@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f79a882e3a3e4520cb8cfcd4468f3c908b79abf5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833762"
 ---
 # <a name="http-connection-manager"></a>диспетчер HTTP-соединений
-  HTTP-соединение позволяет пакету получить доступ к веб-серверу через протокол HTTP, чтобы передавать или принимать файлы. Задача «веб-служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] », которая включает в себя, использует этот диспетчер соединений.  
+  HTTP-соединение позволяет пакету получить доступ к веб-серверу через протокол HTTP, чтобы передавать или принимать файлы. Задача "Веб-служба" из состава служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] использует этот диспетчер соединений.  
   
  При добавлении к пакету диспетчера HTTP-соединений [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создает диспетчер соединений, который будет решать задачи HTTP-соединений во время работы, устанавливают свойства диспетчера соединений и добавляют его к коллекции пакета `Connections`.  
   
@@ -48,13 +48,13 @@ ms.locfileid: "62833762"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Страница &#40;сервера редактора диспетчера HTTP-соединений&#41;](../http-connection-manager-editor-server-page.md)  
+-   [Редактор диспетчера HTTP-сеансов (страница "Сервер")](../http-connection-manager-editor-server-page.md)  
   
--   [Редактор диспетчера HTTP-сеансов &#40;прокси-страница&#41;](../http-connection-manager-editor-proxy-page.md)  
+-   [Редактор диспетчера HTTP-сеансов (страница "Прокси-сервер")](../http-connection-manager-editor-proxy-page.md)  
   
  Дополнительные сведения о программной настройке диспетчера соединений см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задача «веб-служба»](../control-flow/web-service-task.md)   
  [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  
   

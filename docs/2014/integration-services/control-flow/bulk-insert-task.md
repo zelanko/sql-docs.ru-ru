@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b5da9ff28dc658f870033a02fe88b14ea442c51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832876"
 ---
 # <a name="bulk-insert-task"></a>задача «Массовая вставка»
@@ -64,7 +64,7 @@ ms.locfileid: "62832876"
 ## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>Пользовательские записи журнала, доступные в задаче «Массовая вставка»  
  В следующей таблице перечислены пользовательские записи в журнале для задачи «Массовая вставка». Дополнительные сведения см. в разделах [Ведение журналов в службах Integration Services (SSIS)](../performance/integration-services-ssis-logging.md) и [Пользовательские сообщения для ведения журнала](../custom-messages-for-logging.md).  
   
-|Запись в журнале|Description|  
+|Запись журнала|Описание|  
 |---------------|-----------------|  
 |`BulkInsertTaskBegin`|Указывает, что массовая вставка началась.|  
 |`BulkInsertTaskEnd`|Указывает, что массовая вставка завершена.|  
@@ -89,11 +89,11 @@ ms.locfileid: "62832876"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задачи "групповые вставки" &#40;общие&#41;страницы](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи "Массовая вставка" (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор задачи "Вставка в &#40;"&#41;страницу "соединение"](../bulk-insert-task-editor-connection-page.md)  
+-   [Редактор задачи "Массовая вставка" (страница "Соединение")](../bulk-insert-task-editor-connection-page.md)  
   
--   [Редактор задачи "операции с массовыми вставками" &#40;параметры&#41;](../bulk-insert-task-editor-options-page.md)  
+-   [Редактор задачи "Массовая вставка" (страница "Параметры")](../bulk-insert-task-editor-options-page.md)  
   
 -   [Страница «Выражения»](../expressions/expressions-page.md)  
   

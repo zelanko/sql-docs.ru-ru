@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12340ae2ba13bf6219cf9940a56eeaa8b995f3e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829497"
 ---
 # <a name="wmi-data-reader-task"></a>Задача «Модуль чтения данных WMI»
@@ -84,7 +84,7 @@ Select * FROM Win32_QuickFixEngineering
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах.  
   
--   [Редактор задачи "модуль чтения данных WMI" &#40;странице "параметры WMI"&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [Редактор задачи "Модуль чтения данных WMI" (страница "Параметры инструментария WMI")](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [Страница «Выражения»](../expressions/expressions-page.md)  
   
@@ -97,7 +97,7 @@ Select * FROM Win32_QuickFixEngineering
   
 -   [Задание свойств задач или контейнеров](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задачи Integration Services](integration-services-tasks.md)   
  [Поток управления](control-flow.md)  
   

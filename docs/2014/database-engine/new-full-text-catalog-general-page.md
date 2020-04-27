@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62844102"
 ---
 # <a name="new-full-text-catalog-general-page"></a>Создать полнотекстовый каталог (страница «Общие»)
@@ -24,7 +24,7 @@ ms.locfileid: "62844102"
   
  **Создание полнотекстового каталога в среде SQL Server Management Studio**  
   
--   [Создание и управление полнотекстовыми каталогами](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
+-   [Создание полнотекстовых каталогов и управление ими](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
  **Имя полнотекстового каталога**  
@@ -40,7 +40,7 @@ ms.locfileid: "62844102"
  **Учитывать диакритические знаки**  
  Указывает, является ли каталог конфиденциальным или нечувствительным к диакритическим знакам, таким**~** как тильда (), острая диакритические знаки (**ґ**) или умляут (**ё**). Если выбрать вариант **Без учета диакритических знаков**, то в полнотекстовых индексах, связанных с этим полнотекстовым каталогом, не будут учитываться диакритические знаки. Сведения о диакритических знаках см. в разделе [диакритические](https://www.merriam-webster.com/dictionary/diacritic) знаки на веб-сайте Мерриам-толковом.  
   
-## <a name="see-also"></a>См. также:  
- [Создание ПОЛНОТЕКСТОВОГО каталога &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
+## <a name="see-also"></a>См. также  
+ [CREATE FULLTEXT CATALOG (Transact-SQL)](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9a2244c5e6cddbc53ccd3aaec7faaaa3836a923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831749"
 ---
 # <a name="file-system-task"></a>Задача "Файловая система"
@@ -62,7 +62,7 @@ ms.locfileid: "62831749"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задачи "файловая система" &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи "Файловая система" (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
   
 -   [Страница «Выражения»](../expressions/expressions-page.md)  
   
@@ -75,9 +75,9 @@ ms.locfileid: "62831749"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]включает задачу, которая скачивает и отправляет файлы данных и управляет каталогами на серверах. Дополнительные сведения см. в статье [FTP Task](ftp-task.md).  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат задачу, которая загружает и отправляет файлы данных и управляет каталогами на серверах. Дополнительные сведения см. в статье [FTP Task](ftp-task.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задачи Integration Services](integration-services-tasks.md)   
  [Поток управления](control-flow.md)  
   

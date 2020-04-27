@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833824"
 ---
 # <a name="flat-file-connection-manager"></a>Диспетчер соединений с неструктурированными файлами
@@ -71,13 +71,13 @@ ms.locfileid: "62833824"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор диспетчера соединений с неструктурированными файлами &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор диспетчера соединений с неструктурированными файлами (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор диспетчера соединений с неструктурированными файлами &#40;столбцы&#41;](../flat-file-connection-manager-editor-columns-page.md)  
+-   [Редактор диспетчера подключений с неструктурированными файлами (страница "Столбцы")](../flat-file-connection-manager-editor-columns-page.md)  
   
--   [Редактор диспетчера соединений с неструктурированными файлами &#40;страница "Дополнительно"&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
+-   [Редактор диспетчера подключений к неструктурированным файлам (страница "Дополнительно")](../flat-file-connection-manager-editor-advanced-page.md)  
   
--   [Редактор диспетчера соединений с неструктурированными файлами &#40;страница предварительного просмотра&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+-   [Редактор диспетчера подключений с неструктурированными файлами (страница "Предварительный просмотр")](../flat-file-connection-manager-editor-preview-page.md)  
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
   

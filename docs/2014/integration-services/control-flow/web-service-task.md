@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829405"
 ---
 # <a name="web-service-task"></a>Задача «Веб-служба»
@@ -64,11 +64,11 @@ ms.locfileid: "62829405"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задачи "веб-служба" &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи "Веб-служба" (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор задачи "веб-служба" &#40;"входная страница"&#41;](../web-service-task-editor-input-page.md)  
+-   [Редактор задачи "Веб-служба" (страница "Ввод")](../web-service-task-editor-input-page.md)  
   
--   [Редактор задачи "веб-служба" &#40;страница "выходные данные"&#41;](../web-service-task-editor-output-page.md)  
+-   [Редактор задачи "Веб-служба" (страница "Вывод")](../web-service-task-editor-output-page.md)  
   
 -   [Страница «Выражения»](../expressions/expressions-page.md)  
   

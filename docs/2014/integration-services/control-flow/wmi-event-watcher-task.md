@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829506"
 ---
 # <a name="wmi-event-watcher-task"></a>Задача «Отслеживание событий WMI»
@@ -91,9 +91,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задачи "наблюдатель событий WMI" &#40;общие&#41;страницы](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи "Отслеживание событий WMI" (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор задачи "наблюдатель событий WMI" &#40;странице "параметры WMI"&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
+-   [Редактор задачи "Отслеживание событий WMI" (страница "Параметры WMI")](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   
 -   [Страница «Выражения»](../expressions/expressions-page.md)  
   

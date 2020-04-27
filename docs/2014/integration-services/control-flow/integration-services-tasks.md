@@ -27,22 +27,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89f73de6a8474b6e2842de7b1caf0b882ff2b5c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831458"
 ---
 # <a name="integration-services-tasks"></a>Задачи служб Integration Services
-  Задачами называются элементы потока управления, которые определяют рабочие модули, выполняющиеся в потоке управления пакета. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Пакет состоит из одной или нескольких [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] задач. Если в пакете несколько задач, они связаны и упорядочены в потоке управления с помощью управления очередностью.  
+  Задачами называются элементы потока управления, которые определяют рабочие модули, выполняющиеся в потоке управления пакета. Пакет служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] состоит из одной задачи или нескольких. Если в пакете несколько задач, они связаны и упорядочены в потоке управления с помощью управления очередностью.  
   
  Можно также создавать пользовательские задачи на языке программирования, поддерживающем COM, например на Visual Basic, или на языке программирования для платформы .NET, например на C#.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] Конструктор, графическое средство в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для работы с пакетами, предоставляет область конструктора для создания потока управления пакета и предоставляет настраиваемые редакторы для настройки задач. Также можно программировать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] объектную модель для программного создания пакетов.  
+ Конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] — графическое средство служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для работы с пакетами — предоставляет область конструктора для создания потока управления пакета и специальные редакторы для настройки задач. Можно также использовать объектную модель служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для создания пакетов программными средствами.  
   
 ## <a name="types-of-tasks"></a>Типы задач  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержатся следующие типы задач.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержатся следующие типы задач.  
   
  Задача потока данных  
  Задача, создающая поток данных для извлечения данных, применения преобразований на уровне столбцов и загрузки данных.  
@@ -83,6 +82,6 @@ ms.locfileid: "62831458"
  Задачи можно группировать и выполнять как одно целое либо повторять их выполнение в цикле. Дополнительные сведения см. в разделах [Foreach Loop Container](foreach-loop-container.md), [For Loop Container](for-loop-container.md)и [Sequence Container](sequence-container.md).  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Добавление задачи или контейнера в поток управления или удалить их из него](add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+ [Добавление задачи или контейнера в поток управления или удаление их из него](add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
   

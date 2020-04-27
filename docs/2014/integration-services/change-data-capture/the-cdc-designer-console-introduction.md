@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62834659"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Общие сведения о консоли конструктора CDC
@@ -30,7 +30,7 @@ ms.locfileid: "62834659"
   
 -   Windows 7, 32-разрядная (x86) и 64-разрядная (x64) версии  
   
--   Windows Server 2008 R2  
+-   Windows Server 2008 R2  
   
 -   Windows Server 2008, 32-разрядная (x86) и 64-разрядная (x64) версии с пакетом обновления 2 (SP2)  
   
@@ -47,10 +47,10 @@ ms.locfileid: "62834659"
   
  **База данных SQL Server**  
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]выпуск с поддержкой SQL Server CDC  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с поддержкой CDC SQL Server  
   
 ## <a name="software-prerequisites"></a>Обязательное программное обеспечение  
- Требуется следующее ПО:  
+ Требуется наличие следующего программного обеспечения:  
   
 -   Клиент Oracle 10. x  
   

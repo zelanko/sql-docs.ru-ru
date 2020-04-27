@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832461"
 ---
 # <a name="data-flow-task"></a>Задача потока данных
@@ -44,11 +44,9 @@ ms.locfileid: "62832461"
  ![Потоки данных](../media/mw-dts-09.gif "Потоки данных")  
   
 ## <a name="log-entries"></a>Записи журнала  
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предоставляют несколько событий журнала, которые доступны всем задачам. 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предоставляют также пользовательские записи журнала. Дополнительные сведения см. в разделах [Ведение журналов в службах Integration Services (SSIS)](../performance/integration-services-ssis-logging.md) и [Пользовательские сообщения для ведения журнала](../custom-messages-for-logging.md). Задача потока данных содержит следующие пользовательские записи журнала.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предоставляют несколько событий журнала, которые доступны всем задачам. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предоставляют также пользовательские записи журнала. Дополнительные сведения см. в разделах [Ведение журналов в службах Integration Services (SSIS)](../performance/integration-services-ssis-logging.md) и [Пользовательские сообщения для ведения журнала](../custom-messages-for-logging.md). Задача потока данных содержит следующие пользовательские записи журнала.  
   
-|Запись в журнале|Description|  
+|Запись журнала|Description|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|Указывает, что задача потока данных изменила размер буфера. Эта запись журнала описывает причины изменения размера и фиксирует новый временный размер буфера.|  
 |`OnPipelinePostEndOfRowset`|Означает, что компонент получил сигнал конца набора строк, который устанавливается при последнем вызове метода `ProcessInput`. Запись делается для каждого компонента в потоке данных, который обрабатывает ввод. Запись включает имя компонента.|  
@@ -73,7 +71,7 @@ ms.locfileid: "62832461"
 ### <a name="sample-messages-from-a-data-flow-task"></a>Образцы сообщений от задачи потока данных  
  В следующей таблице приведен список образцов сообщений для записей журнала в очень простом пакете. Пакет использует источник данных «OLE DB» для извлечения данных из таблицы, преобразование «Сортировка» для сортировки данных и назначение «OLE DB» для записи данных в другую таблицу.  
   
-|Запись в журнале|Сообщения|  
+|Запись журнала|Сообщения|  
 |---------------|--------------|  
 |`BufferSizeTuning`|`Rows in buffer type 0 would cause a buffer size greater than the configured maximum. There will be only 9637 rows in buffers of this type.`<br /><br /> `Rows in buffer type 2 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`<br /><br /> `Rows in buffer type 3 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`|  
 |`OnPipelinePostEndOfRowset`|`A component will be given the end of rowset signal. : 1180 : Sort : 1181 : Sort Input`<br /><br /> `A component will be given the end of rowset signal. : 1291 : OLE DB Destination : 1304 : OLE DB Destination Input`|  
@@ -90,13 +88,13 @@ ms.locfileid: "62832461"
   
  Например, следующая таблица содержит сообщение «В качестве входных данных компоненту потока данных были предоставлены строки. :  : 1185 : выход источника OLE DB : 1180 : сортировка : 1181 : вход сортировки : 76", разделенное на столбцы. Сообщение записано событием `OnPipelineRowsSent`, когда строки были отправлены из источника «OLE DB» в преобразование «Сортировка».  
   
-|Столбец|Description|Значение|  
+|Столбец|Описание|Значение|  
 |------------|-----------------|-----------|  
-|**пасид**|Значение свойства `ID` пути между источником «OLE DB» и преобразованием «Сортировка».|1185|  
+|**PathID**|Значение свойства `ID` пути между источником «OLE DB» и преобразованием «Сортировка».|1185|  
 |**PathName**|Значение свойства `Name` пути.|Выход данных источника «OLE DB»|  
 |**ComponentID**|Значение свойства `ID` преобразования «Сортировка».|1180|  
 |**ComponentName**|Значение свойства `Name` преобразования «Сортировка».|Сортировка|  
-|**инпутид**|Значение свойства `ID` входных данных для преобразования «Сортировка».|1181|  
+|**InputID**|Значение свойства `ID` входных данных для преобразования «Сортировка».|1181|  
 |**InputName**|Значение свойства `Name` входных данных для преобразования «Сортировка».|Вход сортировки|  
 |**ровссент**|Количество строк, отправленных в качестве входных данных на преобразование «Сортировка».|76|  
   

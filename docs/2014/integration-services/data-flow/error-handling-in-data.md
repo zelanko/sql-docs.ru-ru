@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827153"
 ---
 # <a name="error-handling-in-data"></a>Обработка ошибок в данных
@@ -59,7 +59,7 @@ ms.locfileid: "62827153"
   
  Можно установить, как источники, преобразования и назначения обрабатывают ошибки и усечения. В следующей таблице приводятся описания дополнительных параметров.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |Компонент, завершившийся сбоем|Задача потока данных заканчивается сбоем, если возникли ошибка или усечение. Неудача является параметром по умолчанию для ошибки и усечения.|  
 |Пропуск неудачи|Ошибка или усечение пропускаются, и строка данных направляется на выход преобразования или источника.|  
@@ -74,7 +74,7 @@ ms.locfileid: "62827153"
   
 -   [Настройка вывода ошибок в компоненте потока данных](../configure-an-error-output-in-a-data-flow-component.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поток данных](data-flow.md)   
  [Преобразование данных с помощью преобразований](transformations/transform-data-with-transformations.md)   
  [Соединение компонентов с путями](../connect-components-with-paths.md)   

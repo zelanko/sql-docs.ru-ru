@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831772"
 ---
 # <a name="execute-sql-task"></a>Задача "Выполнение SQL"
@@ -42,21 +42,21 @@ ms.locfileid: "62831772"
 ## <a name="connecting-to-a-data-source"></a>Подключение к источнику данных  
  Задача «Выполнение SQL» может использовать разные типы диспетчеров соединений для подключения к источнику данных, где требуется выполнить инструкцию SQL или хранимую процедуру. Задача может использовать типы соединений, перечисленные в следующей таблице.  
   
-|Тип подключения|Диспетчер соединений|  
+|Тип соединений|Диспетчер соединений|  
 |---------------------|------------------------|  
-|EXCEL;|[Диспетчер соединений с Excel](../connection-manager/excel-connection-manager.md)|  
-|OLE DB|[диспетчер соединений OLE DB](../connection-manager/ole-db-connection-manager.md)|  
-|ODBC|[диспетчер соединений ODBC](../connection-manager/odbc-connection-manager.md)|  
-|ADO|[Диспетчер соединений ADO](../connection-manager/ado-connection-manager.md)|  
-|ADO.NET|[Диспетчер соединений ADO.NET](../connection-manager/ado-net-connection-manager.md)|  
-|SQLMOBILE|[Диспетчер соединений SQL Server Compact Edition](../connection-manager/sql-server-compact-edition-connection-manager.md)|  
+|EXCEL|[Диспетчер подключений Excel](../connection-manager/excel-connection-manager.md)|  
+|OLE DB|[Диспетчер соединений OLE DB](../connection-manager/ole-db-connection-manager.md)|  
+|ODBC|[Диспетчер подключений ODBC](../connection-manager/odbc-connection-manager.md)|  
+|ADO|[Диспетчер подключений объектов данных ActiveX](../connection-manager/ado-connection-manager.md)|  
+|ADO.NET|[Диспетчер подключений ADO.NET](../connection-manager/ado-net-connection-manager.md)|  
+|SQLMOBILE|[Диспетчер подключений SQL Server Compact Edition](../connection-manager/sql-server-compact-edition-connection-manager.md)|  
   
 ## <a name="creating-sql-statements"></a>Создание инструкций SQL  
  Источником инструкций SQL для этой задачи может быть свойство задачи, которое содержит инструкцию, соединение с файлом, содержащим инструкции, или имя переменной, хранящей инструкцию. Для написания инструкций SQL необходимо использовать разновидность языка SQL, используемую системой управления базой данных-источником (СУБД). Дополнительные сведения см. в разделе [Запросы в службах Integration Services (SSIS)](../integration-services-ssis-queries.md).  
   
  Если инструкции SQL хранятся в файле, задача использует диспетчер подключения файлов для подключения к файлу. Дополнительные сведения см. в статье [File Connection Manager](../connection-manager/file-connection-manager.md).  
   
- В конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] можно использовать диалоговое окно **Редактор задачи «Выполнение SQL»** для ввода инструкций SQL или **построитель запросов**— графический пользовательский интерфейс для создания запросов SQL. Дополнительные сведения см. в разделах [Редактор задачи "Выполнение SQL" (страница "Общие")](../execute-sql-task-editor-general-page.md) и [Построитель запросов](../query-builder.md).  
+ В конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] можно использовать диалоговое окно **Редактор задачи «Выполнение SQL»** для ввода инструкций SQL или **построитель запросов**— графический пользовательский интерфейс для создания запросов SQL. Дополнительные сведения см. в разделе [Execute SQL Task Editor &#40;General Page&#41;](../execute-sql-task-editor-general-page.md) и [построитель запросов](../query-builder.md).  
   
 > [!NOTE]  
 >  Задача «Выполнение SQL» не может провести синтаксический анализ допустимых инструкций SQL, созданных за ее пределами.  
@@ -104,7 +104,7 @@ ms.locfileid: "62831772"
 ### <a name="custom-log-entries"></a>Пользовательские записи журнала  
  В следующей таблице перечислены пользовательские записи журнала для задачи «Выполнение SQL». Дополнительные сведения см. в разделах [Ведение журналов в службах Integration Services (SSIS)](../performance/integration-services-ssis-logging.md) и [Пользовательские сообщения для ведения журнала](../custom-messages-for-logging.md).  
   
-|Запись в журнале|Description|  
+|Запись журнала|Описание|  
 |---------------|-----------------|  
 |`ExecuteSQLExecutingQuery`|Предоставляет сведения об этапах выполнения инструкции SQL. Записи журнала формируются в тот момент, когда задача устанавливает соединение с базой данных, когда задача приступает к подготовке инструкции SQL, и после того, как завершается выполнение инструкции SQL. Запись журнала для этапа подготовки содержит инструкцию SQL, которая используется задачей.|  
   
@@ -156,7 +156,7 @@ ms.locfileid: "62831772"
   
 -   [Результирующие наборы в задаче "Выполнение SQL"](../result-sets-in-the-execute-sql-task.md)  
   
--   [Справочник по Transact-SQL &#40;ядро СУБД&#41;](/sql/t-sql/language-reference)  
+-   [Справочник по Transact-SQL (компонент Database Engine)](/sql/t-sql/language-reference)  
   
 -   Запись в блоге [Новые функции даты и времени в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=239783)на сайте mssqltips.com  
   

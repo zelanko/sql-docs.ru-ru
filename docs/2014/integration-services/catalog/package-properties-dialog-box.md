@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ab3cdf0079d0c01d95b73339e1fce8960658f93a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62836343"
 ---
 # <a name="package-properties-dialog-box"></a>диалоговое окно «Свойства пакета»
@@ -31,7 +31,7 @@ ms.locfileid: "62836343"
   
 -   [Настройка параметров](#options)  
   
-##  <a name="open_dialog"></a> Открытие диалогового окна «Свойства пакета»  
+##  <a name="open-the-package-properties-dialog-box"></a><a name="open_dialog"></a> Открытие диалогового окна «Свойства пакета»  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]установите соединение с сервером служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62836343"
   
 5.  Щелкните правой кнопкой мыши пакет и выберите **Свойства**.  
   
-##  <a name="options"></a> Настройка параметров  
+##  <a name="configure-the-options"></a><a name="options"></a> Настройка параметров  
  На странице **Общие** можно просмотреть свойства выбранного пакета.  
   
  Все свойства на странице **Общие** доступны только для чтения.  
@@ -57,7 +57,7 @@ ms.locfileid: "62836343"
  Выводит идентификатор пакета.  
   
  **Точка входа**  
- Значение `True` указывает, что пакет запущен непосредственно. Значение `False` указывает, что пакет запущен из другого пакета с помощью задачи «Выполнение пакета». По умолчанию используется значение `True`.  
+ Значение `True` указывает, что пакет запущен непосредственно. Значение `False` указывает, что пакет запущен из другого пакета с помощью задачи «Выполнение пакета». Значение по умолчанию — `True`.  
   
  Это свойство задается в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] как для родительского пакета, так и для дочерних пакетов. Для этого щелкните пакет правой кнопкой мыши в обозревателе решений, а затем выберите **Входной пакет**.  
   

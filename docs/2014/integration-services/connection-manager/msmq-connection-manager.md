@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78377fe5eaf5b9f0639533f17fa7a45cca69a537
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833663"
 ---
 # <a name="msmq-connection-manager"></a>диспетчер соединений MSMQ
-  Диспетчер соединений MSMQ позволяет пакетам соединяться с очередями сообщений, которые используют службу очередей сообщений (также называемую MSMQ). Задача «очередь сообщений» [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , которая включает в себя, использует диспетчер соединений MSMQ.  
+  Диспетчер соединений MSMQ позволяет пакетам соединяться с очередями сообщений, которые используют службу очередей сообщений (также называемую MSMQ). Задача "Очередь сообщений", содержащаяся в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], использует диспетчер соединений MSMQ.  
   
  При добавлении к пакету диспетчера MSMQ-сеансов службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создают диспетчер соединений, который будет решать задачи MSMQ-сеансов во время работы, устанавливает свойства диспетчера соединений и добавляет его к коллекции пакета `Connections`. Свойству `ConnectionManagerType` диспетчера соединений присваивается значение `MSMQ`.  
   
@@ -37,8 +37,8 @@ ms.locfileid: "62833663"
   
 |Тип очереди|Образец пути|  
 |----------------|-----------------|  
-|Общедоступные|\<имя компьютера>\\<очереди\>|  
-|Private|\<имя компьютера> \Привате $\\<имя очереди\>|  
+|Общедоступные|\<имя компьютера>\\<имя очереди\>|  
+|Private|\<имя компьютера>\Private$\\<имя очереди\>|  
   
  Для представления локального компьютера можно использовать знак точки («.»).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62833663"
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задача "очередь сообщений"](../control-flow/message-queue-task.md)   
  [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  
   

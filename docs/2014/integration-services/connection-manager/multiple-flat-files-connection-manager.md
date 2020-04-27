@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7235f5f333ac7bb4520a6244e103baafba343ea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833709"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>диспетчер соединения с несколькими неструктурированными файлами
@@ -47,7 +47,7 @@ ms.locfileid: "62833709"
   
  Когда диспетчер соединений нескольких неструктурированных файлов ссылается на несколько файлов, то пути этих файлов разделены символом вертикальной черты (|). Свойство `ConnectionString` диспетчера соединений имеет следующий формат:  
   
- \<*путь к пути*>|\<**>  
+ \<*путь*>|\<*путь*>  
   
  Можно также указать несколько файлов, используя символы-шаблоны. Например, чтобы сослаться на все текстовые файлы на диске C, можно задать для `ConnectionString` свойства значение C:\\*. txt.  
   
@@ -62,17 +62,17 @@ ms.locfileid: "62833709"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;страница столбцов&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
+-   [Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Столбцы")](../multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;страница "Дополнительно"&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Дополнительно")](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
--   [Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;страница предварительного просмотра&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
+-   [Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Предварительный просмотр")](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Источник "Неструктурированный файл"](../data-flow/flat-file-source.md)   
  [Назначение "Неструктурированный файл"](../data-flow/flat-file-destination.md)   
  [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  

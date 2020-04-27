@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed653b16fe524f364ba89f13e00715b725080033
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62824401"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>Отмена подавления предупреждений для пользовательских отчетов
@@ -24,11 +24,11 @@ ms.locfileid: "62824401"
   
  По умолчанию перед запуском пользовательского отчета отображается диалоговое окно **Запустить пользовательский отчет** . Если установить флажок **Больше не показывать это предупреждение** , то это диалоговое окно больше отображаться не будет. Также по умолчанию диалоговое окно **Запустить пользовательский отчет** отображается, если после открытия одного пользовательского отчета нажать ссылку для открытия другого отчета. В этом диалоговом окне отображается полный путь к файлу пользовательского детализированного отчета. Если установить флажок **Больше не показывать это предупреждение** , то это диалоговое окно больше отображаться не будет.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-unsuppress-the-main-custom-report-warning-dialog-box"></a>Отмена подавления основного диалогового окна предупреждения для пользовательских отчетов  
   
-1.  Подключитесь \<к *серверу*>\\<*Общий*** \\ \>диск> \Documents and Settings<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.XML.>|\<  
+1.  Подключитесь \<к *серверу*>\\<*Общий**Drive* \\ \>диск> \Documents and Settings<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.XML.>|\<  
   
 2.  `reports.xml`Щелкните правой кнопкой мыши и выберите пункт **изменить**.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62824401"
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>Отмена подавления диалогового окна предупреждений для детализированных пользовательских отчетов  
   
-1.  Подключитесь \<к *серверу*>\\<*Общий*** \\ \>диск> \Documents and Settings<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.XML.>|\<  
+1.  Подключитесь \<к *серверу*>\\<*Общий**Drive* \\ \>диск> \Documents and Settings<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.XML.>|\<  
   
 2.  `reports.xml`Щелкните правой кнопкой мыши и выберите **изменить**.  
   

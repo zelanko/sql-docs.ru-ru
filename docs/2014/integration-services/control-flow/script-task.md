@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7c710065bf0a87b5ec3850010344f2ef5114022e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830565"
 ---
 # <a name="script-task"></a>Задача «Скрипт»
@@ -66,15 +66,15 @@ ms.locfileid: "62830565"
 ### <a name="configuring-the-script-task-in-the-designer"></a>Настройка задачи «Скрипт» в конструкторе  
  В следующей таблице описано событие `ScriptTaskLogEntry`, которое может быть зарегистрировано для задачи «Скрипт». `ScriptTaskLogEntry` Событие выбирается для ведения журнала на вкладке **сведения** диалогового окна **Настройка журналов служб SSIS** . Дополнительные сведения см. в разделах [Ведение журналов в службах Integration Services (SSIS)](../performance/integration-services-ssis-logging.md) и [Пользовательские сообщения для ведения журнала](../custom-messages-for-logging.md).  
   
-|Запись в журнале|Description|  
+|Запись журнала|Описание|  
 |---------------|-----------------|  
 |`ScriptTaskLogEntry`|Сообщает о результатах выполнения операции ведения журнала в скрипте. Задача формирует запись журнала для каждого вызова метода `Log` объекта `Dts`. Задача формирует эти записи в момент запуска кода. Дополнительные сведения см. в разделе [ведения журналов в задаче «скрипт»](../extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задачи "Скрипт" &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи "Скрипт" (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор задачи "Скрипт" &#40;страница "Скрипт"&#41;](../script-task-editor-script-page.md)  
+-   [Редактор задачи "Скрипт" (страница "Скрипт")](../script-task-editor-script-page.md)  
   
 -   [Страница «Выражения»](../expressions/expressions-page.md)  
   
@@ -89,6 +89,6 @@ ms.locfileid: "62830565"
   
 ## <a name="related-content"></a>См. также  
   
--   Техническая статья [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625)на сайте shareourideas.com  
+-   Техническая статья [oтправка электронной почты с уведомлением доставки в C#](https://go.microsoft.com/fwlink/?LinkId=237625)на сайте shareourideas.com  
   
   

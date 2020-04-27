@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 00d28ef5dbe2c0a19e5a464981934f2a84df7a7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833736"
 ---
 # <a name="ole-db-connection-manager"></a>диспетчер соединений OLE DB
@@ -54,11 +54,11 @@ ms.locfileid: "62833736"
   
 ## <a name="related-content"></a>См. также  
   
--   Вики-статья, [службы SSIS с соединителями Oracle](https://go.microsoft.com/fwlink/?LinkId=220670) на Social.TechNet.Microsoft.com.  
+-   Статья Wiki [Соединители служб SSIS с Oracle](https://go.microsoft.com/fwlink/?LinkId=220670) на сайте social.technet.microsoft.com  
   
 -   Техническая статья [Connection Strings for OLE DB Providers](https://go.microsoft.com/fwlink/?LinkId=220744)(Строки подключения для поставщиков OLE DB) на сайте carlprothman.net.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Источник OLE DB](../data-flow/ole-db-source.md)   
  [Назначение OLE DB](../data-flow/ole-db-destination.md)   
  [Задача «Выполнение SQL»](../control-flow/execute-sql-task.md)   

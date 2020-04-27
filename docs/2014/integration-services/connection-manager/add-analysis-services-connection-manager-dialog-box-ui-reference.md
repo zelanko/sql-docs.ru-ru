@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9177dceefb03617a1837f7f051fb52aa805f33aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833759"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Добавление диалогового окна  «Диспетчер соединений со службами Analysis Services" в справочник по пользовательскому интерфейсу
@@ -43,7 +43,7 @@ ms.locfileid: "62833759"
  Выберите проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из списка.  
   
 ## <a name="see-also"></a>См. также:  
- [Справочник по ошибкам и сообщениям Integration Services](../integration-services-error-and-message-reference.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../integration-services-error-and-message-reference.md)   
  [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  
   
   

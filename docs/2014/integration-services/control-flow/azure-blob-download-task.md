@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af99d5ba79919920b2fb1ff3dde8d0a134a8ef0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832929"
 ---
 # <a name="azure-blob-download-task"></a>Задача скачивания BLOB-объектов Azure
@@ -31,9 +31,9 @@ ms.locfileid: "62832929"
 |**Поле**|**Описание**|  
 |AzureStorageConnection|Создайте новый или укажите существующий диспетчер подключений службы хранилища Azure, который ссылается на учетную запись хранения Azure, указывающую на место размещения файлов BLOB-объектов.|  
 |BlobContainer|Указывает имя контейнера BLOB-объектов, который содержит скачиваемые файлы BLOB-объектов.|  
-|BlobDirectory|Указывает каталог больших двоичных объектов, который содержит скачиваемые файлы BLOB-объектов. Каталог BLOB-объектов имеет виртуальную иерархическую структуру.|  
+|BlobDirectory|Указывает каталог больших двоичных объектов, который содержит скачиваемые файлы BLOB-объектов. Каталог больших двоичных объектов — это виртуальная иерархическая структура.|  
 |LocalDirectory|Указывает локальный каталог для хранения скачанных файлов BLOB-объектов.|  
-|FileName|Указывает имя фильтра для выбора файлов с указанным шаблоном имени. (например, MySheet*.xls\* включает такие файлы, как MySheet001.xls и MySheetABC.xlsx.|  
+|FileName|Указывает имя фильтра для выбора файлов с указанным шаблоном имени. Пример: MySheet*.xls\* включает такие файлы, как MySheet001.xls и MySheetABC.xlsx.|  
 |TimeRangeFrom/TimeRangeTo|Задает фильтр диапазона времени. Будут включены файлы, измененные после **TimeRangeFrom** и до **TimeRangeTo** .|  
   
   

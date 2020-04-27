@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 548fac7dbc7d1f2750a130da9847be406361d8bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843670"
 ---
 # <a name="retrieve-files"></a>Получение файлов
@@ -50,7 +50,7 @@ ms.locfileid: "62843670"
   
 3.  В диалоговом окне **Получение** нажмите кнопку **ОК**. Если решение или проект выбрано в обозревателе решений, можно снять флажки, расположенные рядом с элементами, которые не нужно получать.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диалоговое окно «Получение &#40;системы управления версиями»&#41;](../../2014/database-engine/get-dialog-box-source-control.md)   
  [Задание и получение сведений о версии](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [Просмотр журнала проекта](../../2014/database-engine/view-project-history.md)   

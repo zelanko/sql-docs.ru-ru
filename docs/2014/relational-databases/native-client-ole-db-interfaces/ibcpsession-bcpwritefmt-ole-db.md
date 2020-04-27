@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPWriteFmt (OLE DB) | Документация Майкрософт'
+title: IBCPSession::BCPWriteFmt (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b4022f14c1f39984b1feaa0a45adef2154c1d0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62826846"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
@@ -42,7 +42,7 @@ const wchar_t *pwszFormatFile);
  Для загрузки сохраненного файла форматирования используется метод [IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md).  
   
 ## <a name="arguments"></a>Аргументы  
- *пвсзформатфиле*[in]  
+ *pwszFormatFile*[in]  
  Путь и имя файла, содержащего значения формата для файла данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -50,7 +50,7 @@ const wchar_t *pwszFormatFile);
  Метод выполнен успешно.  
   
  E_FAIL  
- Произошла ошибка, связанная с поставщиком. Подробные сведения можно получить при помощи интерфейса [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md).  
+ Произошла ошибка конкретного поставщика; для получения дополнительных сведений используйте интерфейс [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) .  
   
  E_OUTOFMEMORY  
  Недостаточно памяти.  
@@ -58,7 +58,7 @@ const wchar_t *pwszFormatFile);
  E_UNEXPECTED  
  Непредвиденный вызов метода. Например, перед вызовом этого метода не был вызван метод [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../native-client/features/performing-bulk-copy-operations.md)  
   

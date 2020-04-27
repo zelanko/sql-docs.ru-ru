@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eaad0a80fd77257c6e79e092733d75c0c8df5df5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827085"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed, класс событий
@@ -40,11 +40,11 @@ ms.locfileid: "62827085"
 |Запись|`int`|Количество операций логической записи.|17|Да|  
 |GroupID|`int`|Идентификатор классифицированной группы рабочей нагрузки.|66|Да|  
 |Ошибка|`int`|Номер последней ошибки в случае, если выполнение определяемой пользователем функции-классификатора завершилось с ошибкой.|31|Да|  
-|State|`int`|Состояние последней ошибки.|30|Да|  
-|TargetUserName|`sysname`|Возвращаемое значение (имя группы рабочей нагрузки) для определяемой пользователем функции-классификатора, если системе не удается найти соответствующую активную группу. В противном случае этот столбец содержит значение NULL.|11,9|Да|  
+|Состояние|`int`|Состояние последней ошибки.|30|Да|  
+|TargetUserName|`sysname`|Возвращаемое значение (имя группы рабочей нагрузки) для определяемой пользователем функции-классификатора, если системе не удается найти соответствующую активную группу. В противном случае этот столбец содержит значение NULL.|39|Да|  
 |ObjectName|`nvarchar(256)`|Двухкомпонентное имя определяемой пользователем функции-классификатора. Например, dbo.classifier.|34|Да|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные события](../extended-events/extended-events.md)   
  [Класс событий Reconnect: starting](preconnect-starting-event-class.md)   
  [Регулятор ресурсов](../resource-governor/resource-governor.md)  

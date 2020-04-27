@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c61e1b980e729cb936c00410a156d8c0dc47d0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62842980"
 ---
 # <a name="sql-server-management-tools-backward-compatibility"></a>Обратная совместимость средств управления SQL Server
@@ -27,7 +27,7 @@ ms.locfileid: "62842980"
 |[Критические изменения в функциях средств управления в SQL Server 2014](../../2014/database-engine/breaking-changes-to-management-tools-features-in-sql-server-2014.md)|Изменения функциональных возможностей, которые могут потребовать изменений в приложениях.|  
 |[Изменения в работе функций средств управления в SQL Server 2014](../../2014/database-engine/behavior-changes-to-management-tools-features-in-sql-server-2014.md)|Другие изменения в функциях средств управления в этой версии.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обратная совместимость](../../2014/getting-started/backward-compatibility.md)  
   
   

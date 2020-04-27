@@ -20,10 +20,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68113c6de003aea94924f6e220373664212becf1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843487"
 ---
 # <a name="set-and-retrieve-version-information"></a>Задание и получение сведений о версии
@@ -51,7 +51,7 @@ ms.locfileid: "62843487"
   
 -   пути проектов, имеющих общий доступ к этому файлу.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Просмотр журнал файла](../../2014/database-engine/view-file-history.md)  
   
@@ -65,11 +65,11 @@ ms.locfileid: "62843487"
   
 -   [Сравнение файлов](../../2014/database-engine/compare-files.md)  
   
--   [Открытие файлов для общего доступа](../../2014/database-engine/share-files.md)  
+-   [Общий доступ к файлам](../../2014/database-engine/share-files.md)  
   
 -   [Создание журналов и отчетов состояния](../../2014/database-engine/create-history-and-status-reports.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основы системы управления версиями](../../2014/database-engine/source-control-basics.md)  
   
   
