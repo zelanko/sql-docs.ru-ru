@@ -18,16 +18,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b5c775393f7815084e8a79aae4be7f0974886f3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056933"
 ---
 # <a name="package-backup-and-restore-ssis-service"></a>Резервное копирование и восстановление пакетов (службы SSIS)
     
 > [!IMPORTANT]  
->  В данном разделе описывается компонент [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]поддерживает службу для обеспечения обратной совместимости с более ранними выпусками [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], на сервере служб Integration Services можно управлять пакетами.  
+>  В данном разделе описывается компонент [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] поддерживает эту службу для обеспечения обратной совместимости с более ранними версиями служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], на сервере служб Integration Services можно управлять пакетами.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] пакеты могут быть сохранены в файловой системе или в базе данных msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , в системном файле. Для пакетов, сохраненных в msdb, может выполняться резервное копирование и восстановление с помощью функций резервного копирования и восстановления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66056933"
   
 -   [Резервное копирование и восстановление баз данных SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
--   [Резервное копирование и восстановление системных баз данных &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
+-   [Резервное копирование и восстановление системных баз данных (SQL Server)](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]включает программу командной строки **dtutil** (dtutil. Exec), которую можно использовать для управления пакетами. Дополнительные сведения см. в статье [dtutil Utility](dtutil-utility.md).  
   

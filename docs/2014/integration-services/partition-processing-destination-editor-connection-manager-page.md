@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44e116ece7460787f272f0b8cc6e99a4300fc728
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056708"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>Редактор назначения обработки секций (страница «Диспетчер соединений»)
-  Используйте страницу **Диспетчер соединений** диалогового окна **Редактор назначения обработки секций** , чтобы определить соединение с проектом служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или экземпляром служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+  Используйте страницу **Диспетчер соединений** диалогового окна **Редактор назначения обработки секций**, чтобы определить соединение с проектом служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или экземпляром служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  Дополнительные сведения о назначении «Обработка секций» см. в разделе [Partition Processing Destination](data-flow/partition-processing-destination.md).  
   
@@ -30,7 +30,7 @@ ms.locfileid: "66056708"
 >  Описанные здесь задачи не применимы к табличным моделям служб Analysis Services.  Нельзя связать входные столбцы со столбцами секционирования для табличных моделей. Вместо этого для обработки секции следует использовать задачу выполнения DDL [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md) служб Analysis Services.  
   
 ## <a name="options"></a>Параметры  
- **Connection manager**  
+ **Диспетчер соединений**  
  Выберите из списка существующий диспетчер соединений или создайте новое соединение, нажав кнопку **Создать**.  
   
  **Создать**  
@@ -42,15 +42,15 @@ ms.locfileid: "66056708"
  **Метод обработки**  
  Выберите метод обработки. Значение этого параметра по умолчанию — **Полная**.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |Добавление (дополнительное)|Выполнить дополнительную обработку секции.|  
 |Полное|Выполнить полную обработку секции.|  
 |Только данные|Выполнить обработку обновления секции.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения "Обработка секций" &#40;"сопоставления"&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
- [Редактор назначения обработки секций &#40;страница "Дополнительно"&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [Редактор назначения "Обработка секций" (страница "Дополнительно")](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

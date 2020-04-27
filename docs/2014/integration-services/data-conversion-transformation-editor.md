@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060044"
 ---
 # <a name="data-conversion-transformation-editor"></a>редактор преобразования «Конвертация данных»
@@ -40,12 +40,12 @@ ms.locfileid: "66060044"
  Введите псевдоним для каждого нового столбца. Значением по умолчанию является `Copy of`, за которым следует имя входного столбца, однако можно выбрать любое уникальное описательное имя.  
   
  **Тип данных**  
- Выберите доступный тип данных из списка. Дополнительные сведения см. в разделе [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ Выберите доступный тип данных из списка. Дополнительные сведения см. в разделе [типы данных Integration Services](data-flow/integration-services-data-types.md).  
   
- **Недопустим**  
+ **Длина**  
  Установите ширину столбца для строковых данных.  
   
- **Обеспечивают**  
+ **Точность**  
  Установите точность для числовых данных.  
   
  **Масштабирование**  
@@ -55,9 +55,9 @@ ms.locfileid: "66060044"
  Выберите подходящую кодовую страницу для столбцов типа DT_STR.  
   
  **Настройка вывода ошибок**  
- Укажите способ обработки ошибок на уровне строк при помощи диалогового окна [Configure Error Output](../../2014/integration-services/configure-error-output.md) .  
+ Укажите способ обработки ошибок уровня строк в диалоговом окне [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Преобразование данных в другой тип данных с помощью преобразования «Конвертация данных»](data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
   

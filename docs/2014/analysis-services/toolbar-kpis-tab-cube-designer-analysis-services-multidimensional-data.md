@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7db4849a71644772f055059d18faa9f964603913
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066013"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Панель инструментов (вкладка «Ключевые показатели эффективности», конструктор кубов) (службы Analysis Services — многомерные данные)
@@ -42,7 +42,7 @@ ms.locfileid: "66066013"
 > [!NOTE]  
 >  Этот параметр включен только в представлении формы.  
   
- **Вверх**  
+ **вверх**  
  Нажмите для перемещения на одну позицию вверх ключевого показателя эффективности, выбранного на панели **Организатор ключевых показателей эффективности** .  
   
 > [!NOTE]  

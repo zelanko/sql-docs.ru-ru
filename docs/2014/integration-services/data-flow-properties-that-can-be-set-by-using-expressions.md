@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059943"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Свойства потока данных, которые можно задавать с помощью выражений
@@ -45,7 +45,7 @@ ms.locfileid: "66059943"
 |Объект потока данных|Свойство|  
 |----------------------|--------------|  
 |источник ADO NET|Свойство TableOrViewName<br /><br /> Свойство SqlCommand|  
-|Источник XML|Свойство XMLData<br /><br /> Свойство XMLSchemaDefinition|  
+|XML-источник|Свойство XMLData<br /><br /> Свойство XMLSchemaDefinition|  
   
 ### <a name="data-flow-transformations"></a>Преобразования потока данных  
  Дополнительные сведения об этих пользовательских свойствах см. в разделе [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "66059943"
 |Назначение «ADO.NET»|Свойство TableOrViewName<br /><br /> Свойство BatchSize<br /><br /> Свойство CommandTimeout|  
 |назначение «Неструктурированный файл»|Свойство Header|  
 |Назначение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact|Свойство TableName|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]местоназначение|Свойство BulkInsertTableName<br /><br /> Свойство BulkInsertFirstRow<br /><br /> Свойство BulkInsertLastRow<br /><br /> Свойство BulkInsertOrder<br /><br /> Свойство Timeout|  
+|Назначение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Свойство BulkInsertTableName<br /><br /> Свойство BulkInsertFirstRow<br /><br /> Свойство BulkInsertLastRow<br /><br /> Свойство BulkInsertOrder<br /><br /> Свойство Timeout|  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66059943"
 ## <a name="related-content"></a>См. также  
  Техническая статья [Памятка выражений служб SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)на сайте pragmaticworks.com  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование выражений свойств в пакетах](expressions/use-property-expressions-in-packages.md)   
  [Общие свойства](../../2014/integration-services/common-properties.md)   
  [Пользовательские свойства преобразования](data-flow/transformations/transformation-custom-properties.md)   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1eba4cb2f1f5c8825e9cae5751fe230fbe45a835
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061702"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>Редактор источника «ADO.NET» (страница «Столбцы»)
@@ -40,9 +40,9 @@ ms.locfileid: "66061702"
  Просмотрите внешние столбцы (столбцы в источнике) в том порядке, в котором они отображаются при настройке компонентов, получающих данные из этого источника.  
   
  **Выходной столбец**  
- Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца; однако можно выбрать любое уникальное описательное имя. Это имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
+ Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца, однако можно выбрать любое уникальное описательное имя. Это имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор источника «ADO NET» &#40;«диспетчер соединений»&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
  [Редактор источника ADO NET &#40;страница вывода ошибок&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Диспетчер соединений ADO.NET](connection-manager/ado-net-connection-manager.md)  

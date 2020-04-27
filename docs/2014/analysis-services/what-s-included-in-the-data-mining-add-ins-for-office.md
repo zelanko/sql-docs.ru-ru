@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98e87bb2243a8bb024fdcdc819fa5914f462eb66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065331"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Какие&#39;s входят в надстройки интеллектуального анализа данных для Office
@@ -60,7 +60,7 @@ ms.locfileid: "66065331"
   
     -   \<диск>: \Program Files (x86) \Microsoft SQL Server 2014, надстройки DM  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Начало работы с интеллектуальным анализом данных &#40;надстройки интеллектуального анализа данных для Excel&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
   
   

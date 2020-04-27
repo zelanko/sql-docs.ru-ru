@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdf32878788bd68f9f0da36500be75fed5b96691
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066219"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>Технический справочник (надстройки интеллектуального анализа данных для Excel)
@@ -38,10 +38,10 @@ ms.locfileid: "66066219"
   
 -   [Служебная программа настройки сервера &#40;надстройки интеллектуального анализа данных для Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Алгоритмы интеллектуального анализа данных &#40;SQL Server надстройки интеллектуального анализа данных&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)  
   
  [Служебная программа настройки сервера &#40;надстройки интеллектуального анализа данных для Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
-## <a name="related-sections"></a>См. также  
+## <a name="related-sections"></a>Связанные разделы  
   

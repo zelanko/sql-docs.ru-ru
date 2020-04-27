@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055724"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Задание свойств пути с помощью редактора пути потока данных
@@ -36,7 +36,7 @@ ms.locfileid: "66055724"
   
 6.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пути Integration Services](data-flow/integration-services-paths.md)   
  [Поток данных](data-flow/data-flow.md)  
   

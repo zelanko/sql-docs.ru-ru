@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64b31656796c1875d11c6ab1aa9524f4b149d7ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059878"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>Редактор обучения модели интеллектуального анализа данных (вкладка «Соединение»)
@@ -27,7 +27,7 @@ ms.locfileid: "66059878"
  Дополнительные сведения о назначении «Обучение модели интеллектуального анализа данных» см. в разделе [Data Mining Model Training Destination](data-flow/data-mining-model-training-destination.md).  
   
 ## <a name="options"></a>Параметры  
- **Connection manager**  
+ **Диспетчер соединений**  
  Выберите из списка существующих соединений [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или создайте новое соединение служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , используя кнопку **Создать** , как описано ниже.  
   
  **Создать**  
@@ -42,8 +42,8 @@ ms.locfileid: "66059878"
  **Модели интеллектуального анализа данных**  
  Просмотр списка моделей интеллектуального анализа данных, связанных с выбранной структурой интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор обучения моделей интеллектуального анализа данных &#40;вкладка "столбцы"&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
+ [Редактор обучения модели интеллектуального анализа данных (вкладка "Столбцы")](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
   
   

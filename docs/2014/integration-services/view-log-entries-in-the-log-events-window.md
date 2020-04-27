@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed348a4525024052946ac30bfe6ec780ca86a4b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054630"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>Просмотр записей журнала в окне "Регистрация событий"
@@ -30,9 +30,9 @@ ms.locfileid: "66054630"
   
 1.  В среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
-2.  В меню **Службы SSIS** выберите пункт **Регистрация событий**. При необходимости можно вывести окно **Регистрация событий** , сопоставив команду View.LogEvents комбинации клавиш по своему выбору на странице **Клавиатура** диалогового окна **Параметры** .  
+2.  В меню **службы SSIS** выберите пункт **события журнала**. При необходимости можно вывести окно **Регистрация событий** , сопоставив команду View.LogEvents комбинации клавиш по своему выбору на странице **Клавиатура** диалогового окна **Параметры** .  
   
-3.  В меню **Отладка** выберите команду **Начать отладку**.  
+3.  В меню **Отладка** выберите команду **начать отладку**.  
   
      По мере того, как среда выполнения определяет события и пользовательские сообщения, для которых разрешена запись в журнал, записи журнала для таких событий и сообщений записываются в окно **Регистрация событий** .  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66054630"
   
 9. Откройте текстовый редактор, вставьте и сохраните запись журнала в текстовом файле.  
   
-## <a name="see-also"></a>См. также:  
- [Ведение журнала&#41; Integration Services &#40;SSIS](performance/integration-services-ssis-logging.md)  
+## <a name="see-also"></a>См. также  
+ [Ведение журналов в службах Integration Services (SSIS)](performance/integration-services-ssis-logging.md)  
   
   

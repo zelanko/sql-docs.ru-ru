@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a0222627860b70059163bff1dd989e230c1cb66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054841"
 ---
 # <a name="unpivot-transformation-editor"></a>Редактор преобразования «Отмена свертывания»
   Используйте диалоговое окно **Редактор преобразования «Отмена свертывания»** , чтобы выбрать столбцы для сведения в строки, а также указать столбцы данных и новый выходной столбец сведенных значений.  
   
 > [!NOTE]  
->  Этот раздел опирается на сценарий отмены свертывания, описанный в разделе [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md) , чтобы проиллюстрировать использование параметров.  
+>   Этот раздел опирается на сценарий отмены свертывания, описанный в разделе [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md) , чтобы проиллюстрировать использование параметров.  
   
  Дополнительные сведения о преобразовании отмены свертывания см. в разделе [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md).  
   
@@ -33,10 +33,10 @@ ms.locfileid: "66054841"
  **Доступные входные столбцы**  
  Используя флажки, укажите столбцы, которые должны быть сведены в строки.  
   
- **Название**  
+ **Имя**  
  Просмотрите имя доступного входного столбца.  
   
- **Сквозная передача**  
+ **Передать**  
  Укажите, следует ли включить этот столбец в выход с отмененным сведением.  
   
  **Входной столбец**  
@@ -61,8 +61,8 @@ ms.locfileid: "66054841"
   
  В сценарии отмены свертывания, описанном в разделе [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md), именем столбца значений ключа сведения является **Product** , оно обозначает новый столбец **Product** , в который осуществляется отмена свертывания столбцов **Ham**, **Soda**, **Milk**, **Beer**и **Chips** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [преобразование «Сведение»](data-flow/transformations/pivot-transformation.md)  
+ [Преобразование «Сведение»](data-flow/transformations/pivot-transformation.md)  
   
   

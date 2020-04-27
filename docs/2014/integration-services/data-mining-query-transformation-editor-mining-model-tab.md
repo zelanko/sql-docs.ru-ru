@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 88dbc58a205a87f1b4c2e187537eef9d9c493cf1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059771"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>Редактор преобразования «Запрос интеллектуального анализа данных» (вкладка «Модель интеллектуального анализа данных»)
@@ -39,8 +39,8 @@ ms.locfileid: "66059771"
  **Модели интеллектуального анализа данных**  
  Просмотрите список моделей интеллектуального анализа данных, связанных с выбранной структурой интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор преобразования «Запрос интеллектуального анализа данных» &#40;вкладка «запрос»&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
+ [Редактор преобразования "Запрос интеллектуального анализа данных" (вкладка "Запрос")](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
   
   

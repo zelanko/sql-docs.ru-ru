@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55a1a296e6a7b2a2155dea590be9321b22e73451
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067185"
 ---
 # <a name="configure-in-memory-or-directquery-access-for-a-tabular-model-database"></a>Настройка доступа в памяти или доступа DirectQuery для базы данных табличной модели
@@ -23,7 +23,7 @@ ms.locfileid: "66067185"
  Дополнительные сведения об этих свойствах и конфигурации для наиболее распространенных сценариев см. в статье [сценарии развертывания DirectQuery &#40;табличных&#41;SSAS ](../directquery-deployment-scenarios-ssas-tabular.md).  
   
 ## <a name="requirements"></a>Требования  
- Включение использования режима Direct Query — это многоступенчатый процесс. Необходимо следующее:  
+ Включение использования режима Direct Query — это многоступенчатый процесс. Необходимо сделать следующее:  
   
 1.  убедиться в том, что модель не имеет функций, которые могут вызвать ошибки при проверке в режиме Direct Query;  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66067185"
   
 3.  Нахождение свойства **DirectQueryMode**. Чтобы включить использование реляционного источника данных, это свойство должно иметь одно из следующих значений.  
   
-    -   **Режим**  
+    -   **DirectQuery**  
   
     -   **InMemoryWithDirectQuery**  
   

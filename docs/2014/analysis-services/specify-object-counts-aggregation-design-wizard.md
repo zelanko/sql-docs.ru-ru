@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d616997d3764aad42691d9ef3c213d553b5f311
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068311"
 ---
 # <a name="specify-object-counts-aggregation-design-wizard"></a>Определение счетчиков объектов (мастер статистических схем)
@@ -32,10 +32,10 @@ ms.locfileid: "66068311"
  **Число секций**  
  Введите оценочное число строк группы мер и оценочное число элементов атрибута в секциях (необязательно).  
   
- **Расчета**  
+ **Count**  
  Вычисляет и повторно заполняет значения в столбце **Оценочное число** для всех пустых полей. Поля, где уже отображаются оценочные числа, не обновляются.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 мастера статистических схем](aggregation-design-wizard-f1-help.md)   
  [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e889c4da9e20a547f5a512f4aab1ee823bde5f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056182"
 ---
 # <a name="script-task-editor-general-page"></a>Редактор задачи «Скрипт» (страница «Общие»)
@@ -27,7 +27,7 @@ ms.locfileid: "66056182"
  Дополнительные сведения о задаче «Скрипт» см. в разделах [Script Task](control-flow/script-task.md) и [Настройка задачи «Скрипт» в редакторе задачи «Скрипт»](extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Дополнительные сведения о программировании задачи «Скрипт» см. в разделе [Extending the Package with the Script Task](extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Задайте уникальное имя для задачи «Скрипт». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -36,7 +36,7 @@ ms.locfileid: "66056182"
  **Описание**  
  Введите описание задачи «Скрипт».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "Скрипт" &#40;страница "Скрипт"&#41;](../../2014/integration-services/script-task-editor-script-page.md)   
  [Страница "выражения"](expressions/expressions-page.md)   

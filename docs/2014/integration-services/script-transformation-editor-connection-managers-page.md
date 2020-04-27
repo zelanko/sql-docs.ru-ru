@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0090534872f0c2ae73e4047d30a6bcc0729b9d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056199"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>Редактор преобразования «Скрипт» (страница «Диспетчеры соединений»)
@@ -30,7 +30,7 @@ ms.locfileid: "66056199"
  **Диспетчеры соединений**  
  Просмотрите список соединений, доступных для использования скриптом.  
   
- **Название**  
+ **Имя**  
  Введите уникальное и описательное имя для соединения.  
   
  **Диспетчер соединений**  
@@ -45,7 +45,7 @@ ms.locfileid: "66056199"
  **Удалить**  
  Удалить выбранное соединение из списка **Диспетчеры соединений** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Выбор типа компонента скрипта](../../2014/integration-services/select-script-component-type.md)   
  [Редактор преобразования "Скрипт" &#40;страница "входные столбцы"&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   

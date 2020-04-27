@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc9f6c28e775cdbd21806172d7074e655fdd1545
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054821"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>Использование выражения в компоненте потока данных
@@ -64,7 +64,7 @@ ms.locfileid: "66054821"
     > [!NOTE]  
     >  Если выражение является недопустимым, появится предупреждение с описанием синтаксических ошибок данного выражения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выражения&#41; Integration Services &#40;SSIS](expressions/integration-services-ssis-expressions.md)   
  [Преобразование «Условное разбиение»](data-flow/transformations/conditional-split-transformation.md)   
  [Преобразование «Производный столбец»](data-flow/transformations/derived-column-transformation.md)   

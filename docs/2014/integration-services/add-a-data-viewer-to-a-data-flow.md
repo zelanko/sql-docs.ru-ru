@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbd45caac75d4fac3b5fffc305a9f359193191a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062086"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>Добавление средства просмотра данных к потоку данных
@@ -49,11 +49,11 @@ ms.locfileid: "66062086"
 9. В области «Отображаемые столбцы» выберите столбцы, которые нужно отображать в средстве просмотра данных. По умолчанию выбраны все доступные столбцы, их перечень содержится в списке **Отображенные столбцы** . Переместите ненужные столбцы в список **Неиспользуемые столбцы** . Для этого выберите их, а затем нажмите стрелку влево.  
   
     > [!NOTE]  
-    >  Значения типа данных DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 и DT_DBTIMESTAMPOFFSET отображаются в сетке как строки, форматированные по стандарту ISO 8601, а разделитель `T` заменяется пробелом. Значения типов данных DT_DATE и DT_FILETIME имеют семь разрядов для хранения долей секунды. Так как тип данных DT_FILETIME хранит доли секунды только в трех разрядах, в остальных четырех выводятся нули. Значения типа DT_DBTIMESTAMP имеют три разряда для хранения долей секунды. У типов данных DT_DBTIME2, DT_DBTIMESTAMP2 и DT_DBTIMESTAMPOFFSET число разрядов для долей секунды соответствует масштабу, указанному для типа данных столбца. Дополнительные сведения о форматах ISO 8601 см. в разделе [Date and Time Formats](../../2014/integration-services/date-and-time-formats.md). Дополнительные сведения о типах данных см. в разделе [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+    >  Значения типа данных DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 и DT_DBTIMESTAMPOFFSET отображаются в сетке как строки, форматированные по стандарту ISO 8601, а разделитель `T` заменяется пробелом. Значения типов данных DT_DATE и DT_FILETIME имеют семь разрядов для хранения долей секунды. Так как тип данных DT_FILETIME хранит доли секунды только в трех разрядах, в остальных четырех выводятся нули. Значения типа DT_DBTIMESTAMP имеют три разряда для хранения долей секунды. У типов данных DT_DBTIME2, DT_DBTIMESTAMP2 и DT_DBTIMESTAMPOFFSET число разрядов для долей секунды соответствует масштабу, указанному для типа данных столбца. Дополнительные сведения о форматах ISO 8601 см. в разделе [Date and Time Formats](../../2014/integration-services/date-and-time-formats.md). Дополнительные сведения о типах данных см. в разделе [типы данных Integration Services](data-flow/integration-services-data-types.md).  
   
 10. Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Преобразования Integration Services](data-flow/transformations/integration-services-transformations.md)   
  [Пути Integration Services](data-flow/integration-services-paths.md)   
  [Поток данных](data-flow/data-flow.md)   

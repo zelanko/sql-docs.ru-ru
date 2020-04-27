@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 38ebc261b8d1c5a2a134de7085c2e6f34a704b34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066290"
 ---
 # <a name="tabular-modeling-ssas-tabular"></a>Табличное моделирование (табличные службы SSAS)
@@ -24,10 +24,10 @@ ms.locfileid: "66066290"
   
  Табличные модели создаются в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с использованием новых шаблонов проекта табличной модели. Можно импортировать данные из нескольких источников, а затем дополнить модель, добавив связи, вычисляемые столбцы, меры, ключевые идентификаторы производительности и иерархии. Затем модели можно развернуть на экземпляре служб Analysis Services, где клиентские приложения отчетности могут подключаться к ним. Развернутыми моделями можно управлять в среде SQL Server Management Studio как многомерными моделями. Также они могут быть секционированы для оптимизации обработки и защиты на уровне строк с помощью безопасности на основе ролей.  
   
-## <a name="in-this-section"></a>в этом разделе  
- [Решения табличных моделей &#40;табличные&#41;SSAS](../tabular-model-solutions-ssas-tabular.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Решения табличных моделей (табличные службы SSAS)](../tabular-model-solutions-ssas-tabular.md)  
   
- [Табличные модели баз данных &#40;службы SSAS&#41;](tabular-model-databases-ssas-tabular.md)  
+ [Базы данных табличной модели (табличные службы SSAS)](tabular-model-databases-ssas-tabular.md)  
   
  [Доступ к данным табличной модели](tabular-model-data-access.md)  
   

@@ -16,17 +16,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0f48c3a6cebe079d93601f53698afafb350587e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057388"
 ---
 # <a name="numeric-data-formats"></a>Форматы числовых данных
   Быстрый синтаксический анализ предоставляет набор простых, не зависящих от локалей процедур синтаксического анализа данных. Он поддерживает только ограниченный набор форматов числовых типов данных.  
   
 ## <a name="integer-data-types"></a>Целочисленные типы данных  
- Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют следующие целочисленные типы данных: DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 и DT_UI8. Дополнительные сведения см. в разделе [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют следующие целочисленные типы данных: DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 и DT_UI8. Дополнительные сведения см. в разделе [типы данных Integration Services](data-flow/integration-services-data-types.md).  
   
  Быстрый синтаксический анализ поддерживает следующие форматы целочисленных типов данных:  
   

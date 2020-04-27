@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9dfc99a05b4da5d8ba5537529db4d25f6771038
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064548"
 ---
 # <a name="browse-data-source-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Обзор источника данных» (службы Analysis Services — многомерные данные)
@@ -28,7 +28,7 @@ ms.locfileid: "66064548"
  **Таблица источника данных**  
  Выводит первую тысячу записей из выбранной таблицы. Все данные доступны только для чтения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

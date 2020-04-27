@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 345e733e5c1e90f637efab02a9942e307c2fb9f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067379"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
   В этом разделе описаны типы источников данных, которые могут использоваться в табличной модели.  
   
- Эта статья состоит из следующих разделов.  
+ Эта статья состоит из следующих разделов:  
   
 -   [Поддерживаемые источники данных](#bkmk_supported_ds)  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66067379"
   
 -   [Советы по выбору источников данных](#bkmk_tips)  
   
-##  <a name="bkmk_supported_ds"></a>Поддерживаемые источники данных  
+##  <a name="supported-data-sources"></a><a name="bkmk_supported_ds"></a>Поддерживаемые источники данных  
  Данные можно импортировать из источников данных, перечисленных в следующей таблице. При установке среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]программа установки не устанавливает поставщиков, указанных для каждого из источников данных. Некоторые поставщики могут быть уже установлены в компьютер с другими приложениями, а в других случаях потребуется загрузить и установить необходимый поставщик.  
   
 |||||  
@@ -45,10 +45,10 @@ ms.locfileid: "66067379"
 |Другие реляционные базы данных|(неприменимо)|(неприменимо)|Поставщик OLE DB или драйвер ODBC|  
 |Текстовые файлы|(неприменимо)|TXT, TAB, CSV|Поставщик OLE DB ACE 14 для Microsoft Access|  
 |Файлы Microsoft Excel|Excel 97-2003, 2007, 2010|XLSX, XLSM, XLSB, XLTX, XLTM|Поставщик OLE DB для ACE 14|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]Microsoft|Службы Microsoft SQL Server 2008 R2 Analysis Services|XLSX, XLSM, XLSB, XLTX, XLTM|ASOLEDB 10.5<br /><br /> (используется только с книгами [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , опубликованными на фермах SharePoint с установленным [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] )|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книга|Службы Microsoft SQL Server 2008 R2 Analysis Services|XLSX, XLSM, XLSB, XLTX, XLTM|ASOLEDB 10.5<br /><br /> (используется только с книгами [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , опубликованными на фермах SharePoint с установленным [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] )|  
 |Куб служб Analysis Services|Службы Microsoft SQL Server 2005, 2008, 2008 R2 Analysis Services|(неприменимо)|ASOLEDB 10|  
 |Веб-каналы данных<br /><br /> (используются для импорта данных из отчетов служб Reporting Services, сервисных документов Atom, Microsoft Azure Marketplace DataMarket и одиночных веб-каналов данных)|Формат Atom 1.0<br /><br /> Любая база данных или документ, который предоставляется как служба данных Windows Communication Foundation (WCF) (ранее служба данных ADO.NET).|ATOMSVC для сервисного документа, определяющего один или несколько потоков<br /><br /> ATOM для документа веб-канала Atom|Поставщик веб-каналов данных Microsoft для [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Поставщик данных веб-каналов .NET Framework для [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
-|Файлы подключения к базе данных Office||.odc||  
+|Файлы подключения к базе данных Office||ODC||  
   
  <sup>1</sup> можно также использовать поставщик OLE DB для ODBC.  
   
@@ -58,12 +58,12 @@ ms.locfileid: "66067379"
   
  <sup>4</sup> в некоторых случаях использование поставщика MSDAORA OLE DB может привести к ошибкам подключения, особенно с более новыми версиями Oracle. Если возникают ошибки, рекомендуется использовать один из других поставщиков для Oracle.  
   
-##  <a name="bkmk_unsupported_ds"></a>Неподдерживаемые источники  
+##  <a name="unsupported-sources"></a><a name="bkmk_unsupported_ds"></a>Неподдерживаемые источники  
  В данной версии не поддерживается следующий тип источников данных.  
   
 -   Нельзя импортировать серверные документы, например базы данных Access, уже опубликованные в SharePoint.  
   
-##  <a name="bkmk_tips"></a>Советы по выбору источников данных  
+##  <a name="tips-for-choosing-data-sources"></a><a name="bkmk_tips"></a>Советы по выбору источников данных  
   
 1.  Импорт таблиц из реляционных баз данных сокращает число операций, поскольку при импорте для создания связей между таблицами в конструкторе моделей по *внешнему ключу* .  
   
@@ -73,8 +73,8 @@ ms.locfileid: "66067379"
   
 4.  Поставщики OLE DB иногда обеспечивают повышенную производительность для данных большого объема. Если нужно выбрать один из нескольких поставщиков, подходящих для некоторого источника данных, вначале следует проверить работу поставщика OLE DB.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Источники данных &#40;табличные&#41;SSAS](../data-sources-ssas-tabular.md)   
- [Импорт данных &#40;табличные&#41;SSAS](../import-data-ssas-tabular.md)  
+ [Импорт данных (табличные службы SSAS)](../import-data-ssas-tabular.md)  
   
   

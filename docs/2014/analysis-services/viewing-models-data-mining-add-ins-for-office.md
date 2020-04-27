@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9fbd8b24b490123c337c9f7510899da12bcae749
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065530"
 ---
 # <a name="viewing-models-data-mining-add-ins-for-office"></a>Просмотр моделей (надстройки интеллектуального анализа данных для Office)
@@ -37,7 +37,7 @@ ms.locfileid: "66065530"
   
      [Документирование моделей интеллектуального анализа &#40;надстройки интеллектуального анализа данных для Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [&#40;запросов SQL Server надстройки интеллектуального анализа данных&#41;](query-sql-server-data-mining-add-ins.md)  
   
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30163b4d65ac6a732efb3f7c67a018f433a42ac0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056448"
 ---
 # <a name="row-sampling-transformation-editor-sampling-page"></a>Редактор преобразования «Выборка строк» (страница выборки)
@@ -28,7 +28,7 @@ ms.locfileid: "66056448"
  Дополнительные сведения о преобразовании «Выборка строк» см. в разделе [Row Sampling Transformation](data-flow/transformations/row-sampling-transformation.md).  
   
 ## <a name="options"></a>Параметры  
- **Количество строк**  
+ **Число строк**  
  Задайте количество строк из входных данных для использования в качестве выборки.  
   
  Значение этого свойства можно задать с помощью выражения свойства.  
@@ -42,7 +42,7 @@ ms.locfileid: "66056448"
  **Использовать следующее начальное значение**  
  Задайте начальное значение выборки для генератора случайных чисел, который преобразование использует для создания выборки. Рекомендуется только для разработки и тестирования. Если начальное значение выборки не задано, преобразование использует счетчик сигналов времени Microsoft Windows.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [преобразование «Процентная выборка»](data-flow/transformations/percentage-sampling-transformation.md)  
   

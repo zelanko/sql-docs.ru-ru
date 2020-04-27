@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 50a054bbe83c7873d1da93909bc57331fcf4a635
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055862"
 ---
 # <a name="send-mail-task-editor-general-page"></a>Редактор задачи «Отправка почты» (страница «Общие»)
@@ -27,15 +27,15 @@ ms.locfileid: "66055862"
  Дополнительные сведения об этой задаче см. в разделе [Send Mail Task](control-flow/send-mail-task.md).  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Укажите уникальное имя для задачи «Отправка почты». Это имя используется в качестве метки для значка задачи.  
   
- **Примечание** . Имена задач должны быть уникальными в пределах пакета.  
+ **Примечание.** Имена задач должны быть уникальными в пределах пакета.  
   
  **Описание**  
  Введите описание задачи «Отправка почты».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "Отправка почты" &#40;страницу почты&#41;](../../2014/integration-services/send-mail-task-editor-mail-page.md)   
  [Страница «Выражения»](expressions/expressions-page.md)  

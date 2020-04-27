@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b67b5eaf0d6927a0ed009498fd1b81c3aabd3354
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061141"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>Редактор задачи «Массовая вставка» (страница «Общие»)
@@ -27,7 +27,7 @@ ms.locfileid: "66061141"
  Дополнительные сведения об этой задаче см. в разделе [Bulk Insert Task](control-flow/bulk-insert-task.md).  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Задайте уникальное имя задачи «Массовая вставка». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -36,7 +36,7 @@ ms.locfileid: "66061141"
  **Описание**  
  Введите описание задачи «Массовая вставка».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "Вставка в &#40;"&#41;страницу "соединение"](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
  [Редактор задачи "операции с массовыми вставками" &#40;параметры&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   

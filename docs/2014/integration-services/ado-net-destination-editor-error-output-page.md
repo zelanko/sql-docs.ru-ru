@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061768"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>Редактор назначения «ADO.NET» (страница «Вывод ошибок»)
@@ -24,7 +24,7 @@ ms.locfileid: "66061768"
   
  Дополнительные сведения о назначении «ADO.NET» см. в разделе [ADO NET Destination](data-flow/ado-net-destination.md).  
   
- **Открытие страницы «вывод ошибок»**  
+ **Открытие страницы «Вывод ошибок»**  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте пакет [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий назначение «ADO.NET».  
   
@@ -36,10 +36,10 @@ ms.locfileid: "66061768"
  **Вход или выход**  
  Просмотрите имя входных данных.  
   
- **Столбец**  
+ **Рубрик**  
  Не используется.  
   
- **Ошибка**  
+ **Error**  
  Задайте действие, которое необходимо выполнить при возникновении ошибки: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
  **См. также:** [Обработка ошибок в данных](data-flow/error-handling-in-data.md)  
@@ -50,14 +50,14 @@ ms.locfileid: "66061768"
  **Описание**  
  Просмотрите описание операции.  
   
- **Присвоить это значение выбранным ячейкам**  
+ **Присвоить указанное значение выбранным ячейкам**  
  Укажите действие, которое необходимо применить ко всем выбранным ячейкам при возникновении ошибки или усечения: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор назначения «ADO NET» &#40;«диспетчер соединений»&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [Редактор назначения «ADO NET» &#40;«сопоставления»&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
+ [Редактор назначения ADO.NET (страница "Сопоставления")](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   
   

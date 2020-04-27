@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b62fb5e33311f1011911c40fc858723b218bac55
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054833"
 ---
 # <a name="union-all-transformation-editor"></a>редактор преобразования «Объединить все»
@@ -36,7 +36,7 @@ ms.locfileid: "66054833"
  **Вход n преобразования «Объединить все»**  
  Выберите из списка доступных входных столбцов во втором и дополнительных входных параметрах. Метаданные сопоставляемых столбцов должны совпадать.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Объединение данных с помощью преобразования «объединить все»](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
  [Преобразование «Слияние»](data-flow/transformations/merge-transformation.md)   

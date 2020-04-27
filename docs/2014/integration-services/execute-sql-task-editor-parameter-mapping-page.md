@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7508324be0bef23ba0590bb181135512d75701e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059042"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>Редактор задачи «Выполнение SQL» (страница «Сопоставление параметров»)
@@ -30,9 +30,9 @@ ms.locfileid: "66059042"
  **Имя переменной**  
  После добавления сопоставления параметров нажатием кнопки **Добавить** выберите системную или пользовательскую переменную в списке или щелкните \<**Создать переменную...**> для добавления новой переменной с помощью диалогового окна **Добавление переменной**.  
   
- **См. также:** [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md)  
+ **См. также:** [Переменные в службах Integration Services](integration-services-ssis-variables.md)  
   
- **Двух**  
+ **Направление**  
  Выбор направления для параметра. Сопоставьте каждую переменную с входным параметром, выходным параметром или кодом возврата.  
   
  **Тип данных**  
@@ -43,7 +43,7 @@ ms.locfileid: "66059042"
   
  В зависимости от типа диспетчера соединений, используемого задачей, необходимо использовать числа или имена параметра. Для некоторых типов диспетчеров соединений требуется, чтобы в качестве первого символа имени параметра использовался символ \@, а в качестве имен параметров использовались определенные имена, например \@Param1, или имена столбцов.  
   
- **См. также:** [Параметры и коды возврата в задаче «Выполнение SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md) »  
+ **См. также:** [Параметры и коды возврата в задаче "Выполнение SQL"](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)  
   
  **Размер параметра**  
  Укажите размер для параметров, имеющих переменную длину, например, строк и двоичных полей.  
@@ -56,10 +56,10 @@ ms.locfileid: "66059042"
  **Удалить**  
  Выберите сопоставление параметра из списка, затем нажмите **Удалить**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи «Выполнение SQL» &#40;страница «Общие»&#41;](general-page-of-integration-services-designers-options.md)   
  [Редактор задачи "Выполнение SQL" &#40;страница "результирующий набор"&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   
- [Справочник по Transact-SQL &#40;ядро СУБД&#41;](/sql/t-sql/language-reference)  
+ [Справочник по Transact-SQL (компонент Database Engine)](/sql/t-sql/language-reference)  
   
   

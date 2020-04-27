@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057229"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>Редактор назначения ODBC (страница «Сопоставления»)
@@ -38,8 +38,8 @@ ms.locfileid: "66057229"
 ### <a name="destination-column"></a>Целевой столбец  
  Просмотрите все доступные целевые столбцы, сопоставленные и несопоставленные.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор назначения ODBC &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
- [Редактор назначения ODBC &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
+ [Редактор назначения ODBC (страница "Вывод ошибок")](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   
   

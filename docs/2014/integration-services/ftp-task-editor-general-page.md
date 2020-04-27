@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058431"
 ---
 # <a name="ftp-task-editor-general-page"></a>Редактор задачи «FTP» (страница «Общие»)
@@ -27,18 +27,18 @@ ms.locfileid: "66058431"
  Дополнительные сведения об этой задаче см. в разделе [Задача FTP](control-flow/ftp-task.md).  
   
 ## <a name="options"></a>Параметры  
- **фтпконнектион**  
- Выберите существующий диспетчер подключений FTP или щелкните \<**Создать соединение...**>, чтобы создать его.  
+ **FtpConnection**  
+ Выберите существующий диспетчер FTP-соединений или нажмите кнопку \< **создать соединение...**>, чтобы создать диспетчер соединений.  
   
 > [!IMPORTANT]  
 >  Диспетчер FTP-соединений поддерживает только анонимную проверку подлинности и обычную проверку подлинности. Проверка подлинности Windows не поддерживается.  
   
- **См. также**: [Диспетчер FTP-соединений](connection-manager/ftp-connection-manager.md), [Редактор диспетчера FTP-сеансов](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **См. также**: [FTP Connection Manager](connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
- **стопонфаилуре**  
+ **StopOnFailure**  
  Укажите, следует ли завершить задачу «FTP» в случае ошибки операции с FTP.  
   
- **Название**  
+ **Имя**  
  Задайте уникальное имя задачи «FTP». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -47,7 +47,7 @@ ms.locfileid: "66058431"
  **Описание**  
  Введите описание задачи «FTP».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "FTP" &#40;страницу "перенос файлов"&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
  [Страница «Выражения»](expressions/expressions-page.md)  

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97268dac1fef029bc35ff702ace0d422ee296d65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065500"
 ---
 # <a name="validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel"></a>Проверка моделей и использование моделей для прогнозирования (надстройки интеллектуального анализа данных для Excel)
@@ -63,7 +63,7 @@ ms.locfileid: "66065500"
   
  [Расширенный редактор запросов интеллектуального анализа данных](advanced-data-mining-query-editor.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Изучение и очистка данных](exploring-and-cleaning-data.md)   
  [Создание модели интеллектуального анализа данных](creating-a-data-mining-model.md)   
  [Развертывание и масштабирование моделей интеллектуального анализа &#40;надстройки интеллектуального анализа данных для Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  

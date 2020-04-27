@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062219"
 ---
 # <a name="active-operations-dialog-box"></a>Диалоговое окно «Активные операции»
@@ -25,13 +25,13 @@ ms.locfileid: "66062219"
   
  Дополнительные сведения о связанных представлениях [!INCLUDE[tsql](../includes/tsql-md.md)] см. в разделах [catalog.operations (база данных SSISDB)](/sql/integration-services/system-views/catalog-operations-ssisdb-database), [catalog.validations (база данных SSISDB)](/sql/integration-services/system-views/catalog-validations-ssisdb-database) и [catalog.executions (база данных SSISDB)](/sql/integration-services/system-views/catalog-executions-ssisdb-database).  
   
- **Что необходимо сделать?**  
+ **Выбор действия**  
   
-1.  [Открытие диалогового окна «активные операции»](#open_dialog)  
+1.  [Открытие диалогового окна «Активные операции»](#open_dialog)  
   
 2.  [Настройка параметров](#options)  
   
-##  <a name="open_dialog"></a>Открытие диалогового окна «активные операции»  
+##  <a name="open-the-active-operations-dialog-box"></a><a name="open_dialog"></a>Открытие диалогового окна «активные операции»  
   
 1.  Откройте среду [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
@@ -39,10 +39,10 @@ ms.locfileid: "66062219"
   
 3.  В обозревателе объектов разверните узел **Службы Integration Services** , щелкните правой кнопкой мыши элемент **SSISDB**и выберите пункт **Активные операции**.  
   
-##  <a name="options"></a>Настройка параметров  
+##  <a name="configure-the-options"></a><a name="options"></a>Настройка параметров  
   
 ### <a name="options"></a>Параметры  
- **Тип**  
+ **Type**  
  Задает тип операции. Ниже приведены возможные значения для поля **Type** и соответствующие значения в столбце Operations_type представления TRANSACT-SQL `catalog.operations` .  
   
 |||  
@@ -58,7 +58,7 @@ ms.locfileid: "66062219"
 |Проверить пакет|301|  
 |Настроить каталог|1000|  
   
- **Позиции**  
+ **Остановить**  
  Щелкните, чтобы остановить выполняемую в настоящий момент операцию.  
   
   

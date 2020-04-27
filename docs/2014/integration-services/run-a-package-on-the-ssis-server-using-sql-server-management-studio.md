@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a598030000e5764cecc8ababa75ef2bdd8598ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056380"
 ---
 # <a name="run-a-package-on-the-ssis-server-using-sql-server-management-studio"></a>Выполнение пакета на сервере служб SSIS с использованием среды SQL Server Management Studio
@@ -30,9 +30,9 @@ ms.locfileid: "66056380"
   
 3.  Щелкните имя пакета правой кнопкой мыши и выберите команду **Выполнить**.  
   
-4.  Настройте выполнение пакета с помощью параметров на вкладках **Параметры**, **Диспетчеры соединений**и **Расширенные** диалогового окна **Выполнение пакета** .  
+4.  Настройте выполнение пакета с помощью параметров на вкладках **Параметры**, **Диспетчеры соединений**и **Дополнительно** в диалоговом окне **выполнение пакета** .  
   
-5.  Нажмите кнопку **ОК** , чтобы выполнить пакет.  
+5.  Нажмите кнопку **ОК** , чтобы запустить пакет.  
   
      -или-  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 431e01df40ab3a531af21977b85253d84768118f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059750"
 ---
 # <a name="data-mining-query-transformation-editor-query-tab"></a>Редактор преобразования «Запрос интеллектуального анализа данных» (вкладка «Запрос»)
@@ -33,8 +33,8 @@ ms.locfileid: "66059750"
  **Создать новый запрос**  
  Щелкните **Создать новый запрос** для создания запроса расширения интеллектуального анализа данных, используя графический построитель запросов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор преобразования «Запрос интеллектуального анализа данных» &#40;вкладку «модель интеллектуального анализа»&#41;](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
+ [Редактор преобразования "Запрос интеллектуального анализа данных" (вкладка "Модель интеллектуального анализа данных")](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
   
   

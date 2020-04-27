@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 403100ddfbd78609ac0d98dd3ee387d2ecdeec61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059900"
 ---
 # <a name="data-flow-tab"></a>Вкладка «Поток данных»
@@ -34,7 +34,7 @@ ms.locfileid: "66059900"
   
  Чтобы добавить эти функции в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , щелкните правой кнопкой мыши область конструктора, а затем выберите желаемый параметр.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пути Integration Services](data-flow/integration-services-paths.md)   
  [Задача потока данных](control-flow/data-flow-task.md)   
  [Конструктор служб SSIS](ssis-designer.md)   

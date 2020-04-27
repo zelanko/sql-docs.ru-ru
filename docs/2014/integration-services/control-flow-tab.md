@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd46efd60d81134f04a6bbc44e47c1fe8b5f342e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060354"
 ---
 # <a name="control-flow-tab"></a>Вкладка «Поток управления»
@@ -40,7 +40,7 @@ ms.locfileid: "66060354"
   
  Чтобы добавить эти функции к отдельным задачам или контейнерам в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , щелкните правой кнопкой мыши объект в области конструктора и выберите параметр.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление очередностью](control-flow/precedence-constraints.md)   
  [Конструктор служб SSIS](ssis-designer.md)   
  [Поток управления](control-flow/control-flow.md)  

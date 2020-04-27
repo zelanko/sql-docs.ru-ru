@@ -19,13 +19,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c41edcfc545e69e6e8174003ca765a4c2f1d551b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064433"
 ---
-# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Учебник. Выполнение политик рекомендаций с помощью управления на основе политик
+# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Руководство по Выполнение политик рекомендаций с помощью управления на основе политик
   Добро пожаловать в учебник по выполнению рекомендаций с помощью управления на основе политик. Этот учебник предназначен для пользователей, имеющих представление о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], но незнакомых с управлением на основе политик. Управление на основе политик — это система определения политик, которые можно использовать для обеспечения принудительного выполнения стандартов администрирования. Управление на основе политик подразумевает использование набора рекомендуемых политик, которые могут быть использованы для анализа экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и дают возможность определить, соответствует ли он советам и рекомендациям.  
   
 ## <a name="what-you-will-learn"></a>Обзор учебника  
@@ -36,7 +36,7 @@ ms.locfileid: "66064433"
  [Урок 1. Выполнение политик рекомендаций по запросу](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
  На этом занятии будет выполнено выполнение по запросу рекомендованных политик на одном или нескольких экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [Занятие 2. Выполнение политик рекомендаций по расписанию](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Урок 2. Выполнение политик рекомендаций по расписанию](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
  На этом занятии будет выполнена настройка рекомендованных политик для запуска по расписанию. Занятие показывает, как произвести настройку запланированных политик на единственном экземпляре и развернуть запланированные политики из центрального местоположения на нескольких экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="requirements"></a>Требования  
@@ -47,7 +47,7 @@ ms.locfileid: "66064433"
 ## <a name="start-the-tutorial"></a>Приступить к изучению  
  [Урок 1. Выполнение политик рекомендаций по запросу](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Администрирование серверов с помощью управления на основе политик](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a88e2c1508ec849437d90b3de7c66705299dafc1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068884"
 ---
 # <a name="memory-properties"></a>Свойства памяти
@@ -57,7 +57,7 @@ ms.locfileid: "66068884"
   
  Нуль (**0**) отключает механизм подкачки страниц. При недостатке памяти обработка прерывается с ошибкой нехватки памяти. Если подкачка запрещена, вы должны предоставить права доступа Windows учетной записи службы. Инструкции см. в разделе [Настройка учетных записей служб (службы Analysis Services)](../instances/configure-service-accounts-analysis-services.md).  
   
- значение по умолчанию — **1** . Данное свойство разрешает подкачку на диск с использованием файла подкачки операционной системы (pagefile.sys).  
+ По умолчанию —**1** . Данное свойство разрешает подкачку на диск с использованием файла подкачки операционной системы (pagefile.sys).  
   
  Если свойство `VertiPaqPagingPolicy` имеет значение 1, то ошибки обработки вследствие ограничений памяти менее вероятны, поскольку сервер использует подкачку на диск по указанному методу. Установка свойства `VertiPaqPagingPolicy` не гарантирует полное отсутствие ошибок памяти. Ошибки нехватки памяти по-прежнему могут возникать при следующих условиях.  
   
@@ -110,8 +110,8 @@ ms.locfileid: "66068884"
  `WaitCountIfHighMemory`  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка свойств сервера в Analysis Services](server-properties-in-analysis-services.md)   
- [Определение режима работы сервера для экземпляра Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Определение режима работы сервера экземпляра служб Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

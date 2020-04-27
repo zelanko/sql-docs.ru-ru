@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5b38fdc684cce71e0910a8a576180ece3e48f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068139"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>Определение типов таблиц (мастер интеллектуального анализа данных)
@@ -25,10 +25,10 @@ ms.locfileid: "66068139"
 > [!NOTE]  
 >  Таблицы можно добавлять позже на вкладке **Структура интеллектуального анализа данных** в окне **Конструктор интеллектуального анализа данных**.  
   
- **Дополнительные сведения:** [вложенные таблицы &#40;Analysis Services —&#41;интеллектуального ](data-mining/nested-tables-analysis-services-data-mining.md)анализа данных, [&#40;Analysis Services — интеллектуальный ](data-mining/data-mining-wizard-analysis-services-data-mining.md)анализ данных, [Создание реляционной структуры интеллектуального анализа](data-mining/create-a-relational-mining-structure.md)  
+ **Дополнительные сведения:** [Вложенные таблицы (службы Analysis Services — интеллектуальный анализ данных)](data-mining/nested-tables-analysis-services-data-mining.md), [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-wizard-analysis-services-data-mining.md) и [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md).  
   
 ## <a name="options"></a>Параметры  
- **Таблице**  
+ **Таблицы**  
  Отображает таблицы в представлении источника данных, выбранном на странице **Выбор представления источников данных** данного мастера.  
   
  **Ситуации**  
@@ -40,7 +40,7 @@ ms.locfileid: "66068139"
 > [!NOTE]  
 >  У этих таблиц должна быть связь «многие к одному» с таблицей вариантов, а не «один-ко-многим». Необходимо определить эту связь в представлении источника данных, прежде чем можно будет выбрать таблицу в качестве вложенной.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 мастера интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Выберите представление источника данных &#40;мастер интеллектуального анализа данных&#41;](select-data-source-view-data-mining-wizard.md)   
  [Укажите обучающие данные &#40;мастер интеллектуального анализа данных&#41;](specify-the-training-data-data-mining-wizard.md)  

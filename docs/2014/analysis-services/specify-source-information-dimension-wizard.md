@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30234275a724dddce95cdad66e5e37a382a25e62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068181"
 ---
 # <a name="specify-source-information-dimension-wizard"></a>Определение исходных сведений (мастер измерений)
@@ -42,7 +42,7 @@ ms.locfileid: "66068181"
  **Столбец имени**  
  Выберите столбец, содержащий имена членов для данного измерения, из таблицы, указанной в поле **Основная таблица** . Необходимо указать столбец имени, прежде чем составной ключ будет доступен для использования. Чтобы создать столбец имени для составного ключа, рекомендуется создать именованное вычисление в представлении источника данных, объединяющем указанные ключевые столбцы. Если используется единственный ключ, то столбец имени необязателен.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 мастера измерений](dimension-wizard-f1-help.md)   
  [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  

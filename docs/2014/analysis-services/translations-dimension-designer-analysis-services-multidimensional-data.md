@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7d879ffb8f02b41c4cc6c070946c737f9aea2c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065730"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>Переводы (конструктор измерений) (службы Analysis Services — многомерные данные)
@@ -25,13 +25,13 @@ ms.locfileid: "66065730"
 ## <a name="panes"></a>Панели  
  Вкладка **Переводы** содержит следующие панели.  
   
- [Панель инструментов](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Панелей](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
  Используйте панель инструментов для выполнения типовых действий на вкладке **Переводы** конструктора измерений.  
   
  [Сведения о переводе](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
  Используйте панель **Сведения о переводе** , чтобы просматривать переводы, связанные с измерением, и управлять ими.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конструктор измерений &#40;Analysis Services многомерных данных&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
  [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)   

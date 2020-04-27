@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058488"
 ---
 # <a name="ftp-connection-manager-editor"></a>редактор диспетчера FTP-сеансов
@@ -48,7 +48,7 @@ ms.locfileid: "66058488"
  **Использовать пассивный режим**  
  Позволяет указать сторону, инициирующую соединение, — сервер или клиент. В активном режиме соединение инициируется сервером, а в пассивном режиме — клиентом. По умолчанию, установлен **активный режим**.  
   
- **Повторных попыток**  
+ **Повторы**  
  Позволяет задать число попыток соединения, осуществляемых задачей. Значение **0** указывает на отсутствие ограничений на число попыток.  
   
  **Размер фрагмента данных (КБ)**  
@@ -57,7 +57,7 @@ ms.locfileid: "66058488"
  **Проверить подключение**  
  После настройки диспетчера FTP-соединений следует проверить доступность подключения, нажав кнопку **Проверить соединение**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

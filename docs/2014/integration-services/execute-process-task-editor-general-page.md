@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 743f8d8930652deadf3698ea16440b3361ae1789
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059064"
 ---
 # <a name="execute-process-task-editor-general-page"></a>Редактор задачи «Выполнение процесса» (страница «Общие»)
@@ -27,7 +27,7 @@ ms.locfileid: "66059064"
  Дополнительные сведения об этой задаче см. в разделе [Execute Process Task](control-flow/execute-process-task.md).  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Введите уникальное имя для задачи "Выполнение процесса". Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -36,7 +36,7 @@ ms.locfileid: "66059064"
  **Описание**  
  Введите описание задачи "Выполнение процесса".  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "выполнение процесса" &#40;страницу процесса&#41;](../../2014/integration-services/execute-process-task-editor-process-page.md)   
  [Страница «Выражения»](expressions/expressions-page.md)  

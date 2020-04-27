@@ -39,17 +39,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069030"
 ---
 # <a name="general-properties"></a>Общие свойства
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера, перечисленные в следующих таблицах. В этом разделе описываются свойства сервера из файла msmdsrv.ini, которые не отнесены к тому или иному определенному разделу, например Security (безопасность), Network (сеть) или ThreadPool (пул потоков). Дополнительные сведения о дополнительных свойствах сервера и об их настройке см. в разделе [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Применимо к:** Режим многомерных и табличных серверов, если не указано иное  
+ **Область применения:** многомерный или табличный режим сервера, если не указано иное.  
   
 ## <a name="non-specific-category"></a>Общая категория  
  `AdminTimeout`  
@@ -100,7 +99,7 @@ ms.locfileid: "66069030"
   
  Ниже приведены допустимые значения для этого свойства.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |0|Это значение по умолчанию. Оно задает многомерный режим, используемый для обслуживания многомерных баз данных с хранилищем MOLAP, HOLAP и ROLAP, а также с моделями интеллектуального анализа данных.|  
 |1|Указывает экземпляры служб Analysis Service, установленные в составе развертывания PowerPivot для SharePoint. Не следует изменять свойство режима развертывания экземпляра служб Analysis Services, который входит в состав установки PowerPivot для SharePoint. Если изменить режим, данные PowerPivot больше не будут выполняться на сервере.|  
@@ -112,12 +111,12 @@ ms.locfileid: "66069030"
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  `ExternalCommandTimeout`  
- Целочисленное свойство, определяющее время ожидания в секундах для команд, выданных внешним серверам, включая реляционные источники данных и внешние серверы служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Целочисленное свойство, определяющее время ожидания в секундах для команд, выданных внешним серверам, включая реляционные источники данных и внешние серверы служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  Значение данного свойства по умолчанию составляет 3600 (секунд).  
   
  `ExternalConnectionTimeout`  
- Целочисленное свойство, определяющее время ожидания в секундах для создания соединений с внешними серверами, включая реляционные источники данных и внешние серверы служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Это свойство не учитывается, если в строке подключения указано время ожидания соединения.  
+ Целочисленное свойство, определяющее время ожидания в секундах для создания соединений с внешними серверами, включая реляционные источники данных и внешние серверы служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Это свойство не учитывается, если в строке подключения указано время ожидания соединения.  
   
  Значение данного свойства по умолчанию составляет 60 (секунд).  
   
@@ -132,8 +131,7 @@ ms.locfileid: "66069030"
  Дополнительные сведения об этом свойстве см. в [Руководстве по использованию служб SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
 > [!IMPORTANT]  
->  
-  `ForceCommitTimeout` применяется к командам обработки куба и операциям обратной записи.  
+>  `ForceCommitTimeout` применяется к командам обработки куба и операциям обратной записи.  
   
  `IdleConnectionTimeout`  
  Целочисленное свойство, задающее время ожидания в секундах для неактивных соединений.  
@@ -178,8 +176,8 @@ ms.locfileid: "66069030"
  `StatisticsStoreSize`  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка свойств сервера в Analysis Services](server-properties-in-analysis-services.md)   
- [Определение режима работы сервера для экземпляра Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Определение режима работы сервера экземпляра служб Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

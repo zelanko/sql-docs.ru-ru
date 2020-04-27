@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15a86cc55e67b2000eabee62d02fa04de4874f59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062304"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>Мастер взаимосвязей (клиент интеллектуального анализа данных для Excel)
@@ -97,7 +97,7 @@ ms.locfileid: "66062304"
   
  Источник данных должен быть отсортирован по столбцу идентификатора транзакций.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание модели интеллектуального анализа данных](creating-a-data-mining-model.md)   
  [Просмотр модели правил взаимосвязей](browsing-an-association-rules-model.md)   
  [Анализ покупательской корзины &#40;таблицу Аналисистулс для Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)   

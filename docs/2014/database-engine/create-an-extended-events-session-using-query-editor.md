@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065033"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>Создание сеанса расширенных событий с помощью редактора запросов
@@ -35,7 +35,7 @@ ms.locfileid: "66065033"
   
  Сведения о создании сеанса расширенных событий с помощью мастера новых сеансов см. в статье [Создание сеанса расширенных событий с помощью пользовательского интерфейса нового сеанса (обозреватель объектов)](../ssms/object/object-explorer.md). Сведения о создании сеанса расширенных событий с помощью мастера новых сеансов см. в статье [Создание сеанса расширенных событий с помощью диалогового окна "Создание сеанса"](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md).  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permissions  
  Для создания сеанса расширенных событий требуется разрешение ALTER ANY EVENT SESSION.  
   
 ## <a name="creating-an-extended-events-session-using-query-editor"></a>Создание сеанса расширенных событий с помощью редактора запросов  
@@ -218,9 +218,9 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename = 'c:\temp\xelog.xel', metadatafile = 'c:\temp\xelog.xem')  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql)   
- [Цели расширенных событий SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
+## <a name="see-also"></a>См. также  
+ [Создание сеанса событий &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [SQL Serverные цели расширенных событий](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [Пакеты обработки расширенных событий SQL Server](../relational-databases/extended-events/sql-server-extended-events-packages.md)  
   
   

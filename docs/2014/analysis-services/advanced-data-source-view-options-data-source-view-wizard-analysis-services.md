@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40a1c9ab87a608aa9d39f77fb4693acdc1b57efa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062845"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>Диалоговое окно «Расширенные параметры представления источников данных» (мастер представлений источников данных) (службы Analysis Services)
@@ -31,7 +31,7 @@ ms.locfileid: "66062845"
  **Ограничить схемами**  
  Используется, чтобы указать список схем, извлекаемых из источника данных. Имена схем в списке разделяются запятыми. Если в этом параметре не указаны никакие имена схем, на используемые схемы не накладывается никаких ограничений.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Источники данных в многомерных моделях](multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Поддерживаемые источники данных &#40;многомерные&#41;SSAS](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   

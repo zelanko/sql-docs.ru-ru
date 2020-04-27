@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67c2def091fe6e1282e00c65c23e8d98544e970f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062896"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>Действия (конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте вкладку **Действия** в конструкторе кубов для просмотра и редактирования действий, включая действия для детализации и действия с отчетом, для выбранного куба.  
   
 ## <a name="panes"></a>Панели  
- **Панель инструментов**  
+ **Панелей**  
  Используйте панель инструментов для выполнения общих действий на этой вкладке. Дополнительные сведения об этой панели см. в разделе [панель инструментов &#40;действия, конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Организатор действий**  
@@ -41,7 +41,7 @@ ms.locfileid: "66062896"
  **Редактор форм действий отчетов**  
  Используйте панель **Редактор форм действий отчетов** в виде формы для редактирования действий с отчетами, содержащимися в кубе. Дополнительные сведения об этой панели см. в разделе [Report Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Действия &#40;Analysis Services многомерных данных&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Основные принципы создания скриптов многомерных выражений &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Панель инструментов &#40;вкладка "действия" конструктора кубов&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   

@@ -11,19 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 316263c823c371d4c90415d694adcadef26f2030
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065941"
 ---
 # <a name="toolbar-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Панель инструментов (вкладка «Переводы», конструктор кубов) (службы Analysis Services — многомерные данные)
-  
   **Панель инструментов** на вкладке **Переводы** конструктор кубов предназначена для выполнения наиболее часто встречающихся операций.  
   
 ## <a name="options"></a>Параметры  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**Добавить бизнес-аналитику**|Нажмите, чтобы открыть **мастер бизнес-аналитики** и добавить функции бизнес-аналитики в куб.|  
 |**Процесс**|Нажмите, чтобы открыть диалоговое окно **Обработка** и обработать выбранный куб.|  

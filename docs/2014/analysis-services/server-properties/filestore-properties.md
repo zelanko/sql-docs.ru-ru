@@ -25,16 +25,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe11b7a9cda6b3e75cb97faa17a381e2b0ea1afe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069089"
 ---
 # <a name="filestore-properties"></a>свойства хранилища файлов
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]поддерживает свойства сервера хранилища файлов, перечисленные в следующих таблицах. Эти дополнительные свойства следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Дополнительные сведения о дополнительных свойствах сервера и об их настройке см. в разделе [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера хранилища файлов, перечисленные в следующих таблицах. Эти дополнительные свойства следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Дополнительные сведения о дополнительных свойствах сервера и об их настройке см. в разделе [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Применимо к:** Режим многомерных и табличных серверов  
+ **Область применения:** многомерный и табличный режим сервера  
   
 ## <a name="properties"></a>Свойства  
  `MemoryLimit`  
@@ -77,8 +77,8 @@ ms.locfileid: "66069089"
  `MemoryModel\InitialBonus`  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка свойств сервера в Analysis Services](server-properties-in-analysis-services.md)   
- [Определение режима работы сервера для экземпляра Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Определение режима работы сервера экземпляра служб Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

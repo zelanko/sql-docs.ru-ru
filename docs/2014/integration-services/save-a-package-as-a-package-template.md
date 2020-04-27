@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76349c0ca91f24a6d8d7942a89eb9683a91b573d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056342"
 ---
 # <a name="save-a-package-as-a-package-template"></a>Сохранение пакета в качестве шаблона пакета
@@ -41,14 +41,14 @@ ms.locfileid: "66056342"
   
 2.  В обозревателе решений щелкните проект правой кнопкой мыши, укажите **Добавить** и выберите **Новый элемент**.  
   
-3.  В диалоговом окне **Добавление нового элемента — \<имя проекта>** щелкните пакет, который нужно использовать в качестве шаблона.  
+3.  В диалоговом окне **Добавление нового\<элемента — имя проекта>** выберите пакет, который нужно использовать в качестве шаблона.  
   
      Список шаблонов включает шаблон пакетов по умолчанию с именем «Новый пакет служб SSIS». Значок пакета определяет шаблоны, которые можно использовать в качестве шаблонов пакетов.  
   
 4.  Нажмите кнопку **Добавить**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание пакетов в SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)   
- [Integration Services &#40;пакетов&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)  
+ [Пакеты служб Integration Services (SSIS)](../../2014/integration-services/integration-services-ssis-packages.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: baf3349bc72a6d6baff4defd9a9cd4799397b716
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068512"
 ---
 # <a name="specify-a-sql-or-mdx-query-ssas"></a>Указание SQL-запроса или запроса многомерных выражений (службы SSAS)
@@ -32,6 +32,6 @@ ms.locfileid: "66068512"
 |**Понятное имя запроса**|Введите уникальное имя для запроса. Это поле является обязательным.|  
 |**Инструкция SQL**|Введите или вставьте инструкцию SQL.|  
 |**Проверить**|Проверяет допустимость инструкции SQL.|  
-|**Конструирование**|Создайте инструкцию SQL с помощью диалогового окна конструктора запросов. Дополнительные сведения см. в разделе [Конструктор реляционных запросов (SSAS)](relational-query-designer-ssas.md).|  
+|**Проектирование**|Создайте инструкцию SQL с помощью диалогового окна конструктора запросов. Дополнительные сведения см. в разделе [Конструктор реляционных запросов (SSAS)](relational-query-designer-ssas.md).|  
   
   

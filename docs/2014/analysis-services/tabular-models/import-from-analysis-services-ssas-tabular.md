@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d864b2f8256bdd33cd2f595274a7894b4ea5e89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067046"
 ---
 # <a name="import-from-analysis-services-ssas-tabular"></a>Импорт из служб Analysis Services (табличные службы SSAS)
@@ -29,13 +29,13 @@ ms.locfileid: "66067046"
   
 2.  В диалоговом окне **Создание проекта** выберите в разделе **Установленные шаблоны**пункт **Бизнес-аналитика**, затем нажмите кнопку **Импортировать с сервера**.  
   
-3.  В поле **имя**введите имя проекта, укажите расположение и имя решения, а затем нажмите кнопку **ОК**.  
+3.  В поле **Имя**введите имя проекта, укажите расположение и имя решения, а затем нажмите кнопку **ОК**.  
   
 4.  В диалоговом окне **Импорт из служб Analysis Services** в поле **Имя сервера**введите имя сервера служб Analysis Services, на котором находятся метаданные модели для импорта.  
   
 5.  В поле **Имя базы данных**выберите базу данных табличной модели, содержащую метаданные модели для импорта, и нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
- [Свойства проекта &#40;табличные&#41;SSAS](properties-ssas-tabular.md)  
+## <a name="see-also"></a>См. также  
+ [Свойства проекта (табличные службы SSAS)](properties-ssas-tabular.md)  
   
   

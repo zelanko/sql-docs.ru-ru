@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061178"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>Редактор преобразования «Кэш» (страница «Сопоставления»)
@@ -46,7 +46,7 @@ ms.locfileid: "66061178"
  **Целевой столбец**  
  Просмотр каждого доступного целевого столбца.  
   
-## <a name="see-also"></a>См. также:  
- [Редактор преобразования "кэш" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
+## <a name="see-also"></a>См. также  
+ [Редактор преобразования "Кэш" (страница "Диспетчер соединений")](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

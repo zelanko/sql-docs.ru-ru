@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85d085472a8d904efb2b33b942ba9f0a67326fed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067253"
 ---
 # <a name="delete-a-table-ssas-tabular"></a>Удаление таблицы (табличные службы SSAS)
@@ -32,7 +32,7 @@ ms.locfileid: "66067253"
   
 -   Если с помощью этой таблицы были созданы вычисляемые столбцы, столбцы в этой таблице все равно будут удалены, а все вычисляемые столбцы в другой таблице, использующие столбцы удаленной таблицы, отобразят ошибку.  
   
-## <a name="see-also"></a>См. также:  
- [Таблицы и столбцы &#40;табличные&#41;SSAS](tables-and-columns-ssas-tabular.md)  
+## <a name="see-also"></a>См. также  
+ [Таблицы и столбцы (табличные службы SSAS)](tables-and-columns-ssas-tabular.md)  
   
   

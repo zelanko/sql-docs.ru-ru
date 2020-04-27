@@ -16,16 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 600858e3d7b2ea29a30541c559aa764b4085f7cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060498"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Настройка служб Integration Services (службы SSIS)
     
 > [!IMPORTANT]  
->  В данном разделе описывается компонент [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]поддерживает службу для обеспечения обратной совместимости с более ранними выпусками [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], на сервере служб Integration Services можно управлять пакетами.  
+>  В данном разделе описывается компонент [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] поддерживает эту службу для обеспечения обратной совместимости с более ранними версиями служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], на сервере служб Integration Services можно управлять пакетами.  
   
  Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] используют для определения параметров файл конфигурации. По умолчанию имя этого файла конфигурации — MsDtsSrvr. ini. XML, а файл находится в папке%ProgramFiles%\Microsoft SQL Server\120\DTS\Binn.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66060498"
   
 -   Службы управляют пакетами, хранящимися в папке Packages файловой системы.  
   
- **Пример файла конфигурации по умолчанию**  
+ **Пример стандартного файла конфигурации**  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -98,7 +98,7 @@ ms.locfileid: "66060498"
 ### <a name="modified-configuration-file-example"></a>Пример измененного файла конфигурации  
  В следующем примере показан модифицированный файл конфигурации для службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Этот файл предназначен для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , называемого `InstanceName` на сервере с именем `ServerName`.  
   
- **Пример измененного файла конфигурации для именованного экземпляра SQL Server**  
+ **Пример модифицированного файла конфигурации для именованного экземпляра SQL Server**  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -122,8 +122,7 @@ ms.locfileid: "66060498"
   
   
 > [!CAUTION]  
->  Неправильное изменение реестра может приводить к серьезным проблемам, вплоть до необходимости переустановки операционной системы. 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] не гарантирует возможность разрешения проблем, возникших в результате неправильного изменения реестра. Перед изменением реестра создайте резервную копию всех необходимых данных. Дополнительные сведения о том, как выполнять создание резервной копии, восстановление и изменение системного реестра, см. в [!INCLUDE[msCoName](../includes/msconame-md.md)] статье базы знаний [Описание системного реестра Microsoft Windows](https://support.microsoft.com/kb/256986).  
+>  Неправильное изменение реестра может приводить к серьезным проблемам, вплоть до необходимости переустановки операционной системы. [!INCLUDE[msCoName](../includes/msconame-md.md)] не гарантирует возможность разрешения проблем, возникших в результате неправильного изменения реестра. Перед изменением реестра создайте резервную копию всех необходимых данных. Дополнительные сведения о том, как выполнять создание резервной копии, восстановление и изменение системного реестра, см. в [!INCLUDE[msCoName](../includes/msconame-md.md)] статье базы знаний [Описание системного реестра Microsoft Windows](https://support.microsoft.com/kb/256986).  
   
  Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] загружают файл конфигурации при запуске. Все изменения записей реестра требуют перезапуска службы.  
   

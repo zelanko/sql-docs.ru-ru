@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062441"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Сценарий учебника по службам Analysis Services
-  Этот учебник основывается на вымышленной организации [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]— Это крупная, многонациональной производственная компания, которая создает и распространяет металлические и композитные велосипеды на коммерческие рынки в Северная Америка, Европе и Азии. Штаб-квартира компании [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] находится в городе Боселл, штат Вашингтон. В ней работают 500 сотрудников компании. Кроме того, компания [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] имеет в своем составе несколько групп сбыта на региональных рынках.  
+  Этот учебник основывается на вымышленной организации [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] — крупная транснациональная производственная компания, производящая и реализующая металлические и композитные велосипеды на рынках Северной Америки, Европы и Азии. Штаб-квартира компании [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] находится в городе Боселл, штат Вашингтон. В ней работают 500 сотрудников компании. Кроме того, компания [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] имеет в своем составе несколько групп сбыта на региональных рынках.  
   
  В последние годы компания [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] приобрела небольшой завод под названием Importadores Neptuno, расположенный в Мексике. Предприятие Importadores Neptuno производит несколько важных компонентов для производственной линии компании [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] . Эти компоненты поставляются в Боселл для окончательной сборки продукции. В 2005 году Importadores Neptuno стала единоличным производителем и поставщиком туристических велосипедов.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66062441"
   
  Занятия в учебнике по службам Analysis Services позволяют изучить создание базы данных куба, которая удовлетворяет всем этим требованиям. Чтобы приступить к изучению этого учебника, перейдите к первому занятию: [Занятие 1. Создание нового проекта табличной модели](lesson-1-create-a-new-tabular-model-project.md).  
   
-## <a name="see-also"></a>См. также:  
- [&#40;учебника по Adventure Works в многомерном моделировании&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+## <a name="see-also"></a>См. также  
+ [Многомерное моделирование (учебник по Adventure Works)](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

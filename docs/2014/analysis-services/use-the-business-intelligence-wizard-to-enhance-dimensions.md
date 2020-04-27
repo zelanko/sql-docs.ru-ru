@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 331820704691d86ab06c1a46934f7aca6154e1cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065511"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>Использование мастера бизнес-аналитики для улучшения измерений
@@ -32,9 +32,9 @@ ms.locfileid: "66065511"
   
 -   [Определение упорядочивания для измерения](multidimensional-models/bi-wizard-define-the-ordering-for-a-dimension.md)  
   
--   [Разрешение обратной записи в измерение](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
+-   [Включить обратную запись в измерение](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Определение измерений базы данных](multidimensional-models/define-database-dimensions.md)   
  [Справочник по свойствам атрибутов измерения](multidimensional-models/dimension-attribute-properties-reference.md)   
  [Создание определяемых пользователем иерархий](multidimensional-models/user-defined-hierarchies-create.md)   

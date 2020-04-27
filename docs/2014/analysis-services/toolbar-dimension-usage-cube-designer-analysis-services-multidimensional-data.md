@@ -11,19 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e4205cc3a99e5ce5fb9e4309813531a451e7bd92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066018"
 ---
 # <a name="toolbar-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Панель инструментов (вкладка «Использование измерений», конструктор кубов) (службы Analysis Services — многомерные данные)
-  
   **Панель инструментов** на вкладке **Использование измерений** конструктора кубов предназначена для выполнения наиболее часто встречающихся действий, например добавления измерения куба или обработки куба.  
   
 ## <a name="options"></a>Параметры  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**Добавить бизнес-аналитику**|Нажмите, чтобы открыть **мастер бизнес-аналитики** и добавить функции бизнес-аналитики в куб.|  
 |**Процесс**|Нажмите, чтобы открыть диалоговое окно **Обработка** и обработать выбранный куб.|  

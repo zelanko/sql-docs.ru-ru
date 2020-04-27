@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054866"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Редактор задачи «Передача объектов SQL Server» (страница «Объекты» )
@@ -52,19 +52,19 @@ ms.locfileid: "66054866"
  **ExistingData**  
  Позволяет указать, как данные будут копироваться на целевой сервер. Параметры этого свойства приведены в следующей таблице.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**Восстановить**|Данные на целевом сервере будут перезаписаны.|  
 |**Добавление**|Данные, копируемые с исходного сервера, будут присоединяться к существующим данным на целевом сервере.|  
   
 > [!NOTE]  
->  Параметр **ExistingData** доступен только в случае, когда значение **CopyData** равно **True**.  
+>   Параметр **ExistingData** доступен только в случае, когда значение **CopyData** равно **True**.  
   
  **CopySchema**  
  Выберите, будет ли копироваться схема в процессе выполнения задачи "Передача объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ".  
   
 > [!NOTE]  
->  **CopySchema** доступен только для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+>  **CopySchema** доступен только в версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **UseCollation**  
  Выберите, будут ли при передаче объектов включаться параметры сортировки, заданные на исходном сервере.  
@@ -79,7 +79,7 @@ ms.locfileid: "66054866"
  Раскройте список **ObjectsToCopy** , чтобы указать объекты, которые следует копировать из базы данных-источника в целевую базу.  
   
 > [!NOTE]  
->  **ObjectsToCopy** доступен, только если **CopyAllObjects** имеет значение **false**.  
+>  **ObjectsToCopy** доступен только в случае, если значение **CopyAllObjects** равно **False**.  
   
  Параметры копирования следующих типов объектов поддерживаются только в версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
@@ -208,12 +208,12 @@ ms.locfileid: "66054866"
  **XmlSchemaCollectionsList**  
  Выберите этот пункт, чтобы открыть диалоговое окно **Выбрать коллекции XML-схем** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Задачи Integration Services](control-flow/integration-services-tasks.md)   
  [Редактор задачи "перемещение SQL Server объектов" &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
  [Страница "выражения"](expressions/expressions-page.md)   
- [Форматы данных для &#40;SQL Server импорта или экспорта&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+ [Форматы данных для массового экспорта или импорта (SQL Server)](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Вопросы безопасности при установке SQL Server](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   

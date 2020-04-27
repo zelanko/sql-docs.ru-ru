@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12f1a73c1d21986d2089878bfe9d29dd4450f222
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057862"
 ---
 # <a name="lookup-transformation-editor-error-output-page"></a>Редактор преобразования «Уточняющий запрос» (страница «Вывод ошибок»)
@@ -25,13 +25,13 @@ ms.locfileid: "66057862"
  Дополнительные сведения о преобразовании «Уточняющий запрос» см. в разделе [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
 ## <a name="options"></a>Параметры  
- **Входные и выходные данные**  
+ **Ввод-вывод**  
  Просмотрите имя входных данных.  
   
- **Столбец**  
+ **Рубрик**  
  Не используется.  
   
- **Ошибка**  
+ **Error**  
  Укажите, какой тип ошибки должен появляться при обработке строк, не имеющих совпадающих записей в эталонном наборе данных:  
   
 -   не учитывать сбой и направить строки на выход;  
@@ -56,7 +56,7 @@ ms.locfileid: "66057862"
  **Описание**  
  Просмотрите описание операции.  
   
- **Задать для выбранных ячеек это значение**  
+ **Присвоить указанное значение выбранным ячейкам**  
  Укажите действие, которое необходимо применить ко всем выбранным ячейкам при возникновении ошибки или усечения:  
   
 -   пропустить ошибку;  
@@ -68,7 +68,7 @@ ms.locfileid: "66057862"
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

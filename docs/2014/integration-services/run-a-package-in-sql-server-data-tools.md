@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9fdbc707a26c9cebae33c0dd432572cde3157c2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056414"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>Запуск пакета с помощью SQL Server Data Tools
@@ -27,7 +27,7 @@ ms.locfileid: "66056414"
   
  Во время выполнения пакета [!INCLUDE[ssIS](../includes/ssis-md.md)] конструктор отображает ход выполнения пакета на вкладке **выполнение** . В дополнение к сведениям о задачах или контейнерах в пакете, в которых произошел сбой, можно просмотреть время начала и окончания пакета, а также его задачи и контейнеры. После завершения выполнения пакета сведения о времени выполнения остаются доступными на вкладке **результаты выполнения** . Дополнительные сведения см. в разделе "отчеты о состоянии" статьи [Отладка потока управления](control-flow/control-flow.md).  
   
- **Развертывание во время разработки**. Когда запуск пакета произведен в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], происходит построение пакета и затем его развертывание в папку. Перед запуском пакета можно указать папку, в которой будет производиться развертывание пакета. Если папка не указана, то по умолчанию используется папка **bin** . Этот тип развертывания называется развертыванием времени разработки.  
+ **Развертывание времени проектирования**. Когда запуск пакета произведен в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], происходит построение пакета и затем его развертывание в папку. Перед запуском пакета можно указать папку, в которой будет производиться развертывание пакета. Если папка не указана, то по умолчанию используется папка **bin** . Этот тип развертывания называется развертыванием времени разработки.  
   
 ### <a name="to-run-a-package-in-sql-server-data-tools"></a>Запуск пакета с помощью SQL Server Data Tools  
   
@@ -49,8 +49,8 @@ ms.locfileid: "66056414"
   
 3.  Обновите значения свойства OutputPath для указания папки, которую необходимо использовать для развертывания времени разработки, и нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполнение проектов и пакетов](packages/run-integration-services-ssis-packages.md)   
- [Integration Services &#40;пакетов&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)  
+ [Пакеты служб Integration Services (SSIS)](../../2014/integration-services/integration-services-ssis-packages.md)  
   
   

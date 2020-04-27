@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cab36a851c5ef50f0690e9bc0a1a18676d335e50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054919"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-general-page"></a>Редактор задачи «Передача главных хранимых процедур» (страница «Общие»)
@@ -28,7 +28,7 @@ ms.locfileid: "66054919"
 >  Эта задача передает только пользовательские хранимые процедуры, принадлежащие **dbo** , из базы данных **master** на исходном сервере в базу данных **master** на целевом сервере. Пользователям должно быть предоставлено разрешение CREATE PROCEDURE в базе данных **master** на целевом сервере, или они должны быть членами предопределенной роли сервера **sysadmin** на целевом сервере, чтобы создавать на нем хранимые процедуры.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Введите уникальное имя для задачи «Передача главных хранимых процедур». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -37,7 +37,7 @@ ms.locfileid: "66054919"
  **Описание**  
  Введите описание для задачи «Передача главных хранимых процедур».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Задачи Integration Services](control-flow/integration-services-tasks.md)   
  [Редактор задачи "перенос главных хранимых процедур" &#40;страницу хранимых процедур&#41;](../../2014/integration-services/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   

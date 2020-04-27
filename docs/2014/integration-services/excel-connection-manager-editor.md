@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0881624f421cba5bda5d2b0ba8f9d3732efd2497
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059269"
 ---
 # <a name="excel-connection-manager-editor"></a>редактор диспетчера соединений с Excel
@@ -42,7 +42,7 @@ ms.locfileid: "66059269"
  **Версия Excel**  
  Позволяет указать версию Microsoft Excel, в которой был создан файл.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |Excel 97-2003|Файл был создан с помощью Excel 97 или более поздней версии.|  
 |Excel 3,0|Файл был создан с помощью Excel 3,0.|  
@@ -52,7 +52,7 @@ ms.locfileid: "66059269"
  **Первая строка содержит имена столбцов**  
  Позволяет указать, содержит ли первая строка данных выбранного листа имена столбцов. По умолчанию значение этого параметра равно **True**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Просмотр файлов и таблиц Excel с помощью контейнера "Цикл по каждому элементу"](control-flow/foreach-loop-container.md)  
   

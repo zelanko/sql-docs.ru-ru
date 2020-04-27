@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065879"
 ---
 # <a name="translations-analysis-services"></a>Переводы (службы Analysis Services)
@@ -34,7 +34,7 @@ ms.locfileid: "66065879"
  Перевод содержит код языка (LCID), переведенный заголовок для объекта (например, измерения или имени атрибута) и при необходимости привязку к столбцу, предоставляющую значения данных на целевом языке. Может быть несколько переводов, но для любого соединения можно использовать только один. Нет теоретического ограничения для количества переводов, которые можно внедрить в модель, но каждый перевод усложняет тестирование, а все переводы должны совместно использовать одинаковые параметры сортировки, поэтому при разработке решения учитывайте эти естественные ограничения.  
   
 > [!TIP]  
->  Вы можете использовать клиентские приложения, например Excel, Management Studio и [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] , для возврата переведенных строк. Дополнительные сведения см. в разделе [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
+>  Вы можете использовать клиентские приложения, например Excel, Management Studio и [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] , для возврата переведенных строк. Дополнительные сведения см. в разделе [Советы и рекомендации по глобализации (службы Analysis Services)](globalization-tips-and-best-practices-analysis-services.md) .  
   
 ## <a name="setting-up-a-model-to-support-translated-members"></a>Настройка модели для поддержки переведенный членов  
  Модели данных, используемой в многоязычном решении, нужны не только переведенные метки (имена полей и описания). Также модели необходимо предоставить значения данных, которые выводятся в различных скриптах. Для создания многоязычного решения необходимы отдельные атрибуты, привязанные к столбцам во внешней базе данных, возвращающие данные.  
@@ -53,7 +53,7 @@ ms.locfileid: "66065879"
   
  Форматы даты, времени и валюты не реализуются с помощью переводов. Для динамического предоставления определенных форматов на основе языкового стандарта клиента используйте мастер преобразования валюты и свойство `FormatString`. Дополнительные сведения см. в разделах [Конвертация валюты (службы Analysis Services)](currency-conversions-analysis-services.md) и [Элемент FormatString (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
   
- [Занятие 9. определение перспектив и переводов](lesson-9-defining-perspectives-and-translations.md) в Analysis Services руководстве поможет вам выполнить шаги по созданию и тестированию переводов.  
+ В разделе[Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) в учебнике по службам Analysis Services описывается создание и тестирование переводов.  
   
 ## <a name="defining-translations"></a>Определение переводов  
  При определении перевода создается объект `Translation` в качестве дочернего элемента базы данных [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], измерения или объекта куба. Используйте [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] , чтобы открыть решение и определить переводы.  
@@ -71,7 +71,7 @@ ms.locfileid: "66065879"
   
 4.  Постройте и разверните проект.  
   
-5.  Подключитесь к базе данных с помощью клиентского приложения, например Excel, добавив в строку подключения код языка. Дополнительные сведения см. в разделе [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
+5.  Подключитесь к базе данных с помощью клиентского приложения, например Excel, добавив в строку подключения код языка. Дополнительные сведения см. в разделе [Советы и рекомендации по глобализации (службы Analysis Services)](globalization-tips-and-best-practices-analysis-services.md) .  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>Добавление переводов в измерение и атрибуты  
  Переводы можно добавить в измерения базы данных, атрибуты, иерархии и уровни в иерархии.  
@@ -100,7 +100,7 @@ ms.locfileid: "66065879"
   
 4.  Постройте и разверните проект.  
   
-5.  Подключитесь к базе данных с помощью клиентского приложения, например Excel, добавив в строку подключения код языка. Дополнительные сведения см. в разделе [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
+5.  Подключитесь к базе данных с помощью клиентского приложения, например Excel, добавив в строку подключения код языка. Дополнительные сведения см. в разделе [Советы и рекомендации по глобализации (службы Analysis Services)](globalization-tips-and-best-practices-analysis-services.md) .  
   
 ### <a name="add-a-translation-of-the-database-name"></a>Добавление перевода имени базы данных  
  На уровне базы данных можно добавлять переводы имени и описания. Переведенное имя базы данных может быть видимо для клиентских подключений, которые указывают код языка, но это зависит от используемого средства. Например, при просмотре базы данных в среде Management Studio не покажется переведенное имя сортировки, даже если указать код языка для соединения. Интерфейс API, используемый в Management Studio для подключения к службам Analysis Services, не поддерживает чтение свойства `Language`.  
@@ -116,10 +116,10 @@ ms.locfileid: "66065879"
 ## <a name="resolving-translations"></a>Разрешение переводов  
  Если клиентское приложение запрашивает код языка, экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] пытается разрешить данные и метаданные для объектов [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в ближайший соответствующий код языка. Если клиентское приложение не задает язык по умолчанию или задает нейтральный код локали (0) или идентификатор языка процесса по умолчанию (1024), то службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] используют язык по умолчанию для экземпляра, чтобы вернуть данные и метаданные для объектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сценарии глобализации для Analysis Services многомерных](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Языки и параметры сортировки &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
- [Задание или изменение параметров сортировки столбца](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Советы и рекомендации по глобализации &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
+ [Установка или изменение параметров сортировки столбца](../relational-databases/collations/set-or-change-the-column-collation.md)   
+ [Советы и рекомендации по глобализации (службы Analysis Services)](globalization-tips-and-best-practices-analysis-services.md)  
   
   

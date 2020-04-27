@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062368"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Анализ в Excel (вкладка «Браузер», конструктор кубов) (службы Analysis Services — многомерные данные)
-  **Анализ в Excel** предоставляет разработчику кубов возможность быстро просмотреть, как будет выглядеть проект для конечного пользователя. Функция **Анализ в Excel** открывает Microsoft Excel, создает соединение с источником данных, которым выступает база данных рабочей области, и автоматически добавляет сводную таблицу на лист. Эта функция заменяет веб-элемент управления Office на вкладке «Браузер», который в предыдущих версиях содержал внедренную сводную таблицу.  
+  Функция**Анализ в Excel** позволяет разработчику куба быстро определить, как проект будут видеть конечные пользователи. Функция **Анализ в Excel** открывает Microsoft Excel, создает соединение с источником данных, которым выступает база данных рабочей области, и автоматически добавляет сводную таблицу на лист. Эта функция заменяет веб-элемент управления Office на вкладке «Браузер», который в предыдущих версиях содержал внедренную сводную таблицу.  
   
  **Для просмотра данных куба выполните следующие действия.**  
   
@@ -44,13 +44,13 @@ ms.locfileid: "66062368"
   
  Дополнительные сведения о функции **Анализ в Excel** см. в следующих ресурсах:  
   
- [Анализ в Excel &#40;табличные&#41;SSAS](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Анализ в Excel (табличные службы SSAS)](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Анализ табличной модели в Excel &#40;табличные&#41;SSAS](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
+ [Анализ табличной модели в Excel (табличные службы SSAS)](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
   
  [Просмотр данных и метаданных в кубе](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обозреватель &#40;конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
  [Панель инструментов &#40;вкладка «браузер», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Вкладка браузера &#40;метаданных, конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   

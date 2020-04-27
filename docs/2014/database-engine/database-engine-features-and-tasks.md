@@ -14,23 +14,23 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 43aa8a23a7d9322e6865b83e3aee4d77fa40e49e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064980"
 ---
 # <a name="database-engine-features-and-tasks"></a>Функции и задачи компонента Database Engine
   Найдите сведения, необходимые для создания [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] баз данных любым пользователем-конструктором, разработчиком, аналитиком или администратором.  
   
-## <a name="in-this-section"></a>в этом разделе  
- [Экземпляры ядро СУБД &#40;SQL Server&#41;](configure-windows/database-engine-instances-sql-server.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Экземпляры компонента Database Engine (SQL Server)](configure-windows/database-engine-instances-sql-server.md)  
   
  [Функции базы данных](../relational-databases/database-features.md)  
   
  [Возможности перекрестного экземпляра компонента Database Engine](../../2014/database-engine/database-engine-cross-instance-features.md)  
   
- [Решения для обеспечения высокого уровня доступности &#40;SQL Server&#41;](../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
+ [Решения высокого уровня доступности (SQL Server)](../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
   
  [Центр безопасности для ядра СУБД SQL Server и Базы данных Azure SQL](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

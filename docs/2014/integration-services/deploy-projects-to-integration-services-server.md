@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e260825532f66205e301628f60d68d93f8e7c04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059581"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
@@ -29,15 +29,14 @@ ms.locfileid: "66059581"
   
 1.  Создайте каталог SSISDB, если он еще не создан. Дополнительные сведения см. в разделе [Создание каталога служб SSIS](catalog/ssis-catalog.md).  
   
-2.  
-  **Мастер преобразования проекта служб Integration Services** преобразует проект в модель развертывания проекта. Дополнительные сведения см. в инструкциях ниже: [Преобразование проекта в модель развертывания проекта](#convert)  
+2.  **Мастер преобразования проекта служб Integration Services** преобразует проект в модель развертывания проекта. Дополнительные сведения см. в инструкциях ниже: [Преобразование проекта в модель развертывания проекта](#convert)  
   
     -   При создании проекта в службах [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]по умолчанию проект использует модель развертывания проекта.  
   
     -   Если проект был создан в более раннем выпуске служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], то после открытия файла проекта в среде [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]необходимо преобразовать проект в модель развертывания проекта.  
   
         > [!NOTE]  
-        >  Если проект содержит один или более источников данных, то они будут удалены после завершения преобразования проекта. Для создания соединения с источником данных, который может совместно использоваться пакетами в проекте, добавьте диспетчер соединений на уровне проекта. Дополнительные сведения см. в разделе [Добавление, удаление или совместное использование диспетчера соединений в пакете](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md).  
+        >  Если проект содержит один или более источников данных, то они будут удалены после завершения преобразования проекта. Для создания соединения с источником данных, который может совместно использоваться пакетами в проекте, добавьте диспетчер соединений на уровне проекта. Дополнительные сведения см. в статье [Добавление, удаление или совместное использование диспетчера соединений в пакете](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md).  
   
          В зависимости от того, запускается ли **Мастер преобразования проекта служб Integration Services** из [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] или из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], он выполняет разные задачи по преобразованию.  
   
@@ -51,11 +50,11 @@ ms.locfileid: "66059581"
   
      Дополнительные сведения об обновлении пакетов см. в разделах [Обновление пакетов служб Integration Services](install-windows/upgrade-integration-services-packages.md) и [Обновление пакетов служб Integration Services с помощью мастера обновления пакетов служб SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Разверните проект на сервере служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в инструкциях ниже: [Развертывание проекта на сервере служб Integration Services](#deploy).  
+3.  Разверните проект на сервере служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в приведенных ниже инструкциях по [развертыванию проекта на Integration Services сервере](#deploy).  
   
 4.  (Необязательно.) Создайте среду для развернутого проекта. Дополнительные сведения см. в статье [Создание и сопоставление серверной среды](../../2014/integration-services/create-and-map-a-server-environment.md).  
   
-##  <a name="convert"></a>Преобразование проекта в модель развертывания проекта  
+##  <a name="to-convert-a-project-to-the-project-deployment-model"></a><a name="convert"></a>Преобразование проекта в модель развертывания проекта  
   
 1.  Откройте проект в [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], а затем в обозревателе решений щелкните его правой кнопкой мыши и выберите команду **Преобразовать в модель развертывания проекта**.  
   
@@ -65,13 +64,13 @@ ms.locfileid: "66059581"
   
 2.  Завершите работу мастера. Дополнительные сведения см. в статье [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md).  
   
-##  <a name="deploy"></a>Развертывание проекта на Integration Services сервере  
+##  <a name="to-deploy-a-project-to-the-integration-services-server"></a><a name="deploy"></a>Развертывание проекта на Integration Services сервере  
   
 1.  Откройте проект в [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], а затем из меню **Проект** выберите пункт **Развернуть** , чтобы запустить **Мастер развертывания служб Integration Services**.  
   
      -или-  
   
-     В среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]разверните узел [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] > **SSISDB** в обозревателе объектов и найдите папку "Проекты" для того проекта, который требуется развернуть. Щелкните папку **Проекты** правой кнопкой мыши и выберите команду **Развернуть проект**.  
+     В [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]разверните [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  > узел **SSISDB** в обозревателе объектов и выберите папку проекты для проекта, который требуется развернуть. Щелкните папку **Проекты** правой кнопкой мыши и выберите команду **Развернуть проект**.  
   
      -или-  
   
@@ -79,7 +78,7 @@ ms.locfileid: "66059581"
   
 2.  Чтобы выбрать файл развертывания для проекта, на странице **Выбор источника** щелкните **Файл развертывания проекта** .  
   
-     -ИЛИ-  
+     -или-  
   
      Щелкните **Каталог служб Integration Services** , чтобы выбрать проект, который уже был развернут в каталог служб SSISDB.  
   

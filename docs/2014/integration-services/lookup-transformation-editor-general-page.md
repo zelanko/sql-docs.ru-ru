@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cb83e95bd13b566f46386cf10676ee882a954762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057841"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>Редактор преобразования «Уточняющий запрос» (страница «Общие»)
@@ -50,11 +50,11 @@ ms.locfileid: "66057841"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Запись в блоге [Режимы кэша уточняющих запросов](https://go.microsoft.com/fwlink/?LinkId=219518) на сайте blogs.msdn.com  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диспетчер соединений с кэшем](connection-manager/cache-connection-manager.md)   
  [Редактор преобразования "Уточняющий запрос" &#40;страница подключения&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [Редактор преобразования «Уточняющий запрос» &#40;столбцов&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [Редактор преобразования "Уточняющий запрос" &#40;страница "Дополнительно"&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [Редактор преобразования "Уточняющий запрос" &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
+ [Редактор преобразования "Уточняющий запрос" (страница "Вывод ошибок")](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcb156d5c0a3c1332e748878ddebda1772b80696
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068598"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Срез исходного куба (мастер интеллектуального анализа данных)
@@ -28,7 +28,7 @@ ms.locfileid: "66068598"
   
 -   [Задайте &#40;свойству среза секции Analysis Services&#41;](multidimensional-models/set-the-partition-slice-property-analysis-services.md)  
   
--   [Создание локальной секции &#40;Analysis Services и управление ею&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+-   [Создание локальной секции и управление ею (службы Analysis Services)](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
 > [!NOTE]  
 >  Обратите внимание, что динамические функции многомерных выражений (такие как [Generate (многомерное выражение)](/sql/mdx/generate-mdx) или [Except (многомерное выражение)](/sql/mdx/except-mdx-function)) не поддерживаются в свойстве Slice для секций. Необходимо определить срез с помощью явных кортежей или ссылок на элементы.  
@@ -37,7 +37,7 @@ ms.locfileid: "66068598"
 >   
 >  Если необходимо определить сложный срез, рекомендуется идентифицировать кортежи в срезе с помощью скрипта изменения XMLA. Затем вы можете использовать средство командной строки ascmd или SSIS [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) для запуска скрипта и создания указанного набора элементов непосредственно перед секционированием.  
   
- Дополнительные **сведения:** [Мастер интеллектуального анализа данных &#40;Analysis Services&#41;интеллектуального анализа данных ](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Создание реляционной структуры интеллектуального анализа](data-mining/create-a-relational-mining-structure.md)  
+ **Дополнительные сведения:** [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Параметры  
  **Измерение**  
@@ -59,7 +59,7 @@ ms.locfileid: "66068598"
  **Параметры**  
  Этот параметр не используется для моделей интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Завершение работы мастера &#40;мастера интеллектуального анализа данных&#41;](completing-the-wizard-data-mining-wizard.md)   
  [Справка F1 мастера интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Определение использования столбцов модели интеллектуального анализа данных &#40;мастер интеллектуального анализа&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  

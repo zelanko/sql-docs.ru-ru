@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055353"
 ---
 # <a name="ssis-package-format"></a>Формат пакетов служб SSIS
-  В текущем выпуске служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] внесены серьезные изменения в формат пакетов (файл DTSX), чтобы упростить чтение формата и сравнение пакетов. Кроме того, можно более надежно выполнять слияние пакетов, которые не содержат конфликтующих изменений или изменений, хранящихся в двоичном формате.  
+  В текущем выпуске служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]внесены серьезные изменения в формат пакетов (файл DTSX), чтобы упростить чтение формата и сравнение пакетов. Кроме того, можно более надежно выполнять слияние пакетов, которые не содержат конфликтующих изменений или изменений, хранящихся в двоичном формате.  
   
  Чтобы просмотреть текущий формат файла пакета dtsx, см [ \[. статью MS-\]dtsx: спецификация формата XML-файла пакета служб DTS](https://go.microsoft.com/fwlink/?LinkId=233251).  
   

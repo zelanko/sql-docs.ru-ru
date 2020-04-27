@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a66a4e77b3858b769aef287e68cac18b8b8514ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064794"
 ---
 # <a name="get-the-configurable-parameters-for-the-add-target-argument"></a>получить настраиваемые параметры для аргумента ADD TARGET
@@ -33,9 +33,9 @@ ms.locfileid: "66064794"
   
 -   parameter_type  
   
--   обязательно  
+-   обязательные  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
  Перед созданием сеанса расширенных событий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] полезно выяснить, какие параметры можно установить при использовании аргумента ADD TARGET в CREATE EVENT SESSION или ALTER EVENT SESSION.  
   
 ### <a name="to-get-the-configurable-parameters-for-the-add-target-argument-using-query-editor"></a>Получение настраиваемых параметров для аргумента ADD TARGET с использованием редактора запросов.  
@@ -52,9 +52,9 @@ ms.locfileid: "66064794"
     ORDER BY package_name, target_name, required DESC  
     ```  
   
-## <a name="see-also"></a>См. также:  
- [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql)   
- [ALTER EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/alter-event-session-transact-sql)   
+## <a name="see-also"></a>См. также  
+ [Создание сеанса событий &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [sys. dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)   
  [sys.dm_xe_packages (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql)  
   

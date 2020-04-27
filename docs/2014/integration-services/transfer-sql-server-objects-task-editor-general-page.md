@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5fba4bafe61090e3b7bb89129e5ecefd0befc7d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054884"
 ---
 # <a name="transfer-sql-server-objects-task-editor-general-page"></a>Редактор задачи «Передача объектов SQL Server» (страница «Общие»)
@@ -28,7 +28,7 @@ ms.locfileid: "66054884"
 >  Пользователь, создающий задачу "Передача объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ", должен иметь необходимые разрешения на исходные объекты сервера, чтобы выбирать их для копирования, а также разрешения на доступ к базе данных целевого сервера, куда будут передаваться объекты.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Введите уникальное имя задачи «Передача объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -37,7 +37,7 @@ ms.locfileid: "66054884"
  **Описание**  
  Введите описание для задачи «Передача объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Задачи Integration Services](control-flow/integration-services-tasks.md)   
  [Редактор задачи "перемещение объектов SQL Server объекты" &#40;"объекты"&#41;](../../2014/integration-services/transfer-sql-server-objects-task-editor-objects-page.md)   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 33ad9ddda5b40abaafddbd6e31272ece1f8edaee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056064"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>Редактор преобразования «Скрипт» (страница «Входы и выходы»)
@@ -30,26 +30,26 @@ ms.locfileid: "66056064"
  Дополнительные сведения о компоненте скрипта см. в разделах [Script Component](data-flow/transformations/script-component.md) и [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Расширение потока данных с помощью компонента скрипта](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ## <a name="options"></a>Параметры  
- **Входы и выходы**  
+ **Входные и выходные данные**  
  Выберите вход или вывод слева, чтобы посмотреть его свойства в таблице справа. Свойства, доступные для редактирования, варьируются в зависимости от выбора. Многие отображаемые параметры доступны только для чтения. Дополнительные сведения об индивидуальных свойствах см. в следующих разделах:  
   
  [Общие свойства](../../2014/integration-services/common-properties.md)  
   
  [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)  
   
- **Добавить выходные данные**  
+ **Добавление выходных данных**  
  Добавить в список дополнительный выход.  
   
  **Добавление столбца.**  
  Выберите папку, в которую необходимо поместить новый выходной столбец, и добавьте его, нажав кнопку **Добавить столбец**.  
   
- **Удалить выходные данные**  
+ **Удалить выход**  
  Выберите выход и удалите его, нажав кнопку **Удалить выход**.  
   
- **Удаление столбца**  
+ **Удалить столбец**  
  Выберите столбец и удалите его, нажав кнопку **Удалить столбец**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Выбор типа компонента скрипта](../../2014/integration-services/select-script-component-type.md)   
  [Редактор преобразования "Скрипт" &#40;страница "входные столбцы"&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   

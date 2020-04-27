@@ -10,17 +10,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c862f61f6fb5caabfb171ca145e351d8a07c76c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065652"
 ---
 # <a name="ui-designers-and-dialogs-for-tabular-analysis"></a>Конструкторы и диалоговые окна пользовательского интерфейса для табличного анализа
 
 Этот раздел содержит документацию о конструкторах пользовательского интерфейса и диалоговых окнах для табличного анализа.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Дальнейшие действия
 
 - [Конструкторы и диалоговые окна служб Analysis Services (табличная модель)](../analysis-services-designers-and-dialog-boxes-tabular.md)
 

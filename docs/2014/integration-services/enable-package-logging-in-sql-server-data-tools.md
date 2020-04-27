@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059278"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Включение средств ведения журналов в SQL Server Data Tools
@@ -43,8 +43,7 @@ ms.locfileid: "66059278"
   
     -   Для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]используется диспетчер соединений OLE DB. Дополнительные сведения см. в разделе [Диспетчер соединений OLE DB](connection-manager/ole-db-connection-manager.md).  
   
-    -   В журнале событий Windows выполнение действий не требуется. 
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] автоматически создадут журнал.  
+    -   В журнале событий Windows выполнение действий не требуется. [!INCLUDE[ssIS](../includes/ssis-md.md)] автоматически создадут журнал.  
   
     -   Для XML-файлов используется диспетчер подключения файлов.  
   
@@ -62,14 +61,14 @@ ms.locfileid: "66059278"
     > [!NOTE]  
     >  По умолчанию в журнал вносятся все данные.  
   
-9. На вкладке **Подробности** нажмите кнопку **Сохранить**. Отображается диалоговое окно **Сохранить как** . Выберите папку для хранения настроек ведения журнала, введите имя файла для конфигурации нового журнала и щелкните **Сохранить**.  
+9. На вкладке **Подробности** нажмите кнопку **Сохранить**. Откроется диалоговое окно **Сохранить как**. Выберите папку для хранения настроек ведения журнала, введите имя файла для конфигурации нового журнала и щелкните **Сохранить**.  
   
 10. Нажмите кнопку **ОК**.  
   
 11. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ведение журнала&#41; Integration Services &#40;SSIS](performance/integration-services-ssis-logging.md)   
- [Ведение журнала&#41; Integration Services &#40;SSIS](performance/integration-services-ssis-logging.md)  
+ [Ведение журналов в службах Integration Services (SSIS)](performance/integration-services-ssis-logging.md)  
   
   

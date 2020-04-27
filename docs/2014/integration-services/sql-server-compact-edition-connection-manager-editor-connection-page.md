@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6e78e65bbc3f7503dbe4c49b2e45dc07e870e6bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055424"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>Редактор диспетчера соединений SQL Server Compact Edition (страница «Соединение»)
-  Диалоговое окно **SQL Server Compact Edition Connection Manager** (Диспетчер соединений SQL Server Compact Edition) позволяет задать свойства для подключения к базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
+  Диалоговое окно **Диспетчер соединений SQL Server Compact Edition** позволяет задать свойства для соединения с базой данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
  Дополнительные сведения о диспетчере соединений [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact Edition см. в разделе [Диспетчер соединений SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md).  
   
@@ -36,8 +36,8 @@ ms.locfileid: "66055424"
  **Требуется ввести пароль доступа к базе данных**  
  Введите пароль для базы данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор диспетчера подключений SQL Server Compact Edition &#40;все страницы&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)  
+ [Редактор диспетчера подключений SQL Server Compact Edition (страница "Все")](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)  
   
   

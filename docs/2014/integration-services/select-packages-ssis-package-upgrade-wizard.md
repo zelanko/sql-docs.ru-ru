@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056021"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>Выбор пакетов (мастер обновления пакетов служб SSIS)
@@ -39,10 +39,10 @@ ms.locfileid: "66056021"
  **Пароль**  
  Укажите пароль, необходимый для расшифровки выбранных обновленных пакетов.  
   
- **Применить к выделенному фрагменту**  
+ **Применить к выбранным объектам**  
  Примените заданный пароль для расшифровки выбранных обновленных пакетов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выберите исходное расположение &#40;мастер обновления пакетов служб SSIS&#41;](../../2014/integration-services/select-source-location-ssis-package-upgrade-wizard.md)   
  [Обновление пакетов служб Integration Services](install-windows/upgrade-integration-services-packages.md)  
   

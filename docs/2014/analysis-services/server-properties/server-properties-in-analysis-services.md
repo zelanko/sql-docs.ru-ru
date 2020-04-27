@@ -19,13 +19,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068901"
 ---
-# <a name="configure-server-properties-in-analysis-services"></a>Configure Server Properties in Analysis Services
+# <a name="configure-server-properties-in-analysis-services"></a>Настройка свойств сервера в службах Analysis Services
   Администратор служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может изменить по умолчанию свойства конфигурации сервера для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . У всех экземпляров имеются собственные свойства конфигурации, которые можно задать независимо от других экземпляров на этом же сервере.  
   
  Для задания свойств сервера используйте среду SQL Server Management Studio или измените файл msmdsrv.ini соответствующего экземпляра.  
@@ -36,7 +36,7 @@ ms.locfileid: "66068901"
   
  [Справочник по свойствам сервера](#bkmk_ref)  
   
-##  <a name="bkmk_config"></a>Настройка свойств сервера (экземпляра)  
+##  <a name="configure-server-instance-properties"></a><a name="bkmk_config"></a>Настройка свойств сервера (экземпляра)  
  Страницы свойств в среде SQL Server Management Studio содержат подмножество доступных свойств, при этом отображаются только те из свойств, которые с наибольшей вероятностью могут быть изменены. Полный набор свойств содержится в файле msmdsrv.ini.  
   
 > [!NOTE]  
@@ -72,12 +72,12 @@ ms.locfileid: "66068901"
   
 4.  После сохранения файла необходимо перезапустить службу.  
   
-##  <a name="bkmk_ref"></a>Справочник по свойствам сервера  
+##  <a name="server-property-reference"></a><a name="bkmk_ref"></a> Справочник по свойствам сервера  
  Свойства конфигурации служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] применяются для тонкой настройки системы. Например, чтобы настроить поведение журнала запросов в соответствии со своими требованиями, нужно установить соответствующие свойства.  
   
  Следующие подразделы содержат описание различных свойств конфигурации служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Общие свойства](general-properties.md)|К общим свойствам относятся основные и расширенные свойства, а так же свойства, которые определяют каталог данных, каталог резервного копирования и другие характеристики сервера.|  
 |[Свойства интеллектуального анализа данных](data-mining-properties.md)|Свойства интеллектуального анализа данных позволяют включать или отключать различные алгоритмы интеллектуального анализа. По умолчанию все алгоритмы включены.|  
@@ -92,7 +92,7 @@ ms.locfileid: "66068901"
 |[Свойства безопасности](security-properties.md)|Раздел безопасности содержит основные и расширенные свойства, определяющие разрешения доступа. К ним относятся параметры, управляющие действиями администраторов и пользователей.|  
 |[Свойства пула потоков](thread-pool-properties.md)|Свойства пула потоков управляют количеством потоков, которые создает сервер. Они предназначены, главным образом, для расширенного использования.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление экземплярами Analysis Services](../instances/analysis-services-instance-management.md)   
  [Указание настроек конфигурации для развертывания решения](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   

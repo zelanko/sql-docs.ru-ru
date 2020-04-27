@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9386070902022e29ba191f24eb8fbfb10ed92b9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058439"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>Редактор задачи «FTP» (страница «Передача файлов»)
@@ -27,21 +27,21 @@ ms.locfileid: "66058439"
  Дополнительные сведения об этой задаче см. в разделе [Задача FTP](control-flow/ftp-task.md).  
   
 ## <a name="options"></a>Параметры  
- **исремотепасвариабле**  
+ **IsRemotePathVariable**  
  Укажите, хранится ли удаленный путь в переменной. Это свойство имеет параметры, указанные в следующей таблице.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**Условия**|Целевой путь хранится в переменной. Выбор этого значения отображает динамический параметр **RemoteVariable**.|  
 |**IsFalse**|Целевой путь задается в диспетчере подключения файлов. Выбор этого значения отображает динамический параметр **RemotePath**.|  
   
- **овервритефилеатдестинатион**  
+ **OverwriteFileAtDestination**  
  Задайте, можно ли заменять файл в месте назначения.  
   
  **IsLocalPathVariable**  
  Укажите, хранится ли локальный путь в переменной. Это свойство имеет параметры, указанные в следующей таблице.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**Условия**|Целевой путь хранится в переменной. Выбор этого значения отображает динамический параметр **LocalVariable**.|  
 |**IsFalse**|Целевой путь задается в диспетчере подключения файлов. Выбор этого значения отображает динамический параметр **LocalPath**.|  
@@ -49,10 +49,10 @@ ms.locfileid: "66058439"
  **Операция**  
  Выберите операцию протокола FTP для выполнения. Это свойство имеет параметры, указанные в следующей таблице.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**Отправить файлы**|Отправляет файлы. При выборе этого значения выводятся динамические параметры **LocalVariable**, **LocalPathRemoteVariable** и **RemotePath**.|  
-|**Получение файлов**|Получает файлы. При выборе этого значения выводятся динамические параметры **LocalVariable**, **LocalPathRemoteVariable** и **RemotePath**.|  
+|**Получить файлы**|Получает файлы. При выборе этого значения выводятся динамические параметры **LocalVariable**, **LocalPathRemoteVariable** и **RemotePath**.|  
 |**Создать локальный каталог**|Создает локальный каталог. При выборе этого значения выводятся динамические параметры **LocalVariable** и **LocalPath**.|  
 |**Создать удаленный каталог**|Создает удаленный каталог. При выборе этого значения выводятся динамические параметры **RemoteVariable** и **RemoteIPath**.|  
 |**Удалить локальный каталог**|Удаляет локальный каталог. При выборе этого значения выводятся динамические параметры **LocalVariable** и **LocalPath**.|  
@@ -60,7 +60,7 @@ ms.locfileid: "66058439"
 |**Удалить локальные файлы**|Удаляет локальные файлы. При выборе этого значения выводятся динамические параметры **LocalVariable** и **LocalPath**.|  
 |**Удалить удаленные файлы**|Удаляет удаленные файлы. При выборе этого значения выводятся динамические параметры **RemoteVariable** и **RemotePath**.|  
   
- **истрансферасЦии**  
+ **IsTransferASCII**  
  Укажите, должны ли файлы, передаваемые на и с удаленного FTP-сервера, передаваться в режиме ASCII.  
   
 ## <a name="isremotepathvariable-dynamic-options"></a>Динамические параметры IsRemotePathVariable  
@@ -73,7 +73,7 @@ ms.locfileid: "66058439"
   
 ### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- Выберите существующий диспетчер подключений FTP или щелкните \<**Создать соединение...**>, чтобы создать его.  
+ Выберите существующий диспетчер FTP-соединений или нажмите кнопку \< **создать соединение...**>, чтобы создать диспетчер соединений.  
   
  **См. также:** [Диспетчер FTP-соединений](connection-manager/ftp-connection-manager.md), [Редактор диспетчера FTP-сеансов](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
@@ -87,11 +87,11 @@ ms.locfileid: "66058439"
   
 ### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- Выберите существующий диспетчер подключений файлов или щелкните \<**Создать подключение...**>, чтобы создать его.  
+ Выберите существующий диспетчер соединения файлов или нажмите кнопку \< **создать соединение...**>, чтобы создать диспетчер соединений.  
   
- **См. также**: [Диспетчер соединений с неструктурированными файлами](connection-manager/file-connection-manager.md), [Редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также**: [Flat File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "FTP" &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
  [Страница «Выражения»](expressions/expressions-page.md)  

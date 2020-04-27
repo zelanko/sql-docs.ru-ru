@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 669fa1fcd9e4802a4d4102120a373dd615741017
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062738"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>Расширенное моделирование (надстройки интеллектуального анализа данных для Excel)
@@ -42,7 +42,7 @@ ms.locfileid: "66062738"
   
  Например, можно использовать любой из алгоритмов, поддерживаемых службами [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
--   Linear regression  
+-   Линейная регрессия  
   
 -   Кластеризация последовательностей  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66062738"
   
  Дополнительные сведения см. в разделе [Добавление модели в структуру &#40;надстройки интеллектуального анализа данных для&#41;Excel ](add-model-to-structure-data-mining-add-ins-for-excel.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление моделями &#40;SQL Server надстроек интеллектуального анализа данных&#41;](manage-models-sql-server-data-mining-add-ins.md)   
  [Просмотр моделей в Excel &#40;SQL Server надстройки интеллектуального анализа данных&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   

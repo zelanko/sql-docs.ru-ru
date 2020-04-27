@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060231"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
@@ -29,7 +29,7 @@ ms.locfileid: "66060231"
   
  В следующей таблице производится перечисление свойств программы развертывания.  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |AllowConfigurationChange|Значение, указывающее, возможно ли обновление конфигураций во время развертывания.|  
 |CreateDeploymentUtility|Значение, указывающее, будет ли во время построения пакета производиться создание программы развертывания. Для создания программы развертывания значение свойства должно быть равно `True`.|  
@@ -47,9 +47,9 @@ ms.locfileid: "66060231"
   
 3.  В диалоговом окне ** \<страницы свойств "имя проекта>** " щелкните **средство развертывания**.  
   
-4.  Чтобы обновить конфигурации пакетов при развертывании пакетов, задайте **** для `True`AllowConfigurationChanges значение.  
+4.  Чтобы обновить конфигурации пакетов при развертывании пакетов, задайте **AllowConfigurationChanges** для `True`AllowConfigurationChanges значение.  
   
-5.  Задайте для параметра `CreateDeploymentUtility` значение `True`.  
+5.  Присвойте параметру `CreateDeploymentUtility` значение `True`.  
   
 6.  При необходимости обновите расположение программы развертывания посредством изменения свойства `DeploymentOutputPath`.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66060231"
   
 9. Просмотрите ход компоновки и ошибки в окне **Выход** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конфигурации пакетов](../../2014/integration-services/package-configurations.md)   
  [Создание конфигураций пакетов](../../2014/integration-services/create-package-configurations.md)   
  [Развертывание пакетов с помощью программы развертывания](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   

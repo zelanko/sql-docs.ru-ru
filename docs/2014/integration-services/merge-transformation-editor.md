@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c7ff5b4488eaa4563a2415d754853bc8e33803bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057683"
 ---
 # <a name="merge-transformation-editor"></a>редактор преобразования «Слияние»
-  
   **Редактор преобразования «Слияние»** используется для указания столбцов из двух отсортированных наборов данных для слияния.  
   
 > [!IMPORTANT]  
@@ -40,7 +39,7 @@ ms.locfileid: "66057683"
  **Вход слияния 2**  
  Позволяет выбрать столбец в качестве входа слияния 2.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Сортировка данных для преобразований «Слияние» и «соединение слиянием»](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
  [Преобразование «Соединение слиянием»](data-flow/transformations/merge-join-transformation.md)   

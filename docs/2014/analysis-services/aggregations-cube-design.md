@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35c862d89d5f98bee968f0e980c784e35c43e74d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062657"
 ---
 # <a name="aggregations-cube-design"></a>Агрегаты (создание кубов)
@@ -23,7 +23,7 @@ ms.locfileid: "66062657"
  Вкладка **Агрегаты** содержит следующие панели.  
   
 ## <a name="panes"></a>Панели  
- **Панель инструментов**  
+ **Панелей**  
  Панель инструментов используется для выполнения общих действий на вкладке.  
   
  **Стандартное представление**  
@@ -32,7 +32,7 @@ ms.locfileid: "66062657"
  **Расширенное представление**  
  Панель **Расширенное представление** используется для создания и изменения агрегатов. Это представление должно использоваться только опытными пользователями.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

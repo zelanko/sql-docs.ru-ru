@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b922581c657bc45a1bb404a1f803e7a525bb8d42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062390"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Мастера служб Analysis Services (многомерные данные)
@@ -24,7 +24,7 @@ ms.locfileid: "66062390"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Справка F1 мастера статистических схем](aggregation-design-wizard-f1-help.md)|Используйте мастер статистических схем, чтобы определить агрегаты для статистической схемы, которая используется для создания экземпляров агрегатов в различных секциях группы мер.|  
 |[Справка F1 мастера бизнес-аналитики](business-intelligence-wizard-f1-help.md)|Используйте мастер бизнес-аналитики для добавления в куб или в измерение таких дополнительных элементов бизнес-аналитики, как логика операций со счетами и конвертация валюты.|  
@@ -37,9 +37,9 @@ ms.locfileid: "66062390"
 |[Справка F1 мастера связанных объектов](linked-object-wizard-f1-help.md)|Используйте мастер связанных объектов для определения связанных измерений или групп мер и импорта дополнительных связанных объектов.|  
 |[Справка F1 мастера секционирования &#40;Analysis Services многомерных данных&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)|Используйте мастер секционирования для определения или удаления секции.|  
 |[Справка F1 мастера формирования схем &#40;Analysis Services многомерных данных&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)|Используйте мастер формирования схем для определения представления источников данных и дополнительно для создания скрипта переноса реляционной схемы представления источников данных из существующего объекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в источник данных.|  
-|[Справка F1 мастера оптимизации с учетом использования](usage-based-optimization-wizard-f1-help.md)|Используйте мастер оптимизации с учетом использования для определения агрегатов для статистических схем на основе запросов, которые хранятся в журнале запросов базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|[Справка F1 мастера оптимизации с учетом использования](usage-based-optimization-wizard-f1-help.md)|Используйте мастер оптимизации с учетом использования для определения агрегатов для статистических схем на основе запросов, которые хранятся в журнале запросов базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Справочник по пользовательскому интерфейсу &#40;Analysis Services&#41;](user-interface-reference-analysis-services.md)  
   

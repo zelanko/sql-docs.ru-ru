@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6eaf39005e6c5d1d5cf401738fe82f3c97cdf693
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059412"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>Редактор назначения «Обработка измерения» (страница «Сопоставления»)
@@ -39,9 +39,9 @@ ms.locfileid: "66059412"
  **Целевой столбец**  
  Просмотреть все доступные целевые столбцы независимо от наличия сопоставления.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения «Обработка измерений» &#40;страница «Диспетчер соединений»&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
- [Редактор назначения "Обработка измерения" &#40;страница "Дополнительно"&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [Редактор назначения "Обработка измерения" (страница "Дополнительно")](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

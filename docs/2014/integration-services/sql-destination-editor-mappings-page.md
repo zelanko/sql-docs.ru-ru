@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c687b82433a8491fbdd1b54b9f92d9de62ad418
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055478"
 ---
 # <a name="sql-destination-editor-mappings-page"></a>Редактор назначения "SQL" (страница «Сопоставления»)
@@ -39,7 +39,7 @@ ms.locfileid: "66055478"
  **Целевой столбец**  
  Просмотреть все доступные целевые столбцы независимо от того, сопоставлены они с входными столбцами или нет.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения "SQL" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
  [Редактор назначения "SQL" &#40;страница "Дополнительно"&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)   

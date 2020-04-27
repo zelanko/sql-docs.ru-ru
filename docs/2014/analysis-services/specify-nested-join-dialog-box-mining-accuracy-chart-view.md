@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 20106b002eba07a3eb9e2877c84dacb9a98b87b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068318"
 ---
 # <a name="specify-nested-join-dialog-box-mining-accuracy-chart-view"></a>Диалоговое окно «Определение вложенного соединения» (диаграмма точности интеллектуального анализа данных)
@@ -31,7 +31,7 @@ ms.locfileid: "66068318"
  **Удалить связь**  
  Нажмите для удаления связи, выбранной на панели **Диаграмма** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конструктор диаграмм точности интеллектуального анализа &#40;&#41;интеллектуального анализа данных](mining-accuracy-chart-designer-data-mining.md)   
  [Задачи тестирования и проверки и инструкции &#40;&#41;интеллектуального анализа данных](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Диалоговое окно «Создание или изменение связи» &#40;Analysis Services многомерных данных&#41;](create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md)  

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f105a7f30d2d1c42bfb31f1555bb976745bbbe4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055801"
 ---
 # <a name="set-the-properties-of-a-package"></a>Установка свойств переменной пакета
@@ -45,7 +45,7 @@ ms.locfileid: "66055801"
   
 5.  В меню **Файл** выберите пункт **Сохранить выбранные элементы** для сохранения измененного пакета.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Integration Services &#40;пакетов&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Установка свойств пакета](set-package-properties.md)  
   

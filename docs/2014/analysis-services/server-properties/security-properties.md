@@ -20,16 +20,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9316827245adfbcf64bd798869f570dc5f0af14c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068911"
 ---
 # <a name="security-properties"></a>Свойства безопасности
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]поддерживает свойства сервера безопасности, перечисленные в следующей таблице. Дополнительные сведения о дополнительных свойствах сервера и об их настройке см. в разделе [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера безопасности, перечисленные в следующей таблице. Дополнительные сведения о дополнительных свойствах сервера и об их настройке см. в разделе [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Применимо к:** Режим многомерных и табличных серверов  
+ **Область применения:** многомерный и табличный режим сервера  
   
 ## <a name="properties"></a>Свойства  
  `RequireClientAuthentication`  
@@ -59,7 +59,7 @@ ms.locfileid: "66068911"
  `DataProtection\ RequiredProtectionLevel`  
  Целочисленное 32-разрядное свойство со знаком, определяющее требуемый уровень защиты для всех запросов клиентов. Возможные значения этого свойства перечислены в следующей таблице.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |*0*|Нет, допускается открытый текст.|  
 |*1*|Значение по умолчанию. Открытый текст не регистрируется.|  
@@ -68,8 +68,8 @@ ms.locfileid: "66068911"
  `AdministrativeDataProtection\ RequiredProtectionLevel`  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка свойств сервера в Analysis Services](server-properties-in-analysis-services.md)   
- [Определение режима работы сервера для экземпляра Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Определение режима работы сервера экземпляра служб Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

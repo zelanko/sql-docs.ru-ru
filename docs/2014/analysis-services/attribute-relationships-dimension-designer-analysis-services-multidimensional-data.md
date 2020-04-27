@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d01bb328bcf3e693724475532b6c9a39c79be2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063190"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>Связи атрибутов (конструктор измерений) (службы Analysis Services - многомерные данные)
@@ -25,19 +25,19 @@ ms.locfileid: "66063190"
 ## <a name="panes"></a>Панели  
  Вкладка **Связи атрибутов** содержит следующие панели.  
   
- [Панель инструментов](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Панелей](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
  Панель инструментов используется для работы на вкладке **Связи атрибутов** конструктора измерений.  
   
  [Диаграмма «Связь атрибутов»](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  
  Чтобы просмотреть диаграмму связей атрибутов и создать, изменить или удалить связи атрибутов используется диаграмма связей атрибутов.  
   
- [Список «Атрибуты»](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Список атрибутов](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  Этот список используется, чтобы отыскать конкретный атрибут в диаграмме связей атрибутов или определить новую связь атрибутов.  
   
  [Список «Связи атрибутов»](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  Этот список используется, чтобы отыскать конкретную связь в диаграмме связей атрибутов и управлять этой связью.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Структура измерения &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
  [Переводы &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
  [Конструктор измерений &#40;конструктора&#41; &#40;Analysis Services многомерных данных&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)   

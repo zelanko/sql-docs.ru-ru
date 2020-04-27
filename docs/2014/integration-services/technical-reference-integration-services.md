@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e66a3465c543879b2ff6115e9ea45a53f97312
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055281"
 ---
 # <a name="technical-reference-integration-services"></a>Технический справочник (службы Integration Services)
@@ -28,14 +28,14 @@ ms.locfileid: "66055281"
   
  [Конструктор системы отслеживания измененных данных для Oracle компании Attunity](change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   
- ![Маленький значок папки](media/filefolder-small.gif "Маленький значок папки") **ошибки и события**  
+ ![Маленький значок папки](media/filefolder-small.gif "Маленький значок папки") **Ошибки и события**  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
  ![Маленький значок папки](media/filefolder-small.gif "Маленький значок папки") **Справочник по Transact-SQL**  
- [Представления &#40;каталога Integration Services&#41;](/sql/integration-services/system-views/views-integration-services-catalog)  
+ [Представления (каталог служб Integration Services)](/sql/integration-services/system-views/views-integration-services-catalog)  
   
- [Хранимые процедуры &#40;Integration Services каталога&#41;](/sql/integration-services/system-stored-procedures/stored-procedures-integration-services-catalog)  
+ [Хранимые процедуры (каталог служб Integration Services)](/sql/integration-services/system-stored-procedures/stored-procedures-integration-services-catalog)  
   
- [Функции &#40;каталога Integration Services&#41;](performance/performance-counters.md)  
+ [Функции (каталог служб Integration Services)](performance/performance-counters.md)  
   
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee8ee5b2113d6fda6aaac72b407c899a610960bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055844"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>Установка и изменение уровня защиты пакетов
@@ -30,7 +30,7 @@ ms.locfileid: "66055844"
  В приведенной в данном разделе процедуре описано использование [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] или средства командной dtutil для изменения свойства `ProtectionLevel`.  
   
 > [!NOTE]  
->  В дополнение к приведенной в этом разделе процедуре можно, как правило, задать или изменить свойство пакета `ProtectionLevel` при импорте или экспорте пакета. Если сохранение пакета производится с помощью мастера импорта и экспорта `ProtectionLevel`, то можно также изменить свойство [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+>  В дополнение к приведенной в этом разделе процедуре можно, как правило, задать или изменить свойство пакета `ProtectionLevel` при импорте или экспорте пакета. Если сохранение пакета производится с помощью мастера импорта и экспорта [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], то можно также изменить свойство `ProtectionLevel`.  
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>Установка или изменение уровня защиты пакета в SQL Server Data Tools  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66055844"
   
          Если подобную команду использовать в пакетном файле, то в него необходимо включить заполнитель «%f» в виде «%%f».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [dtutil, программа](dtutil-utility.md)  
   
   

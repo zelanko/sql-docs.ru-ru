@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061599"
 ---
 # <a name="analysis-of-data-flow"></a>Анализ потока данных
@@ -38,9 +38,9 @@ order by source_component_name, destination_component_name
   
 -   **total_rows** — сумма всех строк, отправленных компонентом  
   
--   **wall_clock_time_ms** — общее затраченное время выполнения (в миллисекундах) для каждого компонента  
+-   **wall_clock_time_ms** — общее время выполнения каждого компонента, в миллисекундах  
   
--   **num_rows_per_millisecond** — количество строк в миллисекунду, отправляемых каждым компонентом  
+-   **num_rows_per_millisecond** — количество строк, отправляемых каждым компонентом в миллисекунду  
   
  `HAVING` Предложение используется для предотвращения ошибки деления на ноль в вычислениях.  
   
@@ -63,7 +63,7 @@ order by source_component_name desc
   
  [Устранение неполадок инструментов с помощью отчетов](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Данные потоков данных](data-flow/data-in-data-flows.md)  
   
   

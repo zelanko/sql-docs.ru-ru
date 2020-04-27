@@ -16,33 +16,33 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0e7e62510338b9dd47d59ce50626ecffebfcf85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060416"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Подключение к удаленному серверу служб Integration Services (службы SSIS Service)
     
 > [!IMPORTANT] 
-> В данном разделе описывается компонент [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]поддерживает службу для обеспечения обратной совместимости с более ранними выпусками [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], на сервере служб Integration Services можно управлять пакетами.  
+> В данном разделе описывается компонент [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] поддерживает эту службу для обеспечения обратной совместимости с более ранними версиями служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], на сервере служб Integration Services можно управлять пакетами.  
   
  Соединение с экземпляром служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на удаленном сервере из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] или другого управляющего приложения требует определенного набора прав на сервере для пользователей этого приложения.  
   
 > [!IMPORTANT] 
-> Чтобы управлять пакетами, которые хранятся на удаленном сервере, не нужно соединятся с экземпляром службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на этом удаленном сервере. Вместо этого измените файл конфигурации для службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] таким образом, чтобы среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] отображала пакеты, хранимые на удаленном сервере. Дополнительные сведения см. в разделе [Configuring the Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md).  
+> Чтобы управлять пакетами, которые хранятся на удаленном сервере, не нужно соединятся с экземпляром службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на этом удаленном сервере. Вместо этого измените файл конфигурации для службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] таким образом, чтобы среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] отображала пакеты, хранимые на удаленном сервере. Дополнительные сведения см. в разделе [Настройка служб Integration Services (службы SSIS)](service/integration-services-service-ssis-service.md).  
   
 ## <a name="connecting-to-integration-services-on-a-remote-server"></a>Подключение к службам Integration Services на удаленном сервере  
   
 #### <a name="to-connect-to-integration-services-on-a-remote-server"></a>Подключение к службам Integration Services на удаленном сервере  
   
-1.  Откройте среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Откройте [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  В меню **Файл**выберите пункт **Подключить к обозревателю объектов** , чтобы вывести диалоговое окно **Подключение к серверу** .  
   
 3.  Выберите службы **Integration Services** в списке **Тип сервера** .  
   
-4.  В текстовое поле [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server in the **Server name** text box.  
+4.  Введите имя сервера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в текстовом поле **Имя сервера**.  
   
     > [!NOTE]  
     >  Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] не привязаны к экземпляру. Чтобы подключиться к службам, используется имя компьютера, на котором работают службы Integration Services.  
@@ -105,7 +105,7 @@ ms.locfileid: "66060416"
 
 Дополнительные сведения см. в разделе [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)(Обеспечение междоменной работы Kerberos и делегирования с помощью пакета SSIS).
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка параметров брандмауэра Windows для доступа к службам SSIS](../../2014/integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)  
   
   

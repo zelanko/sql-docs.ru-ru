@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 774cba19a7762a41d60fe7cf90d63de275e59b71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060655"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>Настройка средства просмотра данных (вкладка «Сетка»)
@@ -31,7 +31,7 @@ ms.locfileid: "66060655"
  **Отображаемые столбцы**  
  Выберите имя столбца, затем щелкните одинарную стрелку, чтобы перенести его в список **Неиспользуемые столбцы** ; щелчок по двойной стрелке переносит в список **Неиспользуемые столбцы** все имена столбцов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка средства просмотра данных &#40;вкладка «Общие»&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
  [Настройка средства просмотра данных &#40;вкладка «Гистограмма»&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [Настройка средства просмотра данных &#40;вкладке «гистограмма»&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   

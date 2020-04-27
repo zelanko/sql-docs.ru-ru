@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e5c0ad2405c0d62b703dcb7fa668837e7e47386
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060430"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>Соединение задач и контейнеров с помощью элементов управления очередностью по умолчанию
@@ -30,7 +30,7 @@ ms.locfileid: "66060430"
   
 #### <a name="to-set-the-default-value-for-precedence-constraints"></a>Настройка значения по умолчанию для управления очередностью  
   
-1.  Откройте среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+1.  Откройте [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  В меню **Сервис** выберите команду **Параметры**.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66060430"
   
 5.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление очередностью](control-flow/precedence-constraints.md)   
  [Установка значения управления очередностью с помощью контекстного меню](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
  [Задание свойств управления очередностью](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)   

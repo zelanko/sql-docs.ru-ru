@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aadfb7b53d22a00bf14699f611f20ce508a7ab5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055645"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>Установка свойств определяемой пользователем переменной
@@ -96,7 +96,7 @@ ms.locfileid: "66055645"
   
 8.  Чтобы сохранить измененный пакет, в меню **Файл** выберите команду **Сохранить выбранные элементы**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md)   
  [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)   
  [Добавление, удаление и изменение области определяемой пользователем переменной в пакете](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d9f11b8713ea26cd79e95b9edc3f36c0bf3564
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066691"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>Переименование таблицы или столбца (табличные службы SSAS)
@@ -55,9 +55,9 @@ ms.locfileid: "66066691"
   
  Вычисления, использующие переименованную таблицу или столбцы из переименованной таблицы, тоже должны быть обновлены, а данные, получаемые из этих вычислений, должны быть обновлены и пересчитаны. В зависимости от числа таблиц и вычислений, которых коснулось это изменение, выполнение этой операции может занять определенное время. Поэтому лучше всего переименовывать таблицы во время операции импорта или до начала построения сложных связей или вычислений.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы и столбцы &#40;табличные&#41;SSAS](tables-and-columns-ssas-tabular.md)   
  [Импорт из табличного&#41;PowerPivot &#40;SSAS](import-from-power-pivot-ssas-tabular.md)   
- [Импорт из Analysis Services &#40;табличных&#41;SSAS](import-from-analysis-services-ssas-tabular.md)  
+ [Импорт из служб Analysis Services (табличные службы SSAS)](import-from-analysis-services-ssas-tabular.md)  
   
   

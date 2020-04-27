@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e54caf8ec3e99fe4076ae50cb0b8015c8330ddb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065075"
 ---
 # <a name="create-an-extended-events-session"></a>Создание сеанса расширенных событий
@@ -30,7 +30,7 @@ ms.locfileid: "66065075"
   
 -   Устранять неполадки взаимоблокировок.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Создание сеанса расширенных событий с помощью редактора запросов](../../2014/database-engine/create-an-extended-events-session-using-query-editor.md)  
   
  [Создание сеанса расширенных событий с помощью мастера &#40;обозревателе объектов&#41;](../ssms/object/object-explorer.md)  

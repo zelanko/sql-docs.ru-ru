@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 57fbbf1702109546037fe91872a7a983bc5713bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060927"
 ---
 # <a name="complete-the-wizard-ssis-package-upgrade-wizard"></a>Завершение работы мастера (мастер обновления пакетов служб SSIS)
@@ -30,7 +30,7 @@ ms.locfileid: "66060927"
  **Сводка параметров**  
  Просмотрите выбранные с помощью мастера параметры обновления. Чтобы изменить параметр, нажмите кнопку **Назад** , чтобы вернуться на предыдущие страницы мастера.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обновление пакетов служб Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

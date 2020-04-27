@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057760"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Сопоставление результирующих наборов с переменными в задаче "Выполнение SQL"
@@ -59,13 +59,13 @@ ms.locfileid: "66057760"
   
 11. Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задача «Выполнение SQL»](control-flow/execute-sql-task.md)   
  [Результирующие наборы в задаче «Выполнение SQL»](result-sets-in-the-execute-sql-task.md)   
  [Задача "выполнение пакета"](control-flow/execute-package-task.md)   
  [Конфигурации пакетов](../../2014/integration-services/package-configurations.md)   
  [Создание конфигураций пакетов](../../2014/integration-services/create-package-configurations.md)   
  [Использование значений переменных и параметров в дочернем пакете](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
- [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md)  
+ [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md)  
   
   

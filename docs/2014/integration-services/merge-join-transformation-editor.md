@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 118d68d1cacd5035535c6f1ac578542909356c7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057710"
 ---
 # <a name="merge-join-transformation-editor"></a>редактор преобразования «Cоединение слиянием»
@@ -36,7 +36,7 @@ ms.locfileid: "66057710"
  **Обменять выходы**  
  Переключение порядка входов выполняется с помощью кнопки **Обменять выходы** . Этот выбор может быть полезен с параметром левого внешнего соединения.  
   
- **Входной**  
+ **Входные данные**  
  Вначале выберите из списка имеющихся входов каждый столбец, который необходимо включить в объединенный вывод.  
   
  Входы отображаются в двух отдельных таблицах. Выберите столбцы для включения в вывод. Перетащите столбцы для создания соединения между таблицами. Для удаления соединения выберите его и нажмите клавишу DELETE.  
@@ -47,7 +47,7 @@ ms.locfileid: "66057710"
  **Псевдоним вывода**  
  Введите псевдоним для каждого выходного столбца. По умолчанию, используется имя входного столбца, однако можно выбрать любое уникальное описательное имя.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Сортировка данных для преобразований «Слияние» и «соединение слиянием»](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
  [Расширение набора данных с помощью преобразования «Соединение слиянием»](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   

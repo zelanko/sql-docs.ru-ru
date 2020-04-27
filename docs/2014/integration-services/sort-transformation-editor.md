@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: becd97e843909a5d7bc181dfdf1060988836ee3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055484"
 ---
 # <a name="sort-transformation-editor"></a>редактор преобразования «Сортировка»
@@ -30,7 +30,7 @@ ms.locfileid: "66055484"
  **Доступные входные столбцы**  
  Укажите столбцы, подлежащие сортировке, с помощью соответствующих флажков.  
   
- **Название**  
+ **Имя**  
  Позволяет просмотреть имя каждого из доступных входных столбцов.  
   
  **Сылка**  
@@ -54,7 +54,7 @@ ms.locfileid: "66055484"
  **Удалить строки с повторяющимися значениями сортировки**  
  Указывает, будут ли повторяющиеся строки при преобразовании скопированы на выход или же для всех дубликатов будет создана единственная запись; дубликаты определяются на основе указанных параметров сравнения строк.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

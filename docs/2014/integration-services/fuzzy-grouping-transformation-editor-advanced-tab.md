@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dcebe499eb80fbe01b9aa36a4e07785846eaf621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058368"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>Редактор преобразования «Нечеткое группирование» (вкладка «Дополнительно»)
@@ -36,7 +36,7 @@ ms.locfileid: "66058368"
  **Имя выходного ключевого столбца**  
  Укажите имя выходного столбца, содержащего уникальный идентификатор для канонической строки группы повторяющихся строк. Столбец `_key_out` соответствует значению `_key_in` канонической строки данных.  
   
- **Имя столбца оценки подобия**  
+ **Имя столбца порога подобия**  
  Укажите имя столбца, содержащего показатель подобия. Показатель подобия — значение от 0 до 1, представляющее собой степень подобия входной строки относительно канонической. Чем ближе к 1 коэффициент, тем более строка соответствует канонической.  
   
  **Порог подобия**  
@@ -45,7 +45,7 @@ ms.locfileid: "66058368"
  **Разделители токенов**  
  В преобразовании имеется набор разделителей по умолчанию для разделения данных на лексемы. При необходимости можно добавить или удалить разделители в списке.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Определение подобных строк данных с помощью преобразования «Нечеткое группирование»](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

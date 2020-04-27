@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b1c002a7fcf0027f5169c4365c4ee1cd82f1a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060678"
 ---
 # <a name="configure-data-viewer-scatter-plot-tab"></a>Настройка средства просмотра данных (вкладка «Точечная диаграмма»)
@@ -31,7 +31,7 @@ ms.locfileid: "66060678"
  **Столбец значений по оси Y**  
  Выберите столбец, значения которого надо расположить по оси Y. Для каждой оси можно выбрать только один столбец.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка средства просмотра данных &#40;вкладка «Общие»&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
  [Настройка средства просмотра данных &#40;вкладка «Гистограмма»&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [Настройка средства просмотра данных &#40;вкладке сетки&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   

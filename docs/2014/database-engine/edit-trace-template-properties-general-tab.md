@@ -15,28 +15,28 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 20f4376d6cd2eee3702596f5db60ae501d0ecc33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064902"
 ---
 # <a name="edit-trace-template-properties-general-tab"></a>Изменение свойств шаблона трассировки (вкладка «Общие»)
-  Используйте вкладку **Общие** диалогового окна **Свойства шаблона трассировки** для просмотра и редактирования имеющихся шаблонов трассировки с помощью следующих параметров. Чтобы открыть это диалоговое окно, в меню [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Файл** укажите пункт **Шаблоны**и выберите команду **Изменить шаблон**.  
+  Используйте вкладку **Общие** диалогового окна **Свойства шаблона трассировки** для просмотра и редактирования имеющихся шаблонов трассировки с помощью следующих параметров. Чтобы открыть это диалоговое окно, в меню [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Файл** укажите пункт **Шаблоны** и выберите команду **Изменить шаблон**.  
   
 ## <a name="options"></a>Параметры  
- **Выбор типа сервера**  
+ **Выберите тип сервера**  
  Задайте тип сервера, для которого будет использоваться этот шаблон.  
   
- **Выбор имени шаблона**  
+ **Выберите имя шаблона**  
  Выберите редактируемый шаблон.  
   
- **Использовать как шаблон по умолчанию для выбранного типа сервера**  
+ **Применять как шаблон по умолчанию для выбранного типа сервера**  
  Этот шаблон используется по умолчанию для трассировок, созданных для этого типа сервера.  
   
-## <a name="see-also"></a>См. также:  
- [Изменение шаблона трассировки (приложение SQL Server Profiler)](modify-a-trace-template-sql-server-profiler.md)   
- [Шаблоны и разрешения приложения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+## <a name="see-also"></a>См. также  
+ [Изменение &#40;шаблона трассировки SQL Server Profiler&#41;](modify-a-trace-template-sql-server-profiler.md)   
+ [Шаблоны и разрешения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Приложение SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

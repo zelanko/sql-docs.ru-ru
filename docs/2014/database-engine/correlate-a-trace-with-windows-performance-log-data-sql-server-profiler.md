@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065053"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>согласовать трассировку с данными журнала производительности Windows (приложение SQL Server Profiler)
@@ -29,7 +29,7 @@ ms.locfileid: "66065053"
   
 1.  В [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]откройте сохраненный файл трассировки или таблицу трассировки. Нельзя согласовывать запущенную трассировку, которая производит сбор данных события. Чтобы гарантировать точность связывания с данными системного монитора, трассировка должна содержать столбцы данных **StartTime** и **EndTime** .  
   
-2.  В меню [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **приложения** выберите **Импорт данных производительности**.  
+2.  В меню  **Файл** в [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] выберите **Импорт данных производительности**.  
   
 3.  В диалоговом окне **Открыть** выберите файл с журналом производительности. Чтобы данные журнала производительности можно было связать с трассировкой, они должны быть собраны в то же время, что и данные трассировки.  
   
@@ -63,8 +63,8 @@ ms.locfileid: "66065053"
   
 11. Нажмите кнопку **ОК** для создания журнала производительности.  
   
-## <a name="see-also"></a>См. также:  
- [Шаблоны и разрешения приложения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+## <a name="see-also"></a>См. также  
+ [Шаблоны и разрешения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Запуск приложения SQL Server Profiler](../tools/sql-server-profiler/start-sql-server-profiler.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d891f456f9c4922b3c680913f767d4e9b14a76a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056010"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>Выбор целевого расположения (мастер обновления пакетов служб SSIS)
@@ -41,7 +41,7 @@ ms.locfileid: "66056010"
  **Источник пакета**  
  Позволяет указать, где будут храниться обновленные пакеты. Все возможные значения этого параметра приведены в следующей таблице.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**Файловая система**|Указывает, что обновленные пакеты должны быть сохранены в папку на локальном компьютере.|  
 |**Хранилище пакетов служб SSIS**|Указывает, что обновленные пакеты должны быть сохранены в хранилище пакетов служб Integration Services. Хранилище пакетов представляет собой набор папок в файловой системе, управляемый службами Integration Services. Дополнительные сведения см. в разделе [Управление пакетами (службы SSIS)](service/package-management-ssis-service.md).<br /><br /> При выборе этого значения отображаются соответствующие динамические параметры **Источник пакета** .|  
@@ -56,11 +56,11 @@ ms.locfileid: "66056010"
 ## <a name="package-source-dynamic-options"></a>Динамические параметры источника пакетов  
   
 ### <a name="package-source--ssis-package-store"></a>Источник пакета = хранилище пакетов служб SSIS  
- **Сервер**  
+ **Server**  
  Введите имя сервера, на котором будет сохранен обновленный пакет, или выберите сервер из списка.  
   
 ### <a name="package-source--microsoft-sql-server"></a>Источник пакета = Microsoft SQL Server  
- **Сервер**  
+ **Server**  
  Введите имя сервера, на котором будет сохранен обновленный пакет, или выберите сервер из списка.  
   
  **Использовать проверку подлинности Windows**  
@@ -75,7 +75,7 @@ ms.locfileid: "66056010"
  **Пароль**  
  Введите пароль, который будет использован, если при подключении к серверу применяется проверка подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обновление пакетов служб Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

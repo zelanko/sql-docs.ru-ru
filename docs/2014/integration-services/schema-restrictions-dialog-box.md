@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3da112ff268e824792bdd29160ec97331e5b0f7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056147"
 ---
 # <a name="schema-restrictions-dialog-box"></a>Диалоговое окно «Ограничения схемы»
@@ -28,15 +28,15 @@ ms.locfileid: "66056147"
  **Ограничения**  
  Выберите ограничения, которые необходимо применить к схеме.  
   
- **Перемен**  
- Используйте переменную для определения ограничений. Выберите переменную из списка или нажмите кнопку **Создать переменную...** , чтобы создать переменную.  
+ **Переменная**  
+ Используйте переменную для определения ограничений. Выберите переменную из списка или нажмите кнопку **создать переменную...** , чтобы создать новую переменную.  
   
- **См. также:** [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md) , [Добавить переменную](../../2014/integration-services/add-variable.md)  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md), [Добавление переменной](../../2014/integration-services/add-variable.md)  
   
- **текст**  
+ **Текст**  
  Введите текст для определения ограничений.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор циклов по каждому элементу &#40;страница коллекции&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Контейнер «цикл по каждому элементу»](control-flow/foreach-loop-container.md)  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d82d19836147514a4a03296ebc40a047b80410b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068813"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>Параметры статистической обработки (мастер статистических схем)
@@ -35,16 +35,16 @@ ms.locfileid: "66068813"
  **Не создавать статистические схемы (0%)**  
  Укажите, что статистическая схема не содержит агрегатов. Используйте этот параметр для очистки существующей статистической схемы для секции, группы мер или куба.  
   
- **Запуск**  
+ **Start**  
  Запускает обработку статистической схемы.  
   
- **Позиции**  
+ **Остановить**  
  Завершает обработку статистической схемы.  
   
- **Reset**  
+ **Сбросить**  
  Восстанавливает все статистические параметры по умолчанию на данной странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 мастера статистических схем](aggregation-design-wizard-f1-help.md)   
  [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
   

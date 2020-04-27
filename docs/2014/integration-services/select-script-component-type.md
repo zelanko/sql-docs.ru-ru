@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e07e29c8b200984d5803007f3612f9a43824e261
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055977"
 ---
 # <a name="select-script-component-type"></a>Выбор типа компонента скрипта
@@ -27,7 +27,7 @@ ms.locfileid: "66055977"
 ## <a name="options"></a>Параметры  
  Выбор пункта **Источник**, **Назначение**или **Преобразование** влияет на конфигурацию преобразования «Скрипт» и страницы редактора преобразования «Скрипт».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор преобразования "Скрипт" &#40;страница "входные столбцы"&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
  [Редактор преобразования "Скрипт" &#40;страница "входы и выходы"&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   

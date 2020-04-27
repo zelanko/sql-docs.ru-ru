@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 408b6b605e14fd5e7aa52cd0df7fba13b225c20c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064830"
 ---
 # <a name="feature-reference-database-engine"></a>Справочник по компонентам (компонент Database Engine)
@@ -25,7 +25,7 @@ ms.locfileid: "66064830"
   
  Для доступа к разделу пользовательского интерфейса во время работы средства или приложения нажмите клавишу F1 или кнопку «Справка» в открытом диалоговом окне, мастере или веб-странице.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Запуск и использование помощника по настройке ядра СУБД](../relational-databases/performance/database-engine-tuning-advisor.md)  
  Содержит справку для помощника по настройке [!INCLUDE[ssDE](../includes/ssde-md.md)] и его диалоговых окон.  
   

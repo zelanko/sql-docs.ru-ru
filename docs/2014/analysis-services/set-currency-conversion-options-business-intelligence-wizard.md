@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97e44dc259c79c7bb1aef5cc5cbff8b06dc6c48e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068749"
 ---
 # <a name="set-currency-conversion-options-business-intelligence-wizard"></a>Установка параметров конвертации валюты (мастер бизнес-аналитики)
   Страница **Установка параметров конвертации валюты** используется для установки вычислений конвертации валют для группы мер, содержащих курсы обмена валют.  
   
 > [!NOTE]  
->  Эта страница не отображается, если мастер бизнес-аналитики был запущен из конструктора измерений или для его запуска пользователь щелкнул правой кнопкой мыши измерение в обозревателе решений в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+>  Эта страница не выводится на экран, если мастер бизнес-аналитики был запущен из конструктора измерений, а также если щелкнуть правой кнопкой мыши измерение в обозревателе решений в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="options"></a>Параметры  
  **Выберите группу мер, которая содержит обменные курсы**  
@@ -41,7 +41,7 @@ ms.locfileid: "66068749"
  **X единиц в валюте образца за 1 единицу в основной валюте**  
  Выберите для указания того, что курс обмена валют в группе мер представляет собой множитель для заданной валюты образца.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 мастера бизнес-аналитики](business-intelligence-wizard-f1-help.md)   
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Конструктор измерений &#40;Analysis Services многомерных данных&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

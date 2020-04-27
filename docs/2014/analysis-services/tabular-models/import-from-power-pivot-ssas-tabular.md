@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 941155a5e434457cdf9c79bd25c653c7207937a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067019"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>Импорт из PowerPivot (табличные службы SSAS)
@@ -42,12 +42,12 @@ ms.locfileid: "66067019"
   
 2.  В диалоговом окне **Новый проект** в разделе **Установленные шаблоны**выберите **Бизнес-аналитика**, а затем щелкните **Импорт из PowerPivot**.  
   
-3.  В поле  **Имя**введите имя проекта, укажите расположение и имя решения, а затем нажмите кнопку **ОК**.  
+3.  В поле **имя**введите имя проекта, укажите расположение и имя решения, а затем нажмите кнопку **ОК**.  
   
 4.  В диалоговом окне **Открыть** выберите файл [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] , содержащий необходимые для импорта метаданные модели и данные, и нажмите кнопку **Открыть**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [База данных рабочей области &#40;табличные&#41;SSAS](workspace-database-ssas-tabular.md)   
- [Копирование и вставка данных &#40;табличные&#41;SSAS](../copy-and-paste-data-ssas-tabular.md)  
+ [Копирование и вставка данных (табличные службы SSAS)](../copy-and-paste-data-ssas-tabular.md)  
   
   

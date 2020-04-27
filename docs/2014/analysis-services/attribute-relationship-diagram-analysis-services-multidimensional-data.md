@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8fbd67f8a6fcc88a3821583d1e06ec3e8a75ab91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063100"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Диаграмма связи атрибутов (вкладка «Конструктор связей атрибутов», конструктор измерений) (службы Analysis Services - многомерные данные)
@@ -60,7 +60,7 @@ ms.locfileid: "66063100"
 > [!NOTE]  
 >  Если установить этот флажок, конструктор измерений вернет фигуры на диаграмме связей атрибутов к виду, используемому по умолчанию.  
   
- **Zoom**  
+ **Масштабирование**  
  Отображает список допустимых параметров масштаба.  
   
 ### <a name="attribute-shortcut-menu"></a>Контекстное меню атрибутов  
@@ -91,7 +91,7 @@ ms.locfileid: "66063100"
  **Свойства**  
  Отображает свойства связи в окне **Свойства** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Связи атрибутов &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
  [Панель инструментов &#40;вкладка Конструктор связей атрибутов, конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
  [Атрибуты &#40;вкладка конструктора связей атрибутов, конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   

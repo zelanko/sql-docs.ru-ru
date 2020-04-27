@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07077fabaca18170496a1b4e972da7b7e34cd4fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056256"
 ---
 # <a name="save-a-package-to-the-file-system"></a>Сохранение пакета в файловой системе
@@ -37,7 +37,7 @@ ms.locfileid: "66056256"
     > [!NOTE]  
     >  Путь к файлу и имя, под которым был сохранен пакет, можно проверить в окне свойств.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Integration Services &#40;пакетов&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Сохранение одной копии пакета](../../2014/integration-services/save-a-copy-of-a-package.md)  
   

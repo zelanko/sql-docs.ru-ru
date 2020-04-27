@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d21063bf403d9973ac4ff09725545e47e84a7cd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068663"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Отображение таблицы» (службы Analysis Services — многомерные данные)
@@ -41,7 +41,7 @@ ms.locfileid: "66068663"
  **Filter**  
  Задайте фильтр ограничения для объектов в списке, затем нажмите кнопку, чтобы отфильтровать таблицы в списке **Выбор дополнительных таблиц для просмотра**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Представление источника данных &#40;вкладка «Структура измерения», конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
  [Представление источника данных &#40;вкладка «Структура куба», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  

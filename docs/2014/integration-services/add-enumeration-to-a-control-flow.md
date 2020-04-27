@@ -17,15 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cad9c6a3537fb523a13f0206eed6c8eee837ed06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061911"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>Добавление перечисления к потоку управления
-  
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]включают в себя контейнер "Цикл по каждому элементу" — элемент потока управления, который позволяет легко использовать циклы, перечисляющие файлы и объекты в потоке управления пакета. Дополнительные сведения см. в статье [Foreach Loop Container](control-flow/foreach-loop-container.md).  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]включают в себя контейнер "Цикл по каждому элементу" — элемент потока управления, который позволяет легко использовать циклы, перечисляющие файлы и объекты в потоке управления пакета. Дополнительные сведения см. в разделе [Контейнер «цикл по каждому элементу»](control-flow/foreach-loop-container.md).  
   
  Контейнер «цикл по каждому элементу» не добавляет новых функций, он только предоставляет структуру, в которой можно построить повторяемый поток управления, указать тип перечислителя и задать его параметры. Чтобы контейнер заработал, необходимо включить в контейнер «цикл по каждому элементу» как минимум одну задачу. Дополнительные сведения см. в разделе [Integration Services Tasks](control-flow/integration-services-tasks.md).  
   
@@ -43,7 +42,7 @@ ms.locfileid: "66061911"
   
 4.  Задайте параметры контейнера «цикл по каждому элементу». Дополнительные сведения см. в разделе [Настройка контейнера «цикл по каждому элементу»](../../2014/integration-services/configure-a-foreach-loop-container.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление или удаление задачи или контейнера в потоке управления](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Группирование или разгруппирование компонентов](group-or-ungroup-components.md)   
  [Управление очередностью](control-flow/precedence-constraints.md)   

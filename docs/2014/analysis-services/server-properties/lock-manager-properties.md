@@ -16,17 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 607654924a9f7e2d071bbce1ee4797792cb760c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068940"
 ---
 # <a name="lock-manager-properties"></a>Свойства диспетчера блокировок
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера диспетчера блокировок, перечисленные в следующей таблице. Дополнительные сведения о дополнительных свойствах сервера и об их настройке см. в разделе [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Применимо к:** Режим многомерных и табличных серверов  
+ **Область применения:** многомерный и табличный режим сервера  
   
 ## <a name="properties"></a>Свойства  
  `DefaultLockTimeoutMS`  
@@ -40,8 +39,8 @@ ms.locfileid: "66068940"
  `DeadlockDetectionGranularityMS`  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка свойств сервера в Analysis Services](server-properties-in-analysis-services.md)   
- [Определение режима работы сервера для экземпляра Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Определение режима работы сервера экземпляра служб Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

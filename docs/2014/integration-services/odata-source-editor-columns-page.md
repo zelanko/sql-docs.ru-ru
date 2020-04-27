@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f6677fad3df1d1f99e2f78257ea85551f8ae8db3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057341"
 ---
 # <a name="odata-source-editor-columns-page"></a>Редактор источника OData (страница «Столбцы»)
@@ -30,9 +30,9 @@ ms.locfileid: "66057341"
  Просмотрите исходные столбцы, выбранные для включения в выходные данные.  
   
  **Выходной столбец**  
- Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца; однако можно выбрать любое уникальное описательное имя.  
+ Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца, однако можно выбрать любое уникальное описательное имя.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор источника OData &#40;страница подключения&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
  [Редактор источника OData &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [Источник OData](data-flow/odata-source.md)   

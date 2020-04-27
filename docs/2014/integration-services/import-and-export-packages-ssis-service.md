@@ -16,16 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058149"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Импорт и экспорт пакетов (службы SSIS)
     
 > [!IMPORTANT]  
->  В данном разделе описывается компонент [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]поддерживает службу для обеспечения обратной совместимости с более ранними выпусками [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], на сервере служб Integration Services можно управлять пакетами.  
+>  В данном разделе описывается компонент [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] поддерживает эту службу для обеспечения обратной совместимости с более ранними версиями служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], на сервере служб Integration Services можно управлять пакетами.  
   
  Пакеты можно сохранять либо в таблице sysssispackages базы данных msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , либо в файловой системе.  
   
@@ -39,16 +39,14 @@ ms.locfileid: "66058149"
   
 -   База данных msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют возможность для импорта и экспорта пакетов и посредством этого изменения формата и места хранения пакетов. С помощью функций импорта и экспорта можно добавлять пакеты в файловую систему, хранилище пакетов или базу данных msdb, а также копировать пакеты из одного формата хранения в другой. Например, пакеты, сохраненные в msdb, можно скопировать в файловую систему и наоборот.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют возможность для импорта и экспорта пакетов и посредством этого изменения формата и места хранения пакетов. С помощью функций импорта и экспорта можно добавлять пакеты в файловую систему, хранилище пакетов или базу данных msdb, а также копировать пакеты из одного формата хранения в другой. Например, пакеты, сохраненные в msdb, можно скопировать в файловую систему и наоборот.  
   
  Можно также скопировать пакет в другой формат с помощью программы командной строки **dtutil** (dtutil.exe). Дополнительные сведения см. в статье [dtutil Utility](dtutil-utility.md).  
   
 ## <a name="to-import-or-export-a-package"></a>Импорт и экспорт пакетов  
   
 > [!IMPORTANT]  
->  В этом разделе обсуждается служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , входящая в состав [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] поддерживает службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для обеспечения обратной совместимости с [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Сведения об управлении пакетами в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] см. в разделе [Сервер служб Integration Services (SSIS)](catalog/integration-services-ssis-server-and-catalog.md).  
+>  В этом разделе обсуждается служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , входящая в состав [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] поддерживает службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для обеспечения обратной совместимости с [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Сведения об управлении пакетами в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] см. в разделе [Сервер служб Integration Services (SSIS)](catalog/integration-services-ssis-server-and-catalog.md).  
   
  Можно выполнять импорт и экспорт пакетов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] между следующими типами хранилищ.  
   
@@ -66,13 +64,13 @@ ms.locfileid: "66058149"
   
 #### <a name="to-import-a-package-by-using-sql-server-management-studio"></a>Импорт пакета с помощью среды SQL Server Management Studio  
   
-1.  Нажмите кнопку **Пуск**, укажите пункт **Microsoft** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]и выберите пункт среды **SQL Server Management Studio**.  
+1.  Нажмите кнопку **Пуск**, укажите пункт **Microsoft** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и выберите пункт **SQL Server Management Studio**.  
   
-2.  В диалоговом окне **соединение с сервером** задайте следующие параметры.  
+2.  В диалоговом окне **Соединение с сервером** установите следующие параметры.  
   
     -   В поле **Тип сервера** выберите **Службы Integration Services**.  
   
-    -   В поле **Имя сервера** введите имя сервера или щелкните **\<<Искать дальше...>** и найдите нужный сервер.  
+    -   В поле **имя сервера** введите имя сервера или нажмите кнопку ** \<обзор, чтобы узнать больше... >** и найдите используемый сервер.  
   
 3.  Если обозреватель объектов не открыт, в меню **Вид** выберите пункт **Обозреватель объектов**.  
   
@@ -102,13 +100,13 @@ ms.locfileid: "66058149"
   
 #### <a name="to-export-a-package-by-using-sql-server-management-studio"></a>Экспорт пакета с помощью среды SQL Server Management Studio  
   
-1.  Нажмите кнопку **Пуск**, укажите пункт **Microsoft** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]и выберите пункт среды **SQL Server Management Studio**.  
+1.  Нажмите кнопку **Пуск**, укажите пункт **Microsoft** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и выберите пункт **SQL Server Management Studio**.  
   
-2.  В диалоговом окне **Соединение с сервером** установите следующие параметры.  
+2.  В диалоговом окне **соединение с сервером** задайте следующие параметры.  
   
     -   В поле **Тип сервера** выберите **Службы Integration Services**.  
   
-    -   В поле **Имя сервера** введите имя сервера или щелкните **\<<Искать дальше...>** и найдите нужный сервер.  
+    -   В поле **имя сервера** введите имя сервера или нажмите кнопку ** \<обзор, чтобы узнать больше... >** и найдите используемый сервер.  
   
 3.  Если обозреватель объектов не открыт, в меню **Вид** выберите пункт **Обозреватель объектов**.  
   
@@ -134,7 +132,7 @@ ms.locfileid: "66058149"
   
 8.  Чтобы завершить экспорт, нажмите кнопку **ОК** .  
   
-## <a name="see-also"></a>См. также:  
- [Управление пакетами &#40;служб SSIS&#41;](service/package-management-ssis-service.md)  
+## <a name="see-also"></a>См. также  
+ [Управление пакетами (службы SSIS)](service/package-management-ssis-service.md)  
   
   

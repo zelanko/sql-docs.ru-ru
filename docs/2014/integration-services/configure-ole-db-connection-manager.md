@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cef2c37c2775b1b5bd46e04f214d8ae77ee7b56d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060553"
 ---
 # <a name="configure-ole-db-connection-manager"></a>настройка диспетчера соединений OLE DB
@@ -39,7 +39,7 @@ ms.locfileid: "66060553"
  **Удаление**  
  Выберите подключение к данным и удалите его с помощью кнопки **Удалить** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

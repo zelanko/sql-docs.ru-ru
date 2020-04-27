@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058308"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Редактор преобразования «Нечеткий уточняющий запрос» (вкладка «Ссылочная таблица»)
@@ -39,7 +39,7 @@ ms.locfileid: "66058308"
  **Создать**  
  Создайте новое соединение с помощью диалогового окна **Настройка диспетчера соединений OLE DB** .  
   
- **Создать новый индекс**  
+ **Сформировать новый индекс**  
  Укажите в том случае, если преобразование должно создавать новый индекс уточняющего запроса.  
   
  **Имя ссылочной таблицы**  
@@ -48,10 +48,10 @@ ms.locfileid: "66058308"
  **Сохранить новый индекс**  
  Выберите этот параметр, если требуется сохранить новый индекс уточняющего запроса.  
   
- **Новое имя индекса**  
+ **Имя нового индекса**  
  Если выбран параметр сохранения нового индекса уточняющего запроса, введите описательное имя индекса.  
   
- **Ведение хранимого индекса**  
+ **Поддерживать хранимый индекс**  
  Если выбран параметр сохранения нового индекса уточняющего запроса, укажите, должен ли [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживать этот индекс.  
   
 > [!NOTE]  
@@ -65,9 +65,9 @@ ms.locfileid: "66058308"
  **Имя существующего индекса**  
  Выберите из списка ранее созданный индекс уточняющего запроса.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор преобразования "Нечеткий уточняющий запрос" &#40;вкладка "столбцы"&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
- [Редактор преобразования "Нечеткий уточняющий запрос" &#40;вкладка "Дополнительно"&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
+ [Редактор преобразования "Нечеткий уточняющий запрос" (вкладка "Дополнительно")](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
   

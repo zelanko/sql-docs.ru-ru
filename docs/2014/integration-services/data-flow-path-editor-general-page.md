@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059955"
 ---
 # <a name="data-flow-path-editor-general-page"></a>Редактор пути потока данных (страница «Общие»)
@@ -27,10 +27,10 @@ ms.locfileid: "66059955"
  Используйте раздел **Общие** диалогового окна **Редактор пути потока данных** , чтобы задать имя и описание пути, а также указать заметки для пути.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Введите уникальное имя пути.  
   
- **УДОСТОВЕРЕНИЯ**  
+ **Идентификатор**  
  Идентификатор истории данных пути. Это свойство доступно только для чтения.  
   
  **IdentificationString**  
@@ -48,7 +48,7 @@ ms.locfileid: "66059955"
  **SourceName**  
  Отображает выход, являющийся началом пути.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор пути потока данных &#40;страница метаданных&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
  [Редактор пути потока данных &#40;страница "средства просмотра данных"&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [Поток данных](data-flow/data-flow.md)   

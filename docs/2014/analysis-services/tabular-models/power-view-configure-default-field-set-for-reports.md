@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37571e141395afe255329edc10edeaeaed121710
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066891"
 ---
 # <a name="configure-default-field-set-for-power-view-reports-ssas-tabular"></a>Настройка набора полей по умолчанию для отчетов Power View (табличные службы SSAS)
@@ -42,7 +42,7 @@ ms.locfileid: "66066891"
   
 6.  Повторите шаги для других таблиц книги.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
  После создания набора полей по умолчанию можно также указать заголовки по умолчанию, изображения, групповые поведения или указать, должны строки, содержащие одно значение, группироваться вместе в одну строку или отображаться по отдельности. Дополнительные сведения см. в разделе [Настройка свойств работы таблицы для отчетов Power View (табличные службы SSAS)](power-view-configure-table-behavior-properties-for-reports.md).  
   
   

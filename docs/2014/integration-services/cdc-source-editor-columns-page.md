@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 980b9cf22e2c50cd1de3eb90a06e6496c01cc093
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061028"
 ---
 # <a name="cdc-source-editor-columns-page"></a>Редактор источника «CDC» (страница «Столбцы»)
@@ -24,7 +24,7 @@ ms.locfileid: "66061028"
   
  Дополнительные сведения об источнике CDC см. в разделе [CDC Source](data-flow/cdc-source.md).  
   
-## <a name="task-list"></a>Список задач  
+## <a name="task-list"></a>список задач  
  **Открытие страницы «Столбцы» редактора источника CDC**  
   
 1.  В среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]откройте пакет служб [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] , содержащий источник CDC.  
@@ -43,8 +43,8 @@ ms.locfileid: "66061028"
  **Выходной столбец**  
  Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца, но можно выбрать любое уникальное описательное имя. Введенное имя отображается в конструкторе служб SSIS.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор источника "CDC" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
- [Редактор источника "CDC" &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
+ [Редактор источника "CDC" (страница "Вывод ошибок")](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

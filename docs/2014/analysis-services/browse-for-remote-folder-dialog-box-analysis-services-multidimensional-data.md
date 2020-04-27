@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23b0125ab578ebb4fb8837c95ec61db900880ec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064533"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Выбор удаленной папки» (службы Analysis Services — многомерные данные)
@@ -37,7 +37,7 @@ ms.locfileid: "66064533"
  **Выбранный путь**  
  Введите, чтобы изменить путь, выбранный в поле **Выберите папку**, или выбрать папку, отсутствующую в списке **Выберите папку**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Мастер создания секций и места хранения &#40;&#41;](processing-and-storage-locations-partition-wizard.md)   
  [Секции &#40;диалоговое окно «Восстановление базы данных»&#41; &#40;Analysis Services многомерных данных&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   

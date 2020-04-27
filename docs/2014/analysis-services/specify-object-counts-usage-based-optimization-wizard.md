@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e0503192c3c948110f8301c8eb375e1c8203e42f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068238"
 ---
 # <a name="specify-object-counts-usage-based-optimization-wizard"></a>Задание счетчиков объектов (мастер оптимизации с учетом использования)
@@ -32,10 +32,10 @@ ms.locfileid: "66068238"
  **Число секций**  
  Введите оценочное количество строк группы мер и оценочное количество элементов атрибута в секциях (необязательно).  
   
- **Расчета**  
+ **Count**  
  Вычисляет и повторно заполняет значения в столбце **Оценочное число** для всех пустых полей. Поля, где уже отображаются оценочные числа, не обновляются.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 мастера статистических схем](aggregation-design-wizard-f1-help.md)   
  [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
   

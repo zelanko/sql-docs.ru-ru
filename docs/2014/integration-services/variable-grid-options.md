@@ -15,22 +15,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054678"
 ---
 # <a name="variable-grid-options"></a>Параметры сетки переменных
   Используйте диалоговое окно **Параметры сетки переменных** для выбора столбцов, которые появятся в окне **Переменные** , и для выбора фильтров, применяемых к списку переменных. Дополнительные сведения о свойствах соответствующей переменной см. в разделе [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md).  
   
 ## <a name="options-for-filter"></a>Параметры фильтрации  
- **Показывать системные переменные**  
+ **Отображать системные переменные**  
  Выберите, чтобы в окне **Переменные** отображались системные переменные. Системные переменные — это стандартные переменные. Системные переменные нельзя добавить или удалить. Можно изменить параметр свойства **RaiseChangedEvent** .  
   
  В списке используется цветовой код. Системные переменные отображаются серым цветом, а пользовательские — черным.  
   
- **Показывать переменные всех областей**  
+ **Показывать переменные из всех областей видимости**  
  Выберите для отображения переменных из области видимости пакета и из областей видимости контейнеров, задач и обработчиков событий, находящихся в пакете. Оставьте этот параметр не выбранным, если следует показывать только переменные из области пакета и из области выбранного контейнера, задачи или обработчика события.  
   
  Дополнительные сведения об области переменной см. в разделе [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "66054678"
   
 -   **Тип данных**  
   
--   **Value**  
+-   **Значение**  
   
 -   **Пространство имен**  
   
@@ -52,10 +52,10 @@ ms.locfileid: "66054678"
   
 -   **Выражение**  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Окно переменных](../../2014/integration-services/variables-window.md)   
  [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md)   
  [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)   
- [Integration Services &#40;служб SSIS&#41; обработчики событий](integration-services-ssis-event-handlers.md)  
+ [Обработчики событий в службах Integration Services (SSIS)](integration-services-ssis-event-handlers.md)  
   
   

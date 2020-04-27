@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f233f0730286a1623ee54c38084d07a2aba903e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054863"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>Редактор задачи «Передача главных хранимых процедур» (страница «Хранимые процедуры»)
@@ -34,12 +34,12 @@ ms.locfileid: "66054863"
  **DestinationConnection**  
  Выберите в списке Диспетчер соединений SMO или нажмите кнопку ** \<создать соединение... >** , чтобы создать новое соединение с целевым сервером.  
   
- **Перечислении ifobjectexists**  
+ **IfObjectExists**  
  Выберите, каким способом задача будет обрабатывать пользовательские хранимые процедуры с именами, уже существующими в базе данных **master** на целевом сервере.  
   
  Параметры этого свойства приведены в следующей таблице.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**FailTask**|Если в базе данных **master** на целевом сервере уже существуют хранимые процедуры с теми же именами, задача завершается ошибкой.|  
 |**Перезаписать**|Задача перезаписывает хранимые процедуры с теми же именами в базе данных **master** на целевом сервере.|  
@@ -48,7 +48,7 @@ ms.locfileid: "66054863"
  **TransferAllStoredProcedures**  
  Укажите, все ли пользовательские хранимые процедуры в базе данных **master** на исходном сервере следует копировать на целевой сервер.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**Условия**|Копировать все пользовательские хранимые процедуры базы данных **master** .|  
 |**IsFalse**|Копировать только указанные хранимые процедуры.|  
@@ -56,7 +56,7 @@ ms.locfileid: "66054863"
  **StoredProceduresList**  
  Укажите, какие пользовательские хранимые процедуры в базе данных **master** на исходном сервере следует копировать в целевую базу данных **master** . Этот параметр доступен, только если параметру **TransferAllStoredProcedures** присвоено значение **False**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Задачи Integration Services](control-flow/integration-services-tasks.md)   
  [Редактор задачи "перенос главных хранимых процедур" &#40;общие&#41;страницы](general-page-of-integration-services-designers-options.md)   

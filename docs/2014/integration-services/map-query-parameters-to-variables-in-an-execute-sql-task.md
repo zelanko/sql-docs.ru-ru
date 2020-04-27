@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057798"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Сопоставление параметров запроса с переменными в задаче «Выполнение SQL»
@@ -103,9 +103,9 @@ ms.locfileid: "66057798"
   
 14. Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задача «Выполнение SQL»](control-flow/execute-sql-task.md)   
  [Параметры и коды возврата в задаче «Выполнение SQL»](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
- [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md)  
+ [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md)  
   
   

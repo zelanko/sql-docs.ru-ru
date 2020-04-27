@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4d614f3479dac0abcf5b1d6c5ae69dff3dfedf5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059287"
 ---
 # <a name="event-handlers-tab"></a>Вкладка «Обработчики событий»
   Используйте вкладку **Обработчики событий** конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , чтобы сформировать поток управления в пакете служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Обработчик события запускается в ответ на событие, инициированное либо пакетом, либо задачей или контейнером в пакете.  
   
 ## <a name="options"></a>Параметры  
- **Объектов**  
+ **Исполняемый объект**  
  Выберите исполняемый объект, для которого необходимо создать обработчик события. Исполняемый объект может быть либо пакетом, либо задачей или контейнером в пакете.  
   
  **Обработчик событий**  
@@ -39,10 +39,10 @@ ms.locfileid: "66059287"
   
  Кроме того, чтобы добавить заметки, щелкните правой кнопкой мыши в области конструктора и выберите из меню команду **Добавить заметку**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Integration Services &#40;служб SSIS&#41; обработчики событий](integration-services-ssis-event-handlers.md)   
  [Поток управления](control-flow/control-flow.md)   
  [Конструктор служб SSIS](ssis-designer.md)   
- [Integration Services &#40;служб SSIS&#41; обработчики событий](integration-services-ssis-event-handlers.md)  
+ [Обработчики событий в службах Integration Services (SSIS)](integration-services-ssis-event-handlers.md)  
   
   

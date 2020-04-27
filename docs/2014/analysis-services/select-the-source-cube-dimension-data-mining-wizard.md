@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bdb61763a49bad7eae1a49a01633ec8f45e27642
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069228"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>Выбор измерения исходного куба (мастер интеллектуального анализа данных)
@@ -38,7 +38,7 @@ ms.locfileid: "66069228"
   
  Если выбранное измерение не содержит всех связанных атрибутов, необходимых для построения модели интеллектуального анализа данных, то это измерение, возможно, нужно изменить. Дополнительные сведения см. в разделе [Определение измерений базы данных](multidimensional-models/define-database-dimensions.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 мастера интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Создание структуры интеллектуального анализа данных &#40;мастер интеллектуального анализа данных&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
  [Выберите ключ варианта &#40;мастер интеллектуального анализа данных&#41;](select-the-case-key-data-mining-wizard.md)  

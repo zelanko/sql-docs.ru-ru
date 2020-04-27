@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53cf3aa4b23484bb22f4237fbf61874990381067
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064855"
 ---
 # <a name="event-file-target"></a>Event File Target
@@ -26,7 +26,7 @@ ms.locfileid: "66064855"
   
  В следующей таблице описаны доступные параметры для настройки цели «Файл событий».  
   
-|Параметр|Допустимые значения|Description|  
+|Параметр|Допустимые значения|Описание|  
 |------------|--------------------|-----------------|  
 |filename|Любая строка длиной до 260 символов. Это значение обязательно.|Расположение и имя файла.<br /><br /> Можно использовать любое расширение имени файла.|  
 |max_file_size|Любое 64-разрядное целое число. Это значение является необязательным.|Верхний предел размера файла в мегабайтах (МБ). Если аргумент max_file_size не указан, файл будет увеличиваться до исчерпания пространства на диске. Размер файла по умолчанию составляет 1 ГБ.<br /><br /> Аргумент max_file_size должен быть больше по сравнению с текущим размером буфера сеанса. Иначе целевой файл нельзя будет инициализировать и появится сообщение о недопустимости значения параметра max_file_size. Текущий размер буферов можно получить запросом к столбцу buffer_size в динамическом административном представлении [sys.dm_xe_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql) .<br /><br /> Если размер файла по умолчанию меньше размера буфера сеанса, рекомендуется задать для max_file_size значение, указанное в столбце max_memory представления каталога [sys.server_event_sessions](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql) .<br /><br /> Если значение параметра max_file_size больше размера буферов сеанса, его можно округлить до ближайшей меньшей величины, кратной размеру буфера сеанса. Созданный в результате целевой файл по размеру может быть меньше заданной величины max_file_size. Например, если размер буфера составляет 100 МБ, а max_file_size равен 150 МБ, размер результирующего файла округляется до меньшего значения 100 МБ, поскольку второй буфер не уместится в оставшихся 50 МБ.<br /><br /> Если размер файла по умолчанию меньше размера буфера сеанса, рекомендуется задать для max_file_size значение, указанное в столбце max_memory представления каталога [sys.server_event_sessions](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql) .|  
@@ -57,10 +57,10 @@ SELECT *, CAST(event_data AS XML) AS 'event_data_XML'
 FROM sys.fn_xe_file_target_read_file('file_name*.xel', NULL, NULL, NULL)  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Цели расширенных событий SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
+## <a name="see-also"></a>См. также  
+ [SQL Serverные цели расширенных событий](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [sys. fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)   
- [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [Создание сеанса событий &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

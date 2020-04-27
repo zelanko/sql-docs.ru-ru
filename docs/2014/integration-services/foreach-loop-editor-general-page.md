@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 804e8ddca760be8734dd4862aed5c2edd6fc8caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058519"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Редактор циклов по каждому элементу (страница «Общие»)
@@ -25,7 +25,7 @@ ms.locfileid: "66058519"
  Дополнительные сведения о контейнере "цикл по каждому элементу" и его настройке см. в разделах [Контейнер "цикл по каждому элементу"](control-flow/foreach-loop-container.md) и [Настройка контейнера "цикл по каждому элементу"](../../2014/integration-services/configure-a-foreach-loop-container.md).  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Содержит уникальное имя для контейнера «цикл по каждому элементу». Это имя используется в качестве метки в значке задачи и в журналах.  
   
 > [!NOTE]  
@@ -34,7 +34,7 @@ ms.locfileid: "66058519"
  **Описание**  
  Введите описание контейнера «цикл по каждому элементу».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор циклов по каждому элементу &#40;страница коллекции&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Редактор циклов по каждому элементу &#40;страница сопоставления переменных&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   

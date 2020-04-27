@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e780758513aebc90dd35399894e78d0096cb0400
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068253"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>Задание цели (мастер формирования схем) (службы Analysis Services — многомерные данные)
@@ -46,7 +46,7 @@ ms.locfileid: "66068253"
  **Использовать существующее представление источника данных**  
  Выберите этот параметр, чтобы выбрать существующее представление источника данных для размещения реляционной схемы сформированной мастером.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 мастера формирования схем &#40;Analysis Services многомерных данных&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
  [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
   

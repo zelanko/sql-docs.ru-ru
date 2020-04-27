@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 233bc63102243c60c7ed74b5beeadd2c921f399a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058736"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>Редактор диспетчера соединения с неструктурированными файлами (страница «Предварительный просмотр»)
@@ -33,19 +33,19 @@ ms.locfileid: "66058736"
  **Описание**  
  Опишите соединение. Рекомендуется описать цель соединения, чтобы пакеты самодокументировались и их проще было обслуживать.  
   
- **Пропускаемые строки данных**  
+ **Количество пропускаемых строк данных**  
  Укажите, сколько строк необходимо пропустить в начале неструктурированного файла.  
   
- **Обновить**  
+ **Обновление**  
  Просмотрите эффект от изменения числа пропускаемых строк, нажав кнопку **Обновить**. Эта кнопка становится видимой только после изменения других параметров соединения.  
   
  **Предварительный просмотр строк**  
  Просмотр данных выборки в неструктурированном файле, разделенном на столбцы и строки согласно выбранным параметрам.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор диспетчера соединений с неструктурированными файлами &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
  [Редактор диспетчера соединений с неструктурированными файлами &#40;столбцы&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
- [Редактор диспетчера соединений с неструктурированными файлами &#40;страница "Дополнительно"&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
+ [Редактор диспетчера подключений к неструктурированным файлам (страница "Дополнительно")](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
   

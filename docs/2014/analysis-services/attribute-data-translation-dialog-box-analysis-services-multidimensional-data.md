@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063069"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Перевод данных атрибута» (службы Analysis Services — многомерные данные)
@@ -29,7 +29,7 @@ ms.locfileid: "66063069"
 -   Щелкнуть правой кнопкой мыши панель **Подробности перевода** на вкладке **Переводы****конструктора измерений** и выбрать команду **Создать столбец заголовков** или **Изменить столбец заголовков**.  
   
 ## <a name="options"></a>Параметры  
- **attribute**  
+ **Версию**  
  Отображает выбранный атрибут.  
   
  **Язык**  
@@ -57,7 +57,7 @@ ms.locfileid: "66063069"
   
  Если этот параметр не выбран, службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] не различают буквы верхнего и нижнего регистра. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]не определяет, сортируются ли строчные буквы по нижнему или верхнему регистру в соответствии с прописными буквами, если не выбрано значение **с учетом регистра** .  
   
- **с учетом диакритических знаков**  
+ **Учитывать диакритические знаки**  
  Выберите этот параметр для сортировки и сравнения данных на основе словарных правил для соответствующего языка или алфавита и для различения символов с диакритическими знаками и без них. Например, «a» не равно «á».  
   
  Если этот параметр не выбран, службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] рассматривают символы с диакритическими знаками и без них как одинаковые.  
@@ -72,7 +72,7 @@ ms.locfileid: "66063069"
   
  Если этот параметр не выбран, службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] рассматривают символы в однобайтном и двухбайтном представлении как одинаковые.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Сведения о переводе &#40;вкладка Переводы, конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
   

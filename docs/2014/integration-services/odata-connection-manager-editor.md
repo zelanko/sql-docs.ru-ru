@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8319699dd58039b918f0715e5b2293a7990108f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057377"
 ---
 # <a name="odata-connection-manager-editor"></a>Редактор диспетчера соединений c OData
@@ -27,7 +27,7 @@ ms.locfileid: "66057377"
  Имя диспетчера соединений.  
   
  **Расположение сервисного документа**  
- URL-адрес службы OData. Например, http://services.odata.org/V3/Northwind/Northwind.svc/.  
+ URL-адрес службы OData. Например: http://services.odata.org/V3/Northwind/Northwind.svc/.  
   
  **Аутентификация**  
  Выберите либо **Проверка подлинности Windows**, либо **это имя пользователя и пароль** в поле **Проверка подлинности**. Если выбран другой параметр, введите **имя пользователя** и **пароль**.  
@@ -35,7 +35,7 @@ ms.locfileid: "66057377"
  **Проверить подключение**  
  Нажмите эту кнопку для проверки подключения к источнику OData.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диспетчер соединений OData](connection-manager/odata-connection-manager.md)  
   
   

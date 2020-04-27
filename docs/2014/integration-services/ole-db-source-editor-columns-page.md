@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 453bed2f366c4b2bd51fd706d5d56ea6ccf01f01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057032"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>Редактор источника «OLE DB» (страница «Столбцы»)
@@ -34,9 +34,9 @@ ms.locfileid: "66057032"
  Просмотрите внешние столбцы (столбцы в источнике) в том порядке, в котором они отображаются при настройке компонентов, получающих данные из этого источника. Этот порядок можно изменить, вначале очистив выделенные столбцы в таблице, а затем выбрав в списке внешние столбцы в другом порядке.  
   
  **Выходной столбец**  
- Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца; однако можно выбрать любое уникальное описательное имя. Указанное имя будет отображено в конструкторе служб SSIS.  
+ Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца, однако можно выбрать любое уникальное описательное имя. Указанное имя будет отображено в конструкторе служб SSIS.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор OLE DBного источника &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
  [Редактор источника OLE DB &#40;странице вывода ошибок&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   

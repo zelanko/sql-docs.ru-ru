@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7541ba23401bf964f0aa5c8a0425719b89d96b43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067984"
 ---
 # <a name="storage-options-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Параметры хранилища» (службы Analysis Services — многомерные данные)
@@ -31,7 +31,7 @@ ms.locfileid: "66067984"
 |**Общие сведения**|Используйте вкладку **Общие** для задания настроек хранилища и упреждающего кэширования. Дополнительные сведения об этой вкладке см. в разделе [Общие (диалоговое окно "Параметры хранилища") (службы Analysis Services — многомерные данные)](general-storage-options-dialog-box-analysis-services-multidimensional-data.md).|  
 |**Уведомления**|Используйте вкладку **Уведомления** для задания метода уведомлений и относящихся к нему настроек. Дополнительные сведения об этой вкладке см. в разделе [Уведомления (диалоговое окно "Параметры хранилища") (службы Analysis Services — многомерные данные)](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Упреждающее кэширование &#40;секций&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)  
   

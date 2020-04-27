@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2b57ad76be3811352bbfb8774fb56c748efa1ac8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061608"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Редактор задачи «Выполнение инструкции DDL служб Analysis Services» (страница DDL)
@@ -28,43 +28,43 @@ ms.locfileid: "66061608"
   
 ## <a name="static-options"></a>Статические параметры  
  **Соединен**  
- Выберите проект [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или диспетчер соединений [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] из списка или нажмите кнопку \<**Новое соединение...**> и создайте новое соединение с помощью диалогового окна **Добавление диспетчера соединений со службами Analysis Services**.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Выберите проект или диспетчер [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] соединений из списка или нажмите кнопку \< **создать соединение...**> и используйте диалоговое окно **Добавление диспетчера соединений Analysis Services** для создания нового подключения.  
   
- **См. также:** [диалоговое окно "Добавление Analysis Services диспетчера соединений" Справочник по интерфейсу пользователя](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md) [Analysis Services диспетчер соединений](connection-manager/analysis-services-connection-manager.md)  
+ **См. также:** [Добавление диалогового окна "Диспетчер соединений со службами Analysis Services" в справочнике по пользовательскому интерфейсу](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Диспетчер соединений служб Analysis Services](connection-manager/analysis-services-connection-manager.md)  
   
- **SourceType**  
+ **Тип источника**  
  Указать тип источника инструкции DDL. Параметры этого свойства приведены в следующей таблице.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**Прямой ввод**|Установите в качестве источника инструкцию DDL, содержащуюся в текстовом поле **SourceDirect** . При выборе этого значения в следующем подразделе отображаются динамические параметры.|  
 |**Соединение с файлом**|В качестве источника указывается файл, содержащий инструкцию DDL. При выборе этого значения в следующем подразделе отображаются динамические параметры.|  
-|**Перемен**|Установите в качестве источника переменную. При выборе этого значения в следующем подразделе отображаются динамические параметры.|  
+|**Переменная**|Установите в качестве источника переменную. При выборе этого значения в следующем подразделе отображаются динамические параметры.|  
   
 ## <a name="dynamic-options"></a>Динамические параметры  
   
 ### <a name="sourcetype--direct-input"></a>SourceType = Прямой ввод  
- **Source**  
- Введите инструкции DDL или нажмите кнопку с многоточием **(…)** и после этого введите инструкции в диалоговом окне **Инструкции DDL**.  
+ **Источник**  
+ Введите инструкции DDL или нажмите кнопку с многоточием **(...)** и введите инструкции в диалоговом окне **инструкции DDL** .  
   
 ### <a name="sourcetype--file-connection"></a>SourceType = Подключение файла  
- **Source**  
- Выберите "Соединение с файлом" из списка или нажмите кнопку \<**Новое соединение...**> и создайте новое соединение с помощью диалогового окна **Диспетчер соединения файлов**.  
+ **Источник**  
+ Выберите соединение с файлом в списке или нажмите кнопку \< **создать соединение...**> и используйте диалоговое окно **Диспетчер подключения файлов** для создания нового соединения.  
   
- **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md)  
+ **См. также:** [Диспетчер соединения файлов](connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>SourceType = Переменная  
- **Source**  
+ **Источник**  
  Выберите переменную из списка или нажмите \<**Новая переменная...**> и создайте новую переменную с помощью диалогового окна **Добавление переменной**.  
   
- **См. также:** [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md)  
+ **См. также:** [Переменные в службах Integration Services](integration-services-ssis-variables.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "Analysis Services выполнение инструкции DDL" &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
  [Страница "выражения"](expressions/expressions-page.md)   
  [Поток управления](control-flow/control-flow.md)   
  [Справочник по языку сценариев Analysis Services &#40;языка ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [Справочник по XML для аналитики &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [Справочник по XML для аналитики (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

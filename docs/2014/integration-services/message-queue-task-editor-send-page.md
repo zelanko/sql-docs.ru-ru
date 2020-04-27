@@ -15,20 +15,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057601"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Редактор задачи «Очередь сообщений» (страница «Отправка»)
-  Используйте страницу **Отправить** диалогового окна **Редактор задачи «Очередь сообщений»** , чтобы настроить задачу «Очередь сообщений» для отправки сообщений от пакета служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  Используйте страницу **Отправить** диалогового окна **Редактор задачи "Очередь сообщений"**, чтобы настроить задачу "Очередь сообщений" для отправки сообщений от пакета служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  Дополнительные сведения об этой задаче см. в разделе [Message Queue Task](control-flow/message-queue-task.md).  
   
 ## <a name="options"></a>Параметры  
- **усинкриптион**  
- Укажите, необходимо ли шифровать сообщение. Значение по умолчанию — `False`.  
+ **UseEncryption**  
+ Укажите, необходимо ли шифровать сообщение. Значение по умолчанию — `False`.  
   
  **EncryptionAlgorithm**  
  При выборе шифрования задайте имя алгоритма шифрования для использования. Задача «Очередь сообщений» поддерживает алгоритмы RC2 и RC4. По умолчанию, используется алгоритм **RC2**.  
@@ -42,7 +42,7 @@ ms.locfileid: "66057601"
  **MessageType**  
  Выбор типа сообщения. Это свойство имеет параметры, указанные в следующей таблице.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**Сообщение файла данных**|Сообщение хранится в файле. При выборе этого значения отображается динамический параметр **DataFileMessage**.|  
 |**Сообщение переменной**|Сообщение хранится в переменной. При выборе этого значения отображается динамический параметр **VariableMessage**.|  
@@ -52,19 +52,19 @@ ms.locfileid: "66057601"
   
 ### <a name="messagetype--data-file-message"></a>MessageType = Сообщение файла данных  
  **DataFileMessage**  
- Введите путь к файлу данных или нажмите кнопку с многоточием **(…)**, а затем найдите файл.  
+ Введите путь к файлу данных или нажмите кнопку с многоточием **(...)** и найдите файл.  
   
 ### <a name="messagetype--variable-message"></a>MessageType = Сообщение с переменными  
  **VariableMessage**  
- Введите имена переменных или нажмите кнопку с многоточием **(…)**, а затем выберите переменные. Переменные разделяются запятыми.  
+ Введите имена переменных или нажмите кнопку с многоточием **(...)** , а затем выберите переменные. Переменные разделяются запятыми.  
   
  **См. также:** Выбор переменных  
   
 ### <a name="messagetype--string-message"></a>MessageType = Строковое сообщение  
  **StringMessage**  
- Введите строковое сообщение или нажмите кнопку с многоточием **(…)**, а затем введите сообщение в диалоговом окне **Введите строковое сообщение**.  
+ Введите строковое сообщение или нажмите кнопку с многоточием **(...)** , а затем введите сообщение в диалоговом окне **Введите строковое сообщение** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "очередь сообщений" &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
  [Редактор задачи "очередь сообщений" &#40;"получить страницу"&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
