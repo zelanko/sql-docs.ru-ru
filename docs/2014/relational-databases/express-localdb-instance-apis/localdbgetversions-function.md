@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 431124cff2fcf293ccf1e8e8bcb74321245a661e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032286"
 ---
 # <a name="localdbgetversions-function"></a>Функция LocalDBGetVersions
   Возвращает все доступные версии SQL Server Express LocalDB на компьютере.  
   
- **Заголовочный файл:** sqlncli. h  
+ **Файл заголовка:** sqlncli.h  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63032286"
  [Вход/выход] На входе содержит число ячеек для версий в буфере *pVersionNames* .   
 На выходе содержит количество существующих версий LocalDB.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  S_OK  
  Функция выполнена успешно.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63032286"
 ## <a name="remarks"></a>Remarks  
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Заголовок и сведения о версии SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

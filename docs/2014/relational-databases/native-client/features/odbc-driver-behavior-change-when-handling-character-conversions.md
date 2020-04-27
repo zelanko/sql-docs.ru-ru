@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7f9562f8594e29c33832c595b9296eaf4f2019b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162433"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>Изменение поведения драйвера ODBC при обработке преобразования символов
@@ -52,7 +52,7 @@ SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // R
 SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempting to determine storage size needed  
 ```  
   
-|Версия драйвера Native Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Итоговая длина или индикатор|Description|  
+|Версия драйвера Native Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Итоговая длина или индикатор|Описание|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |Native Client [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] или более ранняя версия|6|Драйвер ошибочно предположил, что преобразование CHAR в WCHAR можно было выполнить как умножение длины на 2.|  
 |Native Client [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] (версия 11.0.2100.60) или более поздняя версия|-4 (SQL_NO_TOTAL)|Драйвер больше не предполагает, что преобразование типа CHAR в тип WCHAR или WCHAR в CHAR является действием ( \*умножение) 2 или (деление)/2.<br /><br /> Вызов **SQLGetData** больше не возвращает длину ожидаемого преобразования. Драйвер обнаруживает преобразование из CHAR в WCHAR или обратное преобразование и возвращает (-4) SQL_NO_TOTAL вместо *2 или /2, что могло быть неверным.|  
@@ -81,7 +81,7 @@ while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {
 SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting String Data Right Truncation behavior  
 ```  
   
-|Версия драйвера Native Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Итоговая длина или индикатор|Description|  
+|Версия драйвера Native Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Итоговая длина или индикатор|Описание|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |Native Client [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] или более ранняя версия|20|-   **SQLFetch** сообщает, что в правой части данных имеется усечение.<br />-Length — это Длина возвращаемых данных, а не то, что было сохранено (предполагает преобразование * 2 CHAR в WCHAR, которое может быть неправильным для глифов).<br />— Данные, хранящиеся в буфере, имеют значение 123 \ 0. Буфер гарантированно заканчивается на NULL.|  
 |Native Client [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] (версия 11.0.2100.60) или более поздняя версия|-4 (SQL_NO_TOTAL)|-   **SQLFetch** сообщает, что в правой части данных имеется усечение.<br />-Length означает-4 (SQL_NO_TOTAL), так как остальные данные не были преобразованы.<br />— Данные, хранящиеся в буфере, имеют значение 123 \ 0. - Буфер гарантированно заканчивается на NULL.|  
@@ -95,7 +95,7 @@ SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting
 SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters  
 ```  
   
-|Версия драйвера Native Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Итоговая длина или индикатор|Description|  
+|Версия драйвера Native Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Итоговая длина или индикатор|Описание|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |Native Client [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] или более ранняя версия|2468|-   **SQLFetch** больше не возвращает данные.<br />-   **SQLMoreResults** больше не возвращает данные.<br />-Length указывает размер данных, возвращаемых с сервера, не хранимых в буфере.<br />— Исходный буфер содержит 63 байт и знак завершения NULL. Буфер гарантированно заканчивается на NULL.|  
 |Native Client [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] (версия 11.0.2100.60) или более поздняя версия|-4 (SQL_NO_TOTAL)|-   **SQLFetch** больше не возвращает данные.<br />-   **SQLMoreResults** больше не возвращает данные.<br />-Length указывает (-4) SQL_NO_TOTAL, так как остальные данные не были преобразованы.<br />— Исходный буфер содержит 63 байт и знак завершения NULL. Буфер гарантированно заканчивается на NULL.|  
@@ -107,7 +107,7 @@ SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters
   
 -   Если не выполнить привязку, можно получить данные в блоках с помощью **SQLGetData** и **метод SQLParamData**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Компоненты собственного клиента SQL Server](sql-server-native-client-features.md)  
   
   

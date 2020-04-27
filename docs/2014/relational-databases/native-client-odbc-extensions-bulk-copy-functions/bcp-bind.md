@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 711c82bb627ca9ad1620cf1e11fdbc9dfa5f4351
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140561"
 ---
 # <a name="bcp_bind"></a>bcp_bind
@@ -69,7 +69,7 @@ idxServerCol
   
  Если в данных присутствуют признаки, они размещаются в памяти непосредственно перед данными. Параметр *pData* указывает на переменную индикатора в этом случае, а ширина индикатора, параметр *кбиндикатор* , используется массовым копированием для правильного адресации данных пользователя.  
   
- *кбиндикатор*  
+ *cbIndicator*  
  Ширина индикатора в байтах или значение NULL для данных столбца. Допускаются следующие значения длины признака: 0 (если признак не используется), 1, 2, 4 или 8. Признаки размещаются в памяти непосредственно перед данными. Например, следующее определение типа структуры можно использовать для вставки целочисленных значений в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью массового копирования:  
   
 ```  
@@ -140,7 +140,7 @@ bcp_bind(hdbc, szName, 0,
  *idxServerCol*  
  Порядковый номер столбца в таблице базы данных, в которую копируются данные. Первый столбец в таблице имеет порядковый номер 1. Порядковый номер столбца возвращается функцией [SQLColumns](../native-client-odbc-api/sqlcolumns.md).  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  SUCCEED или FAIL.  
   
 ## <a name="remarks"></a>Remarks  
@@ -266,7 +266,7 @@ if ((nRowsProcessed = bcp_done(hdbc)) == -1)
 printf_s("%ld rows copied.\n", nRowsProcessed);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

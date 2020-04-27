@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162403"
 ---
 # <a name="disable-indexes-and-constraints"></a>Отключение индексов и ограничений
@@ -47,9 +47,9 @@ ms.locfileid: "63162403"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   При отключении индекса он не обслуживается.  
   
@@ -85,12 +85,12 @@ ms.locfileid: "63162403"
   
 -   При создании нового кластеризованного индекса включаются ранее отключенные некластеризованные индексы. Дополнительные сведения см. в статье [Enable Indexes and Constraints](enable-indexes-and-constraints.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для выполнения ALTER INDEX необходимо иметь как минимум разрешение ALTER для таблицы или представления.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-disable-an-index"></a>Отключение индекса  
   
@@ -159,7 +159,7 @@ ms.locfileid: "63162403"
   
 -   Щелкните гиперссылку, чтобы вызвать диалоговое окно, отображающее полный текст сообщения об ошибке.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-disable-an-index"></a>Отключение индекса  
   

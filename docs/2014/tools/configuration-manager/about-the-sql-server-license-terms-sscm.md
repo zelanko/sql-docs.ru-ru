@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035323"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>Об условиях лицензионного соглашения SQL Server (SSCM)
@@ -77,7 +77,7 @@ ms.locfileid: "63035323"
 ## <a name="sql-server-licensing-options"></a>Варианты лицензирования SQL Server  
  Дополнительные сведения о ценах и параметрах лицензирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. на веб-сайте [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=190955) .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Заявление о конфиденциальности Microsoft SQL Server](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
  [Юридическое уведомление для документации](../../../2014/getting-started/legal-notice-for-documentation.md)  
   

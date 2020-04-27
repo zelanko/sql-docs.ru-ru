@@ -14,23 +14,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27d9d7ab4cd29c6eb0ea7ae1c6bddbe8c1b7ef06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046010"
 ---
 # <a name="detail-property"></a>Свойство Detail
-  Свойство **Detail** класса SoapException[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ** служб ** имеет следующую структуру XML:  
+  Свойство **Detail** класса [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** служб  имеет следующую структуру XML:  
   
 ## <a name="elements"></a>Элементы  
- **Описание**  
+ **Налог**  
  Элемент верхнего уровня, содержащий все остальные элементы данных об ошибке.  
   
  **Код ошибки**  
  Код ошибки служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
- **Состоянию HTTP**  
+ **HttpStatus**  
  Код состояния HTTP.  
   
  **Сообщение**  
@@ -39,7 +39,7 @@ ms.locfileid: "63046010"
  **HelpLink**  
  URL-адрес справочной ссылки на веб-сайт, где находятся дополнительные сведения об ошибке. Дополнительные сведения см. в разделе [Элемент HelpLink](helplink-element.md).  
   
- **Параметра**  
+ **LinkID**  
  Идентификатор, присвоенный ссылке.  
   
  **ProductName**  
@@ -48,19 +48,19 @@ ms.locfileid: "63046010"
  **ProductVersion**  
  Версия служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Максимальная длина составляет 15 символов. Номер версии должен иметь следующий формат: 8.00.0xxx.00.  
   
- **продуктлокалеид**  
+ **ProductLocaleId**  
  Идентификатор локали или идентификатор языка библиотеки INTL приложения (например, 0x41A).  
   
  **OperatingSystem**  
  Операционная система, в которой установлены службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Допустимыми являются значение **0** (независимость от операционной системы), значение **1** ([!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)]) и значение **16** (Windows XP).  
   
- **каунтрилокалеид**  
+ **CountryLocaleId**  
  Идентификатор локали или идентификатор языка операционной системы. Например, для французской версии Windows используется значение 0x040c.  
   
  **MoreInformation**  
  XML-строка, содержащая вложенные исключения, сформированные во время выполнения метода.  
   
- **Source**  
+ **Источник**  
  Дочерний элемент для элемента **MoreInformation**. Источник ошибки.  
   
  **Сообщение**  
@@ -69,9 +69,9 @@ ms.locfileid: "63046010"
  **Предупреждения**  
  XML-строка, содержащая предупреждения, возвращенные при обработке отчета.  
   
-## <a name="see-also"></a>См. также:  
- [Введение в обработку исключений в службах Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
- [Класс SoapException в службах Reporting Services](reporting-services-soapexception-class.md)   
+## <a name="see-also"></a>См. также  
+ [Введение в обработку исключений в Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
+ [Reporting Services класс SoapException](reporting-services-soapexception-class.md)   
  [Использование свойства Detail для обработки определенных ошибок](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   

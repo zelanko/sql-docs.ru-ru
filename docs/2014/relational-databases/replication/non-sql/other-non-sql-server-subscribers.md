@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021949"
 ---
-# <a name="other-non-sql-server-subscribers"></a>Подписчики, отличные от подписчиков SQL Server
-  Список[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] подписчиков [!INCLUDE[msCoName](../../../includes/msconame-md.md)], отличных от, поддерживаемых, см. в разделе [подписчики, отличные от SQL Server](non-sql-server-subscribers.md). В данном разделе содержатся сведения о требованиях к драйверам ODBC и поставщикам OLE DB.  
+# <a name="other-non-sql-server-subscribers"></a>Другие подписчики, отличные от SQL Server
+   Список подписчиков, не относящихся к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и поддерживаемых [!INCLUDE[msCoName](../../../includes/msconame-md.md)], см. в разделе [Подписчики, отличные от подписчиков SQL Server](non-sql-server-subscribers.md). В данном разделе содержатся сведения о требованиях к драйверам ODBC и поставщикам OLE DB.  
   
 ## <a name="odbc-driver-requirements"></a>Требования к драйверам ODBC  
  Драйвер ODBC:  
@@ -40,15 +40,15 @@ ms.locfileid: "63021949"
 ## <a name="replicating-using-ole-db-interfaces"></a>Репликация при помощи интерфейсов OLE DB  
  Поставщики OLE DB должны поддерживать эти объекты для репликации транзакций:  
   
--   Объект **DataSource**  
+-   объект**DataSource**  
   
--   Объект **Session**  
+-   объект**Session**  
   
--   Объект **Command**  
+-   объект**Command**  
   
--   Объект **набора строк**  
+-   объект**Rowset**  
   
--   Объект **Error**  
+-   объект**Error**  
   
 ### <a name="datasource-object-interfaces"></a>Интерфейсы объекта DataSource  
  Необходимы следующие интерфейсы для подключения к источнику данных:  
@@ -59,14 +59,14 @@ ms.locfileid: "63021949"
   
 -   `IDBProperties`  
   
- Если поставщик поддерживает интерфейс **IDBInfo** , [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует интерфейс для получения сведений, таких, как символ-идентификатор в кавычках, максимальная длина инструкции SQL, а также максимальное число символов в именах таблиц и столбцов.  
+ Если поставщик поддерживает интерфейс **IDBInfo**, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует интерфейс для получения сведений, таких как символ-идентификатор в кавычках, максимальная длина инструкции SQL, а также максимальное число символов в именах таблиц и столбцов.  
   
 ### <a name="session-object-interfaces"></a>Интерфейсы объекта Session  
  Требуются следующие интерфейсы:  
   
 -   **IDBCreateCommand**  
   
--   **Методы**  
+-   **ITransaction**  
   
 -   **ITransactionLocal**  
   
@@ -100,7 +100,7 @@ ms.locfileid: "63021949"
   
 -   **IColumnsInfo**  
   
- Приложение должно открыть набор строк в реплицированной таблице, которая создается в базе данных подписки. **IColumnsInfo** и **IAccessor** необходимы для доступа к данным в наборе строк.  
+ Приложение должно открыть набор строк в реплицированной таблице, которая создается в базе данных подписки. Интерфейсы**IColumnsInfo** и **IAccessor** необходимы для доступа к данным в наборе строк.  
   
 ### <a name="error-object-interfaces"></a>Интерфейсы объекта Error  
  Используйте следующие интерфейсы для управления ошибками:  
@@ -113,7 +113,7 @@ ms.locfileid: "63021949"
   
  Дополнительные сведения о поставщике OLE DB см. в документации, поставляемой с используемым поставщиком OLE DB.  
   
-## <a name="see-also"></a>См. также:  
- [Подписчики, не относящиеся к SQL Server](non-sql-server-subscribers.md)  
+## <a name="see-also"></a>См. также  
+ [Non-SQL Server Subscribers](non-sql-server-subscribers.md)  
   
   

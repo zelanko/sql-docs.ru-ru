@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 37c719beb625a533c2d8f279a8500365c4786c05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990583"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Поддержка высокого уровня доступности в базах данных OLTP в памяти
@@ -44,7 +44,7 @@ ms.locfileid: "62990583"
 ## <a name="support-for-transaction-replication-in-in-memory-oltp"></a>Поддержка репликации транзакций в базах данных OLTP в памяти  
  Таблицы, выступающие в качестве подписчиков репликации транзакций, за исключением одноранговой репликации транзакций, можно настроить как оптимизированные для памяти таблицы. Другие конфигурации репликации несовместимы с таблицами, оптимизированными для памяти.  Дополнительные сведения см. [в разделе Репликация на подписчики таблиц, оптимизированных для памяти](../replication/replication-to-memory-optimized-table-subscribers.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Активные вторичные реплики: &#40;группы доступности AlwaysOn для чтения&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   

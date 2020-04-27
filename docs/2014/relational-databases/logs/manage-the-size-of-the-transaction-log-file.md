@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144335"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Управление размером файла журнала транзакций
   В некоторых случаях может оказаться полезным физическое сжатие или расширение размера реального файла журнала или журнала транзакции базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В данном разделе содержатся сведения о мониторинге размера журнала транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , сжатии журнала транзакций, добавлении или увеличении файла журнала транзакций, оптимизации скорости роста журнала транзакций **tempdb** , а также об управлении размером файла журнала транзакций.  
   
   
-##  <a name="MonitorSpaceUse"></a>Мониторинг использования пространства журнала  
- Контролировать используемое пространство журнала можно с помощью процедуры DBCC SQLPERF (LOGSPACE). Она возвращает сведения об объеме пространства, используемого журналом в данный момент, и указывает, если необходимо провести усечение журнала транзакций. Дополнительные сведения см. в разделе [DBCC SQLPERF &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-sqlperf-transact-sql). Для получения сведений о текущем размере файла журнала, его максимальном размере и параметре автоматического увеличения файла вы можете также использовать столбцы **size**, **max_size**и **growth** для данного файла журнала в представлении **sys.database_files**. Дополнительные сведения см. в разделе [sys.database_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).  
+##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>Мониторинг использования пространства журнала  
+ Контролировать используемое пространство журнала можно с помощью процедуры DBCC SQLPERF (LOGSPACE). Она возвращает сведения об объеме пространства, используемого журналом в данный момент, и указывает, если необходимо провести усечение журнала транзакций. Дополнительные сведения см. в разделе [DBCC SQLPERF (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-sqlperf-transact-sql). Для получения сведений о текущем размере файла журнала, его максимальном размере и параметре автоматического увеличения файла вы можете также использовать столбцы **size**, **max_size** и **growth** для данного файла журнала в представлении **sys.database_files**. Дополнительные сведения см. в разделе [sys.database_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).  
   
 > [!IMPORTANT]  
 >  Рекомендуется избегать переполнения диска, содержащего журналы.  
   
   
-##  <a name="ShrinkSize"></a>Уменьшение размера файла журнала  
+##  <a name="shrink-the-size-of-the-log-file"></a><a name="ShrinkSize"></a>Уменьшение размера файла журнала  
  Для уменьшения реального размера физического файла журнала необходимо выполнить его сжатие. Это полезно, если файл журнала транзакций содержит ненужное неиспользованное пространство. Сжатие файла журнала может производиться только в том случае, если база данных находится в режиме «в сети» и пока свободен хотя бы один виртуальный файл журнала. В ряде случаев сжатие невозможно до тех пор, пока не выполнена следующая операция усечения журнала.  
   
 > [!NOTE]  
@@ -40,7 +40,7 @@ ms.locfileid: "63144335"
   
  **Сжатие файла журнала (без сжатия файлов базы данных)**  
   
--   [DBCC SHRINKFILE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)  
+-   [DBCC SHRINKFILE (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)  
   
 -   [Сжатие файла](../databases/shrink-a-file.md)  
   
@@ -50,28 +50,28 @@ ms.locfileid: "63144335"
   
  `To monitor log space`  
   
--   [DBCC SQLPERF &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-sqlperf-transact-sql)  
+-   [DBCC SQLPERF (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-sqlperf-transact-sql)  
   
--   [sys. database_files &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (см. столбцы **Размер**, **max_size**и **рост** для файла или файлов журнала).  
+-   [sys.database_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (См. столбцы **size**, **max_size** и **growth** файла или файлов журнала.)  
   
 > [!NOTE]  
 >  Можно задать автоматическое выполнение сжатия файлов базы данных и журнала. Однако автоматическое сжатие не рекомендуется, поэтому свойство `autoshrink` базы данных по умолчанию имеет значение FALSE. Если свойство `autoshrink` имеет значение TRUE, то автоматическое сжатие уменьшит размер файла только в том случае, если неиспользуемое пространство занимает более 25 % от общего объема. Файл будет сжат либо до размера, в котором 25 % пространства не используется, либо до исходного размера, каким бы большим он ни был. `autoshrink` Сведения об изменении значения свойства см. в разделе [Просмотр или изменение свойств базы данных](../databases/view-or-change-the-properties-of-a-database.md)— используйте свойство **Автоматическое сжатие** на странице **Параметры** или [Параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)— используйте параметр AUTO_SHRINK.  
   
   
-##  <a name="AddOrEnlarge"></a>Добавление или увеличение файла журнала  
+##  <a name="add-or-enlarge-a-log-file"></a><a name="AddOrEnlarge"></a>Добавление или увеличение файла журнала  
  Кроме того, можно выделить дополнительное место на диске путем увеличения существующего файла журнала (если для этого достаточно места на диске) либо путем добавления файла журнала в базу данных, как правило, на другом диске.  
   
 -   Файл журнала добавляется в базу данных с помощью предложения ADD LOG FILE инструкции ALTER DATABASE. Это позволяет увеличить размер файла.  
   
--   Файл журнала можно увеличить с помощью предложения MODIFY FILE инструкции ALTER DATABASE. При этом следует указать синтаксис SIZE и MAXSIZE. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql).  
+-   Файл журнала можно увеличить с помощью предложения MODIFY FILE инструкции ALTER DATABASE. При этом следует указать синтаксис SIZE и MAXSIZE. Дополнительные сведения см. в разделе [ALTER database &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
   
-##  <a name="tempdbOptimize"></a>Оптимизация размера журнала транзакций базы данных tempdb  
+##  <a name="optimize-the-size-of-the-tempdb-transaction-log"></a><a name="tempdbOptimize"></a>Оптимизация размера журнала транзакций базы данных tempdb  
  При перезапуске экземпляра сервера размер журнала транзакций базы данных **tempdb** изменяется и становится равным исходному размеру, который был до применения параметра автоматического увеличения файла. Это может понизить производительность журнала транзакций базы данных **tempdb** . Этого можно избежать с помощью увеличения размера журнала транзакций базы данных **tempdb** после запуска или перезапуска экземпляра сервера. Дополнительные сведения см. в статье [tempdb Database](../databases/tempdb-database.md).  
   
   
-##  <a name="ControlGrowth"></a>Управление ростом файла журнала транзакций  
- Для управления размером файла журнала транзакций вы можете использовать инструкцию [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql). Обратите внимание на следующее.  
+##  <a name="control-the-growth-of-a-transaction-log-file"></a><a name="ControlGrowth"></a>Управление ростом файла журнала транзакций  
+ Для управления размером файла журнала транзакций вы можете использовать инструкцию [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql). Следует отметить следующее.  
   
 -   Чтобы изменить текущий размер файла в КБ, МБ, ГБ и ТБ, используйте параметр «SIZE».  
   
@@ -83,7 +83,7 @@ ms.locfileid: "63144335"
   
   
 ## <a name="see-also"></a>См. также:  
- [&#41;BACKUP &#40;Transact-SQL](/sql/t-sql/statements/backup-transact-sql)   
- [Устранение неполадок при переполнении журнала транзакций &#40;SQL Server ошибка 9002&#41;](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+ [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
+ [Устранение неполадок при переполнении журнала транзакций (ошибка SQL Server 9002)](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
   

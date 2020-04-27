@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63016064"
 ---
 # <a name="execute-a-stored-procedure"></a>Выполнение хранимой процедуры
@@ -47,9 +47,9 @@ ms.locfileid: "63016064"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   При сопоставлении имен системных процедур используются параметры сортировки вызывающей базы данных. Таким образом, в вызове процедур следует всегда использовать точный регистр имен системных процедур. Например, этот код завершится с ошибкой при выполнении в контексте базы данных, в параметрах сортировки которой учитывается регистр:  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63016064"
   
 -   Если определяемая пользователем процедура имеет имя, совпадающее с системной процедурой, то такая определяемая пользователем процедура никогда не будет выполняться.  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   Выполнение системных хранимых процедур  
   
@@ -119,13 +119,13 @@ ms.locfileid: "63016064"
   
     2.  отменить выполнение процедуры при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
  Дополнительные сведения см. в статьях [EXECUTE AS (Transact-SQL)](/sql/t-sql/statements/execute-as-transact-sql) и [EXECUTE AS Clause (Transact-SQL)](/sql/t-sql/statements/execute-as-clause-transact-sql).  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Дополнительные сведения см. в разделе "Разрешения" статьи [EXECUTE (Transact-SQL)](/sql/t-sql/language-elements/execute-transact-sql).  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-execute-a-stored-procedure"></a>Выполнение хранимой процедуры  
   
@@ -154,7 +154,7 @@ ms.locfileid: "63016064"
   
 5.  Чтобы выполнить хранимую процедуру, нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-execute-a-stored-procedure"></a>Выполнение хранимой процедуры  
   
@@ -202,7 +202,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
     , @OptionValue = 'off';  
 ```  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
   
 ## <a name="see-also"></a>См. также:  
  [Указание параметров](specify-parameters.md)   

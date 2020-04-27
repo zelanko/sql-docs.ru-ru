@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033668"
 ---
 # <a name="create-statistics"></a>Создание статистики
@@ -42,9 +42,9 @@ ms.locfileid: "63033668"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Прежде чем создавать статистику с помощью инструкции CREATE STATISTICS, убедитесь, что на уровне базы данных установлен параметр AUTO_CREATE_STATISTICS. Это гарантирует, что оптимизатор запросов продолжит регулярно создавать статистику по отдельным столбцам для столбцов предиката запроса.  
   
@@ -52,12 +52,12 @@ ms.locfileid: "63033668"
   
 -   Удалить, переименовать или изменить определение столбца таблицы, определенного в предикате отфильтрованной статистики, нельзя.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Пользователь должен быть владельцем таблицы или индексированного представления либо членом одной из следующих ролей: предопределенная роль сервера **sysadmin** , предопределенная роль базы данных **db_owner** или предопределенная роль базы данных **db_ddladmin** .  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-create-statistics"></a>Создание статистики  
   
@@ -69,7 +69,7 @@ ms.locfileid: "63033668"
   
 4.  Щелкните правой кнопкой мыши папку **Статистика** и выберите пункт **Создать статистику...** .  
   
-     Следующие свойства отображаются на странице **Общие** в диалоговом окне **Новая статистика по таблице**_table_name_ .  
+     На странице **Общие** в диалоговом окне **Создание статистики по таблице**_имя_таблицы_ отображаются указанные ниже свойства.  
   
      **Имя таблицы**  
      Отображает имя таблицы, которую описывает данная статистика.  
@@ -113,7 +113,7 @@ ms.locfileid: "63033668"
      **Обновить статистику для этих столбцов**  
      Установите флажок для обновления статистики после закрытия диалогового окна.  
   
-     Следующее свойство отображается на странице **Фильтр** диалогового окна **Новая статистика по таблице**_table_name_ .  
+     На странице **Фильтр** в диалоговом окне **Создание статистики по таблице**_имя_таблицы_ отображается указанное ниже свойство.  
   
      **Критерий фильтра**  
      Определяет столбцы данных, которые будут включены в статистику фильтрации. Например `Production.ProductSubcategoryID IN ( 1,2,3 )`.  
@@ -141,7 +141,7 @@ ms.locfileid: "63033668"
   
 7.  В диалоговом окне **Новая статистика по таблице**_table_name_ нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-create-statistics"></a>Создание статистики  
   

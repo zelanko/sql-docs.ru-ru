@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ede93e1552451f7db8e286ac28284fed79ddef0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067860"
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
@@ -26,7 +26,7 @@ ms.locfileid: "63067860"
   
  Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может возвращать несколько результирующих наборов для одной инструкции. Каждый результирующий набор должен быть привязан отдельно. Дополнительные сведения о привязке для нескольких результирующих наборов см. в разделе [SQLMoreResults](sqlmoreresults.md).  
   
- Разработчик может привязывать столбцы к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]конкретным типам данных C с помощью значения ** `SQL_C_BINARY`TargetType. Столбцы, привязанные к типам, зависящим от служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не могут быть перенесены. Определенные типы данных ODBC языка C, зависящие от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], совпадают с определениями типов для DB-Library, и разработчики приложений переноса DB-Library могут воспользоваться этой возможностью.  
+ Разработчик может привязывать столбцы к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]конкретным типам данных C с помощью значения *TargetType* `SQL_C_BINARY`TargetType. Столбцы, привязанные к типам, зависящим от служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не могут быть перенесены. Определенные типы данных ODBC языка C, зависящие от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], совпадают с определениями типов для DB-Library, и разработчики приложений переноса DB-Library могут воспользоваться этой возможностью.  
   
  Усечение данных отчетов — это дорогостоящий процесс для драйвера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC собственного клиента. Усечения можно избежать с помощью гарантии того, что все буферы связанных данных достаточно широки для возвращения данных. Для символьных данных ширина должна включать пространство для признака конца строки при использовании поведения драйвера по умолчанию для завершения строки. Например, привязка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбца **char (5)** к массиву из пяти символов приводит к усечению каждого полученного значения. Привязка одинакового столбца к массиву из шести символов позволит избежать усечения путем предоставления элемента символа для хранения признака конца NULL. [SQLGetData](sqlgetdata.md) можно использовать для эффективного извлечения длинных символьных и двоичных данных без усечения.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63067860"
 ## <a name="sqlbindcol-support-for-large-clr-udts"></a>Поддержка функцией SQLBindCol определяемых пользователем типов больших данных CLR  
  **SQLBindCol** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функция SQLBindCol](https://go.microsoft.com/fwlink/?LinkId=59327)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

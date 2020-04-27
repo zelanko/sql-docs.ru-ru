@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 90280725036f3d984b0d7b989e9a802dfec38746
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63048629"
 ---
 # <a name="report-server-properties-advanced-tab"></a>Свойства сервера отчетов (вкладка «Дополнительно»)
-  Эта служба — [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Если определены пользовательские свойства, они отображаются на этой вкладке вместе со значениями.  
+  Эта служба представляет собой среду [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Если определены пользовательские свойства, они отображаются на этой вкладке вместе со значениями.  
   
 ## <a name="options"></a>Параметры  
  **Передача отзывов пользователей**  

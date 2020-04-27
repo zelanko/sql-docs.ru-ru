@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b03dd7f886cee5816d591034d1be63ece45d8d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021340"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>настроить свойства моментального снимка (программирование репликации на языке Transact-SQL)
@@ -68,7 +68,7 @@ ms.locfileid: "63021340"
   
     -   **post_snapshot_script** . также можно **@value** указать имя файла и полный путь к **SQL** -файлу, который будет выполняться на подписчике во время инициализации после применения исходного моментального снимка.  
   
-    -   **snapshot_in_defaultfolder** . также укажите значение **true** или **false** , чтобы указать, доступен ли моментальный снимок только в расположении, отличном от расположения по умолчанию.  
+    -   **snapshot_in_defaultfolder** — также укажите значение **true** или **false** , чтобы указать, доступен ли моментальный снимок только в месте хранения, отличном от места по умолчанию.  
   
 2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changepublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql)(необязательно). Укажите **@publication** и одно или несколько измененных параметров планирования или учетных данных безопасности.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "63021340"
   
     -   **post_snapshot_script** . также можно **@value** указать имя файла и полный путь к **SQL** -файлу, который будет выполняться на подписчике во время инициализации после применения исходного моментального снимка.  
   
-    -   **snapshot_in_defaultfolder** . также укажите значение **true** или **false** , чтобы указать, доступен ли моментальный снимок только в расположении, отличном от расположения по умолчанию.  
+    -   **snapshot_in_defaultfolder** — также укажите значение **true** или **false** , чтобы указать, доступен ли моментальный снимок только в месте хранения, отличном от места по умолчанию.  
   
 2.  Чтобы сформировать новый моментальный снимок, запустите агент моментальных снимков репликации ( [Replication Snapshot Agent](../agents/replication-snapshot-agent.md) ) из командной строки или задание агента моментальных снимков. Дополнительные сведения см. в разделе [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
@@ -98,7 +98,7 @@ ms.locfileid: "63021340"
   
  [!code-sql[HowTo#sp_mergealtsnapshot](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubaltsnapshot.sql#sp_mergealtsnapshot)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Альтернативные расположения папки моментальных снимков](../alternate-snapshot-folder-locations.md)   
  [Сжатые моментальные снимки](../compressed-snapshots.md)   
  [Выполнение скриптов до и после применения моментального снимка](../snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)   

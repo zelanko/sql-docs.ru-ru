@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162354"
 ---
 # <a name="create-unique-indexes"></a>Создание уникальных индексов
@@ -50,9 +50,9 @@ ms.locfileid: "63162354"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Benefits"></a> Преимущества уникального индекса  
+###  <a name="benefits-of-a-unique-index"></a><a name="Benefits"></a> Преимущества уникального индекса  
   
 -   Использование уникальных индексов по нескольким столбцам позволяет гарантировать уникальность всех сочетаний значений в ключе индекса. Например, если уникальный индекс создан для комбинации столбцов **LastName**, **FirstName**и **MiddleName** , то никакие две строки в таблице не могут образовывать одну и ту же комбинацию этих значений.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63162354"
   
 -   Уникальные индексы обеспечивают дополнительные сведения, которые могут использоваться оптимизатором запросов для создания более эффективных планов выполнения.  
   
-###  <a name="Implementations"></a> Стандартные реализации  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> Стандартные реализации  
  Уникальные индексы реализуются следующими способами:  
   
 -   **Ограничение PRIMARY KEY или UNIQUE**  
@@ -83,18 +83,18 @@ ms.locfileid: "63162354"
   
      Чтобы создать индексированное представление, по одному или нескольким столбцам представления определяется уникальный кластеризованный индекс. Представление выполняется и результирующий набор сохраняется на конечном уровне индекса аналогично хранению данных таблиц в кластеризованном индексе. Дополнительные сведения см. в разделе [Создание индексированных представлений](../views/views.md).  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Уникальный индекс и ограничения UNIQUE и PRIMARY KEY не могут быть созданы, если дублирующиеся значения уже существуют.  
   
 -   Уникальный некластеризованный индекс может содержать любые неключевые столбцы. Дополнительные сведения см. в статье [Create Indexes with Included Columns](create-indexes-with-included-columns.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner**.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>Создание уникального индекса с помощью конструктора таблиц  
   
@@ -142,13 +142,13 @@ ms.locfileid: "63162354"
   
 7.  В разделе **Ключевые столбцы индекса** щелкните **Добавить…** .  
   
-8.  В диалоговом окне **Выбор столбцов из**_table_name_ установите флажки для столбцов таблицы или столбцов, которые будут добавлены в уникальный индекс.  
+8.  В диалоговом окне **Выбор столбцов из**_имя_таблицы_ установите флажки для столбцов таблицы, добавляемых к уникальному индексу.  
   
 9. Нажмите кнопку **ОК**.  
   
 10. В диалоговом окне **Создание индекса** нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>Создание уникального индекса в таблице  
   

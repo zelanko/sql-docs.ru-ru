@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151188"
 ---
 # <a name="create-a-new-plan-guide"></a>Создание структуры плана
@@ -39,12 +39,11 @@ ms.locfileid: "63151188"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
--   Аргументы процедуры sp_create_plan_guide должны задаваться в указанном порядке. При задании значений параметрам процедуры `sp_create_plan_guide` все имена параметров необходимо указывать явно или вообще не указывать. Например, если указан параметр `@name =`, необходимо также указать параметры `@stmt =`, `@type =` и т. д. Подобным образом, если параметр `@name =` пропущен и указано только его значение, имена остальных параметров должны быть также пропущены и должны быть указаны только их значения. Имена аргументов приводятся исключительно в целях описания, чтобы помочь разобраться с синтаксисом. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не проверяет соответствие указанных имен параметров их позициям.  
+-   Аргументы процедуры sp_create_plan_guide должны задаваться в указанном порядке. При задании значений параметрам процедуры `sp_create_plan_guide` все имена параметров необходимо указывать явно или вообще не указывать. Например, если указан параметр `@name =`, необходимо также указать параметры `@stmt =`, `@type =` и т. д. Подобным образом, если параметр `@name =` пропущен и указано только его значение, имена остальных параметров должны быть также пропущены и должны быть указаны только их значения. Имена аргументов приводятся исключительно в целях описания, чтобы помочь разобраться с синтаксисом. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не проверяет соответствие указанных имен параметров их позициям.  
   
 -   Можно создать несколько структур планов OBJECT или SQL для одного и того же запроса и пакета либо модуля. Однако только одна структура плана может быть включена в данный момент времени.  
   
@@ -52,12 +51,12 @@ ms.locfileid: "63151188"
   
 -   Попытка удаления или изменения функции, хранимой процедуры или триггера DML, на которые имеется ссылка в структуре плана (как включенных, так и отключенных), приводит к ошибке. Попытка удалить таблицу, для которой определен триггер, имеющий соответствующую ссылку в структуре плана, также вызывает ошибку.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для создания структуры плана типа OBJECT необходимо разрешение ALTER на соответствующий объект. Чтобы создать структуру плана типа SQL или TEMPLATE, необходимо обладать разрешением ALTER на текущую базу данных.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-create-a-plan-guide"></a>Создание структуры плана  
   
@@ -89,7 +88,7 @@ ms.locfileid: "63151188"
   
 11. Нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-create-a-plan-guide"></a>Создание структуры плана  
   

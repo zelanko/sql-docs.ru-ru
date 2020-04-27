@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4a17b9b6599a57275524308608ac6ef18a8e18e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128656"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   В таблице показаны значения, возвращаемые функцией **SQLGetInfo**. Эти значения могут меняться в зависимости от номера версии сервера, с которым установлено соединение.  
   
- **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственном клиенте отличается от **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвере ODBC (SQLSRV32. DLL), когда **SQLGetInfo** вызывается с SQL_KEYWORDS и длиной буфера 0.  Драйвер собственного клиента Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает SQL_SUCCESS, но драйвер ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает SQL_SUCCESS_WITH_INFO.  Однако при вызове с ненулевой длиной буфера, которая меньше, чем выходная строка **** ключевого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] слова, SQLGetInfo в собственном клиенте возвращает SQL_SUCCESS_WITH_INFO и SQLSTATE 01004.  
+ **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственном клиенте отличается от **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвере ODBC (SQLSRV32. DLL), когда **SQLGetInfo** вызывается с SQL_KEYWORDS и длиной буфера 0.  Драйвер собственного клиента Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает SQL_SUCCESS, но драйвер ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает SQL_SUCCESS_WITH_INFO.  Однако при вызове с ненулевой длиной буфера, которая меньше, чем выходная строка **SQLGetInfo** ключевого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] слова, SQLGetInfo в собственном клиенте возвращает SQL_SUCCESS_WITH_INFO и SQLSTATE 01004.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
@@ -207,7 +207,7 @@ ms.locfileid: "63128656"
 |SQL_UNION|SQL_U_UNION SQL_U_UNION_ALL|  
 |SQL_USER_NAME|Текущее имя пользователя.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функция SQLGetInfo](https://go.microsoft.com/fwlink/?LinkId=59354)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

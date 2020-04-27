@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ff2a744f68cf6152330179eb8dcab1f33911914
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046609"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
@@ -30,7 +30,7 @@ ms.locfileid: "63046609"
   
  При выполнении [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции INSERT, Update, DELETE или MERGE с предложением OUTPUT SQLRowCount не возвращает количество строк, затронутых до тех пор, пока не будут потреблены все строки результирующего набора, сформированного предложением OUTPUT. Чтобы сконсуме эти строки, вызовите SQLFetch или SQLFetchScroll. Склресултколс возвращает значение-1, пока не будут использованы все строки результатов. После того как SQLFetch или SQLFetchScroll возвращает SQL_NO_DATA, приложение должно вызвать SQLRowCount, чтобы определить число затронутых строк перед вызовом SQLMoreResults для перехода к следующему результату.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функция SQLRowCount](https://go.microsoft.com/fwlink/?LinkId=59367)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

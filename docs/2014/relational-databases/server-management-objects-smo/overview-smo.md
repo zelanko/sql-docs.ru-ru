@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63131808"
 ---
 # <a name="overview-smo"></a>Общие сведения об SMO
@@ -66,7 +66,7 @@ ms.locfileid: "63131808"
   
 -   Триггеры DDL, обеспечивающие дополнительные функции при возникновении DDL-событий. Дополнительные сведения см. в разделе [DDL Triggers](../triggers/ddl-triggers.md).  
   
- Пространство имен объектов SMO — <xref:Microsoft.SqlServer.Management.Smo>. Объекты SMO реализованы в виде сборки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Это означает, что перед использованием объектов SMO нужно установить среду CLR из [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0. Сборки объектов SMO по умолчанию устанавливаются в глобальный кэш сборок с параметром пакета SDK [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эти сборки размещаются в [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Дополнительные сведения см. в документации по [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Пространство имен объектов SMO — <xref:Microsoft.SqlServer.Management.Smo>. Объекты SMO реализованы в виде сборки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Это означает, что перед использованием объектов SMO нужно установить среду CLR из [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0. Сборки объектов SMO по умолчанию устанавливаются в глобальный кэш сборок с параметром пакета SDK [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эти сборки размещаются в [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Дополнительные сведения см. в документации по [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
 ## <a name="smo-classes"></a>Классы модели объектов SMO  
  Классы модели объектов SMO подразделяются на две категории: классы экземпляров и служебные классы.  
@@ -108,7 +108,7 @@ ms.locfileid: "63131808"
   
  Объекты поставщика WMI помещаются в объекты SMO. В результате программист модели SMO получает простую модель объектов, весьма напоминающую классы SMO. Однако в этом случае программист не должен понимать модель программирования, представленную пространством имен, и особенности организации поставщика WMI [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поставщик WMI позволяет конфигурировать службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , псевдонимы, а также сетевые библиотеки клиентов и серверов.  
   
- **Написание сценариев**  
+ **Создание скриптов**  
   
  В модели объектов SMO средства для работы со скриптами были улучшены и переданы в класс `Scripter`. `Scripter` Класс может обнаруживать зависимости, понимать связи между объектами и позволяет управлять иерархией зависимостей. Главным объектом, обеспечивающим работу со скриптами, является объект `Scripter`. Существует несколько поддерживающих объектов, которые осуществляют обработку зависимостей, а также реагируют на события состояния и на события ошибок.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "63131808"
   
  В модели объектов SMO реализованы новые объекты, представляющие расширенные возможности полнотекстового поиска.  
   
- **Объект Page Verify**  
+ **Проверка страниц**  
   
  Объект <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A> представляет параметры проверки страниц баз данных.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "63131808"
   
  База данных моментальных снимков — это предназначенная только для чтения копия указанной базы данных, снятая в указанный момент времени. База данных моментальных снимков может быть определена с помощью свойства <xref:Microsoft.SqlServer.Management.Smo.Database.IsDatabaseSnapshot%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
- **Компонент Service Broker**  
+ **Service Broker**  
   
  Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] и его функциональные возможности представлены группой объектов  
   
@@ -178,10 +178,9 @@ ms.locfileid: "63131808"
   
  Библиотека DMO представляет собой объектную модель COM, тогда как модель SMO реализована в виде сборки [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Компоненты COM — это библиотеки, которые предоставляют пригодные для повторного использования средства приложениям и в программировании неуправляемых приложений. Сборки [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предоставляют пригодные для повторного использования средства для [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] с целью написания приложений с управляемым кодом.  
   
- При переходе к использованию технологии [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно применять приложения, написанные частично с помощью управляемого, а частично — неуправляемого кода. 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] дает возможность взаимодействовать с компонентами COM, для чего требуется основная сборка взаимодействия. Для объекта SQL-DMO требуется оболочка среды выполнения, чтобы к нему можно было обращаться из приложения на базе платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ При переходе к использованию технологии [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно применять приложения, написанные частично с помощью управляемого, а частично — неуправляемого кода. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] дает возможность взаимодействовать с компонентами COM, для чего требуется основная сборка взаимодействия. Для объекта SQL-DMO требуется оболочка среды выполнения, чтобы к нему можно было обращаться из приложения на базе платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
-## <a name="see-also"></a>См. также:  
- [Основные понятия объекты Replication Management Objects](../replication/concepts/replication-management-objects-concepts.md)  
+## <a name="see-also"></a>См. также  
+ [Основные понятия объектов RMO](../replication/concepts/replication-management-objects-concepts.md)  
   
   

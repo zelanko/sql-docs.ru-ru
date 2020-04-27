@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b95fbb99affb91743d5b922f748cae5554736f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164414"
 ---
 # <a name="deploying-a-delivery-extension"></a>Развертывание модуля доставки
@@ -26,7 +26,7 @@ ms.locfileid: "63164414"
   
  В случае замены или обновления модуля доставки все подписки, с которыми он связан, остаются действительными.  
   
- После написания [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и компиляции модуля доставки в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] библиотеку необходимо скопировать расширение в соответствующий каталог и добавить запись в соответствующий [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] файл конфигурации, чтобы сервер отчетов мог его разместить.  
+ После записи и компиляции модуля доставки службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в библиотеку [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] необходимо скопировать модуль в соответствующий каталог и добавить запись в соответствующий файл конфигурации [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], чтобы сервер отчетов мог найти этот модуль.  
   
 ## <a name="configuration-file-extension-element"></a>Элемент Extension в файле конфигурации  
  Модули доставки, развернутые на сервере отчетов, необходимо указывать в файле конфигурации как элементы `Extension`. Файлом конфигурации для сервера отчетов является RSReportServer.config.  
@@ -51,7 +51,7 @@ ms.locfileid: "63164414"
     > [!IMPORTANT]  
     >  При попытке перезаписать существующую сборку модуля доставки необходимо сначала остановить службу сервера отчетов, а затем скопировать обновленную сборку. После окончания копирования сборки перезапустите службу.  
   
-2.  Скопировав файл сборки, откройте файл RSReportServer.config. Файл RSReportServer. config находится в папке%ProgramFiles%\Microsoft SQL Server \ MSRS10_50. \<InstanceName> \reporting Services\ReportServer Directory. Необходимо создать запись в файле конфигурации для файла сборки модуля доставки. Файл конфигурации можно открыть с помощью [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] или воспользоваться простым текстовым редактором (таким, как Блокнот).  
+2.  Скопировав файл сборки, откройте файл RSReportServer.config. Файл RSReportServer. config находится в папке%ProgramFiles%\Microsoft SQL Server \ MSRS10_50. \<InstanceName> \reporting Services\ReportServer Directory. Необходимо создать запись в файле конфигурации для файла сборки модуля доставки. Файл конфигурации можно открыть с помощью [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] или простого текстового редактора, например Блокнота.  
   
 3.  Найдите в файле RSReportServer.config элемент `Delivery`. Запись для созданного модуля доставки должна находиться в следующем разделе файла:  
   
@@ -138,8 +138,8 @@ ms.locfileid: "63164414"
 ## <a name="verifying-the-deployment"></a>Проверка развертывания  
  Проверить, успешно ли был развернут модуль доставки на сервере отчетов, можно с помощью метода веб-службы <xref:ReportService2010.ReportingService2010.ListExtensions%2A>. Можно также открыть диспетчер отчетов и убедиться, что модуль включен в список доступных модулей доставки для подписки. Дополнительные сведения о диспетчер отчетов и подписках см. в разделе [подписки и доставка &#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Реализация модуля доставки](implementing-a-delivery-extension.md)   
- [Библиотека модулей Reporting Services](../reporting-services-extension-library.md)  
+ [Библиотека модулей служб Reporting Services](../reporting-services-extension-library.md)  
   
   

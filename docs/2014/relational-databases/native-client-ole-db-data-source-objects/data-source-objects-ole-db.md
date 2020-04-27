@@ -1,5 +1,5 @@
 ---
-title: Объекты источника данных (OLE DB) | Документация Майкрософт
+title: Объекты источника данных (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b602695720e0d6567e44e4fbe8fd06b6d496a6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63130583"
 ---
 # <a name="data-source-objects-ole-db"></a>Объекты источников данных (OLE DB)
@@ -73,9 +73,9 @@ else
   
  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента выполняет свое первое подключение к указанному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в ходе успешной инициализации источника данных. Соединение с источником данных поддерживается до тех пор, пока хранятся ссылки на любой интерфейс инициализации источника данных или пока не вызван метод **IDBInitialize::Uninitialize**.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
--   [Свойства источника данных &#40;OLE DB&#41;](data-source-properties-ole-db.md)  
+-   [Свойства источника данных &#40;OLE DB&#41;](data-source-properties-ole-db.md)  
   
 -   [Свойства сведений об источнике данных](data-source-information-properties.md)  
   
@@ -87,7 +87,7 @@ else
   
 -   [Материализованные данные исходного объекта](persisted-data-source-objects.md)  
   
-## <a name="see-also"></a>См. также:  
- [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
+## <a name="see-also"></a>См. также  
+ [SQL Server Native Client (OLE DB)](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

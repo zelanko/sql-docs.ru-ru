@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7d68f329aecdd1284bac311db4139470bba55e41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162382"
 ---
 # <a name="enable-indexes-and-constraints"></a>Включение индексов и ограничений
@@ -41,9 +41,9 @@ ms.locfileid: "63162382"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   После перестроения индекса нужно вручную включить все ограничения, которые были отключены из-за отключения индекса. Ограничения PRIMARY KEY и UNIQUE включаются путем перестроения соответствующего индекса. Индекс должен быть перестроен (включен) до включения ограничений FOREIGN KEY, которые ссылаются на ограничение PRIMARY KEY или UNIQUE. Ограничения FOREIGN KEY включаются с помощью инструкции ALTER TABLE CHECK CONSTRAINT.  
   
@@ -68,12 +68,12 @@ ms.locfileid: "63162382"
     |DROP INDEX.|Операция выполнена успешно.|Операция выполнена успешно.|  
     |CREATE INDEX WITH DROP_EXISTING.|Не удалось выполнить операцию.|Операция выполнена успешно.|  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER для таблицы или представления. При использовании инструкции DBCC DBREINDEX пользователь должен быть владельцем таблицы, членом предопределенной роли сервера **sysadmin** либо предопределенной роли базы данных **db_ddladmin** или **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-enable-a-disabled-index"></a>Включение отключенного индекса  
   
@@ -103,7 +103,7 @@ ms.locfileid: "63162382"
   
  В диалоговом окне **Перестроение индексов** приведены следующие сведения:  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>Использование инструкции ALTER INDEX для включения отключенного индекса  
   

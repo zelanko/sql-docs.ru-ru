@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63071789"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Демонстрация. Улучшение производительности выполняющейся в памяти OLTP
@@ -181,13 +181,13 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
   
  Ожидаемые результаты содержат фактическое время ответа и подтверждают тот факт, что использование таблиц, оптимизированных для памяти, и компилированных в собственном коде хранимых процедур, как правило, стабильно обеспечивает более быстрое время ответа по сравнению с аналогичными нагрузками, выполняемыми на основе традиционных таблиц на диске.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения в AdventureWorks для демонстрации выполняющейся в памяти OLTP](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
  [Выполняющаяся в памяти OLTP &#40;оптимизации в памяти&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Оптимизированные для памяти таблицы](memory-optimized-tables.md)   
  [Скомпилированные в собственном код хранимые процедуры](natively-compiled-stored-procedures.md)   
  [Требования к использованию таблиц, оптимизированных для памяти](requirements-for-using-memory-optimized-tables.md)   
- [Создание &#40;базы данных SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [Параметры ALTER DATABASE File и FILEGROUP &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
  [СОЗДАНИЕ процедур и таблиц, оптимизированных для памяти](/sql/t-sql/statements/create-procedure-transact-sql)  
   

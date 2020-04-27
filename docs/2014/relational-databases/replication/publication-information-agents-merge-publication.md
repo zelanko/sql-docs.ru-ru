@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 46a2e9e332899c8d48fb762e153a926c99bb9e61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021767"
 ---
 # <a name="publication-information-agents-merge-publication"></a>Сведения о публикации, агенты (публикация слиянием)
@@ -61,6 +61,6 @@ ms.locfileid: "63021767"
 ## <a name="see-also"></a>См. также:  
  [Запуск монитора репликации](monitor/start-the-replication-monitor.md)   
  [Просмотр сведений и выполнение задач с помощью монитора репликации](monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Наблюдение за репликацией](monitoring-replication.md)  
+ [Мониторинг репликации](monitoring-replication.md)  
   
   

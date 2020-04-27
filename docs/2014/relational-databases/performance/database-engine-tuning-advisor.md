@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151203"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
@@ -97,7 +97,7 @@ ms.locfileid: "63151203"
   
 -   Помощник по настройке ядра СУБД сохраняет данные о сеансе настройки и другие сведения в базе данных `msdb`. При изменении базы данных `msdb` существует вероятность потерять данные сеанса настройки. Чтобы этого избежать, реализуйте соответствующую стратегию резервного копирования для базы данных `msdb`.  
   
-## <a name="performance-considerations"></a>Рекомендации по производительности  
+## <a name="performance-considerations"></a>Вопросы производительности  
  Помощник по настройке ядра СУБД потребляет значительное количество ресурсов процессора и памяти во время анализа. Следующие стратегии позволяют избежать снижения производительности сервера.  
   
 -   Занимайтесь настройкой баз данных, когда сервер не занят. Помощник по настройке ядра СУБД может повлиять на производительность задач обслуживания.  

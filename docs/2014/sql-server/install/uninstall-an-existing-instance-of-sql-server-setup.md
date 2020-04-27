@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990193"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Удаление существующего экземпляра SQL Server (программа установки)
@@ -30,7 +30,7 @@ ms.locfileid: "62990193"
 >  Удаление экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]должно производиться локальным администратором, имеющим разрешение на вход в систему в качестве службы.  
   
 > [!NOTE]  
->  Для удаления отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется функция удаления узла, предоставляемая программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которая удаляет каждый узел по отдельности. Дополнительные сведения см. [в разделе Добавление или удаление узлов в отказоустойчивом кластере SQL Server &#40;установки&#41;](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
+>  Для удаления отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется функция удаления узла, предоставляемая программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которая удаляет каждый узел по отдельности. Дополнительные сведения см. на странице [Добавление и удаление узлов в отказоустойчивом кластере SQL Server (настройка)](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
  Перед удалением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью данной процедуры следует учесть следующие обстоятельства.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62990193"
   
 ### <a name="before-you-uninstall"></a>Перед началом удаления  
   
-1.  **Создайте резервную копию данных.** Хотя это не является обязательным действием, могут быть базы данных, которые нужно сохранить в текущем состоянии. Кроме того, может потребоваться сохранить изменения, внесенные в системные базы данных. В этих случаях перед удалением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]необходимо создать резервную копию данных. В качестве альтернативного решения можно сохранить копию файлов данных и файлов журналов в папке с именем, отличным от MSSQL. Папка MSSQL будет удалена в ходе удаления SQL Server.  
+1.  **Резервное копирование данных.** Хотя это не является обязательным действием, могут быть базы данных, которые нужно сохранить в текущем состоянии. Кроме того, может потребоваться сохранить изменения, внесенные в системные базы данных. В этих случаях перед удалением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]необходимо создать резервную копию данных. В качестве альтернативного решения можно сохранить копию файлов данных и файлов журналов в папке с именем, отличным от MSSQL. Папка MSSQL будет удалена в ходе удаления SQL Server.  
   
      Необходимо сохранить следующие файлы баз данных.  
   
@@ -72,19 +72,19 @@ ms.locfileid: "62990193"
   
 2.  **Удалите локальные группы безопасности.** Перед удалением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]удалите локальные группы безопасности для компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  **Останавливает все** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **службы.**   Перед удалением компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рекомендуется остановить все службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Наличие активных соединений может помешать удалению компонентов.  
+3.  **Остановите все**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **службы**. Перед удалением компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рекомендуется остановить все службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Наличие активных соединений может помешать удалению компонентов.  
   
-4.  **Используйте учетную запись с соответствующими разрешениями.** Выполните вход на сервер с учетной записью службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или с учетной записью, обладающей аналогичным набором разрешений. Например, можно войти на сервер с учетной записью, входящей в локальную группу администраторов.  
+4.  **Выбор учетной записи с необходимыми разрешениями.** Выполните вход на сервер с учетной записью службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или с учетной записью, обладающей аналогичным набором разрешений. Например, можно войти на сервер с учетной записью, входящей в локальную группу администраторов.  
   
-### <a name="to-uninstall-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>To Uninstall an Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="to-uninstall-an-instance-of-ssnoversion"></a>To Uninstall an Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Чтобы начать процесс удаления, перейдите на страницу **Панель управления** , а затем на страницу **Программы и компоненты**.  
   
-2.  Щелкните правой кнопкой мыши **** **и выберите [!INCLUDE[msCoName](../../includes/msconame-md.md)] ** удалить. Нажмите кнопку **Удалить**. Будет запущен мастер установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+2.  Щелкните правой кнопкой мыши **Uninstall** **и выберите [!INCLUDE[msCoName](../../includes/msconame-md.md)] ** удалить. Нажмите кнопку **Удалить**. Будет запущен мастер установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     Для проверки конфигурации компьютера будут выполнены правила поддержки установки. Для продолжения нажмите кнопку **Далее**.  
+     Для проверки конфигурации компьютера будут выполнены правила поддержки установки. Чтобы продолжить, нажмите кнопку **Далее**.  
   
-3.  На странице «Выбор экземпляра» воспользуйтесь раскрывающимся списком, чтобы указать удаляемый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , или укажите параметр для удаления только общих компонентов и средств управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для продолжения нажмите кнопку **Далее**.  
+3.  На странице «Выбор экземпляра» воспользуйтесь раскрывающимся списком, чтобы указать удаляемый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , или укажите параметр для удаления только общих компонентов и средств управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы продолжить, нажмите кнопку **Далее**.  
   
 4.  На странице «Выбор компонентов» укажите компоненты, которые нужно удалить из указанного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -98,13 +98,13 @@ ms.locfileid: "62990193"
   
 1.  Если процесс удаления не завершился успешно, попробуйте исправить проблему, вызвавшую сбой. В следующих статьях приводятся сведения, которые помогут понять причину неудавшегося удаления.  
   
-    -   [Определение проблем с установкой SQL Server 2008 в файлах журналов установки](https://support.microsoft.com/kb/955396/en-us)  
+    -   [Как определить проблемы установки SQL Server 2008, используя файлы журнала установки](https://support.microsoft.com/kb/955396/en-us)  
   
     -   [Просмотр и чтение файлов журналов программы установки SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
 2.  Если вам не удалось исправить проблему, вы можете связаться с поддержкой [!INCLUDE[msCoName](../../includes/msconame-md.md)] . В некоторых случаях, например при неумышленном удалении важных файлов, перед переустановкой на компьютере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может потребоваться переустановка операционной системы.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и чтение файлов журналов программы установки SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

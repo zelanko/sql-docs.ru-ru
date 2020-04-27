@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 237838d4d9780c6180adebcae264949b10af94e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63061256"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile, класс событий
@@ -28,7 +28,7 @@ ms.locfileid: "63061256"
   
 |Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
+|ApplicationName|`nvarchar`|Имя клиентского приложения, которое создало соединение с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Заполнение этого столбца данных производится в том случае, если клиент предоставляет идентификатор процесса.|9|Да|  
 |DatabaseID|`int`|Идентификатор базы данных, в которой выполняется хранимая процедура. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
@@ -49,17 +49,17 @@ ms.locfileid: "63061256"
 |ObjectType|`int`|Значение, представляющее тип объекта, связанного с событием. Дополнительные сведения см. в статье [ObjectType Trace Event Column](objecttype-trace-event-column.md).|28|Да|  
 |Offset|`int`|Начальное смещение инструкции внутри хранимой процедуры или пакета, вызвавшего повторную компиляцию.|61|Да|  
 |RequestID|`int`|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|имя_сервера;|`nvarchar`|Имя отслеживаемой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|26|нет|  
+|ServerName|`nvarchar`|Имя отслеживаемой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|26|нет|  
 |SessionLoginName|`nvarchar`|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|`int`|Идентификатор серверного процесса соединения.|12|Да|  
-|SqlHandle|`varbinary`|64-разрядная версия хэша, основанная на тексте нерегламентированного запроса или базы данных и на идентификаторе объекта SQL. Это значение может быть передано в функцию sys.dm_exec_sql_text, чтобы получить связанный SQL-текст.|63|нет|  
+|SqlHandle|`varbinary`|64-разрядная версия хэша, основанная на тексте нерегламентированного запроса или базы данных и на идентификаторе объекта SQL. Это значение может быть передано в функцию sys.dm_exec_sql_text, чтобы получить связанный SQL-текст.|63|Нет|  
 |StartTime|`datetime`|Время начала события, если оно известно.|14|Да|  
 |TextData|`ntext`|Текст повторно скомпилированной инструкции Transact-SQL.|1|Да|  
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|`bigint`|Токен, который описывает текущую транзакцию.|50|Да|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SP: RECOMPILE, класс событий](sp-recompile-event-class.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
+ [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

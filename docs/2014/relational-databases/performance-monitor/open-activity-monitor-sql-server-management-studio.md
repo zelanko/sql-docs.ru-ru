@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032008"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Открытие монитора активности (среда SQL Server Management Studio)
@@ -35,23 +35,23 @@ ms.locfileid: "63032008"
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
--   **Установка интервала обновления с помощью:**  [SQL Server Management Studio](#Refresh)  
+-   **Установка интервала обновления с помощью:**  [Среда SQL Server Management Studio](#Refresh)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
  Монитор активности выполняет запросы в отслеживаемом экземпляре, чтобы получать данные для панелей отображения монитора активности. Если установлен интервал обновления менее 10 секунд, то время, затрачиваемое на выполнение этих запросов, может повлиять на производительность сервера.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для просмотра монитора активности у пользователя должно быть разрешение VIEW SERVER STATE. Для просмотра раздела ввода-вывода в файл данных монитора активности, кроме разрешения на VIEW SERVER STATE, необходимо иметь также разрешения на CREATE DATABASE, ALTER ANY DATABASE или VIEW ANY DEFINITION.  
   
  Для вызова инструкции KILL для процесса пользователь должен быть членом предопределенных ролей сервера sysadmin или processadmin.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>Открытие монитора активности в среде SQL Server Management Studio  
   
-1.  На панели [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] инструментов Стандартная щелкните **Монитор активности**.  
+1.  На стандартной панели инструментов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] щелкните **Монитор активности**.  
   
 2.  В диалоговом окне **Подключение к серверу** выберите имя сервера и режим проверки подлинности, а затем нажмите кнопку **Соединить**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63032008"
   
 4.  Чтобы изменения вступили в силу, закройте и снова откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-###  <a name="Refresh"></a>Настройка интервала обновления монитора активности  
+###  <a name="to-set-the-activity-monitor-refresh-interval"></a><a name="Refresh"></a>Настройка интервала обновления монитора активности  
   
 -   Откройте монитор активности.  
   

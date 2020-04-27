@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 934acda419b734f577de4c8127184d3dd18ea650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150151"
 ---
 # <a name="configuration-element-dta"></a>Элемент Configuration (DTA)
@@ -46,23 +46,23 @@ ms.locfileid: "63150151"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
-|**Тип данных и длина**|Нет.|  
-|**Значение по умолчанию**|Нет.|  
-|**Наличие**|Необязательный параметр. Может использоваться один раз для каждого элемента `DTAInput`.|  
+|**Тип данных и длина**|Отсутствует.|  
+|**Значение по умолчанию**|Отсутствует.|  
+|**Однократно**|Необязательный параметр. Может использоваться один раз для каждого элемента `DTAInput`.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент DTAInput &#40;DTA&#41;](dtainput-element-dta.md)|  
-|**Дочерние элементы**|[Серверный элемент для &#40;конфигурации DTA&#41;](server-element-for-configuration-dta.md)|  
+|**Родительский элемент**|[Элемент DTAInput (DTA)](dtainput-element-dta.md)|  
+|**Дочерние элементы**|[Элемент Server описания конфигурации (DTA)](server-element-for-configuration-dta.md)|  
   
 ## <a name="example"></a>Пример  
  Пример использования этого элемента см. в разделе [Образец входного XML-файла с пользовательской конфигурацией (DTA)](xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

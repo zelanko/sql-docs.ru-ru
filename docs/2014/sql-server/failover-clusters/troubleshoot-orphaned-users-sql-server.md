@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035686"
 ---
-# <a name="troubleshoot-orphaned-users-sql-server"></a>Устранение неполадок, связанных с пользователями, утратившими связь с учетной записью (SQL Server)
+# <a name="troubleshoot-orphaned-users-sql-server"></a>Диагностика пользователей, утративших связь с учетной записью (SQL Server)
   Чтобы войти в экземпляр Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], участник должен иметь допустимое имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это имя используется в процессе проверки подлинности, который проверяет, разрешено ли участнику подключаться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Имена входа на экземпляре сервера отображаются в представлении каталога **sys. server_principals** и представлении совместимости **sys. syslogins** .  
   
  Имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] получают доступ к отдельным базам данных с помощью пользователя базы данных, сопоставленного с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Существует два исключения из этого правила:  
@@ -92,7 +92,7 @@ GO;
   
      Дополнительные сведения см. в разделе [sp_password &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание ПОЛЬЗОВАТЕЛЬСКОГО &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)   
  [Создание имени входа &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
  [sp_change_users_login &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)   

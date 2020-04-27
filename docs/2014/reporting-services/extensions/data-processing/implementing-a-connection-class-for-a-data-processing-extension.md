@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fbd293c156f373de0cdad53b4419633ded15af8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164129"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Реализация класса Connection для модуля обработки данных
@@ -31,13 +31,13 @@ ms.locfileid: "63164129"
  Свойства необходимого соединения представлены в виде строки соединения. Рекомендуется, чтобы в модулях обработки данных служб [!INCLUDE[ssRS](../../../includes/ssrs.md)] поддержка свойства <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> осуществлялась с использованием системы пар «имя-значение», определенной в OLE DB.  
   
 > [!NOTE]  
->  Объекты **соединения** часто задаются ресурсоемкими, поэтому для устранения этой проблемы можно использовать пулы подключений или другие методы.  
+>  Получение объектов **Connection** связано с затратами ресурсов; для компенсации рекомендуется использовать метод организации пула соединений или другие методики.  
   
  Интерфейс <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> наследуется от интерфейса <xref:Microsoft.ReportingServices.Interfaces.IExtension>. Интерфейс <xref:Microsoft.ReportingServices.Interfaces.IExtension> следует реализовать в качестве части реализации класса соединения. Интерфейс <xref:Microsoft.ReportingServices.Interfaces.IExtension> позволяет классу реализовать локализованное имя модуля и обрабатывать характерные для модуля сведения о конфигурации, хранимые в файле конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  Объект **Connection** содержит свойство <xref:Microsoft.ReportingServices.Interfaces.IExtension.LocalizedName%2A> из-за реализации интерфейса <xref:Microsoft.ReportingServices.Interfaces.IExtension>. Рекомендуется обеспечить поддержку свойства [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и модуле обработки данных служб <xref:Microsoft.ReportingServices.Interfaces.IExtension.LocalizedName%2A>. Это позволит пользователям видеть знакомое локализованное имя модуля в пользовательском интерфейсе (например, в диспетчере отчетов).  
   
- <xref:Microsoft.ReportingServices.Interfaces.IExtension>также позволяет объекту **подключения** получать и обрабатывать пользовательские данные конфигурации, хранящиеся в файле RSReportServer. config. Дополнительные сведения об обработке данных пользовательской конфигурации см. в описании метода <xref:Microsoft.ReportingServices.Interfaces.IExtension.SetConfiguration%2A>.  
+ Интерфейс <xref:Microsoft.ReportingServices.Interfaces.IExtension> также позволяет объекту **Connection** получать и обрабатывать данные пользовательской конфигурации, хранимые в файле RSReportServer.config. Дополнительные сведения об обработке данных пользовательской конфигурации см. в описании метода <xref:Microsoft.ReportingServices.Interfaces.IExtension.SetConfiguration%2A>.  
   
  Класс, реализующий интерфейс <xref:Microsoft.ReportingServices.Interfaces.IExtension>, не выгружается из памяти при выгрузке остальных классов модуля обработки данных. В связи с этим класс **Extension** можно использовать для хранения данных о состоянии, действительных для нескольких соединений, или для хранения данных, которые могут быть кэшированы в памяти. Класс **Extension** остается в памяти, пока запущен сервер отчетов.  
   

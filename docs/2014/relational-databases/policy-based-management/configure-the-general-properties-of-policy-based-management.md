@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 249b338148dc762e091d0be47bc081fe87c72fcd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162391"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>Настройка общих свойств управления на основе политик
@@ -30,20 +30,20 @@ ms.locfileid: "63162391"
   
      [Безопасность](#Security)  
   
--   **Настройка управления на основе политик с помощью:**  
+-   **Для настройки управления на основе политик используется:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требуется членство в предопределенной роли базы данных PolicyAdministratorRole.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-configure-policy-based-management"></a>Настройка управления на основе политик  
   
@@ -55,22 +55,22 @@ ms.locfileid: "63162391"
   
      В диалоговом окне **Свойства управления политиками** доступны следующие параметры.  
   
-     **Enabled**  
+     **Включен**  
      Указывает, включено ли управление на основе политик.  
   
-     **хисториретентиониндайс**  
+     **HistoryRetentionInDays**  
      Указывает число дней, в течение которых хранится журнал вычисления политик. Если это значение равно 0 (по умолчанию), то журнал автоматически не удаляется.  
   
-     **логонсукцесс**  
+     **LogOnSuccess**  
      Указывает, регистрирует ли управление на основе политик успешное вычисление политик.  
   
     -   Если это значение равно false (по умолчанию), то регистрируются только вычисления политик, завершившиеся ошибками.  
   
     -   Если это значение равно true, то регистрируются и успешные вычисления, и вычисления, завершившиеся ошибками.  
   
-4.  После завершения нажмите кнопку **ОК**.  
+4.  По окончании нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-configure-policy-based-management"></a>Настройка управления на основе политик  
   

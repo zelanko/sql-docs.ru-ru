@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e69a3ecab06b800ef1295c8c638b574135bf7b41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63158717"
 ---
 # <a name="programming-specific-tasks"></a>Задачи, связанные с программированием
   Задачи, связанные с программированием объектов SMO, которые затрагивают сложные вопросы, которые необходимы лишь программам, выполняющим специальные функции, например резервное копирование, статистику наблюдения, репликацию, управление объектами экземпляра и настройка параметров конфигурации.  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Использование связанных серверов в объектах SMO](using-linked-servers-in-smo.md)|Описывает описание использования объектами SMO объекта <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> для связи с сервером OLE-DB.|  
 |[Настройка SQL Server в SMO](configuring-sql-server-in-smo.md)|Описывает просмотр и изменение параметров конфигурации для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в объектах SMO.|  
@@ -41,7 +41,7 @@ ms.locfileid: "63158717"
 |[Использование шифрования](using-encryption.md)|Содержит описание защиты данных с помощью шифрования в объектах SMO.|  
 |[Планирование автоматических административных задач в агенте SQL Server](../../../ssms/agent/sql-server-agent.md)|Содержит описание использования агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для наблюдения, ведения отчетов и расписания заданий в объектах SMO.|  
 |[Резервное копирование и восстановление баз данных и журналов транзакций](backing-up-and-restoring-databases-and-transaction-logs.md)|Содержит описание создания резервной копии и восстановления баз данных и журналов транзакций в объектах SMO.|  
-|[Написание сценариев](scripting.md)|Содержит описание создания скриптов для объектов и обнаружения зависимостей в объектах SMO.|  
+|[Создание скриптов](scripting.md)|Содержит описание создания скриптов для объектов и обнаружения зависимостей в объектах SMO.|  
 |[Передача данных](transferring-data.md)|Содержит описание передачи данных в объектах SMO.|  
 |[Использование компонента Database Mail](using-database-mail.md)|Содержит описание использования почтовых служб в объектах SMO.|  
 |[Управление компонентом Service Broker](managing-service-broker.md)|Содержит описание установки компонента Service Broker с помощью объектов SMO.|  

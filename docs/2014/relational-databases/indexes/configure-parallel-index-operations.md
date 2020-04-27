@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3a70d58caba2b2a443f0017c52611331e9257972
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157477"
 ---
 # <a name="configure-parallel-index-operations"></a>Настройка параллельных операций с индексами
@@ -37,21 +37,21 @@ ms.locfileid: "63157477"
   
      [Безопасность](#Security)  
   
--   **Чтобы задать максимальную степень параллелизма, используется:**  
+-   **Для настройки параметра max degree of parallelism используется:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Число процессоров, используемых оптимизатором запросов, как правило, обеспечивает оптимальную производительность. Однако некоторые операции, например создание, перестроение или удаление очень больших индексов, требуют большого количества ресурсов и могут привести к нехватке ресурсов для других приложений и операций базы данных на время выполнения операции с индексами. При возникновении этой проблемы можно вручную установить максимальное количество процессоров, которые используются при выполнении индексной инструкции, ограничив число процессоров, используемых в операции с индексами.  
   
 -   Параметр индекса MAXDOP замещает параметр конфигурации max degree of parallelism только для запросов, указывающих этот параметр. В следующей таблице перечислены действительные целочисленные значения, которые могут быть установлены для параметра конфигурации максимальной степени параллелизма и параметра индекса MAXDOP.  
   
-    |Значение|Description|  
+    |Применение|Описание|  
     |-----------|-----------------|  
     |0|Указывает, что сервер определяет число используемых процессоров в зависимости от текущей рабочей нагрузки. Это значение по умолчанию, которое рекомендуется использовать.|  
     |1|Подавляет формирование параллельных планов. Операция будет выполнена последовательно.|  
@@ -73,12 +73,12 @@ ms.locfileid: "63157477"
   
 -   Операции с секционированными индексами, для которых необходима сортировка, могут требовать больше памяти, если оптимизатор запросов применяет степени параллелизма к операциям построения. Чем выше степень параллелизма, тем больше требуется памяти. Дополнительные сведения см. в разделе [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER для таблицы или представления.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-index"></a>Задание параметра max degree of parallelism для индекса  
   
@@ -98,7 +98,7 @@ ms.locfileid: "63157477"
   
 8.  Нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>Задание параметра max degree of parallelism для существующего индекса  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63157477"
     GO  
     ```  
   
- Дополнительные сведения см. в разделе [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
+ Дополнительные сведения см. в разделе [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql).  
   
 #### <a name="set-max-degree-of-parallelism-on-a-new-index"></a>Задание параметра max degree of parallelism для нового индекса  
   

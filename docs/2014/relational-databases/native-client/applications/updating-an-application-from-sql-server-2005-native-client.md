@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bf12faa1dc32044c6dc40c048d463394d6841b2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046489"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Обновление приложения с переходом от собственного клиента SQL Server 2005
@@ -24,14 +24,12 @@ ms.locfileid: "63046489"
   
  При обновлении с компонентов доступа к данным MDAC к собственному клиенту [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут возникнуть определенные изменения в работе. Дополнительные сведения см. [в статье обновление приложения для SQL Server Native Client из MDAC](updating-an-application-to-sql-server-native-client-from-mdac.md).  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 поставляется в составе [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 поставляется в составе [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 10.5 поставляется в составе [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. Клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 поставляется в составе [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 поставляется в составе [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 поставляется в составе [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 10.5 поставляется в составе [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. Клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 поставляется в составе [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
   
-|Изменения в поведении собственного клиента SQL Server, начиная с версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Description|  
+|Изменения в поведении собственного клиента SQL Server, начиная с версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Описание|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB дополняет данные только до заданного масштаба.|Что касается преобразований, при которых преобразованные данные передаются на сервер, то собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) дополняет данные завершающими нулями только до максимальной длины значений `datetime`. Собственный клиент SQL Server версии 9.0 дополнял данные до 9 разрядов.|  
-|Проверьте DBTYPE_DBTIMESTAMP для Икоммандвиспараметер:: SetParameterInfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент (начиная с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) реализует OLE DB требование для *bScale* в икоммандвиспараметер:: SetParameterInfo для задания точности доли секунды для DBTYPE_DBTIMESTAMP.|  
+|Проверьте DBTYPE_DBTIMESTAMP для ICommandWithParameter::SetParameterInfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент (начиная с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) реализует OLE DB требование для *bScale* в икоммандвиспараметер:: SetParameterInfo для задания точности доли секунды для DBTYPE_DBTIMESTAMP.|  
 |`sp_columns` Хранимая процедура теперь возвращает значение **"No** " вместо **"No"** для IS_NULLABLE столбца.|Начиная с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента 10,0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]), `sp_columns` хранимая процедура теперь возвращает **"No** " вместо **"No"** для IS_NULLABLE столбца.|  
 |SQLSetDescRec, SQLBindParameter и SQLBindCol теперь выполняют проверку согласованности.|До [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента 10,0 Установка SQL_DESC_DATA_PTR не вызывала проверку согласованности для любого типа дескриптора в SQLSetDescRec, SQLBindParameter или SQLBindCol.|  
 |Теперь Склкопидеск проверяет согласованность дескриптора.|До [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента 10,0 склкопидеск не выполнял проверку согласованности, когда поле SQL_DESC_DATA_PTR было задано для конкретной записи.|  
@@ -45,10 +43,9 @@ ms.locfileid: "63046489"
 |В пользовательских приложениях, в которых используется API BCP, теперь могут обнаруживаться предупреждающие сообщения.|API BCP выдает предупреждающее сообщение, если длина данных превышает заданную длину для полей всех типов. Раньше это предупреждение выдавалось только для символьных типов, но не для всех типов.|  
 |Вставка пустой строки в объект типа `sql_variant`, привязанный как тип даты и времени, вызывает ошибку.|В собственном клиенте версии 9.0 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] вставка пустой строки в объект типа `sql_variant`, привязанный как тип даты и времени, не вызывала ошибки. Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версии 10.0 (или более поздних версий) в этом случае совершенно обоснованно возвращает ошибку.|  
 |Более строгая проверка параметров типа SQL_C_TYPE _TIMESTAMP и DBTYPE_DBTIMESTAMP.|[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Перед собственным клиентом `datetime` значения округляются в соответствии с масштабом столбцов `datetime` и. `smalldatetime` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Теперь в собственном клиенте [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (и более поздних версиях) применяются более строгие правила проверки, определенные в базовой спецификации ODBC для долей секунды. Если значение параметра не удается преобразовать в тип SQL с помощью масштаба, заданного или подразумеваемого клиентской привязкой, без усечения конечных разрядов, то возвращается ошибка.|  
-|
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может возвращать различные результаты при выполнении триггера.|Изменения, внесенные в [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], могут привести к тому, что приложение получит другие результаты при выполнении инструкции, вызвавшей выполнение триггера при действующем параметре `NOCOUNT OFF`. В такой ситуации в приложении может возникнуть ошибка. Чтобы устранить эту ошибку, задайте `NOCOUNT ON` в триггере или вызовите SQLMoreResults, чтобы перейти к следующему результату.|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может возвращать различные результаты при выполнении триггера.|Изменения, внесенные в [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], могут привести к тому, что приложение получит другие результаты при выполнении инструкции, вызвавшей выполнение триггера при действующем параметре `NOCOUNT OFF`. В такой ситуации в приложении может возникнуть ошибка. Чтобы устранить эту ошибку, задайте `NOCOUNT ON` в триггере или вызовите SQLMoreResults, чтобы перейти к следующему результату.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Программирование собственного клиента SQL Server](../sql-server-native-client-programming.md)  
   
   

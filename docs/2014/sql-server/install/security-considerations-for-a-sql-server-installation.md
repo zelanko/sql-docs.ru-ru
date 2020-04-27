@@ -27,16 +27,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127895"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Вопросы безопасности при установке SQL Server
   Безопасность является важной характеристикой для любого продукта и любого предприятия. Следуя простым рекомендациям, можно избежать многих уязвимостей в безопасности. В этой статье обсуждаются некоторые рекомендации по безопасности, которых следует придерживаться как до установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения по безопасности для конкретных компонентов приводятся в справочных разделах по этим компонентам.  
   
-## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>Перед установкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="before-installing-ssnoversion"></a>Перед установкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  При настройке среды сервера выполняйте следующие рекомендации.  
   
 -   [Повышение физической безопасности](#physical_security)  
@@ -51,7 +51,7 @@ ms.locfileid: "63127895"
   
 -   [Установка SQL Server на контроллере домена](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md#Install_DC)  
   
-###  <a name="physical_security"></a> Enhance Physical Security  
+###  <a name="enhance-physical-security"></a><a name="physical_security"></a> Enhance Physical Security  
  Физическая и логическая изоляции составляют основу безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для повышения физической безопасности установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполните следующие действия.  
   
 -   Установите сервер в помещении, недоступном для посторонних.  
@@ -62,7 +62,7 @@ ms.locfileid: "63127895"
   
 -   Регулярно создавайте резервные копии данных и храните их в безопасном месте за пределами расположения компьютера.  
   
-###  <a name="firewalls"></a> Use Firewalls  
+###  <a name="use-firewalls"></a><a name="firewalls"></a> Use Firewalls  
  Брандмауэры играют важную роль в обеспечении безопасности установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Брандмауэры будут более эффективны, если следовать приведенным ниже правилам.  
   
 -   Установите брандмауэр между сервером и Интернетом. Разрешите работу брандмауэра. Если он отключен, включите его. Если он включен, не отключайте.  
@@ -77,12 +77,12 @@ ms.locfileid: "63127895"
   
  Дополнительные сведения о настройках брандмауэра Windows по умолчанию и описание портов TCP, влияющих на компоненты [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-###  <a name="isolated_services"></a> Isolate Services  
+###  <a name="isolate-services"></a><a name="isolated_services"></a> Isolate Services  
  Изолирование служб уменьшает риск того, что подвергнувшаяся опасности служба подвергнет опасности другие службы. Чтобы изолировать службы, следуйте приведенным ниже правилам.  
   
 -   Запускайте разные службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под разными учетными записями Windows. Если возможно, пользуйтесь для каждой из служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отдельными учетными записями Windows или локальных пользователей, обладающих наименьшими правами. Дополнительные сведения см. в статье [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
+###  <a name="configure-a-secure-file-system"></a><a name="sa_with_least_privileges"></a> Configure a Secure File System  
  Правильный выбор файловой системы повышает уровень безопасности. Для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо выполнить следующие действия.  
   
 -   Используйте файловую систему NTFS. Рекомендуется устанавливать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на файловую систему NTFS, так как она обеспечивает более высокую стабильность и восстанавливаемость, чем файловые системы FAT. Кроме того, NTFS реализует параметры управления доступом к файлам и каталогам (ACL), шифрование файловой системы (EFS) и другие средства обеспечения безопасности. Во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установит необходимые списки ACL на разделы реестра и файлы, если программа установки обнаружит NTFS. Эти разрешения не должны меняться. В будущих выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может не поддерживаться установка на компьютеры с файловой системой FAT.  
@@ -92,7 +92,7 @@ ms.locfileid: "63127895"
   
 -   Используйте дисковый массив (RAID) для наиболее критичных файлов данных.  
   
-###  <a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
+###  <a name="disable-netbios-and-server-message-block"></a><a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
  На внешних серверах сети должны быть отключены все ненужные протоколы, включая NetBIOS и SMB.  
   
  NetBIOS использует следующие порты:  
@@ -111,7 +111,7 @@ ms.locfileid: "63127895"
   
  Веб-серверы и DNS-серверы не требуют наличия NetBIOS или SMB. Отключите на них оба протокола, чтобы снизить угрозу раскрытия списка пользователей.  
   
-###  <a name="Install_DC"></a> Установка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на контроллере домена  
+###  <a name="installing-ssnoversion-on-a-domain-controller"></a><a name="Install_DC"></a> Установка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на контроллере домена  
  Исходя из соображений безопасности, не рекомендуется устанавливать [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на контроллере домена. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не заблокирует установку на компьютере, который является контроллером домена, однако при этом будут применены следующие ограничения.  
   
 -   Запуск служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на контроллере домена в учетной записи локальной службы невозможен.  
@@ -124,7 +124,7 @@ ms.locfileid: "63127895"
   
 -   Программа установки[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может создавать группы безопасности или подготавливать учетные записи служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на контроллере домена, доступном только для чтения. В такой ситуации программа установки завершается ошибкой.  
   
-## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>Во время или после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="during-or-after-installation-of-ssnoversion"></a>Во время или после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  После установки вы можете повысить безопасность установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , следуя приведенным ниже рекомендациям относительно учетных записей и режимов проверки подлинности.  
   
  **Учетные записи службы**  

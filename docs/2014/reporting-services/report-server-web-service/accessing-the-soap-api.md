@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab8db976275a60cfbf1e0afb78457afad18fc366
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63012261"
 ---
 # <a name="accessing-the-soap-api"></a>Доступ к API-интерфейсу SOAP
@@ -51,7 +51,7 @@ http://server/reportserver/ReportService2010.asmx?wsdl
   
  В следующей таблице описывается каждый элемент URL-адреса.  
   
-|Элемент URL-адреса|Description|  
+|Элемент URL-адреса|Описание|  
 |-----------------|-----------------|  
 |*сервером*|Имя сервера, на котором развернут сервер отчетов.|  
 |*ReportServer*|Имя папки, в которой содержится веб-служба XML. Данный элемент настраивается во время установки.|  

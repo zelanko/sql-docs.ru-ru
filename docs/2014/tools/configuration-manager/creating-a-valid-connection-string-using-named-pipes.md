@@ -17,10 +17,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 12d5cb30217a0580d4da101d614b4930cfd8184b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63065552"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Создание допустимой строки соединения, использующей протокол именованных каналов
@@ -118,9 +118,9 @@ Server             .
 > [!NOTE]  
 >  Сведения об указании сетевого протокола в качестве параметра **sqlcmd** см. в разделе «как подключиться к ядро СУБД с помощью sqlcmd. exe» [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  
   
-## <a name="see-also"></a>См. также:  
- [Создание допустимой строки соединения с использованием протокола общей памяти](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
- [Создание допустимой строки подключения с использованием протокола TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
+## <a name="see-also"></a>См. также  
+ [Создание допустимой строки подключения с помощью протокола общей памяти](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
+ [Создание допустимой строки подключения с помощью IP-адреса TCP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
  [Выбор сетевого протокола](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  
   
   

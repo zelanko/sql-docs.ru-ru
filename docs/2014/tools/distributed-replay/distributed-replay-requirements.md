@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149775"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
@@ -103,11 +103,11 @@ ms.locfileid: "63149775"
   
 -   HostName  
   
--   Двоичные данные  
+-   Binary Data  
   
 -   SPID  
   
--   Время начала  
+-   Start Time  
   
 -   EndTime  
   
@@ -134,10 +134,9 @@ ms.locfileid: "63149775"
   
 |Компонент распределенного воспроизведения|Максимальное число установленных экземпляров для среды воспроизведения|  
 |--------------------------------|--------------------------------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Служба контроллера распределенное воспроизведение|1|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Служба клиента распределенного воспроизведения|16 (физических или виртуальных компьютеров)|  
-|Средство администрирования|Без ограничений|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Служба контроллера распределенного воспроизведения|1|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Служба клиента распределенного воспроизведения|16 (физических или виртуальных компьютеров)|  
+|Средство администрирования|Неограниченно|  
   
 > [!NOTE]  
 >  Хотя на одном компьютере можно устанавливать только один экземпляр программы администрирования, допускается одновременный запуск нескольких экземпляров программы администрирования. Команды, поступающие от нескольких экземпляров программы администрирования, разрешаются в порядке поступления.  
@@ -158,7 +157,7 @@ ms.locfileid: "63149775"
   
  В результате воспроизведения событий, связанных с отсутствующими или неверными именами входа, будут возникать ошибки воспроизведения, но сама операция воспроизведения будет продолжена.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server распределенное воспроизведение](sql-server-distributed-replay.md)   
  [Безопасность распределенное воспроизведение](distributed-replay-security.md)   
  [Установка распределенного воспроизведения](install-distributed-replay-overview.md)  

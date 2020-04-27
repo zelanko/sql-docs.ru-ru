@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5bbc5e58b95ffb4eebc5dfa0400a566868ae5cba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63165211"
 ---
 # <a name="delivery-extensions-overview"></a>Общие сведения о модулях доставки
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяет пользователям создавать и публиковать отчеты, которые после создания и публикации могут доставляться в различные места. Кроме того, службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] содержат несколько модулей доставки и API-интерфейс доставки, который позволяет разработчикам создавать дополнительные модули доставки, расширяя возможности доставки в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  С помощью среды [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] пользователи могут создавать и публиковать отчеты, которые затем можно доставлять в различные места. Кроме того, службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] содержат несколько модулей доставки и API-интерфейс доставки, который позволяет разработчикам создавать дополнительные модули доставки, расширяя возможности доставки в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  В следующей таблице перечислены модули доставки, входящие в состав служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
@@ -30,7 +30,7 @@ ms.locfileid: "63165211"
 |Электронная почта сервера отчетов|Отправляет отчеты отдельным пользователям или группам пользователей по электронной почте через SMTP-сервер.|  
 |Общая папка сервера отчетов|Используется для распространения отчетов по организации с использованием сетевых общих папок. Дает возможность автоматически копировать отчет в общую папку по заданному расписанию.|  
   
- ![Архитектура модуля доставки служб Reporting Services](../../media/bk-reportservicedelivery.gif "Архитектура модуля доставки служб Reporting Services")  
+ ![Архитектура модуля доставки Reporting Services](../../media/bk-reportservicedelivery.gif "Архитектура модуля доставки служб Reporting Services")  
 Архитектура модуля доставки служб Reporting Services  
   
  Подпискам ставятся в соответствие модули доставки. При создании подписки, чтобы определить порядок доставки отчета, пользователь может выбрать один из доступных модулей доставки. В службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] подписки располагаются в базе данных сервера отчетов. Когда происходит событие, службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] проверяет событие по подпискам, содержащимся в базе данных сервера отчетов. Для каждой подписки, сопоставленной с событием, сервер отчетов создает уведомление. Для управляемых данными подписок уведомление создается для каждого получателя. После создания уведомления сервер отчетов вызывает определенный модуль доставки и передает для параметров модуля значения, указанные в уведомлении. Модуль доставки отправляет уведомление пользователю, как указано в выбранном модуле доставки.  
@@ -47,13 +47,13 @@ ms.locfileid: "63165211"
   
 -   компьютер для развертывания с установленным сервером отчетов;  
   
--   Компьютер разработчика с [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] установленным пакетом средств разработки программного обеспечения (SDK).  
+-   компьютер для разработки с установленной средой [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] или пакетом средств разработки программного обеспечения (пакетом SDK) для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)];  
   
 -   основные сведения о функциях и возможностях служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], в особенности относящихся к подписке и доставке;  
   
 -   основные сведения о [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] и веб-элементах управления, если планируется реализация собственного пользовательского интерфейса подписки для диспетчера отчетов;  
   
--   Возможности разработки на таких [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] языках, как [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+-   опыт разработки на языке [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], например [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
 ## <a name="see-also"></a>См. также:  
  [Реализация модуля доставки](../delivery-extension/implementing-a-delivery-extension.md)   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d6b6fa07c2cb2f4880420885fefc30d0fd419c38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011999"
 ---
 # <a name="transactionlog-event-class"></a>TransactionLog, класс событий
@@ -33,8 +33,8 @@ ms.locfileid: "63011999"
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|`int`|Идентификатор базы данных, где регистрируются данные.|3|Да|  
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
-|EventClass|`int`|Тип события = 54.|27|нет|  
-|EventSequence|`int`|Последовательность данного события в запросе.|51|нет|  
+|EventClass|`int`|Тип события = 54.|27|Нет|  
+|EventSequence|`int`|Последовательность данного события в запросе.|51|Нет|  
 |EventSubClass|`int`|Тип подкласса события.|21|Да|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
@@ -47,14 +47,14 @@ ms.locfileid: "63011999"
 |NTUserName|`nvarchar`|Имя пользователя Windows.|6|Да|  
 |ObjectID|`int`|Идентификатор объекта, назначенный системой.|22|Да|  
 |RequestID|`int`|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|имя_сервера;|`nvarchar`|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
+|ServerName|`nvarchar`|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
 |SessionLoginName|`nvarchar`|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|`int`|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|`datetime`|Время начала события, если оно известно.|14|Да|  
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
- [&#40;SQL Server журнала транзакций&#41;](../logs/the-transaction-log-sql-server.md)  
+ [Журнал транзакций (SQL Server)](../logs/the-transaction-log-sql-server.md)  
   
   

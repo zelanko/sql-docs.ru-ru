@@ -1,5 +1,5 @@
 ---
-title: Поддержка FILESTREAM | Документация Майкрософт
+title: Поддержка FILESTREAM | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 33e447048f7058ee81b0b144f0aa94a370f6d670
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046270"
 ---
 # <a name="filestream-support"></a>Поддержка FILESTREAM
-  Компонент FILESTREAM предоставляет способ хранения и доступа к большим двоичным значениям либо с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], либо путем непосредственного доступа к файловой системе Windows. Большим двоичным значением считается значение с размером больше 2 гигабайт (ГБ). Дополнительные сведения о расширенной поддержке FILESTREAM см. в разделе [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md).  
+  Компонент FILESTREAM предоставляет способ хранения и доступа к большим двоичным значениям либо с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], либо путем непосредственного доступа к файловой системе Windows. Большим двоичным значением считается значение с размером больше 2 гигабайт (ГБ). Дополнительные сведения о поддержке усовершенствованного компонента FILESTREAM см. в статье [FILESTREAM (SQL Server)](../../blob/filestream-sql-server.md).  
   
  После открытия подключения к базе данных параметр `@@TEXTSIZE` устанавливается в значение -1 («неограниченный») по умолчанию.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63046270"
   
  Чтобы создать столбцы FILESTREAM или определить, какие существующие столбцы являются столбцами FILESTREAM, можно использовать `is_filestream` столбец представления каталога [sys. Columns](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql) .  
   
- Ниже приведен пример.  
+ Ниже представлен пример такого кода:  
   
 ```  
 -- Create a table with a FILESTREAM column.  
@@ -62,7 +62,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
   
  Для клиентов, которые используют SQLOLEDB или другие поставщики, выпущенные до [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] собственного клиента, `varbinary(max)` будут сопоставлены с изображением.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Компоненты собственного клиента SQL Server](sql-server-native-client-features.md)  
   
   

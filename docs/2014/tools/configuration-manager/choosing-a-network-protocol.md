@@ -24,10 +24,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035293"
 ---
 # <a name="choosing-a-network-protocol"></a>Выбор сетевого протокола
@@ -61,6 +61,6 @@ ms.locfileid: "63035293"
 ## <a name="enabling-the-protocol"></a>Включение протокола  
  Для работы протокол должен быть включен и на сервере, и на клиенте. Сервер может одновременно прослушивать запросы по всем включенным протоколам. Клиентский компьютер может выбрать один из них либо поочередно пытаться соединяться по протоколам, перечисленным в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Краткий учебник о настройке протоколов и подключении к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)]см. в разделе [Tutorial: Getting Started with the Database Engine](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
+ Краткий учебник о настройке протоколов и подключении к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)]см. в разделе [Учебник. Приступая к работе с компонентом Database Engine](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
   
   

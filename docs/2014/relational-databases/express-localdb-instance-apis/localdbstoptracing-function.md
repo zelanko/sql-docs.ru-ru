@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 023700b1922946cc1234468aeb0551785067666c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128708"
 ---
 # <a name="localdbstoptracing-function"></a>Функция LocalDBStopTracing
   Отключает трассировку вызовов API для всех экземпляров SQL Server Express LocalDB, принадлежащих текущему пользователю Windows.  
   
- **Заголовочный файл:** sqlncli. h  
+ **Файл заголовка:** sqlncli.h  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63128708"
 HRESULT LocalDBStopTracing();  
 ```  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  S_OK  
  Функция выполнена успешно.  
   
@@ -44,7 +44,7 @@ HRESULT LocalDBStopTracing();
 ## <a name="remarks"></a>Remarks  
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Заголовок и сведения о версии SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

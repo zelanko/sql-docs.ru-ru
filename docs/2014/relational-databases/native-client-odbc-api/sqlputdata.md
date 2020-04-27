@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046629"
 ---
 # <a name="sqlputdata"></a>SQLPutData
@@ -36,7 +36,7 @@ ms.locfileid: "63046629"
 ## <a name="diagnostics"></a>Диагностика  
  Для SQLPutData существует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] один собственный клиент с конкретным кодом SQLSTATE:  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Error|Описание|  
 |--------------|-----------|-----------------|  
 |22026|Строковые данные, несовпадение длины|Если длина данных в байтах для отправки была задана приложением, например с SQL_LEN_DATA_AT_EXEC (*n*), где *n* больше 0, общее число байтов, заданное приложением через SQLPutData, должно соответствовать указанной длине.|  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63046629"
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>Поддержка функции SQLPutData для больших определяемых пользователем типов данных CLR  
  Функция `SQLPutData` поддерживает определяемые пользователем типы больших данных CLR. Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функция SQLPutData](https://go.microsoft.com/fwlink/?LinkId=59365)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

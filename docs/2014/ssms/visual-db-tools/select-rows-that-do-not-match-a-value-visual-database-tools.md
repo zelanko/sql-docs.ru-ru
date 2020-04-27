@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f84f4fcc8a6dde7dcf9f556a72c2599356e231f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067540"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>Выбор строк, не соответствующих заданному значению (визуальные инструменты для баз данных)
@@ -27,7 +27,7 @@ ms.locfileid: "63067540"
   
 ### <a name="to-find-rows-that-do-not-match-a-value"></a>Поиск строк, не соответствующих значению  
   
-1.  Если вы еще не сделали этого, добавьте столбцы или выражения, которые будут использоваться в условии поиска, на [панель критериев](visual-database-tools.md).  
+1.  Если это еще не сделано, нужно добавить на [панели критериев](visual-database-tools.md)столбцы или выражения, которые необходимо использовать в условиях поиска.  
   
 2.  Найдите строку, содержащую столбец данных или выражение поиска, и в столбце сетки **Фильтр** введите оператор NOT и затем значение поиска.  
   

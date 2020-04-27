@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63072390"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP
@@ -31,7 +31,7 @@ ms.locfileid: "63072390"
   
 -   Создайте отчеты анализа производительности транзакции, чтобы определить таблицы и хранимые процедуры, оказывающие критическое влияние на производительность.  
   
- Дополнительные сведения о методологиях миграции см. в разделе [Выполняемая в памяти OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](https://msdn.microsoft.com/library/dn673538.aspx).  
+ Сведения о методологиях миграции см. [в разделе Общие шаблоны рабочих нагрузок в памяти OLTP и рекомендации по миграции](https://msdn.microsoft.com/library/dn673538.aspx).  
   
  Сборщик данных о производительности транзакции и отчеты анализа производительности транзакции позволяют выполнить следующие задачи.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63072390"
   
  Сборщик данных о производительности транзакций и возможность создания отчета об анализе производительности транзакций устанавливаются при выборе **средства управления — основные** **средства или инструменты управления — дополнительно** при установке [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-## <a name="best-practices"></a>Рекомендации  
+## <a name="best-practices"></a>Советы и рекомендации  
  Рекомендуемый рабочий процесс проиллюстрирован на следующей блок-схеме. Желтые узлы представляют необязательные процедуры.  
   
  ![Рабочий процесс AMR](../../database-engine/media/amr-1.gif "Рабочий процесс AMR")  
@@ -99,7 +99,7 @@ ms.locfileid: "63072390"
   
 7.  На следующем экране нажмите кнопку **Готово** , чтобы выйти из мастера.  
   
-### <a name="configure-data-collection-on-a-local-includessnoversionincludesssnoversion-mdmd-instance"></a>Настройка сбора данных на локальном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="configure-data-collection-on-a-local-ssnoversion-instance"></a>Настройка сбора данных на локальном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Для сбора данных необходимо запустить агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Необходимо настроить только один сборщик данных на сервере.  
   
  Сборщик данных можно настроить на SQL Server 2012 или более поздней версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -118,7 +118,7 @@ ms.locfileid: "63072390"
   
 6.  Проверьте выбранные параметры. Нажмите кнопку **назад** , чтобы изменить параметры. По завершении нажмите кнопку **Готово** .  
   
-###  <a name="xxx"></a>Настройка сбора данных на удаленном [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляре  
+###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>Настройка сбора данных на удаленном [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляре  
  Для сбора данных требуется запущенный агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на экземпляре, который будет собирать данные.  
   
  Сборщик данных можно настроить на SQL Server 2012 или более поздней версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -161,7 +161,7 @@ ms.locfileid: "63072390"
   
 10. Чтобы настроить системные наборы сбора, проверьте **системные наборы сбора** и нажмите кнопку **Далее**.  
   
-11. Проверьте выбранные параметры. Нажмите кнопку **назад** , чтобы изменить параметры. По **** завершении кликкк.  
+11. Проверьте выбранные параметры. Нажмите кнопку **назад** , чтобы изменить параметры. По **Finish** завершении кликкк.  
   
  Теперь наборы сбора данных настроены и запущены на вашем экземпляре.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "63072390"
   
  Чтобы просмотреть сведения о преобразовании хранимой процедуры в скомпилированную в собственном код хранимую процедуру, используйте [Помощник по компиляции в машинный](native-compilation-advisor.md)код.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Миграция в In-Memory OLTP](migrating-to-in-memory-oltp.md)  
   
   

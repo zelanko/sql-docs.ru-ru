@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2be1d4e014a20d1774f92ea261a83716dbbc11bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62999358"
 ---
 # <a name="report-server-ltservergt-sql-server-configuration-manager"></a>Сервер отчетов &lt;сервер&gt; (диспетчер конфигурации SQL Server)
-  Это служба, которая поддерживает службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Чтобы просмотреть свойства службы, щелкните правой кнопкой мыши в области сведений, а затем выберите пункт **Свойства**.  
+  Это служба, которая поддерживает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Чтобы просмотреть свойства службы, щелкните правой кнопкой мыши в области сведений, а затем выберите пункт **Свойства**.  
   
  Сведения о службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]см. в электронной документации.  
   

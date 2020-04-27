@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022249"
 ---
 # <a name="non-sql-server-subscribers"></a>Подписчики, отличные от подписчиков SQL Server
@@ -40,7 +40,7 @@ ms.locfileid: "63022249"
 |Oracle;|Все платформы, поддерживаемые Oracle|Поставщик OLE DB для Oracle (поставляемый Oracle)|  
 |IBM DB2|MVS, AS400, Unix, Linux, Windows, за исключением версии 9.x|Поставщик OLE DB для Microsoft Host Integration Server (HIS)|  
   
- Сведения о создании подписок для Oracle и IBM DB2 см. в разделах [Oracle Subscribers](oracle-subscribers.md) и [IBM DB2 Subscribers](ibm-db2-subscribers.md).  
+ Сведения о создании подписок для Oracle и IBM DB2 см. в разделах [Подписчики Oracle](oracle-subscribers.md) и [IBM DB2 Subscribers](ibm-db2-subscribers.md).  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>Вопросы использования подписчиков, отличных от подписчиков SQL Server  
  При репликации на подписчики, не относящиеся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , необходимо помнить о следующем:  
@@ -53,7 +53,7 @@ ms.locfileid: "63022249"
   
 -   Если публикация имеет подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и подписчиков, не относящихся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , то публикация должна быть включена для подписчиков, не относящихся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , перед тем как будут созданы какие-либо подписки для подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   По умолчанию скрипты, создаваемые агентом моментальных снимков для подписчиков, не относящихся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , используют в синтаксисе инструкции CREATE TABLE идентификаторы без кавычек. Поэтому опубликованная таблица с именем 'test' реплицируется как 'TEST'. Чтобы сохранить регистр символов для имени таблицы публикации, укажите для агента распространителя параметр **-QuotedIdentifier** . Параметр **-QuotedIdentifier** должен также применяться, если имена опубликованных объектов (таких как таблицы, столбцы и ограничения) содержат пробелы или слова, которые являются зарезервированными словами в той версии базы данных, которая используется на подписчике, не являющемся подписчиком[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения об этом параметре см. в разделе [Replication Distribution Agent](../agents/replication-distribution-agent.md).  
+-   По умолчанию скрипты, создаваемые агентом моментальных снимков для подписчиков, не относящихся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , используют в синтаксисе инструкции CREATE TABLE идентификаторы без кавычек. Поэтому опубликованная таблица с именем 'test' реплицируется как 'TEST'. Чтобы сохранить регистр символов для имени таблицы публикации, укажите для агента распространителя параметр **-QuotedIdentifier** . Параметр **-QuotedIdentifier** должен также применяться, если имена опубликованных объектов (таких как таблицы, столбцы и ограничения) содержат пробелы или слова, которые являются зарезервированными словами в той версии базы данных, которая используется на подписчике, не являющемся подписчиком[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения об этом параметре см. в разделе [агент распространения репликации](../agents/replication-distribution-agent.md).  
   
 -   Учетная запись, под которой запускается агент распространителя, должна иметь доступ с правом на чтение к установочному каталогу поставщика OLE DB.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "63022249"
   
 -   В разных базах данных значение NULL обрабатывается по-разному, что влияет на представление пустых значений, пустых строк и значений NULL. Это в свою очередь влияет на поведение значений, вставляемых в столбцы с определяемыми уникальными ограничениями. Например, СУБД Oracle допускает существование нескольких значений NULL в столбце, который считается уникальным, тогда как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] допускает наличие только одного значения NULL в уникальном столбце.  
   
-     Дополнительным фактором, который следует учитывать, является порядок обработки значений NULL, пустых строк и пустых значений в случае, когда столбец определяется как NOT NULL. Сведения по этому вопросу для подписчиков Oracle см. в разделе [Oracle Subscribers](oracle-subscribers.md).  
+     Дополнительным фактором, который следует учитывать, является порядок обработки значений NULL, пустых строк и пустых значений в случае, когда столбец определяется как NOT NULL. Сведения по этому вопросу для подписчиков Oracle см. в разделе [Подписчики Oracle](oracle-subscribers.md).  
   
 -   Связанные с репликацией метаданные (таблица последовательности транзакций) на поставщиках[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не удаляются при удалении подписки.  
   
@@ -87,16 +87,16 @@ ms.locfileid: "63022249"
   
 ### <a name="replication-feature-support"></a>Поддержка возможности репликации  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]предлагает два типа подписок: Push и Pull. Подписчики, не относящиеся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , должны использовать принудительные подписки, для которых агент распространителя запускается на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предусматривает два типа подписок: по запросу и принудительную. Подписчики, не относящиеся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , должны использовать принудительные подписки, для которых агент распространителя запускается на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]поддерживает два формата моментальных снимков: собственный bcp-режим и символьный режим. Подписчики, не относящиеся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , требуют использования моментальных снимков символьного формата.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предусматривает два формата моментальных снимков: собственный режим bcp и символьный режим. Подписчики, не относящиеся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , требуют использования моментальных снимков символьного формата.  
   
 -   Подписчики, не относящиеся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , не могут использовать подписки с немедленным обновлением или обновлением посредством очередей и не могут быть узлами одноранговой топологии.  
   
 -   Подписчики, не относящиеся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , не могут быть автоматически инициализированы из резервной копии.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разнородная репликация базы данных](heterogeneous-database-replication.md)   
- [Подписка на публикации](../subscribe-to-publications.md)  
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

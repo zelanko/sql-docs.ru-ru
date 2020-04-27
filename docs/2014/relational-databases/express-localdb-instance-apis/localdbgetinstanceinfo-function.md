@@ -17,10 +17,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 889e5eee49363c71a18808e7c71434110241bc84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63130525"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>Функция LocalDBGetInstanceInfo
@@ -73,7 +73,7 @@ typedef struct _LocalDBInstanceInfo
   
 ```  
   
- **Заголовочный файл:** sqlncli. h  
+ **Файл заголовка:** sqlncli.h  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -95,7 +95,7 @@ HRESULT LocalDBGetInstanceInfo(
  *двинстанцеинфосизе*  
  Входной Содержит размер буфера *инстанцеинфо* .  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  S_OK  
  Функция выполнена успешно.  
   
@@ -126,7 +126,7 @@ HRESULT LocalDBGetInstanceInfo(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  Произошла непредвиденная ошибка. Подробные сведения см. в журнале событий.  
   
-## <a name="details"></a>Сведения  
+## <a name="details"></a>Подробности  
  Смысл в поведении аргумента `struct` size (*лпинстанцеинфосизе*) заключается в том, чтобы позволить API возвращать различные версии **локалдбинстанцеинфострукт**, эффективно обеспечивая прямую и обратную совместимость.  
   
  Если аргумент `struct` size (*лпинстанцеинфосизе*) соответствует размеру известной версии **локалдбинстанцеинфострукт**, возвращается эта версия `struct` . В противном случае возвращается значение LOCALDB_ERROR_INVALID_PARAMETER.  
@@ -141,7 +141,7 @@ LocalDBInstanceInfo(L"Test", &ii, sizeof(LocalDBInstanceInfo));
   
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Заголовок и сведения о версии SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

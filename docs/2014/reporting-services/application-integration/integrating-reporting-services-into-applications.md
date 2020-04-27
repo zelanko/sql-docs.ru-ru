@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9ad6d24495bb44a7bd1013dbc822eefe346f02d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126156"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>Интеграция служб Reporting Services в приложения
@@ -37,20 +37,20 @@ ms.locfileid: "63126156"
 ## <a name="url-access"></a>Доступ по URL-адресу  
  Доступ по URL-адресу представляет собой еще один метод интеграции средств просмотра отчетов в приложения; он используется в случаях, когда применение элементов управления ReportViewer не представляется возможным. Метод доступа по URL-адресу также позволяет отправлять пользователям ссылки на отчеты по электронной почте.  
   
-## <a name="in-this-section"></a>в этом разделе  
- [Интеграция Reporting Services с помощью SOAP](../application-integration/integrating-reporting-services-using-soap.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Интеграция служб Reporting Services по протоколу SOAP](../application-integration/integrating-reporting-services-using-soap.md)  
  Описывает способ интеграции средств навигации по отчетам и управления отчетами служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в существующие бизнес-приложения с помощью веб-службы сервера отчетов.  
   
  [Интеграция служб Reporting Services с помощью элементов управления ReportViewer](../application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
  Описывает способ интеграции средств просмотра отчетов в существующие приложения с помощью элементов управления ReportViewer.  
   
- [Интеграция Reporting Services с использованием доступа по URL-адресу](../application-integration/integrating-reporting-services-using-url-access.md)  
+ [Интеграция служб Reporting Services с помощью доступа по URL-адресу](../application-integration/integrating-reporting-services-using-url-access.md)  
  Описывает способ интеграции средств навигации по отчетам служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в существующие бизнес-приложения с помощью доступа по URL-адресу.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Выбор между доступом по URL-адресу и SOAP](../../../2014/reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
- [Технический справочник (службы SSRS)](../../../2014/reporting-services/technical-reference-ssrs.md)   
+ [Технический справочник &#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)   
  [Веб-службы сервера отчетов](../report-server-web-service/report-server-web-service.md)  
   
   

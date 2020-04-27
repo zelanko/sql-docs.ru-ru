@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a4ec4e5d7575fdf5d915c8209999e1285fa79aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144325"
 ---
 # <a name="asynchronous-mode-and-sqlcancel"></a>Асинхронный режим и команда SQLCancel
@@ -47,7 +47,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  Иногда команда остается необработанной долгое время. Если приложению нужно отменить команду, не дожидаясь ответа, это можно сделать, вызвав **SQLCancel** с тем же маркером инструкции, что и у необработанной команды. Это единственный момент, когда следует использовать **SQLCancel** . Некоторые программисты используют **SQLCancel** , когда они обрабатывали фрагменты в результирующем наборе и хотят отменить оставшуюся часть результирующего набора. [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) или [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) следует использовать для отмены оставшейся части необработанного результирующего набора, а не **SQLCancel**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание драйвера ODBC для собственного клиента SQL Server](creating-a-driver-application.md)  
   
   

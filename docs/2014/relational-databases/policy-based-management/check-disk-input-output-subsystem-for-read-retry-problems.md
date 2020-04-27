@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 68c8cdb91f4c850618d19b26f0125205bfd045b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63158778"
 ---
 # <a name="check-disk-input-output-subsystem-for-read-retry-problems"></a>Проверка на наличие проблем повторного чтения в подсистеме дискового ввода-вывода
@@ -36,6 +36,6 @@ ms.locfileid: "63158778"
 ## <a name="for-more-information"></a>Дополнительные сведения см. в разделе  
  [MSSQLSERVER_825](../errors-events/mssqlserver-825-database-engine-error.md)  
   
- [SQL Server основы ввода-вывода, глава 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))  
+ [Основные операции ввода-вывода в SQL Server, раздел 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))  
   
   

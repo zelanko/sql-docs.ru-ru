@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 927a89c36019ebc7232a110f5a10fcbf2cfa74af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157984"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Создание таблиц, оптимизированных для памяти, и хранимых процедур, скомпилированных в собственном коде
@@ -26,7 +26,7 @@ ms.locfileid: "63157984"
   
 -   Создайте оптимизированные для памяти таблицы и индексы. Дополнительные сведения см. в разделе [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql).  
   
--   Использование интерпретированных [!INCLUDE[tsql](../../includes/tsql-md.md)], загрузка данных в оптимизированную для памяти таблицу и обновление статистики до создания хранимых процедур, скомпилированных в собственном коде. Дополнительные сведения см. в статье [Statistics for Memory-Optimized Tables](memory-optimized-tables.md).  
+-   Использование интерпретированных [!INCLUDE[tsql](../../includes/tsql-md.md)], загрузка данных в оптимизированную для памяти таблицу и обновление статистики до создания хранимых процедур, скомпилированных в собственном коде. Дополнительные сведения см. в статье [Статистика для таблиц, оптимизированных для памяти](memory-optimized-tables.md).  
   
 -   Создайте хранимые процедуры, скомпилированные в собственном коде, для доступа к данным в таблицах, оптимизированных для памяти. Дополнительные сведения см. в статье [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql).  
   
@@ -232,7 +232,7 @@ ORDER BY so.so_id, sod.lineitem_id
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Образцы кода выполняющейся в памяти OLTP](in-memory-oltp-code-samples.md)   
  [Перенос рассчитанных столбцов](migrating-computed-columns.md)   
  [Реализация IDENTITY в таблице, оптимизированной для памяти](implementing-identity-in-a-memory-optimized-table.md)  

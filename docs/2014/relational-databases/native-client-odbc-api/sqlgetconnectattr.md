@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128667"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
@@ -32,7 +32,7 @@ ms.locfileid: "63128667"
 > [!NOTE]  
 >  Стандартный атрибут соединения ODBC SQL_ATTR_CONNECTION_DEAD возвращает последнее по времени состояние соединения. Может оказаться так, что это состояние соединения будет отличаться от текущего.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|Соединение с сервером потеряно.|  
 |SQL_CD_FALSE|Соединение открыто и доступно для обработки инструкций.|  
@@ -48,7 +48,7 @@ ms.locfileid: "63128667"
   
  Дополнительные сведения см. [в разделе доступ к диагностическим сведениям в журнале расширенных событий](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |SQL_ERROR|Ошибка соединения.|  
 |SQL_SUCCESS|Подключение выполнено успешно. Идентификатор соединения клиента будет находиться в выходном буфере.|  
@@ -56,7 +56,7 @@ ms.locfileid: "63128667"
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
  Атрибут SQL_COPT_SS_PERF_DATA возвращает указатель на структуру SQLPERF, содержащую текущую статистику производительности драйвера. `SQLGetConnectAttr`Возвращает значение NULL, если ведение журнала производительности не включено. Драйвер не обновляет статистику в структуре SQLPERF динамически. Вызывайте `SQLGetConnectAttr` каждый раз, когда необходимо обновить статистику производительности.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |NULL|Ведение журнала производительности не включено.|  
 |Любое другое значение|Указатель на структуру SQLPERF.|  
@@ -67,7 +67,7 @@ ms.locfileid: "63128667"
 ## <a name="sql_copt_ss_user_data"></a>SQL_COPT_SS_USER_DATA  
  Атрибут SQL_COPT_SS_USER_DATA извлекает указатель на данные пользователя. Пользовательские данные хранятся в принадлежащей клиенту памяти и записываются отдельно для каждого соединения. Если указатель на данные пользователя на задан, что соответствует значению SQL_UD_NOTSET, то возвращается указатель NULL.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|Указатель на данные пользователя не задан.|  
 |Любое другое значение|Указатель на данные пользователя.|  
@@ -81,12 +81,12 @@ ms.locfileid: "63128667"
   
  Дополнительные сведения о SPN см. [в статье имена субъектов-служб &#40;имен участников-служб&#41; в клиентских подключениях &#40;&#41;ODBC ](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функция SQLGetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59347)   
  [Сведения о реализации API ODBC](odbc-api-implementation-details.md)   
  [Настройка QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   
  [Настройка ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [Настройка ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
- [Настройка ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)  
+ [SET ANSI_WARNINGS (Transact-SQL)](/sql/t-sql/statements/set-ansi-warnings-transact-sql)  
   
   

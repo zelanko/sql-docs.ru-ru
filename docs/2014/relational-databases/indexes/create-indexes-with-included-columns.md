@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156809"
 ---
 # <a name="create-indexes-with-included-columns"></a>Создание индексов с включенными столбцами
@@ -49,21 +49,21 @@ ms.locfileid: "63156809"
   
      [Безопасность](#Security)  
   
--   **Для создания индекса с неключевыми столбцами используется:**  
+-   **Создание индекса с неключевыми столбцами с помощью различных средств.**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="DesignRecs"></a>Рекомендации по проектированию  
+###  <a name="design-recommendations"></a><a name="DesignRecs"></a>Рекомендации по проектированию  
   
 -   Переопределите некластеризованные индексы с большим размером ключа индекса, чтобы только столбцы, используемые для поиска и уточняющего запроса, были ключевыми. Все остальные столбцы, покрывающие запрос, сделайте неключевыми столбцами. Таким образом, в наличии будут все столбцы, покрывающие запрос, но сам ключ индекса будет небольшим и эффективным.  
   
 -   Включите неключевые столбцы в некластеризованный индекс, чтобы избежать превышения текущих ограничений на размер индекса (16 ключевых столбцов) и размер ключа индекса (900 байт). Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не учитывает неключевые столбцы при расчете количества ключевых столбцов индекса и размера ключа индекса.  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Неключевые столбцы можно задавать только для некластеризованных индексов.  
   
@@ -81,12 +81,12 @@ ms.locfileid: "63156809"
   
     -   Увеличение длины столбцов типов `varchar`, `nvarchar` и `varbinary`.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner**.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Создание индекса с неключевыми столбцами  
   
@@ -96,7 +96,7 @@ ms.locfileid: "63156809"
   
 3.  Щелкните знак «плюс», чтобы развернуть таблицу, в которой необходимо создать индекс с неключевыми столбцами.  
   
-4.  Щелкните правой кнопкой мыши папку **Индексы**, выберите **Создать индекс** и **Некластеризованный индекс…**.  
+4.  Щелкните правой кнопкой мыши папку **индексы** , укажите **создать индекс**и выберите **некластеризованный индекс...**  
   
 5.  В диалоговом окне **Создание индекса** на странице **Общие** введите имя нового индекса в поле **Имя индекса** .  
   
@@ -114,7 +114,7 @@ ms.locfileid: "63156809"
   
 12. В диалоговом окне **Создание индекса** нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Создание индекса с неключевыми столбцами  
   

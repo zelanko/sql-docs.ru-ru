@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63028421"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Диалоговое окно «Полнотекстовые индексы» (визуальные инструменты для баз данных)
@@ -94,6 +94,6 @@ ms.locfileid: "63028421"
   
 ## <a name="see-also"></a>См. также:  
  [Использование мастера полнотекстового индексирования](../../relational-databases/search/use-the-full-text-indexing-wizard.md)   
- [Создание ПОЛНОТЕКСТОВОГО индекса &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
+ [CREATE FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
   

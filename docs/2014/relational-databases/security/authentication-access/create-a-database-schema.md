@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3c3747149b23c6217f321eff9d19621189b89b66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011988"
 ---
 # <a name="create-a-database-schema"></a>Создание схемы базы данных
@@ -35,29 +35,29 @@ ms.locfileid: "63011988"
   
      [Безопасность](#Security)  
   
--   **Создание схемы с помощью:**  
+-   **Создание схемы с помощью следующих средств**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Новая схема принадлежит одному из следующих участников уровня базы данных: пользователю базы данных, роли базы данных или роли приложения. Объекты, создаваемые в схеме, принадлежат владельцу схемы и имеют значение NULL для **principal_id** в **sys.objects**. Владение объектами, содержащимися в схеме, можно передать любому участнику уровня базы данных, однако у владельца схемы всегда остается разрешение CONTROL на объекты в схеме.  
   
 -   Если при создании объекта базы данных указать допустимого участника домена (пользователя или группу) в качестве владельца объекта, то этот участник будет добавлен в базу данных в качестве схемы. Новая схема будет принадлежать этому участнику домена.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
 -   Требует разрешения CREATE SCHEMA в базе данных.  
   
 -   Чтобы назначить другого пользователя владельцем создаваемой схемы, у участника должно быть разрешение IMPERSONATE на этого пользователя. Если роль базы данных указана в качестве владельца, то вызывающий объект должен входить в роль или иметь на нее разрешение ALTER.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 ##### <a name="to-create-a-schema"></a>Создание схемы  
   
@@ -74,13 +74,13 @@ ms.locfileid: "63011988"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Дополнительные параметры  
- Диалоговое окно **Схема — создание** также содержит параметры на двух дополнительных страницах: **Разрешения** и **Расширенные свойства**.  
+ Диалоговое окно **Схема-создать** также предлагает параметры на двух дополнительных страницах: **разрешения** и **Расширенные свойства**.  
   
 -   На странице **Разрешения** перечислены все возможные защищаемые объекты и разрешения на эти объекты, которые могут быть предоставлены для имени входа.  
   
 -   Страница **Расширенные свойства** позволяет добавлять пользовательские свойства пользователям базы данных.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-create-a-schema"></a>Создание схемы  
   

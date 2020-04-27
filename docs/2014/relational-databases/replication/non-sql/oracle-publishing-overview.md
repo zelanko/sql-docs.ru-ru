@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558ee09eeb4419bc354ff3ade9d6586877246b33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022258"
 ---
 # <a name="oracle-publishing-overview"></a>Oracle Publishing Overview
@@ -39,7 +39,7 @@ ms.locfileid: "63022258"
   
  Когда создается публикация Oracle, для каждой опубликованной таблицы в базе данных Oracle создаются триггеры и таблицы отслеживания. При внесении изменений в опубликованные таблицы срабатывают триггеры базы данных и данные вставляются в таблицы отслеживания репликации по каждой измененной строке. Затем агент чтения журнала на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] перемещает сведения об изменении данных из таблиц отслеживания в базу данных распространителя на стороне распространителя. Наконец, как и при обычной репликации транзакций, агент распространителя перемещает изменения от распространителя подписчикам.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка издателя Oracle](configure-an-oracle-publisher.md)   
  [Глоссарий терминов для публикации Oracle](glossary-of-terms-for-oracle-publishing.md)   
  [Разнородная репликация базы данных](heterogeneous-database-replication.md)  

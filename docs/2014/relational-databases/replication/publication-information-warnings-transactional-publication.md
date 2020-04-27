@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2ab1c4be29b87e1051daa702ce40905a95e34ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022002"
 ---
 # <a name="publication-information-warnings-transactional-publication-sql-server-2005-and-later"></a>Сведения о публикации, предупреждения (публикация транзакций, SQL Server 2005 и более поздние версии)
-  Вкладка **Предупреждения** доступна для распространителей, работающих с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздними версиями. Вкладка **Предупреждения** позволяет выполнять следующие задачи для выбранных публикаций:  
+   Вкладка **Предупреждения** доступна для распространителей, работающих с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздними версиями. Вкладка **Предупреждения** позволяет выполнять следующие задачи для выбранных публикаций:  
   
 -   включать предупреждения, которые будут отображаться в мониторе репликации;  
   
@@ -54,7 +54,7 @@ ms.locfileid: "63022002"
  Достижение порогового значения помимо отображения предупреждения в мониторе репликации может также вызывать системное предупреждение. Предупреждения определяются нажатием кнопки **Настройка предупреждений** и указанием сведений в диалоговом окне **Настройка предупреждений репликации** .  
   
 ## <a name="options"></a>Параметры  
- **Enabled**  
+ **Включен**  
  Выберите, чтобы включить предупреждение и указать пороговое значение.  
   
  **Предупреждение**  
@@ -75,11 +75,11 @@ ms.locfileid: "63022002"
  **Сохранить изменения**  
  Нажмите эту кнопку для сохранения всех произведенных изменений предупреждений и пороговых значений.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск монитора репликации](monitor/start-the-replication-monitor.md)   
  [Просмотр сведений и выполнение задач с помощью монитора репликации](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Мониторинг производительности с помощью монитора репликации](monitor/monitor-performance-with-replication-monitor.md)   
- [Наблюдение за репликацией](monitoring-replication.md)   
- [Настройка пороговых значений и предупреждений в мониторе репликации](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Мониторинг репликации](monitoring-replication.md)   
+ [Set Thresholds and Warnings in Replication Monitor](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

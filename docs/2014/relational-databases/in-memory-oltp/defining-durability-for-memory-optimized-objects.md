@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ecf171c8c50e1f7ce1e7cdc9e86cd27ac6fe558b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63161991"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>Определение устойчивости для оптимизированных для памяти объектов
@@ -57,7 +57,7 @@ ms.locfileid: "63161991"
   
 -   Количество записей журнала в активной части журнала, которые нужно перезаписать.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание и управление хранилищем для оптимизированных для памяти объектов](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61f7e509b715b1156b06362f8e9bcd4a634de0c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63020870"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Создание публикации из базы данных Oracle
@@ -35,16 +35,16 @@ ms.locfileid: "63020870"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
--   Перед созданием публикации необходимо установить программное обеспечение Oracle на [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] распространителе, а также настроить базу данных Oracle. Дополнительные сведения см. в статье [Настройка издателя Oracle](../non-sql/configure-an-oracle-publisher.md).  
+-   Перед созданием публикации необходимо установить программное обеспечение Oracle на распространитель [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и настроить базу данных Oracle. Дополнительные сведения см. в статье [Настройка издателя Oracle](../non-sql/configure-an-oracle-publisher.md).  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Создать публикацию моментальных снимков или публикацию транзакций из базы данных Oracle можно с помощью мастера создания публикаций.  
   
- При первоначальном создании публикации из базы данных Oracle необходимо идентифицировать издатель Oracle на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (этого не нужно делать для последующих публикаций из этой же самой базы данных). Идентификацию издателя Oracle можно выполнить в мастере создания публикаций или в диалоговом окне **Свойства распространителя — \<распространитель>**. В этой статье описывается диалоговое окно **Свойства распространителя — \<распространитель>**.  
+ При первоначальном создании публикации из базы данных Oracle необходимо идентифицировать издатель Oracle на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (этого не нужно делать для последующих публикаций из этой же самой базы данных). Идентификацию издателя Oracle можно выполнить в мастере создания публикаций или в диалоговом окне **Свойства распространителя — \<распространитель>** . В этой статье описывается диалоговое окно **Свойства распространителя — \<распространитель>** .  
   
 #### <a name="to-identify-the-oracle-publisher-at-the-sql-server-distributor"></a>Идентификация издателя Oracle на распространителе SQL Server  
   
@@ -68,9 +68,9 @@ ms.locfileid: "63020870"
   
 6.  На вкладке **Свойства соединения** выберите тип издателя **Шлюз** или **Полный**.  
   
-     Параметр **Complete** предназначен для создания моментальных снимков и публикаций транзакций с полным набором поддерживаемых функций для публикации Oracle. Параметр **Шлюз** оптимизирует работу системы для случаев, когда шлюзом между системами выступает репликация. Параметр **Шлюз** нельзя использовать, если одна и та же таблица будет публиковаться в нескольких публикациях транзакций. Если выбран параметр **Шлюз**, то таблица может использоваться только в одной публикации транзакций и в любом количестве публикаций моментальных снимков.  
+     Параметр **Полный** обеспечивает публикации моментальных снимков и транзакций полным набором поддерживаемых функций, необходимых для публикаций Oracle. Параметр **Шлюз** оптимизирует работу системы для случаев, когда шлюзом между системами выступает репликация. Параметр **Шлюз** нельзя использовать, если одна и та же таблица будет публиковаться в нескольких публикациях транзакций. Если выбран параметр **Шлюз**, то таблица может использоваться только в одной публикации транзакций и в любом количестве публикаций моментальных снимков.  
   
-7.  По щелчку **Соединиться**устанавливается соединение с издателем Oracle и выполняется его настройка для репликации. Диалоговое окно **Соединение с сервером** закрывается, и вы возвращаетесь в диалоговое окно **Свойства распространителя — \<распространитель>**.  
+7.  По щелчку **Соединиться**устанавливается соединение с издателем Oracle и выполняется его настройка для репликации. Диалоговое окно **Соединение с сервером** закрывается, и вы возвращаетесь в диалоговое окно **Свойства распространителя — \<распространитель>** .  
   
     > [!NOTE]  
     >  Если имеются какие-либо проблемы с конфигурацией сети, в этом месте выводится сообщение об ошибке. Если при подключении к базе данных Oracle возникают проблемы, см. подраздел «Распространитель SQL Server не может подключиться к экземпляру базы данных Oracle» в разделе [Troubleshooting Oracle Publishers](../non-sql/troubleshooting-oracle-publishers.md).  
@@ -105,8 +105,8 @@ ms.locfileid: "63020870"
   
 11. На странице **Завершение работы мастера** укажите имя публикации.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
- После настройки базы данных Oracle в качестве издателя можно создать публикацию транзакций или публикации моментальных снимков так же, как от [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] издателя, с помощью системных хранимых процедур.  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
+ После того как база данных Oracle будет настроена как издатель, можно создать публикацию транзакций или публикацию моментальных снимков точно так же, как из издателя [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], с помощью системных хранимых процедур.  
   
 #### <a name="to-create-an-oracle-publication"></a>Создание публикации Oracle  
   
@@ -114,8 +114,7 @@ ms.locfileid: "63020870"
   
 2.  Если удаленный распространитель не существует, настройте удаленный распространитель. Дополнительные сведения см. в статье [Configure Publishing and Distribution](../configure-publishing-and-distribution.md).  
   
-3.  На удаленном распространителе, который будет использовать издатель Oracle, выполните хранимую процедуру [sp_adddistpublisher (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql). Укажите имя в виде прозрачной подсети ( **@publisher** TNS) для экземпляра базы данных Oracle и значение `ORACLE` или `ORACLE GATEWAY` для. **@publisher_type** 
-  `Specify` режим безопасности, используемый при соединении с издателем Oracle к удаленному распределителю [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] одним из следующих способов:  
+3.  На удаленном распространителе, который будет использовать издатель Oracle, выполните хранимую процедуру [sp_adddistpublisher (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql). Укажите имя в виде прозрачной подсети ( **@publisher** TNS) для экземпляра базы данных Oracle и значение `ORACLE` или `ORACLE GATEWAY` для. **@publisher_type** `Specify` режим безопасности, используемый при соединении с издателем Oracle к удаленному распределителю [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] одним из следующих способов:  
   
     -   Чтобы по умолчанию использовать стандартную проверку подлинности Oracle, укажите значение **0** для **@security_mode**, имя входа административной схемы пользователей репликации, созданной во время настройки издателя Oracle, в параметре **@login**и пароль в параметре **@password**.  
   
@@ -145,8 +144,8 @@ ms.locfileid: "63020870"
 ## <a name="see-also"></a>См. также:  
  [Настройка издателя Oracle](../non-sql/configure-an-oracle-publisher.md)   
  [Публикация данных и объектов базы данных](publish-data-and-database-objects.md)   
- [Настройка задания набора транзакций для издателя Oracle &#40;программирование репликации на языке Transact-SQL&#41;](../administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
- [Общие сведения о публикации Oracle](../non-sql/oracle-publishing-overview.md)   
+ [Configure the Transaction Set Job for an Oracle Publisher](../administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)  (Настройка задания для набора транзакции в издателе Oracle)  
+ [Обзор публикации Oracle](../non-sql/oracle-publishing-overview.md)   
  [Скрипт для предоставления разрешений Oracle](../non-sql/script-to-grant-oracle-permissions.md)  
   
   

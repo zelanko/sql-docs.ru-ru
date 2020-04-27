@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fedf4ce3011d9caae9d673acf354265537115057
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126136"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Интеграция служб Reporting Services с помощью доступа по URL-адресу
@@ -28,14 +28,14 @@ ms.locfileid: "63126136"
 > [!NOTE]  
 >  Подразделы этого раздела содержат основные принципы интеграции. Эти сведения можно использовать для начала проектирования и разработки собственных сценариев интеграции для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Использование доступа по URL-адресу в веб-приложении](integrating-reporting-services-using-url-access-web-application.md)  
  Описывает использование доступа по URL-адресу для интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в веб-среду.  
   
  [Использование доступа по URL-адресу в приложении Windows](integrating-reporting-services-using-url-access-windows-application.md)  
  Описывает использование доступа по URL-адресу для интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в среду [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Интеграция Reporting Services в приложения](../application-integration/integrating-reporting-services-into-applications.md)   
  [Доступ по URL-адресу (службы SSRS)](../url-access-ssrs.md)  
   

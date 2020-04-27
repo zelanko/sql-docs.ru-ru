@@ -16,28 +16,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 613c0ccae7be912bd3bec63905b838b7f07b59b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033585"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
   В этом разделе описывается настройка [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журнала заданий агента.  
   
--   **Перед началом:**  [Безопасность](#Security)  
+-   **Перед началом работы:**  [Безопасность](#Security)  
   
--   **Настройка журнала заданий с помощью:**  [SQL Server Management Studio](#SSMS)  
+-   **Для настройки журнала заданий используется:**  [Среда SQL Server Management Studio](#SSMS)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
  Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Использование среды SQL Server Management Studio  
  **Настройка журнала заданий**  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]и разверните его.  
+1.  В **обозревателе объектов** подключитесь к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и разверните его.  
   
 2.  Щелкните правой кнопкой мыши **агент SQL Server**, затем выберите **Свойства**.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63033585"
   
     2.  Выберите **Автоматически удалять журнал агента**и задайте период времени, записи старше которого будут автоматически удаляться из журнала.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Реализация заданий](implement-jobs.md)   
  [Мониторинг активности заданий](monitor-job-activity.md)   
  [Создание заданий](create-jobs.md)  

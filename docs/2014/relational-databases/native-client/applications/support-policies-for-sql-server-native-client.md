@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e5c7a01cc2a9569dd8c05316a2aa3314959e894
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046529"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>Политики поддержки собственного клиента SQL Server
@@ -23,7 +23,7 @@ ms.locfileid: "63046529"
 ## <a name="server-support"></a>Поддержка сервера  
  Клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 поддерживает соединение с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] и [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].  
   
-## <a name="supported-operating-system-versions"></a>Поддерживаемые версии операционных систем  
+## <a name="supported-operating-system-versions"></a>Поддерживаемые версии операционной системы  
  В следующей таблице приведен список операционных систем, поддерживающих Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 |Версия собственного клиента SQL Server|Поддерживаемые операционные системы|  
@@ -51,7 +51,7 @@ ms.locfileid: "63046529"
   
  Приложение OLE DB, которое пользуется компонентом службы OLE DB, может пользоваться собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], если в строке соединения указано `DataTypeCompatibility=80`. Однако в этом случае компоненты, [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] добавленные после, будут недоступны.  
   
-## <a name="see-also"></a>См. также:  
- [Построение приложений с использованием SQL Server Native Client](building-applications-with-sql-server-native-client.md)  
+## <a name="see-also"></a>См. также  
+ [Построение приложений с использованием собственного клиента SQL Server](building-applications-with-sql-server-native-client.md)  
   
   

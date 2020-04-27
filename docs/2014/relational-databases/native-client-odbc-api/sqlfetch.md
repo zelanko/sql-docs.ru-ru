@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3dc2de6d8dc1967986162f2a468d0edf7266730a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015806"
 ---
 # <a name="sqlfetch"></a>SQLFetch
@@ -27,7 +27,7 @@ ms.locfileid: "63015806"
 ## <a name="sqlfetch-support-for-large-clr-udts"></a>Поддержка функцией SQLFetch определяемых пользователем типов больших данных CLR  
  Функция `SQLFetch` поддерживает определяемые пользователем типы больших данных CLR. Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

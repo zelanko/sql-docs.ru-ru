@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155790"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Статистика для таблиц, оптимизированных для памяти
@@ -68,7 +68,7 @@ ms.locfileid: "63155790"
   
 -   Или обновите статистику с помощью скрипта [!INCLUDE[tsql](../../../includes/tsql-md.md)] , как описано ниже.  
   
- Чтобы обновить статистику для отдельной таблицы, оптимизированной для памяти (*myschema*. *MyTable*), выполните следующий скрипт:  
+ Чтобы обновить статистику для отдельной таблицы, оптимизированной для памяти (*myschema*. *Mytable*), выполните следующий скрипт:  
   
 ```  
 UPDATE STATISTICS myschema.Mytable WITH FULLSCAN, NORECOMPUTE  
@@ -96,7 +96,7 @@ from sys.tables t join sys.stats s on t.object_id=s.object_id cross apply sys.dm
 where t.is_memory_optimized=1  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Таблицы, оптимизированные для памяти](memory-optimized-tables.md)  
+## <a name="see-also"></a>См. также  
+ [Оптимизированные для памяти таблицы](memory-optimized-tables.md)  
   
   

@@ -19,21 +19,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e700f5178a3520fe83f4d896662a8741aa166b9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150910"
 ---
 # <a name="isolate-performance-problems"></a>Локализация проблем производительности
-  Часто более эффективно использовать несколько [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] средств Microsoft Windows для изоляции проблем с производительностью базы данных, чем использование одного средства за раз. Например, возможность графического плана выполнения, также называемая инструкцией Showplan, помогает быстро распознать взаимоблокировки в отдельном запросе. Однако при совместном использовании возможности контроля [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows можно с еще большей легкостью распознать некоторые другие проблемы производительности.  
+  Зачастую для локализации проблем производительности базы данных более эффективным является совместное использование нескольких средств [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Microsoft Windows вместо одного. Например, возможность графического плана выполнения, также называемая инструкцией Showplan, помогает быстро распознать взаимоблокировки в отдельном запросе. Однако при совместном использовании возможности контроля [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows можно с еще большей легкостью распознать некоторые другие проблемы производительности.  
   
- 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] может быть использовано для контроля и диагностики проблем, связанных с языком Transact-SQL и приложениями. Системный монитор может быть использован для контроля проблем аппаратного обеспечения и других системных проблем.  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] может быть использовано для контроля и диагностики проблем, связанных с языком Transact-SQL и приложениями. Системный монитор может быть использован для контроля проблем аппаратного обеспечения и других системных проблем.  
   
  Для поиска и устранения проблем можно осуществлять контроль следующих областей:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]хранимые процедуры или пакеты [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций, отправленные пользовательскими приложениями.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или пакеты инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , переданные пользовательскими приложениями;  
   
 -   деятельность пользователя, например блокировки и взаимоблокировки;  
   
@@ -54,6 +53,6 @@ ms.locfileid: "63150910"
   
  [Выявление узких мест](identify-bottlenecks.md)  
   
- [Наблюдение за использованием памяти](../performance-monitor/monitor-memory-usage.md)  
+ [Отслеживание использования памяти](../performance-monitor/monitor-memory-usage.md)  
   
   

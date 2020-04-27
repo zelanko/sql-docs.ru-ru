@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150821"
 ---
 # <a name="plan-guides"></a>Руководства планов
@@ -145,14 +145,14 @@ sp_create_plan_guide
 |Описано, как включить постоянный план запроса в структуру плана.|[Применение фиксированного плана запроса к структуре плана](apply-a-fixed-query-plan-to-a-plan-guide.md)|  
 |Описано, как задать указания запросов в структуре плана.|[Присоединение указаний запросов к структуре плана](attach-query-hints-to-a-plan-guide.md)|  
 |Описано, как просматривать свойства структуры плана.|[Просмотр свойств структуры плана](view-plan-guide-properties.md)|  
-|Описано, как использовать профилировщик SQL Server для создания и проверки структур планов.|[Использование приложения SQL Server Profiler для создания и проверки руководств планов](plan-guides.md)|  
+|Описано, как использовать профилировщик SQL Server для создания и проверки структур планов.|[Использование SQL Server Profiler для создания и тестирования структур планов](plan-guides.md)|  
 |Описано, как проверять структуры планов.|[Проверка структур плана после обновления](validate-plan-guides-after-upgrade.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
  [sys. plan_guides &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
- [sys. fn_validate_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
+ [sys.fn_validate_plan_guide (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
   
   

@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150709"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Наблюдение и настройка производительности
@@ -71,11 +71,11 @@ ms.locfileid: "63150709"
 |[Формирование базовых показателей производительности](establish-a-performance-baseline.md)|Содержит сведения о том, как создать базовый уровень производительности.|  
 |[Локализация проблем производительности](isolate-performance-problems.md)|Описание способа изоляции проблем производительности базы данных.|  
 |[Выявление узких мест](identify-bottlenecks.md)|Описание способов наблюдения за производительностью сервера и отслеживания его работы для выявления узких мест.|  
-|[Производительность сервера и мониторинг активности](server-performance-and-activity-monitoring.md)|Описание способов использования средств наблюдения за производительностью и активностью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows.|  
+|[Мониторинг производительности и действий сервера](server-performance-and-activity-monitoring.md)|Описание способов использования средств наблюдения за производительностью и активностью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows.|  
 |[Отображение и сохранение планов выполнения](display-and-save-execution-plans.md)|Описание способов отображения и сохранения планов выполнения в файле в формате XML.|  
-|[Monitoring Performance By Using the Query Store](monitoring-performance-by-using-the-query-store.md)|Хранилище запросов автоматически захватывает журнал запросов, планы и статистику выполнения и сохраняет их для просмотра.|  
+|[Мониторинг производительности с использованием хранилища запросов](monitoring-performance-by-using-the-query-store.md)|Хранилище запросов автоматически захватывает журнал запросов, планы и статистику выполнения и сохраняет их для просмотра.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Автоматизированное администрирование в масштабах предприятия](../../ssms/agent/automated-administration-across-an-enterprise.md)   
  [помощник по настройке ядра СУБД](database-engine-tuning-advisor.md)   
  [Мониторинг использования ресурсов &#40;системном мониторе&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   

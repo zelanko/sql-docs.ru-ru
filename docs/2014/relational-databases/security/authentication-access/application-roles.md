@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 56f075ff4a26af4913d792c20a8d7c1d6a58fcb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011673"
 ---
 # <a name="application-roles"></a>Роли приложений
@@ -56,10 +56,10 @@ ms.locfileid: "63011673"
   
 |||  
 |-|-|  
-|Создание роли приложения.|[Создание роли приложения](create-an-application-role.md) и [создание роли приложения &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-application-role-transact-sql)|  
-|Изменение роли приложения.|[ALTER APPLICATION ROLE &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-application-role-transact-sql)|  
-|Удаление роли приложения.|[УДАЛИТЬ роль приложения &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-application-role-transact-sql)|  
-|Использование роли приложения.|[sp_setapprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)|  
+|Создание роли приложения.|[Создание роли приложения](create-an-application-role.md) и [CREATE APPLICATION ROLE (Transact-SQL)](/sql/t-sql/statements/create-application-role-transact-sql)|  
+|Изменение роли приложения.|[ALTER APPLICATION ROLE (Transact-SQL)](/sql/t-sql/statements/alter-application-role-transact-sql)|  
+|Удаление роли приложения.|[DROP APPLICATION ROLE (Transact-SQL)](/sql/t-sql/statements/drop-application-role-transact-sql)|  
+|Использование роли приложения.|[sp_setapprole (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)|  
   
 ## <a name="see-also"></a>См. также:  
  [Обеспечение безопасности SQL Server](../securing-sql-server.md)  

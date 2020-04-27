@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cf214691c2bcffeb617d3f7534fac94f8941db5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144506"
 ---
 # <a name="open-log-file-viewer"></a>Открытие средства просмотра файла журнала
@@ -40,7 +40,7 @@ ms.locfileid: "63144506"
   
  Открыть средство просмотра журнала можно несколькими способами (в зависимости от того, какие сведения нужно просмотреть).  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permissions  
  Чтобы получить доступ к файлам журнала для экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые находятся в сети, требуется членство в предопределенной роли сервера securityadmin.  
   
  Чтобы получить доступ к файлам журнала для экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые находятся вне сети, необходим доступ на чтение к пространству WMI **Root\Microsoft\SqlServer\ComputerManagement10** , а также к папке, в которой хранятся файлы журнала. Дополнительные сведения см. в подразделе "Безопасность" раздела [Просмотр автономных файлов журнала](view-offline-log-files.md).  

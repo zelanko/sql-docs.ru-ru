@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f597aa6c9ba9759b606501b0bd72a2166b1805e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127404"
 ---
 # <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler (API-интерфейс расширенных хранимых процедур)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
   
  Вызывает установленный обработчик сообщений API-интерфейса расширенных хранимых процедур. Эта функция обычно используется для вызова [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из расширенной хранимой процедуры, чтобы зарегистрировать ошибку (определенную расширенной хранимой процедурой) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в файле журнала ошибок или [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнале приложений Windows.  
   
@@ -73,31 +73,31 @@ oserrtextlen
  *srvproc*  
  Указатель на структуру SRV_PROC, который представляет собой дескриптор соединения с клиентом. Параметр *srvproc* содержит сведения, которые используются для управления связью и передачей данных между приложением и клиентом.  
   
- *еррорнум*  
+ *errornum*  
  Номер ошибки, определенный расширенной хранимой процедурой. Это значение должно быть от 50 001 до 2 147 483 647.  
   
- *серьезности*  
+ *severity*  
  Стандартное значение серьезности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для ошибки. Это значение должно быть от 0 до 24.  
   
  *state*  
  Значение состояния [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для ошибки.  
   
- *осеррнум*  
+ *oserrnum*  
  Номер ошибки операционной системы. Этот аргумент не учитывается.  
   
- *ерртекст*  
+ *errtext*  
  Описание ошибки *errornum* расширенной хранимой процедуры.  
   
- *ерртекстлен*  
+ *errtextlen*  
  Длина строки ошибки *errtext* расширенной хранимой процедуры.  
   
- *осерртекст*  
+ *oserrtext*  
  Описание ошибки операционной системы *oserrnum*. Этот аргумент не учитывается.  
   
- *осерртекстлен*  
+ *oserrtextlen*  
  Длина строки ошибки операционной системы *oserrtext*.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  SUCCEED или FAIL.  
   
 ## <a name="remarks"></a>Remarks  

@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067733"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
-  `SQLColumns`Возвращает SQL_SUCCESS, существуют ли значения для параметров *CatalogName*, *TableName*или *ColumnName* . **SQLFetch** возвращает SQL_NO_DATA, если в этих параметрах используются недопустимые значения.  
+  `SQLColumns`Возвращает SQL_SUCCESS, существуют ли значения для параметров *CatalogName*, *TableName*или *ColumnName* . Функция**SQLFetch** возвращает значение SQL_NO_DATA, если в этих параметрах заданы недопустимые значения.  
   
 > [!NOTE]  
 >  Для типов больших значений все параметры длины будут возвращены со значением SQL_SS_LENGTH_UNLIMITED.  
@@ -31,11 +31,11 @@ ms.locfileid: "63067733"
   
  Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает выдачу сведений о таблицах, находящихся на связанных серверах, принимая двухкомпонентное имя в параметре *CatalogName* : *Имя_Связанного_Сервера.Имя_Каталога*.  
   
- Для ODBC 2. приложения *x* , не использующие подстановочные знаки в `SQLColumns` *TableName*, возвращают сведения обо всех таблицах, имена которых совпадают с *TableName* и принадлежат текущему пользователю. Если текущий пользователь не владеет таблицей, имя которой соответствует ** параметру TableName `SQLColumns` , возвращает сведения о любых таблицах, принадлежащих другим пользователям, где имя таблицы совпадает с параметром *TableName* . Для ODBC 2. приложения *x* , использующие подстановочные `SQLColumns` знаки, возвращает все таблицы, имена которых совпадают с *TableName*. Для ODBC 3. ** приложения `SQLColumns` x возвращают все таблицы, имена которых совпадают с *TableName* , независимо от владельца или от того, используются ли подстановочные знаки.  
+ Для ODBC 2. приложения *x* , не использующие подстановочные знаки в `SQLColumns` *TableName*, возвращают сведения обо всех таблицах, имена которых совпадают с *TableName* и принадлежат текущему пользователю. Если текущий пользователь не владеет таблицей, имя которой соответствует *TableName* параметру TableName `SQLColumns` , возвращает сведения о любых таблицах, принадлежащих другим пользователям, где имя таблицы совпадает с параметром *TableName* . Для ODBC 2. приложения *x* , использующие подстановочные `SQLColumns` знаки, возвращает все таблицы, имена которых совпадают с *TableName*. Для ODBC 3. *x* приложения `SQLColumns` x возвращают все таблицы, имена которых совпадают с *TableName* , независимо от владельца или от того, используются ли подстановочные знаки.  
   
  В следующей таблице перечислены столбцы, возвращаемые в результирующем наборе.  
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |DATA_TYPE|Возвращает SQL_VARCHAR, SQL_VARBINARY или SQL_WVARCHAR для типов данных **varchar (max)** .|  
 |TYPE_NAME|Возвращает "varchar", "varbinary" или "nvarchar" для типов данных **varchar (max)**, **varbinary (max)** и **nvarchar (max)** .|  
@@ -77,7 +77,7 @@ ms.locfileid: "63067733"
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Поддержка функцией SQLColumns разреженных столбцов  
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] результирующий набор для SQLColumns были добавлены два указанных столбца:  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|`Smallint`|Если столбец является разреженным, то значение равно SQL_TRUE. В противном случае — SQL_FALSE.|  
 |SS_IS_COLUMN_SET|`Smallint`|Если столбец является `column_set`, это значение равно SQL_TRUE. В противном случае — SQL_FALSE.|  
@@ -88,7 +88,7 @@ ms.locfileid: "63067733"
   
  Дополнительные сведения о разреженных столбцах в ODBC см. в разделе [Поддержка разреженных столбцов &#40;&#41;ODBC ](../native-client/odbc/sparse-columns-support-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функция SQLColumns](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

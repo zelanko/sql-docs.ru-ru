@@ -14,13 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164063"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Практическое руководство. Развертывание модуля обработки данных на сервере отчетов
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Руководство. Развертывание модуля обработки данных на сервере отчетов
   Серверы отчетов используют модули обработки данных для получения и обработки данных в отчетах, готовых для просмотра. Сборка модуля обработки данных развертывается на сервере отчетов как закрытая сборка. Нужно также внести запись в файл конфигурации сервера отчетов RSReportServer.config.  
   
 ## <a name="procedures"></a>Процедуры  
@@ -30,7 +30,7 @@ ms.locfileid: "63164063"
 1.  Скопируйте сборку из промежуточной папки в каталог bin сервера отчетов, на котором будет использоваться модуль обработки данных. По умолчанию каталог bin сервера отчетов располагается по пути %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<*имя_экземпляра*>\Reporting Services\ReportServer\bin.  
   
     > [!NOTE]  
-    >  Этот шаг предотвратит обновление до более нового экземпляра SQL Server. Дополнительные сведения см. в разделе [обновление и миграция Reporting Services](../../install-windows/upgrade-and-migrate-reporting-services.md).  
+    >  Этот шаг предотвратит обновление до более нового экземпляра SQL Server. Дополнительные сведения см. в разделе [Upgrade and Migrate Reporting Services](../../install-windows/upgrade-and-migrate-reporting-services.md).  
   
 2.  Скопировав файл сборки, откройте файл RSReportServer.config. Файл RSReportServer.config расположен в каталоге ReportServer. Необходимо внести запись в этот файл конфигурации для файла сборки развертываемого модуля обработки данных. Файл конфигурации можно открыть с помощью среды Visual Studio или простого текстового редактора (такого как Блокнот).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63164063"
     </CodeGroup>  
     ```  
   
- URL-членство — это лишь одно из множества условий членства, которые могут быть заданы для модуля обработки данных. Дополнительные сведения о безопасном управлении доступом для кода в [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] см. в разделе [Безопасная разработка (службы Reporting Services)](../secure-development/secure-development-reporting-services.md).  
+ URL-членство — это лишь одно из множества условий членства, которые могут быть заданы для модуля обработки данных. Дополнительные сведения об управлении доступом для кода в [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] см. в статье [Разработка безопасных приложений (службы Reporting Services)](../secure-development/secure-development-reporting-services.md).  
   
 ## <a name="verifying-the-deployment"></a>Проверка развертывания  
  Проверить, успешно ли был развернут модуль обработки данных на сервере отчетов, можно с помощью метода веб-службы <xref:ReportService2010.ReportingService2010.ListExtensions%2A>. Можно также открыть диспетчер отчетов и убедиться, что модуль включен в список доступных источников данных. Дополнительные сведения о диспетчере отчетов и источниках данных см. в разделе [Создание, изменение и удаление общих источников данных (службы SSRS)](../../report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  

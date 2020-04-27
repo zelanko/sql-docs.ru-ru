@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 379877d3a08c60a293b96c5c57d55a2894ba0a79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63074063"
 ---
 # <a name="handle-multiple-job-steps"></a>Обработка множественных шагов задания
@@ -40,9 +40,9 @@ ms.locfileid: "63074063"
 > [!NOTE]  
 >  Если создаются задания с циклическими шагами (за шагом 1 следует шаг 2, затем шаг 2 возвращается к шагу 1), то при создании задания с использованием среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]выдается предупреждающее сообщение.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Агент записывает сведения о заданиях и шагах заданий в журнал заданий.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент записывает сведения о задании и шагах задания в журнал заданий.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
  [dbo. sysjobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)   
  [dbo. sysjobs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)   

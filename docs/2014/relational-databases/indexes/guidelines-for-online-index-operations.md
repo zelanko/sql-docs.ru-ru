@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2f7a25a4a6a4bb6b8f153a8b04b47aeb542265c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162483"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Руководящие принципы для операций с индексами
@@ -60,7 +60,7 @@ ms.locfileid: "63162483"
 ## <a name="disk-space-considerations"></a>Рекомендации по месту на диске  
  В общем случае требования к свободному месту на диске при работе с индексами и в режиме в сети и в режиме вне сети одинаковы. Исключением является дополнительное место, необходимое для временного сопоставления индекса. Этот временный индекс применяется в операциях с индексами в сети при создании, перестроении или удалении кластеризованных индексов. Удаление кластеризованного индекса в режиме в сети требует столько же места, сколько и его создание в режиме в сети. Дополнительные сведения см. в статье [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md).  
   
-## <a name="performance-considerations"></a>Рекомендации по производительности  
+## <a name="performance-considerations"></a>Вопросы производительности  
  Хотя операции с индексами в сети допускают одновременную работу пользователей, в этом случае они выполняются тем дольше, чем интенсивнее происходит обновление данных. Обычно операции с индексами в сети выполняются медленнее, чем аналогичные операции вне сети, независимо от текущей интенсивности обновления данных.  
   
  Поскольку и исходная, и целевая структуры обслуживаются во время выполнения операции с индексами в сети, увеличивается потребление ресурсов при вставке, обновлении и удалении, и это увеличение может доходить до двукратного. Это может привести к снижению производительности и повышению нагрузки на систему, особенно ресурсов ЦП. Операции с индексами в сети полностью записываются в журнал.  
@@ -79,9 +79,9 @@ ms.locfileid: "63162483"
 ## <a name="related-content"></a>См. также  
  [Об операциях с индексом в сети](how-online-index-operations-work.md)  
   
- [Выполнение операций с индексами в оперативном режиме](perform-index-operations-online.md)  
+ [Выполнение операций с индексами в режиме "в сети"](perform-index-operations-online.md)  
   
- [Инструкция ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
+ [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)  
   
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)  
   

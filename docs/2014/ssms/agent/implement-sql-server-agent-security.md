@@ -16,14 +16,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137520"
 ---
 # <a name="implement-sql-server-agent-security"></a>Обеспечение безопасности агента SQL Server
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент позволяет администратору базы данных выполнять каждый шаг задания в контексте безопасности, имеющем только те разрешения, которые необходимы для выполнения шага задания, что обеспечивается учетной записью-посредником агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для установки разрешений для конкретного шага задания необходимо создать учетную запись-посредник, обладающую необходимыми разрешениями, а затем назначить ее шагу задания. Учетная запись-посредник может быть назначена нескольким этапам задания. Шагам задания, которым требуются одинаковые разрешения, назначают одну и ту же учетную запись-посредник.  
   
  Следующий раздел описывает, какие роли базы данных необходимо предоставить пользователям, чтобы они могли создавать и выполнять задания с помощью агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -66,15 +65,15 @@ ms.locfileid: "63137520"
   
 -   ACE зависит от следующих библиотек конфигурации DLL, принадлежащих SSDP, поскольку эти API библиотек DLL вызываются ACE:  
   
-    -   **SCO** -Microsoft. SqlServer. Configuration. SCO. dll, включая новые проверки SCO для виртуальных учетных записей  
+    -   **SCO** — Microsoft.SqlServer.Configuration.Sco.dll, содержащий новые проверки SCO для виртуальных учетных записей;  
   
-    -   **Cluster** — Microsoft. SqlServer. Configuration. Cluster. dll  
+    -   **Кластер** — Microsoft.SqlServer.Configuration.Cluster.dll;  
   
-    -   **Sfc** -Microsoft. SqlServer. Configuration. SqlConfigBase. dll  
+    -   **SFC** — Microsoft.SqlServer.Configuration.SqlConfigBase.dll;  
   
-    -   **Расширение** — Microsoft. SqlServer. Configuration. конфижекстенсион. dll  
+    -   **Расширение** — Microsoft.SqlServer.Configuration.ConfigExtension.dll.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Стандартные роли](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)   
  [sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)   

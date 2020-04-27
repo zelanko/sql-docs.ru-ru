@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c4b427047aeba970ad65a6bd2ac31a219978ea71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046769"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed, класс событий
@@ -32,12 +32,12 @@ ms.locfileid: "63046769"
 |BinaryData|`image`|Значение типа Binary, зависящее от класса событий, фиксируемых при трассировке.|2|Да|  
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент вводит идентификатор клиентского процесса.|9|Да|  
 |ЦП|`int`|Количество использованного событием времени ЦП. В микросекундах, начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. В миллисекундах в более ранних версиях.|18|Да|  
-|DatabaseID|`int`|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database* не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Отображает имя базы данных, если столбец данных ServerName фиксируется при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
+|DatabaseID|`int`|Идентификатор базы данных, указанной в инструкции USE *Database* , или базы данных по умолчанию, если для данного *экземпляра инструкция USE database не* выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
 |Duration|`bigint`|Количество занятого событием времени. В микросекундах, начиная с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. В миллисекундах в более ранних версиях.|13|Да|  
 |EndTime|`datetime`|Время окончания удаленного вызова процедуры (RPC).|15|Да|  
 |Ошибка|`int`|Номер ошибки для данного события.<br /><br /> 0 = ОК<br /><br /> 1 = ошибка<br /><br /> 2 = прервано<br /><br /> 3 = пропущено|31|Да|  
-|EventClass|`int`|Тип события = 10.|27|нет|  
+|EventClass|`int`|Тип события = 10.|27|Нет|  
 |EventSequence|`int`|Последовательность данного события в запросе.|51|нет|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
@@ -50,7 +50,7 @@ ms.locfileid: "63046769"
 |Операции чтения|`bigint`|Число операций чтения страниц, инициированных удаленным вызовом процедуры (RPC).|16|Да|  
 |RequestID|`int`|Идентификатор запроса, содержащего инструкцию.|49|Да|  
 |RowCounts|`bigint`|Число строк в пакете RPC.|48|Да|  
-|имя_сервера;|`nvarchar`|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26||  
+|ServerName|`nvarchar`|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26||  
 |SessionLoginName|`nvarchar`|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|`int`|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|`datetime`|Время начала события, если оно известно.|14|Да|  
@@ -59,7 +59,7 @@ ms.locfileid: "63046769"
 |Запись|`bigint`|Число операций записи страниц, инициированных удаленным вызовом процедуры (RPC).|17|Да|  
 |XactSequence|`bigint`|Токен, который описывает текущую транзакцию.|50|Да|  
   
-## <a name="see-also"></a>См. также:  
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
+## <a name="see-also"></a>См. также  
+ [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

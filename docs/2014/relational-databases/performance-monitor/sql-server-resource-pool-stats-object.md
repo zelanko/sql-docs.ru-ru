@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183018"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, объект Resource Pool Stats
@@ -50,7 +50,7 @@ ms.locfileid: "63183018"
 | Скорость записи на диск (байт/с)|Число байтов, записанных на диск в течение последней секунды.|  
 |Ср. вр. записи на диск (мс)|Среднее время (мс) операции записи на диск.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Мониторинг использования ресурсов &#40;системном мониторе&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server, объект статистики группы рабочей нагрузки](sql-server-workload-group-stats-object.md)   
  [Регулятор ресурсов](../resource-governor/resource-governor.md)  

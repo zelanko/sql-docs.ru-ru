@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 703643f2c51ec86090cb03ba7089080dfe416620
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137464"
 ---
-# <a name="lesson-4-update-the-report-definition-programmatically"></a>Урок 4. Обновление определения отчета программным способом
+# <a name="lesson-4-update-the-report-definition-programmatically"></a>Занятие 4: Обновление определения отчета программным способом
   После загрузки определения отчета с сервера отчетов и при наличии ссылки на него через поле отчета необходимо обновить определение отчета. В этом примере будет обновлено свойство `Description` отчета.  
   
 ### <a name="to-update-the-report-definition"></a>Обновление определения отчета  
@@ -90,7 +90,7 @@ ms.locfileid: "63137464"
 ## <a name="next-lesson"></a>Следующее занятие  
  На следующем занятии обновленное определение отчета будет сохранено назад на сервер отчетов. См. [занятие 5. Публикация определения отчета на сервере отчетов](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обновление отчетов с использованием классов, созданных из учебника по схеме языка определения отчетов &#40;SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
   
   

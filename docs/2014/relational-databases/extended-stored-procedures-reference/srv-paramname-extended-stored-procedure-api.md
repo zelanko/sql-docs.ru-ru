@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8a5eca5aef966d205ef550b05eff2d7055e4cb28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127178"
 ---
 # <a name="srv_paramname-extended-stored-procedure-api"></a>srv_paramname (API-интерфейс расширенных хранимых процедур)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
   
  Возвращает имя параметра вызова удаленной хранимой процедуры.  
   
@@ -46,13 +46,13 @@ SRV_PROC * srvproc,intn, int *len );
  *srvproc*  
  Указатель на структуру SRV_PROC, представляющую собой дескриптор соединения с клиентом (в данном случае — дескриптор, который получил вызов удаленной хранимой процедуры). Эта структура содержит сведения, которые используются библиотекой API-интерфейса расширенных хранимых процедур для управления связью и передачи данных между приложением и клиентом.  
   
- *\n*  
+ *n*  
  Указывает номер параметра. Первый параметр имеет значение 1.  
   
  *len*  
  Содержит указатель на переменную `int`, которая содержит длину имени параметра в байтах. Если параметр *len* равен NULL, то длина имени параметра удаленной хранимой процедуры не возвращается.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  Указатель на строку, заканчивающуюся нулевым символом, которая содержит имя параметра. Длина имени параметра хранится в *len*. Если параметра с номером *n* или удаленной хранимой процедуры не существует, то возвращается значение NULL, *len* получает значение -1 и отправляется информационное сообщение об ошибке. Если имя параметра равно NULL, для *len* устанавливается значение 0 и возвращается пустая строка, заканчивающаяся нулевым символом.  
   
 ## <a name="remarks"></a>Remarks  
@@ -61,7 +61,7 @@ SRV_PROC * srvproc,intn, int *len );
 > [!IMPORTANT]  
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>См. также:  
- [API srv_rpcparams &#40;расширенных хранимых процедур&#41;](srv-rpcparams-extended-stored-procedure-api.md)  
+## <a name="see-also"></a>См. также  
+ [srv_rpcparams (интерфейс API расширенных хранимых процедур)](srv-rpcparams-extended-stored-procedure-api.md)  
   
   

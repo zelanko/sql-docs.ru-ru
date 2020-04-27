@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bf07f4e83cb58966b384a4bf0f523b7a1dd3881
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032880"
 ---
 # <a name="communicating-with-sql-server-odbc"></a>Взаимодействие с SQL Server (ODBC)
@@ -28,7 +28,7 @@ ms.locfileid: "63032880"
   
  Вы можете скачать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] образцы ODBC для собственного клиента на странице [загрузки SQL Server](https://go.microsoft.com/fwlink/?LinkId=62796) на сайте MSDN.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Выделение дескриптора среды](allocating-an-environment-handle.md)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63032880"
   
 -   [Отсоединение от источника данных](disconnecting-from-a-data-source.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
  [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)  
   

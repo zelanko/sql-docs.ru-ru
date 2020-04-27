@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022645"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Сопоставление типов данных для издателей Oracle
-  Типы данных Oracle и [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типы данных не всегда точно совпадают. Там, где это возможно, выбор подходящего типа данных при публикации таблицы Oracle осуществляется автоматически. В случаях, когда выбор однозначного соответствия типов данных не очевиден, предлагаются альтернативные сопоставления типов данных. Сведения о выборе альтернативных соответствий типов данных см. ниже в разделе «Указание альтернативных сопоставлений типов данных».  
+  Типы данных Oracle и типы данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не всегда полностью совпадают. Там, где это возможно, выбор подходящего типа данных при публикации таблицы Oracle осуществляется автоматически. В случаях, когда выбор однозначного соответствия типов данных не очевиден, предлагаются альтернативные сопоставления типов данных. Сведения о выборе альтернативных соответствий типов данных см. ниже в разделе «Указание альтернативных сопоставлений типов данных».  
   
  Следующая таблица показывает, как по умолчанию осуществляется преобразование типов данных между Oracle и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , когда данные передаются издателем Oracle распространителю [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . В столбце «Альтернатива» показано, допустимы ли альтернативные соответствия.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "63022645"
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Да|  
 |NVARCHAR2([1-2000])|NVARCHAR([1-2000])|нет|  
 |RAW([1-2000])|VARBINARY([1-2000])|нет|  
-|REAL|FLOAT|нет|  
+|real|FLOAT|нет|  
 |ROWID|CHAR(18)|нет|  
-|TIMESTAMP|DATETIME|Да|  
+|timestamp|DATETIME|Да|  
 |TIMESTAMP(0-7)|DATETIME|Да|  
 |TIMESTAMP(8-9)|DATETIME|Да|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Да|  
@@ -65,7 +65,7 @@ ms.locfileid: "63022645"
 ### <a name="unsupported-data-types"></a>Неподдерживаемые типы данных  
  Следующие типы данных не поддерживаются; столбцы, имеющие эти типы, невозможно реплицировать.  
   
--   Типы объектов  
+-   Типы Object  
   
 -   Типы XML  
   
@@ -106,7 +106,7 @@ ms.locfileid: "63022645"
   
 ## <a name="see-also"></a>См. также:  
  [Настройка издателя Oracle](configure-an-oracle-publisher.md)   
- [Рекомендации по проектированию и ограничения для издателей Oracle](design-considerations-and-limitations-for-oracle-publishers.md)   
- [Общие сведения о публикации Oracle](oracle-publishing-overview.md)  
+ [Рекомендации по структуре и ограничения для издателей Oracle](design-considerations-and-limitations-for-oracle-publishers.md)   
+ [Обзор публикации Oracle](oracle-publishing-overview.md)  
   
   

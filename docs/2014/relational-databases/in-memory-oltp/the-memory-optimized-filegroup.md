@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 64402f73fdf43c0ebcbeff338ed72d56d55227be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155574"
 ---
 # <a name="the-memory-optimized-filegroup"></a>Оптимизированная для памяти файловая группа
@@ -67,7 +67,7 @@ ms.locfileid: "63155574"
 Аналогичным образом следующие файлы данных и разностного файла будут выделены из контейнеров-3 и контейнеров-4, сопоставленных с диском Y. Это позволяет равномерно распространять данные и разностные файлы по двум дискам.  
  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Создание и управление хранилищем для оптимизированных для памяти объектов](creating-and-managing-storage-for-memory-optimized-objects.md)     
 [Файлы и файловые группы базы данных](../../relational-databases/databases/database-files-and-filegroups.md)    
   

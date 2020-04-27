@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2efc74fa2ba84335fcb5e03b42125fb9c6782f43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164119"
 ---
 # <a name="implementing-a-data-processing-extension"></a>Реализация модуля обработки данных
-  Модули обработки данных в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяют соединяться с источником данных и получать данные. Они также служат мостом между источником данных и набором данных. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]модули обработки данных моделируются после подмножества [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] интерфейсов поставщика данных.  
+  Модули обработки данных в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяют соединяться с источником данных и получать данные. Они также служат мостом между источником данных и набором данных. Модули обработки данных [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] построены на наборе интерфейсов поставщиков данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения о модулях обработки данных](data-processing-extensions-overview.md)  
@@ -58,8 +58,8 @@ ms.locfileid: "63164119"
   
  Образец полностью реализованного модуля обработки данных см. на странице [Образцы продуктов служб SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="see-also"></a>См. также:  
- [Модули служб Reporting Services](../reporting-services-extensions.md)   
- [Библиотека модулей Reporting Services](../reporting-services-extension-library.md)  
+## <a name="see-also"></a>См. также  
+ [Расширения Reporting Services](../reporting-services-extensions.md)   
+ [Библиотека модулей служб Reporting Services](../reporting-services-extension-library.md)  
   
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1a60d9e5d8569324cc3f68200d4a5a232b930d8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63017586"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
@@ -28,23 +28,23 @@ ms.locfileid: "63017586"
   
      [Безопасность](#Security)  
   
--   **Для внесения изменений в шаги агент SQL Server главного задания используется:**  
+-   **Внесение изменений в шаги главного задания агента SQL Server с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
  Главное задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может быть ориентировано как на локальный, так и на удаленный сервер.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Если пользователь не является членом предопределенной роли сервера **sysadmin** , он может изменять только свои собственные задания. Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-make-changes-to-the-steps-of-a-sql-server-agent-master-job"></a>Внесение изменений в шаги главного задания агента SQL Server  
   
@@ -56,15 +56,15 @@ ms.locfileid: "63017586"
   
 4.  Щелкните правой кнопкой мыши задание, шаги которого требуется изменить, и выберите пункт **Свойства**.  
   
-5.  В диалоговом окне **Свойства задания — **_имя_задания_ в разделе **Выберите страницу** выберите пункт **Шаги**.  
+5.  В диалоговом окне **Свойства задания —**_Job_name_ в разделе **Выбор страницы**выберите **шаги**.  
   
 6.  Нажмите кнопку **изменить** , чтобы открыть диалоговое окно **Свойства шага задания —**_job_step_name_ . Дополнительные сведения о параметрах, доступных в этом диалоговом окне, см. в разделе [Свойства шага задания: новый шаг задания &#40;общие&#41;страницы](../../integration-services/general-page-of-integration-services-designers-options.md) и [Свойства шага задания: новый шаг задания &#40;дополнительные&#41;страницы ](job-step-properties-new-job-step-advanced-page.md).  
   
-7.  После завершения нажмите кнопку **ОК**.  
+7.  По окончании нажмите кнопку **ОК**.  
   
 8.  В диалоговом окне **Свойства задания —**_Job_name_ нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-make-changes-to-the-steps-of-a-sql-server-agent-master-job"></a>Внесение изменений в шаги главного задания агента SQL Server  
   

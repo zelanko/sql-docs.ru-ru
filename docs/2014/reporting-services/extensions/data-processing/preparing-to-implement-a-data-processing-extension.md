@@ -14,18 +14,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3343823399b0500e0a329e160e5545d4dd372a54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63165025"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Подготовка к реализации модуля обработки данных
-  Перед реализацией [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] модуля обработки данных необходимо определить интерфейсы для реализации. Вы можете создать зависящие от модулей реализации всего набора интерфейсов либо реализовать только ограниченное его подмножество, например интерфейсы <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> и <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand>. Используя эти интерфейсы, клиенты в основном взаимодействовали бы с результирующим набором в виде объекта **DataReader**, а модуль обработки данных служб [!INCLUDE[ssRS](../../../includes/ssrs.md)] использовался бы как посредник между результирующим набором и источником данных.  
+  Перед реализацией собственного модуля обработки данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] вам следует определить реализуемые интерфейсы. Вы можете создать зависящие от модулей реализации всего набора интерфейсов либо реализовать только ограниченное его подмножество, например интерфейсы <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> и <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand>. Используя эти интерфейсы, клиенты в основном взаимодействовали бы с результирующим набором в виде объекта **DataReader**, а модуль обработки данных служб [!INCLUDE[ssRS](../../../includes/ssrs.md)] использовался бы как посредник между результирующим набором и источником данных.  
   
  Модули обработки данных можно реализовать двумя путями:  
   
--   Классы модулей обработки данных могут реализовывать [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] интерфейсы поставщика данных и, при необходимости, интерфейсы расширенной обработки данных, предоставляемые [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+-   Классы модуля обработки данных могут реализовывать интерфейсы поставщика данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] и при необходимости расширенные интерфейсы модуля обработки данных, предоставляемые службами [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
 -   Классы модуля обработки данных могут реализовать интерфейсы модуля обработки данных, предоставляемые службами [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], и, при необходимости, расширенные интерфейсы модуля обработки данных.  
   

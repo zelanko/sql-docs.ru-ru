@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156831"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Вызов хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным
@@ -48,8 +48,7 @@ ms.locfileid: "63156831"
   
 -   Выполните хранимую процедуру несколько раз с помощью `SQLExecute`.  
   
- Следующий фрагмент кода демонстрирует подготовленное выполнение хранимой процедуры для добавления позиций в заказ. 
-  `SQLPrepare` вызывается только один раз, а `SQLExecute` вызывается несколько раз, по одному разу для каждого выполнения процедуры.  
+ Следующий фрагмент кода демонстрирует подготовленное выполнение хранимой процедуры для добавления позиций в заказ. `SQLPrepare` вызывается только один раз, а `SQLExecute` вызывается несколько раз, по одному разу для каждого выполнения процедуры.  
   
 ```  
 // Bind parameters  
@@ -393,7 +392,7 @@ int _tmain() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Скомпилированные в собственном коде хранимые процедуры](natively-compiled-stored-procedures.md)  
+## <a name="see-also"></a>См. также  
+ [скомпилированные в собственном коде хранимые процедуры](natively-compiled-stored-procedures.md)  
   
   

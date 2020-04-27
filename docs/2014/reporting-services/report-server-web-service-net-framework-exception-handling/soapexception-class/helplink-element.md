@@ -14,25 +14,25 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bdd18641663003a1878fe0af0ac1d39a16eda1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046030"
 ---
 # <a name="helplink-element"></a>Элемент HelpLink
   Элемент **HelpLink** свойства **Detail** представляет строку с URL-адресом, которая создается сервером отчетов. Этот URL-адрес ссылается на веб-страницу, управляемую центром справки и поддержки [!INCLUDE[msCoName](../../../includes/msconame-md.md)], которая предоставляет дополнительную справку и статьи базы значений, посвященные ошибкам, происходящим в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. URL-адрес имеет следующий синтаксис:  
   
- **http://** www.Microsoft.com**/****/** Products**/** ee Transform. aspx **? Значение евтсрк**=__ **&евтид**=_значение_ **&ProdName**=_значение_ **&продвер**=__  
+ **http://** www.Microsoft.com**/****/** Products**/** ee Transform. aspx **? Значение евтсрк**=_value_ **&евтид**=_значение_ **&ProdName**=_значение_ **&продвер**=_value_  
   
  В следующей таблице перечислены аргументы URL-адреса **HelpLink**.  
   
-|Аргумент|Значение|  
+|Аргумент|Применение|  
 |--------------|-----------|  
-|**евтсрк**|Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings.|  
-|**евтид**|Код ошибки сервера отчетов, например rsReservedItem.|  
+|**EvtSrc**|Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings.|  
+|**EvtID**|Код ошибки сервера отчетов, например rsReservedItem.|  
 |**ProdName**|«Microsoft SQL%20Server%20Reporting%20Services». Значение названия продукта кодируется по правилам URL-адресов.|  
-|**продвер**|Номер версии служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Значение "8,00" означает [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
+|**ProdVer**|Номер версии служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Значение "8,00" означает [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
   
  В следующем примере показан URL-адрес **HelpLink** , который возвращается для кода `rsReservedItem`ошибки. Эта ошибка происходит, когда пользователь выполняет попытку изменить или удалить зарезервированный элемент в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]:  
   
@@ -65,9 +65,9 @@ catch (SoapException e)
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Введение в обработку исключений в службах Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
- [Класс SoapException в службах Reporting Services](reporting-services-soapexception-class.md)   
+## <a name="see-also"></a>См. также  
+ [Введение в обработку исключений в Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
+ [Reporting Services класс SoapException](reporting-services-soapexception-class.md)   
  [Использование свойства Detail для обработки определенных ошибок](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   

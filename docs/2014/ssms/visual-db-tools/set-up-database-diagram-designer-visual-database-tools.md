@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d71ea2d6a10755ef52e0cac37ddcd2385d82d9cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067625"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>Настройка конструктора диаграмм баз данных (визуальные инструменты для баз данных)
@@ -60,6 +60,6 @@ ms.locfileid: "63067625"
 ## <a name="see-also"></a>См. также:  
  [Общие сведения о владении диаграммами базы данных &#40;визуальные инструменты для баз данных&#41;](visual-database-tools.md)   
  [Обновление диаграмм баз данных из предыдущих выпусков &#40;визуальные инструменты для баз данных&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
- [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-authorization-transact-sql)  
+ [ALTER AUTHORIZATION (Transact-SQL)](/sql/t-sql/statements/alter-authorization-transact-sql)  
   
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032325"
 ---
 # <a name="parameter-and-result-metadata"></a>Метаданные параметров и результатов
@@ -40,7 +40,7 @@ ms.locfileid: "63032325"
 |SQL_DESC_TYPE_NAME|`date`|`time`|Данные типа `smalldatetime` в IRD, данные типа `datetime2` в IPD|Данные типа `datetime` в IRD, данные типа `datetime2` в IPD|`datetime2`|datetimeoffset|  
 |SQL_CA_SS_VARIANT_TYPE|SQL_C_TYPE_DATE|SQL_C_TYPE_BINARY|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_BINARY|  
 |SQL_CA_SS_VARIANT_SQL_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
-|SQL_CA_SS_SERVER_TYPE|Недоступно|Недоступно|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|Недоступно|  
+|SQL_CA_SS_SERVER_TYPE|Н/Д|Н/Д|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|Н/Д|  
   
  Иногда возникают нарушения непрерывности значений диапазона. Например, в диапазоне 8,10...16 отсутствует 9. Это следствие добавления десятичной запятой, когда точность в долях секунды выше нуля.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63032325"
   
  SQL_CA_SS_VARIANT_SQL_TYPE — это новое поле дескриптора. Это поле было добавлено к полям IPD и IRD, чтобы в приложениях можно было указать тип значения, связанного с `sqlvariant` (SQL_SSVARIANT).  
   
- SQL_CA_SS_SERVER_TYPE — это новое поле (только для IPD), позволяющее в приложениях управлять способом привязки в качестве SQL_TYPE_TYPETIMESTAMP (или в качестве SQL_SS_VARIANT с типом SQL_C_TYPE_TIMESTAMP языка C) параметров, передаваемых на сервер. Если SQL_DESC_CONCISE_TYPE является SQL_TYPE_TIMESTAMP (или SQL_SS_VARIANT, а тип C — SQL_C_TYPE_TIMESTAMP) при вызове SQLExecute или SQLExecDirect, значение SQL_CA_SS_SERVER_TYPE определяет тип потока табличных данных (TDS) значения параметра. , как показано ниже.  
+ SQL_CA_SS_SERVER_TYPE — это новое поле (только для IPD), позволяющее в приложениях управлять способом привязки в качестве SQL_TYPE_TYPETIMESTAMP (или в качестве SQL_SS_VARIANT с типом SQL_C_TYPE_TIMESTAMP языка C) параметров, передаваемых на сервер. Если SQL_DESC_CONCISE_TYPE имеет SQL_TYPE_TIMESTAMP (или SQL_SS_VARIANT и тип C SQL_C_TYPE_TIMESTAMP) при вызове SQLExecute или SQLExecDirect, значение SQL_CA_SS_SERVER_TYPE определяет тип потока табличных данных (TDS) для значения параметра следующим образом:  
   
 |Значение SQL_CA_SS_SERVER_TYPE|Допустимые значения для SQL_DESC_PRECISION|Допустимые значения для SQL_DESC_LENGTH|Тип потока табличных данных|  
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  
@@ -92,7 +92,7 @@ ms.locfileid: "63032325"
 |SQL_DESC_TYPE_NAME|`date`|`time`|`smalldatetime`|`datetime`|`datetime2`|datetimeoffset|  
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метаданные &#40;ODBC&#41;](../../database-engine/dev-guide/metadata-odbc.md)  
   
   

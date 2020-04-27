@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 800b3e43129bba36db0836f9a58a3ad1e47b40c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046294"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Использование файлов заголовков и библиотек собственного клиента SQL Server
@@ -80,9 +80,9 @@ include "sqlncli.h";
   
 ## <a name="component-names-and-properties-by-version"></a>Имена и свойства компонентов в зависимости от версии  
   
-|Свойство|собственный клиент SQL Server<br /><br /> SQL Server 2005.|Собственный клиент SQL Server версии 10.0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
+|Свойство|собственный клиент SQL Server<br /><br /> SQL Server 2005|Собственный клиент SQL Server версии 10.0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
 |--------------|--------------------------------------------------|-------------------------------------------------------|---------------------------------------------------------------|----------|  
-|Имя драйвера ODBC|Собственный клиент SQL|Собственный клиент SQL Server версии 10.0|SQL Server Native Client 11.0|SQL Server|  
+|Имя драйвера ODBC|Собственный клиент SQL|Собственный клиент SQL Server версии 10.0|SQL Server Native Client 11.0|SQL Server|  
 |Имя файла заголовка ODBC|Sqlncli.h|Sqlncli.h|Sqlncli.h|Odbcss.h|  
 |DLL-библиотека драйвера ODBC|Sqlncli.dll|Sqlncl10.dll|Sqlncl11.dll|sqlsrv32.dll|  
 |Библиотека ODBC для API-интерфейсов программы BCP|Sqlncli.lib|Sqlncli10.lib|Sqlncli11.lib|Odbcbcp.lib|  
@@ -98,9 +98,9 @@ include "sqlncli.h";
   
  Например, если приложение компилируется с помощью собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а связанный файл библиотеки (sqlncli11.lib) и файл заголовка (sqlncli.h) взяты из каталога «\Program Files\Microsoft SQL Server\110\SDK», то убедитесь, что в строке подключения указывается (например, посредством ODBC) параметр «DRIVER={SQL Server Native Client 11.0}».  
   
- Дополнительные сведения см. в разделе Выполнение [операций с массовым копированием](../features/performing-bulk-copy-operations.md).  
+ Дополнительные сведения см. в разделе [Performing Bulk Copy Operations](../features/performing-bulk-copy-operations.md) (Выполнение операций массового копирования).  
   
-## <a name="see-also"></a>См. также:  
- [Построение приложений с использованием SQL Server Native Client](building-applications-with-sql-server-native-client.md)  
+## <a name="see-also"></a>См. также  
+ [Построение приложений с использованием собственного клиента SQL Server](building-applications-with-sql-server-native-client.md)  
   
   

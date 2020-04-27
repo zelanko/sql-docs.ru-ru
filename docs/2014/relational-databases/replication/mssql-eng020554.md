@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63057124"
 ---
 # <a name="mssql_eng020554"></a>MSSQL_ENG020554
@@ -68,17 +68,17 @@ ms.locfileid: "63057124"
   
     -   [Работа с профилями агента репликации](agents/replication-agent-profiles.md)  
   
-    -   [Просмотр и изменение параметров командной строки агента репликации &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [Просмотр и изменение параметров командной строки агента репликации (среда SQL Server Management Studio)](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Основные понятия исполняемых файлов агента репликации](concepts/replication-agent-executables-concepts.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Администрирование агента репликации](agents/replication-agent-administration.md)   
  [Ошибки и события ссылаются на &#40;&#41;репликации](errors-and-events-reference-replication.md)   
  [агент распространения репликации](agents/replication-distribution-agent.md)   
  [агент чтения журнала репликации](agents/replication-log-reader-agent.md)   
  [агент слияния репликации](agents/replication-merge-agent.md)   
  [агент чтения очереди репликации](agents/replication-queue-reader-agent.md)   
- [агент моментальных снимков репликации](agents/replication-snapshot-agent.md)  
+ [Агент моментальных снимков репликации](agents/replication-snapshot-agent.md)  
   
   

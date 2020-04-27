@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151043"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Оценка количества элементов (SQL Server)
@@ -45,9 +45,9 @@ ms.locfileid: "63151043"
 ## <a name="new-xevents"></a>Новые события XEvent  
  Для поддержки новых планов запросов появились два новых события XEvents query_optimizer_estimate_cardinality.  
   
--   *query_optimizer_estimate_cardinality* возникает, когда оптимизатор запросов оценивает количество элементов в реляционном выражении.  
+-   *query_optimizer_estimate_cardinality* возникает, когда оптимизатор запросов определяет количество элементов в реляционном выражении.  
   
--   *query_optimizer_force_both_cardinality_estimation*_behaviors возникает, когда включены оба флагов трассировки 2312 и 9481, попытка принудительно использовать как старую, так и новую оценку количества элементов одновременно.  
+-   *query_optimizer_force_both_cardinality_estimation*_behaviors возникает, когда включены оба флага трассировки 2312 и 9481 с целью заставить одновременно работать и старый и новый механизмы оценки количества элементов.  
   
 ## <a name="examples"></a>Примеры  
  В следующих примерах показаны некоторые изменения, реализованные в новом механизме оценки количества элементов. Код оценки количества элементов был переписан. Логика этого сложна, поэтому предоставлять полный список всех изменений невозможно.  
@@ -87,7 +87,7 @@ WHERE s.ticket = r.ticket AND s.type = 'toy' AND r.date = '2013-12-19';
   
  Это поведение изменено. Теперь в новой логике механизма оценки количества элементов предполагается, что фильтр s.type не связан с фильтром r.date. На практике это означает, что возврат игрушек происходит каждый день, а не только в какой-то определенный день. В этом случае новые оценки количества элементов будут выражаться меньшим числом, чем предыдущие оценки количества элементов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Наблюдение и настройка производительности](monitor-and-tune-for-performance.md)  
   
   

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067650"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Установка отказоустойчивого кластера SQL Server
@@ -31,7 +31,7 @@ ms.locfileid: "63067650"
   
         -   [Вопросы безопасности при установке SQL Server](../../install/security-considerations-for-a-sql-server-installation.md)  
   
-    -   Этапы настройки должны выполняться до запуска программы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] установки; Используйте администратора кластера Windows для их выполнения. Необходимо иметь одну группу WSFC для каждого экземпляра отказоустойчивого кластера, который необходимо настроить.  
+    -   Эти шаги по конфигурации должны быть выполнены до запуска программы установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , для их реализации необходимо использовать оснастку Windows «Администратор кластера». Для каждого экземпляра настраиваемого отказоустойчивого кластера необходимо иметь одну группу WSFC.  
   
     -   Операционная система должна соответствовать минимальным требованиям для этого продукта. Дополнительные сведения о требованиях к отказоустойчивому кластеру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] см. в разделе [Подготовка к установке отказоустойчивого кластера](before-installing-failover-clustering.md).  
   
@@ -41,20 +41,17 @@ ms.locfileid: "63067650"
   
 3.  Указание нескольких IP-адресов для каждого экземпляра отказоустойчивого кластера. Для каждой подсети можно указать несколько IP-адресов. Если для одной подсети имеется несколько IP-адресов, то программа установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливает зависимость в «И». Если выполняется кластеризация узлов по нескольким подсетям, то программа установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливает зависимость в «ИЛИ».  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Параметры установки отказоустойчивого кластера  
+## <a name="ssnoversion-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Параметры установки отказоустойчивого кластера  
   
 ##### <a name="option-1-integrated-installation-with-add-node"></a>Вариант 1. Интегрированная установка с добавлением узлов  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] состоит из двух шагов.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] состоит из двух шагов.  
   
 1.  Создайте и настройте состоящий из одиночного узла экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . После завершения настройки узла готов полностью функциональный экземпляр отказоустойчивого кластера. В данный момент этот отказоустойчивый кластер не имеет высокого уровня готовности, поскольку в него входит только один узел.  
   
 2.  На каждом узле, добавляемом к отказоустойчивому кластеру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , запустите программу установки с функцией добавления узла.  
   
 ##### <a name="option-2-advancedenterprise-installation"></a>Вариант 2. Расширенная установка (для выпуска Enterprise)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Расширенная установка (установка выпуска Enterprise) отказоустойчивого кластера состоит из двух шагов:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Расширенная установка (установка выпуска Enterprise) отказоустойчивого кластера состоит из двух шагов:  
   
 1.  На каждом узле, который станет частью отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , запустите программу установки с функцией подготовки отказоустойчивого кластера. На этом шаге осуществляется подготовка узлов, предназначенных для кластеризации, но в конце шага экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не переводится в рабочий режим.  
   
@@ -67,8 +64,7 @@ ms.locfileid: "63067650"
     >  Буква диска операционной системы для размещения [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должна совпадать на всех узлах, добавленных к отказоустойчивому кластеру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="ip-address-configuration-during-setup"></a>Настройка IP-адресов во время установки  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] дает возможность задать или изменить ресурсы IP-адресов при выполнении следующих действий.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] дает возможность задать или изменить ресурсы IP-адресов при выполнении следующих действий.  
   
 -   Интегрированная установка: [Создание отказоустойчивого кластера SQL Server (программа установки)](create-a-new-sql-server-failover-cluster-setup.md)  
   
@@ -78,13 +74,12 @@ ms.locfileid: "63067650"
   
 -   Удаление узла: [Добавление или удаление узлов отказоустойчивого кластера SQL Server (программа установки)](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
- **Примечание** . Поддерживаются IP-адреса IPV6.  Если заданы адреса IPV4 и IPV6, то они рассматриваются как принадлежащие разным подсетям, и IPV6 подключаются первыми.  
+ **Примечание.** IP-адреса IPV6 не поддерживаются.  Если заданы адреса IPV4 и IPV6, то они рассматриваются как принадлежащие разным подсетям, и IPV6 подключаются первыми.  
   
-##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Отказоустойчивый кластер с несколькими подсетями  
+##### <a name="ssnoversion-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Отказоустойчивый кластер с несколькими подсетями  
  Можно задать зависимости «ИЛИ», когда узлы кластера принадлежат разным подсетям. Однако, для каждого узла отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с несколькими подсетями должно быть указан хотя бы один IP-адрес возможного владельца.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Перед установкой отказоустойчивой кластеризации](before-installing-failover-clustering.md)   
  [Создание нового SQL Server отказоустойчивого кластера &#40;установки&#41;](create-a-new-sql-server-failover-cluster-setup.md)   
  [Установка SQL Server 2014 из командной строки](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   

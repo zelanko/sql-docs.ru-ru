@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f294ad3868670783d3010498dd0ba89e1e6a48be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127064"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>запустить задания по обслуживанию репликаций (среда SQL Server Management Studio)
@@ -24,8 +24,8 @@ ms.locfileid: "63127064"
   
 -   **Повторная инициализация подписок, имеющих сбои при выполнении проверки данных**
 -   **Очистка журнала агента: распределение**
--   **Обновитель мониторинга репликации для распространения.**
--   **Контроль за агентами репликации**
+-   **Обновитель монитора репликацией для распространителя**
+-   **Проверка агентов репликации**
 -   **Очистка распространения: распространение**
 -   **Очистка истекшей подписки**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63127064"
   
 ### <a name="to-start-or-stop-a-replication-maintenance-job-in-management-studio"></a>Запуск или остановка задания по обслуживанию репликации в среде Management Studio  
   
-1.  Подключитесь к распространителю в [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]и раскройте узел сервера.  
+1.  Подключитесь к распространителю в [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]и разверните узел сервера.  
   
 2.  Раскройте папку **Агент SQL Server** , а затем — папку **Задания** .  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63127064"
   
 ### <a name="to-view-and-modify-properties-for-a-replication-maintenance-job-in-management-studio"></a>Просмотр и изменение свойств задания по обслуживанию репликации в среде Management Studio  
   
-1.  Подключитесь к распространителю в [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]и раскройте узел сервера.  
+1.  Подключитесь к распространителю в [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]и разверните узел сервера.  
   
 2.  Раскройте папку **Агент SQL Server** , а затем — папку **Задания** .  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63127064"
   
 4.  В диалоговом окне **Свойства задания — \<задание>** измените любые свойства по необходимости, а затем нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и завершение работы агента репликации &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [Просмотр сведений и выполнение задач с помощью монитора репликации](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Администрирование агента репликации](../agents/replication-agent-administration.md)  

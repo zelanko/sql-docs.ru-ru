@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151447"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>Свойства TCP-IP (вкладка «IP-адреса»)
@@ -56,9 +56,9 @@ ms.locfileid: "63151447"
 ## <a name="adding-or-removing-ip-addresses"></a>Добавление или удаление IP-адресов  
  Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображает IP-адреса, которые были доступны во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Доступные IP-адреса могут измениться при добавлении или удалении сетевых адаптеров, после истечения срока действия динамически назначаемых IP-адресов, при перестройке сетевой структуры или при изменении физического местоположения компьютера, например в случае, когда переносной компьютер подключается к сети в другом здании. Для изменения IP-адреса необходимо изменить поле **IP-адрес** и перезапустить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выбор сетевого протокола](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
- [Создание допустимой строки подключения с использованием протокола TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
- [Служба обозревателя SQL Server](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
+ [Создание допустимой строки подключения с помощью IP-адреса TCP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
+ [Служба обозреватель SQL Server](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
   
   

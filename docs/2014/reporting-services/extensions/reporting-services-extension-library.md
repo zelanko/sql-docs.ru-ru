@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d09464ce4a61903a3e9b74711482d2ce07bd0c4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62985753"
 ---
 # <a name="reporting-services-extension-library"></a>Библиотека модулей служб Reporting Services
-  Библиотека модулей служб Reporting Services — это набор классов, интерфейсов и типов значений, включенных в службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Эта библиотека предоставляет доступ к функциональным возможностям системы и предназначена для того, чтобы стать основой [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , в которой приложения могут расширять [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] компоненты.  
+  Библиотека модулей служб Reporting Services — это набор классов, интерфейсов и типов значений, включенных в службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Эта библиотека предоставляет доступ к системным функциям и предназначена в качестве основы для расширения компонентов служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] с помощью приложений [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="namespaces"></a>Пространства имен  
  Библиотека модулей служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] содержит следующие пространства имен.  
@@ -37,7 +37,7 @@ ms.locfileid: "62985753"
  `Microsoft.ReportingServices.ReportRendering`  
  Содержит классы и интерфейсы, которые позволяют расширить возможности служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] по подготовке отчетов к просмотру. С помощью элементов этого пространства имен вместе с элементами пространства имен <xref:Microsoft.ReportingServices.Interfaces> можно строить пользовательские модули подготовки отчетов для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также:  
- [Модули служб Reporting Services](reporting-services-extensions.md)  
+## <a name="see-also"></a>См. также  
+ [модули служб Reporting Services](reporting-services-extensions.md)  
   
   

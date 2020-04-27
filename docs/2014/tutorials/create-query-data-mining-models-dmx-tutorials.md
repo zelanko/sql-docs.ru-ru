@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63180551"
 ---
 # <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Создание и запрос моделей интеллектуального анализа данных с помощью расширений интеллектуального анализа: учебники (Analysis Services — интеллектуальный анализ данных)
@@ -24,7 +24,7 @@ ms.locfileid: "63180551"
   
  Пошаговые учебники, приведенные в следующем списке, помогут научиться создавать и выполнять запросы интеллектуального анализа данных с помощью [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , что позволяет максимально эффективно использовать данные.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Учебник по расширениям интеллектуального анализа данных «Покупатель велосипеда»](../../2014/tutorials/bike-buyer-dmx-tutorial.md)  
   
@@ -39,11 +39,11 @@ ms.locfileid: "63180551"
      В этом учебнике создается модель прогнозирования для демонстрации процесса использования инструкции CREATE MODEL (DMX). Затем добавляются связанные модели и выполняется настройка поведения каждой из них путем изменения параметров алгоритма временных рядов (Майкрософт). Наконец, создаются прогнозы, которые обновляются новыми данными. Возможность обновления временного ряда во время создания прогнозов появилась в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
 ## <a name="reference"></a>Справочник  
- [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](/sql/dmx/data-mining-extensions-dmx-reference)  
   
-## <a name="related-sections"></a>См. также  
+## <a name="related-sections"></a>Связанные разделы  
   
 -   [Учебник по основам интеллектуального анализа данных](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63180551"
   
      В этом учебнике содержится несколько независимых занятий, в каждом из которых представлен определенный тип моделей. Каждое занятие предлагает пошаговую инструкцию по созданию и изучению модели, а также по настройке модели и созданию прогнозирующих запросов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Решения интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
  [Средства интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-tools.md)   
  [Проекты интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-projects.md)  

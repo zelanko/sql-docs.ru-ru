@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4741c822dab24026d823a0e08571ac6aacea9ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63165173"
 ---
 # <a name="deploying-a-data-processing-extension"></a>Развертывание модуля обработки данных
-  После написания и компиляции модуля обработки [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] данных в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] библиотеку необходимо сделать его обнаруживаемым сервером отчетов и конструктор отчетов. Для этого нужно просто скопировать модуль в соответствующие каталоги и добавить записи в соответствующие файлы конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  После создания модуля обработки данных для служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и компиляции его в библиотеку [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] необходимо сделать модуль доступным для обнаружения сервером отчетов и конструктором отчетов. Для этого нужно просто скопировать модуль в соответствующие каталоги и добавить записи в соответствующие файлы конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="configuration-file-extension-element"></a>Элемент Extension в файле конфигурации  
  Модули обработки данных, развертываемые на сервере отчетов или в конструкторе отчетов, необходимо вставить в файлы конфигурации в виде элементов **Extension**. Для сервера отчетов используется файл RSReportServer.config, а для конструктора отчетов — файл RSReportDesigner.config.  
@@ -39,14 +39,14 @@ ms.locfileid: "63165173"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
-|[Практическое руководство. Развертывание модуля обработки данных на сервере отчетов](deploying-a-data-processing-extension-to-a-report-server.md)|Описывает развертывание модуля обработки данных на сервере отчетов.|  
-|[Практическое руководство. Развертывание модуля обработки данных в конструкторе отчетов](deploying-a-data-processing-extension-to-report-designer.md)|Описывает развертывание модуля обработки данных в конструкторе отчетов.|  
+|[Руководство. Развертывание модуля обработки данных на сервере отчетов](deploying-a-data-processing-extension-to-a-report-server.md)|Описывает развертывание модуля обработки данных на сервере отчетов.|  
+|[Руководство. Развертывание модуля обработки данных в конструкторе отчетов](deploying-a-data-processing-extension-to-report-designer.md)|Описывает развертывание модуля обработки данных в конструкторе отчетов.|  
   
-## <a name="see-also"></a>См. также:  
- [Модули служб Reporting Services](../reporting-services-extensions.md)   
+## <a name="see-also"></a>См. также  
+ [Расширения Reporting Services](../reporting-services-extensions.md)   
  [Реализация модуля обработки данных](implementing-a-data-processing-extension.md)   
- [Библиотека модулей Reporting Services](../reporting-services-extension-library.md)  
+ [Библиотека модулей служб Reporting Services](../reporting-services-extension-library.md)  
   
   

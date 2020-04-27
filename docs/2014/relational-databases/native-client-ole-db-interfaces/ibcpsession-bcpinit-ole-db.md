@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPInit (OLE DB) | Документация Майкрософт'
+title: IBCPSession::BCPInit (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc9983cea171eb78f4b3b4f2b9c5cb9f31ecb2d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033599"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
@@ -58,20 +58,20 @@ inteDirection);
  Для таблиц, не содержащих индексы, можно оптимизировать массовое копирование в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установив параметр базы данных **select into/bulkcopy**.  
   
 ## <a name="arguments"></a>Аргументы  
- *пвсзтабле*[in]  
+ *pwszTable*[IN]  
  Имя таблицы базы данных, в которую или из которой выполняется копирование. Имя может включать имя базы данных или имя владельца. Примеры: «pubs.username.titles», «pubs..titles», «username.titles».  
   
  Если аргумент eDirection имеет значение BCP_DIRECTION_OUT, аргумент pwszTable может являться именем представления базы данных.  
   
  Если аргумент eDirection имеет значение BCP_DIRECTION_OUT и инструкция SELECT указана с помощью метода **BCPControl** перед вызовом метода **BCPExec**, аргумент *pwszTable* должен иметь значение NULL.  
   
- *пвсздатафиле*[in]  
+ *pwszDataFile*[IN]  
  Имя пользовательского файла, в который или из которого выполняется копирование.  
   
- *пвсзеррорфиле*[in]  
- Имя файла ошибок, который заполняется сообщениями о ходе выполнения, сообщениями об ошибках и копиями строк, которые не удалось скопировать из пользовательского файла в таблицу. Если для аргумента *пвсзеррорфиле* ЗАДАНО значение null, файл ошибок не используется.  
+ *pwszErrorFile*[IN]  
+ Имя файла ошибок, который заполняется сообщениями о ходе выполнения, сообщениями об ошибках и копиями строк, которые не удалось скопировать из пользовательского файла в таблицу. Если аргумент *pwszErrorFile* имеет значение NULL, файл ошибок не используется.  
   
- *eDirection*[in]  
+ *eDirection*[IN]  
  Направление операции копирования: BCP_DIRECTION_IN или BCP_DIRECTION _OUT. BCP_DIRECTION _IN обозначает копирование из пользовательского файла в таблицу базы данных; BCP_DIRECTION _OUT обозначает копирование из таблицы базы данных в пользовательский файл.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -79,7 +79,7 @@ inteDirection);
  Метод выполнен успешно.  
   
  E_FAIL  
- Произошла ошибка, связанная с поставщиком. Подробные сведения можно получить с помощью интерфейса [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md).  
+ Произошла ошибка, специфическая для поставщика. для получения подробных сведений используйте интерфейс [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) .  
   
  E_OUTOFMEMORY  
  Недостаточно памяти.  
@@ -87,7 +87,7 @@ inteDirection);
  E_INVALIDARG  
  Один или несколько аргументов были указаны неправильно. Например, указано недопустимое имя файла.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../native-client/features/performing-bulk-copy-operations.md)  
   

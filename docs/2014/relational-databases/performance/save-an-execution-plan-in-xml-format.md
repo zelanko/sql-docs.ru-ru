@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b2e058eba4e21e5e9060e2315dad3c865c46bb78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150866"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Сохранение плана выполнения в формате XML
@@ -48,7 +48,7 @@ ms.locfileid: "63150866"
   
      Инструкция SHOWPLAN_XML создает сведения о плане выполнения запроса во время компиляции, но не выполняет запрос. Инструкция STATISTICS XML создает сведения о плане выполнения запроса во время выполнения и выполняет запрос.  
   
-3.  Выполните запрос. Пример  
+3.  Выполните запрос. Пример.  
   
     ```  
     USE AdventureWorks2012;  
@@ -63,9 +63,9 @@ ms.locfileid: "63150866"
     SET SHOWPLAN_XML OFF;  
     ```  
   
-4.  На панели **Результаты** щелкните правой кнопкой мыши поле **Microsoft SQL Server XML Showplan**, содержащее план запроса, и выберите пункт **Сохранить результаты как**.  
+4.  На панели **Результаты** щелкните правой кнопкой мыши поле **Microsoft SQL Server XML Showplan** , содержащее план запроса, и выберите пункт **Сохранить результаты как**.  
   
-5.  В диалоговом окне **Сохранить** \<результаты**** сетка или текст> найдите поле **Тип файла** и выберите в нем значение **Все файлы (\*.\*)**.  
+5.  В диалоговом окне **Сохранить** \<<сетку или текст> **Результаты** в окне **Сохранить как тип** нажмите **Все файлы (\*.\*)**.  
   
 6.  В поле **имя файла** введите имя в формате \<**>. sqlplan**и нажмите кнопку **сохранить**.  
   
@@ -91,8 +91,8 @@ ms.locfileid: "63150866"
   
      Также можно дважды щелкнуть файл с расширением **sqlplan**в проводнике Windows. План откроется в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка SHOWPLAN_XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-showplan-xml-transact-sql)   
- [SET STATISTICS XML &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
+ [SET STATISTICS XML (Transact-SQL)](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
   

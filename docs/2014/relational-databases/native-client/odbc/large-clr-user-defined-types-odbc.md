@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144314"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Определяемые пользователем типы данных больших значений CLR (ODBC)
@@ -34,7 +34,7 @@ ms.locfileid: "63144314"
   
  В следующей таблице показано сопоставление типов данных в параметрах и результирующих наборах.  
   
-|Тип данных SQL Server|Тип данных SQL|Значение|  
+|Тип данных SQL Server|Тип данных SQL|Применение|  
 |--------------------------|-------------------|-----------|  
 |определяемый пользователем тип среды CLR|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -52,12 +52,12 @@ ms.locfileid: "63144314"
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CONCISE_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|0|0|  
-|SQL_DESC_DATETIME_INTERVAL_PRECISION|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_DATETIME_INTERVAL_PRECISION|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_FIXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|  
-|SQL_DESC_LENGTH|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_LOCAL_TYPE_NAME|"udt"|"udt"|  
-|SQL_DESC_OCTET_LENGTH|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
-|SQL_DESC_PRECISION|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_OCTET_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_PRECISION|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_SCALE|0|0|  
 |SQL_DESC_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DESC_TYPE_NAME|"udt"|"udt"|  
@@ -84,15 +84,15 @@ ms.locfileid: "63144314"
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CONCISE_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|0|0|  
-|SQL_DESC_DATETIME_INTERVAL_PRECISION|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_DATETIME_INTERVAL_PRECISION|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_DISPLAY_SIZE|2*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_FIXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|  
-|SQL_DESC_LENGTH|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_LITERAL_PREFIX|"0x"|"0x"|  
 |SQL_DESC_LITERAL_SUFFIX|""|""|  
 |SQL_DESC_LOCAL_TYPE_NAME|"udt"|"udt"|  
-|SQL_DESC_OCTET_LENGTH|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
-|SQL_DESC_PRECISION|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_OCTET_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_PRECISION|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_SCALE|0|0|  
 |SQL_DESC_SEARCHABLE|SQL_PRED_NONE|SQL_PRED_NONE|  
 |SQL_DESC_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
@@ -110,12 +110,12 @@ ms.locfileid: "63144314"
 |-----------------|-------------------------------------------------------------------|----------------------------------------------------------|  
 |DATA_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |TYPE_NAME|Имя определяемого пользователем типа.|Имя определяемого пользователем типа.|  
-|COLUMN_SIZE|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
-|BUFFER_LENGTH|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|COLUMN_SIZE|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|BUFFER_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |DECIMAL_DIGITS|NULL|NULL|  
 |SQL_DATA_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DATETIME_SUB|NULL|NULL|  
-|CHAR_OCTET_LENGTH|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|CHAR_OCTET_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SS_UDT_CATALOG_NAME|Имя каталога, содержащего определяемый пользователем тип.|Имя каталога, содержащего определяемый пользователем тип.|  
 |SS_UDT_SCHEMA_NAME|Имя схемы, содержащей определяемый пользователем тип.|Имя схемы, содержащей определяемый пользователем тип.|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|Полное имя определяемого пользователем типа.|Полное имя определяемого пользователем типа.|  
@@ -156,8 +156,8 @@ ms.locfileid: "63144314"
   
 |Версия сервера|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|  
 |--------------------|-------------------------------------------------------------------|----------------------------------------------------------|  
-|SQL Server 2005.|`UDT`|`varbinary(max)`|  
-|SQL Server 2008 и более поздних версий|`UDT`|`UDT`|  
+|SQL Server 2005|`UDT`|`varbinary(max)`|  
+|SQL Server 2008 и более поздние версии|`UDT`|`UDT`|  
   
 ## <a name="odbc-functions-supporting-large-clr-udts"></a>Функции ODBC, поддерживающие определяемые пользователем типы больших данных CLR  
  В этом разделе обсуждаются изменения в функциях ODBC собственного клиента SQL Server, касающиеся поддержки определяемых пользователем типов больших данных CLR.  
@@ -170,7 +170,7 @@ ms.locfileid: "63144314"
   
 |Тип данных SQL|*ParameterType*|*колумнсизептр*|*деЦималдигитсптр*|  
 |-------------------|---------------------|---------------------|------------------------|  
-|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|*\n*|0|  
+|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|*n*|0|  
 |SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
@@ -184,7 +184,7 @@ ms.locfileid: "63144314"
   
 |Тип данных SQL|*дататипептр*|*колумнсизептр*|*деЦималдигитсптр*|  
 |-------------------|-------------------|---------------------|------------------------|  
-|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|*\n*|0|  
+|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|*n*|0|  
 |SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqldescribeparam"></a>SQLDescribeParam  
@@ -192,7 +192,7 @@ ms.locfileid: "63144314"
   
 |Тип данных SQL|*дататипептр*|*колумнсизептр*|*деЦималдигитсптр*|  
 |-------------------|-------------------|---------------------|------------------------|  
-|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|*\n*|0|  
+|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|*n*|0|  
 |SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlfetch"></a>SQLFetch  
@@ -210,9 +210,9 @@ ms.locfileid: "63144314"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Для определяемых пользователем типов возвращаются следующие значения.  
   
-|Тип данных SQL|Тип|SubType|Длина|Precision|Масштабирование|  
+|Тип данных SQL|Type|Подтип|Длина|Точность|Масштабирование|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
-|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|0|*\n*|n|0|  
+|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlgettypeinfo"></a>SQLGetTypeInfo  
@@ -230,15 +230,15 @@ ms.locfileid: "63144314"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Для определяемых пользователем типов разрешены следующие значения.  
   
-|Тип данных SQL|Тип|SubType|Длина|Precision|Масштабирование|  
+|Тип данных SQL|Type|Подтип|Длина|Точность|Масштабирование|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
-|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|0|*\n*|*\n*|0|  
+|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlspecialcolumns"></a>SQLSpecialColumns  
  Значения, возвращаемые для столбцов DATA_TYPE, TYPE_NAME, COLUMN_SIZE, BUFFER_LENGTH и DECIMAL_DIGTS определяемых пользователем типов, описаны в подразделе «Метаданные, возвращаемые функциями SQLColumns и SQLProcedureColumns (метаданные каталога)» ранее в этом разделе.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Большие определяемые пользователем типы данных CLR](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   
