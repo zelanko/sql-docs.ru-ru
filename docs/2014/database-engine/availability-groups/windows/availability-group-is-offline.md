@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35d8f9cdda7c3b85c77d290f9c793640705438e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815438"
 ---
 # <a name="availability-group-is-offline"></a>Группа доступности в режиме вне сети
@@ -28,17 +28,17 @@ ms.locfileid: "62815438"
 |||  
 |-|-|  
 |**Имя политики**|Режим «в сети» группы доступности|  
-|**Issue**|Группа доступности находится в режиме «вне сети».|  
+|**Проблема**|Группа доступности находится в режиме «вне сети».|  
 |**Категория**|**Critical**|  
-|**Устанавливают**|Группа доступности|  
+|**Устанавливают**|группа доступности|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Эта политика проверяет состояние группы доступности (режим «в сети» или режим «вне сети»). Политика находится в нерабочем состоянии и при переходе кластерного ресурса группы доступности в режим «вне сети» и отсутствии у группы доступности первичной реплики формируется предупреждение.  
   
  Политика находится в рабочем состоянии, если кластерный ресурс группы доступности находится в режиме «в сети», а у группы доступности имеется первичная реплика.  
   
 > [!NOTE]  
->  Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]сведения о возможных причинах проблем и решениях доступны в разделе [Группа доступности в режиме "вне сети"](https://go.microsoft.com/fwlink/p/?LinkId=220850) в TechNet Wiki.  
+>   Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]сведения о возможных причинах проблем и решениях доступны в разделе [Группа доступности в режиме «вне сети»](https://go.microsoft.com/fwlink/p/?LinkId=220850) в TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Возможные причины  
  Эта проблема могла быть вызвана сбоем в работе экземпляра сервера, на котором размещается первичная реплика, или переходом в режим «вне сети» ресурса группы доступности отказоустойчивого кластера Windows Server. Ниже перечислены возможные причины работы группы доступности в режиме «вне сети»:  
@@ -72,8 +72,8 @@ ms.locfileid: "62815438"
   
 -   Если выполняется отработка отказа, дождитесь его завершения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Использование панели мониторинга AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

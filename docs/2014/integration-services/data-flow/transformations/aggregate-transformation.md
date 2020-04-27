@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770640"
 ---
 # <a name="aggregate-transformation"></a>Преобразование «Статистическая обработка»
@@ -112,9 +112,9 @@ ms.locfileid: "62770640"
   
  Дополнительные сведения о свойствах, которые можно установить в диалоговом окне **Редактор преобразования «Статистическая обработка»** , см. в следующих разделах:  
   
--   [Редактор преобразования "Статистическая обработка" &#40;вкладка "агрегаты"&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
+-   [Редактор преобразования "Статистическая обработка" (вкладка "Агрегаты")](../../aggregate-transformation-editor-aggregations-tab.md)  
   
--   [Редактор преобразования "Статистическая обработка" &#40;вкладка "Дополнительно"&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
+-   [Редактор преобразований "Статистическая обработка" (вкладка "Дополнительно")](../../aggregate-transformation-editor-advanced-tab.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "62770640"
 ## <a name="related-tasks"></a>Связанные задачи  
  [Статистическая обработка значений в наборе данных с помощью преобразования «Агрегатная обработка»](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поток данных](../data-flow.md)   
  [Преобразования служб Integration Services](integration-services-transformations.md)  
   

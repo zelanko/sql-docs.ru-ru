@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807508"
 ---
 # <a name="create-history-and-status-reports"></a>Создание журналов и отчетов состояния
@@ -47,7 +47,7 @@ ms.locfileid: "62807508"
   
  Дополнительные сведения о параметрах, которые можно указать при получении состояния файла, см. в разделе [Просмотр состояния файла](../../2014/database-engine/view-file-status.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задание и получение сведений о версии](../../2014/database-engine/set-and-retrieve-version-information.md)  
   
   

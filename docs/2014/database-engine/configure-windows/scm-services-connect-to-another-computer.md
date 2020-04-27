@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810352"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>Подключение к другому компьютеру (диспетчер конфигурации SQL Server)
@@ -59,7 +59,7 @@ ms.locfileid: "62810352"
   
 8.  В диалоговом окне **Добавить или удалить оснастку** нажмите кнопку **ОК**.  
   
-9. Разверните узел **Управление компьютером (***\<имя компьютера>***)**, а затем узел **Службы и приложения**.  
+9. Разверните узел **Управление компьютером (***\<имя компьютера>***)**, а затем **службы и приложения**.  
   
 10. Щелкните правой кнопкой мыши **Диспетчер конфигурации SQL Server**, затем щелкните **Новое окно отсюда**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62810352"
 > [!CAUTION]  
 >  При использовании диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленном компьютере имя компьютера не является очевидным, и можно по ошибке остановить или настроить не тот компьютер. На вкладке **Служба** в поле **Имя узла** проверьте имя компьютера перед тем, как изменять службу.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка инструментария WMI для отображения состояния сервера в инструментальных средствах SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)  
   
   

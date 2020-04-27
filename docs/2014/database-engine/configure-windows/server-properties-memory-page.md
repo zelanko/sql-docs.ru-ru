@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6950199a5da1f4aa773eaa12fee80edb98aba04f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809421"
 ---
 # <a name="server-properties-memory-page"></a>Свойства сервера (страница «Память»)
@@ -41,7 +41,7 @@ ms.locfileid: "62809421"
  **Настроенные значения**  
  Отображает настроенные значения для параметров на этой панели. В случае изменения этих значений выберите пункт **Текущие значения** и посмотрите, вступили ли в силу внесенные изменения. В противном случае первым должен быть перезапущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Выполняемые значения**  
+ **Текущие значения**  
  Показывает текущие значения для параметров на этой панели. Эти значения доступны только для чтения.  
   
 ## <a name="see-also"></a>См. также:  

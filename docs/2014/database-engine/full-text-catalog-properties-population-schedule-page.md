@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62778826"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>Свойства полнотекстового каталога (страница «Расписание заполнения»)
@@ -25,13 +25,13 @@ ms.locfileid: "62778826"
 ## <a name="schedules-grid"></a>Сетка расписаний  
  Каждая строка представляет собой назначенную операцию по заполнению или повторному заполнению каталога.  
   
- **Название**  
+ **Имя**  
  Отображает имя расписания.  
   
  **Тип заполнения**  
  Позволяет просмотреть или изменить операцию заполнения: полная, добавочная или операция оптимизации.  
   
- **Enabled**  
+ **Включен**  
  Установка или снятие этого флажка позволяет включить или отключить назначенную операцию.  
   
  **Описание**  
@@ -46,7 +46,7 @@ ms.locfileid: "62778826"
  **Удаление**  
  Нажмите эту кнопку, чтобы удалить выбранное расписание заполнения.  
   
-## <a name="see-also"></a>См. также:  
- [Создание ПОЛНОТЕКСТОВОГО каталога &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
+## <a name="see-also"></a>См. также  
+ [CREATE FULLTEXT CATALOG (Transact-SQL)](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
   

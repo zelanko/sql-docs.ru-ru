@@ -16,17 +16,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815729"
 ---
-# <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>Use the Add Database to Availability Group Wizard (SQL Server Management Studio)
+# <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>Использование мастера добавления базы данных в группу доступности (среда SQL Server Management Studio)
   Используйте мастер добавления базы данных в группу доступности для добавления одной или нескольких баз данных в существующую группу доступности AlwaysOn.  
   
 > [!NOTE]  
->  Сведения об использовании [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell для добавления базы данных см. в разделе [Add a Database to an Availability Group &#40;SQL Server&#41;](availability-group-add-a-database.md).  
+>  Сведения об использовании [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell для добавления базы данных см. в разделе [Добавление базы данных в группу доступности (SQL Server)](availability-group-add-a-database.md).  
   
  **В этом разделе:**  
   
@@ -36,12 +36,12 @@ ms.locfileid: "62815729"
   
      [Безопасность](#Security)  
   
--   **Добавление базы данных с помощью:**  [мастера добавления базы данных в группу доступности (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Чтобы добавить базу данных, воспользуйтесь инструкциями из раздела:**  [Мастер добавления базы данных в группу доступности (среда SQL Server Management Studio)](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
  Если вы еще не добавили базу данных в группу доступности, см. раздел "базы данных доступности" раздела [Предварительные требования, ограничения и рекомендации для группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Prerequisites"></a>Предварительные требования, ограничения и рекомендации  
+###  <a name="prerequisites-restrictions-and-recommendations"></a><a name="Prerequisites"></a>Предварительные требования, ограничения и рекомендации  
   
 -   Необходимо подключиться к экземпляру сервера, на котором размещена текущая первичная реплика.  
   
@@ -67,14 +67,14 @@ ms.locfileid: "62815729"
   
     -   Чтобы при помощи мастера можно было создавать резервные копии и обращаться к ним, необходимо будет указать общую сетевую папку. Для каждой первичной реплики учетная запись, используемая для запуска [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , должна иметь разрешения в файловой системе на чтение и запись в общей сетевой папке. Для вторичных реплик учетная запись должна иметь разрешение на чтение в сетевой папке.  
   
-     Если нет возможности воспользоваться мастером для выполнения полной первоначальной синхронизации данных, то базы данных-получатели нужно подготовить вручную. Это можно сделать до или после запуска мастера. Дополнительные сведения см. в разделе [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+     Если нет возможности воспользоваться мастером для выполнения полной первоначальной синхронизации данных, то базы данных-получатели нужно подготовить вручную. Это можно сделать до или после запуска мастера. Дополнительные сведения см. в статье [Ручная подготовка базы данных-получателя для присоединения к группе доступности (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a>Использование мастера добавления базы данных в группу доступности (SQL Server Management Studio)  
+##  <a name="using-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Использование мастера добавления базы данных в группу доступности (SQL Server Management Studio)  
  **Использование мастера добавления базы данных в группу доступности**  
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, на котором размещена первичная реплика группы доступности, и разверните дерево сервера.  
@@ -85,7 +85,7 @@ ms.locfileid: "62815729"
   
 4.  На странице **Выбор баз данных** выберите одну или несколько баз данных. Дополнительные сведения см. в разделе [Страница Выбор баз данных &#40;мастер создания группы доступности — мастер добавления базы данных&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md).  
   
-5.  На странице **Выбор начальной синхронизации данных** выберите, как именно необходимо создать новые базы данных-получатели и присоединить их к группе доступности. Выберите один из следующих вариантов:  
+5.  На странице **Выбор начальной синхронизации данных** выберите, как именно необходимо создать новые базы данных-получатели и присоединить их к группе доступности. Выберите один из следующих параметров.  
   
     -   **Полный**  
   
@@ -134,17 +134,17 @@ ms.locfileid: "62815729"
   
 11. Если начальная синхронизация данных не запустилась автоматически для всех баз данных-получателей, необходимо настроить все базы данных-получатели, которые еще не были подсоединены. Дополнительные сведения см. в разделе [Запуск перемещения данных в базе данных-получателе AlwaysOn (SQL Server)](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
--   [Вручную Подготовьте базу данных-получатель для группы доступности &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   [Присоединение базы данных-получателя к группе доступности &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
+-   [Присоединение базы данных-получателя к группе доступности (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Предварительные требования, ограничения и рекомендации для группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Добавление базы данных в группу доступности &#40;SQL Server&#41;](availability-group-add-a-database.md)   
  [Запуск перемещения данных для базы данных-получателя AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)   
- [Добавление базы данных в группу доступности &#40;SQL Server&#41;](availability-group-add-a-database.md)  
+ [Добавление базы данных в группу доступности (SQL Server)](availability-group-add-a-database.md)  
   
   

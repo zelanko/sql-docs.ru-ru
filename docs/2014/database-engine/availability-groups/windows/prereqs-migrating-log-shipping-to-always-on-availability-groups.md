@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 865e8d720e9977f582ac5ae8a0e75d995fc82629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789559"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>Необходимые условия для выполнения перехода от использования доставки журналов к использованию групп доступности AlwaysOn (SQL Server)
@@ -28,29 +28,29 @@ ms.locfileid: "62789559"
   
  **В этом разделе:**  
   
--   [Предварительные требования для группы доступности](#AGPrereqsRealAddress)  
+-   [Предварительные условия для группы доступности](#AGPrereqsRealAddress)  
   
--   [Предварительные требования для доставки журналов](#LogShipPrereqs)  
+-   [Предварительные условия для доставки журналов](#LogShipPrereqs)  
   
 -   [Связанные задачи](#RelatedTasks)  
   
--   [Связанное содержимое](#RelatedContent)  
+-   [См. также](#RelatedContent)  
   
-##  <a name="AGPrereqsRealAddress"></a>Предварительные требования для группы доступности  
+##  <a name="availability-group-prerequisites"></a><a name="AGPrereqsRealAddress"></a>Предварительные требования для группы доступности  
  Чтобы разрешить выполнение заданий резервного копирования в первичной реплике группы доступности, используйте следующие параметры резервного копирования групп доступности AlwaysOn:  
   
 |Свойство|Параметр|  
 |--------------|-------------|  
 |Автоматическое резервное копирование группы доступности|Только в первичной реплике|  
-|Приоритет резервного копирования первичной реплики.|>0|  
+|Приоритет резервного копирования первичной реплики.|> 0|  
   
  **Дополнительные сведения:**  
   
  [Просмотр свойств группы доступности (SQL Server)](view-availability-group-properties-sql-server.md)  
   
- [Настройка резервного копирования на реплики доступности &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
+ [Настройка резервного копирования в репликах доступности (SQL Server)](configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="LogShipPrereqs"></a>Предварительные требования для доставки журналов  
+##  <a name="log-shipping-prerequisites"></a><a name="LogShipPrereqs"></a>Предварительные требования для доставки журналов  
   
 -   База данных-источник доставки журналов должна находиться на экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещается первоначальная или текущая первичная реплика группы доступности.  
   
@@ -66,52 +66,52 @@ ms.locfileid: "62789559"
   
  **Дополнительные сведения:**  
   
- [Преобразование конфигурации доставки журналов в группу доступности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (блог SQL Server)  
+ [Преобразование конфигурации доставки журналов в группу доступности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (блог по SQL Server)  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Доставка журналов**  
   
 -   [Обновление доставки журналов до SQL Server 2014 &#40;Transact-SQL&#41;](../../log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
--   [Удалить SQL Server &#40;доставки журналов&#41;](../../log-shipping/remove-log-shipping-sql-server.md)  
+-   [Удаление доставки журналов (SQL Server)](../../log-shipping/remove-log-shipping-sql-server.md)  
   
  **Группы доступности AlwaysOn**  
   
--   [Использование мастера групп доступности &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Использование мастера групп доступности (среда SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Используйте диалоговое окно Создание группы доступности &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Использование диалогового окна "Создание группы доступности" (среда SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [Создание группы доступности &#40;&#41;Transact-SQL](create-an-availability-group-transact-sql.md)  
+-   [Создание группы доступности (Transact-SQL)](create-an-availability-group-transact-sql.md)  
   
--   [Создание SQL Server PowerShell &#40;группы доступности&#41;](../../../powershell/sql-server-powershell.md)  
+-   [Создание группы доступности (SQL Server PowerShell)](../../../powershell/sql-server-powershell.md)  
   
--   [Присоединение базы данных-получателя к группе доступности &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
+-   [Присоединение базы данных-получателя к группе доступности (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
--   [Настройка резервного копирования на реплики доступности &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
+-   [Настройка резервного копирования в репликах доступности (SQL Server)](configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
--   **Тех**  
+-   **Блоги**  
   
      [Преобразование конфигурации доставки журналов в группу доступности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
   
-     [Добавление базы данных-источника доставки журналов и баз данных-получателей в существующую группу доступности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
+     [Добавление базы данных-источника доставки журналов и баз данных-получателей к существующей группе доступности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
   
-     [Блоги группы разработчиков SQL Server AlwaysOn: официальный блог группы разработчиков SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
+     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Блоги SQL Server инженеров CSS](https://blogs.msdn.com/b/psssql/)  
+     [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Технические документы**  
   
      [Руководство по миграции. Переход на группы доступности AlwaysOn с предыдущих развертываний, сочетающих зеркальное отображение базы данных и доставку журналов](https://msdn.microsoft.com/library/jj635217)  
   
-     [Технические документы Майкрософт для SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Технические документы Майкрософт Microsoft по SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [Технические документы группы консультирования клиентов SQL Server](http://sqlcat.com/)  
+     [Технические документы группы консультантов по SQL Server](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>См. также:  
  [SQL Server &#40;доставки журналов&#41;](../../log-shipping/about-log-shipping-sql-server.md)   
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Мониторинг групп доступности &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
+ [Отслеживание групп доступности (SQL Server)](monitoring-of-availability-groups-sql-server.md)  
   
   

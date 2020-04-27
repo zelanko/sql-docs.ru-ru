@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0936af9b97d08c6bcd5033e61d9fa1c9153272e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791804"
 ---
 # <a name="add-projects-to-source-control"></a>Добавление проектов в систему управления версиями
@@ -44,7 +44,7 @@ ms.locfileid: "62791804"
   
 5.  В списке **папки** откройте папку, в которую нужно поместить проект. Кроме того, можно нажать кнопку **создать** , чтобы создать папку с именем, отображаемым в поле **проект** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление решений и проектов в систему управления версиями](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)  
   
   

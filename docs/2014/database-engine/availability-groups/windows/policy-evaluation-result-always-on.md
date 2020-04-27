@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99f32a970ee8cc3c68da6f4fb150ec36e17bcea1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789084"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>Результат оценки политики (AlwaysOn)
@@ -25,7 +25,7 @@ ms.locfileid: "62789084"
   
 
   
-##  <a name="Options"></a>Параметры диалогового окна  
+##  <a name="dialog-box-options"></a><a name="Options"></a>Параметры диалогового окна  
  **Обнаруженная неполадка**  
  Отображает одну строку для каждой обнаруженной неполадки. Значок, связанный с неполадкой, содержит визуальный индикатор, предназначенный для отображения серьезности неполадки следующим образом:  
   
@@ -40,15 +40,15 @@ ms.locfileid: "62789084"
  **Дополнительные сведения**  
  Щелкните эту ссылку, чтобы открыть раздел справки для выбранной неполадки.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
--   [Использование панели мониторинга AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [Используйте политики AlwaysOn для просмотра работоспособности группы доступности &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обзор группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md) [политик AlwaysOn для проблем в работе с группы доступности AlwaysOn](always-on-policies-for-operational-issues-always-on-availability.md) &#40;SQL Server&#41; 
   
   

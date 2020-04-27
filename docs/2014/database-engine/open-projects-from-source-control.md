@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec14f86b283fa8ccbc037feec4a8a54983126403
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774958"
 ---
 # <a name="open-projects-from-source-control"></a>Открытие проекта из системы управления версиями
@@ -42,7 +42,7 @@ ms.locfileid: "62774958"
   
 6.  В диалоговом окне **Открытие решения** выберите проект, который необходимо открыть, и нажмите кнопку **Открыть**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Открытие решений и проектов из системы управления версиями](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)   
  [Открытие решений из системы управления версиями](../../2014/database-engine/open-solutions-from-source-control.md)  
   

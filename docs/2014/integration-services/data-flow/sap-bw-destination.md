@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cac8403327ecf3888439290554f059bb00bce2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770873"
 ---
 # <a name="sap-bw-destination"></a>Назначение SAP BW
@@ -33,7 +33,7 @@ ms.locfileid: "62770873"
   
 -   [настройка цели SAP BW.](#bkmk_Configure_Destination)  
   
-##  <a name="bkmk_Prepare_Objects"></a> Подготовка объектов SAP Netweaver BW, необходимых для цели  
+##  <a name="preparing-the-sap-netweaver-bw-objects-that-the-destination-requires"></a><a name="bkmk_Prepare_Objects"></a> Подготовка объектов SAP Netweaver BW, необходимых для цели  
  Цели SAP BW для функционирования необходимы определенные объекты в системе SAP Netweaver BW. Если эти объекты не существуют, выполните следующие действия для создания и настройки этих объектов в системе SAP Netweaver BW.  
   
 > [!NOTE]  
@@ -55,12 +55,12 @@ ms.locfileid: "62770873"
   
  Также можно создать дополнительные объекты InfoObject, Infocube, InfoSource и InfoPackage, которые необходимы для поддержки загрузки данных в систему SAP Netweaver BW.  
   
-##  <a name="bkmk_Connect_Database"></a> Подключение к системе SAP Netweaver BW  
+##  <a name="connecting-to-the-sap-netweaver-bw-system"></a><a name="bkmk_Connect_Database"></a> Подключение к системе SAP Netweaver BW  
  Для подключения к системе SAP Netweaver BW версии 7 цель SAP BW использует диспетчер соединений SAP BW, который является частью пакета [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW. Диспетчер соединений SAP BW является единственным диспетчером соединений [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , который может использоваться целью SAP BW.  
   
  Дополнительные сведения о диспетчере соединений SAP BW см. в разделе [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md).  
   
-##  <a name="bkmk_Configure_Destination"></a> Настройка целевого объекта SAP BW  
+##  <a name="configuring-the-sap-bw-destination"></a><a name="bkmk_Configure_Destination"></a> Настройка целевого объекта SAP BW  
  Целевой объект SAP BW может быть настроен следующими способами.  
   
 -   Найдите и выберите InfoPackage, который будет использоваться для загрузки данных.  

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770220"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>Учебник. Использование источника OData [SSIS]
@@ -54,7 +54,7 @@ ms.locfileid: "62770220"
   
 10. В раскрывающемся списке **Коллекция** выберите **Employees**.  
   
-11. Введите любые дополнительные параметры запроса OData или фильтры для **Параметры запроса**. Например, $orderby=CompanyName&$top=100. Для целей данного учебного примера введите **$top=5**.  
+11. Введите любые дополнительные параметры запроса OData или фильтры для **Параметры запроса**. Например: $orderby=CompanyName&$top=100. Для целей данного учебного примера введите **$top=5**.  
   
 12. Щелкните **Предварительный просмотр** , чтобы просмотреть данные.  
   

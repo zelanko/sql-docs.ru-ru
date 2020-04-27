@@ -15,19 +15,19 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813200"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Изменения в функциях полнотекстового поиска
   В этом разделе описаны изменения поведения полнотекстового поиска. Изменения в работе оказывают влияние на способ выполнения функций или взаимодействие между ними в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] по сравнению с предыдущими версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>Изменения в работе полнотекстового поиска в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="behavior-changes-in-full-text-search-in-sssql14"></a>Изменения в работе полнотекстового поиска в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Сведения будут доступны позже.  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Изменения в работе полнотекстового поиска в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="behavior-changes-in-full-text-search-in-sssql11"></a>Изменения в работе полнотекстового поиска в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  В [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] устанавливается новая версия средств разбиения по словам и парадигматических модулей для языков «Английский (США)» (код 1033) и «Английский (Соединённое Королевство)» (код 2057). Однако можно переключиться на предыдущую версию этих компонентов, если требуется сохранить предыдущий режим работы. Дополнительные сведения см. в статье [Изменение средства разбиения по словам, используемого для английского (США) и английского (Британского)](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 ### <a name="new-word-breakers-and-stemmers-installed"></a>Установлены новые средства разбиения по словам и парадигматические модули  
@@ -102,8 +102,8 @@ ms.locfileid: "62813200"
   
      Полнотекстовый поиск индексирует содержимое блоков больших двоичных объектов (BLOB) FILESTREAM. Индексирование таких файлов, как изображения, может оказаться нецелесообразным. При обновлении блоков больших двоичных объектов (BLOB) FILESTREAM выполняется их повторное индексирование.  
   
-## <a name="see-also"></a>См. также:  
- [Полнотекстовый поиск](../relational-databases/search/full-text-search.md)   
+## <a name="see-also"></a>См. также  
+ [Компонент Full-text Search](../relational-databases/search/full-text-search.md)   
  [Обратная совместимость полнотекстового поиска](../../2014/database-engine/full-text-search-backward-compatibility.md)   
  [Обновление полнотекстового поиска](../relational-databases/search/upgrade-full-text-search.md)   
  [Приступая к работе с компонентом Full-Text Search](../relational-databases/search/get-started-with-full-text-search.md)  

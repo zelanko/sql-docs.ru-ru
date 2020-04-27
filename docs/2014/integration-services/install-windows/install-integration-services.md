@@ -19,23 +19,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 678b14b224f994c834630a398767fee1ea360870
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768236"
 ---
 # <a name="install-integration-services"></a>Установка служб Integration Services
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предоставляет единую программу установки для установки всех компонентов, включая [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Она позволяет на одном компьютере устанавливать службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] как вместе с другими компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и отдельно от них.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет единую программу установки для всех компонентов, включая службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Она позволяет на одном компьютере устанавливать службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] как вместе с другими компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и отдельно от них.  
   
  Этот раздел обращает внимание на важные моменты, которые следует рассмотреть перед началом установки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Сведения, содержащиеся в этом разделе, помогут правильно подобрать параметры установки, сделать правильный выбор и успешно осуществить установку.  
   
  Этот раздел не содержит инструкций по запуску программы установки, ее выполнению из командной строки и использованию мастера установки. Пошаговые инструкции по запуску программы установки и выбору компонентов для установки см. в разделе [Быстрый запуск установки SQL Server 2014](../../getting-started/quick-start-installation-of-sql-server-2014.md). Сведения о параметрах командной строки для установки [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]см. в разделе [Install SQL Server 2014 в командной строке](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="preparing-to-install-integration-services"></a>Подготовка к установке служб Integration Services  
- Прежде чем приступить к установке служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ознакомьтесь со следующими требованиями:  
+ Перед установкой [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ознакомьтесь со следующими требованиями.  
   
--   [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Требования к аппаратному и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Параметры для средства проверки конфигурации системы](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)  
   
@@ -68,24 +68,24 @@ ms.locfileid: "62768236"
   
      Для полной установки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]вместе со средствами и документацией для разработки пакетов и управления ими выберите службы **Integration Services** и следующие **общие компоненты**:  
   
-    -   **SQL Server Data Tools** для установки средств разработки пакетов.  
+    -   **SQL Server Data Tools** , чтобы установить средства разработки пакетов.  
   
-    -   **Средства управления — полная** установка [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для управления пакетами.  
+    -   **Средства управления — полный набор** для установки среды управления пакетами [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
-    -   **Пакет SDK клиентских средств** для установки управляемых сборок [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для программирования.  
+    -   **Пакет SDK клиентских средств** , чтобы установить управляемые сборки для программирования служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
      Многие решения для хранения данных также нуждаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в установке дополнительных компонентов, таких как [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]и. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
     > [!NOTE]  
     >  Некоторые из компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выбранных для установки на странице **Выбор компонентов** мастера установки, устанавливают подмножество компонентов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Эти компоненты полезны для определенных задач, но функциональные возможности служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] будут ограничены. Например, для компонента **Службы компонента Database Engine** устанавливаются также компоненты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , необходимые мастеру импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При выборе компонента **SQL Server Data Tools** также устанавливаются компоненты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , необходимые для разработки пакетов, однако сами службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не устанавливаются, и поэтому выполнение пакетов за пределами среды [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]будет невозможно. Чтобы выполнить полную установку служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], выберите на странице **Выбор компонентов** компонент **Службы Integration Services** .  
   
-     **Установка на 64-разрядном компьютере** На 64-разрядном компьютере при выборе **Integration Services** устанавливаются только 64-разрядная среда выполнения и средства. Если требуется выполнять пакеты в 32-разрядном режиме, нужно также выбрать дополнительный параметр, чтобы установить 32-разрядные версии средств и среды выполнения.  
+     **Установка на 64-разрядный компьютер.** На 64-разрядном компьютере при выборе компонента **Службы Integration Services** устанавливаются только 64-разрядные версии средств и среды выполнения. Если требуется выполнять пакеты в 32-разрядном режиме, нужно также выбрать дополнительный параметр, чтобы установить 32-разрядные версии средств и среды выполнения.  
   
     -   Если 64-разрядный компьютер работает под управлением операционной системы x86, выберите **SQL Server Data Tools** или **средства управления — завершено**.  
   
     -   Если на 64-разрядном компьютере работает [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] операционная система, выберите **средства управления — полный**.  
   
-     **Установка на выделенном сервере для ETL** Чтобы использовать выделенный сервер для процессов извлечения, преобразования и загрузки (ETL), рекомендуется установить локальный экземпляр служб [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] при установке. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]обычно хранит пакеты в экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)] и использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент для планирования этих пакетов. Если на сервере ETL нет экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], нужно запускать пакеты или составлять расписание их выполнения с сервера, на котором имеется экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Это значит, что пакеты будут выполняться не на сервере ETL, а на сервере, откуда они были запущены. В результате ресурсы выделенного сервера ETL не будут использоваться так, как ожидалось. Более того, у других серверов может возникнуть нехватка ресурсов из-за выполнения процессов извлечения, преобразования и загрузки.  
+     **Установка на выделенном сервере для извлечения, преобразования и загрузки.** Чтобы использовать выделенный сервер для извлечения, преобразования и загрузки данных, рекомендуется установить локальный экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] при установке служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] обычно хранят пакеты в экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и используют агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы составить расписание выполнения этих пакетов. Если на сервере ETL нет экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], нужно запускать пакеты или составлять расписание их выполнения с сервера, на котором имеется экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Это значит, что пакеты будут выполняться не на сервере ETL, а на сервере, откуда они были запущены. В результате ресурсы выделенного сервера ETL не будут использоваться так, как ожидалось. Более того, у других серверов может возникнуть нехватка ресурсов из-за выполнения процессов извлечения, преобразования и загрузки.  
   
 -   **Конфигурация экземпляра**  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62768236"
   
      На компьютере может быть установлен только один экземпляр службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Подключение к службе производится с помощью имени компьютера.  
   
-     По умолчанию службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] настроены для управления пакетами в базе данных **msdb** экземпляра компонента Database Engine, установленного одновременно со службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Если экземпляр компонента Database Engine одновременно со службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]не установлен, служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] будет настроена для управления пакетами, хранящимися в базе данных **msdb** на локальном экземпляре по умолчанию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Чтобы управлять пакетами, хранящимися на именованном или удаленном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] либо на нескольких экземплярах компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], необходимо изменить файл конфигурации. Дополнительные сведения об изменении этого файла конфигурации см. в статье [Настройка служб Integration Services (служба SSIS)](../service/integration-services-service-ssis-service.md).  
+     По умолчанию службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] настроены для управления пакетами в базе данных **msdb** экземпляра компонента Database Engine, установленного одновременно со службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Если экземпляр компонента Database Engine одновременно со службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]не установлен, служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] будет настроена для управления пакетами, хранящимися в базе данных **msdb** на локальном экземпляре по умолчанию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Чтобы управлять пакетами, хранящимися на именованном или удаленном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]либо на нескольких экземплярах компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], необходимо изменить файл конфигурации. Дополнительные сведения об изменении этого файла конфигурации см. в статье [Настройка служб Integration Services (служба SSIS)](../service/integration-services-service-ssis-service.md).  
   
 -   **Конфигурация сервера**  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62768236"
  По умолчанию в новой установке службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] настроены таким образом, чтобы не заносить в журнал событий приложений события, связанные с запуском пакетов. Это позволяет избежать слишком большого количества записей в журнале событий при использовании компонента сборщика данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. События, которые не заносятся в журнал: EventID 12288, "Package started" и EventID 12289, "Package finished successfully." Чтобы эти события заносились в журнал событий приложений, откройте реестр для изменения. Затем найдите в реестре узел HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS и измените значение DWORD для параметра LogPackageExecutionToEventLog с 0 на 1.  
   
 ## <a name="understanding-the-integration-services-service"></a>Основные сведения о службе Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]устанавливает [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] службу.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливает службу [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  По умолчанию служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливается при выборе на странице **Выбор компонентов** параметра **Службы Integration Services** . При выборе настроек по умолчанию на странице **Конфигурация сервера** служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включена, а ее **Тип запуска** установлен в значение **Авто**.  
   
@@ -124,6 +124,6 @@ ms.locfileid: "62768236"
  64-разрядные функции устанавливаются в каталог **Program Files** , а 32-разрядные — отдельно в каталог **Program Files (x86)** . (Это одинаково для служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 32-разрядная среда разработки для [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакетов не поддерживается в [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 64-разрядной операционной системе и не устанавливается на [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] серверах.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 32-разрядная среда разработки для пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , не поддерживается на 64-разрядных платформах [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] и не устанавливается на серверы на базе процессоров [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] .  
   
   

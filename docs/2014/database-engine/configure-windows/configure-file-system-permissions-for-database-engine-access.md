@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b23ed3a3a1f128d24bfec2a0066e63b09753311a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62811328"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Настройка разрешений файловой системы для доступа к компоненту ядра СУБД
@@ -40,14 +40,14 @@ ms.locfileid: "62811328"
   
 6.  Теперь выберите идентификатор безопасности службы: **MSSQLServer** или **NT SERVICE\MSSQL $ имя_экземпляра**, а затем нажмите кнопку **ОК**.  
   
-7.  Нажмите кнопку **ОК** еще раз, чтобы вернуться в диалоговое окно **разрешения** .  
+7.  Снова нажмите кнопку **ОК** , чтобы вернуться в диалоговое окно **Разрешения** .  
   
 8.  В поле имена **групп или пользователей** выберите идентификатор безопасности службы, а затем в поле **разрешения для** \<имени> установите флажок **Разрешить** для **полного доступа**.  
   
 9. Нажмите кнопку **Применить**, а затем дважды кнопку **ОК** , чтобы выполнить выход.  
   
 ## <a name="see-also"></a>См. также:  
- [Управление службами ядро СУБД](manage-the-database-engine-services.md)   
+ [Управление службами компонента Database Engine](manage-the-database-engine-services.md)   
  [Перемещение системных баз данных](../../relational-databases/databases/system-databases.md)   
  [Перемещение пользовательских баз данных](../../relational-databases/databases/move-user-databases.md)  
   

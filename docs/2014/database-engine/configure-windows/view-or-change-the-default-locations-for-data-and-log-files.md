@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06d17a4feaec0db614f61fb7761b37ea415efc24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808715"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>Просмотр или изменение расположения по умолчанию для файлов данных и журнала (среда SQL Server Management Studio)
@@ -33,18 +33,18 @@ ms.locfileid: "62808715"
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
--   **Дальнейшие действия.**  [Изменение расположений по умолчанию](#FollowUp)  
+-   **Продолжение**  [после изменения расположений по умолчанию](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
  Рекомендуемым способом защиты файлов данных и журналов является защита с помощью списков управления доступом (ACL). Списки ACL должны располагаться в корневом каталоге, в котором создаются файлы.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-default-locations-for-database-files"></a>Просмотр или изменение расположения по умолчанию для файлов базы данных  
   
@@ -54,11 +54,11 @@ ms.locfileid: "62808715"
   
 3.  В области **Места хранения, используемые базой данных по умолчанию**можно просмотреть текущие расположения, используемые по умолчанию для новых файлов данных и файлов журнала. Чтобы изменить местоположение по умолчанию, введите новый путь по умолчанию в поле **Данные** или **Журнал** или нажмите кнопку обзора, перейдите к нужному пути и выберите его.  
   
-##  <a name="FollowUp"></a>Дальнейшие действия. После изменения расположений по умолчанию  
+##  <a name="follow-up-after-changing-the-default-locations"></a><a name="FollowUp"></a>Дальнейшие действия. После изменения расположений по умолчанию  
  Необходимо остановить и запустить службу SQL Server для завершения изменения.  
   
-## <a name="see-also"></a>См. также:  
- [Создание &#40;базы данных SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+## <a name="see-also"></a>См. также  
+ [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [Создание базы данных](../../relational-databases/databases/create-a-database.md)  
   
   

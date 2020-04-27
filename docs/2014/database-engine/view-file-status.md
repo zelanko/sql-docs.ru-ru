@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773370"
 ---
 # <a name="view-file-status"></a>Просмотр состояния файла
@@ -42,7 +42,7 @@ ms.locfileid: "62773370"
   
 2.  В меню **файл** укажите пункт **система управления версиями**и выберите пункт **Свойства SourceSafe**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задание и получение сведений о версии](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [Просмотр журнала проекта](../../2014/database-engine/view-project-history.md)   
  [Получение файлов](../../2014/database-engine/retrieve-files.md)   

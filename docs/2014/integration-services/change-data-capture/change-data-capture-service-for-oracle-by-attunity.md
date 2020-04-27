@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a01524acf4fc72cb50732650f1f2e6f58b4ff74d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771530"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Служба системы отслеживания измененных данных для Oracle компании Attunity
@@ -36,9 +36,9 @@ ms.locfileid: "62771530"
   
 -   Windows 7, 32-разрядная (x86) и 64-разрядная (x64) версии  
   
--   Windows Server 2012  
+-   Windows Server 2012  
   
--   Windows Server 2008 R2 с пакетом обновления 1 (SP1)  
+-   Windows Server 2008 R2 с пакетом обновления 1 (SP1)  
   
 -   Windows Server 2008, 32-разрядная (x86) и 64-разрядная (x64) версии с пакетом обновления 2 (SP2)  
   
@@ -66,10 +66,9 @@ ms.locfileid: "62771530"
   
  Если программное обеспечение службы CDC Service удаляется с одного компьютера и устанавливается на другой, нужно задать только следующие данные:  
   
--   Учетная запись службы.  
+-   Учетная запись службы  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и учетные данные  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и учетные данные  
   
 -   Главный пароль  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62771530"
   
 -   [Руководство по службе системы отслеживания измененных данных для Oracle компании Attunity](change-data-capture-service-for-oracle-by-attunity-how-to-guide.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Работа со службой CDC Oracle](working-with-the-oracle-cdc-service.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b6b4aeb4059ba659a3188712b1ce76f10efd030
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771040"
 ---
 # <a name="odata-source"></a>Источник OData
@@ -31,13 +31,13 @@ ms.locfileid: "62771040"
 |||||  
 |-|-|-|-|  
 |Строки|ATOM|JSON|JSON (Light)|  
-|10 000|113 секунд|74 секунды|68 секунд|  
+|10000|113 секунд|74 секунды|68 секунд|  
 |1000000|1110 секунд|853 секунды|665 с|  
   
 > [!NOTE]  
 >  Источник OData служб SSIS использует ODataLib 5.5.0 для синтаксического анализа каналов OData и может считывать все форматы, поддерживаемые этой библиотекой.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Установка и удаление компонента источника OData](../install-and-uninstall-odata-source-component.md)  
   
@@ -45,15 +45,15 @@ ms.locfileid: "62771040"
   
 -   [Изменение запроса источника OData во время выполнения](modify-odata-source-query-at-runtime.md)  
   
--   [Редактор источника OData &#40;страница подключения&#41;](../odata-source-editor-connection-page.md)  
+-   [Редактор источника OData (страница "Подключение")](../odata-source-editor-connection-page.md)  
   
--   [Редактор источника OData — страница &#40;столбцы&#41;](../odata-source-editor-columns-page.md)  
+-   [Редактор источника OData (страница "Столбцы")](../odata-source-editor-columns-page.md)  
   
--   [Редактор источника OData &#40;страница "вывод ошибок"&#41;](../odata-source-editor-error-output-page.md)  
+-   [Редактор источника OData (страница "Вывод ошибок")](../odata-source-editor-error-output-page.md)  
   
 -   [Свойства источника OData](odata-source-properties.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диспетчер соединений OData](../connection-manager/odata-connection-manager.md)  
   
   

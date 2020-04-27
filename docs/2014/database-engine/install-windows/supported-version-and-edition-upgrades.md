@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775227"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Поддерживаемые обновления версий и выпусков
@@ -43,13 +43,13 @@ ms.locfileid: "62775227"
   
 -   Межплатформенное обновление не поддерживается. Невозможно обновить 32-разрядный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до стандартного 64-разрядного при помощи программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Но можно создать резервную копию или отсоединить базы данных от 32-разрядного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем восстановить их или присоединить к новому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64-разрядная версия), если базы данных не опубликованы в репликации. Необходимо повторно создать имена входа и другие объекты пользователя в системных базах данных master, msdb и model.  
   
--   Добавить новые компоненты в процессе обновления существующего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]нельзя. После обновления экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]добавить новые компоненты можно при помощи программы установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Дополнительные сведения см. [в разделе Добавление компонентов в экземпляр компонента SQL Server 2014 &#40;&#41;установки ](add-features-to-an-instance-of-sql-server-setup.md).  
+-   Добавить новые компоненты в процессе обновления существующего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]нельзя. После обновления экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] добавить новые компоненты можно при помощи программы установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения см. [в разделе Добавление компонентов в экземпляр компонента SQL Server 2014 &#40;&#41;установки ](add-features-to-an-instance-of-sql-server-setup.md).  
   
 -   Кластеры отработки отказа не поддерживаются в режиме WOW.  
   
 -   Обновление с выпуска Evaluation предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживается.  
   
-## <a name="upgrades-from-earlier-versions-to-includesssql14includessssql14-mdmd"></a>Обновление ранних версий до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+## <a name="upgrades-from-earlier-versions-to-sssql14"></a>Обновление ранних версий до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
 > [!NOTE]  
 >  Поддержка [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] более подробно рассматривается в следующем разделе «Поддержка[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]».  
@@ -59,73 +59,50 @@ ms.locfileid: "62775227"
 -   64-разрядные версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно обновить до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] только на 64-разрядном сервере.  
   
 > [!NOTE]  
->  При обновлении до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с предыдущей версии выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise выберите "Enterprise Edition: лицензирование по числу ядер" и "Enterprise Edition". Эти выпуски Enterprise отличаются только в отношении режима лицензирования и максимального количества поддерживаемых ядер. Дополнительные сведения см. в разделе [ограничения емкости вычислений по Выпуску SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  При обновлении до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с предыдущей версии выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise выберите "Enterprise Edition: лицензирование по числу ядер" и "Enterprise Edition". Эти выпуски Enterprise отличаются только в отношении режима лицензирования и максимального количества поддерживаемых ядер. Дополнительные сведения см. в разделе [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
- 
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] поддерживает обновление со следующих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] поддерживает обновление со следующих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 4 (SP4) или более поздней версии  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 4 (SP4) или более поздней версии  
   
--   
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] с пакетом обновления 3 (SP3) или более поздней версии  
+-   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] с пакетом обновления 3 (SP3) или более поздней версии  
   
--   
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]с пакетом обновления 2 (SP2) или более поздней версии  
+-   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]с пакетом обновления 2 (SP2) или более поздней версии  
   
--   
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) или более поздние версии.  
+-   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) или более поздние версии.  
   
  В таблице, представленной ниже, перечислены поддерживаемые сценарии обновления предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
 |Исходная версия|Поддерживаемые варианты обновления|  
 |------------------|----------------------------|  
-|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]SP4 для предприятий|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Компании<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика|  
-|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Пакет обновления 4 (SP4)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Developer|  
-|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Стандарт SP4|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Компании<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
-|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Рабочая группа SP4|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Компании<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
-|
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Express с пакетом обновления 4 (SP4),<br /><br /> 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Express с инструментами, пакетом обновления 4 (SP4) и<br /><br /> 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Express с дополнительными службами и пакетом обновления 4 (SP4)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Компании<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Интернет<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Ражающий|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]SP3 Enterprise|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Компании<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Пакет обновления 3 (SP3)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Developer|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Standard с пакетом обновления 3 (SP3)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Standard|  
-|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Small Business с пакетом обновления 3 (SP3)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]SP3, веб|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Компании<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Интернет|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]SP3, Рабочая группа|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Компании<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Standard|  
-|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Express с пакетом обновления 3 (SP3),<br /><br /> 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Express с инструментами, пакетом обновления 3 (SP3) и<br /><br /> 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Express с дополнительными службами и пакетом обновления 3 (SP3)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Компании<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Интернет<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Ражающий|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]Центр обработки данных с пакетом обновления 2|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Компании<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]SP2 Enterprise|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Компании<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]Пакет SP2 для разработчиков|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Developer|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]Пакет обновления 2 для малого бизнеса|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Standard|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]SP2 Standard|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Компании<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Standard|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]SP2 Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Интернет|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]SP2, Рабочая группа|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Standard|  
-|
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Express с пакетом обновления 2 (SP2),<br /><br /> 
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Express с инструментами, пакетом обновления 2 (SP2) и<br /><br /> 
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Express с дополнительными службами и пакетом обновления 2 (SP2)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Компании<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Ражающий|  
-|
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise с пакетом обновления 1 (SP1)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Компании<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика|  
-|
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Developer с пакетом обновления 1 (SP1)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Developer|  
-|
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Standard с пакетом обновления 1 (SP1)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Компании<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Standard|  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1, веб-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Компании<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Интернет|  
-|
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Express с пакетом обновления 1 (SP1),<br /><br /> 
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express с инструментами, пакетом обновления 1 (SP1) и<br /><br /> 
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Express Management Studio с пакетом обновления 1 (SP1) и<br /><br /> 
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Express с дополнительными службами и пакетом обновления 1 (SP1)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Компании<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Интернет<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Ражающий|  
-|
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Business Intelligence с пакетом обновления 1 (SP1)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Компании<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика|  
+|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Enterprise с пакетом обновления 4 (SP4)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
+|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Developer с пакетом обновления 4 (SP4)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|  
+|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Standard с пакетом обновления 4 (SP4)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Workgroup с пакетом обновления 4 (SP4)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Express с пакетом обновления 4 (SP4),<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Express с инструментами, пакетом обновления 4 (SP4) и<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Express с дополнительными службами и пакетом обновления 4 (SP4)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Enterprise с пакетом обновления 3 (SP3)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Developer с пакетом обновления 3 (SP3)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Standard с пакетом обновления 3 (SP3)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Small Business с пакетом обновления 3 (SP3)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Web с пакетом обновления 3 (SP3)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Workgroup с пакетом обновления 3 (SP3)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Express с пакетом обновления 3 (SP3),<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Express с инструментами, пакетом обновления 3 (SP3) и<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Express с дополнительными службами и пакетом обновления 3 (SP3)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Datacenter с пакетом обновления 2 (SP2)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Enterprise с пакетом обновления 2 (SP2)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Developer с пакетом обновления 2 (SP2)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Small Business с пакетом обновления 2 (SP2)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Standard с пакетом обновления 2 (SP2)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Web с пакетом обновления 2 (SP2)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Workgroup с пакетом обновления 2 (SP2)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Express с пакетом обновления 2 (SP2),<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Express с инструментами, пакетом обновления 2 (SP2) и<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Express с дополнительными службами и пакетом обновления 2 (SP2)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise с пакетом обновления 1 (SP1)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Developer с пакетом обновления 1 (SP1)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Standard с пакетом обновления 1 (SP1)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Web с пакетом обновления 1 (SP1)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Express с пакетом обновления 1 (SP1),<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express с инструментами, пакетом обновления 1 (SP1) и<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Express Management Studio с пакетом обновления 1 (SP1) и<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Express с дополнительными службами и пакетом обновления 1 (SP1)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Business Intelligence с пакетом обновления 1 (SP1)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
   
-### <a name="includesssql14includessssql14-mdmd-support-for-includessversion2005includesssversion2005-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Поддержка[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+### <a name="sssql14-support-for-ssversion2005"></a>Поддержка [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] для [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
  В этом разделе описывается поддержка [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] для [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. В [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]вы сможете выполнить следующие действия.  
   
 -   Обновить экземпляр Database Engine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , запустив программу установки [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с помощью мастера установки или из командной строки.  
@@ -168,28 +145,27 @@ ms.locfileid: "62775227"
   
 -   Поддержка компонентов служб Integration Services [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] сторонних разработчиков, например выполнение и обновление.  
   
-## <a name="includesssql14includessssql14-mdmd-edition-upgrade"></a>
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Обновление выпуска  
+## <a name="sssql14-edition-upgrade"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Обновление выпуска  
  В следующей таблице перечислены поддерживаемые сценарии обновлений в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
  Пошаговые инструкции по выполнению обновления выпуска см. в статье [обновление до другого выпуска SQL Server 2014 &#40;&#41;установки ](upgrade-to-a-different-edition-of-sql-server-setup.md).  
   
 |Исходная версия|Обновленная версия|  
 |------------------|----------------|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (сервер + CAL и Core) <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (лицензия Server + CAL или Core)|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Ознакомительная версия Enterprise <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (лицензия Server+CAL или Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Developer<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Интернет<br /><br /> Обновление с переходом от Evaluation Enterprise (бесплатного выпуска) на любой из платных выпусков поддерживается для изолированных установок, но не поддерживается для кластеризованных установок.|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Стандартный <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (лицензия Server + CAL или Core)|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Разработчик <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (лицензия Server + CAL или Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Интернет<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Standard|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Интернет|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (лицензия Server + CAL или Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Standard|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Express <sup>1</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (лицензия Server + CAL или Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Бизнес-аналитика<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Developer<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Интернет|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (сервер + CAL и Core) <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (лицензия Server+CAL или Core)|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Ознакомительная версия Enterprise <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (лицензия Server+CAL или Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> Обновление с переходом от Evaluation Enterprise (бесплатного выпуска) на любой из платных выпусков поддерживается для изолированных установок, но не поддерживается для кластеризованных установок.|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Стандартный <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (лицензия Server+CAL или Core)|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Разработчик <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (лицензия Server+CAL или Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (лицензия Server+CAL или Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Express <sup>1</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (лицензия Server+CAL или Core)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|  
   
  Кроме того, можно выполнить обновление выпуска между выпусками [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (лицензия Server+CAL) и [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (лицензия Core).  
   
 |Обновление выпуска c|Обновление выпуска до|  
 |--------------------------|------------------------|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (лицензия Server + CAL) <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (лицензия Core)|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (лицензия Core)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (лицензия Server + CAL)|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (лицензия Server + CAL) <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (лицензия Core)|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (лицензия Core)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (лицензия Server+CAL)|  
   
  <sup>1</sup> также применяется к [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express с инструментами и [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express с дополнительными службами.  
   
@@ -203,7 +179,7 @@ ms.locfileid: "62775227"
   
 -   SQL Server 2014 Enterprise Evaluation до SQL Server 2014 Standard.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции, поддерживаемые различными выпусками SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Требования к оборудованию и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Обновление до SQL Server 2014](upgrade-sql-server.md)   

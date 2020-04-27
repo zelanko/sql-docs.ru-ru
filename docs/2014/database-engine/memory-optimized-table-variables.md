@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774432"
 ---
 # <a name="memory-optimized-table-variables"></a>Переменные оптимизированной для памяти таблицы
@@ -60,8 +60,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
  Пример показывает, что синтаксис оптимизированных для памяти табличных типов похож на дисковые табличные типы, за исключением следующих случаев.  
   
--   
-  `MEMORY_OPTIMIZED=ON` указывает, что табличный тип является оптимизированным для памяти.  
+-   `MEMORY_OPTIMIZED=ON` указывает, что табличный тип является оптимизированным для памяти.  
   
 -   Тип должен иметь по крайней мере один индекс. Как и в случае с оптимизированными для памяти таблицами, можно использовать хэш-индексы и некластеризованные индексы.  
   
@@ -187,7 +186,7 @@ GO
   
  Память учитывается как часть одного потребителя памяти PGPOOL базы данных.  
   
-## <a name="see-also"></a>См. также:  
- [Поддержка Transact-SQL для выполняющейся в памяти OLTP](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
+## <a name="see-also"></a>См. также  
+ [Поддержка Transact-SQL для In-Memory OLTP](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
   

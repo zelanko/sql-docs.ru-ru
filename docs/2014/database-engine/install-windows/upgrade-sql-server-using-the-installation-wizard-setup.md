@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775424"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Обновление до версии SQL Server 2014 с помощью мастера установки (программа установки)
@@ -29,7 +29,7 @@ ms.locfileid: "62775424"
   
 -   [Работа с несколькими версиями и экземплярами SQL Server](../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
   
--   [Обновление экземпляра отказоустойчивого кластера SQL Server &#40;установки&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)  
+-   [Обновление экземпляра отказоустойчивого кластера SQL Server (программа установки)](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)  
   
 -   [Install SQL Server 2014 from the Command Prompt](install-sql-server-from-the-command-prompt.md)  
   
@@ -38,27 +38,27 @@ ms.locfileid: "62775424"
 > [!NOTE]  
 >  Обновление предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] не поддерживается на компьютере с [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core с пакетом обновления 1 (SP1). Дополнительные сведения об установке основных серверных компонентов см. в разделе [Install SQL Server 2014 на Server Core](install-sql-server-on-server-core.md).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Необходимо запустить программу установки с правами администратора. При установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из удаленной общей папки необходимо пользоваться учетной записью домена, имеющей разрешения на чтение и выполнение в удаленной общей папке и являющейся локальным администратором.  
   
  Перед обновлением компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] просмотрите следующие разделы:  
   
 -   [Обновление до SQL Server 2014](upgrade-sql-server.md)  
   
--   [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Требования к аппаратному и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Параметры для средства проверки конфигурации системы](check-parameters-for-the-system-configuration-checker.md)  
   
 -   [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
--   [Обратная совместимость компонента SQL Server Database Engine](../sql-server-database-engine-backward-compatibility.md)  
+-   [Обратная совместимость компонента ядра СУБД SQL Server](../sql-server-database-engine-backward-compatibility.md)  
   
 > [!WARNING]  
 >  Не забудьте, что во время обновления невозможно ни изменять обновляемые компоненты, ни добавлять их. Дополнительные сведения о добавлении компонентов к обновленному экземпляру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] после завершения операции обновления см. в разделе [Добавление компонентов в экземпляр компонента SQL Server 2014 &#40;&#41;установки ](add-features-to-an-instance-of-sql-server-setup.md).  
   
 ## <a name="procedure"></a>Процедура  
   
-#### <a name="to-upgrade-to-includesscurrentincludessscurrent-mdmd"></a>Обновление до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-upgrade-to-sscurrent"></a>Обновление до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , перейдите в корневую папку и дважды щелкните файл Setup.exe. Чтобы выполнить установку из общего сетевого ресурса, перейдите в его корневой каталог и дважды щелкните файл Setup.exe.  
   
@@ -82,8 +82,7 @@ ms.locfileid: "62775424"
   
 11. На странице «Выбор компонентов» автоматически выделяются обновляемые компоненты. После выбора компонента описание его группы отображается в правой панели окна.  
   
-     Требования для выбранных компонентов показаны на правой панели. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установит обязательный компонент, который еще не был установлен, в шаге установки, описанном ниже в данной процедуре.  
+     Требования для выбранных компонентов показаны на правой панели. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установит обязательный компонент, который еще не был установлен, в шаге установки, описанном ниже в данной процедуре.  
   
     > [!NOTE]  
     >  Если вы выбрали обновление общих компонентов, выбрав ** \<обновление только общие компоненты>** на странице **Выбор экземпляра** , все общие компоненты будут выбраны на странице Выбор компонентов. Все общие компоненты обновляются одновременно.  
@@ -94,18 +93,17 @@ ms.locfileid: "62775424"
   
      Все обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (в том числе и пакеты обновления) применяются к каждому из компонентов экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Установленные экземпляры** — в сетке будут показаны экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , наявляющиеся на компьютере, на котором запущена программа установки. Поскольку экземпляр по умолчанию на компьютере уже имеется, необходимо установить именованный экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+     **Установленные экземпляры** — в этой сетке перечислены все экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установленные на компьютере, на котором запущена программа установки. Поскольку экземпляр по умолчанию на компьютере уже имеется, необходимо установить именованный экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 13. Набор операций, оставшихся в этом разделе, зависит от того, какие компоненты были выбраны для установки. В зависимости от сделанного выбора могут отображаться не все страницы.  
   
 14. На странице "Конфигурация сервера: учетные записи служб" для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображаются учетные записи по умолчанию. Набор служб, которые можно настроить на этой странице, зависит от компонентов, выбранных для обновления.  
   
-     Сведения для проверки подлинности и имена входа будут перенесены из предыдущего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно назначить одну учетную запись входа всем службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или настроить учетные записи служб индивидуально. Можно также указать, будут службы запускаться автоматически или вручную либо будут отключены. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует настраивать учетные записи служб индивидуально, предоставляя каждой из служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] минимальные разрешения, необходимые для выполнения ее задач. Дополнительные сведения см. в разделе [Настройка учетных записей службы Windows и разрешений](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     Сведения для проверки подлинности и имена входа будут перенесены из предыдущего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно назначить одну учетную запись входа всем службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или настроить учетные записи служб индивидуально. Можно также указать, будут службы запускаться автоматически или вручную либо будут отключены. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует настраивать учетные записи служб индивидуально, предоставляя каждой из служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] минимальные разрешения, необходимые для выполнения ее задач. Дополнительные сведения см. в разделе [Настройка учетных записей службы Windows и разрешений](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Чтобы задать одну учетную запись входа для всех учетных записей служб этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], укажите учетные данные в полях, которые находятся в нижней части страницы.  
   
-     **Примечание по безопасности**[!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+     **Примечание по безопасности.** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
      После ввода данных входа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нажмите кнопку **Далее**.  
   
@@ -113,8 +111,7 @@ ms.locfileid: "62775424"
   
 16. Если все правила удовлетворены, окно «Правила компонентов» автоматически сменится следующим.  
   
-17. На странице готовности к обновлению отображается представление параметров установки в виде дерева, заданных в программе установки. Чтобы продолжить, нажмите кнопку **Установить**. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вначале устанавливает требуемые компоненты для выбранных средств, затем устанавливает сами средства.  
+17. На странице готовности к обновлению отображается представление параметров установки в виде дерева, заданных в программе установки. Чтобы продолжить, нажмите кнопку **Установить**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки вначале устанавливает требуемые компоненты для выбранных средств, затем устанавливает сами средства.  
   
 18. Во время установки на странице выполнения установки отображается состояние установки, позволяющее наблюдать за ее ходом.  
   
@@ -122,16 +119,16 @@ ms.locfileid: "62775424"
   
 20. Если будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения о файлах журналов установки см. в разделе [Просмотр и чтение файлов журналов программы установки SQL Server](view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
  После обновления до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]выполните следующие задачи.  
   
--   **Регистрация серверов** — при обновлении удаляются параметры реестра для предыдущего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После обновления необходимо заново зарегистрировать серверы.  
+-   **Регистрация серверов:** в процессе обновления удаляются настройки реестра для предыдущего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После обновления необходимо заново зарегистрировать серверы.  
   
--   **Обновление статистики** . чтобы оптимизировать производительность запросов, рекомендуется обновить статистику для всех баз данных после обновления. Используйте хранимую процедуру `sp_updatestats` для обновления статистики в пользовательских таблицах баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Обновление статистики** — чтобы оптимизировать производительность запросов, рекомендуется обновить статистику для всех обновленных баз данных. Используйте хранимую процедуру `sp_updatestats` для обновления статистики в пользовательских таблицах баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Настройте новую [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установку** . чтобы уменьшить уязвимую контактную зону системы, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выборочно устанавливает и включает ключевые службы и функции. Дополнительные сведения о настройке контактной зоны см. в файле Readme для данной версии.  
+-   **Настройка новой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  — чтобы уменьшить уязвимую контактную зону системы, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по выбору устанавливает и активирует ключевые службы и функции. Дополнительные сведения о настройке контактной зоны см. в файле Readme для данной версии.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обновление до SQL Server 2014](upgrade-sql-server.md)   
  [Обратная совместимость](../../getting-started/backward-compatibility.md)  
   

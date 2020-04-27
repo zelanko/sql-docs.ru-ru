@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e92fbb8bc29aed54e43925a0670d9a365388df62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808685"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>Соединение с сервером (страница «Дополнительные параметры соединения»)
@@ -35,7 +35,7 @@ ms.locfileid: "62808685"
     > [!IMPORTANT]  
     >  Не указывайте учетные данные и пароли для входа на странице **Дополнительные параметры соединения** . Они не будут зашифрованы при передаче по сети. Вместо этого используйте вкладку **Имя входа** .  
   
-## <a name="task-list"></a>Список задач  
+## <a name="task-list"></a>список задач  
   
 ### <a name="to-show-the-additional-connection-parameters-page"></a>Отображение страницы «Дополнительные параметры соединения»  
   

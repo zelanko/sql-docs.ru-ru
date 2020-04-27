@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41e0ca3ee7ccaa7bb57e5667092c0660e35c4c52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808683"
 ---
 # <a name="connect-to-server-reporting-services"></a>Соединение с сервером (службы Reporting Services)
-  Это диалоговое окно используется для просмотра или указания параметров при [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]соединении с.  
+  Используйте это диалоговое окно для просмотра или настройки параметров при подключении к [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ## <a name="options"></a>Параметры  
  **Тип сервера**  
@@ -34,8 +34,7 @@ ms.locfileid: "62808683"
  Для сервера отчетов, работающего в режиме интеграции с SharePoint, необходимо указать сайт SharePoint. Можно указать любой сайт из семейства сайтов, интегрированного со службами [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Введенный URL-адрес должен содержать префикс HTTP или HTTPS. Чтобы подключиться к сайту SharePoint из среды Management Studio, необходимо иметь разрешение на доступ к нему. Уровень разрешений определяет набор объектов, которые доступны для просмотра и управления. Дополнительные сведения см. в статье [Подключение к серверу отчетов в среде Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
  **Аутентификация**  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] можно настроить для принятия запросов проверки подлинности Windows или запросов проверки подлинности с помощью форм, обрабатываемых нестандартным модулем проверки подлинности. При соединении со службами [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]выберите один из следующих режимов проверки подлинности.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] можно настроить для принятия запросов проверки подлинности Windows или запросов проверки подлинности с помощью форм, обрабатываемых нестандартным модулем проверки подлинности. При соединении со службами [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]выберите один из следующих режимов проверки подлинности.  
   
  **Режим проверки подлинности Windows (проверка подлинности Windows)**  
  Подключитесь к экземпляру сервера отчетов, используя учетные данные [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
@@ -50,17 +49,17 @@ ms.locfileid: "62808683"
  Введите имя входа, которое будет использоваться при соединении. Этот параметр доступен только в том случае, если выбран режим **Обычная проверка подлинности** или **Проверка подлинности с помощью форм**.  
   
  **Пароль**  
- Введите пароль для этого имени пользователя, Этот параметр может редактироваться только в том случае, если выбран режим **Обычная проверка подлинности** или **Проверка подлинности с помощью форм**.  
+ Введите пароль для имени пользователя. Этот параметр может редактироваться только в том случае, если выбран режим **Обычная проверка подлинности** или **Проверка подлинности с помощью форм**.  
   
- **Подключение**  
+ **Подключить**  
  Нажмите, чтобы подключиться к выбранному выше серверу.  
   
  **Параметры**  
  Нажмите, чтобы вывести дополнительные параметры соединения с сервером, такие как регистрация сервера и запоминание пароля.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка подключения к базе данных сервера отчетов &#40;службы SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Подключение к серверу отчетов в среде Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Соединение с сервером отчетов в Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Проверка подлинности с использованием сервера отчетов](../reporting-services/security/authentication-with-the-report-server.md)  
   
   

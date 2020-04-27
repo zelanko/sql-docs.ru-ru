@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773906"
 ---
 # <a name="use-sql-server-management-studio"></a>Использование среды SQL Server Management Studio
@@ -28,7 +28,7 @@ ms.locfileid: "62773906"
   
  Скачайте и установите среду SSMS из [сети разработчиков Майкрософт](https://msdn.microsoft.com/library/dn434042.aspx).  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Возможности среды SQL Server Management Studio](features-in-sql-server-management-studio.md)  
  Описание обширного набора функциональных возможностей, включенных в среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62773906"
  [Решения (среда SQL Server Management Studio)](../ssms/solution/solutions-sql-server-management-studio.md)  
  Методы разработки скриптов проектов и решений.  
   
- [Обозреватель шаблонов](../ssms/template/template-explorer.md)  
+ [Template Explorer](../ssms/template/template-explorer.md)  
  Методы использования шаблонов среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и создания пользовательских шаблонов.  
   
  [Страницы свойств в среде SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)  
@@ -77,7 +77,7 @@ ms.locfileid: "62773906"
  [Конструкторы визуальных инструментов для баз данных](../ssms/visual-db-tools/visual-database-tool-designers.md)  
  Описывает визуальные инструменты для баз данных, с помощью которых можно создавать запросы, конструировать и изменять структуру базы данных или обновлять данные.  
   
-## <a name="see-also"></a>См. также:  
- [Просмотр или изменение свойств сервера &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
+## <a name="see-also"></a>См. также  
+ [Просмотр или изменение свойств сервера (SQL Server)](configure-windows/view-or-change-server-properties-sql-server.md)  
   
   

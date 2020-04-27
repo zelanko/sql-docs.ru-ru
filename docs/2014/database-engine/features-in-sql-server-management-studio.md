@@ -14,14 +14,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 790e02374fe209576c963c5f1e9c6e63e8e2d16b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779828"
 ---
 # <a name="features-in-sql-server-management-studio"></a>Возможности среды SQL Server Management Studio
-  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] обеспечивает следующие основные возможности:  
   
 -   поддерживает большинство административных задач для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)];  
@@ -65,8 +64,7 @@ ms.locfileid: "62779828"
   
 -   встроенная система управления версиями для проектов решений и скриптов, поддерживающая хранение и обслуживание копий скриптов по мере их разработки;  
   
--   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] поддержка технологии IntelliSense для инструкций многомерных выражений.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] поддержка технологии IntelliSense для инструкций многомерных выражений.  
   
 ## <a name="object-explorer-features"></a>Возможности обозревателя объектов  
  Компонент «Обозреватель объектов» среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] представляет собой встроенное средство просмотра и управления объектами на всех типах серверов. Поддерживаются следующие возможности:  
@@ -79,15 +77,14 @@ ms.locfileid: "62779828"
   
  Дополнительные сведения см. в статье [Семантический поиск](../ssms/object/object-explorer.md).  
   
-## <a name="extensibility"></a>Расширяемость  
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] построена на основе среды Visual Studio Isolated Shell, которая по определению поддерживает расширяемость (надстройки и подключаемые модули). Можно подключиться к службам расширяемости Visual Studio для выявления пользовательских возможностей в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], но подобная расширяемость не поддерживается.  
+## <a name="extensibility"></a>Расширение среды  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] построена на основе среды Visual Studio Isolated Shell, которая по определению поддерживает расширяемость (надстройки и подключаемые модули). Можно подключиться к службам расширяемости Visual Studio для выявления пользовательских возможностей в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], но подобная расширяемость не поддерживается.  
   
  Некоторые пользователи и сторонние производители разработали расширения для [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Мы не препятствуем этому, но следует помнить, что подобная расширяемость не поддерживается и могут возникнуть проблемы с обратной или прямой совместимостью. Корпорация Майкрософт не публикует документацию для расширения [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Тем не менее существуют блоги сообществ и примеры кода, которые вы можете использовать.  
   
  Корпорация Майкрософт не поддерживает установки [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] с присутствующими расширениями [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , и в случае установки расширений [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] их может потребоваться удалить перед обращением в службу поддержки пользователей корпорации Майкрософт о неполадке в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование среды SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)  
   
   

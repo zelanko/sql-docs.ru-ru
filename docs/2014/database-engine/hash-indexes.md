@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 263fdcd4b09c4acc6c2bba4d67629f867d64c6b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779498"
 ---
 # <a name="hash-indexes"></a>Хэш-индексы.
@@ -26,8 +26,7 @@ ms.locfileid: "62779498"
   
  Функция, используемая для хэширования индексов, имеет следующие характеристики.  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] имеет одну хэш-функцию, используемую для всех хэш-индексов.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] имеет одну хэш-функцию, используемую для всех хэш-индексов.  
   
 -   Хэш-функция является детерминированной. Один ключ индекса всегда связан с одним контейнером в хэш-индексе.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "62779498"
   
  Дополнительные сведения об индексах оптимизированных для памяти таблиц см. в разделе [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Индексы для оптимизированных для памяти таблиц](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

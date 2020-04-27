@@ -15,20 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f4a4d4ce67d6087ca6efd2cb2285604a3d79d64f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781030"
 ---
 # <a name="performing-transactions-odbc"></a>Выполнение транзакций (ODBC)
-  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживают функции управления транзакциями ODBC API. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] обеспечивает полную поддержку локальных транзакций на отдельном сервере. Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует эти функции для поддержки функций ODBC API, которые управляют транзакциями.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживают функции управления транзакциями ODBC API. [!INCLUDE[msCoName](../../includes/msconame-md.md)] обеспечивает полную поддержку локальных транзакций на отдельном сервере. Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует эти функции для поддержки функций ODBC API, которые управляют транзакциями.  
   
  С помощью координатора распределенных транзакций (Майкрософт) драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может принимать участие в распределенных транзакциях, объединяющих несколько серверов.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Транзакции в ODBC](../../relational-databases/native-client/odbc/performing-transactions-in-odbc.md)  
   

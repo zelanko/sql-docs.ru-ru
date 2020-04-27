@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779140"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Вопросы по установке SQL Server с помощью SysPrep
@@ -30,7 +30,7 @@ ms.locfileid: "62779140"
   
  Дополнительные сведения об установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью Sysprep см. в [статье Установка SQL Server 2014 с помощью Sysprep](install-sql-server-using-sysprep.md).  
   
-## <a name="common-uses-for-includessnoversionincludesssnoversion-mdmd-sysprep"></a>Распространенные варианты применения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
+## <a name="common-uses-for-ssnoversion-sysprep"></a>Распространенные варианты применения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
  Функцию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep можно использовать одним из следующих способов.  
   
 -   На шаге подготовки образа можно подготовить один или несколько ненастроенных экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на одном компьютере. Эти подготовленные экземпляры можно настроить на шаге завершения создания образа на том же компьютере.  
@@ -56,7 +56,7 @@ ms.locfileid: "62779140"
   
     -   Нельзя указать идентификатор продукта для подготавливаемого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition.  
   
-## <a name="supported-includessnoversionincludesssnoversion-mdmd-installations"></a>Поддерживаемые установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="supported-ssnoversion-installations"></a>Поддерживаемые установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep поддерживаются все функции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая средства.  
   
  Можно подготовить несколько экземпляров для параллельной установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] или более ранних версий. Компоненты данных экземпляров должны поддерживать SysPrep.  
@@ -65,16 +65,16 @@ ms.locfileid: "62779140"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и модуль записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подготавливаются автоматически при подготовке экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они создаются по окончании создания экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на шаге завершения создания образа.  
   
- Дополнительные сведения о поддерживаемых выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]смприменяется процесс, состоящий из двух действий. в разделе [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)применяется процесс, состоящий из двух действий.  
+ Сведения о поддерживаемых выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. [в разделе функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Во время настройки подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно выполнить обновление выпусков. Этот параметр не поддерживается для выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
   
  Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep поддерживает установки кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
+## <a name="ssnoversion-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
  Восстановление подготавливаемого экземпляра не поддерживается. При возникновении ошибки в работе программы установки во время подготовки образа или завершения его создания необходимо запустить мастер удаления.  
   
-##  <a name="BKMK_PrepareImage"></a> Подготовка образа  
+##  <a name="prepare-image"></a><a name="BKMK_PrepareImage"></a> Подготовка образа  
  На шаге подготовки образа выполняется установка продукта и компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но не выполняется настройка установки.  
   
  В рамках этого действия можно выбрать компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для установки и указать расположение для установки файлов продукта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно подготовить либо путем выбора пункта **Подготовка образа изолированного экземпляра для развертывания SysPrep** на странице **Дополнительно** в **Центре установки** , либо с помощью командной строки.  
@@ -85,7 +85,7 @@ ms.locfileid: "62779140"
   
  После завершения подготовки экземпляра в меню **Пуск** появляется ярлык, который служит для завершения настройки подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="BKMK_CompleteImage"></a> Завершение создания образа  
+##  <a name="complete-image"></a><a name="BKMK_CompleteImage"></a> Завершение создания образа  
  Завершение создания подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется одним из следующих методов.  
   
 -   с помощью ярлыка в меню «Пуск»;  

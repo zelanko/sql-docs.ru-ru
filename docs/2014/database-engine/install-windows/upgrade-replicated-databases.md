@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775329"
 ---
 # <a name="upgrade-replicated-databases"></a>Обновление реплицируемых баз данных
@@ -65,11 +65,11 @@ ms.locfileid: "62775329"
   
 -   [Создание и применение исходного моментального снимка](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
--   [Запуск и завершение работы агента репликации &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
+-   [Запуск и остановка агента репликации (среда SQL Server Management Studio)](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
   
 -   [Создание и применение исходного моментального снимка](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
--   [Основные понятия исполняемых файлов агента репликации](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
  Дополнительные сведения о выполнении агента слияния см. в следующих разделах.  
   
@@ -88,8 +88,8 @@ ms.locfileid: "62775329"
 ## <a name="restoring-a-replicated-database-from-an-earlier-version"></a>Восстановление из копии реплицированной базы данных из предыдущей версии  
  Чтобы обеспечить неизменность параметров репликации при восстановлении реплицированной базы данных, имеющей более раннюю версию, выполните восстановление на сервер и в базу данных, имеющих те же имена, что и у сервера или базы данных, для которых была сделана резервная копия.  
   
-## <a name="see-also"></a>См. также:  
- [Вопросы и ответы об администрировании репликации](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+## <a name="see-also"></a>См. также  
+ [Вопросы и ответы по администрированию репликации](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Обратная совместимость репликации](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
  [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Обновление до SQL Server 2014](upgrade-sql-server.md)  

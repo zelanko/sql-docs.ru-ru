@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c60a2de7c36eef7f01338e2b8ea8abe29093490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62790223"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>Свойства группы доступности: создание группы доступности (страница настроек резервного копирования)
@@ -28,7 +28,7 @@ ms.locfileid: "62790223"
   
 -   [Просмотр свойств группы доступности (SQL Server)](view-availability-group-properties-sql-server.md)  
   
--   [Использование панели мониторинга AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="where-should-backups-occur"></a>Где должно выполняться резервное копирование?  
  **Предпочтение вторичной**  
@@ -37,7 +37,7 @@ ms.locfileid: "62790223"
  **Только вторичная**  
  Указывает, что резервное копирование никогда не выполняется на первичной реплике. Если первичная реплика является единственной репликой, находящейся в режиме «в сети», резервное копирование не будет выполняться.  
   
- **Источник**  
+ **Первичный**  
  Указывает, что резервное копирования должно всегда выполняться на первичной реплике. Данный параметр является полезным, если вам требуются такие функции резервного копирования, как создание разностных резервных копий, которые не поддерживаются при выполнении резервного копирования на вторичной реплике.  
   
  **Любая реплика**  
@@ -58,7 +58,7 @@ ms.locfileid: "62790223"
  **Исключить реплику**  
  Установите этот параметр, чтобы реплика никогда не выбиралась для выполнения резервного копирования. Этот параметр может быть полезным, например, для исключения удаленной реплики доступности, создание резервных копий на которой нежелательно.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Активные вторичные реплики: резервное копирование во вторичных копиях (группы доступности AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)  
   

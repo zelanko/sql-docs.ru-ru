@@ -11,22 +11,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 06ae79e51fa7526ab0e6bad2747c32d0bc5ca6bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771609"
 ---
 # <a name="certification-by-sap"></a>Сертификация SAP
   Соединитель Microsoft 1.1 для SAP BW получил сертификации от корпорации SAP для интеграции с SAP NetWeaver.  
   
- ![Сертифицировано SAP — интеграция с SAP NetWeaver](media/sapcertifiedforssis11.gif "Сертифицировано SAP — интеграция с SAP NetWeaver")  
+ ![Сертифицировано SAP — интеграция с SAP NetWeaver](media/sapcertifiedforssis11.gif "Сертифицировано SAP — интеграция с SAP NetWeaver")  
   
  В следующей таблице представлены сведения о сертификации.  
   
 |Интерфейс SAP|Уровни выпуска SAP|Дата сертификации|Связанный компонент|  
 |-------------------|------------------------|------------------------|-----------------------|  
 |BW_OHS 7.0 — SAP NetWeaver Business Intelligence — Open Hub Service 7.0|Business Intelligence 7.0|Декабрь 2012 г.|Источник|  
-|BW-STA 3.5 — промежуточные BAPI для SAP BW 3.5|Business Intelligence 3.5, 7.0|Декабрь 2012 г.|Destination|  
+|BW-STA 3.5 — промежуточные BAPI для SAP BW 3.5|Business Intelligence 3.5, 7.0|Декабрь 2012 г.|Назначение|  
   
   

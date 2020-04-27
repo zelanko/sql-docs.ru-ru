@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771580"
 ---
 # <a name="ssis-catalog"></a>Каталог служб SSIS
@@ -41,12 +41,11 @@ ms.locfileid: "62771580"
 >  Если ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] переходят на другой ресурс в процессе отработки отказа кластера, выполняемые пакеты не перезапускаются. Перезапуск пакетов вы можете выполнять с помощью контрольных точек. Дополнительные сведения см. в разделе [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catalog-object-identifiers"></a>Идентификаторы объектов каталога  
- При создании нового объекта в каталоге необходимо назначить имя объекта. Идентификатором объекта является его имя. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет правила, указывающие, какие символы могут использоваться в идентификаторе. Имена следующих объектов должны соответствовать правилам для идентификаторов.  
+ При создании нового объекта в каталоге необходимо назначить имя объекта. Идентификатором объекта является его имя. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет правила, указывающие, какие символы могут использоваться в идентификаторе. Имена следующих объектов должны соответствовать правилам для идентификаторов.  
   
 -   Папка  
   
--   Project  
+-   Проект  
   
 -   Среда  
   
@@ -61,8 +60,7 @@ ms.locfileid: "62771580"
   
 -   Имя не должно содержать начальных и конечных пробелов.  
   
--   
-  \@ нельзя использовать в качестве первого символа. \@ может использоваться в качестве последующих символов.  
+-   \@ нельзя использовать в качестве первого символа. \@ может использоваться в качестве последующих символов.  
   
 -   Длина имени должна быть больше 0 и меньше или равна 128.  
   
@@ -80,8 +78,7 @@ ms.locfileid: "62771580"
   
 -   Имя не должно содержать начальных и конечных пробелов.  
   
--   
-  \@ нельзя использовать в качестве первого символа. \@ может использоваться в качестве последующих символов.  
+-   \@ нельзя использовать в качестве первого символа. \@ может использоваться в качестве последующих символов.  
   
 -   Длина имени должна быть больше 0 и меньше или равна 128.  
   
@@ -113,7 +110,7 @@ ms.locfileid: "62771580"
  **Максимальное количество версий в проекте**  
  Определяет, сколько версий проекта будет храниться в каталоге. Более старые версии проектов удаляются.  
   
-### <a name="encryption-algorithm"></a>"Encryption Algorithm" (Алгоритм шифрования)  
+### <a name="encryption-algorithm"></a>Алгоритм шифрования  
  Свойство **Алгоритм шифрования** указывает тип шифрования, который используется при шифровании значений конфиденциальных параметров. Вы можете выбрать из следующих типов шифрования.  
   
 -   AES_256 (по умолчанию)  
@@ -171,91 +168,91 @@ ms.locfileid: "62771580"
   
 -   Для проекта пользуйтесь страницей **Разрешения** в диалоговом окне [Project Properties Dialog Box](project-properties-dialog-box.md).  
   
- Чтобы управлять разрешениями с помощью Transact-SQL, вызовите [Catalog. grant_permission &#40;базу данных ssisdb&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database), [catalog. Deny_permission &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database) и [Catalog. revoke_permission &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database). Чтобы просмотреть действующие разрешения текущего участника для всех объектов, выполните запрос [catalog.effective_object_permissions (база данных SSISDB)](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database). В этом разделе содержатся описания различных типов разрешений. Для просмотра разрешений, явным образом назначенных пользователю, выполните запрос [catalog.explicit_object_permissions (база данных SSISDB)](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database).  
+ Для управления разрешениями с помощью Transact-SQL вызовите процедуру [catalog.grant_permission (SSISDB Database)](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database), [catalog.deny_permission (SSISDB Database)](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database) или [catalog.revoke_permission (SSISDB Database)](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database). Чтобы просмотреть действующие разрешения текущего участника для всех объектов, выполните запрос [catalog.effective_object_permissions (база данных SSISDB)](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database). В этом разделе содержатся описания различных типов разрешений. Для просмотра разрешений, явным образом назначенных пользователю, выполните запрос [catalog.explicit_object_permissions (база данных SSISDB)](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database).  
   
 ## <a name="folders"></a>Папки  
  Папка содержит один или несколько проектов и сред в `SSISDB` каталоге. Вы можете использовать представление [catalog.folders (база данных SSISDB)](/sql/integration-services/system-views/catalog-folders-ssisdb-database) для получения доступа к сведениям о папках в каталоге. Для управления папками вы можете использовать следующие хранимые процедуры.  
   
--   [Catalog. create_folder &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database)  
+-   [catalog.create_folder (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database)  
   
--   [Catalog. delete_folder &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-delete-folder-ssisdb-database)  
+-   [catalog.delete_folder (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-delete-folder-ssisdb-database)  
   
--   [Catalog. rename_folder &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-rename-folder-ssisdb-database)  
+-   [catalog.rename_folder (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-rename-folder-ssisdb-database)  
   
--   [Catalog. set_folder_description &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database)  
+-   [catalog.set_folder_description (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database)  
   
 ## <a name="projects-and-packages"></a>Проекты и пакеты  
  Каждый проект может содержать несколько пакетов. Как проекты, так и пакеты могут содержать параметры и ссылки на среды. Доступ к параметрам и ссылкам на среды возможен с использованием [Configure Dialog Box](configure-dialog-box.md).  
   
  Вы можете выполнять другие задачи администрирования проекта, вызывая следующие хранимые процедуры.  
   
--   [Catalog. delete_project &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-delete-project-ssisdb-database)  
+-   [catalog.delete_project (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-delete-project-ssisdb-database)  
   
--   [Catalog. deploy_project &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database)  
+-   [catalog.deploy_project (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database)  
   
--   [Catalog. get_project &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-get-project-ssisdb-database)  
+-   [catalog.get_project (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-get-project-ssisdb-database)  
   
--   [Catalog. move_project &#40;&#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-move-project-ssisdb-database)  
+-   [catalog.move_project (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-move-project-ssisdb-database)  
   
--   [Catalog. restore_project &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database)  
+-   [catalog.restore_project (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database)  
   
  Эти представления содержат сведения о пакетах, проектах и версиях проектов.  
   
--   [Catalog. Projects &#40;база данных SSISDB&#41;](/sql/integration-services/system-views/catalog-projects-ssisdb-database)  
+-   [catalog.projects (база данных SSISDB)](/sql/integration-services/system-views/catalog-projects-ssisdb-database)  
   
--   [Catalog. Packages &#40;база данных SSISDB&#41;](/sql/integration-services/system-views/catalog-packages-ssisdb-database)  
+-   [catalog.packages (база данных SSISDB)](/sql/integration-services/system-views/catalog-packages-ssisdb-database)  
   
--   [Catalog. object_versions &#40;базы данных SSISDB&#41;](/sql/integration-services/system-views/catalog-object-versions-ssisdb-database)  
+-   [catalog.object_versions (база данных SSISDB)](/sql/integration-services/system-views/catalog-object-versions-ssisdb-database)  
   
 ## <a name="parameters"></a>Параметры  
  Параметры используются для присвоения значений свойствам пакета во время выполнения пакета. Для задания значения параметра проекта или пакета и очистки этого значения следует вызвать процедуру [catalog.set_object_parameter_value (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database) или [catalog.clear_object_parameter_value (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database). Чтобы задать значение параметра для экземпляра выполнения, следует вызвать [catalog.set_execution_parameter_value (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database). Значения параметров по умолчанию можно получить, вызвав процедуру [catalog.get_parameter_values (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database).  
   
  Эти представления показывают параметры для всех пакетов и проектов, а также значения параметров, используемые для экземпляра выполнения.  
   
--   [Catalog. object_parameters &#40;базы данных SSISDB&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database)  
+-   [catalog.object_parameters (база данных SSISDB)](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database)  
   
--   [Catalog. execution_parameter_values &#40;базы данных SSISDB&#41;](/sql/integration-services/system-views/catalog-execution-parameter-values-ssisdb-database)  
+-   [catalog.execution_parameter_values (база данных SSISDB)](/sql/integration-services/system-views/catalog-execution-parameter-values-ssisdb-database)  
   
 ## <a name="server-environments-server-variables-and-server-environment-references"></a>Серверные среды, переменные сервера и ссылки на серверные среды  
  Серверные среды содержат переменные сервера. Значения переменных могут использоваться при выполнении или проверке пакета на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Следующие хранимые процедуры позволяют выполнять многие другие задачи управления для сред и переменных.  
   
--   [Catalog. create_environment &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-create-environment-ssisdb-database)  
+-   [catalog.create_environment (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-create-environment-ssisdb-database)  
   
--   [Catalog. delete_environment &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-delete-environment-ssisdb-database)  
+-   [catalog.delete_environment (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-delete-environment-ssisdb-database)  
   
--   [Catalog. move_environment &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database)  
+-   [catalog.move_environment (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database)  
   
--   [Catalog. rename_environment &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-rename-environment-ssisdb-database)  
+-   [catalog.rename_environment (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-rename-environment-ssisdb-database)  
   
--   [Catalog. set_environment_property &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-set-environment-property-ssisdb-database)  
+-   [catalog.set_environment_property (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-set-environment-property-ssisdb-database)  
   
--   [Catalog. create_environment_variable &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-create-environment-variable-ssisdb-database)  
+-   [catalog.create_environment_variable (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-create-environment-variable-ssisdb-database)  
   
--   [Catalog. delete_environment_variable &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-delete-environment-variable-ssisdb-database)  
+-   [catalog.delete_environment_variable (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-delete-environment-variable-ssisdb-database)  
   
--   [Catalog. set_environment_variable_property &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-set-environment-variable-property-ssisdb-database)  
+-   [catalog.set_environment_variable_property (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-set-environment-variable-property-ssisdb-database)  
   
--   [Catalog. set_environment_variable_value &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-set-environment-variable-value-ssisdb-database)  
+-   [catalog.set_environment_variable_value (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-set-environment-variable-value-ssisdb-database)  
   
  Вызов хранимой процедуры [catalog.set_environment_variable_protection (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-set-environment-variable-protection-ssisdb-database) позволит установить бит конфиденциальности для переменной.  
   
  Для использования значения серверной переменной необходимо указать ссылку между проектом и серверной средой. Вы можете использовать следующие хранимые процедуры создания и удаления ссылок. Вы можете также указать, может ли среда находиться в той же папке, что и проект, или в другой папке.  
   
--   [Catalog. create_environment_reference &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-create-environment-reference-ssisdb-database)  
+-   [catalog.create_environment_reference (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-create-environment-reference-ssisdb-database)  
   
--   [Catalog. delete_environment_reference &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-delete-environment-reference-ssisdb-database)  
+-   [catalog.delete_environment_reference (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-delete-environment-reference-ssisdb-database)  
   
--   [Catalog. set_environment_reference_type &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-set-environment-reference-type-ssisdb-database)  
+-   [catalog.set_environment_reference_type (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-set-environment-reference-type-ssisdb-database)  
   
  Чтобы получить дополнительные сведения о средах и переменных, выполните запрос к этим представлениям.  
   
--   [Catalog. Environments &#40;база данных SSISDB&#41;](/sql/integration-services/system-views/catalog-environments-ssisdb-database)  
+-   [catalog.environments (база данных SSISDB)](/sql/integration-services/system-views/catalog-environments-ssisdb-database)  
   
--   [Catalog. environment_variables &#40;базы данных SSISDB&#41;](/sql/integration-services/system-views/catalog-environment-variables-ssisdb-database)  
+-   [catalog.environment_variables (база данных SSISDB)](/sql/integration-services/system-views/catalog-environment-variables-ssisdb-database)  
   
--   [Catalog. environment_references &#40;базы данных SSISDB&#41;](/sql/integration-services/system-views/catalog-environment-references-ssisdb-database)  
+-   [catalog.environment_references (база данных SSISDB)](/sql/integration-services/system-views/catalog-environment-references-ssisdb-database)  
   
 ## <a name="executions-and-validations"></a>Выполнения и проверки  
  Выполнение — это экземпляр выполнения пакета. Процедуры [catalog.create_execution (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database) и [catalog.start_execution (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) позволяют настроить и запустить выполнение пакета. Чтобы остановить выполнение или проверку пакета или проекта, вызовите [catalog.stop_operation (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database).  
@@ -264,13 +261,13 @@ ms.locfileid: "62771580"
   
  Выполняйте запросы к этим представлениям для получения сведений о выполнениях, проверках и сообщениях, регистрируемых в ходе операций, а также контекстных сведений, связанных с ошибками.  
   
--   [Catalog. выполнений &#40;базы данных SSISDB&#41;](/sql/integration-services/system-views/catalog-executions-ssisdb-database)  
+-   [catalog.executions (база данных SSISDB)](/sql/integration-services/system-views/catalog-executions-ssisdb-database)  
   
--   [Catalog. Operations &#40;база данных SSISDB&#41;](/sql/integration-services/system-views/catalog-operations-ssisdb-database)  
+-   [catalog.operations (база данных SSISDB)](/sql/integration-services/system-views/catalog-operations-ssisdb-database)  
   
--   [Catalog. operation_messages &#40;базы данных SSISDB&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database)  
+-   [catalog.operation_messages (база данных SSISDB)](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database)  
   
--   [Catalog. extended_operation_info &#40;базы данных SSISDB&#41;](/sql/integration-services/system-views/catalog-extended-operation-info-ssisdb-database)  
+-   [catalog.extended_operation_info (база данных SSISDB)](/sql/integration-services/system-views/catalog-extended-operation-info-ssisdb-database)  
   
 -   [catalog.event_messages](/sql/integration-services/system-views/catalog-event-messages)  
   

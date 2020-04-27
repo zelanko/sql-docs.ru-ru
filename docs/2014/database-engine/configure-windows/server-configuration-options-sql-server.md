@@ -28,17 +28,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809572"
 ---
 # <a name="server-configuration-options-sql-server"></a>Параметры конфигурации сервера (SQL Server)
   Управление и оптимизация ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] производятся на основе параметров конфигурации с применением среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или системной хранимой процедуры sp_configure. Наиболее часто используемые параметры конфигурации сервера доступны в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]; доступ ко всем параметрам конфигурации можно получить при помощи sp_configure. Взвесьте возможные последствия для системы, прежде чем устанавливать эти параметры. Дополнительные сведения см. в разделе [Просмотр или изменение свойств сервера (SQL Server)](view-or-change-server-properties-sql-server.md).  
   
 > [!IMPORTANT]  
->  Дополнительные параметры должны изменяться только опытным администратором баз данных или сертифицированным техническим специалистом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Дополнительные параметры должны изменяться только опытным администратором баз данных или сертифицированным техническим специалистом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="categories-of-configuration-options"></a>Категории параметров конфигурации  
  Параметры конфигурации могут вступать в силу:  
@@ -64,80 +64,80 @@ ms.locfileid: "62809572"
   
 -   SC = Самонастраивающиеся параметры.  
   
-    |Параметр конфигурации|Минимальное значение|Максимальное значение|По умолчанию|  
+    |Параметр конфигурации|Минимальное значение|Максимальное значение|Значение по умолчанию|  
     |--------------------------|-------------------|-------------------|-------------|  
-    |[доступ к счетчику контейнеров проверки кэша](access-check-cache-server-configuration-options.md) (A)|0|16 384|0|  
-    |[доступ к квоте кэша проверки](access-check-cache-server-configuration-options.md) (а)|0|2147483647|0|  
-    |[Нерегламентированные распределенные запросы](ad-hoc-distributed-queries-server-configuration-option.md) (A)|0|1|0|  
-    |[сходство масок ввода-вывода](affinity-input-output-mask-server-configuration-option.md) (A, RR)|-2147483648|2147483647|0|  
-    |[affinity64ная маска ввода-вывода](affinity64-input-output-mask-server-configuration-option.md) (A, доступна только в 64-разрядной [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]версии)|-2147483648|2147483647|0|  
-    |[маска сходства](affinity-mask-server-configuration-option.md) (A)|-2147483648|2147483647|0|  
+    |[access check cache bucket count](access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
+    |[access check cache quota](access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
+    |[ad hoc distributed queries](ad-hoc-distributed-queries-server-configuration-option.md) (A)|0|1|0|  
+    |[affinity I/O mask](affinity-input-output-mask-server-configuration-option.md) (A, RR)|-2147483648|2147483647|0|  
+    |[affinity64 I/O mask](affinity64-input-output-mask-server-configuration-option.md) (A, доступно только в 64-разрядной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])|-2147483648|2147483647|0|  
+    |[affinity mask](affinity-mask-server-configuration-option.md) (A)|-2147483648|2147483647|0|  
     |[Маска affinity64](affinity64-mask-server-configuration-option.md) (A, RR) доступна только в 64-разрядной версии[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
-    |[Агент XPS](agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> (Изменяется на 1, если запускается агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; Значение по умолчанию равно 0, если при установке был указан автоматический запуск агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .)|  
-    |[Разрешить обновления](allow-updates-server-configuration-option.md) (устаревшие. Не используйте. Вызовет ошибку во время повторной настройки.)|0|1|0|  
+    |[Agent XPs](agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> (Изменяется на 1, если запускается агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; Значение по умолчанию равно 0, если при установке был указан автоматический запуск агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .)|  
+    |[allow updates](allow-updates-server-configuration-option.md) (Устаревший. Не используйте. Вызовет ошибку во время повторной настройки.)|0|1|0|  
     |[Контрольная сумма резервной копии: значение по умолчанию](../backup-checksum-default.md)|0|1|0|  
     |[backup compression default](view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1|0|  
-    |[пороговое значение заблокированного процесса](blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
-    |[режим аудита C2](c2-audit-mode-server-configuration-option.md) (A, RR)|0|1|0|  
+    |[blocked process threshold](blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
+    |[c2 audit mode](c2-audit-mode-server-configuration-option.md) (A, RR)|0|1|0|  
     |[clr enabled](clr-enabled-server-configuration-option.md)|0|1|0|  
-    |[соответствие стандарту Common условия_отбора включено](common-criteria-compliance-enabled-server-configuration-option.md) (a, RR)|0|1|0|  
+    |[common criteria compliance enabled](common-criteria-compliance-enabled-server-configuration-option.md) (A, RR)|0|1|0|  
     |[Проверка подлинности автономной базы данных](contained-database-authentication-server-configuration-option.md)|0||0|  
-    |[пороговое значение стоимости для параллелизма](configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A)|0|32767|5|  
+    |[cost threshold for parallelism](configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A)|0|32767|5|  
     |[cross db ownership chaining](cross-db-ownership-chaining-server-configuration-option.md)|0|1|0|  
-    |[пороговое значение курсора](configure-the-cursor-threshold-server-configuration-option.md) (A)|-1|2147483647|-1|  
-    |[Database Mail XPS](database-mail-xps-server-configuration-option.md) (A)|0|1|0|  
-    |[язык полнотекстового текста по умолчанию](configure-the-default-full-text-language-server-configuration-option.md) (A)|0|2147483647|1033|  
+    |[cursor threshold](configure-the-cursor-threshold-server-configuration-option.md) (A)|-1|2147483647|-1|  
+    |[Database Mail XPs](database-mail-xps-server-configuration-option.md) (A)|0|1|0|  
+    |[default full-text language](configure-the-default-full-text-language-server-configuration-option.md) (A)|0|2147483647|1033|  
     |[язык по умолчанию](configure-the-default-language-server-configuration-option.md)|0|9999|0|  
-    |[Трассировка по умолчанию включена](default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
-    |[запретить результаты триггеров](disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
+    |[default trace enabled](default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
+    |[disallow results from triggers](disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
     |[Поставщик расширенного управления ключами включен](ekm-provider-enabled-server-configuration-option.md)|0|1|0|  
     |[filestream_access_level](filestream-access-level-server-configuration-option.md)|0|2|0|  
-    |[Коэффициент заполнения](configure-the-fill-factor-server-configuration-option.md) (A, RR)|0|100|0|  
+    |[fill factor](configure-the-fill-factor-server-configuration-option.md) (A, RR)|0|100|0|  
     |ft crawl bandwidth (max), см. раздел [ft crawl bandwidth](ft-crawl-bandwidth-server-configuration-option.md)(A)|0|32767|100|  
     |ft crawl bandwidth (min), см. раздел [ft crawl bandwidth](ft-crawl-bandwidth-server-configuration-option.md)(A)|0|32767|0|  
     |ft notify bandwidth (max), см. раздел [ft notify bandwidth](ft-notify-bandwidth-server-configuration-option.md)(A)|0|32767|100|  
     |ft notify bandwidth (min), см. раздел [ft notify bandwidth](ft-notify-bandwidth-server-configuration-option.md)(A)|0|32767|0|  
-    |[память для создания индекса](configure-the-index-create-memory-server-configuration-option.md) (A, SC)|704|2147483647|0|  
-    |[Разрешение проблемных транзакций](in-doubt-xact-resolution-server-configuration-option.md) (A)|0|2|0|  
-    |использование [упрощенных пулов](lightweight-pooling-server-configuration-option.md) (a, RR)|0|1|0|  
-    |[блокировки](configure-the-locks-server-configuration-option.md) (A, RR, SC)|5000|2147483647|0|  
-    |[Максимальная степень параллелизма](configure-the-max-degree-of-parallelism-server-configuration-option.md) (A)|0|32767|0|  
-    |[максимальный диапазон полнотекстового сканирования](max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
-    |[максимальный объем памяти сервера](server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
+    |[index create memory](configure-the-index-create-memory-server-configuration-option.md) (A, SC)|704|2147483647|0|  
+    |[in-doubt xact resolution](in-doubt-xact-resolution-server-configuration-option.md) (A)|0|2|0|  
+    |[lightweight pooling](lightweight-pooling-server-configuration-option.md) (A, RR)|0|1|0|  
+    |[locks](configure-the-locks-server-configuration-option.md) (A, RR, SC)|5000|2147483647|0|  
+    |[max degree of parallelism](configure-the-max-degree-of-parallelism-server-configuration-option.md) (A)|0|32767|0|  
+    |[max full-text crawl range](max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
+    |[max server memory](server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[Максимальное число рабочих потоков](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1024 является максимальным значением, рекомендуемым для 32-разрядных операционных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 2048 — для 64-разрядных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)|0<br /><br /> При нулевом значении максимальное число рабочих потоков не настраивается в зависимости от числа процессоров, с использованием формулы (256 + (*\<процессоры>* -4) * 8) для 32 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -бит и дважды для 64- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]бит.|  
-    |[Хранение носителей](configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
-    |[Минимальный объем памяти на запрос](configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
+    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1024 является максимальным значением, рекомендуемым для 32-разрядных операционных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 2048 — для 64-разрядных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)|0<br /><br /> При нулевом значении максимальное число рабочих потоков не настраивается в зависимости от числа процессоров, с использованием формулы (256 + (*\<процессоры>* -4) * 8) для 32 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -бит и дважды для 64- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]бит.|  
+    |[media retention](configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
+    |[min memory per query](configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  
     |[вложенные триггеры](configure-the-nested-triggers-server-configuration-option.md)|0|1|1|  
-    |[Размер сетевого пакета](configure-the-network-packet-size-server-configuration-option.md) (A)|512|32767|4096|  
-    |[Процедуры OLE-автоматизации](ole-automation-procedures-server-configuration-option.md) (A)|0|1|0|  
-    |[открытые объекты](open-objects-server-configuration-option.md) (A, RR, устаревшие)|0|2147483647|0|  
-    |[оптимизировать для нерегламентированных рабочих нагрузок](optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
+    |[network packet size](configure-the-network-packet-size-server-configuration-option.md) (A)|512|32767|4096|  
+    |[Ole Automation Procedures](ole-automation-procedures-server-configuration-option.md) (A)|0|1|0|  
+    |[open objects](open-objects-server-configuration-option.md) (A, RR, устаревший)|0|2147483647|0|  
+    |[optimize for ad hoc workloads](optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
-    |[предварительное вычисление ранга](precompute-rank-server-configuration-option.md) (A)|0|1|0|  
-    |[повышение приоритета](configure-the-priority-boost-server-configuration-option.md) (A, RR)|0|1|0|  
-    |[ограничение стоимости регулятора запросов](configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  
-    |[Ожидание запроса](configure-the-query-wait-server-configuration-option.md) (а)|-1|2147483647|-1|  
-    |[интервал восстановления](configure-the-recovery-interval-server-configuration-option.md) (A, SC)|0|32767|0|  
-    |[Удаленный доступ](configure-the-remote-access-server-configuration-option.md) (RR)|0|1|1|  
+    |[precompute rank](precompute-rank-server-configuration-option.md) (A)|0|1|0|  
+    |[priority boost](configure-the-priority-boost-server-configuration-option.md) (A, RR)|0|1|0|  
+    |[query governor cost limit](configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  
+    |[query wait](configure-the-query-wait-server-configuration-option.md) (A)|-1|2147483647|-1|  
+    |[recovery interval](configure-the-recovery-interval-server-configuration-option.md) (A, SC)|0|32767|0|  
+    |[remote access](configure-the-remote-access-server-configuration-option.md) (RR)|0|1|1|  
     |[remote admin connections](remote-admin-connections-server-configuration-option.md)|0|1|0|  
     |[время ожидания удаленного входа](configure-the-remote-login-timeout-server-configuration-option.md)|0|2147483647|10|  
     |[remote proc trans](configure-the-remote-proc-trans-server-configuration-option.md)|0|1|0|  
     |[remote query timeout](configure-the-remote-query-timeout-server-configuration-option.md)|0|2147483647|600|  
-    |[Параметр репликации XPS](replication-xps-server-configuration-option.md) (A)|0|1|0|  
-    |[Проверка на наличие процедур запуска](configure-the-scan-for-startup-procs-server-configuration-option.md) (A, RR)|0|1|0|  
+    |[Replication XPs Option](replication-xps-server-configuration-option.md) (A)|0|1|0|  
+    |[scan for startup procs](configure-the-scan-for-startup-procs-server-configuration-option.md) (A, RR)|0|1|0|  
     |[server trigger recursion](server-trigger-recursion-server-configuration-option.md)|0|1|1|  
-    |[задать размер рабочего набора](set-working-set-size-server-configuration-option.md) (A, RR, устаревший)|0|1|0|  
+    |[set working set size](set-working-set-size-server-configuration-option.md) (A, RR, устаревший)|0|1|0|  
     |[show advanced options](show-advanced-options-server-configuration-option.md)|0|1|0|  
-    |[SMO и DMO XPS](smo-and-dmo-xps-server-configuration-option.md) (A)|0|1|1|  
-    |[Преобразование пропускаемых слов](transform-noise-words-server-configuration-option.md) (A)|0|1|0|  
-    |[отсечение двух цифр года](configure-the-two-digit-year-cutoff-server-configuration-option.md) (A)|1753|9999|2049|  
-    |[подключения пользователей](configure-the-user-connections-server-configuration-option.md) (A, RR, SC)|0|32767|0|  
+    |[SMO and DMO XPs](smo-and-dmo-xps-server-configuration-option.md) (A)|0|1|1|  
+    |[transform noise words](transform-noise-words-server-configuration-option.md) (A)|0|1|0|  
+    |[two digit year cutoff](configure-the-two-digit-year-cutoff-server-configuration-option.md) (A)|1753|9999|2049|  
+    |[user connections](configure-the-user-connections-server-configuration-option.md) (A, RR, SC)|0|32767|0|  
     |[параметры пользователя](configure-the-user-options-server-configuration-option.md)|0|32767|0|  
     |[xp_cmdshell](xp-cmdshell-server-configuration-option.md) (A)|0|1|0|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)  
   

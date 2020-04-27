@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4b38fddc5ddd29ae354a7f53a4e448867f31f912
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809356"
 ---
 # <a name="server-properties-general-page---sql-server-management-studio"></a>Свойства сервера (страница «Общие») — среда SQL Server Management Studio
-  Эта страница используется для просмотра сведений об [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установке, предназначенных только для чтения.  
+  Эта страница выводит доступные только для чтения данные об установленной конфигурации [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-grid"></a>Сетка свойств  
  Показывает свойства выбранного сервера — имя сервера, установленную ОС и число процессоров.  
@@ -31,7 +31,7 @@ ms.locfileid: "62809356"
  Отображает имя экземпляра сервера.  
   
  **Продукт**  
- Выводит выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], запущенный в данный момент.  
+ Выводит выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запущенный в данный момент.  
   
  **Операционная система**  
  Отображает версию работающей в настоящий момент ОС [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
@@ -40,7 +40,7 @@ ms.locfileid: "62809356"
  Описывает ОС и оборудование, на которых запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Версия**  
- Выводит номер версии запущенного в настоящий момент выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Выводит номер версии запущенного в настоящий момент выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Язык**  
  Выводит язык, поддерживаемый запущенным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -52,16 +52,16 @@ ms.locfileid: "62809356"
  Выводит число установленных ЦП.  
   
  **Корневой каталог**  
- Выводит путь к данному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обычно "C:\Program Files\Microsoft SQL Server\\".  
+ Выводит путь к данному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , обычно "C:\Program Files\Microsoft SQL Server\\".  
   
  **Параметры сортировки сервера**  
  Выводит параметры сортировки, поддерживаемые сервером. Параметры сортировки задают кодовую страницу и порядок сортировки для работы с данными в Юникоде и других форматах.  
   
  **Кластеризован**  
- Содержит значение **True**, если экземпляр сервера настроен для работы в отказоустойчивом кластере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо значение **False**, если экземпляр сервера не кластеризован.  
+ Содержит значение **True** , если экземпляр сервера настроен для работы в отказоустойчивом кластере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо значение **False** , если экземпляр сервера не кластеризован.  
   
  **Режим HADR включен**  
- Содержит значение **True**, если служба [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] включена, или **False**, если служба [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] отключена. Дополнительные сведения о включении и отключении [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] см. в статье [Включение и отключение групп доступности AlwaysOn (SQL Server)](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
+ Содержит значение **True** , если служба [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] включена, или **False** , если служба [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] отключена. Дополнительные сведения о включении и отключении [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] см. в статье [Включение и отключение групп доступности AlwaysOn (SQL Server)](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 ## <a name="description-field"></a>Поле описания  
  Содержит дополнительные сведения о свойствах сервера.  

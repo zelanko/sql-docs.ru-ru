@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773756"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Администрирование программ (служебная программа SQL Server)
@@ -96,12 +96,12 @@ ms.locfileid: "62773756"
  Каталог UMDW можно настроить: <системный диск\<:\Program Files\Microsoft SQL Server\MSSQL10_50.<имя_UCP>\MSSQL\Data\\, где \<системный диск> — это чаще всего диск C:\. Файл журнала, UMDW_\<GUID>_LOG, находится в том же каталоге.  
   
 > [!NOTE]  
->  Расположение файла UMDW (sysutility_mdw) можно изменить путем отсоединения и присоединения или с помощью инструкции ALTER DATABASE. Рекомендуется использовать инструкцию ALTER DATABASE. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql).  
+>  Расположение файла UMDW (sysutility_mdw) можно изменить путем отсоединения и присоединения или с помощью инструкции ALTER DATABASE. Рекомендуется использовать инструкцию ALTER DATABASE. Дополнительные сведения см. в разделе [ALTER database &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
  Вернуться к значениям по умолчанию  
  Чтобы изменить настройки на этой вкладке на значения по умолчанию, нажмите кнопку **Восстановить значения по умолчанию** , затем кнопку **Применить**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Панель мониторинга служебной программы &#40;служебная программа SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Сведения о развернутом приложении уровня данных &#40;служебная программа SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
  [Сведения о Управляемый экземпляр &#40;служебная программа SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   

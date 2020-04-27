@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781073"
 ---
 # <a name="links-in-clr-integration-security"></a>Ссылки в средствах безопасности интеграции со средой CLR
@@ -49,7 +49,7 @@ ms.locfileid: "62781073"
   
 4.  Это разрешение проверяется применительно к текущему контексту выполнения. Процедуры и функции могут быть созданы с контекстом выполнения, отличным от такового для вызывающего объекта. Сборки всегда создаются с контекстом выполнения процедуры, функции или триггера, по отношению к которому определен этот объект.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Безопасность интеграции со средой CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

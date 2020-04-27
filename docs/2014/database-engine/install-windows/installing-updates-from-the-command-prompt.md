@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51ad82519e8afd5e4a871046465e0cafec2f783e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774988"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Установка обновлений из командной строки
@@ -59,7 +59,7 @@ ms.locfileid: "62774988"
   
  <sup>1</sup> этот параметр нельзя указать, чтобы применить обновление к подготовленному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Вместо этого необходимо указать параметр /instanceID.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения об обслуживании установки SQL Server](../../sql-server/install/overview-of-sql-server-servicing-installation.md)  
   
   

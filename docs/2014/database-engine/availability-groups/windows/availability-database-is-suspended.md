@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 21d788db62fe39b86eb801c028450c16cf845845
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815769"
 ---
 # <a name="availability-database-is-suspended"></a>База данных доступности приостановлена
@@ -28,15 +28,15 @@ ms.locfileid: "62815769"
 |||  
 |-|-|  
 |**Имя политики**|Состояние приостановки базы данных доступности|  
-|**Issue**|База данных доступности приостановлена.|  
+|**Проблема**|База данных доступности приостановлена.|  
 |**Категория**|**Предупреждение**|  
 |**Устанавливают**|База данных доступности|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Эта политика проверяет состояние перемещения данных базы данных-получателя (которая также называется «реплика базы данных-получателя»). Эта политика находится в нерабочем состоянии, если перемещение данных приостановлено. В остальном политика находится в рабочем состоянии.  
   
 > [!NOTE]  
->  Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]сведения о возможных причинах проблем и решениях доступны в разделе [База данных доступности приостановлена](https://go.microsoft.com/fwlink/p/?LinkId=220860) в TechNet Wiki.  
+>   Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]сведения о возможных причинах проблем и решениях доступны в разделе [База данных доступности приостановлена](https://go.microsoft.com/fwlink/p/?LinkId=220860) в TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Возможные причины  
  Возможны следующие причины приостановки синхронизации данных в этой базе данных доступности:  
@@ -48,8 +48,8 @@ ms.locfileid: "62815769"
 ## <a name="possible-solution"></a>Возможное решение  
  Восстановите синхронизацию данных. При повторном возникновении проблемы проверьте группу доступности в журнале событий, а затем с помощью диагностики определите причину приостановки перемещения данных системой.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Использование панели мониторинга AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

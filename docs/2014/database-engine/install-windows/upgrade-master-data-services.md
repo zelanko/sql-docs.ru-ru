@@ -11,18 +11,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774666"
 ---
 # <a name="upgrade-master-data-services"></a>Обновление служб Master Data Services
   Существует четыре варианта обновления до Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Выберите тот из них, который лучше всего подходит в конкретной ситуации.  
   
--   [Обновление без ядро СУБД обновления](#noengine)  
+-   [Обновление без обновления компонента Database Engine](#noengine)  
   
--   [Обновление с ядро СУБД обновлением](#engine)  
+-   [Обновление с обновлением компонента Database Engine](#engine)  
   
 -   [Обновление в сценарии с двумя компьютерами](#twocomputer)  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62774666"
 > -   Пакеты развертывания модели можно использовать только в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в котором они были созданы. Пакеты развертывания модели, созданные [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] в, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]нельзя развернуть в.  
 > -   Можно продолжить использование надстройки служб Master Data Services для Excel версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) после обновления служб Master Data Services и Data Quality Services до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Однако любая более ранняя версия надстройки служб Master Data Services для Excel перестанет работать после обновления до версии SQL Server 2014 CTP2. Можно загрузить надстройку служб Master Data Services для Excel версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) по [этой ссылке](https://go.microsoft.com/fwlink/?LinkId=328664).  
   
-##  <a name="noengine"></a>Обновление без ядро СУБД обновления  
+##  <a name="upgrade-without-database-engine-upgrade"></a><a name="noengine"></a>Обновление без ядро СУБД обновления  
  Этот сценарий можно считать параллельной установкой, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] так как и, и [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливаются параллельно на одном компьютере или на разных компьютерах.  
   
  В этом случае можно продолжить использовать [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] для размещения базы данных служб MDS. Однако схему базы данных служб MDS необходимо обновить, после чего для доступа к ней необходимо будет создать веб-приложение [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . База данных служб MDS больше не доступна с помощью веб-приложения [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
@@ -83,7 +83,7 @@ ms.locfileid: "62774666"
   
     3.  На панели справа в списке **Веб-сайт** выберите один из следующих вариантов.  
   
-        -   **Веб-сайт по умолчанию**, а затем щелкните **создать приложение**.  
+        -   **Веб-сайт по умолчанию**и щелкните **Создать приложение**.  
   
         -   **Создать новый сайт**. При создании нового веб-сайта автоматически создается новое веб-приложение.  
   
@@ -100,12 +100,12 @@ ms.locfileid: "62774666"
   
     3.  Нажмите кнопку **Применить**.  
   
-##  <a name="engine"></a>Обновление с ядро СУБД обновлением  
+##  <a name="upgrade-with-database-engine-upgrade"></a><a name="engine"></a> Обновление с обновлением компонента Database Engine  
  В этом сценарии выполняется обновление компонента Database Engine и приложения [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] с версии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или SQL Server 2012 до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Чтобы выполнить эту задачу, требуются следующие действия.  
   
-1.  **Только [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] для**: Откройте **панель** > управления**программы и компоненты** и удалите Майкрософт [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  **Только для [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** . Откройте **панель управления** > **Программы и компоненты** и удалите Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Обновите компонент Database Engine до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -144,7 +144,7 @@ ms.locfileid: "62774666"
   
     4.  Нажмите кнопку **Обновить базу данных** , чтобы запустить **мастер обновления баз данных**. Дополнительные сведения см. в разделе [Мастер обновления баз данных (диспетчер конфигурации служб Master Data Services)](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
-    5.  Нажмите кнопку **Применить**.  
+    5.  Щелкните **Применить**.  
   
 5.  После завершения обновления создайте веб-приложение [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -154,7 +154,7 @@ ms.locfileid: "62774666"
   
     3.  На панели справа в списке **Веб-сайт** выберите один из следующих вариантов.  
   
-        -   **Веб-сайт по умолчанию**, а затем щелкните **создать приложение**.  
+        -   **Веб-сайт по умолчанию**и щелкните **Создать приложение**.  
   
         -   **Создать новый сайт**. При создании нового веб-сайта автоматически создается новое веб-приложение.  
   
@@ -169,9 +169,9 @@ ms.locfileid: "62774666"
   
     2.  Выберите базу данных служб MDS.  
   
-    3.  Нажмите кнопку **Применить**.  
+    3.  Щелкните **Применить**.  
   
-##  <a name="twocomputer"></a>Обновление в сценарии с двумя компьютерами  
+##  <a name="upgrade-in-two-computer-scenario"></a><a name="twocomputer"></a> Обновление при использовании двух компьютеров  
  В этом сценарии предполагается обновление системы, в которой SQL Server установлена на двух компьютерах: один [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]с, а другой — с SQL Server 2008 R2 или SQL Server 2012.  
   
  Если установлена версия [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], то [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] соответственно продолжает использоваться для размещения базы данных служб MDS на одном компьютере. Однако схему базы данных служб MDS необходимо обновить, после чего для доступа к ней необходимо будет использовать веб-приложение [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . База данных служб MDS больше не доступна с помощью веб-приложения [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
@@ -217,7 +217,7 @@ ms.locfileid: "62774666"
   
     3.  На панели справа в списке **Веб-сайт** выберите один из следующих вариантов.  
   
-        -   **Веб-сайт по умолчанию**, а затем щелкните **создать приложение**.  
+        -   **Веб-сайт по умолчанию**и щелкните **Создать приложение**.  
   
         -   **Создать новый сайт**. При создании нового веб-сайта автоматически создается новое веб-приложение.  
   
@@ -232,9 +232,9 @@ ms.locfileid: "62774666"
   
     2.  Выберите базу данных служб MDS.  
   
-    3.  Нажмите кнопку **Применить**.  
+    3.  Щелкните **Применить**.  
   
-##  <a name="restore"></a>Обновление с восстановлением базы данных из резервной копии  
+##  <a name="upgrade-with-restoring-a-database-from-backup"></a><a name="restore"></a> Обновление с восстановлением базы данных из резервной копии  
  В этом случае [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливается вместе с SQL Server 2008 R2 или SQL Server 2012 на том же компьютере или на разных компьютерах 2. Кроме того, резервная копия базы данных создана на версии более ранней, чем версия [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2, перед обновлением и базы данных должны быть восстановлены.  
   
 -   По умолчанию в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]файлы устанавливаются в каталог *диск*:\Program Files\Microsoft SQL Server\120\Master Data Services.  
@@ -280,7 +280,7 @@ ms.locfileid: "62774666"
   
     3.  На панели справа в списке **Веб-сайт** выберите один из следующих вариантов.  
   
-        -   **Веб-сайт по умолчанию**, а затем щелкните **создать приложение**.  
+        -   **Веб-сайт по умолчанию**и щелкните **Создать приложение**.  
   
         -   **Создать новый сайт**. При создании нового веб-сайта автоматически создается новое веб-приложение.  
   
@@ -295,7 +295,7 @@ ms.locfileid: "62774666"
   
     2.  Выберите базу данных служб MDS.  
   
-    3.  Нажмите кнопку **Применить**.  
+    3.  Щелкните **Применить**.  
   
 ## <a name="troubleshooting"></a>Устранение неполадок  
  **Вопрос.** При открытии веб- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] приложения [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] или отображается сообщение об ошибке "версия клиента несовместима с версией базы данных".  
@@ -304,7 +304,7 @@ ms.locfileid: "62774666"
   
  Она также может возникнуть, если не были выполнены останов и перезапуск **пула приложений служб MDS** в IIS при обновлении схемы базы данных служб MDS. Перезапустите **пул приложений служб MDS** , чтобы устранить проблему.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установка служб Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774787"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>Открытие решений и проектов из системы управления версиями
@@ -27,12 +27,12 @@ ms.locfileid: "62774787"
   
  В следующей таблице описаны подразделы, содержащиеся в этом разделе.  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Открытие решений из системы управления версиями](../../2014/database-engine/open-solutions-from-source-control.md)|Использование среды [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] для открытия решения непосредственно из системы управления версиями.|  
 |[Открытие проекта из системы управления версиями](../../2014/database-engine/open-projects-from-source-control.md)|Открытие проекта из системы управления версиями для извлечения и изменения файлов проекта.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление решений и проектов в систему управления версиями](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)  
   
   

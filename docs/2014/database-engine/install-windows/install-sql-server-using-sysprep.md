@@ -11,15 +11,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775307"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Установка SQL Server 2014 с помощью SysPrep
-  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, доступны в центре установки. На странице **Дополнительно****центра установки** имеется два параметра: **Подготовка образа изолированного экземпляра[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** и **Завершение образа подготовленного изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. В разделах [Подготовка](#prepare) и [Завершение](#complete) подробно описывается процесс установки. Дополнительные сведения см. в разделе [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, доступны в центре установки. На странице **Дополнительно** **центра установки** имеется два параметра: **Подготовка образа изолированного экземпляра[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** и **Завершение образа подготовленного изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . В разделах [Подготовка](#prepare) и [Завершение](#complete) подробно описывается процесс установки. Дополнительные сведения см. в разделе [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
   
  Можно также подготовить и завершить создание экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью командной строки или файла конфигурации. Дополнительные сведения см. в разделе:  
   
@@ -27,14 +26,13 @@ ms.locfileid: "62775307"
   
 -   [установить SQL Server 2014 с помощью файла конфигурации](install-sql-server-using-a-configuration-file.md)  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Перед установкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]изучите разделы в статье [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
  Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выпусках и требованиях к оборудованию и программному обеспечению см. в разделе [требования для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep не поддерживает следующие компоненты.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep не поддерживает следующие компоненты.  
 >   
 >  Установки WOW 64: это компонент 64-разрядного выпуска Windows, который позволяет выполнять 32-разрядные приложения в собственном 32-разрядном режиме.  
   
@@ -52,12 +50,12 @@ ms.locfileid: "62775307"
   
 -   [Удаление подготовленного экземпляра](install-sql-server-using-sysprep.md#Uninstall)  
   
--   [Изменение или Удаление завершенного экземпляра SQL Server.](install-sql-server-using-sysprep.md#bk_Modifying_Uninstalling)  
+-   [Изменение и удаление завершенного экземпляра SQL Server](install-sql-server-using-sysprep.md#bk_Modifying_Uninstalling)  
   
-##  <a name="sysprep"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поддержка кластера Sysprep  
+##  <a name="ssnoversion-sysprep-cluster-support"></a><a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поддержка кластера SysPrep  
  Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep поддерживает кластеризованные экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в установке из командной строки. Дополнительные сведения см. в разделе [Что такое Sysprep?](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx).  
   
-#### <a name="to-prepare-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Подготовка кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (самостоятельно)  
+#### <a name="to-prepare-a-ssnoversion-failover-cluster-unattended"></a>Подготовка кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (самостоятельно)  
   
 1.  Подготовьте образ (как описано в разделе [Вопросы по установке SQL Server с помощью SysPrep](considerations-for-installing-sql-server-using-sysprep.md)) и сохраните образ Windows с помощью обобщения SysPrep. В следующем примере показана подготовка образа.  
   
@@ -77,7 +75,7 @@ ms.locfileid: "62775307"
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-#### <a name="complete-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Завершение кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (самостоятельно)  
+#### <a name="complete-a-ssnoversion-failover-cluster-unattended"></a>Завершение кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (самостоятельно)  
   
 1.  Запустите файл setup.exe с `/ACTION=CompleteFailoverCluster` на узле, принадлежащем доступной группе хранения:  
   
@@ -85,7 +83,7 @@ ms.locfileid: "62775307"
     setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName=<InstanceName>  /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'>:" /FAILOVERCLUSTERNETWORKNAME="<Insert FOI Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /INSTALLSQLDATADIR="<Drive>:\<Path>\MSSQLSERVER" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSYSADMINACCOUNTS="<DomainName\UserName>"  
     ```  
   
-#### <a name="adding-a-node-to-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Добавление узла к существующему кластеру отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (самостоятельно)  
+#### <a name="adding-a-node-to-an-existing-ssnoversion-failover-cluster-unattended"></a>Добавление узла к существующему кластеру отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (самостоятельно)  
   
 1.  Разверните образ, выполнив Windows SysPrep Specialize.  
   
@@ -97,9 +95,9 @@ ms.locfileid: "62775307"
     setup.exe /q /ACTION=AddNode /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-##  <a name="prepare"></a> Подготовка образа  
+##  <a name="prepare-image"></a><a name="prepare"></a>Подготовка образа  
   
-#### <a name="prepare-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Подготовьте изолированный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+#### <a name="prepare-a-stand-alone-instance-of-ssnoversion"></a>Подготовьте изолированный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 1.  Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В корневой папке дважды щелкните файл Setup.exe. Чтобы выполнить установку из общей сетевой папки, перейдите в корневую папку общего ресурса и дважды щелкните файл setup.exe.  
   
@@ -117,19 +115,17 @@ ms.locfileid: "62775307"
   
      Страница **Подготовка типа образа** отображается только при наличии на компьютере ненастроенного подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно подготовить новый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или добавить поддерживаемые компоненты SysPrep к существующему экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере. Дополнительные сведения о добавлении компонентов к подготовленному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Добавление компонентов к подготовленному экземпляру](#AddFeatures).  
   
-8.  На странице **Условия лицензии** прочтите лицензионное соглашение и установите флажок, подтверждая принятие условий соглашения. Чтобы помочь в улучшении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно также включить параметр наблюдения за использованием компонентов и отправлять отчеты в [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+8.  На странице **условия лицензии** прочтите лицензионное соглашение и установите флажок, чтобы принять условия лицензионного соглашения. Чтобы помочь в улучшении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно также включить параметр наблюдения за использованием компонентов и отправлять отчеты в [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 9. На странице **Выбор** компонентов выберите компоненты для установки.  
   
     |||  
     |-|-|  
-    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Репликации<br /><br /> Полнотекстовые компоненты<br /><br /> Data Quality Services<br /><br /> 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Распространяемые компоненты<br /><br /> Общие функции|  
+    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Репликация<br /><br /> Полнотекстовые компоненты<br /><br /> Data Quality Services<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Распространяемые компоненты<br /><br /> Общие функции|  
   
      После выбора имени компонента описание его группы отображается на правой панели окна. Можно установить любое сочетание компонентов (устанавливаемые компоненты отмечаются флажками). Дополнительные сведения см. в статьях [выпуски и компоненты SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) и [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-     Требования для выбранных компонентов показаны на правой панели. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установит обязательный компонент, который еще не был установлен, в шаге установки, описанном ниже в данной процедуре.  
+     Требования для выбранных компонентов показаны на правой панели. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установит обязательный компонент, который еще не был установлен, в шаге установки, описанном ниже в данной процедуре.  
   
 10. На странице **Правила подготовки образа** средство проверки конфигурации проверяет состояние системы компьютера, после чего программа установки продолжает выполнение. Подробные сведения можно просмотреть на экране, нажав кнопку **Показать подробности**, или в виде HTML-отчета, нажав кнопку **Просмотр подробного отчета**.  
   
@@ -147,36 +143,35 @@ ms.locfileid: "62775307"
   
 13. Средство проверки конфигурации системы выполнит правила подготовки образа для оценки конфигурации компьютера с выбранными компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Подробные сведения можно просмотреть на экране, нажав кнопку **Показать подробности**, или в виде HTML-отчета, нажав кнопку **Просмотр подробного отчета**.  
   
-14. На странице **Готовность к подготовке образа** показано представление параметров установки в виде дерева, заданных в программе установки. На этой странице программа установки указывает, включена ли функция обновления продукта, а также последнюю версию обновления. Чтобы продолжить, нажмите кнопку **Подготовить**. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вначале устанавливает требуемые компоненты для выбранных средств, затем устанавливает сами средства.  
+14. На странице **Готовность к подготовке образа** показано представление параметров установки в виде дерева, заданных в программе установки. На этой странице программа установки указывает, включена ли функция обновления продукта, а также последнюю версию обновления. Чтобы продолжить, нажмите кнопку **Подготовить**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки вначале устанавливает требуемые компоненты для выбранных средств, затем устанавливает сами средства.  
   
 15. Во время установки на странице **Ход выполнения подготовки образа** отображается состояние установки, позволяющее наблюдать за ее выполнением.  
   
-16. После установки на странице **Завершение** будет приведена ссылка на файл сводного журнала установки и даны другие важные примечания. Чтобы завершить процесс установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Готово**.  
+16. После установки **полная** страница содержит ссылку на файл сводного журнала для установки и другие важные примечания. Чтобы завершить процесс установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Готово**.  
   
-17. Если будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [Просмотр и чтение SQL Server файлов журнала установки](view-and-read-sql-server-setup-log-files.md).  
+17. Если будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](view-and-read-sql-server-setup-log-files.md).  
   
 18. На этом завершается шаг подготовки. Можно завершить создание образа или выполнить развертывание подготовленного образа, как описано в разделе [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
   
-##  <a name="complete"></a> Завершение создания образа  
+##  <a name="complete-image"></a><a name="complete"></a>Завершить образ  
   
-#### <a name="complete-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Завершение создания подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="complete-a-prepared-instance-of-ssnoversion"></a>Завершение создания подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  При наличии подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в виде образа компьютера в меню «Пуск» появится ярлык. Можно также запустить центр установки и выбрать **Завершение образа подготовленного изолированного экземпляра** на странице **Дополнительно** .  
   
 2.  Средство проверки конфигурации системы запускает операцию обнаружения на компьютере. Чтобы продолжить, нажмите кнопку **ОК**. Подробные сведения можно просмотреть на экране, нажав кнопку **Показать подробности**, или в виде HTML-отчета, нажав кнопку **Просмотр подробного отчета**.  
   
-3.  На странице **Файлы поддержки программы установки** щелкните **Установить** , чтобы установить файлы поддержки программы установки.  
+3.  На странице **файлы поддержки программы установки** нажмите кнопку **установить** , чтобы установить файлы поддержки программы установки.  
   
 4.  Средство проверки конфигурации проверяет состояние системы компьютера, после чего программа установки продолжает выполнение. После завершения проверки нажмите кнопку **Далее** , чтобы продолжить установку. Подробные сведения можно просмотреть на экране, нажав кнопку **Показать подробности**, или в виде HTML-отчета, нажав кнопку **Просмотр подробного отчета**.  
   
 5.  На странице **Ключ продукта** выберите переключатель установки бесплатного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или рабочей версии продукта, которая имеет ключ PID. Дополнительные сведения см. в разделе [выпуски и компоненты SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md). При установке выпуска Evaluation Edition он становится доступен для ознакомления в течение 180 дней с момента завершения этого шага.  
   
-6.  На странице **Условия лицензии** прочтите лицензионное соглашение и установите флажок, подтверждая принятие условий соглашения. Чтобы помочь в улучшении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно также включить параметр наблюдения за использованием компонентов и отправлять отчеты в [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+6.  На странице **условия лицензии** прочтите лицензионное соглашение и установите флажок, чтобы принять условия лицензионного соглашения. Чтобы помочь в улучшении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно также включить параметр наблюдения за использованием компонентов и отправлять отчеты в [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 7.  На странице **Выбор подготовленного** экземпляра выберите в раскрывающемся списке подготовленный экземпляр, создание которого необходимо завершить. Выберите ненастроенный экземпляр в списке **Идентификатор экземпляра** .  
   
-     **Установленные экземпляры:** В этой сетке отображаются все экземпляры, включая подготовленный экземпляр на этом компьютере.  
+     **Установленные экземпляры:** в этой сетке отображаются все экземпляры на этом компьютере, включая подготовленные.  
   
 8.  На странице **Обзор компонента** будут отображены выбранные средства и компоненты, включенные в установку на шаге подготовки. Если необходимо добавить дополнительные компоненты к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не включенному в подготовленный экземпляр, то сначала завершите данный шаг, чтобы закончить создание экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а затем добавьте компоненты на странице **Добавить компоненты** в **Центре установки**.  
   
@@ -191,22 +186,21 @@ ms.locfileid: "62775307"
   
      Все обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (в том числе и пакеты обновления) применяются к каждому из компонентов экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Установленные экземпляры** — в сетке отображаются экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , наявляющиеся на компьютере, на котором запущена программа установки.  
+     **Установленные экземпляры** — в этой сетке перечислены все экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установленные на компьютере, на котором запущена программа установки.  
   
 10. Набор операций, оставшихся в этом разделе, зависит от того, какие компоненты были выбраны на шаге подготовки. В зависимости от выбора на экране могут отображаться не все страницы.  
   
 11. На странице **Настройка сервера** — учетные записи служб укажите учетные записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа для служб. Набор служб, которые можно настроить на этой странице, зависит от компонентов, выбранных при установке.  
   
-     Можно назначить одну учетную запись входа всем службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или настроить учетные записи служб индивидуально. Можно также указать, будут службы запускаться автоматически или вручную либо будут отключены. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует настраивать учетные записи служб отдельно, чтобы каждой службе предоставлялся минимальный набор, с тем условием, чтобы службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставлялись минимальные права доступа, необходимые для выполнения их задач. Дополнительные сведения см. в разделах [Настройка сервера — учетные записи служб](../../sql-server/install/server-configuration-service-accounts.md) и [Настройка учетных записей службы Windows и разрешений](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     Можно назначить одну учетную запись входа всем службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или настроить учетные записи служб индивидуально. Можно также указать, будут службы запускаться автоматически или вручную либо будут отключены. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует настраивать учетные записи служб отдельно, чтобы каждой службе предоставлялся минимальный набор, с тем условием, чтобы службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставлялись минимальные права доступа, необходимые для выполнения их задач. Дополнительные сведения см. в разделах [Настройка сервера — учетные записи служб](../../sql-server/install/server-configuration-service-accounts.md) и [Настройка учетных записей службы Windows и разрешений](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Чтобы задать одну учетную запись входа для всех учетных записей служб этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], укажите учетные данные в полях, которые находятся в нижней части страницы.  
   
-     **Примечание по безопасности**[!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+     **Примечание по безопасности.** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
      После ввода данных входа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нажмите кнопку **Далее**.  
   
-12. На вкладке **Настройка сервера — параметры сортировки** можно для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]задать параметры сортировки, отличные от параметров по умолчанию. Дополнительные сведения см. в разделе [Настройка сервера — параметры сортировки](../../sql-server/install/server-configuration-collation.md).  
+12. Используйте вкладку **Конфигурация сервера — параметры сортировки** , чтобы указать параметры сортировки, [!INCLUDE[ssDE](../../includes/ssde-md.md)] отличные от параметров по умолчанию для и. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Дополнительные сведения см. в разделе [Настройка сервера — параметры сортировки](../../sql-server/install/server-configuration-collation.md).  
   
 13. На странице «Настройка компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] — провизионирование учетных записей» укажите следующие сведения:  
   
@@ -214,8 +208,7 @@ ms.locfileid: "62775307"
   
          После удачного соединения устройства с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в режиме проверки подлинности Windows и смешанном режиме начинает действовать один механизм безопасности. Дополнительные сведения см. в разделе [Database Engine Configuration - Account Provisioning](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
-    -   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Администраторы: для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]должен быть задан как минимум один системный администратор. Чтобы добавить учетную запись, с которой выполняется программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Добавить текущего пользователя**. Чтобы добавить или удалить учетные записи из списка системных администраторов, нажмите кнопку **Добавить** или **Удалить**и затем измените список пользователей, групп или компьютеров, которые будут иметь права администраторов на этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Database Engine Configuration - Account Provisioning](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Администраторы: для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]должен быть задан как минимум один системный администратор. Чтобы добавить учетную запись, с которой выполняется программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Добавить текущего пользователя**. Чтобы добавить или удалить учетные записи из списка системных администраторов, нажмите кнопку **Добавить** или **Удалить**, затем измените список пользователей, групп или компьютеров, которые будут иметь права администраторов на этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Database Engine Configuration - Account Provisioning](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
      После изменения списка нажмите кнопку **ОК**. Проверьте список администраторов в диалоговом окне конфигурации. После завершения работы со списком нажмите кнопку **Далее**.  
   
@@ -230,7 +223,7 @@ ms.locfileid: "62775307"
   
 16. На странице «Конфигурация служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] » укажите тип установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения о режимах настройки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Параметры конфигурации служб Reporting Services (SSRS)](../../sql-server/install/reporting-services-configuration-options-ssrs.md).  
   
-17. На странице **Отчеты об ошибках** укажите сведения, которые будут отправлены в [!INCLUDE[msCoName](../../includes/msconame-md.md)] и помогут улучшить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию параметры создания отчетов об ошибках включены.  
+17. На странице **отчеты об ошибках** укажите сведения, которые вы хотите отправить, чтобы [!INCLUDE[msCoName](../../includes/msconame-md.md)] помочь в улучшении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию параметры создания отчетов об ошибках включены.  
   
 18. На странице **Правила завершения образа** средство проверки конфигурации системы применит правила завершения образа для оценки конфигурации компьютера с указанными конфигурациями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Подробные сведения можно просмотреть на экране, нажав кнопку **Показать подробности**, или в виде HTML-отчета, нажав кнопку **Просмотр подробного отчета**.  
   
@@ -238,15 +231,15 @@ ms.locfileid: "62775307"
   
 20. Во время установки на странице **Ход выполнения завершения образа** отображается состояние установки, позволяющее наблюдать за ее выполнением.  
   
-21. После установки на странице **Завершение** будет приведена ссылка на файл сводного журнала установки и даны другие важные примечания. Чтобы завершить процесс установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Готово**.  
+21. После установки **полная** страница содержит ссылку на файл сводного журнала для установки и другие важные примечания. Чтобы завершить процесс установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Готово**.  
   
-22. Если будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [Просмотр и чтение SQL Server файлов журнала установки](view-and-read-sql-server-setup-log-files.md).  
+22. Если будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](view-and-read-sql-server-setup-log-files.md).  
   
 23. Этот шаг завершает настройку подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="AddFeatures"></a>Добавление компонентов к подготовленному экземпляру  
+##  <a name="add-features-to-a-prepared-instance"></a><a name="AddFeatures"></a>Добавление компонентов к подготовленному экземпляру  
   
-#### <a name="add-features-to-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Добавление компонентов к подготовленному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="add-features-to-a-prepared-instance-of-ssnoversion"></a>Добавление компонентов к подготовленному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В корневой папке дважды щелкните файл Setup.exe. Чтобы выполнить установку из общей сетевой папки, перейдите в корневую папку общего ресурса и дважды щелкните файл setup.exe.  
   
@@ -254,14 +247,13 @@ ms.locfileid: "62775307"
   
 3.  Средство проверки конфигурации системы запускает операцию обнаружения на компьютере. Чтобы продолжить, нажмите кнопку **ОК**. Подробные сведения можно просмотреть на экране, нажав кнопку **Показать подробности**, или в виде HTML-отчета, нажав кнопку **Просмотр подробного отчета**.  
   
-4.  На странице Файлы поддержки программы установки щелкните **Установить** , чтобы установить файлы поддержки программы установки.  
+4.  На странице файлы поддержки программы установки нажмите кнопку **установить** , чтобы установить файлы поддержки программы установки.  
   
 5.  На странице **Подготовка типа образа** выберите параметр **Добавить компоненты в существующий подготовленный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Выберите в раскрывающемся списке доступных подготовленных экземпляров конкретный подготовленный экземпляр, к которому необходимо добавить компоненты.  
   
 6.  На странице **Выбор компонентов** укажите компоненты, которые необходимо добавить к указанному подготовленному экземпляру.  
   
-     Требования для выбранных компонентов показаны на правой панели. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установит обязательный компонент, который еще не был установлен, в шаге установки, описанном ниже в данной процедуре.  
+     Требования для выбранных компонентов показаны на правой панели. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установит обязательный компонент, который еще не был установлен, в шаге установки, описанном ниже в данной процедуре.  
   
 7.  На странице **Правила подготовки образа** средство проверки конфигурации проверяет состояние системы компьютера, после чего программа установки продолжает выполнение. Подробные сведения можно просмотреть на экране, нажав кнопку **Показать подробности**, или в виде HTML-отчета, нажав кнопку **Просмотр подробного отчета**.  
   
@@ -269,18 +261,17 @@ ms.locfileid: "62775307"
   
 9. На странице **Правила завершения образа** средство проверки конфигурации выполняет правила подготовки образа для оценки конфигурации компьютера с выбранными компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Подробные сведения можно просмотреть на экране, нажав кнопку **Показать подробности**, или в виде HTML-отчета, нажав кнопку **Просмотр подробного отчета**.  
   
-10. На странице **Готовность к подготовке образа** показано представление параметров установки в виде дерева, заданных в программе установки. Чтобы продолжить, нажмите кнопку **Установить**. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вначале устанавливает требуемые компоненты для выбранных средств, затем устанавливает сами средства.  
+10. На странице **Готовность к подготовке образа** показано представление параметров установки в виде дерева, заданных в программе установки. Чтобы продолжить, нажмите кнопку **Установить**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки вначале устанавливает требуемые компоненты для выбранных средств, затем устанавливает сами средства.  
   
 11. Во время установки на странице **Ход выполнения подготовки образа** отображается состояние установки, позволяющее наблюдать за ее выполнением.  
   
-12. После установки на странице **Завершение** будет приведена ссылка на файл сводного журнала установки и даны другие важные примечания. Чтобы завершить процесс установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Готово**.  
+12. После установки **полная** страница содержит ссылку на файл сводного журнала для установки и другие важные примечания. Чтобы завершить процесс установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Готово**.  
   
-13. Если будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [Просмотр и чтение SQL Server файлов журнала установки](view-and-read-sql-server-setup-log-files.md).  
+13. Если будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](view-and-read-sql-server-setup-log-files.md).  
   
-##  <a name="RemoveFeatures"></a>Удаление компонентов из подготовленного экземпляра  
+##  <a name="remove-features-from-a-prepare-instance"></a><a name="RemoveFeatures"></a>Удаление компонентов из подготовленного экземпляра  
   
-#### <a name="removing-features-from-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Удаление компонентов из подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="removing-features-from-a-prepared-instance-of-ssnoversion"></a>Удаление компонентов из подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Чтобы начать процесс удаления, в меню **Пуск** выберите **Панель управления** , а затем дважды щелкните **Программы и компоненты**.  
   
@@ -300,9 +291,9 @@ ms.locfileid: "62775307"
   
 9. На странице **Завершение** можно предварительно просмотреть состояние завершения операции. Чтобы выйти из мастера установки, нажмите кнопку **Закрыть** .  
   
-##  <a name="Uninstall"></a>Удаление подготовленного экземпляра  
+##  <a name="uninstalling-a-prepared-instance"></a><a name="Uninstall"></a>Удаление подготовленного экземпляра  
   
-#### <a name="uninstall-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Удаление подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="uninstall-a-prepared-instance-of-ssnoversion"></a>Удаление подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Чтобы начать процесс удаления, в меню **Пуск** выберите **Панель управления** , а затем дважды щелкните **Программы и компоненты**.  
   
@@ -324,13 +315,13 @@ ms.locfileid: "62775307"
   
 10. Повторяйте шаги 1–9 до тех пор, пока не будут удалены все компоненты [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
-##  <a name="bk_Modifying_Uninstalling"></a>Изменение или Удаление завершенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+##  <a name="modifying-or-uninstalling-a-completed-instance-of-ssnoversion"></a><a name="bk_Modifying_Uninstalling"></a>Изменение или Удаление завершенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Процесс добавления и удаления компонентов и удаления завершенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аналогичен процессу, выполняемому для установленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в следующих разделах:  
   
 -   [Добавьте компоненты в экземпляр компонента SQL Server 2014 &#40;установки&#41;](add-features-to-an-instance-of-sql-server-setup.md)  
   
 -   [Удаление существующего экземпляра SQL Server (программа установки)](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Что такое Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
- [Как работает Windows Sysprep](https://go.microsoft.com/fwlink/?LinkId=143547)  
+ [Как работает Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143547)  

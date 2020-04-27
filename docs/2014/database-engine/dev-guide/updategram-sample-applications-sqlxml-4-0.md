@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0805ef503f7206ffeb1f7ccaf85fd09e808ac554
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780422"
 ---
 # <a name="updategram-sample-applications-sqlxml-40"></a>Образцы приложений диаграмм обновления (SQLXML 4.0)
@@ -27,7 +27,7 @@ ms.locfileid: "62780422"
   
  Во всех примерах в этом разделе используется образец базы данных AdventureWorks [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в. Все обновления применяются к таблицам базы данных AdventureWorks.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Исполнение Диаграмма обновления с помощью ADO &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/executing-an-updategram-by-using-ado-sqlxml-4-0.md)  
  Содержит приложение [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic, использующее ADO для установки соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выполнения диаграммы обновления.  
   

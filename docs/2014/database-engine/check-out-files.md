@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62786749"
 ---
 # <a name="check-out-files"></a>Извлечение файлов
@@ -57,7 +57,7 @@ ms.locfileid: "62786749"
      **Edit** (Изменение)  
      Изменение элемента без его извлечения. Кнопка **изменить** появляется только в том случае, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] если настроена поддержка редактирования возвращенных файлов.  
   
-     **Название**  
+     **Имя**  
      Отображает имена элементов, доступных для извлечения. Рядом с выбранными элементами отображаются флажки отметки. Если какой-либо элемент не надо извлекать, снимите его флажок.  
   
      **Параметры**  
@@ -66,10 +66,10 @@ ms.locfileid: "62786749"
      **Сортировка**  
      Сортировка порядка отображаемых столбцов.  
   
-     **Представление в виде дерева**  
+     **Структура в виде дерева**  
      Отображение иерархии файлов и папок для извлекаемого элемента.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Изменение возвращенных файлов](../../2014/database-engine/edit-checked-in-files.md)   
  [Автоматически извлекать файлы после изменения](../../2014/database-engine/automatically-check-out-files-upon-edit.md)   
  [Отменить извлечение](../../2014/database-engine/undo-checkouts.md)   

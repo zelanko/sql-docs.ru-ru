@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36f447ce365f25135a521ea7e1760599aa17f9bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812598"
 ---
 # <a name="compare-files"></a>Сравнение файлов
@@ -34,7 +34,7 @@ ms.locfileid: "62812598"
   
 3.  В диалоговом окне **Параметры различий** выберите соответствующие параметры и нажмите кнопку **отчет**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задание и получение сведений о версии](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [Просмотр истории файлов](../../2014/database-engine/view-file-history.md)   
  [Просмотр журнала проекта](../../2014/database-engine/view-project-history.md)   

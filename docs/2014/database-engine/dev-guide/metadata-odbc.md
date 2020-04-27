@@ -14,23 +14,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48f2fde8280a4b309c43e292bda452091d46ee02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781234"
 ---
 # <a name="metadata-odbc"></a>Метаданные (ODBC)
   В этом разделе рассматриваются метаданные параметра, результата столбца и каталога.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Метаданные параметров и результатов](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)  
  Описывает сведения, возвращаемые в полях IPD и IRD для типов данных даты и времени.  
   
  [Метаданные каталога](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)  
  Описывает метаданные столбца, возвращаемые `SQLColumns` и `SQLProcedureColumns`, а также метаданные типа данных, возвращаемые `SQLGetTypeInfo`.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Улучшения даты и времени &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

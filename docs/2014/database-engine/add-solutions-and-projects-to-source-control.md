@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62792094"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>Добавление решений и проектов в систему управления версиями
@@ -29,12 +29,12 @@ ms.locfileid: "62792094"
   
  В следующей таблице описаны подразделы, содержащиеся в этом разделе.  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Добавление решений в систему управления версиями](../../2014/database-engine/add-solutions-to-source-control.md)|Описание типов проектов, которые можно добавлять в систему управления версиями, а также инструкции по добавлению решения в систему.|  
 |[Добавление проектов в систему управления версиями](../../2014/database-engine/add-projects-to-source-control.md)|Инструкции по добавлению проекта к решению.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Открытие решений и проектов из системы управления версиями](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)  
   
   

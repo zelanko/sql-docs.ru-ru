@@ -22,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1536592d7a5463dc1e15df20aee4fe188323cf5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62782117"
 ---
 # <a name="logging-in-to-sql-server"></a>Вход в систему SQL Server
-  Вы можете войти в экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью любого графического средства администрирования или из командной строки.  
+  Войти в систему на экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно с использованием любого графического средства администрирования или из командной строки.  
   
  При входе на экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью графического средства администрирования, такого как среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], пользователю предлагается ввести имя сервера, имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и, при необходимости, пароль. Если вход на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляется с проверкой подлинности Windows, то каждый раз при обращении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]вводить имя входа SQL Server не нужно. Вместо этого в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется учетная запись [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows для автоматического входа в систему. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает в смешанном режиме (проверка подлинности[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows) и пользователь входит в систему с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то необходимо указать имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пароль. По возможности используйте аутентификацию Windows.  
   
@@ -64,8 +64,7 @@ ms.locfileid: "62782117"
 |Соединение с экземпляром по умолчанию по имени при форсировании соединения TCP.|tcp:APPHOST|  
 |Соединение с именованным экземпляром по имени, с принудительным TCP-соединением.|tcp:APPHOST\SQLEXPRESS|  
 |Соединение с экземпляром по умолчанию, с указанием имени именованного канала.|\\\APPHOST\pipe\unit\app|  
-|Соединение с именованным экземпляром, с указанием имени именованного канала.|
-  \\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
+|Соединение с именованным экземпляром, с указанием имени именованного канала.|\\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
 |Соединение с экземпляром по умолчанию по имени, с принудительным подключением к именованным каналам.|np:APPHOST|  
 |Соединение с именованным экземпляром по имени, с принудительным подключением к именованным каналам.|np:APPHOST\SQLEXPRESS|  
   
@@ -79,13 +78,13 @@ WHERE session_id = @@SPID;
 ```  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Войдите в экземпляр SQL Server &#40;командной строки&#41;](log-in-to-an-instance-of-sql-server-command-prompt.md)  
+ [Вход в экземпляр SQL Server (командная строка)](log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  Следующие ресурсы могут помочь устранить проблему с соединением.  
   
--   [Устранение неполадок при подключении к SQL Server ядро СУБД](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
+-   [Поиск и устранение неполадок соединений с SQL Server Database Engine](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
--   [Действия по устранению неполадок с подключением к SQL](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
+-   [Шаги для устранения неполадок с подключением SQL](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
 ## <a name="related-content"></a>См. также  
  [Выбор режима проверки подлинности](../../relational-databases/security/choose-an-authentication-mode.md)  

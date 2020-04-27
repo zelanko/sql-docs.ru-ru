@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a8ffc33de161c71c6f72eebf8616d1e814fb994
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770396"
 ---
 # <a name="ole-db-command-transformation"></a>преобразование «Команда OLE DB»
@@ -49,7 +49,7 @@ ms.locfileid: "62770396"
 ## <a name="related-tasks"></a>Связанные задачи  
  Преобразование можно настроить с помощью конструктора служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или объектной модели. Сведения о настройке преобразования с помощью конструктора [!INCLUDE[ssIS](../../../includes/ssis-md.md)] см. в разделе  [Настройка преобразования "Команда OLE DB"](../../configure-the-ole-db-command-transformation.md). Сведения о настройке этого преобразования программными средствами см. в руководстве разработчика.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поток данных](../data-flow.md)   
  [Преобразования служб Integration Services](integration-services-transformations.md)  
   

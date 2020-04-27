@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779598"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Установка пакета обновления на систему с минимальным временем простоя для зеркально отображаемых баз данных
@@ -56,7 +56,7 @@ ms.locfileid: "62779598"
   
 1.  Создайте полную резервную копию каждой основной базы данных.  
   
-     **Резервное копирование базы данных**  
+     **Создание резервной копии базы данных**  
   
     -   [Создайте полную резервную копию базы данных &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62779598"
   
      **Удаление следящего сервера**  
   
-    -   [Удалите следящий сервер из сеанса зеркального отображения базы данных &#40;SQL Server&#41;](database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
+    -   [Удаление следящего сервера из сеанса зеркального отображения базы данных (SQL Server)](database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
 ### <a name="to-change-a-session-from-high-performance-mode-to-high-safety-mode"></a>Изменение режима сеанса с высокопроизводительного на режим высокой безопасности  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62779598"
   
     -   В [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: измените параметр **Режим работы** на **Высокая безопасность без автоматической отработки отказа (синхронный)** с помощью страницы [Зеркальное отображение](../relational-databases/databases/database-properties-mirroring-page.md) диалогового окна **Свойства базы данных**. Дополнительные сведения о доступе к этой странице см. в разделе [Запуск мастер настройки безопасности зеркального отображения баз данных (среда SQL Server Management Studio)](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
   
-    -   В [!INCLUDE[tsql](../includes/tsql-md.md)]: установите безопасность транзакций в значение FULL. Дополнительные сведения см. в разделе [Изменение безопасности транзакций в сеансах зеркального отображения базы данных (Transact-SQL)](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
+    -   В [!INCLUDE[tsql](../includes/tsql-md.md)]: установите безопасность транзакций в значение FULL. Дополнительные сведения см. [в разделе изменение безопасности транзакций в сеансе зеркального отображения базы данных &#40;&#41;Transact-SQL ](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
 ### <a name="to-perform-the-rolling-update"></a>Выполнение последовательного обновления  
   
@@ -93,9 +93,9 @@ ms.locfileid: "62779598"
   
      После обновления экземпляр сервера автоматически подключится к сеансам зеркального отображения.  
   
-     **Выполнение отработки отказа вручную**  
+     **Отработки отказа вручную**  
   
-    -   [Вручную отработка отказа сеанса зеркального отображения базы данных &#40;SQL Server Management Studio&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
+    -   [Переключение сеанса зеркального отображения базы данных на другой ресурс вручную (среда SQL Server Management Studio)](database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
     -   [Вручную отработка отказа сеанса зеркального отображения базы данных &#40;&#41;Transact-SQL ](database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
@@ -133,17 +133,17 @@ ms.locfileid: "62779598"
   
      **Повторное соединение следящего сервера**  
   
-    -   [Добавление или замена следящего сервера зеркального отображения базы данных &#40;SQL Server Management Studio&#41;](database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
+    -   [Добавление или замена следящего сервера зеркального отображения базы данных (среда SQL Server Management Studio)](database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-    -   [Добавление следящего сервера зеркального отображения базы данных с использованием проверки подлинности Windows &#40;Transact-SQL&#41;](database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
+    -   [Добавление следящего сервера для зеркального отображения базы данных с использованием проверки подлинности Windows (Transact-SQL)](database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [&#41;Transact-SQL для зеркального отображения базы данных ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
- [&#41;BACKUP &#40;Transact-SQL](/sql/t-sql/statements/backup-transact-sql)   
+ [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [SQL Server &#40;зеркального отображения базы данных&#41;](database-mirroring/database-mirroring-sql-server.md)   
  [Режимы работы зеркального отображения базы данных](database-mirroring/database-mirroring-operating-modes.md)   
  [Переключение ролей во время сеанса зеркального отображения базы данных &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Запуск монитора зеркального отображения баз данных &#40;SQL Server Management Studio&#41;](database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
- [Просмотр состояния зеркальной базы данных &#40;SQL Server Management Studio&#41;](database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)  
+ [Просмотр состояния зеркального отображения базы данных (среда SQL Server Management Studio)](database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)  
   
   

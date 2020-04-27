@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812793"
 ---
 # <a name="change-source-control-connections"></a>Изменение соединений с системой управления версиями
@@ -33,9 +33,9 @@ ms.locfileid: "62812793"
   
 1.  В меню **файл** укажите пункт **система управления версиями**, а затем выберите пункт **запустить Microsoft Visual SourceSafe**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основы системы управления версиями](../../2014/database-engine/source-control-basics.md)   
  [Задание параметров системы управления версиями](../../2014/database-engine/set-source-control-options.md)   
- [Исключение файлов из системы управления версиями](../../2014/database-engine/exclude-files-from-source-control.md)  
+ [Исключить файлы из системы управления версиями](../../2014/database-engine/exclude-files-from-source-control.md)  
   
   

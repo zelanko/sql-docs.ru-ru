@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770320"
 ---
 # <a name="term-lookup-transformation"></a>преобразование «Уточняющий запрос термина»
@@ -94,11 +94,11 @@ ms.locfileid: "62770320"
   
  Дополнительные сведения о свойствах, которые можно установить в диалоговом окне **Редактор преобразования «Уточняющий запрос термина»** , см. в следующих разделах:  
   
--   [Редактор преобразования "Уточняющий запрос термина" &#40;вкладка "ссылочная таблица"&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [Редактор преобразования "Уточняющий запрос термина" (вкладка "Ссылочная таблица")](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
--   [Редактор преобразования "Уточняющий запрос термина" &#40;вкладка "Поиск терминов"&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
+-   [Редактор преобразований "Уточняющий запрос термина" (вкладка "Уточняющий запрос термина")](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
--   [Редактор преобразования "Уточняющий запрос термина" &#40;вкладка "Дополнительно"&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
+-   [Редактор преобразования "Уточняющий запрос термина" (вкладка "Дополнительно")](../../term-lookup-transformation-editor-advanced-tab.md)  
   
  Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   

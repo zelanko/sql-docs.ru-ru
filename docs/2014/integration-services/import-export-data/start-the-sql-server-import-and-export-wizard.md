@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768036"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Запуск мастера импорта и экспорта SQL Server
@@ -73,7 +73,7 @@ ms.locfileid: "62768036"
         |--------------|-----------|  
         |Параметры сортировки|Latin1_General_CS_AS_KS_WS|  
         |Модель восстановления|Полное|  
-        |Использовать полнотекстовое индексирование|Истина|  
+        |Использовать полнотекстовое индексирование|True|  
   
     -   Выберите, копировать ли данные из таблиц или представлений или копировать результаты запроса.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "62768036"
     > [!NOTE]  
     >  В выпуске [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] пакет, созданный при помощи мастера, сохранить нельзя.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Мастер импорта и экспорта SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [Создание пакетов в SQL Server Data Tools](../create-packages-in-sql-server-data-tools.md)  
   

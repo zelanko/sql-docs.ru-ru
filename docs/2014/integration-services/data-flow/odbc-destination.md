@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771030"
 ---
 # <a name="odbc-destination"></a>Назначение ODBC
@@ -26,7 +26,7 @@ ms.locfileid: "62771030"
   
  Назначение ODBC имеет один обычный вывод и один вывод ошибок.  
   
-##  <a name="BKMK_odbcdestination_loadoptions"></a> Параметры загрузки  
+##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> Параметры загрузки  
  Назначение ODBC может использовать один из двух модулей загрузки доступа. Режим задается в [редакторе источника "ODBC" (страница "Диспетчер соединений")](../odbc-source-editor-connection-manager-page.md). Доступны два режима.  
   
 -   **Batch**. В этом режиме назначение ODBC предпринимает попытки использовать наиболее эффективный метод вставки на основе предполагаемых возможностей поставщика ODBC. Для большинства современных поставщиков ODBC это означает подготовку инструкции INSERT с параметрами, а затем использование построчной привязки параметров массива (где размером массива управляет свойство **BatchSize** ). Если выбран режим **Batch** , а поставщик не поддерживает этот способ выборки, назначение ODBC автоматически переключается на режим **Row-by-row** .  
@@ -75,11 +75,11 @@ ms.locfileid: "62771030"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Редактор назначения ODBC &#40;страница "вывод ошибок"&#41;](../odbc-destination-editor-error-output-page.md)  
+-   [Редактор назначения ODBC (страница "Вывод ошибок")](../odbc-destination-editor-error-output-page.md)  
   
--   [Редактор назначения ODBC &#40;страниц сопоставления&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [Редактор назначения ODBC (страница "Сопоставления")](../odbc-destination-editor-mappings-page.md)  
   
--   [Редактор назначения ODBC &#40;страница "Диспетчер соединений"&#41;](../odbc-destination-editor-connection-manager-page.md)  
+-   [Редактор назначения ODBC (страница "Диспетчер соединений")](../odbc-destination-editor-connection-manager-page.md)  
   
 -   [Загрузка данных с помощью назначения ODBС](odbc-destination.md)  
   

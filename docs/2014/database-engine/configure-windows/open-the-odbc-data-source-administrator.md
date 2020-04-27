@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 47710b89cdad74ac7e17a6091592af0d379ce2e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781404"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Открытие администратора источника данных ODBC
@@ -37,7 +37,7 @@ ms.locfileid: "62781404"
   
 3.  В окне **Администрирование**выберите пункт **Источники данных (ODBC)**.  
   
-## <a name="see-also"></a>См. также:  
- [Проверьте версию драйвера ODBC SQL Server &#40;Windows&#41;](check-the-odbc-sql-server-driver-version-windows.md)  
+## <a name="see-also"></a>См. также  
+ [Проверка версии драйвера ODBC для SQL Server (Windows)](check-the-odbc-sql-server-driver-version-windows.md)  
   
   

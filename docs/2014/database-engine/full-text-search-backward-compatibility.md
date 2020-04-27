@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5a749bb4da4511f30a231f6ab2dd05a35ebdb11d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779264"
 ---
 # <a name="full-text-search-backward-compatibility"></a>Обратная совместимость компонента Full-Text Search
@@ -31,7 +31,7 @@ ms.locfileid: "62779264"
 |[Критические изменения в полнотекстовом поиске](breaking-changes-to-full-text-search.md)|Изменения в полнотекстовом поиске, которые могут потребовать внесения изменений в приложения.|  
 |[Изменения в функциях полнотекстового поиска](../../2014/database-engine/behavior-changes-to-full-text-search.md)|Другие изменения в поведении полнотекстового поиска.|  
   
-## <a name="see-also"></a>См. также:  
- [Обратная совместимость компонента SQL Server Database Engine](sql-server-database-engine-backward-compatibility.md)  
+## <a name="see-also"></a>См. также  
+ [Обратная совместимость компонента ядра СУБД SQL Server](sql-server-database-engine-backward-compatibility.md)  
   
   

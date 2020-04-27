@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 818f78cd0b38aba0a7201eb28f49eb573ba32672
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770729"
 ---
 # <a name="sql-server-destination"></a>назначение «SQL Server»
@@ -91,11 +91,11 @@ ms.locfileid: "62770729"
   
  Дополнительные сведения о свойствах, которые могут быть заданы в диалоговом окне **Редактор назначения SQL Server** , см. в следующих разделах:  
   
--   [Редактор назначения "SQL" &#40;страница "Диспетчер соединений"&#41;](../sql-destination-editor-connection-manager-page.md)  
+-   [Редактор назначения SQL (страница "Диспетчер соединений")](../sql-destination-editor-connection-manager-page.md)  
   
--   [Редактор назначения "SQL &#40;страниц сопоставления"&#41;](../sql-destination-editor-mappings-page.md)  
+-   [Редактор назначения "SQL" (страница "Сопоставления")](../sql-destination-editor-mappings-page.md)  
   
--   [Редактор назначения "SQL" &#40;страница "Дополнительно"&#41;](../sql-destination-editor-advanced-page.md)  
+-   [Редактор назначения SQL (страница "Дополнительно")](../sql-destination-editor-advanced-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "62770729"
   
 -   Техническая статья [Использование служб SQL Server Integration Services для массовой загрузки данных](https://go.microsoft.com/fwlink/?LinkId=233701)размещена на сайте simple-talk.com.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поток данных](data-flow.md)  
   
   

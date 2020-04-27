@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791995"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>Обслуживание базы данных публикации AlwaysOn (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "62791995"
   
  
   
-##  <a name="MaintainPublDb"></a> Обслуживание опубликованной базы данных в группе доступности  
+##  <a name="maintaining-a-published-database-in-an-availability-group"></a><a name="MaintainPublDb"></a>Обслуживание опубликованной базы данных в группе доступности  
  Обслуживание опубликованной базы данных AlwaysOn существенно не отличается от обслуживания стандартной базы данных публикации со следующими оговорками.  
   
 -   Администрирование выполняется на узле первичной реплики. В среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]публикации появляются в папке **Локальные публикации** для узла первичной реплики и для вторичных реплик, доступных для чтения. После отработки отказа может потребоваться обновление [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] вручную для отражения изменений, если вторичная реплика, ставшая первичной, была недоступна для чтения.  
@@ -39,7 +39,7 @@ ms.locfileid: "62791995"
   
 -   Для синхронизации подписки в среде [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] после отработки отказа необходимо синхронизировать подписки по запросу от подписчика и синхронизировать принудительные подписки от активного издателя.  
   
-##  <a name="RemovePublDb"></a> Удаление опубликованной базы данных из группы доступности  
+##  <a name="removing-a-published-database-from-an-availability-group"></a><a name="RemovePublDb"></a> Удаление опубликованной базы данных из группы доступности  
  При удалении опубликованной базы данных из группы доступности или удалении группы доступности, содержащей опубликованную базу данных, необходимо учитывать следующее.  
   
 -   Если база данных публикации на исходном издателе удаляется из первичной реплики группы доступности, необходимо запустить `sp_redirect_publisher` без указания значения для *@redirected_publisher* параметра, чтобы удалить перенаправление для пары "издатель — база данных".  
@@ -100,7 +100,7 @@ ms.locfileid: "62791995"
   
      На этом этапе копию опубликованной базы данных можно сохранить или удалить.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Настройка репликации для групп доступности AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)  
   
@@ -110,10 +110,10 @@ ms.locfileid: "62791995"
   
 -   [Подписчики репликации и группы доступности AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Предварительные требования, ограничения и рекомендации для группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Группы доступности AlwaysOn: взаимодействие (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
- [Репликация SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
+ [Репликация SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
   
   

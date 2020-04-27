@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62806755"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Пример. Настройка зеркального отображения базы данных с помощью сертификатов (язык Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "62806755"
   
  При копировании сертификата на другую систему используйте безопасный метод копирования. Отнеситесь с особым вниманием к хранению сертификатов в безопасном месте.  
   
-##  <a name="ExampleH2"></a>Например  
+##  <a name="example"></a><a name="ExampleH2"></a>Например  
  В следующем примере показано, что необходимо сделать на одном участнике, который находится на узле HOST_A. В этом примере два участника являются экземплярами сервера по умолчанию в трех компьютерных системах. Два экземпляра сервера запущены в ненадежных доменах Windows, поэтому необходима проверка подлинности на основе сертификата.  
   
  Начальная основная роль принимается узлом HOST_A, а зеркальная роль — узлом HOST_B.  
@@ -60,8 +60,8 @@ ms.locfileid: "62806755"
   
 4.  [Настройка участников зеркального отображения](#ConfigureMirroringPartners)  
   
-###  <a name="ConfiguringOutboundConnections"></a>Настройка исходящих соединений  
- **Настройка Host_A для исходящих соединений**  
+###  <a name="configuring-outbound-connections"></a><a name="ConfiguringOutboundConnections"></a>Настройка исходящих соединений  
+ **Настройка узла Host_A для исходящих соединений**  
   
 1.  При необходимости создайте в базе данных master главный ключ базы данных.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62806755"
   
 5.  С помощью безопасного метода скопируйте файл «C:\HOST_A_cert.cer» на узел HOST_B.  
   
- **Настройка Host_B для исходящих соединений**  
+ **Настройка узла Host_B для исходящих соединений**  
   
 1.  При необходимости создайте в базе данных master главный ключ базы данных.  
   
@@ -152,8 +152,8 @@ ms.locfileid: "62806755"
   
  Дополнительные сведения см. в разделе [Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](database-mirroring-use-certificates-for-outbound-connections.md).  
   
-###  <a name="ConfigureInboundConnections"></a>Настройка входящих соединений  
- **Настройка Host_A для входящих подключений**  
+###  <a name="configuring-inbound-connections"></a><a name="ConfigureInboundConnections"></a>Настройка входящих соединений  
+ **Настройка узла Host_A для входящих соединений**  
   
 1.  Создайте имя входа на узле HOST_A для узла HOST_B.  
   
@@ -186,7 +186,7 @@ ms.locfileid: "62806755"
     GO  
     ```  
   
- **Настройка Host_B для входящих подключений**  
+ **Настройка узла Host_B для входящих соединений**  
   
 1.  Создайте имя входа на узле HOST_B для узла HOST_A.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "62806755"
 ### <a name="creating-the-mirror-database"></a>Создание зеркальной базы данных  
  Дополнительные сведения о создании зеркальной базы данных см. в разделе [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-###  <a name="ConfigureMirroringPartners"></a>Настройка участников зеркального отображения  
+###  <a name="configuring-the-mirroring-partners"></a><a name="ConfigureMirroringPartners"></a>Настройка участников зеркального отображения  
   
 1.  В экземпляре зеркального сервера, расположенного на узле HOST_B, установите в качестве участника экземпляр сервера, расположенного на узле HOST_A (сделав его начальным экземпляром основного сервера). Замените допустимый сетевой адрес на `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024`. Дополнительные сведения см. в разделе [Указание сетевого адреса сервера (зеркальное отображение базы данных)](specify-a-server-network-address-database-mirroring.md).  
   
@@ -259,26 +259,26 @@ ms.locfileid: "62806755"
     > [!NOTE]  
     >  Если вы планируете работать в режиме высокого уровня безопасности с автоматической отработкой отказа, оставьте параметр безопасность транзакций установленным в значение Full (значение по умолчанию) и добавьте следящий сервер как можно скорее после выполнения второго оператора Set Partner **'*`partner_server`*'** . Обратите внимание, что следящий сервер вначале нужно настроить для исходящих и входящих соединений.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
--   [Подготовка зеркальной базы данных к зеркальному отображению &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
+-   [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
--   [Разрешить использование сертификатов для входящих соединений в конечной точке зеркального отображения базы данных &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
+-   [Включение использования сертификатов для входящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Разрешить использование сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
+-   [Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](database-mirroring-use-certificates-for-outbound-connections.md)  
   
--   [Управление именами входа и заданиями после переключения ролей &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
+-   [Управление именами входа и заданиями после переключения ролей (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
--   [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md) (SQL Server)  
+-   [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md) (SQL Server)  
   
--   [Устранение неполадок конфигурации зеркального отображения базы данных &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
+-   [Диагностика конфигурации зеркального отображения базы данных (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Безопасность транспорта для зеркального отображения базы данных и группы доступности AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Укажите сетевой адрес сервера &#40;зеркальное отображение базы данных&#41;](specify-a-server-network-address-database-mirroring.md)   
  [SQL Server &#40;конечной точки зеркального отображения базы данных&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Использование сертификатов для конечной точки зеркального отображения базы данных &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
- [&#41;Transact-SQL ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [Центр безопасности для ядра СУБД SQL Server и Базы данных Azure SQL](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

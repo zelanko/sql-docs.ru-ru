@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774747"
 ---
 # <a name="password-expired"></a>Срок действия пароля истек
@@ -34,10 +34,10 @@ ms.locfileid: "62774747"
  **Подтверждение пароля**  
  Еще раз введите новый пароль для подтверждения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Надежные пароли](../relational-databases/security/strong-passwords.md)   
  [Выбор режима проверки подлинности](../relational-databases/security/choose-an-authentication-mode.md)   
  [Изменение режима проверки подлинности сервера](configure-windows/change-server-authentication-mode.md)   
- [Изменение пароля учетных записей, используемых SQL Server &#40;диспетчер конфигурации SQL Server&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
+ [Изменение пароля учетных записей, используемых SQL Server (диспетчер конфигурации SQL Server)](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
   
   

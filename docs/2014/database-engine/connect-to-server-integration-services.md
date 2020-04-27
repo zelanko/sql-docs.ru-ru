@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64c565c45288de157a3ba4c6c367ae7f8849dfee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808708"
 ---
 # <a name="connect-to-server-integration-services"></a>Соединение с сервером (службы Integration Services)
-  Это диалоговое окно используется для просмотра или указания параметров при [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]соединении с.  
+  Используйте это диалоговое окно для просмотра или настройки параметров при подключении к [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
 ## <a name="options"></a>Параметры  
  **Тип сервера**  
@@ -41,7 +41,7 @@ ms.locfileid: "62808708"
  **Пароль**  
  Этот параметр недоступен, поскольку для служб [!INCLUDE[ssIS](../includes/ssis-md.md)]возможен только режим проверки подлинности Windows.  
   
- **Подключение**  
+ **Подключить**  
  Нажмите, чтобы подключиться к выбранному выше серверу.  
   
  **Параметры**  

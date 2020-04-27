@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774286"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Управление именами входа и заданиями для баз данных группы доступности (SQL Server)
@@ -43,19 +43,19 @@ ms.locfileid: "62774286"
   
 -   **Дополнительные метаданные**  
   
-     Имена входа и задания — это не единственные сведения, которые должны быть созданы повторно на каждом экземпляре сервера, размещающем вторичную реплику доступности. Например, возможно, потребуется воссоздать параметры конфигурации сервера, учетные данные, зашифрованные данные, разрешения и параметры репликации, приложения компонента Service Broker, триггеры уровня сервера и т. д. Дополнительные сведения см. в статье [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+     Имена входа и задания — это не единственные сведения, которые должны быть созданы повторно на каждом экземпляре сервера, размещающем вторичную реплику доступности. Например, возможно, потребуется воссоздать параметры конфигурации сервера, учетные данные, зашифрованные данные, разрешения и параметры репликации, приложения компонента Service Broker, триггеры уровня сервера и т. д. Дополнительные сведения см. [в разделе Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="SSauthentication"></a>Имена входа для приложений, использующих SQL Serverную проверку подлинности или локальное имя входа Windows  
+##  <a name="logins-of-applications-that-use-sql-server-authentication-or-a-local-windows-login"></a><a name="SSauthentication"></a> Имена входа для приложений, использующих проверку подлинности SQL Server или локальное имя входа Windows  
  Если приложение использует проверку подлинности SQL Server или локальное имя входа Windows, то несоответствие идентификаторов безопасности может привести к ошибке входа на удаленный экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Несоответствие идентификаторов безопасности вызывает утрату связи с учетной записью на удаленном экземпляре сервера. Эта проблема может возникать при подключении приложения к зеркальной базе данных или базе данных доставки журналов после отработки отказа либо к базе данных подписчика репликации, которая была инициализирована из резервной копии.  
   
- Во избежание этой проблемы рекомендуется предпринять профилактические меры во время настройки такого приложения на использование базы данных, размещенной на удаленном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Среди таких мер — перенос имен входа и паролей с локального экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на удаленный экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения о том, как предотвратить возникновение этой проблемы, см. в статье базы знаний 918992 [Перемещение имен входа и паролей между экземплярами SQL Server](https://support.microsoft.com/kb/918992/).  
+ Во избежание этой проблемы рекомендуется предпринять профилактические меры во время настройки такого приложения на использование базы данных, размещенной на удаленном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Среди таких мер — перенос имен входа и паролей с локального экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на удаленный экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения о предотвращении этой проблемы см. в статье базы знаний 918992 —[как передавать имена входа и пароли между экземплярами SQL Server](https://support.microsoft.com/kb/918992/)).  
   
 > [!NOTE]  
 >  Эта проблема затрагивает локальные учетные записи Windows на разных компьютерах. Для доменных учетных записей эта проблема не возникает, поскольку идентификатор безопасности там один для всех компьютеров.  
   
- Дополнительные сведения см. в записи [Пользователи, утратившие связь с учетной записью при работе с зеркальным отображением базы данных и доставкой журналов](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (блог о ядре СУБД).  
+ Дополнительные сведения см. в записи [Пользователи, утратившие связь с учетной записью при работе с зеркальным отображением базы данных и доставкой журналов](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (блог Database Engine).  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Создание имени входа](../relational-databases/security/authentication-access/create-a-login.md)  
   
@@ -63,9 +63,9 @@ ms.locfileid: "62774286"
   
 -   [Создание задания](../ssms/agent/create-a-job.md)  
   
--   [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
+-   [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Автономные базы данных](../relational-databases/databases/contained-databases.md)   
  [Создание заданий](../ssms/agent/create-jobs.md)  

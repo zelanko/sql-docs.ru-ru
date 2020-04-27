@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774985"
 ---
 # <a name="upgrade-database-engine"></a>Обновление [компонент ядра СУБД]
@@ -43,7 +43,7 @@ ms.locfileid: "62774985"
 >  Если обновление производится с одного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до другого, то сначала проверьте, поддерживаются ли в целевом выпуске все используемые функции.  
   
 > [!NOTE]  
->  При обновлении до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с предыдущей версии выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise выберите "Enterprise Edition: лицензирование по числу ядер" и "Enterprise Edition". Эти выпуски Enterprise отличаются только режимом лицензирования. Дополнительные сведения см. в разделе [ограничения емкости вычислений по Выпуску SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  При обновлении до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с предыдущей версии выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise выберите "Enterprise Edition: лицензирование по числу ядер" и "Enterprise Edition". Эти выпуски Enterprise отличаются только режимом лицензирования. Дополнительные сведения см. в разделе [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Контрольный список действий перед обновлением  
  Программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает обновление предыдущей версии до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Есть также возможность выполнить миграцию баз данных из предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Миграция может быть произведена из одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в другой на том же компьютере или из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на другой компьютер. Произвести ее можно следующими способами: при помощи мастера копирования баз данных, функций резервного копирования и восстановления, мастера импорта и экспорта служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], а также при помощи массового экспорта и импорта.  
@@ -97,12 +97,12 @@ ms.locfileid: "62774985"
 >  При запуске программы установки SQL Server 2014 экземпляр SQL Server останавливается и перезапускается в процессе выполнения предварительных проверок.  
   
 > [!CAUTION]  
->  При обновлении версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предыдущий экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет перезаписан и перестанет существовать на компьютере. Перед обновлением создайте резервную копию баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и других объектов, связанных с экземпляром предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+>  При обновлении версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предыдущий экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет перезаписан и перестанет существовать на компьютере. Перед обновлением создайте резервную копию баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и других объектов, связанных с экземпляром предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Обновление компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] можно выполнить при помощи мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>Уровень совместимости баз данных после обновления  
- После обновления уровни совместимости баз `tempdb`данных `model`ресурсов `msdb` , **** и устанавливаются в 120. Системная база данных `master` сохраняет уровень совместимости, который она имела до обновления.  
+ После обновления уровни совместимости баз `tempdb`данных `model`ресурсов `msdb` , **Resource** и устанавливаются в 120. Системная база данных `master` сохраняет уровень совместимости, который она имела до обновления.  
   
  Если уровень совместимости пользовательской базы данных до обновления был 100 или выше, после обновления он останется таким же. Если уровень совместимости до обновления был 90, в обновленной базе данных он устанавливается в значение 100, что является минимально поддерживаемым уровнем совместимости в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -118,14 +118,13 @@ ms.locfileid: "62774985"
  Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="after-upgrading-the-database-engine"></a>После обновления компонента Database Engine  
- После обновления компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] выполните следующие действия.  
+ После обновления компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]выполните следующие действия.  
   
 -   Повторно зарегистрируйте серверы. Дополнительные сведения о регистрации серверов см. в разделе [Регистрация серверов](../../ssms/register-servers/register-servers.md).  
   
 -   Для обеспечения семантической согласованности результатов запроса заполните полнотекстовые каталоги повторно.  
   
-     
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливает новые средства разбиения по словам, используемые компонентами полнотекстового и семантического поиска. Средства разбиения по словам используются как во время индексирования, так и при выполнении запросов. Если не выполнить перепостроение полнотекстовых каталогов, результаты поиска могут быть несогласованными. Полнотекстовый запрос, выполняющий поиск фразы, которая в предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] была разбита средством разбиения по словам не так, как это сделано текущим средством разбиения по словам, может не обнаружить документ или строку, содержащую эту фразу. Это связано с тем, что индексированные фразы были разбиты с помощью логики, которая не соответствует логике, используемой в запросе. Решение заключается в том, чтобы заполнить полнотекстовые каталоги повторно (перестроить их) с помощью новых средств разбиения по словам, чтобы при индексировании и выполнении запросов использовалась одинаковая логика.  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливает новые средства разбиения по словам, используемые компонентами полнотекстового и семантического поиска. Средства разбиения по словам используются как во время индексирования, так и при выполнении запросов. Если не выполнить перепостроение полнотекстовых каталогов, результаты поиска могут быть несогласованными. Полнотекстовый запрос, выполняющий поиск фразы, которая в предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] была разбита средством разбиения по словам не так, как это сделано текущим средством разбиения по словам, может не обнаружить документ или строку, содержащую эту фразу. Это связано с тем, что индексированные фразы были разбиты с помощью логики, которая не соответствует логике, используемой в запросе. Решение заключается в том, чтобы заполнить полнотекстовые каталоги повторно (перестроить их) с помощью новых средств разбиения по словам, чтобы при индексировании и выполнении запросов использовалась одинаковая логика.  
   
      Дополнительные сведения см. в разделе [sp_fulltext_catalog (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql).  
   
@@ -163,7 +162,7 @@ EXEC sp_fulltext_service 'pause_indexing', 1;
 EXEC sp_fulltext_service 'pause_indexing', 0;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поддерживаемые обновления версий и выпусков](supported-version-and-edition-upgrades.md)   
  [Работа с несколькими версиями и экземплярами SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [Обратная совместимость](../../getting-started/backward-compatibility.md)   

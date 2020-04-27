@@ -14,23 +14,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 345d92c6d0d276a24a3d7d7abbc7c633205bc972
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62792024"
 ---
 # <a name="connect-to-existing-secondary-replicas-page-add-replica-wizard-and-add-databases-wizard"></a>Подключение к странице существующих вторичных реплик (мастер добавления реплики и мастер добавления баз данных)
-  В этом разделе описываются параметры на странице **Подключение к существующим вторичным репликам** . Этот раздел используется в [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] и [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] из [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+   В этом разделе описываются параметры на странице **Подключиться к существующим вторичным репликам**. Этот раздел используется в [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] и [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] из [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- **Столбцы сетки:**  
+ **Столбцы сетки**  
  **Экземпляр сервера**  
  Отображает имя экземпляра сервера, на котором будет размещена реплика доступности.  
   
- **Подключено как**  
+ **Подключение от имени**  
  Показывает учетную запись, подключенную к экземпляру сервера после установления соединения. Если в этом столбце для данного экземпляра сервера отображается**Не подключено**, потребуется нажать кнопку **Подключить** или **Подключить все** .  
   
- **Подключение**  
+ **Подключить**  
  Нажмите, если данный экземпляр сервера работает под учетной записью, отличной от учетной записи экземпляров сервера, к которым нужно подключиться.  
   
  **Подключить все**  
@@ -41,15 +41,15 @@ ms.locfileid: "62792024"
   
 
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
--   [Использование мастера добавления реплики в группу доступности &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [Использование мастера добавления реплики в группу доступности (среда SQL Server Management Studio)](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Использование мастера добавления базы данных в группу доступности &#40;SQL Server Management Studio&#41;](availability-group-add-database-to-group-wizard.md)  
+-   [Использование мастера добавления базы данных в группу доступности (среда SQL Server Management Studio)](availability-group-add-database-to-group-wizard.md)  
   
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

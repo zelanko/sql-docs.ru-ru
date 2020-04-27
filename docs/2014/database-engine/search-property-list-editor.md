@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773672"
 ---
 # <a name="search-property-list-editor"></a>Редактор списка свойств поиска
@@ -27,7 +27,7 @@ ms.locfileid: "62773672"
   
 ## <a name="options"></a>Параметры  
  **Имя свойства**  
- Укажите имя, которое будет использоваться для обозначения свойства в полнотекстовых запросах. Имя свойства может содержать внутренние пробелы. Длина **имени свойства** не должна превышать 256 символов. Это имя должно быть описательным, таким как «Автор» или «Домашний адрес», или каноническим именем Windows свойства, например `System.Author` или `System.Contact.HomeAddress`. **Имя свойства** должно однозначно идентифицировать свойство в наборе свойств.  
+ Укажите имя, которое будет использоваться для обозначения свойства в полнотекстовых запросах. Имя свойства может содержать внутренние пробелы. Длина **имени свойства** не должна превышать 256 символов. Это имя должно быть описательным, таким как «Автор» или «Домашний адрес», или каноническим именем Windows свойства, например `System.Author` или `System.Contact.HomeAddress`. **Имя свойства** должно уникально определять свойство в наборе свойств.  
   
  Разработчики используют имя свойства, чтобы определить свойство в предикате [CONTAINS](/sql/t-sql/queries/contains-transact-sql) . Поэтому при добавлении свойства важно указать значение, которое значимо представляет свойство.  
   
@@ -50,14 +50,14 @@ ms.locfileid: "62773672"
   
  **Настройка списка свойств поиска для полнотекстового индекса**  
   
--   [Поиск свойств документа с использованием списков свойств поиска](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
+-   [Поиск свойств документа с помощью списков свойств поиска](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
 ## <a name="permissions"></a>Разрешения  
  См. раздел [ALTER Search Property LIST &#40;&#41;Transact-SQL ](/sql/t-sql/statements/alter-search-property-list-transact-sql).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ИЗМЕНЕНИЕ списка свойств поиска &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-search-property-list-transact-sql)   
  [Поиск свойств документа с помощью списков свойств поиска](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [sys. registered_search_property_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
+ [sys.registered_search_property_lists (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   
   

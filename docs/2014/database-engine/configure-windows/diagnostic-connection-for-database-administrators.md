@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810425"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Диагностическое соединение для администраторов баз данных
@@ -74,7 +74,7 @@ ms.locfileid: "62810425"
   
 -   Запрос представлений каталога.  
   
--   Основные команды DBCC, например DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` а также DBCC SQLPERF. Не запускайте ресурсоемкие команды, такие как **DBCC** CHECKDB, DBCC DBREINDEX или DBCC SHRINKDATABASE.  
+-   Основные команды DBCC, например DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` а также DBCC SQLPERF. Не выполняйте такие ресурсоемкие команды, как **DBCC** CHECKDB, DBCC DBREINDEX или DBCC SHRINKDATABASE.  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] Команда KILL *\<spid>* . В зависимости от состояния [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]команда KILL не всегда выполняется успешно. В этом случае единственным выходом остается перезапуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Рассмотрим несколько общих правил.  
   
@@ -115,24 +115,24 @@ ms.locfileid: "62810425"
   
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)  
   
- [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)  
+ [sp_who (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)  
   
- [sp_lock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql)  
+ [sp_lock (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql)  
   
- [Инструкция KILL &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/kill-transact-sql)  
+ [KILL (Transact-SQL)](/sql/t-sql/language-elements/kill-transact-sql)  
   
- [DBCC CHECKALLOC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)  
+ [DBCC CHECKALLOC (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)  
   
- [DBCC CHECKDB &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)  
+ [DBCC CHECKDB (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)  
   
- [DBCC OPENTRAN &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-opentran-transact-sql)  
+ [DBCC OPENTRAN (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-opentran-transact-sql)  
   
- [DBCC INPUTBUFFER &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-inputbuffer-transact-sql)  
+ [DBCC INPUTBUFFER (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-inputbuffer-transact-sql)  
   
  [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md)  
   
- [Динамические административные представления и функции, связанные с транзакциями &#40;языке Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql)  
+ [Динамические административные представления и функции, связанные с транзакциями (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql)  
   
- [Флаги трассировки &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)  
+ [Флаги трассировки (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)  
   
   

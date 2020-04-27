@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c32691a065c2bfc43868d6b4105fbf1395a63ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781132"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>Олицетворение и средства обеспечения безопасности при интеграции со средой CLR
@@ -41,7 +41,7 @@ ms.locfileid: "62781132"
   
  Как сборки `EXTERNAL_ACCESS`, так и сборки `UNSAFE` получают доступ к ресурсам операционной системы с помощью учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если в них не было специально применено олицетворение текущего контекста безопасности, как описано выше. В связи с этим требуется более высокий уровень доверия к авторам сборок `EXTERNAL_ACCESS`, чем к авторам сборок `SAFE`, что выражается в наличии разрешения `EXTERNAL ACCESS` на уровне имени входа. Только именам входа, которым доверено выполнение кода в рамках учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должно быть предоставлено разрешение `EXTERNAL ACCESS`.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Безопасность интеграции со средой CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Олицетворение и учетные данные для соединений](../../relational-databases/clr-integration/data-access/impersonation-and-credentials-for-connections.md)  
   

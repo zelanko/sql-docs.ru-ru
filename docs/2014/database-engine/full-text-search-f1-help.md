@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 447b91ee1aa99642647dd1377976feef026b9a08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62778975"
 ---
 # <a name="full-text-search-f1-help"></a>Справка F1 по полнотекстовому поиску
@@ -29,11 +29,11 @@ ms.locfileid: "62778975"
 |[Свойства полнотекстового индекса &#40;общие&#41;страницы](../../2014/database-engine/full-text-index-properties-general-page.md)|[Редактор списка свойств поиска](../../2014/database-engine/search-property-list-editor.md)|  
 |[Свойства полнотекстового индекса &#40;страница "столбцы"&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md)||  
   
-## <a name="see-also"></a>См. также:  
- [Полнотекстовый поиск](../relational-databases/search/full-text-search.md)   
- [Создание ПОЛНОТЕКСТОВОГО каталога &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
- [Создание ПОЛНОТЕКСТОВОГО индекса &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
+## <a name="see-also"></a>См. также  
+ [Компонент Full-text Search](../relational-databases/search/full-text-search.md)   
+ [CREATE FULLTEXT CATALOG (Transact-SQL)](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+ [CREATE FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [Создание ПОЛНОТЕКСТОВОГО списка стоп-слов &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
- [Создание списка свойств поиска &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-search-property-list-transact-sql)  
+ [CREATE SEARCH PROPERTY LIST (Transact-SQL)](/sql/t-sql/statements/create-search-property-list-transact-sql)  
   
   

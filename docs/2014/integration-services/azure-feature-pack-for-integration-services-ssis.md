@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 536dce64880c1e70b1b8a0c4b419811c1b32a975
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62772150"
 ---
 # <a name="azure-feature-pack"></a>Пакет дополнительных компонентов Azure
@@ -37,7 +37,7 @@ ms.locfileid: "62772150"
     
     -   [Диспетчер подключений Azure HDInsight](../../2014/integration-services/azure-hdinsight-connection-manager.md)
   
--   Задания  
+-   Задачи  
   
     -   [Задача передачи больших двоичных объектов Azure](control-flow/azure-blob-upload-task.md)  
   
@@ -73,11 +73,11 @@ ms.locfileid: "62772150"
   
 -   [Пакет дополнительных компонентов служб SQL Server Integration Services 2014 для Azure](https://www.microsoft.com/download/details.aspx?id=47366)  
 
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
 Перед установкой этого пакета необходимо установить следующие компоненты:  
   
 -   SQL Server Integration Services  
--   .NET Framework 4.5;  
+-   .NET Framework 4.5.  
   
 ## <a name="scenarios"></a>Сценарии  
   

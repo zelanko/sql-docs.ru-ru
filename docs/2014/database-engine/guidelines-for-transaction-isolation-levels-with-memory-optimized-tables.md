@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779159"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Рекомендации для уровней изоляции транзакций с таблицами, оптимизированными для памяти
@@ -129,7 +129,7 @@ COMMIT
   
  Указания блокировки не поддерживаются. Вместо этого следует объявить необходимые гарантии через уровни изоляции транзакций. (Поддерживается NOLOCK, так как [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не принимает блокировки на оптимизированные для памяти таблицы. Обратите внимание, что в отличие от дисковых таблиц NOLOCK не подразумевает поведение уровня изоляции READ UNCOMMITTED для таблиц, оптимизированных для памяти.)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные сведения о транзакциях в таблицах, оптимизированных для памяти](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [Рекомендации по логике повторных попыток для транзакций в таблицах, оптимизированных для памяти](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
  [Уровни изоляции транзакций](../../2014/database-engine/transaction-isolation-levels.md)  

@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e916fe3b76abfa8773a757cf2779e7d5cbf26b86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810546"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Параметр конфигурации сервера «Database Mail XPs»
   Используйте параметр **Расширенные хранимые процедуры компонента Database Mail** для включения компонента Database Mail на сервере. Вы можете выбрать  
   
--   **0** означает, что Database Mail недоступен (по умолчанию).  
+-   **0** означает, что компонент Database Mail не доступен (по умолчанию).  
   
--   **1** указывает, что Database Mail доступен.  
+-   **1** означает, что компонент Database Mail доступен.  
   
  Новые настройки вступают в силу сразу же, без остановки или перезапуска сервера.  
   
@@ -49,7 +49,7 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
   

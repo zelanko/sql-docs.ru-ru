@@ -11,17 +11,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774347"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Подробные сведения об управляемом экземпляре (служебная программа SQL Server)
   Представление «Сведения об управляемых экземплярах» проводника служебной программы отображает сведения об использовании для отдельных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], журнал использования ЦП, подробные сведения об использовании хранилища на уровне файлов, а также позволяет просматривать и обновлять пороговые значения политик. Пороговые значения политик могут быть изменены на уровне экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , для компьютера, для файлов баз данных и файлов журналов и на уровне томов хранилища. Также можно просмотреть подробные сведения о свойствах отдельных управляемых экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
- Представление "List" (Список)  
+ Режим списка  
  В представлении списка в верхней панели отображаются данные об отдельных экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , перечисленных в виде строк "Имя_компьютера\Имя_экземпляра".  
   
  Значки состояния исправности показывают общее состояние каждого экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по категории использования.  
@@ -76,7 +76,7 @@ ms.locfileid: "62774347"
   
 -   С учетом регистра: (True или False)  
   
--   Language:  
+-   Язык:  
   
 -   Время последнего отчета: в этом столбце содержится локальная дата и время в формате UCP с использованием типа данных datetime. Дополнительные сведения см. в разделе [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) электронной документации по SQL Server. При использовании объектной модели служебной программы обратите внимание, что среда SSMS использует тип данных datetimeoffset. Дополнительные сведения см. в разделе [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) электронной документации по SQL Server.  
   
@@ -173,9 +173,9 @@ ms.locfileid: "62774347"
   
 -   С учетом регистра: (True или False)  
   
--   Language:  
+-   Язык:  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сведения о развернутом приложении уровня данных &#40;служебная программа SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
  [Панель мониторинга служебной программы &#40;служебная программа SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Наблюдение за экземплярами SQL Server в служебная программа SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   

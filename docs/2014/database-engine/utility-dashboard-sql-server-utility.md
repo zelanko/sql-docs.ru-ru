@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773816"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Панель мониторинга программ (служебная программа SQL Server)
@@ -102,9 +102,9 @@ ms.locfileid: "62773816"
  Использование хранилища служебной программы  
  В нижней правой части панели мониторинга в круговой диаграмме использования хранилища отображается отношение используемого пространства к свободному пространству в томах, размещенных на компьютерах, содержащих управляемые экземпляры [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Данные для этого отображения обновляются каждые 15 мин.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование обозревателя программ для управления служебная программа SQL Server](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
  [Регистрация экземпляра SQL Server &#40;служебная программа SQL Server&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
- [Изменение определения политики Работоспособность ресурсов &#40;служебная программа SQL Server&#41;](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  
+ [Изменение определения политики исправности ресурсов (служебная программа SQL Server)](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  
   
   
