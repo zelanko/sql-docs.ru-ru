@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919591"
 ---
 # <a name="clr-scalar-valued-functions"></a>Скалярные функции среды CLR
@@ -82,9 +82,7 @@ End Class
   
  В первой строке кода содержится ссылка на объект `Microsoft.SqlServer.Server` для доступа к атрибутам и на объект `System.Data.SqlClient` для доступа к пространству имен ADO.NET. (Это пространство имен содержит `SqlClient`, поставщик данных .NET Framework для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
- Далее функция получает пользовательский атрибут `SqlFunction`, относящийся к пространству имен `Microsoft.SqlServer.Server`. Пользовательский атрибут указывает, используется ли определяемая пользователем функция (UDF) внутрипроцессным поставщиком для чтения данных с сервера. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не позволяет определяемым пользователем функциям обновлять, вставлять и удалять данные. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может оптимизировать выполнение определяемой пользователем функции, не использующей внутрипроцессный поставщик. На это указывает параметр `DataAccessKind`, имеющий значение `DataAccessKind.None`. На следующей строке целевой метод определяется как public static (или на языке Visual Basic .NET — shared).  
+ Далее функция получает пользовательский атрибут `SqlFunction`, относящийся к пространству имен `Microsoft.SqlServer.Server`. Пользовательский атрибут указывает, используется ли определяемая пользователем функция (UDF) внутрипроцессным поставщиком для чтения данных с сервера. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не позволяет определяемым пользователем функциям обновлять, вставлять и удалять данные. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может оптимизировать выполнение определяемой пользователем функции, не использующей внутрипроцессный поставщик. На это указывает параметр `DataAccessKind`, имеющий значение `DataAccessKind.None`. На следующей строке целевой метод определяется как public static (или на языке Visual Basic .NET — shared).  
   
  После этого класс `SqlContext`, находящийся в пространстве имен `Microsoft.SqlServer.Server`, может получить доступ к объекту `SqlCommand` с уже созданным соединением с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Кроме того, становится доступным в рамках API `System.Transactions` контекст текущей транзакции, хотя в данном случае не используется.  
   
@@ -130,8 +128,7 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 ```  
   
 > [!NOTE]  
->  
-  `/t:library` указывает, что результатом компиляции должна быть библиотека, а не исполняемый объект. Исполняемые объекты нельзя регистрировать в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  `/t:library` указывает, что результатом компиляции должна быть библиотека, а не исполняемый объект. Исполняемые объекты нельзя регистрировать в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  Выполнение объектов базы данных, написанных на языке Visual C++ и скомпилированных с параметром `/clr:pure`, в СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживается. В частности, такими объектами базы данных являются скалярные функции.  
@@ -153,7 +150,7 @@ GO
   
  Обратите внимание, что имя функции в [!INCLUDE[tsql](../../includes/tsql-md.md)] не обязательно должно соответствовать имени общего статического целевого метода.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сопоставление данных параметров среды CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
  [Общие сведения о настраиваемых атрибутах интеграции со средой CLR](../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)   
  [Определяемые пользователем функции](../user-defined-functions/user-defined-functions.md)   

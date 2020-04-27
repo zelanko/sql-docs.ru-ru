@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4be1c196adbe21635c1339da3d5ec7ca519001fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876604"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>Создание разностной резервной копии базы данных (SQL Server)
@@ -43,29 +43,28 @@ ms.locfileid: "62876604"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Инструкция BACKUP не разрешена в явных и неявных транзакциях.  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Для создания разностной резервной копии базы данных необходимо наличие ранее созданной полной резервной копии. Если для выбранной базы данных резервное копирование еще не производилось, то перед созданием разностной резервной копии выполните полное резервное копирование. Дополнительные сведения см. в разделе [Создание полной резервной копии базы данных (SQL Server)](create-a-full-database-backup-sql-server.md).  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   Поскольку разностные резервные копии увеличиваются в размере, восстановление разностной резервной копии может значительно увеличить время, которое необходимо для восстановления базы данных. Поэтому рекомендуется через некоторое время выполнить создание новой полной резервной копии, чтобы получить новую базовую копию для разностного копирования. Например, можно выполнять полное резервное копирование всей базы данных один раз в неделю, а затем в течение недели регулярно создавать разностные резервные копии.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Разрешения BACKUP DATABASE и BACKUP LOG назначены по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator** .  
   
- Проблемы, связанные с владельцем и разрешениями у физических файлов на устройстве резервного копирования, могут помешать операции резервного копирования. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь возможность считывать и записывать данные на устройстве; учетная запись, от имени которой выполняется служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должна иметь разрешения на запись. Однако процедура [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql), добавляющая запись для устройства резервного копирования в системные таблицы, не проверяет разрешения на доступ к файлу. Проблемы физического файла устройства резервного копирования могут не проявляться до момента доступа к физическому ресурсу во время операции резервного копирования или восстановления.  
+ Проблемы, связанные с владельцем и разрешениями у физических файлов на устройстве резервного копирования, могут помешать операции резервного копирования. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь возможность считывать и записывать данные на устройстве; учетная запись, от имени которой выполняется служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должна иметь разрешения на запись. Однако процедура [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql), добавляющая запись для устройства резервного копирования в системные таблицы, не проверяет разрешения на доступ к файлу. Проблемы физического файла устройства резервного копирования могут не проявляться до момента доступа к физическому ресурсу во время операции резервного копирования или восстановления.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-create-a-differential-database-backup"></a>Создание разностной резервной копии  
   
@@ -82,7 +81,7 @@ ms.locfileid: "62876604"
 5.  В списке **Тип резервной копии** выберите **Разностная**.  
   
     > [!IMPORTANT]  
-    >  Если выбран параметр **разностная** , убедитесь, что флажок **резервная копия только для копирования** снят.  
+    >   При выборе **Разностная** убедитесь в том, что флажок **Резервная копия только для копирования** снят.  
   
 6.  В разделе **Компонент резервного копирования**выберите **База данных**.  
   
@@ -136,7 +135,7 @@ ms.locfileid: "62876604"
     > [!NOTE]  
     >  Для создания разностных резервных копий баз данных можно также воспользоваться мастером планов обслуживания базы данных.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-create-a-differential-database-backup"></a>Создание разностной резервной копии  
   
@@ -152,7 +151,7 @@ ms.locfileid: "62876604"
   
      BACKUP DATABASE *имя_базы_данных* TO <устройство_резервного_копирования> WITH DIFFERENTIAL  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере показано создание полной и разностной резервной копии базы данных `MyAdvWorks` .  
   
 ```sql  

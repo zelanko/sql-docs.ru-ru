@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 893b2c69a20974bb379cc032f442e5fcb3525ec5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919684"
 ---
 # <a name="accessing-user-defined-types-in-adonet"></a>Доступ к определяемым пользователем типам в ADO.NET
@@ -32,14 +32,14 @@ ms.locfileid: "62919684"
   
 -   В виде параметра объекта `System.Data.SqlClient.SqlParameter`.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Получение данных определяемого пользователем типа](accessing-user-defined-types-retrieving-udt-data.md)  
  Описывает, как получить данные определяемого пользователем типа и как указать параметры.  
   
  [Обновление столбцов определяемых пользователем типов с помощью DataAdapter](accessing-user-defined-types-updating-udt-columns-with-dataadapters.md)  
  Описывает, как работать с определяемыми пользователем типами в `DataSets` и как обновить данные определяемого пользователем типа с помощью `DataAdapters`.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Определяемые пользователем типы данных CLR](clr-user-defined-types.md)  
   
   

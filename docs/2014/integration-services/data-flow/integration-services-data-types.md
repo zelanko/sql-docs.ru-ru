@@ -19,22 +19,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902452"
 ---
 # <a name="integration-services-data-types"></a>Типы данных служб Integration Services
-  Когда данные входят в поток данных в пакете, источник, извлекающий данные, преобразовывает их в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Числовым данным назначается числовой тип данных, строковым — символьный тип данных, а датам — тип даты. Другим данным, таким как идентификатор GUID и BLOB (Binary Large Object Blocks), также назначаются соответствующие типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Если данные имеют тип, не преобразуемый в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , возникает ошибка.  
+  Когда данные входят в поток данных в пакете, источник, извлекающий данные, преобразовывает их в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Числовым данным назначается числовой тип данных, строковым — символьный тип данных, а датам — тип даты. Другим данным, таким как идентификатор GUID и BLOB (Binary Large Object Blocks), также назначаются соответствующие типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Если данные имеют тип, не преобразуемый в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , возникает ошибка.  
   
- Некоторые компоненты потока данных преобразуют типы данных между типами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] данных и управляемыми типами [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]данных. Дополнительные сведения о сравнении между службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и управляемыми типами данных см. в разделе [Работа с типами данных в потоке данных](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
+ Некоторые компоненты потока данных преобразуют типы данных между типами данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и управляемыми типами данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Дополнительные сведения о сравнении между службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и управляемыми типами данных см. в разделе [Работа с типами данных в потоке данных](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
  В следующей таблице перечислены типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . К некоторым из типов данных в таблице применяются сведения о масштабе и точности. Сведения о точности и масштабе см. в разделе [Точность, масштаб и длина (Transact-SQL)](/sql/t-sql/data-types/precision-scale-and-length-transact-sql).  
   
 |Тип данных|Description|  
 |---------------|-----------------|  
-|DT_BOOL|Логическое значение.|  
+|DT_BOOL|Значение типа Boolean.|  
 |DT_BYTES|Значение двоичных данных. Длину можно изменять. Максимальная длина составляет 8000 байт.|  
 |DT_CY|Значение денежного типа. Этот тип данных представляет собой восьмибайтовое целое число со знаком, с масштабом 4 и максимальной точностью в 19 цифр.|  
 |DT_DATE|Структура даты, состоящая из года, месяца, дня, часа, минуты, секунд и долей секунды.  Для долей секунды используется фиксированный масштаб в 7 разрядов.<br /><br /> Тип данных DT_DATE представляет собой 8-байтовое число с плавающей запятой. Дни представлены целым числом, где за ноль принято значение полночь 30 декабря 1899. Значение часа выражается абсолютным значением дробной части числа. Тем не менее, значение с плавающей запятой не может представить все реальные значения, поэтому есть пределы отображения ряда дат в DT_DATE.<br /><br /> С другой стороны, тип данных DT_DBTIMESTAMP представлен структурой, имеющей внутри себя отдельные поля для года, месяца, дня, часов, минут, секунд и миллисекунд. Такой тип данных имеет более широкие границы диапазона дат, которые он может представлять.|  
@@ -67,7 +67,7 @@ ms.locfileid: "62902452"
 ## <a name="conversion-of-data-types"></a>Преобразование типов данных  
  Если тип источника данных не требует распределения данных по всей ширине столбца, можно изменить тип данных столбца. Максимально короткие строки данных помогают оптимизировать производительность при передаче данных, так как чем короче каждая строка, тем быстрее данные перемещаются от источника к целевому объекту.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]включает полный набор числовых типов данных, что позволяет точно сопоставить тип данных с размером данных. Например, если значения в столбце с типом данных DT_UI8 всегда являются целыми числами от 0 до 3000, то можно изменить тип данных на DT_UI2. Подобным образом, если столбец с типом данных DT_CY соответствует требованиям данных пакета, используя целочисленный тип данных, можно изменить тип данных на DT_I4.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают полный набор числовых типов данных, так что можно сопоставить типы данных с размером данных. Например, если значения в столбце с типом данных DT_UI8 всегда являются целыми числами от 0 до 3000, то можно изменить тип данных на DT_UI2. Подобным образом, если столбец с типом данных DT_CY соответствует требованиям данных пакета, используя целочисленный тип данных, можно изменить тип данных на DT_I4.  
   
  Можно изменить тип данных столбца следующим образом:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62902452"
   
 -   Использование преобразования «Конвертация данных» для приведения типа данных столбца от одного к другому. Дополнительные сведения см. в статье [Data Conversion Transformation](transformations/data-conversion-transformation.md).  
   
--   Создание копии столбца, тип данных которого отличается от типа данных исходного столбца, с помощью преобразования «Производный столбец». Дополнительные сведения см. в статье [Преобразование «Производный столбец»](transformations/derived-column-transformation.md).  
+-   Создание копии столбца, тип данных которого отличается от типа данных исходного столбца, с помощью преобразования «Производный столбец». Дополнительные сведения см. в разделе [Derived Column Transformation](transformations/derived-column-transformation.md).  
   
 ### <a name="converting-between-strings-and-datetime-data-types"></a>Преобразование между строковым типом данных и типами данных даты-времени  
  В следующей таблице приведены результаты приведения или преобразования между строковыми типами данных и типами данных даты-времени.  
@@ -224,24 +224,24 @@ ms.locfileid: "62902452"
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
 |DT_CY|smallmoney, money|smallmoney, money|Валюта||||  
 |DT_DATE|||||||  
-|DT_DBDATE|[Дата &#40;&#41;Transact-SQL](/sql/t-sql/data-types/date-transact-sql)|[Дата &#40;&#41;Transact-SQL](/sql/t-sql/data-types/date-transact-sql)||Дата|Дата|Дата|  
+|DT_DBDATE|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||Дата|Дата|Дата|  
 |DT_DBTIME||||TIMESTAMP|time|time|  
-|DT_DBTIME2|[время &#40;&#41;Transact-SQL ](/sql/t-sql/data-types/time-transact-sql)(p)|[время &#40;&#41;Transact-SQL](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
-|DT_DBTIMESTAMP|[datetime &#40;Transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
+|DT_DBTIME2|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
+|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|Дата и время|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
 |DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
-|DT_DBTIMESTAMPOFFSET|[&#41;Transact-SQL &#40;DateTimeOffset ](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[&#41;Transact-SQL &#40;DateTimeOffset](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
+|DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
 |DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
-|DT_I2|smallint|smallint|Сокращение||SMALLINT|SMALLINT|  
+|DT_I2|smallint|smallint|Short||SMALLINT|SMALLINT|  
 |DT_I4|INT|INT|Long||INTEGER|INTEGER|  
-|DT_I8|bigint|bigint|||BIGINT|BIGINT|  
+|DT_I8|BIGINT|BIGINT|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|real;|real;|Single||REAL|REAL|  
+|DT_R4|real|real|Один||real|real|  
 |DT_R8|FLOAT|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
 |DT_STR|char, varchar||VarChar||char, varchar|char, varchar|  
-|DT_UI1|tinyint;|tinyint;|Byte||||  
+|DT_UI1|tinyint|tinyint|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
 |DT_UI8|||||||  

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b30322bb48cfff6e0bca092d72aa9d5ad0990948
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62875074"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>Восстановление файлов в новое место (SQL Server)
@@ -41,9 +41,9 @@ ms.locfileid: "62875074"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Системный администратор, восстанавливающий файлы, должен быть единственным лицом, использующим восстанавливаемую базу данных в данный момент.  
   
@@ -53,14 +53,14 @@ ms.locfileid: "62875074"
   
 -   Чтобы восстановить зашифрованную базу данных, необходимо иметь доступ к сертификату или асимметричному ключу, который использовался для шифрования базы данных. Без сертификата или асимметричного ключа восстановить базу данных нельзя. Поэтому сертификат, используемый для шифрования ключа шифрования базы данных, должен храниться в течение всего времени, пока есть необходимость в резервной копии. Дополнительные сведения см. в статье [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Если восстанавливаемая база данных не существуют, для выполнения инструкции RESTORE у пользователя должны быть разрешения CREATE DATABASE. Если база данных существует, разрешения на выполнение инструкции RESTORE по умолчанию предоставлены членам предопределенных ролей сервера **sysadmin** и **dbcreator** , а также владельцу базы данных (**dbo**) (для параметра FROM DATABASE_SNAPSHOT база данных всегда существует).  
   
  Разрешения на выполнение инструкции RESTORE даются ролям, в которых данные о членстве всегда доступны серверу. Так как членство в предопределенной роли базы данных может быть проверено только тогда, когда база данных доступна и не повреждена, что не всегда имеет место при выполнении инструкции RESTORE, члены предопределенной роли базы данных **db_owner** не имеют разрешений RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-restore-files-to-a-new-location"></a>Восстановление файлов и групп файлов в новое место  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62875074"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-restore-files-to-a-new-location"></a>Восстановление файлов и групп файлов в новое место  
   
@@ -136,7 +136,7 @@ ms.locfileid: "62875074"
   
          Резервные копии журналов транзакций, в случае их использования, должны включать в себя промежуток времени, в течение которого создавались резервные копии файлов и файловых групп.  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере восстанавливаются два файла базы данных `MyNwind` , первоначально находившиеся на диске C, в новое место на диске D. Также будут применены два журнала транзакций для восстановления базы данных на текущий момент времени. Количество восстанавливаемых файлов базы данных, а также их логические и физические имена можно определить с помощью инструкции `RESTORE FILELISTONLY` .  
   
 ```sql  

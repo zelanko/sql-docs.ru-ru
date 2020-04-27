@@ -19,28 +19,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0f2de1f7003e61dbdc8e82f7a9b549fd42c77fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917284"
 ---
 # <a name="delete-data-or-log-files-from-a-database"></a>Удаление файлов данных или журнала из базы данных
   В данном разделе содержатся инструкции по удалению файлов данных или журналов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Чтобы можно было удалить файл, он должен быть пустым. Дополнительные сведения см. в разделе [Сжатие файла](shrink-a-file.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на базу данных.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-delete-data-or-log-files-from-a-database"></a>Удаление файлов данных или журнала из базы данных  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62917284"
   
 5.  Нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-delete-data-or-log-files-from-a-database"></a>Удаление файлов данных или журнала из базы данных  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62917284"
   
  Дополнительные сведения см. в разделе [Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сжатие базы данных](shrink-a-database.md)   
  [Добавление файлов данных или журналов в базу данных](add-data-or-log-files-to-a-database.md)  
   

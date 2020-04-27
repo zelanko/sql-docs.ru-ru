@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917047"
 ---
 # <a name="master-database"></a>База данных master
@@ -44,19 +44,19 @@ ms.locfileid: "62917047"
 |ANSI_PADDING|OFF|Да|  
 |ANSI_WARNINGS|OFF|Да|  
 |ARITHABORT|OFF|Да|  
-|AUTO_CLOSE|OFF|нет|  
+|AUTO_CLOSE|OFF|Нет|  
 |AUTO_CREATE_STATISTICS|ON|Да|  
-|AUTO_SHRINK|OFF|нет|  
+|AUTO_SHRINK|OFF|Нет|  
 |AUTO_UPDATE_STATISTICS|ON|Да|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Да|  
-|CHANGE_TRACKING|OFF|нет|  
+|CHANGE_TRACKING|OFF|Нет|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Да|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Да|  
 |CURSOR_DEFAULT|GLOBAL|Да|  
-|Параметры доступности базы данных|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|нет<br /><br /> нет<br /><br /> нет|  
+|Параметры доступности базы данных|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Нет<br /><br /> Нет<br /><br /> Нет|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Да|  
 |DB_CHAINING|ON|нет|  
-|ENCRYPTION|OFF|нет|  
+|ENCRYPTION|OFF|Нет|  
 |NUMERIC_ROUNDABORT|OFF|Да|  
 |PAGE_VERIFY|CHECKSUM|Да|  
 |PARAMETERIZATION|ПРОСТОЙ|Да|  
@@ -64,7 +64,7 @@ ms.locfileid: "62917047"
 |READ_COMMITTED_SNAPSHOT|OFF|нет|  
 |RECOVERY|ПРОСТОЙ|Да|  
 |RECURSIVE_TRIGGERS|OFF|Да|  
-|Параметры компонента Service Broker|DISABLE_BROKER|нет|  
+|Параметры компонента Service Broker|DISABLE_BROKER|Нет|  
 |TRUSTWORTHY|OFF|Да|  
   
  Описание этих параметров баз данных см. в разделе [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql).  
@@ -76,7 +76,7 @@ ms.locfileid: "62917047"
   
 -   Изменение параметров сортировки. Параметрами сортировки по умолчанию являются параметры сортировки сервера.  
   
--   Изменение владельца базы данных. владельцем **главной** роли является **SA**.  
+-   Изменение владельца базы данных. Владельцем**master** является **sa**.  
   
 -   создание полнотекстового каталога или полнотекстового индекса;  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62917047"
   
 -   Удаление базы данных.  
   
--   Удаление пользователя **guest** из базы данных.  
+-   Удаление **гостевого** пользователя из базы данных.  
   
 -   Включение системы отслеживания измененных данных.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "62917047"
   
  [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [sys. master_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
+ [sys.master_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
  [Перемещение файлов базы данных](move-database-files.md)  
   

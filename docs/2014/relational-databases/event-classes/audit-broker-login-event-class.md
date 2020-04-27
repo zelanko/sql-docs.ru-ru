@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de23ecd1201d7ce0e24638cf9e64c63cb782face
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62912111"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login, класс событий
@@ -26,7 +26,7 @@ ms.locfileid: "62912111"
   
 ## <a name="audit-broker-login-event-class-data-columns"></a>Столбцы класса событий Audit Broker Login  
   
-|Столбец данных|Тип|Description|Номер столбца|Фильтруемый|  
+|Столбец данных|Тип|Описание|Номер столбца|Фильтруемый|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Не используется в этом классе событий.|10|Да|  
 |**ClientProcessID**|**int**|Не используется в этом классе событий.|9|Да|  
@@ -53,7 +53,7 @@ ms.locfileid: "62912111"
   
  Следующая таблица содержит список значений подклассов события для этого класса событий.  
   
-|ID|Подкласс|Description|  
+|ID|Подкласс|Описание|  
 |--------|--------------|-----------------|  
 |1|Успешный вход|Событие Login Success (успешный вход) извещает об успешном завершении соответствующего процесса регистрации брокера.|  
 |2|Ошибка входного протокола|Событие Login Protocol Error (ошибка протокола входа) извещает о том, что брокер получил синтаксически правильное, но неправильное при текущем состоянии процесса регистрации сообщение. Сообщение могло быть потеряно или отослано вне очереди.|  

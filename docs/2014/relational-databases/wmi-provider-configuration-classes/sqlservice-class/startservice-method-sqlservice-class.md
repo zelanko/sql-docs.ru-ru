@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d0a425bda3d32f19aca5be09dbb8ba4b7b6ac899
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62911721"
 ---
 # <a name="startservice-method-sqlservice-class"></a>Метод StartService (класс SqlService)
@@ -38,7 +38,7 @@ object
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объектами*  
+ *object*  
  Объект [класса SqlService](sqlservice-class.md) , представляющий службу.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
@@ -48,7 +48,7 @@ object
  Успешно. Запрос принят.  
   
  1  
-  Не поддерживается. Запрос не поддерживается.  
+ Не поддерживается. Запрос не поддерживается.  
   
  2  
  Доступ запрещен. Пользователь не имеет соответствующих прав доступа.  
@@ -121,7 +121,7 @@ object
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

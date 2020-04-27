@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc1bfce77a089b24e68613c94af6e2886e6b5952
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874473"
 ---
 # <a name="implementing-assemblies"></a>Реализация сборок
@@ -35,7 +35,7 @@ ms.locfileid: "62874473"
   
  **Создание сборки с помощью Transact-SQL**  
   
--   [Создание сборки &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-assembly-transact-sql)  
+-   [CREATE ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/create-assembly-transact-sql)  
   
  **Создание сборки с помощью среды SQL Server Management Studio**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62874473"
   
  **Чтобы изменить сборку с помощью Transact-SQL**  
   
--   [ALTER ASSEMBLY &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-assembly-transact-sql)  
+-   [ALTER ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
  **Чтобы изменить сборку с помощью среды SQL Server Management Studio**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62874473"
   
  **Чтобы удалить сборку с помощью Transact-SQL**  
   
--   [УДАЛИТЬ СБОРКУ &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-assembly-transact-sql)  
+-   [DROP ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/drop-assembly-transact-sql)  
   
  **Чтобы удалить сборку с помощью среды SQL Server Management Studio**  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62874473"
   
 -   [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
-##  <a name="_managing"></a>Управление версиями сборки  
+##  <a name="managing-assembly-versions"></a><a name="_managing"></a>Управление версиями сборки  
  Когда сборка передана в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], сборка сохраняется и управляется в пределах системных каталогов базы данных. Любые изменения, внесенные в определение сборки в, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] должны распространяться на сборку, которая хранится в каталоге базы данных.  
   
  Если нужно изменить сборку, следует выполнить инструкцию ALTER ASSEMBLY, чтобы обновить сборку в базе данных. Это обновит сборку до последней копии модулей [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], поддерживая ее реализацию.  
@@ -93,8 +93,7 @@ ms.locfileid: "62874473"
   
  Только члены предопределенной роли базы данных **db_owner** и **db_ddlowner** могут выполнять инструкцию ALTER ASSEMBLY с предложением WITH NOCHECK Data.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отправляет сообщение в журнал событий приложений Windows о том, что сборка была изменена непроверенными данными в таблицах. Затем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отмечает любые таблицы, содержащие данные, зависящие от сборки, как таблицы с непроверенными данными. Столбец **has_unchecked_assembly_data** представления каталога **sys. Tables** содержит значение 1 для таблиц, содержащих непроверенные данные, и 0 для таблиц без непроверенных данных.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отправляет сообщение в журнал событий приложений Windows о том, что сборка была изменена непроверенными данными в таблицах. Затем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отмечает любые таблицы, содержащие данные, зависящие от сборки, как таблицы с непроверенными данными. Столбец **has_unchecked_assembly_data** представления каталога **sys. Tables** содержит значение 1 для таблиц, содержащих непроверенные данные, и 0 для таблиц без непроверенных данных.  
   
  Чтобы проверить целостность непроверенных данных, выполните инструкцию DBCC CHECKTABLE по отношению к каждой таблице, которая имеет непроверенные данные. Если DBCC CHECKTABLE терпит неудачу, надо либо удалить неправильные строки таблицы, либо изменить код сборки для решения проблем, а затем выполнить дополнительные инструкции ALTER ASSEMBLY.  
   
@@ -111,9 +110,9 @@ ms.locfileid: "62874473"
   
  **Чтобы обновить версию сборки**  
   
--   [ALTER ASSEMBLY &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-assembly-transact-sql)  
+-   [ALTER ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сборки &#40;ядро СУБД&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Получение сведений о сборках](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   

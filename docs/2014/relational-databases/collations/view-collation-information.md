@@ -13,24 +13,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cb0f104d1555b18d18df38027c240a392d2ac66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918744"
 ---
 # <a name="view-collation-information"></a>Просмотр сведений о параметрах сортировки
     
-##  <a name="Top"></a> Просмотреть параметры сортировки сервера, базы данных или столбца в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно, используя команды меню обозревателя объектов или при помощи инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+##  <a name="you-can-view-the-collation-of-a-server-database-or-column-in-ssmanstudiofull-using-object-explorer-menu-options-or-by-using-tsql"></a><a name="Top"></a> Просмотреть параметры сортировки сервера, базы данных или столбца в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно, используя команды меню обозревателя объектов или при помощи инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-##  <a name="Procedures"></a> Как просмотреть параметры сортировки  
+##  <a name="how-to-view-a-collation-setting"></a><a name="Procedures"></a> Как просмотреть параметры сортировки  
  Можно использовать один из следующих способов:  
   
 -   [Среда SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  **Просмотр параметров сортировки для сервера (экземпляра SQL Server) в обозревателе объектов.**  
   
 1.  В обозревателе объектов установите соединение с экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -53,7 +53,7 @@ ms.locfileid: "62918744"
   
 4.  Щелкните правой кнопкой мыши столбец и выберите команду **Свойства**. Если параметры сортировки не указаны, то данный столбец не относится к символьному типу данных.  
   
-###  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Просмотр параметров сортировки для сервера**  
   
 1.  В обозревателе объектов подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и выберите на панели инструментов команду **Создать запрос**.  
@@ -106,12 +106,12 @@ ms.locfileid: "62918744"
     SELECT name, collation_name FROM sys.columns WHERE name = N'<insert character data type column name>';  
     ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   
- [sys. fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
- [sys. databases &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [sys.fn_helpcollations (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
+ [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [sys. Columns &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)   
- [Очередность параметров сортировки &#40;&#41;Transact-SQL](/sql/t-sql/statements/collation-precedence-transact-sql)   
- [sp_helpsort &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsort-transact-sql)  
+ [Очередность параметров сортировки (Transact-SQL)](/sql/t-sql/statements/collation-precedence-transact-sql)   
+ [sp_helpsort (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-helpsort-transact-sql)  
   
   

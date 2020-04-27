@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917734"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Добавление файлов данных или журналов в базу данных
@@ -42,20 +42,20 @@ ms.locfileid: "62917734"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Добавить или удалить файл во время выполнения инструкции BACKUP невозможно.  
   
 -   Для каждой базы данных может указываться не более 32 767 файлов и 32 767 файловых групп.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на базу данных.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>Добавление файлов данных или журналов в базу данных  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62917734"
   
 12. Нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>Добавление файлов данных или журналов в базу данных  
   

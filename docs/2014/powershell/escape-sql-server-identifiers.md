@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 17196f4e9a6deaadca09e77e94e2cf393f4af237
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922906"
 ---
 # <a name="escape-sql-server-identifiers"></a>Применение escape-символов к идентификаторам SQL Server
@@ -36,9 +36,9 @@ cd SQLSERVER:\SQL\MyComputer\MyInstance\MyDatabase\MySchema\`#MyTempTable
 Set-Location SQLSERVER:\SQL\`(local`)\DEFAULT  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Идентификаторы SQL Server в PowerShell](sql-server-identifiers-in-powershell.md)   
- [SQL Server PowerShell, поставщик](sql-server-powershell-provider.md)   
+## <a name="see-also"></a>См. также  
+ [SQL Server идентификаторов в PowerShell](sql-server-identifiers-in-powershell.md)   
+ [Поставщик SQL Server PowerShell](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

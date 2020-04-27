@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 479cc0e650c598e0a253caca796b854dc4eb69cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892672"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Выбор исходных таблиц и представлений (мастер импорта и экспорта SQL Server)
@@ -32,10 +32,10 @@ ms.locfileid: "62892672"
 ## <a name="options"></a>Параметры  
   
 ### <a name="tables-and-views-list"></a>Список «Таблицы и представления»  
- **Source**  
+ **Источник**  
  С помощью флажков выберите из списка таблицы и представления для копирования в место назначения. Если выбрана исходная таблица или представление и никакие другие действия не выполняются, схема и данные из источника копируются без изменения.  
   
- **Destination**  
+ **Назначение**  
  Выберите целевую таблицу из списка для каждой исходной таблицы.  
   
 > [!NOTE]  

@@ -11,16 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c0e2316d8222709b3b276f3206bf82b4343d24c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916519"
 ---
 # <a name="database-engine-events-and-errors"></a>События и ошибки компонента Database Engine
   Этот раздел содержит сведения об ошибках и событиях компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Основные сведения об ошибках компонента Database Engine](../native-client-ole-db-errors/errors.md)  
  Описывает формат сообщений об ошибках компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , способы просмотра и передачи этих сообщений в приложения.  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916950"
 ---
 # <a name="model-database"></a>База данных model
@@ -60,13 +60,13 @@ ms.locfileid: "62916950"
 |AUTO_SHRINK|OFF|Да|  
 |AUTO_UPDATE_STATISTICS|ON|Да|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Да|  
-|CHANGE_TRACKING|OFF|нет|  
+|CHANGE_TRACKING|OFF|Нет|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Да|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Да|  
 |CURSOR_DEFAULT|GLOBAL|Да|  
-|Параметры доступности базы данных|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|нет<br /><br /> Да<br /><br /> Да|  
+|Параметры доступности базы данных|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Нет<br /><br /> Да<br /><br /> Да|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Да|  
-|DB_CHAINING|OFF|нет|  
+|DB_CHAINING|OFF|Нет|  
 |ENCRYPTION|OFF|нет|  
 |NUMERIC_ROUNDABORT|OFF|Да|  
 |PAGE_VERIFY|CHECKSUM|Да|  
@@ -75,8 +75,8 @@ ms.locfileid: "62916950"
 |READ_COMMITTED_SNAPSHOT|OFF|Да|  
 |RECOVERY|Зависит от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выпуска<sup>1</sup>|Да|  
 |RECURSIVE_TRIGGERS|OFF|Да|  
-|Параметры компонента Service Broker|DISABLE_BROKER|нет|  
-|TRUSTWORTHY|OFF|нет|  
+|Параметры компонента Service Broker|DISABLE_BROKER|Нет|  
+|TRUSTWORTHY|OFF|Нет|  
   
  <sup>1</sup> чтобы проверить текущую модель восстановления базы данных, см. статью [Просмотр или изменение модели восстановления базы данных &#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) или [sys. databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
@@ -89,11 +89,11 @@ ms.locfileid: "62916950"
   
 -   Изменение параметров сортировки. Параметрами сортировки по умолчанию являются параметры сортировки сервера.  
   
--   Изменение владельца базы данных. владельцем **модели** является **SA**.  
+-   Изменение владельца базы данных. Владельцем**model** является **sa**.  
   
 -   Удаление базы данных.  
   
--   Удаление пользователя **guest** из базы данных.  
+-   Удаление **гостевого** пользователя из базы данных.  
   
 -   Включение системы отслеживания измененных данных.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "62916950"
   
  [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [sys. master_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
+ [sys.master_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
  [Перемещение файлов базы данных](move-database-files.md)  
   

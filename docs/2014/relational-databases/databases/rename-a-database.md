@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916774"
 ---
 # <a name="rename-a-database"></a>Переименование базы данных
@@ -31,7 +31,7 @@ ms.locfileid: "62916774"
   
      [Безопасность](#Security)  
   
--   **Переименование базы данных с помощью:**  
+-   **Переименование базы данных с использованием следующих средств:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
@@ -39,18 +39,18 @@ ms.locfileid: "62916774"
   
 -   **Дальнейшие действия.**  [После переименования базы данных](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Системные базы данных не могут быть переименованы.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на базу данных.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-rename-a-database"></a>Переименование базы данных  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62916774"
   
 4.  Введите новое имя базы данных и нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-rename-a-database"></a>Переименование базы данных  
   
@@ -81,11 +81,11 @@ GO
 ```  
   
 ###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a>Дальнейшие действия. После переименования базы данных  
+##  <a name="follow-up-after-renaming-a-database"></a><a name="FollowUp"></a> Дальнейшие действия. После переименования базы данных  
  Создавайте резервную копию базы данных **master** после переименования любой базы данных.  
   
-## <a name="see-also"></a>См. также:  
- [&#41;Transact-SQL ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql)   
+## <a name="see-also"></a>См. также  
+ [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [Идентификаторы баз данных](database-identifiers.md)  
   
   

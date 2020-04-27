@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876696"
 ---
 # <a name="backup-device-media-contents-page"></a>Устройство резервного копирования (страница «Содержимое носителя»)
@@ -68,7 +68,7 @@ ms.locfileid: "62876696"
 |**Имя пользователя**|Имя пользователя, выполнившего операцию резервного копирования.|  
 |**Истечение срока**|Дата и время истечения срока действия резервного набора данных.|  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Определение логического устройства резервного копирования для дискового файла (SQL Server)](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   

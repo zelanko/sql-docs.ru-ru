@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920017"
 ---
 # <a name="accessing-the-current-transaction"></a>Доступ к текущей транзакции
@@ -200,7 +200,7 @@ DROP ASSEMBLY TestProcs;
 Go  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Интеграция со средой CLR и транзакции](../native-client-ole-db-transactions/transactions.md)  
   
   

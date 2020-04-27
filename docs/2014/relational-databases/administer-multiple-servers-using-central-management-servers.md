@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f47eec543c21e74565d750035d20fbcee9baa82e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877314"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>Администрирование нескольких серверов с использованием центральных серверов управления
@@ -30,13 +30,12 @@ ms.locfileid: "62877314"
 ## <a name="benefits-of-central-management-servers-and-server-groups"></a>Преимущества центральных серверов управления и групп серверов  
  Экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], предназначенный для работы в качестве сервера центрального управления, обслуживает группы серверов, в которых содержатся сведения о соединении для одного или нескольких экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Инструкции [!INCLUDE[tsql](../includes/tsql-md.md)] и политики управления на основе политик могут одновременно выполняться для всех групп серверов. Можно также просмотреть файлы журналов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на экземплярах, управляемых через сервер централизованного управления. Версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ранее [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] нельзя назначить в качестве сервера централизованного управления.  
   
- 
-  [!INCLUDE[tsql](../includes/tsql-md.md)] также можно выполнить для локальных групп серверов в окне «Зарегистрированные серверы».  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] также можно выполнить для локальных групп серверов в окне «Зарегистрированные серверы».  
   
 ### <a name="related-tasks"></a>Связанные задачи  
  Для создания сервера централизованного управления и групп серверов воспользуйтесь окном **Зарегистрированные серверы** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Обратите внимание, что сервер центрального управления не может быть членом группы, которую он обслуживает. Дополнительные сведения о создании центральных серверов управления и групп серверов см. в разделе [Создание центрального сервера управления и группы серверов (среда SQL Server Management Studio)](../ssms/register-servers/create-a-central-management-server-and-server-group.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Администрирование серверов с помощью управления на основе политик](policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

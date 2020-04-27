@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cc1484a09929f4e4a8534b2c2acac2089adfbb97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62912189"
 ---
 # <a name="state-property-sqlservice-class"></a>Свойство State (класс SqlService)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объектами*  
+ *object*  
  Объект [класса SqlService](sqlservice-class.md) , представляющий службу.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
@@ -68,7 +68,7 @@ object
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

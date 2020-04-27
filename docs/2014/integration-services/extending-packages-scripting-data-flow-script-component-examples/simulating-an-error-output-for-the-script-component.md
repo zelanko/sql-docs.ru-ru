@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7e2324fcfce6c560000bfef798aa966102d674b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62895513"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>Имитация вывода ошибок для компонента скрипта
@@ -34,11 +34,11 @@ ms.locfileid: "62895513"
   
 1.  Перед созданием нового компонента скрипта создайте диспетчер соединений и настройте источник потока данных, выбирающий адреса из образца базы данных AdventureWorks. В этом примере, где предусмотрено обращение только к столбцу CountryRegionName, можно просто использовать представление Person.vStateCountryProvinceRegion либо выбрать данные, соединив таблицы Person.Address, Person.StateProvince и Person.CountryRegion.  
   
-2.  Добавьте новый компонент скрипта в область конструктора потока данных и настройте его в качестве преобразования. Откройте **редактор преобразования "Скрипт"**.  
+2.  Добавьте новый компонент скрипта в область конструктора потока данных и настройте его в качестве преобразования. Откройте **редактор преобразования "Скрипт"** .  
   
 3.  На странице **Скрипт** задайте свойство **ScriptLanguage**, указав язык скрипта, используемый для создания скрипта.  
   
-4.  Нажмите кнопку **Изменить скрипт** , чтобы открыть среду [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
+4.  Нажмите кнопку **Изменить скрипт**, чтобы открыть среду [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
   
 5.  В методе `Input0_ProcessInputRow` введите или вставьте следующий образец кода:  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62895513"
   
 10. Запишите значение идентификатора входного столбца или столбцов, которые должны проверяться компонентом скрипта на наличие ошибок. В этом примере идентификатор столбца используется для заполнения значений в столбце ErrorColumn.  
   
-11. Закройте **редактор преобразования "Скрипт"**.  
+11. Закройте **редактор преобразования "Скрипт"** .  
   
 12. Соедините выходы компонента скрипта с подходящими назначениями. Назначение «Неструктурированный файл» проще всего для настройки тестирования в нерегламентированных случаях.  
   
@@ -101,7 +101,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обработка ошибок в данных](../data-flow/error-handling-in-data.md)   
  [Использование вывода ошибок в компоненте потока данных](../extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
  [Создание синхронного преобразования с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) 

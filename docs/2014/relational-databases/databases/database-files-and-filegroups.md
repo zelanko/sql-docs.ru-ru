@@ -33,18 +33,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d75dee637a5579ca3f189e14333fbf9356623d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917281"
 ---
 # <a name="database-files-and-filegroups"></a>Файлы и файловые группы базы данных
   Каждая база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет как минимум два рабочих системных файла: файл данных и файл журнала. Файлы данных содержат данные и объекты, такие как таблицы, индексы, хранимые процедуры и представления. Файлы журнала содержат сведения, необходимые для восстановления всех транзакций в базе данных. Файлы данных могут быть объединены в файловые группы для удобства распределения и администрирования.  
   
 ## <a name="database-files"></a>Файлы базы данных  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеют три типа файлов.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеют три типа файлов.  
   
 |Файл|Description|  
 |----------|-----------------|  
@@ -63,9 +62,9 @@ ms.locfileid: "62917281"
   
  Все файлы данных хранятся в файловых группах, перечисленных в следующей таблице.  
   
-|Файловая группа|Description|  
+|Файловая группа|Описание|  
 |---------------|-----------------|  
-|Первичная|Файловая группа, содержащая первичный файл. Все системные таблицы размещены в первичной файловой группе.|  
+|Первичный|Файловая группа, содержащая первичный файл. Все системные таблицы размещены в первичной файловой группе.|  
 |Определяемые пользователем маршруты|Любая файловая группа, созданная пользователем при создании или изменении базы данных.|  
   
 ### <a name="default-filegroup"></a>Файловая группа по умолчанию  
@@ -74,10 +73,10 @@ ms.locfileid: "62917281"
  Файловая группа PRIMARY является группой по умолчанию, если только она не была изменена инструкцией ALTER DATABASE. Системные объекты и таблицы распределяются внутри первичной файловой группы, а не новой файловой группой по умолчанию.  
   
 ## <a name="related-content"></a>См. также  
- [Создание &#40;базы данных SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
+ [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
- [Параметры ALTER DATABASE File и FILEGROUP &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)  
+ [Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)  
   
- [Отсоединение и присоединение базы данных &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)  
+ [Присоединение и отсоединение базы данных (SQL Server)](database-detach-and-attach-sql-server.md)  
   
   

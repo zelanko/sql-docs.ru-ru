@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7905d620cb9bff24f92e73929322ed995a1d8ba0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919649"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Запрещенные типы и элементы в Microsoft.VisualBasic.dll
@@ -60,8 +60,8 @@ ms.locfileid: "62919649"
 |Microsoft.VisualBasic.Interaction.CreateObject()|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Interaction.DeleteSetting()|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Interaction.GetObject()|ExternalProcessMgmt|  
-|Microsoft.VisualBasic.Interaction.InputBox()|Пользовательский интерфейс|  
-|Microsoft.VisualBasic.Interaction.MsgBox()|Пользовательский интерфейс|  
+|Microsoft.VisualBasic.Interaction.InputBox()|UI|  
+|Microsoft.VisualBasic.Interaction.MsgBox()|UI|  
 |Microsoft.VisualBasic.Logging.AspLog|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Logging.FileLogTraceListener..ctor()|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|Синхронизация|  
@@ -78,7 +78,7 @@ ms.locfileid: "62919649"
 |Microsoft.VisualBasic.MyServices.RegistryProxy|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy|ExternalProcessMgmt|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Атрибуты защиты узла и программирование интеграции со средой CLR](host-protection-attributes-and-clr-integration-programming.md)   
  [Недопустимые типы и элементы в mscorlib. dll](disallowed-types-and-members-in-mscorlib-dll.md)   
  [Недопустимые типы и члены в System. dll](disallowed-types-and-members-in-system-dll.md)   

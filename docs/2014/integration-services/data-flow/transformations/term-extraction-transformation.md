@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899937"
 ---
 # <a name="term-extraction-transformation"></a>преобразование «Извлечение терминов»
@@ -173,11 +173,11 @@ ms.locfileid: "62899937"
   
  Дополнительные сведения о настройках, задаваемых в диалоговом окне **Редактор преобразования «Извлечение терминов»** , см. в следующих разделах.  
   
--   [Редактор преобразования "Извлечение терминов" &#40;вкладка "Извлечение терминов"&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [Редактор преобразования "Извлечение терминов" (вкладка "Извлечение терминов")](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [Редактор преобразования "Извлечение терминов" &#40;вкладка "исключения"&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [Редактор преобразования "Извлечение терминов" (вкладка "Исключение")](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [Редактор преобразования "Извлечение терминов" &#40;вкладка "Дополнительно"&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [Редактор преобразования "Извлечение терминов" (вкладка "Дополнительно")](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   

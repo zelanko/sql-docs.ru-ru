@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a78b177b1fb429535a4bb9b271d0b1dbc4eedc79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921945"
 ---
 # <a name="file-restores-full-recovery-model"></a>Файлы из резервных копий (модель полного восстановления)
@@ -54,7 +54,7 @@ ms.locfileid: "62921945"
   
   
   
-##  <a name="Overview"></a> Восстановление поврежденных файлов из резервных копий файлов  
+##  <a name="restoring-damaged-files-from-file-backups"></a><a name="Overview"></a> Восстановление поврежденных файлов из резервных копий файлов  
   
 1.  Перед восстановлением одного или нескольких поврежденных файлов попробуйте создать [резервную копию заключительного фрагмента журнала](tail-log-backups-sql-server.md).  
   
@@ -120,7 +120,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [Пример. Автономное восстановление основной и еще одной файловой группы (модель полного восстановления)](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Восстановление файлов и файловых групп**  
   
 -   [Восстановление файлов в новое место (SQL Server)](restore-files-to-a-new-location-sql-server.md)  

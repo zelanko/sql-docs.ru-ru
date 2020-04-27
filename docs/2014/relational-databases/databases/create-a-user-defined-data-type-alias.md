@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917461"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Создание псевдонима определяемого пользователем типа данных
@@ -39,18 +39,18 @@ ms.locfileid: "62917461"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Определяемый пользователем псевдоним типа данных должен соответствовать правилам для идентификаторов.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требует разрешения CREATE TYPE в текущей базе данных и разрешения ALTER для схемы *schema_name*. Если аргумент *schema_name* не указан, в действие вступают принимаемые по умолчанию правила разрешения имен с целью определения схемы для текущего пользователя.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-create-a-user-defined-data-type"></a>Создание пользовательского типа данных  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62917461"
   
 7.  Если требуется связать с новым псевдонимом типа данных значение по умолчанию или правило, заполните в области **Привязка** поле **По умолчанию** или **Правило** . В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]нельзя создавать правила или значения по умолчанию. Используйте [!INCLUDE[tsql](../../includes/tsql-md.md)]. Примеры кода, создающего умолчания и правила, доступны в окне обозревателя шаблонов.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-create-a-user-defined-data-type-alias"></a>Создание псевдонима определяемого пользователем типа данных  
   

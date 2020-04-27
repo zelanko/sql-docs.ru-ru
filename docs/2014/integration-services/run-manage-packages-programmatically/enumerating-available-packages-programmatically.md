@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3826607072ad62af90c680572a42f5ffb3ab12a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889799"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Программное перечисление доступных пакетов
   Во время обработки пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] программным путем может потребоваться определить, существует ли отдельный пакет или папка, или перечислить сохраненные пакеты, которые доступны для загрузки и выполнения. Класс <xref:Microsoft.SqlServer.Dts.Runtime.Application> из пространства имен <xref:Microsoft.SqlServer.Dts.Runtime> предоставляет разнообразные методы, выполняющие эти требования.  
   
-##  <a name="exists"></a> Определение существования пакета или папки  
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> Определение существования пакета или папки  
  Чтобы определить программно, существует ли сохраненный пакет, вызовите один из следующих методов перед тем, как пытаться загрузить и выполнить пакет.  
   
 |Место хранения|Вызываемый метод|  
@@ -41,7 +41,7 @@ ms.locfileid: "62889799"
   
  [Вверх](#top)  
   
-##  <a name="listing"></a> Перечисление доступных пакетов  
+##  <a name="enumerating-available-packages"></a><a name="listing"></a> Перечисление доступных пакетов  
  Чтобы получить программным путем список сохраненных пакетов, вызовите один из следующих методов.  
   
 |Место хранения|Вызываемый метод|  
@@ -51,7 +51,7 @@ ms.locfileid: "62889799"
   
  Приложения командной строки в следующих образцах иллюстрируют использование этих методов.  
   
-###  <a name="listing_store"></a> Пример (хранилище пакетов служб SSIS)  
+###  <a name="example-ssis-package-store"></a><a name="listing_store"></a> Пример (хранилище пакетов служб SSIS)  
  Используйте метод <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> для перечисления пакетов, сохраненных в хранилище пакетов служб SSIS. Местом хранения по умолчанию, которое управляется хранилищем пакетов служб SSIS, является файловая система и MSDB. В этих местах можно создать дополнительные логические папки.  
   
 ```vb  
@@ -157,7 +157,7 @@ namespace EnumeratePackagesSSIS_CS
   
  [Вверх](#top)  
   
-###  <a name="listing_sql"></a> Пример (SQL Server)  
+###  <a name="example-sql-server"></a><a name="listing_sql"></a> Пример (SQL Server)  
  Используйте метод <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> для перечисления пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], хранящихся в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```vb  
@@ -240,7 +240,7 @@ namespace EnumeratePackagesSql_CS
   
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
- [Управление пакетами &#40;служб SSIS&#41;](../service/package-management-ssis-service.md)  
+## <a name="see-also"></a>См. также  
+ [Управление пакетами (службы SSIS)](../service/package-management-ssis-service.md)  
   
   

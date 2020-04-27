@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbae9e97e99223665e6d89d9e8c1a2bce3e48a26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901203"
 ---
 # <a name="odata-source-properties"></a>Свойства источника OData
@@ -22,7 +22,7 @@ ms.locfileid: "62901203"
   
 |||  
 |-|-|  
-|Свойство|Description|  
+|Свойство|Описание|  
 |CollectionName|Имя коллекции, которую необходимо получить из службы OData. Свойство **CollectionName** используется в том случае, когда значение **UseResourcePath** равно False.<br /><br /> Это свойство поддерживает выражения, что позволяет задать значение во время выполнения. Но если метаданные коллекции не соответствуют метаданным, которые использовались во время разработки, то произойдет ошибка проверки, из-за чего выполнение потока данных приведет к ошибке.|  
 |DefaultStringLength|Это значение указывает длину по умолчанию для строковых столбцов без максимальной длины.<br /><br /> **По умолчанию:** 4000|  
 |Запрос|Параметры запроса OData. Это свойство поддерживает выражения и может быть задано во время выполнения.|  

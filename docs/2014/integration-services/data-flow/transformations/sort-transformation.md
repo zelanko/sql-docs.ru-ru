@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dba1f3598abb8877721ff77d3dabcc8af8e0b94a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899901"
 ---
 # <a name="sort-transformation"></a>преобразование «Сортировка»
@@ -57,7 +57,7 @@ ms.locfileid: "62899901"
 ## <a name="related-content"></a>См. также  
  Образец [Пользовательский компонент SortDeDuplicateDelimitedString служб SSIS](https://go.microsoft.com/fwlink/?LinkId=220821)на сайте codeplex.com.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поток данных](../data-flow.md)   
  [Преобразования служб Integration Services](integration-services-transformations.md)  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d125a725a9e1c0cab34c7066fd9554ef0099d6e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901110"
 ---
 # <a name="odbc-source"></a>ODBC-источник
@@ -70,11 +70,11 @@ ms.locfileid: "62901110"
   
  Дополнительные сведения см. в одном из следующих разделов:  
   
--   [Редактор источника ODBC &#40;страница "Диспетчер соединений"&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [Редактор источника ODBC (страница "Диспетчер соединений")](../odbc-source-editor-connection-manager-page.md)  
   
--   [Редактор источника «ODBC» &#40;столбцы&#41;](../odbc-source-editor-columns-page.md)  
+-   [Редактор источника ODBC (страница "Столбцы")](../odbc-source-editor-columns-page.md)  
   
--   [Редактор источника ODBC &#40;страница "вывод ошибок"&#41;](../odbc-source-editor-error-output-page.md)  
+-   [Редактор источника ODBC (страница "Вывод ошибок")](../odbc-source-editor-error-output-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые могут быть заданы программным путем.  
   
@@ -84,13 +84,13 @@ ms.locfileid: "62901110"
   
  Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне «Расширенный редактор», см. в разделе [ODBC Source Custom Properties](odbc-source-custom-properties.md).  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
--   [Редактор источника ODBC &#40;страница "вывод ошибок"&#41;](../odbc-source-editor-error-output-page.md)  
+-   [Редактор источника ODBC (страница "Вывод ошибок")](../odbc-source-editor-error-output-page.md)  
   
--   [Редактор источника «ODBC» &#40;столбцы&#41;](../odbc-source-editor-columns-page.md)  
+-   [Редактор источника ODBC (страница "Столбцы")](../odbc-source-editor-columns-page.md)  
   
--   [Редактор источника ODBC &#40;страница "Диспетчер соединений"&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [Редактор источника ODBC (страница "Диспетчер соединений")](../odbc-source-editor-connection-manager-page.md)  
   
 -   [Извлечение данных с помощью источника ODBC](odbc-source.md)  
   

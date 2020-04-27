@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899947"
 ---
 # <a name="xml-source"></a>XML-источник
@@ -69,17 +69,17 @@ ms.locfileid: "62899947"
   
  XML-источник поддерживает несколько обычных выходов и несколько выходов ошибок.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включает диалоговое окно **Источник XML редактор**r для настройки источника XML. Это диалоговое окно доступно из конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включает диалоговое окно **Редактор источника XML** для настройки этого источника. Это диалоговое окно доступно из конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
  Дополнительные сведения о свойствах, которые могут быть заданы в диалоговом окне **Редактор источника «XML»** или программно, см. в следующих разделах:  
   
--   [Редактор источника "XML" &#40;страница "Диспетчер соединений"&#41;](../xml-source-editor-connection-manager-page.md)  
+-   [Редактор источника "XML" (страница "Диспетчер подключений")](../xml-source-editor-connection-manager-page.md)  
   
--   [Редактор источника "XML" &#40;столбцы "&#41;](../xml-source-editor-columns-page.md)  
+-   [Редактор источника "XML" (страница "Столбцы")](../xml-source-editor-columns-page.md)  
   
--   [Редактор источника "XML" &#40;страница "вывод ошибок"&#41;](../xml-source-editor-error-output-page.md)  
+-   [Редактор источника "XML" (страница "Вывод ошибок")](../xml-source-editor-error-output-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6338c7a306f163f786f2c1e7d44ae4dbc66504ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902480"
 ---
 # <a name="flat-file-source"></a>источник «Неструктурированный файл»
@@ -55,11 +55,11 @@ ms.locfileid: "62902480"
   
  Дополнительные сведения о свойствах, которые можно задать в диалоговом окне **Редактор источника «Неструктурированный файл»** , см. в следующих разделах:  
   
--   [Редактор источника "Неструктурированный файл" &#40;страница "Диспетчер соединений"&#41;](../flat-file-source-editor-connection-manager-page.md)  
+-   [Редактор источника "Неструктурированный файл" (страница "Диспетчер соединений")](../flat-file-source-editor-connection-manager-page.md)  
   
--   [Редактор источника «Неструктурированный файл» &#40;столбцов&#41;](../flat-file-source-editor-columns-page.md)  
+-   [Редактор источника "Неструктурированный файл" (страница "Столбцы")](../flat-file-source-editor-columns-page.md)  
   
--   [Редактор источника "Неструктурированный файл" &#40;страница "вывод ошибок"&#41;](../flat-file-source-editor-error-output-page.md)  
+-   [Редактор источника "Неструктурированный файл" (страница "Вывод ошибок")](../flat-file-source-editor-error-output-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62902480"
 ## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения о настройке свойств для компонента потока данных см. в разделе [Установление свойств компонента потока данных](set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Назначение "Неструктурированный файл"](flat-file-destination.md)   
  [Поток данных](data-flow.md)  
   

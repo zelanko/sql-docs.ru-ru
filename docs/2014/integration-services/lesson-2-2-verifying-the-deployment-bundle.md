@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 127044042eed7f082b6f1f7ba7ae6918232ba9ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891773"
 ---
 # <a name="step-2-verifying-the-deployment-bundle"></a>Этап 2. Проверка пакета развертывания
@@ -55,7 +55,7 @@ ms.locfileid: "62891773"
 5.  Закройте обозреватель Internet Explorer или текстовый редактор.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 3. Установка пакетов](../integration-services/lesson-3-install-ssis-package.md)  
+ [Занятие 3. Установка пакетов](../integration-services/lesson-3-install-ssis-package.md)  
   
 ![Значок Integration Services (маленький)](media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   

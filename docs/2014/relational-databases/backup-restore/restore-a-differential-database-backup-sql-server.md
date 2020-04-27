@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a7aa0f0ba295d8e152877d11ceb39fb6eb4f3c87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877251"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>Восстановление разностной резервной копии базы данных (SQL Server)
@@ -44,9 +44,9 @@ ms.locfileid: "62877251"
   
 -   [Связанные задачи](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Инструкция RESTORE недопустима в явной или неявной транзакции.  
   
@@ -54,18 +54,18 @@ ms.locfileid: "62877251"
   
 -   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]можно восстановить пользовательскую базу данных из резервной копии базы данных, созданной с помощью [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии.  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Перед восстановлением базы данных в среде по модели полного восстановления или модели восстановления с неполным протоколированием необходимо выполнить резервное копирование активного журнала транзакций (который называется заключительным фрагментом журнала). Дополнительные сведения см. в статье [Создание резервной копии журнала транзакций (SQL Server)](back-up-a-transaction-log-sql-server.md)).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Если восстанавливаемая база данных не существуют, для выполнения инструкции RESTORE у пользователя должны быть разрешения CREATE DATABASE. Если база данных существует, разрешения на выполнение инструкции RESTORE по умолчанию предоставлены членам предопределенных ролей сервера **sysadmin** и **dbcreator** , а также владельцу базы данных (**dbo**) (для параметра FROM DATABASE_SNAPSHOT база данных всегда существует).  
   
  Разрешения на выполнение инструкции RESTORE даются ролям, в которых данные о членстве всегда доступны серверу. Так как членство в предопределенной роли базы данных может быть проверено только тогда, когда база данных доступна и не повреждена, что не всегда имеет место при выполнении инструкции RESTORE, члены предопределенной роли базы данных **db_owner** не имеют разрешений RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-restore-a-differential-database-backup"></a>Восстановление разностной резервной копии базы данных  
   
@@ -133,7 +133,7 @@ ms.locfileid: "62877251"
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-restore-a-differential-database-backup"></a>Восстановление разностной резервной копии базы данных  
   
@@ -149,7 +149,7 @@ ms.locfileid: "62877251"
   
 3.  В модели полного восстановления или модели восстановления с неполным протоколированием разностная резервная копия восстанавливает базу данных на момент выполнения разностного резервного копирования. Чтобы восстановить данные на момент сбоя, следует применить все резервные копии журнала транзакций, созданные после создания последней разностной копии базы данных. Дополнительные сведения см. в разделе [Применение резервных копий журналов транзакций (SQL Server)](transaction-log-backups-sql-server.md).  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
   
 #### <a name="a-restoring-a-differential-database-backup"></a>A. Восстановление разностной резервной копии базы данных  
  В этом примере показано восстановление базы данных и разностной резервной копии базы данных `MyAdvWorks` .  
@@ -201,7 +201,7 @@ RESTORE LOG MyAdvWorks
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Создание разностной резервной копии базы данных (SQL Server)](create-a-differential-database-backup-sql-server.md)  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877718"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Работа с диспетчерами соединений программным образом
@@ -61,13 +61,13 @@ ms.locfileid: "62877718"
 |MULTIFILE|диспетчер соединений с несколькими файлами|`System.String`|Путь к одному из файлов.|  
 |MULTIFLATFILE|диспетчер соединения с несколькими неструктурированными файлами|`System.String`|Путь к одному из файлов.|  
 |SMOServer|SMO, диспетчер соединений|`Microsoft.SqlServer.Management.Smo.Server`||  
-|SMTP|Диспетчер соединений SMTP|`System.String`|Например: `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
+|SMTP|Диспетчер соединений SMTP|`System.String`|Пример: `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
 |WMI|Диспетчер WMI-соединений|`System.Management.ManagementScope`||  
 |SQLMOBILE|Диспетчер соединений SQL Server Compact|`System.Data.SqlServerCe.SqlCeConnection`||  
   
 ![Значок Integration Services (маленький)](media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Подключение к источникам данных в задаче «Скрипт»](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
  [Подключение к источникам данных в компоненте скрипта](extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
  [Соединение с источниками данных в пользовательской задаче](extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  

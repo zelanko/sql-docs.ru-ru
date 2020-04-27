@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4afdc9adae6f968ca89ff1a9b2bf9e5b67992037
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62912476"
 ---
 # <a name="mssqlserver_926"></a>MSSQLSERVER_926
@@ -50,7 +50,7 @@ ms.locfileid: "62912476"
   
 ## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление баз данных SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Восстановление &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
+ [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
  [sys. sysdatabases &#40;&#41;Transact-SQL](/sql/relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql)   
  [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   

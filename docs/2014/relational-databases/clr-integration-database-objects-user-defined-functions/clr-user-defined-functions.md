@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f48a62e1dff2fbc1d226077c2271e8a8a71efb2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874489"
 ---
 # <a name="clr-user-defined-functions"></a>Определяемые пользователем функции среды CLR
@@ -39,7 +39,7 @@ ms.locfileid: "62874489"
  [Пользовательские агрегатные функции среды CLR](clr-user-defined-aggregates.md)  
  Объясняет реализацию и использование определяемых пользователем статистических функций.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Определяемые пользователем функции](../user-defined-functions/user-defined-functions.md)  
   
   

@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1e65bb5c651862a82d78faede158234d20392c1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919697"
 ---
 # <a name="managing-clr-integration-assemblies"></a>Управление сборками интеграции со средой CLR
@@ -28,14 +28,14 @@ ms.locfileid: "62919697"
   
  Информация о сборке хранится в таблице `sys.assembly_files` в базе данных, где установлена сборка. Таблица `sys.assembly_files` содержит следующие столбцы.  
   
-|Столбец|Description|  
+|Столбец|Описание|  
 |------------|-----------------|  
 |assembly_id|Идентификатор, определенный для сборки. Это число назначается всем объектам, относящимся к одной сборке.|  
 |name|Имя объекта.|  
 |file_id|Идентификационный номер каждого из объектов. Первый объект, связанный с данным идентификатором сборки `assembly_id`, получает номер 1. Если существует несколько объектов, связанных с одним и тем же `assembly_id`, то каждое последующее значение `file_id` увеличивается на 1.|  
 |Содержимое|Шестнадцатеричное представление сборки или файла.|  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Создание сборки](creating-an-assembly.md)  
  Обсуждается создание сборок с ключевыми словами SAFE, EXTERNAL_ACCESS и UNSAFE CLR в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62919697"
  [Удаление сборки](dropping-an-assembly.md)  
  Описывается удаление сборок CLR из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Безопасность интеграции со средой CLR](../security/clr-integration-security.md)   
  [Управление доступом для кода на основе интеграции со средой CLR](../security/clr-integration-code-access-security.md)  
   

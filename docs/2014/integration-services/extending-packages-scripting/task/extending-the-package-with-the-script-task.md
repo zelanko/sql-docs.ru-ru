@@ -20,14 +20,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10cfa4d5d9deeeeb6bc664fc6480e31bc5dc483e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894778"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>Расширение пакета с помощью задачи «Скрипт»
-  Задача «Скрипт» расширяет возможности [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] времени выполнения пакетов с помощью пользовательского кода, написанного [!INCLUDE[msCoName](../../../includes/msconame-md.md)] на Visual Basic [!INCLUDE[msCoName](../../../includes/msconame-md.md)] или Visual C#, который компилируется и выполняется во время выполнения пакета. Задача «Скрипт» упрощает разработку пользовательской задачи времени выполнения, если задачи, включенные в службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], не полностью удовлетворяют требованиям разработчика. Задача «Скрипт» самостоятельно пишет весь инфраструктурный код, давая разработчику возможность сосредоточиться исключительно на коде, необходимом для пользовательской обработки.  
+  Задача "Скрипт" расширяет возможности времени выполнения для пакетов служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] благодаря пользовательскому коду, написанному на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, который компилируется и выполняется во время выполнения пакетов. Задача «Скрипт» упрощает разработку пользовательской задачи времени выполнения, если задачи, включенные в службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], не полностью удовлетворяют требованиям разработчика. Задача «Скрипт» самостоятельно пишет весь инфраструктурный код, давая разработчику возможность сосредоточиться исключительно на коде, необходимом для пользовательской обработки.  
   
  Задача «Скрипт» взаимодействует с пакетом-контейнером через глобальный объект `Dts`, экземпляр класса <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>, предоставляемого средой скриптов. В задаче «Скрипт» можно писать код, который изменяет значения, хранящиеся в переменных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]. Позже пакет использует эти обновленные значения для определения рабочего процесса. Задача «Скрипт» может также использовать пространство имен [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], библиотеку классов платформы [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] и пользовательские сборки для реализации собственной функциональности.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62894778"
  Объясняется, как настроенные в окне **Редактор задачи "скрипт"** свойства влияют на возможности и производительность кода в задаче "Скрипт".  
   
  [Написание кода и отладка задачи «Скрипт»](../../control-flow/script-task.md)  
- Объясняется, как [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] использовать средства для приложений (VSTA) для разработки скриптов, содержащихся в задаче «Скрипт».  
+ Объясняется использование редактора средств [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] для приложений (VSTA) для разработки скриптов, содержащихся в задаче "Скрипт".  
   
  [Использование переменных в задаче «Скрипт»](using-variables-in-the-script-task.md)  
  Объясняется использование переменных с помощью свойства <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>.  
@@ -64,7 +64,7 @@ ms.locfileid: "62894778"
   
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы [!INCLUDE[msCoName](../../../includes/msconame-md.md)], а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задача "Скрипт"](../../control-flow/script-task.md)   
  [Сравнение задачи «Скрипт» и компонента скрипта](../../extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
   

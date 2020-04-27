@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 70b092f81030c7905fe1d771844369f2d59317b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919020"
 ---
 # <a name="debugging-clr-database-objects"></a>Отладка объектов базы данных среды CLR
@@ -29,7 +29,7 @@ ms.locfileid: "62919020"
  Дополнительные сведения об отладке управляемого кода с помощью Visual Studio см. в разделе "[Отладка управляемого кода](https://go.microsoft.com/fwlink/?LinkId=120377)" в документации по Visual Studio.  
   
 ## <a name="debugging-permissions-and-restrictions"></a>Разрешения и ограничения отладки  
- Отладка — это операция с высокой степенью привилегий, и **** поэтому в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]могут быть разрешены только члены предопределенной роли сервера sysadmin.  
+ Отладка — это операция с высокой степенью привилегий, и **sysadmin** поэтому в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]могут быть разрешены только члены предопределенной роли сервера sysadmin.  
   
  При отладке применяются следующие ограничения.  
   
@@ -118,7 +118,7 @@ End Class
 EXEC GetVersion  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Общеязыковая среда выполнения &#40;концепции программирования интеграции&#41; среды CLR](common-language-runtime-clr-integration-programming-concepts.md)  
+## <a name="see-also"></a>См. также  
+ [Основные понятия о программировании интеграции со средой (CLR)](common-language-runtime-clr-integration-programming-concepts.md)  
   
   

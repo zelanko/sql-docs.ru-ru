@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d9b75cc79f1f127858ce8547aa222524614ac09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901625"
 ---
 # <a name="ole-db-destination"></a>Назначение «OLE DB»
@@ -61,7 +61,7 @@ ms.locfileid: "62901625"
   
  Целевой объект OLE DB имеет один обычный вход и один выход ошибок.  
   
- Дополнительные сведения о типах данных см. в разделе [Integration Services Data Types](integration-services-data-types.md).  
+ Дополнительные сведения о типах данных см. в разделе [типы данных Integration Services](integration-services-data-types.md).  
   
 ## <a name="fast-load-options"></a>Параметры быстрой загрузки  
  Если целевой объект OLE DB использует режим доступа к данным "быстрая загрузка", можно задать следующие параметры быстрой загрузки в интерфейсе пользователя **Редактор назначения "OLE DB"**.  
@@ -83,7 +83,7 @@ ms.locfileid: "62901625"
   
  Помимо параметров быстрой загрузки, отображенных в диалоговом окне **Редактор назначения "OLE DB"** , можно настроить назначение "OLE DB" для использования параметров массовой загрузки. Для этого введите параметры в свойство FastLoadOptions в диалоговом окне **Расширенный редактор** .  
   
-|Параметры быстрой загрузки|Description|  
+|Параметры быстрой загрузки|Описание|  
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|Устанавливает размер в килобайтах для вставки. Параметр имеет `KILOBYTES_PER_BATCH`  =  \<положительное целочисленное значение**>**.|  
 |FIRE_TRIGGERS|Устанавливает запуск триггеров при вставке таблицы. Параметр имеет форму **FIRE_TRIGGERS**. Наличие параметра означает, что триггер запускается.|  
@@ -101,11 +101,11 @@ ms.locfileid: "62901625"
   
  Дополнительные сведения о свойствах, которые можно установить в диалоговом окне **Редактор назначения "OLE DB"** см. в следующих разделах:  
   
--   [Редактор назначения OLE DB &#40;странице Диспетчер соединений&#41;](../ole-db-destination-editor-connection-manager-page.md)  
+-   [Редактор назначения OLE DB (страница "Диспетчер соединений")](../ole-db-destination-editor-connection-manager-page.md)  
   
--   [Редактор назначения "OLE DB &#40;страница" сопоставления "&#41;](../ole-db-destination-editor-mappings-page.md)  
+-   [Редактор назначения OLE DB (страница "Сопоставления")](../ole-db-destination-editor-mappings-page.md)  
   
--   [Редактор назначения OLE DB &#40;странице вывода ошибок&#41;](../ole-db-destination-editor-error-output-page.md)  
+-   [Редактор назначения "OLE DB" (страница "Вывод ошибок")](../ole-db-destination-editor-error-output-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62901625"
 ## <a name="related-content"></a>См. также  
  [Источник OLE DB](ole-db-source.md)  
   
- [Integration Services &#40;переменные&#41; SSIS](../integration-services-ssis-variables.md)  
+ [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md)  
   
  [Поток данных](data-flow.md)  
   

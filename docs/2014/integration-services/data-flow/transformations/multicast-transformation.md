@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a05605ca5c2b35b0a5e35c8228a2a144f20d7905
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900194"
 ---
 # <a name="multicast-transformation"></a>преобразование «Многоадресная доставка»
@@ -43,7 +43,7 @@ ms.locfileid: "62900194"
 ## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения о настройке свойств компонента см. в разделе [Установление свойств компонента потока данных](../set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поток данных](../data-flow.md)   
  [Преобразования служб Integration Services](integration-services-transformations.md)  
   

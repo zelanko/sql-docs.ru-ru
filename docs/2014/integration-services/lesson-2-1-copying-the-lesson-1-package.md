@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d473cdf45eebeb0a5bd6268ed79c071741e74e8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891677"
 ---
 # <a name="step-1-copying-the-lesson-1-package"></a>Шаг 1. Копирование пакета занятия 1
@@ -28,11 +28,11 @@ ms.locfileid: "62891677"
   
 3.  В обозревателе решений правой кнопкой мыши щелкните **Lesson 1.dtsx**и выберите команду **Копировать**.  
   
-4.  В обозревателе решений правой кнопкой мыши щелкните элемент **Пакеты служб SSIS**и выберите команду **Вставить**.  
+4.  В обозреватель решений щелкните правой кнопкой мыши **пакеты служб SSIS**и выберите команду **Вставить**.  
   
      По умолчанию копируемому пакету будет присвоено имя Lesson 2.dtsx.  
   
-5.  Чтобы открыть пакет в обозревателе решений, правой кнопкой мыши щелкните **Lesson 2.dtsx** .  
+5.  В обозреватель решений дважды щелкните **занятие 2. dtsx** , чтобы открыть пакет.  
   
 6.  Щелкните правой кнопкой мыши в области конструктора **Поток управления** и выберите пункт **Свойства**.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "62891677"
   
      Чтобы загрузить все пакеты занятий этого учебника, выполните следующие действия.  
   
-    1.  Переход к [Integration Services примерам продуктов](https://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Перейдите к [образцам продуктов служб Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027).  
   
-    2.  Перейдите на вкладку **DOWNLOADS** .  
+    2.  Перейдите на вкладку **Downloads (загрузки** ).  
   
     3.  Щелкните файл SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   

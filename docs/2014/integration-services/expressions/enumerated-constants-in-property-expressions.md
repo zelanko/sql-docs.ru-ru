@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b22e25ad9053ed4da0187035cff00ff7e3ca70af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62898902"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Констант-перечислителей в выражениях свойств
@@ -43,7 +43,7 @@ ms.locfileid: "62898902"
   
  [Общие свойства](#CommonProperties)  
   
-##  <a name="Package"></a> Пакет  
+##  <a name="package"></a><a name="Package"></a> Пакет  
  В следующих таблицах приводятся списки понятных имен и эквивалентных числовых значений для свойств пакетов, которые устанавливаются с использованием значений перечислителей.  
   
  `PackageType`свойство задается с помощью значений из `DTSPackageType` перечисления.  
@@ -86,7 +86,7 @@ ms.locfileid: "62898902"
 |EncryptAllWithUserKey|4|  
 |ServerStorage|5|  
   
-##  <a name="PrecedenceConstraints"></a> Управление очередностью  
+##  <a name="precedence-constraints"></a><a name="PrecedenceConstraints"></a> Управление очередностью  
  `EvalOp`свойство задается с помощью значений из `DTSPrecedenceEvalOp` перечисления.  
   
 |Понятное имя в перечислении DTSPrecedenceEvalOp|Числовое значение|  
@@ -105,7 +105,7 @@ ms.locfileid: "62898902"
 |Completion|2|  
 |Отменено|3|  
   
-##  <a name="Foreach"></a> Перечислители контейнера «цикл по каждому элементу»  
+##  <a name="foreach-loop-enumerators"></a><a name="Foreach"></a> Перечислители контейнера «цикл по каждому элементу»  
  Контейнер «цикл по каждому элементу» включает в себя набор перечислителей со свойствами, которые могут быть установлены с помощью выражений свойств.  
   
 ### <a name="foreach-ado-enumerator"></a>Перечислитель ADO по каждой строке  
@@ -143,7 +143,7 @@ ms.locfileid: "62898902"
 |Узел|1|  
 |NodeText|2|  
   
-##  <a name="Tasks"></a> Задачи  
+##  <a name="tasks"></a><a name="Tasks"></a> Задачи  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают в себя многочисленные задачи со свойствами, которые можно устанавливать с помощью выражений свойств.  
   
 ### <a name="analysis-services-execute-ddl-task"></a>Задача «Выполнение инструкции DDL служб Analysis Services»  
@@ -475,7 +475,7 @@ ms.locfileid: "62898902"
 |быстрый;|1|  
 |Точный|2|  
   
-##  <a name="MaintenancePlanTasks"></a> Задачи плана обслуживания  
+##  <a name="maintenance-plan-tasks"></a><a name="MaintenancePlanTasks"></a> Задачи плана обслуживания  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают в себя набор задач, выполняющих задачи SQL Server для использования в планах обслуживания, и пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживают работу с этими задачами программным путем, а документация по программированию не включает в себя API-документацию для этих задач и их перечислителей.  
@@ -568,7 +568,7 @@ ms.locfileid: "62898902"
 |Индекс|2|  
 |All|3|  
   
-##  <a name="CommonProperties"></a> Общие свойства  
+##  <a name="common-properties"></a><a name="CommonProperties"></a> Общие свойства  
  Пакеты, задачи, а также контейнеры последовательности, «цикл по каждому элементу» и «цикл по элементам» могут использовать следующие перечисления для задания специфических свойств.  
   
  `ForceExecutionResult`свойство задается с помощью значений из `DTSForcedExecResult` перечисления.  

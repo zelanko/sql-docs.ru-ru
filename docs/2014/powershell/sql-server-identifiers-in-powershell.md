@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3823b6d55439aad860d9176933c348e44acc1ba5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922853"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>Идентификаторы SQL Server в PowerShell
@@ -53,8 +53,8 @@ SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing
 |Описывает, как указывать шестнадцатеричную кодировку для символов в идентификаторах с разделителями, которые не поддерживаются Windows PowerShell. Кроме того, описывает, как декодировать шестнадцатеричные символы.|[Шифрование и расшифровка идентификаторов SQL Server](encode-and-decode-sql-server-identifiers.md)|  
 |Описывает, как использовать escape-символ Windows PowerShell для символов, не поддерживаемых в путях PowerShell.|[Применение escape-символов к идентификаторам SQL Server](escape-sql-server-identifiers.md)|  
   
-## <a name="see-also"></a>См. также:  
- [SQL Server PowerShell, поставщик](sql-server-powershell-provider.md)   
+## <a name="see-also"></a>См. также  
+ [Поставщик SQL Server PowerShell](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)   
  [Идентификаторы баз данных](../relational-databases/databases/database-identifiers.md)  
   

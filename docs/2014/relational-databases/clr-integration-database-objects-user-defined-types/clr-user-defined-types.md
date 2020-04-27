@@ -33,14 +33,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7044fdc4c29110870e20cd2f9fe4f2140659e551
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874440"
 ---
 # <a name="clr-user-defined-types"></a>Определяемые пользователем типы данных CLR
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет создавать объекты базы данных, которые программируются по сборке, созданной в среде CLR платформы .NET Framework. Объекты базы данных, которые способны пользоваться преимуществами многофункциональной модели программирования, предоставляемыми средой CLR, содержат триггеры, хранимые процедуры, функции, агрегатные функции и типы.  
   
 > [!NOTE]  
@@ -69,7 +68,7 @@ ms.locfileid: "62874440"
   
 4.  **Создание таблиц, переменных или параметров с помощью определяемого пользователем типа** Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], определяемый пользователем тип может использоваться в качестве определения столбца таблицы, в виде переменной в [!INCLUDE[tsql](../../includes/tsql-md.md)] пакете или в качестве аргумента [!INCLUDE[tsql](../../includes/tsql-md.md)] функции или хранимой процедуры.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Создание определяемого пользователем типа](creating-user-defined-types.md)  
  Описывает способ создания определяемых пользователем типов.  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917732"
 ---
 # <a name="create-a-database-mail-account"></a>Создание учетной записи компонента Database Mail
@@ -29,15 +29,15 @@ ms.locfileid: "62917732"
   
 -   **Дальнейшие действия.**  [Следующие действия по настройке компонента Database Mail](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Определите имя сервера и номер порта для сервера протокола SMTP, который используется для отправки электронной почты. Если SMTP-сервер требует проверки подлинности, определите имя пользователя и пароль для SMTP-сервера.  
   
 -   Также можно указать тип сервера и номер его порта. Для исходящих сообщений всегда используется тип сервера «SMTP». Большинство SMTP-серверов по умолчанию используют порт 25.  
   
-##  <a name="SSMSProcedure"></a> Использование мастера настройки компонента Database Mail  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="SSMSProcedure"></a> Использование мастера настройки компонента Database Mail  
  **Создание учетной записи компонента Database Mail с использованием мастера**  
   
 -   В обозревателе объектов подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого необходимо настроить компонент Database Mail, и разверните дерево сервера.  
@@ -54,7 +54,7 @@ ms.locfileid: "62917732"
   
 -   На странице **Завершение работы мастера** просмотрите действия, подлежащие выполнению, и нажмите **Готово** , чтобы завершить создание новой учетной записи.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Создание учетной записи компонента Database Mail с помощью инструкций Transact-SQL**  
   
  Выполните хранимую процедуру **msdb.dbo.sysmail_add_account_sp** , чтобы создать учетную запись, и задайте следующие сведения:  
@@ -84,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. Следующие действия по настройке компонента Database Mail  
+##  <a name="follow-up-next-steps-to-configuring-the-database-mail"></a><a name="FollowUp"></a> Дальнейшие действия. Следующие действия по настройке компонента Database Mail  
   
 -   [Создание профиля компонента Database Mail](create-a-database-mail-profile.md)  
   

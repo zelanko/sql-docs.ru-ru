@@ -11,14 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cd4cf8f8fe90afcda343b2b494e0b0b050c8c951
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890611"
 ---
 # <a name="microsoft-connector-11-for-sap-bw"></a>Microsoft Connector 1.1 для SAP BW
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 для SAP BW — это набор из трех компонентов, позволяющих извлекать или загружать данные в систему SAP NetWeaver BW версии 7.  
   
 > [!IMPORTANT]  
@@ -28,8 +27,7 @@ ms.locfileid: "62890611"
 >  Для извлечения данных из SAP Netweaver BW требуется дополнительная лицензия SAP. Обратитесь к SAP, чтобы уточнить требования.  
   
 ## <a name="components"></a>Components  
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 для SAP BW состоит из следующих компонентов:  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 для SAP BW состоит из следующих компонентов:  
   
 -   Источник **SAP BW**— источник SAP BW — это компонент источника потока данных, позволяющий извлекать данные из системы SAP NetWeaver BW версии 7.  
   

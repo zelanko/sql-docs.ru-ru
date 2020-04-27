@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919169"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>Ограничения обычных и контекстных соединений
@@ -34,14 +34,13 @@ ms.locfileid: "62919169"
   
 -   Пакетное обновление не поддерживается в контекстных соединениях.  
   
--   
-  `SqlNotificationRequest` нельзя использовать с командами, применяемыми в контекстном соединении.  
+-   `SqlNotificationRequest` нельзя использовать с командами, применяемыми в контекстном соединении.  
   
 -   Отмена команд, применяемых в контекстном соединении, не поддерживается. Метод `SqlCommand.Cancel` не учитывает запрос, не сообщая об этом.  
   
 -   Никакие другие ключевые слова строки соединения не могут использоваться при использовании «context connection=true».  
   
--   Свойство `SqlConnection.DataSource` возвращает вместо имени экземпляра `SqlConnection` значение NULL, если строка соединения для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] равна «context connection=true».  
+-   Свойство `SqlConnection.DataSource` возвращает вместо имени экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] значение NULL, если строка соединения для `SqlConnection` равна «context connection=true».  
   
 -   Установка свойства `SqlCommand.CommandTimeout` не имеет значения, если команда выполняется в контекстном соединении.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "62919169"
   
 -   Объект `SqlDependency` не поддерживается.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Контекстное соединение](context-connection.md)  
   
   

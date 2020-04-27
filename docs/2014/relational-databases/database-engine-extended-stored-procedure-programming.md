@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4146e19c6306cbe83659390605f570561fcc08f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917823"
 ---
 # <a name="database-engine-extended-stored-procedure-programming"></a>Программирование расширенных хранимых процедур ядра СУБД
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR. Дополнительные сведения см. в статье [Основные понятия о программировании интеграции со средой CLR](clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)] Пользуйтесь вместо этого интеграцией со средой CLR. Дополнительные сведения см. в статье [Основные понятия о программировании интеграции со средой CLR](clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
  API [!INCLUDE[msCoName](../includes/msconame-md.md)] расширенных хранимых процедур предоставляет серверный интерфейс прикладного программирования (API) для расширения [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] функциональных возможностей. API-интерфейс состоит из функций на языках C и C++ и макросов, предназначенных для построения приложений следующих категорий: расширенные хранимые процедуры и шлюзовые приложения.  
   
  Расширенные хранимые процедуры позволяют создавать собственные внешние подпрограммы на языках программирования, подобных C. Расширенные хранимые процедуры представляются пользователям как обычные хранимые процедуры и выполняются тем же способом. Расширенным хранимым процедурам могут передаваться аргументы, и эти процедуры могут возвращать результаты и статус.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Программирование расширенных хранимых процедур](extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)  
  Содержит описание способов создания, управления и использования расширенных хранимых процедур.  
   

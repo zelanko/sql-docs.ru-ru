@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ebbb5ac25ea71dc5b9929fb529414b059c0589fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919303"
 ---
 # <a name="getting-information-about-assemblies"></a>Получение сведений о сборках
@@ -44,17 +44,17 @@ ms.locfileid: "62919303"
   
 -   [sys. assembly_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-types-transact-sql)  
   
--   [sys. types &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)  
+-   [sys.types (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)  
   
  **Получение сведений о хранимых процедурах, триггерах и функциях среды CLR**  
   
--   [sys. assembly_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-modules-transact-sql)  
+-   [sys.assembly_modules (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-assembly-modules-transact-sql)  
   
  **Получение сведений о объектах, не являющихся объектами CLR**  
   
--   [sys. sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)  
+-   [sys.sql_modules (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сборки &#40;ядро СУБД&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Проектирование сборок](../../relational-databases/clr-integration/assemblies-designing.md)   
  [Реализация сборок](assemblies-implementing.md)  

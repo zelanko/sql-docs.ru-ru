@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fab91a2df7d0401e8301589b1dd0d21027e579c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891297"
 ---
 # <a name="step-5-testing-the-lesson-4-tutorial-package"></a>Шаг 5. Проверка учебного пакета, созданного на занятии 4
@@ -38,7 +38,7 @@ ms.locfileid: "62891297"
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>Выполнение учебного пакета занятия 4  
   
-1.  В меню **Отладка** выберите команду **Начать отладку**.  
+1.  В меню **Отладка** выберите команду **начать отладку**.  
   
 2.  После окончания работы пакета выберите в меню **Отладка** пункт **Остановить отладку**.  
   

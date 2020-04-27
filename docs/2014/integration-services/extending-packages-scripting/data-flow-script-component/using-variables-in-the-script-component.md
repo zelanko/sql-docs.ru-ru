@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 922454c7bc04a211d6f54754d48331fdfdffeb07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894973"
 ---
 # <a name="using-variables-in-the-script-component"></a>Использование переменных в компоненте скрипта
@@ -29,7 +29,7 @@ ms.locfileid: "62894973"
   
  Дополнительные сведения о странице **Скрипт** окна **Редактор преобразования "Скрипт"** см. в разделах [Настройка компонента скрипта в редакторе компонента скрипта](configuring-the-script-component-in-the-script-component-editor.md) и [Редактор преобразования "Скрипт" (страница "Скрипт")](../../script-transformation-editor-script-page.md).  
   
- Компонент скрипта создает класс коллекции `Variables` в элементе проекта `ComponentWrapper` со строго типизированным свойством метода доступа для значения каждой предварительно настроенной переменной, в которой свойство имеет то же самое имя, что и сама переменная. Эта коллекция доступна с помощью свойства `Variables` класса `ScriptMain`. Свойство метода доступа предоставляет разрешения только для чтения или для чтения и записи значения этой переменной, в зависимости от ситуации. Например, если к списку `MyIntegerVariable` добавлена целочисленная переменная с именем `ReadOnlyVariables`, ее значение можно получить в скрипте с помощью следующего кода:  
+ Компонент скрипта создает класс коллекции `Variables` в элементе проекта `ComponentWrapper` со строго типизированным свойством метода доступа для значения каждой предварительно настроенной переменной, в которой свойство имеет то же самое имя, что и сама переменная. Эта коллекция доступна с помощью свойства `Variables` класса `ScriptMain`. Свойство метода доступа предоставляет разрешения только для чтения или для чтения и записи значения этой переменной, в зависимости от ситуации. Например, если к списку `ReadOnlyVariables` добавлена целочисленная переменная с именем `MyIntegerVariable`, ее значение можно получить в скрипте с помощью следующего кода:  
   
  `Dim myIntegerVariableValue As Integer = Me.Variables.MyIntegerVariable`  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62894973"
   
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Integration Services &#40;переменные&#41; SSIS](../../integration-services-ssis-variables.md)   
  [Использование переменных в пакетах](../../use-variables-in-packages.md)  
   

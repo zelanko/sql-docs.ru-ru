@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874932"
 ---
 # <a name="designing-assemblies"></a>Конструирование сборок
@@ -57,8 +57,7 @@ ms.locfileid: "62874932"
  Кроме того, выбор набора UNSAFE позволяет коду в сборке выполнять операции, которые рассматриваются средством проверки среды CLR как нетипичные. Эти операции потенциально могут получать бесконтрольный доступ к буферам памяти в пространстве процесса [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Сборки UNSAFE потенциально могут подвергнуть опасности систему безопасности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или среды CLR. Разрешения UNSAFE должны предоставляться только высоконадежным сборкам опытными разработчиками или администраторами. Только члены предопределенной роли сервера **sysadmin** могут создавать ненадежные сборки.  
   
 ## <a name="restrictions-on-assemblies"></a>Ограничения на сборки  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] налагает определенные ограничения на управляемый код в сборках, делая их выполнение надежным и масштабируемым. Это означает, что некоторые операции, способные нарушить устойчивость сервера, не разрешены в сборках с набором разрешений SAFE и EXTERNAL_ACCESS.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] налагает определенные ограничения на управляемый код в сборках, делая их выполнение надежным и масштабируемым. Это означает, что некоторые операции, способные нарушить устойчивость сервера, не разрешены в сборках с набором разрешений SAFE и EXTERNAL_ACCESS.  
   
 ### <a name="disallowed-custom-attributes"></a>Запрещенные пользовательские атрибуты  
  Сборки не могут иметь следующих пользовательских атрибутов.  
@@ -117,7 +116,7 @@ System.Data.OracleClient
 System.Configuration  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сборки &#40;ядро СУБД&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Безопасность интеграции со средой CLR](security/clr-integration-security.md)  
   

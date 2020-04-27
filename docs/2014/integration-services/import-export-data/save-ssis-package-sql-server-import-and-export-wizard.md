@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6af26cafd4f8dd9bf874ae7860c4f796bef48ae1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892771"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Сохранение пакета служб SSIS (мастер экспорта и импорта SQL Server)
@@ -30,13 +30,13 @@ ms.locfileid: "62892771"
  Назначение мастера импорта и экспорта SQL Server заключается в копировании данных из исходного расположения в целевое. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="static-options"></a>Статические параметры  
- **Название**  
+ **Имя**  
  Введите уникальное имя пакета.  
   
  **Описание**  
  Введите описание пакета. Рекомендуется описывать пакеты в связи с их предназначением, чтобы пакеты описывали сами себя и их легко было обслуживать.  
   
- **Мишень**  
+ **Target**  
  Просмотрите цель ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или файл), которая ранее была назначена для целевого файла.  
   
 ## <a name="target-dynamic-options"></a>Целевые динамические параметры  
@@ -64,7 +64,7 @@ ms.locfileid: "62892771"
  **Обзор**  
  Выбрав назначение файла, перейдите к целевому файлу с помощью диалогового окна **сохранить пакет** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сохранение пакетов](../save-packages.md)  
   
   

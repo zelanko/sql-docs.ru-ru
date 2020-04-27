@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916738"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Восстановление базы данных до состояния, сохраненного в моментальном снимке
@@ -33,9 +33,9 @@ ms.locfileid: "62916738"
   
 -   **Восстановление базы данных из моментального снимка с помощью**:  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
  Возврат не поддерживается в следующих условиях.  
   
 -   У базы данных в текущее время должен быть один моментальный снимок, из которого необходимо возвратить состояние базы.  
@@ -66,7 +66,7 @@ ms.locfileid: "62916738"
   
 -   Операция восстановления удаляет все полнотекстовые каталоги.  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
  Убедитесь, что исходная база данных и моментальный снимок базы данных удовлетворяют следующим предварительным требованиям.  
   
 -   Убедитесь, что база данных не повреждена.  
@@ -78,12 +78,12 @@ ms.locfileid: "62916738"
   
 -   Удалите все прочие моментальные снимки, существующие в базе данных. Дополнительные сведения см. в разделе [Удаление моментального снимка базы данных (Transact-SQL)](drop-a-database-snapshot-transact-sql.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Возвратить базу данных-источник к состоянию на момент создания моментального снимка базы данных может любой пользователь с разрешением RESTORE DATABASE.  
   
-##  <a name="TsqlProcedure"></a> Как восстановить базу данных до моментального снимка базы данных (с использованием Transact-SQL)  
+##  <a name="how-to-revert-a-database-to-a-database-snapshot-using-transact-sql"></a><a name="TsqlProcedure"></a> Как восстановить базу данных до моментального снимка базы данных (с использованием Transact-SQL)  
  **Восстановление базы данных до состояния, сохраненного в моментальном снимке**  
   
 > [!NOTE]  
@@ -117,14 +117,14 @@ ms.locfileid: "62916738"
   
 6.  Кроме того, можно создать резервную копию восстанавливаемой базы данных, особенно если в ней используется полная модель восстановления или модель восстановления с неполным протоколированием. Сведения о резервном копировании базы данных см. в разделе [Создание полной резервной копии базы данных (SQL Server)](../backup-restore/create-a-full-database-backup-sql-server.md).  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом разделе содержатся примеры восстановления базы данных до состояния, соответствующего моментальному снимку.  
   
 -   A. [Восстановление базы данных AdventureWorks к состоянию моментального снимка](#Reverting_AW)  
   
 -   Б. [Восстановление базы данных Sales к состоянию моментального снимка](#Reverting_Sales)  
   
-####  <a name="Reverting_AW"></a> A. Восстановление базы данных AdventureWorks к состоянию моментального снимка  
+####  <a name="a-reverting-a-snapshot-on-the-adventureworks-database"></a><a name="Reverting_AW"></a> A. Восстановление базы данных AdventureWorks к состоянию моментального снимка  
  В этом примере предполагается наличие единственного моментального снимка базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Пример создания снимка, к состоянию на момент создания которого необходимо восстановить базу данных, см. в разделе [Создание моментального снимка базы данных (Transact-SQL)](create-a-database-snapshot-transact-sql.md).  
   
 ```  
@@ -135,7 +135,7 @@ DATABASE_SNAPSHOT = 'AdventureWorks_dbss1800';
 GO  
 ```  
   
-####  <a name="Reverting_Sales"></a> Б. Восстановление базы данных Sales к состоянию моментального снимка  
+####  <a name="b-reverting-a-snapshot-on-the-sales-database"></a><a name="Reverting_Sales"></a> Б. Восстановление базы данных Sales к состоянию моментального снимка  
  В этом примере предполагается, что в базе данных **Sales** имеется два моментальных снимка: **sales_snapshot0600** и **sales_snapshot1200**. В примере происходит удаление более раннего моментального снимка, и база данных восстанавливается до состояния более позднего моментального снимка.  
   
  Код программы создания образца базы данных и моментальных снимков для данного примера см. в следующих разделах.  
@@ -157,7 +157,7 @@ RESTORE DATABASE Sales FROM DATABASE_SNAPSHOT = 'sales_snapshot1200';
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Создание моментального снимка базы данных (Transact-SQL)](create-a-database-snapshot-transact-sql.md)  
   

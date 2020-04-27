@@ -18,23 +18,20 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 68f1f114002ab0ef38c7565a523723a06958048d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874342"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Атрибуты защиты узла и программирование средств интеграции со средой CLR
   Среда CLR предоставляет механизм для аннотирования управляемых API, входящих в состав платформы .NET Framework, при помощи определенных атрибутов, которые могут потребоваться серверу CLR (такому как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Примеры таких атрибутов защиты сервера включают следующее:  
   
--   
-  `SharedState`, который указывает, предоставляет ли API доступ к средствам создания или управления общим состоянием (например, к полям статического класса).  
+-   `SharedState`, который указывает, предоставляет ли API доступ к средствам создания или управления общим состоянием (например, к полям статического класса).  
   
--   
-  `Synchronization`, который указывает, предоставляет ли API возможность выполнять синхронизацию потоков.  
+-   `Synchronization`, который указывает, предоставляет ли API возможность выполнять синхронизацию потоков.  
   
--   
-  `ExternalProcessMgmt`, который указывает, предоставляет ли API способ управления процессом узла.  
+-   `ExternalProcessMgmt`, который указывает, предоставляет ли API способ управления процессом узла.  
   
  C учетом этих атрибутов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи управления доступом для кода определяет список атрибутов защиты сервера, которые запрещены в размещенной среде. Требования к CAS задаются одним из трех [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] наборов разрешений: `SAFE`, `EXTERNAL_ACCESS`или `UNSAFE`. Один из этих трех уровней безопасности задается с помощью инструкции `CREATE ASSEMBLY` при регистрации сборки на сервере. В коде, выполняющемся с наборами разрешений `SAFE` или `EXTERNAL_ACCESS`, необходимо избегать использования элементов определенных типов, к которым применен атрибут `System.Security.Permissions.HostProtectionAttribute`. Дополнительные сведения см. в разделе [Создание сборки](../clr-integration/assemblies/creating-an-assembly.md) и [ограничения модели программирования интеграции со средой CLR](../clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
@@ -57,7 +54,7 @@ ms.locfileid: "62874342"
 > [!NOTE]  
 >  Списки в этих разделах содержат поддерживаемые сборки.  Дополнительные сведения см. в разделе [supported .NET Framework librarys](../clr-integration/database-objects/supported-net-framework-libraries.md).  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Запрещенные типы и элементы в Microsoft.VisualBasic.dll](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)  
  Приведены типы и элементы из файла Microsoft.VisualBasic.dll, для которых запрещены значения атрибутов защиты сервера.  
   
@@ -73,7 +70,7 @@ ms.locfileid: "62874342"
  [Недопустимые типы и элементы в библиотеке System.Core.dll](disallowed-types-and-members-in-system-core-dll.md)  
  Приведены типы и элементы из файла System.Core.dll, для которых запрещены значения атрибутов защиты сервера.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Безопасность доступа к коду при интеграции со средой CLR](../clr-integration/security/clr-integration-code-access-security.md)   
  [Ограничения модели программирования интеграции со средой CLR](../clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
  [Создание сборки](../clr-integration/assemblies/creating-an-assembly.md)  

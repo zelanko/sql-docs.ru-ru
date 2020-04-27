@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bcf462f82d7455f83bb0bee8a3b0af991ec2e7db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920057"
 ---
 # <a name="sqlpipe-object"></a>Объект SqlPipe
@@ -138,7 +138,7 @@ End Class
 EXEC uspGetProductLineVB 'T';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект SqlDataRecord](sqldatarecord-object.md)   
  [Хранимые процедуры CLR](../../database-engine/dev-guide/clr-stored-procedures.md)   
  [Внутрипроцессные расширения SQL Server для ADO.NET](sql-server-in-process-specific-extensions-to-ado-net.md)  

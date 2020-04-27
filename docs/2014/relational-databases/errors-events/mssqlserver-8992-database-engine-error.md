@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62912548"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
@@ -30,7 +30,7 @@ ms.locfileid: "62912548"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC3_CHECK_CATALOG|  
-|Текст сообщения|Check Catalog Msg ERROR Level LEVEL State STATE: MESSAGE.|  
+|Текст сообщения|Проверьте сообщение каталога ERROR, уровень LEVEL, состояние STATE: MESSAGE.|  
   
 ## <a name="explanation"></a>Объяснение  
  Инструкции DBCC CHECKCATALOG или DBCC CHECKDB обнаружили несогласованность в системных таблицах метаданных для указанного объекта. То есть существует несогласованность между записанным идентификатором объекта и объектом, указанным в сообщении об ошибке.  
@@ -74,7 +74,7 @@ ms.locfileid: "62912548"
 ### <a name="do-not-manually-update-system-tables"></a>Не обновляйте системные таблицы вручную  
  Не вносите изменения в системные таблицы вручную. SQL Server не поддерживает внесенных вручную каких-либо изменений в системные базы данных. В случае обновления системной таблицы в базе данных SQL Server в журнале регистрируются два события (идентификаторы событий 17659 и 3859). Дополнительные сведения см. в статье базы знаний 2688307 «При обновлении системных таблиц в базе данных SQL Server регистрируются события с идентификаторами 17659 и 3859».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [При обновлении системных таблиц в базе данных SQL Server в журнале регистрируются события с идентификаторами 17659 и 3859](https://support.microsoft.com/kb/2688307/EN-US).  
   
   

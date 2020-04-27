@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 38c29f8d70b3cc72baf81e2ae23082fe270ba573
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874030"
 ---
 # <a name="set-or-change-the-database-collation"></a>Установка и изменение параметров сортировки базы данных
@@ -33,21 +33,21 @@ ms.locfileid: "62874030"
   
      [Безопасность](#Security)  
   
--   **Установка или изменение параметров сортировки базы данных с помощью:**  
+-   **Задание и изменение параметров сортировки базы данных с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Параметры сортировки Windows только для Юникода могут использоваться только с предложением COLLATE для применения параметров сортировки к данным типов `nchar`, `nvarchar` и `ntext` на уровне столбца и на уровне выражения. Их нельзя использовать с предложением COLLATE для изменения параметров сортировки базы данных или экземпляра сервера.  
   
 -   Если указанные или используемые объектом по ссылке параметры сортировки используют кодовую страницу, не поддерживаемую Windows, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] выдаст ошибку.  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   Имена поддерживаемых параметров сортировки вы можете найти в статьях [Имя параметров сортировки Windows (Transact-SQL)](/sql/t-sql/statements/windows-collation-name-transact-sql) и [Имя параметров сортировки SQL Server (Transact-SQL)](/sql/t-sql/statements/sql-server-collation-name-transact-sql)или воспользоваться системной функцией [sys.fn_helpcollations (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql) .  
   
@@ -61,16 +61,16 @@ ms.locfileid: "62874030"
   
 -   Можно изменить параметры сортировки любых новых объектов, созданных в пользовательской базе данных, с помощью предложения COLLATE инструкции [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) . Эта инструкция не изменяет параметры сортировки столбцов в любых существующих пользовательских таблицах. Он может быть изменен с помощью предложения COLLATE инструкции [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  CREATE DATABASE  
- Требуется разрешение CREATE DATABASE в базе данных **master** , или требуется разрешение CREATE ANY DATABASE или ALTER ANY DATABASE.  
+ Требуется разрешение CREATE DATABASE в базе данных **master** или разрешение CREATE ANY DATABASE или ALTER ANY DATABASE.  
   
  ALTER DATABASE  
  Необходимо разрешение ALTER на базу данных.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-set-or-change-the-database-collation"></a>Задание и изменение параметров сортировки базы данных  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62874030"
   
 3.  По завершении нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-set-the-database-collation"></a>Задание параметров сортировки базы данных  
   
@@ -135,14 +135,14 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Поддержка параметров сортировки и Юникода](collation-and-unicode-support.md)   
- [sys. fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
- [sys. databases &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [SQL Server имя параметров сортировки &#40;&#41;Transact-SQL](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
- [Имя параметров сортировки Windows &#40;&#41;Transact-SQL](/sql/t-sql/statements/windows-collation-name-transact-sql)   
- [Сортировка &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations)   
- [Очередность параметров сортировки &#40;&#41;Transact-SQL](/sql/t-sql/statements/collation-precedence-transact-sql)   
+ [sys.fn_helpcollations (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
+ [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [Имя параметров сортировки SQL Server (Transact-SQL)](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
+ [Имя параметров сортировки Windows (Transact-SQL)](/sql/t-sql/statements/windows-collation-name-transact-sql)   
+ [COLLATE (Transact-SQL)](/sql/t-sql/statements/collations)   
+ [Очередность параметров сортировки (Transact-SQL)](/sql/t-sql/statements/collation-precedence-transact-sql)   
  [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql)   
- [Создание &#40;базы данных SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)   
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)  
   

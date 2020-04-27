@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889639"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Программная загрузка и запуск удаленного пакета
@@ -29,7 +29,7 @@ ms.locfileid: "62889639"
   
  В качестве альтернативы можно запустить удаленный пакет с локального компьютера, на котором установлены службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Дополнительные сведения см. в разделе [Программная загрузка и запуск локального пакета](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md).  
   
-##  <a name="top"></a> Запуск удаленного пакета на удаленном компьютере  
+##  <a name="running-a-remote-package-on-the-remote-computer"></a><a name="top"></a> Запуск удаленного пакета на удаленном компьютере  
  Как упоминалось выше, существует несколько способов выполнения удаленного пакета на удаленном сервере.  
   
 -   [Использовать агент SQL Server, чтобы запустить удаленный пакет программным способом](#agent)  
@@ -38,7 +38,7 @@ ms.locfileid: "62889639"
   
  Практически все методы, которые используются в этом разделе для загрузки и сохранения пакетов, требуют наличия ссылки на сборку `Microsoft.SqlServer.ManagedDTS`. Исключением является ADO.NETый подход, продемонстрированный в этом разделе для исполнения хранимой процедуры **sp_start_job** , для которой требуется только `System.Data`ссылка на. После добавления ссылки на сборку `Microsoft.SqlServer.ManagedDTS` в новый проект импортируйте пространство имен <xref:Microsoft.SqlServer.Dts.Runtime> с инструкцией `using` или `Imports`.  
   
-###  <a name="agent"></a> Использование агента SQL Server для выполнения удаленного пакета программным способом на сервере  
+###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a> Использование агента SQL Server для выполнения удаленного пакета программным способом на сервере  
  В следующем образце кода демонстрируется, как программным способом использовать агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения удаленного пакета на сервере. В образце кода вызывается системная хранимая процедура **sp_start_job**, которая запускает задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Задание, запускаемое процедурой, называется `RunSSISPackage` и расположено на удаленном компьютере. Затем задание `RunSSISPackage` запускает пакет на удаленном компьютере.  
   
 > [!NOTE]  
@@ -145,7 +145,7 @@ namespace LaunchSSISPackageAgent_CS
   
  
   
-###  <a name="service"></a> Использование веб-службы или удаленного компонента для запуска удаленного пакета программным способом  
+###  <a name="using-a-web-service-or-remote-component-to-run-a-remote-package-programmatically"></a><a name="service"></a> Использование веб-службы или удаленного компонента для запуска удаленного пакета программным способом  
  В предыдущем решении для запуска пакетов программным способом на сервере не требовалось размещать какой-либо пользовательский код на сервере. Однако, возможно, предпочтительным окажется решение, не зависящее от агента SQL Server для выполнения пакетов. В следующем примере демонстрируется веб-служба, которая может быть создана на сервере для локального запуска пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], и тестовое приложение, которое можно использовать для вызова веб-службы с клиентского компьютера. Если предпочтительней создать удаленный компонент вместо веб-службы, можно использовать ту же логику кода после внесения незначительных изменений в удаленный компонент. Однако для удаленного компонента может потребоваться более сложная настройка, чем для веб-службы.  
   
 > [!IMPORTANT]  
@@ -424,7 +424,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные сведения о различиях между локальным и удаленным выполнением](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Программная загрузка и запуск локального пакета](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Загрузка выхода локального пакета](../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  

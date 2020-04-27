@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921831"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Восстановления файлов (простая модель восстановления)
@@ -50,7 +50,7 @@ ms.locfileid: "62921831"
   
 
   
-##  <a name="Overview"></a>Общие сведения о восстановлении файлов и файловых групп в простой модели восстановления  
+##  <a name="overview-of-file-and-filegroup-restore-under-the-simple-recovery-model"></a><a name="Overview"></a>Общие сведения о восстановлении файлов и файловых групп в простой модели восстановления  
  Сценарий восстановления файлов состоит из единой последовательности восстановления, в процессе которой производится копирование, накат транзакций и восстановление соответствующих данных.  
   
 1.  Восстановите каждый поврежденный файл из последней резервной копии поврежденного файла.  
@@ -62,13 +62,13 @@ ms.locfileid: "62921831"
   
  Последовательность восстановления содержит только две инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Первая инструкция восстанавливает вторичный файл `A`, который восстанавливается с параметром WITH NORECOVERY. Вторая операция восстанавливает файлы `B` и `C` , которые восстанавливаются с другого устройства резервного копирования с параметром WITH RECOVERY:  
   
-1.  Восстановление **=** файла *базы* данных базы данных _name_of_file_A_  
+1.  RESTORE DATABASE *база_данных* FILE **=**_имя_файла_A_  
   
      FROM *резервная_копия_файла_A*  
   
      WITH NORECOVERY **;**  
   
-2.  Восстановление **=** файла *базы* данных базы данных _name_of_file_B_**,**_name_of_file_C_  
+2.  RESTORE DATABASE *база_данных* FILE **=**_имя_файла_Б_**,**_имя_файла_В_  
   
      FROM *резервная_копия_файлов_Б_и_В*  
   
@@ -76,33 +76,33 @@ ms.locfileid: "62921831"
   
 ### <a name="examples"></a>Примеры  
   
--   [Пример. оперативное восстановление файла, доступного только для чтения, &#40;простой модели восстановления&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Пример. Оперативное восстановление доступного только для чтения файла (простая модель восстановления)](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Пример. автономное восстановление основной и другой файловой группы &#40;модели полного восстановления&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Пример. Автономное восстановление основной и еще одной файловой группы (модель полного восстановления)](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Восстановление файлов и файловых групп**  
   
--   [Восстановление файлов и файловых групп поверх существующих файлов &#40;SQL Server&#41;](restore-files-and-filegroups-over-existing-files-sql-server.md)  
+-   [Восстановление файлов и файловых групп поверх существующих файлов (SQL Server)](restore-files-and-filegroups-over-existing-files-sql-server.md)  
   
--   [Восстановление файлов и файловых групп &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
+-   [Восстановление файлов и файловых групп (SQL Server)](restore-files-and-filegroups-sql-server.md)  
   
--   [Восстановление файлов и файловых групп &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
+-   [Восстановление файлов и файловых групп (SQL Server)](restore-files-and-filegroups-sql-server.md)  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>ОБЪЕКТАХ  
+-   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A> (SMO)  
   
   
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Резервное копирование и восстановление: взаимодействие и сосуществование &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Разностные резервные копии &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [&#40;SQL Server полных резервных копий файлов&#41;](full-file-backups-sql-server.md)   
- [Общие сведения о резервном копировании &#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [Обзор восстановления и восстановления &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
- [Восстановление &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
+ [Общие сведения о резервном копировании (SQL Server)](backup-overview-sql-server.md)   
+ [Обзор процессов восстановления (SQL Server)](restore-and-recovery-overview-sql-server.md)   
+ [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Полное восстановление базы данных &#40;простой модели восстановления&#41;](complete-database-restores-simple-recovery-model.md)   
- [Поэтапное восстановление &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)  
+ [Поэтапное восстановление (SQL Server)](piecemeal-restores-sql-server.md)  
   
   

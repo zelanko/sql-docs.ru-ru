@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891406"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>Шаг 3. Добавление перенаправления потока ошибок
@@ -24,7 +24,7 @@ ms.locfileid: "62891406"
   
  В этой задаче будет настроено преобразование «Поиск ключа валюты» так, чтобы все строки с ошибками перенаправлялись на вывод ошибок. Согласно ветке ошибок потока данных, эти строки будут записаны в файл.  
   
- По умолчанию два дополнительных столбца в выводе [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ошибок, **ErrorCode** и **ErrorColumn**содержат только числовые коды, представляющие номер ошибки, и идентификатор столбца, в котором произошла ошибка. Эти числовые значения могут быть малополезны без соответствующего описания ошибки.  
+ По умолчанию два дополнительных столбца в выводе ошибок служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , **ErrorCode** и **ErrorColumn**, содержат только числовые коды, представляющие номер ошибки и идентификатор столбца, в котором произошла ошибка. Эти числовые значения могут быть малополезны без соответствующего описания ошибки.  
   
  Чтобы повысить информативность вывода ошибок, перед тем как пакет запишет строки с ошибками в файл, следует с помощью компонента скрипта получить доступ к API-интерфейсу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и извлечь описание ошибки.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62891406"
   
 10. На странице **Скрипт** убедитесь, что `LocaleID` свойство имеет значение **Английский (США.**  
   
-11. Нажмите кнопку **Изменить скрипт** , чтобы открыть среду [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA). В методе `Input0_ProcessInputRow` введите или вставьте следующий код:  
+11. Нажмите кнопку **Изменить скрипт**, чтобы открыть среду [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA). В методе `Input0_ProcessInputRow` введите или вставьте следующий код:  
   
      [Visual Basic]  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62891406"
   
 13. Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно **Редактор преобразования «Скрипт»** .  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
  [Шаг 4. Добавление назначения «Неструктурированный файл»] (lesson-4-4-adding-a-flat-file-destination.md  
   
   

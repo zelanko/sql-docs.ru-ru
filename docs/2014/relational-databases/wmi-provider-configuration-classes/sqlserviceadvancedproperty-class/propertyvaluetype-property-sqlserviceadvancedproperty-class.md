@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d8f777bd8a3b473a93e3f9b6a6e212efd56c04a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62911507"
 ---
 # <a name="propertyvaluetype-property-sqlserviceadvancedproperty-class"></a>Свойство PropertyValueType (класс SqlServiceAdvancedProperty)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объектами*  
+ *object*  
  Объект [класса SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) , представляющий дополнительное свойство.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
@@ -45,7 +45,7 @@ object
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

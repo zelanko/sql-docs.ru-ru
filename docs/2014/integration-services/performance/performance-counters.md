@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 79c9e433a6b5bcf9babee0060fdf028775e0e8a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889842"
 ---
 # <a name="performance-counters"></a>Счетчики производительности
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]устанавливает набор счетчиков производительности, которые можно использовать для наблюдения за производительностью подсистемы обработки потока данных. Например, наблюдая за счетчиком «Выгружено буферов», можно определить, записываются ли временно на диск буфера данных при выполнении пакета. Такая выгрузка снижает производительность и указывает на недостаточный объем памяти компьютера.  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливают набор счетчиков производительности, предназначенных для наблюдения за производительностью подсистемы обработки потока данных. Например, наблюдая за счетчиком «Выгружено буферов», можно определить, записываются ли временно на диск буфера данных при выполнении пакета. Такая выгрузка снижает производительность и указывает на недостаточный объем памяти компьютера.  
   
 > [!NOTE]  
 >  Если установить службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на компьютер, где запущена ОС [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], а затем обновить ОС до [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], то в процессе обновления из компьютера будут удалены счетчики производительности [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Чтобы восстановить счетчики производительности служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на компьютере, запустите средство установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме исправлений.  
@@ -71,13 +71,13 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ## <a name="related-content"></a>См. также  
   
--   Средство [Визуализация производительности служб SSIS Performance для Business Intelligence Development Studio (проект CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146626) на узле codeplex.com.  
+-   Средство [Визуализация производительности служб SSIS Performance для Business Intelligence Development Studio (проект CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146626)на узле codeplex.com.  
   
--   Видео [Измерение и основные сведения о показателях пакетов служб SSIS на предприятии (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkId=150497) на сайте msdn.microsoft.com.  
+-   Видео [Измерение и основные сведения о показателях пакетов служб SSIS на предприятии (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkId=150497)на сайте msdn.microsoft.com.  
   
 -   Статья поддержки [Счетчик производительности служб SSIS больше недоступен в системном мониторе после обновления до Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319)на узле support.microsoft.com.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск проектов и пакетов](../packages/run-integration-services-ssis-packages.md)  
   
   

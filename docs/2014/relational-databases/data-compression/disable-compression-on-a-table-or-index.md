@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7700a2d1da4349bd1bc652badc1c2cdd89dc6550
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873276"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Отключение сжатия таблицы или индекса
@@ -36,9 +36,9 @@ ms.locfileid: "62873276"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Если таблица является кучей, то операция перестроения в режиме ONLINE будет однопотоковой. Используйте режим OFFLINE для выполнения многопотоковых операций перестроения кучи. Дополнительную информацию о сжатии данных см. в разделе [Сжатие данных](data-compression.md).  
   
@@ -46,12 +46,12 @@ ms.locfileid: "62873276"
   
 -   Если у таблицы есть невыровненные индексы, изменить настройку сжатия отдельной секции невозможно.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на таблицу или индекс.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-disable-compression-on-a-table"></a>Отключение сжатия в таблице  
   
@@ -187,7 +187,7 @@ ms.locfileid: "62873276"
   
      Завершив выбор параметров, нажмите кнопку **Закрыть**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-disable-compression-on-a-table"></a>Отключение сжатия в таблице  
   

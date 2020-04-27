@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916894"
 ---
 # <a name="tempdb-database"></a>База данных tempdb
@@ -70,16 +70,16 @@ ms.locfileid: "62916894"
 |ANSI_PADDING|OFF|Да|  
 |ANSI_WARNINGS|OFF|Да|  
 |ARITHABORT|OFF|Да|  
-|AUTO_CLOSE|OFF|нет|  
+|AUTO_CLOSE|OFF|Нет|  
 |AUTO_CREATE_STATISTICS|ON|Да|  
-|AUTO_SHRINK|OFF|нет|  
+|AUTO_SHRINK|OFF|Нет|  
 |AUTO_UPDATE_STATISTICS|ON|Да|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Да|  
 |CHANGE_TRACKING|OFF|нет|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Да|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Да|  
 |CURSOR_DEFAULT|GLOBAL|Да|  
-|Параметры доступности базы данных|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|нет<br /><br /> нет<br /><br /> нет|  
+|Параметры доступности базы данных|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Нет<br /><br /> Нет<br /><br /> Нет|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Да|  
 |DB_CHAINING|ON|нет|  
 |ENCRYPTION|OFF|нет|  
@@ -91,7 +91,7 @@ ms.locfileid: "62916894"
 |RECOVERY|ПРОСТОЙ|нет|  
 |RECURSIVE_TRIGGERS|OFF|Да|  
 |Параметры компонента Service Broker|ENABLE_BROKER|Да|  
-|TRUSTWORTHY|OFF|нет|  
+|TRUSTWORTHY|OFF|Нет|  
   
  Описание этих баз данных см. в статье [Параметры ALTER DATABASE SET (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62916894"
   
 -   Удаление базы данных.  
   
--   Удаление пользователя **guest** из базы данных.  
+-   Удаление **гостевого** пользователя из базы данных.  
   
 -   Включение системы отслеживания измененных данных.  
   
@@ -138,11 +138,11 @@ ms.locfileid: "62916894"
   
  [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [sys. master_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
+ [sys.master_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
  [Перемещение файлов базы данных](move-database-files.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Работа с базой данных tempdb в SQL Server 2005](https://chresandro.wordpress.com/2014/09/29/working-with-tempdb-in-sql-server-2005/)  
   
   

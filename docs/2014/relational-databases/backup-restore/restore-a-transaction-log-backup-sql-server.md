@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62875675"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Восстановление резервной копии журнала транзакций (SQL Server)
@@ -45,9 +45,9 @@ ms.locfileid: "62875675"
   
 -   [Связанные задачи](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Резервные копии должны восстанавливаться в том же порядке, в котором они были созданы. Перед тем как можно будет восстановить определенную резервную копию журнала транзакций, вначале должны быть восстановлены следующие более ранние резервные копии без отката незафиксированных транзакций, т.е.с параметром WITH NORECOVERY:  
   
@@ -57,12 +57,12 @@ ms.locfileid: "62875675"
   
          Дополнительные сведения о резервных копиях журналов транзакций см. в статье [Резервные копии журналов транзакций (SQL Server)](transaction-log-backups-sql-server.md) и [Применение резервных копий журналов транзакций (SQL Server)](apply-transaction-log-backups-sql-server.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Разрешения на выполнение инструкции RESTORE даются ролям, в которых данные о членстве всегда доступны серверу. Так как членство в предопределенной роли базы данных может быть проверено только тогда, когда база данных доступна и не повреждена, что не всегда имеет место при выполнении инструкции RESTORE, члены предопределенной роли базы данных **db_owner** не имеют разрешений RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 > [!WARNING]  
 >  Обычно процесс восстановления заключается в выборе в диалоговом окне **Восстановление базы данных** резервных копий журналов, данных и разностных резервных копий.  
@@ -189,7 +189,7 @@ ms.locfileid: "62875675"
   
 11. При необходимости укажите имя резервного файла в текстовом поле **Резервный файл** . Этот параметр необходим, чтобы оставить базу данных в режиме только для чтения. Резервный файл можно выбрать в проводнике или ввести полный путь к нему в текстовом поле.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 > [!IMPORTANT]  
 >  Во избежание неоднозначности в каждой инструкции WITH RECOVERY рекомендуется явное задание параметра WITH NORECOVERY или WITH RECOVERY. Это особенно важно учитывать при написании скриптов.  
@@ -234,7 +234,7 @@ ms.locfileid: "62875675"
     > [!IMPORTANT]  
     >  При создании зеркальной базы данных этап восстановления можно пропустить. Зеркальная база данных должна остаться в состоянии RESTORING.  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  По умолчанию для базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] используется простая модель восстановления. В следующем примере для перехода на модель полного восстановления требуется изменить базу данных следующим образом:  
   
 ```sql  
@@ -287,7 +287,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Создание резервной копии журнала транзакций (SQL Server)](back-up-a-transaction-log-sql-server.md)  
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 32b95a5d156ae52394b7128b024c86b9a7e308b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891542"
 ---
 # <a name="step-5-adding-and-configuring-the-flat-file-source"></a>Шаг 5. Добавление и настройка источника неструктурированных файлов
@@ -45,8 +45,8 @@ ms.locfileid: "62891542"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Шаг 6. Добавление и настройка преобразований «Уточняющий запрос»](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Источник "Неструктурированный файл"](data-flow/flat-file-source.md)   
- [Редактор диспетчера соединений с неструктурированными файлами &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)  
+ [Редактор диспетчера соединений с неструктурированными файлами (страница "Общие")](general-page-of-integration-services-designers-options.md)  
   
   

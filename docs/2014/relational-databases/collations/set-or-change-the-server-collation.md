@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4501bc77a28746de3b0ce97b7b619889093650d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918581"
 ---
 # <a name="set-or-change-the-server-collation"></a>Задание или изменение параметров сортировки сервера
@@ -51,8 +51,8 @@ ms.locfileid: "62918581"
   
 ## <a name="see-also"></a>См. также:  
  [Поддержка параметров сортировки и Юникода](collation-and-unicode-support.md)   
- [Установка и изменение параметров сортировки базы данных](set-or-change-the-database-collation.md)   
- [Задание или изменение параметров сортировки столбца](set-or-change-the-column-collation.md)   
+ [Установка или изменение параметров сортировки базы данных](set-or-change-the-database-collation.md)   
+ [Установка или изменение параметров сортировки столбца](set-or-change-the-column-collation.md)   
  [Перестроение системных баз данных](../databases/system-databases.md)  
   
   

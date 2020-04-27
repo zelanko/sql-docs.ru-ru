@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e25c90b3baa4e718f40dc3a3f84b6dc221d54c33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62878291"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>Учебник по службам SSIS. Создание простого ETL-пакета
@@ -39,7 +39,7 @@ ms.locfileid: "62878291"
   
  Для работы с этим учебником в системе должны быть установлены следующие компоненты:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]с базой данных **AdventureWorksDW2012** . В целях повышения безопасности образцы баз данных по умолчанию не устанавливаются. Для загрузки базы данных **AdventureWorksDW2012** перейдите по ссылке [Adventure Works для SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=275026).  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с базой данных **AdventureWorksDW2012** . В целях повышения безопасности образцы баз данных по умолчанию не устанавливаются. Для загрузки базы данных **AdventureWorksDW2012** перейдите по ссылке [Adventure Works для SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=275026).  
   
     > [!IMPORTANT]  
     >  При присоединении базы данных (файл\*.mdf) по умолчанию среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] выполняет поиск LDF-файла. Необходимо вручную удалить LDF-файл перед тем, как нажать кнопку «ОК» в диалоговом окне **Присоединение баз данных** .  
@@ -48,9 +48,9 @@ ms.locfileid: "62878291"
   
 -   Образцы данных. Образцы данных включаются в состав с пакетами занятий по службам [!INCLUDE[ssIS](../includes/ssis-md.md)] . Чтобы загрузить образцы данных и пакеты занятий выполните следующие действия.  
   
-    1.  Переход к [Integration Services примерам продуктов](https://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Перейдите к [образцам продуктов служб Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027).  
   
-    2.  Перейдите на вкладку **DOWNLOADS** .  
+    2.  Перейдите на вкладку **Downloads (загрузки** ).  
   
     3.  Щелкните файл SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62878291"
  [Урок 5. Добавление конфигураций пакетов в модель развертывания пакета](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
  На этом занятии созданный на занятии 4 пакет будет расширен, что позволит использовать новые параметры конфигурации пакета.  
   
- [Занятие 6. Использование параметров в модели развертывания проекта](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [Занятие 6: Использование параметров в модели развертывания проекта](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
  На этом занятии будет расширен пакет, созданный на занятии 5, чтобы воспользоваться преимуществами новых параметров в модели развертывания проекта.  
   
   

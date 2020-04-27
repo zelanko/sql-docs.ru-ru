@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d8cb4bb7aec53ebc28a91cc36add1ae810b08d44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62911848"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>Метод SetStrValue (класс SqlServiceAdvancedProperty)
@@ -40,12 +40,12 @@ StrValue
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объектами*  
+ *object*  
  Объект [класса SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) , представляющий дополнительное свойство.  
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |*StrValue*|Строка, указывающая значение дополнительного свойства.|  
   
@@ -55,7 +55,7 @@ StrValue
 ## <a name="remarks"></a>Remarks  
  Чтобы задать строковое значение, свойство должно иметь тип *string* .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

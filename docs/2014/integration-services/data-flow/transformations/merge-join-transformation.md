@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0ef70f4f9d28fc23c0ac0a168447cc1b8867cd27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900170"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
@@ -61,7 +61,7 @@ ms.locfileid: "62900170"
   
 -   [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор преобразования "соединение слиянием"](../../merge-join-transformation-editor.md)   
  [Преобразование «Слияние»](merge-transformation.md)   
  [Преобразование «объединить все»](union-all-transformation.md)   

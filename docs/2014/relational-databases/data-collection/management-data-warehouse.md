@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918342"
 ---
 # <a name="management-data-warehouse"></a>хранилище данных управления
@@ -75,7 +75,7 @@ ms.locfileid: "62918342"
   
     -   `snapshots.os_memory_clerks`  
   
-    -   **моментальные снимки. os_memory_nodes**  
+    -   **snapshots.os_memory_nodes**  
   
     -   snapshots.sql_process_and_system_memory  
   
@@ -103,13 +103,13 @@ ms.locfileid: "62918342"
   
     -   snapshots.distinct_query_to_handle  
   
- **Схема Custom_snapshots**  
+ **Схема custom_snapshots**  
   
  Схема custom_snapshots описывает новые таблицы и представления, которые создаются, когда стандартные или сторонние типы сборщика используются для создания пользовательских наборов сбора. Любой тип сборщика, которому необходима новая таблица данных для элемента сбора, может создать ее в этой схеме. Новые таблицы могут быть добавлены в эту схему членами роли mdw_writer. Любые другие изменения схемы могут выполнять только члены роли mdw_admin.  
   
  Подробные сведения о типе данных и содержимом столбцов таблиц базы данных можно получить из документации или с помощью соответствующей хранимой процедуры сборщика данных для каждой таблицы.  
   
-### <a name="best-practices"></a>Рекомендации  
+### <a name="best-practices"></a>Советы и рекомендации  
  При работе с хранилищем управляющих данных рекомендуется следовать данным рекомендациям.  
   
 -   Не изменяйте метаданные в таблицах хранилища управляющих данных за исключением тех случаев, когда происходит добавление нового типа сборщика.  
@@ -125,10 +125,10 @@ ms.locfileid: "62918342"
 |В раздел «Схема core» добавлена таблица core.performance_counter_report_group_items.|  
 |Обновлен список таблиц в разделе «Схема snapshots». Добавлены таблицы snapshots.os_memory_clerks, snapshots.sql_process_and_system_memory и snapshots.io_virtual_file_stats. Удалены таблицы snapshots.os_process_memory и snapshots.distinct_query_stats.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры хранилища управляющих данных &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
  [Хранимые процедуры сборщика данных &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
  [Сбор данных](data-collection.md)   
- [Просмотр SQL Server Management Studio &#40;отчетов набора сбора&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
+ [Просмотр отчета о наборе элементов сбора (среда SQL Server Management Studio)](view-a-collection-set-report-sql-server-management-studio.md)  
   
   

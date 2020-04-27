@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62872339"
 ---
 # <a name="create-a-database"></a>Создание базы данных
@@ -30,54 +30,54 @@ ms.locfileid: "62872339"
   
      [Ограничения](#Restrictions)  
   
-     [Предварительные требования](#Prerequisites)  
+     [Предварительные условия](#Prerequisites)  
   
      [Рекомендации](#Recommendations)  
   
      [Безопасность](#Security)  
   
--   **Создание базы данных с помощью:**  
+-   **Создание базы данных с использованием следующих средств:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   В экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]может быть задано не более 32 767 баз данных.  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Инструкция CREATE DATABASE должна выполняться в режиме автоматической фиксации (режим управления транзакциями по умолчанию) и не может применяться в явной или неявной транзакции.  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
--   Резервная копия [главной](master-database.md) базы данных должна создаваться при каждом создании, изменении или удалении пользовательской базы данных.  
+-   Резервную копию базы данных [master](master-database.md) необходимо создавать каждый раз при создании, изменении или удалении пользовательской базы данных.  
   
 -   При создании базы данных файлы данных следует делать как можно большего размера, в соответствии с максимальным предполагаемым объемом данных в базе данных.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требуется разрешение CREATE DATABASE в базе данных master или разрешение CREATE ANY DATABASE или ALTER ANY DATABASE.  
   
  В целях сохранения управления над использованием диска в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]разрешение на создание баз данных обычно предоставляется небольшому числу учетных записей входа.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-create-a-database"></a>Создание базы данных  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] а затем разверните этот экземпляр.  
   
-2.  Щелкните правой кнопкой мыши элемент **Базы данных**, а затем выберите пункт **Создать базу данных**.  
+2.  Щелкните правой кнопкой мыши элемент **базы данных**и выберите пункт **создать базу данных**.  
   
 3.  В поле **Новая база данных**введите имя базы данных.  
   
 4.  Чтобы создать базу данных, приняв все значения по умолчанию, нажмите кнопку **ОК**; иначе продолжайте выполнение следующих дополнительных шагов.  
   
-5.  Чтобы изменить имя владельца, нажмите (**…**) и выберите другого владельца.  
+5.  Чтобы изменить имя владельца, нажмите кнопку (**...**), чтобы выбрать другого владельца.  
   
     > [!NOTE]  
     >  Параметр **Использовать полнотекстовое индексирование** всегда установлен и недоступен (т. к. начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]все пользовательские базы данных поддерживают полнотекстовый поиск).  
@@ -100,7 +100,7 @@ ms.locfileid: "62872339"
   
 12. Чтобы создать базу данных, нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-create-a-database"></a>Создание базы данных  
   
@@ -131,10 +131,10 @@ GO
   
  Дополнительные примеры см. в статье [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Файлы и файловые группы базы данных](database-files-and-filegroups.md)   
  [Отсоединение и присоединение базы данных &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
- [&#41;Transact-SQL ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [Добавление файлов данных или журналов в базу данных](add-data-or-log-files-to-a-database.md)  
   
   

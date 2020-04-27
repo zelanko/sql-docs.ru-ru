@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ac8dd7682ecfe8df3b317bba578bca8358b9b11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916506"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>диалоговое окно «Значение для расширенного свойства»
-  Используйте **значение** в диалоговом окне * \<имя свойства>* , чтобы ввести или просмотреть значение. Это часто используемое диалоговое окно, которое можно открыть из разных местоположений.  
+  Используйте диалоговое окно **Значение** *\<имя свойства>* для ввода или просмотра значения. Это часто используемое диалоговое окно, которое можно открыть из разных местоположений.  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
  **Имя расширенного свойства**  

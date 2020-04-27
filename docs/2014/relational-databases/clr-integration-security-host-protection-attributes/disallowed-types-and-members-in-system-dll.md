@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1780f4236c70d8685c1ce2050a08bc305a3f0853
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919669"
 ---
 # <a name="disallowed-types-and-members-in-systemdll"></a>Запрещенные типы и элементы в System.dll
@@ -211,9 +211,9 @@ ms.locfileid: "62919669"
 |System.IO.Compression.GZipStream.BeginWrite()|ExternalThreading|  
 |System.IO.Ports.SerialStream.BeginRead()|ExternalThreading|  
 |System.IO.Ports.SerialStream.BeginWrite()|ExternalThreading|  
-|System.Media.SoundPlayer|Пользовательский интерфейс|  
-|System.Media.SystemSound|Пользовательский интерфейс|  
-|System.Media.SystemSounds|Пользовательский интерфейс|  
+|System.Media.SoundPlayer|UI|  
+|System.Media.SystemSound|UI|  
+|System.Media.SystemSounds|UI|  
 |System.Net.ConnectStream.BeginRead()|ExternalThreading|  
 |System.Net.ConnectStream.BeginWrite()|ExternalThreading|  
 |System.Net.Dns.BeginGetHostAddresses()|ExternalThreading|  
@@ -280,7 +280,7 @@ ms.locfileid: "62919669"
 |WebClientWriteStream.BeginRead()|ExternalThreading|  
 |WebClientWriteStream.BeginWrite()|ExternalThreading|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Атрибуты защиты узла и программирование интеграции со средой CLR](host-protection-attributes-and-clr-integration-programming.md)   
  [Недопустимые типы и члены в Microsoft. VisualBasic. dll](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
  [Недопустимые типы и элементы в mscorlib. dll](disallowed-types-and-members-in-mscorlib-dll.md)   

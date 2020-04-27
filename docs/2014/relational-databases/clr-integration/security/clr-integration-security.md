@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918989"
 ---
 # <a name="clr-integration-security"></a>Безопасность интеграции со средой CLR
@@ -57,7 +57,7 @@ ms.locfileid: "62918989"
  [Домены приложений и безопасность интеграции со средой CLR](../../../database-engine/dev-guide/application-domains-and-clr-integration-security.md)  
  Описывает загрузку сборок в домены приложений.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление сборками интеграции со средой CLR](../assemblies/managing-clr-integration-assemblies.md)  
   
   

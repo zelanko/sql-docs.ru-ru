@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2eaaadc4e1cc1f2f360fe3d45e2dea4c082b7b76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62915691"
 ---
 # <a name="mssqlserver_137"></a>MSSQLSERVER_137
@@ -67,8 +67,8 @@ ms.locfileid: "62915691"
  EXECUTE ('SELECT ' + @mycol + ' FROM Production.Product';) ;  
   
 ## <a name="see-also"></a>См. также:  
- [ВЫПОЛНЕНИЕ &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)   
- [Инструкции SET &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-statements-transact-sql)   
+ [EXECUTE (Transact-SQL)](/sql/t-sql/language-elements/execute-transact-sql)   
+ [Инструкции SET (Transact-SQL)](/sql/t-sql/statements/set-statements-transact-sql)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)  
   
   

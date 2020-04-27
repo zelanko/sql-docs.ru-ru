@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 460d66b7e2d4f314db65213819fca1800af2da4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922903"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Использование Windows PowerShell в шагах агента SQL Server
   Агент SQL Server применяется для запуска скриптов SQL Server PowerShell в запланированное время.  
   
-1.  **Перед началом:**  [ограничения](#LimitationsRestrictions)  
+1.  **Перед началом работы выполните следующие действия.**  [Ограничения](#LimitationsRestrictions)  
   
-2.  **Запуск PowerShell из агент SQL Server с помощью:**  [шага задания PowerShell](#PShellJob), [шаг задания командной строки](#CmdExecJob)  
+2.  **Запуск PowerShell из агента SQL Server с помощью:**  [шагов задания PowerShell](#PShellJob), [шагов задания командной строки](#CmdExecJob).  
   
 ## <a name="before-you-begin"></a>Перед началом  
  Существует несколько типов шагов заданий агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Каждый тип связан с некоторой подсистемой, в которой реализуется определенная среда, например агент репликации или среда командной строки. Можно создавать скрипты Windows PowerShell, а затем использовать агент [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , чтобы включить скрипты в задания, которые выполняются в запланированное время или в ответ на события [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Скрипты Windows PowerShell можно запускать либо с помощью шагов задания командной строки, либо с помощью шагов задания PowerShell.  
@@ -31,12 +31,12 @@ ms.locfileid: "62922903"
   
 2.  Используйте шаг задания командной строки для запуска PowerShell.exe и укажите скрипт, импортирующий модуль `sqlps`.  
   
-###  <a name="LimitationsRestrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Ограничения  
   
 > [!CAUTION]  
 >  Каждый шаг задания агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], запускающий PowerShell с модулем `sqlps`, запускает процесс, которому требуется приблизительно 20 МБ памяти. Одновременный запуск большого числа шагов задания Windows PowerShell может иметь негативное влияние на производительность.  
   
-##  <a name="PShellJob"></a>Создание шага задания PowerShell  
+##  <a name="create-a-powershell-job-step"></a><a name="PShellJob"></a>Создание шага задания PowerShell  
  **Создание шага задания PowerShell**  
   
 1.  Разверните **Агент SQL Server**, создайте задание или щелкните правой кнопкой мыши существующее задание и выберите пункт **Свойства**. Дополнительные сведения о создании заданий см. в разделе [Создание заданий](../ssms/agent/create-jobs.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "62922903"
   
 7.  Выберите страницу **Дополнительно** , чтобы задать следующие параметры шага задания: какие действия предпринять в случае успешного или неуспешного выполнения шага задания, сколько раз агенту [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] пытаться его выполнить и как часто повторять эти попытки.  
   
-##  <a name="CmdExecJob"></a>Создание шага задания командной строки  
+##  <a name="create-a-command-prompt-job-step"></a><a name="CmdExecJob"></a>Создание шага задания командной строки  
  **Создание шага задания CmdExec**  
   
 1.  Разверните **Агент SQL Server**, создайте задание или щелкните правой кнопкой мыши существующее задание и выберите пункт **Свойства**. Дополнительные сведения о создании заданий см. в разделе [Создание заданий](../ssms/agent/create-jobs.md).  
@@ -72,7 +72,7 @@ ms.locfileid: "62922903"
   
 8.  Выберите вкладку **Дополнительно** , чтобы задать следующие параметры шага задания: действие, которое необходимо выполнить при успешном или неуспешном выполнении шага задания, количество попыток агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выполнить шаг задания и файл, в который агент [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может записывать результат выполнения шага задания. Только члены предопределенной роли сервера **sysadmin** могут записывать выходные данные шага задания в файл операционной системы.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62897468"
 ---
 # <a name="literals-ssis"></a>Литералы (службы SSIS)
@@ -97,7 +97,7 @@ ms.locfileid: "62897468"
   
  Строки могут включать другие символы, требующие управляющей последовательности. Следующая таблица содержит escape-последовательности строковых литералов.  
   
-|Escape-последовательность|Description|  
+|Escape-последовательность|Описание|  
 |---------------------|-----------------|  
 |\a|Предупреждение|  
 |\b|Отмена|  
@@ -107,7 +107,7 @@ ms.locfileid: "62897468"
 |\t|Горизонтальная табуляция|  
 |\v|Вертикальная табуляция|  
 |\\"|Знак кавычек|  
-|\\\|Знака|  
+|\\\|Обратная косая черта|  
 |\xhhhh|Символ Юникод в шестнадцатеричной записи|  
   
 ## <a name="boolean-literals"></a>Логические литералы  

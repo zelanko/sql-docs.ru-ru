@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 832ee3caa23a034f1c228d01ff8ec2ceda32de06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62915126"
 ---
 # <a name="mssqlserver_21871"></a>MSSQLSERVER_21871
@@ -33,11 +33,9 @@ ms.locfileid: "62915126"
 |Текст сообщения|Издатель %s базы данных %s не перенаправлен.|  
   
 ## <a name="explanation"></a>Объяснение  
- `sp_validate_replica_hosts_as_publishers` проверяет таблицу MSredirected_publishers в базе данных распространителя, пытаясь найти запись идентифицированного издателя и базы данных издателя.  
-  `sp_validate_replica_hosts_as_publishers` возвращает ошибку 21871, если запись не будет найдена.  
+ `sp_validate_replica_hosts_as_publishers` проверяет таблицу MSredirected_publishers в базе данных распространителя, пытаясь найти запись идентифицированного издателя и базы данных издателя.  `sp_validate_replica_hosts_as_publishers` возвращает ошибку 21871, если запись не будет найдена.  
   
 ## <a name="user-action"></a>Действие пользователя  
- 
-  `sp_validate_replica_hosts_as_publishers` относится только к перенаправляемым издателям. Если база данных издателя является членом группы доступности, воспользуйтесь хранимой процедурой `sp_redirect_publisher`, чтобы связать издателя и базу данных издателя с именем прослушивателя группы доступности соответствующей группы доступности.  
+ `sp_validate_replica_hosts_as_publishers` относится только к перенаправляемым издателям. Если база данных издателя является членом группы доступности, воспользуйтесь хранимой процедурой `sp_redirect_publisher`, чтобы связать издателя и базу данных издателя с именем прослушивателя группы доступности соответствующей группы доступности.  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 51116c993cf795e6390ac463f67f75e2ddff3e0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917215"
 ---
 # <a name="database-properties-query-store-page"></a>Свойства базы данных (страница хранилища запросов)
@@ -62,8 +62,8 @@ ms.locfileid: "62917215"
 ## <a name="remarks"></a>Remarks  
  Хранилище запросов предоставляет DBA подробные сведения о выборе и производительности плана запросов. Оно упрощает устранение неполадок с производительностью, позволяя быстро находить разницу в производительности, вызванную изменениями в планах запросов. Функция автоматически записывает журнал запросов, планы и статистику выполнения и сохраняет их для просмотра. Она разделяет данные по временным окнам, позволяя просмотреть шаблоны использования и понять, когда изменения плана запросов произошли на сервере. Хранилище запросов можно настроить на странице свойств базы данных хранилища запросов или с помощью параметра [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) . Сведения в хранилище запросов представлены в диалоговом окне [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Дополнительные сведения о хранилище запросов см. в разделе [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры хранилища запросов &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql)   
- [Представления каталога хранилища запросов &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/query-store-catalog-views-transact-sql)  
+ [Представления каталога хранилища запросов (Transact-SQL)](/sql/relational-databases/system-catalog-views/query-store-catalog-views-transact-sql)  
   
   

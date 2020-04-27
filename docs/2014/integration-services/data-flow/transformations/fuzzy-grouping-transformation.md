@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900573"
 ---
 # <a name="fuzzy-grouping-transformation"></a>преобразование «Нечеткое группирование»
@@ -83,11 +83,11 @@ ms.locfileid: "62900573"
   
  Дополнительные сведения о свойствах, которые можно установить в диалоговом окне **Редактор преобразования «Нечеткое группирование»** , см. в следующих разделах:  
   
--   [Редактор преобразования "Нечеткое группирование" &#40;вкладка "Диспетчер соединений"&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [Редактор преобразования "Нечеткое группирование" (вкладка "Диспетчер соединений")](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [Редактор преобразования "Нечеткое группирование" &#40;вкладка "столбцы"&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [Редактор преобразования "Нечеткое группирование" (вкладка "Столбцы")](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [Редактор преобразования "Нечеткое группирование" &#40;вкладка "Дополнительно"&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [Редактор преобразования "Нечеткое группирование" (вкладка "Дополнительно")](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62900573"
   
 -   [Установление свойств компонента потока данных](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Преобразование "Нечеткий уточняющий запрос"](lookup-transformation.md)   
  [Преобразования служб Integration Services](integration-services-transformations.md)  
   

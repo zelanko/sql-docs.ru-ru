@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919607"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Вызов определяемых пользователем агрегатных функций CLR
@@ -240,7 +240,7 @@ GROUP BY BookID;
 |2|Taylor, Mayler|  
 |3|Roberts, Michaels, Steven|  
   
-## <a name="example-2"></a>Пример 2.  
+## <a name="example-2"></a>Пример 2  
  В следующем образце показана статистическая функция, имеющая два параметра в методе `Accumulate`.  
   
  [C#]  
@@ -441,7 +441,7 @@ SELECT dbo.WeightedAvg(ItemValue, ItemWeight) FROM @myTable;
 go  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пользовательские агрегатные функции среды CLR](clr-user-defined-aggregates.md)  
   
   

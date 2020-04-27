@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890946"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>Шаг 4. Проверка учебного пакета, созданного на занятии 5
@@ -35,11 +35,11 @@ ms.locfileid: "62890946"
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>Проверка пакета занятия 5 учебника  
   
-1.  В меню **Отладка** выберите команду **Начать отладку**.  
+1.  В меню **Отладка** выберите команду **начать отладку**.  
   
-2.  По окончании работы пакета в меню **Отладка** выберите команду **Прекратить отладку**.  
+2.  После завершения выполнения пакета в меню **Отладка** выберите команду **завершить отладку**.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 6. Использование параметров в модели развертывания проекта](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [Занятие 6: Использование параметров в модели развертывания проекта](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
   
   

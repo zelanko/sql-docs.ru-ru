@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899452"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Справочник по ошибкам и событиям (службы Integration Services)
@@ -42,7 +42,7 @@ ms.locfileid: "62899452"
 |DTS_E_CONNECTIONNOTFOUND|Указывает, что не удалось запустить пакет, поскольку не удалось найти указанный диспетчер соединений.|  
 |DTS_E_CONNECTIONREQUIREDFORMETADATA|Указывает, что конструктору служб [!INCLUDE[ssIS](../includes/ssis-md.md)] необходимо подключиться к источнику данных для получения новых или обновленных метаданных исходной или целевой базы данных, но установить соединение с источником данных не удалось.|  
 |DTS_E_MULTIPLECACHEWRITES|Указывает, что пакет нельзя выполнить, так как преобразование «Преобразование кэша» пытается записать данные в кэш, хранимый в памяти. Однако другое преобразование «Преобразование кэша» уже произвело запись в кэш, находящийся в памяти.|  
-|DTS_E_PRODUCTLEVELTOLOW|Указывает, что пакет не может быть запущен, так как [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] не установлена соответствующая версия.|  
+|DTS_E_PRODUCTLEVELTOLOW|Указывает, что выполнение пакета невозможно, так как не установлена подходящая версия служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].|  
 |DTS_E_READNOTFILLEDCACHE|Указывает, что преобразование «Уточняющий запрос» пытается прочитать данные из кэша памяти в то же время, когда преобразование «Преобразование кэша» записывает данные в кэш.|  
 |DTS_E_UNPROTECTXMLFAILED|Указывает, что система не расшифровала защищенный XML-узел.|  
 |DTS_E_WRITEWHILECACHEINUSE|Указывает, что преобразование «Преобразование кэша» пытается произвести запись в кэш памяти в то время, как преобразование «Уточняющий запрос» читает данные из кэша памяти.|  

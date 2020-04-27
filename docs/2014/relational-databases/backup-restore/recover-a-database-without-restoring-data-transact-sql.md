@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921819"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Восстановление базы данных без восстановления данных (Transact-SQL)
@@ -76,23 +76,23 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
 ## <a name="examples-of-completing-a-piecemeal-restore-scenario-with-a-recovery-only-restore"></a>Примеры завершения сценария поэтапного восстановления восстановлением только по журналу транзакций  
  **Простая модель восстановления**  
   
--   [Пример. Поэтапное восстановление базы данных &#40;простая модель восстановления&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Пример. Поэтапное восстановление базы данных (простая модель восстановления)](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [Пример. Поэтапное восстановление только некоторых файловых групп &#40;простой модели восстановления&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [Пример. Поэтапное восстановление отдельных файловых групп (простая модель восстановления)](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
  **Модель полного восстановления**  
   
--   [Пример. Поэтапное восстановление модели полного восстановления базы данных &#40;&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [Пример. Поэтапное восстановление базы данных (модель полного восстановления)](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [Пример. Поэтапное восстановление только некоторых файловых групп &#40;модель полного восстановления&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [Пример. Поэтапное восстановление только некоторых файловых групп (модель полного восстановления)](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [&#40;оперативного восстановления SQL Server&#41;](online-restore-sql-server.md)   
  [Поэтапное восстановление &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [Восстановление файлов &#40;простой модели восстановления&#41;](file-restores-simple-recovery-model.md)   
  [Восстановление файлов &#40;модель полного восстановления&#41;](file-restores-full-recovery-model.md)   
- [Восстановление &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
+ [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

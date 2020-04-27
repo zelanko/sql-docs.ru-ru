@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f078caae791e4009a309e7cc70d7af333ca4c90f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919558"
 ---
 # <a name="disallowed-types-and-members-in-systemcoredll"></a>Недопустимые типы и элементы в библиотеке System.Core.dll
@@ -127,7 +127,7 @@ ms.locfileid: "62919558"
 |System.Threading.LockRecursionException|MayLeakOnAbort|  
 |System.Threading.ReaderWriterLockSlim|MayLeakOnAbort|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Атрибуты защиты узла и программирование интеграции со средой CLR](host-protection-attributes-and-clr-integration-programming.md)   
  [Недопустимые типы и члены в Microsoft. VisualBasic. dll](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
  [Недопустимые типы и элементы в mscorlib. dll](disallowed-types-and-members-in-mscorlib-dll.md)   

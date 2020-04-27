@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6cbfac91613c2374e42da5b33e75ed5cade2bcf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62913761"
 ---
 # <a name="mssqlserver_5235"></a>MSSQLSERVER_5235
@@ -58,7 +58,7 @@ ms.locfileid: "62913761"
 |Состояние 4|Обратитесь в службу поддержки пользователей.|  
 |Состояние 5|Запустите команду еще раз: если устранить неполадку не удается, обратитесь в службу поддержки пользователей.|  
   
-## <a name="see-also"></a>См. также:  
- [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)  
+## <a name="see-also"></a>См. также  
+ [DBCC (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-transact-sql)  
   
   

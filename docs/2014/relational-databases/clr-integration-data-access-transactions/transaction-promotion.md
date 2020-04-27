@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bf30b06849c0384d118edf635a6361712c2d22f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874763"
 ---
 # <a name="transaction-promotion"></a>Повышение транзакции
@@ -33,7 +33,7 @@ ms.locfileid: "62874763"
   
  Преимущество использования повышения транзакций заключается в том, что при открытии соединения с активной транзакцией `TransactionScope` и отсутствии других открытых соединений, такая транзакция фиксируется как упрощенная, что позволяет избежать излишних затрат ресурсов на полностью распределенную транзакцию. Дополнительные сведения о `TransactionScope`см. [в разделе Использование System. Transactions](../native-client-ole-db-transactions/transactions.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Интеграция со средой CLR и транзакции](clr-integration-and-transactions.md)  
   
   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 88ea15fabe8e8fd6630d3430417879c7104dff67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876992"
 ---
 # <a name="back-up-to-a-mirrored-media-set-transact-sql"></a>Создание резервной копии на зеркальном наборе носителей (Transact-SQL)
@@ -34,12 +34,12 @@ GO
 ```  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- **Восстановление из зеркальной резервной копии**  
+ **Восстановление из зеркально отображенной резервной копии**  
   
--   [Восстановление &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
+-   [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)  
   
 ## <a name="see-also"></a>См. также:  
- [&#41;BACKUP &#40;Transact-SQL](/sql/t-sql/statements/backup-transact-sql)   
- [Зеркальные наборы носителей резервных копий &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)  
+ [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
+ [Зеркальные наборы носителей резервных копий (SQL Server)](mirrored-backup-media-sets-sql-server.md)  
   
   

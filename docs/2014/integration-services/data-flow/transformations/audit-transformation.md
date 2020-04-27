@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea923f72e0c9e505bc9e1f056d5ff4dbe36ad9a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901038"
 ---
 # <a name="audit-transformation"></a>преобразование «Аудит»
-  Преобразование «Аудит» позволяет включать поток данных в пакет для передачи данных о среде, в которой запускается этот пакет. Например, в поток данных можно добавлять имя пакета, компьютера и оператора. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] включает в себя системные переменные, предоставляющие эти [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] сведения.  
+  Преобразование «Аудит» позволяет включать поток данных в пакет для передачи данных о среде, в которой запускается этот пакет. Например, в поток данных можно добавлять имя пакета, компьютера и оператора. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предусмотрены системные переменные, предоставляющие эти сведения.  
   
 ## <a name="system-variables"></a>Системные переменные  
  В приведенной ниже таблице описаны системные переменные, применяемые в преобразовании «Аудит».  

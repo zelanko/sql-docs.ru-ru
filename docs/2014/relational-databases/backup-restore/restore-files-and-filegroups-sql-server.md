@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2d056e61abd08a75b1a1b62117d351b2c55d7e09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921144"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>Восстановление файлов и файловых групп (SQL Server)
@@ -41,9 +41,9 @@ ms.locfileid: "62921144"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Системный администратор, восстанавливающий файлы и файловые группы, должен быть единственным лицом, использующим восстанавливаемую базу данных в данный момент.  
   
@@ -55,14 +55,14 @@ ms.locfileid: "62921144"
   
 -   Чтобы восстановить зашифрованную базу данных, необходимо иметь доступ к сертификату или асимметричному ключу, который использовался для шифрования базы данных. Без сертификата или асимметричного ключа восстановить базу данных нельзя. Поэтому сертификат, используемый для шифрования ключа шифрования базы данных, должен храниться в течение всего времени, пока есть необходимость в резервной копии. Дополнительные сведения см. в статье [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Если восстанавливаемая база данных не существуют, для выполнения инструкции RESTORE у пользователя должны быть разрешения CREATE DATABASE. Если база данных существует, разрешения на выполнение инструкции RESTORE по умолчанию предоставлены членам предопределенных ролей сервера **sysadmin** и **dbcreator** , а также владельцу базы данных (**dbo**) (для параметра FROM DATABASE_SNAPSHOT база данных всегда существует).  
   
  Разрешения на выполнение инструкции RESTORE даются ролям, в которых данные о членстве всегда доступны серверу. Так как членство в предопределенной роли базы данных может быть проверено только тогда, когда база данных доступна и не повреждена, что не всегда имеет место при выполнении инструкции RESTORE, члены предопределенной роли базы данных **db_owner** не имеют разрешений RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-restore-files-and-filegroups"></a>Восстановление файлов и файловых групп  
   
@@ -152,7 +152,7 @@ ms.locfileid: "62921144"
      **Файл отмены отката**  
      Укажите имя резервного файла в текстовом поле **Файл отмены отката** . Этот параметр необходим, если нужно оставить базу данных в режиме «только для чтения» (RESTORE WITH STANDBY).  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-restore-files-and-filegroups"></a>Восстановление файлов и файловых групп  
   
@@ -178,7 +178,7 @@ ms.locfileid: "62921144"
   
          В случае применения резервных копий журналов транзакций они должны охватывать время резервного копирования файлов и их групп вплоть до конца журналов (если только не восстанавливаются ВСЕ файлы базы данных).  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере восстанавливаются файлы и файловые группы базы данных `MyDatabase` . При восстановлении базы данных до текущего момента будут применены два журнала транзакций.  
   
 ```sql  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917973"
 ---
 # <a name="database-mail"></a>Database Mail
@@ -26,15 +26,14 @@ ms.locfileid: "62917973"
   
  
   
-##  <a name="Benefits"></a>Преимущества использования Database Mail  
+##  <a name="benefits-of-using-database-mail"></a><a name="Benefits"></a> Преимущества использования компонента Database Mail  
  Компонент Database Mail спроектирован для надежности, масштабируемости, безопасности и простой поддержки.  
   
 ### <a name="reliability"></a>Надежность  
   
 -   Для отправки почты компонент Database Mail использует простой протокол доставки сообщений (SMTP). Можно использовать компонент Database Mail, не устанавливая клиент Extended MAPI на компьютер, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Изоляция процесса. Чтобы свести к минимуму влияние на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], компонент, доставляющий электронную почту, запускается в процессе, отдельном от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] продолжает помещать в очередь сообщения электронной почты, даже если внешний процесс остановится или в нем произойдет сбой. Поставленные в очередь сообщения будут отосланы, как только внешний процесс или SMTP-сервер перейдет в состояние «в сети».  
+-   Изоляция процесса. Чтобы свести к минимуму влияние на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], компонент, доставляющий электронную почту, запускается в процессе, отдельном от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] продолжает помещать в очередь сообщения электронной почты, даже если внешний процесс остановится или в нем произойдет сбой. Поставленные в очередь сообщения будут отосланы, как только внешний процесс или SMTP-сервер перейдет в состояние «в сети».  
   
 -   Учетные записи отработки отказа. Профиль компонента Database Mail позволяет указать более одного SMTP-сервера. Если SMTP-сервер будет недоступен, почта может быть доставлена другому SMTP-серверу.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62917973"
   
 -   64-разрядная совместимость. Компонент Database Mail полностью поддерживается на 64-разрядных установках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="security"></a>безопасность  
+### <a name="security"></a>Безопасность  
   
 -   По умолчанию отключена. Для уменьшения контактной зоны [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]хранимые процедуры компонента Database Mail по умолчанию отключены.  
   
@@ -76,14 +75,14 @@ ms.locfileid: "62917973"
   
 
   
-##  <a name="VisualElement"></a>Архитектура Database Mail  
+##  <a name="database-mail-architecture"></a><a name="VisualElement"></a> Архитектура Database Mail  
  Компонент Database Mail спроектирован по принципу очереди на основе технологий компонента Service Broker. Когда пользователь выполняет хранимую процедуру **sp_send_dbmail**, в почтовую очередь вставляется новый элемент и создается запись, содержащая сообщение электронной почты. При вставке новой записи в почтовую очередь запускается внешний процесс компонента Database Mail (DatabaseMail.exe). Внешний процесс считывает данные электронной почты и отправляет сообщение электронной почты соответствующему серверу или серверам электронной почты. Внешний процесс вставляет элемент в очередь состояния в соответствии с результатами операции отправки. При вставке новой записи в очередь состояний запускается внутренняя хранимая процедура, которая выполняет обновление состояния электронного сообщения. Кроме сохранения отправленного (или неотправленного) сообщения электронной почты, компонент Database Mail также записывает в системные таблицы все вложения. Представления компонента Database Mail содержат сведения о состоянии сообщений для диагностики и устранения неполадок в работе, а хранимые процедуры позволяют администрировать очередь компонента Database Mail.  
   
- ![msdb отправляет сообщения на почтовый SMTP-сервер](../../database-engine/media/databasemail.gif "msdb отправляет сообщения на почтовый SMTP-сервер")  
+ ![База данных msdb отправляет сообщения на почтовый SMTP-сервер](../../database-engine/media/databasemail.gif "База данных msdb отправляет сообщения на почтовый SMTP-сервер")  
   
 
   
-##  <a name="ComponentsAndConcepts"></a>Общие сведения о компонентах Database Mail  
+##  <a name="introduction-to-database-mail-components"></a><a name="ComponentsAndConcepts"></a> Общие сведения о компонентах Database Mail  
  Компонент Database Mail состоит из следующих основных компонентов.  
   
 -   Компоненты настройки и безопасности  
@@ -102,7 +101,7 @@ ms.locfileid: "62917973"
   
      Компонент Database Mail записывает данные протоколирования в базу данных **msdb** и в журнал событий приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Настройка агента для использования Database Mail:**  
+ **Настройка агента на использование компонента Database Mail.**  
   
  Агент SQL Server можно настроить использование компонента Database Mail. Это необходимо для рассылки уведомлений о предупреждениях и автоматических уведомлений о завершении заданий.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62917973"
   
  
   
-##  <a name="RelatedContent"></a>Разделы Database Mail компонентов  
+##  <a name="database-mail-component-topics"></a><a name="RelatedContent"></a> Руководства по компоненту Database Mail  
   
 -   [Объекты конфигурации компонента Database Mail](database-mail-configuration-objects.md)  
   

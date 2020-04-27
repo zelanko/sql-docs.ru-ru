@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7dd2b26662fea95837eabaf61f61e3da04fac69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873621"
 ---
 # <a name="data-collector-security"></a>Безопасность сборщика данных
@@ -144,7 +144,7 @@ ms.locfileid: "62873621"
 ### <a name="mdw_reader-role"></a>Роль mdw_reader  
  Члены роли **mdw_reader** имеют доступ на чтение к хранилищу данных управления. Эта роль предназначена для помощи при устранении неполадок путем предоставления доступа к данным с предысторией. Ее члены не могут просматривать другие элементы схемы хранилища данных управления.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  
   
   
