@@ -1,5 +1,5 @@
 ---
-title: Объявление об устаревании зеркального отображения базы данных. | Документация Майкрософт
+title: Объявление об устаревании зеркального отображения базы данных. | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48f70f9c2a19d63b80bfca653ec1c60172a86a23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095742"
 ---
 # <a name="database-mirroring-deprecation-announcement"></a>Объявление об устаревании зеркального отображения базы данных.

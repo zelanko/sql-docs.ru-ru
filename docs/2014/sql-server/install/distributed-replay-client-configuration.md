@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095476"
 ---
 # <a name="distributed-replay-client-configuration"></a>Конфигурация клиента распределенного воспроизведения
@@ -26,7 +26,7 @@ ms.locfileid: "66095476"
  **Имя контроллера**  
  Это необязательный параметр, а значение по умолчанию \<— *пустое*>.  
   
- Введите имя контроллера, с которым будет связываться клиентский компьютер для доступа к службе клиента распределенного воспроизведения. Обратите внимание на следующее.  
+ Введите имя контроллера, с которым будет связываться клиентский компьютер для доступа к службе клиента распределенного воспроизведения. Следует отметить следующее.  
   
 -   Должно быть указано полное доменное имя (FQDN). Например, FQDN узла с именем server1 в иерархии продуктов Майкрософт может иметь вид server1.products.microsoft.com.  
   
@@ -37,11 +37,11 @@ ms.locfileid: "66095476"
  **Рабочий каталог**  
  Укажите рабочий каталог для службы клиента распределенного воспроизведения.  
   
- Рабочий каталог по умолчанию — \<*буква диска*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\.  
+ Рабочий каталог по умолчанию \< *— буква диска*>:\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Program\\Files \DReplayClient\WorkingDir.  
   
  **Папка результатов**  
  Укажите каталог результатов для службы клиента распределенного воспроизведения.  
   
- Каталог результатов по умолчанию — \<*буква диска*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\.  
+ Каталог результатов по умолчанию \< *— буква диска*>:\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Program\\Files \DReplayClient\ResultDir.  
   
   
