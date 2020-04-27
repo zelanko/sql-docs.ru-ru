@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fd397349bc3fa3ed7f69e9e1293415ea96fc75d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754313"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>Настройка учетных записей входа для зеркального отображения баз данных или групп доступности AlwaysOn (SQL Server)
@@ -32,11 +32,11 @@ ms.locfileid: "62754313"
     > [!IMPORTANT]  
     >  Для создания более безопасной среды рассмотрите возможность использования отдельных учетных записей домена для каждого экземпляра сервера.  
   
-##  <a name="CreateLogin"></a>Создание имени входа для другой учетной записи  
+##  <a name="create-a-login-for-a-different-account"></a><a name="CreateLogin"></a>Создание имени входа для другой учетной записи  
  Если два экземпляра сервера запущены под разными учетными записями, системный администратор должен использовать инструкцию CREATE LOGIN [!INCLUDE[tsql](../../includes/tsql-md.md)] для создания имени входа для учетной записи службы запуска удаленного экземпляра для каждого экземпляра сервера. Дополнительные сведения см. в разделе [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql).  
   
 > [!IMPORTANT]  
->  Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запущен под учетной записью, не относящейся к домену, следует использовать сертификаты. Дополнительные сведения см. в подразделах [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+>  Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запущен под учетной записью, не относящейся к домену, следует использовать сертификаты. Дополнительные сведения см. в разделе [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
  Например, для подключения экземпляра сервера sqlA, запущенного под именем loginA к экземпляру сервера sqlB, запущенному под именем loginB, необходимо, чтобы имя loginA существовало на сервере sqlB, а имя loginB — на сервере sqlA. Кроме того, если в сеансе зеркального отображения базы данных участвует экземпляр следящего сервера (sqlC) и если все три экземпляра сервера запущены под разными учетными записями домена, то необходимо создать следующие учетные записи для зеркального отображения:  
   
@@ -49,18 +49,18 @@ ms.locfileid: "62754313"
 > [!NOTE]  
 >  Можно подключиться, используя учетную запись сетевой службы, если вместо пользователя домена указать учетную запись компьютера. При использовании учетной записи компьютера ее необходимо добавить в качестве пользователя на другом экземпляре сервера.  
   
-##  <a name="GrantConnect"></a>Предоставление разрешения на подключение  
+##  <a name="grant-connect-permission"></a><a name="GrantConnect"></a>Предоставление разрешения на подключение  
  После создания имени входа на экземпляре сервера имени входа должно быть предоставлено разрешение на соединение с конечной точкой зеркального отображения базы данных на другом экземпляре. Системный администратор предоставляет разрешение на подключение с помощью инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] GRANT. Дополнительные сведения см. в разделе [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql).  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Создание имени входа](../../relational-databases/security/authentication-access/create-a-login.md)  
   
--   [Разрешите сетевой доступ к конечной точке зеркального отображения базы данных, используя проверку подлинности Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md).  
+-   [Разрешение сетевого доступа к конечной точке зеркального отображения базы данных с использованием проверки подлинности Windows (SQL Server)](../database-mirroring-allow-network-access-windows-authentication.md)  
   
--   [Использование сертификатов для конечной точки зеркального отображения базы данных &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server &#40;конечной точки зеркального отображения базы данных&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Устранение неполадок конфигурации зеркального отображения базы данных &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Устранение неполадок SQL Server &#40;конфигурации группы доступности AlwaysOn&#41;](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

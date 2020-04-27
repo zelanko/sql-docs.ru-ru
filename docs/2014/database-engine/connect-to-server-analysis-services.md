@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7dd13f417ccf7b6240d8e3f8328d0b3cd9371bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755598"
 ---
 # <a name="connect-to-server-analysis-services"></a>Соединение с сервером (службы Analysis Services)
-  Это диалоговое окно используется для просмотра или указания параметров при [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]соединении с.  
+  Используйте это диалоговое окно для просмотра или настройки параметров при подключении к [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## <a name="options"></a>Параметры  
  **Тип сервера**  
@@ -36,12 +36,12 @@ ms.locfileid: "62755598"
  Режим **проверки подлинности Windows** позволяет пользователю подключаться с помощью учетной записи пользователя Windows.  
   
  **User name**  
- Этот параметр недоступен в данном выпуске. Введите имя пользователя для соединения. Этот параметр доступен только в том случае, если выбрано подключение с использованием **проверки подлинности Windows**.  
+ Этот параметр недоступен в данном выпуске. Введите имя пользователя для соединения. Этот параметр доступен только в случае выбора режима **Проверка подлинности Windows**для подключения.  
   
  **Пароль**  
  Этот параметр недоступен в данном выпуске. Введите пароль для этого имени входа. Этот параметр доступен для редактирования только при подключении с проверкой подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- **Подключение**  
+ **Подключить**  
  Нажмите, чтобы подключиться к выбранному выше серверу.  
   
  **Параметры**  

@@ -14,16 +14,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 162c878c5d39356f08f01c4eb51a0f88e3ed2d45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62753261"
 ---
 # <a name="deploying-an-exception-message-box-application"></a>Развертывание приложения для вывода сообщения об исключении
   Окно сообщения об исключении устанавливается с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помощью и поддерживается для использования в пользовательских приложениях Windows для улучшения обработки исключений. Так как окно сообщения об исключении устанавливается во всех выпусках, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] кроме [!INCLUDE[ssEW](../../includes/ssew-md.md)], его можно использовать без дополнительной настройки на любом компьютере, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на котором установлены клиентские компоненты, включая пакет SDK.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Окно сообщения об исключении программы](../../../2014/database-engine/dev-guide/program-exception-message-box.md)   
  [Справочник по сообщениям об исключениях](../../../2014/database-engine/dev-guide/exception-message-box-reference.md)  
   

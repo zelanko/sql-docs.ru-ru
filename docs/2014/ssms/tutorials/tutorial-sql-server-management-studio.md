@@ -23,16 +23,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62753466"
 ---
 # <a name="tutorial-sql-server-management-studio"></a>Руководство: SQL Server Management Studio
-  В учебнике по среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] описывается интегрированная среда для управления инфраструктурой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] представляет собой графический интерфейс для настройки экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], наблюдения за ними и управления ими. Такая среда также позволяет развертывать, наблюдать и обновлять компоненты уровня данных, используемых приложениями, например базами и хранилищами данных. 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] также предоставляет редакторы [!INCLUDE[tsql](../../includes/tsql-md.md)], языка многомерных выражений, расширений интеллектуального анализа данных и XML для изменения и отладки скриптов.  
+  В учебнике по среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] описывается интегрированная среда для управления инфраструктурой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] представляет собой графический интерфейс для настройки экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], наблюдения за ними и управления ими. Такая среда также позволяет развертывать, наблюдать и обновлять компоненты уровня данных, используемых приложениями, например базами и хранилищами данных. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] также предоставляет редакторы [!INCLUDE[tsql](../../includes/tsql-md.md)], языка многомерных выражений, расширений интеллектуального анализа данных и XML для изменения и отладки скриптов.  
   
 ## <a name="what-you-will-learn"></a>Обзор учебника  
  В этом учебнике разъясняется представление информации в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , а также способы использования ее возможностей. Обратите внимание, что этот учебник относится к полной установке [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], которая входит в состав всех версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], кроме [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Функциональные возможности для базовой установки среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и установок среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], которые поставляются с [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], немного отличаются от представленных в этом учебнике.  
@@ -55,12 +53,11 @@ ms.locfileid: "62753466"
   
  Для работы с этим учебником в системе должны быть установлены следующие компоненты:  
   
--   
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] или более поздняя версия с образцами баз данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . В целях повышения безопасности образцы баз данных по умолчанию не устанавливаются. Дополнительные сведения об установке образцов баз данных см. в статье [Установка образцов SQL Server и образцов баз данных](http://sqlserversamples.codeplex.com).  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] или более поздняя версия с образцами баз данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . В целях повышения безопасности образцы баз данных по умолчанию не устанавливаются. Дополнительные сведения об установке образцов баз данных см. в статье [Установка образцов SQL Server и образцов баз данных](http://sqlserversamples.codeplex.com).  
   
 -   Internet Explorer 9.0 или более поздней версии.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Учебники по компоненту ядра СУБД](../../relational-databases/database-engine-tutorials.md)  
   
   

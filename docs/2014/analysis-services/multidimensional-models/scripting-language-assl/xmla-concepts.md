@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0da9467d293c0081309accd99fb46d7589fb4b8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736578"
 ---
 # <a name="xmla-concepts"></a>Основные понятия XML для аналитики
@@ -24,8 +24,7 @@ ms.locfileid: "62736578"
   
  XML для аналитики (XMLA) — это XML-протокол, основанный на протоколе SOAP, который специально предназначен для обеспечения унифицированного доступа к данным в любом стандартном многомерном источнике данных, находящемся в Интернете. XMLA также устраняет необходимость в развертывании клиентского компонента, предоставляющего интерфейсы модели COM или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Протокол XMLA оптимизирован для работы с Интернетом, особенно если обмен данными с сервером требует больших затрат времени и ресурсов, а в связи с применением поддерживающих состояние соединений с источниками данных количество соединений пользователя с сервером может стать ограниченным.  
   
- XMLA — это собственный протокол для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], используемый для всех взаимодействий между клиентским приложением и экземпляром [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] полностью поддерживает стандарт XML для аналитики (XMLA) версии 1.1, а также реализует расширения по управлению метаданными, управлению сеансами и блокировке. При обмене данными с экземпляром служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] протокол XMLA используется и объектами AMO, и компонентом ADOMD.NET.  
+ XMLA — это собственный протокол для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], используемый для всех взаимодействий между клиентским приложением и экземпляром [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] полностью поддерживает стандарт XML для аналитики (XMLA) версии 1.1, а также реализует расширения по управлению метаданными, управлению сеансами и блокировке. При обмене данными с экземпляром служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] протокол XMLA используется и объектами AMO, и компонентом ADOMD.NET.  
   
 ## <a name="handling-xmla-communications"></a>Связь по протоколу XMLA  
  В открытом стандарте XMLA описаны два общедоступных метода: `Discover` и `Execute`. В этих методах для обработки входящей и исходящей информации в экземпляре служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] используется слабо связанная архитектура клиента и сервера, поддерживаемая XML.  

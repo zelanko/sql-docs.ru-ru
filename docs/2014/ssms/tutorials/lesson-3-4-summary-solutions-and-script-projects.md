@@ -11,19 +11,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4438dc445a9e1fc72fdb48b0863b75f041e2253f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62753031"
 ---
 # <a name="summary-solutions-and-script-projects"></a>Сводка. Решения и проекты скриптов
-  Используя обширные функции разработчика [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает функциональные возможности, необходимые разработчикам для управления кодом на уровне предприятия. Вы можете создавать пользовательские шаблоны для выполнения повторяющихся задач, сохранения и управления сложными проектами знаков в централизованной и координируемой среде.  
+   Используя расширенные функции среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio для разработки, среда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предлагает разработчикам необходимые возможности по управлению кодом на уровне предприятия. Вы можете создавать пользовательские шаблоны для выполнения повторяющихся задач, сохранения и управления сложными проектами знаков в централизованной и координируемой среде.  
   
 ## <a name="return-to-sql-server-tools-tutorials-portal"></a>Вернуться к порталу учебников по инструментарию SQL Server  
- [Руководство: SQL Server Management Studio](tutorial-sql-server-management-studio.md)  
+ [Руководство. SQL Server Management Studio](tutorial-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Руководства для SQL Server 2014](tutorial-sql-server-management-studio.md)   
  [Учебники по ядро СУБД](../../relational-databases/database-engine-tutorials.md)   
  [Среда SQL Server Management Studio](../sql-server-management-studio-ssms.md)  

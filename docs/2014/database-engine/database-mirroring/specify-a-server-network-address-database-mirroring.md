@@ -16,25 +16,25 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755060"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Указание сетевого адреса сервера (зеркальное отображение базы данных)
   При настройке сеанса зеркального отображения базы данных для каждого экземпляра сервера необходим сетевой адрес. Он должен однозначно определять экземпляр по адресу и номеру порта, который прослушивается данным экземпляром.  
   
- Определение порта в сетевом адресе сервера возможно при наличии конечной точки зеркального отображения базы данных в экземпляре сервера. Дополнительные сведения см. в разделе [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+ Определение порта в сетевом адресе сервера возможно при наличии конечной точки зеркального отображения базы данных в экземпляре сервера. Дополнительные сведения см. в разделе [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
   
   
-##  <a name="Syntax"></a>Синтаксис для сетевого адреса сервера  
+##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a> Синтаксис сетевого адреса сервера  
  Сетевой адрес сервера имеет следующий синтаксис:  
   
  TCP<strong>://</strong>*\<системный адрес>* <strong>:<strong>*\<порт>* 
   
- , где  
+ where  
   
 -   >системных адресов — это строка, однозначно идентифицирующая компьютер назначения. * \<* Обычно сетевой адрес представляет собой системное имя (если компьютеры входят в один домен), полное доменное имя или IP-адрес.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "62755060"
   
     -   При указании полного доменного имени гарантируется правильная работа. Это локально определенная строка адреса, которая имеет различную форму в разных местах. Часто, но не всегда полное доменное имя представляет собой составное имя, состоящее из имени компьютера и нескольких компонентов доменов, разделенных точками, в следующем виде:  
   
-         _computer_name_ **.** _domain_segment_[... **.** _domain_segment_]  
+         _имя_компьютера_ **.** _компонент_домена_[...**.**_компонент_домена_]  
   
-         где *computer_name i*— сетевое имя компьютера, на котором работает экземпляр сервера, и *domain_segment*[... **.** _domain_segment_] — Это оставшаяся информация о домене сервера; Например: `localinfo.corp.Adventure-Works.com`.  
+         где *имя_компьютера*— сетевое имя компьютера, на котором запущен экземпляр сервера, а *сегмент_домена*[...**.**_сегмент_домена_] — остальные сведения о домене для сервера, например `localinfo.corp.Adventure-Works.com`.  
   
          Содержание и количество доменных сегментов определяется компанией или организацией. Полное доменное имя сервера можно узнать у системного администратора.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62755060"
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://SYSTEM46:7022';  
 ```  
   
-#### <a name="b-using-a-fully-qualified-domain-name"></a>Б. Использование полного доменного имени  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>Б) Использование полного доменного имени  
  В следующем сетевом адресе сервера определено полное доменное имя `DBSERVER8.manufacturing.Adventure-Works.com`и порт `7024`.  
   
 ```  
@@ -104,11 +104,11 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
 ## <a name="finding-the-fully-qualified-domain-name"></a>Определение полного доменного имени  
  Чтобы определить полное доменное имя системы, введите следующую команду в командной строке Windows:  
   
- **IPCONFIG/ALL**  
+ **IPCONFIG /ALL**  
   
  Чтобы сформировать полное доменное имя, следует сцепить значения *<имя_узла>* и *<основной_DNS_суффикс>* следующим образом:  
   
- _>host_name<_ **.** _<Primary_Dns_Suffix>_  
+ _<имя_узла>_ **.** _<основной_DNS_суффикс>_  
   
  Например, следующая конфигурация IP:  
   
@@ -120,7 +120,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `MYSERVER.mydomain.Adventure-Works.com`  
   
-##  <a name="Examples"></a> Примеры  
+##  <a name="examples"></a><a name="Examples"></a> Примеры  
  В следующем примере показан сетевой адрес сервера для экземпляра сервера на компьютере с именем `REMOTESYSTEM3` в другом домене. Сведения о домене: `NORTHWEST.ADVENTURE-WORKS.COM`, порт конечной точки зеркального отображения базы данных — `7025`. Для приведенных примеров компонентов сетевой адрес сервера выглядит следующим образом:  
   
  `TCP://REMOTESYSTEM3.NORTHWEST.ADVENTURE-WORKS.COM:7025`  
@@ -129,12 +129,12 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `TCP://DBSERVER1:7022`  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
--   [Создание конечной точки зеркального отображения базы данных для проверки подлинности Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server &#40;зеркального отображения базы данных&#41;](database-mirroring-sql-server.md)   
- [SQL Server &#40;конечной точки зеркального отображения базы данных&#41;](the-database-mirroring-endpoint-sql-server.md)  
+ [Конечная точка зеркального отображения базы данных (SQL Server)](the-database-mirroring-endpoint-sql-server.md)  
   
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 414cdedb8f2bc3dee4edc792c11b6438306818c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754546"
 ---
 # <a name="removing-database-mirroring-sql-server"></a>Удаление зеркального отображения базы данных (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62754546"
 > [!NOTE]  
 >  Чтобы продолжить зеркальное отображение после остановки сеанса, необходимо установить новый сеанс зеркального отображения базы данных. Если резервная копия журнала создана после остановки зеркального отображения, то перед возобновлением зеркального отображения ее необходимо применить к зеркальной базе данных.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Удаление зеркального отображения базы данных**  
   
 -   [Удаление зеркального отображения базы данных (SQL Server)](database-mirroring-sql-server.md)  

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62756990"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
@@ -29,7 +29,7 @@ ms.locfileid: "62756990"
 ## <a name="installing-localdb"></a>Установка LocalDB  
  Основной метод установки `LocalDB` — с помощью программы SqlLocalDB. msi. `LocalDB`параметр используется при установке любого SKU [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. Выберите `LocalDB` на странице **Выбор компонентов** во время установки [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Для каждой основной [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] версии может быть только одна `LocalDB` установка двоичных файлов. Можно запускать несколько процессов [!INCLUDE[ssDE](../../includes/ssde-md.md)] , которые будут использовать одни и те же двоичные файлы. Экземпляр, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] запущенный как, `LocalDB` имеет те же ограничения, что и[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Программа `LocalDB` установки использует программу SqlLocalDB. msi для установки необходимых файлов на компьютере. После установки `LocalDB` — это экземпляр [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , который может создавать и открывать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных. Файлы системной базы данных, как правило, хранятся в каталоге AppData пользователя, который обычно скрыт. Например, **C:\Users\\<пользователь\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**. Файлы пользовательской базы данных хранятся в месте, указанном пользователем, как правило, в папке **C:\Users\\<пользователь\>\Documents\\**.  
   
  Дополнительные сведения о включении `LocalDB` в приложение см. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] в документации [Общие сведения о локальных данных](https://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [Пошаговое руководство. Создание SQL Server базы данных LocalDB](https://msdn.microsoft.com/library/ms233763\(VS.110\).aspx)и [пошаговое руководство. подключение к данным в SQL Server базе данных LocalDB (Windows Forms)](https://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
@@ -88,12 +88,12 @@ REM Gather information about the instance of LocalDB
 |||  
 |-|-|  
 |Имя|«LocalDBApp1»|  
-|Версия|\<Текущая версия>|  
+|Версия|\<текущая версия>|  
 |Общее имя|""|  
-|Владелец.|"\<пользователь Windows>"|  
+|Владелец|"\<пользователь Windows>"|  
 |Автоматическое создание|нет|  
-|State|выполнение|  
-|Время последнего запуска|\<> даты и времени|  
+|Состояние|запуск|  
+|Время последнего запуска|\<дата и время>|  
 |Имя канала экземпляра|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|  
   
 > [!NOTE]  

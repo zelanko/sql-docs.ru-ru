@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fee60fa1a78c2d6d0becb63b2319105016adf1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754667"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Удаление следящего сервера из сеанса зеркального отображения базы данных (SQL Server)
@@ -30,22 +30,22 @@ ms.locfileid: "62754667"
   
      [Безопасность](#Security)  
   
--   **Для замены удалите следящий сервер с помощью:**  
+-   **Удаление следящего сервера с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия.**  [после удаления следящего сервера](#FollowUp)  
+-   **Дальнейшие действия**  [После удаления следящего сервера](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на базу данных.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-remove-the-witness"></a>Удаление следящего сервера  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62754667"
     > [!NOTE]  
     >  При переключении из режима высокого уровня безопасности с автоматической отработкой отказа в высокопроизводительный режим поле **Следящий** автоматически очищается.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-remove-the-witness"></a>Удаление следящего сервера  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62754667"
   
 3.  Выполните следующую инструкцию:  
   
-     [ALTER database](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) *DATABASE_NAME* Set свидетель Off  
+     [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) *имя_базы_данных* SET WITNESS OFF  
   
      где *имя_базы_данных* — имя зеркально отображаемой базы данных.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62754667"
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a>Дальнейшие действия. После удаления следящего сервера  
+##  <a name="follow-up-after-removing-the-witness"></a><a name="FollowUp"></a>Дальнейшие действия. После удаления следящего сервера  
  При отключении следящего сервера [режим работы](database-mirroring-operating-modes.md)изменяется в соответствии с параметром безопасности транзакций.  
   
 -   Если уровень безопасности транзакций установлен в FULL (значение по умолчанию), то сеанс использует синхронный режим с высоким уровнем защиты без автоматической отработки отказа.  
@@ -90,13 +90,13 @@ ms.locfileid: "62754667"
 > [!TIP]  
 >  Параметры безопасности транзакций для каждого участника на экземпляре сервера доступны через представление каталога [sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql), в столбцах **mirroring_safety_level** и **mirroring_safety_level_desc**.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
--   [Добавление следящего сервера зеркального отображения базы данных с использованием проверки подлинности Windows &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
+-   [Добавление следящего сервера для зеркального отображения базы данных с использованием проверки подлинности Windows (Transact-SQL)](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
--   [Добавление или замена следящего сервера зеркального отображения базы данных &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
+-   [Добавление или замена следящего сервера зеркального отображения базы данных (среда SQL Server Management Studio)](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [&#41;Transact-SQL для зеркального отображения базы данных ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [Изменение безопасности транзакций в сеансе зеркального отображения базы данных &#40;&#41;Transact-SQL](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
  [Добавление следящего сервера зеркального отображения базы данных с использованием проверки подлинности Windows &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   

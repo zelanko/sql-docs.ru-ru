@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62761616"
 ---
 # <a name="create-foreign-key-relationships"></a>Создание связей по внешнему ключу
@@ -36,9 +36,9 @@ ms.locfileid: "62761616"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Ограничение внешнего ключа не обязательно должно быть связано только с ограничением первичного ключа в другой таблице. Кроме того, это ограничение может быть определено для ссылки на столбцы с ограничением UNIQUE в другой таблице.  
   
@@ -60,20 +60,20 @@ ms.locfileid: "62761616"
   
 -   Столбец типа `varchar(max)` может участвовать в ограничении FOREIGN KEY только при условии, что первичный ключ, на который он ссылается, также имеет тип данных `varchar(max)`.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Создание новой таблицы с внешним ключом требует разрешения CREATE TABLE в базе данных и разрешения ALTER на схему, в которой создается таблица.  
   
  Создание внешнего ключа в существующей таблице требует разрешения ALTER на таблицу.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-create-a-foreign-key-relationship-in-table-designer"></a>Создание связи по внешнему ключу в конструкторе таблиц  
   
 1.  В обозревателе объектов щелкните правой кнопкой мыши таблицу, которая будет содержать внешний ключ для связи, и выберите пункт **Конструктор**.  
   
-     Таблица откроется в окне **Конструктор таблиц**.  
+     Таблица откроется в **Конструктор таблиц**.  
   
 2.  В меню **конструктора таблиц** выберите пункт **Связи**.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "62761616"
   
 7.  В сетке внизу выберите столбцы, составляющие первичный ключ таблицы. В соседней ячейке сетки слева от каждого столбца выберите соответствующий столбец внешнего ключа таблицы внешнего ключа.  
   
-     **Конструктор таблиц** предложит имя для связи. Чтобы его изменить, отредактируйте содержимое текстового поля **Имя связи** .  
+     **Конструктор таблиц** автоматически предлагает имя для связи. Чтобы его изменить, отредактируйте содержимое текстового поля **Имя связи** .  
   
 8.  Нажмите кнопку **OК** , чтобы создать связь.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-create-a-foreign-key-in-a-new-table"></a>Создание внешнего ключа в новой таблице  
   

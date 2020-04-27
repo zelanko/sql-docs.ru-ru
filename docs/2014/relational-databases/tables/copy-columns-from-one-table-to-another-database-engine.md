@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67df7c541b0c664f200f6cf77affc0c809dbc719
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736357"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Копирование столбцов из одной таблицы в другую (компонент Database Engine)
@@ -31,23 +31,23 @@ ms.locfileid: "62736357"
   
      [Безопасность](#Security)  
   
--   **Для копирование столбцов с помощью:**  
+-   **Копирование столбцов с помощью**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
  При копировании из одной базы данных в другую столбца, имеющего псевдоним типа данных, исходный тип данных в целевой базе данных может оказаться недоступным. В этом случае столбцу будет назначен ближайший подходящий базовый тип данных, доступный в целевой базе данных.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требуется разрешение ALTER на таблицу.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Копирование определения столбца из одной таблицы в другую  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62736357"
      При копировании строк внутри таблицы в качестве целевой таблицы нужно указать исходную.  
   
     > [!NOTE]  
-    >  **Конструктор запросов** не может определить заранее, какие таблицы и представления можно обновить. Поэтому в диалоговом окне **Выберите целевую таблицу для инструкции Insert Results** приведен список всех таблиц и представлений, доступных этому подключению к данным, даже тех, копирование строк в которые будет невозможно.  
+    >  **Конструктор запросов** не может определить заранее, какие таблицы и представления доступны для обновления. Поэтому в диалоговом окне **Выберите целевую таблицу для инструкции Insert Results** приведен список всех таблиц и представлений, доступных этому подключению к данным, даже тех, копирование строк в которые будет невозможно.  
   
 5.  Щелкните правой кнопкой мыши панель диаграммы и в контекстном меню выберите пункт **Добавить таблицу в диаграмму**.  
   
@@ -97,9 +97,9 @@ ms.locfileid: "62736357"
   
 11. Для запуска запроса нажмите кнопку **Выполнить SQL** .  
   
-     При выполнении запроса на вставку результатов в [области результатов](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)не отображаются никакие результаты. Вместо этого появляется сообщение о количестве скопированных строк.  
+     При выполнении запроса по вставке результатов результаты не отображаются на панели [Результаты](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Вместо этого появляется сообщение о количестве скопированных строк.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Копирование определения столбца из одной таблицы в другую  
   

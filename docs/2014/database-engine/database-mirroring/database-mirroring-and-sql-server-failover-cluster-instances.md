@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e7c3a3094309d2d1d32a840d4eee933555daa66a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755584"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Экземпляры зеркального отображения баз данных и отказоустойчивых кластеров (SQL Server)
@@ -53,17 +53,17 @@ ms.locfileid: "62755584"
 ### <a name="high-performance-mode-session"></a>Сеанс в режиме высокой производительности  
  Если необходимо реализовать зеркальное отображение базы данных в режиме высокой производительности, следует расположить основной сервер на экземпляре кластера отработки отказа в кластере, а зеркальный сервер — на удаленном сервере вне кластера. В случае перехода кластера на другой узел экземпляр кластера отработки отказа будет продолжать работу в качестве основного сервера сеанса зеркального отображения. Если существуют проблемы на всем кластере, можно принудительно перевести обслуживание на зеркальный сервер.  
   
- **Настройка нового отказоустойчивого кластера SQL Server**  
+ **Установка нового отказоустойчивого кластера SQL Server**  
   
--   [Создание нового SQL Server отказоустойчивого кластера &#40;установки&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
+-   [Создание отказоустойчивого кластера SQL Server (программа установки)](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
  **Настройка зеркального отображения базы данных**  
   
--   [Настройка SQL Server &#40;зеркального отображения базы данных&#41;](setting-up-database-mirroring-sql-server.md)  
+-   [Настройка зеркального отображения базы данных (SQL Server)](setting-up-database-mirroring-sql-server.md)  
   
--   [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
+-   [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server &#40;зеркального отображения базы данных&#41;](database-mirroring-sql-server.md)   
  [Режимы работы зеркального отображения базы данных](database-mirroring-operating-modes.md)   
  [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 

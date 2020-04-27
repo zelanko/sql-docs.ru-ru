@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52781de1cd4b6309f3ebeb9a2c59ae85b0b32dbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754595"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Приостановка или возобновление сеанса зеркального отображения базы данных (SQL Server)
@@ -38,20 +38,20 @@ ms.locfileid: "62754595"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия.**  [после приостановки или возобновления зеркального отображения базы данных](#FollowUp)  
+-   **Дальнейшие действия.**  [После приостановки или возобновления зеркального отображения базы данных](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
  В любой момент сеанс зеркального отображения базы данных можно приостановить, что дает возможность повышать производительность при возникновении узких мест. Затем в любое время приостановленный сеанс можно возобновить.  
   
 > [!CAUTION]  
 >  После принудительного обслуживания при повторном подключении исходного основного сервера зеркальное отображение приостанавливается. Возобновление зеркального отображения в данной ситуации может привести к потере данных исходным основным сервером. Дополнительные сведения о том, как действовать при возможной потере данных, см. в разделе [Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на базу данных.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Приостановить или возобновить сеанс зеркального отображения базы данных можно на странице **Свойства базы данных — зеркальное отображение** .  
   
 #### <a name="to-pause-or-resume-database-mirroring"></a>Приостановление или возобновление зеркального отображения базы данных  
@@ -70,7 +70,7 @@ ms.locfileid: "62754595"
   
 5.  Чтобы возобновить сеанс, нажмите кнопку **Продолжить**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-pause-database-mirroring"></a>Приостановка зеркального отображения базы данных  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62754595"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a>Дальнейшие действия. После приостановки или возобновления зеркального отображения базы данных  
+##  <a name="follow-up-after-pausing-or-resuming-database-mirroring"></a><a name="FollowUp"></a>Дальнейшие действия. После приостановки или возобновления зеркального отображения базы данных  
   
 -   **После приостановки зеркального отображения базы данных**  
   
@@ -118,11 +118,11 @@ ms.locfileid: "62754595"
   
      Возобновление зеркального отображения базы данных переводит зеркальную базу данных в состояние SYNCHRONIZING. Если уровень безопасности установлен в FULL, зеркало захватывается основным сервером, и зеркальная база данных переходит в состояние SYNCHRONIZED. В этот момент возможна отработка отказа. Если присутствует следящий сервер, установленный в положение ON, возможна автоматическия отработка отказа. В случае отсутствия следящего сервера возможна отработка отказа вручную.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
--   [&#40;SQL Server удаления зеркального отображения базы данных&#41;](remove-database-mirroring-sql-server.md)  
+-   [Удаление зеркального отображения базы данных (SQL Server)](remove-database-mirroring-sql-server.md)  
   
-## <a name="see-also"></a>См. также:  
- [SQL Server &#40;зеркального отображения базы данных&#41;](database-mirroring-sql-server.md)  
+## <a name="see-also"></a>См. также  
+ [Зеркальное отображение базы данных (SQL Server)](database-mirroring-sql-server.md)  
   
   

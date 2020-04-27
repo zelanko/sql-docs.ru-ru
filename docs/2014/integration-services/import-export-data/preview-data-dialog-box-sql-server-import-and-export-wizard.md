@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55102e5b91b9b544a38338dbbbbcd882bc66f84a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62767986"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Диалоговое окно «Просмотр данных» (мастер импорта и экспорта SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "62767986"
 -   На странице **Выбор исходных таблиц и представлений** мастера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] импорта и экспорта нажмите кнопку **Предварительный просмотр**.  
   
 ## <a name="options"></a>Параметры  
- **Source**  
+ **Источник**  
  Отображает запрос, посылаемый мастером источнику данных.  
   
  **Сетка образца данных**  
