@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c824c1298a9bd5c0fd0564688ea76c48e8975c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480082"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>Условия бизнес-правил (службы Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "65480082"
   
 ## <a name="business-rule-conditions"></a>Условия бизнес-правил  
   
-|Имя условия|Description|  
+|Название условия|Описание|  
 |--------------------|-----------------|  
 |**равно**|Выбранный атрибут **равен** указанному атрибуту или указанному значению атрибута либо пуст.<br /><br /> Это условие допустимо для текстовых, числовых значений, дат и ссылок.|  
 |**не равно**|Выбранный атрибут **не равен** указанному атрибуту или указанному значению атрибута либо пуст.<br /><br /> Это условие допустимо для текстовых, числовых значений, дат и ссылок.|  
@@ -44,9 +44,9 @@ ms.locfileid: "65480082"
 > [!NOTE]  
 >  Если бизнес-правило содержит условие, выполняющее сравнение двух значений, и применяется к элементу, в котором оба значения содержат значение NULL, этот элемент не проходит проверку.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Действия бизнес-правил &#40;Master Data Services&#41;](../../2014/master-data-services/business-rule-actions-master-data-services.md)   
  [Бизнес-правила &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
- [Создание и публикация бизнес-правила &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+ [Создание и публикация бизнес-правила (службы Master Data Services)](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   

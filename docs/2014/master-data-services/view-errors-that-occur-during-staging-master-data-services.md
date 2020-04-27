@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 75b7fb5a1b98f599a07e47101f93268779ca39b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478569"
 ---
 # <a name="view-errors-that-occur-during-the-staging-process-master-data-services"></a>Возможность просмотра ошибки, которая возникает в ходе промежуточного процесса (службы Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "65478569"
   
 -   Stg.viw_name_RelationshipErrorDetails для обновления связей иерархии.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
 -   В базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] необходимо иметь разрешения SELECT для представления stg.viw_name_MemberErrorDetails или stg.viw_name_RelationshipErrorDetails.  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-view-staging-errors"></a>Для просмотра промежуточных ошибок  
   
@@ -45,10 +45,10 @@ ms.locfileid: "65478569"
   
 4.  Выполните запрос. Сведения об ошибках отображаются в поле **ErrorDescription** .  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
  Дополнительные сведения о сообщениях об ошибках см. в разделе [Ошибки промежуточного процесса (службы Master Data Services)](../../2014/master-data-services/staging-process-errors-master-data-services.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Master Data Services &#40;импорта данных&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [Устранение неполадок в промежуточном процессе (службы Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   

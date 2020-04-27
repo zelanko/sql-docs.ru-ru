@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d5465ab5157af0c0a6f1bd4a0566d49e45cd55c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482682"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>Удаление строки (надстройка MDS для Excel)
@@ -23,7 +23,7 @@ ms.locfileid: "65482682"
 > [!NOTE]  
 >  Администратор может повторно активировать удаленные элементы. Дополнительные сведения см. в разделе [Повторная активация элемента или коллекции (службы Master Data Services)](../reactivate-a-member-or-collection-master-data-services.md).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
@@ -38,7 +38,7 @@ ms.locfileid: "65482682"
   
 3.  В диалоговом окне подтверждения нажмите кнопку **Да**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Публикация &#40;данных надстройка MDS для Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

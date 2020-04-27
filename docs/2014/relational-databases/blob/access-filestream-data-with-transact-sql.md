@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 067f14e857addc5f43a0b17d81d554997adbc09f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010440"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Доступ к данным FILESTREAM с помощью Transact-SQL
@@ -25,7 +25,7 @@ ms.locfileid: "66010440"
 > [!NOTE]  
 >  Для примеров в этом разделе требуется база данных с поддержкой FILESTREAM и таблица, которая создана в разделе [Создание базы данных с поддержкой FILESTREAM](create-a-filestream-enabled-database.md) и [Создание таблицы для хранения данных FILESTREAM](create-a-table-for-storing-filestream-data.md).  
   
-##  <a name="ins"></a> Вставка строки, содержащей данные FILESTREAM  
+##  <a name="inserting-a-row-that-contains-filestream-data"></a><a name="ins"></a> Вставка строки, содержащей данные FILESTREAM  
  Чтобы вставить строку в таблицу, которая поддерживает данные FILESTREAM, используйте инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT. Значение, вставляемое в столбец FILESTREAM, может быть либо значением NULL, либо значением типа `varbinary(max)`.  
   
 ### <a name="inserting-null"></a>Вставка значения NULL  
@@ -51,15 +51,14 @@ ms.locfileid: "66010440"
 |`F8F5C314-0559-4927-8FA9-1535EE0BDF50`|`2`|`0x`|  
 |`7F680840-B7A4-45D4-8CD5-527C44D35B3F`|`3`|`0x536569736D69632044617461`|  
   
-##  <a name="upd"></a>Обновление данных FILESTREAM  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] можно использовать для обновления данных файла, хотя это может быть нежелательным при потоковой записи в файл больших объемов данных.  
+##  <a name="updating-filestream-data"></a><a name="upd"></a>Обновление данных FILESTREAM  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] можно использовать для обновления данных файла, хотя это может быть нежелательным при потоковой записи в файл больших объемов данных.  
   
  В следующем примере любой текст в записи файла заменяется текстом `Xray 1`.  
   
  [!code-sql[FILESTREAM#FS_UpdateData](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_updatedata)]  
   
-##  <a name="del"></a>Удаление данных FILESTREAM  
+##  <a name="deleting-filestream-data"></a><a name="del"></a> Удаление данных FILESTREAM  
  При удалении строки, содержащей поле FILESTREAM, также удаляются и связанные с ней файлы файловой системы. Единственным способом удаления строки и, как следствие, файла является использование инструкции DELETE языка [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  В следующем примере показано, как удалить строку и связанный с ней файл файловой системы.  
@@ -71,7 +70,7 @@ ms.locfileid: "66010440"
 > [!NOTE]  
 >  Базовые файлы удаляются сборщиком мусора FILESTREAM.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Включение и настройка FILESTREAM](enable-and-configure-filestream.md)   
  [Избегание конфликтов в операциях баз данных в приложениях FILESTREAM](avoid-conflicts-with-database-operations-in-filestream-applications.md)  
   

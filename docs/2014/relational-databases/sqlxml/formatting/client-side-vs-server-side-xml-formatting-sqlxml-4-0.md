@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4eaa4667db1e8b6ed789e2adb90bc8d72c1b02e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012352"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Форматирование XML-кода на клиенте и на сервере (SQLXML 4.0)
@@ -212,7 +212,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
   
 -   При указании **Client-Side-XML = "1"** (true) в шаблоне выполняется запрос форматирования XML на стороне клиента. В этом случае можно указать предложение FOR XML NESTED. Если для XML AUTO задано значение, то форматирование XML происходит на стороне сервера, хотя в шаблоне указан параметр **Client-Side-XML = "1"** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Рекомендации по безопасности XML &#40;SQLXML 4,0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
  [Форматирование XML на стороне клиента &#40;SQLXML 4,0&#41;](client-side-xml-formatting-sqlxml-4-0.md)   
  [Форматирование XML на стороне сервера &#40;SQLXML 4,0&#41;](server-side-xml-formatting-sqlxml-4-0.md)  

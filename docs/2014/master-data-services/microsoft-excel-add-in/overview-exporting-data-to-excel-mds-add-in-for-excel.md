@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3bbd3ac1bf97530d64760d1434b9e7e8f6a81d34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482802"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>Загрузка данных (надстройка MDS для Excel)
@@ -42,16 +42,16 @@ ms.locfileid: "65482802"
 |----------------------|-----------|  
 |Фильтрация данных MDS перед их загрузкой в Excel.|[Фильтровать данные перед загрузкой &#40;надстройка MDS для Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)|  
 |Загрузка данных MDS в Excel.|[Загрузка данных из MDS в Excel](export-data-to-excel-from-master-data-services.md)|  
-|Изменение порядка столбцов перед загрузкой данных.|[Переупорядочение столбцов &#40;надстройка MDS для Excel&#41;](reorder-columns-mds-add-in-for-excel.md)|  
+|Изменение порядка столбцов перед загрузкой данных.|[Переупорядочение столбцов (надстройка MDS для Excel)](reorder-columns-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Подключения &#40;надстройка MDS для Excel&#41;](connections-mds-add-in-for-excel.md)  
+-   [Соединения (надстройка MDS для Excel)](connections-mds-add-in-for-excel.md)  
   
--   [Файлы ярлыков запросов &#40;надстройка MDS для Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
+-   [Файлы ярлыков запросов (надстройка MDS для Excel)](shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [Надстройка Master Data Services для Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
--   [Master Data Services &#40;безопасности&#41;](../security-master-data-services.md)  
+-   [Безопасность (службы Master Data Services)](../security-master-data-services.md)  
   
   

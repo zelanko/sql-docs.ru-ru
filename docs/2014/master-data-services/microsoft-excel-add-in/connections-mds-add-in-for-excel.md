@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a7d336e777f4f6bf00310cbadfed75987ba45252
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478915"
 ---
 # <a name="connections-mds-add-in-for-excel"></a>Соединения (настройка MDS для Excel)
@@ -32,8 +32,7 @@ ms.locfileid: "65478915"
  Если вы всегда соединяетесь с одним и тем же сервером и загружаете один и тот же набор данных, то можно создать файл ярлыка запроса, который содержит сведения о соединении и фильтрах. Дополнительные сведения о файлах запросов см. в разделе [файлы ярлыков запросов &#40;надстройки MDS для Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md).  
   
 ## <a name="data-quality-services"></a>Data Quality Services  
- 
-  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] включает функциональные возможности служб Data Quality Services, которые помогут сопоставить данные, прежде чем публиковать их в репозитории MDS. Если при установлении соединения база данных DQS установлена на том же экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , что и база данных MDS, то на ленте появятся кнопки служб DQS. Если база данных DQS_Main не существует на этом экземпляре, то эти кнопки не отображаются и функции качества данных будут недоступны.  
+ [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] включает функциональные возможности служб Data Quality Services, которые помогут сопоставить данные, прежде чем публиковать их в репозитории MDS. Если при установлении соединения база данных DQS установлена на том же экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , что и база данных MDS, то на ленте появятся кнопки служб DQS. Если база данных DQS_Main не существует на этом экземпляре, то эти кнопки не отображаются и функции качества данных будут недоступны.  
   
 ## <a name="troubleshooting-connections"></a>Устранение неполадок с соединениями  
  Если при подключении к MDS возникнут проблемы, см [https://social.technet.microsoft.com/wiki/contents/articles/4520.aspx](https://social.technet.microsoft.com/wiki/contents/articles/4520.aspx) . Советы по устранению неполадок.  
@@ -42,7 +41,7 @@ ms.locfileid: "65478915"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Установите соединение с базой данных служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Подключение к репозиторию MDS &#40;надстройка MDS для Excel&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|Установите соединение с базой данных служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Соединение с репозиторием MDS (надстройка MDS для Excel)](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |Загрузка данных MDS в Excel.|[Загрузка данных из MDS в Excel](export-data-to-excel-from-master-data-services.md)|  
 |Фильтрация данных MDS перед их загрузкой в Excel.|[Фильтровать данные перед загрузкой &#40;надстройка MDS для Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)|  
   
@@ -50,7 +49,7 @@ ms.locfileid: "65478915"
   
 -   [Загрузка надстройка MDS для Excel &#40;данных&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
--   [Файлы ярлыков запросов &#40;надстройка MDS для Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
+-   [Файлы ярлыков запросов (надстройка MDS для Excel)](shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [Надстройка Master Data Services для Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   

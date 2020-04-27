@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7b4b7d9d9d153456ca471196c6480465d057e412
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483523"
 ---
 # <a name="change-tracking-master-data-services"></a>Отслеживание изменений (службы Master Data Services)
@@ -32,15 +32,15 @@ ms.locfileid: "65483523"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Добавление атрибутов в группу отслеживания изменений.|[Добавление атрибутов в группу Отслеживание изменений &#40;Master Data Services&#41;](add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|Создание бизнес-правила для инициации действий на основе изменений атрибута.|[Инициируйте действия на основе изменений значений атрибутов &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|Добавление атрибутов в группу отслеживания изменений.|[Добавление атрибутов в группу отслеживания изменений (службы Master Data Services)](add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|Создание бизнес-правила для инициации действий на основе изменений атрибута.|[Инициирование действия на основе значения атрибута (службы Master Data Services)](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Master Data Services &#40;проверки&#41;](../../2014/master-data-services/validation-master-data-services.md)  
+-   [Проверка (службы Master Data Services)](../../2014/master-data-services/validation-master-data-services.md)  
   
--   [Бизнес-правила &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [Бизнес-правила (службы Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)  
   
--   [Master Data Services &#40;атрибутов&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [Атрибуты (службы Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

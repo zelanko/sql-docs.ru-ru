@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5eecc52bb683f19582a539992b0668d3fe6e175
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014521"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>Схемы XSD с заметками в SQLXML 4.0
   В этом разделе приводятся сведения об использовании аннотированных схем XSD в SQLXML 4.0. В предшествующих версиях SQLXML аналогичные функциональные возможности обеспечивались с помощью схем с сокращенными XML-данными (XDR). Кроме того, в этом разделе приводятся сведения по XDR для прежних версий приложений.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о схемах XSD с заметками &#40;SQLXML 4,0&#41;](introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  
  Содержит общие сведения об аннотированных схемах XSD в SQLXML 4.0.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66014521"
  [Схемы XDR с заметками &#40;нерекомендуемые в SQLXML 4,0&#41;](annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
  Предшествующие версии SQLXML поддерживали заметки в схемах XDR. Аннотированные схемы XDR не используются в SQLXML 4.0, и этот раздел приводится в качестве справочника по приложениям устаревших версий.  
   
-## <a name="other-resources"></a>Прочие ресурсы  
+## <a name="other-resources"></a>Другие ресурсы  
  Дополнительные сведения о языке XSD, языке XPath и преобразованиях XSLT находятся на следующих веб-сайтах.  
   
 -   XML-схема, часть 0: учебник, рекомендация консорциума W3C (http://www.w3.org/TR/xmlschema-0/)  

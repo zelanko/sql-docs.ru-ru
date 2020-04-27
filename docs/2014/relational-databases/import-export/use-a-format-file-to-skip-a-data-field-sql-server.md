@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f880dcacbd4571c188d0368a0378a89c45787af2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011714"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Использование файла форматирования для пропуска поля данных (SQL Server)
@@ -64,7 +64,7 @@ GO
 -   сопоставить четвертое поле данных с третьим столбцом, `LastName`.  
   
 ## <a name="non-xml-format-file-for-more-data-fields"></a>Не XML-файлы форматирования для дополнительных полей данных  
- Файл форматирования `myTestSkipField.fmt`сопоставляет поля в файле `myTestSkipField-c.dat` со столбцами таблицы `myTestSkipField` . Файл форматирования имеет символьный формат данных. Чтобы пропустить столбец, необходимо изменить его порядковый номер на «0», как показано для столбца `ExtraField` в файле форматирования.  
+ Файл форматирования `myTestSkipField.fmt` сопоставляет поля в файле `myTestSkipField-c.dat` со столбцами таблицы `myTestSkipField`. Файл форматирования имеет символьный формат данных. Чтобы пропустить столбец, необходимо изменить его порядковый номер на «0», как показано для столбца `ExtraField` в файле форматирования.  
   
  В файле форматирования `myTestSkipField.fmt` содержатся следующие данные:  
   
@@ -100,7 +100,7 @@ GO
 ## <a name="xml-format-file-for-more-data-fields"></a>XML-файл форматирования для дополнительных полей данных  
  Файл форматирования в этом примере создан на основе другого файла форматирования `myTestSkipField.xml`, в котором количество полей совпадает с количеством столбцов таблицы `myTestSkipField`. Содержимое этого файла форматирования см. в разделе [Создание файла форматирования (SQL Server)](create-a-format-file-sql-server.md).  
   
- Файл форматирования `myTestSkipField.xml`сопоставляет поля в файле `myTestSkipField-c.dat` со столбцами таблицы `myTestSkipField` . Файл форматирования имеет символьный формат данных.  
+ Файл форматирования `myTestSkipField.xml` сопоставляет поля в файле `myTestSkipField-c.dat` со столбцами таблицы `myTestSkipField`. Файл форматирования имеет символьный формат данных.  
   
  В файле форматирования `myTestSkipField.xml` содержатся следующие данные:  
   
@@ -144,8 +144,8 @@ GO
 ## <a name="see-also"></a>См. также:  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Используйте файл форматирования для пропуска столбца таблицы &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
- [Используйте файл форматирования для преобразования столбцов таблицы в поля файла данных &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+ [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
+ [Пропуск столбца таблицы с помощью файла форматирования (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+ [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
   

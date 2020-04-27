@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 77f7144231bda8be36334513584df16cf9c0e22b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010174"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>Создание клиентских приложений для данных FILESTREAM
@@ -31,34 +31,32 @@ ms.locfileid: "66010174"
 > [!NOTE]  
 >  Для примеров в этом разделе требуется база данных с поддержкой FILESTREAM и таблица, которая создана в разделе [Создание базы данных с поддержкой FILESTREAM](create-a-filestream-enabled-database.md) и [Создание таблицы для хранения данных FILESTREAM](create-a-table-for-storing-filestream-data.md).  
   
-##  <a name="func"></a>Функции для работы с данными FILESTREAM  
+##  <a name="functions-for-working-with-filestream-data"></a><a name="func"></a> Функции для работы с данными FILESTREAM  
  Если для хранения данных больших двоичных объектов (BLOB) используется FILESTREAM, то для работы с файлами могут быть использованы API-интерфейсы Win32. Для поддержки работы с данными FILESTREAM BLOB в приложениях Win32 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предусмотрены следующие функции и API-интерфейсы.  
   
--   [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) Возвращает путь в виде маркера для большого двоичного объекта. Этот токен позволяет приложению получить дескриптор Win32 и работать с данными большого двоичного объекта.  
+-   [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) возвращает в BLOB путь в виде токена. Этот токен позволяет приложению получить дескриптор Win32 и работать с данными большого двоичного объекта.  
   
      Если база данных, содержащая данные FILESTREAM, принадлежит к группе доступности AlwaysOn, то функция PathName возвращает имя виртуальной сети (VNN) вместо имени компьютера.  
   
--   [GET_FILESTREAM_TRANSACTION_CONTEXT ()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) возвращает маркер, представляющий текущую транзакцию сеанса. Данный токен позволяет приложению связать потоковые операции файловой системы FILESTREAM с транзакцией.  
+-   [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) возвращает токен, который представляет текущую транзакцию сеанса. Данный токен позволяет приложению связать потоковые операции файловой системы FILESTREAM с транзакцией.  
   
--   
-  [OpenSqlFilestream API](access-filestream-data-with-opensqlfilestream.md) получает дескриптор файла Win32. Данный дескриптор позволяет приложению передать поток данных FILESTREAM, после чего приложение передает этот дескриптор следующим API-интерфейсам Win32: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)и [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Если при помощи этого дескриптора приложение вызывает любой другой API-интерфейс, возвращается ошибка ERROR_ACCESS_DENIED. Приложение должно закрыть дескриптор с помощью функции [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428).  
+-   [OpenSqlFilestream API](access-filestream-data-with-opensqlfilestream.md) получает дескриптор файла Win32. Данный дескриптор позволяет приложению передать поток данных FILESTREAM, после чего приложение передает этот дескриптор следующим API-интерфейсам Win32: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)и [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Если при помощи этого дескриптора приложение вызывает любой другой API-интерфейс, возвращается ошибка ERROR_ACCESS_DENIED. Приложение должно закрыть дескриптор с помощью функции [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428).  
   
- Весь доступ к контейнеру данных FILESTREAM осуществляется в транзакции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] можно выполнить в одной транзакции, обеспечивая согласованность данных SQL и данных FILESTREAM.  
+ Весь доступ к контейнеру данных FILESTREAM осуществляется в транзакции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] можно выполнить в одной транзакции, обеспечивая согласованность данных SQL и данных FILESTREAM.  
   
-##  <a name="steps"></a>Действия по доступу к данным FILESTREAM  
+##  <a name="steps-for-accessing-filestream-data"></a><a name="steps"></a> Действия для доступа к данным FILESTREAM  
   
-###  <a name="path"></a>Чтение пути к файлу FILESTREAM  
+###  <a name="reading-the-filestream-file-path"></a><a name="path"></a> Чтение пути файла FILESTREAM  
  Каждая ячейка в таблице FILESTREAM имеет связанный с ней путь к файлу. Для считывания этого пути используется свойство `PathName` столбца `varbinary(max)` в инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. В следующем примере показано, как считать путь файла столбца `varbinary(max)`.  
   
  [!code-sql[FILESTREAM#FS_PathName](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_pathname)]  
   
-###  <a name="trx"></a>Чтение контекста транзакции  
- Чтобы получить текущий контекст транзакции, используйте функцию [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) . В следующем примере показано, как запустить транзакцию и считать текущий контекст транзакции.  
+###  <a name="reading-the-transaction-context"></a><a name="trx"></a> Чтение контекста транзакции  
+ Чтобы получить текущий контекст транзакции, используйте функцию [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql). В следующем примере показано, как запустить транзакцию и считать текущий контекст транзакции.  
   
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_get_transaction_context)]  
   
-###  <a name="handle"></a>Получение маркера файла Win32  
+###  <a name="obtaining-a-win32-file-handle"></a><a name="handle"></a> Получение дескриптора файла Win32  
  API OpenSqlFilestream получает дескриптор файла Win32. Этот API-интерфейс экспортируется из файла sqlncli.dll. Возвращенный дескриптор может быть передан в любой из следующих API-интерфейсов Win32: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)или [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). В следующих примерах показано, как получить дескриптор файла Win32 и использовать его для чтения и записи данных в объект FILESTREAM BLOB.  
   
  [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cs/filestream.cs#fs_cs_readandwriteblob)]  
@@ -67,7 +65,7 @@ ms.locfileid: "66010174"
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cpp/filestream.cpp#fs_cpp_writeblob)]  
   
-##  <a name="best"></a>Рекомендации по проектированию и реализации приложений  
+##  <a name="best-practices-for-application-design-and-implementation"></a><a name="best"></a> Рекомендации по проектированию и реализации приложений  
   
 -   При проектировании и реализации приложений, использующих FILESTREAM, примите к сведению следующие рекомендации.  
   
@@ -88,9 +86,9 @@ ms.locfileid: "66010174"
 -   Если в приложении используется протокол Message Block1 (SMB1), то для оптимизации производительности данные больших двоичных объектов FILESTREAM должны считываться блоками по 60 килобайт.  
   
 ## <a name="see-also"></a>См. также:  
- [Избегайте конфликтов с операциями базы данных в приложениях FILESTREAM](avoid-conflicts-with-database-operations-in-filestream-applications.md)   
- [Доступ к данным FILESTREAM с помощью OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
- [Большие двоичные объекты &#40;данные&#41; &#40;SQL Server&#41;](binary-large-object-blob-data-sql-server.md)   
+ [Избегание конфликтов в операциях баз данных в приложениях FILESTREAM](avoid-conflicts-with-database-operations-in-filestream-applications.md)   
+ [Доступ к данным FILESTREAM с OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
+ [Большой двоичный объект &#40;BLOB-объект& #41;Данные&#40;SQL Server&#41;](binary-large-object-blob-data-sql-server.md)   
  [Создание частичных обновлений данных FILESTREAM](make-partial-updates-to-filestream-data.md)  
   
   

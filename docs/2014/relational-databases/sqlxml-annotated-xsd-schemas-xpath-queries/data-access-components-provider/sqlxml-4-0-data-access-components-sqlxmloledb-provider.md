@@ -18,14 +18,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 51369c321b8463c009027664e555a059522e1d23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014355"
 ---
 # <a name="sqlxml-40-data-access-components"></a>Компоненты доступа к данным SQLXML 4.0
-  
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 включает в себя три поставщика данных, которые могут вставлять XML-данные и получать XML-данные из базы данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   SQLXMLOLEDB, поставщик  
@@ -40,7 +39,7 @@ ms.locfileid: "66014355"
   
      Отображает функции SQLXML 4.0 с помощью новой технологии доступа к данным, которая расширяет и дополняет текущие версии компонентов доступа к данным MDAC. SQLNCLI11 обеспечивает полную поддержку для функций, представленных в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Дополнительные сведения см. в статье [Программирование SQL Server Native Client](../../native-client/sql-server-native-client-programming.md).  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Поставщик SQLXMLOLEDB &#40;SQLXML 4,0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md)  
  Описывает поставщик SQLXMLOLEDB и демонстрирует его использование.  
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63287811"
 ---
 # <a name="examples-using-auto-mode"></a>Примеры. Использование режима AUTO
@@ -167,8 +167,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
  `...`  
   
 ## <a name="example-returning-binary-data"></a>Пример. Возврат двоичных данных  
- Запрос возвращает фотографию продукта из таблицы `ProductPhoto` . 
-  `ThumbNailPhoto` является столбцом `varbinary(max)` в таблице `ProductPhoto`. По умолчанию режим `AUTO` возвращает ссылку на двоичные данные, являющуюся относительным URL-адресом виртуального корня базы данных, в которой выполняется запрос. Для идентификации изображения необходимо указать ключевой атрибут `ProductPhotoID` . Как показано в этом примере, при поиске изображения для однозначной идентификации строки в предложении `SELECT` необходимо также указать первичный ключ таблицы.  
+ Запрос возвращает фотографию продукта из таблицы `ProductPhoto` . `ThumbNailPhoto` является столбцом `varbinary(max)` в таблице `ProductPhoto`. По умолчанию режим `AUTO` возвращает ссылку на двоичные данные, являющуюся относительным URL-адресом виртуального корня базы данных, в которой выполняется запрос. Для идентификации изображения необходимо указать ключевой атрибут `ProductPhotoID` . Как показано в этом примере, при поиске изображения для однозначной идентификации строки в предложении `SELECT` необходимо также указать первичный ключ таблицы.  
   
 ```  
 SELECT ProductPhotoID, ThumbNailPhoto  

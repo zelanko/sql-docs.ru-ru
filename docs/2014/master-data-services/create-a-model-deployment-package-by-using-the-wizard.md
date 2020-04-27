@@ -15,21 +15,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c88e5ac59730eede7c252261d7509ee77de9cd6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483604"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Создание пакета развертывания модели с помощью мастера
   Мастер развертывания модели [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] служит для создания пакета, содержащего только объекты модели. Если в пакет нужно включить данные, см. раздел [Создание пакета развертывания модели при помощи MDSModelDeploy](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
 -   В веб-приложении [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** .  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   Для создания пакета модели модель должна существовать. Дополнительные сведения см. в разделе [Создание модели (службы Master Data Services)](../../2014/master-data-services/create-a-model-master-data-services.md).  
   
@@ -43,19 +43,19 @@ ms.locfileid: "65483604"
   
 4.  На странице **Создание пакета** выберите модель в списке **Модель** .  
   
-5.  Щелкните **Далее**.  
+5.  Нажмите кнопку **Далее**.  
   
-6.  Нажмите кнопку **Загрузить**.  
+6.  Нажмите **Загрузить**.  
   
 7.  Сохраните файл.  
   
 8.  Нажмите кнопку **Закрыть**, чтобы завершить работу мастера.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
   
 -   [Развертывание пакета развертывания модели с помощью мастера](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
-## <a name="see-also"></a>См. также:  
- [Развертывание моделей &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+## <a name="see-also"></a>См. также  
+ [Развертывание моделей (службы Master Data Services)](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

@@ -11,14 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22fae65a5e62be579f751dd3d6d3d0c9a73e7409
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316399"
 ---
 # <a name="script-a-table"></a>Создание скрипта таблицы
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно создавать скрипты выбора, вставки, обновления и удаления таблиц, а также скрипты создания, изменения, удаления и выполнения хранимых процедур.  
   
  Иногда возникает необходимость создать скрипт с несколькими действиями, например: удаление процедуры с последующим созданием другой процедуры, создание таблицы и ее изменение. Чтобы создать комбинированный скрипт, сохраните первый скрипт в окне редактора запросов, а второй — в буфере обмена, чтобы можно было вставить его из буфера обмена в это окно после первого скрипта.  

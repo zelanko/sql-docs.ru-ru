@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 271be9656aa7fabc1edbece16f18ae7a60ba3978
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312616"
 ---
 # <a name="set-the-startup-options"></a>Настройка параметров запуска
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]можно настроить для открытия области конструктора в конфигурации, которую вы предпочитаете при [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] запуске. Настройка среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] позволяет сэкономить время пользователя.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] может быть настроена таким образом, чтобы при запуске среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] область конструктора имела нужный вид. Настройка среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] позволяет сэкономить время пользователя.  
   
 ## <a name="configuring-startup-options"></a>Настройка параметров запуска  
   
@@ -30,13 +30,13 @@ ms.locfileid: "63312616"
   
     -   **Откройте обозреватель объектов**. Это параметр по умолчанию.  
   
-    -   **Откройте новое окно запроса**.  
+    -   **Открыть новое окно запроса**.  
   
-    -   **Откройте обозреватель объектов и новый запрос**.  
+    -   **Открыть обозреватель объектов и новый запрос**.  
   
-    -   **Откройте обозреватель объектов и монитор активности**.  
+    -   **Открыть обозреватель объектов и монитор активности**.  
   
-    -   **Откройте пустую среду**.  
+    -   **Открыть пустую среду**.  
   
 3.  Выберите нужный вариант и нажмите кнопку **ОК**.  
   

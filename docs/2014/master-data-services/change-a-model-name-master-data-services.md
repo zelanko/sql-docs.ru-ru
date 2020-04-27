@@ -13,21 +13,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d933475231913edeccbc5206afb675916a765302
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054220"
 ---
 # <a name="change-a-model-name-master-data-services"></a>Изменение имени модели (службы Master Data Services)
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] имя модели можно изменять.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
--   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
+-   Необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** .  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-change-a-model-name"></a>Изменение имени модели  
   
@@ -46,9 +46,9 @@ ms.locfileid: "66054220"
   
 6.  Нажмите **Сохранить модель**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание &#40;модели Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)   
  [Удаление &#40;модели Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)   
- [Модели &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)  
+ [Модели (службы Master Data Services)](../../2014/master-data-services/models-master-data-services.md)  
   
   

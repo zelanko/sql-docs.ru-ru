@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4fc4d98eb32fb07def2fd317ebb7f5a6f6332cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63282154"
 ---
 # <a name="authentication-in-reporting-services"></a>Проверка подлинности в службах Reporting Services
@@ -102,7 +102,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
  На следующем рисунке представлен метод проверки подлинности пользователей в веб-службе, где приложение развернуто на сервере отчетов, настроенном для использования нестандартного модуля проверки подлинности.  
   
- ![Поток проверки подлинности служб Reporting Services](../../media/rosettasecurityextensionauthenticationflow.gif "Поток проверки подлинности служб Reporting Services")  
+ ![Поток аутентификации в системе безопасности Reporting Services](../../media/rosettasecurityextensionauthenticationflow.gif "Поток аутентификации в системе безопасности Reporting Services")  
   
  На рис. 1 процесс проверки подлинности представлен следующим образом.  
   

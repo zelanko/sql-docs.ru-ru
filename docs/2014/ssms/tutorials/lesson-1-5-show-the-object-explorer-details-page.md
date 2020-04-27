@@ -11,14 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2771cd508c2bc2f3be0de1c9d0502e8ab5ce062
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63282032"
 ---
 # <a name="show-the-object-explorer-details-page"></a>Отображение страницы «Сведения об обозревателе объектов»
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] выводится отчет по каждому объекту, выбранному в обозревателе объектов. Отчет, называемый «Страница подробностей обозревателя объектов», создается в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и открывается в окне документа.  
   
 ## <a name="showing-the-object-explorer-details-page"></a>Отображение страницы «Сведения об обозревателе объектов»  

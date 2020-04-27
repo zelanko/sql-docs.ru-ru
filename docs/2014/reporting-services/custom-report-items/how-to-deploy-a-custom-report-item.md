@@ -1,5 +1,5 @@
 ---
-title: Развертывание пользовательского элемента отчета | Документы Майкрософт
+title: Руководство. Развертывание пользовательского элемента отчета | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b41519ee6a6d31be33d92c8fbdf2ab503c93ec1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265082"
 ---
-# <a name="how-to-deploy-a-custom-report-item"></a>Развертывание пользовательского элемента отчета
+# <a name="how-to-deploy-a-custom-report-item"></a>Руководство. Развертывание пользовательского элемента отчета
   Чтобы развернуть пользовательский элемент отчета в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], нужно изменить файлы конфигурации сервера отчетов и скопировать сборки времени разработки и времени выполнения в соответствующие папки приложений для конструктора отчетов и сервера отчетов.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>Развертывание пользовательского элемента отчета  
   
-1.  Произведите редактирование файла Rsreportdesigner.config, настроив компоненты времени разработки и компоненты времени выполнения, принадлежащие пользовательскому элементу отчета, для использования в конструкторе. Следует заметить, что запись `ReportItemName` должна соответствовать атрибуту `CustomReportItemAttribute`, используемому в классе `CustomReportItemDesigner`. Пример:  
+1.  Произведите редактирование файла Rsreportdesigner.config, настроив компоненты времени разработки и компоненты времени выполнения, принадлежащие пользовательскому элементу отчета, для использования в конструкторе.  Следует заметить, что запись `ReportItemName` должна соответствовать атрибуту `CustomReportItemAttribute`, используемому в классе `CustomReportItemDesigner`. Пример:  
   
     ```  
     <ReportItems>  
@@ -67,6 +67,6 @@ ms.locfileid: "63265082"
   
 ## <a name="see-also"></a>См. также:  
  [Файлы конфигурации служб Reporting Services](../report-server/reporting-services-configuration-files.md)   
- [Библиотеки классов пользовательских элементов отчета](custom-report-item-class-libraries.md)  
+ [Библиотеки классов пользовательского элемента отчета](custom-report-item-class-libraries.md)  
   
   

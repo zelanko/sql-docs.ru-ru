@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f5d0ddc957cfca8e122920321acc7ccebb70ef72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63270772"
 ---
 # <a name="securitycertificate-class"></a>Класс SecurityCertificate
@@ -36,7 +36,7 @@ ms.locfileid: "63270772"
   
 -   проверять SHA-отпечаток для указанного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также:  
- [Иерархия средств шифрования](../../security/encryption/encryption-hierarchy.md)  
+## <a name="see-also"></a>См. также  
+ [Иерархия шифрования](../../security/encryption/encryption-hierarchy.md)  
   
   

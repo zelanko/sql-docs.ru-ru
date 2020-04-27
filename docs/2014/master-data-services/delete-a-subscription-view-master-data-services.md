@@ -14,21 +14,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3ae447196ebef455406202615ce4aff50d3749c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479473"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>Удаление представления подписки (службы Master Data Services)
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]представление подписки удаляется тогда, когда в нем отпадает необходимость. При удалении представления подписки в службах [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] представление удаляется из базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
 -   необходимо разрешение на доступ к функциональной области **Управление интеграцией** ;  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-delete-a-subscription-view"></a>Удаление представления подписки  
   
@@ -42,7 +42,7 @@ ms.locfileid: "65479473"
   
 5.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание представления подписки &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)   
  [Экспорт Master Data Services &#40;данных&#41;](overview-exporting-data-master-data-services.md)  
   

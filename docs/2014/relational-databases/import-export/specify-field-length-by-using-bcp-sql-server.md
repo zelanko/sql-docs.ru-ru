@@ -17,17 +17,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: abb451611f7e102e9167561ef2c3a4b64e00fb12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011843"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Указание длины поля с помощью программы bcp (SQL Server)
   Длина поля указывает максимальное количество символов, необходимых для представления данных в символьном формате. Длина поля известна заранее, если данные хранятся в собственном формате, например значение типа `int` занимает 4 байта. Если для длины префикса указано значение 0, то команда **bcp** запрашивает длину поля, длину полей по умолчанию и влияние длины поля на хранение данных в файлах данных, содержащих `char` данные.  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>Запрос командой bcp значения длины поля  
- Если интерактивная команда **bcp** содержит параметр **in** или **out** без параметра файла форматирования (**-f**) либо параметра формата данных (**-n**, **-c**, **-w** или **-N**), то команда запрашивает длину каждого поля данных следующим образом:  
+ Если интерактивная команда **bcp** содержит параметр **in** или **out** без параметра файла форматирования ( **-f**) либо параметра формата данных ( **-n**, **-c**, **-w** или **-N**), то команда запрашивает длину каждого поля данных следующим образом:  
   
  `Enter length of field <field_name> [<default>]:`  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66011843"
   
 -   Если происходит преобразование несимвольных данных в символьные данные, то **bcp** предлагает по умолчанию длину поля, достаточно большую для сохранения данных.  
   
--   Если по своему типу хранилище файлов не является символьным, то команда **bcp** не выводит приглашения для указания длины полей. Данные хранятся в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственном представлении данных (собственный формат).  
+-   Если по своему типу хранилище файлов не является символьным, то команда **bcp** не выводит приглашения для указания длины полей. Данные хранятся в собственном представлении данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (в собственном формате).  
   
 ## <a name="using-default-field-lengths"></a>Использование значения длины поля по умолчанию  
  В общем случае [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует принимать значения по умолчанию для длины полей, предлагаемые командой **bcp**. Использование значений длины поля по умолчанию при создании файла символьных данных помогает избежать усечения данных и возникновения ошибок переполнения.  
@@ -111,8 +111,8 @@ ms.locfileid: "66011843"
 |`tinyint`|1|  
 |`money`|8|  
 |`smallmoney`|4|  
-|`decimal`<sup>1</sup>|<sup>*</sup>|  
-|`numeric`<sup>1</sup>|<sup>*</sup>|  
+|`decimal` <sup>1</sup>|<sup>*</sup>|  
+|`numeric` <sup>1</sup>|<sup>*</sup>|  
 |`uniqueidentifier`|16|  
 |`timestamp`|8|  
   
@@ -122,10 +122,10 @@ ms.locfileid: "66011843"
   
 ## <a name="see-also"></a>См. также:  
  [bcp Utility](../../tools/bcp-utility.md)   
- [Типы данных &#40;&#41;Transact-SQL](/sql/t-sql/data-types/data-types-transact-sql)   
- [Укажите признаки конца поля и строки &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
- [Указание длины префикса в файлах данных с помощью программы bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
- [Указание типа файлового хранилища с помощью программы bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)   
- [Не заменяйте значения NULL или используйте значение по умолчанию во время &#40;ного импорта SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
+ [Типы данных (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)   
+ [Определение признаков конца поля и строки (SQL Server)](specify-field-and-row-terminators-sql-server.md)   
+ [Определение длины префикса в файлах данных с помощью программы bcp (SQL Server)](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
+ [Указание типа файлового хранилища с помощью программы bcp (SQL Server)](specify-file-storage-type-by-using-bcp-sql-server.md)   
+ [Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
   

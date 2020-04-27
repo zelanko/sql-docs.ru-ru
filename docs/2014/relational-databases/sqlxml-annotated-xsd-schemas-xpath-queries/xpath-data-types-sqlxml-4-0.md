@@ -28,10 +28,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e4a0c3d8b7a01f43b03d3f94b48d5bba800b64f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014558"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Типы данных XPath (SQLXML 4.0)
@@ -69,9 +69,7 @@ ms.locfileid: "66014558"
  Преобразования наборов узлов не всегда интуитивно понятны. Чтобы преобразовать набор узлов в тип `string`, берется строковое значение только первого узла набора. Чтобы преобразовать набор узлов к типу `number`, он сначала преобразуется в тип `string`, а затем значение типа `string` преобразуется в тип `number`. Чтобы преобразовать набор узлов к типу `boolean`, производится его проверка на существование.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не производит выборку по положению в наборах узлов — например, запрос XPath `Customer[3]` указывает на третьего заказчика; такой тип выборки по положению не поддерживается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Поэтому преобразования набора узлов в тип `string` или в тип `number`, согласно спецификации XPath, не реализованы. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует семантику «любой» там, где спецификация XPath использует семантику «первый». Например, на основе спецификации W3C XPath запрос `Order[OrderDetail/@UnitPrice > 10.0]` XPath выбирает эти заказы с помощью первого элемента **OrderDetail** , у которого **Цена** больше 10,0. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот запрос XPath выбирает эти заказы с любым значением **OrderDetail** , имеющим значение **UnitPrice** больше 10,0.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не производит выборку по положению в наборах узлов — например, запрос XPath `Customer[3]` указывает на третьего заказчика; такой тип выборки по положению не поддерживается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Поэтому преобразования набора узлов в тип `string` или в тип `number`, согласно спецификации XPath, не реализованы. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует семантику «любой» там, где спецификация XPath использует семантику «первый». Например, на основе спецификации W3C XPath запрос `Order[OrderDetail/@UnitPrice > 10.0]` XPath выбирает эти заказы с помощью первого элемента **OrderDetail** , у которого **Цена** больше 10,0. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот запрос XPath выбирает эти заказы с любым значением **OrderDetail** , имеющим значение **UnitPrice** больше 10,0.  
   
  Преобразование к типу `boolean` проводит проверку на существование, поэтому запрос XPath `Products[@Discontinued=true()]` эквивалентен выражению SQL "Products.Discontinued is not null", а не выражению SQL "Products.Discontinued = 1". Чтобы запрос был эквивалентен последнему из приведенных выражений SQL, набор узлов сначала надо преобразовать в тип, отличный от `boolean`, например, `number`. Например, `Products[number(@Discontinued) = true()]`.  
   
@@ -89,7 +87,7 @@ ms.locfileid: "66014558"
   
 |Тип данных XDR|Эквивалентный<br /><br /> тип данных XPath|Использованное преобразование SQL Server|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|Недоступно|NoneEmployeeID|  
+|Nonebin.base64bin.hex|Н/Д|NoneEmployeeID|  
 |Логическое|Логическое|CONVERT(bit, EmployeeID)|  
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|строка|CONVERT(nvarchar(4000), EmployeeID, 126)|  
@@ -149,7 +147,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  К строке добавляется префикс «E-», а результат затем сравнивается с `N'E-1'`.  
   
-### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>Б. Несколько преобразований типов данных в запросе XPath  
+### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>Б) Несколько преобразований типов данных в запросе XPath  
  Рассмотрим этот запрос XPath, заданный для схемы XSD с заметками:`OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
  Этот запрос XPath возвращает все элементы ** \<>OrderDetail** , соответствующие предикату. `@UnitPrice * @OrderQty > 98` Если **UnitPrice** помечена типом `fixed14.4` данных в схеме с заметками, этот предикат эквивалентен выражению SQL:  

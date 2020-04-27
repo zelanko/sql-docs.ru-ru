@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f131dc8fa36ad8ab8d9284012e25b44ecd209dcd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014894"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>Использование массовой загрузки SQLXML в среде .NET
@@ -109,7 +109,7 @@ ms.locfileid: "66014894"
   
 4.  Запустите среду Visual Studio.  
   
-5.  Создайте консольное приложение на C#.  
+5.  Создайте приложение командной строки на языке C#.  
   
 6.  В меню **проект** выберите команду **Добавить ссылку**.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "66014894"
   
      Это средство создает DLL-библиотеку управляемой оболочки (SQLXMLBULKLOADLib.dll), которую можно использовать в проекте платформы .NET Framework. В .NET Framework ссылка на проект добавляется к вновь созданной DLL-библиотеке.  
   
-## <a name="see-also"></a>См. также:  
- [Выполнение групповой загрузки данных XML &#40;SQLXML 4,0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+## <a name="see-also"></a>См. также  
+ [Выполнение массовой загрузки XML-данных &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

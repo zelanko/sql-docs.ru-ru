@@ -19,15 +19,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011973"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Примеры массового импорта и экспорта XML-документов (SQL Server)
     
-##  <a name="top"></a>Можно выполнять массовый импорт XML-документов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базу данных или выполнить их экспорт [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из базы данных. В этом разделе приведены примеры и того, и другого.  
+##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>Можно выполнять массовый импорт XML-документов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базу данных или выполнить их экспорт [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из базы данных. В этом разделе приведены примеры и того, и другого.  
   
  Для выполнения массового импорта данных из файла в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или несекционированное представление могут использоваться следующие средства.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "66011973"
 ## <a name="examples"></a>Примеры  
  Далее следуют примеры.  
   
--   A. [МАССОВЫй импорт XML-данных в виде двоичного байтового потока](#binary_byte_stream)  
+-   А) [МАССОВЫй импорт XML-данных в виде двоичного байтового потока](#binary_byte_stream)  
   
--   Б. [Массовый импорт XML-данных в существующую строку](#existing_row)  
+-   Б) [Массовый импорт XML-данных в существующую строку](#existing_row)  
   
 -   В. [Массовый импорт XML-данных из файла, содержащего DTD](#file_contains_dtd)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66011973"
   
 -   Д. [Групповое Экспортирование XML-данных](#bulk_export_xml_data)  
   
-###  <a name="binary_byte_stream"></a>Конкретного. Массовый импорт XML-данных в виде двоичного байтового потока  
+###  <a name="a-bulk-importing-xml-data-as-a-binary-byte-stream"></a><a name="binary_byte_stream"></a> A. Массовый импорт XML-данных в виде двоичного байтового потока  
  При массовом импорте XML-данных из файла, содержащего объявление кодировки, которое необходимо применить, нужно указать параметр SINGLE_BLOB в предложении OPENROWSET(BULK…). Параметр SINGLE_BLOB гарантирует, что средство синтаксического анализа XML в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] произведет импорт данных в соответствии со схемой кодирования, указанной в XML-объявлении.  
   
 #### <a name="sample-table"></a>Образец таблицы  
@@ -99,9 +99,9 @@ SELECT * FROM OPENROWSET(
   
 -   Подобрать настройки параметров сортировки баз данных для схемы кодирования XML-данных, отличной от кодировки Юникод.  
   
- [&#91;Top&#93;](#top)  
+ [&#91;В начало&#93;](#top)  
   
-###  <a name="existing_row"></a>&. Массовый импорт XML-данных в существующую строку  
+###  <a name="b-bulk-importing-xml-data-in-an-existing-row"></a><a name="existing_row"></a> Б. Массовый импорт XML-данных в существующую строку  
  В этом примере при помощи поставщика массового набора строк `OPENROWSET` в существующую строку или строки образца таблицы `T`добавляются инструкции XML.  
   
 > [!NOTE]  
@@ -134,9 +134,9 @@ WHERE IntCol = 1;
 GO  
 ```  
   
- [&#91;Top&#93;](#top)  
+ [&#91;В начало&#93;](#top)  
   
-###  <a name="file_contains_dtd"></a>Ц. Массовый импорт XML-данных из файла, содержащего DTD  
+###  <a name="c-bulk-importing-xml-data-from-a-file-that-contains-a-dtd"></a><a name="file_contains_dtd"></a> В. Массовый импорт XML-данных из файла, содержащего DTD  
   
 > [!IMPORTANT]  
 >  Включать поддержку для определений типов документов (DTD) не рекомендуется, если только это не является неотъемлемой частью среды XML. Включение поддержки DTD увеличивает уязвимую контактную зону сервера и может привести к атаке типа «отказ в обслуживании». При необходимости включения поддержки DTD снизить риск для этой опасности можно с помощью обработки только доверенных XML-документов.  
@@ -180,9 +180,9 @@ INSERT T1
   
  После выполнения инструкции `INSERT` определение DTD исключается из XML и хранится в таблице `T1` .  
   
- [&#91;Top&#93;](#top)  
+ [&#91;В начало&#93;](#top)  
   
-###  <a name="field_terminator_in_format_file"></a>Четырехмерного. Указание признаков конца поля явным образом при помощи файла форматирования  
+###  <a name="d-specifying-the-field-terminator-explicitly-using-a-format-file"></a><a name="field_terminator_in_format_file"></a> Г. Указание признаков конца поля явным образом при помощи файла форматирования  
  В следующем примере демонстрируется, как выполнить массовый импорт XML-документа `Xmltable.dat`.  
   
 #### <a name="sample-data-file"></a>Образец файла данных  
@@ -212,7 +212,7 @@ B7 EF BA B7 EF BF B8 C3-B8 3C 2F 72 6F 6F 74 3E  *.........</root>*
 ```  
   
 #### <a name="sample-table"></a>Образец таблицы  
- При выполнении операции с массовым импортом или экспортом XML-документа следует использовать [признак конца поля](specify-field-and-row-terminators-sql-server.md) , который, возможно, не будет отображаться в документах. Например, последовательность из четырех значений NULL (`\0`), за которыми следует буква `z`: `\0\0\0\0z`.  
+ При выполнении массового импорта или экспорта XML-документа следует использовать [признаки конца поля](specify-field-and-row-terminators-sql-server.md) , которые не могут присутствовать в каком-либо документе, например последовательность из четырех значений NULL (`\0`), заканчивающаяся буквой `z`: `\0\0\0\0z`.  
   
  В этом примере показано, как использовать эти признаки конца поля в образце таблицы `xTable` . Чтобы создать этот образец таблицы, используйте следующую инструкцию `CREATE TABLE` :  
   
@@ -243,9 +243,9 @@ WITH (FORMATFILE = 'C:\Xmltable.fmt');
 GO  
 ```  
   
- [&#91;Top&#93;](#top)  
+ [&#91;В начало&#93;](#top)  
   
-###  <a name="bulk_export_xml_data"></a>&. Массовый экспорт XML-данных  
+###  <a name="e-bulk-exporting-xml-data"></a><a name="bulk_export_xml_data"></a> Д. Массовый экспорт XML-данных  
  В следующем примере для выполнения массового экспорта XML-данных из таблицы, созданной в предыдущем примере при помощи того же XML-файла форматирования, используется программа `bcp` . В следующей команде `bcp``<server_name>` и `<instance_name>` являются заполнителями, которые должны быть заменены соответствующими значениями:  
   
 ```  
@@ -253,18 +253,16 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 ```  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не сохраняет кодировку XML, если XML-данные постоянно хранятся в базе данных. Поэтому оригинальная кодировка полей XML недоступна при экспорте XML-данных. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует для экспорта XML-данных кодировку UTF-16.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не сохраняет кодировку XML, если XML-данные постоянно хранятся в базе данных. Поэтому оригинальная кодировка полей XML недоступна при экспорте XML-данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует для экспорта XML-данных кодировку UTF-16.  
   
- [&#91;Top&#93;](#top)  
+ [&#91;В начало&#93;](#top)  
   
 ## <a name="see-also"></a>См. также:  
  [INSERT (Transact-SQL)](/sql/t-sql/statements/insert-transact-sql)   
- [Предложение SELECT &#40;&#41;Transact-SQL](/sql/t-sql/queries/select-clause-transact-sql)   
+ [Предложение SELECT (Transact-SQL)](/sql/t-sql/queries/select-clause-transact-sql)   
  [bcp Utility](../../tools/bcp-utility.md)   
- [Групповой импорт и экспорт SQL Server &#40;данных&#41;](bulk-import-and-export-of-data-sql-server.md)   
+ [Массовый импорт и экспорт данных (SQL Server)](bulk-import-and-export-of-data-sql-server.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)  
+ [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)  
   
   

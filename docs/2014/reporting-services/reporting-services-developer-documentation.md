@@ -15,18 +15,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e8c555d853fd791bed29a06f561021b138526ea1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255098"
 ---
 # <a name="developer39s-guide-reporting-services"></a>Руководством для разработчиков&#39;(Reporting Services)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предлагает несколько программных интерфейсов, которые можно использовать в собственных приложениях. Можно использовать существующие функции и возможности служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для построения пользовательских средств создания отчетов и средств управления на сайтах и в приложениях Windows или расширять платформу служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
+  В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] доступно несколько программных интерфейсов для работы в пользовательских приложениях. Можно использовать существующие функции и возможности служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для построения пользовательских средств создания отчетов и средств управления на сайтах и в приложениях Windows или расширять платформу служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
  Расширение платформы служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включает создание новых компонентов и ресурсов, которые могут использоваться для доступа к данным, доставки отчетов и других задач. Эти компоненты и ресурсы можно предлагать компаниям, использующим в своей работе службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Интеграция служб Reporting Services в приложения](application-integration/integrating-reporting-services-into-applications.md)  
  Приводит общие сведения об использовании служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для интеграции средств работы с отчетами в пользовательские приложения. Описывает, когда для обращения к серверу отчетов применяется прямой доступ по URL-адресу, а когда — веб-служба.  
   
@@ -48,10 +48,10 @@ ms.locfileid: "63255098"
  [Доступ к поставщику WMI для служб Reporting Services](tools/access-the-reporting-services-wmi-provider.md)  
  Описывает использование поставщика WMI служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для управления развертыванием сервера отчетов.  
   
-## <a name="see-also"></a>См. также:  
- [Службы Reporting Services (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+## <a name="see-also"></a>См. также  
+ [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Язык определения отчетов &#40;службы SSRS&#41;](reports/report-definition-language-ssrs.md)   
- [Технический справочник (службы SSRS)](technical-reference-ssrs.md)   
- [Безопасная &#40;разработки Reporting Services&#41;](extensions/secure-development/secure-development-reporting-services.md)  
+ [Технический справочник &#40;SSRS&#41;](technical-reference-ssrs.md)   
+ [Разработка безопасных приложений (службы Reporting Services)](extensions/secure-development/secure-development-reporting-services.md)  
   
   

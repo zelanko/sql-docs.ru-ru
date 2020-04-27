@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 639e6b7640f3463bfe100345d044437d619a5546
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63459999"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>Инструменты конструктора запросов и представлений (визуальные инструменты для баз данных)
@@ -50,6 +50,6 @@ ms.locfileid: "63459999"
 ## <a name="see-also"></a>См. также:  
  [Разделы руководства по проектированию запросов и представлений &#40;визуальных инструментов для баз данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Откройте конструктор запросов и представлений &#40;визуальные инструменты для баз данных&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
- [Редактор SQL &#40;визуальных инструментов для баз данных&#41;](sql-editor-visual-database-tools.md)  
+ [Редактор SQL (визуальные инструменты для баз данных)](sql-editor-visual-database-tools.md)  
   
   

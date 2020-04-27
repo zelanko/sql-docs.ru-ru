@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6c3bdb745d836959f563d19dc9897b718a2c9b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478886"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Перекрытие разрешений пользователей и групп (службы основных данных)
@@ -30,11 +30,11 @@ ms.locfileid: "65478886"
   
  Если пользователь является членом нескольких групп и эти группы имеют доступ к диспетчеру основных данных, то применяются следующие правила.  
   
--   **Deny** переопределяет все остальные разрешения.  
+-   **Запретить** переопределяет все остальные разрешения.  
   
 -   **Обновление** переопределяет **только чтение**.  
   
- Эти правила применяются к вкладкам **Модели** и **Элементы иерархии** . Разрешения определяются для каждой вкладки, после чего объединяются. Дополнительные сведения см. в разделе [How Permissions Are Determined &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md).  
+ Эти правила применяются к вкладкам **Модели** и **Элементы иерархии** . Разрешения определяются для каждой вкладки, после чего объединяются. Дополнительные сведения см. в разделе [Способ определения разрешений (службы Master Data Services)](how-permissions-are-determined-master-data-services.md).  
   
 > [!NOTE]  
 >  Просмотреть разрешение перекрытия разрешений пользователя и группы можно в пользовательском интерфейсе. На вкладках **Модели** и **Элементы иерархии** есть раскрывающийся список, в котором можно выбрать **Действующие** для просмотра действующих разрешений.  
@@ -52,7 +52,7 @@ ms.locfileid: "65478886"
   
  Результат: действующим разрешением пользователя для сущности Product будет **Обновить** .  
   
-## <a name="example-2"></a>Пример 2.  
+## <a name="example-2"></a>Пример 2  
  ![mds_conc_user_group_ex_2](../../2014/master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
   
  Пользователь принадлежит к группе 1 и группе 2.  
@@ -65,7 +65,7 @@ ms.locfileid: "65478886"
   
  Результат: действующим разрешением пользователя для сущности Product будет **Запретить** .  
   
-## <a name="example-3"></a>Пример 3  
+## <a name="example-3"></a>Пример 3  
  ![mds_conc_user_group_ex_3](../../2014/master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
   
  Пользователь принадлежит к группе 1 и группе 2.  
@@ -78,8 +78,8 @@ ms.locfileid: "65478886"
   
  Результат: действующее разрешение пользователя для элементов — **Обновить** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Как определяются разрешения &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
- [Перекрытие разрешений модели и элемента &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [Перекрытие разрешений моделей и элементов (службы Master Data Services)](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

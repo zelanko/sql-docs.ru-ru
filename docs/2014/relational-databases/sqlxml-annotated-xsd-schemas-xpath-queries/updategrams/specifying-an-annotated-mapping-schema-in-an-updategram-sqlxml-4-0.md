@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627ab54ed35cbc0a43c5a0eac26a1397199edbd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014663"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Определение схемы с заметками сопоставления в диаграмме обновления (SQLXML 4.0)
@@ -45,7 +45,7 @@ ms.locfileid: "66014663"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы с помощью следующих примеров, необходимо выполнить требования, указанные в [требованиях к запуску примеров SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. Создание диаграммы обновления с простой схемой сопоставления  
+### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>А) Создание диаграммы обновления с простой схемой сопоставления  
  Следующая схема XSD (под SampleSchema. XML) — это схема сопоставления, которая сопоставляет элемент ** \<>клиента** с таблицей Sales. Customer.  
   
 ```  
@@ -112,7 +112,7 @@ ms.locfileid: "66014663"
    </Schema>   
 ```  
   
-### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>Б. Вставка записи с помощью связи «родители-потомки», указанной в схеме сопоставления  
+### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>Б) Вставка записи с помощью связи «родители-потомки», указанной в схеме сопоставления  
  Между элементами схемы можно устанавливать связь. Элемент ** \<SQL: relationship>** указывает связь «родители-потомки» между элементами схемы. Эти данные используются для обновления соответствующих таблиц, между которыми установлена связь «первичный-внешний ключ».  
   
  Следующая схема сопоставления (под SampleSchema. XML) состоит из двух элементов: ** \<Order>** и ** \<OD>**.  
@@ -234,11 +234,9 @@ ms.locfileid: "66014663"
   
  В этом примере предполагается, что в базе данных **tempdb** находятся следующие таблицы:  
   
--   
-  `Cust (CustomerID, CompanyName)`, где `CustomerID` — это первичный ключ;  
+-   `Cust (CustomerID, CompanyName)`, где `CustomerID` — это первичный ключ;  
   
--   
-  `Ord (OrderID, CustomerID)`, где `CustomerID` — это внешний ключ, который ссылается на первичный ключ `CustomerID` из таблицы `Cust`.  
+-   `Ord (OrderID, CustomerID)`, где `CustomerID` — это внешний ключ, который ссылается на первичный ключ `CustomerID` из таблицы `Cust`.  
   
  Для вставки записей в таблицы Cust и Ord в диаграмме обновления используется следующая схема XSD:  
   
@@ -324,7 +322,7 @@ ms.locfileid: "66014663"
   
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Вопросы безопасности диаграмма обновления &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

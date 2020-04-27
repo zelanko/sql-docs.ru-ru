@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489108"
 ---
-# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Задача 5. Создание атрибута на основе домена из Excel
+# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Задача 5. Создание атрибута на основе домена в Excel
   В этой задаче вы преобразуете атрибут **State** сущности **поставщика** в качестве **атрибута на основе домена**. После настройки атрибута State на основе домена и его публикации в службах MDS новая сущность с именем **State** будет создана на сервере MDS со всеми значениями в столбце, а атрибут **State** сущности **поставщика** будет заполнен значениями из сущности **State** . Теперь модель **поставщиков** должна иметь две сущности: **поставщик** и **состояние** , в которых атрибут **State** сущности « **поставщик** » является атрибутом на основе домена, который зависит от сущности **состояния** .  
   
 1.  Переключитесь в окно **Excel** , которое было **очищено и совпало** с opens. xlsx.  
@@ -40,7 +40,7 @@ ms.locfileid: "65489108"
   
      ![Excel — раскрывающийся список со штатами](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-03.jpg "Excel — раскрывающийся список со штатами")  
   
-## <a name="next-step"></a>Дальнейшее действие  
- [Задача 6. Убедитесь, что атрибут на основе домена создан с помощью диспетчера основных данных](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
+## <a name="next-step"></a>Следующий шаг  
+ [Задача 6. Проверка создания атрибута на основе домена в диспетчере основных данных](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
   
   

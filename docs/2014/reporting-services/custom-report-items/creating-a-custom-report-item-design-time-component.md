@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1a57fe5449deeb4445dff3853335b19a62dbc589
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265140"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Создание компонента времени разработки пользовательского элемента отчета
@@ -194,10 +194,10 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   Пошаговое руководство. Создание элемента управления Windows Forms, использующего функции времени разработки среды Visual Studio  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Архитектура пользовательского элемента отчета](custom-report-item-architecture.md)   
  [Создание компонента времени выполнения пользовательского элемента отчета](creating-a-custom-report-item-run-time-component.md)   
  [Библиотеки классов пользовательских элементов отчета](custom-report-item-class-libraries.md)   
- [Развертывание пользовательского элемента отчета](how-to-deploy-a-custom-report-item.md)  
+ [Руководство. развернуть пользовательский элемент отчета](how-to-deploy-a-custom-report-item.md)  
   
   

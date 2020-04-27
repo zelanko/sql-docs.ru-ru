@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e685ecda39e0487eb4b469920820fa6e4a10daa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264900"
 ---
 # <a name="using-strong-named-custom-assemblies"></a>Использование пользовательских сборок со строгими именами
@@ -37,12 +37,12 @@ ms.locfileid: "63264900"
 [assembly:AllowPartiallyTrustedCallers]  
 ```  
   
- Атрибут **AllowPartiallyTrustedCallersAttribute** эффективен только при применении сборки со строгим именем на уровне сборки. Дополнительные сведения о применении атрибутов на уровне сборки см. в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] разделе «Применение атрибутов» документации по пакету SDK.  
+ Атрибут **AllowPartiallyTrustedCallersAttribute** действует только при применении сборкой со строгим именем на уровне сборки. Дополнительные сведения о применении атрибутов на уровне сборки см. в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] разделе «Применение атрибутов» документации по пакету SDK.  
   
 > [!CAUTION]  
 >  Если присутствует атрибут **AllowPartiallyTrustedCallersAttribute**, то стандартная проверка безопасности **FullTrustLinkDemand** блокируется, что позволяет вызывать сборку из любой другой частично доверенной сборки. Все виды проверки безопасности, в том числе декларативные атрибуты безопасности уровня класса или уровня метода, необходимо указывать явно.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование пользовательских сборок с отчетами](using-custom-assemblies-with-reports.md)  
   
   

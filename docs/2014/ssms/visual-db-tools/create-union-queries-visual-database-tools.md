@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34e06960274c7e16ef4f6efc31f1b7ca55a7d48c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63270590"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>Создание запросов UNION (визуальные инструменты для баз данных)
@@ -53,6 +53,6 @@ ms.locfileid: "63270590"
  [Поддерживаемые типы запросов &#40;визуальных инструментов для баз данных&#41;](visual-database-tools.md)   
  [Разделы руководства по проектированию запросов и представлений &#40;визуальных инструментов для баз данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Выполнение основных операций с запросами &#40;визуальных инструментов для баз данных&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
- [&#41;Transact-SQL &#40;UNION](/sql/t-sql/language-elements/set-operators-union-transact-sql)  
+ [UNION (Transact-SQL)](/sql/t-sql/language-elements/set-operators-union-transact-sql)  
   
   

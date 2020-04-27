@@ -17,10 +17,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014269"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Создание, изменение и удаление пространственных индексов
@@ -29,15 +29,15 @@ ms.locfileid: "66014269"
  На создание пространственных индексов накладывается ряд ограничений. Дополнительные сведения см. в подразделе [Ограничения пространственных индексов](#restrictions) далее в этом разделе.  
   
 > [!NOTE]  
->  Дополнительные сведения о связи пространственных индексов с секциями и файловыми группами см. в подразделе "Примечания" раздела [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-spatial-index-transact-sql).  
+>  Дополнительные сведения о связи пространственных индексов с секциями и файловыми группами см. в подразделе "Примечания" раздела [CREATE SPATIAL INDEX (Transact-SQL)](/sql/t-sql/statements/create-spatial-index-transact-sql).  
   
-##  <a name="creating"></a>Создание, изменение и удаление пространственных индексов  
+##  <a name="creating-modifying-and-dropping-spatial-indexes"></a><a name="creating"></a> Создание, изменение и удаление пространственных индексов  
   
-###  <a name="create"></a>Создание пространственного индекса  
- **Создание пространственного индекса с помощью Transact-SQL**  
+###  <a name="to-create-a-spatial-index"></a><a name="create"></a> Создание пространственного индекса  
+ **Создание нового пространственного индекса с помощью Transact-SQL**  
  [CREATE SPATIAL INDEX (Transact-SQL)](/sql/t-sql/statements/create-spatial-index-transact-sql)  
   
- **Создание пространственного индекса с помощью диалогового окна «Создание индекса» в Management Studio**  
+ **Создание пространственного индекса с помощью диалогового окна «Создание индекса» в среде Management Studio**  
  ##### <a name="to-create-a-spatial-index-in-management-studio"></a>Создание пространственного индекса в среде Management Studio  
   
 1.  В обозревателе объектов подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и разверните его.  
@@ -76,7 +76,7 @@ ms.locfileid: "66014269"
 >  Чтобы создать другой пространственный индекс на том же или другом пространственном столбце, повторите предыдущие шаги.  
   
   
- **Создание пространственного индекса с помощью конструктор таблиц в Management Studio**  
+ **Создание пространственного индекса с помощью конструктора таблиц в среде Management Studio**  
  ##### <a name="to-create-a-spatial-index-in-table-designer"></a>Создание пространственного индекса в конструкторе таблиц  
   
 1.  В обозревателе объектов щелкните правой кнопкой мыши таблицу, для которой нужно создать пространственный индекс, и выберите пункт **Конструктор**.  
@@ -92,9 +92,9 @@ ms.locfileid: "66014269"
 5.  Выберите новый индекс в списке **Выбранные пространственные индексы** и в сетке справа задайте свойства пространственного индекса. Дополнительные сведения о свойствах см. в разделе [Диалоговое окно "Пространственные индексы" (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/visual-database-tools.md).  
   
   
-###  <a name="alter"></a>Изменение пространственного индекса  
+###  <a name="to-alter-a-spatial-index"></a><a name="alter"></a> Изменение пространственного индекса  
   
--   [Инструкция ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
+-   [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)  
   
     > [!IMPORTANT]  
     >  Чтобы изменить параметры, характерные для пространственного индекса (такие как BOUNDING_BOX или GRID), необходимо либо применить инструкцию CREATE SPATIAL INDEX с параметром DROP_EXISTING = ON, либо удалить пространственный индекс и создать новый. Пример см. в разделе [CREATE SPATIAL INDEX (Transact-SQL)](/sql/t-sql/statements/create-spatial-index-transact-sql).  
@@ -104,14 +104,14 @@ ms.locfileid: "66014269"
 -   [Перемещение существующего индекса в другую файловую группу](../indexes/move-an-existing-index-to-a-different-filegroup.md)  
   
   
-###  <a name="drop"></a>Удаление пространственного индекса  
+###  <a name="to-drop-a-spatial-index"></a><a name="drop"></a> Удаление пространственного индекса  
  **Удаление пространственного индекса с помощью Transact-SQL**  
  [DROP INDEX (Transact-SQL)](/sql/t-sql/statements/drop-index-transact-sql)  
   
  **Удаление индекса с помощью среды Management Studio**  
  [Удаление индекса](../indexes/delete-an-index.md)  
   
- **Удаление пространственного индекса с помощью конструктор таблиц в Management Studio**  
+ **Удаление пространственного индекса с помощью конструктора таблиц в среде Management Studio**  
  ##### <a name="to-drop-a-spatial-index-in-table-designer"></a>Удаление пространственного индекса в конструкторе таблиц  
   
 1.  В обозревателе объектов щелкните правой кнопкой мыши таблицу с пространственным индексом, который необходимо удалить, и выберите пункт **Конструктор**.  
@@ -127,7 +127,7 @@ ms.locfileid: "66014269"
 4.  Щелкните **Удалить**.  
   
   
-##  <a name="restrictions"></a>Ограничения для пространственных индексов  
+##  <a name="restrictions-on-spatial-indexes"></a><a name="restrictions"></a> Ограничения пространственных индексов  
  Пространственный индекс можно создать только для столбца типа `geometry` или `geography`.  
   
 ### <a name="table-and-view-restrictions"></a>Ограничения таблиц и представлений  

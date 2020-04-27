@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ccb9642982b8680e4111346298e7a70bbc606dbb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011891"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
@@ -62,20 +62,20 @@ ms.locfileid: "66011891"
 > [!NOTE]  
 >  Если включена репликация транзакций, операции BULK INSERT полностью протоколируются даже в модели с неполным протоколированием.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
--   [Просмотр или изменение модели восстановления &#40;базы данных SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
+-   [Просмотр или изменение модели восстановления базы данных (SQL Server)](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   
 
   
 ## <a name="see-also"></a>См. также:  
- [Модели восстановления &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)   
+ [Модели восстановления (SQL Server)](../backup-restore/recovery-models-sql-server.md)   
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [&#41;BACKUP &#40;Transact-SQL](/sql/t-sql/statements/backup-transact-sql)   
- [&#41;Transact-SQL ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Табличные указания &#40;&#41;Transact-SQL](/sql/t-sql/queries/hints-transact-sql-table)   
+ [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
+ [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
+ [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
+ [Табличные указания (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table)   
  [INSERT (Transact-SQL)](/sql/t-sql/statements/insert-transact-sql)  
   
   

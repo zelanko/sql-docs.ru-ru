@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6f9a2380ae4ab5b59fa974093d81a09266ebd8c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010533"
 ---
 # <a name="sqlxml-40-security-considerations"></a>Проблемы безопасности SQLXML 4.0
   В этом разделе представлены рекомендации для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML, относящиеся к безопасности.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Основные проблемы безопасности SQLXML](core-sqlxml-security-considerations.md)  
  Содержит рекомендации по безопасности для использования SQLXML для доступа к данным.  
   

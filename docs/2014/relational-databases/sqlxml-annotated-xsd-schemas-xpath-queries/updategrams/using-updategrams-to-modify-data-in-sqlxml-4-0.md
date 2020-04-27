@@ -25,10 +25,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b615062ae70c5a7b7ee18869aaa20951dec29b2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014604"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>Использование диаграмм обновления для изменения данных в SQLXML 4.0
@@ -36,7 +36,7 @@ ms.locfileid: "66014604"
   
  В этом разделе содержатся сведения о диаграммах обновления и примеры их использования.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Введение в диаграмм обновления &#40;SQLXML 4,0&#41;](introduction-to-updategrams-sqlxml-4-0.md)  
  Содержит основные сведения и примеры диаграмм обновления.  
   

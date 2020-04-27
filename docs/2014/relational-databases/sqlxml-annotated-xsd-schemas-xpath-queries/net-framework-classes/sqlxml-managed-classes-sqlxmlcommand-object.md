@@ -31,10 +31,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010738"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>Объект SqlXmlCommand (управляемые классы SQLXML)
@@ -106,7 +106,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  Идентифицирует тип команды. Это свойство используется для задания типа команды, которую нужно выполнить. Значения в следующей таблице задают тип команды. Рабочий пример см. в разделе [доступ к функциям SQLXML в среде .NET](accessing-sqlxml-functionality-in-the-net-environment.md).  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |Склксмлкоммандтипе. SQL|Выполняет команду SQL (например, `SELECT * FROM Employees FOR XML AUTO`).|  
 |Склксмлкоммандтипе. XPath|Выполняет команду XPath (например, `Employees[@EmployeeID=1]`).|  
@@ -115,7 +115,7 @@ public SqlXmlCommand(string cnString)
 |Склксмлкоммандтипе. Диаграмма обновления|Выполняет диаграмму обновления.|  
 |Склксмлкоммандтипе. DiffGram|Выполняет дельту.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект SqlXmlParameter &#40;управляемые классы SQLXML&#41;](sqlxml-managed-classes-sqlxmlparameter-object.md)   
  [Объект Склксмладаптер &#40;управляемые классы SQLXML&#41;](sqlxml-managed-classes-sqlxmladapter-object.md)  
   

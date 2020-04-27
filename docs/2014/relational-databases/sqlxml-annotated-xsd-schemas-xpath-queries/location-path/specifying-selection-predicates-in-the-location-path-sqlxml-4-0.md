@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d35b70c157dc5285355fcd15b38739757f0be9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012583"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Указание предикатов выбора в пути доступа (SQLXML 4.0)
@@ -39,8 +39,7 @@ ms.locfileid: "66012583"
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- В этом запросе XPath `child` и `attribute` являются именами осей. `Customer`— Это проверка узла (значение true `Customer` , если является ** \<узлом элемента>**, поскольку ** \<элемент>** является типом основного узла для `child` оси). 
-  `attribute::CustomerID="ALFKI"` является предикатом. В `attribute` предикате является осью и `CustomerID` является тестом узла (значение true, если **CustomerID** является атрибутом контекстного узла, так как ** \<атрибут>** является типом основного узла `attribute` оси).  
+ В этом запросе XPath `child` и `attribute` являются именами осей. `Customer`— Это проверка узла (значение true `Customer` , если является ** \<узлом элемента>**, поскольку ** \<элемент>** является типом основного узла для `child` оси). `attribute::CustomerID="ALFKI"` является предикатом. В `attribute` предикате является осью и `CustomerID` является тестом узла (значение true, если **CustomerID** является атрибутом контекстного узла, так как ** \<атрибут>** является типом основного узла `attribute` оси).  
   
  Запрос XPath также можно задать с использованием сокращенного синтаксиса:  
   
@@ -55,9 +54,7 @@ ms.locfileid: "66012583"
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
 ```  
   
- В этом выражении XPath `child` и `attribute` являются именами осей. 
-  `Customer`, `Order` и `SalesOrderID` являются проверками узла. 
-  `attribute::OrderID="1"` является предикатом.  
+ В этом выражении XPath `child` и `attribute` являются именами осей. `Customer`, `Order` и `SalesOrderID` являются проверками узла. `attribute::OrderID="1"` является предикатом.  
   
  Запрос XPath также можно задать с использованием сокращенного синтаксиса:  
   
@@ -74,8 +71,7 @@ child::Customer[child::ContactName]
   
  В этом примере предполагается, что ** \<ContactName>** является дочерним элементом элемента ** \<>Customer** в XML-документе, который называется *сопоставлением с использованием элементов* в схеме XSD с заметками.  
   
- В этом выражении XPath `child` является именем оси. `Customer`является тестом узла (значение true `Customer` , если является ** \<элементом>** узлом, поскольку ** \<элемент>** является типом основного узла для `child` оси). 
-  `child::ContactName` является предикатом. В предикате `child` является осью и `ContactName` является тестом узла (значение true, если `ContactName` является ** \<элементом>** узле).  
+ В этом выражении XPath `child` является именем оси. `Customer`является тестом узла (значение true `Customer` , если является ** \<элементом>** узлом, поскольку ** \<элемент>** является типом основного узла для `child` оси). `child::ContactName` является предикатом. В предикате `child` является осью и `ContactName` является тестом узла (значение true, если `ContactName` является ** \<элементом>** узле).  
   
  Это выражение возвращает только дочерние элементы ** \<Customer>** элемента контекстного узла, которые имеют ** \<ContactName>** дочерние элементы.  
   
@@ -94,8 +90,7 @@ child::Customer[not(child::ContactName)]
   
  В этом примере предполагается, что ** \<ContactName>** является дочерним элементом элемента ** \<>Customer** в XML-документе, а поле ContactName не является обязательным в базе данных.  
   
- В этом примере `child` является осью. `Customer`является тестом узла (значение TRUE `Customer` , если \<является элементом> узле). 
-  `not(child::ContactName)` является предикатом. В предикате `child` является осью и `ContactName` является ТЕСТОМ узла (значение true, если `ContactName` является \<элементом> узле).  
+ В этом примере `child` является осью. `Customer`является тестом узла (значение TRUE `Customer` , если \<является элементом> узле). `not(child::ContactName)` является предикатом. В предикате `child` является осью и `ContactName` является ТЕСТОМ узла (значение true, если `ContactName` является \<элементом> узле).  
   
  Запрос XPath также можно задать с использованием сокращенного синтаксиса:  
   
@@ -110,8 +105,7 @@ Customer[not(ContactName)]
 child::Customer[attribute::CustomerID]  
 ```  
   
- В этом примере — `child` это ось и `Customer` проверка узла (значение true, если `Customer` является \<элементом> узле). 
-  `attribute::CustomerID` является предикатом. В предикате `attribute` является осью и `CustomerID` является предикатом (значение true, если `CustomerID` является ** \<атрибутом>** узле).  
+ В этом примере — `child` это ось и `Customer` проверка узла (значение true, если `Customer` является \<элементом> узле). `attribute::CustomerID` является предикатом. В предикате `attribute` является осью и `CustomerID` является предикатом (значение true, если `CustomerID` является ** \<атрибутом>** узле).  
   
  Запрос XPath также можно задать с использованием сокращенного синтаксиса:  
   
@@ -120,8 +114,7 @@ Customer[@CustomerID]
 ```  
   
 ## <a name="selection-predicate-example-6"></a>Предикат выбора: пример 6  
- 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 включает поддержку запросов XPath, которые содержат в предикате перекрестное произведение, как показано в следующем примере:  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 включает поддержку запросов XPath, которые содержат в предикате перекрестное произведение, как показано в следующем примере:  
   
 ```  
 Customer[Order/@OrderDate=Order/@ShipDate]  
@@ -129,7 +122,7 @@ Customer[Order/@OrderDate=Order/@ShipDate]
   
  Этот запрос выбирает всех клиентов с элементом `Order`, для которого `OrderDate` равен `ShipDate``Order`.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о схемах XSD с заметками &#40;SQLXML 4,0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
  [Форматирование XML на стороне клиента &#40;SQLXML 4,0&#41;](../../sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
   

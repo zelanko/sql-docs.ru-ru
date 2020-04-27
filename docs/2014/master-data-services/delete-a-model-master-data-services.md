@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f12b66fd895b7a7b90103fd1bed1eb51597c669a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483170"
 ---
 # <a name="delete-a-model-master-data-services"></a>Удаление модели (службы Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "65483170"
 > [!NOTE]  
 >  Когда процесс завершится, все объекты и все данные из всех версий модели будут безвозвратно удалены.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
--   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
+-   Необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** .  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-delete-a-model"></a>Удаление модели  
   
@@ -47,8 +47,8 @@ ms.locfileid: "65483170"
   
 6.  В дополнительном диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Модели &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   
- [Создание &#40;модели Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
+ [Создание модели (службы Master Data Services)](../../2014/master-data-services/create-a-model-master-data-services.md)  
   
   

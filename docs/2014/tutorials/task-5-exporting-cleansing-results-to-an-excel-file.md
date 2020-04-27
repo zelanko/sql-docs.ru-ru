@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489128"
 ---
-# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Задача 5. Экспорт результатов очистки в файл Excel.
+# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Задача 5. Экспорт результатов очистки в файл Excel
   В этой задаче вы экспортируете результаты операции очистки в файл Excel. Дополнительные сведения см. в разделе [этап экспорта](https://msdn.microsoft.com/library/hh213061.aspx#Export) .  
   
 1.  В области справа выберите **Excel** для **типа назначения**.  
@@ -46,7 +46,7 @@ ms.locfileid: "65489128"
   
     5.  Удалите столбец **проверки адреса** из электронной таблицы и сохраните файл Excel. Этот дополнительный столбец соответствует составному домену проверки адреса.  
   
-## <a name="next-step"></a>Дальнейшее действие  
- [Задача 6. Импорт значений из проекта очистки списка поставщиков](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
+## <a name="next-step"></a>Следующий шаг  
+ [Задача 6. Импорт значений из проекта очистки списка поставщиков](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
   
   

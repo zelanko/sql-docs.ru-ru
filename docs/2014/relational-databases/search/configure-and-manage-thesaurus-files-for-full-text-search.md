@@ -15,17 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011478"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Настройка и управление файлами тезауруса для полнотекстового поиска
-  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полнотекстовые запросы могут выполнять поиск синонимов для заданных пользователем терминов с помощью тезауруса. 
-  Тезаурус[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** определяет набор синонимов для указанного языка. Системные администраторы могут определить две формы синонимов: расширяющие наборы и заменяющие наборы. Подготовив тезаурус, ориентированный на пользовательские полнотекстовые данные, можно эффективно расширить область полнотекстовых запросов к этим данным. Сопоставление с тезаурусом выполняется для всех запросов [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) и [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) и для любых запросов [CONTAINS](/sql/t-sql/queries/contains-transact-sql) и [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) , которые указывают предложение FORMSOF THESAURUS.  
+  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]полнотекстовые запросы могут выполнять поиск синонимов для заданных пользователем терминов с помощью тезауруса. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** определяет набор синонимов для указанного языка. Системные администраторы могут определить две формы синонимов: расширяющие наборы и заменяющие наборы. Подготовив тезаурус, ориентированный на пользовательские полнотекстовые данные, можно эффективно расширить область полнотекстовых запросов к этим данным. Сопоставление с тезаурусом выполняется для всех запросов [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) и [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) и для любых запросов [CONTAINS](/sql/t-sql/queries/contains-transact-sql) и [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) , которые указывают предложение FORMSOF THESAURUS.  
   
-##  <a name="tasks"></a>Основные задачи по настройке файла тезауруса  
+##  <a name="basic-tasks-for-setting-up-a-thesaurus-file"></a><a name="tasks"></a>Основные задачи по настройке файла тезауруса  
  Прежде чем запросы полнотекстового поиска экземпляра сервера смогут найти синонимы на данном языке, необходимо определить сопоставления тезауруса (синонимы) для этого языка. В каждом тезаурусе необходимо вручную определить следующее.  
   
 -   Настройка диакритических знаков  
@@ -43,9 +42,8 @@ ms.locfileid: "66011478"
      Заменяющий набор содержит текстовый шаблон, заменяемый подстановочным набором. Пример см. в подразделе «XML-структура заменяющего набора» далее в этом разделе.  
   
   
-##  <a name="initial_thesaurus_files"></a>Первоначальное содержимое файлов тезауруса  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет набор XML-файлов тезауруса, по одному для каждого поддерживаемого языка. Эти файлы в основном пустые. Они содержат только XML-структуру верхнего уровня, общую для всех тезаурусов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и заключенный в комментарии образец тезауруса.  
+##  <a name="initial-content-of-the-thesaurus-files"></a><a name="initial_thesaurus_files"></a>Первоначальное содержимое файлов тезауруса  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет набор XML-файлов тезауруса, по одному для каждого поддерживаемого языка. Эти файлы в основном пустые. Они содержат только XML-структуру верхнего уровня, общую для всех тезаурусов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и заключенный в комментарии образец тезауруса.  
   
  Все файлы тезауруса, поставляемые с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], содержат следующий XML-код:  
   
@@ -76,7 +74,7 @@ ms.locfileid: "66011478"
 ```  
   
   
-##  <a name="location"></a>Расположение файлов тезауруса  
+##  <a name="location-of-the-thesaurus-files"></a><a name="location"></a>Расположение файлов тезауруса  
  Местоположение файлов тезауруса по умолчанию:  
   
  *<SQL_Server_data_files_path>* \MSSQL12. мссклсервер\мсскл\фтдата\  
@@ -104,18 +102,18 @@ ms.locfileid: "66011478"
  Файл глобального тезауруса соответствует языку «Нейтральный» с кодом языка (LCID) 0. Это значение может быть изменено только администратором.  
   
   
-##  <a name="how_queries_use_tf"></a>Использование файлов тезауруса в запросах  
+##  <a name="how-queries-use-thesaurus-files"></a><a name="how_queries_use_tf"></a>Использование файлов тезауруса в запросах  
  В каждом запросе тезауруса используется как языковой тезаурус, так и глобальный. Вначале запрос ищет файл, относящийся к конкретному языку, и загружает его для обработки (если он не загружен). Запрос расширяется с целью включить в файл тезауруса синонимы конкретного языка, заданные правилами расширяющего и заменяющего наборов. Затем эти шаги повторяются для глобального тезауруса. Но если термин уже входит в состав соответствий в файле конкретного языка, он используется в глобальном тезаурусе.  
   
   
-##  <a name="structure"></a>Основные сведения о структуре файла тезауруса  
+##  <a name="understanding-the-structure-of-a-thesaurus-file"></a><a name="structure"></a>Основные сведения о структуре файла тезауруса  
  Каждый файл тезауруса определяет XML-контейнер, идентификатор которого — `Microsoft Search Thesaurus`, и комментарий, `<!--` ... `-->`, который содержит образец тезауруса. Тезаурус определяется в \<тезаурусе> элементе, который содержит примеры дочерних элементов, определяющих параметры диакритических знаков, расширяющие наборы и наборы для замены, следующим образом.  
   
 -   XML-структура настройки диакритических знаков  
   
      Настройка диакритических знаков определяется в отдельном элементе <diacritics_sensitive>. Этот элемент содержит целое значение, которое управляет поведением диакритических знаков, как показано ниже.  
   
-    |Настройка диакритических знаков|Значение|XML|  
+    |Настройка диакритических знаков|Применение|XML|  
     |------------------------|-----------|---------|  
     |без учета диакритических знаков|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
     |с учетом диакритических знаков|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
@@ -175,21 +173,21 @@ ms.locfileid: "66011478"
     ```  
   
   
-##  <a name="working_with_thesaurus_files"></a>Работа с файлами тезауруса  
+##  <a name="working-with-thesaurus-files"></a><a name="working_with_thesaurus_files"></a>Работа с файлами тезауруса  
  **Изменение файла тезауруса**  
   
 -   [Изменение файла тезауруса](#editing)  
   
  **Загрузка обновленного файла тезауруса**  
   
--   [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql)  
+-   [sp_fulltext_load_thesaurus_file (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql)  
   
  **Просмотр разметки, полученной в результате применения средства разбиения по словам, тезауруса и списка стоп-слов**  
   
 -   [sys. dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="editing"></a>Изменение файла тезауруса  
+##  <a name="editing-a-thesaurus-file"></a><a name="editing"></a>Изменение файла тезауруса  
  Тезаурус для данного языка может быть настроен путем изменения соответствующего файла тезауруса (XML-файла). Во время установки пустые файлы тезауруса, содержащие только \<контейнер> XML, и образец \<тезауруса с комментарием> устанавливаются. Чтобы запросы полнотекстового поиска, которые ищут синонимы, работали правильно, необходимо создать фактический \<тезаурус> элемент, определяющий набор синонимов. Могут быть определены две формы синонимов — расширяющие наборы и заменяющие наборы.  
   
  **Ограничения для файлов тезауруса**  
@@ -236,11 +234,11 @@ ms.locfileid: "66011478"
     ```  
   
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [СОДЕРЖИТ &#40;&#41;Transact-SQL](/sql/t-sql/queries/contains-transact-sql)   
- [Функция CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
- [FREETEXT &#40;Transact-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)   
- [&#41;а FREETEXTTABLE &#40;Transact-SQL](/sql/relational-databases/system-functions/freetexttable-transact-sql)   
+ [CONTAINSTABLE (Transact-SQL)](/sql/relational-databases/system-functions/containstable-transact-sql)   
+ [FREETEXT (Transact-SQL)](/sql/t-sql/queries/freetext-transact-sql)   
+ [FREETEXTTABLE (Transact-SQL)](/sql/relational-databases/system-functions/freetexttable-transact-sql)   
  [Полнотекстовый поиск](full-text-search.md)  
   
   

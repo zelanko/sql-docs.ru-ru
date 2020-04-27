@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd97b67974f248d002255c1977feebe4551e691f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013683"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Задание целевого пространства имен с помощью атрибута targetNamespace (SQLXML 4.0)
@@ -34,7 +34,7 @@ ms.locfileid: "66013683"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-a-target-namespace"></a>A. Указание целевого пространства имен  
+### <a name="a-specifying-a-target-namespace"></a>А) Указание целевого пространства имен  
  Следующая схема XSD задает целевое пространство имен с помощью атрибута **xsd: targetNamespace** . Схема также задает для значений атрибута **elementFormDefault** и **attributeFormDefault** значение **"неполное"** (для этих атрибутов по умолчанию). Это глобальное объявление и влияет на все локальные элементы (**\<порядок>** в схеме) и атрибуты (**CustomerID**, **ContactName**и **OrderID** в схеме).  
   
 ```  

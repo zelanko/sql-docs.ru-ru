@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5d91c82d892888d2e6edde5615ba05a2a9ebf3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011759"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Определение длины префикса в файлах данных с помощью программы bcp (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "66011759"
 > [!IMPORTANT]  
 >  При использовании собственного формата предпочтительнее использовать префиксы длины, а не признаки конца поля. Собственный формат данных может конфликтовать с признаками конца, поскольку файл данных в собственном формате хранится во внутреннем двоичном формате данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="PrefixLengthsExport"></a> Длины префиксов для массового экспорта  
+##  <a name="prefix-lengths-for-bulk-export"></a><a name="PrefixLengthsExport"></a> Длины префиксов для массового экспорта  
   
 > [!NOTE]  
 >  Значение по умолчанию, предлагаемое при запросе длины префикса при экспорте поля, означает оптимальную длину префикса для этого поля.  
@@ -56,11 +56,11 @@ ms.locfileid: "66011759"
 |`varchar`|2|2|2|2|  
 |`nchar`|2|2|2|2|  
 |`nvarchar`|2|2|2|2|  
-|`text`<sup>1</sup>|4|4|4|4|  
-|`ntext`<sup>1</sup>|4|4|4|4|  
+|`text` <sup>1</sup>|4|4|4|4|  
+|`ntext` <sup>1</sup>|4|4|4|4|  
 |`binary`|2|2|2|2|  
 |`varbinary`|2|2|2|2|  
-|`image`<sup>1</sup>|4|4|4|4|  
+|`image` <sup>1</sup>|4|4|4|4|  
 |`datetime`|0|1|0|1|  
 |`smalldatetime`|0|1|0|1|  
 |`decimal`|1|1|1|1|  
@@ -83,7 +83,7 @@ ms.locfileid: "66011759"
   
  <sup>1</sup> типы `ntext`данных `text`, и `image` будут удалены в следующей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует избегать использования этих типов данных при новой разработке и запланировать изменение приложений, использующих их в настоящий момент. Используйте вместо них типы данных `nvarchar(max)`, `varchar(max)` и `varbinary(max)`.  
   
-##  <a name="PrefixLengthsImport"></a>Длина префикса для полного импорта  
+##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> Длины префиксов для массового импорта  
  При массовом импорте данных длина префикса — это значение, указанное при первоначальном создании файла данных. Если файл данных не создан командой **bcp** , символы префикса длины, возможно, не существуют. В этом случае в качестве длины префикса нужно указать 0.  
   
 > [!NOTE]  
@@ -91,9 +91,9 @@ ms.locfileid: "66011759"
   
 ## <a name="see-also"></a>См. также:  
  [bcp Utility](../../tools/bcp-utility.md)   
- [Типы данных &#40;&#41;Transact-SQL](/sql/t-sql/data-types/data-types-transact-sql)   
- [Указание длины поля с помощью программы bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
- [Укажите признаки конца поля и строки &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
- [Указание типа файлового хранилища с помощью программы bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [Типы данных (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)   
+ [Указание длины поля с помощью программы bcp (SQL Server)](specify-field-length-by-using-bcp-sql-server.md)   
+ [Определение признаков конца поля и строки (SQL Server)](specify-field-and-row-terminators-sql-server.md)   
+ [Указание типа файлового хранилища с помощью программы bcp (SQL Server)](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   

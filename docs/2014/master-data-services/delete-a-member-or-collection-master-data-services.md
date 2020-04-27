@@ -17,10 +17,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f3164bca23e709fd434c6ba7850ec21179a076ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479714"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>Удаление элемента или коллекции (службы Master Data Services)
@@ -29,7 +29,7 @@ ms.locfileid: "65479714"
 > [!NOTE]  
 >  Невозможно удалить элемент, если он используется в качестве значения атрибута на основе домена для другого элемента.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
@@ -60,9 +60,9 @@ ms.locfileid: "65479714"
   
 7.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Повторная активация элемента или коллекции &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
  [Master Data Services &#40;членов&#41;](../../2014/master-data-services/members-master-data-services.md)   
- [&#40;коллекций Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+ [Коллекции (службы Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)  
   
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c36eae0ca3d9613dfdaf13bce3a5e748f91b123f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255398"
 ---
 # <a name="tutorial-replicating-data-with-mobile-clients"></a>Учебник. Репликация данных с мобильными клиентами
@@ -26,7 +26,7 @@ ms.locfileid: "63255398"
  В этом учебнике используется репликация слиянием, чтобы опубликовать данные из центральной базы данных для одного или более мобильных пользователей так, что каждый пользователь получит уникальным образом фильтрованное подмножество данных. На первом занятии рассматривается, как создать публикацию при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . На последующих занятиях рассматривается, как создать и синхронизировать подписку.  
   
 ## <a name="requirements"></a>Требования  
- Этот учебник предназначен для пользователей, знакомых с основными операциями с базами данных, но имеющих ограниченный опыт работы с репликацией. Перед началом работы с этим руководством необходимо пройти [руководство по подготовке сервера к репликации](tutorial-preparing-the-server-for-replication.md).  
+ Этот учебник предназначен для пользователей, знакомых с основными операциями с базами данных, но имеющих ограниченный опыт работы с репликацией. Перед тем как приступить к работе с этим учебником, необходимо освоить [Учебник. Подготовка сервера к репликации](tutorial-preparing-the-server-for-replication.md).  
   
  Для работы с этим учебником в системе должны быть установлены следующие компоненты:  
   
@@ -38,8 +38,7 @@ ms.locfileid: "63255398"
   
 -   На сервере-подписчике (целевом):  
   
-    -   Любой выпуск [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], за исключением [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 
-  [!INCLUDE[ssEW](../../includes/ssew-md.md)] не поддерживается публикацией, созданной в этом учебнике.  
+    -   Любой выпуск [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], за исключением [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] не поддерживается публикацией, созданной в этом учебнике.  
   
     > [!NOTE]  
     >  По умолчанию на [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]репликация не устанавливается.  
@@ -47,17 +46,17 @@ ms.locfileid: "63255398"
 > [!NOTE]  
 >  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]необходимо подключиться к издателю и подписчику с помощью имени входа, которое является членом предопределенной роли сервера sysadmin.  
   
- **Предполагаемое время для выполнения заданий данного учебника: 30 минут.**  
+ **Предполагаемое время выполнения этого учебника: 30 минут.**  
   
 ## <a name="lessons-in-this-tutorial"></a>Занятия этого учебника  
   
--   [Занятие 1. Публикация данных с помощью репликации слиянием](lesson-1-publishing-data-using-merge-replication.md)  
+-   [Занятие 1. Публикация данных с помощью репликации слиянием](lesson-1-publishing-data-using-merge-replication.md)  
   
--   [Занятие 2. Создание подписки на публикацию слиянием](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
+-   [Занятие 2. Создание подписки на публикацию слиянием](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
   
  [Запуск учебника](merge/merge-replication.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные понятия программирования репликации](concepts/replication-programming-concepts.md)  
   
   

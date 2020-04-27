@@ -32,10 +32,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc1618a40585ad1b20d4f59019f1dd3674468da7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013268"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Примеры массовой загрузки XML (SQLXML 4.0)
@@ -110,7 +110,7 @@ Function ValidateFile(strXmlFile,strUrn,strXsdFile)
 End Function  
 ```  
   
-## <a name="a-bulk-loading-xml-in-a-table"></a>A. Массовая загрузка XML-данных в таблицу  
+## <a name="a-bulk-loading-xml-in-a-table"></a>А) Массовая загрузка XML-данных в таблицу  
  В этом примере устанавливается соединение с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , указанным в свойстве ConnectionString (MyServer). В примере также указывается свойство Еррорлогфиле. Поэтому ошибочный вывод сохраняется в указанном файле («C:\error.log»), для которого также можно указать другое место. Кроме того, обратите внимание, что метод Execute имеет в качестве параметров файл схемы сопоставления (под SampleSchema. XML) и XML-файл данных (SampleXMLData. XML). При выполнении групповой загрузки таблица Cust, созданная в базе данных **tempdb** , будет содержать новые записи на основе содержимого XML-файла данных.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>Проверка образца массовой загрузки  
@@ -198,7 +198,7 @@ End Function
 </Schema>  
 ```  
   
-## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>Б. Массовая загрузка XML-данных в несколько таблиц  
+## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>Б) Массовая загрузка XML-данных в несколько таблиц  
  В этом примере XML-документ состоит из ** \<>клиента** и ** \<заказа>** элементов.  
   
 ```  

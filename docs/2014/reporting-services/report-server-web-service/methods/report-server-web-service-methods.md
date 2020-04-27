@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37d0031ebfb4ec6d31da6aad9a8842c0623cb75b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63283482"
 ---
 # <a name="report-server-web-service-methods"></a>Методы веб-службы сервера отчетов
@@ -30,7 +30,7 @@ ms.locfileid: "63283482"
 ## <a name="endpoints-and-methods"></a>Конечные точки и методы  
  В следующей таблице указаны конечные точки веб-службы сервера отчетов и категории методов, предоставленные конечной точкой <xref:ReportService2010.ReportingService2010>. Дополнительные сведения о методах, доступных в других конечных точках, см. в разделе [Технический справочник (службы SSRS)](../../technical-reference-ssrs.md).  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Конечные точки веб-службы сервера отчетов](report-server-web-service-endpoints.md)|Содержит описание конечных точек для управления и выполнения, используемых веб-службой сервера отчетов.|  
 |[Методы управления пространством имен сервера отчетов](report-server-namespace-management-methods.md)|Описывает методы управления базой данных сервера отчетов. В частности, эти методы позволяют управлять папками и ресурсами, а также настраивать свойства элемента.|  
@@ -44,7 +44,7 @@ ms.locfileid: "63283482"
 |[Методы подписки и доставки](subscription-and-delivery-methods.md)|Описывает методы создания и управления подписками и доставки отчетов.|  
 |[Методы связанных отчетов](linked-reports-methods.md)|Описывает методы создания связанных отчетов и управления ими.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Доступ к API SOAP](../accessing-the-soap-api.md)   
  [Создание приложений с помощью веб-службы и .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Веб-служба сервера отчетов](../report-server-web-service.md)   

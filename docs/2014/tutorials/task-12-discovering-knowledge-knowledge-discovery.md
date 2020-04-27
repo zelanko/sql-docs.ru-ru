@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484686"
 ---
-# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Задача 12. Поиск знаний (обнаружение знаний)
+# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Задача 12. Обнаружение знаний
   В этой задаче выполняется операция **обнаружения набора знаний** для доменов с **идентификаторами** и **именами** поставщиков. В этом сценарии процесс обнаружения знаний в основном импортирует значения для этих двух доменов.  
   
  В этом учебнике было начато построение базы знаний с нуля. Можно также запустить создание базы знаний путем выполнения действия обнаружения знаний. При нажатии кнопки **создать базу знаний** на главной странице клиент DQS переходит на страницу с действием **Управление доменами** , выбранным для действия. Вы можете изменить **действие** на **Обнаружение знаний** , а затем на следующей странице можно создать домены в рамках процесса обнаружения знаний. Дополнительные сведения см. в разделе [выполнение обнаружения знаний](https://msdn.microsoft.com/library/hh510398.aspx) .  
@@ -66,7 +66,7 @@ ms.locfileid: "65484686"
   
      Вы завершили первое занятие учебника.  
   
-## <a name="next-step"></a>Дальнейшее действие  
- [Занятие 2. Очистка данных поставщика с помощью базы знаний](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
+## <a name="next-step"></a>Следующий шаг  
+ [Урок 2. Очистка данных в базе знаний о поставщиках](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
   
   

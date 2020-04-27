@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 19ebeac45f7596de42add894922838864f62546e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054313"
 ---
 # <a name="xml-source-editor-error-output-page"></a>Редактор источника «XML» (страница «Вывод ошибок»)
@@ -27,13 +27,13 @@ ms.locfileid: "66054313"
  Дополнительные сведения об источнике XML см. в разделе [XML Source](data-flow/xml-source.md).  
   
 ## <a name="options"></a>Параметры  
- **Входные и выходные данные**  
+ **Ввод-вывод**  
  Просмотр имени источника данных.  
   
- **Столбец**  
+ **Рубрик**  
  Просмотрите внешние (исходные) столбцы, выбранные на странице **Диспетчер соединений** диалогового окна **Редактор источника "XML"**.  
   
- **Ошибка**  
+ **Error**  
  Задайте действие, которое необходимо выполнить при возникновении ошибки: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
  **См. также:** [Обработка ошибок в данных](data-flow/error-handling-in-data.md)  
@@ -44,13 +44,13 @@ ms.locfileid: "66054313"
  **Описание**  
  Просмотреть описание ошибки.  
   
- **Присвоить это значение выбранным ячейкам**  
+ **Присвоить указанное значение выбранным ячейкам**  
  Укажите действие, которое необходимо применить ко всем выбранным ячейкам при возникновении ошибки или усечения: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор источника "XML" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
  [Редактор источника "XML" &#40;столбцы "&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   

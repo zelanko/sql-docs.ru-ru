@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 918c0ecd3a1ac1d0f1821ee8f19df291f9a5fa33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054481"
 ---
 # <a name="wmi-connection-manager-editor"></a>редактор диспетчера WMI-сеансов
@@ -27,7 +27,7 @@ ms.locfileid: "66054481"
  Дополнительные сведения о диспетчере WMI-сеансов см. в разделе [WMI Connection Manager](connection-manager/wmi-connection-manager.md).  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Задает уникальное имя диспетчера соединений.  
   
  **Описание**  
@@ -48,10 +48,10 @@ ms.locfileid: "66054481"
  **Пароль**  
  Если проверка подлинности Windows не используется, необходимо ввести пароль для данного соединения.  
   
- **Проверьте**  
+ **Тест**  
  Проверка настроек диспетчера соединений.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Основные понятия о поставщике WMI для управления конфигурацией](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [Основные понятия о поставщике WMI для событий сервера](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  

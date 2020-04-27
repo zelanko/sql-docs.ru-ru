@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c43cb42cffba31f20b0e9717204f5475b5bb156d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012074"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>Форматы данных для массового экспорта или импорта (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "66012074"
   
 -   [Связанные задачи](#RelatedTasks)  
   
-##  <a name="ComponentsAndConcepts"></a> Форматы данных для массового импорта или экспорта  
+##  <a name="data-formats-for-bulk-import-or-export"></a><a name="ComponentsAndConcepts"></a> Форматы данных для массового импорта или экспорта  
  В следующей таблице приведены общие правила выбора формата данных в зависимости от того, как представлены данные, а также от источника или назначения операции.  
   
 |Операция|Собственный|собственный формат Юникода|Символ|символьный формат Юникода|  
@@ -43,7 +43,7 @@ ms.locfileid: "66012074"
   
  <sup>1</sup> самый быстрый способ для полного экспорта данных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при использовании программы **bcp**.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Использование собственного формата для импорта и экспорта данных (SQL Server)](use-native-format-to-import-or-export-data-sql-server.md)  
   

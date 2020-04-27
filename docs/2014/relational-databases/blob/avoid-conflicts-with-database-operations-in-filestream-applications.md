@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fafb116e1e5c02d27ad3242edd27064ffae6e401
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010372"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Избегание конфликтов в операциях баз данных в приложениях FILESTREAM
@@ -33,13 +33,12 @@ ms.locfileid: "66010372"
 |SAVE TRANSACTION|Запрещены*|Запрещены*|  
 |ROLLBACK|Разрешено*|Разрешено*|  
   
- 
-  \* Транзакция отменяется, а открытые дескрипторы для контекста транзакции становятся недействительными. Приложение должно закрыть все открытые дескрипторы.  
+ \* Транзакция отменяется, а открытые дескрипторы для контекста транзакции становятся недействительными. Приложение должно закрыть все открытые дескрипторы.  
   
 ## <a name="examples"></a>Примеры  
  В следующих примерах показывается, как могут возникать конфликты при совместном использовании инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] и доступа к FILESTREAM с помощью функций Win32.  
   
-### <a name="a-opening-a-filestream-blob-for-write-access"></a>A. Открытие объекта FILESTREAM BLOB с доступом на запись  
+### <a name="a-opening-a-filestream-blob-for-write-access"></a>А) Открытие объекта FILESTREAM BLOB с доступом на запись  
  В следующем примере показывается эффект от открытия файла с доступом только на запись.  
   
 ```  
@@ -62,7 +61,7 @@ CloseHandle(dstHandle);
 //is returned with the updateData applied.  
 ```  
   
-### <a name="b-opening-a-filestream-blob-for-read-access"></a>Б. Открытие объекта FILESTREAM BLOB с доступом на считывание  
+### <a name="b-opening-a-filestream-blob-for-read-access"></a>Б) Открытие объекта FILESTREAM BLOB с доступом на считывание  
  В следующем примере показывается эффект от открытия файла с доступом только на считывание.  
   
 ```  
@@ -141,8 +140,8 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 //cursor is still open.  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Доступ к данным FILESTREAM с помощью OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
- [Использование нескольких активных результирующих наборов &#40;режиме MARS&#41;](../native-client/features/using-multiple-active-result-sets-mars.md)  
+ [Использование множественных активных результирующих наборов (MARS)](../native-client/features/using-multiple-active-result-sets-mars.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63313892"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Создание прогнозов временных рядов (учебник по интеллектуальному анализу данных — средний уровень)
@@ -172,7 +172,7 @@ ms.locfileid: "63313892"
   
 3.  В столбце **имя таблицы** введите новое имя временной таблицы, например **тестовые прогнозы**.  
   
-4.  Выберите команду **Сохранить**.  
+4.  Нажмите кнопку **Сохранить**.  
   
     > [!NOTE]  
     >  Чтобы просмотреть созданную таблицу, создайте соединение с компонентом Database Engine, на котором были сохранены данные, и сформируйте запрос.  
@@ -185,7 +185,7 @@ ms.locfileid: "63313892"
 ## <a name="next-lesson"></a>Следующее занятие  
  [Учебник по расширенному анализу временных рядов &#40;промежуточного интеллектуального анализа данных&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры запросов моделей временных рядов](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   
   

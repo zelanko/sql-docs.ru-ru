@@ -10,10 +10,10 @@ ms.technology: database-engine
 ms.topic: conceptual
 ms.date: 08/10/2017
 ms.openlocfilehash: c359f709b2c0a1ba779111a007843dd249b5d7b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261302"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Перенос установки служб Reporting Services (собственный режим)
@@ -42,7 +42,7 @@ ms.locfileid: "63261302"
   
 -   Обнаруживается проблема, блокирующая обновление.  
   
-##  <a name="bkmk_nativemode_migration_overview"></a>Обзор миграции в собственном режиме  
+##  <a name="native-mode-migration-overview"></a><a name="bkmk_nativemode_migration_overview"></a> Обзор миграции в собственном режиме  
  Процесс миграции для [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] состоит из шагов, выполняемых вручную и автоматически. При выполнении миграции сервера отчетов выполняются следующие задачи.  
   
 -   Создайте резервные копии базы данных, приложения и файлов конфигурации.  
@@ -70,7 +70,7 @@ ms.locfileid: "63261302"
   
 -   [Создание базы данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
   
-##  <a name="bkmk_fixed_database_name"></a>Предопределенное имя базы данных  
+##  <a name="fixed-database-name"></a><a name="bkmk_fixed_database_name"></a> Фиксированное имя базы данных  
  Нельзя переименовать базу данных сервера отчетов. Идентификатор базы данных записывается в хранимых процедурах сервера отчетов при создании базы данных. Переименование первичной или временной баз данных сервера отчетов приводит к возникновению ошибок при выполнении этих процедур, поэтому установка сервера отчетов становится недействительной.  
   
  Если имя базы данных из существующей установки не подходит для новой установки, рассмотрите возможность создания новой базы данных с тем же именем, затем загрузки данных существующего приложения с использованием методов из следующего списка:  
@@ -81,7 +81,7 @@ ms.locfileid: "63261302"
   
 -   Если число элементов невелико, можно переиздать отчеты, модели отчетов и общие источники данных из конструктора отчетов, конструктора моделей и построителя отчетов на новом сервере отчетов. Необходимо создать повторно назначения ролей, подписки, общие расписания, расписания моментальных снимков отчета, пользовательские свойства, установленные для отчетов или других элементов, безопасность элементов модели и свойства, назначенные на сервере отчетов. Будут потеряны журнал отчетов и данные журнала выполнения отчета.  
   
-##  <a name="bkmk_before_you_start"></a>Перед началом работы  
+##  <a name="before-you-start"></a><a name="bkmk_before_you_start"></a> Перед началом работы  
  Несмотря на то что выполняется миграция, а не обновление экземпляра, попробуйте запустить помощник по обновлению на существующем экземпляре, который поможет обнаружить любые неполадки, влияющие на миграцию. Этот шаг особенно полезен, если выполняется миграция сервера отчетов, установленного и настроенного другим лицом. Запустив помощник по обновлению, можно обнаружить пользовательские настройки, возможно, не поддерживаемые в новом экземпляре [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  Кроме того, помните о нескольких важных изменениях в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , которые влияют на метод миграции экземпляра.  
@@ -92,19 +92,19 @@ ms.locfileid: "63261302"
   
 -   Диспетчер отчетов и среда SQL Server Management Studio переработаны, чтобы устранить перекрытие функций. Каждое средство поддерживает отдельный набор задач; эти средства более не взаимозаменяемы.  
   
--   Фильтры ISAPI не поддерживаются в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и более поздних версиях. Если используются фильтры ISAPI, необходимо до осуществления миграции перепроектировать решения по созданию отчетов.  
+-   Фильтры ISAPI не поддерживаются в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и более поздних версий. Если используются фильтры ISAPI, необходимо до осуществления миграции перепроектировать решения по созданию отчетов.  
   
--   Ограничения IP-адресов не поддерживаются [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в и более поздних версиях. В случае применения ограничений на IP-адреса необходимо до осуществления миграции перепроектировать решения по созданию отчетов либо воспользоваться такой технологией, как брандмауэр, маршрутизатор или преобразование сетевых адресов (NAT) с целью настройки адресов, на которые наложены ограничения по доступу к серверу отчетов.  
+-   Ограничения на IP-адреса не поддерживаются в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и более поздних версий. В случае применения ограничений на IP-адреса необходимо до осуществления миграции перепроектировать решения по созданию отчетов либо воспользоваться такой технологией, как брандмауэр, маршрутизатор или преобразование сетевых адресов (NAT) с целью настройки адресов, на которые наложены ограничения по доступу к серверу отчетов.  
   
 -   Сертификаты SSL клиента (SSL) не поддерживаются в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и более поздних версиях. Если используются клиентские SSL-сертификаты, необходимо до осуществления миграции перепроектировать решения по созданию отчетов.  
   
--   Если используется тип проверки подлинности, отличный от интегрированной проверки подлинности Windows, необходимо обновить элемент `<AuthenticationTypes>` в файле **RSReportServer.config** с учетом поддерживаемого типа проверки подлинности. К поддерживаемым типам проверки подлинности относятся NTLM, Kerberos, Negotiate и Basic. Анонимные, .NET Passport и дайджест-проверка подлинности [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не поддерживаются в и более поздних версиях.  
+-   Если используется тип проверки подлинности, отличный от интегрированной проверки подлинности Windows, необходимо обновить элемент `<AuthenticationTypes>` в файле **RSReportServer.config** с учетом поддерживаемого типа проверки подлинности. К поддерживаемым типам проверки подлинности относятся NTLM, Kerberos, Negotiate и Basic. Такие методы проверки подлинности, как анонимный доступ, дайджест-проверка подлинности и .NET Passport, не поддерживаются в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и более поздних версий.  
   
 -   Если в среде подготовки отчетов применяются пользовательские каскадные таблицы стилей, они не подлежат переносу. Их нужно перемещать вручную по завершении миграции.  
   
  Дополнительные сведения об изменениях в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]см. в документации помощника по обновлению, а также в статье [новые возможности &#40;Reporting Services&#41;](../what-s-new-reporting-services.md).  
   
-##  <a name="bkmk_backup"></a>Файлы и данные резервной копии  
+##  <a name="backup-files-and-data"></a><a name="bkmk_backup"></a> Резервное копирование файлов и данных  
  Перед установкой нового экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]не забудьте создать резервные копии всех файлов из текущего экземпляра.  
   
 1.  Создайте резервную копию ключа шифрования для базы данных сервера отчетов. Этот шаг важен для успешной миграции. На дальнейших этапах процесса миграции необходимо восстановить его для сервера отчетов, чтобы снова получить доступ к зашифрованным данным. Чтобы создать резервную копию ключа, используйте диспетчер настройки служб Reporting Services.  
@@ -127,7 +127,7 @@ ms.locfileid: "63261302"
   
     7.  Machine.config — для [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , если он изменен для операций сервера отчетов.  
   
-##  <a name="bkmk_install_ssrs"></a>Установка SQL Server Reporting Services  
+##  <a name="install-sql-server-reporting-services"></a><a name="bkmk_install_ssrs"></a> Установите службы SQL Server Reporting Services  
  Установите новый экземпляр сервера отчетов в режиме «Только файлы», чтобы настроить его на использование значений, отличных от выбираемых по умолчанию. Для установки из командной строки используйте аргумент `FilesOnly`. В мастере установки выберите параметр **Установить, но не настраивать сервер**.  
   
  Перейдите по одной из следующих ссылок для просмотра инструкций по установке нового экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -136,7 +136,7 @@ ms.locfileid: "63261302"
   
 -   [Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   
-##  <a name="bkmk_move_database"></a>Перемещение базы данных сервера отчетов  
+##  <a name="move-the-report-server-database"></a><a name="bkmk_move_database"></a> Перемещение базы данных сервера отчетов  
  База данных сервера отчетов содержит опубликованные отчеты, модели отчетов, общие источники данных, расписания, ресурсы, подписки и папки. Она также содержит свойства системы и элемента и разрешения для доступа к содержимому сервера отчетов.  
   
  Если в процессе миграции используется другой экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , необходимо переместить базу данных сервера отчетов в новый экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Если используется тот же экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , перейдите к разделу [Перемещение пользовательских сборок и расширений](#bkmk_move_custom).  
@@ -161,7 +161,7 @@ ms.locfileid: "63261302"
   
  Помните, что база данных сервера отчетов и временная база данных взаимозависимы, поэтому перемещать их необходимо вместе. Не копируйте базы данных. В процессе копирования в новый экземпляр переносятся не все параметры настройки безопасности. Не перемещайте задания агента SQL Server для запланированных операций сервера отчетов. Сервер отчетов автоматически создаст эти задания повторно.  
   
-##  <a name="bkmk_move_custom"></a>Перемещение пользовательских сборок или расширений  
+##  <a name="move-custom-assemblies-or-extensions"></a><a name="bkmk_move_custom"></a> Перемещение пользовательских сборок и расширений  
  Если в установку входят пользовательские элементы отчета, сборки или расширения, необходимо заново разместить пользовательские компоненты. Если пользовательские компоненты не используются, пропустите подраздел [Настройка сервера отчетов](#bkmk_configure_reportserver).  
   
  Для повторного размещения пользовательских компонентов выполните следующее.  
@@ -170,9 +170,9 @@ ms.locfileid: "63261302"
   
     -   Должны быть перекомпилированы нестандартные модули проверки подлинности для версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-    -   Пользовательские модули подготовки отчетов [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для должны быть переписаны с помощью объектной модели подготовки отчетов (ROM).  
+    -   Пользовательские модули подготовки отчетов для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] должны быть переписаны с использованием объектной модели для подготовки отчетов (ROM).  
   
-    -   Модули подготовки отчетов HTML 3,2 и HTML OWC не поддерживаются [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в и более поздних версиях.  
+    -   Модули подготовки отчетов, использующие HTML 3.2 и HTML OWC, не поддерживаются в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и более поздних версий.  
   
     -   Повторная компиляция других пользовательских сборок необязательна.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "63261302"
   
     1.  [Развертывание пользовательской сборки](../custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2.  [Развертывание пользовательского элемента отчета](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2.  [Руководство. развернуть пользовательский элемент отчета](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3.  [Развертывание модуля обработки данных](../extensions/data-processing/deploying-a-data-processing-extension.md)  
   
@@ -194,7 +194,7 @@ ms.locfileid: "63261302"
   
     6.  [Реализация модуля безопасности](../extensions/security-extension/implementing-a-security-extension.md)  
   
-##  <a name="bkmk_configure_reportserver"></a>Настройка сервера отчетов  
+##  <a name="configure-the-report-server"></a><a name="bkmk_configure_reportserver"></a> Настройка сервера отчетов  
  Настройте URL-адреса для веб-службы сервера отчетов и диспетчера отчетов и настройте соединение с базой данных сервера отчетов.  
   
  При осуществлении миграции масштабного развертывания нужно перевести в режим «вне сети» все узлы сервера отчетов и перемещать все серверы по одному. После завершения переноса первого сервера отчетов и его успешного подключения к базе данных сервера отчетов версия этой базы данных сервера отчетов автоматически обновляется до уровня версии базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
@@ -217,29 +217,29 @@ ms.locfileid: "63261302"
   
 4.  Восстановите ключи шифрования. Этот шаг необходим, чтобы задействовать обратимое шифрование на предыдущих строках соединения и учетных данных, которые уже находятся в базе данных сервера отчетов. Дополнительные сведения см. в разделе [Резервное копирование и восстановление ключей шифрования служб Reporting Services](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
-5.  Если сервер отчетов установлен на новом компьютере и используется брандмауэр Windows, убедитесь, что порт, который прослушивает сервер отчетов, открыт. По умолчанию для этой цели используется порт 80. Дополнительные сведения см. [в разделе Настройка брандмауэра для доступа к серверу отчетов](../report-server/configure-a-firewall-for-report-server-access.md).  
+5.  Если сервер отчетов установлен на новом компьютере и используется брандмауэр Windows, убедитесь, что порт, который прослушивает сервер отчетов, открыт. По умолчанию для этой цели используется порт 80. Дополнительные сведения см. в статье [Настройка брандмауэра для доступа к серверу отчетов](../report-server/configure-a-firewall-for-report-server-access.md).  
   
 6.  Если есть необходимость локального администрирования сервера отчетов, работающего в собственном режиме, следует настроить операционную систему, чтобы разрешить локальное администрирование диспетчера отчетов. Дополнительные сведения см. в разделе [Настройка сервера отчетов, работающего в основном режиме, для локального администрирования (службы SSRS)](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-##  <a name="bkmk_copy_custom_config"></a>Копирование пользовательских параметров конфигурации в файл RSReportServer. config  
+##  <a name="copy-custom-configuration-settings-to-rsreportserverconfig-file"></a><a name="bkmk_copy_custom_config"></a> Копирование настроек пользовательской конфигурации в файл RSReportServer.config  
  Если изменен файл RSReportServer.config или RSWebApplication.config в предыдущей установке, следует внести те же изменения в новый файл RSReportServer.config. В следующем списке приведена сводка причин изменения предыдущего файла конфигурации и даны ссылки на дополнительную информацию о способах настройки этих же параметров в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 |Настройка|Сведения|  
 |-------------------|-----------------|  
 |Доставка электронной почты сервера отчетов с пользовательскими параметрами|[Настройка сервера отчетов для доставки электронной почты &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) и [Параметры электронной почты — Configuration Manager &#40;служб SSRS в основном режиме&#41;](e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |Настройки сведений об устройстве|[Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../customize-rendering-extension-parameters-in-rsreportserver-config.md)|  
-|Диспетчер отчетов на удаленном экземпляре|[Настройка диспетчер отчетов &#40;собственном режиме&#41;](../report-server/configure-web-portal.md)|  
+|Диспетчер отчетов на удаленном экземпляре|[Настройка диспетчера отчетов (собственный режим)](../report-server/configure-web-portal.md)|  
   
-##  <a name="bkmk_windowsservice_group"></a>Группа служб Windows и списки ACL безопасности  
- В [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]существует одна группа служб, группа служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows, которая используется для создания списков управления доступом для всех разделов реестра, файлов и папок, установленных с помощью. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Это имя группы Windows отображается в\<формате SQLServerReportServerUser $*computer_name*>$\<*instance_name*>. Эта группа занимает место двух групп служб Windows в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. При наличии пользовательских списков управления доступом, связанных с любой [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из групп Windows, необходимо применить эти списки ACL к новой группе для нового экземпляра сервера отчетов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+##  <a name="windows-service-group-and-security-acls"></a><a name="bkmk_windowsservice_group"></a> Группа служб Windows и списки управления доступом  
+ В [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]существует одна группа служб, группа служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows, которая используется для создания списков управления доступом для всех разделов реестра, файлов и папок, установленных с помощью. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Имя этой группы Windows отображается в формате SQLServerReportServerUser$\<*имя_компьютера*>$\<*имя_экземпляра*>. Эта группа занимает место двух групп служб Windows в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. При наличии пользовательских списков управления доступом, связанных с любой [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из групп Windows, необходимо применить эти списки ACL к новой группе для нового экземпляра сервера отчетов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-##  <a name="bkmk_verify"></a>Проверка развертывания  
+##  <a name="verify-your-deployment"></a><a name="bkmk_verify"></a> Проверка развертывания  
   
-1.  Проверьте виртуальные каталоги сервера отчетов и диспетчера отчетов, открыв браузер и введя URL-адрес. Дополнительные сведения см. [в разделе Проверка установки Reporting Services](verify-a-reporting-services-installation.md).  
+1.  Проверьте виртуальные каталоги сервера отчетов и диспетчера отчетов, открыв браузер и введя URL-адрес. Дополнительные сведения см. в статье [Проверка установки служб Reporting Services](verify-a-reporting-services-installation.md).  
   
 2.  Проверьте отчеты и убедитесь в том, что они содержат ожидаемые данные. Просмотрите сведения об источнике данных на предмет того, содержатся ли в них данные о подключении к источнику данных. При обработке и подготовке отчетов к просмотру на сервере отчетов используется модель объектов отчетов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], но конструкции [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] новыми элементами языка определения отчетов не заменяются. Дополнительные сведения о выполнении существующих отчетов на сервере отчетов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] см. в статье [Обновление отчетов](upgrade-reports.md).  
   
-##  <a name="bkmk_remove_unused"></a>Удаление неиспользуемых программ и файлов  
+##  <a name="remove-unused-programs-and-files"></a><a name="bkmk_remove_unused"></a> Удаление неиспользуемых программ и файлов  
  После успешного переноса сервера отчетов на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] экземпляр может потребоваться выполнить следующие действия, чтобы удалить ненужные программы и файлы.  
   
 1.  Удалите прежнюю версию служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , если она больше не нужна. Этот шаг не удаляет следующие элементы, но их можно удалить вручную, если они больше не нужны:  
@@ -258,9 +258,9 @@ ms.locfileid: "63261302"
   
 2.  Удалите службы IIS, если они более не нужны на этом компьютере.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Миграция Reporting Services установки &#40;режиме интеграции с SharePoint&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
- [База данных сервера отчетов (службы Reporting Services в собственном режиме)](../report-server/report-server-database-ssrs-native-mode.md)   
+ [База данных сервера отчетов &#40;служб SSRS в собственном режиме&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [Обновление и миграция Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [Reporting Services обратной совместимости](../reporting-services-backward-compatibility.md)   
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

@@ -14,21 +14,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 70f328da53f2d346fe58f3416b0a3a0c331eb74c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479984"
 ---
 # <a name="copy-a-version-master-data-services"></a>Копирование версии (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]копирование версии модели позволяет создать из нее новую версию.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-copy-a-version"></a>Копирование версии  
   
@@ -43,11 +43,11 @@ ms.locfileid: "65479984"
   
 4.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
   
--   [Изменение имени версии &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)  
+-   [Изменение имени версии (службы Master Data Services)](../../2014/master-data-services/change-a-version-name-master-data-services.md)  
   
-## <a name="see-also"></a>См. также:  
- [Версии &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+## <a name="see-also"></a>См. также  
+ [Версии (службы Master Data Services)](../../2014/master-data-services/versions-master-data-services.md)  
   
   

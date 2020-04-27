@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71f6cc444bd5a5cee3f3e3399736c2f25e32b8dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010711"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>Образцы запросов XPath (SQLXML 4.0)
@@ -29,7 +29,7 @@ ms.locfileid: "66010711"
 > [!NOTE]  
 >  Образцы запросов в этом разделе сгруппированы по типу операций XPath, выполняемых в запросе.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Пример схемы XSD с заметками для примеров XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)  
  Используйте этот файл с примерами запросов XPath, приведенными в этом разделе.  
   

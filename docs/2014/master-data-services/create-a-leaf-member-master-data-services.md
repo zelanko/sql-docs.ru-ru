@@ -15,16 +15,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a113803c9d6e5c688ea6eddca9446d96d79e82be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483415"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>Создание конечного элемента (службы Master Data Services)
   В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]среде конечный элемент создается, если требуется добавить основные данные в систему и не используются промежуточные таблицы или [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] для импорта данных.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
@@ -41,7 +41,7 @@ ms.locfileid: "65483415"
   
 4.  В строке меню наведите указатель на пункт **Сущности** и щелкните имя сущности, к которой нужно добавить элемент.  
   
-5.  Нажмите кнопку **Добавить участника**.  
+5.  Нажмите кнопку **Добавить элемент**.  
   
 6.  Заполните поля в области **Сведения** .  
   
@@ -49,9 +49,9 @@ ms.locfileid: "65483415"
   
 8.  Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Загрузка или обновление элементов в Master Data Services с помощью промежуточного процесса](add-update-and-delete-data-master-data-services.md)   
  [Создание &#40;объединенного элемента Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
- [Master Data Services &#40;членов&#41;](../../2014/master-data-services/members-master-data-services.md)  
+ [Элементы (службы Master Data Services)](../../2014/master-data-services/members-master-data-services.md)  
   
   

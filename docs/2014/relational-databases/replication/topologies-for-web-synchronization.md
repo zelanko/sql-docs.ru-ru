@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 62fd4cd78beaeff479fc7cc9ec3abbd79e227e04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63273570"
 ---
 # <a name="topologies-for-web-synchronization"></a>Topologies for Web Synchronization
-  Вы можете выбрать одну из различных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] топологий репликации веб-синхронизации. Наиболее часто используемые способы настройки веб-синхронизации включают в себя следующие.  
+  Существует несколько топологий репликации [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для веб-синхронизации. Наиболее часто используемые способы настройки веб-синхронизации включают в себя следующие.  
   
 -   Отдельный сервер  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63273570"
  ![Веб-синхронизация с повторной публикацией](media/web-sync05.gif "Веб-синхронизация с повторной публикацией")  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка веб-синхронизации](configure-web-synchronization.md)   
- [Веб-синхронизация для репликации слиянием](web-synchronization-for-merge-replication.md)  
+ [Configure Web Synchronization](configure-web-synchronization.md)   
+ [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)  
   
   

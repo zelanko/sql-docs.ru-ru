@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0e9a6a1a96d208077e70c0cf1835cff6e34650dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489112"
 ---
-# <a name="task-5-setting-term-based-relationships"></a>Задача 5. Задание связей на основе параметров
+# <a name="task-5-setting-term-based-relationships"></a>Задача 5. Задание связей на основе термина
   В этой задаче вы определяете несколько связей на основе термина для значений в домене **имени поставщика** . Связь на основе терма позволяет исправить терм, являющийся частью значения в домене. Это позволяет считать идентичными синонимами несколько значений, идентичных по написанию во всем, кроме отдельных частей. Например, **Inc.** можно исправить на « **включено**». Службы DQS используют эти связи при обнаружении знаний, очистке и сопоставлении. Дополнительные сведения см. в разделе [Создание связей на основе термина](https://msdn.microsoft.com/library/hh510404.aspx) .  
   
 1.  Выберите **имя поставщика** в **списке Домен**.  
@@ -30,14 +30,14 @@ ms.locfileid: "65489112"
   
 5.  Повторите предыдущие два шага для следующих значений:  
   
-    |Значение|Исправить на|  
+    |Применение|Исправить на|  
     |-----------|----------------|  
     |Corp.|Corporation|  
     |Inc.|Incorporated|  
   
      ![Связи на основе термина](../../2014/tutorials/media/et-settingtermbasedrelations.jpg "Связи на основе термина")  
   
-## <a name="next-step"></a>Дальнейшее действие  
- [Задача 6. Задание синонимов](../../2014/tutorials/task-6-setting-synonyms.md)  
+## <a name="next-step"></a>Следующий шаг  
+ [Задача 6. Задание синонимов](../../2014/tutorials/task-6-setting-synonyms.md)  
   
   

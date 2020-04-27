@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d171270a7605c258f9bc347781cd9a4d91c7a348
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014675"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Обновление данных при помощи диаграмм обновления XML (SQLXML 4.0)
@@ -91,7 +91,7 @@ ms.locfileid: "66014675"
   
 -   В большинстве примеров задействован образец базы данных AdventureWorks. Все обновления применяются к таблицам в этой базе данных. Базу данных AdventureWorks можно восстановить.  
   
-### <a name="a-updating-a-record"></a>A. Обновление записи  
+### <a name="a-updating-a-record"></a>А) Обновление записи  
  Следующая диаграмма обновления используется для изменения фамилии сотрудника в таблице Person.Contact базы данных AdventureWorks на Fuller. В диаграмме обновления не задана схема сопоставления, поэтому применяется сопоставление по умолчанию.  
   
 ```  
@@ -119,7 +119,7 @@ ms.locfileid: "66014675"
   
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>Б. Обновление нескольких записей с помощью атрибута updg:id  
+### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>Б) Обновление нескольких записей с помощью атрибута updg:id  
  В данном примере диаграмма обновления выполняет два обновления в таблице HumanResources.Shift в базе данных AdventureWorks.  
   
 -   Имя исходной дневной смены, начинающейся в 7:00, меняется с «Day» на «Early Morning».  
@@ -554,7 +554,7 @@ ms.locfileid: "66014675"
   
  Дополнительные примеры диаграмм обновления, в которых используются схемы сопоставления, см. [в разделе Указание схемы сопоставления с заметками в диаграмма обновления &#40;SQLXML 4,0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Вопросы безопасности диаграмма обновления &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

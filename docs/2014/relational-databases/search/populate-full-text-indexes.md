@@ -25,16 +25,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011180"
 ---
 # <a name="populate-full-text-indexes"></a>Заполнение полнотекстовых индексов
   Создание и обслуживание полнотекстового индекса включает процесс *заполнения* индекса (которое также называется *сканированием*).  
   
-##  <a name="types"></a>Типы населения  
+##  <a name="types-of-population"></a><a name="types"></a>Типы населения  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]поддерживает следующие типы заполнения: полное заполнение, автоматическое или ручное заполнение на основе отслеживания изменений и добавочное заполнение на основе меток времени.  
   
 ### <a name="full-population"></a>Полное заполнение  
@@ -91,8 +91,7 @@ ms.locfileid: "66011180"
   
  Для выполнения добавочного заполнения проиндексированная таблица должна включать столбец типа `timestamp`. Если столбца типа `timestamp` в таблице нет, добавочное заполнение невозможно. Попытка выполнить добавочное заполнение для таблицы, не содержащей столбец типа `timestamp`, приведет к полному заполнению. Кроме того, если за время, прошедшее с момента последнего заполнения, изменились какие-либо метаданные, влияющие на полнотекстовый индекс таблицы, то запросы добавочного заполнения реализуются как полное заполнение. Сюда относятся и изменения в метаданных, вызванные изменениями в определениях любых столбцов, индексов или полнотекстовых индексов.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет строки, которые изменились со времени последнего заполнения, с помощью столбца `timestamp`. Затем операция добавочного заполнения обновляет полнотекстовый индекс для строк, добавленных, удаленных или измененных после или во время последнего заполнения. Если выполняется большое количество операций вставки в таблицу, то использование добавочного заполнения может быть более эффективным, чем использование заполнения вручную.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет строки, которые изменились со времени последнего заполнения, с помощью столбца `timestamp`. Затем операция добавочного заполнения обновляет полнотекстовый индекс для строк, добавленных, удаленных или измененных после или во время последнего заполнения. Если выполняется большое количество операций вставки в таблицу, то использование добавочного заполнения может быть более эффективным, чем использование заполнения вручную.  
   
  По окончании заполнения служба полнотекстового поиска сохраняет новое значение `timestamp`. Это значение — самое большое значение `timestamp`, которое встретилось средству сбора данных SQL. Это значение будет использовано в начале последующего добавочного заполнения.  
   
@@ -100,12 +99,12 @@ ms.locfileid: "66011180"
   
 
   
-##  <a name="examples"></a>Примеры заполнения полнотекстовых индексов  
+##  <a name="examples-of-populating-full-text-indexes"></a><a name="examples"></a>Примеры заполнения полнотекстовых индексов  
   
 > [!NOTE]  
 >  В примерах этого раздела используется таблица `Production.Document` или `HumanResources.JobCandidate` образца базы данных `AdventureWorks` .  
   
-### <a name="a-creating-a-full-text-index-without-running-a-full-population"></a>A. Создание полнотекстового индекса без выполнения полного заполнения  
+### <a name="a-creating-a-full-text-index-without-running-a-full-population"></a>А) Создание полнотекстового индекса без выполнения полного заполнения  
  В следующем примере создается полнотекстовый индекс для таблицы `Production.Document` образца базы данных `AdventureWorks` . В этом примере используется параметр WITH CHANGE_TRACKING OFF, NO POPULATION для задержки первоначального полного заполнения.  
   
 ```  
@@ -124,7 +123,7 @@ GO
   
 ```  
   
-### <a name="b-running-a-full-population-on-table"></a>Б. Выполнение полного заполнения в таблице  
+### <a name="b-running-a-full-population-on-table"></a>Б) Выполнение полного заполнения в таблице  
  В следующем примере полное заполнение выполняется в таблице `Production.Document` образца базы данных `AdventureWorks` .  
   
 ```  
@@ -168,7 +167,7 @@ GO
   
 
   
-##  <a name="create"></a>Создание или изменение расписания для добавочного заполнения  
+##  <a name="creating-or-changing-a-schedule-for-incremental-population"></a><a name="create"></a>Создание или изменение расписания для добавочного заполнения  
   
 #### <a name="to-create-or-change-a-schedule-for-incremental-population-in-management-studio"></a>Создание или изменение расписания добавочных заполнений в Management Studio  
   
@@ -209,7 +208,7 @@ GO
   
 
   
-##  <a name="crawl"></a>Устранение ошибок полнотекстового заполнения (сканирование)  
+##  <a name="troubleshooting-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a>Устранение ошибок полнотекстового заполнения (сканирование)  
  При возникновении ошибки во время сканирования модуль протоколирования сканирования, входящий в механизм полнотекстового поиска, создает и обновляет журнал сканирования, хранящийся в текстовом файле. Каждый журнал сканирования соответствует конкретному полнотекстовому каталогу. По умолчанию журналы сканирования, соответствующие конкретному экземпляру — в данном случае первому экземпляру, — располагаются в папке «%ProgramFiles%\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG». Имена файлов журналов сканирования имеют следующий формат.  
   
  SQLFT\<DatabaseID>\<фуллтексткаталогид>. Журнал [\<n>]  
@@ -227,11 +226,11 @@ GO
   
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)   
- [Приступая к работе с полнотекстовым поиском](get-started-with-full-text-search.md)   
- [Создание полнотекстовых индексов и управление ими](create-and-manage-full-text-indexes.md)   
- [Создание ПОЛНОТЕКСТОВОГО индекса &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
- [ALTER FULLTEXT INDEX &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
+ [Приступая к работе с компонентом Full-Text Search](get-started-with-full-text-search.md)   
+ [Создание и управление полнотекстовыми индексами](create-and-manage-full-text-indexes.md)   
+ [CREATE FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
+ [ALTER FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
   
   

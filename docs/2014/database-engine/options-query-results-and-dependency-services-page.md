@@ -13,28 +13,28 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481207"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>Параметры ("Результаты запроса" и страница "Службы зависимостей")
   Используйте эту страницу, чтобы указать сервер для подключения к службам зависимостей. Службы зависимостей позволяют извлекать данные о зависимостях между объектами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], сохраненными на разных серверах. Просмотреть зависимости объектов можно с помощью диалогового окна « **зависимости объектов** » в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]среде.  
   
- **Что необходимо сделать?**  
+ **Выбор действия**  
   
 1.  [Откройте диалоговое окно «Параметры» (страницу результатов запроса или служб зависимостей)](#open_dialog)  
   
 2.  [Настройка параметров](#options)  
   
-##  <a name="open_dialog"></a>Открытие диалогового окна «Параметры» (страница «результаты запроса/службы зависимостей»)  
+##  <a name="open-the-options-query-resultsdependency-services-page-dialog-box"></a><a name="open_dialog"></a>Открытие диалогового окна «Параметры» (страница «результаты запроса/службы зависимостей»)  
   
 1.  В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]выберите пункт **Параметры** в меню **Сервис** .  
   
 2.  Разверните **Результаты запроса** и нажмите кнопку **Службы зависимостей**.  
   
-##  <a name="options"></a>Настройка параметров  
+##  <a name="configure-the-options"></a><a name="options"></a>Настройка параметров  
   
 ### <a name="options"></a>Параметры  
  **Сервер служб зависимостей**  
@@ -51,5 +51,5 @@ ms.locfileid: "65481207"
  **Пароль**  
  При использовании проверки подлинности SQL Server укажите пароль.  
   
- **Проверьте**  
+ **Тест**  
  Щелкните, чтобы проверить соединение.

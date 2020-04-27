@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cbdf233af3c0c27d6b4e95d18dc2c438d5307e7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479478"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>Развертывание пакета развертывания модели с помощью мастера
@@ -26,14 +26,14 @@ ms.locfileid: "65479478"
 > [!IMPORTANT]  
 >  Пакеты могут быть развернуты только в выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , в котором они были созданы. Это означает, что пакеты, созданные в среде [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , не могут быть развернуты в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** в целевой среде служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ;  
   
 -   должен существовать пакет развертывания модели. Дополнительные сведения см. в разделе [Создание пакета развертывания модели с помощью мастера](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
   
--   В среде, в которой выполняется развертывание модели, необходимо обладать правами администратора. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
+-   В среде, в которой выполняется развертывание модели, необходимо обладать правами администратора. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-deploy-a-model-deployment-package-of-model-objects-only"></a>Развертывание пакета развертывания модели, состоящего только из объектов модели  
   
@@ -47,7 +47,7 @@ ms.locfileid: "65479478"
   
 5.  Найдите свой пакет развертывания (файл PKG) и нажмите кнопку **Открыть**.  
   
-6.  Щелкните **Далее**.  
+6.  Нажмите кнопку **Далее**.  
   
 7.  После загрузки пакета нажмите кнопку **Далее**.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65479478"
   
 9. Нажмите кнопку **Готово**, чтобы закрыть мастер.  
   
- **Заметки о**  
+ **Примечания.**  
   
 -   Если представление подписки в пакете имеет то же имя, что и представление подписки в существующей модели, это представление создается как *modelname. subscriptionviewname*. Если это имя уже используется, то представление подписки не создается.  
   
@@ -73,14 +73,14 @@ ms.locfileid: "65479478"
   
      При обновлении в случае неудачного завершения любого из первых трех шагов переход к следующему шагу не производится. Однако откат уже внесенных изменений также не выполняется. Если процесс развертывания завершается неудачей в шаге 4, обновляются те элементы, которые могут обновиться.  
   
-## <a name="next-steps"></a>Next Steps  
- Определенные пользователем метаданные, атрибуты файлов и разрешения для пользователей и групп не включаются в пакеты развертывания модели. При развертывании модели их нужно обновить вручную. Дополнительные сведения см. в разделе:  
+## <a name="next-steps"></a>Дальнейшие действия  
+ Определенные пользователем метаданные, атрибуты файлов и разрешения для пользователей и групп не включаются в пакеты развертывания модели. При развертывании модели их нужно обновить вручную. Дополнительная информация:  
   
 -   [Добавление Master Data Services &#40;метаданных&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)  
   
--   [Назначение разрешений объекта модели &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
+-   [Назначение разрешения для объекта модели (службы Master Data Services)](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>См. также:  
- [Развертывание моделей &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+## <a name="see-also"></a>См. также  
+ [Развертывание моделей (службы Master Data Services)](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

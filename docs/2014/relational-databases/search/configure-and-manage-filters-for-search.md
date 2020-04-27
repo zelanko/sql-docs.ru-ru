@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: df228060a5b714d92c9ae200d91851e4b579839d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011582"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Настройка поисковых фильтров и управление ими
@@ -25,14 +25,12 @@ ms.locfileid: "66011582"
   
  Данный фильтр зависит от типа данных документа (DOC, PDF, XLS, XML и т. д.). Такие фильтры реализуют интерфейс IFilter. Для получения дополнительных сведений об этих типах документов выполните запрос к представлению каталога [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) .  
   
- Двоичные документы можно хранить в одном столбце `varbinary(max)` или `image`. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выбирает для каждого документа правильный фильтр в соответствии с расширением файла. Поскольку расширение файла не отображается, если файл хранится в столбце `varbinary(max)` или `image` , расширение файла (doc, XLS, PDF и т. д.) должно храниться в отдельном столбце таблицы, называемом столбцом типа. Столбец типов может иметь любой символьный тип данных и содержит расширение файла документа (например, DOC в случае документа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word). В таблице **документа** в [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]столбец **документа** имеет тип `varbinary(max)`, а столбец Type, fileExtension, имеет тип. **** `nvarchar(8)`  
+ Двоичные документы можно хранить в одном столбце `varbinary(max)` или `image`. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выбирает для каждого документа правильный фильтр в соответствии с расширением файла. Поскольку расширение файла не отображается, если файл хранится в столбце `varbinary(max)` или `image` , расширение файла (doc, XLS, PDF и т. д.) должно храниться в отдельном столбце таблицы, называемом столбцом типа. Столбец типов может иметь любой символьный тип данных и содержит расширение файла документа (например, DOC в случае документа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word). В таблице **документа** в [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]столбец **документа** имеет тип `varbinary(max)`, а столбец Type, fileExtension, имеет тип. **FileExtension** `nvarchar(8)`  
   
 > [!NOTE]  
 >  Фильтр может быть способен обрабатывать объекты, внедренные в родительский объект, в зависимости от его реализации. Однако в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] фильтры не настроены на переход по ссылкам на другие объекты.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливаются собственные фильтры XML и HTML. Кроме того, любые фильтры для собственных форматов [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (DOC, XDOC, PPT и т. д.), которые уже установлены в операционной системе, также загружаются средствами  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы определить, какие фильтры загружены в экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]в данный момент, используйте хранимую процедуру [sp_help_fulltext_system_components](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql) следующим образом:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливаются собственные фильтры XML и HTML. Кроме того, любые фильтры для собственных форматов [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (DOC, XDOC, PPT и т. д.), которые уже установлены в операционной системе, также загружаются средствами  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы определить, какие фильтры загружены в экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]в данный момент, используйте хранимую процедуру [sp_help_fulltext_system_components](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql) следующим образом:  
   
 ```  
 EXEC sp_help_fulltext_system_components 'filter';   
@@ -40,11 +38,11 @@ EXEC sp_help_fulltext_system_components 'filter';
   
  Прежде чем использовать фильтры для форматов, не принадлежащих [!INCLUDE[msCoName](../../../includes/msconame-md.md)] , их необходимо вручную загрузить на экземпляр сервера. Сведения об установке дополнительных фильтров см. в статье [Просмотр или изменение зарегистрированных фильтров и разделителей слов](view-or-change-registered-filters-and-word-breakers.md).  
   
- **Просмотр столбца типа в существующем полнотекстовом индексе**  
+ **Просмотр столбца типов в существующем полнотекстовом индексе**  
   
--   [sys. fulltext_index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)  
+-   [sys.fulltext_index_columns (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. fulltext_index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)   
  [Совместимость FILESTREAM с другими компонентами SQL Server](../blob/filestream-compatibility-with-other-sql-server-features.md)  
   

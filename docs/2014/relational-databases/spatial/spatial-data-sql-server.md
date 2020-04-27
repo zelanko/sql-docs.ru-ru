@@ -18,17 +18,16 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7bd529f67f9184f86d4a9ec704e9cf7af972f3f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014060"
 ---
 # <a name="spatial-data-sql-server"></a>Пространственные данные (SQL Server)
   Пространственные данные представляют сведения о физическом расположении и форме геометрических объектов. Этими объектами могут быть точки расположения или более сложные объекты, такие как страны, дороги или озера.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает два пространственных типа данных: `geometry` и `geography`.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает два пространственных типа данных: `geometry` и `geography`.  
   
 -   Тип `geometry` представляет данные в Евклидовой (плоской) системе координат.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66014060"
 > [!IMPORTANT]  
 >  Подробное описание и примеры использования новых возможностей обработки пространственных данных в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]можно получить, загрузив технический документ [Новые функции обработки пространственных данных в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
-##  <a name="reltasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Связанные задачи  
  [Создание, конструирование и запрос экземпляров geometry](create-construct-and-query-geometry-instances.md)  
  Описывает методы, которые можно использовать с экземплярами типа данных geometry.  
   

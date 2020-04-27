@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63460112"
 ---
 # <a name="storageboundinmb-element-dta"></a>Элемент StorageBoundInMB (DTA)
@@ -38,8 +38,7 @@ ms.locfileid: "63460112"
   
 |Характеристика|Description|  
 |--------------------|-----------------|  
-|**Тип данных и длина**|
-  `unsignedInt`, неограниченная длина|  
+|**Тип данных и длина**|`unsignedInt`, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  
 |**Наличие**|Необязательный параметр. Может быть использован только один раз для элемента `TuningOptions`.|  
   

@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f27b47ae8216fa64b537d4c8b22b612c535a1869
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013668"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Указание связей при помощи sql:relationship (SQLXML 4.0)
@@ -50,7 +50,7 @@ ms.locfileid: "66013668"
   
  Для указания имен таблиц и необходимых сведений о соединении для заметки `sql:relationship` должны быть определены следующие атрибуты. Эти атрибуты допустимы только с элементом ** \<SQL: relationship>** .  
   
- **Название**  
+ **Имя**  
  Указывает уникальное имя связи.  
   
  **Parent**  
@@ -75,7 +75,7 @@ ms.locfileid: "66013668"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. Определение заметки sql:relationship для элемента  
+### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>А) Определение заметки sql:relationship для элемента  
  Следующая схема XSD с заметками включает в себя ** \<>клиента** и ** \<порядок>** элементов. Элемент ** \<Order>** является дочерним элементом элемента ** \<>Customer** .  
   
  В схеме `sql:relationship` заметка задается в дочернем элементе ** \<Order>** . Сама связь определяется в элементе ** \<XSD: appinfo>** .  
@@ -184,7 +184,7 @@ ms.locfileid: "66013668"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-a-relationship-chain"></a>Б. Указание цепочки связей  
+### <a name="b-specifying-a-relationship-chain"></a>Б) Указание цепочки связей  
  Для данного примера предположим, что в следующем XML-документе нужно использовать данные, полученные из базы данных AdventureWorks:  
   
 ```  

@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aaccdd5d4f84f5bdba240fadc7d4d0729476f215
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489144"
 ---
-# <a name="task-5-adding-data-flow-task"></a>Задача 5. Добавление задачи потока данных
+# <a name="task-5-adding-data-flow-task"></a>Задача 5. Добавление задачи потока данных
   В этой задаче вы добавите задачу потока данных в поток управления пакетом служб SSIS.  
   
 1.  Перетащите **задачу потока данных** из **панели элементов служб SSIS** на вкладку **поток управления** в конструкторе служб SSIS. Если **панель элементов служб SSIS**не отображается, щелкните в любом месте вкладки **поток управления** , выберите **SSIS** в строке меню и щелкните **панель элементов служб SSIS**.  
@@ -30,7 +30,7 @@ ms.locfileid: "65489144"
   
 4.  Дважды щелкните **задачу потока данных** , чтобы перейти на вкладку **поток данных** .  
   
-## <a name="next-step"></a>Дальнейшее действие  
- [Задача 6. Добавление источника Excel в поток данных](task-6-adding-excel-source-to-the-data-flow.md)  
+## <a name="next-step"></a>Следующий шаг  
+ [Задача 6. Добавление в поток данных источника Excel](task-6-adding-excel-source-to-the-data-flow.md)  
   
   

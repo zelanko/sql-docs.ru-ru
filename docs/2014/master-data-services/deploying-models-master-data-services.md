@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6b631686e9daf716bb124ce5fadaf7575420a114
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483130"
 ---
 # <a name="deploying-models-master-data-services"></a>Развертывание моделей (службы Master Data Services)
@@ -29,11 +29,11 @@ ms.locfileid: "65483130"
 ## <a name="tools-for-deploying-models"></a>Инструменты для развертывания моделей  
  Для работы с пакетами модели можно использовать одно из трех средств, в зависимости от задач, которые требуется выполнить.  
   
--   **Средство MDSModelDeploy**. для создания и развертывания объектов и данных модели используйте средство MDSModelDeploy. exe. Если при установке MDS был выбран путь по умолчанию, это средство находится в папке *диск*: \PROGRAM Files\Microsoft SQL Server\120\Master Data Services\Configuration.  
+-   **Средство MDSModelDeploy**. Для создания и развертывания объектов и данных модели используйте средство MDSModelDeploy.exe. Если при установке MDS был выбран путь по умолчанию, это средство находится в папке *диск*: \PROGRAM Files\Microsoft SQL Server\120\Master Data Services\Configuration.  
   
--   **Мастер развертывания модели**. для создания и развертывания пакетов только для структуры модели используйте мастер в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] веб-приложении. Этот мастер нельзя использовать для развертывания данных.  
+-   **Мастер развертывания модели**. Чтобы создать и развернуть только пакеты структуры модели, воспользуйтесь мастером в веб-приложении [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Этот мастер нельзя использовать для развертывания данных.  
   
--   **Редактор пакетов моделей**. чтобы изменить пакет модели, используйте ModelPackageEditor. exe, который запускает мастер редактора пакетов моделей. С помощью этого мастера выполняется изменения пакета, созданного средством MDSModelDeploy или мастером развертывания модели. Если при установке MDS был выбран путь по умолчанию, это средство находится в папке *диск*: \PROGRAM Files\Microsoft SQL Server\120\Master Data Services\Configuration.  
+-   **Редактор модели пакета**. Чтобы изменить пакет модели, используйте файл ModelPackageEditor.exe, который запускает редактор пакетов моделей. С помощью этого мастера выполняется изменения пакета, созданного средством MDSModelDeploy или мастером развертывания модели. Если при установке MDS был выбран путь по умолчанию, это средство находится в папке *диск*: \PROGRAM Files\Microsoft SQL Server\120\Master Data Services\Configuration.  
   
 > [!IMPORTANT]  
 >  MDSDeployModel можно использовать для создания новой модели или клона модели или обновления существующей модели и ее данных. Если средство MDSModelDeploy используется для обновления существующей модели и ее данных и пакет не содержит сущность, атрибут или элемент, имеющиеся в целевой модели, MDSModelDeploy не удаляет из модели эту сущность, атрибут или элемент.  
@@ -76,6 +76,6 @@ ms.locfileid: "65483130"
   
 ## <a name="related-content"></a>См. также  
   
--   [Параметры развертывания модели &#40;Master Data Services&#41;](model-deployment-options-master-data-services.md)  
+-   [Варианты развертывания модели (службы Master Data Services)](model-deployment-options-master-data-services.md)  
   
   

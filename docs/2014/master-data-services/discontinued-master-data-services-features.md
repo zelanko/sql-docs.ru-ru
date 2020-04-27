@@ -11,21 +11,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3f1eb85cb05c8284990d46241ed752515ef5504b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479446"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>Неподдерживаемые функции служб Master Data Services в SQL Server «2014»
-  В этом разделе описаны функции служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , которые больше недоступны в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  В этой статье описаны функции служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , которые больше недоступны в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="includesssql14includessssql14-mdmd-discontinued-features"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]Неподдерживаемые функции  
+## <a name="sssql14-discontinued-features"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Неподдерживаемые возможности  
  В этой версии нет неподдерживаемых возможностей.  
   
-## <a name="includesssql11includessssql11-mdmd-discontinued-features"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]Неподдерживаемые функции  
+## <a name="sssql11-discontinued-features"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Неподдерживаемые возможности  
   
-### <a name="security"></a>безопасность  
+### <a name="security"></a>Безопасность  
  В целях упрощения настройки свойств безопасности, более невозможно присваивание разрешений на объекты модели для объектов производных иерархий, явных иерархий и групп атрибутов.  
   
 -   Теперь разрешения на производную иерархию основываются на модели. Например, если требуется, чтобы пользователь имел разрешение на производную иерархию, необходимо назначить **Обновление** объекту модели. Затем можно назначить **запрет** доступа для любых сущностей, к которым пользователь не должен иметь доступ.  
@@ -53,7 +53,7 @@ ms.locfileid: "65479446"
  Кроме того, пакеты могут быть развернуты только в выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], в котором они были созданы. Это означает, что пакеты, созданные в среде [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , не могут быть развернуты в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Необходимо развернуть пакет в среде [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], а затем обновить базу данных до версии [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 ### <a name="code-generation-business-rules"></a>Бизнес-правила создания кодов  
- Теперь бизнес-правила, которые автоматически формируют значения атрибута Code, администрируются по-разному. Ранее для создания значений атрибута Code использовался **атрибут по умолчанию для действия созданное значение** в функциональной области **Администрирование системы** в разделе **бизнес-правила**. Теперь в **системном администрировании**необходимо изменить сущность, чтобы включить автоматически создаваемые значения кода. Дополнительные сведения см. в разделе [Автоматическое создание кодов (службы Master Data Services)](automatic-code-creation-master-data-services.md).  
+ Теперь бизнес-правила, которые автоматически формируют значения атрибута Code, администрируются по-разному. Ранее для создания значений атрибута Code использовался **атрибут по умолчанию для действия созданное значение** в функциональной области **Администрирование системы** в разделе **бизнес-правила**. Теперь в **системном администрировании**необходимо изменить сущность, чтобы включить автоматически создаваемые значения кода. Дополнительные сведения см. в разделе [Автоматическое создание кода &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).  
   
  Если существует пакет развертывания модели [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], который содержит правило такого типа, при обновлении базы данных до [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] бизнес-правило будет исключено.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "65479446"
 ### <a name="powershell-cmdlets"></a>Командлеты PowerShell  
  Теперь службы MDS не содержат командлетов PowerShell.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Устаревшие функции Master Data Services в SQL Server «2014»](deprecated-master-data-services-features.md)  
   
   

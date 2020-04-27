@@ -14,26 +14,26 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2402a69f428fe0c9ba2359f100e2baf16e1a1d04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480998"
 ---
 # <a name="create-a-knowledge-base"></a>Создание базы знаний
   В этом разделе описано, как создать базу знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) и подготовить ее для управления доменами, обнаружения знаний или добавления политики сопоставления.  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
  Для создания базы знаний необходимо установить [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] и [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для создания базы знаний необходимо иметь роль dqs_administrator или dqs_kb_editor в базе данных DQS_MAIN.  
   
-##  <a name="Createaknowledgebase"></a>Создание базы знаний  
+##  <a name="create-a-knowledge-base"></a><a name="Createaknowledgebase"></a>Создание базы знаний  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -57,9 +57,9 @@ ms.locfileid: "65480998"
   
     -   Выберите вариант **Политика сопоставления** , чтобы создать политику сопоставления и добавить ее в базу знаний.  
   
-6.  Нажмите кнопку **Создать**.  
+6.  Нажмите кнопку **Create** (Создать).  
   
-##  <a name="FollowUp"></a>Дальнейшие действия. После создания базы знаний  
+##  <a name="follow-up-after-creating-a-knowledge-base"></a><a name="FollowUp"></a> Дальнейшие действия. После создания базы знаний  
  После создания базы знаний откроется мастер, с помощью которого можно выполнить обнаружение знаний, мастер для создания политики сопоставления или страницы для управления доменами. Дополнительные сведения об обнаружении знаний, управлении доменами и политике сопоставления см. в разделах [Обнаружение знаний](../../2014/data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../../2014/data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

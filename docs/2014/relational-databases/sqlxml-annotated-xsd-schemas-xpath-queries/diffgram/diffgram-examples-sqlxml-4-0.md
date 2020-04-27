@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 38bee43ed5b727bca552c1b44010dd692012d823
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012965"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>Примеры дельт (SQLXML 4.0)
@@ -72,7 +72,7 @@ ms.locfileid: "66012965"
   
      Сохраните данную схему под именем DiffGramSchema.xml в той же папке, где находятся остальные файлы, используемые в примерах.  
   
-## <a name="a-deleting-a-record-by-using-a-diffgram"></a>A. Удаление записи с помощью дельты  
+## <a name="a-deleting-a-record-by-using-a-diffgram"></a>А) Удаление записи с помощью дельты  
  Дельта в этом примере удаляет запись пользователя (с атрибутом CustomerID, имеющим значение ALFKI) из таблицы Cust и удаляет соответствующую запись заказа (с атрибутом OrderID со значением 1) из таблицы Ord.  
   
 ```  
@@ -141,7 +141,7 @@ ms.locfileid: "66012965"
   
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="b-inserting-a-record-by-using-a-diffgram"></a>Б. Вставка записи с помощью дельты  
+## <a name="b-inserting-a-record-by-using-a-diffgram"></a>Б) Вставка записи с помощью дельты  
  В этом примере дельта вставляет по одной записи в таблицы Cust и Ord.  
   
 ```  

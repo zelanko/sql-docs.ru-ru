@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312089"
 ---
-# <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Урок 4. Создание прогнозов временных рядов с использованием расширений интеллектуального анализа данных
+# <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Занятие 4: Создание прогнозов на основе временных рядов с помощью расширений интеллектуального анализа данных
   На этом занятии и на следующем занятии будут использоваться расширения интеллектуального анализа данных для создания различных типов прогнозов на основе моделей временных рядов, созданных на [занятии 1. Создание модели и структуры интеллектуального анализа данных временных рядов](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md) , а также [занятие 2. Добавление моделей интеллектуального анализа данных в структуру интеллектуального анализа временных рядов](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md).  
   
  Использование модели временных рядов дает много возможностей для выполнения прогнозирования.  
@@ -144,9 +144,9 @@ WHERE [<criteria>]
  На следующем занятии будет создан запрос, предоставляющий модели новые данные, и будет выполнено сравнение результатов этого прогноза с результатами только что созданного прогноза.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Занятие 5. Расширение модели временных рядов](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
+ [Занятие 5.: Расширение модели временных рядов](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [PredictTimeSeries &#40;расширений интеллектуального анализа данных&#41;](/sql/dmx/predicttimeseries-dmx)   
  [Запаздывание &#40;&#41;расширений интеллектуального анализа данных](/sql/dmx/lag-dmx)   
  [Примеры запросов модели временных рядов](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ca57d34a3dda2880f3882d1940c6852af0729fb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482733"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Перекрытие разрешений моделей и элементов (службы основных данных)
@@ -26,7 +26,7 @@ ms.locfileid: "65482733"
   
  Если разрешение элемента отличается от разрешения соответствующего модельного объекта, то применяются следующие правила.  
   
--   **Deny** переопределяет все остальные разрешения.  
+-   **Запретить** переопределяет все остальные разрешения.  
   
 -   Переопределяет **Обновление** **только для чтения** .  
   
@@ -45,7 +45,7 @@ ms.locfileid: "65482733"
   
  ![mds_conc_overlap_model_example_1](../../2014/master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
-## <a name="example-2"></a>Пример 2.  
+## <a name="example-2"></a>Пример 2  
  ![mds_conc_overlap_model_2](../../2014/master-data-services/media/mds-conc-overlap-model-2.gif "mds_conc_overlap_model_2")  
   
  На вкладке **Модели** для атрибута Subcategory назначено разрешение **Обновление** .  
@@ -56,7 +56,7 @@ ms.locfileid: "65482733"
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## <a name="example-3"></a>Пример 3  
+## <a name="example-3"></a>Пример 3  
  ![mds_conc_overlap_model_3](../../2014/master-data-services/media/mds-conc-overlap-model-3.gif "mds_conc_overlap_model_3")  
   
  На вкладке **модели** атрибут Подкатегория имеет разрешение **только чтение** .  
@@ -67,8 +67,8 @@ ms.locfileid: "65482733"
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Как определяются разрешения &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
- [Перекрывающиеся разрешения пользователей и групп &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
+ [Перекрытие разрешений пользователей и групп (службы основных данных)](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

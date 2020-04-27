@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 403e9394f23ba0d6ce503dbea3e46ad7f37b9cd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054319"
 ---
 # <a name="xml-source-editor-columns-page"></a>Редактор источника «XML» (страница «Столбцы»)
@@ -34,9 +34,9 @@ ms.locfileid: "66054319"
  Просмотр внешних (исходных) столбцов в том порядке, в котором их будет считывать задача. Этот порядок можно изменить, сначала очистив выделенные столбцы в таблице, отображаемой в редакторе, а затем выбрав внешние столбцы из списка в другом порядке.  
   
  **Выходной столбец**  
- Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца; однако можно выбрать любое уникальное описательное имя. Выбранное имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
+ Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца, однако можно выбрать любое уникальное описательное имя. Выбранное имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор источника "XML" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
  [Редактор источника "XML" &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   

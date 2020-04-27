@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 696a114c74ecb6d4b8f4cfe6b2d16b33869e1602
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478904"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Сопоставление качества данных в надстройке MDS для Excel
@@ -48,8 +48,8 @@ ms.locfileid: "65478904"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Объедините внешние данные с данными, управляемыми MDS, и подготовьтесь к их сравнению.|[Объединение &#40;данных надстройка MDS для Excel&#41;](combine-data-mds-add-in-for-excel.md)|  
-|Воспользуйтесь базой набора знаний служб DQS для определения схожести данных.|[Сопоставление схожих &#40;данных надстройка MDS для Excel&#41;](match-similar-data-mds-add-in-for-excel.md)|  
+|Объедините внешние данные с данными, управляемыми MDS, и подготовьтесь к их сравнению.|[Объединение данных (надстройка MDS для Excel)](combine-data-mds-add-in-for-excel.md)|  
+|Воспользуйтесь базой набора знаний служб DQS для определения схожести данных.|[Сопоставление схожих данных (надстройка MDS для Excel)](match-similar-data-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>См. также  
   

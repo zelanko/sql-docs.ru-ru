@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7ee7e06829f72ab44fd036766907be94c95b7d90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483694"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>Автоматическое создание кодов (службы Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "65483694"
  Когда значения атрибутов вводятся в MDS — либо с помощью одного из программных средств, либо с помощью промежуточного процесса — можно оставить значение атрибута пустым. При использовании бизнес-правил значения будут наращиваться, исходя из наибольшего существующего значения. Например, если правило звучит как "Задать для атрибута формируемое значение по умолчанию начиная с 1, с увеличением последующих значений на 4" и наибольшее значение атрибута равно 700, то следующий добавленный элемент будет равняться 704.  
   
 ## <a name="deleting-automatically-generated-values"></a>Удаление автоматически сформированных значений  
- После того как администратор включит автоматическое формирование значений для атрибута Code, пользователь может случайно удалить элемент со значением Code, которое необходимо использовать повторно. Будет отображено сообщение об ошибке "код элемента уже используется удаленным элементом". Есть два возможных решения:  
+ После того как администратор включит автоматическое формирование значений для атрибута Code, пользователь может случайно удалить элемент со значением Code, которое необходимо использовать повторно. Будет отображено сообщение об ошибке "код элемента уже используется удаленным элементом". Существует два возможных решения:  
   
 -   В функциональной области **Управление версиями** администратор может отменить транзакцию, которая произошла при удалении участника. Однако это означает, что восстанавливаются все атрибуты предыдущего элемента и членство в иерархиях и коллекциях. Дополнительные сведения см. [в разделе обратная &#40;транзакций Master Data Services&#41;](reverse-a-transaction-master-data-services.md).  
   
@@ -41,15 +41,15 @@ ms.locfileid: "65483694"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Автоматическое формирование значений для атрибута Code.|[Автоматически формировать значения атрибутов кода &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
-|Автоматическое формирование значений для других атрибутов.|[Автоматически формировать значения атрибутов, отличные от Code &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
+|Автоматическое формирование значений для атрибута Code.|[Автоматическое формирование значений атрибута Code (службы Master Data Services)](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
+|Автоматическое формирование значений для других атрибутов.|[Автоматическое формирование значений атрибута, отличного от Code (службы Master Data Services)](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Общие сведения о службах Master Data Services](master-data-services-overview-mds.md)  
+-   [Обзор Master Data Services](master-data-services-overview-mds.md)  
   
--   [Бизнес-правила &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [Бизнес-правила (службы Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)  
   
--   [Сущности &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
+-   [Сущности (службы Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)  
   
   

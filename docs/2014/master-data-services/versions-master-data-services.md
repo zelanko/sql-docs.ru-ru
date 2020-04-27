@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 07ba6990049c5ad3bff2e93b06aac0023dedbfe8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481348"
 ---
 # <a name="versions-master-data-services"></a>Версии (службы Master Data Services)
@@ -47,7 +47,7 @@ ms.locfileid: "65481348"
   
 1.  Начальная версия создается автоматически при создании модели и наполнении базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] основными данными компании. На основании разрешений пользователи могут при необходимости вносить изменения в эту версию.  
   
-2.  Когда необходимо зафиксировать версию модели, заблокируйте ее, чтобы только администраторы модели могли обновлять данные. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md). Если настраиваются уведомления, то администратору модели по электронной почте направляются уведомления каждый раз, когда изменяется состояние версии. Дополнительные сведения см. в разделе [Настройка уведомления электронной почты (службы Master Data Services)](../../2014/master-data-services/configure-email-notifications-master-data-services.md).  
+2.  Когда необходимо зафиксировать версию модели, заблокируйте ее, чтобы только администраторы модели могли обновлять данные. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](administrators-master-data-services.md). Если настраиваются уведомления, то администратору модели по электронной почте направляются уведомления каждый раз, когда изменяется состояние версии. Дополнительные сведения см. в разделе [Настройка уведомления электронной почты (службы Master Data Services)](../../2014/master-data-services/configure-email-notifications-master-data-services.md).  
   
 3.  Примените бизнес-правила к данным заблокированной версии и просмотрите все ошибки, обнаруженные при проверке. При необходимости можно внести отсутствующие данные или восстановить транзакции, которые привели к возникновению ошибки. Можно также разблокировать версию, чтобы пользователи могли вносить изменения.  
   
@@ -69,22 +69,22 @@ ms.locfileid: "65481348"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Изменение имени существующей версии.|[Изменение имени версии &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)|  
-|Блокирование версии, чтобы изменять ее данные могли только администраторы.|[Блокировка &#40;версии Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)|  
-|Разблокирование версии, чтобы изменять ее данные могли пользователи.|[Разблокировка версии Master Data Services &#40;&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
-|Фиксирование версии после проверки всех данных.|[Фиксация &#40;версии Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
-|Создание нового флага для обозначения версии.|[Создание флага версии &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
-|Изменение имени для существующего флага версии.|[Измените имя флага версии &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  
-|Назначение существующего флага для версии.|[Назначение флага версии &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|Создание новой копии для существующей версии|[Копирование Master Data Services &#40;версии&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)|  
-|Удаление существующей версии.|[Удаление &#40;версии Master Data Services&#41;](../../2014/master-data-services/delete-a-version-master-data-services.md)|  
+|Изменение имени существующей версии.|[Изменение имени версии (службы Master Data Services)](../../2014/master-data-services/change-a-version-name-master-data-services.md)|  
+|Блокирование версии, чтобы изменять ее данные могли только администраторы.|[Блокировка версии (службы Master Data Services)](../../2014/master-data-services/lock-a-version-master-data-services.md)|  
+|Разблокирование версии, чтобы изменять ее данные могли пользователи.|[Разблокировка версии (службы Master Data Services)](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
+|Фиксирование версии после проверки всех данных.|[Фиксация версии (службы Master Data Services)](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
+|Создание нового флага для обозначения версии.|[Создание флага версии (службы Master Data Services)](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
+|Изменение имени для существующего флага версии.|[Изменение имени флага версии (службы Master Data Services)](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|Назначение существующего флага для версии.|[Назначение флага версии (службы Master Data Services)](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
+|Создание новой копии для существующей версии|[Копирование версии (службы Master Data Services)](../../2014/master-data-services/copy-a-version-master-data-services.md)|  
+|Удаление существующей версии.|[Удаление версии (службы Master Data Services)](../../2014/master-data-services/delete-a-version-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Отмена Master Data Services &#40;транзакций&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [Отмена транзакции (службы Master Data Services)](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [Master Data Services &#40;уведомлений&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
+-   [Уведомления (службы Master Data Services)](../../2014/master-data-services/notifications-master-data-services.md)  
   
--   [Бизнес-правила &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [Бизнес-правила (службы Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

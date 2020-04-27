@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011472"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Создание и управление полнотекстовыми каталогами
   Полнотекстовый каталог теперь является виртуальным объектом, не принадлежащим ни к одной файловой группе. Он является логическим понятием, ссылающимся на группу полнотекстовых индексов.  
   
-##  <a name="creating"></a>Создание полнотекстового каталога  
+##  <a name="creating-a-full-text-catalog"></a><a name="creating"></a>Создание полнотекстового каталога  
   
 #### <a name="to-create-a-full-text-catalog"></a>Создание полнотекстового каталога  
   
@@ -42,12 +42,12 @@ ms.locfileid: "66011472"
   
   
   
-##  <a name="props"></a>Просмотр свойств полнотекстового каталога  
+##  <a name="viewing-the-properties-of-a-full-text-catalog"></a><a name="props"></a>Просмотр свойств полнотекстового каталога  
  Для получения значений различных свойств полнотекстового индексирования можно использовать некоторые функции [!INCLUDE[tsql](../../includes/tsql-md.md)], например FULLTEXTCATALOGPROPERTY. Эти сведения полезны для администрирования и устранения нарушений в работе средств полнотекстового поиска.  
   
  В следующей таблице перечислены свойства, о которых сообщается в полнотекстовых каталогах.  
   
-|Свойство|Description|Компонент|  
+|Свойство|Описание|Компонент|  
 |--------------|-----------------|--------------|  
 |`AccentSensitivity`|Настройка учета диакритических знаков:|[FULLTEXTCATALOGPROPERTY](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql)|  
 |`ImportStatus`|Выполняется ли в настоящее время импорт полнотекстового каталога.|FULLTEXTCATALOGPROPERTY|  
@@ -60,7 +60,7 @@ ms.locfileid: "66011472"
   
   
   
-##  <a name="rebuildone"></a>Перестроение полнотекстового каталога  
+##  <a name="rebuilding-a-full-text-catalog"></a><a name="rebuildone"></a>Перестроение полнотекстового каталога  
   
 #### <a name="to-rebuild-a-full-text-catalog"></a>Перестроение полнотекстового каталога  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66011472"
   
   
   
-##  <a name="rebuildall"></a>Перестроение всех полнотекстовых каталогов для базы данных  
+##  <a name="rebuilding-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a>Перестроение всех полнотекстовых каталогов для базы данных  
   
 #### <a name="to-rebuild-the-full-text-catalogs-for-a-database"></a>Перестроение полнотекстовых каталогов базы данных  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66011472"
   
   
   
-##  <a name="removing"></a>Удаление полнотекстового каталога из базы данных  
+##  <a name="removing-a-full-text-catalog-from-a-database"></a><a name="removing"></a>Удаление полнотекстового каталога из базы данных  
   
 #### <a name="to-remove-a-full-text-catalog-from-a-database"></a>Удаление полнотекстового каталога из базы данных  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66011472"
   
   
   
-## <a name="see-also"></a>См. также:  
- [Создание ПОЛНОТЕКСТОВОГО каталога &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
+## <a name="see-also"></a>См. также  
+ [CREATE FULLTEXT CATALOG (Transact-SQL)](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
   

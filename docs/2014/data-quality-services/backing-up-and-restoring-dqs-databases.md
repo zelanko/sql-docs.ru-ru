@@ -11,18 +11,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 50b051cf2780fc1a94830c461d9ae30674bb7dad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481157"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Резервное копирование и восстановление баз данных DQS
   В этом разделе описывается, как проводить резервное копирование и восстановление баз данных DQS.  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Необходимо знать пароль для главного ключа базы данных, который вы указывали при установке сервера DQS.  
   
@@ -30,15 +30,15 @@ ms.locfileid: "65481157"
   
 -   Убедитесь, что на сервере DQS нет подключенных пользователей.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
 -   Для выполнения операций резервного копирования и восстановления учетная запись Windows должна быть членом предопределенной роли сервера sysadmin на этом экземпляре SQL Server.  
   
 -   Для завершения любых выполняемых операций или остановки каких-либо процессов в службах DQS необходимо быть членом роли dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="BackupRestore"></a>Резервное копирование и восстановление баз данных DQS  
+##  <a name="backup-and-restore-dqs-databases"></a><a name="BackupRestore"></a>Резервное копирование и восстановление баз данных DQS  
   
 1.  Запустите среду Microsoft SQL Server Management Studio и подключитесь к соответствующему экземпляру SQL Server.  
   
@@ -70,9 +70,9 @@ ms.locfileid: "65481157"
   
     ```  
   
-12. Нажмите клавишу F5, чтобы выполнить инструкции. Проверьте панель **результатов** , чтобы убедиться, что инструкции выполнены успешно.  
+12. Нажмите клавишу F5, чтобы выполнить инструкции. Откройте область **Результаты** , чтобы удостовериться в успешном выполнении инструкций.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)  
   
   

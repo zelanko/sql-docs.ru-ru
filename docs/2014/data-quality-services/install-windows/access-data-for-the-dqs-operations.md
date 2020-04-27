@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b3c722c5774a333773f4bcffc41c408d19ae28be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480522"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Предоставление доступа к данным для операций со службами DQS
@@ -24,7 +24,7 @@ ms.locfileid: "65480522"
   
 -   Собственная база данных может использоваться как в качестве исходных данных для операций служб DQS, так и для экспорта обработанных данных. Для этого убедитесь, что она размещена на том же экземпляре SQL Server, что и базы данных сервера служб Data Quality. В противном случае база данных не будет доступна в клиенте служб Data Quality для операций DQS. Также для учетной записи пользователя Windows должен быть предоставлен доступ к базе данных DQS_STAGING_DATA для экспорта соответствующих результатов, так как они экспортируются в два этапа: сначала экспортируются во временные таблицы в базе данных DQS_STAGING_DATA, а затем перемещаются в таблицу целевой базы данных.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
   
 -   Необходимо, чтобы установка сервера [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , запускаемая с помощью файла DQSInstaller.exe, была завершена. Дополнительные сведения см. в разделе [Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
@@ -44,16 +44,16 @@ ms.locfileid: "65480522"
   
     -   **db_datareader**: чтение данных из таблиц и представлений.  
   
-    -   **db_datawriter**: Добавление, удаление или изменение данных в таблицах.  
+    -   **db_datawriter**: добавление, удаление и изменение данных в таблицах.  
   
     -   **db_ddladmin**: создание, изменение или удаление таблиц и представлений.  
   
 6.  В диалоговом окне **Свойства имени входа** нажмите кнопку **ОК** , чтобы применить изменения.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
  Проверьте работоспособность операций служб DQS, использующих эту базу данных в качестве источника данных, а затем экспортирующих в нее обработанные данные.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установка служб Data Quality Services](install-data-quality-services.md)  
   
   

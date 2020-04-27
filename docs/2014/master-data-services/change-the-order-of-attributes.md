@@ -11,21 +11,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5bd144197379ed574ccd152fedf8089b311881be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483529"
 ---
 # <a name="change-the-order-of-attributes"></a>Изменение порядка атрибутов
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]вы можете изменять порядок атрибутов.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
--   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
+-   Необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** .  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-change-the-order-of-an-attribute"></a>Изменение порядка атрибутов  
   
@@ -43,7 +43,7 @@ ms.locfileid: "65483529"
   
 7.  Нажмите кнопку **Сохранить сущность**.  
   
-## <a name="see-also"></a>См. также:  
- [Master Data Services &#40;атрибутов&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+## <a name="see-also"></a>См. также  
+ [Атрибуты (службы Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

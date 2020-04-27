@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 54c1a720f34a7cce978371a6794f41e8af5f3b24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480962"
 ---
 # <a name="create-a-domain"></a>Создание домена
@@ -24,17 +24,17 @@ ms.locfileid: "65480962"
   
  Существуют следующие два способа создания нового домена. Первый — на этапе сопоставления действий по обнаружению знаний, в процессе анализа образца данных для добавления набора знаний в новую или существующую базу знаний. Второй — в ходе действий по управлению доменами, когда вместо изменения существующего домена вы создаете новый.  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
  Чтобы создать домен, необходимо создать и открыть базу знаний.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для создания домена необходимо иметь в базе данных DQS_MAIN роль dqs_administrator или dqs_kb_editor.  
   
-##  <a name="Discovery"></a>Создание домена в действии обнаружения знаний  
+##  <a name="create-a-domain-in-the-knowledge-discovery-activity"></a><a name="Discovery"></a> Создание домена в ходе операции обнаружения знаний  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "65480962"
   
 5.  В таблице **Сопоставления** выберите исходный столбец из раскрывающегося списка для столбца **Исходный столбец** пустой строки. Если соответствующий домен не существует, щелкните значок **Создать домен** .  
   
-##  <a name="DomainManagement"></a>Создание домена в действии "Управление доменами"  
+##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a>Создание домена в действии "Управление доменами"  
   
 1.  На главной странице [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] нажмите кнопку **Открыть базу знаний** и выберите базу знаний или нажмите кнопку **Создать базу знаний** и введите свойства новой базы знаний.  
   
@@ -54,12 +54,12 @@ ms.locfileid: "65480962"
   
 3.  На странице **Управление доменами** щелкните значок **Создать домен** над списком доменов.  
   
-##  <a name="Properties"></a>Задание свойств домена  
+##  <a name="set-domain-properties"></a><a name="Properties"></a>Задание свойств домена  
   
 1.  В диалоговом окне **Создание домена** введите имя, уникальное в базе знаний, и описание длиной не более 256 символов.  
   
     > [!NOTE]  
-    >  Дополнительные сведения о свойствах домена см. в разделе [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
+    >   Дополнительные сведения о свойствах домена см. в разделе [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
 2.  Из списка **Тип данных** выберите тип данных для значений в домене. Типом данных может быть **String** (по умолчанию), **Date**, **Integer**или **Decimal**.  
   
@@ -87,9 +87,9 @@ ms.locfileid: "65480962"
   
 9. Нажмите кнопку **ОК**.  
   
-10. Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
+10. Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [Завершение операции по управлению доменами](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a>Дальнейшие действия. После создания домена  
+##  <a name="follow-up-after-creating-a-domain"></a><a name="FollowUp"></a> Дальнейшие действия. После создания правила домена  
  Создав домен, вы можете выполнить другие задачи управления доменами для этого домена, провести обнаружение знаний для добавления знаний в домен или добавить в домен политику сопоставления. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../../2014/data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../../2014/data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

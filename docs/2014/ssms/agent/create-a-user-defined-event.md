@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5625e65b1da45e05002b540774f441f2deabd3f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63260951"
 ---
 # <a name="create-a-user-defined-event"></a>Создание пользовательского события
@@ -42,13 +42,13 @@ ms.locfileid: "63260951"
   
  В следующих задачах приводятся сведения о том, как создавать пользовательские события и реагирующие на них предупреждения.  
   
- **Создание предупреждения на основе номера сообщения**  
+ **Создание предупреждения по номеру сообщения**  
   
 -   [Среда SQL Server Management Studio](create-an-alert-using-an-error-number.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)  
   
- **Создание предупреждения на основе уровней серьезности**  
+ **Создание предупреждения по уровню серьезности**  
   
 -   [Среда SQL Server Management Studio](create-an-alert-using-severity-level.md)  
   
@@ -60,25 +60,25 @@ ms.locfileid: "63260951"
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)  
   
- **Создание сообщения об ошибке определяемого пользователем события**  
+ **Создание сообщения об ошибке пользовательского события**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql)  
   
- **Изменение сообщения об ошибке определяемого пользователем события**  
+ **Изменение сообщения об ошибке пользовательского события**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
- **Удаление сообщения об ошибке определяемого пользователем события**  
+ **Удаление сообщения об ошибке пользовательского события**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dropmessage-transact-sql)  
   
- **Отключение или повторная активация предупреждения**  
+ **Отключение или повторное включение предупреждения**  
   
 -   [Среда SQL Server Management Studio](disable-or-reactivate-an-alert.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_update_alert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)  
   
   

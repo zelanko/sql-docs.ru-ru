@@ -20,14 +20,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ca2bc726b0bf017ec4b3dd0451313d60ef57696
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012140"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>Новые&#39;в SQLXML 4,0 SP1
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 с пакетом обновления 1 (SP1) содержит различные обновления и улучшения. В этом разделе содержится описание всех обновлений и предоставляются ссылки на более подробные сведения (если они доступны). SQLXML 4.0 с пакетом обновления 1 (SP1) предоставляет улучшения для поддержки новых типов данных, появившихся в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. В этом разделе рассматриваются следующие вопросы.  
   
 -   Установка SQLXML 4.0 с пакетом обновления 1 (SP1)  

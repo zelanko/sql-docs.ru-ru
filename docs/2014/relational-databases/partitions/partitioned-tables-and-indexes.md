@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f96f82919b9f4a130ce8a533e6ffcf31e765f5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65092044"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
@@ -37,8 +37,7 @@ ms.locfileid: "65092044"
   
 -   Можно повысить скорость выполнения запросов в зависимости от запросов, которые часто выполняются в вашей конфигурации оборудования. Например, оптимизатор запросов может быстрее выполнять запросы на эквисоединение двух и более секционированных таблиц, если в этих таблицах одни и те же столбцы секционирования, потому что можно соединить сами секции.  
   
-     В процессе сортировки данных для операций ввода-вывода в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сначала проводится сортировка данных по секциям. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может одновременно обращаться только к одному диску, что может снизить производительность. Для ускорения сортировки данных рекомендуется распределить файлы данных в секциях по нескольким жестким дискам, создав RAID. Таким образом, несмотря на сортировку данных по секциям, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сможет одновременно осуществлять доступ ко всем жестким дискам каждой секции.  
+     В процессе сортировки данных для операций ввода-вывода в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сначала проводится сортировка данных по секциям. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может одновременно обращаться только к одному диску, что может снизить производительность. Для ускорения сортировки данных рекомендуется распределить файлы данных в секциях по нескольким жестким дискам, создав RAID. Таким образом, несмотря на сортировку данных по секциям, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сможет одновременно осуществлять доступ ко всем жестким дискам каждой секции.  
   
      Кроме того, можно повысить производительность, применяя блокировки на уровне секций, а не всей таблицы. Это может уменьшить количество конфликтов блокировок для таблицы.  
   
@@ -103,21 +102,21 @@ ms.locfileid: "65092044"
   
 |||  
 |-|-|  
-|**Задания**|**Раздел**|  
+|**Задачи**|**Раздел**|  
 |Описано, как создать функции секционирования и схемы секционирования и применить их к таблице или индексу.|[Создание секционированных таблиц и индексов](create-partitioned-tables-and-indexes.md)|  
 |||  
   
 ## <a name="related-content"></a>См. также  
  Следующие публикации по стратегиям секционированных таблиц и индексов и примеры внедрения могут оказаться полезными.  
   
--   [Стратегии секционированных таблиц и индексов с использованием SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
+-   [Partitioned Table and Index Strategies Using SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
   
--   [Как реализовать автоматическое скользящее окно](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
+-   [How to Implement an Automatic Sliding Window in a Partitioned Table on SQL Server 2005](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
--   [Многоблочная загрузка в секционированную таблицу](https://msdn.microsoft.com/library/cc966380.aspx)  
+-   [Массовая загрузка в секционированную таблицу](https://msdn.microsoft.com/library/cc966380.aspx)  
   
 -   [Улучшенные возможности обработки запросов для секционированных таблиц и индексов](https://msdn.microsoft.com/library/ms345599.aspx)  
   
--   [10 лучших рекомендаций по созданию реляционного хранилища данных большого размера](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
+-   [10 лучших методов для построения реляционного хранилища данных в больших масштабах](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 795e27c020c9ea4c80c858da734ebd315d56615c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012658"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Указание пути доступа (SQLXML 4.0)
@@ -59,7 +59,7 @@ ms.locfileid: "66012658"
   
      Синтаксис шага доступа: имя оси и проверки узла, разделенные двумя двоеточиями, за которыми следует ноль или более выражений — каждое в квадратных скобках. Например, выражение XPath (путь расположения) **дочерний элемент:: Customer@CustomerID[= ' ALFKI ']** выбирает все дочерние элементы ** \<Customer>** элемента контекстного узла. После этого тест в предикате применяется к набору узлов, который возвращает только узлы элементов ** \<Customer>** с атрибутом **CustomerID** со значением «ALFKI».  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Указание оси &#40;SQLXML 4,0&#41;](specifying-an-axis-sqlxml-4-0.md)  
  Содержит примеры указания оси.  
   

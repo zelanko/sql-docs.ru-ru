@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48ae7034ec0c133c1140e4c581794302ca8bad77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013919"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Создание допустимых атрибутов типа ID, IDREF и IDREFS с использованием sql:prefix (SQLXML 4.0)
@@ -51,7 +51,7 @@ ms.locfileid: "66013919"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-id-and-idrefs-types"></a>A. Задание типов ID и IDREFS  
+### <a name="a-specifying-id-and-idrefs-types"></a>А) Задание типов ID и IDREFS  
  В следующей схеме элемент ** \<>клиента** состоит из дочернего элемента ** \<Order>** . Элемент ** \<Order>** также имеет дочерний элемент, элемент ** \<OrderDetail>** .  
   
  Атрибут **ордеридлист** ** \<клиента>** является атрибутом типа IDREFS, который ссылается на атрибут **OrderID** элемента ** \<Order>** .  

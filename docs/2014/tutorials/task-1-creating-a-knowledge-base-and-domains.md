@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 79edd8566f2b3c9b586bc8c8815e1d9bc586fb05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481245"
 ---
-# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Задача 1. Создание доменов и базы знаний
+# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Задача 1. Создание базы знаний и доменов
   В этой задаче вы создадите базу знаний **поставщиков** и создадите домены, которые будут использоваться для очистки данных и сопоставления данных для удаления дубликатов.  
   
 1.  Запустите **Data Quality Client**. В меню **Пуск**последовательно выберите **пункты все программы**, **Microsoft SQL Server 2012**, **службы Data Quality Services**и щелкните **Data Quality Client**.  
@@ -54,15 +54,15 @@ ms.locfileid: "65481245"
   
     -   Строка адреса  
   
-    -   City  
+    -   Город  
   
-    -   State  
+    -   Состояние  
   
     -   Country  
   
-    -   Zip  
+    -   Почтовый индекс  
   
-## <a name="next-step"></a>Дальнейшее действие  
- [Задача 2. Добавление значений домена вручную](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
+## <a name="next-step"></a>Следующий шаг  
+ [Задача 2. Добавление значений домена вручную](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
   
   

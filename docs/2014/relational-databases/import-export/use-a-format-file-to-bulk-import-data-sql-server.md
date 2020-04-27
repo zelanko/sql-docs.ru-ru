@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 772dbb86188bf164a2e135f7bb9b71a1cc030745
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011770"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Использование файла форматирования для массового импорта данных (SQL Server)
@@ -41,13 +41,13 @@ ms.locfileid: "66011770"
  Дополнительные сведения см. в статьях [Программа bcp](../../tools/bcp-utility.md), [BULK INSERT (SQL Server)](/sql/t-sql/statements/bulk-insert-transact-sql) и [OPENROWSET (SQL Server)](/sql/t-sql/functions/openrowset-transact-sql).  
   
 > [!NOTE]  
->  Для массового экспорта или импорта данных SQLXML используйте один из следующих типов данных в файле форматирования: SQLCHAR или SQLVARYCHAR (данные отправляются в кодовой странице клиента или в кодовой странице, предполагаемой параметрами сортировки), SQLNCHAR или SQLNVARCHAR (данные отправляются в формате Юникод) и SQLBINARY или SQLVARYBIN (данные отправляются без преобразования).  
+>  Для массового экспорта или импорта данных SQLXML используется один из следующих типов данных в файле форматирования. SQLCHAR или SQLVARYCHAR (данные посылаются в кодовой странице клиента или в кодовой странице, предполагаемой параметрами сортировки), SQLNCHAR или SQLNVARCHAR (данные посылаются в формате Юникод) и SQLBINARY или SQLVARYBIN (данные посылаются без преобразования).  
   
 ## <a name="examples"></a>Примеры  
  В примерах этого раздела показано, как использовать файлы форматирования для выполнения операций с массовым импортом с помощью команды **bcp** , BULK INSERT и вставки... SELECT * FROM OPENROWSET (BULK...). Перед выполнением примеров массового импортирования необходимо создать учебную таблицу, файл данных и файл форматирования.  
   
 ### <a name="sample-table"></a>Образец таблицы  
- Для выполнения этих примеров необходимо создать таблицу **myTestFormatFiles** в схеме [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]dbo** образца базы данных **. Для создания этой таблицы в редакторе запросов среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] выполните следующий код:  
+ Для выполнения этих примеров необходимо создать таблицу **myTestFormatFiles** в схеме **dbo** образца базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]. Для создания этой таблицы в редакторе запросов среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] выполните следующий код:  
   
 ```  
 USE AdventureWorks2012;  
@@ -184,19 +184,19 @@ DROP TABLE myTestFormatFiles
 >  Дополнительные сведения о предложении OPENROWSET BULK см. в разделе [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql).  
   
 ## <a name="additional-examples"></a>Дополнительные примеры  
- [Создайте файл форматирования &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
+ [Создание файла форматирования (SQL Server)](create-a-format-file-sql-server.md)  
   
- [Используйте файл форматирования для пропуска столбца таблицы &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
+ [Пропуск столбца таблицы с помощью файла форматирования (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
- [Используйте файл форматирования для пропуска поля данных &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
+ [Использование файла форматирования для пропуска поля данных (SQL Server)](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
- [Используйте файл форматирования для преобразования столбцов таблицы в поля файла данных &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+ [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>См. также:  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Файлы форматирования в формате, отличном от XML &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
- [XML-файлы форматирования &#40;SQL Server&#41;](xml-format-files-sql-server.md)  
+ [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
+ [Файлы формата, отличные от XML (SQL Server)](xml-format-files-sql-server.md)   
+ [XML-файлы форматирования (SQL Server)](xml-format-files-sql-server.md)  
   
   

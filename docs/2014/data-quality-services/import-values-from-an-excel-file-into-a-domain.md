@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 74be4b3e924d02f6992b927af35c7774c3ea0ae4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484316"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Импорт значений в домен из файла Excel
@@ -30,17 +30,17 @@ ms.locfileid: "65484316"
   
 -   Импорт значений в существующий, заполненный домен. В этом варианте импортируются только новые значения. Все значения, которые уже существуют, не будут импортированы.  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
  Для импорта доменов из файла Excel необходимо установить Microsoft Excel на компьютер, на котором установлено приложение [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , чтобы импортировать значения домена или домен целиком. Необходимо создать файл Excel со значениями домена (см. раздел [How the import works](#How)). Также необходимо создать и открыть базу знаний, в которую будет импортироваться домен.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для импорта значений доменов из файла Excel необходимо иметь роль dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="Import"></a>Импорт значений из файла Excel в домен  
+##  <a name="import-values-from-an-excel-file-into-a-domain"></a><a name="Import"></a>Импорт значений из файла Excel в домен  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -70,10 +70,10 @@ ms.locfileid: "65484316"
   
 14. Нажмите кнопку **Готово** , чтобы добавить новые значения в базу знаний.  
   
-##  <a name="FollowUp"></a>Дальнейшие действия. После импорта значений из файла Excel в домен  
+##  <a name="follow-up-after-importing-values-from-an-excel-file-into-a-domain"></a><a name="FollowUp"></a>Дальнейшие действия. После импорта значений из файла Excel в домен  
  После импорта значений в домен вы можете выполнить другие задачи по управлению доменами для этого домена, провести обнаружение набора знаний для добавления его в домен или добавить в домен политику сопоставления. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../../2014/data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../../2014/data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../../2014/data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Synonyms"></a>Импорт синонимов  
+##  <a name="importing-synonyms"></a><a name="Synonyms"></a>Импорт синонимов  
  Синонимы импортируются следующим образом:  
   
 -   Во-первых, импортируются все значения, затем устанавливается соединение с синонимами.  
@@ -88,7 +88,7 @@ ms.locfileid: "65484316"
   
 -   Если по какой-либо причине невозможно подсоединить вручную значения в приложении, эти значения в операции импорта не используются.  
   
-##  <a name="How"></a>Принцип работы импорта  
+##  <a name="how-the-import-works"></a><a name="How"></a>Принцип работы импорта  
  При выполнении этой операции импортируются следующие значения.  
   
  В ходе операции импорта DQS выполняет импорт из файла Excel следующим образом:  

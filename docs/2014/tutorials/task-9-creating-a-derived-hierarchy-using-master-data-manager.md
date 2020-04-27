@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7cb2f12115e3fe743c49c2f7e69f765da4501ba2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489551"
 ---
-# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Задача 9. Создание производной иерархии с помощью диспетчера основных данных
+# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Задача 9. Создание производной иерархии с помощью диспетчера основных данных
   В этой задаче вы создадите производную иерархию с помощью диспетчера основных данных. Эта производная иерархия является производной от отношений атрибутов на основе домена между сущностями **поставщика** и **состояния** .  
   
 1.  Перейдите на главную страницу **Диспетчер основных данных** , щелкнув **SQL Server 2012 Master Data Services** в верхней части страницы.  
@@ -60,7 +60,7 @@ ms.locfileid: "65489551"
   
      ![Производная иерархия в обозревателе](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-07.jpg "Производная иерархия в обозревателе")  
   
-## <a name="next-step"></a>Дальнейшее действие  
- [Занятие 5. Автоматизация очистки данных и сопоставления с помощью служб SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
+## <a name="next-step"></a>Следующий шаг  
+ [Занятие 5.: Автоматизация очистки и сопоставления с помощью SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
   
   

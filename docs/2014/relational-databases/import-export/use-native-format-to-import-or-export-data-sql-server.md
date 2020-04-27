@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2e91899172dfc6d640df0c33c77e32de3c1c21c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011660"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Использование собственного формата для импорта или экспорта данных
@@ -62,7 +62,7 @@ ms.locfileid: "66011660"
     > [!IMPORTANT]  
     >  Когда используется собственный режим, программа **bcp** по умолчанию преобразует символы из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в символы OEM перед их копированием в файл данных. Программа **bcp** преобразует символы из файла данных в символы ANSI перед их массовым импортом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицу. Во время подобных преобразований расширенные символьные данные могут быть потеряны. Для расширенных наборов символов необходимо либо использовать собственный формат в Юникоде, либо задать кодовую страницу.  
   
--   `sql_variant`Data  
+-   Данные `sql_variant`.  
   
      Если данные типа `sql_variant` сохраняются как SQLVARIANT в файле данных в собственном формате, то все характеристики данных сохраняются. Метаданные, в которых записан тип данных каждой величины, записываются вместе со значениями данных. Эти метаданные используются для повторного создания значений данных с тем же типом данных, как и в столбце назначения `sql_variant`.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66011660"
   
  Собственный формат поддерживается следующими параметрами командной строки:  
   
-|Get-Help|Параметр|Description|  
+|Get-Help|Параметр|Описание|  
 |-------------|------------|-----------------|  
 |**bcp**|**-n**|Заставляет служебную программу **bcp** использовать собственные типы данных. <sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **= "** Native **"**|Использует собственный тип данных или расширенный собственный тип данных. Учтите, что параметр DATAFILETYPE не нужен, если типы данных указываются в файле форматирования.|  
@@ -118,12 +118,12 @@ SELECT Col1,Col2,Col3 FROM myTestNativeData
 ### <a name="using-bcp-to-bulk-export-native-data"></a>Массовый экспорт собственных данных с помощью программы bcp  
  Чтобы экспортировать данные из таблицы в файл данных, используйте команду **bcp** с параметром **out** и следующими квалификаторами:  
   
-|Квалификаторы|Description|  
+|Квалификаторы|Описание|  
 |----------------|-----------------|  
 |**-n**|Указывает собственные типы данных.|  
 |**-T**|Указывает, что программа **bcp** устанавливает доверительное соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием встроенной безопасности. Если параметр **-T** не указан, для входа необходимо указать **-U** и **-P** .|  
   
- В следующем примере показан массовый экспорт данных в собственном формате из таблицы `myTestNativeData` в новый файл данных с именем `myTestNativeData-n.Dat` . В командной строке [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows введите:  
+ В следующем примере показан массовый экспорт данных в собственном формате из таблицы `myTestNativeData` в новый файл данных с именем `myTestNativeData-n.Dat`. В командной строке [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows введите:  
   
 ```  
 bcp AdventureWorks..myTestNativeData out C:\myTestNativeData-n.Dat -n -T  
@@ -145,24 +145,24 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Использование форматов данных для массового импорта или экспорта**  
   
 -   [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [Используйте символьный формат для импорта или экспорта &#40;данных SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Использование символьного формата для импорта и экспорта данных (SQL Server)](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Используйте символьный формат Юникода для импорта или экспорта &#40;данных SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Использование символьного формата Юникод для импорта и экспорта данных (SQL Server)](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Используйте собственный формат Юникода для импорта или экспорта &#40;данных SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Использование собственного формата Юникод для импорта и экспорта данных (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>См. также:  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [Типы данных &#40;&#41;Transact-SQL](/sql/t-sql/data-types/data-types-transact-sql)   
- [sql_variant &#40;Transact-SQL&#41;](/sql/t-sql/data-types/sql-variant-transact-sql)   
- [Импорт данных в собственном и символьном формате из более ранних версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
- [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Используйте собственный формат Юникода для импорта или экспорта &#40;данных SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+ [Типы данных (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)   
+ [sql_variant (Transact-SQL)](/sql/t-sql/data-types/sql-variant-transact-sql)   
+ [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
+ [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
+ [Использование собственного формата Юникод для импорта и экспорта данных (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
   

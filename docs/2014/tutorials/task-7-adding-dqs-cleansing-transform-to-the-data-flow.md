@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65488944"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Задача 7. Добавление преобразования «Очистка DQS» в поток данных
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Задача 7. Добавление в поток данных преобразования "Очистка DQS"
   В этой задаче вы добавите преобразование очистки DQS в поток данных для очистки входных данных о поставщиках с помощью служб DQS. Дополнительные сведения о преобразовании см. в разделе **[Преобразование очистки DQS](https://msdn.microsoft.com/library/ee677619.aspx)** .  
   
 1.  Щелкните правой кнопкой мыши **Очистка DQS** на вкладке **поток данных** и выберите команду **Переименовать**. Введите **Очистка данных поставщика**и нажмите клавишу **Ввод**.  
@@ -53,14 +53,14 @@ ms.locfileid: "65488944"
     |Имя поставщика|Имя поставщика|  
     |ContactEmailAddress|Контактный адрес электронной почты|  
     |Строка адреса|Строка адреса|  
-    |City|City|  
-    |State|State|  
+    |Город|Город|  
+    |Состояние|Состояние|  
     |Country|Country|  
-    |Почтовый индекс|Zip|  
+    |Почтовый индекс|Почтовый индекс|  
   
 12. Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно **Редактор преобразования «Очистка DQS** ».  
   
-## <a name="next-step"></a>Дальнейшее действие  
- [Задача 8. Добавление преобразования «Условное разбиение» к выводу «Очистка разбиения»](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+## <a name="next-step"></a>Следующий шаг  
+ [Задача 8. Добавление преобразования "Условное разбиение" для выходных данных очистки](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

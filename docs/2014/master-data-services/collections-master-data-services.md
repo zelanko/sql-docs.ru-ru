@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0dbf84d6fd3253a3b4d945693090fdad00d077ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483544"
 ---
 # <a name="collections-master-data-services"></a>Коллекции (службы основных данных)
@@ -45,12 +45,12 @@ ms.locfileid: "65483544"
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
 |Включение сущности для явных иерархий и коллекций.|[Включение сущности для явных иерархий и коллекций &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|Создание новой коллекции.|[Создание Master Data Services &#40;коллекции&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
-|Добавление элементов в существующую коллекцию.|[Добавление членов в коллекцию &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
+|Создание новой коллекции.|[Создание коллекции (службы Master Data Services)](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
+|Добавление элементов в существующую коллекцию.|[Добавление элементов в коллекцию (службы Master Data Services)](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Явные иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [Явные иерархии (службы Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
 -   [Экспорт Master Data Services &#40;данных&#41;](overview-exporting-data-master-data-services.md)  
   

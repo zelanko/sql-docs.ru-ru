@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03d6069358c1591233aa892a723b7367a21be569
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012224"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Основные понятия о программировании для SQLXML 4.0
@@ -30,7 +30,7 @@ ms.locfileid: "66012224"
  [SQLXML не установлен в SQL Server](sqlxml-is-not-installed-in-sql-server.md)  
  Описывает процесс установки SQLXML 4.0.  
   
- [Новые возможности в SQLXML 4.0 с пакетом обновления 1 (SP1)](what-s-new-in-sqlxml-4-0-sp1.md)  
+ [Новые возможности SQLXML 4.0 с пакетом обновления 1 (SP1)](what-s-new-in-sqlxml-4-0-sp1.md)  
  Содержит описание обновлений и расширений в SQLXML 4.0, а также ссылки на соответствующие разделы в настоящей документации.  
   
  [Использование ADO для выполнения запросов SQLXML 4.0](using-ado-to-execute-sqlxml-4-0-queries.md)  
@@ -54,7 +54,7 @@ ms.locfileid: "66012224"
  [Использование диаграмм обновления для изменения данных в SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  Содержит сведения о диаграммах обновления, которые изменяют данные в базе данных применительно к XML-представлениям на основе аннотированных схем XSD (или XDR).  
   
- [Выполнение групповой загрузки данных XML &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Выполнение массовой загрузки XML-данных &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  Описывает процесс массовой загрузки XML в SQLXML 4.0.  
   
  [Компоненты доступа к данным SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
@@ -73,6 +73,6 @@ ms.locfileid: "66012224"
  Содержит перечень проблем, которые следует учитывать при работе с SQLXML 4.0.  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server &#40;XML-данных&#41;](../xml/xml-data-sql-server.md)  
+ [Данные XML (SQL Server)](../xml/xml-data-sql-server.md)  
   
   

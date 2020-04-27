@@ -21,20 +21,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316067"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)
   Конструктор запросов и представлений помогает создавать и поддерживать фрагменты для получения данных и управления данными для приложения.  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Откройте конструктор запросов и представлений &#40;визуальные инструменты для баз данных&#41;](visual-database-tools.md)  
+ [Открытие конструктора запросов и представлений (визуальные инструменты для баз данных)](visual-database-tools.md)  
  Описывает шаги открытия нового или существующего запроса или представления в конструкторе запросов и представлений.  
   
- [Навигация в конструкторе запросов и представлений &#40;визуальных инструментов для баз данных&#41;](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
+ [Навигация по конструктору запросов и представлений (визуальные инструменты для баз данных)](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
  Предоставляет список сочетаний клавиш и операций с мышью, которые используются в конструкторе запросов и представлений.  
   
  [Инструменты конструктора запросов и представлений (визуальные инструменты для баз данных)](query-and-view-designer-tools-visual-database-tools.md)  

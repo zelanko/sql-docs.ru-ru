@@ -22,16 +22,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5ed0a510a6b74e3c33e9cb7ed9d789ad8242a499
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63270231"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Работа с отслеживанием изменений (SQL Server)
   Приложения, в которых используется отслеживание изменений, должны иметь возможность получать отслеженные изменения, применять эти изменения к другому хранилищу данных и обновлять базу данных-источник. В этом разделе описаны способы выполнения этих задач и роль отслеживания изменений в случае отработки отказа и необходимостью восстановить базу данных из резервной копии.  
   
-##  <a name="Obtain"></a> Получение изменений с помощью функций отслеживания изменений  
+##  <a name="obtain-changes-by-using-change-tracking-functions"></a><a name="Obtain"></a> Получение изменений с помощью функций отслеживания изменений  
  Описывает, как использовать функции отслеживания изменений, чтобы получить изменения и сведения об изменениях, произведенных в базе данных.  
   
 ### <a name="about-the-change-tracking-functions"></a>Сведения о функциях отслеживания изменений  
@@ -285,7 +285,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  Выбор оптимального подхода для приложения, работающего с отслеживанием изменений, или любого пользовательского средства отслеживания изменений требует тщательного анализа. Поэтому намного проще использовать изоляцию моментального снимка.  
   
-##  <a name="Handles"></a> Как система отслеживания изменений обрабатывает изменения в базе данных  
+##  <a name="how-change-tracking-handles-changes-to-a-database"></a><a name="Handles"></a>Как Отслеживание изменений обрабатывает изменения в базе данных  
  Некоторые приложения, использующие отслеживание изменений, выполняют двустороннюю синхронизацию с другими хранилищами данных. Это означает, что изменения в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обновляются в другом хранилище данных, а изменения в другом хранилище данных обновляются в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Если приложение обновляет локальную базу данных изменениями, сделанными в другом хранилище данных, оно должно выполнить следующие операции.  
@@ -404,7 +404,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  Существует вероятность того, что обновляемая в рамках транзакции моментальных снимков строка уже была обновлена в другой транзакции после начала транзакции моментальных снимков. В этом случае произойдет конфликт обновления при изоляции моментальных снимков, который вызовет прекращение транзакции. В этом случае повторите попытку обновления. В дальнейшем это приведет к обнаружению конфликта отслеживания изменений и ни одна из строк обновлена не будет.  
   
-##  <a name="DataRestore"></a> Изменение отслеживания и восстановление данных  
+##  <a name="change-tracking-and-data-restore"></a><a name="DataRestore"></a>Отслеживание изменений и восстановление данных  
  Приложения, для которых необходима синхронизация, должны учитывать возможность восстановления базы данных, для которой включено отслеживание изменений, в предыдущее состояние. Речь идет о восстановлении базы данных из резервной копии при отработке отказа на асинхронную зеркальную базу данных или сбое при доставке журналов. Эту проблему иллюстрирует следующий сценарий.  
   
 1.  Для таблицы Т1 включено отслеживание изменений. Минимальный действительный номер версии равен 50.  
@@ -431,14 +431,14 @@ COMMIT TRAN
   
 -   Когда клиент делает запрос об изменениях, сохраните номер последней версии синхронизации каждого клиента сервера. При возникновении проблем с данными номера последней синхронизированной версии не совпадут. Это будет означать, что необходима повторная инициализация.  
   
-## <a name="see-also"></a>См. также:  
- [Отслеживание измененных данных (SQL Server)](../track-changes/track-data-changes-sql-server.md)   
- [Об отслеживании изменений (SQL Server)](../track-changes/about-change-tracking-sql-server.md)   
- [Управление отслеживанием изменений (SQL Server)](../track-changes/manage-change-tracking-sql-server.md)   
- [Включение и отключение отслеживания изменений (SQL Server)](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
- [CHANGETABLE (Transact-SQL)](/sql/relational-databases/system-functions/changetable-transact-sql)   
- [CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)](/sql/relational-databases/system-functions/change-tracking-min-valid-version-transact-sql)   
- [CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)](/sql/relational-databases/system-functions/change-tracking-current-version-transact-sql)   
+## <a name="see-also"></a>См. также  
+ [Отслеживание изменений данных &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
+ [Сведения о Отслеживание изменений &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
+ [Управление Отслеживание изменений &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
+ [Включение и отключение Отслеживание изменений &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
+ [&#40;"CHANGETABLE" Transact-SQL&#41;](/sql/relational-databases/system-functions/changetable-transact-sql)   
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-min-valid-version-transact-sql)   
+ [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-current-version-transact-sql)   
  [WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)](/sql/relational-databases/system-functions/with-change-tracking-context-transact-sql)  
   
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d8bac9ba8afafa6b5141d90c51f8029f596ba8f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482627"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Надстройка Master Data Services для Microsoft Excel
@@ -32,52 +32,47 @@ ms.locfileid: "65482627"
 ## <a name="terms"></a>Термины  
  Во время работы с надстройкой вы можете встретить следующие термины.  
   
--   
-  *MDS repository* — место, где хранятся все основные данные. Это база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , настроенная для хранения данных MDS. Чтоб работать с данными из репозитория, их необходимо загрузить в Excel, а после окончания работы опубликовать изменения в репозитории. Администраторы могут добавлять в репозиторий новые сущности и атрибуты.  
+-   *MDS repository* — место, где хранятся все основные данные. Это база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , настроенная для хранения данных MDS. Чтоб работать с данными из репозитория, их необходимо загрузить в Excel, а после окончания работы опубликовать изменения в репозитории. Администраторы могут добавлять в репозиторий новые сущности и атрибуты.  
   
--   *Данные, управляемые MDS* , — это данные, которые хранятся в репозитории MDS и загружаются в Excel, где данные отображаются в виде выделенных строк. На лист можно добавить данные, которые не управляются MDS, и это никак не повлияет на возможность обновления данных, управляемых MDS.  
+-   *Данные, управляемые службами MDS* , — это данные, которые хранятся в репозитории MDS и которые можно загрузить в Excel, где они отображаются в виде выделенных строк. На лист можно добавить данные, которые не управляются MDS, и это никак не повлияет на возможность обновления данных, управляемых MDS.  
   
--   
-  *model* — контейнер для данных. Можно создать несколько версий контейнера, и обычно последняя версия является наиболее актуальной. Дополнительные сведения см. в разделе [Модели (службы Master Data Services)](../models-master-data-services.md).  
+-   *model* — контейнер для данных. Можно создать несколько версий контейнера, и обычно последняя версия является наиболее актуальной. Дополнительные сведения см. в разделе [Модели (службы Master Data Services)](../models-master-data-services.md).  
   
--   
-  *entity* — список данных. Можно рассматривать сущность как таблицу в базе данных. Например, сущность **Цвет** может содержать список цветов. Дополнительные сведения см. в разделе [Сущности (службы Master Data Services)](../entities-master-data-services.md).  
+-   *entity* — список данных. Можно рассматривать сущность как таблицу в базе данных. Например, сущность **Цвет** может содержать список цветов. Дополнительные сведения см. в разделе [Сущности (службы Master Data Services)](../entities-master-data-services.md).  
   
--   
-  *member* — строка данных. Каждая сущность содержит элементы. Пример элемента — **Blue**. Дополнительные сведения см. в разделе [Элементы (службы Master Data Services)](../members-master-data-services.md).  
+-   *member* — строка данных. Каждая сущность содержит элементы. Пример элемента — **Blue**. Дополнительные сведения см. в разделе [Элементы (службы Master Data Services)](../members-master-data-services.md).  
   
--   
-  *attribute* — столбец данных. Каждый элемент имеет атрибуты. Например, атрибут **Code** для **синего** элемента имеет значение **B**. Дополнительные сведения об атрибутах см. в разделе [attributes &#40;Master Data Services&#41;](../attributes-master-data-services.md).  
+-   *attribute* — столбец данных. Каждый элемент имеет атрибуты. Например, атрибут **Code** для **синего** элемента имеет значение **B**. Дополнительные сведения об атрибутах см. в разделе [attributes &#40;Master Data Services&#41;](../attributes-master-data-services.md).  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание соединения с репозиторием [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Подключение к репозиторию MDS &#40;надстройка MDS для Excel&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|Создание соединения с репозиторием [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Соединение с репозиторием MDS (надстройка MDS для Excel)](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |Загрузка данных, управляемых MDS, в Excel.|[Загрузка данных из MDS в Excel](export-data-to-excel-from-master-data-services.md)|  
-|Сохранение ярлыка запроса, который может быть использован для открытия в будущем текущих отображаемых данных, управляемых MDS.|[Сохранение файла ярлыка запроса &#40;надстройка MDS для Excel&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
-|Передача ярлыков другим пользователям.|[Отправка надстройка MDS для Excel &#40;файла ярлыка запроса&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
-|Просмотр всех изменений, сделанных для элемента.|[Просмотр всех заметок или транзакций для элемента &#40;надстройка MDS для Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
-|Перед публикацией новых данных, выясните, имеются ли дублирующиеся значения.|[Сопоставление схожих &#40;данных надстройка MDS для Excel&#41;](match-similar-data-mds-add-in-for-excel.md)|  
+|Сохранение ярлыка запроса, который может быть использован для открытия в будущем текущих отображаемых данных, управляемых MDS.|[Сохранение файла ярлыка запроса (надстройка MDS для Excel)](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|Передача ярлыков другим пользователям.|[Отправка файла ярлыка запроса по электронной почте (надстройка MDS для Excel)](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|Просмотр всех изменений, сделанных для элемента.|[Просмотр всех заметок или транзакций для элемента (надстройка MDS для Excel)](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
+|Перед публикацией новых данных, выясните, имеются ли дублирующиеся значения.|[Сопоставление схожих данных (надстройка MDS для Excel)](match-similar-data-mds-add-in-for-excel.md)|  
 |Публикация данных с листа в репозиторий MDS.|[Публикация данных из Excel в службах MDS &#40;надстройка MDS для Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
-|Создание на листе новой сущности с данными. (Только администраторы.)|[Создание сущности &#40;надстройка MDS для Excel&#41;](create-an-entity-mds-add-in-for-excel.md)|  
-|Создание атрибута на основе домена, который также называется ограниченным списком. (Только администраторы.)|[Создание атрибута на основе домена &#40;надстройка MDS для Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
+|Создание на листе новой сущности с данными. (Только администраторы.)|[Создание сущности (надстройка MDS для Excel)](create-an-entity-mds-add-in-for-excel.md)|  
+|Создание атрибута на основе домена, который также называется ограниченным списком. (Только администраторы.)|[Создание атрибута на основе домена (надстройка MDS для Excel)](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
 |Задание свойств для загрузки и публикации данных в надстройке служб Master Data Services для Excel. (Только администраторы.)|[Задание свойств надстройки Master Data Services для Excel](setting-properties-for-master-data-services-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Подключения &#40;надстройка MDS для Excel&#41;](connections-mds-add-in-for-excel.md)  
+-   [Соединения (надстройка MDS для Excel)](connections-mds-add-in-for-excel.md)  
   
 -   [Загрузка надстройка MDS для Excel &#40;данных&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
--   [Файлы ярлыков запросов &#40;надстройка MDS для Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
+-   [Файлы ярлыков запросов (надстройка MDS для Excel)](shortcut-query-files-mds-add-in-for-excel.md)  
   
--   [Сопоставление качества данных в надстройка MDS для Excel](data-quality-matching-in-the-mds-add-in-for-excel.md)  
+-   [Сопоставление качества данных в надстройке MDS для Excel](data-quality-matching-in-the-mds-add-in-for-excel.md)  
   
 -   [Публикация &#40;данных надстройка MDS для Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
--   [Создание модели &#40;надстройка MDS для Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
+-   [Построение модели (надстройка MDS для Excel)](building-a-model-mds-add-in-for-excel.md)  
   
--   [Master Data Services &#40;безопасности&#41;](../security-master-data-services.md)  
+-   [Безопасность (службы Master Data Services)](../security-master-data-services.md)  
   
   

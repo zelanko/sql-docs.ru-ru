@@ -13,19 +13,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee3582e7de37b99cd7f665f563e789259954b722
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478487"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Раздел «Веб-конфигурация» (службы Master Data Services)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]использует файл Web. config для хранения параметров конфигурации, позволяющих службы IIS (IIS) размещать [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] веб-приложение и веб-службу. Этот файл Web.config находится в папке WebApplication пути установки [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Дополнительные сведения о пути и разрешениях см. в разделе [Разрешения для папок и файлов (службы Master Data Services)](folder-and-file-permissions-master-data-services.md).  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] хранит в файле Web.config параметры конфигурации, которые позволяют службам IIS разместить веб-приложение [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] и веб-службу. Этот файл Web.config находится в папке WebApplication пути установки [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Дополнительные сведения о пути и разрешениях см. в разделе [Разрешения для папок и файлов (службы Master Data Services)](folder-and-file-permissions-master-data-services.md).  
   
 ## <a name="webconfig-elements"></a>Элементы файла Web.Config  
  В дополнение к стандартным элементам конфигурации IIS [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , .NET Framework, ASP.NET и Windows Communication Foundation (WCF) файл Web. config содержит пользовательский элемент ** \<masterDataServices>**. В следующей таблице описываются элементы, включенные в файл Web.config.  
   
-|Элемент настройки|Description|  
+|Элемент настройки|Описание|  
 |---------------------------|-----------------|  
 |`masterDataServices`|Пользовательский элемент. Соединяет веб-службу [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] с базой данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
 |`connectionStrings`|Элемент ASP.NET. Дополнительные сведения см. в статье MSDN, посвященной [элементу connectionStrings в схеме параметров ASP.NET](https://go.microsoft.com/fwlink/?LinkId=178347) .|  
@@ -52,7 +52,7 @@ ms.locfileid: "65478487"
   
 ### <a name="elements-and-attributes"></a>Элементы и атрибуты  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |----------|-----------------|  
 |`instance`|Дочерний элемент. Содержит атрибуты, указывающие данные для веб-службы и строки подключения к базе данных.|  
 |`virtualPath`|Атрибут. Указывает виртуальный путь веб-приложения [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] и службы. Это соответствует `path` атрибуту элемента ** \<Application>** в элементе ** \<>сайта** в файле IIS ApplicationHost. config.|  

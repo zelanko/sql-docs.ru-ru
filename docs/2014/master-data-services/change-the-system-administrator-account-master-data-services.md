@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 911bd20c7d232bca52fdf9dca294bd7a4924d984
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054139"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>Изменение учетной записи системного администратора (службы Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "66054139"
 > [!WARNING]  
 >  После завершения этой процедуры учетная запись прежнего системного администратора будет удалена.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
 -   Необходимо добавить имя пользователя нового системного администратора к списку пользователей [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Дополнительные сведения см. [в разделе Добавление пользователя &#40;Master Data Services&#41;](add-a-user-master-data-services.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "66054139"
   
 5.  Выполните запрос.  
   
-## <a name="see-also"></a>См. также:  
- [Администраторы &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
+## <a name="see-also"></a>См. также  
+ [Администраторы (службы Master Data Services)](../../2014/master-data-services/administrators-master-data-services.md)  
   
   

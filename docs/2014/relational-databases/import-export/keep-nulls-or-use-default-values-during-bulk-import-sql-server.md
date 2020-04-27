@@ -21,14 +21,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011894"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)
-  При импорте данных в таблицу команда **bcp** и инструкция BULK INSERT используют значения по умолчанию, которые определены для столбцов таблицы. Например, если поле в файле данных имеет значение NULL, вместо него загружается значение по умолчанию соответствующего столбца. И команда **bcp**, и инструкция BULK INSERT позволяют пользователю указать, следует ли оставлять значения NULL.  
+  При импорте данных в таблицу команда **bcp** и инструкция BULK INSERT используют значения по умолчанию, которые определены для столбцов таблицы. Например, если поле в файле данных имеет значение NULL, вместо него загружается значение по умолчанию соответствующего столбца. И команда **bcp** , и инструкция BULK INSERT позволяют пользователю указать, следует ли оставлять значения NULL.  
   
  Обычная инструкция INSERT, напротив, оставляет значение NULL и не использует значения по умолчанию. Инструкция INSERT ... Инструкция SELECT * FROM OPENROWSET(BULK...) ведет себя так же, как обычная инструкция INSERT, но поддерживает табличное указание для загрузки значений по умолчанию.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66011894"
  Для выполнения примеров этого подраздела необходимо создать образец таблицы и файла данных.  
   
 ### <a name="sample-table"></a>Образец таблицы  
- Для выполнения примеров этого раздела требуется создать таблицу **MyTestDefaultCol2** в образце базы данных **AdventureWorks** в схеме **dbo**. Для создания этой таблицы в редакторе запросов среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] выполните следующий код:  
+ Для выполнения примеров этого раздела требуется создать таблицу **MyTestDefaultCol2** в образце базы данных **AdventureWorks** в схеме **dbo**. Чтобы создать эту таблицу, в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] редакторе запросов выполните следующую команду:  
   
 ```  
 USE AdventureWorks;  
@@ -79,7 +79,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
   
 |Get-Help|Квалификатор|Тип квалификатора|  
 |-------------|---------------|--------------------|  
-|**bcp**|`-k`|Переключатель|  
+|**bcp**|`-k`|Параметр|  
 |BULK INSERT|KEEPNULLS<sup>1</sup>|Аргумент|  
   
  <sup>1</sup> для BULK INSERT, если значения по умолчанию недоступны, столбец таблицы должен быть определен для разрешения значений NULL.  
@@ -104,7 +104,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 #### <a name="using-bcp-and-keeping-null-values"></a>Сохранение значений NULL при работе с командой bcp  
  Следующий пример демонстрирует, как сохранить значения NULL при использовании команды **bcp**. Команда **bcp** содержит следующие параметры:  
   
-|Переключатель|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |`-f`|Позволяет указать файл форматирования.|  
 |`-k`|Указывает, что пустые столбцы во время данной операции должны сохранить значение NULL вместо любых вставляемых значений столбцов по умолчанию.|  
@@ -142,7 +142,7 @@ GO
 |Инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...).|WITH(KEEPDEFAULTS)|Табличное указание|  
   
 > [!NOTE]  
->  Дополнительные сведения см. в статьях [INSERT (Transact-SQL)](/sql/t-sql/statements/insert-transact-sql), [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql), [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) и [Табличные указания (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table).  
+>  Дополнительные сведения см. в статьях [вставка &#40;Transact-sql&#41;](/sql/t-sql/statements/insert-transact-sql), [SELECT &#40;transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql), [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)и [табличные указания &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)  
   
 ### <a name="examples"></a>Примеры  
  Следующая инструкция INSERT... SELECT * FROM OPENROWSET (BULK...) пример выполняет операции по импорту данных и сохраняет значения по умолчанию.  
@@ -171,49 +171,49 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
--   [Не заключайте значения идентификаторов при выполнении много&#40;ного импорта данных SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [Сохранение значений идентификаторов при массовом импорте данных (SQL Server)](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
--   [Подготовка данных к экспорту или импорту &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
+-   [Подготовка данных к массовому экспорту или импорту (SQL Server)](prepare-data-for-bulk-export-or-import-sql-server.md)  
   
  **Использование файла форматирования**  
   
--   [Создайте файл форматирования &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
+-   [Создание файла форматирования (SQL Server)](create-a-format-file-sql-server.md)  
   
--   [Использование файла форматирования для SQL Server &#40;данных при выполнении операций импорта&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
+-   [Использование файла форматирования для массового импорта данных (SQL Server)](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [Используйте файл форматирования для преобразования столбцов таблицы в поля файла данных &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
--   [Используйте файл форматирования для пропуска поля данных &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
+-   [Использование файла форматирования для пропуска поля данных (SQL Server)](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [Используйте файл форматирования для пропуска столбца таблицы &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
+-   [Пропуск столбца таблицы с помощью файла форматирования (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
  **Использование форматов данных для массового импорта или экспорта**  
   
 -   [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [Используйте символьный формат для импорта или экспорта &#40;данных SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Использование символьного формата для импорта и экспорта данных (SQL Server)](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Используйте собственный формат для импорта или экспорта &#40;данных SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Использование собственного формата для импорта и экспорта данных (SQL Server)](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Используйте символьный формат Юникода для импорта или экспорта &#40;данных SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Использование символьного формата Юникод для импорта и экспорта данных (SQL Server)](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Используйте собственный формат Юникода для импорта или экспорта &#40;данных SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Использование собственного формата Юникод для импорта и экспорта данных (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
- **Указание форматов данных для совместимости при использовании программы bcp**  
+ **Задание форматов данных для совместимости с помощью программы bcp**  
   
--   [Укажите признаки конца поля и строки &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [Определение признаков конца поля и строки (SQL Server)](specify-field-and-row-terminators-sql-server.md)  
   
--   [Указание длины префикса в файлах данных с помощью программы bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+-   [Определение длины префикса в файлах данных с помощью программы bcp (SQL Server)](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
--   [Указание типа файлового хранилища с помощью программы bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+-   [Указание типа файлового хранилища с помощью программы bcp (SQL Server)](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>См. также:  
- [&#41;BACKUP &#40;Transact-SQL](/sql/t-sql/statements/backup-transact-sql)   
- [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
+ [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
+ [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [Табличные указания &#40;&#41;Transact-SQL](/sql/t-sql/queries/hints-transact-sql-table)  
+ [Табличные указания (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table)  
   
   

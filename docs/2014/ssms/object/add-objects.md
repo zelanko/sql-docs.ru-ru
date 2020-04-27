@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15011717f0f2d5ece6666c30aef72eade0faabb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63276962"
 ---
 # <a name="add-objects"></a>Добавление объектов
@@ -29,7 +29,7 @@ ms.locfileid: "63276962"
  **Все объекты типов**  
  Открывает диалоговое окно **Выбор типов объектов** для указания типа объектов, который нужно включить в следующий список.  
   
- ****_Сервер\<ServerName>_    
+ **The server**_Сервер\<ServerName>_    
  Добавляет все соответствующие объекты на указанном сервере. Появляется только при открытии из диалоговых окон в пределах сервера, например **Имя входа — создание** .  
   
  **Все объекты, принадлежащие схеме**  

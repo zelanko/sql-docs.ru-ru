@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fb3fa69a552dc00c85e1053cb230ba56ae840ac8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484066"
 ---
-# <a name="task-11-publishing-the-knowledge-base"></a>Задача 11. Публикация базы знаний
+# <a name="task-11-publishing-the-knowledge-base"></a>Задача 11. Публикация базы знаний
   В этой задаче вы опубликуете базу знаний. Опубликованную базу знаний можно использовать для очистки и сопоставления действий в проекте служб DQS.  
   
 1.  Нажмите кнопку **Готово** в нижней части окна.  
@@ -26,7 +26,7 @@ ms.locfileid: "65484066"
   
 3.  Нажмите кнопку **OК** , чтобы закрыть окно сообщения.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
  [Задача 12. Обнаружение знаний &#40;обнаружения знаний&#41;](../../2014/tutorials/task-12-discovering-knowledge-knowledge-discovery.md)  
   
   

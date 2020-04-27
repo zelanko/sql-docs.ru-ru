@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010718"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Указание осей в запросах XPath (SQLXML 4.0)
@@ -83,7 +83,7 @@ ms.locfileid: "66010718"
 </ROOT>  
 ```  
   
-### <a name="b-retrieve-grandchildren-of-the-context-node"></a>Б. Получение внучатых элементов контекстного узла  
+### <a name="b-retrieve-grandchildren-of-the-context-node"></a>Б) Получение внучатых элементов контекстного узла  
  Следующий запрос XPath выбирает все дочерние элементы ** \<Order>** элементов>элемента " ** \<клиент** " в узле контекста:  
   
 ```  

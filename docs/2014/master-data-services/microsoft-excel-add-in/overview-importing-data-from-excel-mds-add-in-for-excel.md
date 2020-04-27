@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd5046c9a307f498ffb585c99cba8044c7b18b3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479031"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>Публикация данных (надстройка MDS для Excel)
@@ -52,11 +52,11 @@ ms.locfileid: "65479031"
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
 |Публикация данных из активного листа в репозитории MDS.|[Публикация данных из Excel в службах MDS &#40;надстройка MDS для Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
-|Одновременное удаление строки из репозитория MDS и с листа.|[Удаление строки &#40;надстройка MDS для Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
+|Одновременное удаление строки из репозитория MDS и с листа.|[Удаление строки (надстройка MDS для Excel)](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Обновление надстройка MDS для Excel &#40;данных&#41;](refreshing-data-mds-add-in-for-excel.md)  
+-   [Обновление данных (надстройка MDS для Excel)](refreshing-data-mds-add-in-for-excel.md)  
   
 -   [Надстройка Master Data Services для Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   

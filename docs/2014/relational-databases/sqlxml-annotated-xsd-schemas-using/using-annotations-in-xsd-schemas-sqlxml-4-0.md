@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c62357496d0b143fcd8736bc61117d43c6a0fac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013602"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>Использование заметок в схемах XSD (SQLXML 4.0)
@@ -38,7 +38,7 @@ ms.locfileid: "66013602"
 > [!NOTE]  
 >  Все примеры в этом разделе задают простые запросы XPath к схеме XSD с заметками, описанной в каждом из примеров. Предполагается, что читатель знаком с языком XPath.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Аннотации XSD &#40;SQLXML 4,0&#41;](xsd-annotations-sqlxml-4-0.md)  
  Перечисление заметок, которые можно использовать со схемами XSD, и эквивалентных им заметок для XDR.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66013602"
  [Получение невостребованных данных с помощью SQL: overflow-поля &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)  
  Содержит описание заметок `sql:overflow-field` и примеры.  
   
- [Скрытие элементов и атрибутов при помощи sql:hide](hiding-elements-and-attributes-by-using-sql-hide.md)  
+ [Скрытие элементов и атрибутов с помощью sql:hide](hiding-elements-and-attributes-by-using-sql-hide.md)  
  Содержит описание заметок `sql:hide` и примеры.  
   
  [Использование заметок sql:identity и sql:guid](using-the-sql-identity-and-sql-guid-annotations.md)  
@@ -96,7 +96,7 @@ ms.locfileid: "66013602"
  [Задание глубины рекурсивных связей с использованием sql:max-depth](specifying-depth-in-recursive-relationships-by-using-sql-max-depth.md)  
  Содержит описание заметок `sql:max-depth` и примеры.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Рекомендации по безопасности схемы с заметками &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
   
   

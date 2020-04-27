@@ -15,23 +15,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5555e49a85d50b6b5a48002a176055605ee06913
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484225"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>Включение или отключение уведомлений по профилированию в DQS
-  В этом разделе описывается включение или отключение уведомлений по профилированию в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). По умолчанию уведомления по профилированию в DQS включены. Уведомления по профилированию сообщают важные сведения об источнике данных и эффективности текущего действия, выполняемого с данными. Дополнительные сведения см. в статье [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+  В этом разделе описывается включение или отключение уведомлений по профилированию в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). По умолчанию уведомления по профилированию в DQS включены. Уведомления по профилированию сообщают важные сведения об источнике данных и эффективности текущего действия, выполняемого с данными. Дополнительные сведения см. в разделе [Профилирование данных и уведомления в DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для включения уведомлений необходимо иметь роль dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="Enable"></a>Включение или отключение уведомлений о профилировании  
+##  <a name="enable-or-disable-profiling-notifications"></a><a name="Enable"></a>Включение или отключение уведомлений о профилировании  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -41,6 +41,6 @@ ms.locfileid: "65484225"
   
 4.  Установите или снимите флажок **Включить уведомления** , чтобы отключить или включить уведомления по профилированию для различных действий в DQS.  
   
-5.  Щелкните **Закрыть**.  
+5.  Нажмите кнопку **Закрыть**.  
   
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b5f1297927510fe6f0f5b15ac185316687326ce6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482751"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>Обновление данных (надстройка MDS для Excel)
@@ -46,12 +46,12 @@ ms.locfileid: "65482751"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Установите соединение с базой данных служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Подключение к репозиторию MDS &#40;надстройка MDS для Excel&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|Установите соединение с базой данных служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Соединение с репозиторием MDS (надстройка MDS для Excel)](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |Загрузка данных MDS в Excel.|[Загрузка данных из MDS в Excel](export-data-to-excel-from-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Подключения &#40;надстройка MDS для Excel&#41;](connections-mds-add-in-for-excel.md)  
+-   [Соединения (надстройка MDS для Excel)](connections-mds-add-in-for-excel.md)  
   
 -   [Загрузка надстройка MDS для Excel &#40;данных&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   

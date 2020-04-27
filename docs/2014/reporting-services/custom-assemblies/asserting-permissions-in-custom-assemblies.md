@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f66896479ec06d78b94d6fe084ff806e3af67727
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265379"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Проверка предположений о наличии разрешений в пользовательских сборках
@@ -89,7 +89,7 @@ try
   
  Дополнительные сведения см. в разделе «Безопасность .NET Framework» документа «Руководство разработчика для платформы .NET Framework».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование пользовательских сборок с отчетами](using-custom-assemblies-with-reports.md)  
   
   

@@ -13,16 +13,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3b5d76c06096dd2dab13bd6dcf7ff59fbd612302
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483764"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>Добавление элементов в коллекцию (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]в коллекцию можно добавлять конечные и консолидированные элементы.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
@@ -55,7 +55,7 @@ ms.locfileid: "65483764"
   
 11. При необходимости установите взвешенные значения, щелкнув значение в столбце **Вес** .  
   
-## <a name="see-also"></a>См. также:  
- [&#40;коллекций Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+## <a name="see-also"></a>См. также  
+ [Коллекции (службы Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)  
   
   

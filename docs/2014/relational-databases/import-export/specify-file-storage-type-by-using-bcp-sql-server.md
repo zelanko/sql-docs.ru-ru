@@ -17,18 +17,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011823"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Указание типа файлового хранилища с помощью программы bcp (SQL Server)
-  
   *Тип файла хранилища* описывает, каким образом данные хранятся в файле данных. Экспорт данных может быть выполнен в файл данных в формате таблиц баз данных (собственный формат), в символьном представлении (символьный формат) или в любом формате данных, поддерживающем неявное преобразование, например копирование данных типа `smallint` как `int`. Пользовательские типы данных экспортируются так же, как их базовые типы.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Приглашение bcp указать тип файлового хранилища  
- Если интерактивная команда **bcp** содержит параметр **in** или **out** без параметра файла форматирования (**-f**) или параметра формата данных (**-n**, **-c**, **-w**или **-N**), команда запрашивает тип файлового хранилища для каждого поля данных следующим образом:  
+ Если интерактивная команда **bcp** содержит параметр **in** или **out** без параметра файла форматирования ( **-f**) или параметра формата данных ( **-n**, **-c**, **-w**или **-N**), команда запрашивает тип файлового хранилища для каждого поля данных следующим образом:  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   
@@ -42,16 +41,16 @@ ms.locfileid: "66011823"
   
     |Тип файла хранилища|Введите в командной строке|  
     |-----------------------|-----------------------------|  
-    |`char`<sup>1</sup>|`c`[`har`]|  
+    |`char` <sup>1</sup>|`c`[`har`]|  
     |`varchar`|`c[har]`|  
     |`nchar`|`w`|  
     |`nvarchar`|`w`|  
-    |`text`<sup>2</sup>|`T`[`ext`]|  
+    |`text` <sup>2</sup>|`T`[`ext`]|  
     |`ntext2`|`W`|  
     |`binary`|`x`|  
     |`varbinary`|`x`|  
-    |`image`<sup>2</sup>|`I`[`mage`]|  
-    |`datetime`|**г [ATE]**|  
+    |`image` <sup>2</sup>|`I`[`mage`]|  
+    |`datetime`|**d[ate]**|  
     |`smalldatetime`|`D`|  
     |`time`|`te`|  
     |`date`|`de`|  
@@ -59,19 +58,19 @@ ms.locfileid: "66011823"
     |`datetimeoffset`|`do`|  
     |`decimal`|`n`|  
     |`numeric`|`n`|  
-    |`float`|**f [лоат]**|  
+    |`float`|**f[loat]**|  
     |`real`|`r`|  
-    |`Int`|**i [NT]**|  
+    |`Int`|**i[nt]**|  
     |`bigint`|`B[igint]`|  
-    |`smallint`|**s [маллинт]**|  
-    |`tinyint`|**t [ининт]**|  
-    |`money`|**m [Онэй]**|  
+    |`smallint`|**s[mallint]**|  
+    |`tinyint`|**t[inyint]**|  
+    |`money`|**m[oney]**|  
     |`smallmoney`|`M`|  
     |`bit`|`b[it]`|  
     |`uniqueidentifier`|`u`|  
     |`sql_variant`|`V[ariant]`|  
     |`timestamp`|`x`|  
-    |`UDT`(определяемый пользователем тип данных)|`U`|  
+    |`UDT` (пользовательский тип данных)|`U`|  
     |`XML`|`X`|  
   
      <sup>1</sup> взаимодействие длины поля, длины префикса и признаков конца определяет объем дискового пространства, выделенного в файле данных для несимвольных данных, экспортируемых в качестве типа `char` хранилища файлов.  
@@ -83,15 +82,15 @@ ms.locfileid: "66011823"
   
 |Тип файла хранилища|Тип данных файла|  
 |-----------------------|-------------------------|  
-|`char`<sup>1</sup>|SQLCHAR|  
+|`char` <sup>1</sup>|SQLCHAR|  
 |`varchar`|SQLCHAR|  
 |`nchar`|SQLNCHAR|  
 |`nvarchar`|SQLNCHAR|  
-|`text`<sup>2</sup>|SQLCHAR|  
-|`ntext`<sup>2</sup>|SQLNCHAR|  
+|`text` <sup>2</sup>|SQLCHAR|  
+|`ntext` <sup>2</sup>|SQLNCHAR|  
 |`binary`|SQLBINARY|  
 |`varbinary`|SQLBINARY|  
-|`image`<sup>2</sup>|SQLBINARY|  
+|`image` <sup>2</sup>|SQLBINARY|  
 |`datetime`|SQLDATETIME|  
 |`smalldatetime`|SQLDATETIM4|  
 |`decimal`|SQLDECIMAL|  
@@ -128,9 +127,9 @@ ms.locfileid: "66011823"
   
 ## <a name="see-also"></a>См. также:  
  [bcp Utility](../../tools/bcp-utility.md)   
- [Типы данных &#40;&#41;Transact-SQL](/sql/t-sql/data-types/data-types-transact-sql)   
- [Указание длины поля с помощью программы bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
- [Укажите признаки конца поля и строки &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
- [Указание длины префикса в файлах данных с помощью программы bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+ [Типы данных (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)   
+ [Указание длины поля с помощью программы bcp (SQL Server)](specify-field-length-by-using-bcp-sql-server.md)   
+ [Определение признаков конца поля и строки (SQL Server)](specify-field-and-row-terminators-sql-server.md)   
+ [Определение длины префикса в файлах данных с помощью программы bcp (SQL Server)](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
   

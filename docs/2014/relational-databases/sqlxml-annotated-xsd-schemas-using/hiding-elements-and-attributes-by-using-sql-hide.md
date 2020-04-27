@@ -25,10 +25,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ce8daf2badb855cbf855031d93e38fb689eab54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013829"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Скрытие элементов и атрибутов при помощи sql:hide
@@ -39,7 +39,7 @@ ms.locfileid: "66013829"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Указание sql:hide для атрибута  
+### <a name="a-specifying-sqlhide-on-an-attribute"></a>А) Указание sql:hide для атрибута  
  Схема XSD в этом примере состоит из элемента ** \<Person. Contact>** с атрибутами **ContactID**, **FirstName**и **LastName** .  
   
  Элемент ** \<Person. Contact>** имеет сложный тип и, следовательно, сопоставляется с таблицей с тем же именем (сопоставление по умолчанию). Все атрибуты элемента ** \<Person. Contact>** имеют простой тип и сопоставляются со столбцами с теми же именами в поле Person. контакттабле в базе данных AdventureWorks. В схеме `sql:hide` заметка задается в атрибуте **ContactID** . Если для этой схемы задан запрос XPath, то объект **ContactID** не возвращается в XML-документе.  
