@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de8a27801ef89f10bf303cee17d1c2d0e1081c5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109702"
 ---
 # <a name="control-report-distribution"></a>Управление распространением отчета
@@ -46,9 +46,9 @@ ms.locfileid: "66109702"
 ## <a name="controlling-file-share-delivery"></a>Управление доставкой в общую папку  
  Доставка в общую папку используется для записи отчета в файл на жестком диске. После сохранения файла на диске этот файл перестает быть субъектом модели безопасности на основе ролей, с помощью которой сервер отчетов управляет доступом пользователей. Для защиты отчета, сохраненного на диске, можно поместить списки управления доступом (ACLs) в сам файл или в папку, в которой он находится. Кроме того, в зависимости от операционной системы, могут быть доступны другие параметры безопасности.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка сервера отчетов для доставки электронной почты &#40;Configuration Manager SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
  [Подписки и доставка (службы Reporting Services)](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
+ [Создание и администрирование подписок для серверов отчетов в собственном режиме](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
   
   

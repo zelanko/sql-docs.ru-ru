@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110065"
 ---
 # <a name="optimizing-the-neworg-table"></a>Оптимизация таблицы NewOrg
@@ -95,7 +95,7 @@ ms.locfileid: "66110065"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     **КодСотрудника**— первый индекс: строки хранятся в последовательности **EmployeeID** .  
+     Индекс преимущественно по**EmployeeID**: строки хранятся в соответствии с последовательностью значений **EmployeeID** .  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -159,6 +159,6 @@ ms.locfileid: "66110065"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Сводка. преобразование таблицы в иерархическую структуру](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
+ [Сводка. Преобразование таблицы в иерархическую структуру](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
   

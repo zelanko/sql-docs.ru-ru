@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01d9c5b6ae0e69febd45008bf0aa7b6c3b5a83d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109383"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>Диалоговое окно «Свойства набора данных» — «Фильтры» (построитель отчетов)
@@ -54,12 +54,12 @@ ms.locfileid: "66109383"
  **Оператор**  
  Выберите оператор для сравнения выражения и значения.  
   
- **Value**  
+ **Значение**  
  Введите выражение или значение, которое будет использовано для вычисления выражения, указанного в поле **Выражение** . Нажмите кнопку Выражение (**FX**), чтобы изменить выражение.  
   
-## <a name="see-also"></a>См. также:  
- [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Параметры отчета (построитель отчетов и конструктор отчетов)](report-design/report-parameters-report-builder-and-report-designer.md)   
+## <a name="see-also"></a>См. также  
+ [Внедренные и общие наборы данных отчета &#40;построитель отчетов и службы SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Параметры отчета &#40;построитель отчетов и конструктор отчетов&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Добавление фильтра в набор данных &#40;построитель отчетов и SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   

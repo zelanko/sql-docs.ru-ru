@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1008202519f1d9bcbf48dfdc4cd4ef3a3cbbe20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108465"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Занятие 4. Определение подключения к данным и таблицы данных для родительского отчета
@@ -46,7 +46,7 @@ ms.locfileid: "66108465"
   
 6.  Если в шаге 5 (b) был выбран вариант **Использовать проверку подлинности SQL Server** , выберите включение конфиденциальных данных в строку или задание этих сведений в коде приложения.  
   
-7.  На странице **Сохранение строки подключения в файле конфигурации приложения** введите имя строки подключения или примите **AdventureWorks2008ConnectionString**по умолчанию. Щелкните **Далее**.  
+7.  На странице **Сохранение строки подключения в файле конфигурации приложения** введите имя строки подключения или примите **AdventureWorks2008ConnectionString**по умолчанию. Нажмите кнопку **Далее**.  
   
 8.  На странице **Выбор типа команды** выберите команду **использовать инструкции SQL**, а затем нажмите кнопку **Далее**.  
   

@@ -29,10 +29,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d1e804282459972b21303cf795a9c3a88ea93d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107039"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Задание учетных данных и сведениях о соединении для источников данных отчета
@@ -126,25 +126,25 @@ ms.locfileid: "66107039"
   
  В этом случае сервер отчетов подключается к удаленному источнику данных, используя учетную запись автоматического выполнения, которую необходимо указать заранее. Поскольку сервер отчетов не подключается к удаленному серверу, используя учетные данные служб, нужно задать учетную запись, которую сервер отчетов может использовать для соединения. Дополнительные сведения о создании такой учетной записи см. в разделе [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-##  <a name="DataSourceConfigurationConnections"></a>Настройка источника данных и сетевые подключения  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a> Настройка источника данных и сетевые подключения  
  В следующей таблице приводятся способы соединения для конкретных комбинаций типов учетных данных и модулей обработки данных. Если используется пользовательский модуль обработки данных, см. раздел [Указание соединений для пользовательских модулей обработки данных](specify-connections-for-custom-data-processing-extensions.md).  
   
-|**Тип**|**Контекст сетевого подключения**|**Типы источников данных**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  
+|**Type**|**Контекст сетевого подключения**|**Типы источников данных**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, службы Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |Встроенные функции безопасности|Олицетворение текущего пользователя|Для всех типов источников данных при соединении используется учетная запись текущего пользователя.|  
 |Учетные данные Windows|Олицетворение заданного пользователя|Для источников [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC и OLE DB установите соединение с помощью олицетворенной учетной записи.|  
 |Учетные данные базы данных|Олицетворение учетной записи автоматического выполнения или учетной записи службы<br /><br /> (Службы Reporting Services удаляют разрешения администратора при отправке запроса на соединение при помощи идентификатора служб.)|Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC и OLE DB:<br /><br /> добавление имени пользователя и пароля к строке соединения.<br /><br /> Для [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> соединение выполняется успешно при использовании протокола TCP/IP, в противном случае происходит сбой соединения.<br /><br /> Для XML:<br /><br /> сбой соединения на сервере отчетов при использовании учетных данных базы данных.|  
-|None|Олицетворение учетной записи автоматического выполнения|Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC и OLE DB:<br /><br /> используются учетные данные, определенные в строке соединения. Сбой соединения на сервере отчетов, если не задана учетная запись автоматического выполнения.<br /><br /> Для [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> всегда сбой соединения, если не заданы учетные данные, даже если определена учетная запись автоматического выполнения.<br /><br /> Для XML:<br /><br /> соединение в качестве анонимного пользователя, если определена учетная запись автоматического выполнения, в противном случае сбой соединения.|  
+|Отсутствуют|Олицетворение учетной записи автоматического выполнения|Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC и OLE DB:<br /><br /> используются учетные данные, определенные в строке соединения. Сбой соединения на сервере отчетов, если не задана учетная запись автоматического выполнения.<br /><br /> Для [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> всегда сбой соединения, если не заданы учетные данные, даже если определена учетная запись автоматического выполнения.<br /><br /> Для XML:<br /><br /> соединение в качестве анонимного пользователя, если определена учетная запись автоматического выполнения, в противном случае сбой соединения.|  
   
 ## <a name="setting-credentials-programmatically"></a>Программная установка учетных данных  
  Чтобы контролировать доступ к отчету и серверу отчетов, можно задать учетные данные в своем коде. Дополнительные сведения см. в статье [Data Sources and Connection Methods](../report-server-web-service/methods/data-sources-and-connection-methods.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Подключения к данным, источники данных и строки подключения в Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Управление источниками данных отчета](../../integration-services/connection-manager/data-sources.md)   
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md)   
  [Создание, удаление или изменение общего источника данных &#40;диспетчер отчетов&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Настройка свойств источника данных для диспетчер отчетов &#40;отчетов&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [Настройка свойств источника данных для отчета (диспетчер отчетов)](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

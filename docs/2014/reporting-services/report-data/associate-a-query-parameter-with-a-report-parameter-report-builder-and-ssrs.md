@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 697a8bbfa77a8afcabfdf00deef93620ff607233
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107471"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>Связь параметра запроса с параметром отчета (построитель отчетов и службы SSRS)
@@ -30,10 +30,10 @@ ms.locfileid: "66107471"
   
 ### <a name="to-associate-a-query-parameter-with-a-report-parameter"></a>Связывание параметра запроса с параметром отчета  
   
-1.  В области данных отчета щелкните правой кнопкой мыши набор данных, выберите пункт **Свойства набора данных** и нажмите **Параметры**.  
+1.  В области данных отчета щелкните правой кнопкой мыши набор данных, выберите пункт **Свойства набора данных**и нажмите **Параметры**.  
   
     > [!NOTE]  
-    >  Если область данных отчета не отображается, в меню **Вид** выберите пункт **Данные отчета** .  
+    >   Если область данных отчета не отображается, в меню **Вид** выберите пункт **Данные отчета** .  
   
 2.  В столбце **Имя параметра**найдите имя параметра запроса. Имена параметров заполняются автоматически на основе запроса. Каждый раз при изменении запроса он проверяется на наличие новых параметров запроса. Созданные вручную параметры запроса не меняются при изменении запроса.  
   
@@ -46,8 +46,8 @@ ms.locfileid: "66107471"
   
 3.  Повторите шаг 2 для остальных параметров запроса.  
   
-## <a name="see-also"></a>См. также:  
- [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Внедренные и общие наборы данных отчета &#40;построитель отчетов и службы SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Концепция параметров отчета &#40;построитель отчетов и службы SSRS&#41;](../report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   
   

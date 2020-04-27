@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5b9fdcac2499cdf33d98ba636596218c14704f9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108210"
 ---
 # <a name="new-model-page-report-manager"></a>Страница «Создание модели» (диспетчер отчетов)
@@ -38,7 +38,7 @@ ms.locfileid: "66108210"
     -   Выберите **Управление** , чтобы открыть страницу свойств отчета «Общие». Затем нажмите кнопку **Создать модель отчета** , чтобы открыть страницу «Создать модель».  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Указывает имя модели. Имя должно содержать хотя бы одну букву или цифру. В него могут также входить пробелы и другие символы. При задании имени нельзя использовать следующие символы:  
   
  ; ? : \@ & = +, $/* \< > | " /  

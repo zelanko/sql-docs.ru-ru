@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c94117f277f0d058bd67c61e8dabc609d009337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107640"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Сохранение отчетов на сервере отчетов (построитель отчетов)
@@ -48,10 +48,10 @@ ms.locfileid: "66107640"
   
 4.  В поле **Элементы типа**выберите тип сохраняемого элемента отчета. Для отчетов используется тип «Отчеты» (RDL).  
   
-## <a name="see-also"></a>См. также:  
- [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Поиск, просмотр отчетов и управление ими &#40;построитель отчетов и SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Экспорт отчетов &#40;построитель отчетов и SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
- [Сохранение отчетов (построитель отчетов)](saving-reports-report-builder.md)   
+ [Сохранение отчетов &#40;построитель отчетов&#41;](saving-reports-report-builder.md)   
  [Экспорт отчета в файл другого типа (построитель отчетов и службы SSRS)](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   
   

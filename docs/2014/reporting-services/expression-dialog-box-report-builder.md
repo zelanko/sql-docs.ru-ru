@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6f12a39c1456c179187654445947de9ee7d87a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109148"
 ---
 # <a name="expression-dialog-box-report-builder"></a>Диалоговое окно «Выражение» (построитель отчетов)
@@ -27,7 +27,7 @@ ms.locfileid: "66109148"
  Диалоговое окно **Выражение** содержит окно кода, дерево категорий, элементы категорий, панель описания и панель примеров. Диалоговое окно « **выражение** » зависит от контекста; элементы категории и описания изменяются в ответ на категорию выражения, с которой вы работаете. Дополнительные сведения см. в статьях [примеры выражений &#40;построитель отчетов и ssrs&#41;](report-design/expression-examples-report-builder-and-ssrs.md), [выражения &#40;ПОСТРОИТЕЛЬ отчетов и службы SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)  
   
 ## <a name="expression-constructs"></a>Конструкции выражения  
- Выражения начинаются со знака равенства (=) и могут содержать константы, литералы, операторы и ссылки на встроенные поля, встроенные коллекции, встроенные функции, функции библиотеки времени выполнения [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], классы среды CLR платформы [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] и пользовательские функции. В следующем списке перечислены категории и значения, которые можно добавить в выражение.  
+ Выражения начинаются со знака равенства (=) и могут содержать константы, литералы, операторы и ссылки на встроенные поля, встроенные коллекции, встроенные функции, функции библиотеки времени выполнения [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] , классы среды CLR платформы [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] и пользовательские функции. В следующем списке перечислены категории и значения, которые можно добавить в выражение.  
   
  **Задать выражение для:**  _\<PropertyName>_  
  Имя свойства, для которого задается выражение. Кроме того, это свойство можно установить в панели свойств по его имени.  
@@ -44,7 +44,7 @@ ms.locfileid: "66109148"
  Содержит список параметров отчета.  
   
  **Поля (** _ \<выбранный набор данных>_ **)**  
- Отображает список полей для набора данных, выбранного в категории «Наборы данных». Дважды щелкните поле, чтобы скопировать его в окно **Выражение**.  
+ Отображает список полей для набора данных, выбранного в категории «Наборы данных». Дважды щелкните поле, чтобы скопировать его в окно **Выражение** .  
   
  **Наборы данных**  
  Предоставляет список доступных наборов данных и показывает поля, являющиеся элементами набора данных.  
@@ -52,7 +52,7 @@ ms.locfileid: "66109148"
  **Переменные**  
  Отображает список переменных отчета. Дополнительные сведения см. в разделе [Ссылки на коллекции переменных отчета и группы (построитель отчетов и службы SSRS)](report-design/built-in-collections-report-and-group-variables-references-report-builder.md).  
   
- **Операторы**  
+ **Инструкции**  
  Отображает операторы, которые можно включить в вычисление или строковую операцию. Дополнительные сведения см. в разделе [Операторы в выражениях (построитель отчетов и службы SSRS)](report-design/operators-in-expressions-report-builder-and-ssrs.md).  
   
  **Общие функции**  
@@ -81,14 +81,14 @@ ms.locfileid: "66109148"
   
 ## <a name="see-also"></a>См. также:  
  [Выражения (построитель отчетов и службы SSRS)](report-design/expressions-report-builder-and-ssrs.md)   
- [Форматирование элементов отчета (построитель отчетов и службы SSRS)](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Форматирование чисел и дат (построитель отчетов и службы SSRS)](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Ссылки на коллекцию параметров (построитель отчетов и службы SSRS)](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
- [Примеры выражений групп &#40;построитель отчетов и службы SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [Форматирование элементов отчета &#40;построитель отчетов и SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Форматирование чисел и дат &#40;построитель отчетов и SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Коллекция Parameters ссылается на &#40;построитель отчетов и SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
+ [Примеры выражений групп &#40;построитель отчетов и SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [Примеры уравнений фильтра &#40;построитель отчетов и SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [Ссылки на коллекцию полей набора данных &#40;построитель отчетов и SSRS&#41;](report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)   
  [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Типы данных в выражениях (построитель отчетов и службы SSRS)](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Типы данных в выражениях &#40;построитель отчетов и SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [Диалоговое окно «Выбор цвета» &#40;построитель отчетов и SSRS&#41;](../../2014/reporting-services/select-color-dialog-box-report-builder-and-ssrs.md)  
   
   

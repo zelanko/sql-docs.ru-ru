@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bb8790496efb1701baf1636e5c16769e6430aa0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109436"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Страница «Выбор источника данных» (диспетчер отчетов)
@@ -36,18 +36,18 @@ ms.locfileid: "66109436"
 5.  На панели свойств выберите **Общий источник данных** , а затем щелкните **Обзор**.  
   
 ## <a name="options"></a>Параметры  
- **Location**  
+ **Расположение**  
  Позволяет задать полный путь к общему элементу источника данных, начинающийся с имени корневой папки. Этот путь можно ввести вручную или перейти к нужному общему источнику данных в древовидном представлении.  
   
  **Представление в виде дерева**  
  Показывает структуру папок пространства имен для сервера отчетов. Щелкните общий элемент, источника данных, чтобы добавить полный путь к нему в поле **Размещение** .  
   
- **OK**  
+ **ОК**  
  Нажмите, чтобы скопировать выбор источника данных на страницу свойств источников данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление источниками данных отчета](report-data/manage-report-data-sources.md)   
- [Указание учетных данных и сведений о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Задание учетных данных и сведениях о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Страница свойств «Источники данных» &#40;диспетчер отчетов&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
  [Страница "Создание источника данных" &#40;диспетчер отчетов&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)  

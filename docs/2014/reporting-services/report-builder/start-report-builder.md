@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fc123be862320cd35ccf4aec76d8bc9cf7877af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107603"
 ---
 # <a name="start-report-builder-report-builder"></a>Запуск построителя отчетов (построитель отчетов)
@@ -80,7 +80,7 @@ ms.locfileid: "66107603"
   
      Если сервер отчетов не отображается в списке существующих серверов, закройте диалоговое окно **Открытие отчета** и нажмите кнопку **Подключиться** в нижней части построитель отчетов, чтобы подключиться к серверу.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Построитель отчетов в SQL Server 2014](report-builder-in-sql-server-2016.md)  
   
   

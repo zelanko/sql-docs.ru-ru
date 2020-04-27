@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9106ff624c9a8e50bd292166690fc220eaea527e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108568"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
@@ -30,11 +30,11 @@ ms.locfileid: "66108568"
   
  В этом разделе содержатся следующие сведения:  
   
--   [Проверка установки в режиме интеграции с SharePoint](#bkmk_sharepointmode)  
+-   [Проверка установки в режиме SharePoint](#bkmk_sharepointmode)  
   
 -   [Проверка установки в собственном режиме](#bkmk_nativemode)  
   
-##  <a name="bkmk_sharepointmode"></a> Проверка установки в режиме SharePoint  
+##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a>Проверка установки в режиме интеграции с SharePoint  
   
 #### <a name="to-verify-the-reporting-services-service"></a>Проверка службы Reporting Services  
   
@@ -82,14 +82,14 @@ ms.locfileid: "66108568"
   
 2.  Загрузите образец базы данных Adventure Works и образцы отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из CodePlex. Дополнительные сведения см. в разделе [Образцы отчетов AdventureWorks](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home).  
   
-##  <a name="bkmk_nativemode"></a> Проверка установки в собственном режиме  
+##  <a name="verify-a-native-mode-installation"></a><a name="bkmk_nativemode"></a>Проверка установки в собственном режиме  
  Если сервер отчетов устанавливается в собственном режиме в конфигурации по умолчанию, то программа установки проводит установку и развертывание сервера. Можно проверить, развернула ли программа установки сервер отчетов, выполнив несколько простых тестов. Для выполнения этих шагов необходимо быть локальным администратором. Чтобы тестирование могли выполнить другие пользователи, необходимо сконфигурировать доступ к серверу отчетов для этих пользователей.  
   
 #### <a name="to-verify-that-the-report-server-is-installed-and-running"></a>Проверка успешной установки и запуска сервера отчетов  
   
 1.  Запустите программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и подключитесь к только что установленному экземпляру сервера отчетов. На странице «URL-адрес веб-службы» имеется ссылка на веб-службу сервера отчетов. Щелкните ссылку и убедитесь, что можете обращаться к серверу. Если база данных сервера отчетов не настроена, выполните ее настройку до активизации ссылки.  
   
-2.  Откройте приложения командной строки служб и убедитесь в том, что служба сервера отчетов запущена. Для просмотра состояния службы сервера отчетов нажмите кнопку **Пуск**, выберите **Панель управления**, дважды щелкните **Администрирование**и откройте оснастку **Службы**. Когда появится список служб, найдите службу **Сервер отчетов (MSSQLSERVER)** . Состояние службы должно быть **Работает**.  
+2.  Откройте приложения командной строки служб и убедитесь в том, что служба сервера отчетов запущена. Для просмотра состояния службы сервера отчетов нажмите кнопку **Пуск**, выберите **Панель управления**, дважды щелкните **Администрирование**и откройте оснастку **Службы**. Когда появится список служб, найдите службу **Сервер отчетов (MSSQLSERVER)**. Состояние службы должно быть **Работает**.  
   
 3.  Откройте браузер и в строке адреса введите URL-адрес сервера отчетов. Адрес должен состоять из имени сервера и имени виртуального каталога, которое было определено во время установки сервера отчетов. По умолчанию имя виртуального каталога сервера отчетов — **ReportServer**. Для проверки установки сервера отчетов можно использовать следующий URL-адрес: http://*\<Computer Name>*/ReportServer*\<_instance Name>*. URL-адрес будет другим, если сервер отчетов установлен как именованный экземпляр. Дополнительные сведения о формате URL-адресов см. в статье [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](configure-report-server-urls-ssrs-configuration-manager.md). Если вы являетесь локальным администратором систем Windows Vista или Windows Server 2008, ознакомьтесь со статьей [Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (службы SSRS)](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
@@ -111,8 +111,8 @@ ms.locfileid: "66108568"
   
 2.  Если установлены образцы отчетов, откройте файлы образцов проектов отчетов и опубликуйте отчеты на сервере отчетов.  
   
-## <a name="see-also"></a>См. также:  
- [Устранение неполадок при установке служб Reporting Services](troubleshoot-a-reporting-services-installation.md)   
+## <a name="see-also"></a>См. также  
+ [Устранение неполадок при установке Reporting Services](troubleshoot-a-reporting-services-installation.md)   
  [Причины ошибок служб Reporting Services и способы их устранения](../troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
   

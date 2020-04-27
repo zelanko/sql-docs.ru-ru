@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 862d8b90f3c91dffda35971677db7fdc231c1b63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108933"
 ---
 # <a name="import-reports-from-microsoft-access-reporting-services"></a>Импорт отчетов из базы данных Microsoft Access (службы Reporting Services)
@@ -38,7 +38,7 @@ ms.locfileid: "66108933"
   
 4.  Проверьте окно **список задач** на наличие ошибок сборки. Чтобы открыть окно **список задач** , откройте меню **вид** , наведите указатель на пункт **другие окна**, а затем щелкните **список задач**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разработка отчетов с использованием конструктора отчетов (SSRS)](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   

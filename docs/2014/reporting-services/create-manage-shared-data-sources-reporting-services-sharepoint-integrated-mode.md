@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5eedb74dd5a24f40469b3ee6a4a24e97e6e59174
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109625"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>Создание общих источников данных и управление ими (службы Reporting Services в режиме интеграции с SharePoint)
@@ -85,7 +85,7 @@ ms.locfileid: "66109625"
   
  Будьте осторожны при удалении модели отчета. При удалении модели невозможно открыть или изменить любые отчеты, основанные на этой модели в построителе отчетов. При непреднамеренном удалении модели, используемой в существующих отчетах, необходимо повторно создать модель, повторно создать и сохранить использующие эту модель отчеты и повторно указать необходимую безопасность элемента модели. Невозможно просто сформировать заново модель и присоединить ее к существующему отчету.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задание учетных данных и сведениях о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

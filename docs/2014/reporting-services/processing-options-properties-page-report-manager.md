@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f91cd8a93571b62f57933ff7556004f8c7b42a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108034"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Страница «Свойства параметров обработки» (диспетчер отчетов)
@@ -60,8 +60,8 @@ ms.locfileid: "66108034"
   
  Это значение применяется для обработки отчетов на сервере отчетов. Оно не задает время ожидания для обработки данных на сервере базы данных, предоставляющем данные для отчета. Однако это заданное значение должно быть достаточным для завершения как обработки данных, так и обработки отчета. Отсчет времени обработки отчета начинается, когда отчет выбирается, и заканчивается, когда отчет открывается.  
   
-## <a name="see-also"></a>См. также:  
- [Установка свойств обработки отчетов](report-server/set-report-processing-properties.md)   
+## <a name="see-also"></a>См. также  
+ [Установка свойств обработки отчета](report-server/set-report-processing-properties.md)   
  [Кэширование отчетов (службы SSRS)](report-server/caching-reports-ssrs.md)   
  [Создание, изменение и удаление расписаний](subscriptions/create-modify-and-delete-schedules.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)  

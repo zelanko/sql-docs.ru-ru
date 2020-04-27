@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7f916e8acf45c822439a116bc5ad1ff40a11d2de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107697"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>Печать отчетов (построитель отчетов и службы SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "66107697"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Печать отчетов из браузера с помощью элемента управления печатью (построитель отчетов и службы SSRS)](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
  Описывает, как печатать отчеты на стороне клиента из веб-браузера или диспетчера отчетов.  
   
@@ -48,10 +48,10 @@ ms.locfileid: "66107697"
  [Печать отчета (построитель отчетов и службы SSRS)](print-a-report-report-builder-and-ssrs.md)  
  Содержит пошаговые инструкции по печати отчета, управлению полями страницы и указанию размера бумаги для отчетов, подготавливаемых к просмотру в модулях подготовки отчетов к печати: "PDF", "Изображение" и "Печать".  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Экспорт отчетов &#40;построитель отчетов и SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
- [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Изображения (построитель отчетов и службы SSRS)](../report-design/images-report-builder-and-ssrs.md)   
+ [Верхние и нижние колонтитулы страницы &#40;построитель отчетов и службы SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Образы &#40;построитель отчетов и службы SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  
   
   

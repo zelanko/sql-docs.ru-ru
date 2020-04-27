@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2fbc640573d6d897205e11dbc40d40210502ee60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109310"
 ---
 # <a name="delete-rows-dialog-box"></a>Диалоговое окно «Удаление строк»
@@ -32,7 +32,7 @@ ms.locfileid: "66109310"
  **Удалить только строки**  
  Выберите этот параметр, чтобы удалить только выбранные строки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

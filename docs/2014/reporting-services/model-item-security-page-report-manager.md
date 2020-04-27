@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f45169a2fdc8fdc4d56cb27a8bf6348a3c3c1a29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108231"
 ---
 # <a name="model-item-security-page-report-manager"></a>Страница «Безопасность элементов модели» (диспетчер отчетов)
@@ -73,7 +73,7 @@ ms.locfileid: "66108231"
  **Присвоить разрешение на чтение следующим пользователям и группам (разделенным точкой с запятой)**  
  Выберите этот параметр, чтобы указать учетную запись пользователя или группы, для которой определяется доступ. Если используются настройки безопасности по умолчанию, учетные записи пользователей и групп представляют собой учетные записи домена Windows. Укажите учетные записи в следующем формате: * \<домен \\><\>учетной записи*.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 по использованию сервера отчетов среде Management Studio](tools/report-server-in-management-studio-f1-help.md)  
   
   

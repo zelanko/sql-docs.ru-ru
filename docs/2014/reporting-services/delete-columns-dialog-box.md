@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 211d5020c85c5295f195389904385981db46d315
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109340"
 ---
 # <a name="delete-columns-dialog-box"></a>Диалоговое окно «Удаление столбцов»
@@ -32,10 +32,10 @@ ms.locfileid: "66109340"
  **Удалить только столбцы**  
  Выберите этот параметр, чтобы удалить только выбранные столбцы.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 конструктор отчетов](tools/report-designer-f1-help.md)   
- [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Область данных табликса (построитель отчетов и службы SSRS)](../../2014/reporting-services/tablix-data-region-report-builder-and-ssrs.md)   
+ [Фильтрация, группировка и сортировка данных &#40;построитель отчетов и SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Область данных табликса &#40;построитель отчетов и SSRS&#41;](../../2014/reporting-services/tablix-data-region-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

@@ -14,20 +14,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6512f2523b1dc64c1f9505c59b727aad0f15ad2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108100"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>Диалоговое окно «Свойства заполнителя» — «Общие» (построитель отчетов и службы SSRS)
   Диалоговое окно **Свойства заполнителя** можно использовать для изменения значения, подсказки и параметров разметки заполнителя в текстовом поле.  
   
 ## <a name="options"></a>Параметры  
- **Заголовка**  
+ **Метка**  
  Введите метку для заполнителя. Метка отображается только в области конструктора.  
   
- **Value**  
+ **Значение**  
  Введите значение текстового поля. Это должно быть выражение с полями, другое выражение или метка. Нажмите кнопку **выражение** (*FX*), чтобы изменить выражение.  
   
  **Сказок**  
@@ -36,17 +36,17 @@ ms.locfileid: "66108100"
  **Тип разметки**  
  Выберите параметр, указывающий метод подготовки к просмотру заполнителя.  
   
--   **Обычный текст** Отображение заполнителя в виде простого текста. HTML обрабатывается как литеральный текст.  
+-   **Простой текст** Отображать заполнитель как простой текст. HTML обрабатывается как литеральный текст.  
   
--   **HTML-код**  Отображение заполнителя в виде HTML. Если значение выражения в заполнителе содержит допустимые теги HTML, они будут подготовлены к просмотру как HTML.  
+-   **HTML**  Отображать заполнитель как HTML. Если значение выражения в заполнителе содержит допустимые теги HTML, они будут подготовлены к просмотру как HTML.  
   
-## <a name="see-also"></a>См. также:  
- [Форматирование текста в текстовом поле (построитель отчетов и службы SSRS)](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Форматирование текста в текстовом поле &#40;построитель отчетов и SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [Добавление HTML в &#40;отчетов построитель отчетов и SSRS&#41;](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Текстовые поля (построитель отчетов и службы SSRS)](report-design/text-boxes-report-builder-and-ssrs.md)   
- [Форматирование элементов отчета (построитель отчетов и службы SSRS)](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Форматирование текста и заполнителей (построитель отчетов и службы SSRS)](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Импорт HTML в построитель отчетов &#40;отчетов и службы SSRS&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [Текстовые поля &#40;построитель отчетов и службы SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
+ [Форматирование элементов отчета &#40;построитель отчетов и SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Форматирование текста и заполнителей &#40;построитель отчетов и SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Импорт HTML в отчет (построитель отчетов и службы SSRS)](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
   
   

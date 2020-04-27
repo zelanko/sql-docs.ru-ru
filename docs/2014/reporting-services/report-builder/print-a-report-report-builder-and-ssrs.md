@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 737e8ebfd96d98bff9ed144db33189e141dc0cfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107770"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Печать отчета (построитель отчетов и службы SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66107770"
   
 1.  Откройте отчет.  
   
-2.  На вкладке «Главная» нажмите кнопку **Выполнить**.  
+2.  На вкладке Главная нажмите кнопку **выполнить**.  
   
 3.  Щелкните **Макет страницы** , чтобы просмотреть, как отчет будет выглядеть после печати (необязательно).  
   

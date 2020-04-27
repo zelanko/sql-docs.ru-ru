@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ccdd085b4beb757e0f16e973ad02c9e27a3dafb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107113"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Тип соединения SAP NetWeaver BI (службы SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66107113"
   
  Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в статьях [Добавление и проверка подключения к данным или источника данных &#40;построитель отчетов и служб SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="support"></a>Поддерживаемые версии  
+##  <a name="supported-versions"></a><a name="support"></a>Поддерживаемые версии  
  Поставщик данных был разработан и проверен для работы с SAP BW 3.5 и 7.0.  
   
 -   Поддержка пакета 20 для SAP BW 3.5 и 7.0  
@@ -37,7 +37,7 @@ ms.locfileid: "66107113"
   
 -   SAP Duet 1.0  
   
-##  <a name="Connection"></a>Строка подключения  
+##  <a name="connection-string"></a><a name="Connection"></a>Строка подключения  
  Свяжитесь с администратором базы данных, чтобы получить сведения о соединении и учетные данные, необходимые для соединения с источником данных. Приведенный ниже пример строки соединения задает подключение через Интернет с использованием протокола SOAP к источнику данных [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] на сервере, использующем порт 8000 и XML для аналитики:  
   
 ```  
@@ -48,7 +48,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
   
-##  <a name="Credentials"></a>Информации  
+##  <a name="credentials"></a><a name="Credentials"></a>Информации  
  Учетные данные необходимы для запуска запросов, локального предварительного просмотра отчетов, а также для предварительного просмотра отчетов на сервере отчетов.  
   
  После публикации отчета может понадобиться изменить учетные данные источника данных, чтобы разрешения, необходимые для получения данных при запуске отчета на сервере отчетов, были допустимыми.  
@@ -57,7 +57,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
   
-##  <a name="Query"></a>Запроса  
+##  <a name="queries"></a><a name="Query"></a>Запроса  
  Для построения запроса многомерного выражения с помощью просмотра базовых структур данных в источнике данных можно использовать графический конструктор запросов в режиме конструктора или в режиме запроса. Чтобы увидеть результаты запроса во время конструирования, его можно запустить из конструктора запросов в интерактивном режиме. Построенный запрос определяет поля в наборе данных. Во время выполнения источник данных возвращает действительные данные. Для выполнения следующих действий используйте графический конструктор запросов.  
   
 -   Для построения запроса многомерного выражения в режиме конструктора перетащите измерения, элементы, свойства элементов и ключевые числа из источника данных в панель «Данные». Перетащите вычисляемые элементы с панели «Вычисляемые элементы» на панель «Данные», чтобы определить дополнительные поля наборов данных.  
@@ -70,7 +70,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
   
-##  <a name="Extended"></a>Расширенные свойства поля  
+##  <a name="extended-field-properties"></a><a name="Extended"></a> Расширенные свойства поля  
  Источник данных [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] поддерживает расширенные свойства полей. Расширенные свойства полей дополняют свойства `Value` и `IsMissing`, заданные для полей набора данных с помощью модуля обработки данных. Расширенные свойства включают стандартные свойства и пользовательские. Стандартные свойства — это свойства, общие для многих источников данных. Пользовательские свойства уникальны для каждого источника данных.  
   
 ### <a name="working-with-field-properties"></a>Работа со свойствами полей  
@@ -85,7 +85,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  Для ссылки на стандартные расширенные свойства используйте одно из следующих выражений:  
   
--   *Полям! FieldName. PropertyName*  
+-   *Fields!ИмяПоля.ИмяСвойства*  
   
 -   *Полям! FieldName ("PropertyName")*  
   
@@ -98,7 +98,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ### <a name="predefined-field-properties"></a>Стандартные свойства полей  
  В следующей таблице представлен список стандартных свойств поля, которые можно использовать для источника данных [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] .  
   
-|**Свойство**|**Тип**|**Описание или ожидаемое значение**|  
+|**Свойство**|**Type**|**Описание или ожидаемое значение**|  
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|Указывает значение данных поля.|  
 |`IsMissing`|`Boolean`|Указывает, найдено ли поле в результирующем наборе данных.|  
@@ -114,25 +114,25 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
   
-##  <a name="Remarks"></a> Замечания  
+##  <a name="remarks"></a><a name="Remarks"></a>. Замечания  
  Этот поставщик данных поддерживает не все режимы доставки отчетов. Доставка отчетов с помощью управляемых данными подписок для этого модуля обработки данных не предусмотрена. Дополнительные сведения см. в разделе [Использование внешнего источника данных для данных подписчика (управляемая данными подписка)](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
  Дополнительные сведения см. в разделе [Использование служб SQL Server 2008 Reporting Services совместно с SAP NetWeaver Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=167352).  
   
   
   
-##  <a name="HowTo"></a> Инструкции  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Разделы руководства  
  В этом разделе содержатся пошаговые инструкции по работе с подключениями к данным, источниками данных и наборами данных.  
   
  [Добавление и проверка подключения к данным или источника данных &#40;построитель отчетов и служб SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
- [Создание общего набора данных или внедренного набора данных &#40;построитель отчетов и служб SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [Добавление фильтра в набор данных &#40;построитель отчетов и SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [Добавление фильтра к набору данных (построитель отчетов и службы SSRS)](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
   
-##  <a name="Related"></a>Связанные разделы  
+##  <a name="related-sections"></a><a name="Related"></a> Связанные разделы  
  В этих разделах документации содержатся подробные сведения о данных отчетов, а также методические сведения об определении, настройке и использовании элементов отчетов, связанных с данными.  
   
  [Добавление данных в построитель отчетов &#40;отчетов и SSRS&#41;](report-datasets-ssrs.md)  
@@ -147,14 +147,14 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [Коллекция полей набора данных (построитель отчетов и службы SSRS)](dataset-fields-collection-report-builder-and-ssrs.md)  
  Предоставляет сведения о коллекции полей набора данных, создаваемой запросом.  
   
- [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
  Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.  
   
  
   
-## <a name="see-also"></a>См. также:  
- [Параметры отчета (построитель отчетов и конструктор отчетов)](../report-design/report-parameters-report-builder-and-report-designer.md)   
- [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Параметры отчета &#40;построитель отчетов и конструктор отчетов&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Фильтрация, группировка и сортировка данных &#40;построитель отчетов и SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Выражения (построитель отчетов и службы SSRS)](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

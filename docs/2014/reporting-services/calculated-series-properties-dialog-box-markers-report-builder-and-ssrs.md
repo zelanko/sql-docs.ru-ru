@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a3cbe076564d1ce24cbe606485462cbfe012407
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109890"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>Диалоговое окно «Свойства вычисляемого ряда» — «Маркеры» (построитель отчетов и службы SSRS)
@@ -39,13 +39,13 @@ ms.locfileid: "66109890"
  **Цвет границы маркера**  
  Выберите цвет границы маркеров для точек данных.  
   
-## <a name="see-also"></a>См. также:  
- [Диаграммы (построитель отчетов и службы SSRS)](report-design/charts-report-builder-and-ssrs.md)   
- [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Задание цветов диаграммы с помощью палитры &#40;построитель отчетов и службы SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Диаграммы &#40;построитель отчетов и службы SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
+ [Форматирование цветов рядов на диаграмме &#40;построитель отчетов и SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Форматирование меток оси на построитель отчетов &#40;диаграммы и SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Определение цветов на диаграмме с помощью палитры &#40;построитель отчетов и служб SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Построение данных на вспомогательной оси &#40;построитель отчетов и SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Форматирование точек данных на диаграмме &#40;построитель отчетов и SSRS&#41;](report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Добавление скользящего среднего в диаграмму (построитель отчетов и службы SSRS)](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

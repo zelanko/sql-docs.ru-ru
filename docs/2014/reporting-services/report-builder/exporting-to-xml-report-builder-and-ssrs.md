@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e8809b53078387fa58a961458693122753698e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107900"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Экспорт в XML (построитель отчетов и службы SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66107900"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItems"></a> Элементы отчета  
+##  <a name="report-items"></a><a name="ReportItems"></a> Элементы отчета  
  В следующей таблице описывается, как готовятся к просмотру элементы отчета.  
   
 |Элемент|Поведение при подготовке к просмотру|  
@@ -51,28 +51,24 @@ ms.locfileid: "66107900"
   
 -   Скрытые элементы, которые невозможно сделать видимыми путем включения, не подготавливаются к просмотру. Первоначально видимые элементы и скрытые элементы, которые можно сделать видимыми путем включения, готовятся к просмотру.  
   
--   
-  `Images, lines, and custom report items` не учитываются.  
+-   `Images, lines, and custom report items` не учитываются.  
   
-##  <a name="DataTypes"></a> Типы данных  
+##  <a name="data-types"></a><a name="DataTypes"></a>Типы данных  
  Элемент или атрибут текстового поля назначается типу данных XSD в зависимости от значений, отображаемых в текстовом поле.  
   
 |Если все значения текстового поля имеют тип|Назначается тип данных|  
 |--------------------------------|---------------------------|  
 |`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|
-  `Decimal` (или `Decimal` и любое целое число или тип данных byte)|**xsd:decimal**|  
-|
-  `Float` (или `Decimal` и любое целое число или тип данных byte)|**xsd:float**|  
-|
-  `Double` (или `Decimal` и любое целое число или тип данных byte)|**xsd:double**|  
-|`DateTime or DateTime Offset`|**XSD: dateTime**|  
-|`Time`|**XSD: строка**|  
-|`Boolean`|**XSD: логическое значение**|  
-|`String`, `Char`|**XSD: строка**|  
-|Другие|**XSD: строка**|  
+|`Decimal` (или `Decimal` и любое целое число или тип данных byte)|**xsd:decimal**|  
+|`Float` (или `Decimal` и любое целое число или тип данных byte)|**xsd:float**|  
+|`Double` (или `Decimal` и любое целое число или тип данных byte)|**xsd:double**|  
+|`DateTime or DateTime Offset`|**xsd:dateTime**|  
+|`Time`|**xsd:string**|  
+|`Boolean`|**xsd:boolean**|  
+|`String`, `Char`|**xsd:string**|  
+|Другой|**xsd:string**|  
   
-##  <a name="XMLSpecificRenderingRules"></a>Правила отрисовки, специфичные для XML  
+##  <a name="xml-specific-rendering-rules"></a><a name="XMLSpecificRenderingRules"></a>Правила отрисовки, специфичные для XML  
  В следующих разделах описывается интерпретация элементов отчета модулем подготовки XML-отчетов.  
   
 ### <a name="report-body"></a>Текст отчета  
@@ -80,11 +76,11 @@ ms.locfileid: "66107900"
   
  Определения пространств имен XML и ссылочные атрибуты схемы также включаются в элементы отчета. Имена переменных выводятся полужирным шрифтом:  
   
- \<**Отчет** xmlns = "**SchemaName**" xmlns: xsi = "<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**= "**счеманамерепортурл**&amp;RC% 3aSchema = true" Name = "ReportName" >  
+ \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  Переменные могут принимать следующие значения.  
   
-|Имя|Значение|  
+|name|Значение|  
 |----------|-----------|  
 |Report|Report.DataElementName|  
 |ReportURL|URLEncoded — абсолютный URL-адрес отчета на сервере.|  
@@ -152,20 +148,20 @@ ms.locfileid: "66107900"
   
  Если свойство DataElementOutput имеет значение "Выводить", верхний колонтитул повторяющегося элемента выводится как дочерний элемент для элемента сведений.  
   
-##  <a name="CustomFormatsXSLTransformations"></a>Пользовательские форматы и преобразования XSL  
+##  <a name="custom-formats-and-xsl-transformations"></a><a name="CustomFormatsXSLTransformations"></a>Пользовательские форматы и преобразования XSL  
  XML-файлы, созданные модулем подготовки XML-отчета, можно преобразовать практически в любой формат с помощью XSL-преобразований (XSLT). Благодаря этому можно выводить данные в форматах, еще не поддерживаемых существующими модулями подготовки отчета. Прежде чем создавать собственный модуль подготовки отчета, рассмотрите возможность использования модуля подготовки XML-отчета.  
   
-##  <a name="DuplicateName"></a>Дублирующиеся имена  
+##  <a name="duplicate-names"></a><a name="DuplicateName"></a>Дублирующиеся имена  
  Если в одной и той же области есть несколько элементов данных с совпадающими именами, модуль подготовки отчетов выдаст сообщение об ошибке.  
   
-##  <a name="XSLTTransformations"></a>Преобразования XSLT  
+##  <a name="xslt-transformations"></a><a name="XSLTTransformations"></a>Преобразования XSLT  
  Модуль подготовки отчетов в формате XML может применять к исходным XML-данным преобразование XSLT на сервере. Когда к данным применяется преобразование XSLT, модуль подготовки отчетов подготавливает к просмотру преобразованное содержимое, а не исходные XML-данные. Преобразование происходит на сервере, а не на клиенте.  
   
  Преобразование XSLT, применяемое к выходным данным, определяется либо в файле определения отчета с помощью свойства отчета DataTransform, либо с помощью параметра XSLT *DeviceInfo* . Если задан любой из этих параметров, преобразование выполняется каждый раз при использовании модуля подготовки отчетов в формате XML. При использовании подписок преобразование XSLT должно быть определено в свойстве RDL DataTransform.  
   
  Если XSLT-файл указан одновременно в свойстве определения DataTransform и параметре сведений об устройстве, сначала выполняется преобразование XSLT, заданное свойством DataTransform, а затем преобразование XSLT, заданное параметрами сведений об устройстве.  
   
-###  <a name="DeviceInfo"></a> Настройки сведений об устройстве  
+###  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Настройки сведений об устройстве  
  Некоторые настройки по умолчанию для этого модуля подготовки отчетов можно изменить через настройку сведений об устройстве, включая следующие.  
   
 -   Преобразование (XSLT), которое должно применяться к XML-документу.  
@@ -184,9 +180,9 @@ ms.locfileid: "66107900"
   
  Дополнительные сведения см. в разделе [XML Device Information Settings](../xml-device-information-settings.md).  
   
-## <a name="see-also"></a>См. также:  
- [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](interactive-functionality-different-report-rendering-extensions.md)   
- [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Разбиение на страницы в Reporting Services &#40;построитель отчетов и SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Поведения подготовки к просмотру &#40;построитель отчетов и SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Интерактивные функции для различных модулей подготовки отчетов к просмотру &#40;построитель отчетов и SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Подготовка элементов отчета к просмотру &#40;построитель отчетов и SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f44b35fcb8a6568e0dcd4e9d3eba412207d1e83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107318"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>Диалоговое окно «Ввод учетных данных для источника данных» (построитель отчетов)
@@ -29,7 +29,7 @@ ms.locfileid: "66107318"
  **Пароль**  
  Введите пароль для входа в источник данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Подключения к данным, источники данных и строки подключения в построитель отчетов](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Диалоговое окно "Свойства источника данных", общие &#40;построитель отчетов&#41;](../data-source-properties-dialog-box-general-report-builder.md)   
  [Укажите учетные данные в построитель отчетов](../specify-credentials-in-report-builder.md)   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e68650b21ee8cddc6258ab64b874bcf51ec1a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108541"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Занятие 1. Создание образца базы данных подписчика
@@ -63,7 +63,7 @@ ms.locfileid: "66108541"
  Успешно завершено создание данных подписки, которые будут управлять распространением отчетов и изменять выходные данные отчетов в соответствии с параметрами настройки для каждого из подписчиков. Далее предстоит изменить свойства источника данных отчета, который будет распространяться среди подписчиков. Изменение свойств источника данных нужно, чтобы подготовить отчет для распространения управляемой данными подписки. Вы также измените конструкцию отчета, включив в нее параметр, который будет использоваться подпиской с данными подписчика. [Занятие 2. изменение свойств источника данных отчета](lesson-2-modifying-the-report-data-source-properties.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Создание управляемой данными подписки &#40;руководство по службам SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Создание управляемой данными подписки (учебник по службам SSRS)](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Создание базы данных](../relational-databases/databases/create-a-database.md)   
  [Создание простого табличного отчета (учебник по службам SSRS)](create-a-basic-table-report-ssrs-tutorial.md)  
   

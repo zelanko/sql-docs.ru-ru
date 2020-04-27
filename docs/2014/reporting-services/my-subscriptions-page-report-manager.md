@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108191"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Страница «Мои подписки» (диспетчер отчетов)
@@ -53,7 +53,7 @@ ms.locfileid: "66108191"
  **Папка**  
  Показывает папку, в которой хранится отчет, указанный в подписке. Щелкните папку для просмотра ее содержимого.  
   
- **Необходимость**  
+ **Триггер**  
  Указывает критерии запуска подписки. Триггер **TimedSubscription** основывается на расписании, определяющем время запуска подписки. Триггер **SnapshotUpdated** основывается на обновлении, внесенном в моментальный снимок отчета.  
   
  **Последний запуск**  

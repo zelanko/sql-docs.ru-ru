@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a5c71344fe45df4265db72e9fd6dc41ac13bd98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108290"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>Диалоговое окно «Свойства окна просмотра карты», вкладка «Центрирование и масштабирование»
@@ -60,7 +60,7 @@ ms.locfileid: "66108290"
   
  Для сопоставления с полем, имеющим другой тип данных, необходимо написать выражение, значение которого имеет соответствующий тип. Например, если поле сопоставления — 5-разрядный почтовый код, хранящийся как целое число, то для задания почтового кода нужно использовать выражение =98053.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Карты (построитель отчетов и службы SSRS)](report-design/maps-report-builder-and-ssrs.md)  
   
   

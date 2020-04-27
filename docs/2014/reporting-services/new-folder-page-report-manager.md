@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21d79e84ca30283eab6fe788be940f712b2cd41f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108194"
 ---
 # <a name="new-folder-page-report-manager"></a>Страница «Создать папку» (диспетчер отчетов)
@@ -34,13 +34,13 @@ ms.locfileid: "66108194"
 2.  На панели инструментов нажмите кнопку **Создать папку**.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Укажите имя папки. Имя должно содержать хотя бы одну букву или цифру. Оно также может включать пробелы и специальные знаки. Не используйте символы ; ? : \@ & = +, $/* \< > | "или/при указании имени.  
   
  **Описание**  
  Введите описание содержимого папки. Описание появится на странице «Содержимое» у тех пользователей, которые имеют доступ к папке.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание, удаление и изменение папки &#40;диспетчер отчетов&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
  [Страница «Общие свойства», папки &#40;диспетчер отчетов&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   

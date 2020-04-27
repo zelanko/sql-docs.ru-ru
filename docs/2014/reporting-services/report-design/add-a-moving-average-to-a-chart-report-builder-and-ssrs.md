@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 016eeebb679ee16e07a99e44a3740efaae413483
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106826"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>Добавление скользящего среднего в диаграмму (построитель отчетов и службы SSRS)
@@ -40,9 +40,9 @@ ms.locfileid: "66106826"
     > [!NOTE]  
     >  Период — это количество дней, используемых для подсчета скользящего среднего. Если значения даты-времени не указываются на оси X, период представляется количеством точек данных, используемых для вычисления скользящего среднего. Если есть только одна точка данных, формула скользящего среднего не вычисляется. Скользящее среднее вычисляется, начиная со второй точки. При задании параметра **Начать с первой точки** , диаграмма начнет вычисление скользящего среднего с первой точки. Если существует только одна точка данных, то точка в вычисленном скользящем среднем будет идентична первой точке исходного ряда.  
   
-## <a name="see-also"></a>См. также:  
- [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Форматирование построитель отчетов &#40;диаграммы и SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
+ [Диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Добавление пустых точек на диаграмму &#40;построитель отчетов и SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
   
   

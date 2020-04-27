@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa7b0d32a62e5e2d729e05c88b892ccaffc0fc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106818"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Добавление гиперссылки на URL-адрес (построитель отчетов и службы SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66106818"
  Чтобы быстро приступить к работе, см. раздел [Учебник. Форматирование текста (построитель отчета)](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
->  Ссылки, привязанные к полям набора данных, могут стать мишенью для злонамеренного вторжения. Дополнительные сведения см. в разделе [Защищенные отчеты и ресурсы](../security/secure-reports-and-resources.md)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]электронной документации[ по ](https://go.microsoft.com/fwlink/?LinkId=154888) на сайте msdn.microsoft.com.  
+>  Ссылки, привязанные к полям набора данных, могут стать мишенью для злонамеренного вторжения. Дополнительные сведения см. в разделе [Защищенные отчеты и ресурсы](../security/secure-reports-and-resources.md)[электронной документации](https://go.microsoft.com/fwlink/?LinkId=154888) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
   
 ### <a name="to-add-a-hyperlink"></a>Добавление гиперссылки  
   
@@ -48,8 +48,8 @@ ms.locfileid: "66106818"
   
 7.  Для проверки ссылки нажмите кнопку **Выполнить** , чтобы выполнить предварительный просмотр отчета, а затем щелкните элемент отчета, для которого была создана ссылка.  
   
-## <a name="see-also"></a>См. также:  
- [Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Интерактивная сортировка, схемы документов и ссылки &#40;построитель отчетов и SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Создание схемы документа (построитель отчетов и службы SSRS)](create-a-document-map-report-builder-and-ssrs.md)  
   
   

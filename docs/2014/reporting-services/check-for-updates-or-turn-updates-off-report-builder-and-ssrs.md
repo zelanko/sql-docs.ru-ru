@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109855"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>Проверка наличия обновлений или отключение обновлений (построитель отчетов и службы SSRS)
@@ -35,8 +35,8 @@ ms.locfileid: "66109855"
   
 -   Щелкните правой кнопкой мыши область конструктора за пределами отчета или в тексте отчета и выберите пункт **проверить наличие обновлений**.  
   
-## <a name="see-also"></a>См. также:  
- [Элементы отчета (построитель отчетов и службы SSRS)](report-parts-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Элементы отчета &#40;построитель отчетов и службы SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [Публикация и повторная публикация элементов отчетов &#40;построитель отчетов и SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
  [Поиск элементов отчета и задание папки по умолчанию &#40;построитель отчетов и SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
  [Устранение неполадок элементов отчетов &#40;построитель отчетов и SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   

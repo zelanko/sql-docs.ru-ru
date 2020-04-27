@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108663"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>Удаление изолированной версии построителя отчетов (построитель отчетов)
@@ -30,15 +30,15 @@ ms.locfileid: "66108663"
   
 2.  На панели управления щелкните элемент **Программы и компоненты**.  
   
-3.  Найдите построитель отчетов « [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] » в списке **Имя** и щелкните его.  
+3.  Найдите построитель отчетов «  » в списке Имя и щелкните его.  
   
-4.  Нажмите кнопку **Удалить**.  
+4.  Щелкните **Удалить**.  
   
 5.  Если понадобится подтвердить удаление построителя отчетов, нажмите кнопку **Да**.  
   
 ### <a name="to-uninstall-report-builder-from-the-command-line"></a>Удаление построителя отчетов из командной строки  
   
-1.  В меню **Пуск** выберите команду **Выполнить**.  
+1.  В меню **Пуск** выберите пункт **Выполнить..**.  
   
 2.  В текстовом поле **Открыть** введите`cmd.`  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66108663"
   
 1.  Нажмите клавишу **ВВОД**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поддержка установки, удаления и построитель отчетов](../install-uninstall-and-report-builder-support.md)   
  [Установите изолированную версию построитель отчетов &#40;построитель отчетов&#41;](install-report-builder.md)  
   

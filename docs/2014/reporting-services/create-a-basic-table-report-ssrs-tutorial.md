@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08ed0c207b92075952ffc71669b45100e4ff7d06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109679"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Создание простого табличного отчета (учебник по службам SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66109679"
   
  Для получения данных из базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] необходимо иметь разрешения только на чтение.  
   
-## <a name="tasks"></a>Задания  
+## <a name="tasks"></a>Задачи  
  [Занятие 1. Создание проекта сервера отчетов (службы Reporting Services)](lesson-1-creating-a-report-server-project-reporting-services.md)  
   
  [Занятие 2. Задание информации о соединении (службы Reporting Services)](lesson-2-specifying-connection-information-reporting-services.md)  
@@ -57,9 +57,9 @@ ms.locfileid: "66109679"
  [Занятие 6. Добавление группирования и итогов (службы Reporting Services)](lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 > [!NOTE]  
->  При просмотре учебников рекомендуется добавить кнопки **Далее** и **назад** на панель инструментов средства просмотра документов. Дополнительные сведения можно найти в разделе  
+>  При просмотре учебников рекомендуется добавить кнопки **Далее** и **назад** на панель инструментов средства просмотра документов. Дополнительные сведения см. в разделе  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Учебники по службам Reporting Services (SSRS)](reporting-services-tutorials-ssrs.md)  
   
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5cbef64cbed910018e7d2f8dae1844074aaa3f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109345"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>Устаревшие функции служб SQL Server Reporting Services в SQL Server 2014
@@ -27,18 +27,18 @@ ms.locfileid: "66109345"
   
  В этом разделе:  
   
--   [SQL Server 2014 Reporting Services устаревшие функции](#bkmk_2014)  
+-   [Устаревшие функции служб SQL Server 2014 Reporting Services](#bkmk_2014)  
   
 -   [Устаревшие функции служб SQL Server 2012 SP1 Reporting Services](#bkmk_2012sp1)  
   
--   [SQL Server 2012 Reporting Services устаревшие функции](#bkmk_2012)  
+-   [Устаревшие функции служб SQL Server 2012 Reporting Services](#bkmk_2012)  
   
 -   [Устаревшие функции служб SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   
-##  <a name="bkmk_2014"></a>SQL Server 2014 Reporting Services устаревшие функции  
+##  <a name="sql-server-2014-reporting-services-deprecated-features"></a><a name="bkmk_2014"></a>SQL Server 2014 Reporting Services устаревшие функции  
   
 ### <a name="features-not-supported-in-the-next-version-of-sql-server"></a>Функции, не поддерживаемые в следующей версии SQL Server  
- Следующие [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] возможности не будут поддерживаться в **следующей** версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не используйте их при работе над новыми приложениями и как можно скорее измените приложения, в которых они в настоящее время используются.  
+ Следующие функции [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] не будут поддерживаться в **следующей** версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не используйте их при работе над новыми приложениями и как можно скорее измените приложения, в которых они в настоящее время используются.  
   
 #### <a name="html-rendering-extension-device-information-settings"></a>Параметры сведений об устройстве для модуля подготовки отчетов в формате HTML  
  Следующие параметры сведений об устройстве для модуля подготовки отчетов в формате HTML являются устаревшими.  
@@ -99,7 +99,7 @@ ms.locfileid: "66109345"
   
  В [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] отсутствуют устаревшие функции служб [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-##  <a name="bkmk_2012sp1"></a>SQL Server 2012 с пакетом обновления 1 (SP1) Reporting Services устаревшие функции  
+##  <a name="sql-server-2012-sp1-reporting-services-deprecated-features"></a><a name="bkmk_2012sp1"></a>SQL Server 2012 с пакетом обновления 1 (SP1) Reporting Services устаревшие функции  
  В этом разделе описываются функции служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , признанные устаревшими в [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Поддержка приведенных ниже функций компонента [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в следующей версии [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]будет сохранена, однако будет удалена в более поздней версии. (с какой именно версии [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , пока не определено).  
   
 ### <a name="sharepoint-web-parts"></a>Веб-части SharePoint  
@@ -107,7 +107,7 @@ ms.locfileid: "66109345"
   
  Дополнительные сведения об устаревших веб-частях см. в статье [Просмотр и изучение отчетов в собственном режиме с помощью SharePoint веб-части (службы SSRS)](https://msdn.microsoft.com/library/ms159772.aspx) .  
   
-##  <a name="bkmk_2012"></a>SQL Server 2012 Reporting Services устаревшие функции  
+##  <a name="sql-server-2012-reporting-services-deprecated-features"></a><a name="bkmk_2012"></a>SQL Server 2012 Reporting Services устаревшие функции  
  В этом разделе описываются функции служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , признанные устаревшими в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 ### <a name="html-rendering-extension-device-information-settings"></a>Параметры сведений об устройстве для модуля подготовки отчетов в формате HTML  
@@ -159,7 +159,7 @@ ms.locfileid: "66109345"
   
 -   <xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services устаревшие функции  
+##  <a name="sql-server-2008-r2-reporting-services-deprecated-features"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services устаревшие функции  
   
 > [!NOTE]  
 >  Поскольку SQL Server 2008 R2 содержит изменения дополнительного номера версии по сравнению с SQL Server 2008, рекомендуется также просмотреть содержимое раздела по SQL Server 2008.  
@@ -169,7 +169,7 @@ ms.locfileid: "66109345"
   
  Новая конечная точка включает все функциональные возможности, доступные в устаревшей конечной точке, и новые средства, введенные в SQL Server 2008 R2.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Новые возможности &#40;Reporting Services&#41;](what-s-new-reporting-services.md)   
  [Обратная совместимость](../getting-started/backward-compatibility.md)   
  [Изменения в работе SQL Server Reporting Services в SQL Server 2014](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   

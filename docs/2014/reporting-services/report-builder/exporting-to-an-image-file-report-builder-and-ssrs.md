@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd3a6e7126775479ae7ca0c6b6d138a0625476af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107891"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>Экспорт в файл изображения (построитель отчетов и службы SSRS)
@@ -25,10 +25,10 @@ ms.locfileid: "66107891"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SupportedImageFormats"></a> Поддерживаемые форматы изображения  
+##  <a name="supported-image-formats"></a><a name="SupportedImageFormats"></a> Поддерживаемые форматы изображения  
  В следующей таблице приведены расширения имени файла и тип MIME для каждого формата модуля подготовки изображений.  
   
-|**Тип**|**Расширение**|**MIMEType**|  
+|**Type**|**Расширение**|**MIMEType**|  
 |--------------|-------------------|------------------|  
 |BMP|BMP|image/bmp|  
 |GIF|GIF|image/gif|  
@@ -39,11 +39,11 @@ ms.locfileid: "66107891"
 |EMFPlus|EMF|image/emf|  
   
   
-##  <a name="RenderingMultiplePages"></a> Подготовка к просмотру нескольких страниц  
+##  <a name="rendering-multiple-pages"></a><a name="RenderingMultiplePages"></a> Подготовка к просмотру нескольких страниц  
  TIFF — это единственный формат, который позволяет представлять многостраничные документы в едином файле. Другие форматы, такие как JPG или PNG, выводят по одной странице одновременно и требуют отдельного вызова модуля подготовки отчетов для подготовки к просмотру каждой страницы.  
   
   
-##  <a name="Interactivity"></a> Интерактивность  
+##  <a name="interactivity"></a><a name="Interactivity"></a>Интерактивности  
  Интерактивные возможности не поддерживаются ни одним из форматов изображения, формируемых этим модулем подготовки отчетов. Не обрабатываются следующие интерактивные элементы.  
   
 -   Гиперссылки  
@@ -61,15 +61,15 @@ ms.locfileid: "66107891"
 -   Закладки  
   
   
-##  <a name="DeviceInfo"></a> Настройки сведений об устройстве  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Настройки сведений об устройстве  
  Некоторые параметры по умолчанию для этого модуля подготовки отчетов можно изменить через настройку сведений об устройстве. Дополнительные сведения см. в разделе [Image Device Information Settings](../image-device-information-settings.md).  
   
   
-## <a name="see-also"></a>См. также:  
- [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](interactive-functionality-different-report-rendering-extensions.md)   
- [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Разбиение на страницы в Reporting Services &#40;построитель отчетов и SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Поведения подготовки к просмотру &#40;построитель отчетов и SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Интерактивные функции для различных модулей подготовки отчетов к просмотру &#40;построитель отчетов и SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Подготовка элементов отчета к просмотру &#40;построитель отчетов и SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

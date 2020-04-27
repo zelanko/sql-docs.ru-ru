@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d289466fcff56a78172c54f24a093e0af169484
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107997"
 ---
 # <a name="query-builder-report-wizard"></a>Построитель запросов (мастер отчетов)
@@ -34,7 +34,7 @@ ms.locfileid: "66107997"
  Можно также импортировать запрос из другого отчета.  
   
 ## <a name="query-builder-options"></a>Параметры построителя запросов  
- **Изменить как текст**  
+ **Редактировать как текст**  
  Переключает между текстовым и графическим конструктором запросов (при условии, что запрос поддерживается обоими конструкторами).  
   
  **Импорт**  
@@ -52,8 +52,8 @@ ms.locfileid: "66107997"
  **Панель результатов**  
  Показывает результирующий набор данного запроса.  
   
-## <a name="see-also"></a>См. также:  
- [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Внедренные и общие наборы данных отчета &#40;построитель отчетов и службы SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Справка мастера отчетов](../../2014/reporting-services/report-wizard-help.md)  
   
   

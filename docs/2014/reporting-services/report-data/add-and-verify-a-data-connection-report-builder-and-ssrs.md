@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca1e5d039a7ea7aacd930f47eb99f854cbce8cac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107523"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>Добавление и проверка подключения к данным или источнику данных (построитель отчетов и службы SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66107523"
   
 ### <a name="to-create-a-reference-to-a-shared-data-source"></a>Создание ссылки на общий источник данных  
   
-1.  На панели инструментов в области данных отчета нажмите кнопку **создать,** а затем выберите **источник данных**. Откроется диалоговое окно **Свойства источника данных** .  
+1.  На панели инструментов в области данных отчета нажмите кнопку **Создать** и выберите **Источник данных**. Откроется диалоговое окно **Свойства источника данных** .  
   
 2.  В текстовое поле **Имя** введите имя источника данных.  
   
@@ -90,10 +90,10 @@ ms.locfileid: "66107523"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление данных в построитель отчетов &#40;отчетов и SSRS&#41;](report-datasets-ssrs.md)   
- [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Внедренные и общие наборы данных отчета &#40;построитель отчетов и службы SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Поиск, просмотр отчетов и управление ими &#40;построитель отчетов и SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Подключения к данным, источники данных и строки подключения в построителе отчетов](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cdb19ba96bc6c324614b7b24ccd77d66213fed3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107787"
 ---
 # <a name="previewing-reports-in-report-builder"></a>Предварительный просмотр отчетов в построителе отчетов
@@ -75,12 +75,12 @@ ms.locfileid: "66107787"
   
  Если вложенный отчет, используемый отчетом, был изменен после создания сеанса изменения, отчет не будет подготовлен к просмотру. Чтобы успешно осуществить предварительный просмотр отчета, следует сохранить отчет или щелкнуть **Обновить** , чтобы получить новые данные.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление данных в построитель отчетов &#40;отчетов и SSRS&#41;](../report-data/report-datasets-ssrs.md)   
- [Форматирование элементов отчета (построитель отчетов и службы SSRS)](../report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Диаграммы (построитель отчетов и службы SSRS)](../report-design/charts-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Форматирование элементов отчета &#40;построитель отчетов и SSRS&#41;](../report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки &#40;построитель отчетов и SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Диаграммы &#40;построитель отчетов и службы SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки &#40;построитель отчетов и SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Сохранение отчетов (построитель отчетов)](saving-reports-report-builder.md)  
   
   

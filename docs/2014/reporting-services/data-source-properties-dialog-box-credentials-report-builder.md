@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5dd4d113c92e0a2d094aa02d49010a5dd477c6ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109462"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>Диалоговое окно «Свойства источника данных» — «Учетные данные» (построитель отчетов)
@@ -27,7 +27,7 @@ ms.locfileid: "66109462"
  Выберите этот параметр, чтобы использовать проверку подлинности Windows.  
   
  **Использовать имя пользователя и пароль**  
- Выберите этот параметр, чтобы использовать определенное имя пользователя и пароль. Для встроенных источников данных: при публикации проекта сервера отчетов на целевом сервере имя пользователя и пароль сохраняются как хранимые учетные данные для базы данных. Если необходимо использовать имя пользователя и пароль как учетные данные Windows, можно изменить свойства опубликованного общего источника данных на целевом сервере. Дополнительные сведения см. в разделе [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) документации к [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в электронной документации[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [ по ](https://go.microsoft.com/fwlink/?linkid=121312).  
+ Выберите этот параметр, чтобы использовать определенное имя пользователя и пароль. Для встроенных источников данных: при публикации проекта сервера отчетов на целевом сервере имя пользователя и пароль сохраняются как хранимые учетные данные для базы данных. Если необходимо использовать имя пользователя и пароль как учетные данные Windows, можно изменить свойства опубликованного общего источника данных на целевом сервере. Дополнительные сведения см. в разделе [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) документации к [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) по .  
   
  **User name**  
  Введите имя пользователя для получения доступа к источнику данных.  
@@ -46,9 +46,9 @@ ms.locfileid: "66109462"
   
  Для некоторых модулей обработки данных необходимо настроить на сервере отчетов учетную запись автоматического выполнения.  
   
- Дополнительные сведения см. в разделе по соответствующему типу источника данных: [Добавление данных из внешних источников данных (службы SSRS)](report-data/add-data-from-external-data-sources-ssrs.md) и [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) в документации к [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в электронной документации[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [ по ](https://go.microsoft.com/fwlink/?linkid=121312).  
+ Дополнительные сведения см. в разделе по соответствующему типу источника данных: [Добавление данных из внешних источников данных (службы SSRS)](report-data/add-data-from-external-data-sources-ssrs.md) и [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) в документации к [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) по .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Построитель отчетов справки по диалоговым окнам, панелям и мастерам](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Диалоговое окно "Свойства источника данных", общие &#40;построитель отчетов&#41;](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md)   
  [Добавление и проверка подключения к данным или источника данных &#40;построитель отчетов и служб SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   

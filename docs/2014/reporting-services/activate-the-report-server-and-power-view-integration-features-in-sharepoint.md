@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e30ae6ea0e7fa314748c4da265650273c0a7d56e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110027"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Активация функций интеграции семейства веб-сайтов с сервером отчетов и Power View в SharePoint
@@ -30,11 +30,11 @@ ms.locfileid: "66110027"
   
  В этом разделе:  
   
--   [Чтобы активировать компоненты семейства веб-сайтов интеграции с сервером отчетов и Power View:](#bkmk_features)  
+-   [Активация функций семейства веб-сайтов для интеграции с сервером отчетов и Power View](#bkmk_features)  
   
 -   [Активация и деактивация функций семейства веб-сайтов для центра администрирования служб Reporting Services](#bkmk_centraladmin)  
   
-##  <a name="bkmk_features"></a>Чтобы активировать компоненты семейства веб-сайтов интеграции с сервером отчетов и Power View:  
+##  <a name="to-activate-the-report-server-and-power-view-integration-site-collection-features"></a><a name="bkmk_features"></a>Чтобы активировать компоненты семейства веб-сайтов интеграции с сервером отчетов и Power View:  
   
 1.  Откройте в браузере веб-сайт, где нужно активировать функции служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
@@ -46,11 +46,11 @@ ms.locfileid: "66110027"
   
 5.  Найдите в списке **Функцию интеграции сервера отчетов** или **Функцию интеграции средства Power View** .  
   
-6.  Нажмите кнопку **Активировать**.  
+6.  Щелкните **Активировать**.  
   
  Деактивация компонентов выполняется схожим образом, только вместо кнопки **Активировать** нужно нажать кнопку **Деактивировать**.  
   
-##  <a name="bkmk_centraladmin"></a>Для активации или деактивации Reporting Services компонента семейства веб-сайтов центра администрирования:  
+##  <a name="to-activate-or-deactivate-reporting-services-central-administration-site-collection-feature"></a><a name="bkmk_centraladmin"></a>Для активации или деактивации Reporting Services компонента семейства веб-сайтов центра администрирования:  
   
 1.  Откройте в браузере центр администрирования SharePoint.  
   
@@ -62,14 +62,14 @@ ms.locfileid: "66110027"
   
 5.  Найдите в списке пункт **Функция центра администрирования сервера отчетов** .  
   
-6.  Нажмите кнопку **Активировать**.  
+6.  Щелкните **Активировать**.  
   
  Деактивация компонента выполняется схожим образом, только вместо кнопки **Активировать** нужно нажать кнопку **Деактивировать**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
  После активации компонента можно продолжить интеграцию сервера.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установка или удаление надстройки Reporting Services для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

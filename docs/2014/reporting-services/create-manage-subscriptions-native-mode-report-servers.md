@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6f18ff05cf6283e4358e8f8afd76a5858b0b41a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109600"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками
@@ -51,8 +51,8 @@ ms.locfileid: "66109600"
   
  После удаления модуля доставки он становится недоступным в диспетчере отчетов или на сайте SharePoint. При удалении модуля доставок могут появляться неактивные подписки. Обязательно удаляйте подписки или настраивайте их на использование другого модуля доставки, прежде чем удалить какой-либо модуль.  
   
-## <a name="in-this-section"></a>В этом разделе  
- [Использовать «Мои подписки»](subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+## <a name="in-this-section"></a>Содержание раздела  
+ [Использование страницы "Мои подписки"](subscriptions/use-my-subscriptions-native-mode-report-server.md)  
  Объясняет, как пользоваться страницей «Мои подписки» для управления собственными подписками.  
   
  [Приостановка обработки отчета и подписки](subscriptions/disable-or-pause-report-and-subscription-processing.md)  
@@ -64,7 +64,7 @@ ms.locfileid: "66109600"
  [Отслеживание подписок служб Reporting Services](subscriptions/monitor-reporting-services-subscriptions.md)  
  Содержит сведения о том, как определить, успешно или неуспешно выполнена подписка, и каким образом изменение отчета влияет на существующие подписки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание, изменение и удаление стандартных подписок &#40;Reporting Services в основном режиме&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   
   

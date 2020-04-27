@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1e1bd9fefaf818a3b1499ba3ea8bf761de234666
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107532"
 ---
 # <a name="report-data-f1-help"></a>Справка F1 по данным отчета
@@ -22,7 +22,7 @@ ms.locfileid: "66107532"
   
  Чтобы получить доступ к этой информации, в диалоговом окне **Свойства отчета** , выберите **Справка**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Данные отчета (SSRS)](report-data/report-data-ssrs.md)  
   
   

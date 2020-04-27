@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 282c5753b0e1e966d1041944e936d341ed46a30f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108485"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Занятие 3. Проектирование родительского отчета с использованием мастера отчетов
@@ -33,7 +33,7 @@ ms.locfileid: "66108485"
 4.  На странице **Свойства набора данных** в поле **Источник данных** выберите набор данных **DataSet1** , созданный на [занятии 2: определение подключения к данным и таблицы данных для родительского отчета](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
     Значение поля **Доступные наборы данных** автоматически изменится на **DataTable** (созданную ранее таблицу данных).  
   
-5.  Щелкните **Далее**.  
+5.  Нажмите кнопку **Далее**.  
   
 6.  На странице **Размещение полей** выполните указанные ниже действия.  
   

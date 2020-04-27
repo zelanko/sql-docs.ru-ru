@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109693"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Создание управляемой данными подписки (учебник по службам SSRS)
@@ -33,13 +33,13 @@ ms.locfileid: "66109693"
   
  Учебник разделен на три занятия.  
   
- [Занятие 1. Создание образца базы данных подписчика](lesson-1-creating-a-sample-subscriber-database.md)  
+ [Урок 1. Создание образца базы данных подписчика](lesson-1-creating-a-sample-subscriber-database.md)  
  На этом занятии рассматривается создание локальной базы данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], в которой содержатся сведения о подписчике.  
   
- [Lesson 2: Modifying the Report Data Source Properties](lesson-2-modifying-the-report-data-source-properties.md)  
+ [Урок 2. Изменение свойств источника данных отчета](lesson-2-modifying-the-report-data-source-properties.md)  
  На этом занятии изучается изменение свойств источника данных отчета для обеспечения автоматического выполнения отчета. Для обеспечения автоматического выполнения необходимы сохраненные учетные данные. Вы также измените набор данных отчета, включив в него параметр, значение которого берется из данных подписчика.  
   
- [Lesson 3: Defining a Data-Driven Subscription](lesson-3-defining-a-data-driven-subscription.md)  
+ [Урок 3. Определение управляемой данными подписки](lesson-3-defining-a-data-driven-subscription.md)  
  На этом занятии рассматриваются способы определения управляемой данными подписки. На этом занятии будет подробно разобрана каждая страница в мастере управляемой данными подписки.  
   
 ## <a name="requirements"></a>Требования  

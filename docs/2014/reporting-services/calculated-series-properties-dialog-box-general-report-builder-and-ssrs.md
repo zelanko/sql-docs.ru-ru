@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3f03857ebbd1d633d78a25437b1f7c03558c7e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109858"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>Диалоговое окно «Свойства вычисляемого ряда» — «Общие» (построитель отчетов и службы SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66109858"
   
 ## <a name="options"></a>Параметры  
  **Формула**  
- Выберите формулу, которая должна быть применена к диаграмме. Доступные параметры:   
+ Выберите формулу, которая должна быть применена к диаграмме. Возможны следующие значения.  
   
 -   Среднее значение  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66109858"
  **Задание параметров формулы**  
  Укажите параметры для выбранной формулы.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диаграммы (построитель отчетов и службы SSRS)](report-design/charts-report-builder-and-ssrs.md)  
   
   

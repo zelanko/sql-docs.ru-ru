@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7efb713b5dbf9a3f19118bb3572ccd35778aad19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109650"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>Создание детализированного (RDLC) отчета с параметрами с помощью ReportViewer (учебник SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66109650"
   
  Использование Visual Studio 2010 или Visual Studio 2012 и шаблона веб-сайта ASP.NET для создания веб-страницы ASP.NET с элементом управления ReportViewer. Этот элемент управления настраивается для просмотра созданного отчета. По условиям данного пошагового руководства приложение создается на Microsoft Visual C#.  
   
-## <a name="tasks"></a>Задания  
+## <a name="tasks"></a>Задачи  
  [Занятие 1. Создание нового веб-сайта](../reporting-services/lesson-1-create-a-new-web-site.md)   
  [Занятие 2. Определение подключения к данным и таблицы данных для родительского отчета](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)   
  [Занятие 3. Проектирование родительского отчета с помощью мастера отчетов](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)   
@@ -36,9 +36,9 @@ ms.locfileid: "66109650"
  [Занятие 6. Добавление элемента управления ReportViewer в приложение](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)   
  [Занятие 7. Добавление действия детализации в родительский отчет](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)   
  [Занятие 8. Создание фильтра данных](../reporting-services/lesson-8-create-a-data-filter.md)   
- [Урок 9. Сборка и запуск приложения](../reporting-services/lesson-9-build-and-run-the-application.md)  
+ [Урок 9. Сборка и запуск приложения](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Reporting Services учебники &#40;службы SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Разработка отчетов с использованием конструктора отчетов (SSRS)](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   

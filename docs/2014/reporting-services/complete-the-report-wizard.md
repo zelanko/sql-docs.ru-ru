@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08d78fc30dbdafa8d65ac01943e729b6cf0d890d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109785"
 ---
 # <a name="complete-the-report-wizard"></a>Завершение работы мастера отчетов
@@ -32,7 +32,7 @@ ms.locfileid: "66109785"
  **Просмотр отчета**  
  Выберите этот параметр, чтобы просмотреть созданный отчет. В противном случае отчет будет открыт в режиме конструктора.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка мастера отчетов](../../2014/reporting-services/report-wizard-help.md)  
   
   

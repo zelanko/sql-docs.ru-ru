@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107617"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Диалоговое окно «Параметры построителя отчетов» — «Настройки» (построитель отчетов)
@@ -45,7 +45,7 @@ ms.locfileid: "66107617"
  **Очистить все списки последних элементов**  
  Позволяет очистить текущие списки последних сайтов и серверов, общих наборов данных, соединений с общими источниками данных и документов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97fa6d01fc4a06825814c8494268ecb668f1da7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108109"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pass a Report Parameter Within a URL
@@ -26,7 +26,7 @@ ms.locfileid: "66108109"
 > [!IMPORTANT]  
 >  Важно, чтобы URL-адрес содержал синтаксис прокси `_vti_bin` для отправки запроса с помощью центра администрирования SharePoint и прокси-сервера HTTP [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Прокси-сервер добавляет в HTTP-запрос контекст, необходимый для обеспечения правильного выполнения отчета для серверов отчетов в режиме интеграции с SharePoint.  
 >   
->  Если не указывать синтаксис прокси, то нужно добавить к параметру префикс *rp:* .  
+>  Если не указать синтаксис прокси-сервера, то необходимо добавить параметр с помощью *RP:*.  
   
  Все параметры запроса могут иметь соответствующие параметры отчета. Параметр запроса можно передать в отчет. Дополнительные сведения см. в статье [Построение запроса в конструкторе реляционных запросов (построитель отчетов и службы SSRS)](report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
@@ -69,7 +69,7 @@ parameter
   
 ```  
   
- Например,  
+ Например, примененная к объекту директива  
   
 ```  
 SalesOrderNumber:isnull=true  
@@ -80,7 +80,7 @@ SalesOrderNumber:isnull=true
 > [!NOTE]  
 >  Если отчет содержит параметр отчета, имеющий значение по умолчанию, а свойство `Prompt` имеет значение `false` (то есть в диспетчере отчетов не выбрано свойство «Подсказка пользователю»), передать значение этого параметра отчета в URL-адресе невозможно. Это позволяет администраторам запретить пользователям добавлять и изменять значения определенных параметров отчета.  
   
-##  <a name="bkmk_examples"></a> Дополнительные примеры  
+##  <a name="additional-examples"></a><a name="bkmk_examples"></a> Дополнительные примеры  
  В следующем примере URL-адрес содержит пробелы и многозначные параметры.  
   
 -   Имя папки "Группы образования пользователя SQL Server" содержит пробелы, которые заменяются знаком "+".  
@@ -99,14 +99,14 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- В следующем примере URL-адреса передается один параметр *SellStartDate* со значением 1.7.2005 для сервера отчетов, работающего в основном режиме.  
+ Следующий пример URL-адреса передает один параметр *SellStartDate* со значением "7/1/2005" для сервера отчетов в собственном режиме.  
   
 ```  
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Доступ по URL-адресу (службы SSRS)](url-access-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Доступ по URL-адресу &#40;службы SSRS&#41;](url-access-ssrs.md)   
  [Ссылка на параметр доступа по URL-адресу](url-access-parameter-reference.md)  
   
   

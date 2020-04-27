@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86ab056f18e69b0b264525377efb0d257ebc2b95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108032"
 ---
 # <a name="publish-reports"></a>Публикация отчетов
@@ -39,11 +39,11 @@ ms.locfileid: "66108032"
     > [!NOTE]  
     >  При публикации отчета необходимо также выполнить развертывание общих источников данных, которые в нем используются.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Публикация источников данных и отчетов](reports/publishing-data-sources-and-reports.md)   
  [Предварительный просмотр отчетов](reports/previewing-reports.md)   
  [Публикация отчетов на сервере отчетов](reports/publishing-reports-to-a-report-server.md)   
- [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Поиск, просмотр отчетов и управление ими &#40;построитель отчетов и SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Экспорт отчетов &#40;построитель отчетов и SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

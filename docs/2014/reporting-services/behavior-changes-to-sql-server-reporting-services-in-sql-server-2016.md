@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 91fa7a66981f3e36c7e25babffbf73dc2519a0c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109937"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>Изменения в работе служб SQL Server Reporting Services в выпуске SQL Server 2014
@@ -41,10 +41,10 @@ ms.locfileid: "66109937"
   
 -   [Изменения в работе служб SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   
-##  <a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services изменения поведения  
+##  <a name="sssql14-reporting-services-behavior-changes"></a><a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services изменения поведения  
  Поведение служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]не изменилось.  
   
-##  <a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services изменения поведения  
+##  <a name="sssql11-reporting-services-behavior-changes"></a><a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services изменения поведения  
  В этом разделе описаны изменения в работе служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint.  
   
 ### <a name="view-items-permission-will-not-download-shared-datasets-sharepoint-mode"></a>Разрешение «Просмотр элементов» не загружает общие наборы данных (режим интеграции с SharePoint)  
@@ -67,15 +67,15 @@ ms.locfileid: "66109937"
 ### <a name="report-server-configuration-and-management-tools"></a>Средства настройки и управления конфигурацией сервера отчетов  
   
 #### <a name="configuration-manager-is-not-used-for-sharepoint-mode"></a>Диспетчер конфигурации не используется в режиме интеграции с SharePoint Mode  
- **Новое поведение:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager больше не поддерживает серверы отчетов в режиме интеграции с SharePoint. Настройка служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции SharePoint теперь может быть выполнена через центр администрирования SharePoint, поэтому диспетчер конфигурации [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] больше не поддерживает режим интеграции с SharePoint. Диспетчер конфигурации теперь используется только для серверов отчетов в собственном режиме.  
+ **Новые возможности.** Диспетчер конфигурации [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] больше не поддерживает серверы отчетов в режиме интеграции с SharePoint. Настройка служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции SharePoint теперь может быть выполнена через центр администрирования SharePoint, поэтому диспетчер конфигурации [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] больше не поддерживает режим интеграции с SharePoint. Диспетчер конфигурации теперь используется только для серверов отчетов в собственном режиме.  
   
 #### <a name="you-cannot-change-the-server-from-one-mode-to-another"></a>Изменить режим работы сервера нельзя.  
- **Новое поведение:** Изменить режимы сервера нельзя. Если вы установили сервер отчетов для работы в собственном режиме, то нельзя его переключить или перенастроить на работу в режиме интеграции с SharePoint. Если вы установили сервер отчетов для работы в режиме интеграции с SharePoint, то можно переключить режим работы сервера отчетов на собственный режим.  
+ **Новые возможности.** Нельзя изменять режимы работы сервера. Если вы установили сервер отчетов для работы в собственном режиме, то нельзя его переключить или перенастроить на работу в режиме интеграции с SharePoint. Если вы установили сервер отчетов для работы в режиме интеграции с SharePoint, то можно переключить режим работы сервера отчетов на собственный режим.  
   
- **Предыдущее поведение:** Клиент устанавливает сервер [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] отчетов в режиме интеграции с SharePoint. Если необходимо переключить сервер отчетов на собственный режим работы, клиент может открыть диспетчер конфигурации [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и изменить режим с помощью создания новой или соединения с существующей базой данных собственного режима. Клиент может также использовать диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для переключения в собственный режим из режима интеграции с SharePoint.  
+ **Возможности предыдущей версии.** Клиент устанавливает сервер отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint. Если необходимо переключить сервер отчетов на собственный режим работы, клиент может открыть диспетчер конфигурации [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и изменить режим с помощью создания новой или соединения с существующей базой данных собственного режима. Клиент может также использовать диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для переключения в собственный режим из режима интеграции с SharePoint.  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services изменения поведения  
- В этом разделе описаны изменения в работе служб [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+##  <a name="sql-server-2008-r2-reporting-services-behavior-changes"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services изменения поведения  
+ В этом разделе описываются изменения в [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]работе.  
   
 > [!NOTE]  
 >  Поскольку SQL Server 2008 R2 содержит изменения дополнительного номера версии по сравнению с SQL Server 2008, рекомендуется также просмотреть содержимое раздела по SQL Server 2008.  
@@ -83,14 +83,13 @@ ms.locfileid: "66109937"
 ### <a name="secureconnectionlevel-property-in-the-reporting-services-wmi-provider-library"></a>Свойство SecureConnectionLevel в библиотеке поставщика WMI служб Reporting Services  
  В библиотеке [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]поставщика WMI для свойство **SecureConnectionLevel** позволяет `0`использовать значения,`1`,`2`,`3`и, `0` указывающие, что протокол SSL не требуется для всех методов веб-службы, `3` что указывает на то, что SSL требуется для всех методов веб-службы, а `1` также `2` для указания подмножеств методов веб-службы, требующих SSL. В [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]эти значения будут иметь лишь два возможных значения:  
   
--   
-  `0` означает, что SSL не требуется ни одному методу веб-службы.  
+-   `0` означает, что SSL не требуется ни одному методу веб-службы.  
   
 -   Положительное целое число указывает, что SSL требуется для всех методов веб-служб.  
   
  Это изменение влияет на то, как сервер отчетов реагирует на запросы веб-службы. Например <xref:ReportService2005.ReportingService2005.ListSecureMethods%2A> , теперь возвращает Nothing, если **SecureConnectionLevel** <xref:ReportService2005.ReportingService2005> имеет значение 0, а все методы в `1`, если **SecureConnectionLevel** имеет значение, `2`или `3`.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Новые возможности &#40;Reporting Services&#41;](what-s-new-reporting-services.md)   
  [Устаревшие функции в SQL Server Reporting Services в SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md)   
  [Неподдерживаемые функции для SQL Server Reporting Services в SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   

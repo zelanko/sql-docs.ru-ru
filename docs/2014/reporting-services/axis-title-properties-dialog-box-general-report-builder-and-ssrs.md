@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4797dd3535ff00511594110cd7f2668af2223d3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109969"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>Диалоговое окно «Свойства заголовка оси» — «Общие» (построитель отчетов и службы SSRS)
@@ -30,18 +30,18 @@ ms.locfileid: "66109969"
  **Выравнивание заголовка**  
  Выберите тип выравнивания или введите выражение, задающее выравнивание заголовка оси по отношению к точке пересечения осей.  
   
--   **Рядом с** Отображает заголовок оси в направлении пересечения двух осей.  
+-   **Близко** Выводит заголовок оси рядом с пересечением осей.  
   
--   По **центру** Отображает заголовок оси в центре оси.  
+-   **По центру** Выводит заголовок оси в центре этой оси.  
   
--   **Далеко** Отображает заголовок оси в направлении от пересечения двух осей.  
+-   **Далеко** Выводит заголовок оси далеко от пересечения осей.  
   
-## <a name="see-also"></a>См. также:  
- [Диаграммы (построитель отчетов и службы SSRS)](report-design/charts-report-builder-and-ssrs.md)   
- [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Задание интервала оси (построитель отчетов и службы SSRS)](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
- [Форматирование меток оси в виде значений даты или валюты &#40;построитель отчетов и службы SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Диаграммы &#40;построитель отчетов и службы SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
+ [Форматирование цветов рядов на диаграмме &#40;построитель отчетов и SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Форматирование меток оси на построитель отчетов &#40;диаграммы и SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Укажите интервал оси &#40;построитель отчетов и службы SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
+ [Форматирование меток оси в виде дат или валют &#40;построитель отчетов и SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Построение данных на вспомогательной оси &#40;построитель отчетов и SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Диалоговое окно "Свойства оси" — "Параметры оси" (построитель отчетов и службы SSRS)](../../2014/reporting-services/axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
   

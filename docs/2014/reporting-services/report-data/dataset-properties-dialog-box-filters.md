@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ddca4b59219598ef6685b6d3529f84725a2f075
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107341"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>Диалоговое окно «Свойства набора данных» — «Фильтры»
@@ -45,11 +45,11 @@ ms.locfileid: "66107341"
  **Оператор**  
  Выберите оператор для сравнения выражения и значения.  
   
- **Value**  
+ **Значение**  
  Введите выражение или значение, которое будет использовано для вычисления выражения, указанного в поле **Выражение** . Нажмите кнопку Выражение (**FX**), чтобы изменить выражение.  
   
-## <a name="see-also"></a>См. также:  
- [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Фильтрация, группировка и сортировка данных &#40;построитель отчетов и SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Добавление данных в построитель отчетов &#40;отчетов и SSRS&#41;](report-datasets-ssrs.md)  
   
   

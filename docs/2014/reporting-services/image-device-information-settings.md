@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32498fbed24ddab591745ae1d01c5f123e976114
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109011"
 ---
 # <a name="image-device-information-settings"></a>Настройки сведений об устройстве вывода изображений
@@ -37,13 +37,13 @@ ms.locfileid: "66109011"
 |**OutputFormat**|Один из поддерживаемых [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) форматов вывода: `BMP`, `EMF`, `GIF`, `JPEG`, `PNG` или `TIFF`.|  
 |**PageHeight**|Задаваемая высота страницы отчета, в дюймах. Необходимо включить целочисленное или десятичное значение, за которым следует строка «in» (например, `11in`). Это значение переопределяет исходные параметры отчета.|  
 |**PageWidth**|Задаваемая ширина страницы отчета, в дюймах. Необходимо включить целочисленное или десятичное значение, за которым следует строка «in» (например, `8.5in`). Это значение переопределяет исходные параметры отчета.|  
-|**PrintDpiX**|Горизонтальное разрешение изображения вывода. По умолчанию используется значение `300`. Применяется к выходному формату`EMF`расширенного метафайла ().|  
-|**PrintDpiY**|Вертикальное разрешение изображения вывода. По умолчанию используется значение `300`. Применяется к выходному формату`EMF`расширенного метафайла ().|  
-|`StartPage`|Первая подготавливаемая к просмотру страница отчета. Значение `0` указывает, что к просмотру подготовлены все страницы. По умолчанию используется значение `1`.|  
+|**PrintDpiX**|Горизонтальное разрешение изображения вывода. Значение по умолчанию — `300`. Применяется к выходному формату`EMF`расширенного метафайла ().|  
+|**PrintDpiY**|Вертикальное разрешение изображения вывода. Значение по умолчанию — `300`. Применяется к выходному формату`EMF`расширенного метафайла ().|  
+|`StartPage`|Первая подготавливаемая к просмотру страница отчета. Значение `0` указывает, что к просмотру подготовлены все страницы. Значение по умолчанию — `1`.|  
   
-## <a name="see-also"></a>См. также:  
- [Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Настройка параметров модулей подготовки отчетов в RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+## <a name="see-also"></a>См. также  
+ [Передача настроек сведений об устройстве в модули подготовки отчетов](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Настройка параметров модуля подготовки отчетов в файле RSReportServer. config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Технический справочник (службы SSRS)](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

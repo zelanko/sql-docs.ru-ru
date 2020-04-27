@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c293b7007ccb8a42928c02ed37bcaacb898504f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108702"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>Удаление и повторное создание ключей шифрования (диспетчер конфигурации служб SSRS)
@@ -115,8 +115,8 @@ ms.locfileid: "66108702"
   
 4.  Для подписок, которые используют зашифрованные данные (это включает модуль доставки в общую папку и любые сторонние расширения доставки, использующие шифрование), откройте каждую подписку и повторно введите учетные данные. Подписки, которые используют доставку по электронной почте сервера отчетов, не используют зашифрованные данные и не затрагиваются изменением ключа.  
   
-## <a name="see-also"></a>См. также:  
- [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](ssrs-encryption-keys-manage-encryption-keys.md)   
- [Хранение зашифрованных данных сервера отчетов &#40;служб SSRS Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+## <a name="see-also"></a>См. также  
+ [Настройка ключей шифрования и управление ими &#40;служб SSRS Configuration Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Хранение зашифрованных данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

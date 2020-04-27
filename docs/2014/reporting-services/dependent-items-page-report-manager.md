@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59c022a0e6c57a85d83b25be3fe9dbe0c9dfeeb1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109329"
 ---
 # <a name="dependent-items-page-report-manager"></a>Страница «Зависимые элементы» (диспетчер отчетов)
@@ -34,7 +34,7 @@ ms.locfileid: "66109329"
 4.  Перейдите на вкладку **Зависимые элементы** .  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Отображается имя отчета или модели. Щелкните имя отчета для открытия. Щелкните имя модели, чтобы открыть страницу ее свойств.  
   
  **Описание**  
@@ -49,7 +49,7 @@ ms.locfileid: "66109329"
  **Edit** (Изменение)  
  Щелкните значок свойств для открытия страницы «Свойства» отчета или модели.  
   
- **Тип**  
+ **Type**  
  Отображает значок типа элемента.  
   
  **Дата изменения**  
@@ -61,7 +61,7 @@ ms.locfileid: "66109329"
  **Время запуска**  
  Для отчетов, которые выполняются в виде снимков состояния выполнения отчетов, отображаются дата и время последнего обновления отчета.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 диспетчер отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Страница "содержимое" &#40;диспетчер отчетов&#41;](../../2014/reporting-services/contents-page-report-manager.md)   

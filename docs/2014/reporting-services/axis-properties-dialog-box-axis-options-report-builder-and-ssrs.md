@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff9f3281e47cf6dfdf8a189c653d0e061f4a761d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109962"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Диалоговое окно «Свойства оси» — «Параметры оси» (построитель отчетов и службы SSRS)
-  Выберите **Параметры оси** в диалоговом окне **Свойства** **горизонтально** или вертикальной оси, чтобы определить внешний вид заданной оси диаграммы. В предыдущих версиях служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] на горизонтальной оси диаграммы по умолчанию отображались все метки. Однако в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 метки на диаграмме опускаются, чтобы изображение было понятнее, а метки не пересекались. Дополнительные сведения см. в разделе [Форматирование меток оси на диаграмме &#40;построитель отчетов и службы SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+  Выберите **Параметры оси** в диалоговом окне **Свойства** **горизонтально** или вертикальной оси, чтобы определить внешний вид заданной оси диаграммы. В предыдущих версиях служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]на горизонтальной оси диаграммы по умолчанию отображались все метки. Однако в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 метки на диаграмме опускаются, чтобы изображение было понятнее, а метки не пересекались. Дополнительные сведения см. в разделе [Форматирование меток оси на диаграмме &#40;построитель отчетов и службы SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Параметры  
  **Включить разрывы шкалы**  
@@ -59,14 +59,14 @@ ms.locfileid: "66109962"
  **Боковые поля**  
  Введите выражение или выберите значение, чтобы добавить или удалить поле между элементами диаграммы и сторонами диаграммы. Если этот параметр равен **Auto**, боковые поля добавляются.  
   
-## <a name="see-also"></a>См. также:  
- [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Диаграммы (построитель отчетов и службы SSRS)](report-design/charts-report-builder-and-ssrs.md)   
- [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Задание интервала оси (построитель отчетов и службы SSRS)](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
- [Форматирование меток оси в виде значений даты или валюты &#40;построитель отчетов и службы SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Форматирование меток оси на построитель отчетов &#40;диаграммы и SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Диаграммы &#40;построитель отчетов и службы SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
+ [Форматирование цветов рядов на диаграмме &#40;построитель отчетов и SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Укажите интервал оси &#40;построитель отчетов и службы SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
+ [Форматирование меток оси в виде дат или валют &#40;построитель отчетов и SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Построение данных на вспомогательной оси &#40;построитель отчетов и SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Спарклайны и гистограммы &#40;построитель отчетов и службы SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Добавление или удаление полей из диаграммы &#40;построитель отчетов и служб SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [Добавление или удаление полей из диаграммы (построитель отчетов и службы SSRS)](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
   

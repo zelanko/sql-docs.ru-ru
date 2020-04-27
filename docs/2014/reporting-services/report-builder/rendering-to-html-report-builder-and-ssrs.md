@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 26f2b31728fec77a6b94a64f35d0fb37096a1b41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107721"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Подготовка к просмотру в виде HTML (построитель отчетов и службы SSRS)
@@ -31,10 +31,10 @@ ms.locfileid: "66107721"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a>Подготовка к просмотру в формате MHTML  
+##  <a name="rendering-in-mhtml"></a><a name="RenderingMHTML"></a> Подготовка к просмотру в виде MHTML  
  Модуль подготовки отчетов HTML может формировать отчеты в формате MHTML (инкапсуляции MIME в статистических документах HTML). MHTML расширяет HTML для внедрения в документ HTML кодированных объектов, таких как рисунки. С помощью модуля подготовки отчетов MHTML можно внедрить такие ресурсы, как изображения, документы или другие двоичные файлы, например структуры MIME, в отчет HTML, в один файл. Отчеты MHTML также можно применять для внедрения в электронные сообщения, поскольку все ресурсы включены в отчет. Хотя на самом деле MHTML создается модулем подготовки отчетов HTML, эту функциональность можно называть модулем подготовки отчетов MHTML.  
   
-##  <a name="BrowserSupport"></a>Поддержка браузера  
+##  <a name="browser-support"></a><a name="BrowserSupport"></a>Поддержка браузера  
  Этот модуль подготовки отчетов поддерживает следующие версии браузеров:  
   
 -   Internet Explorer 5.5 и более поздние версии;  
@@ -45,7 +45,7 @@ ms.locfileid: "66107721"
   
  Из-за проблем совместимости отчеты, готовые для просмотра, могут слегка различаться при просмотре в различных браузерах. Например, текстовое поле содержит свойство WritingMode. Это свойство не поддерживается в обозревателе Firefox.  
   
-##  <a name="HTMLSpecificRenderingRules"></a>Правила отрисовки, специфичные для HTML  
+##  <a name="html-specific-rendering-rules"></a><a name="HTMLSpecificRenderingRules"></a>Правила отрисовки, специфичные для HTML  
  При подготовке отчетов действуют следующие правила, специфичные для формата HTML.  
   
 -   Модуль подготовки отчетов строит табличную структуру HTML, содержащую все элементы для каждой коллекции элементов `ReportItems`, если их несколько.  
@@ -62,7 +62,7 @@ ms.locfileid: "66107721"
   
 -   Все координаты и размеры элементов отчета переводятся в миллиметры. Все остальные размеры, в том числе свойства стиля, остаются в прежних единицах измерения. Размеры и разницы координат, не превышающие 0,2 мм, считаются равными 0 мм.  
   
-##  <a name="Interactivity"></a> Интерактивность  
+##  <a name="interactivity"></a><a name="Interactivity"></a>Интерактивности  
  В формате HTML поддерживаются некоторые интерактивные элементы. Ниже приведено описание особенностей поведения.  
   
 ### <a name="show-and-hide"></a>Показать и скрыть  
@@ -85,12 +85,12 @@ ms.locfileid: "66107721"
   
  Дополнительные функциональные возможности поиска обеспечиваются элементом управления веб-форм ReportViewer.  
   
-##  <a name="DeviceInfo"></a> Настройки сведений об устройстве  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Настройки сведений об устройстве  
  Некоторые настройки по умолчанию для этого модуля подготовки отчетов, в том числе режим подготовки отчета, можно изменить с помощью настройки сведений об устройстве. Дополнительные сведения см. в статье [HTML Device Information Settings](../html-device-information-settings.md).  
 
-## <a name="see-also"></a>См. также:  
- [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](interactive-functionality-different-report-rendering-extensions.md)   
- [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Разбиение на страницы в Reporting Services &#40;построитель отчетов и SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Поведения подготовки к просмотру &#40;построитель отчетов и SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Интерактивные функции для различных модулей подготовки отчетов к просмотру &#40;построитель отчетов и SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Подготовка элементов отчета к просмотру &#40;построитель отчетов и SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

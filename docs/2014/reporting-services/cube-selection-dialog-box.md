@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa45de225ac1de636bc9e9b14cec9d1ab4512316
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109569"
 ---
 # <a name="cube-selection-dialog-box"></a>Диалоговое окно «Выбор куба»
   Для выбора в качестве источника данных для отчета другого куба используйте диалоговое окно **Выбор куба** . При выборе другого куба запрос может стать недопустимым.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пользовательский интерфейс конструктора запросов многомерных выражений Analysis Services](report-data/analysis-services-mdx-query-designer-user-interface.md)   
- [Analysis Services тип соединения для МНОГОМЕРных служб SSRS &#40;&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
+ [Тип соединения служб Analysis Services для запросов многомерных выражений (службы SSRS)](report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
   
   

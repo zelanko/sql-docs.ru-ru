@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6981b756bacd720284fcd38fd29c9ba371db8a87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107928"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Экспорт в CSV-файл (построитель отчетов и службы SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107928"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> Подготовка CSV-отчетов  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a> Подготовка CSV-отчетов  
  Если для отображения используются параметры по умолчанию, отчет в формате CSV имеет следующие характеристики:  
   
 -   По умолчанию строка разделителя полей — запятая (,).  
@@ -55,7 +55,7 @@ ms.locfileid: "66107928"
   
 -   график;  
   
--   Образ —  
+-   Изображение  
   
 -   Прямоугольник  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66107928"
   
  
   
-##  <a name="RenderingModes"></a> Режимы модуля подготовки отчетов  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> Режимы модуля подготовки отчетов  
  Модуль подготовки отчетов в формате CSV может работать в двух режимах: один оптимизирован для Excel, второй — для приложений сторонних разработчиков, требующих строгого соответствия спецификации CSV в стандарте RFC 4180. В зависимости от режима одноранговые области данных обрабатываются по-разному.  
   
 ### <a name="default-mode"></a>Режим по умолчанию  
@@ -120,7 +120,7 @@ ms.locfileid: "66107928"
 #### <a name="formatting"></a>Форматирование  
  Значения не форматируются.  
   
-##  <a name="Interactivity"></a> Интерактивность  
+##  <a name="interactivity"></a><a name="Interactivity"></a>Интерактивности  
  Ни один формат CSV данного модуля подготовки отчетов не поддерживает интерактивности. Не обрабатываются следующие интерактивные элементы.  
   
 -   Гиперссылки  
@@ -139,16 +139,16 @@ ms.locfileid: "66107928"
   
 
   
-##  <a name="DeviceInfo"></a> Настройки сведений об устройстве  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Настройки сведений об устройстве  
  Некоторые настройки по умолчанию для этого модуля подготовки отчетов можно изменить с помощью изменения настроек сведений об устройстве. Можно, например, указать, в каком режиме готовить отчет, какие символы использовать в качестве разделителей, а какие — в качестве ограничителей текста. Дополнительные сведения см. в разделе [CSV Device Information Settings](../csv-device-information-settings.md).  
   
   
   
-## <a name="see-also"></a>См. также:  
- [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](interactive-functionality-different-report-rendering-extensions.md)   
- [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Разбиение на страницы в Reporting Services &#40;построитель отчетов и SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Поведения подготовки к просмотру &#40;построитель отчетов и SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Интерактивные функции для различных модулей подготовки отчетов к просмотру &#40;построитель отчетов и SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Подготовка элементов отчета к просмотру &#40;построитель отчетов и SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

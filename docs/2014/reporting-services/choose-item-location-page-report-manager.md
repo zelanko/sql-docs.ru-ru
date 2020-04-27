@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8fd750b8c83816caf775fd508d892ff2511ce67f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109901"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Страница «Выбор расположения элементов» (диспетчер отчетов)
@@ -52,7 +52,7 @@ ms.locfileid: "66109901"
 4.  На вкладке страницы свойств **Общие** нажмите кнопку **Изменить местоположение** , чтобы открыть страницу «Выбор расположения элементов».  
   
 ## <a name="options"></a>Параметры  
- **Location**  
+ **Расположение**  
  Укажите имя папки, в которую будет помещен создаваемый элемент. Можно ввести полное имя или выбрать нужную папку в древовидном представлении.  
   
  **Представление в виде дерева**  
@@ -60,7 +60,7 @@ ms.locfileid: "66109901"
   
  Щелкните значок (+) или (-), чтобы открыть или закрыть папку без добавления ее имени в поле **Расположение** . Чтобы добавить имя папки в поле **Расположение** , щелкните имя папки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Страница создания связанного отчета &#40;диспетчер отчетов&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
  [Диспетчер отчетов &#40;новой страницы модели&#41;](../../2014/reporting-services/new-model-page-report-manager.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)  

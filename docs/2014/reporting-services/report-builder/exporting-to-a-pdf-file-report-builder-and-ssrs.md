@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107923"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Экспорт в PDF-файл (построитель отчетов и службы SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107923"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FontRequirements"></a> Внедрение шрифта  
+##  <a name="font-embedding"></a><a name="FontRequirements"></a>Внедрение шрифтов  
  При возможности модуль подготовки отчетов PDF внедряет подмножество каждого шрифта, необходимого для отображения отчета, в PDF-файл. Шрифты, которые используются в отчете, должны быть установлены на сервере отчетов. Когда сервер отчетов формирует отчет в формате PDF, он пользуется при создании отображений символов в PDF-файле информацией, сохраненной в используемом отчетом шрифте. Если шрифт, на который ссылается отчет, не установлен на сервере отчетов, полученный PDF-файл может содержать неверное отображение и в результате отображаться неправильно.  
   
  Шрифты внедряются в PDF-файл, если выполняются следующие условия.  
@@ -57,7 +57,7 @@ ms.locfileid: "66107923"
   
  Внедренные в PDF-файл шрифты включены в свойство Fonts, сохраняемое с файлом, в качестве метаданных.  
   
-##  <a name="Metadata"></a> Метаданные  
+##  <a name="metadata"></a><a name="Metadata"></a>Метаданных  
  В дополнение к макету отчета модуль подготовки отчетов PDF записывает в словарь сведений о документе PDF следующие метаданные.  
   
 |Свойство PDF|Создается из|  
@@ -65,14 +65,13 @@ ms.locfileid: "66107923"
 |`Title`|Атрибут `Name` элемента языка определения отчета `Report`.|  
 |`Author`|Элемент `Author` языка определения отчетов.|  
 |`Subject`|Элемент `Description` языка определения отчетов.|  
-|`Creator`|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |`Producer`|Имя и версия модуля подготовки отчетов.|  
 |`CreationDate`|Время выполнения отчета в формате PDF `datetime`.|  
   
   
   
-##  <a name="Interactivity"></a> Интерактивность  
+##  <a name="interactivity"></a><a name="Interactivity"></a>Интерактивности  
  В формате PDF поддерживаются некоторые интерактивные элементы. Ниже приведено описание особенностей поведения.  
   
 ### <a name="show-and-hide"></a>Показать и скрыть  
@@ -94,7 +93,7 @@ ms.locfileid: "66107923"
   
   
   
-##  <a name="Compression"></a>Компакт  
+##  <a name="compression"></a><a name="Compression"></a>Компакт  
  Сжатие изображений основывается на исходном типе файла изображения. Модуль подготовки отчетов PDF по умолчанию производит сжатие файлов PDF.  
   
  Для сохранения сжатия изображений, включенных в PDF-файл, по возможности JPEG-изображения хранятся в виде JPEG-файлов, а все другие типы изображений — в виде BMP-файлов.  
@@ -104,16 +103,16 @@ ms.locfileid: "66107923"
   
   
   
-##  <a name="DeviceInfo"></a> Настройки сведений об устройстве  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Настройки сведений об устройстве  
  Некоторые параметры по умолчанию для этого модуля подготовки отчетов можно изменить через настройку сведений об устройстве. Дополнительные сведения см. в разделе [PDF Device Information Settings](../pdf-device-information-settings.md).  
   
   
   
-## <a name="see-also"></a>См. также:  
- [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](interactive-functionality-different-report-rendering-extensions.md)   
- [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Разбиение на страницы в Reporting Services &#40;построитель отчетов и SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Поведения подготовки к просмотру &#40;построитель отчетов и SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Интерактивные функции для различных модулей подготовки отчетов к просмотру &#40;построитель отчетов и SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Подготовка элементов отчета к просмотру &#40;построитель отчетов и SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

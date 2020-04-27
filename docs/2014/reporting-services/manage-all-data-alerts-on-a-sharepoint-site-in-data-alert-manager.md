@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: debf7415a6364a358bb92066d53b840bcecd5930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108335"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>Управление всеми предупреждениями данных на сайте SharePoint в диспетчере предупреждений данных
@@ -48,8 +48,8 @@ ms.locfileid: "66108335"
     > [!NOTE]  
     >  После того как предупреждение будет удалено, дальнейшая отправка предупреждающих сообщений прекращается. Тем не менее при запросе к базе данных предупреждений может оказаться, что определение предупреждения все еще существует. Служба предупреждений выполняет очистку по расписанию и окончательно удаляет определение предупреждения при следующей очистке. Значение интервала очистки по умолчанию составляет 20 минут. Этот и другие интервалы выполнения очистки являются настраиваемыми. Дополнительные сведения см. в разделе [Предупреждения об изменении данных в службах Reporting Services](../ssms/agent/alerts.md).  
   
-## <a name="see-also"></a>См. также:  
- [Диспетчер предупреждений об изменении данных для предупреждений администраторов](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+## <a name="see-also"></a>См. также  
+ [Диспетчер предупреждений данных для оповещения администраторов](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Предупреждения об изменении данных в службах Reporting Services](../ssms/agent/alerts.md)  
   
   

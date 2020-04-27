@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d86c9bb07a52aba0cd93b006fc33edf4d1aa885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109928"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>Критические изменения в службах SQL Server Reporting Services в выпуске SQL Server «2014»
@@ -32,10 +32,10 @@ ms.locfileid: "66109928"
   
 -   [Критические изменения в работе служб Reporting Services SQL Server 2008 R2](#bkmk_kj)  
   
-##  <a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services критические изменения  
+##  <a name="sssql14-reporting-services-breaking-changes"></a><a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services критические изменения  
  Поведение функций служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] без критических изменений в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-##  <a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services критические изменения  
+##  <a name="sssql11-reporting-services-breaking-changes"></a><a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services критические изменения  
   
 ### <a name="sharepoint-mode-server-references-require-the-sharepoint-site"></a>Для ссылки на сервер в режиме интеграции с SharePoint требуется сайт SharePoint  
  Нельзя просматривать непосредственно сервер отчетов (или давать на него прямые ссылки) с помощью виртуального имени в пути URL-адреса. Пример:  
@@ -67,8 +67,8 @@ ms.locfileid: "66109928"
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>Конструктор моделей отчетов отсутствует в SQL Server Data Tools  
  Среда [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] больше не поддерживает проекты моделей отчетов. В службах [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]нет конструктора моделей отчетов. В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] больше нельзя ни создать новый, ни открыть существующий проект модели отчета, создание и обновление моделей отчетов также не поддерживается. Для работы с моделями отчетов можно воспользоваться службами [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] или средствами предыдущих версий. Можно продолжать пользоваться моделями отчетов в качестве источников данных в отчетах, созданных такими средствами служб [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] , как построитель отчетов или конструктор отчетов. Конструктор запросов, с помощью которого создаются запросы для получения данных отчета из модели отчета, будут по-прежнему работать в службах [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services критические изменения  
- В этом разделе описываются критические изменения в службах [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+##  <a name="sql-server-2008-r2-reporting-services-breaking-changes"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services критические изменения  
+ В этом разделе описаны критические [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]изменения в.  
   
 > [!NOTE]  
 >  Поскольку SQL Server 2008 R2 содержит изменения дополнительного номера версии по сравнению с SQL Server 2008, рекомендуется также просмотреть содержимое раздела по SQL Server 2008.  
@@ -78,7 +78,7 @@ ms.locfileid: "66109928"
   
  Дополнительные сведения см. в разделе [Экспорт в CSV-файл &#40;построитель отчетов и службы SSRS&#41;](report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Изменения в работе SQL Server Reporting Services в SQL Server 2014](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
  [Новые возможности &#40;Reporting Services&#41;](what-s-new-reporting-services.md)   
  [Устаревшие функции в SQL Server Reporting Services в SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md)   

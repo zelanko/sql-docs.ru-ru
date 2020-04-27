@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10fcb605ba6040c6d2a44c562af81c658ee26514
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109166"
 ---
 # <a name="feature-reference-reporting-services"></a>Справочник по функциям (службы Reporting Services)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] содержит несколько средств и приложений, которые можно использовать для создания, просмотра отчетов и управления ими. В этом разделе приводятся конкретные подразделы, описывающие диалоговые окна, веб-страницы и мастера этих инструментальных средств и приложений.  
+  В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] доступно несколько средств и приложений для создания, администрирования и просмотра отчетов. В этом разделе приводятся конкретные подразделы, описывающие диалоговые окна, веб-страницы и мастера этих инструментальных средств и приложений.  
   
  Чтобы получить доступ к разделу пользовательского интерфейса во время работы средства или приложения, нажмите клавишу F1 или кнопку **Справка** в открытом диалоговом окне, веб-странице или мастере. Дополнительные сведения о запуске средств [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] см. в разделе [Учебник. Инструкции по поиску и запуску средств служб Reporting Services (SSRS)](tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
@@ -43,8 +43,8 @@ ms.locfileid: "66109166"
  [Средство просмотра HTML-страниц и панель инструментов отчета](html-viewer-and-the-report-toolbar.md)  
  Предоставляет справку для компонента средств просмотра HTML-страниц для просмотра отчетов в веб-браузере.  
   
-## <a name="see-also"></a>См. также:  
- [Основные понятия служб Reporting Services (SSRS)](reporting-services-concepts-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Reporting Services концепции &#40;SSRS&#41;](reporting-services-concepts-ssrs.md)   
  [Отчеты Reporting Services &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)   
  [Добавление данных в построитель отчетов &#40;отчетов и SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [начало работы с построитель отчетов](https://www.microsoft.com/download/en/details.aspx?id=29072)   

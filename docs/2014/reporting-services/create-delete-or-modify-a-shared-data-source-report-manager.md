@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c554215ba716a35f3e2851a5042be1989ee5648c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109604"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Создание, удаление или изменение общего источника данных (диспетчер отчетов)
@@ -35,7 +35,7 @@ ms.locfileid: "66109604"
   
 1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md).  
   
-2.  В диспетчере отчетов перейдите на страницу **Содержимое** .  
+2.  В диспетчер отчетов перейдите на страницу **содержимое** .  
   
 3.  Нажмите кнопку **Создать источник данных**. Откроется страница **Создание источника данных** .  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66109604"
   
 6.  В списке **Тип источника данных** задайте модуль обработки данных, который будет использоваться для обработки данных, получаемых из источника данных.  
   
-7.  В поле **строка подключения**укажите строку соединения, которую сервер отчетов использует для подключения к источнику данных. Не рекомендуется указывать в строке соединения учетные данные.  
+7.  В поле **Строка подключения**укажите строку соединения, которую сервер отчетов будет использовать для подключения к источнику данных. Не рекомендуется указывать в строке соединения учетные данные.  
   
      В следующем примере показана строка подключения для подключения к локальной [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базе данных.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66109604"
     > [!NOTE]  
     >  Кнопка проверки соединения не поддерживается для источника типа XML-данных.  
   
-10. Нажмите кнопку **ОК**  
+10. Нажмите кнопку **ОК**.  
   
 ### <a name="to-modify-a-shared-data-source"></a>Изменение общего источника данных  
   
@@ -96,11 +96,11 @@ ms.locfileid: "66109604"
   
          [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Подключения к данным, источники данных и строки подключения в Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Страница "содержимое" &#40;диспетчер отчетов&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Создание, изменение и удаление общих источников данных &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Управление источниками данных отчета](report-data/manage-report-data-sources.md)   
- [Настройка свойств источника данных для диспетчер отчетов &#40;отчетов&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Настройка свойств источника данных для отчета (диспетчер отчетов)](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae18d021465a7d14ea22b56534ea48ac316154c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109913"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>Страница «Кэширование», «Общие наборы данных» (диспетчер отчетов)
@@ -55,7 +55,7 @@ ms.locfileid: "66109913"
  **Применить**  
  Сохраните изменения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Справка F1 диспетчер отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
  [Общие наборы данных кэша &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)   

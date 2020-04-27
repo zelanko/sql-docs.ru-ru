@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295a40bc7964e50e5fc0c4a9ea0294b593fdde18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109390"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>Диалоговое окно «Свойства набора данных» — «Настройки» (построитель отчетов)
@@ -65,7 +65,7 @@ ms.locfileid: "66109390"
   
  Выберите этот вариант, чтобы отметить данный параметр в определении общего набора данных как предназначенный только для чтения. После добавления общего набора данных к отчету этот параметр не появляется в свойствах. Если общий набор данных кэширован на сервере отчетов, то это значение изменить нельзя.  
   
- **Nullable**  
+ **Допускает значения NULL**  
  Относится только к общим наборам данных.  
   
  Выберите этот параметр, чтобы применение значения NULL стало допустимым.  
@@ -75,15 +75,15 @@ ms.locfileid: "66109390"
   
  Выберите этот вариант, если ссылка на параметр отчета находится в выражении фильтра общего набора данных, а не в запросе. После выбора этого варианта отпадает необходимость задавать значение по умолчанию для данного параметра при выполнении запроса.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Построитель отчетов справки по диалоговым окнам, панелям и мастерам](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Диалоговое окно "Свойства набора данных", построитель отчетов &#40;запросов&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [Выражения (построитель отчетов и службы SSRS)](report-design/expressions-report-builder-and-ssrs.md)   
- [Учебник. Добавление параметра к отчету (построитель отчетов)](tutorial-add-a-parameter-to-your-report-report-builder.md)   
- [Параметры отчета (построитель отчетов и конструктор отчетов)](report-design/report-parameters-report-builder-and-report-designer.md)   
- [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Учебник. Добавление параметра в отчет &#40;построитель отчетов&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Параметры отчета &#40;построитель отчетов и конструктор отчетов&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Внедренные и общие наборы данных отчета &#40;построитель отчетов и службы SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Конструкторы запросов &#40;построитель отчетов&#41;](../../2014/reporting-services/query-designers-report-builder.md)   
- [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Создание общего набора данных или внедренного набора данных &#40;построитель отчетов и служб SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [Внедренные и общие наборы данных отчета &#40;построитель отчетов и службы SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
   

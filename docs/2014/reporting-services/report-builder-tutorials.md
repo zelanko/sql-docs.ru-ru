@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3859dbf74d1def19b5f3aad405a884ae607fbca3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107971"
 ---
 # <a name="tutorials-report-builder"></a>Учебники (построитель отчетов)
@@ -67,9 +67,9 @@ ms.locfileid: "66107971"
  [Учебник. Общие сведения о выражениях](tutorial-introducing-expressions.md)  
  Следуйте шагам в данном учебнике, чтобы узнать, как с помощью выражений производить сцепления и вычисления значений полей поиска и выводить их в отчете. Кроме того, вы научитесь по условию отображать различные изображения и состояния индикаторов с помощью выражений.  
   
-## <a name="see-also"></a>См. также:  
- [Представление конструктора отчетов (построитель отчетов)](report-builder/report-design-view-report-builder.md)   
+## <a name="see-also"></a>См. также  
+ [Построитель отчетов &#40;представления конструктора отчетов&#41;](report-builder/report-design-view-report-builder.md)   
  [построитель отчетов в SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)   
- [Учебник. Создание отчета с быстрым графиком в автономном режиме &#40;построитель отчетов&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [Учебник. Создание стандартного отчета с диаграммой в режиме "вне сети" (построитель отчетов)](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
   
   
