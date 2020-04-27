@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62960803"
 ---
 # <a name="replication-tutorials"></a>Учебники по репликации
@@ -39,7 +39,7 @@ ms.locfileid: "62960803"
  [Репликация данных с мобильными клиентами](tutorial-replicating-data-with-mobile-clients.md)  
  Изучите, как использовать репликацию слиянием для обмена данными между сервером и одним или более клиентами, которые подключаются периодически.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Безопасность Репликация SQL Server](security/view-and-modify-replication-security-settings.md)  
   
   

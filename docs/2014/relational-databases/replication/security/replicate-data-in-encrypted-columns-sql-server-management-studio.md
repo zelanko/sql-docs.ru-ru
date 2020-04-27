@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62955847"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Репликация данных в зашифрованные столбцы (среда SQL Server Management Studio)
@@ -56,7 +56,7 @@ ms.locfileid: "62955847"
   
 4.  Чтобы закрыть ключ, выполните инструкцию [CLOSE SYMMETRIC KEY](/sql/t-sql/statements/close-symmetric-key-transact-sql) .  
   
-5.  Опубликуйте таблицу, которая содержит зашифрованный столбец. Дополнительные сведения см. в разделе [Create a Publication](../publish/create-a-publication.md).  
+5.  Опубликуйте таблицу, которая содержит зашифрованный столбец. Дополнительные сведения см. [в разделе Создание публикации](../publish/create-a-publication.md).  
   
 6.  Подписка на эту публикацию. Дополнительные сведения см. в статьях [Создание подписки по запросу](../create-a-pull-subscription.md) и [Создание принудительной подписки](../create-a-push-subscription.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62955847"
   
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../snippets/tsql/SQL15/replication/howto/tsql/subscriberencryptedcolumn.sql#sp_subscriberencryptedcolumn)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Безопасность Репликация SQL Server](view-and-modify-replication-security-settings.md)   
  [Создание идентичных симметричных ключей на двух серверах](../../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   

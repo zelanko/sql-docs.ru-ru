@@ -15,17 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9a9c5f01bd682e68e44a7a974cbbaeade8008d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62937021"
 ---
-# <a name="job-categories-manage-job-categories"></a>Категории заданий: управление категориями заданий
+# <a name="job-categories-manage-job-categories"></a>Категории задания: Управление категориями заданий
   Диалоговое окно **Категории заданий** используется для добавления или удаления категорий заданий. Встроенные категории заданий удалить невозможно.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Имя категории заданий.  
   
  **Число заданий в категории**  
@@ -40,7 +40,7 @@ ms.locfileid: "62937021"
  **Удаление**  
  Удаляет выбранную категорию заданий. Работает только для категорий заданий, определенных пользователями.  
   
- **Обновить**  
+ **Обновление**  
  Отправляет серверу запрос на текущие данные.  
   
 #### <a name="to-access-the-job-categories-dialog-box"></a>Для вызова диалогового окна «Категории заданий»  
