@@ -16,10 +16,10 @@ ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a296f5b4cb20768d5aa244646e584bede110d26a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72278349"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
@@ -86,7 +86,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @sync_mode = ] 'sync_mode'`Режим первоначальной синхронизации подписчиков с публикацией. *sync_mode* имеет тип **nvarchar (10)** и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**native** (по умолчанию)|Производит выходные данные программы массового копирования всех таблиц.|  
 |**символов**|Производит выходные данные программы массового копирования всех таблиц в символьном режиме. Требуется для поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] и[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, отличных от.|  
@@ -162,17 +162,17 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @use_partition_groups = ] 'use_partition_groups'`Указывает, что для оптимизации процесса синхронизации должны использоваться предварительно вычисленные секции. *use_partition_groups* имеет тип **nvarchar (5)** и может принимать одно из следующих значений:  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
-|**условия**|Публикация использует предварительно вычисляемые секции.|  
-|**IsFalse**|Публикация не использует предварительно вычисляемые секции.|  
+|**true**|Публикация использует предварительно вычисляемые секции.|  
+|**false**|Публикация не использует предварительно вычисляемые секции.|  
 |NULL (по умолчанию)|Стратегию секционирования выбирает система.|  
   
  По умолчанию используются предварительно вычисляемые секции. Чтобы избежать использования предварительно вычисленных секций, *use_partition_groups* необходимо задать значение **false**. При задании NULL система решает, могут ли использоваться предварительно вычисляемые секции. Если предварительно вычисленные секции не могут быть использованы, это значение будет считаться **ложным** без создания ошибок. В таких случаях *keep_partition_changes* может иметь значение **true** , чтобы обеспечить некоторую оптимизацию. Дополнительные сведения см. в разделах [параметризованные фильтры строк](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) и [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисленных секций](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
 `[ @publication_compatibility_level = ] backward_comp_level`Указывает обратную совместимость публикации. *backward_comp_level* имеет тип **nvarchar (6)** и может принимать одно из следующих значений:  
   
-|Значение|Версия|  
+|Применение|Версия|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -200,7 +200,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @retention_period_unit = ] 'retention_period_unit'`Указывает единицы срока хранения, заданные в параметре *retention*. *retention_period_unit* имеет тип **nvarchar (10)** и может принимать одно из следующих значений.  
   
-|Значение|Версия|  
+|Применение|Версия|  
 |-----------|-------------|  
 |**Day** (по умолчанию)|Срок хранения указан в днях.|  
 |**week**|Срок хранения указан в неделях.|  
@@ -216,15 +216,15 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @conflict_logging = ] 'conflict_logging'`Указывает, где хранятся конфликтующие записи. *conflict_logging* имеет тип **nvarchar (15)** и может принимать одно из следующих значений:  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**издателя**|Конфликтующие записи хранятся на издателе.|  
 |**абонент**|Конфликтующие записи хранятся на подписчике, вызвавшем конфликт. Не поддерживается подписчиками [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 |**как**|Конфликтующие записи хранятся одновременно на издателе и на подписчике.|  
-|NULL (по умолчанию)|Репликация автоматически ** задает conflict_logging **, если значение** *backward_comp_level* равно **90RTM** , а в **Publisher** — во всех остальных случаях.|  
+|NULL (по умолчанию)|Репликация автоматически *conflict_logging* задает conflict_logging **, если значение** *backward_comp_level* равно **90RTM** , а в **Publisher** — во всех остальных случаях.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  **sp_addmergepublication** используется в репликации слиянием.  
@@ -249,6 +249,6 @@ sp_addmergepublication [ @publication = ] 'publication'
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
- [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

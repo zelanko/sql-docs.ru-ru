@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 509c2735475b7113887a2291ac6cdfb67dfc865a
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 70de1a4d2508a955510eb160af5622d7c1252520
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528728"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81727929"
 ---
 # <a name="using-advanced-data-types"></a>Использование расширенных типов данных
 
@@ -77,7 +77,7 @@ rs.next();
 InputStream is = rs.getBinaryStream(2);  
 ```
 
-Кроме того, для считывания данных в виде байтового массива можно следующим образом использовать метод [getBytes](../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md):  
+Кроме того, для считывания данных в виде байтового массива можно следующим образом использовать метод [getBytes](reference/getbytes-method-sqlserverresultset.md):  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -123,7 +123,7 @@ try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Co
 
 ### <a name="modifying-large-value-types-in-a-database"></a>Изменение типов данных большого объема в базе данных
 
-В большинстве случаев для обновления или изменения больших значений в базе данных рекомендуется передавать параметры через классы [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) и [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) с помощью таких команд [!INCLUDE[tsql](../../includes/tsql-md.md)], как `UPDATE`, `WRITE` и `SUBSTRING`.  
+В большинстве случаев для обновления или изменения больших значений в базе данных рекомендуется передавать параметры через классы [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) и [SQLServerCallableStatement](reference/sqlservercallablestatement-class.md) с помощью таких команд [!INCLUDE[tsql](../../includes/tsql-md.md)], как `UPDATE`, `WRITE` и `SUBSTRING`.  
 
 Если нужно заменить экземпляр слова в крупном текстовом файле, например в архивном HTML-файле, можно воспользоваться объектом Clob следующим образом:  
 
@@ -173,12 +173,12 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
   
 ## <a name="sql_variant-data-type"></a>Тип данных sql_variant
 
-Дополнительные сведения см. в статье [об использовании типа данных Sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
+Дополнительные сведения см. в статье [об использовании типа данных Sql_variant](using-sql-variant-datatype.md).  
 
 ## <a name="spatial-data-types"></a>Типы пространственных данных
 
-Дополнительные сведения см. в статье [об использовании пространственных типов данных](../../connect/jdbc/use-spatial-datatypes.md).  
+Дополнительные сведения см. в статье [об использовании пространственных типов данных](use-spatial-datatypes.md).  
 
 ## <a name="see-also"></a>См. также раздел
 
-[Основные сведения о типах данных JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Основные сведения о типах данных JDBC Driver](understanding-the-jdbc-driver-data-types.md)  

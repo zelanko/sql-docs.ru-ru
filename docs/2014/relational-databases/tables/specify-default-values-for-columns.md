@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196724"
 ---
 # <a name="specify-default-values-for-columns"></a>Указание значений по умолчанию для столбца
@@ -35,15 +35,15 @@ ms.locfileid: "68196724"
   
      [Безопасность](#Security)  
   
--   **Указание значения по умолчанию с помощью:**  
+-   **Задание значения по умолчанию с использованием:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Если данные, введенные в поле **Значение по умолчанию** , заменяют связанное со столбцом значение по умолчанию (которое отображается без скобок), то будет предложено отменить привязку значения по умолчанию и заменить его новым значением.  
   
@@ -53,12 +53,12 @@ ms.locfileid: "68196724"
   
 -   Чтобы задать объект или функцию, введите имя объекта или функции без двойных кавычек.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требуется разрешение ALTER на таблицу.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>Указание для столбца значения по умолчанию  
   
@@ -71,9 +71,9 @@ ms.locfileid: "68196724"
     > [!NOTE]  
     >  Чтобы задать численное значение по умолчанию, введите число. В случае объекта или функции нужно ввести его или ее имя. Чтобы задать алфавитно-цифровое значение по умолчанию, введите его, заключив в одинарные кавычки.  
   
-4.  В меню **Файл** выберите пункт **Сохранить**_table name_.  
+4.  В меню **Файл** выберите команду **Сохранить**_имя_таблицы_.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>Указание для столбца значения по умолчанию  
   
@@ -95,6 +95,6 @@ ms.locfileid: "68196724"
   
     ```  
   
- Дополнительные сведения см. в разделе [ALTER table &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
+ Дополнительные сведения см. в разделе [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql).  
   
 ###  <a name="TsqlExample"></a>  

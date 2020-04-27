@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 2e0ed6f2976f0b0f0b93f91f70f82ba30822c87c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5054a00901251bc9b947e7c147619b785f52ae9d
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633882"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728453"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Заметки о выпуске Microsoft ODBC Driver for SQL Server для Windows
 
@@ -256,8 +256,8 @@ GeneMi (and CraigG).  2019/03/30.
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
-| В драйвере ODBC 13.1 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] добавлена поддержка [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) и [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md). | Поддержка этих функций доступна при подключении к Microsoft SQL Server 2016 или более поздней версии. |
-| Появились ключевые слова и атрибуты для пулов соединений, соответствующие поддержке Always Encrypted и Azure Active Directory. | Эти ключевые слова и атрибуты описываются в статье [Организация пулов соединений с учетом драйвера в ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md). |
+| В драйвере ODBC 13.1 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] добавлена поддержка [Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md) и [Azure Active Directory](../using-azure-active-directory.md). | Поддержка этих функций доступна при подключении к Microsoft SQL Server 2016 или более поздней версии. |
+| Появились ключевые слова и атрибуты для пулов соединений, соответствующие поддержке Always Encrypted и Azure Active Directory. | Эти ключевые слова и атрибуты описываются в статье [Организация пулов соединений с учетом драйвера в ODBC Driver for SQL Server](driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ## <a name="13"></a>13

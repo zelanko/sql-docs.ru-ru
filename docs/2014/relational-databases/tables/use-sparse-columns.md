@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196655"
 ---
 # <a name="use-sparse-columns"></a>Использование разреженных столбцов
@@ -71,7 +71,7 @@ ms.locfileid: "68196655"
   
 |Тип данных|Неразреженные байты|Разреженные байты|Процент значений NULL|  
 |---------------|---------------------|------------------|---------------------|  
-|`bit`|0,125|5|98%|  
+|`bit`|0.125|5|98%|  
 |`tinyint`|1|5|86%|  
 |`smallint`|2|6|76%|  
 |`int`|4|8|64%|  
@@ -92,10 +92,10 @@ ms.locfileid: "68196655"
 |`datetime2(0)`|6|10|57%|  
 |`datetime2(7)`|8|12|52%|  
 |`time(0)`|3|7|69%|  
-|`time(7)`|5|9|60 %|  
+|`time(7)`|5|9|60%|  
 |`datetimetoffset(0)`|8|12|52%|  
 |`datetimetoffset (7)`|10|14|49%|  
-|`decimal/numeric(1,s)`|5|9|60 %|  
+|`decimal/numeric(1,s)`|5|9|60%|  
 |`decimal/numeric(38,s)`|17|21|42%|  
 |`vardecimal(p,s)`|Используйте тип `decimal` в качестве консервативной оценки.|||  
   
@@ -104,11 +104,11 @@ ms.locfileid: "68196655"
 |Тип данных|Неразреженные байты|Разреженные байты|Процент значений NULL|  
 |---------------|---------------------|------------------|---------------------|  
 |`sql_variant`|Зависит от базового типа данных|||  
-|`varchar`ни`char`|2*|4*|60 %|  
-|`nvarchar`ни`nchar`|2*|4*+|60 %|  
-|`varbinary`ни`binary`|2*|4*|60 %|  
-|`xml`|2*|4*|60 %|  
-|`hierarchyid`|2*|4*|60 %|  
+|`varchar` или `char`|2*|4*|60%|  
+|`nvarchar` или `nchar`|2*|4*+|60%|  
+|`varbinary` или `binary`|2*|4*|60%|  
+|`xml`|2*|4*|60%|  
+|`hierarchyid`|2*|4*|60%|  
   
  *Длина равна средней длине данных, содержащихся в типе, плюс 2 или 4 байта.  
   
@@ -231,7 +231,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование наборов столбцов](../tables/use-column-sets.md)   
  [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql)   
  [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)   

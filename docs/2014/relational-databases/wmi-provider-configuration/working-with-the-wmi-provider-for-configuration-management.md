@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9d9f3ab9f80c6f2c77153439cf554f0ae8598586
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68195776"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Работа с поставщиком WMI для управления конфигурацией
@@ -41,7 +41,7 @@ ms.locfileid: "68195776"
 \\.\root\Microsoft\SqlServer\ComputerManagement12\instance_name  
 ```  
   
- где `instance_name` в установке по умолчанию `MSSQLSERVER` имеет значение по умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ где `instance_name` в установке по умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет значение по умолчанию `MSSQLSERVER`.  
   
  **Примечание.** При подключении через брандмауэр Windows необходимо убедиться, что компьютеры настроены соответствующим образом. См. статью "подключение через брандмауэр Windows" в документации инструментарий управления Windows (WMI) на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [веб-сайте](https://go.microsoft.com/fwlink/?linkid=15426)MSDN.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68195776"
   
  Поставщик WMI для управления конфигурацией поддерживает сертификаты безопасности. Дополнительные сведения о сертификатах см. в разделе [Иерархия шифрования](../security/encryption/encryption-hierarchy.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диспетчер конфигурации SQL Server](../sql-server-configuration-manager.md)  
   
   

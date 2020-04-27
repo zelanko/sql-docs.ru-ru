@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0519561b24d8aff32adc7c375657fa85b9dfa496
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68195731"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>Работа с поставщиком WMI для событий сервера
@@ -46,7 +46,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
  Для включения компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] в базе данных используется параметр ENABLE_BROKER SET инструкции [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) .  
   
 ## <a name="specifying-a-connection-string"></a>Задание строки соединения  
- Приложения указывают поставщику WMI для событий сервера экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , соединяясь с пространством имен WMI, определяемым поставщиком. Служба Windows WMI сопоставляет это пространство имен с файлом поставщика Sqlwep.dll и загружает его в память. Каждый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет собственное пространство имен WMI, которое по умолчанию имеет значение \\ \\:. \\ **\\*instance_name*root \микрософт\склсервер\серверевентс. *instance_name* по умолчанию принимает значение MSSQLSERVER при установке по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]умолчанию.  
+ Приложения указывают поставщику WMI для событий сервера экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , соединяясь с пространством имен WMI, определяемым поставщиком. Служба Windows WMI сопоставляет это пространство имен с файлом поставщика Sqlwep.dll и загружает его в память. Каждый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет собственное пространство имен WMI, которое по умолчанию имеет значение \\ \\:. \\ *root*\\*instance_name*root \микрософт\склсервер\серверевентс. *instance_name* по умолчанию принимает значение MSSQLSERVER при установке по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]умолчанию.  
   
 ## <a name="permissions-and-server-authentication"></a>Разрешения и проверка подлинности сервера  
  Чтобы получить доступ к поставщику WMI для событий сервера, клиент, на котором выполняется приложение инструментария WMI, должен соответствовать прошедшему проверку имени входа или группе Windows в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который задан в строке соединения приложения.  
@@ -111,7 +111,7 @@ WHERE DatabaseName = "AdventureWorks2012"
 ## <a name="working-with-event-data-on-the-client-side"></a>Работа с данными событий на стороне клиента  
  После того как поставщик WMI для событий сервера создает в целевой базе данных требуемое уведомление о событии, уведомление о событии отправляет данные о событии в целевую службу в msdb с именем **SQL/Notifications/ProcessWMIEventProviderNotification/v 1.0**. Целевая служба помещает событие в очередь в `msdb` с именем **WMIEventProviderNotificationQueue**. (Служба и очередь динамически создаются поставщиком при первом соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Затем поставщик считывает данные о событиях XML из этой очереди и преобразует их в формат управляемых объектов (MOF) перед возвращением в клиентское приложение. Данные MOF состоят из свойств события, запрашиваемого WQL-запросом в виде определения класса общей информационной модели (CIM). Каждое свойство имеет соответствующий тип CIM. Например, свойство `SPID` возвращается как тип CIM `Sint32`. Типы CIM для каждого свойства приведены в списке под каждым из классов событий в разделе [Поставщик WMI для классов и свойств событий сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные понятия о поставщике WMI для событий сервера](https://technet.microsoft.com/library/ms180560.aspx)  
   
   

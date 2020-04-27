@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 50f082edef5d9a6d4e95b7e37ef6d75f22eb6f2a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289152"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Воспроизведение трассировки в Database Experimentation Assistant
@@ -163,6 +163,6 @@ SQL Server — это система управления реляционным
   
 Эта ошибка устранена в последнем накопительном пакете обновления 1 для SQL Server 2017. Скачайте последнюю версию [накопительного пакета обновления 1 для SQL Server 2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - Чтобы создать аналитический отчет, который поможет получить представление о предлагаемых изменениях, см. раздел [Создание отчетов](database-experimentation-assistant-create-report.md).

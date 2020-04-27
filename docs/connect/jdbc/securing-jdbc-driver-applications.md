@@ -1,5 +1,6 @@
 ---
-title: Защита приложений драйвера JDBC | Документация Майкрософт
+title: Защита приложений JDBC Driver
+description: В подразделах данного раздела приводится описание некоторых общих вопросов безопасности, включая строки соединения, проверку вводимых пользователем данных и общую безопасность приложения.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fd01462987ef425af32c8537f1fc99218d59e290
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: e542328d80cabce0c0c5e923c1f150a86d9765d6
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219433"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728310"
 ---
 # <a name="securing-jdbc-driver-applications"></a>Защита приложений JDBC Driver
 

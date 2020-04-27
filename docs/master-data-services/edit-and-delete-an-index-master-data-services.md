@@ -11,10 +11,10 @@ ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: f4855daea163d799d8f880dc74e5fee8d2a50c93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728213"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>Изменение и удаление индекса (Master Data Services)
@@ -23,18 +23,18 @@ ms.locfileid: "73728213"
 
   Индекс, созданный для атрибутов, можно изменить или удалить.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
--   Иметь разрешение на доступ к функциональной области "Администрирование системы". Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Иметь разрешение на доступ к функциональной области "Администрирование системы". Дополнительные сведения см. в разделе [разрешения функциональной области &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
  **Изменение индекса**  
   
 1.  В диспетчере основных данных щелкните **Системное администрирование**.  
   
-2.  На странице **Управление моделью** выберите модель в сетке и щелкните **сущности**.  
+2.  На странице **Manage Model** (Управление моделью) выберите в сетке модель и щелкните **Сущности**.  
   
 3.  На странице **Manage Entity** (Управление сущностью) в сетке выберите сущность, содержащую индекс, который нужно изменить.  
   
@@ -48,11 +48,11 @@ ms.locfileid: "73728213"
   
 8.  Измените список назначенных атрибутов, добавив атрибуты в список или удалив их оттуда.  
   
-9. Выберите команду **Сохранить**.  
+9. Нажмите кнопку **Сохранить**.  
   
  **Удаление индекса**  
   
-1.  На странице **Manage Model** (Управление моделью) выберите в сетке модель и щелкните **Сущности**.  
+1.  На странице **Управление моделью** выберите модель в сетке и щелкните **сущности**.  
   
 2.  На странице **Manage Entity** (Управление сущностью) в сетке выберите сущность, содержащую индекс, который нужно удалить.  
   
@@ -62,8 +62,8 @@ ms.locfileid: "73728213"
   
 5.  В окнах подтверждения нажимайте кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание индекса &#40;Master Data Services&#41;](../master-data-services/create-an-index-master-data-services.md)   
- [Master Data Services &#40;настраиваемого индекса&#41;](../master-data-services/custom-index-master-data-services.md)  
+ [Пользовательский индекс (Master Data Services)](../master-data-services/custom-index-master-data-services.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1dad0f71b2978c25245a42cc33d4adec05dbeaf3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211080"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>создать трассировку (приложение SQL Server Profiler)
@@ -29,7 +29,7 @@ ms.locfileid: "68211080"
      отображается диалоговое окно **Свойства трассировки** .  
   
     > [!NOTE]  
-    >  Если выбран параметр **Начать трассировку немедленно после установления соединения** , диалоговое окно **Свойства трассировки** не появляется, и начинается трассировка. Чтобы отключить этот параметр, в меню **Сервис**выберите пункт **Параметры**и снимите флажок **Начать трассировку немедленно после установления соединения** .  
+    >  Если выбран параметр **Начать трассировку немедленно после установления соединения** , диалоговое окно **Свойства трассировки** не появляется, и начинается трассировка. Чтобы отключить этот параметр, в меню **Сервис**выберите пункт **Параметры**и снимите флажок **Начать трассировку немедленно после** установления соединения.  
   
 2.  В поле **Имя трассировки** введите имя трассировки.  
   
@@ -54,10 +54,10 @@ ms.locfileid: "68211080"
   
 7.  Чтобы запустить трассировку, нажмите кнопку **Выполнить** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разрешения, необходимые для запуска приложения SQL Server Profiler](permissions-required-to-run-sql-server-profiler.md)   
  [Шаблоны и разрешения приложения SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)   
  [Приложение SQL Server Profiler](sql-server-profiler.md)   
- [Сопоставьте трассировку с данными журнала производительности Windows &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
+ [Сопоставить трассировку с данными журнала производительности Windows (приложение SQL Server Profiler)](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   

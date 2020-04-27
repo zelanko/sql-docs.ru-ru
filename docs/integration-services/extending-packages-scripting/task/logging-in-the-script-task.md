@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 84817da83d50edb592ab11dea16b3b21b8d3818d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44cb3b54aae756d00d56e16b3637000b1cae9af5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296436"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087404"
 ---
 # <a name="logging-in-the-script-task"></a>Ведение журнала в задаче «Скрипт»
 
@@ -95,10 +95,6 @@ public class ScriptMain
 ```  
   
  }  
-  
-## <a name="external-resources"></a>Внешние ресурсы  
-  
--   Запись в блоге: [Ведение журнала пользовательских событий для задач служб Integration Services](https://go.microsoft.com/fwlink/?LinkId=165644), на сайте dougbert.com  
   
 ## <a name="see-also"></a>См. также:  
  [Ведение журналов в службах Integration Services (SSIS)](../../../integration-services/performance/integration-services-ssis-logging.md)  

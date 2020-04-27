@@ -15,13 +15,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a793c6ee6e1f6e168ca2a957b84b1ba4a1d2a453
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68195837"
 ---
-# <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Создание предупреждения агента SQL Server при помощи поставщика WMI для событий сервера
+# <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Образец. Создание предупреждения агента SQL Server с помощью поставщика WMI для событий сервера
   Один из общепринятых способов использования поставщика событий WMI состоит в создании предупреждений агента SQL Server, которые отвечают на конкретные события. В следующем образце представлено простое предупреждение, которое сохраняет события графа взаимоблокировок XML в таблице для последующего анализа. Агент SQL Server отправляет запрос WQL, получает события WMI и запускает задание в ответ на событие. Обратите внимание, что в обработке сообщения уведомления участвуют несколько объектов компонента Service Broker, но детальные операции создания и управления этими объектами возлагаются на поставщика событий WMI.  
   
 ## <a name="example"></a>Пример  
@@ -134,7 +134,7 @@ GO
   
  Столбец `DeadlockGraph` должен содержать XML-документ, который показывает все свойства события графа взаимоблокировок.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные понятия о поставщике WMI для событий сервера](wmi-provider-for-server-events-concepts.md)  
   
   

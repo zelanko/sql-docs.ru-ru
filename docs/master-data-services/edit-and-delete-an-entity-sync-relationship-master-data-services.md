@@ -11,10 +11,10 @@ ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4d8f95671bebf3d67368a35ab61f3c24392186fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728235"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>Создание и удаление отношения синхронизации сущностей (Master Data Services)
@@ -23,20 +23,20 @@ ms.locfileid: "73728235"
 
   Синхронизация сущностей — это односторонняя повторяемая синхронизация между версиями сущности. Она позволяет разным моделям совместно использовать данные сущностей. Созданное отношение синхронизации можно изменить или удалить.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для изменения отношения синхронизации сущностей требуется следующее.  
   
--   Иметь разрешение на доступ к функциональной области "Администрирование системы". Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Иметь разрешение на доступ к функциональной области "Администрирование системы". Дополнительные сведения см. в разделе [разрешения функциональной области &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   Быть администратором целевой модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
+-   Быть администратором целевой модели. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Иметь по крайней мере доступ на чтение исходной сущности и всех ее атрибутов и элементов.  
   
  Для удаления отношения синхронизации сущностей требуется следующее.  
   
--   Иметь разрешение на доступ к функциональной области "Администрирование системы". Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Иметь разрешение на доступ к функциональной области "Администрирование системы". Дополнительные сведения см. в разделе [разрешения функциональной области &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   Быть администратором целевой модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
+-   Быть администратором целевой модели. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
  При изменении отношения синхронизации сущностей необходимо учитывать следующее.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "73728235"
   
 5.  Измените параметр **Частота**. Выберите **синхронизацию по требованию**или **автоматическую синхронизацию** и укажите частоту.  
   
-6.  Выберите команду **Сохранить**.  
+6.  Нажмите кнопку **Сохранить**.  
   
  **Удаление отношения синхронизации сущностей**  
   
@@ -84,8 +84,8 @@ ms.locfileid: "73728235"
   
 5.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание и выполнение отношения синхронизации сущностей &#40;Master Data Services&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
- [&#40;Master Data Services отношений синхронизации сущностей&#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
+ [Отношение синхронизации сущностей (Master Data Services)](../master-data-services/entity-sync-relationship-master-data-services.md)  
   
   

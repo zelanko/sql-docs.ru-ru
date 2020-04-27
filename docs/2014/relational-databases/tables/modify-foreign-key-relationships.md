@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196844"
 ---
 # <a name="modify-foreign-key-relationships"></a>Изменение связей по внешнему ключу
@@ -40,9 +40,9 @@ ms.locfileid: "68196844"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
  Тип данных и размер нового внешнего ключевого столбца должны соответствовать типу данных и размеру связанного с ним первичного ключевого столбца со следующими исключениями.  
   
 -   Столбец типа `char` или `sysname` можно связать со столбцом типа `varchar`.  
@@ -51,12 +51,12 @@ ms.locfileid: "68196844"
   
 -   Псевдоним типа данных можно связать со своим базовым типом.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требуется разрешение ALTER на таблицу.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-modify-a-foreign-key"></a>Изменение внешнего ключа  
   
@@ -141,7 +141,7 @@ ms.locfileid: "68196844"
   
 4.  В меню **Файл** выберите пункт **Сохранить**_table name_.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Изменение внешнего ключа**  
   
  Чтобы изменить ограничение FOREIGN KEY с помощью Transact-SQL, сначала необходимо удалить существующее ограничение FOREIGN KEY, а затем повторно создать его с новым определением. Дополнительные сведения см. в разделах [Delete Foreign Key Relationships](delete-foreign-key-relationships.md) и [Create Foreign Key Relationships](create-foreign-key-relationships.md).  
