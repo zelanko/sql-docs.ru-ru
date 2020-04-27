@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 517f5c5dddd809ee71037a95d04109a005968132
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106214"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Сбор мелких срезов на круговой диаграмме (построитель отчетов и службы SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66106214"
   
  Нельзя объединить в один срез срезы воронкообразных и пирамидальных диаграмм.  
   
- Пример этой диаграммы доступен в виде образца отчета. Дополнительные сведения о скачивании этого и других образцов отчетов см. в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]разделе [Построитель отчетов и конструктор отчетов образцы отчетов](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Пример этой диаграммы доступен в виде образца отчета. Дополнительные сведения о скачивании этого и других примеров отчетов см. в статье [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 ### <a name="to-collect-small-slices-into-a-single-slice-on-a-pie-chart"></a>Сбор мелких срезов в один срез круговой диаграммы  
   
@@ -75,9 +75,9 @@ ms.locfileid: "66106214"
 > [!NOTE]  
 >  Форматировать вторичную круговую диаграмму нельзя. По этой причине настоятельно рекомендуется пользоваться для сбора мелких срезов круговых диаграмм первым методом.  
   
-## <a name="see-also"></a>См. также:  
- [Круговые диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
- [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Круговые диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Форматирование точек данных на диаграмме &#40;построитель отчетов и SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Отображение меток точек данных за пределами круговой диаграммы &#40;построитель отчетов и SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Отображение процентных значений на круговой диаграмме &#40;построитель отчетов и SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Добавление в диаграмму объемных эффектов (построитель отчетов и службы SSRS)](chart-effects-add-3d-effects-report-builder.md)  

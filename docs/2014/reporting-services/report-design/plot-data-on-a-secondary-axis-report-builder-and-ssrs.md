@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9bff6ec41cc2437c6083e150eb391470cb5a5ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105431"
 ---
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>Построение данных на вспомогательной оси (построитель отчетов и службы SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66105431"
   
  Если сравнивается более двух рядов, необходимо использовать другой подход для сравнения и отображения на диаграмме нескольких рядов. Дополнительные сведения см. в разделе [несколько рядов на диаграмме &#40;построитель отчетов и службы SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
- Пример этой диаграммы доступен в виде образца отчета. Дополнительные сведения о скачивании этого и других образцов отчетов см. в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]разделе [Построитель отчетов и конструктор отчетов образцы отчетов](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Пример этой диаграммы доступен в виде образца отчета. Дополнительные сведения о скачивании этого и других примеров отчетов см. в статье [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -35,8 +35,8 @@ ms.locfileid: "66105431"
   
 2.  Перейдите на вкладку **Оси и область диаграммы**и выберите, какую из вторичных осей необходимо включить: ось значений или ось категорий.  
   
-## <a name="see-also"></a>См. также:  
- [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Форматирование меток оси на построитель отчетов &#40;диаграммы и SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Задание интервала оси (построитель отчетов и службы SSRS)](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
   

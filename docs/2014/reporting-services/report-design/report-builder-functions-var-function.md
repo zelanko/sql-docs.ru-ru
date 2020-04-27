@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a10d92d8492f9f07f18d2edccd7f3074b7c584c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105093"
 ---
 # <a name="var-function-report-builder-and-ssrs"></a>Функция Var (построитель отчетов и службы SSRS)
@@ -38,8 +38,7 @@ Var(expression, scope, recursive)
  (`String`) Необязательно. Константа, являющаяся именем набора данных, группирования или области данных, содержащих элементы отчета, к которым применяется агрегатная функция. Если аргумент *scope* не задан, используется текущая область.  
   
  *рекурсивные*  
- (**Перечислимый тип**) Необязательно. 
-  `Simple` (по умолчанию) или `RdlRecursive`. Указывает, нужно ли выполнять статистическую обработку рекурсивно.  
+ (**Перечислимый тип**) Необязательно. `Simple` (по умолчанию) или `RdlRecursive`. Указывает, нужно ли выполнять статистическую обработку рекурсивно.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Возвращает значение типа `Decimal` для десятичных выражений и `Double` — для всех остальных выражений.  

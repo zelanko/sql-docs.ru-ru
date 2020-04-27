@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58abb892f737b3f5b3c707c9e26fd44249d8e54f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105478"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)
@@ -82,7 +82,7 @@ ms.locfileid: "66105478"
   
  Дополнительные сведения об использовании этих свойств при экспорте отчетов в Excel см. в разделе [Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>См. также:  
- [Макет страницы и подготовка к просмотру (построитель отчетов и службы SSRS)](page-layout-and-rendering-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>См. также  
+ [Макет страницы и отрисовка (построитель отчетов и службы SSRS)](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

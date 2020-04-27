@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6a60f1b47c7015fa0fca27cc7ce68bf4d04b15d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105205"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Функция Multilookup (построитель отчетов и службы SSRS)
@@ -61,7 +61,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Применяются следующие ограничения:  
   
--   `Multilookup`вычисляется после применения всех критериев фильтра  
+-   Функция `Multilookup` вычисляется после применения всех критериев фильтра.  
   
 -   Поддерживается только один уровень уточняющего запроса. Исходное, целевое и результирующее выражения не могут включать в себя ссылки на функцию уточняющего запроса.  
   

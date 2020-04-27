@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f447d05501949df0fd0860ed7799fca2932714fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105389"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>Прямоугольники и линии (построитель отчетов и службы SSRS)
@@ -23,14 +23,14 @@ ms.locfileid: "66105389"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RectanglesLinesReportParts"></a> Использование прямоугольников и линий в качестве элементов отчета  
+##  <a name="rectangles-and-lines-as-report-parts"></a><a name="RectanglesLinesReportParts"></a> Использование прямоугольников и линий в качестве элементов отчета  
  Прямоугольники вместе с их содержимым можно опубликовать отдельно от отчета как элементы отчета. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
  При этом нельзя публиковать как части отчета элементы отчета, содержащиеся в прямоугольнике. При добавлении пользователями прямоугольников к отчету выполняется добавление и прямоугольника, и содержащихся в нем элементов.  
   
 
   
-##  <a name="RectangleAsContainer"></a> Использование прямоугольника в качестве контейнера  
+##  <a name="using-a-rectangle-as-a-container"></a><a name="RectangleAsContainer"></a>Использование прямоугольника в качестве контейнера  
  Прямоугольник можно использовать в качестве контейнера для других элементов. При перемещении прямоугольника элементы внутри него перемещаются вместе с ним. Элемент внутри прямоугольника отображает его имя в свойстве **Parent** . Дополнительные сведения об использовании прямоугольника как контейнера см. в разделах [Добавление прямоугольника или контейнера (построитель отчетов и службы SSRS)](add-a-rectangle-or-container-report-builder-and-ssrs.md) и [Отображение одних и тех же данных в матрице и на диаграмме (построитель отчетов)](display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).  
   
 > [!NOTE]  
@@ -40,19 +40,19 @@ ms.locfileid: "66105389"
   
 
   
-##  <a name="ReportBorder"></a> Добавление границы отчета  
+##  <a name="adding-a-report-border"></a><a name="ReportBorder"></a> Добавление границы отчета  
  Можно добавить границу к отчету путем добавления границ к самим верхним колонтитулам, нижним колонтитулам и тексту отчета, не добавляя линии или прямоугольники. Дополнительные сведения см. в разделе [Добавление границы в отчет (построитель отчетов и службы SSRS)](add-a-border-to-a-report-report-builder-and-ssrs.md).  
   
 
   
-##  <a name="HowTo"></a> Инструкции  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Разделы руководства  
  [Добавление границы в отчет (построитель отчетов и службы SSRS)](add-a-border-to-a-report-report-builder-and-ssrs.md)  
   
  [Добавление прямоугольника или контейнера (построитель отчетов и службы SSRS)](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
  [Добавление и изменение линии (построитель отчетов и службы SSRS)](add-and-modify-a-line-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление прямоугольника или контейнера (построитель отчетов и службы SSRS)](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
   

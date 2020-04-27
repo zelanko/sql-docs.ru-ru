@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37c3dc20ab537e7cb8bf69099dbd6d24ff384731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105602"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Сохранение заголовков видимыми при прокрутке отчета (построитель отчетов и службы SSRS)
@@ -50,11 +50,11 @@ ms.locfileid: "66105602"
   
 1.  В области конструктора щелкните в любом месте таблицы, чтобы открыть статические элементы и группы на панели группирования.  
   
-     ![Панель группирования](../media/grouppane-updated.png "панель группирования")  
+     ![Панель группировки](../media/grouppane-updated.png "Панель группировки")  
   
      На панели «Группы строк» отображаются иерархические статические и динамические элементы иерархии групп строк, а на панели «Группы столбцов» аналогично отображается иерархия групп столбцов.  
   
-2.  В правой части панели группирования щелкните стрелку вниз и выберите **Расширенный режим**.  
+2.  В правой части панели группирования щелкните стрелку вниз и нажмите кнопку **Расширенный режим**.  
   
 3.  Щелкните статический член (строку или столбец), который нужно оставить видимым при прокрутке. В панели «Свойства» отображаются свойства **Элемент табликса** .  
   
@@ -72,8 +72,8 @@ ms.locfileid: "66105602"
  [Область данных табликса (построитель отчетов и службы SSRS)](../tablix-data-region-report-builder-and-ssrs.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Экспорт отчетов &#40;построитель отчетов и SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
- [Отображение верхних и нижних колонтитулов с помощью групповой &#40;построитель отчетов и служб SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
- [Отображение заголовков строк и столбцов на нескольких страницах &#40;построитель отчетов и SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
+ [Отображение верхних и нижних колонтитулов в группе (построитель отчетов и службы SSRS)](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [Отображение заголовков строк и столбцов на нескольких страницах (построитель отчетов и службы SSRS)](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
  [Панель группировки (построитель отчетов)](grouping-pane-report-builder.md)  
   
   

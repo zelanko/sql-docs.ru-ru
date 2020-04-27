@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 0b0841e031ee1a98f4f678406f790996a709e90f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104482"
 ---
 # <a name="report-history-page-report-manager"></a>Страница «Журнал отчета» (диспетчер отчетов)
@@ -39,7 +39,7 @@ ms.locfileid: "66104482"
   
 2.  Подведите курсор к отчету и щелкните стрелку раскрывающегося списка.  
   
-3.  В раскрывающемся меню выберите **Просмотреть журнал отчета**.  
+3.  В раскрывающемся меню выберите **Просмотр журнала отчета**.  
   
 ## <a name="options"></a>Параметры  
  **Удаление**  
@@ -54,9 +54,9 @@ ms.locfileid: "66104482"
  **Размер**  
  Позволяет отобразить размер определения отчета, а также данных в отчете. Это значение указывает, сколько места в базе данных сервера отчета занято определением отчетов и данными. Отчет, готовый для просмотра, включая форматирование, имеет больший размер. Общий размер, указанный в скобках, представляет собой сумму размеров всех моментальных снимков в журнале текущего отчета.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр или удаление &#40;журнала отчета диспетчер отчетов&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
- [Добавление моментального снимка к журналу отчета (диспетчер отчетов)](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Добавление моментального снимка в журнал отчета &#40;диспетчер отчетов&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Страница «Общие свойства», отчеты &#40;диспетчер отчетов&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Справка F1 диспетчер отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
  [Страница свойств параметров моментального снимка &#40;диспетчер отчетов&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)

@@ -17,14 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23dda0c65589e55849f906c621e42ce70f0d7ab5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106761"
 ---
 # <a name="add-an-assembly-reference-to-a-report-ssrs"></a>Добавление в отчет ссылку на сборку (службы SSRS)
-  При внедрении пользовательского кода, содержащего ссылки на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] классы, отсутствующие в <xref:System.Math> или <xref:System.Convert>, необходимо предоставить ссылку на сборку для отчета, чтобы обработчик отчетов мог разрешить имена. Дополнительные сведения см. в разделе [Добавление кода в отчет (службы SSRS)](add-code-to-a-report-ssrs.md).  
+  При внедрении пользовательского кода, содержащего ссылки на классы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], не входящие в <xref:System.Math> или <xref:System.Convert>, необходимо предоставить в отчете ссылку на сборку, чтобы обработчик отчетов мог разрешать имена этих классов. Дополнительные сведения см. в разделе [Добавление кода в отчет (службы SSRS)](add-code-to-a-report-ssrs.md).  
   
 ### <a name="to-add-an-assembly-reference-to-a-report"></a>Добавление в отчет ссылки на сборку  
   
@@ -43,6 +43,6 @@ ms.locfileid: "66106761"
   
 ## <a name="see-also"></a>См. также:  
  [Использование пользовательских сборок с отчетами](../custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Диалоговое окно «Свойства отчета» — «Ссылки»](../report-properties-dialog-box-references.md)  
+ [Диалоговое окно "Свойства отчета" — "Ссылки"](../report-properties-dialog-box-references.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8b5b343a32480d7d8ae59e9fa27fbe7d1f531213
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106015"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Отображение заголовков строк и столбцов на нескольких страницах (построитель отчетов и службы SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "66106015"
   
  Управление строками и столбцами зависит от того, имеет ли область данных табликса заголовки групп. Если щелкнуть область данных табликса, имеющую заголовки групп, пунктирная линия отобразит области табликса, как показано на следующем рисунке.  
   
- ![область данных табликса области](../media/rs-tablixareas.gif "Области данных табликса")  
+ ![Области данных табликса](../media/rs-tablixareas.gif "Области данных табликса")  
   
  Заголовки групп строк и столбцов создаются автоматически во время добавления групп с помощью мастера создания таблицы или матрицы, мастера создания диаграммы, путем добавления полей на панель группирования или с помощью контекстных меню. Если область данных табликса содержит только область текста табликса и не содержит заголовков групп, строки и столбцы являются элементами табликса.  
   
@@ -70,8 +70,8 @@ ms.locfileid: "66106015"
 ## <a name="see-also"></a>См. также:  
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Экспорт отчетов &#40;построитель отчетов и SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
- [Управление разрывами страниц, заголовками, столбцами и строками &#40;построитель отчетов и SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
- [Отображение верхних и нижних колонтитулов с помощью групповой &#40;построитель отчетов и служб SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [Управление разрывами страниц, заголовками, столбцами и строками (построитель отчетов и службы SSRS)](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Отображение верхних и нижних колонтитулов в группе (построитель отчетов и службы SSRS)](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
  [Сохранение заголовков видимыми при прокрутке отчета (построитель отчетов и службы SSRS)](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
   

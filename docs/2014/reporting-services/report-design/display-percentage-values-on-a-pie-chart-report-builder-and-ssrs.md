@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3beb87611f258d0c028b0a02b5d226864314620
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106025"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>Отображение процентных значений на круговой диаграмме (построитель отчетов и службы SSRS)
@@ -41,9 +41,9 @@ ms.locfileid: "66106025"
   
 2.  В поле **Условные обозначения**введите `#PERCENT` для свойства **Пользовательский текст условных обозначений** .  
   
-## <a name="see-also"></a>См. также:  
- [Круговые диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
- [Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS)](chart-legend-formatting-report-builder.md)   
+## <a name="see-also"></a>См. также  
+ [Круговые диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Форматирование условных обозначений на диаграмме &#40;построитель отчетов и SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Отображение меток точек данных за пределами круговой диаграммы &#40;построитель отчетов и SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Сбор мелких срезов на круговой диаграмме (построитель отчетов и службы SSRS)](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   

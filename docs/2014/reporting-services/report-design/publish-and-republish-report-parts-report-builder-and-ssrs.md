@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9178caad90bff142996247b1c5befe6dd47c4933
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105404"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Публикация и повторная публикация элементов отчетов (построитель отчетов и службы SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "66105404"
   
      После публикации элементов отчетов в диалоговом окне будет показано, какие элементы отчетов опубликованы успешно, а какие нет. Можно ознакомиться с дополнительными сведениями об элементах отчетов, которые не удалось опубликовать, в диалоговом окне **Публикации элементов отчетов** .  
   
-6.  Щелкните **Закрыть**.  
+6.  Нажмите кнопку **Закрыть**.  
   
 ### <a name="to-republish-a-report-part"></a>Переиздание элемента отчета  
   
@@ -56,9 +56,9 @@ ms.locfileid: "66105404"
 > [!NOTE]  
 >  Если элемент отчета будет опубликован как новый, то получит новый уникальный идентификатор. Она больше не будет получать обновления при изменении исходного элемента отчета.  
   
-## <a name="see-also"></a>См. также:  
- [Элементы отчета (построитель отчетов и службы SSRS)](../report-parts-report-builder-and-ssrs.md)   
- [Элементы отчета и наборы данных в построителе отчетов](../report-data/report-parts-and-datasets-in-report-builder.md)   
+## <a name="see-also"></a>См. также  
+ [Элементы отчета &#40;построитель отчетов и службы SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Элементы отчета и наборы данных в построитель отчетов](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Устранение неполадок элементов отчетов &#40;построитель отчетов и SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Проверка наличия обновлений или отключение обновлений &#40;построитель отчетов и служб SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
  [Просмотр элементов отчета и назначение папки по умолчанию (построитель отчетов и службы SSRS)](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  

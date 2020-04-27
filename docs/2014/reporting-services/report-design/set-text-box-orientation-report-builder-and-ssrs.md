@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6acffc286e913d35846b2eeb156cf1980b42fab3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104977"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>Задание ориентации текстового поля (построитель отчетов и службы SSRS)
@@ -40,8 +40,8 @@ ms.locfileid: "66104977"
   
 5.  В списке выберите **Горизонтально**, **Вертикально**или **Поворот на 270 градусов**.  
   
-## <a name="see-also"></a>См. также:  
- [Текстовые поля (построитель отчетов и службы SSRS)](text-boxes-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Текстовые поля &#40;построитель отчетов и службы SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
  [Учебник. Форматирование текста (построитель отчетов)](../tutorial-format-text-report-builder.md)  
   
   

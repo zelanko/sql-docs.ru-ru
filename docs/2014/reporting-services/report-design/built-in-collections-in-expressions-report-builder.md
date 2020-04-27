@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e572e6bd7070247c8e872283964f50ad734d4e32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106415"
 ---
 # <a name="built-in-collections-in-expressions-report-builder-and-ssrs"></a>Встроенные коллекции в выражениях (построитель отчетов и службы SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66106415"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Collections"></a>Основные сведения о встроенных коллекциях  
+##  <a name="understanding-built-in-collections"></a><a name="Collections"></a> Основные сведения о встроенных коллекциях  
  В следующей таблице перечислены встроенные коллекции, доступные при написании выражения. Каждая строка включает программное имя коллекции с учетом регистра, признак, можно ли использовать диалоговое окно «Выражение» для интерактивного добавления в коллекцию ссылки, пример и описание, включающее сведения о том, когда инициализируются и становятся доступными для использования значения коллекции.  
   
 |Встроенная коллекция|Категория в диалоговом окне «Выражение»|Пример|Description|  
@@ -39,18 +39,18 @@ ms.locfileid: "66106415"
 |`Variables`|`Variables`|`=Variables!CustomTimeStamp.Value`|Представляет коллекцию переменных отчета и групповых переменных. Дополнительные сведения см. в разделе [Ссылки на коллекции переменных отчета и группы (построитель отчетов и службы SSRS)](built-in-collections-report-and-group-variables-references-report-builder.md).|  
 |`ReportItems`|Не отображается|`=ReportItems("Textbox1").Value`|Представляет коллекцию текстовых полей для элемента отчета. Эта коллекция может использоваться для суммирования элементов на странице для включения в верхний или нижний колонтитул. Дополнительные сведения см. в разделе [Ссылки на коллекцию ReportItems (построитель отчетов и службы SSRS)](built-in-collections-reportitems-collection-references-report-builder.md).|  
   
-##  <a name="Syntax"></a>Использование синтаксиса коллекции в выражении  
+##  <a name="using-collection-syntax-in-an-expression"></a><a name="Syntax"></a> Использование в выражениях синтаксиса коллекций  
  Для ссылки на коллекцию из выражения используйте стандартный [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] синтаксис для элемента в коллекции. В следующей таблице показаны примеры синтаксиса коллекций.  
   
 |Синтаксис|Пример|  
 |------------|-------------|  
 |*Набор! ObjectName. свойство*|`=Fields!Sales.Value`|  
 |*Набор! ObjectName ("свойство")*|`=Fields!Sales("Value")`|  
-|*Коллекция ("ObjectName"). Свойства*|`=Fields("Sales").Value`|  
-|*Коллекция ("member")*|`=User("Language")`|  
-|*Collection.Member*|`=User.Language`|  
+|*Collection("ObjectName").Property*|`=Fields("Sales").Value`|  
+|*Collection("Member")*|`=User("Language")`|  
+|*Collection. Member*|`=User.Language`|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление построитель отчетов &#40;выражений и служб SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)  
   

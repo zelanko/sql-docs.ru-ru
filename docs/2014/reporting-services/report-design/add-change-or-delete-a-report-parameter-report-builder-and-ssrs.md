@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebf333b49c20c7eadef4fdbcd54834c450d274c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106688"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>Добавление, изменение или удаление параметра отчета (построитель отчетов и службы SSRS)
@@ -57,17 +57,17 @@ ms.locfileid: "66106688"
   
 2.  Щелкните правой кнопкой мыши параметр отчета и выберите команду **Удалить**.  
   
-## <a name="see-also"></a>См. также:  
- [Добавление, изменение и удаление допустимых значений параметра отчета (построитель отчетов и службы SSRS)](add-change-or-delete-available-values-for-a-report-parameter.md)   
- [Добавление, изменение или удаление значения по умолчанию для параметра отчета (построитель отчетов и службы SSRS)](add-change-or-delete-default-values-for-a-report-parameter.md)   
- [Изменение порядка параметров отчета (построитель отчетов и службы SSRS)](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
- [Параметры отчета (построитель отчетов и конструктор отчетов)](report-parameters-report-builder-and-report-designer.md)   
+## <a name="see-also"></a>См. также  
+ [Добавить, изменить или удалить допустимые значения параметра отчета &#40;построитель отчетов и SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
+ [Добавление, изменение или удаление значений по умолчанию для параметра отчета &#40;построитель отчетов и служб SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)   
+ [Изменение порядка параметров отчета &#40;построитель отчетов и SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [Параметры отчета &#40;построитель отчетов и конструктор отчетов&#41;](report-parameters-report-builder-and-report-designer.md)   
  [Построитель отчетов справки по диалоговым окнам, панелям и мастерам](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Добавление каскадных параметров в отчет (построитель отчетов и службы SSRS)](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [Учебник. Добавление параметра к отчету (построитель отчетов)](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Добавление каскадных параметров в построитель отчетов &#40;отчетов и SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Учебник. Добавление параметра в отчет &#40;построитель отчетов&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Учебники &#40;построитель отчетов&#41;](../report-builder-tutorials.md)   
- [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Ссылки на коллекцию параметров (построитель отчетов и службы SSRS)](built-in-collections-parameters-collection-references-report-builder.md)   
+ [Добавление фильтров набора данных, фильтров области данных и групповых фильтров &#40;построитель отчетов и SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Коллекция Parameters ссылается на &#40;построитель отчетов и SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
  [Добавление в отчет параметра с несколькими значениями](add-a-multi-value-parameter-to-a-report.md)  
   
   

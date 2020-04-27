@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e34f0a34030dab62a876a41043dc4c4f4c86f0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106306"
 ---
 # <a name="change-the-text-of-a-legend-item-report-builder-and-ssrs"></a>Изменение текста элемента условных обозначений (построитель отчетов и службы SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "66106306"
   
  В фигурных диаграммах можно изменять текст элемента условных обозначений для отображения дополнительных сведений об отдельных точках данных. Например, если в условных обозначениях необходимо отобразить значения точек данных в виде процентов, то используется ключевое слово `#PERCENT`. Для применения числовых форматов и форматов данных добавляются коды формата .NET Framework совместно с ключевыми словами. Дополнительные сведения о ключевых словах см. в разделе [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
- ![Диаграмма Sharp](../media/sharpchart.png "Диаграмма Sharp")  
+ ![Форма диаграммы](../media/sharpchart.png "Форма диаграммы")  
   
  В диаграммах, отличных от фигурных, можно изменять текст элемента условных обозначений. Например, если ряд имеет имя «Ряд1», то может потребоваться изменить этот текст на более описательное имя, например, «Продажи за 2008 год».  
   
@@ -56,6 +56,6 @@ ms.locfileid: "66106306"
 ## <a name="see-also"></a>См. также:  
  [Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS)](chart-legend-formatting-report-builder.md)   
  [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Скрытие элементов условных обозначений на диаграмме &#40;построитель отчетов и SSRS&#41;](chart-legend-hide-items-report-builder.md)  
+ [Скрытие элементов условных обозначений на диаграмме (построитель отчетов и службы SSRS)](chart-legend-hide-items-report-builder.md)  
   
   

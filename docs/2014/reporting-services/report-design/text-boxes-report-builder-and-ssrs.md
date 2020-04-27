@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb96831c54a67a6ea74ca984cb346dcaaf50a335
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104632"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Текстовые поля (построитель отчетов и службы SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "66104632"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GrowShrinkTextBox"></a>Увеличение и сжатие текстового поля  
+##  <a name="growing-and-shrinking-a-text-box"></a><a name="GrowShrinkTextBox"></a> Увеличение и сжатие размеров текстового поля  
  По умолчанию текстовые поля имеют фиксированный размер. Можно включить сжатие или расширение текстового поля по вертикали в зависимости от содержимого. Дополнительные сведения см. в разделе [Разрешение расширения или сжатия для текстового поля (построитель отчетов и службы SSRS)](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
   
 ## <a name="orienting-a-text-box"></a>Ориентация текстового поля  
@@ -55,17 +55,17 @@ ms.locfileid: "66104632"
   
  Чтобы быстро приступить к изменению ориентации текста, см. раздел о повороте текста в [учебнике: форматирование текста &#40;построитель отчетов&#41;](../tutorial-format-text-report-builder.md). Дополнительные сведения см. в разделе [Set Text Box Orientation &#40;построитель отчетов and SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
   
-##  <a name="HowTo"></a> Инструкции  
- [Добавление, перемещение или удаление текстового поля &#40;построитель отчетов и SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Разделы руководства  
+ [Добавление, перемещение или удаление текстового поля (построитель отчетов и службы SSRS)](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
  [Форматирование текста в текстовом поле (построитель отчетов и службы SSRS)](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
- [Задать ориентацию текстового поля &#40;построитель отчетов и SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
+ [Задание ориентации текстового поля (построитель отчетов и службы SSRS)](set-text-box-orientation-report-builder-and-ssrs.md)  
   
- [Разрешение увеличения или сжатия текстового поля &#40;построитель отчетов и SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
+ [Разрешение расширения или сжатия для текстового поля (построитель отчетов и службы SSRS)](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>См. также:  
- [Форматирование текста и заполнителей (построитель отчетов и службы SSRS)](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Форматирование текста и заполнителей &#40;построитель отчетов и SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Форматирование чисел и дат (построитель отчетов и службы SSRS)](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   

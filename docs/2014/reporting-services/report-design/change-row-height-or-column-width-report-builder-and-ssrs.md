@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b51e18e4b652dde230c9f5421e27d219695987e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106341"
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Изменение высоты строки или ширины столбца (построитель отчетов и службы SSRS)
@@ -39,11 +39,11 @@ ms.locfileid: "66106341"
   
 1.  В режиме конструктора щелкните по ячейке в строке таблицы.  
   
-     ![Выбранные ячейки в таблице](../media/table-selectcell.png "Выбранные ячейки в таблице")  
+     ![Выделенная ячейка в таблице](../media/table-selectcell.png "Выделенная ячейка в таблице")  
   
 2.  На отображаемой вкладке **Свойства** , измените свойство **Высота** , а затем щелкните где-нибудь за пределами вкладки **Свойства** .  
   
-     ![Вкладка Свойства для выбранной ячейки таблицы](../media/cell-propertiespane.png "Вкладка Свойства для выбранной ячейки таблицы")  
+     ![Панель свойств для выбранной ячейки таблицы](../media/cell-propertiespane.png "Панель свойств для выбранной ячейки таблицы")  
   
 ### <a name="to-prevent-a-row-from-automatically-expanding-vertically"></a>Отключение автоматического расширения строки по вертикали  
   
@@ -65,11 +65,11 @@ ms.locfileid: "66106341"
 3.  Щелкните, чтобы захватить край столбца, и перетащите его вправо или влево на нужное расстояние.  
   
 ## <a name="see-also"></a>См. также:  
- [Область данных табликса (построитель отчетов и службы SSRS)](../tablix-data-region-report-builder-and-ssrs.md)   
+ [Область данных табликса &#40;построитель отчетов и SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Ячейки, строки и столбцы области данных табликса &#40;построитель отчетов&#41; и SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
  [Таблицы &#40;построитель отчетов и службы SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Матрицы &#40;построитель отчетов и службы SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
- [Списки &#40;построитель отчетов и службы SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Содержит &#40;построитель отчетов и SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6901123f4a28560c504bc9a83522cb108a6d7b12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104926"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS)
@@ -31,10 +31,10 @@ ms.locfileid: "66104926"
   
 2.  Щелкните **Ряд данных** и введите строку или выражение для свойства **Подсказка** . Можно использовать любое ключевое слово, относящееся к конкретной диаграмме, чтобы представить на диаграмме другое ключевое слово. Дополнительные сведения см. в разделе [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>См. также:  
- [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Изменение текста элемента условных обозначений (построитель отчетов и службы SSRS)](chart-legend-change-item-text-report-builder.md)   
- [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Форматирование точек данных на диаграмме &#40;построитель отчетов и SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Изменение текста элемента условных обозначений &#40;построитель отчетов и SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
+ [Форматирование цветов рядов на диаграмме &#40;построитель отчетов и SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Добавление действия детализации в отчет (построитель отчетов и службы SSRS)](add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99456151a71e74d0e85baec19cc42d8450c00ae4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106168"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Создание схемы документа (построитель отчетов и службы SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66106168"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DocMapRenderExtensions"></a> Схемы документа и модули подготовки отчетов  
+##  <a name="document-maps-and-rendering-extensions"></a><a name="DocMapRenderExtensions"></a> Схемы документа и модули подготовки отчетов  
  Схема документа предназначена для использования в модуле подготовки отчетов в формате HTML, например при предварительном просмотре и в средстве просмотра отчетов. Другие модули подготовки отчетов определяют схему документа другим образом.  
   
 -   Модули подготовки отчетов в формате PDF обращаются со схемой документа как с панелью закладок.  
@@ -118,7 +118,7 @@ ms.locfileid: "66106168"
   
  
   
-## <a name="see-also"></a>См. также:  
- [Поиск и просмотр отчетов в диспетчер отчетов &#40;построитель отчетов и служб SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>См. также  
+ [Поиск и просмотр отчетов в диспетчере отчетов (построитель отчетов и службы SSRS)](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d862ac509af3936a9f09cadd01667cbe81a679c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104850"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Задание интервала оси (построитель отчетов и службы SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66104850"
 > [!NOTE]  
 >  Ось категорий обычно является горизонтальной осью (осью X). Однако для линейчатых диаграмм ось категорий является вертикальной (осью Y).  
   
- Пример диаграммы с различными интервалами осей доступен в виде образца отчета. Дополнительные сведения о скачивании этого и других образцов отчетов см. в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]разделе [Построитель отчетов и конструктор отчетов образцы отчетов](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Пример диаграммы с различными интервалами осей доступен в виде образца отчета. Дополнительные сведения о скачивании этого и других примеров отчетов см. в статье [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -51,12 +51,12 @@ ms.locfileid: "66104850"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>См. также:  
- [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Сортировка данных в области данных (построитель отчетов и службы SSRS)](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Диалоговое окно "Свойства оси" — "Параметры оси" (построитель отчетов и службы SSRS)](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
- [Задание логарифмической шкалы (построитель отчетов и службы SSRS)](specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [Построение данных на вспомогательной оси &#40;построитель отчетов и SSRS&#41;](plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>См. также  
+ [Форматирование построитель отчетов &#40;диаграммы и SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
+ [Форматирование точек данных на диаграмме &#40;построитель отчетов и SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Сортировка данных в области данных &#40;построитель отчетов и SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [Диалоговое окно "Свойства оси" Параметры оси &#40;построитель отчетов и службы SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
+ [Укажите построитель отчетов &#40;логарифмической шкалы и службы SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
+ [Построение данных на вспомогательной оси (построитель отчетов и службы SSRS)](plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   
   
