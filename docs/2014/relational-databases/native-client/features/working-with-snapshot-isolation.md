@@ -1,5 +1,5 @@
 ---
-title: Работа с изоляцией моментальных снимков | Документация Майкрософт
+title: Работа с изоляцией моментального снимка | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcf2003873de6f6ca15fed4d0818337ce4920906
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205854"
 ---
 # <a name="working-with-snapshot-isolation"></a>Работа с изоляцией моментального снимка
@@ -41,21 +41,21 @@ ms.locfileid: "63205854"
 ### <a name="dbpropset_datasourceinfo"></a>DBPROPSET_DATASOURCEINFO  
  Набор свойств DBPROPSET_DATASOURCEINFO изменен и указывает на поддержку уровня изоляции моментальных снимков благодаря добавлению значения DBPROPVAL_TI_SNAPSHOT, используемого в свойстве DBPROP_SUPPORTEDTXNISOLEVELS. Это новое значение указывает, что уровень изоляции моментального снимка поддерживается независимо от того, включено ли в базе данных управление версиями. Ниже приведен список значений DBPROP_SUPPORTEDTXNISOLEVELS.  
   
-|Идентификатор свойства|Description|  
+|Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
 |DBPROP_SUPPORTEDTXNISOLEVELS|Тип: VT_I4<br /><br /> R/W: только для чтения<br /><br /> Описание: битовая маска, указывающая поддерживаемые уровни изоляции транзакции. Сочетание может включать нуль или несколько следующих значений:<br /><br /> — DBPROPVAL_TI_CHAOS<br />— DBPROPVAL_TI_READUNCOMMITTED<br />— DBPROPVAL_TI_BROWSE<br />— DBPROPVAL_TI_CURSORSTABILITY<br />— DBPROPVAL_TI_READCOMMITTED<br />— DBPROPVAL_TI_REPEATABLEREAD<br />— DBPROPVAL_TI_SERIALIZABLE<br />— DBPROPVAL_TI_ISOLATED<br />— DBPROPVAL_TI_SNAPSHOT|  
   
 ### <a name="dbpropset_session"></a>Набор свойств DBPROPSET_SESSION  
  Набор свойств DBPROPSET_SESSION изменен и указывает на поддержку уровня изоляции моментальных снимков благодаря добавлению значения DBPROPVAL_TI_SNAPSHOT, используемого в свойстве DBPROP_SESS_AUTOCOMMITISOLEVELS. Это новое значение указывает, что уровень изоляции моментального снимка поддерживается независимо от того, включено ли в базе данных управление версиями. Ниже приведен список значений DBPROP_SESS_AUTOCOMMITISOLEVELS.  
   
-|Идентификатор свойства|Description|  
+|Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
 |DBPROP_SESS_AUTOCOMMITISOLEVELS|Тип: VT_I4<br /><br /> R/W: только для чтения<br /><br /> Описание: задает битовую маску, которая указывает уровень изоляции транзакции в режиме автоматической фиксации. Значения, которые можно установить в этой битовой маске, такие же, как устанавливаемые для DBPROP_SUPPORTEDTXNISOLEVELS.|  
   
 > [!NOTE]  
 >  Ошибки DB_S_ERRORSOCCURRED или DB_E_ERRORSOCCURRED происходят, если значение DBPROPVAL_TI_SNAPSHOT установлено при использовании версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], предшествующих [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
- Сведения о поддержке изоляции моментальных снимков в транзакциях см. в разделе [Поддержка локальных транзакций](../../native-client-ole-db-transactions/transactions.md).  
+ Сведения о поддержке изоляции моментального снимка в транзакциях см. в статье [Поддержка локальных транзакций](../../native-client-ole-db-transactions/transactions.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Драйвер ODBC для собственного клиента SQL Server  
  Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для собственного клиента обеспечивает изоляцию моментального снимка, в то же самое усовершенствованные функции [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) и [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md) .  
@@ -68,8 +68,8 @@ ms.locfileid: "63205854"
   
  Сведения о поддержке изоляции моментальных снимков в транзакциях см. в разделе [уровень изоляции транзакций курсора](../../native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md).  
   
-## <a name="see-also"></a>См. также:  
- [Компоненты собственного клиента SQL Server](sql-server-native-client-features.md)   
+## <a name="see-also"></a>См. также  
+ [SQL Server Native Client функции](sql-server-native-client-features.md)   
  [Свойства и поведение наборов строк](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
   

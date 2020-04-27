@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0ffbf733db8cbd672f171773e7b44560686e7d1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63223546"
 ---
 # <a name="sqlserveralias-class"></a>Класс SqlServerAlias
@@ -36,7 +36,7 @@ ms.locfileid: "63223546"
   
  **Примечание.** [Класс SqlServerAlias](sqlserveralias-class.md) наследует `Put` метод от класса поставщика. Однако он не возвращает результаты, как указано методом `Provider::Put`. Дополнительные сведения см. в документации WMI.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Обновление данных в SQL Server курсорах | Документация Майкрософт
+title: Обновление данных в курсорах SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5c0b188d8fd45c1177cab77501bdf80fc550987
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63242919"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>Обновление данных в курсорах SQL Server
@@ -42,7 +42,7 @@ ms.locfileid: "63242919"
   
  Потребитель не должен предполагать, что строки обрабатываются в каком-то определенном порядке. Если потребителю требуется упорядоченная обработка данных нескольких строк, он должен установить этот порядок в логике приложения и открыть транзакцию, содержащую процесс упорядочивания.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обновление данных в наборах строк](updating-data-in-rowsets.md)  
   
   

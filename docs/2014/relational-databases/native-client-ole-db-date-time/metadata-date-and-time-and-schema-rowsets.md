@@ -1,5 +1,5 @@
 ---
-title: Дата и время и наборы строк схемы | Документация Майкрософт
+title: Наборы строк даты, времени и схемы | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238015"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>Дата и время и наборы строк схемы
@@ -27,10 +27,10 @@ ms.locfileid: "63238015"
   
 |Тип столбца|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|Дата|DBTYPE_DBDATE|Очистить|0|  
+|Дата|DBTYPE_DBDATE|Clear|0|  
 |time|DBTYPE_DBTIME2|Присвойте параметру|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|Очистить|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|Очистить|3|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
+|DATETIME|DBTYPE_DBTIMESTAMP|Clear|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|Присвойте параметру|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Присвойте параметру|0..7|  
   
@@ -81,7 +81,7 @@ ms.locfileid: "63238015"
 |LOCAL_TYPE_NAME|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
 |MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
-|GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
+|Код GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
 |TYPELIB|NULL|NULL|NULL|NULL|NULL|NULL|  
 |VERSION|NULL|NULL|NULL|NULL|NULL|NULL|  
 |IS_LONG|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
@@ -90,7 +90,7 @@ ms.locfileid: "63238015"
   
  В OLE DB для числовых и десятичных типов определяются только значения MINIMUM_SCALE и MAXIMUM_SCALE, поэтому использование этих столбцов собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для типов time, datetime2 и datetimeoffset является нестандартным.  
   
-## <a name="see-also"></a>См. также:  
- [OLE DB &#40;метаданных&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
+## <a name="see-also"></a>См. также  
+ [Метаданные (OLE DB)](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

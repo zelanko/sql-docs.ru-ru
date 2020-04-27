@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfilee
 ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63217744"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Создание прогнозов для модели кластеризации последовательностей (учебник по интеллектуальному анализу данных — средний уровень)
@@ -194,13 +194,13 @@ NATURAL PREDICTION JOIN
   
  Учебник по моделям кластеризации последовательностей завершен.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
  Если вы выполнили все разделы [учебника по интеллектуальному анализу данных &#40;Analysis Services-&#41;интеллектуального анализа данных ](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md), то на следующем этапе можно научиться использовать инструкции расширений интеллектуального анализа данных для построения моделей и формирования прогнозов. Дополнительные сведения см. в статьях [Создание и запрос моделей интеллектуального анализа данных с помощью расширений интеллектуального анализа: учебники &#40;Analysis Services-&#41;интеллектуального анализа данных ](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md).  
   
  Пользователи, которым знакомы основные понятия программирования, также могут использовать объекты AMO для работы с объектами интеллектуального анализа данных программным путем. Дополнительные сведения см. в разделе [Классы интеллектуального анализа данных объектов AMO](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры запросов к модели кластеризации последовательностей](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Содержимое модели интеллектуального анализа данных для моделей кластеризации последовательностей &#40;Analysis Services-интеллектуальный анализ данных&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Содержимое моделей интеллектуального анализа данных для моделей кластеризации последовательностей (службы Analysis Services — интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

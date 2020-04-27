@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193064"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Столбцы и типы XML-данных (SQL Server)
@@ -174,7 +174,7 @@ ms.locfileid: "63193064"
   
 -   Не может использоваться как ключевой столбец индекса. Однако может включаться в виде данных в кластеризованный индекс или явно добавляться в некластеризованный индекс при его создании с помощью ключевого слова INCLUDE.  
   
-## <a name="see-also"></a>См. также:  
- [Примеры выполнения операций импорта и экспорта XML-документов &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
+## <a name="see-also"></a>См. также  
+ [Примеры массового импорта и экспорта XML-документов (SQL Server)](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
   

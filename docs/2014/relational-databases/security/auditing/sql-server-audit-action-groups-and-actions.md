@@ -22,17 +22,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238136"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Действия и группы действий подсистемы аудита SQL Server
   Подсистема аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет производить аудит групп событий или отдельных событий на уровне сервера или базы данных. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](sql-server-audit-database-engine.md).  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может содержать ноль или более элементов действий аудита. Эти элементы действий аудита могут быть как группами действий, например Server_Object_Change_Group, так и отдельными действиями, например операциями SELECT для таблицы.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может содержать ноль или более элементов действий аудита. Эти элементы действий аудита могут быть как группами действий, например Server_Object_Change_Group, так и отдельными действиями, например операциями SELECT для таблицы.  
   
 > [!NOTE]  
 >  Server_Object_Change_Group включает операции CREATE, ALTER и DROP для любого серверного объекта (базы данных или конечной точки).  
@@ -126,7 +125,7 @@ ms.locfileid: "63238136"
   
  В следующей таблице описываются группы действий аудита уровня базы данных и предоставляются эквивалентные классы событий SQL Server (где возможно).  
   
-|имя группы действий;|Description|  
+|имя группы действий;|Описание|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Это событие появляется при изменении пароля для роли приложения. Эквивалентно [Audit App Role Change Password Event Class](../../event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Это событие возникает при создании, изменении или удалении любого аудита. Это событие возникает при создании, изменении или удалении спецификации любого аудита. Аудит любых изменений в аудите производится в этом аудите. Эквивалентно [Audit Change Audit Event Class](../../event-classes/audit-change-audit-event-class.md).|  
@@ -156,7 +155,7 @@ ms.locfileid: "63238136"
 ## <a name="database-level-audit-actions"></a>Действия аудита уровня базы данных  
  Действия аудита уровня базы данных поддерживают аудит напрямую в базе данных, схеме или в объектах схемы, например в таблицах, представлениях, хранимых процедурах, функциях, расширенных хранимых процедурах, очередях, синонимах. Не подлежат аудиту типы, коллекции схем XML, база данных и схема. Аудит объектов схемы можно настроить для схемы и базы данных. Это означает, что будет выполнен аудит событий всех объектов схемы, содержащихся в указанной схеме или базе данных. В следующей таблице описываются действия аудита уровня базы данных.  
   
-|Действие|Description|  
+|Действие|Описание|  
 |------------|-----------------|  
 |SELECT|Это событие возникает при вызове инструкции SELECT.|  
 |UPDATE|Это событие возникает при вызове инструкции UPDATE.|  
@@ -176,53 +175,53 @@ ms.locfileid: "63238136"
 ## <a name="audit-level-audit-action-groups"></a>Группы действий аудита уровня аудита  
  Также можно производить аудит действий, происходящих во время аудита. Это можно осуществлять как в области сервера, так и в области базы данных. В области базы данных это справедливо только для спецификаций аудита базы данных. В следующей таблице описываются группы действий аудита уровня аудита.  
   
-|имя группы действий;|Description|  
+|имя группы действий;|Описание|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|Это событие возникает при вызове одной из следующих команд:<br /><br /> -СОЗДАТЬ АУДИТ СЕРВЕРА<br />-ALTER SERVER AUDIT<br />— УДАЛЕНИЕ АУДИТА СЕРВЕРА<br />— СОЗДАНИЕ СПЕЦИФИКАЦИИ АУДИТА СЕРВЕРА<br />-ALTER СЕРВЕР СПЕЦИФИКАЦИЯ АУДИТА<br />-DROP СПЕЦИФИКАЦИЯ АУДИТА СЕРВЕРА<br />— СОЗДАНИЕ СПЕЦИФИКАЦИИ АУДИТА БАЗЫ ДАННЫХ<br />— СПЕЦИФИКАЦИЯ АУДИТА БАЗЫ ДАННЫХ<br />-DROP СПЕЦИФИКАЦИЯ АУДИТА БАЗЫ ДАННЫХ|  
   
 ## <a name="related-content"></a>См. также  
  [Создание аудита сервера и спецификации аудита сервера](create-a-server-audit-and-server-audit-specification.md)  
   
- [Создание аудита сервера и спецификации аудита базы данных](create-a-server-audit-and-database-audit-specification.md)  
+ [Создание спецификация аудита для сервера и базы данных](create-a-server-audit-and-database-audit-specification.md)  
   
- [Создание аудита сервера &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-transact-sql)  
+ [CREATE SERVER AUDIT (Transact-SQL)](/sql/t-sql/statements/create-server-audit-transact-sql)  
   
- [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)  
+ [ALTER SERVER AUDIT (Transact-SQL)](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)  
   
- [Удаление аудита сервера &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-audit-transact-sql)  
+ [DROP SERVER AUDIT (Transact-SQL)](/sql/t-sql/statements/drop-server-audit-transact-sql)  
   
- [Создание спецификации аудита сервера &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-server-audit-specification-transact-sql)  
+ [CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)](/sql/t-sql/statements/create-server-audit-specification-transact-sql)  
   
- [ALTER SERVER AUDIT SPECIFICATION &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-server-audit-transact-sql)  
+ [ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)](/sql/t-sql/statements/alter-server-audit-transact-sql)  
   
- [УДАЛИТЬ СПЕЦИФИКАЦИю аудита сервера &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)  
+ [DROP SERVER AUDIT SPECIFICATION (Transact-SQL)](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)  
   
- [Создание спецификации аудита базы данных &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-database-audit-specification-transact-sql)  
+ [CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)](/sql/t-sql/statements/create-database-audit-specification-transact-sql)  
   
- [&#40;Transact-SQL&#41;спецификации ALTER DATABASE AUDIT](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)  
+ [ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)  
   
- [УДАЛИТЬ СПЕЦИФИКАЦИю аудита базы данных &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)  
+ [DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)  
   
- [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-authorization-transact-sql)  
+ [ALTER AUTHORIZATION (Transact-SQL)](/sql/t-sql/statements/alter-authorization-transact-sql)  
   
- [sys. fn_get_audit_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql)  
+ [sys.fn_get_audit_file (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql)  
   
- [sys. server_audits &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-audits-transact-sql)  
+ [sys.server_audits (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-server-audits-transact-sql)  
   
- [sys. server_file_audits &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql)  
+ [sys.server_file_audits (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql)  
   
- [sys. server_audit_specifications &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql)  
+ [sys.server_audit_specifications (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql)  
   
- [sys. server_audit_specification_details &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)  
+ [sys.server_audit_specification_details (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)  
   
- [sys. database_audit_specifications &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)  
+ [sys.database_audit_specifications (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)  
   
- [sys. database_audit_specification_details &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql)  
+ [sys.database_audit_specification_details (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql)  
   
- [sys. dm_server_audit_status &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql)  
+ [sys.dm_server_audit_status (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql)  
   
- [sys. dm_audit_actions &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql)  
+ [sys.dm_audit_actions (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql)  
   
- [sys. dm_audit_class_type_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql)  
+ [sys.dm_audit_class_type_map (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql)  
   
   

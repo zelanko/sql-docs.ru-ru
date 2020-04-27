@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0cbde879e2b7f215c5044936dfbdacab9196f02d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63215963"
 ---
 # <a name="sql_variant-support-for-date-and-time-types"></a>Поддержка sql_variant для типов даты и времени
@@ -41,23 +41,23 @@ ms.locfileid: "63215963"
 |SQL_C_USHORT|INT|Значение SQL_CA_SS_VARIANT_SQL_TYPE не учитывается.|  
 |SQL_C_LONG|INT|Значение SQL_CA_SS_VARIANT_SQL_TYPE не учитывается.|  
 |SQL_C_SLONG|INT|Значение SQL_CA_SS_VARIANT_SQL_TYPE не учитывается.|  
-|SQL_C_ULONG|bigint|Значение SQL_CA_SS_VARIANT_SQL_TYPE не учитывается.|  
-|SQL_C_SBIGINT|bigint|Значение SQL_CA_SS_VARIANT_SQL_TYPE не учитывается.|  
-|SQL_C_FLOAT|real;|Значение SQL_CA_SS_VARIANT_SQL_TYPE не учитывается.|  
+|SQL_C_ULONG|BIGINT|Значение SQL_CA_SS_VARIANT_SQL_TYPE не учитывается.|  
+|SQL_C_SBIGINT|BIGINT|Значение SQL_CA_SS_VARIANT_SQL_TYPE не учитывается.|  
+|SQL_C_FLOAT|real|Значение SQL_CA_SS_VARIANT_SQL_TYPE не учитывается.|  
 |SQL_C_DOUBLE|FLOAT|Значение SQL_CA_SS_VARIANT_SQL_TYPE не учитывается.|  
 |SQL_C_BIT|bit|Значение SQL_CA_SS_VARIANT_SQL_TYPE не учитывается.|  
-|SQL_C_UTINYINT|tinyint;|Значение SQL_CA_SS_VARIANT_SQL_TYPE не учитывается.|  
+|SQL_C_UTINYINT|tinyint|Значение SQL_CA_SS_VARIANT_SQL_TYPE не учитывается.|  
 |SQL_C_BINARY|varbinary|SQL_CA_SS_VARIANT_SQL_TYPE не установлен.|  
-|SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Для параметра Scale задано значение SQL_DESC_PRECISION ** (параметр деЦималдигитс `SQLBindParameter`объекта).|  
-|SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> Для параметра Scale задано значение SQL_DESC_PRECISION ** (параметр деЦималдигитс `SQLBindParameter`объекта).|  
+|SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Для параметра Scale задано значение SQL_DESC_PRECISION *DecimalDigits* (параметр деЦималдигитс `SQLBindParameter`объекта).|  
+|SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> Для параметра Scale задано значение SQL_DESC_PRECISION *DecimalDigits* (параметр деЦималдигитс `SQLBindParameter`объекта).|  
 |SQL_C_TYPE_DATE|Дата|Значение SQL_CA_SS_VARIANT_SQL_TYPE не учитывается.|  
 |SQL_C_TYPE_TIME|time(0)|Значение SQL_CA_SS_VARIANT_SQL_TYPE не учитывается.|  
-|SQL_C_TYPE_TIMESTAMP|datetime2|Для параметра Scale задано значение SQL_DESC_PRECISION ** (параметр деЦималдигитс `SQLBindParameter`объекта).|  
-|SQL_C_NUMERIC|Decimal|Для параметра Precision задано значение SQL_DESC_PRECISION ** (параметр ColumnSize `SQLBindParameter`объекта).<br /><br /> Масштабируемый набор на SQL_DESC_SCALE (параметр *деЦималдигитс* параметра SQLBindParameter).|  
+|SQL_C_TYPE_TIMESTAMP|datetime2|Для параметра Scale задано значение SQL_DESC_PRECISION *DecimalDigits* (параметр деЦималдигитс `SQLBindParameter`объекта).|  
+|SQL_C_NUMERIC|Decimal|Для параметра Precision задано значение SQL_DESC_PRECISION *ColumnSize* (параметр ColumnSize `SQLBindParameter`объекта).<br /><br /> Масштабируемый набор на SQL_DESC_SCALE (параметр *деЦималдигитс* параметра SQLBindParameter).|  
 |SQL_C_SS_TIME2|time|Значение SQL_CA_SS_VARIANT_SQL_TYPE не учитывается.|  
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|Значение SQL_CA_SS_VARIANT_SQL_TYPE не учитывается.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Улучшения даты и времени &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

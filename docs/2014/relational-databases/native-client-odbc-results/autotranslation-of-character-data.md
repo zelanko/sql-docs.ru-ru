@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5182ab1a72caac4181e50df2199f3e0457d3aaac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200215"
 ---
 # <a name="autotranslation-of-character-data"></a>Автоматическое преобразование символьных данных
@@ -38,7 +38,7 @@ ms.locfileid: "63200215"
   
  Функция автоматического преобразования драйвера ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента пытается устранить проблемы при переносе символьных данных между клиентом и сервером с разными кодовыми страницами. Параметр автотрансляции может быть задан в строке подключения [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md), в строке конфигурации [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)или при настройке источников данных для драйвера ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента с помощью администратора ODBC.  
   
- Если параметру автоперевода присвоено значение "нет", преобразования данных, перемещаемых между переменными SQL_C_CHAR на клиенте и в столбцах, переменных или параметрах в **** **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных, не выполняются. **** Эти битовые шаблоны могут по-разному интерпретироваться клиентом и сервером, если данные содержат символы национального алфавита, и два компьютера имеют различные кодовые страницы. Данные интерпретируются единообразно, если оба компьютера используют одну и ту же кодовую страницу.  
+ Если параметру автоперевода присвоено значение "нет", преобразования данных, перемещаемых между переменными SQL_C_CHAR на клиенте и в столбцах, переменных или параметрах в **char** **text** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных, не выполняются. **varchar** Эти битовые шаблоны могут по-разному интерпретироваться клиентом и сервером, если данные содержат символы национального алфавита, и два компьютера имеют различные кодовые страницы. Данные интерпретируются единообразно, если оба компьютера используют одну и ту же кодовую страницу.  
   
  Если для параметра автоперевода задано значение "Да" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , драйвер ODBC для собственного клиента использует Юникод для преобразования данных, перемещаемых между переменными SQL_C_CHAR на клиенте, а также столбцами **типа char**, **varchar**или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Text** в базе данных.  
   
@@ -58,8 +58,8 @@ ms.locfileid: "63200215"
   
  Данные всегда нужно преобразовывать при переходе из символьного формата в Юникод.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обработка результатов &#40;ODBC&#41;](processing-results-odbc.md)   
- [Collation and Unicode Support](../collations/collation-and-unicode-support.md)  
+ [Поддержка параметров сортировки и Юникода](../collations/collation-and-unicode-support.md)  
   
   

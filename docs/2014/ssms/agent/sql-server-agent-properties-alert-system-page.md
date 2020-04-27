@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245750"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Свойства агента SQL Server (страница «Система предупреждений»)
@@ -50,7 +50,7 @@ ms.locfileid: "63245750"
  **Prefix**  
  Введите любой фиксированный текст, требуемый системой в начале строки **Кому** сообщений, отправляемых на пейджер.  
   
- **Расписан**  
+ **Пейджер**  
  Содержит адрес электронной почты для сообщения между префиксом и суффиксом.  
   
  **Суффикс**  
@@ -62,7 +62,7 @@ ms.locfileid: "63245750"
  **Prefix**  
  Введите любой фиксированный текст, требуемый системой в начале строки **Копия** сообщений, отправляемых на пейджер.  
   
- **Расписан**  
+ **Пейджер**  
  Содержит адрес электронной почты для сообщения между префиксом и суффиксом.  
   
  **Суффикс**  
@@ -103,7 +103,7 @@ ms.locfileid: "63245750"
  **Заменить токенами всех ответов заданий на предупреждения**  
  Установите этот флажок, чтобы включить замену токенов для заданий, активизированных предупреждениями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Операторы](operators.md)   
  [Настройка агент SQL Server почты для использования Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)   
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  

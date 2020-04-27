@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba96d6312710f16f70b296dcb17bc3d5f226ff19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200203"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>Определение характеристик результирующего набора (ODBC)
@@ -48,7 +48,7 @@ ms.locfileid: "63200203"
   
  Если приложение использует определенный набор метаданных более одного раза, может быть полезно кэшировать данные в закрытых переменных после их первого получения. Этот предотвращает последующие вызовы функций каталога ODBC для получения тех же данных, ради которых драйверу приходится многократно обращаться к серверу.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обработка результатов &#40;ODBC&#41;](processing-results-odbc.md)  
   
   

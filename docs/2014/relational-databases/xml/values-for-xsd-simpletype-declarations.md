@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0b24a9c02e38ba8165e015cdf8d1b107e64cbaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193071"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>Значения для объявлений &lt;xsd:simpleType>&gt;
@@ -41,6 +41,6 @@ ms.locfileid: "63193071"
 |`anyURI`|Значения этого типа не могут быть в длину больше, чем 4 000 символов Юникода.|  
   
 ## <a name="see-also"></a>См. также:  
- [Требования и ограничения для коллекций XML-схем на сервере](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Требования и ограничения для коллекций схем XML на сервере](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

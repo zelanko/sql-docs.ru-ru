@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63231277"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Использование режима EXPLICIT совместно с предложением FOR XML
@@ -111,7 +111,7 @@ ElementName!TagNumber!AttributeName!Directive
  Далее следует описание частей формата.  
   
  *ElementName*  
- Результирующий общий идентификатор элемента. Например, если **Клиенты** указаны как *ElementName*, создается элемент \<Customers>.  
+ Результирующий общий идентификатор элемента. Например, если **Customers** задано в качестве *ElementName*, формируется элемент \<Customers>.  
   
  *TagNumber*  
  Уникальное значение тега, присвоенное элементу. Это значение с помощью двух метастолбцов, **Tag** и **Parent**, определяет вложенность элементов в результирующем XML.  
@@ -123,14 +123,14 @@ ElementName!TagNumber!AttributeName!Directive
   
  При указании значения *Directive*значение *AttributeName* может быть пустым. Например: ElementName!TagNumber!!Directive. В этом случае значение столбца напрямую содержится в *ElementName*.  
   
- *Директива*  
- *Директива* является необязательной. ее можно использовать для предоставления дополнительных сведений для создания XML. *Директива* имеет две цели.  
+ *Directive*  
+ Значение*Directive* является необязательным и может использоваться с целью предоставления дополнительных сведений для создания XML. Значение*Directive* служит двум целям.  
   
  Одной из целей является кодирование значений в виде ID, IDREF и IDREFS. Можно указать ключевые слова **ID**, **IDREF**и **IDREFS** в качестве значений *Directive*. Эти директивы переопределяют типы атрибутов. Это позволяет создавать связи внутри документа.  
   
  Также можно использовать значение *Directive* для указания того, как сопоставлять строковые данные с XML. Ключевые слова **hide**, **element, elementxsinil**, **xml**, **xmltext**и **cdata** также могут быть использованы в качестве значения *Directive*. Директива **hide** скрывает узел. Это полезно, если некоторые значения извлекаются только в целях сортировки и не должны появляться в результирующем XML.  
   
- Директива **element** формирует содержащийся элемент вместо атрибута. Содержащиеся данные кодируются как сущность. Например, символ преобразуется **<** &lt;в. Для значений столбцов, равных NULL, элемент не формируется. Если требуется, чтобы для столбцов со значениями NULL формировался элемент, можно указать директиву **elementxsinil** . При этом будет сформирован элемент с атрибутом xsi:nil=TRUE.  
+ Директива **element** формирует содержащийся элемент вместо атрибута. Содержащиеся данные кодируются как сущность. Например, символ **<** превращается в &lt;. Для значений столбцов, равных NULL, элемент не формируется. Если требуется, чтобы для столбцов со значениями NULL формировался элемент, можно указать директиву **elementxsinil** . При этом будет сформирован элемент с атрибутом xsi:nil=TRUE.  
   
  Директива **xml** аналогична директиве **element** , однако при ее использовании не происходит кодирования сущности. Обратите внимание на то, что директива **element** может быть совмещена с **ID**, **IDREF**или **IDREFS**, в то время как директива **xml** не допускает совмещения с любой другой директивой, кроме **hide**.  
   
@@ -168,10 +168,10 @@ ElementName!TagNumber!AttributeName!Directive
 -   [Пример. Указание директивы XMLTEXT](../xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Использование режима RAW с FOR XML](../xml/use-raw-mode-with-for-xml.md)   
- [Использование режима AUTO с FOR XML](../xml/use-auto-mode-with-for-xml.md)   
- [Использование режима PATH с FOR XML](../xml/use-path-mode-with-for-xml.md)   
+ [Использование с RAW Mode для FOR XML](../xml/use-raw-mode-with-for-xml.md)   
+ [Использование режима AUTO совместно с FOR XML](../xml/use-auto-mode-with-for-xml.md)   
+ [Использование режима PATH совместно с FOR XML](../xml/use-path-mode-with-for-xml.md)   
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)   
- [ДЛЯ SQL Server &#40;XML&#41;](../xml/for-xml-sql-server.md)  
+ [FOR XML (SQL Server)](../xml/for-xml-sql-server.md)  
   
   

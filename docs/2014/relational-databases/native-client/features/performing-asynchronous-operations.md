@@ -20,14 +20,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 87d961e9613aa390b3001219f88808c8d4ac6ed7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63246150"
 ---
 # <a name="performing-asynchronous-operations"></a>Выполнение асинхронных операций
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет приложениям выполнять асинхронные операции с базой данных. Асинхронная обработка позволяет выполнять возврат из методов немедленно, не блокируя вызывающий поток. Это позволяет использовать значительную часть мощности и гибкости многопотоковой обработки, и разработчику при этом не требуется явно создавать потоки или обрабатывать синхронизацию. Приложения запрашивают асинхронную обработку при инициализации подключения к базе данных или при инициализации результата выполнения команды.  
   
 ## <a name="opening-and-closing-a-database-connection"></a>Открытие и закрытие подключения к базе данных  
@@ -35,14 +34,14 @@ ms.locfileid: "63246150"
   
  Кроме того, в набор свойств DBPROPSET_SQLSERVERROWSET добавлено свойство SSPROP_ISSAsynchStatus. Поставщики, поддерживающие интерфейс **ISSAsynchStatus**, должны реализовывать это свойство со значением VARIANT_TRUE.  
   
- Для отмены вызова асинхронной **инициализации** можно вызвать **IDBAsynchStatus:: Abort** или [метод ISSAsynchStatus:: Abort](../../native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md) . Потребитель должен явно запросить асинхронную инициализацию источника данных. В противном случае возврат из метода **IDBInitialize::Initialize** не происходит до тех пор, пока объект источника данных не будет инициализирован полностью.  
+ Функции **IDBAsynchStatus::Abort** и [ISSAsynchStatus::Abort](../../native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md) могут быть вызваны для отмены асинхронного вызова **Initialize**. Потребитель должен явно запросить асинхронную инициализацию источника данных. В противном случае возврат из метода **IDBInitialize::Initialize** не происходит до тех пор, пока объект источника данных не будет инициализирован полностью.  
   
 > [!NOTE]  
 >  Объекты источника данных, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] используемые для объединения соединений, не могут вызывать интерфейс **метод ISSAsynchStatus** в собственном клиенте OLE DB Provider. Интерфейс **ISSAsynchStatus** недоступен для объединенных в пул объектов источников данных.  
 >   
 >  Если приложение явно и принудительно использует ядро курсора, методы **IOpenRowset::OpenRowset** и **IMultipleResults::GetResult** не будут поддерживать асинхронную обработку.  
 >   
->  Кроме того, прокси-сервер удаленного взаимодействия или библиотека DLL заглушки (в MDAC 2,8) **** не могут вызывать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] интерфейс метод ISSAsynchStatus в собственном клиенте. Интерфейс **ISSAsynchStatus** недоступен при удаленном взаимодействии.  
+>  Кроме того, прокси-сервер удаленного взаимодействия или библиотека DLL заглушки (в MDAC 2,8) **ISSAsynchStatus** не могут вызывать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] интерфейс метод ISSAsynchStatus в собственном клиенте. Интерфейс **ISSAsynchStatus** недоступен при удаленном взаимодействии.  
 >   
 >  Компоненты служб не поддерживают интерфейс **ISSAsynchStatus**.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "63246150"
  После завершения выполнения команды **IMultipleResults** можно использовать как нормальную, с одним исключением из синхронного случая: DB_S_ASYNCHRONOUS может быть возвращено, в этом случае **IDBAsynchStatus** или **метод ISSAsynchStatus** можно использовать для определения момента завершения операции.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере приложение вызывает неблокирующий метод, выполняет некоторую другую обработку, а затем возвращает результаты процессу. **Метод ISSAsynchStatus:: WaitForAsynchCompletion** ожидает внутренний объект события до тех пор, пока не будет выполнено асинхронное выполнение операции или не будет передано время, указанное в *двмилисектимеаут* .  
+ В следующем примере приложение вызывает неблокирующий метод, выполняет некоторую другую обработку, а затем возвращает результаты процессу. Интерфейс **ISSAsynchStatus::WaitForAsynchCompletion** ожидает объект внутреннего события, пока не будет завершена асинхронно выполняющаяся операция или пока не истечет время, указанное в параметре *dwMilisecTimeOut*.  
   
 ```  
 // Set the DBPROPVAL_ASYNCH_INITIALIZE bit in the   
@@ -105,7 +104,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
- **Метод ISSAsynchStatus:: WaitForAsynchCompletion** ожидает внутренний объект события до тех пор, пока не завершится асинхронно выполняемая операция или не передается значение *двмилисектимеаут* .  
+ Метод **ISSAsynchStatus::WaitForAsynchCompletion** ожидает объект внутреннего события, пока не будет завершена асинхронно выполняющаяся операция или пока не будет передано значение *dwMilisecTimeOut*.  
   
  В следующем примере показана асинхронная обработка с несколькими результирующими наборами.  
   
@@ -185,9 +184,9 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Компоненты собственного клиента SQL Server](sql-server-native-client-features.md)   
+## <a name="see-also"></a>См. также  
+ [SQL Server Native Client функции](sql-server-native-client-features.md)   
  [Свойства и поведение набора строк](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)   
- [Метод ISSAsynchStatus &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus (OLE DB)](../../native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

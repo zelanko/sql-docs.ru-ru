@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84c8d4f9ed6eccbf7e58be46a9b84c53559a317d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63232416"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>Доступ к поставщику WMI программным способом
   Раздел находится в стадии разработки.  
   
 ## <a name="wmi-provider-overview"></a>Общие сведения о поставщике WMI  
- Пространством имен, используемым для получения сведений о службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в образцах кода, показанных в этом разделе, является пространство имен **System.Management** , которое находится на платформе [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. Пространство имен **System.Management** предоставляет набор классов управляемого кода, благодаря которым приложения платформы [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] могут иметь доступ к данным управления и обрабатывать эти данные. Дополнительные сведения об использовании WMI-классов служб Reporting Services, использующих пространство имен **System.Management** , см. в разделе «Доступ к данным управления при помощи пространства имен System.Managment» в описании пакетов [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK.  
+ Пространством имен, используемым для получения сведений о службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в образцах кода, показанных в этом разделе, является пространство имен **System.Management**, которое находится на платформе [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. Пространство имен **System.Management** предоставляет набор классов управляемого кода, благодаря которым приложения платформы [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] могут иметь доступ к данным управления и обрабатывать эти данные. Дополнительные сведения об использовании классов WMI (в Reporting Services), использующих пространство имен **System.Management**, см. в документации, посвященной доступу к данным управления при помощи пространства имен System.Managment, в описании пакетов SDK для [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
   
 ## <a name="finding-a-report-server-instance"></a>Поиск экземпляра сервера отчетов  
  Наиболее предпочтительным способом нахождения сведений об установках сервера отчетов является перечисление элементов коллекции экземпляра WMI. В указанном ниже примере показано, как искать свойства каждого экземпляра сервера отчетов, создав коллекцию и циклически считывая элементы коллекции для отображения свойств.  
@@ -126,7 +126,7 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Доступ к поставщику WMI Reporting Services](tools/access-the-reporting-services-wmi-provider.md)   
  [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)  
   

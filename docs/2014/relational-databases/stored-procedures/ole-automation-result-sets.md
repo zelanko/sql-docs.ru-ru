@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 649731c1dbbe3f52dec899cc47366cfeb15c9c56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63195241"
 ---
 # <a name="ole-automation-result-sets"></a>Результирующие наборы OLE-автоматизации
@@ -46,7 +46,7 @@ ms.locfileid: "63195241"
 |`nvarchar`|`nvarchar`|`nvarchar`|`nvarchar`|`nvarchar`|`nvarchar`|`nvarchar`|  
   
 ## <a name="related-content"></a>См. также  
- [Хранимые процедуры OLE-автоматизации &#40;&#41;Transact — SQL](/sql/relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql)  
+ [Хранимые процедуры OLE-автоматизации (Transact-SQL)](/sql/relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql)  
   
  [Параметр конфигурации сервера «Ole Automation Procedures»](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)  
   

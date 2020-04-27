@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bd19cb92f2d2f333954adeb97229feb718c4b592
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63207033"
 ---
 # <a name="conversions-from-sql-to-c"></a>Преобразования из SQL в C
@@ -64,7 +64,7 @@ ms.locfileid: "63207033"
   
  Таблица в этом разделе описывает преобразования между типами, возвращаемыми клиенту, и типами в привязке. Для выходных параметров, если тип сервера, указанный в SQLBindParameter, не совпадает с фактическим типом на сервере, на сервере будет выполнено неявное преобразование, и тип, возвращаемый клиенту, будет соответствовать типу, указанному с помощью SQLBindParameter. Это может привести к непредвиденным результатам преобразования, если правила преобразования сервера отличаются от правил, перечисленных в предыдущей таблице. Например, если необходима дата по умолчанию, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует не текущую дату, а 01.01.1900.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Улучшения даты и времени &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

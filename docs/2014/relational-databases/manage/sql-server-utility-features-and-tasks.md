@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63190426"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Функции и задачи служебной программы SQL Server
@@ -30,7 +30,7 @@ ms.locfileid: "63190426"
 ## <a name="benefits-of-the-sql-server-utility"></a>Преимущества служебной программы SQL Server  
  Программа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] моделирует сущности организации, связанные с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в унифицированном представлении. Контрольные точки обозревателя и проводника служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) предоставляют администраторам целостное представление о работоспособности ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для этого используется экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , служащий точкой управления служебной программой (UCP). Благодаря сочетанию сводных и подробных данных, представленных в пункте управления программой для политик избыточной и недостаточной загрузки, а также для различных ключевых параметров, появляется возможность объединения и простого определения перегруженных ресурсов. Политики исправности являются настраиваемыми и позволяют изменить заданные в них верхние и нижние пороговые значения использования ресурсов. Можно изменять глобальные политики наблюдения или настраивать индивидуальные политики наблюдения для каждой сущности, управляемой в программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="typical_scenarios"></a> Приступая к работе со служебной программой SQL Server  
+##  <a name="getting-started-with-sql-server-utility"></a><a name="typical_scenarios"></a> Приступая к работе со служебной программой SQL Server  
  Обычно в начале работы с программой создается точка управления служебной программой (UCP), представляющий собой центральную базовую точку служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В точке управления служебной программой реализуется консолидированное представление сведений об исправности ресурсов, полученных из управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . После создания точки управления служебной программой в программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистрируются экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы можно было управлять ими из этой точки управления служебной программой.  
   
  Выполнять наблюдение за каждым экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и приложения уровня данных, управляемых программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , можно с помощью определений глобальных или индивидуальных политик.  

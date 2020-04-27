@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2420a4df5b971ae2190b2a66f24b226f472fee2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249342"
 ---
 # <a name="activity-monitor"></a>Монитор активности
@@ -40,6 +40,6 @@ ms.locfileid: "63249342"
 |-|-|  
 |**Описание**|**Раздел**|  
 |Содержит сведения о том, как открыть монитор активности и настроить интервал обновления монитора активности.|[Открытие монитора активности (среда SQL Server Management Studio)](../performance-monitor/open-activity-monitor-sql-server-management-studio.md)|  
-|Ссылки на разделы с описанием производительности сервера и отслеживания действий.|[Производительность сервера и мониторинг активности](../performance/server-performance-and-activity-monitoring.md)|  
+|Ссылки на разделы с описанием производительности сервера и отслеживания действий.|[Мониторинг производительности и действий сервера](../performance/server-performance-and-activity-monitoring.md)|  
   
   

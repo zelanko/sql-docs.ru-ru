@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1d22ec44b7be6562c7186272b403a76cd562be62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192087"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>Соединение с экземпляром SQL Server
@@ -39,7 +39,7 @@ ms.locfileid: "63192087"
   
  Объявите переменную объекта <xref:Microsoft.SqlServer.Management.Smo.Server> и передайте имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в качестве строкового параметра конструктору объекта. Объект <xref:Microsoft.SqlServer.Management.Smo.Server> установит соединение с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], используя значения настроек по умолчанию.  
   
-## <a name="connection-pooling"></a>Организация пулов соединений  
+## <a name="connection-pooling"></a>Объединение подключений в пул  
  Вызов метода <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection> обычно не требуется. SMO автоматически установит соединение, когда это потребуется, и освободит его, передав в пул соединений, после завершения операций. При вызове метода <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> соединение не передается в пул. Для освобождения соединения и его передачи в пул нужен явный вызов метода <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A>. Кроме этого, можно запросить соединение не из пула, установив свойство <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.NonPooledConnection%2A> объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
 ## <a name="multithreaded-applications"></a>Многопоточные приложения  
@@ -207,7 +207,7 @@ public class A {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.SqlServer.Management.Smo.Server>   
  <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
   

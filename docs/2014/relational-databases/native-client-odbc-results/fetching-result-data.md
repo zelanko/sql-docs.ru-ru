@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b803ca3742f9cb831e51105aab9d0ed75ad78e16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200080"
 ---
 # <a name="fetching-result-data"></a>Выборка итоговых данных
@@ -60,7 +60,7 @@ ms.locfileid: "63200080"
   
  Эту оптимизацию можно применить к приложениям, чтобы не отображались данные типа **Text**, **ntext**или **Image** , пока пользователь прокручивает курсор вверх и вниз. После того как пользователь выберет строку, приложение может вызвать **SQLGetData** для получения данных типа **Text**, **ntext**или **Image** . Это сохраняет передачу данных типа **Text**, **ntext**или **Image** для любой строки, которую пользователь не выбирает, и может сохранять передачу очень больших объемов данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обработка результатов &#40;ODBC&#41;](processing-results-odbc.md)  
   
   

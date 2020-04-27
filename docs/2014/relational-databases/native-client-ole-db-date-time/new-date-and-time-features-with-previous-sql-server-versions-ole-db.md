@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63233077"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Новые функции даты и времени с предыдущими версиями SQL Server (OLE DB)
@@ -55,7 +55,7 @@ ms.locfileid: "63233077"
   
 -   Переход на `datetime2`, так как это предпочтительный тип данных для даты и времени.  
   
- Приложения, использующие метаданные сервера, полученные с помощью ICommandWithParameters:: GetParameterInfo или наборов строк схемы для задания сведений о типе параметра через ICommandWithParameters:: SetParameterInfo, завершатся ошибкой во время преобразования клиента, где строка представление исходного типа больше, чем строковое представление целевого типа. Например, если в клиентской привязке используется DBTYPE_DBTIMESTAMP и столбец Server имеет значение Date [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , собственный клиент преобразует его в «гггг-дд-мм чч: мм: СС. FFF», но метаданные сервера будут возвращены как `nvarchar(10)`. В результате переполнение приведет к ошибке DBSTATUS_E_CATCONVERTVALUE. Аналогичные проблемы возникают при преобразовании данных с помощью IRowsetChange, так как метаданные набора строк задаются из метаданных ResultSet.  
+ Приложения, использующие метаданные сервера, полученные с помощью ICommandWithParameters:: GetParameterInfo или наборов строк схемы для задания сведений о типе параметра через ICommandWithParameters:: SetParameterInfo, завершатся ошибкой во время преобразования клиента, где строковое представление исходного типа больше, чем строковое представление целевого типа. Например, если в клиентской привязке используется DBTYPE_DBTIMESTAMP и столбец Server имеет значение Date [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , собственный клиент преобразует его в «гггг-дд-мм чч: мм: СС. FFF», но метаданные сервера будут возвращены как `nvarchar(10)`. В результате переполнение приведет к ошибке DBSTATUS_E_CATCONVERTVALUE. Аналогичные проблемы возникают при преобразовании данных с помощью IRowsetChange, так как метаданные набора строк задаются из метаданных ResultSet.  
   
 ### <a name="parameter-and-rowset-metadata"></a>Метаданные параметров и наборов строк  
  В этом разделе описываются метаданные для параметров, столбцов результатов и наборов строк схемы для клиентов, компилируемых с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, предшествующей версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
@@ -145,7 +145,7 @@ ms.locfileid: "63233077"
 |LOCAL_TYPE_NAME|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
-|GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
+|Код GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
 |TYPELIB|NULL|NULL|NULL|NULL|NULL|NULL|  
 |VERSION|NULL|NULL|NULL|NULL|NULL|NULL|  
 |IS_LONG|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
@@ -165,7 +165,7 @@ ms.locfileid: "63233077"
 ## <a name="comparability-for-irowsetfind"></a>Сравнимость для IRowsetFind  
  Все операторы сравнения разрешены для новых типов данных даты-времени, так как они отображаются как строковые типы, а не типы даты-времени.  
   
-## <a name="see-also"></a>См. также:  
- [Улучшения даты и времени &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>См. также  
+ [Улучшения функций даты и времени &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

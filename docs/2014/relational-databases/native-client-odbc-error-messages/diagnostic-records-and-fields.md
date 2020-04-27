@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 173d0287ba1b63e8811e2d340448d03c3bbf961d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63213923"
 ---
 # <a name="diagnostic-records-and-fields"></a>Диагностические записи и поля
@@ -46,7 +46,7 @@ ms.locfileid: "63213923"
   
  Большинство ошибок, о которых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщает драйвер ODBC для собственного клиента, можно эффективно диагностировать, используя только сведения, возвращенные **SQLGetDiagRec**. Однако в некоторых случаях сведения, возвращаемые в специфических для драйвера диагностических полях, важны для диагностирования ошибки. При написании обработчика ошибок ODBC для приложений, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использующих драйвер ODBC для собственного клиента, рекомендуется также использовать **SQLGetDiagField** для получения по крайней мере SQL_DIAG_SS_MSGSTATE и SQL_DIAG_SS_SEVERITY полей, относящихся к драйверу. Если какая-то ошибка может быть вызвана в нескольких местах кода [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то SQL_DIAG_SS_MSGSTATE показывает сотруднику отдела службы технической поддержки корпорации Майкрософт, где именно ошибка была вызвана, и это может иногда помочь при диагностике проблемы.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обработка ошибок и сообщений](handling-errors-and-messages.md)  
   
   

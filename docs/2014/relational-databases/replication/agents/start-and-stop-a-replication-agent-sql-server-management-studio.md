@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66be53c7b4c145f361c49c0e1611fa2942005ae5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192465"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>Запуск и остановка агента репликации (среда SQL Server Management Studio)
-  Запуск и остановка агентов выполняется из папки **Задания** и папки **Репликация** в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and from Репликация Monitor. Могут запускаться и останавливаться следующие агенты и задания:  
+  Запуск и остановка агентов выполняется из папки **Задания** и папки **Репликация** в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и из монитора репликации. Могут запускаться и останавливаться следующие агенты и задания:  
   
 -   Агент моментальных снимков, используемый всеми публикациями.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63192465"
   
 ### <a name="to-start-and-stop-a-queue-reader-agent-from-management-studio"></a>Запуск и остановка агента чтения очереди из среды Management Studio  
   
-1.  Подключитесь к распространителю в [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]и раскройте узел сервера.  
+1.  Подключитесь к распространителю в [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]и разверните узел сервера.  
   
 2.  Раскройте папку **Агент SQL Server** , а затем — папку **Задания** .  
   
@@ -65,8 +65,8 @@ ms.locfileid: "63192465"
   
 3.  Щелкните правой кнопкой агент и затем щелкните **Запустить агент** или **Остановить агент**.  
   
-## <a name="see-also"></a>См. также:  
- [Наблюдение за репликацией](../monitoring-replication.md)   
+## <a name="see-also"></a>См. также  
+ [Мониторинг репликации](../monitoring-replication.md)   
  [Основные понятия исполняемых файлов агента репликации](../concepts/replication-agent-executables-concepts.md)   
  [Replication Agents Overview](replication-agents-overview.md)  
   

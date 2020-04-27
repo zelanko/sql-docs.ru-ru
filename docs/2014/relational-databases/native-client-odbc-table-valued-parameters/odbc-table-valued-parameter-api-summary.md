@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3c4606fcc4bad9355753b11557a0a4be7706688a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63199864"
 ---
 # <a name="odbc-table-valued-parameter-api-summary"></a>Сводка по API-интерфейсам возвращающих табличное значение параметров ODBC
@@ -59,7 +59,7 @@ ms.locfileid: "63199864"
   
 -   [SQLTables](../native-client-odbc-api/sqltables.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Возвращающие табличное значение параметры &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
   
   

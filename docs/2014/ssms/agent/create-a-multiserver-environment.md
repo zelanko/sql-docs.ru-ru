@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192970"
 ---
 # <a name="create-a-multiserver-environment"></a>Создание многосерверной среды
@@ -37,13 +37,13 @@ ms.locfileid: "63192970"
   
 ||**TSX = 7.0**|**ЦЕЛЕВОЙ СЕРВЕР = 8,0 < SP3**|**TSX = 8.0 пакет обновления 3 (SP3) или выше**|**TSX = 9.0**|**TSX= 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|Да|Да|нет|нет|нет|нет|нет|  
-|**MSX = 8,0 < SP3**|Да|Да|нет|нет|нет|нет|нет|  
-|**MSX = 8.0 SP3 или выше**|нет|нет|Да|Да|Да|Да|Да|  
-|**MSX = 9.0**|нет|нет|нет|Да|Да|Да|Да|  
-|**MSX = 10.0**|нет|нет|нет|нет|Да|Да|Да|  
-|**MSX = 10.5**|нет|нет|нет|нет|нет|Да|Да|  
-|**MSX = 11.0**|нет|нет|нет|нет|нет|нет|Да|  
+|**MSX = 7.0**|Да|Да|Нет|Нет|Нет|Нет|Нет|  
+|**MSX = 8,0 < SP3**|Да|Да|Нет|Нет|Нет|Нет|Нет|  
+|**MSX = 8.0 SP3 или выше**|Нет|Нет|Да|Да|Да|Да|Да|  
+|**MSX = 9.0**|Нет|Нет|Нет|Да|Да|Да|Да|  
+|**MSX = 10.0**|Нет|Нет|Нет|Нет|Да|Да|Да|  
+|**MSX = 10.5**|Нет|Нет|Нет|Нет|Нет|Да|Да|  
+|**MSX = 11.0**|Нет|Нет|Нет|Нет|Нет|Нет|Да|  
   
  При создании многосерверной среды возможны следующие проблемы:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63192970"
 ## <a name="related-tasks"></a>Связанные задачи  
  В следующих разделах описываются типовые задачи при создании многосерверной среды.  
   
-|Description|Раздел|  
+|Описание|Раздел|  
 |-----------------|-----------|  
 |Описывает, как создать главный сервер.|[Make a Master Server](make-a-master-server.md)|  
 |Описывает, как создать целевой сервер.|[Создание целевого сервера](make-a-target-server.md)|  
@@ -67,7 +67,7 @@ ms.locfileid: "63192970"
 |Описывает, как исключить несколько целевых серверов из главного.|[Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)|  
 |Описывает, как проверить состояние целевого сервера.|[sp_help_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Устранение неполадок, связанных с многосерверными заданиями, использующими учетные записи-посредники](troubleshoot-multiserver-jobs-that-use-proxies.md)  
   
   

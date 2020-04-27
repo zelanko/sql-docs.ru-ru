@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c9603994b0a1e2b57334aba836d4322a5d332c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63199119"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>Диалоговые окна репликации в среде SQL Server Management Studio
@@ -30,11 +30,11 @@ ms.locfileid: "63199119"
   
 -   [Безопасность агента чтения очереди](queue-reader-agent-security.md)  
   
--   [Профили агентов &#40;одном агенте&#41;](agent-profiles-single-agent.md)  
+-   [Профили агента (один агент)](agent-profiles-single-agent.md)  
   
 -   [Профили агентов](agent-profiles.md)  
   
--   [Свойства&#60;AgentProfileName&#62;](agentprofilename-properties.md)  
+-   [Свойства <имя_профиля_агента>](agentprofilename-properties.md)  
   
 -   [Создать профиль агента](new-agent-profile.md)  
   
@@ -44,18 +44,18 @@ ms.locfileid: "63199119"
   
 -   [Проверка подписки](validate-subscription.md)  
   
--   [Параметры проверки подписки &#40;подписок на публикацию транзакций&#41;](subscription-validation-options-transactional-subscriptions.md)  
+-   [Параметры проверки подписки (подписки на публикацию транзакций)](subscription-validation-options-transactional-subscriptions.md)  
   
--   [Параметры проверки подписки &#40;подписок на публикацию слиянием&#41;](subscription-validation-options-merge-subscriptions.md)  
+-   [Параметры проверки подписки (подписка на публикацию слиянием)](subscription-validation-options-merge-subscriptions.md)  
   
--   [Повторная инициализация подписки&#40;s&#41; — все подписки](reinitialize-subscription-s-all-subscriptions.md)  
+-   [Повторная инициализация подписок — все подписки](reinitialize-subscription-s-all-subscriptions.md)  
   
--   [Повторная инициализация подписки&#40;s&#41; — одна подписка](reinitialize-subscription-s-one-subscription.md)  
+-   [Повторная инициализация подписок — одна подписка](reinitialize-subscription-s-one-subscription.md)  
   
--   [Создание скрипта SQL &#40;объектов репликации&#41;](generate-sql-script-replication-objects.md)  
+-   [Формирование скрипта SQL (объекты репликации)](generate-sql-script-replication-objects.md)  
   
--   [Подключение к серверу &#40;Oracle&#41;, вход](connect-to-server-oracle-login.md)  
+-   [Подключение к с серверу (Oracle), вход](connect-to-server-oracle-login.md)  
   
--   [Подключение к серверу &#40;Oracle&#41;, свойства соединения](connect-to-server-oracle-connection-properties.md)  
+-   [Подключение к серверу (Oracle), свойства подключения](connect-to-server-oracle-connection-properties.md)  
   
   

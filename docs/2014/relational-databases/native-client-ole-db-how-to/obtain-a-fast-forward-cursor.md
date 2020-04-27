@@ -1,5 +1,5 @@
 ---
-title: Получение FAST_FORWARD курсора | Документация Майкрософт
+title: Получение курсора FAST_FORWARD | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f966d8aa907c6a92f4ac964fd7d937dab94afa95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225551"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>Получение курсора FAST_FORWARD
@@ -25,7 +25,7 @@ ms.locfileid: "63225551"
  Полный образец показывает, как настроить свойства набора строк для создания курсора FAST_FORWARD. После задания свойств выполняется инструкция SELECT для получения и вывода столбца **Name** таблицы Purchase **. Vendor** в базе данных **AdventureWorks** .  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, следует зашифровать их с помощью [API шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-obtain-fast_forward-cursor"></a>Получение курсора FAST_FORWARD  
   

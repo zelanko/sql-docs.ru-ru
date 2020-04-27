@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63241210"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Получение и запрос XML-данных
   В этом разделе описываются параметры запроса, которые необходимо указать для запроса XML-данных. Кроме того, в нем описаны компоненты экземпляров XML, нефиксируемых при сохранении экземпляров в базах данных.  
   
-##  <a name="features"></a> Компоненты экземпляра XML, которые не сохраняются  
+##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> Компоненты экземпляра XML, которые не сохраняются  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохраняется содержимое экземпляра XML, но не сохраняются его аспекты, которые в модели XML-данных не рассматриваются как значительные. Это означает, что полученный экземпляр XML может отличаться от экземпляра, сохраненного на сервере, но при этом будет содержать те же самые данные.  
   
 ### <a name="xml-declaration"></a>XML-декларация  
@@ -86,7 +86,7 @@ GO
 ```  
   
   
-##  <a name="query"></a> Задание обязательных параметров запроса  
+##  <a name="setting-required-query-options"></a><a name="query"></a> Задание обязательных параметров запроса  
  При запросе столбцов `xml` или переменных типа с помощью `xml` методов типа данных необходимо задать следующие параметры, как показано ниже.  
   
 |Параметры SET|Необходимые значения|  

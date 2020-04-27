@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cf597a459f12ccebc449de684fa05ac6dce39b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200281"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>Инструкции по измерению производительности драйвера ODBC (ODBC)
@@ -24,13 +24,13 @@ ms.locfileid: "63200281"
   
  Драйвер также может регистрировать долго выполняемые запросы (запросы, на которые сервер не возвращает ответа в течение заданного времени). Эти запросы могут позднее анализироваться программистами и администраторами баз данных.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Данные производительности драйвера профиля &#40;ODBC&#41;](profiling-odbc-driver-performance-data.md)  
   
 -   [Регистрация долго выполняющихся запросов &#40;ODBC&#41;](profiling-odbc-driver-performance-data-log-long-running-queries.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ODBC How-to Topics](odbc-how-to-topics.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPReadFmt (OLE DB) | Документация Майкрософт'
+title: IBCPSession::BCPReadFmt (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5a82cd2b9261b8f8c26e4e37636423cc27603fcc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192410"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>Метод IBCPSession::BCPReadFmt (OLE DB)
@@ -44,7 +44,7 @@ const wchar_t *pwszFormatFile);
  `BCP_OPTION_DELAYREADFMT` Значение параметра *eOption* [IBCPSession:: BCPControl](ibcpsession-bcpcontrol-ole-db.md) изменяет поведение IBCPSession:: BCPReadFmt.  
   
 ## <a name="arguments"></a>Аргументы  
- *пвсзформатфиле*[in]  
+ *pwszFormatFile*[in]  
  Путь и имя файла, содержащего значения формата для файла данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -52,7 +52,7 @@ const wchar_t *pwszFormatFile);
  Метод выполнен успешно.  
   
  E_FAIL  
- Произошла ошибка конкретного поставщика, для получения подробных сведений используйте интерфейс [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) .  
+ Произошла ошибка, связанная с поставщиком. Подробные сведения можно получить с помощью интерфейса [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md).  
   
  E_OUTOFMEMORY  
  Ошибка, связанная с нехваткой памяти.  
@@ -60,7 +60,7 @@ const wchar_t *pwszFormatFile);
  E_UNEXPECTED  
  Непредвиденный вызов метода. Например, перед вызовом этого метода не был вызван метод [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../native-client/features/performing-bulk-copy-operations.md)  
   

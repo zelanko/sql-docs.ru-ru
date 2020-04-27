@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 009f61563548e0c060350a75e9627804e18a7c54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63222952"
 ---
 # <a name="adding-indentation"></a>Добавление отступов
@@ -24,7 +24,7 @@ ms.locfileid: "63222952"
   
 #### <a name="to-indent-multiple-lines-of-code"></a>Добавление отступа для нескольких строк кода  
   
-1.  На панели инструментов щелкните **Новый запрос**.  
+1.  На панели инструментов нажмите кнопку **Создать запрос**.  
   
 2.  Создайте второй запрос, который выбирает значения столбцов **BusinessEntityID**, FirstName, **MiddleName**и **LastName** из таблицы **Person** схемы **Person** . Разместите каждый столбец на отдельной строке, чтобы код выглядел следующим образом:  
   

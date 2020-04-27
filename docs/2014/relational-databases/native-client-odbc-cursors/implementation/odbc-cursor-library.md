@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b81a7871434691a5940a04c7c60aaad9254b645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63201170"
 ---
 # <a name="odbc-cursor-library"></a>Библиотека курсоров ODBC
@@ -45,7 +45,7 @@ ms.locfileid: "63201170"
   
  Библиотека курсоров ODBC позволяет приложениям использовать несколько активных инструкций для соединения, а также прокручиваемые, обновляемые курсоры. Библиотека курсоров должна быть загружена для поддержки этой функциональности. Используйте [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) для указания способа использования библиотеки курсоров и [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) для указания типа курсора, параллелизма и размера набора строк.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Способы реализации курсоров](how-cursors-are-implemented.md)  
   
   

@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d9d64edf29d1e494d25474845295c505caedee8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63232434"
 ---
 # <a name="use-xml-data-in-applications"></a>Использование XML-данных в приложениях
@@ -44,7 +44,7 @@ ms.locfileid: "63232434"
 ## <a name="handling-xml-from-an-xml-type-column-by-using-ado-and-sql-server-native-client"></a>Обработка XML в столбцах типа xml с помощью ADO и собственного клиента SQL Server  
  Чтобы при помощи компонентов MDAC получить доступ к типам и возможностям, появившимся в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], в строке соединения ADO необходимо указать свойство инициализации, DataTypeCompatibility.  
   
- Например, в следующем образце скрипта Visual Basic Scripting Edition (VBScript) выдается результат запроса столбца `xml`, содержащего данные типа `Demographics`, из таблицы `Sales.Store` образца базы данных `AdventureWorks2012`. В частности, запрос производит поиск значения столбца для строки, в которой значение `CustomerID` равно `3`.  
+ Например, в следующем образце скрипта Visual Basic Scripting Edition (VBScript) выдается результат запроса столбца `Demographics`, содержащего данные типа `xml`, из таблицы `Sales.Store` образца базы данных `AdventureWorks2012`. В частности, запрос производит поиск значения столбца для строки, в которой значение `CustomerID` равно `3`.  
   
 ```  
 Const DS = "MyServer"  
@@ -90,8 +90,7 @@ Set objConn = Nothing
   
  В этом примере показано, как настроить свойство совместимости типов данных. По умолчанию, при использовании собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это свойство принимает значение 0. Если этому свойству присвоить значение 80, то поставщик собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представляет столбцы типа данных `xml` и определяемого пользователем типа в виде типов данных [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. то есть DBTYPE_WSTR и DBTYPE_BYTES соответственно.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен быть установлен на клиентском компьютере, а в строке соединения он должен быть указан в качестве поставщика данных: "`Provider=SQLNCLI11;...`".  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен быть установлен на клиентском компьютере, а в строке соединения он должен быть указан в качестве поставщика данных: "`Provider=SQLNCLI11;...`".  
   
 #### <a name="to-test-this-example"></a>Проверка этого примера  
   
@@ -148,14 +147,14 @@ Row 2
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>Обработка XML-данных в столбцах типа xml с помощью ADO.NET  
  Для обработки XML `xml` из столбца типа данных с помощью ADO.NET и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно использовать стандартное поведение `SqlCommand` класса. Например, столбец с данными типа `xml` и его значения могут быть запрошены таким же образом, как и любые столбцы SQL, с помощью `SqlDataReader`. Но если необходимо работать со столбцами типа `xml` как с XML-данными, то сначала необходимо связать содержимое с типом `XmlReader`.  
   
- Дополнительные сведения и примеры кода см. в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] разделе «значения XML-столбцов в модуле чтения данных» документации по пакету SDK.  
+ Дополнительные сведения и примеры кода см. в разделе "Значения XML-столбцов в модуле чтения данных" в документации по пакету [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK.  
   
 ## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>Обработка столбцов типа xml в параметрах с помощью ADO.NET  
  Для обработки XML-данных, переданных в качестве параметра в ADO.NET и [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], значение можно представить в виде экземпляра данных типа `SqlXml`. Специальная обработка не производится, поскольку для столбцов типа `xml` в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] допустимы такие же значения параметров, как и для любых других столбцов и типов данных, например `string` или `integer`.  
   
- Дополнительные сведения и примеры кода см. в разделе "значения XML в качестве параметров команды" [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] в документации по пакету SDK.  
+ Дополнительные сведения и примеры кода см. в разделе "XML-значения в качестве параметров" в документации по пакету [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK.  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server &#40;XML-данных&#41;](xml-data-sql-server.md)  
+ [Данные XML (SQL Server)](xml-data-sql-server.md)  
   
   

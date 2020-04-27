@@ -1,5 +1,5 @@
 ---
-title: Объекты материализованных источников данных | Документация Майкрософт
+title: Материализованные объекты источника данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a5d50163f439ec3fabd219761f0749c88745c58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63231455"
 ---
 # <a name="persisted-data-source-objects"></a>Материализованные данные исходного объекта
@@ -227,7 +227,7 @@ HRESULT InitFromPersistedDS
   
  Метод **IPersistFile::Save** можно вызвать до или после вызова метода **IDBInitialize::Initialize**. Вызов метода после успешного возвращения из метода **IDBInitialize::Initialize** гарантирует сохранение допустимой спецификации источника данных.  
   
-## <a name="see-also"></a>См. также:  
- [Объекты источника данных &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
+## <a name="see-also"></a>См. также  
+ [Объекты источников данных (OLE DB)](data-source-objects-ole-db.md)  
   
   

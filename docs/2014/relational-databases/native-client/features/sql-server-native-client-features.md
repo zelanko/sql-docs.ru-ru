@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 093d40734b88cc370e0c08a8f9a8b86312409e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225563"
 ---
 # <a name="sql-server-native-client-features"></a>Компоненты собственного клиента SQL Server
   Помимо возможностей компонентов доступа к данным WDAC (ранее MDAC), в собственном клиенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] реализовано множество других функций, позволяющих пользоваться функциональностью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Изменение поведения драйвера ODBC при обработке преобразования символов](odbc-driver-behavior-change-when-handling-character-conversions.md)  
  Описание изменения поведения, реализованного с версии Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "63225563"
  [Выполнение асинхронных операций](performing-asynchronous-operations.md)  
  Обсуждение поддержки собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] асинхронных операций, то есть способности немедленно возвращать управление, не блокируя вызывающий поток.  
   
- [Использование нескольких активных результирующих наборов &#40;режиме MARS&#41;](using-multiple-active-result-sets-mars.md)  
+ [Использование множественных активных результирующих наборов (MARS)](using-multiple-active-result-sets-mars.md)  
  Обсуждение поддержки собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] режима MARS. Режим MARS позволяет выполнять и получать несколько результирующих наборов через одно подключение к базе данных.  
   
  [Использование типов данных XML](using-xml-data-types.md)  
@@ -77,7 +77,7 @@ ms.locfileid: "63225563"
  [Поддержка разреженных столбцов в собственном клиенте SQL Server](sparse-columns-support-in-sql-server-native-client.md)  
  Обсуждение поддержки собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] разреженных столбцов.  
   
- [Улучшения даты и времени](date-and-time-improvements.md)  
+ [Улучшения функций даты и времени](date-and-time-improvements.md)  
  Обсуждение поддержки новых типов данных даты и времени, добавленной в собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [Обнаружение метаданных](metadata-discovery.md)  
@@ -95,7 +95,7 @@ ms.locfileid: "63225563"
  [Поддержка SQL Server Native Client для LocalDB](sql-server-native-client-support-for-localdb.md)  
  Обсуждение поддержки клиентом Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] улучшенной функции LocalDB.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server Native Client программирование](../sql-server-native-client-programming.md)   
  [Разделы руководства по ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB инструкций](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)   

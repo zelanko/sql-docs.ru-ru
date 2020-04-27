@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9138b9abc8b75107061e794f44341f628e58ac67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63207267"
 ---
 # <a name="cursor-programming-details-odbc"></a>Подробные сведения о программировании курсоров (ODBC)
   Выбор правильного типа курсора может повысить производительность приложения. При определенных условиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может неявно преобразовать тип курсора при выполнении инструкции SQL, которая не поддерживается типом запрашиваемого курсора.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Неявные преобразования курсоров &#40;ODBC&#41;](implicit-cursor-conversions-odbc.md)  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63207267"
   
 -   [Однопроходные курсоры &#40;ODBC&#41;](fast-forward-only-cursors-odbc.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование курсоров &#40;ODBC&#41;](../using-cursors-odbc.md)  
   
   

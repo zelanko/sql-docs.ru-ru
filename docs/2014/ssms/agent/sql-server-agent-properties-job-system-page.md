@@ -13,34 +13,32 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8dceeba78e639ecbe2fd81fbdb1021293e75cf8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63246085"
 ---
 # <a name="sql-server-agent-properties-job-system-page"></a>Свойства агента SQL Server (страница «Система заданий»)
   Эта страница используется для просмотра и изменения того, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как служба агента управляет заданиями.  
   
 ## <a name="options"></a>Параметры  
- **Интервал времени ожидания завершения работы (в секундах)**  
+ **Время ожидания при завершении работы (в секундах)**  
  Указывает число секунд, в течение которых агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ожидает завершения заданий при окончании работы. Если отведенное время истекло, а задание так и не завершилось, агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] принудительно его останавливает.  
   
- **Использовать учетную запись-посредник без прав администратора**  
+ **Использовать неадминистративную учетную запись-посредник**  
  Задает неадминистративную учетную запись-посредник для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздние версии поддерживают несколько учетных записей-посредников, поэтому этот [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр применим только при [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]управлении версиями агента до.  
   
  **User name**  
- Введите имя пользователя для неадминистративной учетной записи-посредника. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает несколько учетных записей-посредников, и поэтому этот параметр применим только в случае работы с версиями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ранее [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ Введите имя пользователя для неадминистративной учетной записи-посредника. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает несколько учетных записей-посредников, и поэтому этот параметр применим только в случае работы с версиями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ранее [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
  **Пароль**  
- Введите пароль пользователя для неадминистративной учетной записи-посредника. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]и более поздние версии поддерживают несколько учетных записей-посредников, поэтому этот [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр применим только при [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]управлении версиями агента до.  
+ Введите пароль пользователя для неадминистративной учетной записи-посредника. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздние версии поддерживают несколько учетных записей-посредников, и поэтому этот параметр применим только в случае работы с версиями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ранее [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
- **Домен**  
- Введите домен пользователя для неадминистративной учетной записи-посредника. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает несколько учетных записей-посредников, и поэтому этот параметр применим только в случае работы с версиями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ранее [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ **Поддомен**  
+ Введите домен пользователя для неадминистративной учетной записи-посредника. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает несколько учетных записей-посредников, и поэтому этот параметр применим только в случае работы с версиями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ранее [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Реализация заданий](implement-jobs.md)  
   
   

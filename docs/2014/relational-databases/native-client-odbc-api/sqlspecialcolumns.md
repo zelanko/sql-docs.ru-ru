@@ -15,17 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ea811151e9c81ed515b774f279297d236c608f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188742"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
   При запросе идентификаторов строк (*идентифиертипе* SQL_BEST_ROWID) **SQLSpecialColumns** возвращает пустой результирующий набор (без строк данных) для запрошенной области, отличной от SQL_SCOPE_CURROW. Сформированный результирующий набор определяет, что столбцы допустимы только внутри этой области.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает псевдостолбцы для идентификаторов. Результирующий набор **SQLSpecialColumns** будет обозначать все столбцы как SQL_PC_NOT_PSEUDO.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает псевдостолбцы для идентификаторов. Результирующий набор **SQLSpecialColumns** будет обозначать все столбцы как SQL_PC_NOT_PSEUDO.  
   
  **SQLSpecialColumns** может выполняться для статического курсора. Попытка выполнить **SQLSpecialColumns** на обновляемом (управляемом набором ключей или динамическом) методе возвращает SQL_SUCCESS_WITH_INFO, указывающее, что тип курсора был изменен.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "63188742"
 ## <a name="sqlspecialcolumns-support-for-large-clr-udts"></a>Поддержка функцией SQLSpecialColumns определяемых пользователем типов больших данных CLR  
  **SQLSpecialColumns** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функция SQLSpecialColumns](https://go.microsoft.com/fwlink/?LinkId=59371)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

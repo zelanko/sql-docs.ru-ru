@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35715487638a21e71f76788650b3238a3c9290c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63213506"
 ---
 # <a name="supporting-distributed-transactions"></a>Поддержка распределенных транзакций
@@ -34,12 +34,12 @@ ms.locfileid: "63213506"
   
  Для распределенных транзакций поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB реализует параметры **ITransactionJoin:: жоинтрансактион** следующим образом.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|*пунктрансактионкурд*|Указатель на объект транзакции MS DTC.|  
+|*punkTransactionCoord*|Указатель на объект транзакции MS DTC.|  
 |*IsoLevel*|Игнорируется поставщиком [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB. Уровень изоляции для транзакций, координируемых с использованием служб MS DTC, определяется, когда пользователь получает объект транзакции от координатора MS DTC.|  
-|*исофлагс*|Должно быть равно 0. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента возвращает XACT_E_NOISORETAIN, если потребитель указал любое другое значение.|  
-|*посероптионс*|Если значение не равно NULL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поставщик OLE DB собственного клиента запрашивает объект параметров из интерфейса. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента возвращает XACT_E_NOTIMEOUT, если элемент *ултимеаут* объекта параметров не равен нулю. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента игнорирует значение элемента *сздескриптион* .|  
+|*IsoFlags*|Должно быть равно 0. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента возвращает XACT_E_NOISORETAIN, если потребитель указал любое другое значение.|  
+|*POtherOptions*|Если значение не равно NULL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поставщик OLE DB собственного клиента запрашивает объект параметров из интерфейса. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента возвращает XACT_E_NOTIMEOUT, если элемент *ултимеаут* объекта параметров не равен нулю. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента игнорирует значение элемента *сздескриптион* .|  
   
  В этом примере осуществляется координирование транзакции с использованием координатора MS DTC.  
   
@@ -138,7 +138,7 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 // Release any references and continue.  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Transactions](transactions.md)  
+## <a name="see-also"></a>См. также  
+ [Транзакции](transactions.md)  
   
   

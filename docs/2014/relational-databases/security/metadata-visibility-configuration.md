@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187929"
 ---
 # <a name="metadata-visibility-configuration"></a>Настройка видимости метаданных
@@ -43,7 +43,7 @@ GO
   
 |||  
 |-|-|  
-|Представления каталога|[!INCLUDE[ssDE](../../includes/ssde-md.md)]**sp_help** хранимых процедур|  
+|Представления каталога|Хранимые процедуры компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help**|  
 |Метаданные, предоставляющие встроенные функции|Представления информационной схемы|  
 |представлений совместимости;|Расширенные свойства|  
   
@@ -51,8 +51,7 @@ GO
   
 |||  
 |-|-|  
-|Системные таблицы доставки журналов|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Системные таблицы агента|  
+|Системные таблицы доставки журналов|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Системные таблицы агента|  
 |Системные таблицы плана обслуживания базы данных|Системные таблицы резервных копий|  
 |Системные таблицы репликации|Репликация и хранимые процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_help **агента**|  
   
@@ -183,17 +182,17 @@ GO
 |**sys.partition_schemes**|**sys.data_spaces**|  
 |**sys.filegroups**|**sys.destination_data_spaces**|  
 |**sys.database_files**|**sys.allocation_units**|  
-|**sys.partitions**|**sys. messages**|  
-|**sys. schemas**|**sys.configurations**|  
+|**sys.partitions**|**sys.messages**|  
+|**sys.schemas**|**sys.configurations**|  
 |**sys.sql_dependencies**|**sys.type_assembly_usages**|  
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
 ## <a name="see-also"></a>См. также:  
- [ПРЕДОСТАВЛЕНИЕ &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
- [DENY &#40;&#41;Transact-SQL](/sql/t-sql/statements/deny-transact-sql)   
- [ОТОЗВАТЬ &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   
- [Предложение EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql)   
+ [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)   
+ [DENY (Transact-SQL)](/sql/t-sql/statements/deny-transact-sql)   
+ [REVOKE (Transact-SQL)](/sql/t-sql/statements/revoke-transact-sql)   
+ [Предложение EXECUTE AS (Transact-SQL)](/sql/t-sql/statements/execute-as-clause-transact-sql)   
  [Представления каталога (Transact-SQL)](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
- [Представления совместимости &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
+ [Представления совместимости (Transact-SQL)](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
   
   

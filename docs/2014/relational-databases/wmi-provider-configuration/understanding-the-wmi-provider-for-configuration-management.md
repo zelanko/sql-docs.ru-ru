@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b224868d4d9fc111cdbf9482282767420b6adcc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205148"
 ---
 # <a name="understanding-the-wmi-provider-for-configuration-management"></a>Основные сведения о поставщике WMI для управления конфигурацией
@@ -27,10 +27,10 @@ ms.locfileid: "63205148"
  Получение экземпляра  
  Получение экземпляра определенного типа класса.  
   
- Перечисление.  
+ Перечисление  
  Перечисление всех экземпляров типа класса.  
   
- Изменения  
+ Изменение  
  Изменение определенного экземпляра типа класса.  
   
  Классы содержат методы, позволяющие изменять их свойства.  
@@ -45,7 +45,7 @@ ms.locfileid: "63205148"
   
  Дополнительные сведения о приложениях для управления программированием с помощью поставщика WMI см. в документации по инструментарию WMI в [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Работа с поставщиком WMI для управления конфигурацией](working-with-the-wmi-provider-for-configuration-management.md)   
  [Использование WQL и языков сценариев с поставщиком WMI для управления конфигурациями](using-wql-and-scripting-languages-with-the-wmi-provider.md)  
   

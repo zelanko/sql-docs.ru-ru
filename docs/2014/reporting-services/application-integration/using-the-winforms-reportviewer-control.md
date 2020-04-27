@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 456b9df06540f3708ea231b872a929007b5af329
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63239032"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Использование элемента управления WinForms ReportViewer
@@ -26,7 +26,7 @@ ms.locfileid: "63239032"
   
 1.  Создайте новое приложение Windows, используя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]либо.  
   
-     \-Ни  
+     \- - или -  
   
      Открыть существующий проект приложения Windows и добавить новую форму.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63239032"
   
  Если отчет, который требуется просмотреть, был развернут на сервере отчетов, выберите параметр ** \<серверный отчет>** в раскрывающемся списке **выберите отчет** . После выбора параметра ** \<серверный отчет>** появляются два дополнительных свойства: **URL-адрес сервера отчетов** и **путь к отчету**. Свойство **URL-адрес сервера отчетов** задает адрес сервера отчетов, а свойство **Путь к отчету** задает полный путь к подготавливаемому к просмотру отчету.  
   
- ![Выбор отчета сервера](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Выбор отчета сервера")  
+ ![Выбор серверного отчета](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Выбор серверного отчета")  
   
  Если просматриваемый отчет является отчетом в локальном режиме, выберите параметр **Создать новый отчет** для запуска конструктора отчетов или отчет, который уже является частью существующего проекта.  
   
@@ -501,7 +501,7 @@ Public Class Form1
 End Class  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Интеграция служб Reporting Services с помощью элементов управления ReportViewer](../application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
   
   

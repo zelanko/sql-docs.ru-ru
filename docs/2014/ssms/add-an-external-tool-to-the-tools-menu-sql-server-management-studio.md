@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cca14f144e442fbe75e41dec6ce652c4603863b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63226174"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>Добавление внешнего средства в меню «Сервис» (среда SQL Server Management Studio)
-  Вы можете запустить любое [!INCLUDE[msCoName](../includes/msconame-md.md)] приложение или [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Windows из [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. В меню **Сервис** можно добавлять и затем запускать внешние приложения.  
+  Любое приложение [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows или [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] можно запустить из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. В меню **Сервис** можно добавлять и затем запускать внешние приложения.  
   
 ### <a name="to-add-an-external-tool-to-the-tools-menu"></a>Добавление внешнего средства в меню «Сервис»  
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188685"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
@@ -48,7 +48,7 @@ ms.locfileid: "63188685"
 ### <a name="sql_sopt_ss_cursor_options"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
  Атрибут SQL_SOPT_SS_CURSOR указывает, будет ли драйвер использовать для курсоров специфичные для данного драйвера параметры настройки производительности. [SQLGetData](sqlgetdata.md) не допускается, если заданы эти параметры. Значение по умолчанию равно SQL_CO_OFF. Значение аргумента *ValuePtr* имеет тип SQLLEN.  
   
-|Значение *ValuePtr*|Description|  
+|Значение *ValuePtr*|Описание|  
 |----------------------|-----------------|  
 |SQL_CO_OFF|По умолчанию. Отключает быстрые однопроходные курсоры, только для чтения и автовыборки, включает **SQLGetData** для однопроходных курсоров только для чтения. Если атрибут SQL_SOPT_SS_CURSOR_OPTIONS имеет значение SQL_CO_OFF, тип курсора не изменится. То есть быстрый однопроходный курсор останется быстрым однопроходным курсором. Чтобы изменить тип курсора, приложение должно установить другой тип курсора с помощью `SQLSetStmtAttr`/SQL_ATTR_CURSOR_TYPE.|  
 |SQL_CO_FFO|Включает быстрые однопроходные курсоры только для чтения, отключает **SQLGetData** на однопроходных курсорах только для чтения.|  
@@ -62,7 +62,7 @@ ms.locfileid: "63188685"
 ### <a name="sql_sopt_ss_defer_prepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  Атрибут SQL_SOPT_SS_DEFER_PREPARE определяет, была ли инструкция подготовлена немедленно или отложена до выполнения **SQLExecute**, [SQLDescribeCol](sqldescribecol.md) или [SQLDescribeParam](sqldescribeparam.md) . В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 и более ранних версиях это свойство не учитывается (подготовка не откладывается). Значение аргумента *ValuePtr* имеет тип SQLLEN.  
   
-|Значение *ValuePtr*|Description|  
+|Значение *ValuePtr*|Описание|  
 |----------------------|-----------------|  
 |SQL_DP_ON|По умолчанию. После вызова [функции SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360)подготовка инструкции откладывается до вызова **SQLExecute** или выполнения операции метасвойства (**SQLDescribeCol** или **SQLDescribeParam**).|  
 |SQL_DP_OFF|Инструкция подготовлена сразу после выполнения **SQLPrepare** .|  
@@ -72,7 +72,7 @@ ms.locfileid: "63188685"
   
  Значение аргумента *ValuePtr* имеет тип SQLLEN.  
   
-|Значение *ValuePtr*|Description|  
+|Значение *ValuePtr*|Описание|  
 |----------------------|-----------------|  
 |SQL_RE_OFF|По умолчанию. Драйвер ODBC не использует настройки локали на клиенте при преобразовании данных в денежном формате, формате даты и времени в строковые данные.|  
 |SQL_RE_ON|Драйвер ODBC использует настройки локали на клиенте при преобразовании данных в денежном формате, формате даты и времени в символьные данные.|  
@@ -87,7 +87,7 @@ ms.locfileid: "63188685"
 ### <a name="sql_sopt_ss_textptr_logging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
  Атрибут SQL_SOPT_SS_TEXTPTR_LOGGING переключает ведение журнала операций над столбцами, содержащими **текстовые** или **графические** данные. Значение аргумента *ValuePtr* имеет тип SQLLEN.  
   
-|Значение *ValuePtr*|Description|  
+|Значение *ValuePtr*|Описание|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|Отключает ведение журнала операций, выполняемых с данными типа **Text** и **Image** .|  
 |SQL_TL_ON|По умолчанию. Включает ведение журнала операций, выполняемых с данными типа **Text** и **Image** .|  
@@ -95,7 +95,7 @@ ms.locfileid: "63188685"
 ### <a name="sql_sopt_ss_hidden_columns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  В результирующем наборе атрибут SQL_SOPT_SS_HIDDEN_COLUMNS предоставляет столбцы, скрытые в инструкции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE. По умолчанию драйвер не предоставляет доступ к этим столбцам. Значение аргумента *ValuePtr* имеет тип SQLLEN.  
   
-|Значение *ValuePtr*|Description|  
+|Значение *ValuePtr*|Описание|  
 |----------------------|-----------------|  
 |SQL_HC_OFF|По умолчанию. Столбцы FOR BROWSE в результирующем наборе скрыты.|  
 |SQL_HC_ON|Обеспечивает доступ к столбцам FOR BROWSE.|  
@@ -129,7 +129,7 @@ ms.locfileid: "63188685"
   
  Атрибут SQL_SOPT_SS_NAME_SCOPE принадлежит к типу SQLULEN.  
   
-|Значение *ValuePtr*|Description|  
+|Значение *ValuePtr*|Описание|  
 |----------------------|-----------------|  
 |SQL_SS_NAME_SCOPE_TABLE|По умолчанию.<br /><br /> При использовании возвращающих табличное значение параметров этот атрибут указывает, что нужно возвратить метаданные реально существующих таблиц.<br /><br /> При использовании функции разреженных столбцов SQLColumns возвращает только столбцы, не являющиеся членами разреженного `column_set`.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Указывает, что приложению требуются метаданные для табличного типа, а не для реально существующих таблиц (функции работы с каталогами должны возвращать метаданные для табличных типов). Затем приложение передает TYPE_NAME возвращающего табличное значение параметра в виде параметра *TableName* .|  
@@ -145,7 +145,7 @@ ms.locfileid: "63188685"
   
  Если функция каталога, отличная от then SQLTables, SQLColumns или SQLPrimaryKeys, вызывается, когда SQL_SOPT_SS_NAME_SCOPE имеет значение, отличное от SQL_SS_NAME_SCOPE_TABLE, возвращается SQL_ERROR. Создается диагностическая запись с параметром SQLSTATE HY010 и сообщением «Ошибочная последовательность функций (значение атрибута SQL_SOPT_SS_NAME_SCOPE не равно SQL_SS_NAME_SCOPE_TABLE)».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функция SQLGetStmtAttr](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

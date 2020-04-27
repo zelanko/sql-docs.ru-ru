@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2a105fd636c454ab236764611f1e57729ccad6ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192441"
 ---
 # <a name="setdefaults-method-cinstance-class"></a>Метод SetDefaults (класс CInstance)
@@ -40,12 +40,12 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объектами*  
+ *object*  
  Объект [класса CInstance](cinstance-class.md) , представляющий экземпляр клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |*овервритеалл*|Логическое значение, указывающее, следует ли перезаписывать существующие значения в экземпляре клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. `true`, если следует; в противном случае — `false`.|  
   
@@ -54,7 +54,7 @@ OverwriteAll
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

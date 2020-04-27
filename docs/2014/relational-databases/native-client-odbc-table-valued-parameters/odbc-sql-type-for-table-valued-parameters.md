@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 90857b24fb467df0292beeb88fb9751e68204d12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63199989"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>Тип ODBC SQL для параметров, возвращающих табличное значение
@@ -35,11 +35,11 @@ ms.locfileid: "63199989"
   
  Значения столбца возвращающего табличные значения параметра имеют те же возможности преобразования данных, как параметры и результирующие столбцы.  
   
- В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях возвращающий табличное значение параметр может быть только входным параметром. Если предпринимается попытка задать для SQL_DESC_PARAMETER_TYPE значение, отличное от SQL_PARAM_INPUT через SQLBindParameter или SQLSetDescField, возвращается SQL_ERROR и в инструкцию добавляется диагностическая запись с параметром SQLSTATE = HY105 и сообщением «Invalid Введите ".  
+ В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях возвращающий табличное значение параметр может быть только входным параметром. Если предпринимается попытка задать для SQL_DESC_PARAMETER_TYPE значение, отличное от SQL_PARAM_INPUT через SQLBindParameter или SQLSetDescField, возвращается SQL_ERROR, а в инструкцию с SQLSTATE = HY105 и сообщением «Недопустимый тип параметра» добавляется запись диагностики.  
   
  Столбцы возвращающего табличное значение параметра не могут использовать в качестве параметра *StrLen_or_IndPtr*значение SQL_DEFAULT_PARAM, так как значения по умолчанию не поддерживаются возвращающими табличное значение параметрами. Вместо этого приложение может установить атрибут столбца SQL_CA_SS_COL_HAS_DEFAULT_VALUE в значение 1. Это значит, что во всех строках столбца будут значения по умолчанию. Если *StrLen_or_IndPtr* имеет значение SQL_DEFAULT_PARAM, то SQLExecute или SQLExecDirect возвращает SQL_ERROR, а запись диагностики будет добавлена в инструкцию с параметром SQLSTATE = HY090 и сообщением "Недопустимая строка или длина буфера".  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Возвращающие табличное значение параметры &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
   
   

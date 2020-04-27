@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 302ac36150d21dfecca1e6c6edfbcf6fd86c42f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63226140"
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>Метод SetBoolValue (класс SqlServiceAdvancedProperty)
@@ -37,12 +37,12 @@ object
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объектами*  
+ *object*  
  Объект [класса SqlServiceAdvancedProperty](../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) , представляющий дополнительное свойство.  
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |*булвалуе*|Логическое значение дополнительного свойства.|  
   
@@ -52,7 +52,7 @@ object
 ## <a name="remarks"></a>Remarks  
  Чтобы задать логическое значение, свойство должно иметь логический тип.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

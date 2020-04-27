@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8c565d924b6d8ed6340d60022f9436ec5a34347
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200429"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>Использование инструкций по курсорам (ODBC)
   Чтобы использовать курсоры, сначала необходимо задать атрибуты соединения и инструкции, которые управляют режимом работы курсоров ODBC. Курсоры позволяют приложению получать несколько строк для каждой выборки и выполнять инструкции UPDATE, INSERT и DELETE для текущего положения курсора.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Использование курсоров &#40;ODBC&#41;](use-cursors-odbc.md)  
   
@@ -30,7 +30,7 @@ ms.locfileid: "63200429"
   
 -   [Получение и обновление наборов строк &#40;ODBC&#41;](fetch-and-update-rowsets-odbc.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ODBC How-to Topics](../odbc-how-to-topics.md)  
   
   

@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187079"
 ---
 # <a name="enhance-general-replication-performance"></a>Повышение общей производительности репликации
@@ -33,7 +33,7 @@ ms.locfileid: "63187079"
   
 ## <a name="server-and-network"></a>Сервер и сеть  
   
--   Задайте минимальный и максимальный объем памяти, выделенной для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].  
+-   Установите минимальное и максимальное количество памяти, выделенное для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].  
   
      По умолчанию компонент [!INCLUDE[ssDE](../../../includes/ssde-md.md)] изменяет свои требования к памяти динамически, исходя из доступных ресурсов системы. Чтобы исключить случаи отсутствия доступной памяти во время выполнения операций репликации, используйте параметр **min server memory** для установки минимально доступной памяти. Во избежание размещения на диске страниц системной памяти можно также установить максимальный объем памяти с помощью параметра **max server memory** . Дополнительные сведения см. в статье [Параметры конфигурации сервера "Server Memory"](../../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
@@ -162,8 +162,8 @@ ms.locfileid: "63187079"
   
 -   [Работа с профилями агента репликации](../agents/work-with-replication-agent-profiles.md)  
   
--   [Просмотр и изменение параметров командной строки агента репликации &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+-   [Просмотр и изменение параметров командной строки агента репликации (среда SQL Server Management Studio)](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Основные понятия исполняемых файлов агента репликации](../concepts/replication-agent-executables-concepts.md).  
+-   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md).  
   
   

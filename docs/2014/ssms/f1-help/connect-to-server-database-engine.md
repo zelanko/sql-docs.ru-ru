@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 018ca302bf4d5fe8271369008ffbfec7d228cfbf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245739"
 ---
 # <a name="connect-to-server-database-engine"></a>Соединение с сервером (ядро СУБД)
-  Это диалоговое окно используется для просмотра или указания параметров при [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]соединении с. В большинстве случаев при подключении в поле **Имя сервера** нужно ввести имя компьютера, на котором расположена база данных, а затем нажать кнопку **Соединить**. Если выполняется соединение с [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], введите имя компьютера, а после него — **\sqlexpress**.  
+  Используйте это диалоговое окно для просмотра или настройки параметров при подключении к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. В большинстве случаев при подключении в поле **Имя сервера** нужно ввести имя компьютера, на котором расположена база данных, а затем нажать кнопку **Соединить**. Если выполняется соединение с [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], введите имя компьютера, а после него — **\sqlexpress**.  
   
  На возможность подключиться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]влияют многие факторы.  
   
@@ -43,8 +43,7 @@ ms.locfileid: "63245739"
  При подключении к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] доступны два режима проверки подлинности.  
   
  **Режим проверки подлинности Windows (проверка подлинности Windows)**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Режим проверки подлинности Windows позволяет подключаться с учетной записью Windows.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Режим проверки подлинности Windows позволяет подключаться с учетной записью Windows.  
   
  **Проверка подлинности SQL Server**  
  При подключении пользователя с указанным именем входа и паролем не через доверенное соединение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет проверку подлинности самостоятельно по наличию учетной записи входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и совпадения указанного пароля с ранее сохраненным. Если в службе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не задана учетная запись входа, проверка подлинности завершается ошибкой, о которой пользователь получит сообщение.  
@@ -61,7 +60,7 @@ ms.locfileid: "63245739"
  **Пароль**  
  Введите пароль для этого имени входа. Этот параметр доступен для редактирования только при подключении с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Подключение**  
+ **Подключить**  
  Нажмите, чтобы подключиться к выбранному выше серверу.  
   
  **Параметры**  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185572"
 ---
 # <a name="basic-data-mining-tutorial"></a>Учебник по основам интеллектуального анализа данных
@@ -51,11 +51,11 @@ ms.locfileid: "63185572"
  [Урок 3. Добавление и обработка моделей](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
  На этом занятии будет рассмотрено добавление модели в структуру. Создаваемые модели построены на основе следующих алгоритмов.  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Деревья принятия решений  
+-   алгоритм дерева принятия решений ([!INCLUDE[msCoName](../includes/msconame-md.md)]);  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Кластеризации  
+-   алгоритм кластеризации [!INCLUDE[msCoName](../includes/msconame-md.md)]  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Упрощенный алгоритм Байеса  
+-   упрощенный алгоритм Байеса ([!INCLUDE[msCoName](../includes/msconame-md.md)])  
   
  [Занятие 4. изучение моделей целевой рассылки &#40;учебник по основам интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
  На этом занятии будут рассмотрены анализ и интерпретация результатов каждой модели с использованием средств просмотра.  
@@ -63,7 +63,7 @@ ms.locfileid: "63185572"
  [Занятие 5. Тестирование моделей &#40;учебник по основам интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
  На этом занятии выполняется копия одной из моделей целевой рассылки, добавляется фильтр модели интеллектуального анализа данных для ограничения обучающих данных определенным набором клиентов, а затем производится оценка устойчивости модели.  
   
- [Занятие 6. Создание и работа с прогнозами &#40;учебник по основам интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Занятие 6. Создание прогнозов и работа с ними (учебник по интеллектуальному анализу данных — начальный уровень)](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
  На этом последнем занятии учебника по интеллектуальному анализу данных (начальный уровень) используется модель, которая позволяет прогнозировать, какие клиенты с наибольшей вероятностью купят велосипед. Затем производится детализация до базовых вариантов для получения контактных данных.  
   
 ## <a name="requirements"></a>Требования  
@@ -80,9 +80,9 @@ ms.locfileid: "63185572"
 > [!NOTE]  
 >  При работе с учебником может оказаться проще перемещаться между шагами, если добавить кнопки **следующий раздел** и **предыдущий раздел** на панель инструментов средства просмотра документов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Решения интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
  [Задачи и инструкции по модели интеллектуального анализа данных](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Создание и запрос моделей интеллектуального анализа данных с помощью расширений интеллектуального анализа: учебники &#40;Analysis Services-интеллектуальный анализ данных&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Создание моделей интеллектуального анализа данных и выполнение к ним запросов с помощью расширений интеллектуального анализа данных: учебники (службы Analysis Services — интеллектуальный анализ данных)](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3835f83efff9e720f7f8631d527b9547e3b4239a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245612"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
@@ -36,16 +36,16 @@ ms.locfileid: "63245612"
   
      [Безопасность](#Security)  
   
--   [Просмотр агент SQL Server журнала ошибок с помощью SQL Server Management Studio](#SSMSProcedure)  
+-   [Просмотр журнала ошибок агента SQL Server с помощью среды SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
  Узел агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображается в обозревателе объектов только при наличии у пользователя разрешения на использование узла.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для выполнения своих функций агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен быть настроен на использование учетных данных записи, которая является членом предопределенной роли сервера **sysadmin** в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта учетная запись должна иметь следующие разрешения Windows.  
   
 -   Вход в систему в качестве службы (SeServiceLogonRight)  
@@ -58,9 +58,9 @@ ms.locfileid: "63245612"
   
  Дополнительные сведения о разрешениях Windows, необходимых для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи службы агента, см. в разделе [Выбор учетной записи для службы агент SQL Server](select-an-account-for-the-sql-server-agent-service.md) и [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### <a name="to-view-the-includessnoversionincludesssnoversion-mdmd-agent-error-log"></a>Просмотр журнала ошибок агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="to-view-the-ssnoversion-agent-error-log"></a>Просмотр журнала ошибок агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  В **обозревателе объектов**щелкните значок «плюс», чтобы развернуть сервер, содержащий журнал агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который необходимо просмотреть.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "63245612"
      **Экспорт**  
      Открывает диалоговое окно, позволяющее экспортировать данные из сетки **Сведения о файле журнала** в текстовый файл.  
   
-     **Обновить**  
+     **Обновление**  
      Позволяет обновить представление выбранных журналов. При нажатии кнопки **Обновить** выбранные журналы заново считываются с целевого сервера с применением параметров фильтра.  
   
      **Filter**  
@@ -87,22 +87,22 @@ ms.locfileid: "63245612"
      **Поиск**  
      Позволяет найти определенный текст в файле журнала. Поиск с символами-шаблонами не поддерживается.  
   
-     **Позиции**  
+     **Остановить**  
      Прекращает загрузку записей файла журнала. Например, можно использовать этот параметр, если загрузка удаленного файла или файла журнала вне сети занимает длительное время, а нужно просмотреть лишь наиболее свежие записи.  
   
-     **Сводка по файлу журнала**  
+     **Сведения о файле журнала**  
      Эта информационная панель содержит сводку данных по фильтрации файла журнала. Если файл не фильтруется, на панели отображается текст **без фильтров**. Если фильтр применяется к журналу, отображается следующий текст: **Критерий отбора:** \<критерии фильтрации>.  
   
      **Сведения о выбранной строке**  
      Выберите строку для отображения дополнительных сведений о выбранной строке события внизу страницы. Порядок столбцов можно менять, перетаскивая их в нужное место сетки. Размер столбцов можно менять, перетаскивая разделители столбцов в заголовке сетки вправо или влево. Если дважды щелкнуть разделитель столбцов в заголовке сетки, ширина столбца будет автоматически подогнана под его содержимое.  
   
-     **Вхождение**  
+     **Экземпляр**  
      Имя экземпляра, к которому относится происшедшее событие. Оно отображается как*имя экземпляра* *компьютера*\\.  
   
      **Дата**  
      Дата события.  
   
-     **Source**  
+     **Источник**  
      Исходная функция, создавшая событие, например имя службы (MSSQLSERVER). Отображается не для всех типов журнала.  
   
      **Сообщение**  
@@ -111,7 +111,7 @@ ms.locfileid: "63245612"
      **Тип журнала**  
      Отображает тип журнала, которому принадлежит событие. Все выбранные журналы отображаются в окне сводки файла журнала.  
   
-     **Источник журнала**  
+     **Log Source**  
      Отображает описание исходного журнала, в котором зарегистрировано событие.  
   
 5.  После завершения нажмите кнопку **Закрыть**.  

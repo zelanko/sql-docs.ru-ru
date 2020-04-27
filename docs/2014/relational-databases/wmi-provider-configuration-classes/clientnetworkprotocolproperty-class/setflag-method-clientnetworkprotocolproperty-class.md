@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6c33eca0bf3281243aeee42ed89001cf9108d5d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245092"
 ---
 # <a name="setflag-method-clientnetworkprotocolproperty-class"></a>Метод SetFlag (класс ClientNetworkProtocolProperty)
@@ -39,12 +39,12 @@ BoolValue
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объектами*  
+ *object*  
  A [класса ClientNetworkProtocolProperty](clientnetworkprotocolproperty-class.md) , который представляет атрибут сетевого протокола, используемого [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |*булвалуе*|Логическое значение, указывающее новое состояние флага.|  
   
@@ -53,7 +53,7 @@ BoolValue
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [настройка клиентских протоколов](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

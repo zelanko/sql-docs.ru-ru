@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea86115b88c693e70faa677fdea518f8886bae0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63241240"
 ---
 # <a name="non-deterministic-content-models"></a>недетерминированные модели содержимого
@@ -25,7 +25,7 @@ ms.locfileid: "63241240"
   
  Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 1 (SP1) недетерминированные модели содержимого принимаются, если ограничение вхождений равно 0, 1 или без ограничений.  
   
-## <a name="example-non-deterministic-content-model-rejected"></a>Пример. Отклонение недетерминированной модели содержимого  
+## <a name="example-non-deterministic-content-model-rejected"></a>Пример Недетерминированные модели содержимого отклоняются  
  В следующем примере предпринимается попытка создать XML-схему с недетерминированной моделью содержимого. Выполнение этого кода приведет к ошибке, поскольку неясно, должен ли элемент `<root>` содержать последовательность из двух элементов `<a>` или же элемент `<root>` должен содержать две последовательности, состоящие из элемента `<a>` .  
   
 ```  
@@ -59,7 +59,7 @@ GO
 </sequence>  
 ```  
   
-## <a name="example-non-deterministic-content-model-accepted"></a>Пример. Прием недетерминированной модели содержимого  
+## <a name="example-non-deterministic-content-model-accepted"></a>Пример Недетерминированные модели содержимого принимаются  
  Следующая схема отклоняется в версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , предшествующих [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 1 (SP1).  
   
 ```  

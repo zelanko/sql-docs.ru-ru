@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63215802"
 ---
 # <a name="delete-a-workload-group"></a>Удаление группы рабочей нагрузки
@@ -27,10 +27,10 @@ ms.locfileid: "63215802"
   
 -   **Удаление группы рабочей нагрузки с помощью**:  [обозревателя объектов](#DelWGObjEx), [свойств Resource Governor](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
  Группу рабочей нагрузки нельзя удалить, если она содержит активные сеансы.  
   
-###  <a name="LimitationsRestrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Ограничения  
  Если группа рабочей нагрузки содержит активные сеансы, то удалить или переместить ее в другой пул ресурсов путем вызова инструкции ALTER RESOURCE GOVERNOR RECONFIGURE для применения изменений не удастся. Во избежание этой проблемы можно предпринять одно из следующих действий.  
   
 -   Подождать, пока все сеансы затронутых групп завершатся, и заново выполнить инструкцию ALTER RESOURCE GOVERNOR RECONFIGURE.  
@@ -39,10 +39,10 @@ ms.locfileid: "63215802"
   
 -   Перезапустите сервер. После завершения процесса перезапуска удаленная группа не будет создана, а перемещенная группа будет использовать новое назначение пула ресурсов.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для удаления группы рабочей нагрузки требуется разрешение CONTROL SERVER.  
   
-##  <a name="DelWGObjEx"></a> Удаление группы рабочей нагрузки с помощью обозревателя объектов  
+##  <a name="delete-a-workload-group-using-object-explorer"></a><a name="DelWGObjEx"></a> Удаление группы рабочей нагрузки с помощью обозревателя объектов  
  **Удаление группы рабочей нагрузки с помощью обозревателя объектов**  
   
 1.  В среде[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]откройте обозреватель объектов и рекурсивно разверните узел **Управление** вплоть до узла **Пулы ресурсов**.  
@@ -53,7 +53,7 @@ ms.locfileid: "63215802"
   
 4.  В окне **Удаление объекта** эта группа рабочей нагрузки будет указана в списке **Объект для удаления** . Чтобы удалить группу рабочей нагрузки, нажмите кнопку **ОК**.  
   
-##  <a name="DelWGRGProp"></a> Удаление группы рабочей нагрузки с помощью свойств регулятора ресурсов  
+##  <a name="delete-a-workload-group-using-resource-governor-properties"></a><a name="DelWGRGProp"></a> Удаление группы рабочей нагрузки с помощью свойств регулятора ресурсов  
  **Удаление группы рабочей нагрузки на странице «Свойства регулятора ресурсов»**  
   
 1.  В обозревателе объектов разверните узел **Управление** и далее узлы, включая узел **Пулы ресурсов**.  
@@ -64,7 +64,7 @@ ms.locfileid: "63215802"
   
 4.  Чтобы удалить группу рабочей нагрузки, нажмите кнопку **ОК**.  
   
-##  <a name="DelWGTSQL"></a> Удаление группы рабочей нагрузки с помощью Transact-SQL  
+##  <a name="delete-a-workload-group-using-transact-sql"></a><a name="DelWGTSQL"></a> Удаление группы рабочей нагрузки с помощью Transact-SQL  
  **Удаление группы рабочей нагрузки с помощью Transact-SQL**  
   
 1.  Выполните инструкцию `DROP WORKLOAD GROUP`, указав имя группы рабочей нагрузки, подлежащей удалению.  

@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b9573d9359983e33cf23533787c26039572710ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204719"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Урок 2. Добавление моделей интеллектуального анализа данных к структуре интеллектуального анализа данных "Потребительская корзина"
+# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Урок 2. Добавление моделей к структуре интеллектуального анализа данных покупательского поведения
   На этом занятии вы добавите две модели интеллектуального анализа данных в структуру интеллектуального анализа данных "потребительская корзина", созданную на [занятии 1: создание структуры интеллектуального анализа данных для потребительской корзины](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). С помощью этих моделей интеллектуального анализа данных можно будет создавать прогнозы.  
   
  Для прогнозирования типов продуктов, которые клиенты могут приобретать одновременно, необходимо создать две модели интеллектуального анализа данных с помощью [алгоритма взаимосвязей (Майкрософт](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) ) и два разных значения для параметра *MINIMUM_PROBABILTY* .  
@@ -285,6 +285,6 @@ ADD MINING MODEL [<mining model name>]
  На следующем занятии требуется обработать структуру интеллектуального анализа данных «Потребительская корзина» и связанные с ней модели интеллектуального анализа данных.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 3. Обработка структуры интеллектуального анализа "Потребительская корзина"](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [Урок 3. Обработка структуры интеллектуального анализа данных «Потребительская корзина»](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
   
   

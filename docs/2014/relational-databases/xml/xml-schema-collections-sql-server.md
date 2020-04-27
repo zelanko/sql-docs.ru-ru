@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193040"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Коллекции XML-схем (SQL Server)
@@ -47,7 +47,7 @@ ms.locfileid: "63193040"
   
  Кроме того, можно использовать коллекцию схем XML для типизации переменных, параметров и столбцов типа XML.  
   
-##  <a name="ddl"></a> DDL для управления коллекциями схем  
+##  <a name="ddl-for-managing-schema-collections"></a><a name="ddl"></a> DDL для управления коллекциями схем  
  В базе данных можно создавать коллекции схем XML и связывать их с переменными и столбцами типа `xml`. Для управления коллекциями схем в базе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предусмотрены следующие инструкции DDL:  
   
 -   [CREATE XML SCHEMA COLLECTION (Transact-SQL)](/sql/t-sql/statements/create-xml-schema-collection-transact-sql) импортирует компоненты схемы в базу данных.  
@@ -60,7 +60,7 @@ ms.locfileid: "63193040"
   
  Удалить коллекцию схем можно с помощью инструкции DROP XML SCHEMA COLLECTION. При этом удаляются все схемы в коллекции и сам объект коллекции. Обратите внимание, что для удаления коллекции схем должны выполняться условия, описанные в разделе [DROP XML SCHEMA COLLECTION (Transact-SQL)](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql).  
   
-##  <a name="components"></a> Основные сведения о компонентах схемы  
+##  <a name="understanding-schema-components"></a><a name="components"></a> Основные сведения о компонентах схемы  
  При использовании инструкции CREATE XML SCHEMA COLLECTION в базу данных импортируются различные компоненты схемы. К компонентам схемы относятся ее элементы, атрибуты и определения типов. При использовании инструкции DROP XML SCHEMA COLLECTION коллекция удаляется целиком.  
   
  Инструкция CREATE XML SCHEMA COLLECTION сохраняет компоненты схемы в различных системных таблицах.  
@@ -129,7 +129,7 @@ ms.locfileid: "63193040"
 |**finalDefault**|Атрибут **final** применяется ко всем объявлениям элементов и определениям типов в схеме, где его еще нет. Ему присваивается значение, равное значению атрибута **finalDefault** .|  
 |**targetNamespace**|Сведения о компонентах, принадлежащих целевому пространству имен, хранятся в метаданных.|  
   
-##  <a name="perms"></a> Разрешения на коллекцию схем XML  
+##  <a name="permissions-on-an-xml-schema-collection"></a><a name="perms"></a> Разрешения на коллекцию схем XML  
  При этом требуется иметь соответствующие разрешения на выполнение следующих операций:  
   
 -   создание и загрузка коллекции XML-схем;  
@@ -158,7 +158,7 @@ ms.locfileid: "63193040"
   
      В этом подразделе речь идет о том, каким образом запрещаются разрешения на создание коллекции XML-схем и разрешения на объекты коллекции схем XML.  
   
-##  <a name="info"></a> Получение информации о схемах XML и коллекциях схем  
+##  <a name="getting-information-about-xml-schemas-and-schema-collections"></a><a name="info"></a> Получение информации о схемах XML и коллекциях схем  
  Коллекции XML-схем перечислены в представлении каталога sys.xml_schema_collections. Коллекция XML-схем «sys» определяется системой. Она содержит предопределенные пространства имен, которые можно использовать во всех пользовательских коллекциях XML-схем, не загружая их явно. Этот список содержит пространства имен xml, xs, xsi, fn и xdt. Двумя другими представлениями каталога являются sys.xml_schema_namespaces, в котором перечислены все пространства имен каждой коллекции XML-схем и sys.xml_components, в котором перечислены все компоненты каждой XML-схемы.  
   
  Встроенная функция **xml_schema_namespace**, *schemaName, XmlSchemacollectionName, Namespace-URI*, возвращает экземпляр типа `xml` данных. Этот экземпляр содержит фрагменты для XML-схем, содержащихся в коллекции XML-схем, за исключением предопределенных XML-схем.  

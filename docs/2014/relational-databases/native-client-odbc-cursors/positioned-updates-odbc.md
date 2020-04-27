@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2336944b583b6077d75bd5155bb4b52c66d9a852
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200522"
 ---
 # <a name="positioned-updates-odbc"></a>Позиционированное обновление (ODBC)
@@ -78,7 +78,7 @@ ms.locfileid: "63200522"
   
  Параметр **SQLSetPos** предпочтительнее, чем при использовании серверных курсоров. Если используется статический обновляемый курсор с библиотекой курсоров ODBC, то данная библиотека реализует обновления предложения WHERE CURRENT OF путем добавления предложения WHERE с ключевыми значениями базовой таблицы. Это может вызвать непреднамеренные обновления, если ключи в таблице не являются уникальными.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование курсоров &#40;ODBC&#41;](using-cursors-odbc.md)  
   
   

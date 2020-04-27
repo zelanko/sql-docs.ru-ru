@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250125"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>Вставка данных в таблицу и их обновление (учебник)
-  После создания таблицы **Products** можно вставлять данные в таблицу с помощью инструкции INSERT. После вставки данных содержимое строки изменяется с помощью инструкции UPDATE. Предложение WHERE предназначено для ограничения числа строк, изменяемых в процессе выполнения инструкции UPDATE до одной строки. Чтобы ввести следующие данные, потребуется четыре инструкции.  
+   После создания таблицы **Products** в нее можно вставлять данные с помощью инструкции INSERT. После вставки данных содержимое строки изменяется с помощью инструкции UPDATE. Предложение WHERE предназначено для ограничения числа строк, изменяемых в процессе выполнения инструкции UPDATE до одной строки. Чтобы ввести следующие данные, потребуется четыре инструкции.  
   
 |ProductID|ProductName|Price|ProductDescription|  
 |---------------|-----------------|-----------|------------------------|  
@@ -84,7 +84,7 @@ ms.locfileid: "63250125"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Чтение данных в таблице &#40;учебнике&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+ [Чтение данных из таблицы (учебник)](lesson-1-4-reading-the-data-in-a-table.md)  
   
 ## <a name="see-also"></a>См. также:  
  [INSERT (Transact-SQL)](/sql/t-sql/statements/insert-transact-sql)   

@@ -1,5 +1,5 @@
 ---
-title: 'Метод ISSAsynchStatus:: WaitForAsynchCompletion (OLE DB) | Документация Майкрософт'
+title: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af77f5f5519a49e2d9a744dceca2857cc88ce8e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192313"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
@@ -35,7 +35,7 @@ HRESULT WaitForAsynchCompletion(
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *параметр dwMillisecTimeOut имеет*[in]  
+ *dwMillisecTimeOut*[in]  
  Время ожидания в миллисекундах.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -68,8 +68,8 @@ HRESULT WaitForAsynchCompletion(
   
  Кроме того, в набор свойств DBPROPSET_SQLSERVERROWSET добавлено свойство SSPROP_ISSAsynchStatus. Поставщики, поддерживающие интерфейс [ISSAsynchStatus](issasynchstatus-ole-db.md), должны реализовывать это свойство со значением VARIANT_TRUE.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполнение асинхронных операций](../native-client/features/performing-asynchronous-operations.md)   
- [Метод ISSAsynchStatus &#40;OLE DB&#41;](issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus (OLE DB)](issasynchstatus-ole-db.md)  
   
   

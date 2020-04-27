@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188140"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>Обработка модели кластеризации последовательностей
@@ -39,9 +39,9 @@ ms.locfileid: "63188140"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Изучение модели кластеризации последовательностей &#40;руководстве по интеллектуальному анализу данных&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конструктор интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Алгоритм кластеризации последовательностей (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Требования к обработке и рекомендации &#40;&#41;интеллектуального анализа данных](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Требования к обработке и связанные замечания (интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

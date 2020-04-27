@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 625d56a38d88b3cccbea1c75ad88917af1a6f6dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63228943"
 ---
 # <a name="return-codes"></a>Коды возврата
@@ -44,7 +44,7 @@ ms.locfileid: "63228943"
   
  Функции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] члена поставщика собственного клиента OLE DB не возвращают код успешного выполнения S_FALSE. Все [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функции члена поставщика собственного клиента OLE DB всегда возвращают S_OK, чтобы указать на успешное выполнение.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ошибки](errors.md)  
   
   

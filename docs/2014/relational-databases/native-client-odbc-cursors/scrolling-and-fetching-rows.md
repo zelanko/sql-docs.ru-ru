@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0c0f7f2cad7eaecc212e2283fab7fc7d69f2ee7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63207127"
 ---
 # <a name="scrolling-and-fetching-rows"></a>Прокрутка и выборка строк
@@ -54,11 +54,11 @@ ms.locfileid: "63207127"
 |Ползунок вниз|SQL_FETCH_LAST|  
 |Случайное положение ползунка|SQL_FETCH_ABSOLUTE|  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Создание закладок строк в ODBC](scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование курсоров &#40;ODBC&#41;](using-cursors-odbc.md)  
   
   

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 170cbfffde1b28d60617f0e0166ca9f8e31f5fb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200184"
 ---
 # <a name="data-type-usage"></a>Использование типов данных
@@ -38,17 +38,15 @@ ms.locfileid: "63200184"
 |SQL_LONGVARBINARY, SQL_LONGVARCHAR, SQL_WLONGVARCHAR|Обновления столбцов с типами данных SQL_LONGVARBINARY, SQL_LONGVARCHAR или SQL_WLONGVARCHAR (с использованием предложения WHERE), которые влияют на несколько строк, полностью поддерживаются при подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6. *x* и более поздних версий. При подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4,2*x*возникает ошибка S1000, «частичная Вставка/обновление». Вставка или обновление столбца text или image не завершено», если обновление затрагивает более одной строки. **Примечание.**  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6,5 и более ранним версиям.|  
 |Параметры строковых функций|*string_exp* параметры строковых функций должны иметь тип данных SQL_CHAR или SQL_VARCHAR. Типы данных SQL_LONG_VARCHAR не поддерживаются в строковых функциях. Параметр *Count* должен быть меньше или равен 8 000, поскольку типы данных SQL_CHAR и SQL_VARCHAR ограничены максимальной длиной 8 000 символов.|  
 |Литералы времени|Литералы времени, хранящиеся в столбце SQL_TIMESTAMP ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных **DateTime** или **smalldatetime**), имеют значение даты, равное 1 января 1900.|  
-|**TIMESTAMP**|В столбец **timestamp** можно вручную вставить только значение null. Однако, поскольку столбцы **отметок времени**автоматически обновляются с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], значение NULL перезаписывается.|  
+|**timestamp**|В столбец **timestamp** можно вручную вставить только значение null. Однако, поскольку столбцы **отметок времени**автоматически обновляются с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], значение NULL перезаписывается.|  
 |**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Тип данных **tinyint** не подписан. Столбец **tinyint** привязан к переменной типа данных SQL_C_UTINYINT по умолчанию.|  
 |Псевдонимы типов данных|При подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4,2*x*драйвер ODBC добавляет значение NULL в определение столбца, которое явно не объявляет допустимость значения NULL для столбца. Поэтому допустимость значений NULL, помещенная в определение псевдонима типа данных, не учитывается.<br /><br /> При подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляру 4,2*x*столбцы с псевдонимом типа данных, имеющим базовый тип данных **char** или **binary** и для которого не объявлено допустимость значения NULL, создаются как типы данных **varchar** или **varbinary**. [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md), [SQLColumns](../native-client-odbc-api/sqlcolumns.md)и [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) возвращают SQL_VARCHAR или SQL_VARBINARY в качестве типа данных для этих столбцов. Данные, полученные из этих столбцов, не заполнены. **Примечание.**  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6,5 и более ранним версиям.|  
 |Типы данных большой длины|параметры для *данных на выполнение* ограничены как для SQL_LONGVARBINARY, так и для SQL_LONGVARCHARных типов данных.|  
 |Типы больших значений|Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента будет предоставлять типы **varchar (max)**, **varbinary (max)** и **nvarchar (max)** как SQL_VARCHAR, SQL_VARBINARY и SQL_WVARCHAR (соответственно) в API-интерфейсах, которые принимают или возвращают типы данных ODBC SQL.|  
-|Определяемый пользователем тип|Столбцы определяемого пользователем типа преобразуются в тип данных SQL_SS_UDT. Если столбец определяемого пользователем типа явно сопоставлен с другим типом в инструкции SQL с помощью методов ToString() или ToXMLString() определяемого пользователем типа или с помощью функций CAST/CONVERT, то тип столбца в результирующем наборе будет отражать реальный тип, к которому столбец был преобразован.<br /><br /> Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента может быть привязан только к столбцу определяемого пользователем типа как к двоичному типу. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает преобразование только между типами данных SQL_SS_UDT и SQL_C_BINARY.|  
-|XML|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически преобразует XML в текст Юникода. Тип XML преобразуется в SQL_SS_XML.|  
+|Определяемый пользователем тип|Столбцы определяемого пользователем типа преобразуются в тип данных SQL_SS_UDT. Если столбец определяемого пользователем типа явно сопоставлен с другим типом в инструкции SQL с помощью методов ToString() или ToXMLString() определяемого пользователем типа или с помощью функций CAST/CONVERT, то тип столбца в результирующем наборе будет отражать реальный тип, к которому столбец был преобразован.<br /><br /> Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента может быть привязан только к столбцу определяемого пользователем типа как к двоичному типу. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает преобразование только между типами данных SQL_SS_UDT и SQL_C_BINARY.|  
+|XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически преобразует XML в текст Юникода. Тип XML преобразуется в SQL_SS_XML.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обработка результатов &#40;ODBC&#41;](processing-results-odbc.md)  
   
   

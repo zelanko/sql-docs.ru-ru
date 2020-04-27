@@ -1,5 +1,5 @@
 ---
-title: Сопоставление типов данных в ITableDefinition | Документация Майкрософт
+title: Сопоставление типов данных в интерфейсе ITableDefinition | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e561742406c173b69bfb5040c2f2f51efdf5ed64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63201214"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>Сопоставление типов данных в интерфейсе ITableDefinition
@@ -30,28 +30,28 @@ ms.locfileid: "63201214"
   
  При указании новых типов данных столбцов с OLE DB типами данных с помощью элемента *wType* Structure, поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB сопоставляет OLE DB типы данных следующим образом.  
   
-|Тип данных OLE DB|SQL Server<br /><br /> тип данных|Дополнительная информация|  
+|Тип данных OLE DB|SQL Server<br /><br /> тип данных|Дополнительные сведения|  
 |----------------------|------------------------------|----------------------------|  
 |DBTYPE_BOOL|**bit**||  
-|DBTYPE_BYTES|**binary**, **varbinary**, **Image** или **varbinary (max)**|Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента проверяет элемент *ulColumnSize* структуры DBCOLUMNDESC. Основываясь на значении и версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра, поставщик OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента сопоставляет тип с **изображением**.<br /><br /> Если значение *ulColumnSize* меньше, чем максимальная длина столбца типа данных **binary** , то поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB проверяет элемент DBCOLUMNDESC *rgPropertySets* . Если DBPROP_COL_FIXEDLENGTH VARIANT_TRUE, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB Native Client сопоставляет тип с **двоичным**. Если значение свойства равно VARIANT_FALSE, поставщик OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client сопоставляет тип с типом **varbinary**. В любом случае элемент *ulColumnSize* структуры DBCOLUMNDESC определяет ширину создаваемого столбца SQL Server.|  
+|DBTYPE_BYTES|**binary**, **varbinary**, **image** или **varbinary(max)**|Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента проверяет элемент *ulColumnSize* структуры DBCOLUMNDESC. Основываясь на значении и версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра, поставщик OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента сопоставляет тип с **изображением**.<br /><br /> Если значение *ulColumnSize* меньше, чем максимальная длина столбца типа данных **binary** , то поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB проверяет элемент DBCOLUMNDESC *rgPropertySets* . Если DBPROP_COL_FIXEDLENGTH VARIANT_TRUE, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB Native Client сопоставляет тип с **двоичным**. Если значение свойства равно VARIANT_FALSE, поставщик OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client сопоставляет тип с типом **varbinary**. В любом случае элемент *ulColumnSize* структуры DBCOLUMNDESC определяет ширину создаваемого столбца SQL Server.|  
 |DBTYPE_CY|**money**||  
 |DBTYPE_DBTIMESTAMP|**datetime**||  
-|DBTYPE_GUID|**UNIQUEIDENTIFIER**||  
+|DBTYPE_GUID|**uniqueidentifier**||  
 |DBTYPE_I2|**smallint**||  
 |DBTYPE_I4|**int**||  
-|DBTYPE_NUMERIC|**ISNUMERIC**|Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB проверяет элементы дбколумдеск *бпреЦисион* и *bScale* , чтобы определить точность и масштаб для **числового** столбца.|  
-|DBTYPE_R4|**Real**||  
+|DBTYPE_NUMERIC|**numeric**|Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB проверяет элементы дбколумдеск *бпреЦисион* и *bScale* , чтобы определить точность и масштаб для **числового** столбца.|  
+|DBTYPE_R4|**real**||  
 |DBTYPE_R8|**float**||  
-|DBTYPE_STR|**char**, **varchar**, **Text** или **varchar (max)**|Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента проверяет элемент *ulColumnSize* структуры DBCOLUMNDESC. Основываясь на значении и версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра, поставщик OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента сопоставляет тип с **текстом**.<br /><br /> Если значение *ulColumnSize* меньше, чем максимальная длина столбца типа данных с многобайтовой кодировкой, то поставщик OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для собственного клиента проверяет элемент DBCOLUMNDESC *rgPropertySets* . Если DBPROP_COL_FIXEDLENGTH VARIANT_TRUE, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента сопоставляет тип с типом **char**. Если значение свойства равно VARIANT_FALSE, поставщик OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client сопоставляет тип с типом **varchar**. В любом случае элемент *ulColumnSize* структуры DBCOLUMNDESC определяет ширину создаваемого столбца [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|DBTYPE_UDT|**(UDT)**|Следующие сведения используются в `DBCOLUMNDESC` структурах с помощью **ITableDefinition:: CreateTable** , если требуются столбцы определяемого пользователем типа:<br /><br /> -   *pwSzTypeName* игнорируется.<br />-   *rgPropertySets* должен включать набор `DBPROPSET_SQLSERVERCOLUMN` свойств, как описано в разделе об `DBPROPSET_SQLSERVERCOLUMN` [использовании определяемых пользователем типов](../native-client/features/using-user-defined-types.md).|  
+|DBTYPE_STR|**char**, **varchar**, **text** или **varchar(max)**|Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента проверяет элемент *ulColumnSize* структуры DBCOLUMNDESC. Основываясь на значении и версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра, поставщик OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента сопоставляет тип с **текстом**.<br /><br /> Если значение *ulColumnSize* меньше, чем максимальная длина столбца типа данных с многобайтовой кодировкой, то поставщик OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для собственного клиента проверяет элемент DBCOLUMNDESC *rgPropertySets* . Если DBPROP_COL_FIXEDLENGTH VARIANT_TRUE, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента сопоставляет тип с типом **char**. Если значение свойства равно VARIANT_FALSE, поставщик OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client сопоставляет тип с типом **varchar**. В любом случае элемент *ulColumnSize* структуры DBCOLUMNDESC определяет ширину создаваемого столбца [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|DBTYPE_UDT|**БАЙТ**|Следующие сведения используются в `DBCOLUMNDESC` структурах с помощью **ITableDefinition:: CreateTable** , если требуются столбцы определяемого пользователем типа:<br /><br /> -   *pwSzTypeName* игнорируется.<br />-   *rgPropertySets* должен включать набор `DBPROPSET_SQLSERVERCOLUMN` свойств, как описано в разделе об `DBPROPSET_SQLSERVERCOLUMN` [использовании определяемых пользователем типов](../native-client/features/using-user-defined-types.md).|  
 |DBTYPE_UI1|**tinyint**||  
-|DBTYPE_WSTR|**nchar**, **nvarchar**, **ntext** или **nvarchar (max)**|Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента проверяет элемент *ulColumnSize* структуры DBCOLUMNDESC. Основываясь на значении, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик собственного клиента OLE DB сопоставляет тип с типом **ntext**.<br /><br /> Если значение *ulColumnSize* меньше, чем максимальная длина столбца типа данных character в Юникоде, то поставщик OLE DB для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента проверяет элемент DBCOLUMNDESC *rgPropertySets* . Если DBPROP_COL_FIXEDLENGTH VARIANT_TRUE, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента сопоставляет тип с типом **nchar**. Если значение свойства равно VARIANT_FALSE, поставщик OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client сопоставляет тип с типом **nvarchar**. В любом случае элемент *ulColumnSize* структуры DBCOLUMNDESC определяет ширину создаваемого столбца [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|DBTYPE_WSTR|**nchar**, **nvarchar**, **ntext** или **nvarchar(max)**|Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента проверяет элемент *ulColumnSize* структуры DBCOLUMNDESC. Основываясь на значении, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик собственного клиента OLE DB сопоставляет тип с типом **ntext**.<br /><br /> Если значение *ulColumnSize* меньше, чем максимальная длина столбца типа данных character в Юникоде, то поставщик OLE DB для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента проверяет элемент DBCOLUMNDESC *rgPropertySets* . Если DBPROP_COL_FIXEDLENGTH VARIANT_TRUE, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента сопоставляет тип с типом **nchar**. Если значение свойства равно VARIANT_FALSE, поставщик OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client сопоставляет тип с типом **nvarchar**. В любом случае элемент *ulColumnSize* структуры DBCOLUMNDESC определяет ширину создаваемого столбца [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |DBTYPE_XML|**XML**||  
   
 > [!NOTE]  
 >  При создании новой таблицы поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сопоставляет только значения перечислений типов данных OLE DB, указанные в предшествующей таблице. Попытка создать таблицу со столбцом любого другого типа данных OLE DB приводит к ошибке.  
   
-## <a name="see-also"></a>См. также:  
- [Типы данных &#40;OLE DB&#41;](data-types-ole-db.md)  
+## <a name="see-also"></a>См. также  
+ [Типы данных (OLE DB)](data-types-ole-db.md)  
   
   

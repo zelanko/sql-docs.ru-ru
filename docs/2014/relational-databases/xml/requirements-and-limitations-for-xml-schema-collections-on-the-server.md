@@ -25,10 +25,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63241261"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Требования и ограничения для коллекций XML-схем на сервере
@@ -41,9 +41,8 @@ ms.locfileid: "63241261"
 |**\<xsd:include>**|В настоящее время [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает этот элемент. XML-схемы, содержащие данный элемент, отклоняются сервером.<br /><br /> Чтобы обойти это ограничение, можно предварительно обработать XML-схемы, содержащие директиву **\<xsd:include>** , чтобы скопировать и объединить содержимое всех включенных схем в единую схему для передачи на сервер. Дополнительные сведения см. в разделе [Предварительная обработка схемы для слияния включаемых схем](preprocess-a-schema-to-merge-included-schemas.md).|  
 |**\<xsd:key>** , **\<xsd:keyref>** и **\<xsd:unique>**|В настоящее время [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает эти относящиеся к XSD ограничения для обеспечения уникальности или установки ключей и ссылок на ключи. Схемы XML, содержащие эти элементы, не могут быть зарегистрированы.|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает этот элемент. Сведения о другом способе обновления схем см. в разделе [Элемент &#60;xsd:redefine&#62;](the-xsd-redefine-element.md).|  
-|Значения **\<xsd:simpleType>**|Для простых типов, имеющих секундные компоненты, отличные от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и `xs:time`, `xs:dateTime` поддерживает точность только до миллисекунд, а для компонентов `xs:time` и `xs:dateTime` — до 100 наносекунд. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] накладывает ограничения на все распознанные перечисления простых типов XSD.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает использование значения NaN в объявлениях **\<xsd:simpleType>** .<br /><br /> Дополнительные сведения см. в разделе[Значения для объявлений &#60;xsd:simpleType&#62;](values-for-xsd-simpletype-declarations.md).|  
-|**xsi:schemaLocation** и **xsi:noNamespaceSchemaLocation**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пропускает эти атрибуты, если они присутствуют в данных экземпляра XML, вставленных в столбец или переменную с типом данных `xml`.|  
+|Значения **\<xsd:simpleType>**|Для простых типов, имеющих секундные компоненты, отличные от `xs:time` и `xs:dateTime`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает точность только до миллисекунд, а для компонентов `xs:time` и `xs:dateTime` — до 100 наносекунд. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] накладывает ограничения на все распознанные перечисления простых типов XSD.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает использование значения NaN в объявлениях **\<xsd:simpleType>** .<br /><br /> Дополнительные сведения см. в разделе[Значения для объявлений &#60;xsd:simpleType&#62;](values-for-xsd-simpletype-declarations.md).|  
+|**xsi:schemaLocation** и **xsi:noNamespaceSchemaLocation**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пропускает эти атрибуты, если они присутствуют в данных экземпляра XML, вставленных в столбец или переменную с типом данных `xml`.|  
 |**xs:QName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает типы, полученные из **xs:QName** , которые используют элемент ограничения XML-схемы.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает в качестве элемента-члена типы объединений с **xs:QName** .<br /><br /> Дополнительные сведения см. в разделе [Тип xs:QName](the-xs-qname-type.md).|  
 |Добавление элементов к существующей группе замещения|Нельзя добавить элементы в существующую группу замещения в коллекции XML-схем. Группа замещения в схеме XML ограничена в том, что главный элемент и все члены этого элемента должны быть определены в одной инструкции {CREATE &#124; ALTER} XML SCHEMA COLLECTION.|  
 |Канонические формы и ограничения шаблона|Каноническое представление значения не может нарушать ограничение шаблона для своего типа. Дополнительные сведения см. в разделе [Канонические формы и ограничения шаблона](canonical-forms-and-pattern-restrictions.md).|  

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0597054914dcbce7e7b1fb1475beb29bab7b8a57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200405"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>Непосредственное выполнение инструкции (ODBC)
@@ -83,9 +83,9 @@ ms.locfileid: "63200405"
   
 6.  При использовании входных параметров с данными времени выполнения вызов [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) возвращает SQL_NEED_DATA. Отправьте данные по фрагментам при помощи функций [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) и [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
   
- **Примечание** . Привязка на уровне столбца и на уровне строк чаще всего используется в сочетании с [функцией SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) и [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) , чем с [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
+ **Примечание.** Привязка на уровне столбцов и строк используется чаще совместно с функциями [SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) и [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) , чем с функцией [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Инструкции по выполнению запросов &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
   
   

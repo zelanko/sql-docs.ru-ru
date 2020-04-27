@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184406"
 ---
 # <a name="sequence-numbers"></a>Порядковые номера
@@ -81,7 +81,7 @@ CREATE SEQUENCE Schema.SequenceName
 ## <a name="examples"></a>Примеры  
  Дополнительные примеры см. в статьях [CREATE SEQUENCE (Transact-SQL)](/sql/t-sql/statements/create-sequence-transact-sql), [NEXT VALUE FOR (Transact-SQL)](/sql/t-sql/functions/next-value-for-transact-sql) и [sp_sequence_get_range](/sql/relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql).  
   
-### <a name="a-using-a-sequence-number-in-a-single-table"></a>A. Использование порядкового номера в одной таблице  
+### <a name="a-using-a-sequence-number-in-a-single-table"></a>А) Использование порядкового номера в одной таблице  
  В следующем примере создается схема с именем Test, таблица с именем Orders и последовательность с именем CountBy1, а затем строки вставляются в таблицу с помощью функции NEXT VALUE FOR.  
   
 ```  
@@ -126,7 +126,7 @@ GO
   
  `3        Brake   1`  
   
-### <a name="b-calling-next-value-for-before-inserting-a-row"></a>Б. Вызов NEXT VALUE FOR до вставки строки  
+### <a name="b-calling-next-value-for-before-inserting-a-row"></a>Б) Вызов NEXT VALUE FOR до вставки строки  
  В следующем примере с помощью таблицы `Orders` , созданной в примере А, объявляется переменная с именем `@nextID`, а затем с помощью функции NEXT VALUE FOR этой переменной присваивается следующий доступный порядковый номер. Предполагается, что в приложении выполняется некоторая обработка заказа, например заказчику сообщается номер `OrderID` потенциального заказа, а затем проводится проверка заказа. Независимо от времени, затрачиваемого на такую обработку, и от числа других заказов, добавляемых во время обработки, исходный номер сохраняется для использования в этом соединении. Наконец, инструкция `INSERT` добавляет заказ в таблицу `Orders` .  
   
 ```  
@@ -390,12 +390,12 @@ GO
  Инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)], использующие `SELECT *`, будут получать новый столбец последним, а не первым. Если такая обработка нежелательна, необходимо создать новую таблицу, переместить в нее данные, а затем повторно создать разрешения для новой таблицы.  
   
 ## <a name="related-content"></a>См. также  
- [Создание последовательности &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-sequence-transact-sql)  
+ [CREATE SEQUENCE (Transact-SQL)](/sql/t-sql/statements/create-sequence-transact-sql)  
   
- [Инструкции ALTER SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-sequence-transact-sql)  
+ [ALTER SEQUENCE (Transact-SQL)](/sql/t-sql/statements/alter-sequence-transact-sql)  
   
- [УДАЛИТЬ последовательность &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-sequence-transact-sql)  
+ [DROP SEQUENCE (Transact-SQL)](/sql/t-sql/statements/drop-sequence-transact-sql)  
   
- [&#40;IDENTITY&#41; &#40;свойства&#41;Transact-SQL](/sql/t-sql/statements/create-table-transact-sql-identity-property)  
+ [Свойство IDENTITY (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql-identity-property)  
   
   

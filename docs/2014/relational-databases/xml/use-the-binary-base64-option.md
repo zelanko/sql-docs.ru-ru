@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bda0167e1e55c3ded715de96027a153ec5a65de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63231258"
 ---
 # <a name="use-the-binary-base64-option"></a>Использование параметра BINARY BASE64
@@ -56,6 +56,6 @@ FOR XML AUTO, BINARY BASE64;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Использование с AUTO Mode для FOR XML](use-auto-mode-with-for-xml.md)  
+ [Использование AUTO Mode с FOR XML](use-auto-mode-with-for-xml.md)  
   
   

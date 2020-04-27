@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47e3c3991bd4732d542bf1ce79e83000e738ff77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245415"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>Устранение неполадок, связанных с многосерверными заданиями, использующими учетные записи-посредники
@@ -25,7 +25,7 @@ ms.locfileid: "63245415"
   
 -   «Для этого шага задания необходима учетная запись-посредник, однако проверка совпадения учетной записи-посредника на целевом сервере отключена.»  
   
-     Чтобы устранить эту ошибку, задайте для параметра **\ HKEY_LOCAL_MACHINE \СОФТВАРЕ\МИКРОСОФТ\МИКРОСОФТ SQL Server\MSSQL.** >**** _ \<n_\sqlserveragent\allowdownloadedjobstomatchproxyname значение подраздела реестра **1 (true)**. По умолчанию этот подраздел имеет значение **0** (`false`). Значение **MSSQL.** \< *n*> — имя экземпляра; Например, **MSSQL. 1** или **MSSQL. 3**.  
+     Чтобы устранить эту ошибку, задайте для параметра **\ HKEY_LOCAL_MACHINE \СОФТВАРЕ\МИКРОСОФТ\МИКРОСОФТ SQL Server\MSSQL.** >**\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** _ \<n_\sqlserveragent\allowdownloadedjobstomatchproxyname значение подраздела реестра **1 (true)**. По умолчанию этот подраздел имеет значение **0** (`false`). Значение **MSSQL.** \< *n*> — имя экземпляра; Например, **MSSQL. 1** или **MSSQL. 3**.  
   
 -   «Учетная запись-посредник не найдена.»  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63245415"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание многосерверной среды](create-a-multiserver-environment.md)  
   
   

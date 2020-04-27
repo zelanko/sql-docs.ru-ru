@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 076db2370f027b0d7dffeccb294899b48a065c40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188651"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>Общие сведения об управлении окнами среды SQL Server Management Studio
-  Окна инструментов в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] — это высокофункциональная, гибкая и эффективная система, позволяющая выполнять следующие задачи:  
+  Окна инструментов в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] — это высокофункциональная, гибкая и эффективная система, позволяющая:  
   
 -   увеличивать рабочее пространство пользователя для задач разработки и управления;  
   

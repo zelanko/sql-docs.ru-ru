@@ -23,14 +23,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 673ad13ff5688fb17eaa4b975644256f072a3aef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204621"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>Использование конструктора запросов и представлений с международными данными (визуальные инструменты для баз данных)
-  
   [Конструктор запросов и представлений](visual-database-tools.md) можно использовать с данными на любом языке и с любой версией операционной системы Windows. Ниже описаны различия, с которыми можно столкнуться при работе, и предоставлены сведения об управлении данными в международных приложениях.  
   
 ## <a name="localized-information-in-the-criteria-and-sql-panes"></a>Локализованные сведения на панелях критериев и «SQL»  

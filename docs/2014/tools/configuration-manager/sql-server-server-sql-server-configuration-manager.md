@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8e80e485e866ee34355bd18bb3f484e75ffcf96a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249693"
 ---
 # <a name="sql-server-ltservergt-sql-server-configuration-manager"></a>SQL Server &lt;сервер&gt; (диспетчер конфигурации SQL Server)
-  Это служба, которая поддерживает службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Чтобы просмотреть свойства службы, щелкните правой кнопкой мыши в области сведений, а затем выберите пункт **Свойства**.  
+  Это служба, которая поддерживает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Чтобы просмотреть свойства службы, щелкните правой кнопкой мыши в области сведений, а затем выберите пункт **Свойства**.  
   
  Сведения о компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]см. в электронной документации.  
   

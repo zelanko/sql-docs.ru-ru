@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2bcb3cfa20948e6bb0964d29331ca1d426b8916
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63199912"
 ---
 # <a name="change-workload-group-settings"></a>Изменение параметров группы рабочей нагрузки
@@ -29,7 +29,7 @@ ms.locfileid: "63199912"
   
 ## <a name="before-you-begin"></a>Перед началом  
   
-###  <a name="LimitationsRestrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Ограничения  
  Можно изменить параметры группы рабочей нагрузки по умолчанию и групп рабочей нагрузки, определяемых пользователем.  
   
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
@@ -38,10 +38,10 @@ ms.locfileid: "63199912"
   
  Разрешено создание индексов для использования большего объема памяти рабочей области, чем было указано изначально, в целях повышения производительности. Эта специальная обработка поддерживается регулятором ресурсов, однако изначально предоставленная память и любая дополнительная выделенная память ограничены настройками группы рабочей нагрузки и пула ресурсов.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для изменения параметров группы рабочей нагрузки требуется разрешение CONTROL SERVER.  
   
-##  <a name="ChgWGProp"></a> Изменение параметров группы рабочей нагрузки с использованием среды SQL Server Management Studio  
+##  <a name="change-workload-group-settings-using-sql-server-management-studio"></a><a name="ChgWGProp"></a> Изменение параметров группы рабочей нагрузки с использованием среды SQL Server Management Studio  
  **Изменение параметров группы рабочей нагрузки с использованием среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  В обозревателе объектов рекурсивно разверните узел **Управление** вплоть до и включая папку **Группы рабочей нагрузки** , которая включает группу рабочей нагрузки, подлежащую изменению.  
@@ -54,7 +54,7 @@ ms.locfileid: "63199912"
   
 5.  Чтобы сохранить изменения, нажмите кнопку **ОК**.  
   
-##  <a name="ChgWGTSQL"></a> Изменение параметров группы рабочей нагрузки с использованием Transact-SQL  
+##  <a name="change-workload-group-settings-using-transact-sql"></a><a name="ChgWGTSQL"></a> Изменение параметров группы рабочей нагрузки с использованием Transact-SQL  
  **Изменение параметров группы рабочей нагрузки с использованием Transact-SQL**  
   
 1.  Выполните инструкцию ALTER WORKLOAD GROUP, указав значения свойств, которые необходимо изменить.  

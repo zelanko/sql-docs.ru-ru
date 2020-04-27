@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f07d9b2f613ca1face8be3bb23bac78202da6655
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192148"
 ---
 # <a name="setting-properties"></a>Установка свойств
@@ -148,14 +148,14 @@ sp.QuotedIdentifierStatus = false;
 ```  
   
 ## <a name="setting-default-initialization-fields-in-visual-basic"></a>Задание полей инициализации по умолчанию на языке Visual Basic  
- Этот пример кода демонстрирует, как свести к минимуму число свойств объекта, инициализируемых в программе SMO. Чтобы использовать объект `using System.Collections.Specialized`, необходимо включить инструкцию <xref:System.Collections.Specialized.StringCollection>.  
+ Этот пример кода демонстрирует, как свести к минимуму число свойств объекта, инициализируемых в программе SMO. Чтобы использовать объект <xref:System.Collections.Specialized.StringCollection>, необходимо включить инструкцию `using System.Collections.Specialized`.  
   
  При помощи приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] можно сравнивать числовые инструкции, оправляемые экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], с этой оптимизацией.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBDefaultInitFields1](SMO How to#SMO_VBDefaultInitFields1)]  -->  
   
 ## <a name="setting-default-initialization-fields-in-visual-c"></a>Задание полей инициализации по умолчанию на языке Visual C#  
- Этот пример кода демонстрирует, как свести к минимуму число свойств объекта, инициализируемых в программе SMO. Чтобы использовать объект `using System.Collections.Specialized`, необходимо включить инструкцию <xref:System.Collections.Specialized.StringCollection>.  
+ Этот пример кода демонстрирует, как свести к минимуму число свойств объекта, инициализируемых в программе SMO. Чтобы использовать объект <xref:System.Collections.Specialized.StringCollection>, необходимо включить инструкцию `using System.Collections.Specialized`.  
   
  При помощи приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] можно сравнивать числовые инструкции, оправляемые экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], с этой оптимизацией.  
   

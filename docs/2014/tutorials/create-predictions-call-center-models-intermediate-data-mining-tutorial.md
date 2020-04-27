@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63217870"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Создание прогнозов для моделей Call Center (учебник по интеллектуальному анализу данных — средний уровень)
@@ -150,7 +150,7 @@ ms.locfileid: "63217870"
   
  В следующей таблице показан образец результатов для каждой смены.  
   
-|Shift|WageType|Прогнозируемый уровень обслуживания|Вероятность|  
+|Сдвиг|WageType|Прогнозируемый уровень обслуживания|Вероятность|  
 |-----------|--------------|-----------------------------|-----------------|  
 |AM|выходной|0,165|0,377520666|  
 |midnight|выходной|0,105|0,364105573|  
@@ -192,7 +192,7 @@ ms.locfileid: "63217870"
   
  Однако эти алгоритмы позволяют выполнять итерации с множеством комбинаций факторов и автоматически выявляют сильные корреляции, обеспечивая важную статистическую поддержку, которую было бы трудно получить, исследуя данные вручную с помощью Transact-SQL и даже PowerPivot.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры запросов модели логистической регрессии](../../2014/analysis-services/data-mining/logistic-regression-model-query-examples.md)   
  [Алгоритм логистической регрессии (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Алгоритм нейронной сети (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249395"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>Настройка и обработка модели прогнозирования (учебник по интеллектуальному анализу данных — средний уровень)
@@ -24,7 +24,7 @@ ms.locfileid: "63249395"
   
 1.  Вы настроите способ обработки модели периодов времени, добавив новое значение для параметра *PERIODICITY_HINT* .  
   
-2.  Вы узнаете о двух других важных параметрах алгоритма временных рядов (Майкрософт): FORECAST_METHOD, который позволяет управлять методом, используемым для прогнозирования, и PREDICTION_SMOOTHING, который позволяет настроить смешение долгосрочного и краткосрочного основывают.  
+2.  Вы узнаете о двух других важных параметрах алгоритма временных рядов (Майкрософт): FORECAST_METHOD, который позволяет управлять методом, используемым для прогнозирования, и PREDICTION_SMOOTHING, который позволяет настраивать смешение долгосрочных и краткосрочных прогнозов.  
   
 3.  При необходимости можно указать алгоритму, как вычислять отсутствующие значения.  
   
@@ -103,9 +103,9 @@ ms.locfileid: "63249395"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Изучите учебник по модели прогнозирования &#40;промежуточного интеллектуального анализа данных&#41;](../../2014/tutorials/exploring-the-forecasting-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Технический справочник по алгоритму временных рядов (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Алгоритм временных рядов (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Требования к обработке и рекомендации &#40;&#41;интеллектуального анализа данных](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Требования к обработке и связанные замечания (интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

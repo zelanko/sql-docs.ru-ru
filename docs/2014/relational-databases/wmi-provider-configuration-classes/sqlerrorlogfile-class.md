@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c5c6f1998cffc268a57318e0124f74d3411a3b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249319"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile, класс
@@ -40,11 +40,11 @@ class SQLErrorLogFile
   
 |||  
 |-|-|  
-|арчивенумбер|Тип данных:`uint32`<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Номер архива для файла журнала.|  
-|InstanceName|Тип данных:`string`<br /><br /> Тип доступа: только для чтения<br /><br /> Квалификаторы: ключ<br /><br /> <br /><br /> Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором хранится файл журнала.|  
-|LastModified|Тип данных:`datetime`<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Дата последнего изменения файла журнала.|  
-|LogFileSize|Тип данных:`uint32`<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Размер файла журнала в байтах.|  
-|Имя|Тип данных:`string`<br /><br /> Тип доступа: только для чтения<br /><br /> Квалификаторы: ключ<br /><br /> <br /><br /> Имя файла журнала.|  
+|арчивенумбер|Тип данных: `uint32`<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Номер архива для файла журнала.|  
+|InstanceName|Тип данных: `string`<br /><br /> Тип доступа: только для чтения<br /><br /> Квалификаторы: ключ<br /><br /> <br /><br /> Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором хранится файл журнала.|  
+|LastModified|Тип данных: `datetime`<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Дата последнего изменения файла журнала.|  
+|LogFileSize|Тип данных: `uint32`<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Размер файла журнала в байтах.|  
+|name|Тип данных: `string`<br /><br /> Тип доступа: только для чтения<br /><br /> Квалификаторы: ключ<br /><br /> <br /><br /> Имя файла журнала.|  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -81,7 +81,7 @@ Next
 "SELECT * FROM SqlErrorLogFile"  
 ```  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
  Для подключения к файлу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журнала через инструментарий WMI необходимо иметь следующие разрешения на локальном и на удаленном компьютерах:  
   
 -   Доступ на чтение к пространству имен WMI **Root\Microsoft\SqlServer\ComputerManagement10** . По умолчанию доступ для чтения задается для всех с помощью разрешения «Включить учетную запись».  
@@ -95,7 +95,7 @@ Next
   
  При соединении с использованием брандмауэра убедитесь, что в брандмауэре задано исключение для WMI на удаленных целевых компьютерах. Дополнительные сведения см. [в статье удаленное подключение к WMI, начиная с Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Класс SqlErrorLogEvent](sqlerrorlogevent-class.md)   
  [просматривать файлы журнала в режиме «вне сети»](../logs/view-offline-log-files.md)  
   
