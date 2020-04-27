@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3359e26ace467bbf8446aac6b68a0ef2716d09a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072894"
 ---
 # <a name="set-partition-writeback"></a>Настройка обратной записи секции
@@ -59,7 +59,7 @@ ms.locfileid: "66072894"
   
  Чтобы преобразовать данные обратной записи в секцию, откройте диалоговое окно **Преобразование в секцию** . Чтобы получить доступ к [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], щелкните правой кнопкой мыши таблицу обратной записи для секции, доступной для записи. Укажите имя секции, а также требуемое время разработки статистического выражения для секции — после или во время создания секции. Чтобы создать агрегат во время выбора секции, необходимо выбрать параметр, позволяющий копировать статистическую схему из существующей секции. Обычно (но не всегда) такой секцией является текущая секция обратной записи. Также можно выбрать параметр, позволяющий обрабатывать секцию при ее создании.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Секции, доступные для записи](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Включение обратной записи в куб OLAP на уровне ячейки в Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
  [Включение и защита ввода данных с помощью обратной записи служб Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=394953)  

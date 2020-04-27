@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac0c6637dd08dc2ea8927853b7a6bf8dccca454d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080352"
 ---
 # <a name="analysis-services-instance-management"></a>Управление экземплярами служб Analysis Services
@@ -42,21 +42,21 @@ ms.locfileid: "66080352"
 > [!NOTE]  
 >  Единственным исключением является PowerPivot для SharePoint. Администрирование развернутой на сервере системы PowerPivot всегда осуществляется в контексте фермы SharePoint. PowerPivot отличается от других режимов сервера тем, что всегда существует лишь один экземпляр, который управляется либо из центра администрирования SharePoint, либо средствами настройки PowerPivot. Подключение PowerPivot для SharePoint к среде SQL Server Management Studio или к среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]возможно, но нежелательно. Ферма SharePoint включает инфраструктуру, выполняющую синхронизацию состояния сервера и отслеживающую доступность сервера. Использование других средств может повлиять на эти операции. Дополнительные сведения об администрировании сервера PowerPivot см. в разделе [PowerPivot для SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 |Ссылка|Описание задачи|  
 |----------|----------------------|  
-|[Analysis Services &#40;конфигурации после установки&#41;](post-install-configuration-analysis-services.md)|Описываются обязательные и необязательные задачи, которые завершают или изменяют установку служб Analysis.|  
+|[Настройка после установки (службы Analysis Services)](post-install-configuration-analysis-services.md)|Описываются обязательные и необязательные задачи, которые завершают или изменяют установку служб Analysis.|  
 |[Подключение к службам Analysis Services](connect-to-analysis-services.md)|Описывает свойства строки подключения, клиентские библиотеки, методики проверки подлинности и действия по установке или завершению соединений.|  
 |[Наблюдение за экземпляром служб Analysis Services](monitor-an-analysis-services-instance.md)|Описываются средства и способы наблюдения за экземпляром сервера, в том числе сведения об использовании средства отслеживания производительности и приложения SQL Server Profiler.|  
 |[Создание скриптов для административных задач в службах Analysis Services](../script-administrative-tasks-in-analysis-services.md)|Сведения о том, как автоматизировать многие задачи администрирования, включая обработку.|  
-|[Сценарии глобализации для многомерных служб Analysis Services](../globalization-scenarios-for-analysis-services-multiidimensional.md)|Описание поддержки языков и параметров сортировки, действий по изменению свойств, советы по настройке и тестирования поведения языка и параметров сортировки.|  
-|[Журнал операций в службах Analysis Services](log-operations-in-analysis-services.md)|Описание журналов и их настройки.|  
+|[Сценарии глобализации для многомерных служб Analysis Services](../globalization-scenarios-for-analysis-services-multiidimensional.md)|Описывает поддерживаемые языки и параметры сортировки, действия по изменению обоих свойств и рекомендации по настройке и тестированию поведений языка и параметров сортировки.|  
+|[Журнал операций в службах Analysis Services](log-operations-in-analysis-services.md)|Описывает журналы и способы их настройки.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сравнение табличных и многомерных решений &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Средства настройки PowerPivot](../power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [Администрирование и настройка сервера PowerPivot в центре администрирования](../power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [Определение режима работы сервера для экземпляра Analysis Services](determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Определение режима работы сервера экземпляра служб Analysis Services](determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

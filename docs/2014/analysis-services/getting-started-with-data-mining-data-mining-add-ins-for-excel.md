@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e5a24a158681c3f596355b1b9abca6ada990531
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080936"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Приступая к работе с интеллектуальным анализом данных (надстройки интеллектуального анализа данных для Excel)
@@ -32,7 +32,7 @@ ms.locfileid: "66080936"
   
  Выбирать метод анализа следует исходя из целей. Надстройки интеллектуального анализа данных поддерживают следующие типы анализа:  
   
--   Контролируемое и неконтролируемое обучение  
+-   Обучение с учителем и без учителя  
   
 -   Кластеризация (сегментация)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66080936"
   
 -   Оценка двоичных результатов  
   
--   Linear regression  
+-   Линейная регрессия  
   
  Кроме того, надстройки предоставляют помощь на этапе подготовки данных: выборку данных, исследование и очистку данных.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66080936"
   
  [Проверка моделей и использование моделей для прогнозирования &#40;надстройки интеллектуального анализа данных для Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Что входит в состав надстроек интеллектуального анализа данных для Office](what-s-included-in-the-data-mining-add-ins-for-office.md)   
  [Технический справочник &#40;надстроек интеллектуального анализа данных для Excel&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
   

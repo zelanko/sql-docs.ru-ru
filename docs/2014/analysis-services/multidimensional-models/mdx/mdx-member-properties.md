@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c0326d45af68db966f120fa12e35eb59f30becc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074163"
 ---
 # <a name="using-member-properties-mdx"></a>Использование свойств элементов (многомерные выражения)
@@ -73,7 +73,7 @@ SELECT [<axis_specification>
   
 -   Заданным пользователем внутренним свойствам элемента должно предшествовать имя уровня, на котором они располагаются. Дополнительные сведения об использовании `PROPERTIES` ключевого слова с определяемыми пользователем свойствами элементов см. в разделе [определяемые пользователем свойства элементов &#40;&#41;многомерных выражений ](mdx-member-properties-user-defined-member-properties.md).  
   
-## <a name="see-also"></a>См. также:  
- [Создание и использование значений свойств &#40;&#41;многомерных выражений](../../creating-and-using-property-values-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Создание и использование значений свойств (многомерные выражения)](../../creating-and-using-property-values-mdx.md)  
   
   

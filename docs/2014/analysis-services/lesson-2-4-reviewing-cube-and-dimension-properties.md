@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c95d241d136f290110ac8a2b72540011a3922e24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079003"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>Просмотр свойств куба и измерения
@@ -59,7 +59,7 @@ ms.locfileid: "66079003"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Развертывание проекта служб Analysis Services](lesson-2-5-deploying-an-analysis-services-project.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр данных измерения в конструкторе измерений](multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  
   
   

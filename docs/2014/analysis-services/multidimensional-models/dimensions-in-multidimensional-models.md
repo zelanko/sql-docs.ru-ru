@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 520d6f11e5a472d5337a3747cc73c1d3656171c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075177"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Измерения в многомерных моделях
@@ -37,7 +37,7 @@ ms.locfileid: "66075177"
 > [!NOTE]  
 >  Разрабатывать и настраивать измерения, атрибуты и иерархии можно также программным способом с помощью XML для аналитики или объектов AMO. Дополнительные сведения см. в статьях [Analysis Services языка сценариев &#40;ASSL&#41; Справочник](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla) и [разработка с объекты AMO &#40;объектов AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  В следующей таблице описаны подразделы, содержащиеся в этом разделе.  
   
  [Определение измерений базы данных](define-database-dimensions.md)  
@@ -55,7 +55,7 @@ ms.locfileid: "66075177"
  [Использование мастера бизнес-аналитики для улучшения измерений](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
  Описывает, как улучшить измерение базы данных при помощи мастера бизнес-аналитики.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Кубы в многомерных моделях](cubes-in-multidimensional-models.md)  
   
   

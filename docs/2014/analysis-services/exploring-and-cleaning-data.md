@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 79d356aa1b14ac30ba5bc9a8f579fc66ddebea92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081271"
 ---
 # <a name="exploring-and-cleaning-data"></a>Исследование и очистка данных
@@ -98,7 +98,7 @@ ms.locfileid: "66081271"
   
  [Образец данных &#40;SQL Server надстройки интеллектуального анализа данных&#41;](sample-data-sql-server-data-mining-add-ins.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание модели интеллектуального анализа данных](creating-a-data-mining-model.md)   
  [Проверка моделей и использование моделей для прогнозирования &#40;надстройки интеллектуального анализа данных для Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
  [Развертывание и масштабирование моделей интеллектуального анализа &#40;надстройки интеллектуального анализа данных для Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  

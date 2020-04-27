@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076109"
 ---
 # <a name="cubes-in-multidimensional-models"></a>Кубы в многомерных моделях
@@ -31,7 +31,7 @@ ms.locfileid: "66076109"
 ## <a name="components-of-cubes"></a>Компоненты кубов  
  Из чего состоит куб:  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |Измерения|[Измерения в многомерных моделях](dimensions-in-multidimensional-models.md)|  
 |Меры и их группы|[Создание мер и групп мер в многомерных моделях](create-measures-and-measure-groups-in-multidimensional-models.md)|  
@@ -39,13 +39,13 @@ ms.locfileid: "66076109"
 |перспективами|[Перспективы в многомерных моделях](perspectives-in-multidimensional-models.md)|  
 |Иерархии|[Создание пользовательских иерархий](user-defined-hierarchies-create.md)|  
 |Действия|[Действия в многомерных моделях](actions-in-multidimensional-models.md)|  
-|Ключевые показатели эффективности (KPI)|[Ключевые показатели эффективности &#40;ключевые показатели эффективности&#41; в многомерных моделях](key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|Ключевые показатели эффективности (KPI)|[Ключевые показатели эффективности в многомерных моделях](key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |Вычисления|[Вычисления в многомерных моделях](calculations-in-multidimensional-models.md)|  
 |Translations|[Переводы в многомерных моделях](translations-in-multidimensional-models-analysis-services.md)|  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Создание куба с помощью мастера кубов](create-a-cube-using-the-cube-wizard.md)|Описывает использование мастера кубов для определения куба, измерений, атрибутов измерения и пользовательских иерархий.|  
 |[Создание мер и групп мер в многомерных моделях](create-measures-and-measure-groups-in-multidimensional-models.md)|Описывает процесс определения групп мер.|  

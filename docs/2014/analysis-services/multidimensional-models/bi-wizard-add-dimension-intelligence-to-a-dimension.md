@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd5d6917544cca3506d37ec13e058f4bce9fe77f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076922"
 ---
 # <a name="add-dimension-intelligence-to-a-dimension"></a>Добавление логики измерений к измерению
@@ -40,7 +40,7 @@ ms.locfileid: "66076922"
   
  Например, необходимо добавить логику измерений к измерению «Учетные записи». В списке **Тип измерения**выберите пункт **Учетные записи**. Затем, если у измерения есть атрибуты **Тип учетной записи** и **Описание учетной записи** , в столбце **Включить** установите флажки напротив типов учетной записи **Имя учетной записи** и **Тип учетной записи** . В столбце **Атрибут измерения** свяжите эти типы учетной записи с атрибутами измерения **Описание учетной записи** и **Тип учетной записи** соответственно.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Определение вычислений логики операций со временем с использованием мастера бизнес-аналитики](define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
   
   

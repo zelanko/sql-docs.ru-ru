@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079032"
 ---
 # <a name="adding-attributes-to-dimensions"></a>Добавление атрибутов к измерениям
@@ -64,13 +64,13 @@ ms.locfileid: "66079032"
   
 5.  Перетащите следующие столбцы из таблицы **Geography** в области **Представление источника данных** в область **Атрибуты** .  
   
-    -   **City**  
+    -   **Город**  
   
     -   **StateProvinceName**  
   
     -   **EnglishCountryRegionName**  
   
-    -   **Почтовый**  
+    -   **PostalCode**  
   
 6.  В меню Файл выберите команду **Сохранить все**.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66079032"
   
     -   **StandardCost**  
   
-    -   **Color**  
+    -   **Цвет**  
   
     -   **SafetyStockLevel**  
   
@@ -110,11 +110,11 @@ ms.locfileid: "66079032"
   
     -   **Class**  
   
-    -   **Стиль**  
+    -   **Style**  
   
     -   **ModelName**  
   
-    -   **StartDate**  
+    -   **/SD**  
   
     -   **Предшеству**  
   
@@ -125,7 +125,7 @@ ms.locfileid: "66079032"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Просмотр свойств куба и измерения](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по свойствам атрибута измерения](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

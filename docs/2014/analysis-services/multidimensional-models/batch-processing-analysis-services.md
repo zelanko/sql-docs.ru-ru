@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076944"
 ---
 # <a name="batch-processing-analysis-services"></a>Пакетная обработка (службы Analysis Services)
@@ -32,10 +32,10 @@ ms.locfileid: "66076944"
   
  [Пакетная обработка с использованием XMLA в среде Management Studio](#bkmk_xmla)  
   
-##  <a name="bkmk_ssdt"></a>Пакетная обработка в SQL Server Data Tools  
+##  <a name="batch-processing-in-sql-server-data-tools"></a><a name="bkmk_ssdt"></a> Пакетная обработка в SQL Server Data Tools  
  Прежде чем обрабатывать объекты в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], необходимо произвести развертывание содержащего их проекта. Дополнительные сведения см. в статье [Развертывание проектов служб Analysis Services (среда SSDT)](deploy-analysis-services-projects-ssdt.md).  
   
-1.  Откройте среду [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+1.  Откройте [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 2.  Откройте развернутый проект.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "66076944"
   
 9. В разделе **Параметры обработки**отметьте следующие параметры.  
   
-    -   **Порядок обработки** установлен на **последовательный**, а в качестве **режима транзакции** устанавливается **одна транзакция**.  
+    -   Для параметра**Порядок обработки** выберите **Последовательно**, а параметр **Режим транзакции** выберите **Одна транзакция**.  
   
-    -   **Параметр таблицы обратной записи** установлен для **использования существующего**.  
+    -   **Параметр таблицы обратной записи** установите в значение **Использовать существующие**.  
   
     -   В разделе **Затронутые объекты**установите флажок **Обработать затронутые объекты** .  
   
@@ -69,12 +69,12 @@ ms.locfileid: "66076944"
   
 14. Нажмите кнопку **Закрыть** на экране **Обработка объектов** .  
   
-##  <a name="bkmk_xmla"></a>Пакетная обработка с использованием XMLA в Management Studio  
+##  <a name="batch-processing-using-xmla-in-management-studio"></a><a name="bkmk_xmla"></a>Пакетная обработка с использованием XMLA в Management Studio  
  Вы можете создать скрипт XMLA, который выполняет пакетную обработку. Сначала создайте скрипт XMLA в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для каждого объекта, а затем объедините их в один запрос XMLA, который выполняется в интерактивном режиме или в рамках запланированной задачи.  
   
- Пошаговые инструкции см. в подразделе **Пример 2** раздела [Schedule SSAS Admразделаistrative Tasks with SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md).  
+ Пошаговые инструкции см. в **примере 2** в разделе [Планирование административных задач SSAS с помощью агент SQL Server](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обработка объектов многомерной модели](processing-a-multidimensional-model-analysis-services.md)  
   
   

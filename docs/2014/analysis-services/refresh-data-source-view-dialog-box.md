@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5ac09961db83c8c0f8906f2bd04ea20638e39b22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070508"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>Диалоговое окно «Обновление представления источников данных»
@@ -33,10 +33,10 @@ ms.locfileid: "66070508"
  Позволяет отобразить изменения (обновления, добавления и удаления), которые будут внесены в представление источника данных при нажатии кнопки **ОК**.  
   
  **Сохранить отчет**  
- Выберите этот параметр, чтобы отобразить диалоговое окно **Сохранение** и сохранить HTML-отчет в файл.  
+ Выберите этот параметр, чтобы отобразить диалоговое окно **Сохранить как** и сохранить HTML-отчет в файл.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Конструктор представлений источников данных &#40;Analysis Services многомерных данных&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Конструктор представлений источников данных (службы Analysis Services — многомерные данные)](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

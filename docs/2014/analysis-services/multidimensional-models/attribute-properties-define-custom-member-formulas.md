@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 969a8f11926957ae19512e92b68e02d12011dd03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077283"
 ---
 # <a name="define-custom-member-formulas"></a>Определение нестандартных формул элементов
@@ -71,7 +71,7 @@ Time.[Quarter 3] * 1.5
   
  При одновременном использовании вычисляемых элементов и формул пользовательской свертки следует помнить о порядке вычислений. Вычисляемые элементы разрешаются до формул пользовательской свертки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Атрибуты и иерархии атрибутов](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Настройка нестандартных формул элементов для атрибутов в измерении](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   

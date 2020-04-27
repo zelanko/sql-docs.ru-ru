@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d13675196f3e6cf755033e85213b20220b20918d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078015"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>Конструктор многомерных выражений (службы Analysis Services - Многомерные Данные)
@@ -33,7 +33,7 @@ ms.locfileid: "66078015"
 |**Метаданные**|Отображает метаданные для текущего объекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , который может быть включен в многомерное выражение, определенное в поле **Выражение**.<br /><br /> Скопировать синтаксис многомерного выражения для выбранного элемента можно, щелкнув этот элемент правой кнопкой мыши и выбрав пункт **Копировать** в контекстном меню или перетащив выбранный элемент в поле **Выражение**.|  
 |**Функции**|Отображает доступные функции многомерных выражений для текущего экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Перечисленные элементы извлекаются из набора строк схемы MDSCHEMA_FUNCTIONS.<br /><br /> Скопировать синтаксис многомерного выражения для выбранного элемента можно, щелкнув этот элемент правой кнопкой мыши и выбрав пункт **Копировать** в контекстном меню или перетащив выбранный элемент в поле **Выражение**.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Конструктор ролей &#40;данных ячеек&#41; &#40;Analysis Services многомерных данных&#41;](https://msdn.microsoft.com/library/ms177279(v=sql.120).aspx)  
   

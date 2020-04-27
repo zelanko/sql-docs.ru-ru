@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 847e9da07f8c255af8041071c63254b241490761
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074691"
 ---
 # <a name="calculation-context"></a>Контекст вычисления
@@ -38,7 +38,7 @@ ms.locfileid: "66074691"
   
 5.  Ячейки куба или вложенного куба на каждой оси, устраняющие пустые кортежи на оси и применяющие предложение HAVING.  
   
-6.  Дополнительные сведения см. в разделе [Establishing Cube Context in a Query &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md).  
+6.  Дополнительные сведения см. в разделе [Определение контекста куба в запросе (многомерные выражения)](establishing-cube-context-in-a-query-mdx.md).  
   
  В следующем запросе контекст вычисления для каждой оси строк ограничен элементом атрибута Country и элементом атрибута Calendar Year, указанным в предложении WHERE.  
   
@@ -69,9 +69,9 @@ WHERE (Customer.Country.France,
 > [!IMPORTANT]  
 >  Чтобы увеличить производительность запроса, следует удалить элементы и кортежи как можно раньше в процессе разрешений. Таким образом уменьшается время вычисления сложного запроса на конечном наборе элементов, поскольку запрос обрабатывает минимально возможное количество ячеек.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Определение контекста куба в запросе &#40;многомерных выражений&#41;](establishing-cube-context-in-a-query-mdx.md)   
  [Основные принципы запросов многомерных выражений &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [Основные понятия в Analysis Services &#40;многомерных выражений&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [Основные понятия многомерных выражений (службы Analysis Services)](../key-concepts-in-mdx-analysis-services.md)  
   
   

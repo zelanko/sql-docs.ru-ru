@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d553f0fbb7e8c4188ff8fec2ac292213547e43b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075991"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>Просмотр данных измерения в конструкторе измерений
@@ -36,7 +36,7 @@ ms.locfileid: "66075991"
     > [!NOTE]  
     >  Необходимо иметь в измерении преобразование, определенное для выбранного языка.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения об измерениях &#40;Analysis Services многомерных данных&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](dimensions-in-multidimensional-models.md)  
   

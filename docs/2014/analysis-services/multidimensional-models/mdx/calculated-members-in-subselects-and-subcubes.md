@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074784"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Вычисляемые элементы в подзапросах выборки и вложенных кубах
@@ -27,7 +27,7 @@ ms.locfileid: "66074784"
   
 |||  
 |-|-|  
-|Значение|Description|  
+|Применение|Описание|  
 |0|Вычисляемые элементы не допускаются в подзапросах выборки и вложенных кубах.<br /><br /> Если при вычислении подзапроса выборки или вложенного куба присутствует ссылка на вычисляемый элемент, возникает ошибка.|  
 |1|Вычисляемые элементы допускаются в подзапросах выборки и вложенных кубах, однако в возвращаемое подпространство восходящие элементы не вводятся.|  
 |2|Вычисляемые элементы допускаются в подзапросах выборки и вложенных кубах, и в возвращаемое подпространство вводятся восходящие элементы. Кроме того, в выборке вычисляемых элементов допускается смешанная гранулярность.|  
@@ -121,9 +121,9 @@ Where [Measures].[Reseller Sales Amount]
 ### <a name="remarks"></a>Remarks  
  В выражениях подзапроса выборки или вложенного куба допускается использование только элементов, вычисляемых в сеансе, или элементов, вычисляемых глобально. Наличие в многомерном запросе элементов, вычисляемых в запросе, приведет к ошибке выполнения выражения подзапроса выборки или вложенного куба.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Подзапросы выборки в запросе](subselects-in-queries.md)   
- [Поддерживаемые свойства XMLA &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
+ [Поддерживаемые свойства XMLA (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6592d81e91e0582c79bc1a8bb1264b6ab9a7b733
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080698"
 ---
 # <a name="impersonation-information-dialog-box-table-import-wizard"></a>Диалоговое окно «Сведения об олицетворении» (мастер импорта таблиц)
   Страница **Сведения об олицетворении** служит для указания учетных данных, которые будут использоваться [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] для соединения с источником данных. Дополнительные сведения об олицетворении учетных данных см. в разделе [Impersonation &#40;SSAS Tabular&#41;](tabular-models/impersonation-ssas-tabular.md).  
   
 ## <a name="options"></a>Параметры  
- **Имя и пароль конкретного пользователя Windows**  
+ **Имя и пароль определенного пользователя Windows**  
  Выберите этот параметр, чтобы в табличной модели использовались учетные данные безопасности указанной пользовательской учетной записи Windows.  
   
  **User name**  
@@ -41,7 +41,7 @@ ms.locfileid: "66080698"
  **Учетная запись службы**  
  Выберите этот параметр для использования учетных данных безопасности, связанных со службой [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , управляющей моделью.  
   
-## <a name="see-also"></a>См. также:  
- [Олицетворение &#40;табличные&#41;SSAS](tabular-models/impersonation-ssas-tabular.md)  
+## <a name="see-also"></a>См. также  
+ [Олицетворение (табличные службы SSAS)](tabular-models/impersonation-ssas-tabular.md)  
   
   

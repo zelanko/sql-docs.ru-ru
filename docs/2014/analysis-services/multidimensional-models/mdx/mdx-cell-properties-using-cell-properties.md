@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3c2c3d4838d0e21a1520197612dd08c679df843a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074341"
 ---
 # <a name="using-cell-properties-mdx"></a>Свойства ячеек (многомерные выражения)
@@ -47,23 +47,19 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>Поддерживаемые внутренние свойства ячеек  
  В следующей таблице перечислены поддерживаемые внутренние свойства ячеек, используемые в качестве значений `<property>` .  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |`ACTION_TYPE`|Битовая маска, определяющая существующие типы действий над ячейкой. Это свойство может принимать одно из следующих значений:<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Примечание. Действия детализации не поддерживаются для запросов, содержащих набор в предложении WHERE.|  
 |**BACK_COLOR**|Цвет фона при отображении свойства `VALUE` или `FORMATTED_VALUE`. Дополнительные сведения см. в разделе [Свойства ячеек FORE_COLOR и BACK_COLOR (многомерные выражения)](mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |`CELL_ORDINAL`|Порядковый номер ячейки в наборе данных.|  
-|**FONT_FLAGS**|Битовая маска, определяющая стиль шрифта. Например, значение 5 соответствует комбинации полужирного (`MDFF_BOLD`) и подчеркнутого (`MDFF_UNDERLINE`) стилей. Значение представляет собой результат побитовой операции OR над одной или несколькими следующими константами.<br /><br /> `MDFF_BOLD`= 1<br /><br /> 
-  `MDFF_ITALIC` = 2<br /><br /> 
-  `MDFF_UNDERLINE` = 4<br /><br /> 
-  `MDFF_STRIKEOUT` = 8|  
+|**FONT_FLAGS**|Битовая маска, определяющая стиль шрифта. Например, значение 5 соответствует комбинации полужирного (`MDFF_BOLD`) и подчеркнутого (`MDFF_UNDERLINE`) стилей. Значение представляет собой результат побитовой операции OR над одной или несколькими следующими константами.<br /><br /> `MDFF_BOLD` = 1<br /><br /> `MDFF_ITALIC` = 2<br /><br /> `MDFF_UNDERLINE` = 4<br /><br /> `MDFF_STRIKEOUT` = 8|  
 |**FONT_NAME**|Название шрифта, используемого для отображения свойства `VALUE` или `FORMATTED_VALUE`.|  
 |**FONT_SIZE**|Размер шрифта, используемого для отображения свойства `VALUE` или `FORMATTED_VALUE`.|  
 |**FORE_COLOR**|Цвет переднего плана при отображении свойства `VALUE` или `FORMATTED_VALUE`. Дополнительные сведения см. в разделе [Свойства ячеек FORE_COLOR и BACK_COLOR (многомерные выражения)](mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |`FORMAT`|Эквивалентно `FORMAT_STRING`.|  
 |`FORMAT_STRING`|Строка формата, с помощью которой создается значение свойства `FORMATTED_VALUE`. Дополнительные сведения см. в разделе [Содержание строки FORMAT_STRING (многомерные выражения)](mdx-cell-properties-format-string-contents.md).|  
 |`FORMATTED_VALUE`|Символьная строка, представляющая собой форматированный вывод свойства `VALUE`.|  
-|`LANGUAGE`|Локаль, к которой будет применяться `FORMAT_STRING`. 
-  `LANGUAGE` обычно используется для конвертации валют.|  
+|`LANGUAGE`|Локаль, к которой будет применяться `FORMAT_STRING`. `LANGUAGE` обычно используется для конвертации валют.|  
 |`UPDATEABLE`|Значение, определяющее возможность обновления ячейки. Это свойство может принимать одно из следующих значений:<br /><br /> `MD_MASK_ENABLED`(0x00000000) ячейку можно обновить.<br /><br /> `MD_MASK_NOT_ENABLED`(0x10000000) ячейка не может быть обновлена.<br /><br /> `CELL_UPDATE_ENABLED`(0x00000001) ячейка может быть обновлена в наборе ячеек.<br /><br /> `CELL_UPDATE_ENABLED_WITH_UPDATE`(0x00000002) ячейку можно обновить с помощью инструкции UPDATE. Операция может не выполниться, если обновляемая конечная ячейка не доступна для записи.<br /><br /> `CELL_UPDATE_NOT_ENABLED_FORMULA`(0x10000001) ячейка не может быть обновлена, поскольку в ее координатах ячейка имеет вычисляемый элемент; ячейка была извлечена с набором в предложении WHERE. Ячейку можно обновить, даже если значение ячейки зависит от формулы или от вычисляемого элемента (например, если она обрабатывается статистической функцией). В этом случае итоговое значение ячейки может не соответствовать обновленному значению, поскольку на результат влияют вычисления.<br /><br /> `CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE`(0x10000002) ячейка не может быть обновлена, так как не удается обновить меры, не являющиеся суммами (Count, min, Max, Distinct Count, полуаддитивные).<br /><br /> `CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE`(0x10000003) ячейка не может быть обновлена, поскольку ячейка не существует, так как она находится на пересечении меры и элемента измерения, не связанного с группой мер меры.<br /><br /> `CELL_UPDATE_NOT_ENABLED_SECURE`(0x10000005) ячейка не может быть обновлена, так как ячейка защищена.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CALCLEVEL`(0x10000006) зарезервировано для будущего использования.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE`(0x10000007) ячейка не может быть обновлена по внутренним причинам.<br /><br /> `CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE`(0x10000009) ячейка не может быть обновлена, поскольку обновление не поддерживается в моделях интеллектуального анализа данных, косвенных размерах или измерениях интеллектуального анализа.|  
 |`VALUE`|Неформатированное значение ячейки.|  
   
@@ -98,7 +94,7 @@ FROM [Adventure Works]
 CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Основные принципы запросов многомерных выражений &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>См. также  
+ [Основные принципы запросов многомерных выражений (службы Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 666b7fdf5af10b6726a1e1d7a2aaafa075bf8777
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080556"
 ---
 # <a name="import-from-a-multidimensional-data-source-ssas-tabular"></a>Импорт из многомерного источника данных (табличные службы SSAS)
@@ -32,8 +32,8 @@ ms.locfileid: "66080556"
   
 3.  Выполните шаги мастера импорта таблиц. На странице **Указание запроса MDX** можно указать запрос многомерных выражений. Для использования конструктора запросов многомерных выражений нажмите кнопку **Конструирование**на странице «Указание запроса MDX».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Импорт данных &#40;табличные&#41;SSAS](import-data-ssas-tabular.md)   
- [Поддерживаемые источники данных &#40;табличные&#41;SSAS](tabular-models/data-sources-supported-ssas-tabular.md)  
+ [Поддерживаемые источники данных (табличные службы SSAS)](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8793fe2e63d6867e8e5c12fef6ec73a6f7a27882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073812"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>Базовый скрипт многомерных выражений (многомерные выражения)
@@ -36,7 +36,7 @@ ms.locfileid: "66073812"
   
  Скрипт многомерных выражений по умолчанию также включает в себя команды, создающие именованные наборы, назначения и вычисляемые элементы, созданные в конструкторе кубов.  
   
--   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]непосредственно добавляет команды сценария в скрипт многомерных выражений по умолчанию.  
+-   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] добавляют команды непосредственно в скрипт многомерных выражений по умолчанию.  
   
 -   Для каждого именованного набора в кубе в скрипт многомерных выражений по умолчанию добавляется соответствующая инструкция CREATE SET.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "66073812"
  Все инструкции сценариев многомерных выражений  
  Инструкции скриптов многомерных выражений управляют контекстом и областью вычислений, а также поведением других инструкций в скрипте многомерных выражений. В эту категорию входят следующие инструкции:  
   
--   [СЧИТАЙТЕ](/sql/mdx/mdx-scripting-calculate)  
+-   [CALCULATE](/sql/mdx/mdx-scripting-calculate)  
   
--   [ФИКСИРОВАТЬ](/sql/mdx/mdx-scripting-freeze)  
+-   [FREEZE](/sql/mdx/mdx-scripting-freeze)  
   
 -   [КОТОРЫХ](/sql/mdx/mdx-scripting-scope)  
   
@@ -89,8 +89,8 @@ ms.locfileid: "66073812"
 <Natural hierarchy member> ::= <Natural hierarchy>.<identifier>[.<identifier>...]  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по языку многомерных выражений &#40;&#41;многомерных выражений](/sql/mdx/mdx-language-reference-mdx)   
- [Основные принципы создания скриптов многомерных выражений &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](mdx-scripting-fundamentals-analysis-services.md)  
   
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 307d2ff0419cf5def9f422f08daf349b80bcad2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075208"
 ---
 # <a name="designing-aggregations-analysis-services---multidimensional"></a>Проектирование агрегатов (службы Analysis Services — многомерные данные)
@@ -41,7 +41,7 @@ ms.locfileid: "66075208"
   
  Последний шаг мастера позволяет продолжить или отложить обработку. В первом случае будут созданы спроектированные агрегаты, а во втором они будут сохранены для будущей обработки. В зависимости от размеров секции, обработка может занять значительное время. При необходимости можно прервать обработку секции.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Aggregations and Aggregation Designs](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 701d7a49f7ddda60983a03723506442eac17866b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074553"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>Создание вычисляемых элементов с областью действия сеанса (многомерные выражения)
-  Для создания вычисляемых элементов, доступных в сеансе многомерных выражений, используется инструкция [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member). Вычисляемый элемент, созданный с помощью инструкции CREATE MEMBER, удаляется только при закрытии сеанса многомерных выражений.  
+  Для создания вычисляемых элементов, доступных в сеансе многомерных выражений, используется инструкция [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) . Вычисляемый элемент, созданный с помощью инструкции CREATE MEMBER, удаляется только при закрытии сеанса многомерных выражений.  
   
  Как показано в этом разделе, синтаксис инструкции CREATE MEMBER достаточно прост.  
   
@@ -51,7 +51,7 @@ sum(([Stores].[ByLocation].Lag(3) :
 [Stores].[ByLocation].NextMember), [Measures].[Units Sold])  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Создание вычисляемых элементов с областью действия запроса &#40;многомерных выражениях&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
+## <a name="see-also"></a>См. также  
+ [Создание вычисляемых элементов с областью действия запроса (многомерные выражения)](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b1ab26f596a669a5a0d13b6bb0c283a55851bd58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070269"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Диалоговое окно «Замена таблицы другой таблицей»
@@ -28,7 +28,7 @@ ms.locfileid: "66070269"
  **Источник данных**  
  Позволяет выбрать источник данных, откуда следует извлечь таблицу.  
   
- **Сетки**  
+ **Grid**  
  Служит для отображения объектов и их типов, доступных в выбранном источнике данных и еще не включенных в представление источника данных.  
   
  **Filter**  
@@ -37,8 +37,8 @@ ms.locfileid: "66070269"
  **Show system objects**  
  Выберите для отображения системных объектов выбранного источника данных в поле **Сетка**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Конструктор представлений источников данных &#40;Analysis Services многомерных данных&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Конструктор представлений источников данных (службы Analysis Services — многомерные данные)](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 846998acaa20b572760edcc67ecd24f8346a762a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071374"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>Соединение семантической модели бизнес-аналитики PowerPivot (BISM)
@@ -24,7 +24,7 @@ ms.locfileid: "66071374"
   
  ![Снимок экрана: команда быстрого запуска BISM](../media/ssas-bism-quicklaunch.gif "Снимок экрана: команда быстрого запуска BISM")  
   
-##  <a name="bkmk_prereq"></a>Поддерживаемые базы данных  
+##  <a name="supported-databases"></a><a name="bkmk_prereq"></a>Поддерживаемые базы данных  
  Соединение семантической модели бизнес-аналитики указывает на данные табличной модели. Существует три источника этих данных.  
   
 -   Табличный шаблон базы данных, запущенный на отдельном экземпляре служб Analysis Services в режиме табличного сервера. Развертывание отдельного экземпляра служб Analysis Services выполняется вне пределов фермы. Для доступа к источникам данных, находящимся за пределами фермы, требуются дополнительные разрешения, о которых можно прочитать в следующем разделе: [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "66071374"
   
 -   Модель многомерных данных в экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- Сравнение источников данных см. в контенте от сообщества [Общие сведения о семантической модели SQL Server 2012 BI (BISM)](http://www.mssqltips.com/sqlservertip/2818/understanding-the-sql-server-2012-bi-semantic-model-bism/).  
+ Сравнение источников данных см. в содержимом сообщества, посвященном [семантической модели бизнес-аналитики SQL Server 2012 (BISM)](http://www.mssqltips.com/sqlservertip/2818/understanding-the-sql-server-2012-bi-semantic-model-bism/).  
   
 ## <a name="understanding-the-connection-sequence-for-bi-semantic-connections"></a>Основные сведения о последовательности соединения для семантической модели бизнес-аналитики  
  В этом разделе описывается работа соединений между различными клиентскими приложениями, в том числе Excel или клиентом отчетов Power View в SharePoint, и базой данных табличной модели, находящейся в пределах или вне пределов фермы SharePoint.  
@@ -48,7 +48,7 @@ ms.locfileid: "66071374"
   
  ![Соединения из Excel с табличной моделью шаблона базы данных](../media/ssas-powerpivotbismconnection-1.gif "Соединения из Excel с табличной моделью шаблона базы данных")  
   
- **Подключение из Power View к табличным данным в сети**  
+ **Соединение с табличными данными из Power View по сети**  
   
  Когда пользователь SharePoint выбирает соединение семантической модели бизнес-аналитики в библиотеке документов, то немедленно запускается приложение Power View (если оно установлено) и открывает соединение с базой данных табличной модели.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66071374"
   
  В этом случае все соединения устанавливаются в пределах фермы и нет необходимости применять протокол Kerberos или ограниченное делегирование.  
   
-##  <a name="bkmk_rel"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="bkmk_rel"></a> Связанные задачи  
  [Добавление типа содержимого соединения семантической модели бизнес-аналитики в библиотеку &#40;PowerPivot для SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)  
   
  [Создание соединения семантической модели бизнес-аналитики с книгой PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
@@ -77,7 +77,7 @@ ms.locfileid: "66071374"
   
  [Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Определение режима работы сервера для экземпляра Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Подключение к службам Analysis Services](../instances/connect-to-analysis-services.md)  
   

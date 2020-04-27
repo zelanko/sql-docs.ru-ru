@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72a18711faf9784efc2202f577e2124f321e0052
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077666"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>Вид структуры интеллектуального анализа (конструктор модели интеллектуального анализа данных)
@@ -30,10 +30,10 @@ ms.locfileid: "66077666"
   
 -   [Диалоговое окно "Выбор ключевого столбца вложенной таблицы" &#40;представление структуры интеллектуального анализа данных&#41;](select-a-nested-table-key-column-dialog-box-mining-structure-view.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представление моделей интеллектуального анализа данных в конструкторе моделей интеллектуального анализа &#40;&#41;](mining-models-view-data-mining-model-designer.md)   
  [Средства просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Конструктор диаграмм точности интеллектуального анализа &#40;&#41;интеллектуального анализа данных](mining-accuracy-chart-designer-data-mining.md)   
- [Прогнозирование конструктор запросов &#40;интеллектуального анализа данных&#41;](prediction-query-builder-data-mining.md)  
+ [Построитель прогнозирующих запросов (интеллектуальный анализ данных)](prediction-query-builder-data-mining.md)  
   
   

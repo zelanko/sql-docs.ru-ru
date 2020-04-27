@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0548709be4a95bf67b295fe90e06843feb7ec48c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073298"
 ---
 # <a name="power-view-for-multidimensional-models"></a>Power View для многомерных моделей
   Многомерные модели в службах Analysis Services в Microsoft SQL Server 2014 обеспечивают анализ данных для произвольного случая, исследование и визуализацию с использованием Microsoft Power View.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание раздела  
   
 -   [Основные сведения о Power View для многомерных моделей](power-view-for-multidimensional-models.md)  
   

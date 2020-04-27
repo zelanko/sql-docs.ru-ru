@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b6e367d0bc73de31f46b8533cded824bdb19504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071820"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>настроить максимальный размер передаваемого файла (PowerPivot для SharePoint)
@@ -48,7 +48,7 @@ ms.locfileid: "66071820"
   
 ### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>Настройка максимального размера файла для веб-приложения SharePoint  
   
-1.  В разделе «Управление приложениями» центра администрирования выберите **Управление веб-приложениями**.  
+1.  В центре администрирования в окне "Управление приложениями" щелкните **Управление веб-приложениями**.  
   
     > [!NOTE]  
     >  Выполните следующие шаги, только если параметр «Максимальный размер книги» в службе Excel Services был увеличен.  

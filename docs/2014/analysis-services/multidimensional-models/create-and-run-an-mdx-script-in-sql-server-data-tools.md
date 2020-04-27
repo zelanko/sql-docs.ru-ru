@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6451e2a02bbaf7ef8a58b63c75838023433ff563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076211"
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>Создание и выполнение скрипта многомерных выражений SQL Server Data Tools
@@ -34,9 +34,9 @@ ms.locfileid: "66076211"
   
 4.  Чтобы запустить скрипт многомерных выражений, разверните и обработайте куб с вновь внесенными изменениями скрипта многомерных выражений.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Базовый скрипт многомерных выражений &#40;многомерные выражения&#41;](mdx/the-basic-mdx-script-mdx.md)   
  [Основные принципы создания скриптов многомерных выражений &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Инструкции скриптов многомерных выражений &#40;многомерные выражения&#41;](/sql/mdx/mdx-scripting-statements-mdx)  
+ [Инструкции для создания скриптов многомерных выражений (многомерные выражения)](/sql/mdx/mdx-scripting-statements-mdx)  
   
   

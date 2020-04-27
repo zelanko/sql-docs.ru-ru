@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078112"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Уровень и элементы (вкладка «Браузер» конструктора измерений) (службы Analysis Services — многомерные данные)
@@ -92,7 +92,7 @@ ms.locfileid: "66078112"
 > [!NOTE]  
 >  Этот параметр отображается только при включенной обратной записи.  
   
- **Имени**  
+ **Переименовать**  
  Выберите для редактирования имени выбранного элемента.  
   
 > [!NOTE]  
@@ -119,10 +119,10 @@ ms.locfileid: "66078112"
  **Свернуть элемент**  
  Сворачивает выбранный элемент в области **Дерево**.  
   
- **Записи**  
+ **Обратная запись**  
  Выберите, чтобы включить режим обратной записи.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Панель инструментов &#40;вкладка «браузер», конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
  [Конструктор измерений &#40;конструктора&#41; &#40;Analysis Services многомерных данных&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   

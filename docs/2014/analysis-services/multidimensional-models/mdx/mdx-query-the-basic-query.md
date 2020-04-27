@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcd55827377b72040dd142ed1f2fd094c9bd2651
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073879"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>Базовый запрос многомерных выражений (многомерные выражения)
@@ -41,12 +41,12 @@ ms.locfileid: "66073879"
   
 -   Предложение SELECT, определяющее оси запроса в инструкции многомерных выражений SELECT. Дополнительные сведения о построении осей запроса в предложении SELECT см. в разделе [Определение содержимого оси запроса (многомерные выражения)](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md).  
   
--   Предложение FROM, определяющее, к какому кубу будет направлен запрос. Дополнительные сведения о предложении FROM см. в разделе [SELECT Statement &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select).  
+-   Предложение FROM, определяющее, к какому кубу будет направлен запрос. Дополнительные сведения о предложении FROM см. в разделе [Инструкция SELECT (многомерные выражения)](/sql/mdx/mdx-data-manipulation-select).  
   
 -   Необязательное предложение WHERE, определяющее, какие элементы или кортежи используются на оси среза для ограничения возвращаемых данных. Дополнительные сведения о построении осей среза в предложении WHERE см. в разделе [Определение содержимого оси среза (многомерные выражения)](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
 > [!NOTE]  
->  Дополнительные сведения о различных предложениях инструкции SELECT см. в разделе [SELECT Statement &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select).  
+>  Дополнительные сведения о различных предложениях инструкции SELECT см. в разделе [Инструкция SELECT (многомерные выражения)](/sql/mdx/mdx-data-manipulation-select).  
   
 ## <a name="select-statement-syntax"></a>Синтаксис инструкции SELECT  
  В следующей конструкции иллюстрируется синтаксис базовой инструкции SELECT с использованием предложений SELECT, FROM и WHERE:  
@@ -60,7 +60,7 @@ FROM <SELECT subcube clause>
 [ <SELECT cell property list clause> ]  
 ```  
   
- Инструкция многомерных выражений SELECT поддерживает дополнительный синтаксис, например: ключевое слово WITH, использование функций многомерных выражений для создания вычисляемых элементов, включаемых в ось запроса или среза, а также возможность возвращать значения свойств определенных ячеек как части запроса. Дополнительные сведения об инструкции SELECT многомерных выражений см. в разделе [SELECT Statement &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select).  
+ Инструкция многомерных выражений SELECT поддерживает дополнительный синтаксис, например: ключевое слово WITH, использование функций многомерных выражений для создания вычисляемых элементов, включаемых в ось запроса или среза, а также возможность возвращать значения свойств определенных ячеек как части запроса. Дополнительные сведения об инструкции SELECT многомерных выражений см. в разделе [Инструкция SELECT (многомерные выражения)](/sql/mdx/mdx-data-manipulation-select).  
   
 ### <a name="comparing-the-syntax-of-the-mdx-select-statement-to-sql"></a>Сравнение синтаксиса инструкции многомерных выражений SELECT с синтаксисом SQL  
  Формат синтаксиса для инструкции многомерных выражений SELECT сходен с синтаксисом ее аналога в SQL. Тем не менее есть несколько серьезных отличий.  
@@ -108,8 +108,8 @@ WHERE ( [Sales Territory].[Southwest] )
   
  Дополнительные примеры см. в разделах [Определение содержимого оси запроса (многомерные выражения)](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md) и [Определение содержимого оси среза (многомерные выражения)](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные понятия в Analysis Services &#40;многомерных выражений&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [Инструкция SELECT &#40;&#41;многомерных выражений](/sql/mdx/mdx-data-manipulation-select)  
+ [Инструкция SELECT (многомерные выражения)](/sql/mdx/mdx-data-manipulation-select)  
   
   

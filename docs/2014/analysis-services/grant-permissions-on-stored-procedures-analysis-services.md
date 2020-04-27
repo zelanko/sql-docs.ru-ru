@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a363336af1bee8c3f84ff620f667c7c0d510b73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080732"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>Предоставление разрешений на хранимые процедуры (службы Analysis Services)
@@ -35,7 +35,7 @@ ms.locfileid: "66080732"
   
 -   Без **ограничений** В неограниченном наборе разрешений хранимая процедура может обращаться к внешним ресурсам с помощью любого кода. Данный набор разрешений не обеспечивает для хранимых процедур гарантии безопасности или надежности.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление сборками многомерной модели](multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   

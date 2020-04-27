@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03419c570b4982a19cf1a958ac6e0391de02fef9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076097"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Представления источников данных в многомерных моделях
@@ -31,31 +31,31 @@ ms.locfileid: "66076097"
  Вы можете построить несколько представлений источников данных в проекте или в базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для одного или нескольких источников данных и сконструировать каждый из них для удовлетворения требований другого решения.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Определение представления источников данных &#40;Analysis Services&#41;](defining-a-data-source-view-analysis-services.md)  
+ [Определение представления источников данных (службы Analysis Services)](defining-a-data-source-view-analysis-services.md)  
   
- [Добавление или удаление таблиц или представлений в представлении источника данных &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [Добавление или удаление таблиц или представлений в представлении источника данных (службы Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
- [Изменение свойств в представлении источника данных &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
+ [Изменение свойств в представлении источника данных (службы Analysis Services)](change-properties-in-a-data-source-view-analysis-services.md)  
   
- [Определение логических связей в представлении источника данных &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md)  
+ [Определение логических связей в представлении источника данных (службы Analysis Services)](define-logical-relationships-in-a-data-source-view-analysis-services.md)  
   
- [Определение логических первичных ключей в представлении источника данных &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)  
+ [Определение логических первичных ключей в представлении источника данных (службы Analysis Services)](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)  
   
- [Определение именованных вычислений в представлении источника данных &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Определение именованных вычислений в представлении источника данных (службы Analysis Services)](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
- [Определение именованных запросов в представлении источника данных &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [Определение именованных запросов в представлении источника данных (службы Analysis Services)](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
- [Замените таблицу или именованный запрос в представлении источника данных &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)  
+ [Замена таблицы или именованного запроса в представлении источника данных (службы Analysis Services)](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)  
   
- [Работа с диаграммами в конструкторе представлений источников данных &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Работа с диаграммами в конструкторе представлений источника данных (службы Analysis Services)](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
- [Просмотр данных в представлении источника данных &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)  
+ [Просмотр данных в представлении источника данных (службы Analysis Services)](explore-data-in-a-data-source-view-analysis-services.md)  
   
- [Удаление представления источника данных &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)  
+ [Удаление представления источников данных (службы Analysis Services)](delete-a-data-source-view-analysis-services.md)  
   
- [Обновление схемы в представлении источника данных &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
+ [Обновление схемы в представлении источника данных (службы Analysis Services)](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Мастер формирования схем &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)   
  [Поддерживаемые источники данных &#40;многомерные&#41;SSAS](supported-data-sources-ssas-multidimensional.md)  
   

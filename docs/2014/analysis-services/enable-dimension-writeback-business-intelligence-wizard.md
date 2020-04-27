@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a79df6d154b5b5f2363eb14af0a4ffae5c9cb618
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081359"
 ---
 # <a name="enable-dimension-writeback-business-intelligence-wizard"></a>Разрешение обратной записи в измерение (мастер бизнес-логики)
@@ -26,11 +26,11 @@ ms.locfileid: "66081359"
  **Разрешить обратную запись в измерение**  
  При выборе этого параметра измерение становится доступным для записи.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 мастера бизнес-аналитики](business-intelligence-wizard-f1-help.md)   
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Конструктор измерений &#40;Analysis Services многомерных данных&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
  [Измерения, доступные для записи](multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)   
- [Разрешение обратной записи в измерение](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
+ [Включить обратную запись в измерение](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 70817c567b77af2bfdb7d715683ae6081fda442b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077430"
 ---
 # <a name="add-an--attribute-to-a-dimension"></a>Добавление атрибута в измерение
@@ -32,7 +32,7 @@ ms.locfileid: "66077430"
   
  Дополнительные сведения см. в разделах [Определение нового атрибута автоматически](attribute-properties-define-a-new-attribute-automatically.md), [Определение нового атрибута вручную](../define-a-new-attribute-manually.md), [Привязка атрибута к столбцу имени](attribute-properties-bind-an-attribute-to-a-name-column.md)и [Изменение свойства KeyColumn атрибута](attribute-properties-modify-the-keycolumn-property.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по свойствам атрибута измерения](dimension-attribute-properties-reference.md)  
   
   

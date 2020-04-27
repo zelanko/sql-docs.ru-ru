@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: caa1b9ee8af054f7fcc5f10869553343d50a9c2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075623"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Определение логических связей в представлении источника данных (службы Analysis Services)
@@ -47,7 +47,7 @@ ms.locfileid: "66075623"
   
  [Просмотр или изменение связи на панели таблицы](#bkmk_tablespane)  
   
-##  <a name="bkmk_addRel"></a>Добавление связи между таблицами, именованными запросами или представлениями  
+##  <a name="to-add-a-relationship-between-tables-named-queries-or-views"></a><a name="bkmk_addRel"></a>Добавление связи между таблицами, именованными запросами или представлениями  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект или подключитесь к базе данных, содержащей представление источника данных, в котором необходимо добавить логическую связь.  
   
@@ -72,11 +72,11 @@ ms.locfileid: "66075623"
   
     4.  Дополнительно в поле **Описание** введите описание связи.  
   
-##  <a name="bkmk_diagrampane"></a>Просмотр или изменение связи на панели «Диаграмма»  
+##  <a name="to-view-or-modify-a-relationship-in-the-diagram-pane"></a><a name="bkmk_diagrampane"></a>Просмотр или изменение связи на панели «Диаграмма»  
   
 -   На панели **Диаграмма** в **Конструкторе представлений источников данных**щелкните правой кнопкой мыши связь, которую необходимо просмотреть, и выберите пункт **Изменить связь** (или просто дважды щелкните стрелку связи).  Для изменения связи используйте диалоговое окно **Изменение связи** .  
   
-##  <a name="bkmk_tablespane"></a>Просмотр или изменение связи на панели «таблицы»  
+##  <a name="to-view-or-modify-a-relationship-in-the-tables-pane"></a><a name="bkmk_tablespane"></a>Просмотр или изменение связи на панели «таблицы»  
   
 1.  На панели **Таблицы** в **Конструкторе представлений источников данных**найдите и разверните таблицу, представление или именованный запрос, содержащий связь, которую необходимо просмотреть или изменить.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66075623"
   
 3.  Для изменения связи щелкните ее правой кнопкой мыши и выберите пункт **Изменить связь**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления источников данных в многомерных моделях](data-source-views-in-multidimensional-models.md)  
   
   

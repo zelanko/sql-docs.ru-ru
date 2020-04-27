@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 703080418566b761741575c69fb6be6a7572988e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073567"
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>Решения многомерной модели (службы SSAS)
     
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  Следующие разделы представляют собой справочник по проектированию объектов в многомерных базах данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- [Базы данных многомерной модели &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [Базы данных многомерных моделей (службы SSAS)](multidimensional-model-databases-ssas.md)  
  Содержит инструкции по определению базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  [Поддерживаемые источники данных &#40;многомерные&#41;SSAS](supported-data-sources-ssas-multidimensional.md)  
@@ -40,7 +40,7 @@ ms.locfileid: "66073567"
  [Кубы в многомерных моделях](cubes-in-multidimensional-models.md)  
  Содержит инструкции по определению объектов кубов в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- [Мастер формирования схем &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+ [Мастер формирования схем (службы Analysis Services)](schema-generation-wizard-analysis-services.md)  
  Содержит инструкции по конструированию многомерных объектов баз данных без использования существующих реляционных схем.  
   
  [Модули персонализации служб Analysis Services](extending-olap/analysis-services-personalization-extensions.md)  

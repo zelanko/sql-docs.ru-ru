@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0717d8a81cc89897de005144dd631d23da42137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081024"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>Мастер прогнозов (надстройки интеллектуального анализа данных для Excel)
@@ -70,7 +70,7 @@ ms.locfileid: "66081024"
   
  Если данные не имеют столбца времени или даты, можно назначить произвольный числовой ряд или разрешить мастеру создать его. Если вы разрешили мастеру создать столбец для сортировки, убедитесь, что остальные столбцы отсортированы в нужном порядке, прежде чем запускать мастер.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание модели интеллектуального анализа данных](creating-a-data-mining-model.md)   
  [Прогнозирование &#40;средств анализа таблиц для Excel&#41;](forecast-table-analysis-tools-for-excel.md)   
  [Просмотр модели прогнозов](browsing-a-forecasting-model.md)  

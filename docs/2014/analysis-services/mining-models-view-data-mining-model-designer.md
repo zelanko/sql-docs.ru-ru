@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b698a6c216d4179de414f236fb7d41d6366e470d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077645"
 ---
 # <a name="mining-models-view-data-mining-model-designer"></a>Представление модели интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)
@@ -26,10 +26,10 @@ ms.locfileid: "66077645"
   
 -   [Диалоговое окно "Параметры алгоритма" &#40;представление моделей интеллектуального анализа данных&#41;](algorithm-parameters-dialog-box-mining-models-view.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представление структуры интеллектуального анализа &#40;конструктора моделей интеллектуального анализа данных&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Средства просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Конструктор диаграмм точности интеллектуального анализа &#40;&#41;интеллектуального анализа данных](mining-accuracy-chart-designer-data-mining.md)   
- [Прогнозирование конструктор запросов &#40;интеллектуального анализа данных&#41;](prediction-query-builder-data-mining.md)  
+ [Построитель прогнозирующих запросов (интеллектуальный анализ данных)](prediction-query-builder-data-mining.md)  
   
   

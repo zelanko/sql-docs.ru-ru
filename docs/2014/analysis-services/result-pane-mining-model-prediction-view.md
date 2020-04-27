@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41579af945bcf546eb2c32b5a337ba10bd59510a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070182"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>Панель «Результаты» (представление прогнозирования модели интеллектуального анализа данных)
@@ -35,9 +35,9 @@ ms.locfileid: "66070182"
  **Обновить результаты запроса**  
  Обработать заново прогнозирующий запрос.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Прогнозирование конструктор запросов &#40;интеллектуального анализа данных&#41;](prediction-query-builder-data-mining.md)   
  [Интерфейсы запросов интеллектуального анализа данных](data-mining/data-mining-query-tools.md)   
- [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

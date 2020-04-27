@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079676"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Планирование задач администрирования служб SSAS с помощью агента SQL Server
@@ -24,7 +24,7 @@ ms.locfileid: "66079676"
   
  Данный раздел является пошаговым руководством, демонстрирующим два способа использования агента SQL Server для запуска скрипта XML для аналитики. В первом примере показано, как запланировать обработку одного измерения. Второй пример показывает, как объединить задачи обработки в единый скрипт, выполняемый по расписанию. Для прохождения этого пошагового руководства необходимо выполнить следующие предварительные требования.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Должна быть установлена служба агента SQL Server.  
   
  По умолчанию задания запускаются под учетной записью службы. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]учетной записи по умолчанию для агент SQL Server является NT\<Service\SQLAgent $ имя_экземпляра>. Для выполнения задачи резервного копирования или обработки эта учетная запись должна принадлежать системному администратору в экземпляре служб Analysis Services. Дополнительные сведения см. в статьях [предоставление разрешений администратора сервера &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "66079676"
   
  Запланированная задача служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] представляет собой скрипт XML для аналитики, внедренный в задание агента SQL Server. Это задание имеет расписание для запуска в нужное время и с нужной частотой. Поскольку агент SQL Server является частью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], при создании задачи администрирования придется работать и с ядром СУБД, и со службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-###  <a name="bkmk_CreateScript"></a>Создание скрипта для обработки измерения в агент SQL Serverном задании  
+###  <a name="create-a-script-for-processing-a-dimension-in-a-sql-server-agent-job"></a><a name="bkmk_CreateScript"></a>Создание скрипта для обработки измерения в агент SQL Serverном задании  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]подключитесь к службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Откройте папку базы данных и найдите измерение. Щелкните измерение правой кнопкой мыши и выберите команду **Обработать**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66079676"
     </Batch>  
     ```  
   
-###  <a name="bkmk_ProcessJob"></a>Создание и планирование задания по обработке измерений  
+###  <a name="create-and-schedule-the-dimension-processing-job"></a><a name="bkmk_ProcessJob"></a>Создание и планирование задания по обработке измерений  
   
 1.  Подключитесь к экземпляру ядра СУБД, а затем откройте обозреватель объектов.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66079676"
 ## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Пример 2. Пакетная обработка измерения и секции в запланированной задаче  
  Процедуры в данном примере демонстрируют, как создать и запланировать задание по пакетной обработке измерения базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и одновременно обработать секцию куба, которая зависит от измерения для агрегата. Дополнительные сведения о пакетной обработке объектов [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в разделе [Пакетная обработка (службы Analysis Services)](../multidimensional-models/batch-processing-analysis-services.md).  
   
-###  <a name="bkmk_BatchProcess"></a>Создание скрипта для пакетной обработки измерения и секции в задании агент SQL Server  
+###  <a name="create-a-script-for-batch-processing-a-dimension-and-partition-in-a-sql-server-agent-job"></a><a name="bkmk_BatchProcess"></a>Создание скрипта для пакетной обработки измерения и секции в задании агент SQL Server  
   
 1.  Используя ту же базу данных, разверните узел **Измерения**, щелкните правой кнопкой мыши измерение **Клиент** и выберите **Обработать**.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "66079676"
   
 12. Этот шаг копирует скрипт XML для аналитики в буфер обмена Windows. Скрипт XML для аналитики вы можете оставить в буфере обмена, сохранить в файл или вставить его в «Блокнот» или другой текстовый редактор.  
   
-###  <a name="bkmk_Scheduling"></a>Создание и планирование задания пакетной обработки  
+###  <a name="create-and-schedule-the-batch-processing-job"></a><a name="bkmk_Scheduling"></a>Создание и планирование задания пакетной обработки  
   
 1.  Подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], после чего откройте обозреватель объектов.  
   
@@ -221,7 +221,7 @@ ms.locfileid: "66079676"
   
 16. По завершении задания нажмите кнопку **Закрыть**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Параметры обработки и настройки &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [Создание скриптов для административных задач в службах Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   

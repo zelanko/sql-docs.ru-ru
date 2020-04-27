@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9f1863fc3d707614b7c957dc5ef49561272d6e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073132"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>Замена таблицы или именованного запроса в представлении источника данных (службы Analysis Services)
@@ -33,7 +33,7 @@ ms.locfileid: "66073132"
 > [!IMPORTANT]  
 >  При переименовании таблицы в источнике данных выполните шаги по замене таблицы и укажите переименованную таблицу в качестве источника соответствующей таблицы в представлении источника данных до его обновления. Завершение процесса замены и переименования сохраняет в представлении источника данных таблицу, ее ссылки и связи. В противном случае при обновлении представления источников данных переименованная таблица в источнике данных считается удаленной. Дополнительные сведения см. в разделе [Обновление схемы в представлении источника данных (службы Analysis Services)](refresh-the-schema-in-a-data-source-view-analysis-services.md).  
   
-##  <a name="bkmk_nq"></a>Замена таблицы именованным запросом  
+##  <a name="replace-a-table-with-a-named-query"></a><a name="bkmk_nq"></a> Замена таблицы именованным запросом  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект или подключитесь к базе данных, содержащей представление источника данных, в котором необходимо заменить таблицу или именованный запрос.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66073132"
   
 6.  Сохраните измененное представление источника данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления источников данных в многомерных моделях](data-source-views-in-multidimensional-models.md)  
   
   

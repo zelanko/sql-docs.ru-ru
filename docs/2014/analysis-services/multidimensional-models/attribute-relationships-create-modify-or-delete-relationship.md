@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35e22807ed64cce3bc6f7c186978d4c9ee82c51d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077090"
 ---
 # <a name="create-modify-or-delete-an-attribute-relationship"></a>Создание, изменение или удаление связи атрибутов
@@ -30,7 +30,7 @@ ms.locfileid: "66077090"
 2.  На вкладке **Связи атрибутов** правой кнопкой мыши щелкните атрибут в диаграмме или на панели **Атрибуты** , а затем выберите **Создать связь атрибутов**.  
   
     > [!NOTE]  
-    >  Чтобы отобразить панель **атрибуты** , нажмите кнопку **Показать представления списка** на панели инструментов.  
+    >  Чтобы отобразить панель **Атрибуты** , нажмите кнопку **Показать списки** на панели инструментов.  
   
 3.  В диалоговом окне **Создать связь атрибутов** выберите исходный атрибут и связанный с ним атрибут.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66077090"
   
 3.  В диалоговом окне **Удаление объектов** нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [можно изменить расположение фигур на вкладке](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

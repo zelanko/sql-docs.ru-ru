@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e99fc17cb8f369967ff4c26699e67f0ed91d33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070936"
 ---
-# <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>Не удалось обновить данные для подключения к данным в книге. Повторите попытку или обратитесь к системному администратору. Следующие соединения не удалось обновить: Данные PowerPivot
+# <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>Не удалось обновить данные для подключения к данным в книге. Повторите попытку или обратитесь к системному администратору. Следующие соединения не удалось обновить: данные PowerPivot
   Применительно к книгам Excel, содержащим данные PowerPivot, службы Excel возвращают эту ошибку, если при передаче запроса на соединение серверу PowerPivot запрос завершается ошибкой.  
   
-## <a name="details"></a>Сведения  
+## <a name="details"></a>Подробности  
   
 |||  
 |-|-|  
 |Область применения:|Установка PowerPivot для SharePoint|  
 |Версия продукта|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Причина:|См. ниже.|  
-|Текст сообщения|Не удалось обновить данные для подключения к данным в книге. Повторите попытку или обратитесь к системному администратору. Следующие соединения не удалось обновить: Данные PowerPivot|  
+|Текст сообщения|Не удалось обновить данные для подключения к данным в книге. Повторите попытку или обратитесь к системному администратору. Следующие соединения не удалось обновить: данные PowerPivot|  
   
 ## <a name="explanation-and-resolution"></a>Описание проблемы и действия по ее разрешению  
  Службы Excel не могут установить соединение или загрузить данные PowerPivot. Эта ошибка возникает, в частности, при следующих условиях.  
@@ -36,7 +36,7 @@ ms.locfileid: "66070936"
   
  Не запущен экземпляр служб SQL Server Analysis Services (PowerPivot). Истечение срока действия пароля стало причиной остановки выполнения службы. Дополнительные сведения об изменении пароля см. в разделах [Configure PowerPivot Service Accounts](configure-power-pivot-service-accounts.md) и [Start or Stop a PowerPivot for SharePoint Server](start-or-stop-a-power-pivot-for-sharepoint-server.md).  
   
- **Сценарий 2а. Открытие более ранней версии книги на сервере**  
+ **Сценарий 2a: открытие более ранней версии книги на сервере**  
   
  Возможно книга, которую вы пытаетесь открыть, создана в другой версии PowerPivot для Excel для SQL Server 2008 R2. Наиболее вероятно, что указанный в строке подключения поставщик данных служб Analysis Services, отсутствует на компьютере, который обрабатывает этот запрос.  
   
@@ -48,13 +48,13 @@ ms.locfileid: "66070936"
   
  [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
   
- **Сценарий 2б. Службы Excel выполняются на сервере приложений, на котором находится неправильная версия клиентских библиотек**  
+ **Сценарий 2b: службы Excel выполняются на сервере приложений, на котором находится неправильная версия клиентских библиотек**  
   
  По умолчанию, SharePoint Server 2010 устанавливает на серверы приложений со службами Excel поставщик OLE DB для версии служб Analysis Services, предназначенной для SQL Server 2008. В ферме, которая поддерживает доступ к данным PowerPivot, все физические серверы, на которых запущены приложения, запрашивающие данные PowerPivot, например службы Excel и PowerPivot для SharePoint, должны использовать более позднюю версию поставщика данных.  
   
- Серверы под управлением PowerPivot для SharePoint автоматически получают обновленный поставщик OLE DB. Другие серверы, например такие, на которых запущен отдельный экземпляр служб Excel без служб PowerPivot для SharePoint, установленных на этом же компьютере, должны быть исправлены, чтобы использовать клиентские библиотеки более новой версии. Дополнительные сведения см. в разделе [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
+ Серверы под управлением PowerPivot для SharePoint автоматически получают обновленный поставщик OLE DB. Другие серверы, например такие, на которых запущен отдельный экземпляр служб Excel без служб PowerPivot для SharePoint, установленных на этом же компьютере, должны быть исправлены, чтобы использовать клиентские библиотеки более новой версии. Дополнительные сведения см. в статье [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
- **Сценарий 3. Недоступен контроллер домена**  
+ **Сценарий 3: недоступен контроллер домена**  
   
  Причина может заключаться в том, что контроллер домена недоступен для проверки удостоверения пользователя. Для проверки подлинности пользователя SharePoint службе Claims to Windows Token Service требуется контроллер домена при каждом соединении. Служба Claims to Windows Token Service не использует кэшированные учетные данные. Она проверяет удостоверение пользователя для каждого соединения.  
   

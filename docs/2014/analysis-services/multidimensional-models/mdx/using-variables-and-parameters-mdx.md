@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eeb258266c489056994d8f78f80a6856602a174a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073713"
 ---
 # <a name="using-variables-and-parameters-mdx"></a>Переменные и параметры (многомерные выражения)
@@ -58,7 +58,7 @@ from [Adventure Works]
   
  В OLE DB эти возможности доступны через интерфейс `ICommandWithParameters`. В ADOMD.Net для этого необходимо использовать коллекцию **AdomdCommand.Parameters** .  
   
-## <a name="see-also"></a>См. также:  
- [Основные принципы создания скриптов многомерных выражений &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>См. также  
+ [Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](mdx-scripting-fundamentals-analysis-services.md)  
   
   

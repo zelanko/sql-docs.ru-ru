@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a79e98375c27c6a3570b2fafcf424965d7a97c8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074220"
 ---
 # <a name="using-cube-writebacks-mdx"></a>Обратная запись в куб (многомерные выражения)
@@ -41,7 +41,7 @@ UPDATE [CUBE] <Cube_Name> SET <tuple>.VALUE = <value> [,<tuple>.VALUE = <value>.
  Инструкция UPDATE CUBE подобна подпрограмме, выполняющей серию отдельных операций обратной записи в элементарные ячейки. Затем отдельные операции обратной записи сводятся в указанную сумму.  
   
 > [!NOTE]  
->  Если обновленные ячейки не пересекаются, свойство строки подключения `Update Isolation Level` может быть использовано для повышения производительности инструкции UPDATE CUBE. Дополнительные сведения можно найти по адресу: <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>.  
+>  Если обновленные ячейки не пересекаются, свойство строки подключения `Update Isolation Level` может быть использовано для повышения производительности инструкции UPDATE CUBE. Для получения дополнительной информации см. <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>.  
   
 ## <a name="example"></a>Пример  
  Можно проверить инструкцию UPDATE CUBE с помощью группы мер Sales Targets в кубе Adventure Works. Эта группа мер состоит из мер, суммированных с помощью функции SUM, которая обязательна для UPDATE CUBE.  
@@ -81,7 +81,7 @@ SET ([Measures].[Sales Amount Quota], [Employee].[Employee Department].[Departme
 USE_EQUAL_ALLOCATION  
 ```  
   
-## <a name="error-conditions"></a>Ошибочные условия  
+## <a name="error-conditions"></a>Ситуации, которые могут привести к ошибке  
  В следующей таблице описаны причины возможных ошибок обратной записи и их результаты.  
   
 |Условие возникновения ошибки|Результат|  
@@ -116,7 +116,7 @@ USE_EQUAL_ALLOCATION
   
 -   Изменение степени гранулярности измерения, которое содержится в обратной записи.  
   
-## <a name="see-also"></a>См. также:  
- [Изменение &#40;данных&#41;многомерных выражений](mdx-data-modification-modifying-data.md)  
+## <a name="see-also"></a>См. также  
+ [Изменение данных (многомерные выражения)](mdx-data-modification-modifying-data.md)  
   
   

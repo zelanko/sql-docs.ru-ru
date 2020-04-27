@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c09c8984e964b4bdfa93b0fcebae2e613d484892
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071944"
 ---
-# <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>При попытке установить соединение с внешним источником данных произошла ошибка. Следующие соединения не удалось обновить: Данные PowerPivot
+# <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>При попытке установить соединение с внешним источником данных произошла ошибка. Следующие соединения не удалось обновить: данные PowerPivot
   Эта ошибка возникает во время запроса данных PowerPivot на сервере, где не установлен PowerPivot для SharePoint. Она также возникает в случае, если службы SQL Server Analysis Services (PowerPivot) остановлены, или при попытке просмотра данных PowerPivot предыдущей версии.  
   
-## <a name="details"></a>Сведения  
+## <a name="details"></a>Подробности  
   
 |||  
 |-|-|  
-|Применяется к|PowerPivot для SharePoint|  
+|Область применения|PowerPivot для SharePoint|  
 |Версия продукта|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Причина:|Ошибка подключения к данным.|  
-|Текст сообщения|При попытке установить соединение с внешним источником данных произошла ошибка. Следующие соединения не удалось обновить: Данные PowerPivot|  
+|Текст сообщения|При попытке установить соединение с внешним источником данных произошла ошибка. Следующие соединения не удалось обновить: данные PowerPivot|  
   
 ## <a name="explanation"></a>Объяснение  
  Службы Excel возвращают эту ошибку во время запроса данных PowerPivot в книге Excel, которая опубликована на сайте SharePoint, при этом в среде SharePoint не установлен сервер PowerPivot для SharePoint, либо служба SQL Server Analysis Services (PowerPivot) остановлена.  
@@ -41,7 +41,7 @@ ms.locfileid: "66071944"
   
  Для книг PowerPivot, созданных в версии PowerPivot для Excel SQL Server 2008 R2, необходимо установить поставщик OLE DB служб Analysis Services версии SQL Server 2008 R2. Эта ошибка возникает, если поставщик установлен, но файл Microsoft.AnalysisServices.ChannelTransport.dll не зарегистрирован. Дополнительные сведения о регистрации файла см. в статье [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [При подключении к данным используется проверка подлинности Windows, а учетные данные пользователя не могут быть делегированы. Не удалось обновить следующие соединения: данные PowerPivot](the-data-connection-user-could-not-be-delegated.md)  
   
   

@@ -22,18 +22,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073164"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Требования и вопросы, связанные с развертыванием служб Analysis Services
   Производительность и доступность решения зависят от многих факторов, среди которых мощность оборудования, топология серверов, характеристики решения (например, использование секций, распределенных на нескольких серверах, или хранилища ROLAP, которому требуется прямой доступ к реляционному механизму), соглашения на уровне служб, а также сложность модели данных.  
   
 ## <a name="memory-and-processor-requirements"></a>Требования к памяти и процессору  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в следующих случаях требуется больше ресурсов памяти и процессора:  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в следующих случаях требуется больше ресурсов памяти и процессора:  
   
 -   При обработке больших или сложных кубов. Для этого требуется больше ресурсов памяти и процессора в сравнении с обработкой малых или простых кубов.  
   
@@ -47,13 +46,13 @@ ms.locfileid: "66073164"
   
  Объем доступных службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ресурсов процессора и памяти отличается в зависимости от выпуска SQL Server, операционной системы, оборудования и использования виртуальных или физических процессоров. Дополнительные сведения приведены по следующим ссылкам:  
   
- [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Требования к аппаратному и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
  [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
  [Возможности, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
- [Спецификации максимальной емкости &#40;Analysis Services&#41;](olap-physical/maximum-capacity-specifications-analysis-services.md)  
+ [Спецификации максимальной емкости (службы Analysis Services)](olap-physical/maximum-capacity-specifications-analysis-services.md)  
   
 ## <a name="disk-space-requirements"></a>Требования к месту на диске  
  Объем места на диске зависит от различных аспектов установки служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и задач, связанных с обработкой объектов. Далее приведен список требований к свободному месту на диске.  
@@ -61,7 +60,7 @@ ms.locfileid: "66073164"
  Кубы  
  Кубы с большими таблицами фактов требуют больше места на диске, чем кубы с небольшими таблицами фактов. Аналогично, хотя и в меньшей степени, кубы с большим количеством измерений требуют большего места на диске. Как правило, для базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] требуется примерно на 20% больше объема места на диске в сравнении с таким же объемом данных, хранящемся в базовой реляционной базе данных.  
   
- Агрегаты  
+ Aggregations  
  Агрегатам требуется дополнительное пространство, пропорциональное добавленным агрегатам. чем больше агрегатов, тем больше требуется свободного пространства. Если лишние агрегаты не используются, то дополнительное место на диске, необходимое для агрегатов, обычно не должно превышать 10% от размера данных, хранящихся в базовой реляционной базе данных.  
   
  Интеллектуальный анализ данных  
@@ -70,7 +69,7 @@ ms.locfileid: "66073164"
  Обработка объектов  
  Во время обработки службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] хранят на диске копии объектов, которые участвуют в обработке транзакций, до завершения обработки. Затем обработанные копии объектов замещают исходные объекты. Следовательно, необходимо предоставить значительный объем дополнительного места на диске для второй копии обрабатываемых объектов. Например, если планируется обрабатывать в одной транзакции весь куб, то необходимо обеспечить достаточный объем места на диске для хранения второй копии всего куба.  
   
-##  <a name="BKMK_Availability"></a>Рекомендации по доступности  
+##  <a name="availability-considerations"></a><a name="BKMK_Availability"></a>Рекомендации по доступности  
  В среде служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] куб или модель интеллектуального анализа данных могут быть недоступны для запросов вследствие возникновения сбоев оборудования или ошибок программного обеспечения. Куб может быть недоступным во время обработки.  
   
 ### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>Поддержание доступности в случае возникновения сбоев оборудования или ошибок программного обеспечения  
@@ -87,7 +86,7 @@ ms.locfileid: "66073164"
   
  Для прозрачной обработки добавочных обновлений исходных данных включите упреждающее кэширование. Упреждающее кэширование позволяет обновлять кубы с новыми исходными данными без обработки вручную и влияния на доступность кубов. Дополнительные сведения см. в разделе [Упреждающее кэширование (секции)](../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
-##  <a name="BKMK_Scalability"></a>Рекомендации по масштабируемости  
+##  <a name="scalability-considerations"></a><a name="BKMK_Scalability"></a>Рекомендации по масштабируемости  
  Несколько экземпляров [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на одном компьютере могут вызвать проблемы с производительностью. Для решения этих проблем можно увеличить на сервере ресурсы процессора, памяти и место на диске. Возможно, также придется выполнить масштабирование экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на несколько компьютеров.  
   
 ### <a name="scaling-analysis-services-across-multiple-computers"></a>Масштабирование служб Analysis Services на несколько компьютеров  

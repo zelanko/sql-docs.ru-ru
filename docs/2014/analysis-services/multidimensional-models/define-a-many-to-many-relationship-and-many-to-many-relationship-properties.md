@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075781"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Определение связей "многие ко многим" и свойств связей "многие ко многим"
@@ -109,13 +109,11 @@ ms.locfileid: "66075781"
   
 8.  В таблицах групп мер выберите **FactInternetSales** и **FactInternetSalesReason**.  
   
-     
-  **FactInternetSales** следует выбрать, поскольку этот элемент содержит меры, которые мы будем использовать в кубе. А выбор **FactInternetSalesReason** обусловлен тем, что это промежуточная группа мер, предоставляющая сведения о связях заказов на покупку и причин покупки.  
+     **FactInternetSales** следует выбрать, поскольку этот элемент содержит меры, которые мы будем использовать в кубе. А выбор **FactInternetSalesReason** обусловлен тем, что это промежуточная группа мер, предоставляющая сведения о связях заказов на покупку и причин покупки.  
   
 9. Выберите меры для каждой таблицы фактов.  
   
-     Чтобы упростить модель, уберите все меры, затем выберите в нижней части списка лишь **Sales Amount** и **Fact Internet Sales Count** . 
-  **FactInternetSalesReason** имеет только одну меру, поэтому выбирается автоматически.  
+     Чтобы упростить модель, уберите все меры, затем выберите в нижней части списка лишь **Sales Amount** и **Fact Internet Sales Count** . **FactInternetSalesReason** имеет только одну меру, поэтому выбирается автоматически.  
   
 10. В списке измерений будут отображаться **Dim Sales Reason** и **Dim Sales Orders**.  
   
@@ -148,11 +146,11 @@ ms.locfileid: "66075781"
   
 3.  Создайте сводную таблицу, которая использует следующее:  
   
-    -   **Объем продаж** в качестве значения  
+    -   **Sales Amount** как значение  
   
-    -   **Имя причины покупки** в столбцах  
+    -   **Sales Reason Name** для столбцов  
   
-    -   **Номер заказа на продажу** в строках  
+    -   **Sales Order Number** для строк  
   
 4.  Проанализируйте результаты. Мы используем примеры данных, поэтому на первый взгляд кажется, что все заказы на продажу имеют одинаковые значения. Но если выполнить прокрутку результатов вниз, то можно видеть разброс данных.  
   
@@ -178,16 +176,16 @@ ms.locfileid: "66075781"
   
 4.  Избегайте использования связанных групп мер в нескольких связях типа «многие ко многим», особенно если эти связи находятся в разных кубах. Это может привести к формированию неоднозначных агрегатов. Дополнительные сведения см. в разделе [Неверные суммы для связанных мер в кубе, содержащих связи "многие ко многим"](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
   
-##  <a name="bkmk_Learn"></a>Подробнее  
+##  <a name="learn-more"></a><a name="bkmk_Learn"></a>Подробнее  
  Дополнительную информацию, которая поможет в освоении данных концепций, можно получить по следующим ссылкам.  
   
  [Определение измерения «многие ко многим» в службах Analysis Services](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
- [Революция «многие ко многим» 2,0](https://go.microsoft.com/fwlink/?LinkId=324760)  
+ [Революция концепции «многие ко многим» 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [Учебник. пример измерения "многие ко многим" для SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
+ [Руководство. Пример измерения "многие ко многим" для служб SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Связи измерений](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Руководство по установке образца данных и проектов для Analysis Services учебника по многомерному моделированию](../install-sample-data-and-projects.md)   
  [Развертывание проектов Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   

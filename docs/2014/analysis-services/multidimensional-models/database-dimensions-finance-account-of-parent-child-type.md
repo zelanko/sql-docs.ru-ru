@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28a7cf6b3a712144daead54d521fb3cc6936c99e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075920"
 ---
 # <a name="create-a-finance-account-of-parent-child-type-dimension"></a>Создание учетной записи Finance с измерением типа «родитель-потомок»
@@ -53,7 +53,7 @@ ms.locfileid: "66075920"
 ## <a name="adding-account-intelligence-with-the-business-intelligence-wizard"></a>Добавление логики операций со счетами при помощи мастера бизнес-аналитики  
  После определения измерения счетов и добавления измерения в куб можно добавить логику операций со счетами, например определение и сопоставление типов счетов, в измерение при помощи мастера бизнес-аналитики. Дополнительные сведения см. в разделе [Добавление логики операций со счетами к измерению](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Атрибуты и иерархии атрибутов](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Справка F1 мастера бизнес-аналитики](../business-intelligence-wizard-f1-help.md)   
  [Типы измерений](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  

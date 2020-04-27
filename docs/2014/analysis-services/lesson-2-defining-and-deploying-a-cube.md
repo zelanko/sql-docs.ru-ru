@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 298f07b5a73e7dfd38ef8eef19893813d96e1892
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078938"
 ---
-# <a name="lesson-2-defining-and-deploying-a-cube"></a>Занятие 2. Определение и развертывание куба
+# <a name="lesson-2-defining-and-deploying-a-cube"></a>Урок 2. Определение и развертывание куба
   После определения представления источника данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекте можно приступать к определению исходного [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Куба.  
   
  Кроме того, можно определить куб и его измерения за один проход с помощью мастера кубов. Также можно определить одно или несколько измерений, а затем с помощью мастера кубов определить куб, в котором они будут использоваться. Разработку сложного решения обычно начинают с определения измерений. Дополнительные сведения см. в разделе [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md) или [Кубы в многомерных моделях](multidimensional-models/cubes-in-multidimensional-models.md).  
   
 > [!NOTE]  
->  Завершенные проекты для всех занятий в этом учебнике доступны через Интернет. Можно перейти вперед к любому занятию, используя в качестве отправной точки завершенный проект из предыдущего урока. [Щелкните здесь](https://go.microsoft.com/fwlink/?LinkID=221866) , чтобы скачать примеры проектов, которые можно найти в этом руководстве.  
+>  Завершенные проекты для всех занятий в этом учебнике доступны через Интернет. Можно перейти вперед к любому занятию, используя в качестве отправной точки завершенный проект из предыдущего урока. [Щелкните здесь](https://go.microsoft.com/fwlink/?LinkID=221866) для загрузки образцов проектов, прилагаемых к этому учебнику.  
   
  Это занятие содержит следующие задачи.  
   
@@ -48,13 +48,13 @@ ms.locfileid: "66078938"
 ## <a name="next-lesson"></a>Следующее занятие  
  [Урок 3. Изменение мер, атрибутов и иерархий](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services сценарий учебника](analysis-services-tutorial-scenario.md)   
  [&#40;учебника по Adventure Works в многомерном моделировании&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Кубы в многомерных моделях](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Настройка Analysis Services свойств проекта &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
  [Сборка Analysis Services проектов &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Развертывание проектов Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Развертывание проектов служб Analysis Services (среда SSDT)](multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

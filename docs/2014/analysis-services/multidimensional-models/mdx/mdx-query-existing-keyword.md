@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6c5e8dbe3e1b1ad44286bcbb79132010cad618a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073968"
 ---
 # <a name="existing-keyword-mdx"></a>Ключевое слово EXISTING (многомерные выражения)
@@ -39,7 +39,7 @@ Existing Set_Expression
  По умолчанию наборы вычисляются в контексте куба, который содержит их элементы. Ключевое слово `Existing` указывает на то, что заданный набор должен вычисляться в текущем контексте.  
   
 ## <a name="example"></a>Пример  
- В следующем примере возвращается количество посредников, продажи которых снизились по сравнению с предыдущим периодом, на основании выбранных пользователем значений элемента State-Province, вычисленных с помощью функции `Aggregate`. Ключевое слово [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) и [DrilldownLevel (многомерные выражения)](/sql/mdx/drilldownlevel-mdx) используются для возвращения показателей падения продаж для категорий продуктов в измерении Product. `Existing` Ключевое слово заставляет набор в `Filter` функции вычисляться в текущем контексте, т. е. для элементов Вашингтон и Орегон иерархии атрибута «Штат-провинция».  
+ В следующем примере возвращается количество посредников, продажи которых снизились по сравнению с предыдущим периодом, на основании выбранных пользователем значений элемента State-Province, вычисленных с помощью функции `Aggregate`. Ключевое слово [Hierarchize (многомерные выражения)](/sql/mdx/hierarchize-mdx) и [DrilldownLevel (многомерные выражения)](/sql/mdx/drilldownlevel-mdx) используются для возвращения показателей падения продаж для категорий продуктов в измерении Product. `Existing` Ключевое слово заставляет набор в `Filter` функции вычисляться в текущем контексте, т. е. для элементов Вашингтон и Орегон иерархии атрибута «Штат-провинция».  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -76,7 +76,7 @@ WHERE
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Count &#40;Set&#41; &#40;многомерных выражений&#41;](/sql/mdx/count-set-mdx)   
  [AddCalculatedMembers &#40;&#41;многомерных выражений](/sql/mdx/addcalculatedmembers-mdx)   
  [Статистическая обработка &#40;многомерных выражений&#41;](/sql/mdx/aggregate-mdx)   
@@ -84,6 +84,6 @@ WHERE
  [Свойства &#40;&#41;многомерных выражений](/sql/mdx/properties-mdx)   
  [DrilldownLevel &#40;&#41;многомерных выражений](/sql/mdx/drilldownlevel-mdx)   
  [Hierarchize &#40;&#41;многомерных выражений](/sql/mdx/hierarchize-mdx)   
- [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](/sql/mdx/mdx-function-reference-mdx)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](/sql/mdx/mdx-function-reference-mdx)  
   
   

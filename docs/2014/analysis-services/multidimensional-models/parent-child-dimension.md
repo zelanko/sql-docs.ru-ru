@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0eac17d30d8a8870d03a0b5b81610fad1344333
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073388"
 ---
 # <a name="parent-child-hierarchy"></a>Иерархия "родители-потомки"
@@ -51,7 +51,7 @@ ms.locfileid: "66073388"
   
  Однако иерархии типа «родители-потомки» могут содержать некоторые неконечные элементы, данные которых выводятся из базовых источников данных в дополнение к данным, статистически вычисленным из дочерних элементов. Для этих неконечных элементов в иерархии типа «родители-потомки» можно создавать специальные дочерние элементы, формируемые системой, которые содержат данные базовых таблиц фактов. Они называются *элементы данных*и содержат значение, которое непосредственно связано с неконечным элементом и независимо от сводного значения, вычисленного на основе наследников неконечного элемента. Дополнительные сведения об элементах данных см. в разделе [Атрибуты в иерархиях типа "родители-потомки"](parent-child-dimension-attributes.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Атрибуты в иерархиях «родители-потомки»](parent-child-dimension-attributes.md)   
  [Свойства измерений базы данных](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
   

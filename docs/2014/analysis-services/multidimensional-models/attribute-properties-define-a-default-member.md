@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077421"
 ---
 # <a name="define-a-default-member"></a>Определение элемента по умолчанию
@@ -43,7 +43,7 @@ ms.locfileid: "66077421"
   
  Когда уровни в иерархии вычисляются естественным образом, можно определить элемент по умолчанию для любого атрибута в иерархии, вне зависимости от других атрибутов в этой иерархии. Например, в иерархии страна-провинция-город можно определить элемент по умолчанию для города, например [City]. [Монреаль] без определения элемента по умолчанию для State или Country.  
   
-## <a name="see-also"></a>См. также:  
- [Настройка &#40;всех уровней&#41; для иерархий атрибутов](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+## <a name="see-also"></a>См. также  
+ [Настройка уровня "Все" для иерархий атрибутов](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

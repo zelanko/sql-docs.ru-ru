@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc620811209d854af5a9c874956847236819f462
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081044"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>Прогноз (средства анализа таблиц для Excel)
@@ -91,7 +91,7 @@ ms.locfileid: "66081044"
   
  Дополнительные сведения о мастере **прогнозов** см. в разделе [мастер прогнозов &#40;надстройки интеллектуального анализа данных для&#41;Excel ](forecast-wizard-data-mining-add-ins-for-excel.md). Дополнительные сведения об алгоритме прогнозирования см. в разделе «Алгоритм временных рядов (Майкрософт)» электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Средства анализа таблиц для Excel](table-analysis-tools-for-excel.md)  
   
   

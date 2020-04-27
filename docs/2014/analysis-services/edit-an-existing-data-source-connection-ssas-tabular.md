@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ffc45b255ef609d486f19cf18254ad9ed2937433
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081450"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>Изменение существующего соединения с источником данных (табличные службы SSAS)
@@ -77,8 +77,8 @@ ms.locfileid: "66081450"
   
      При сохранении текущего набора свойств таблицы может появиться сообщение, указывающее на необходимость обработки таблиц. Чтобы загрузить обновленные данные в модель, нажмите кнопку **Обработать** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обработка данных &#40;табличные&#41;SSAS](process-data-ssas-tabular.md)   
- [Поддерживаемые источники данных &#40;табличные&#41;SSAS](tabular-models/data-sources-supported-ssas-tabular.md)  
+ [Поддерживаемые источники данных (табличные службы SSAS)](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

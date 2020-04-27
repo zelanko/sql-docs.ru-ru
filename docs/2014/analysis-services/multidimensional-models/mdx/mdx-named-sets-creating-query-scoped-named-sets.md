@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a611d3d20d269bb9c3fa3a1f764181b1660713b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074070"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>Создание именованных наборов с областью действия запроса (многомерные выражения)
@@ -92,8 +92,8 @@ FROM Sales
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Инструкция SELECT &#40;&#41;многомерных выражений](/sql/mdx/mdx-data-manipulation-select)   
- [Создание именованных наборов с областью действия сеанса &#40;&#41;многомерных выражений](mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [Создание именованных наборов с областью действия сеанса (многомерные выражения)](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

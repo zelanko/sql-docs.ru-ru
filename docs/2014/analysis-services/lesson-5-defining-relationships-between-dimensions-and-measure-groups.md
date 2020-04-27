@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 765d983bcd3c9e12b29235eb5ee5dac91e3c2d8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078420"
 ---
-# <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Занятие 5. Определение связей между измерениями и группами мер
+# <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Занятие 5.: Определение связей между измерениями и группами мер
   На предыдущем занятии было рассмотрено, что измерения баз данных, добавленные к кубу, могут использоваться как основа для одного или нескольких измерений куба. На этом занятии предстоит изучить, как следует определять различные типы связей между измерениями куба и группами мер, а также изучить определение свойств этих связей.  
   
  Дополнительные сведения см. в разделе [Связи измерений](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 > [!NOTE]  
->  Завершенные проекты для всех занятий в этом учебнике доступны через Интернет. Можно перейти вперед к любому занятию, используя в качестве отправной точки завершенный проект из предыдущего урока. [Щелкните здесь](https://go.microsoft.com/fwlink/?LinkID=221866) , чтобы скачать примеры проектов, которые можно найти в этом руководстве.  
+>  Завершенные проекты для всех занятий в этом учебнике доступны через Интернет. Можно перейти вперед к любому занятию, используя в качестве отправной точки завершенный проект из предыдущего урока. [Щелкните здесь](https://go.microsoft.com/fwlink/?LinkID=221866) для загрузки образцов проектов, прилагаемых к этому учебнику.  
   
  Это занятие содержит следующие задачи.  
   
@@ -40,9 +40,9 @@ ms.locfileid: "66078420"
  В этой задаче будет изучено, как изменить степень гранулярности измерения для конкретной группы показателей.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 6. Определение вычислений](lesson-6-defining-calculations.md)  
+ [Занятие 6: Определение вычислений](lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services сценарий учебника](analysis-services-tutorial-scenario.md)   
  [&#40;учебника по Adventure Works в многомерном моделировании&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Связи измерений](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

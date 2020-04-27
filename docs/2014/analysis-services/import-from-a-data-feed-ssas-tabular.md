@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080570"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Импорт из потока данных (табличные службы SSAS)
@@ -32,7 +32,7 @@ ms.locfileid: "66080570"
   
 -   [Импорт веб-каналов данных из отчетов служб Reporting Services](#importreport)  
   
-##  <a name="prereq"></a>Основные сведения об импорте из веб-канала данных  
+##  <a name="understanding-import-from-a-data-feed"></a><a name="prereq"></a>Основные сведения об импорте из веб-канала данных  
  В табличную модель можно импортировать данные из следующих типов веб-каналов данных:  
   
  **Reporting Services, отчет служб**  
@@ -44,9 +44,9 @@ ms.locfileid: "66080570"
  **Веб-каналы Atom**  
  Используются только веб-каналы Atom. Каналы RSS не поддерживаются. Канал должен быть общедоступным, либо необходимо иметь разрешение на подключение к нему под учетной записью Windows, указанной при входе в систему.  
   
- Данные из веб-канала данных добавляются в модель один раз во время импорта. Чтобы получить обновленные данные из канала, можно обновить данные из конструктора моделей или настроить расписание обновления данных для модели после развертывания в рабочем экземпляре служб Analysis Services. Дополнительные сведения см. в разделе [Process Data &#40;SSAS Tabular&#41;](process-data-ssas-tabular.md).  
+ Данные из веб-канала данных добавляются в модель один раз во время импорта. Чтобы получить обновленные данные из канала, можно обновить данные из конструктора моделей или настроить расписание обновления данных для модели после развертывания в рабочем экземпляре служб Analysis Services. Дополнительные сведения см. в разделе [Обработка данных (табличные службы SSAS)](process-data-ssas-tabular.md).  
   
-##  <a name="azure"></a>Импорт данных из набора данных Azure DataMarket  
+##  <a name="import-data-from-an-azure-datamarket-dataset"></a><a name="azure"></a>Импорт данных из набора данных Azure DataMarket  
  Данные из Azure DataMarket можно импортировать в модель в виде таблицы.  
   
 #### <a name="to-import-data-from-an-azure-datamarket-dataset"></a>Импорт данных из набора данных Azure DataMarket  
@@ -73,7 +73,7 @@ ms.locfileid: "66080570"
   
 11. На странице **Выбор таблиц и представлений** нажмите кнопку **Готово**.  
   
-##  <a name="importdata"></a>Импорт веб-каналов данных из общедоступных или корпоративных источников данных  
+##  <a name="import-data-feeds-from-public-or-corporate-data-sources"></a><a name="importdata"></a>Импорт веб-каналов данных из общедоступных или корпоративных источников данных  
  Можно получить доступ к общедоступным потокам данных или построить пользовательские службы данных, формирующие веб-каналы Atom из собственных или устаревших систем управления базами данных.  
   
 #### <a name="to-import-data-from-public-or-corporate-data-feeds"></a>Импорт данных из открытых или корпоративных веб-каналов данных  
@@ -111,7 +111,7 @@ ms.locfileid: "66080570"
   
 10. На странице **Выбор таблиц и представлений** нажмите кнопку **Готово**.  
   
-##  <a name="importlist"></a>Импорт веб-каналов данных из списков SharePoint  
+##  <a name="import-data-feeds-from-sharepoint-lists"></a><a name="importlist"></a>Импорт веб-каналов данных из списков SharePoint  
  Поддерживается импорт любого списка SharePoint, в котором имеется кнопка **Экспортировать как канал данных** в меню ленты (SharePoint). Нажав ее, можно экспортировать лист в качестве канала.  
   
 #### <a name="to-import-data-feeds-from-a-sharepoint-list"></a>Импорт каналов данных из списка SharePoint  
@@ -143,7 +143,7 @@ ms.locfileid: "66080570"
   
 10. На странице **Выбор таблиц и представлений** нажмите кнопку **Готово**.  
   
-##  <a name="importreport"></a>Импорт веб-каналов данных из отчетов Reporting Services  
+##  <a name="import-data-feeds-from-reporting-services-reports"></a><a name="importreport"></a>Импорт веб-каналов данных из отчетов Reporting Services  
  Если на компьютере развернуты службы [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Reporting Services, можно использовать новый модуль подготовки отчетов Atom для формирования веб-канала данных из существующего отчета.  
   
 #### <a name="to-import-report-data-from-a-published-reporting-services-report"></a>Импорт данных отчета из опубликованного отчета служб Reporting Services  
@@ -189,11 +189,11 @@ ms.locfileid: "66080570"
   
 12. На странице **Выбор таблиц и представлений** нажмите кнопку **Готово**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поддерживаемые источники данных &#40;табличные&#41;SSAS](tabular-models/data-sources-supported-ssas-tabular.md)   
  [Поддерживаемые типы данных &#40;табличные&#41;SSAS](tabular-models/data-types-supported-ssas-tabular.md)   
  [Олицетворение &#40;табличные&#41;SSAS](tabular-models/impersonation-ssas-tabular.md)   
  [Обработка данных &#40;табличные&#41;SSAS](process-data-ssas-tabular.md)   
- [Импорт данных &#40;табличные&#41;SSAS](import-data-ssas-tabular.md)  
+ [Импорт данных (табличные службы SSAS)](import-data-ssas-tabular.md)  
   
   

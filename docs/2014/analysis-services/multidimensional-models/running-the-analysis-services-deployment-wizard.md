@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8fd34a7e614c1c1bb247f84846e090d22ea053e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073040"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Запуск мастера развертывания служб Analysis Services
   При использовании [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] мастера развертывания для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] развертывания проекта можно запустить мастер следующими способами.  
   
--   В **интерактивном режиме** При интерактивном запуске мастер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] развертывания создает скрипт развертывания XML на основе входных файлов, как измененный в интерактивном режиме при вводе данных пользователем. Мастер применяет все пользовательские изменения только к скрипту развертывания. Мастер не изменяет входные файлы. Дополнительные сведения о настройках конфигурации см. в разделе [Understanding the Input Files Used to Create the Deployment Script](deployment-script-files-input-used-to-create-deployment-script.md) (Основные сведения о входных файлах, применяемых для создания скрипта развертывания).  
+-   **Интерактивно.** При интерактивном запуске мастер развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] формирует XML-скрипт развертывания на основе входных файлов в соответствии с изменениями, интерактивно вводимыми пользователем. Мастер применяет все пользовательские изменения только к скрипту развертывания. Мастер не изменяет входные файлы. Дополнительные сведения о настройках конфигурации см. в разделе [Understanding the Input Files Used to Create the Deployment Script](deployment-script-files-input-used-to-create-deployment-script.md)(Основные сведения о входных файлах, применяемых для создания скрипта развертывания).  
   
 -   **Из командной строки** При запуске из командной строки мастер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] развертывания создает XML для АНАЛИТИКИ (XMLA) скрипт развертывания на основе параметров, используемых для запуска мастера. Мастер может работать одним из следующих способов: выдать приглашение для ввода данных и изменить входные файлы на основе этих данных, запустить автоматическое развертывание с использованием исходных входных файлов или создать скрипт развертывания, который можно использовать позже.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66073040"
   
 2.  Запустите **Microsoft.AnalysisServices.Deployment.exe** с ключом, определяющим режим запуска мастера.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о скрипте развертывания Analysis Services](understanding-the-analysis-services-deployment-script.md)   
  [Развертывание решений модели с использованием мастера развертывания](deploy-model-solutions-using-the-deployment-wizard.md)  
   

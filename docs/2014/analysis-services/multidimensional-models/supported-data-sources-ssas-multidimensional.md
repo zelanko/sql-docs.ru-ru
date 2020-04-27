@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072863"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Поддерживаемые источники данных (многомерные службы SSAS)
   В этом разделе описываются типы источников данных, которые можно использовать в многомерной модели.  
   
-##  <a name="bkmk_supported_ds"></a>Поддерживаемые источники данных  
+##  <a name="supported-data-sources"></a><a name="bkmk_supported_ds"></a>Поддерживаемые источники данных  
  Данные можно получать из источников данных, перечисленных в следующей таблице. При установке среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]программа установки не устанавливает поставщиков, указанных для каждого из источников данных. Некоторые поставщики могут быть уже установлены в компьютер с другими приложениями, а в других случаях потребуется загрузить и установить необходимый поставщик.  
   
 > [!NOTE]  
@@ -54,7 +54,7 @@ ms.locfileid: "66072863"
   
  <sup>5</sup> для некоторых функций требуется SQL Server реляционной базы данных, которая работает в локальной среде. Это требуется для функции обратной записи и хранилища ROLAP — используемый источник данных должен быть реляционной базой данных SQL Server.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поддерживаемые источники данных &#40;табличные&#41;SSAS](../tabular-models/data-sources-supported-ssas-tabular.md)   
  [Источники данных в многомерных моделях](data-sources-in-multidimensional-models.md)   
  [Представления источников данных в многомерных моделях](data-source-views-in-multidimensional-models.md)  

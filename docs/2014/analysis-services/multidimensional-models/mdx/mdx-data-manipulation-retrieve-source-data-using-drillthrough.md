@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b437016cc29b2e4a85f781e3a422fb40c70f37c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074301"
 ---
 # <a name="using-drillthrough-to-retrieve-source-data-mdx"></a>Извлечение данных из источника с помощью функции DRILLTHROUGH (многомерные выражения)
@@ -55,7 +55,7 @@ From Stores
 RETURN [Department MeasureGroup].[Department Id], [Employee].[First Name]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Обработка данных &#40;многомерных выражениях&#41;](mdx-data-manipulation-manipulating-data.md)  
+## <a name="see-also"></a>См. также  
+ [Манипулирование данными (многомерные выражения)](mdx-data-manipulation-manipulating-data.md)  
   
   

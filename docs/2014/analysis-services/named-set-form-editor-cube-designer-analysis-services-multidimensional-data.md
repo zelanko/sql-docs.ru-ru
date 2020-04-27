@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 861824359ff1cd9700f5acaa64d0b2155c870add
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072345"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Редактор формы именованного набора (вкладка «Вычисления», конструктор кубов) (службы Analysis Services — многомерные данные)
@@ -26,7 +26,7 @@ ms.locfileid: "66072345"
 >  Данная панель отображается только в представлении формы.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Введите имя именованного набора.  
   
  **Выражение**  
@@ -37,7 +37,7 @@ ms.locfileid: "66072345"
 > [!NOTE]  
 >  Этот параметр должен содержать допустимое выражение набора.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Времен](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Создание именованных наборов](multidimensional-models/create-named-sets.md)   
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   

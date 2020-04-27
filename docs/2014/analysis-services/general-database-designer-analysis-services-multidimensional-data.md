@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081088"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>Общие (конструктор баз данных) (службы Analysis Services — многомерные данные)
@@ -60,11 +60,11 @@ ms.locfileid: "66081088"
  Разверните раздел **Сопоставление типов учетных записей** , чтобы изменить используемую по умолчанию статистическую функцию, связанную с каждым **типом** учетных записей в выбранной базе данных.  
   
 > [!NOTE]  
->  Данный параметр применяется только к кубам, в которых одна или более мер используют статистическую функцию *ByAccount* .  
+>   Данный параметр применяется только к кубам, в которых одна или более мер используют статистическую функцию *ByAccount* .  
   
  Этот раздел содержит сетку со следующими столбцами.  
   
- **Название**  
+ **Имя**  
  Введите имя типа учетной записи.  
   
  Чтобы добавить новый тип учетной записи, щелкните ** \<добавить новый тип учетной записи>**.  
@@ -75,7 +75,7 @@ ms.locfileid: "66081088"
  **Агрегатная функция**  
  Задает статистическую функцию, используемую с выбранным типом учетной записи.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Базы данных многомерной модели &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
  [Предупреждения &#40;конструкторе баз данных&#41; &#40;Analysis Services многомерных данных&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  

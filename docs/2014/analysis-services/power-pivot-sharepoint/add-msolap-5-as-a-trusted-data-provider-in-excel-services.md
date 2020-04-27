@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9095c1fa767e1854c300df1ad08bf5d1900af860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071925"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services
@@ -24,7 +24,7 @@ ms.locfileid: "66071925"
   
  Этот шаг нужно выполнить только один раз для каждого приложения служб Excel Services.  
   
- На каждом физическом сервере, обрабатывающем запросы к данным PowerPivot, например сервере PowerPivot для SharePoint или сервере служб Excel Services, должен быть установлен поставщик OLE DB. Установка PowerPivot для SharePoint всегда включает поставщик OLE DB, однако если службы Excel работают на компьютере без PowerPivot для SharePoint, то поставщик следует установить вручную. Дополнительные сведения см. в разделе [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
+ На каждом физическом сервере, обрабатывающем запросы к данным PowerPivot, например сервере PowerPivot для SharePoint или сервере служб Excel Services, должен быть установлен поставщик OLE DB. Установка PowerPivot для SharePoint всегда включает поставщик OLE DB, однако если службы Excel работают на компьютере без PowerPivot для SharePoint, то поставщик следует установить вручную. Дополнительные сведения см. в статье [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
 ## <a name="add-a-trusted-provider-to-excel-services"></a>Добавление надежного поставщика в службы Excel Services  
   

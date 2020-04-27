@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0571271f347c2aebcc2a0e0e25f2fff09b98fa89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070344"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Реляционные объекты» (службы Analysis Services — многомерные данные)
@@ -32,7 +32,7 @@ ms.locfileid: "66070344"
  **Show system objects**  
  Выберите этот параметр для отображения системных объектов для источника данных в поле **Выберите объекты для установки упреждающего кэширования**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Уведомления &#40;диалоговое окно "Параметры хранилища"&#41; &#40;Analysis Services многомерных данных&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)  
   

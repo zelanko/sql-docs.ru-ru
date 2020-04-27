@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9d967d1275c7b682c79313b95af06f3088e7acf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075980"
 ---
 # <a name="create-a-currency-type-dimension"></a>Создание измерения типа Currency
@@ -61,7 +61,7 @@ ms.locfileid: "66075980"
 ## <a name="defining-account-intelligence-with-the-business-intelligence-wizard"></a>Определение логики операций со счетами с помощью мастера бизнес-аналитики  
  После определения измерения счетов и его добавления в куб можно, воспользовавшись мастером бизнес-аналитики, добавить функционал логики операций со счетами, например идентифицирующие типы учетной записи и типы сопоставления, к измерению. Дополнительные сведения см. в разделе [Добавление логики операций со счетами к измерению](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Атрибуты и иерархии атрибутов](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Справка F1 мастера бизнес-аналитики](../business-intelligence-wizard-f1-help.md)   
  [Типы измерений](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dbc1f6daf1039d24830bc91140f82e061b88ae65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069948"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>Справка F1 мастера формирования схем (службы Analysis Services — многомерные данные)
@@ -34,7 +34,7 @@ ms.locfileid: "66069948"
   
  После формирования и сохранения реляционной схемы с использованием мастера формирования схем можно использовать это мастер для изменения и повторного заполнения этой реляционной схемы в будущем.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Мастер определения целевых &#40;мастера формирования схем&#41; &#40;Analysis Services многомерных данных&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66069948"
   
 -   [Завершение работы мастера &#40;мастера формирования схем&#41; &#40;Analysis Services многомерных данных&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070320"
 ---
-# <a name="lesson-3-rename-columns"></a>Занятие 3. Переименование столбцов
+# <a name="lesson-3-rename-columns"></a>Урок 3. Переименование столбцов
   На этом занятии мы переименуем несколько столбцов в каждой импортированной таблице. Переименование делает названия столбцов более понятными, и с ними становится легче работать в конструкторе моделей, а также при выборе полей в клиентском приложении. Дополнительные сведения см. в разделе [Переименование таблицы или столбца (табличные службы SSAS)](tabular-models/rename-a-table-or-column-ssas-tabular.md).  
   
 > [!IMPORTANT]  
@@ -25,7 +25,7 @@ ms.locfileid: "66070320"
   
  Предполагаемое время выполнения этого занятия: **20 минут**  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Этот раздел входит в учебник по табличному моделированию, который следует изучать в предложенном порядке. Прежде чем выполнять задания в этом занятии, необходимо завершить предыдущее занятие: [Занятие 2. Добавление данных](lesson-2-add-data.md).  
   
 ## <a name="rename-columns"></a>Переименование столбцов  
@@ -53,14 +53,14 @@ ms.locfileid: "66070320"
     |MiddleName|Второе имя|  
     |LastName|Фамилия|  
     |NameStyle|Стиль имени|  
-    |BirthDate|Дата рождения|  
+    |BirthDate|Birth Date|  
     |MaritalStatus|Семейное положение|  
     |EmailAddress|Электронная почта|  
     |YearlyIncome|Годовой доход|  
     |TotalChildren|Общее количество детей|  
     |NumberChildrenAtHome|Количество детей в доме|  
     |EnglishEducation|Образование|  
-    |EnglishOccupation|Occupation|  
+    |EnglishOccupation|Род занятий|  
     |HouseOwnerFlag|Владеет домом|  
     |NumberCarsOwned|Количество машин во владении|  
     |AddressLine1|Строка адреса 1|  
@@ -88,7 +88,7 @@ ms.locfileid: "66070320"
     |FiscalYear|Финансовый год|  
     |FiscalSemester|Финансовый семестр|  
   
-     **Geography**  
+     **География**  
   
     |Имя источника|Понятное имя|  
     |-----------------|-------------------|  
@@ -100,7 +100,7 @@ ms.locfileid: "66070320"
     |PostalCode|Почтовый индекс|  
     |SalesTerritoryKey|Идентификатор территории продаж|  
   
-     **Продукт**  
+     **Продукта**  
   
     |Имя источника|Понятное имя|  
     |-----------------|-------------------|  
@@ -121,7 +121,7 @@ ms.locfileid: "66070320"
     |Dealer Price|Dealer Price|  
     |ModelName|Имя модели|  
     |LargePhoto|Большое изображение|  
-    |EnglishDescription|Description|  
+    |EnglishDescription|Описание|  
     |StartDate|Дата начала жизненного цикла продукта (Дата начала периода расчета стоимости продукта )|  
     |EndDate|Дата окончания жизненного цикла продукта (Дата окончания периода расчета стоимости продукта)|  
     |Состояние|Состояние продукта|  
@@ -143,7 +143,7 @@ ms.locfileid: "66070320"
     |EnglishProductSubcategoryName|Имя подкатегории продукта|  
     |ProductCategoryKey|Идентификатор категории продукта|  
   
-     **Продажи через Интернет**  
+     **Internet Sales**  
   
     |Имя источника|Понятное имя|  
     |-----------------|-------------------|  
@@ -155,22 +155,22 @@ ms.locfileid: "66070320"
     |SalesOrderNumber|Число заказов на продажу|  
     |SalesOrderLineNumber|Число линий заказов на продажу|  
     |RevisionNumber|Revision Number|  
-    |OrderQuantity|заказанное количество|  
+    |OrderQuantity|Заказанное количество|  
     |UnitPrice|Unit Price|  
     |ExtendedAmount|Extended Amount|  
     |UnitPriceDiscountPct|Процент скидки от стоимости единицы|  
     |DiscountAmount|Discount Amount|  
     |ProductStandardCost|Product Standard Cost|  
-    |TotalProductCost|общая себестоимость продукции|  
+    |TotalProductCost|Total Product Cost|  
     |SalesAmount|Объем продаж|  
-    |TaxAmt|сумма налогов|  
+    |TaxAmt|Tax Amt|  
     |CarrierTrackingNumber|Номер отслеживания перевозчика|  
     |CustomerPONumber|Номер почтового отделения клиента|  
     |OrderDate|Дата заказа|  
-    |DueDate|Дата оплаты счета|  
+    |DueDate|Срок заказа|  
     |ShipDate|Дата отгрузки|  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
  Чтобы продолжить изучение этого учебника, перейдите к следующему занятию: [Занятие 4. Диалоговое окно "Пометить как таблицу дат"](lesson-3-mark-as-date-table.md).  
   
   

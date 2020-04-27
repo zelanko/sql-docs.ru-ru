@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0948fda951bb415d9fe3f457729200752a8afaaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080484"
 ---
 # <a name="incremental-update-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Добавочное обновление» (службы Analysis Services — многомерные данные)
@@ -35,7 +35,7 @@ ms.locfileid: "66080484"
 |**Источник данных**|Выберите источник данных, в котором находятся таблицы, к которым должен выполняться запрос.<br /><br /> Примечание. Этот параметр включен, если выбран источник данных **Очередь** .|  
 |**Текст запроса**|Введите текст запроса, используемого для получения данных для добавочного обновления куба, группы мер или секции.<br /><br /> Примечание. Этот параметр включен, если выбран источник данных **Очередь** .|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Диалоговое окно "обработка" &#40;Analysis Services многомерных данных&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   

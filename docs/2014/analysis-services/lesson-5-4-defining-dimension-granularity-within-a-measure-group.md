@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 46d69f2bcc82ba1ff4ae49e9bfa5e3aa7a61ad2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078458"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Определение степени гранулярности измерения в группе мер
@@ -60,7 +60,7 @@ ms.locfileid: "66078458"
   
 12. Удалите меру **календарный квартал** из группы `Sales Quotas` мер.  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]обнаружен столбец, лежащий в основе меры календарного квартала, в качестве столбца, содержащего меры. Однако данный столбец и столбец CalendarYear содержат значения, которые будут использованы позднее в этом разделе для связывания группы мер Sales Quotas с измерением даты.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] будет определено, что лежащий в основе показателя Calendar Quarter столбец содержит меры. Однако данный столбец и столбец CalendarYear содержат значения, которые будут использованы позднее в этом разделе для связывания группы мер Sales Quotas с измерением даты.  
   
 13. На панели **меры** щелкните правой кнопкой мыши группу `Sales Quotas` мер и выберите пункт **Создать меру**.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "66078458"
   
 3.  В конструкторе кубов для [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Куба Tutorial перейдите на вкладку **Использование измерений** и просмотрите сведения об использовании измерений в группах мер `Sales Quotas` и **квотах продаж 1** .  
   
-     Обратите внимание **** , что `Date` измерения Employee и Cube связаны с группами мер **Sales куотасанд Sales квоты 1** через обычные связи. Кроме того, обратите внимание, что измерение куба **Территория продаж** не связано ни с одной из этих групп мер.  
+     Обратите внимание **Employee** , что `Date` измерения Employee и Cube связаны с группами мер **Sales куотасанд Sales квоты 1** через обычные связи. Кроме того, обратите внимание, что измерение куба **Территория продаж** не связано ни с одной из этих групп мер.  
   
 4.  Щелкните ячейку на пересечении измерения « **Территория продаж** » и группы `Sales Quotas` мер, а затем нажмите кнопку обзора (..**.**). Откроется диалоговое окно **Задание связи** .  
   
@@ -209,7 +209,7 @@ ms.locfileid: "66078458"
   
 6.  Перетащите пользовательскую иерархию **Date.FiscalDate** в область «Метки строк», а затем щелкните стрелку вниз рядом с названием **Метки столбцов** в сводной таблице и снимите все флажки, кроме **FY 2008**, чтобы отобразить данные только для финансового года 2008.  
   
-7.  Нажмите кнопку ОК.  
+7.  Нажмите кнопку "ОК".  
   
 8.  Последовательно разверните элементы **FY 2008**, **H1 FY 2008**и **Q1 FY 2008**.  
   
@@ -220,11 +220,11 @@ ms.locfileid: "66078458"
      ![Группа мер «Квота продаж», правильно разнесенная по измерениям](../../2014/tutorials/media/l5-granularity-7.gif "Группа мер «Квота продаж», правильно разнесенная по измерениям")  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 6. Определение вычислений](lesson-6-defining-calculations.md)  
+ [Занятие 6: Определение вычислений](lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Связи измерений](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Определение обычной связи и свойств обычной связи](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
- [Работа с диаграммами в конструкторе представлений источников данных &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Работа с диаграммами в конструкторе представлений источника данных (службы Analysis Services)](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bbb792ac4e86ae563f80f35f04854f16501b34a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075563"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Определение именованных запросов в представлении источника данных (службы Analysis Services)
@@ -35,7 +35,7 @@ ms.locfileid: "66075563"
   
  Таблицы и столбцы, указанные в SQL-запросе, не должны квалифицироваться или должны квалифицироваться только именем таблицы. Например, для ссылки на столбец SaleAmount в таблице можно использовать `SaleAmount` или `Sales.SaleAmount` , но `dbo.Sales.SaleAmount` возвращает ошибку.  
   
- **Примечание** . При определении именованного запроса, который запрашивает источник данных [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0, именованный запрос, содержащий Коррелированный вложенный запрос и предложение GROUP BY, завершится ошибкой. Дополнительные сведения см. в статье [Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY](https://support.microsoft.com/kb/274729) (Внутренняя ошибка инструкции SELECT, содержащей связанный вложенный запрос и предложение GROUP BY) в базе знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ **Примечание** При определении именованного запроса, обращающегося к источнику данных [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, именованный запрос, который содержит связанный вложенный запрос и предложение GROUP BY, завершится неудачно. Дополнительные сведения см. в статье [Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY](https://support.microsoft.com/kb/274729) (Внутренняя ошибка инструкции SELECT, содержащей связанный вложенный запрос и предложение GROUP BY) в базе знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="add-or-edit-a-named-query"></a>Добавление или изменение именованного запроса  
   
@@ -60,8 +60,8 @@ ms.locfileid: "66075563"
   
 5.  Нажмите кнопку **ОК**. В заголовке таблицы появится значок с двумя пересекающимися таблицами, указывающий на то, что таблица была заменена именованным запросом.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления источников данных в многомерных моделях](data-source-views-in-multidimensional-models.md)   
- [Определение именованных вычислений в представлении источника данных &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Определение именованных вычислений в представлении источника данных (службы Analysis Services)](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

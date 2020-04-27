@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078899"
 ---
 # <a name="modifying-measures"></a>Изменение мер
@@ -36,7 +36,7 @@ ms.locfileid: "66078899"
   
 5.  Выберите следующие меры. Можно выбрать несколько мер. Для этого щелкните каждую из них, удерживая нажатой клавишу CTRL.  
   
-    -   **Цена за единицу**  
+    -   **Unit Price**  
   
     -   **Extended Amount**  
   
@@ -44,11 +44,11 @@ ms.locfileid: "66078899"
   
     -   **Product Standard Cost**  
   
-    -   **общая себестоимость продукции**  
+    -   **Total Product Cost**  
   
     -   **Объем продаж**  
   
-    -   **сумма налогов**  
+    -   **Tax Amt**  
   
     -   **Freight**  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66078899"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Изменение измерения «Заказчик»](lesson-3-2-modifying-the-customer-dimension.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Определение измерений базы данных](multidimensional-models/define-database-dimensions.md)   
  [Настройка свойств мер](multidimensional-models/configure-measure-properties.md)  
   

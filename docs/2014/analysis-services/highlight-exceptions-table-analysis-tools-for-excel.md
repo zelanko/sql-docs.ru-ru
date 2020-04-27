@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080756"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>Выделение исключений (средства анализа таблиц для Excel)
@@ -37,7 +37,7 @@ ms.locfileid: "66080756"
   
 2.  Укажите столбцы для анализа.  
   
-3.  Нажмите кнопку **Запустить**.  
+3.  Нажмите кнопку **Выполнить**.  
   
 4.  Откройте лист с названием \<таблица имя таблицы> выбросов, чтобы просмотреть сводку обнаруженных выбросов.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66080756"
   
  Дополнительные сведения об алгоритме кластеризации [!INCLUDE[msCoName](../includes/msconame-md.md)] см. в разделе «Алгоритм кластеризации (Майкрософт)» в электронной документации к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Средства анализа таблиц для Excel](table-analysis-tools-for-excel.md)  
   
   

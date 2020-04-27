@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078095"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Вкладка «Диаграмма точности прогнозов» (представление диаграммы точности интеллектуального анализа данных)
@@ -39,12 +39,12 @@ ms.locfileid: "66078095"
   
  Диаграмма роста прибыли недоступна, если был выбран непрерывный прогнозируемый столбец во вкладке **Сопоставление столбцов** .  
   
- **Копировать**  
+ **Копирование**  
  Копирует диаграмму в буфер обмена.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конструктор диаграмм точности интеллектуального анализа &#40;&#41;интеллектуального анализа данных](mining-accuracy-chart-designer-data-mining.md)   
  [Задачи тестирования и проверки и инструкции &#40;&#41;интеллектуального анализа данных](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Тестирование и проверка &#40;&#41;интеллектуального анализа данных](data-mining/testing-and-validation-data-mining.md)  
+ [Тестирование и проверка (интеллектуальный анализ данных)](data-mining/testing-and-validation-data-mining.md)  
   
   

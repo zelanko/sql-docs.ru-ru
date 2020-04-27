@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c5a8e3f2930d7975f8c75c8f89ab90b78461a650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072009"
 ---
 # <a name="activate-powerpivot-feature-integration-for-site-collections-in-central-administration"></a>Активация интеграции функций PowerPivot для семейств веб-сайтов в центре администрирования
@@ -24,7 +24,7 @@ ms.locfileid: "66072009"
   
  Необходимо активировать интеграцию PowerPivot для всех семейств веб-сайтов, поддерживающих обработку запросов PowerPivot.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Пользователь должен быть администратором семейства веб-сайтов.  
   
 ## <a name="activate-powerpivot-features"></a>Активация функций PowerPivot  
@@ -39,11 +39,11 @@ ms.locfileid: "66072009"
   
 4.  Прокрутите страницу вниз, пока не найдете **компонент коллекция веб-сайтов интеграции с PowerPivot**.  
   
-5.  Нажмите кнопку **Активировать**.  
+5.  Щелкните **Активировать**.  
   
 6.  Повторите эти действия для дополнительных семейств веб-сайтов, открыв каждый из сайтов и щелкнув **Действия сайта**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Администрирование и настройка сервера PowerPivot в центре администрирования](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [PowerPivot для SharePoint &#40;начальной конфигурации&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)   
  [Установка PowerPivot для SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

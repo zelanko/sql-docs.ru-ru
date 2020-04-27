@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 313fdd08234e9dd784d45c65d7ee23cd0a0a308c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076241"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Создание проекта служб Analysis Services (среда SSDT)
@@ -31,7 +31,7 @@ ms.locfileid: "66076241"
   
  Этот раздел состоит из следующих подразделов.  
   
- [Создание нового проекта с помощью шаблона проекта Analysis Services](#bkmk_NewUsingTemplate)  
+ [Создание нового проекта с помощью шаблона проекта служб Analysis Services](#bkmk_NewUsingTemplate)  
   
  [Создание нового проекта с помощью существующей базы данных Analysis Services](#bkmk_NewUsingWizard)  
   
@@ -39,13 +39,13 @@ ms.locfileid: "66076241"
   
  [Сборка и развертывание решения](#bkmk_buildDeploy)  
   
- [Analysis Services папки проекта](#bkmk_ProjectFolders)  
+ [Папки проектов служб Analysis Services](#bkmk_ProjectFolders)  
   
  [Типы файлов Analysis Services](#bkmk_FileTypes)  
   
- [Шаблоны элементов Analysis Services](#bkmk_ItemTemplates)  
+ [Шаблоны элементов служб Analysis Services](#bkmk_ItemTemplates)  
   
-##  <a name="bkmk_NewUsingTemplate"></a>Создание нового проекта с помощью шаблона проекта Analysis Services  
+##  <a name="create-a-new-project-using-the-analysis-services-project-template"></a><a name="bkmk_NewUsingTemplate"></a>Создание нового проекта с помощью шаблона проекта Analysis Services  
  Используйте эти инструкции для создания пустого проекта и определения объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которые затем можно будет развернуть в качестве новой базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]выберите **Файл**, **Создать**, а затем **Проект**. В диалоговом окне **Новый проект** на панели **Типы проектов** выберите **Проекты бизнес-аналитики**.  
@@ -64,7 +64,7 @@ ms.locfileid: "66076241"
   
 6.  Нажмите кнопку **ОК**.  
   
-##  <a name="bkmk_NewUsingWizard"></a>Создание нового проекта с помощью существующей базы данных Analysis Services  
+##  <a name="create-a-new-project-using-an-existing-analysis-services-database"></a><a name="bkmk_NewUsingWizard"></a> Создание нового проекта с использованием существующей базы данных служб Analysis Services  
  С помощью импорта баз данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создайте проект на основе объектов из существующей базы данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . При определении проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на основе существующей базы данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] метаданные этой базы данных будут открыты в проекте [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. В дальнейшем эти объекты можно изменить в проекте, не затрагивая их оригиналы, а затем развернуть в той же базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , если в свойствах развертывания указана эта база данных, или во вновь созданной базе данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для сравнительного тестирования. До развертывания изменений в существующей базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] изменения не вносятся.  
   
  Можно также импортировать базу данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , чтобы создать проект из рабочей базы данных, изменения в которую вносились непосредственно с момента развертывания исходного проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -89,7 +89,7 @@ ms.locfileid: "66076241"
   
 7.  Для просмотра содержимого проекта откройте окно обозревателя решений.  
   
-##  <a name="bkmk_AddtoExistingSolution"></a>Добавление Analysis Services проекта в существующее решение  
+##  <a name="add-an-analysis-services-project-to-an-existing-solution"></a><a name="bkmk_AddtoExistingSolution"></a> Добавление проекта служб Analysis Services в существующее решение  
  Если уже имеется решение, содержащее все исходные файлы бизнес-приложения, то можно добавить новый проект служб Analysis Services в это решение.  
   
  При добавлении существующего проекта в решение проект связывается с решением, но копия проекта не создается. Если проект служб Analysis Services был создан в другом решении, то файлы проекта остаются в исходном решении, в котором он был создан. Это означает, что все изменения, вносимые в проект из любого из этих решений, будут производиться над одним и тем же набором исходных файлов. Если это поведение нежелательно, необходимо сначала скопировать или переместить файлы проекта в папку нового решения, а затем добавлять проект в решение.  
@@ -98,7 +98,7 @@ ms.locfileid: "66076241"
   
 2.  Выберите DWPROJ-файл для добавления в решение.  
   
-##  <a name="bkmk_buildDeploy"></a>Сборка и развертывание решения  
+##  <a name="build-and-deploy-the-solution"></a><a name="bkmk_buildDeploy"></a> Построение и развертывание решения  
  По умолчанию среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] разворачивает проект на экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , заданному по умолчанию, на локальном компьютере. Изменить эту цель развертывания можно с помощью диалогового окна **Страницы свойств** проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , изменив свойство конфигурации **Сервер** .  
   
 > [!NOTE]  
@@ -110,10 +110,10 @@ ms.locfileid: "66076241"
   
  После завершения работы с проектом можно использовать мастер развертывания, чтобы развернуть скрипт развертывания, сформированный при сборке решения, на целевые экземпляры для окончательного тестирования, промежуточного хранения и развертывания.  
   
-##  <a name="bkmk_ProjectFolders"></a>Analysis Services папки проекта  
+##  <a name="analysis-services-project-folders"></a><a name="bkmk_ProjectFolders"></a>Analysis Services папки проекта  
  Проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] содержит следующие папки, которые используются для организации элементов, включенных в проект.  
   
-|Папка|Description|  
+|Папка|Описание|  
 |------------|-----------------|  
 |обозревателе решений|Содержит источники данных для проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Эти объекты создаются в мастере источников данных и редактируются в конструкторе источников данных.|  
 |Представления источников данных|Содержит представления источников данных для проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Эти объекты создаются в мастере представлений источников данных и редактируются в конструкторе представлений источников данных.|  
@@ -122,9 +122,9 @@ ms.locfileid: "66076241"
 |Структуры интеллектуального анализа данных|Содержит структуры интеллектуального анализа данных для проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Эти объекты создаются в мастере моделей интеллектуального анализа данных и редактируются в конструкторе моделей интеллектуального анализа данных.|  
 |Роли|Содержит роли базы данных для проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Создание и управление ролями осуществляется в конструкторе ролей.|  
 |Сборки|Содержит ссылки на библиотеки COM и сборки платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework для проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Ссылки создаются при помощи диалогового окна **Добавление ссылки** .|  
-|Разное|Содержит все типы файлов, за исключением типов файлов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . В эту папку проекта добавляются прочие файлы, например текстовые файлы, содержащие примечания по проекту.|  
+|Прочее|Содержит все типы файлов, за исключением типов файлов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . В эту папку проекта добавляются прочие файлы, например текстовые файлы, содержащие примечания по проекту.|  
   
-##  <a name="bkmk_FileTypes"></a>Типы файлов Analysis Services  
+##  <a name="analysis-services-file-types"></a><a name="bkmk_FileTypes"></a> Типы файлов служб Analysis Services  
  Решение в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] может содержать несколько типов файлов, в зависимости от того, какие проекты включены в решение и какие элементы включены в каждый из проектов этого решения. Обычно файлы для каждого проекта в решении среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] хранятся в папке решения, в отдельной папке для каждого проекта.  
   
 > [!NOTE]  
@@ -132,12 +132,10 @@ ms.locfileid: "66076241"
   
  Папка проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может содержать типы файлов, список которых приведен в следующей таблице.  
   
-|Тип файла|Description|  
+|Тип файла|Описание|  
 |---------------|-----------------|  
-|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] файл определения проекта служб (DWPROJ)|Содержит метаданные об элементах, конфигурациях и ссылках на сборки, определенные и включенные в проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] пользовательские настройки проекта (DWPROJ.USER)|Содержит данные о конфигурации проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для конкретного пользователя.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] файл определения проекта служб (DWPROJ)|Содержит метаданные об элементах, конфигурациях и ссылках на сборки, определенные и включенные в проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] пользовательские настройки проекта (DWPROJ.USER)|Содержит данные о конфигурации проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для конкретного пользователя.|  
 |Файл источника данных (DS)|Содержит элементы языка скриптов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ASSL), определяющие метаданные для источника данных.|  
 |Файл представления источников данных (DSV)|Содержит элементы ASSL, определяющие метаданные для представления источников данных.|  
 |Файл куба (CUBE)|Содержит элементы ASSL, определяющие метаданные для куба, включая группы мер, меры и измерения куба.|  
@@ -147,24 +145,23 @@ ms.locfileid: "66076241"
 |Файл базы данных (DATABASE)|Содержит элементы ASSL, определяющие метаданные для базы данных, включая типы учетных записей, переводы и разрешения базы данных.|  
 |Файл роли базы данных (ROLE)|Содержит элементы ASSL, определяющие метаданные для роли базы данных, включая членов роли.|  
   
-##  <a name="bkmk_ItemTemplates"></a>Шаблоны элементов Analysis Services  
+##  <a name="analysis-services-item-templates"></a><a name="bkmk_ItemTemplates"></a>Шаблоны элементов Analysis Services  
  При использовании диалогового окна **Добавление нового элемента** для добавления новых элементов к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно выбрать использование шаблона элемента, представляющего собой стандартный скрипт или инструкцию, демонстрирующую выполнение указанного действия.  
   
  Шаблоны элементов, список которых приведен в следующей таблице, доступны в категории элементов проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в диалоговом окне **Добавление нового элемента** .  
   
-|Категория|Шаблон элемента|Description|  
+|Категория|Шаблон элемента|Описание|  
 |--------------|-------------------|-----------------|  
-|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Элементы проекта|Cube|Запускает «Мастер кубов» для добавления нового куба к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-||источник данных|Запускает «Мастер источников данных», чтобы добавить новый источник данных к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Элементы проекта|Cube|Запускает «Мастер кубов» для добавления нового куба к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+||Источник данных|Запускает «Мастер источников данных», чтобы добавить новый источник данных к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Представление источника данных|Запускает «Мастер представлений источников данных», чтобы добавить новое представление источника данных к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Роль базы данных|Добавляет новую роль базы данных к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а затем отображает «Конструктор ролей» для новой роли базы данных.|  
 ||Измерение|Запускает «Мастер измерений» для добавления измерения базы данных к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Структура интеллектуального анализа данных|Запускает «Мастер интеллектуального анализа данных», чтобы добавить новую структуру интеллектуального анализа данных и связанную с ней модель интеллектуального анализа данных к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка Analysis Services свойств проекта &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
  [Сборка Analysis Services проектов &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
- [Развертывание проектов Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [Развертывание проектов служб Analysis Services (среда SSDT)](deploy-analysis-services-projects-ssdt.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3450713f3b621e960e443062323c3074b2698b07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081635"
 ---
 # <a name="dismiss-warning-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Отклонить предупреждение» (службы Analysis Services — многомерные данные)
@@ -35,7 +35,7 @@ ms.locfileid: "66081635"
  **Комментарии (необязательно)**  
  Введите объяснение, почему отклонено предупреждение. Комментарий будет отображаться в столбце **Комментарий** таблицы **Отключенные предупреждения** вкладки **Предупреждения** конструктора баз данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Предупреждения &#40;конструкторе баз данных&#41; &#40;Analysis Services многомерных данных&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
   
   

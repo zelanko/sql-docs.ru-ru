@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c5eedfb396b33d33ceb9fbfad0245c4eb730997
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076691"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>Задание уровня совместимости для многомерной базы данных (службы Analysis Services)
-  В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] свойство "уровень совместимости" базы данных определяет ее функциональный уровень. Уровень совместимости уникален для каждого типа модели. Например, уровень совместимости `1100` имеет различное значение в зависимости от того, является ли база данных многомерной или табличной.  
+  В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]свойство "уровень совместимости" базы данных определяет ее функциональный уровень. Уровень совместимости уникален для каждого типа модели. Например, уровень совместимости `1100` имеет различное значение в зависимости от того, является ли база данных многомерной или табличной.  
   
  Этот раздел описывает уровень совместимости только для многомерных баз данных. Дополнительные сведения о табличных решениях см. в разделе [уровень совместимости &#40;табличный пакет обновления 1 (SP1)&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).  
   
@@ -31,7 +31,7 @@ ms.locfileid: "66076691"
   
  Для многомерной базы данных допустимы следующие значения для свойства `CompatibilityLevel`.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |-------------|-----------------|  
 |`1050`|Это значение недоступно в скриптах и инструментах, но соответствует базам данных, созданным в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]или [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Любая база данных, в которой значение `CompatibilityLevel` явным образом не задано, неявно работает на уровне `1050`.|  
 |`1100`|Это значение по умолчанию для новых баз данных, созданных в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. К тому же его можно задавать для баз данных, созданных в более ранних версиях служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , чтобы разрешить использование функций, которые поддерживаются только на этом уровне совместимости, а именно увеличенного хранилища строк для атрибутов измерений или мер числа различных объектов, содержащих строковые данные.<br /><br /> Базы данных, имеющие `CompatibilityLevel` набор для `1100` получения дополнительного свойства, `StringStoresCompatibilityLevel`, позволяющего выбрать альтернативное хранилище строк для секций и измерений.|  
@@ -39,7 +39,7 @@ ms.locfileid: "66076691"
 > [!WARNING]  
 >  Повышение уровня совместимости базы данных необратимо. После увеличения уровня совместимости до `1100`необходимо продолжить выполнение базы данных на новых серверах. Нельзя выполнить откат до `1050`. Невозможно присоединить или восстановить `1100` базу данных на сервере версии, предшествующей [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Уровни совместимости баз данных введены в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Для просмотра или установки уровня совместимости базы данных необходимо наличие служб [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или боле поздней версии.  
   
  База данных не может быть локальным кубом. Локальные кубы не поддерживают свойство `CompatibilityLevel`.  
@@ -88,10 +88,10 @@ ms.locfileid: "66076691"
   
 3.  Синхронизация серверов поддерживается только для серверов с одинаковой версией и уровнем совместимости баз данных.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
  После повышения уровня совместимости базы данных можно задать свойство `StringStoresCompatibilityLevel` в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Это увеличит строковое хранилище для измерений и мер. Дополнительные сведения об этой функции см. в разделе [Настройка хранилища строк для измерений и секций](configure-string-storage-for-dimensions-and-partitions.md).  
   
-## <a name="see-also"></a>См. также:  
- [Резервное копирование, восстановление и синхронизация баз данных &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+## <a name="see-also"></a>См. также  
+ [Резервное копирование, восстановление и синхронизация баз данных (XMLA)](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

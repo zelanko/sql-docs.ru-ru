@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a4a4a6362d76afc39234acccc6366c7169244663
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077674"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>Диалоговое окно «Изменение сопоставления» (диаграмма точности интеллектуального анализа данных)
@@ -29,9 +29,9 @@ ms.locfileid: "66077674"
  **Столбец таблицы**  
  Список входных столбцов, связанных с каждым столбцом структуры интеллектуального анализа данных. Чтобы изменить входной столбец, выделите ячейку и выберите новый входной столбец из списка столбцов, содержащегося во входной таблице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конструктор диаграмм точности интеллектуального анализа &#40;&#41;интеллектуального анализа данных](mining-accuracy-chart-designer-data-mining.md)   
  [Задачи тестирования и проверки и инструкции &#40;&#41;интеллектуального анализа данных](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Тестирование и проверка &#40;&#41;интеллектуального анализа данных](data-mining/testing-and-validation-data-mining.md)  
+ [Тестирование и проверка (интеллектуальный анализ данных)](data-mining/testing-and-validation-data-mining.md)  
   
   

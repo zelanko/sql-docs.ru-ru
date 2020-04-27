@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5a46dc4c6130bb49d973ffc0025388c563c080f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075220"
 ---
 # <a name="specifying-the-installation-target"></a>Указание целевого объекта установки
@@ -44,7 +44,7 @@ ms.locfileid: "66075220"
   
 -   \<Измените *имя проекта*>. deploymenttargets с помощью любого текстового редактора.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Указание параметров развертывания секций и ролей](deployment-script-files-partition-and-role-deployment-options.md)   
  [Указание параметров конфигурации для развертывания решения](deployment-script-files-solution-deployment-config-settings.md)   
  [Указание параметров обработки](deployment-script-files-specifying-processing-options.md)  

@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 545bbdb171388f06c28644e0b8caa48db95e7e7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074048"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>Создание именованных наборов с областью действия сеанса (многомерные выражения)
-  Для создания именованного набора, доступного в сеансе многомерных выражений, используется инструкция [CREATE SET](/sql/mdx/mdx-data-definition-create-set). Именованный набор, созданный с помощью инструкции CREATE SET, удаляется только при закрытии сеанса многомерных выражений.  
+  Для создания именованного набора, доступного в сеансе многомерных выражений, используется инструкция [CREATE SET](/sql/mdx/mdx-data-definition-create-set) . Именованный набор, созданный с помощью инструкции CREATE SET, удаляется только при закрытии сеанса многомерных выражений.  
   
  Синтаксис ключевого слова WITH достаточно прост.  
   
@@ -52,7 +52,7 @@ create Session set [Store].[SetCities_2_3] as
 select SetCities_2_3 on 0 from [Store]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Создание именованных наборов с областью действия запроса &#40;многомерных выражениях&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
+## <a name="see-also"></a>См. также  
+ [Создание именованных наборов с областью действия запроса (многомерные выражения)](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

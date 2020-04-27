@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd8bb157d7b501d29230c91d87f148ae738ff45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074412"
 ---
 # <a name="fore_color-and-back_color-contents-mdx"></a>Свойства ячеек FORE_COLOR и BACK_COLOR (многомерные выражения)
@@ -30,7 +30,7 @@ ms.locfileid: "66074412"
   
  Допустимый диапазон обычных RGB-цветов: от нуля (0) до 16777215 (&H00FFFFFF). Старший байт числа в этом диапазоне всегда равен 0, следующие 3 байта (в порядке старшинства) определяют интенсивность красного, зеленого и синего компонентов соответственно. Интенсивность красного, зеленого и синего компонентов выражается числом от 0 до 255 (&HFF).  
   
-## <a name="see-also"></a>См. также:  
- [Использование свойств ячеек &#40;&#41;многомерных выражений](mdx-cell-properties-using-cell-properties.md)  
+## <a name="see-also"></a>См. также  
+ [Использование свойств ячеек (многомерные выражения)](mdx-cell-properties-using-cell-properties.md)  
   
   

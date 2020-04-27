@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74220f2385e27484c5cc511c84be5625290a28db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081151"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>отфильтровать исходный куб для структуры интеллектуального анализа данных
@@ -51,7 +51,7 @@ ms.locfileid: "66081151"
   
      Теперь исходный куб отфильтрован в соответствии с заданным срезом.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задачи и инструкции по структуре интеллектуального анализа данных](data-mining/mining-structure-tasks-and-how-tos.md)   
  [создать новую структуру интеллектуального анализа OLAP](data-mining/create-a-new-olap-mining-structure.md)  
   

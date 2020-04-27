@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2730d14bb0ffc0bab6c0f6dc8a331bae62644da0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081091"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Поиск таблицы» (службы Analysis Services — многомерные данные)
@@ -41,7 +41,7 @@ ms.locfileid: "66081091"
  **Filter**  
  Введите фильтр, ограничивающий число объектов в данном списке, затем нажмите эту кнопку для фильтрации таблиц из списка **Выберите таблицу из представления источника данных**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диалоговое окно "Свойства сборки" &#40;Analysis Services многомерных данных&#41;](assembly-properties-dialog-box-analysis-services-multidimensional-data.md)   
  [Представление источника данных &#40;вкладка «Структура измерения», конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
  [Представление источника данных &#40;вкладка «Структура куба», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  

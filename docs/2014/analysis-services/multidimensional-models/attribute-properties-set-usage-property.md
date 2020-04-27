@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: def616b09e6d5378257c3e5c377f2724c9d09676
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077169"
 ---
 # <a name="set-usage-property"></a>Установка свойства использования
@@ -33,13 +33,13 @@ ms.locfileid: "66077169"
   
 2.  В списке **Атрибуты**щелкните правой кнопкой мыши атрибут, для которого требуется задать использование, и выберите пункт **Задать использование атрибута**, а затем установите один из следующих флажков:  
   
-    -   **Регулярное, **  
+    -   **Regular**  
   
-    -   **Key**  
+    -   **Клавиша**  
   
     -   **Parent**  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Атрибуты и иерархии атрибутов](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Добавление атрибута в измерение](attribute-properties-add-an-attribute-to-a-dimension.md)  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da816635ab978e7baadfb810aed78fa0f3258dd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071678"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>Подключение приложения службы PowerPivot к веб-приложению SharePoint в центре администрирования
@@ -29,7 +29,7 @@ ms.locfileid: "66071678"
   
  [Добавление приложения службы PowerPivot в пользовательский список ассоциаций служб](#custom)  
   
-##  <a name="default"></a>Добавление приложения служб PowerPivot в группу по умолчанию  
+##  <a name="add-powerpivot-services-application-to-the-default-group"></a><a name="default"></a>Добавление приложения служб PowerPivot в группу по умолчанию  
  Список ассоциаций служб представляет собой список общих служб, предоставляющих ресурсы для других веб-приложений SharePoint в ферме. В ферме может быть только одна группа ассоциаций служб по умолчанию.  
   
  Приложение службы PowerPivot можно добавить в список как при создании, так и после него, выполнив следующие шаги.  
@@ -42,10 +42,10 @@ ms.locfileid: "66071678"
   
 4.  Нажмите кнопку **ОК**.  
   
-##  <a name="custom"></a>Добавление приложения служб PowerPivot в настраиваемый список ассоциаций служб  
+##  <a name="add-powerpivot-services-application-a-custom-service-association-list"></a><a name="custom"></a>Добавление приложения служб PowerPivot в настраиваемый список ассоциаций служб  
  Группа по умолчанию может быть заменена пользовательским списком. Пользовательский список создается специально для единичного веб-приложения SharePoint. Он переопределяет группу по умолчанию и заменяет ее только для тех ассоциаций, которые были указаны администратором фермы или службы. Если было создано несколько приложений службы PowerPivot, то необходимо выбрать приложение из пользовательского списка. Пользовательский список не может быть повторно использован другими веб-приложениями. Он применяется только для тех веб-приложений, для которых он был создан.  
   
-1.  В центре администрирования в окне " **Управление приложениями**" щелкните **Управление веб-приложениями**.  
+1.  В разделе **Управление приложениями**центра администрирования выберите **Управление веб-приложениями**.  
   
 2.  Выберите приложение (например, SharePoint 80).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66071678"
   
 6.  Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание и настройка приложения службы PowerPivot в центре администрирования](create-and-configure-power-pivot-service-application-in-ca.md)   
  [PowerPivot для SharePoint &#40;начальной конфигурации&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   

@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d5f0619e7291cc08b1750c0b35f9639cb7a9872
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078038"
 ---
 # <a name="manage-models-sql-server-data-mining-add-ins"></a>Управление моделями (надстройки интеллектуального анализа данных SQL Server)
@@ -50,7 +50,7 @@ ms.locfileid: "66078038"
   
  Если экземпляр служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], к которому имеется подключение, не содержит никаких моделей и структур интеллектуального анализа данных, их можно создать с помощью мастеров и других средств этой надстройки. Можно также создавать новые модели с помощью **модели интеллектуального анализа данных Расширенный редактор**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Документирование моделей интеллектуального анализа &#40;надстройки интеллектуального анализа данных для Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)   
  [Развертывание и масштабирование моделей интеллектуального анализа &#40;надстройки интеллектуального анализа данных для Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   
 

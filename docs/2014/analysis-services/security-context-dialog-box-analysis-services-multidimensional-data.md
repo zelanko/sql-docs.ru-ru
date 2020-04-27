@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c775bc01f78af7d5d5f0dad39eb93c77348ea31d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069850"
 ---
 # <a name="security-context-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Контекст безопасности» (службы Analysis Services — многомерные данные)
@@ -36,7 +36,7 @@ ms.locfileid: "66069850"
  **Роли**  
  Выберите, если хотите использовать одну или несколько указанных ролей во время просмотра данных и метаданных объекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Несколько ролей можно выбрать, если они определены в базе данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ключевые показатели эффективности &#40;конструктора кубов&#41; &#40;Analysis Services многомерных данных&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
  [Обозреватель &#40;конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff9ac19c0b605266de5eca69dd0f410f0d8fbdd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080062"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Определение режима работы сервера экземпляра служб Analysis Services
@@ -40,7 +40,7 @@ ms.locfileid: "66080062"
   
  Ниже приведены допустимые значения для этого свойства.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |0|Это значение по умолчанию. Оно задает многомерный режим, используемый для обслуживания многомерных баз данных с хранилищем MOLAP, HOLAP и ROLAP, а также с моделями интеллектуального анализа данных.|  
 |1|Указывает экземпляры служб Analysis Service, установленные в составе развертывания PowerPivot для SharePoint. Не следует изменять свойство режима развертывания экземпляра служб Analysis Services, который входит в состав установки PowerPivot для SharePoint. Если изменить режим, данные PowerPivot больше не будут выполняться на сервере.|  
@@ -48,13 +48,13 @@ ms.locfileid: "66080062"
   
  Это монопольные режимы. На сервере, где настроен табличный режим, не могут работать базы данных служб Analysis Services, содержащие кубы и измерения. Если позволяет оборудование компьютера, можно установить на одном компьютере несколько экземпляров служб Analysis Services и настроить для каждого экземпляра свой режим развертывания. Следует помнить, что службы Analysis Services являются ресурсоемким приложением. Развертывание нескольких экземпляров на одном компьютере рекомендуется только для мощных серверов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установка Analysis Services в табличном режиме](install-windows/install-analysis-services.md)   
  [Установка Analysis Services в многомерном режиме и модели интеллектуального анализа данных](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [Установка PowerPivot для SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [Подключение к Analysis Services](connect-to-analysis-services.md)   
  [Решения табличных моделей &#40;табличные&#41;SSAS](../tabular-model-solutions-ssas-tabular.md)   
  [Решения многомерной модели &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Модели интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
+ [Модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../data-mining/mining-models-analysis-services-data-mining.md)  
   
   

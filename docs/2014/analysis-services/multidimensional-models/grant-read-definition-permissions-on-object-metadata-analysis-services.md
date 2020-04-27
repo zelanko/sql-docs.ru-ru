@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e03e55451c2340b5f0773e2873127c3551a82aab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074898"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>Предоставление разрешений на чтение описания метаданным объекта (службы Analysis Services)
@@ -32,7 +32,7 @@ ms.locfileid: "66074898"
   
  Мы рекомендуем включать `Read Definition` разрешение на уровне базы данных при настройке ролей для выделенной обработки. HAVING `Read Definition` позволяет не администраторам просматривать иерархию объектов модели в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и переходить к отдельным объектам для последующей обработки.  
   
-1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] соединитесь с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], разверните узел **Роли** для соответствующей базы данных в обозревателе объектов, а затем щелкните роль базы данных (или создайте новую).  
+1.  В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]подключитесь к экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], разверните узел **роли** для соответствующей базы данных в обозревателе объектов, а затем щелкните роль базы данных (или создайте новую роль базы данных).  
   
 2.  На вкладке **Общие** выберите `Read Definition` параметр.  
   
@@ -58,8 +58,8 @@ ms.locfileid: "66074898"
   
 5.  Нажмите **ОК** для завершения процесса создания роли.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Grant, предоставление разрешений на базу данных &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [Предоставление разрешений на обработку &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+ [Предоставление разрешений на обработку (службы Analysis Services)](grant-process-permissions-analysis-services.md)  
   
   

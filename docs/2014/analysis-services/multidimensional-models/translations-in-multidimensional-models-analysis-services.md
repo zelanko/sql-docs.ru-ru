@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a80c7950ec4079021bbcf03d9ccee6970d68786b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072734"
 ---
 # <a name="translations-in-multidimensional-models"></a>Переводы в многомерных моделях
@@ -27,7 +27,7 @@ ms.locfileid: "66072734"
   
  Следующие объекты и свойства в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] могут обладать связанными с ними переводами.  
   
-|Объект|Свойства|Конструктор|  
+|Объект|Свойства|Designer|  
 |------------|----------------|--------------|  
 |База данных|`Caption`, `Description`|[Общие &#40;конструктор баз данных&#41; &#40;Analysis Services многомерных данных&#41;](../general-database-designer-analysis-services-multidimensional-data.md)|  
 |Cube|`Caption`, `Description`|[Переводы &#40;конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
@@ -38,9 +38,9 @@ ms.locfileid: "66072734"
 |Ключевой показатель эффективности|`Caption`, `Description`, `DisplayFolder`|[Переводы &#40;конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |Действие|`Caption`|[Переводы &#40;конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |Именованный набор|`Caption`|[Переводы &#40;конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|Вычисляемый элемент|`Caption`|[Переводы &#40;конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|вычисляемый элемент|`Caption`|[Переводы &#40;конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |Измерение базы данных|`Caption`, `AttributeAllMember`|[Переводы &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
-|attribute|`Caption`, `CaptionColumn` <sup>1</sup>, `AttributeHierarchyDisplayFolder`, `NamingTemplate`,`MembersWithDataCaption`|[Переводы &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|Атрибут|`Caption`, `CaptionColumn` <sup>1</sup>, `AttributeHierarchyDisplayFolder`, `NamingTemplate`,`MembersWithDataCaption`|[Переводы &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Иерархия|`Caption`, `AllMemberName`|[Переводы &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Level|`Caption`|[Переводы &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
   
@@ -76,8 +76,8 @@ ms.locfileid: "66072734"
 ## <a name="deleting-translation-objects"></a>Удаление объектов перевода  
  Можно щелкнуть правой кнопкой мыши объект перевода в измерении или в конструкторе кубов, чтобы окончательно удалить его. Нельзя восстановить или повторно использовать удаленный объект, поэтому следует проверить список удаляемых объектов перед продолжением.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сценарии глобализации для Analysis Services многомерных](../globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [Языки и параметры сортировки &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)  
+ [Языки и параметры сортировки (службы Analysis Services)](../languages-and-collations-analysis-services.md)  
   
   

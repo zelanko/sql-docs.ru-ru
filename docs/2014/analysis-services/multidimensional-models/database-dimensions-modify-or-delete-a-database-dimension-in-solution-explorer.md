@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b46e9e42d212ca8f92f905c241915fdccec679f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075886"
 ---
 # <a name="modify-or-delete-a-database-dimension-in-solution-explorer"></a>Изменение или удаление измерения базы данных в обозревателе решений
@@ -38,7 +38,7 @@ ms.locfileid: "66075886"
   
 -   В обозревателе решений щелкните правой кнопкой мыши измерение, которое хотите удалить, и выберите пункт **Удалить**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Измерения в многомерных моделях](dimensions-in-multidimensional-models.md)  
   
   

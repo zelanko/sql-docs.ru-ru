@@ -11,20 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 42c7b7e876f244831920be390d97c88412eed63f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071669"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>Не удалось загрузить файл или сборку &#39;Microsoft. AnalysisServices. SharePoint. Integration&#39;
   В среде SharePoint 2010, в которой установлен PowerPivot для SharePoint, эта ошибка возникает, если решение на уровне приложений для PowerPivot развернуто неправильно.  
   
-## <a name="details"></a>Сведения  
+## <a name="details"></a>Подробности  
   
 |||  
 |-|-|  
-|Применяется к|PowerPivot для SharePoint|  
+|Область применения|PowerPivot для SharePoint|  
 |Версия продукта|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Причина:|Решение Powerpivotwebapp не развернуто или развернуто неправильно.|  
 |Текст сообщения|Не удалось загрузить файл или сборку Microsoft.AnalysisServices.SharePoint.Integration|  
@@ -45,7 +45,7 @@ ms.locfileid: "66071669"
   
 5.  Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Развертывание решений PowerPivot в SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)  
   
   

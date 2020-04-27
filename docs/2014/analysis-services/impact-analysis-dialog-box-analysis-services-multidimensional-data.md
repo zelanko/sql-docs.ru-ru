@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080753"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Анализ влияния» (службы Analysis Services — многомерные данные)
@@ -27,12 +27,12 @@ ms.locfileid: "66080753"
   
 ## <a name="options"></a>Параметры  
  **Список объектов**  
- Выводит в сетке список зависимых объектов. Сетка содержит следующие столбцы.  
+ Выводит в сетке список зависимых объектов. Сетка содержит следующие столбцы:  
   
  **Имени объекта**  
  Выводит имя зависимого объекта, который, возможно, нужно обработать. Значок слева от имени указывает тип объекта.  
   
- **Тип**  
+ **Type**  
  Выводит тип зависимого объекта, который, возможно, нужно обработать.  
   
  **Тип воздействия**  
@@ -50,7 +50,7 @@ ms.locfileid: "66080753"
  **Обработать объект**  
  Выберите зависимые объекты, которые нужно обработать в данной операции обработки. Невыбранные зависимые объекты должны быть обработаны после завершения операции обработки. В противном случае их нельзя будет использовать.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Диалоговое окно "обработка" &#40;Analysis Services многомерных данных&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   

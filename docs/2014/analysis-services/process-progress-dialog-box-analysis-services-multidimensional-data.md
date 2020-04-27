@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4720d361fdd9a7d93d91f5e8fe873473816c2ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070677"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Ход обработки» (службы Analysis Services — многомерные данные)
@@ -29,7 +29,7 @@ ms.locfileid: "66070677"
  **Описание состояния**  
  Показывает текущее состояние операции обработки.  
   
- **Позиции**  
+ **Остановить**  
  Нажмите «Остановить», чтобы прервать операцию.  
   
  **Обработать заново**  
@@ -38,7 +38,7 @@ ms.locfileid: "66070677"
  **Просмотреть сведения**  
  Нажмите, чтобы открыть диалоговое окно **Просмотр подробностей** и показать детали элемента, выбранного в **Дереве состояния**. Дополнительные сведения о диалоговом окне **Просмотр сведений** см. в разделе [Диалоговое окно "Просмотр подробностей" (службы Analysis Services — многомерные данные)](view-details-dialog-box-analysis-services-multidimensional-data.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Обработка объектов многомерной модели](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   

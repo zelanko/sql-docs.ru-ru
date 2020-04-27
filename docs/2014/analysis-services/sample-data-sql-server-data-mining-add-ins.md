@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a69b2286abbc1ba4289fd482b1bbf5a2dfb3e7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070038"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>Образец данных (надстройки интеллектуального анализа данных SQL Server)
@@ -82,7 +82,7 @@ ms.locfileid: "66070038"
   
  Дополнительные сведения см. в разделе [Преобразование «Выборка строк](../integration-services/data-flow/transformations/row-sampling-transformation.md) » и [Преобразование «Процентная выборка](../integration-services/data-flow/transformations/percentage-sampling-transformation.md)».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Контрольный список для подготовки к интеллектуальному анализу данных](checklist-of-preparation-for-data-mining.md)  
   
   
