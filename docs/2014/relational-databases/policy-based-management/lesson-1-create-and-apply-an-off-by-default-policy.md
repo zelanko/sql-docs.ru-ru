@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2e0a99559312704459c41514d53711cfbea4353e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63057244"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Урок 1. Создание и применение политики, отключенной по умолчанию
@@ -30,6 +30,6 @@ ms.locfileid: "63057244"
  [Создание политики, отключенной по умолчанию](lesson-1-1-create-the-off-by-default-policy.md)  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 2. Создание и применение политики стандартов именования](lesson-2-create-and-apply-a-naming-standards-policy.md)  
+ [Урок 2. Создание и применение политики стандартов именования](lesson-2-create-and-apply-a-naming-standards-policy.md)  
   
   

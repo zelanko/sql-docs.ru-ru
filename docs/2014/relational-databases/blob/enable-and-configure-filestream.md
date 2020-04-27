@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f074872f05ff907d88d58e986d33ae128bcb5f2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010159"
 ---
 # <a name="enable-and-configure-filestream"></a>Включение и настройка FILESTREAM
@@ -25,11 +25,11 @@ ms.locfileid: "66010159"
 > [!NOTE]  
 >  Нельзя включить функцию FILESTREAM в 32-разрядной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], запущенной в 64-разрядной операционной системе.  
   
-##  <a name="enabling"></a>Включение FILESTREAM  
+##  <a name="enabling-filestream"></a><a name="enabling"></a> Включение FILESTREAM  
   
 #### <a name="to-enable-and-change-filestream-settings"></a>Включение и изменение параметров FILESTREAM  
   
-1.  В меню **Пуск** последовательно укажите пункты **Все программы**, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **Средства настройки**и выберите пункт **Диспетчер конфигурации SQL Server**.  
+1.  В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **Средства настройки**и щелкните **Диспетчер конфигурации SQL Server**.  
   
 2.  В списке служб щелкните правой кнопкой мыши **Службы SQL Server**и выберите команду **Открыть**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66010159"
   
 8.  Если удаленные клиенты должны иметь доступ к данным FILESTREAM, хранящимся в этом общем ресурсе, установите флажок **Разрешить удаленным клиентам потоковый доступ к данным FILESTREAM**.  
   
-9. Нажмите кнопку **Применить**.  
+9. Щелкните **Применить**.  
   
 10. В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]нажмите кнопку **Создать запрос** , чтобы открыть редактор запросов.  
   
@@ -56,15 +56,15 @@ ms.locfileid: "66010159"
     RECONFIGURE  
     ```  
   
-12. Нажмите **Execute (Выполнить)**.  
+12. Нажмите кнопку **Выполнить**.  
   
 13. Перезапустите службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 
   
-##  <a name="best"></a>Рекомендации  
+##  <a name="best-practices"></a><a name="best"></a>Рекомендации  
   
-###  <a name="config"></a>Физическая конфигурация и обслуживание  
+###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a> Физическая настройка и поддержка  
  При использовании томов хранилища FILESTREAM обратите внимание на следующие рекомендации.  
   
 -   Отключите короткие имена файлов на компьютерах с FILESTREAM. Короткие имена файлов создаются гораздо дольше. Отключить короткие имена файлов можно с помощью программы Windows **fsutil** .  
@@ -88,7 +88,7 @@ ms.locfileid: "66010159"
   
 
   
-###  <a name="database"></a>Структура физической базы данных  
+###  <a name="physical-database-design"></a><a name="database"></a>Структура физической базы данных  
  При проектировании базы данных FILESTREAM следует учитывать следующие рекомендации.  
   
 -   Столбцы FILESTREAM должны сопровождаться соответствующим `uniqueidentifier`столбцом ROWGUID. Кроме того, типам таблиц также должен соответствовать уникальный индекс. Как правило, этот индекс не является кластеризованным. Если бизнес-логика базы данных требует использовать кластеризованный индекс, следует убедиться, что значения, которые хранятся в индексе, не являются случайными. Случайные значения приведут к переупорядочению индекса при каждом добавлении или удалении строки в таблице.  

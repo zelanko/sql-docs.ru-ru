@@ -18,10 +18,10 @@ ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 45088122cfb6824598aaf40486264d41216d3c39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771323"
 ---
 # <a name="sp_adddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
@@ -54,7 +54,7 @@ sp_adddistributor [ @distributor= ] 'distributor'
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  **sp_adddistributor** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
@@ -65,7 +65,7 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_adddistributor**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
  [sp_dropdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   

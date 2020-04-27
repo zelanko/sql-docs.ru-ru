@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8becd7ad30acf1ea2a63feae4760091aede70c06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033506"
 ---
 # <a name="schedule-the-policies"></a>Планирование политик
@@ -41,7 +41,7 @@ ms.locfileid: "63033506"
 ## <a name="summary"></a>Сводка  
  Тем самым была выполнена настройка запланированных политик на выполнение в единственном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Если необходимо развернуть запланированные политики на нескольких экземплярах, перейдите к следующей задаче в этом учебнике.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
  [Развертывание запланированных политик на нескольких экзмплярах](../../2014/tutorials/deploy-scheduled-policies-to-multiple-instances.md)  
   
   

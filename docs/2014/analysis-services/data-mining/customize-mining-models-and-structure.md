@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b890514422a6b9b16cdfe2eb5b07d796a46bd60
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174448"
 ---
 # <a name="customize-mining-models-and-structure"></a>Настройка структуры и моделей интеллектуального анализа данных
@@ -43,7 +43,7 @@ ms.locfileid: "78174448"
 ### <a name="using-feature-selection"></a>Выбор компонентов
  В большинстве алгоритмов интеллектуального анализа данных в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используется процесс *выбора компонентов* , чтобы выбрать для добавления к модели только наиболее полезные атрибуты. Сокращение числа столбцов и атрибутов может повысить производительность и точность работы модели. Доступные методы выбора компонентов зависят от выбранного алгоритма.
 
- [Выбор компонентов &#40;&#41;интеллектуального анализа данных ](feature-selection-data-mining.md).
+ [Выбор компонентов (интеллектуальный анализ данных)](feature-selection-data-mining.md).
 
 ### <a name="changing-usage"></a>Изменение порядка использования
  Можно изменить список столбцов, включаемых в модель интеллектуального анализа данных, и порядок использования каждого столбца. Если результаты не соответствуют ожиданиям, следует изучить столбцы, использованные в качестве входных данных, и оценить удачность выбора этих столбцов. Затем выясните, что можно сделать для улучшения обработки данных (любые из следующих операций).
@@ -77,7 +77,7 @@ ms.locfileid: "78174448"
 ## <a name="changing-the-algorithm"></a>Изменение алгоритма
  Хотя новые модели, добавляемые в структуру интеллектуального анализа данных, используют один и тот же набор данных, можно получить другие результаты, используя другой алгоритм (если он поддерживается данными) или изменяя параметры алгоритма. Также можно задавать флаги модели.
 
- Выбор алгоритма определяет тип получаемых результатов. Общие сведения о работе определенных алгоритмов и о бизнес-сценариях, в которых наиболее эффективно будет использоваться какой-либо алгоритм, см. в разделе [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md).
+ Выбор алгоритма определяет тип получаемых результатов. Общие сведения о работе определенных алгоритмов и о бизнес-сценариях, в которых наиболее эффективно будет использоваться какой-либо алгоритм, см. в разделе [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining-algorithms-analysis-services-data-mining.md).
 
  Описание требований и ограничений, а также подробные сведения о возможностях настройки, поддерживаемых каждым алгоритмом, см. в разделах технического справочника, посвященных каждому алгоритму.
 
@@ -94,14 +94,14 @@ ms.locfileid: "78174448"
 
  В разделе для каждого типа алгоритма также приведены прогнозирующие функции, которые можно использовать с моделями, основанными на данном алгоритме.
 
-|Имя свойства|Применяется к|
+|Имя свойства|Область применения|
 |-------------------|----------------|
 |AUTO_DETECT_PERIODICITY|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|
 |CLUSTER_COUNT|[Технический справочник по алгоритму кластеризации (Майкрософт)](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму кластеризации последовательностей (Майкрософт)](microsoft-sequence-clustering-algorithm-technical-reference.md)|
 |CLUSTER_SEED|[Технический справочник по алгоритму кластеризации (Майкрософт)](microsoft-clustering-algorithm-technical-reference.md)|
 |CLUSTERING_METHOD|[Технический справочник по алгоритму кластеризации (Майкрософт)](microsoft-clustering-algorithm-technical-reference.md)|
 |COMPLEXITY_PENALTY|[Технический справочник по алгоритму дерева принятия решений (Майкрософт)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|
-|FORCE_REGRESSOR|[Технический справочник по алгоритму дерева принятия решений (Майкрософт)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму линейной регрессии (Майкрософт)](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Флаги моделирования &#40;&#41;интеллектуального анализа данных](modeling-flags-data-mining.md)|
+|FORCE_REGRESSOR|[Технический справочник по алгоритму дерева принятия решений (Майкрософт)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму линейной регрессии (Майкрософт)](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Флаги моделирования (интеллектуальный анализ данных)](modeling-flags-data-mining.md)|
 |FORECAST_METHOD|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|
 |HIDDEN_NODE_RATIO|[Технический справочник по алгоритму нейронной сети (Майкрософт)](microsoft-neural-network-algorithm-technical-reference.md)|
 |HISTORIC_MODEL_COUNT|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|
@@ -132,7 +132,7 @@ ms.locfileid: "78174448"
 |SPLIT_METHOD|[Технический справочник по алгоритму дерева принятия решений (Майкрософт)](microsoft-decision-trees-algorithm-technical-reference.md)|
 |STOPPING_TOLERANCE|[Технический справочник по алгоритму кластеризации (Майкрософт)](microsoft-clustering-algorithm-technical-reference.md)|
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Алгоритмы интеллектуального анализа данных &#40;Analysis Services интеллектуального анализа данных&#41;](data-mining-algorithms-analysis-services-data-mining.md) [физическую архитектуру &#40;Analysis Services — интеллектуальный анализ данных&#41;](physical-architecture-analysis-services-data-mining.md)
 
 

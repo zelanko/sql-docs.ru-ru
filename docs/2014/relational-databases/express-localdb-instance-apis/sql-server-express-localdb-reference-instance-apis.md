@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: adfddc5de02f13b592b1f03107a67c4a3c449d0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128631"
 ---
 # <a name="sql-server-express-localdb-instance-api-reference"></a>Справочник по API экземпляра SQL Server Express LocalDB
@@ -77,7 +77,7 @@ ms.locfileid: "63128631"
  [Заголовок и сведения о версии SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
  Содержит сведения из файла заголовка и разделы реестра для поиска API экземпляра LocalDB.  
   
- [Программа командной строки SqlLocalDB.exe](command-line-management-tool-sqllocaldb-exe.md)  
+ [Программа командной строки: SqlLocalDB.exe](command-line-management-tool-sqllocaldb-exe.md)  
  Описывает программу SqlLocalDB.exe, средство для управления экземплярами LocalDB из командной строки.  
   
  [Функция LocalDBCreateInstance](localdbcreateinstance-function.md)  

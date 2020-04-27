@@ -15,22 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21c0a7248f2e8c5313678f503b239cdf44d16ea7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046719"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
   `SQLProcedureColumns`Возвращает одну строку, сообщающую атрибуты возвращаемого значения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всех хранимых процедур.  
   
- `SQLProcedureColumns`Возвращает SQL_SUCCESS, существуют ли значения для параметров *CatalogName*, *SchemaName*, *CNAME*или *ColumnName* . **SQLFetch** возвращает SQL_NO_DATA, если в этих параметрах используются недопустимые значения.  
+ `SQLProcedureColumns`Возвращает SQL_SUCCESS, существуют ли значения для параметров *CatalogName*, *SchemaName*, *CNAME*или *ColumnName* . Функция**SQLFetch** возвращает значение SQL_NO_DATA, если в этих параметрах заданы недопустимые значения.  
   
  Метод `SQLProcedureColumns` может быть выполнен для статического серверного курсора. При попытке выполнить метод `SQLProcedureColumns` для обновляемого (динамического или набора ключей) курсора будет возвращено значение SQL_SUCCESS_WITH_INFO, которое указывает на то, что тип курсора был изменен.  
   
  В следующей таблице перечислены столбцы, возвращенные результирующим набором, и описывается, как они были расширены для обработки типов данных **udt** и **xml** с помощью драйвера ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|Возвращает имя каталога, содержащего определяемый пользователем тип.|  
 |SS_UDT_SCHEMA_NAME|Возвращает имя схемы, содержащей определяемый пользователем тип.|  
@@ -51,7 +51,7 @@ ms.locfileid: "63046719"
 |DECIMAL_DIGITS|Число столбцов возвращающего табличное значение параметра.|  
 |NUM_PREC_RADIX|NULL|  
 |NULLABLE|SQL_NULLABLE|  
-|ЗАМЕЧАНИЯ|NULL|  
+|ПРИМЕЧАНИЯ|NULL|  
 |COLUMN_DEF|NULL. У табличных типов могут отсутствовать значения по умолчанию.|  
 |SQL_DATA_TYPE|SQL_SS_TABLE|  
 |SQL_DATEIME_SUB|NULL|  
@@ -74,7 +74,7 @@ ms.locfileid: "63046719"
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>Поддержка функцией SQLProcedureColumns определяемых пользователем типов больших данных CLR  
  Функция `SQLProcedureColumns` поддерживает определяемые пользователем типы больших данных CLR. Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функция SQLProcedureColumns](https://go.microsoft.com/fwlink/?LinkId=59363)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

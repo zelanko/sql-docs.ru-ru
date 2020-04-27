@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ee768eb4e50e4501af204c885916cd14409df2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210758"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Переключение между режимами обновления для обновляемой подписки на публикацию транзакций
@@ -26,17 +26,17 @@ ms.locfileid: "68210758"
   
   
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Переход из режима немедленного обновления в режим отложенного обновления может быть произведен в любой момент, однако после этого возврат в режим немедленного обновления будет возможен только тогда, когда появится соединение между подписчиком и издателем, а агент чтения очереди применит к издателю все сообщения, находящиеся в очереди.  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   Если обновляемая подписка на публикацию транзакций поддерживает отработку отказа из одного режима обновления в другой, то возможно программное переключение режимов обновления для выхода из ситуаций, когда возможность подключения изменяется на короткий промежуток времени. Режим обновления может быть установлен как программно, так и по запросу при помощи хранимых процедур репликации. Дополнительные сведения см. в статье [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md).  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 > [!NOTE]  
 >  Чтобы изменить режим обновления после создания подписки, необходимо установить для свойства **update_mode** значение **failover** (что позволяет переключиться с немедленного обновления на обновление посредством очередей) или значение **queued failover** (что позволяет переключиться с обновления по очереди на немедленное обновление), когда подписка создана. Эти свойства устанавливаются автоматически в мастере создания подписки.  
@@ -61,7 +61,7 @@ ms.locfileid: "68210758"
   
  Дополнительные сведения о доступе к диалоговому окну **Свойства подписки — \<издатель>: \<база данных публикации>** см. в статье [Просмотр и изменение свойств подписки по запросу](../view-and-modify-pull-subscription-properties.md).  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-switch-between-update-modes"></a>Переключение режимов обновления  
   
@@ -69,11 +69,11 @@ ms.locfileid: "68210758"
   
 2.  На подписчике в базе данных подписки выполните процедуру [sp_setreplfailovermode](/sql/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql). Укажите **@publisher**значения **@publisher_db**, **@publication**, и одно из следующих значений для **@failover_mode**:  
   
-    -   в **очереди** — переключение на обновление посредством очередей при временном разрыве подключения.  
+    -   **queued** — переход в режим обновления посредством очередей при временной потере соединения;  
   
-    -   **Immediate** — переход к немедленному обновлению после восстановления подключения.  
+    -   **immediate** — переход в режим немедленного обновления, при восстановлении.  
   
-## <a name="see-also"></a>См. также:  
- [Обновляемые подписки для репликации транзакций](../transactional/updatable-subscriptions-for-transactional-replication.md)  
+## <a name="see-also"></a>См. также  
+ [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

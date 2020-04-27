@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f9694a5f54d740e298b9c6af4ab3169a3eb8ab14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067631"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Перевод массового копирования с DB-Library на ODBC
@@ -43,7 +43,7 @@ ms.locfileid: "63067631"
     |-------------------------|--------------------------------|-------------------------|  
     |Предоставлены значения NULL|0|-1 (SQL_NULL_DATA)|  
     |Предоставлены данные переменной длины|-1|-10 (SQL_VARLEN_DATA)|  
-    |Символьная или двоичная строка нулевой длины|Нет данных|0|  
+    |Символьная или двоичная строка нулевой длины|Н/Д|0|  
   
      В DB-Library значение *Варлен* , равное-1, указывает, что данные переменной длины передаются, что в ODBC *cbData* интерпретируется таким же, что предоставляются только значения NULL. Измените все спецификации *ВАРЛЕН* DB-Library с-1 на SQL_VARLEN_DATA и любые спецификации *Варлен* от 0 до SQL_NULL_DATA.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "63067631"
   
 -   При вводе **денежных** значений в символьном формате функции выполнения операций с массовым копированием ODBC предоставляют четыре цифры точности и без разделителей запятой. Версии DB-Library предоставляют только две цифры точности и включают разделители-запятые.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполнение операций с массовым копированием &#40;ODBC&#41;](performing-bulk-copy-operations-odbc.md)   
  [Bulk Copy Functions](../native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   

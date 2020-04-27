@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72dfbcbd1ff264e596eecfecb5ebf759c2cbf5e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013844"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Явное сопоставление элементов и атрибутов XSD с таблицами и столбцами (SQLXML 4.0)
@@ -57,7 +57,7 @@ ms.locfileid: "66013844"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Задание заметок sql:relation и sql:field  
+### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>А) Задание заметок sql:relation и sql:field  
  В этом примере схема XSD состоит из элемента ** \<Contact>** сложного типа с ** \<fname>** и ** \<LName>** дочерними элементами и атрибутом **ContactID** .  
   
  `sql:relation` Заметка сопоставляет элемент ** \<>контакта** с таблицей Person. Contact в базе данных AdventureWorks. `sql:field` Заметка сопоставляет элемент ** \<fname>** столбцу FirstName, а элементу ** \<LName>** — столбцу LastName.  

@@ -18,38 +18,38 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fe48b26960db591ce803b1f110e9293fd22d6554
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011515"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска
   Чтобы предотвратить чрезмерное увеличение полнотекстового индекса, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реализован механизм, отбрасывающий часто встречающиеся строки, не повышающие эффективность поиска. Эти отброшенные строки называются *стоп-словами*. Во время создания индекса средство полнотекстового поиска не включает стоп-слова в полнотекстовый индекс. Это значит, что полнотекстовые запросы не будут выполнять поиск по стоп-словам.  
   
-##  <a name="understand"></a>Основные сведения о стоп-слова и списков  
+##  <a name="understanding-stopwords-and-stoplists"></a><a name="understand"></a>Основные сведения о стоп-слова и списков  
  Стоп-слово может быть словом конкретного языка или *токеном* , не имеющим лингвистического значения. Например, в английском языке такие слова, как «a», «and», «is» и «the», не включаются в полнотекстовый индекс, потому что при поиске они бесполезны.  
   
  Хотя стоп-слова при поиске не учитываются, полнотекстовый индекс принимает во внимание расположение таких слов. Рассмотрим для примера фразу «Instructions are applicable to these Adventure Works Cycles models». Позиции слов в этой фразе приведены в следующей таблице.  
   
 |Word|Положение|  
 |----------|--------------|  
-|Указания|1|  
+|Instructions|1|  
 |are|2|  
 |applicable|3|  
 |значение|4|  
 |these|5|  
 |Adventure|6|  
 |Works|7|  
-|Циклические процессы|8|  
+|Cycles|8|  
 |модели|9|  
   
  Стоп-слова «are», «to» и «these», занимающие позиции 2, 4 и 5, в полнотекстовый индекс не включаются. Однако данные об их позициях сохраняются, благодаря чему позиции других слов в фразе остаются неизменными.  
   
- Управление стоп-словами в базе данных производится через объекты, называемые списками стоп-слов. Список *стоп-слов* является списком стоп-слова, который связан с полнотекстовым индексом и применяется к полнотекстовым запросам по этому индексу.  
+ Управление стоп-словами в базе данных производится через объекты, называемые списками стоп-слов. *Список стоп-слов* связан с полнотекстовым индексом и применяется к полнотекстовым запросам по этому индексу.  
   
   
-##  <a name="creating"></a>Создание списка стоп-слов  
+##  <a name="creating-a-stoplist"></a><a name="creating"></a>Создание списка стоп-слов  
  Списки стоп-слов можно создать любым из следующих способов.  
   
 -   Использование поддерживаемого системой списка стоп-слов в базе данных. В составе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставляется системный список стоп-слов, который содержит наиболее часто используемые стоп-слова для каждого поддерживаемого языка, то есть для любого языка, связанного по умолчанию с предложенными конкретными средствами разбиения по словам. Системный список стоп-слов содержит общие стоп-слова для всех поддерживаемых языков.  Можно скопировать системный список стоп-слов и внести необходимые изменения в созданную копию, добавляя и удаляя стоп-слова.  
@@ -62,7 +62,7 @@ ms.locfileid: "66011515"
   
  **Создание списка стоп-слов**  
   
--   [Создание ПОЛНОТЕКСТОВОГО списка стоп-слов &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)  
+-   [CREATE FULLTEXT STOPLIST (Transact-SQL)](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)  
   
 #### <a name="to-create-a-full-text-stoplist-in-management-studio"></a>Для создания полнотекстового списка стоп-слов в Management Studio  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66011515"
   
 7.  Выберите один из следующих вариантов создания списка стоп-слов.  
   
-    -   **Создание пустого списка стоп-слов**  
+    -   **Создать пустой список стоп-слов**  
   
     -   **Создать из системного списка стоп-слов**  
   
@@ -92,45 +92,45 @@ ms.locfileid: "66011515"
   
  **Удаление списка стоп-слов**  
   
--   [УДАЛИТЬ ПОЛНОТЕКСТОВЫЙ список стоп-слов &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
+-   [DROP FULLTEXT STOPLIST (Transact-SQL)](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
   
   
-##  <a name="queries"></a>Использование списка стоп-слов в полнотекстовых запросах  
+##  <a name="using-a-stoplist-in-full-text-queries"></a><a name="queries"></a>Использование списка стоп-слов в полнотекстовых запросах  
  Чтобы использовать список стоп-слов в запросах, нужно связать его с полнотекстовым индексом. Можно добавить список стоп-слов к полнотекстовому индексу при создании индекса или изменить индекс позже, добавив список стоп-слов.  
   
  **Создание полнотекстового индекса и его связь со списком стоп-слов**  
   
--   [Создание ПОЛНОТЕКСТОВОГО индекса &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
+-   [CREATE FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
  **Связывание или разъединение списка стоп-слов с существующим полнотекстовым индексом**  
   
--   [ALTER FULLTEXT INDEX &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
+-   [ALTER FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
   
  **Подавление сообщения об ошибке при неуспешном завершении логической операции, применяемой к полнотекстовому запросу, из-за стоп-слов**  
   
 -   [Параметр конфигурации сервера «transform noise words»](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)  
   
   
-##  <a name="viewing"></a>Просмотр метаданных списков и списка стоп-слов  
+##  <a name="viewing-stoplists-and-stoplist-metadata"></a><a name="viewing"></a>Просмотр метаданных списков и списка стоп-слов  
  **Для просмотра всех стоп-слов из списка стоп-слов**  
   
--   [sys. fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
+-   [sys.fulltext_stopwords (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
  **Получение сведений обо всех списках стоп-слов в текущей базе данных**  
   
--   [sys. fulltext_stoplists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)  
+-   [sys.fulltext_stoplists (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)  
   
--   [sys. fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
+-   [sys.fulltext_stopwords (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
  **Просмотр разметки, полученной в результате применения средства разбиения по словам, тезауруса и списка стоп-слов**  
   
 -   [sys. dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="change"></a>Изменение стоп-слова в списке стоп-слов  
+##  <a name="changing-the-stopwords-in-a-stoplist"></a><a name="change"></a>Изменение стоп-слова в списке стоп-слов  
  **Добавление или удаление стоп-слов из списка стоп-слов**  
   
--   [ALTER FULLTEXT стоп-слов &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)  
+-   [ALTER FULLTEXT STOPLIST (Transact-SQL)](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)  
   
 #### <a name="to-change-the-stopwords-in-a-stoplist-in-management-studio"></a>Изменение стоп-слов в списке стоп-слов в Management Studio  
   
@@ -153,9 +153,8 @@ ms.locfileid: "66011515"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
   
-##  <a name="upgrade"></a>Обновление пропускаемых слов с SQL Server 2005  
- 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] пропускаемые слова были заменены стоп-словами. При обновлении базы данных с версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]файлы пропускаемых слов более не используются. Однако файлы пропускаемых слов хранятся в папке FTDATA\FTNoiseThresaurusBak, и их можно использовать в дальнейшем при обновлении или построении соответствующих списков стоп-слов. Сведения об обновлении файлов пропускаемых слов с переходом к спискам стоп-слов см. в разделе [Обновление полнотекстового поиска](upgrade-full-text-search.md).  
+##  <a name="upgrading-noise-words-from-sql-server-2005"></a><a name="upgrade"></a>Обновление пропускаемых слов с SQL Server 2005  
+ [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] пропускаемые слова были заменены стоп-словами. При обновлении базы данных с версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]файлы пропускаемых слов более не используются. Однако файлы пропускаемых слов хранятся в папке FTDATA\FTNoiseThresaurusBak, и их можно использовать в дальнейшем при обновлении или построении соответствующих списков стоп-слов. Сведения об обновлении файлов пропускаемых слов с переходом к спискам стоп-слов см. в разделе [Обновление полнотекстового поиска](upgrade-full-text-search.md).  
   
   
   

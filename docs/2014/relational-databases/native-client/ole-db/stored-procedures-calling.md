@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7385dddea48813615a851979e526af5f03a23332
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206580"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>Вызов хранимой процедуры (OLE DB)
@@ -43,7 +43,7 @@ ms.locfileid: "68206580"
   
 1.  Внесите сведения о параметре (имя параметра, специфическое для поставщика имя типа данных параметра или стандартное имя типа данных и т. д.) в массив структур DBPARAMBINDINFO. Каждая структура в массиве описывает один параметр. Затем этот массив передается методу **SetParameterInfo**.  
   
-2.  Вызовите метод **ICommandWithParameters::SetParameterInfo**, чтобы описать параметры для поставщика. **SetParameterInfo** указывает собственный тип данных для каждого параметра. Аргументы **SetParameterInfo** :  
+2.  Вызовите метод **ICommandWithParameters::SetParameterInfo**, чтобы описать параметры для поставщика. Метод **SetParameterInfo** определяет собственный тип данных каждого параметра. Метод **SetParameterInfo** использует следующие аргументы.  
   
     -   Количество параметров, для которых задаются сведения о типе.  
   
@@ -114,18 +114,18 @@ ms.locfileid: "68206580"
 {rpc SalesByCategory}  
 ```  
   
- Пример приложения, демонстрирующий escape-последовательность RPC, см. [в разделах выполнение хранимой процедуры &#40;использование синтаксиса rpc&#41; и обработка кодов возврата и параметров вывода &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Пример приложения, которое демонстрирует применение escape-последовательности RPC, см. в статье [Выполнение хранимой процедуры с использованием RPC и обработка выходных данных](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Инструкция Transact-SQL EXECUTE  
  Escape-последовательность ODBC CALL и escape-последовательность RPC — это предпочтительные способы вызова хранимых процедур в отличие от инструкции [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql). Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента использует механизм RPC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для оптимизации обработки команд. Этот протокол RPC повышает производительность, устраняя большую часть обработки параметров и синтаксической проверки инструкций на сервере.  
   
- Это пример инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**.  
+ Вот пример инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**.  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры](stored-procedures.md)  
   
   

@@ -11,17 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2212e7424f22ecca2619ef7215bf94b0dbb62875
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054266"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>Добавление, обновление и удаление данных (Master Data Services)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]поддерживает массовое добавление данных в модель и их изменение.  
   
- **Предварительные требования**  
+ **Предварительные условия**  
   
 -   Требуется разрешение на вставку данных в таблицу stg.\<имя>_Leaf, the stg.\<имя>_Consolidated, stg.\<имя>_Relationship в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66054266"
   
      При загрузке из промежуточных таблиц данные не проверяются автоматически с помощью бизнес-правил. Дополнительные сведения о том, что такое проверка и когда она выполняется, см. в разделе [Проверка (службы Master Data Services)](../../2014/master-data-services/validation-master-data-services.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Master Data Services &#40;импорта данных&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2c8afa1fbbb51947bef28ae45cabd445aaf0bf2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046437"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Обновление приложения с переходом от компонентов MDAC к собственному клиенту SQL Server
@@ -112,7 +112,7 @@ ms.locfileid: "63046437"
   
  Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и MDAC поддерживают уровень изоляции транзакций read committed при использовании управления версиями строк, однако изоляцию транзакций моментальных снимков поддерживает только собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. (С точки зрения программирования уровень изоляции транзакций READ COMMITTED с управлением версиями строк представляет собой то же, что и транзакция READ COMMITTED.)  
   
-## <a name="see-also"></a>См. также:  
- [Построение приложений с использованием SQL Server Native Client](building-applications-with-sql-server-native-client.md)  
+## <a name="see-also"></a>См. также  
+ [Построение приложений с использованием собственного клиента SQL Server](building-applications-with-sql-server-native-client.md)  
   
   

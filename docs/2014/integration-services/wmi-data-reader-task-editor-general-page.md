@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d25a77fd9a3fce701f65eca580647b193a6c0276
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054407"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>Редактор задачи «Модуль чтения данных WMI» (страница «Общие»)
@@ -27,7 +27,7 @@ ms.locfileid: "66054407"
  Дополнительные сведения об этой задаче см. в разделе [WMI Data Reader Task](control-flow/wmi-data-reader-task.md). Дополнительные сведения о языке запросов WQL см. в разделе документации по инструментарию управления Windows [Запросы с использованием языка запросов WQL](https://go.microsoft.com/fwlink/?LinkId=79045)в библиотеке MSDN.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Задайте уникальное имя задаче «Модуль чтения данных WMI». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -36,7 +36,7 @@ ms.locfileid: "66054407"
  **Описание**  
  Введите описание задачи «Модуль чтения данных WMI».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "модуль чтения данных WMI" &#40;странице "параметры WMI"&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
  [Страница "выражения"](expressions/expressions-page.md)   

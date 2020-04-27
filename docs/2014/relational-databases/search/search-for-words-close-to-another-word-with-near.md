@@ -21,16 +21,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011068"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Поиск слов близких к другим с использованием оператора NEAR
   Выражение с учетом расположения (NEAR) может применяться в предикате [CONTAINS](/sql/t-sql/queries/contains-transact-sql) или функции [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) для поиска слов или фраз, расположенных рядом. Также можно указать максимальное количество слов, которые не включаются в поиск и разделяют первое и последнее из искомых слов. Кроме того, можно искать два слова или две фразы в любом порядке или в порядке, в котором они указаны. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]поддерживает как более раннее [универсальное выражение](#Generic_NEAR)с учетом расположения, которое теперь является устаревшим, так и [настраиваемое выражение](#Custom_NEAR)с учетом расположения, которое является новым в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
-##  <a name="Custom_NEAR"></a>Настраиваемое выражение с учетом расположения  
+##  <a name="the-custom-proximity-term"></a><a name="Custom_NEAR"></a>Настраиваемое выражение с учетом расположения  
  Настраиваемое выражение с учетом расположения дает следующие новые возможности.  
   
 -   Можно указывать максимальное число слов, которые не включаются в поиск, или *максимальное расстояние*, которое может разделять первое и последнее слово поиска для возвращения результата.  
@@ -77,7 +77,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
  Для языка с направлением чтения справа налево (например, арабского или иврита) средство полнотекстового поиска применяет заданные выражения в обратном порядке. Кроме того, обозреватель объектов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] автоматически меняет порядок отображения для слов, заданных на языках с направлением чтения справа налево.  
   
 > [!NOTE]  
->  Дополнительные сведения см. в подразделе[Дополнительные сведения о поиске по сходству](#Additional_Considerations)далее в этом разделе.  
+>  Дополнительные сведения см. в подразделе [Дополнительные сведения о поиске по сходству](#Additional_Considerations) далее в этом разделе.  
   
 ### <a name="how-maximum-distance-is-measured"></a>Измерение максимального расстояния  
  Максимальное расстояние, например 10 или 25, определяет, сколько слов, которые не включаются в поиск, включая стоп-слова, могут разделять первое и последнее слово поиска в заданной строке. Например, выражение `NEAR((dogs, cats, "hunting mice"), 3)` возвращает следующую строку, в которой общее число слов, которые не включаются в поиск, равно трем (`enjoy`,`but`и`avoid`):  
@@ -101,7 +101,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
   
 -   CONTAINS('NEAR((*выражение1*,*выражение2*),5) OR NEAR((*выражение3*,*выражение4*),2, TRUE)')  
   
- Например,  
+ Например, примененная к объекту директива  
   
 ```  
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
@@ -125,7 +125,7 @@ GO
   
 
   
-##  <a name="Additional_Considerations"></a>Дополнительные рекомендации по поиску с учетом расположения  
+##  <a name="additional-considerations-for-proximity-searches"></a><a name="Additional_Considerations"></a>Дополнительные рекомендации по поиску с учетом расположения  
  В этом разделе описываются вопросы, касающиеся универсальных и настраиваемых поисковых запросов с учетом расположения.  
   
 -   Перекрывающиеся экземпляры слов поиска  
@@ -153,7 +153,7 @@ GO
   
 
   
-##  <a name="Generic_NEAR"></a>Нерекомендуемое универсальное выражение с учетом расположения  
+##  <a name="the-deprecated-generic-proximity-term"></a><a name="Generic_NEAR"></a>Нерекомендуемое универсальное выражение с учетом расположения  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Рекомендуется использовать [настраиваемое выражение](#Custom_NEAR)с учетом расположения.  
@@ -171,7 +171,7 @@ GO
 > [!NOTE]  
 >  Сведения о синтаксисе <generic_proximity_term> см. в разделе [CONTAINS (Transact-SQL)](/sql/t-sql/queries/contains-transact-sql).  
   
- Дополнительные сведения см. в подразделе[Дополнительные сведения о поиске по сходству](#Additional_Considerations)далее в этом разделе.  
+ Дополнительные сведения см. в подразделе [Дополнительные сведения о поиске по сходству](#Additional_Considerations) далее в этом разделе.  
   
 ### <a name="combining-a-generic-proximity-term-with-other-terms"></a>Сочетание универсального выражения с учетом расположения и других выражений  
  Операторы AND (&), OR (|) и AND NOT (&!) позволяют сочетать универсальное выражение с учетом расположения с другим универсальным выражением с учетом расположения, простым выражением или префиксным выражением. Пример:  
@@ -224,9 +224,9 @@ CONTAINSTABLE(Production.Document, Document, '(reflector ~ bracket ~ installatio
   
 
   
-## <a name="see-also"></a>См. также:  
- [Функция CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
+## <a name="see-also"></a>См. также  
+ [CONTAINSTABLE (Transact-SQL)](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [Запрос с полнотекстовым поиском](query-with-full-text-search.md)   
- [СОДЕРЖИТ &#40;&#41;Transact-SQL](/sql/t-sql/queries/contains-transact-sql)  
+ [CONTAINS (Transact-SQL)](/sql/t-sql/queries/contains-transact-sql)  
   
   

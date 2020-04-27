@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ada9351eca0b068838b38e59c8e0833d5a9af61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012711"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Основные сведения об использовании запросов XPath (SQLXML 4.0)
@@ -57,7 +57,7 @@ ms.locfileid: "66012711"
   
      SQLXML 4.0 не поддерживает корневой запрос (/). Каждый запрос XPath должен начинаться на уровне ElementType верхнего уровня ** \<>** в схеме.  
   
--   **Создание отчетов об ошибках**  
+-   **Сообщения об ошибках**  
   
      Спецификация XPath консорциума W3C не определяет условия ошибки. Запросы XPath, которые не смогли выбрать какой-либо узел, возвращают пустой набор узлов. В SQLXML 4.0 запрос может вернуть несколько типов ошибок.  
   
@@ -89,25 +89,25 @@ ms.locfileid: "66012711"
 ## <a name="supported-functionality"></a>Поддерживаемые функции  
  В следующей таблице приведены возможности языка XPath, реализованные в SQLXML 4.0.  
   
-|Компонент|Элемент|Ссылка на образцы запросов|  
+|Функция|Элемент|Ссылка на образцы запросов|  
 |-------------|----------|----------------------------|  
 |Оси|оси `attribute`, `child`, `parent` и `self`|[Указание осей в запросах XPath &#40;SQLXML 4,0&#41;](samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Предикаты с логическими значениями, включая последовательные и вложенные предикаты.||[Указание арифметических операторов в запросах XPath &#40;SQLXML 4,0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Все реляционные операторы|=,! =, <, \<=, >, >=|[Указание реляционных операторов в запросах XPath &#40;SQLXML 4,0&#41;](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Арифметические операторы|+, -, *, div|[Указание арифметических операторов в запросах XPath &#40;SQLXML 4,0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Явные функции преобразования|`number()`, `string()`, `Boolean()`|[Указание явных функций преобразования в запросах XPath &#40;SQLXML 4,0&#41;](samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
-|Логические операторы|AND, OR|[Указание логических операторов в запросах XPath &#40;SQLXML 4,0&#41;](samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|логические операторы|AND, OR|[Указание логических операторов в запросах XPath &#40;SQLXML 4,0&#41;](samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |логические функции|`true()`, `false()`, `not()`|[Указание логических функций в запросах XPath &#40;SQLXML 4,0&#41;](samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |переменные XPath||[Указание переменных XPath в запросах XPath &#40;SQLXML 4,0&#41;](samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
-## <a name="unsupported-functionality"></a>Неподдерживаемая функциональность  
+## <a name="unsupported-functionality"></a>Неподдерживаемые функциональные возможности  
  В следующей таблице приведены функции языка XPath, не реализованные в SQLXML 4.0.  
   
-|Компонент|Элемент|  
+|Функция|Элемент|  
 |-------------|----------|  
 |Оси|`ancestor`, `ancestor-or-self`, `descendant`, `descendant-or-self (//)`, `following`, `following-sibling`, `namespace`, `preceding`, `preceding-sibling`|  
 |Предикаты с числовыми значениями||  
-|Арифметические операторы|mod (модуль)|  
+|Арифметические операторы|mod|  
 |Функции узлов|`ancestor`, `ancestor-or-self`, `descendant`, `descendant-or-self (//)`, `following`, `following-sibling`, `namespace`, `preceding`, `preceding-sibling`|  
 |Строковые функции|`string()`, `concat()`, `starts-with()`, `contains()`, `substring-before()`, `substring-after()`, `substring()`, `string-length()`, `normalize()`, `translate()`|  
 |логические функции|`lang()`|  
@@ -118,7 +118,7 @@ ms.locfileid: "66012711"
   
 -   XPath может содержать такие символы, как < или &, которые имеют особые значения в XML (а шаблон — это XML-документ). Эти символы необходимо отформатировать с помощью & кодировки XML или указать XPath в URL-адресе.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование запросов XPath в SQLXML 4.0](using-xpath-queries-in-sqlxml-4-0.md)  
   
   

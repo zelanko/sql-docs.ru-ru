@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b6653f2340dfbcf6265c527f85d87d60a3680f30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66009988"
 ---
 # <a name="manage-filetables"></a>Управление таблицами FileTable
   Описывает стандартные административные задачи по управлению таблицами FileTables.  
   
-##  <a name="HowToEnumerate"></a> Практическое руководство. Получение списка таблиц FileTable и связанных объектов  
+##  <a name="how-to-get-a-list-of-filetables-and-related-objects"></a><a name="HowToEnumerate"></a> Практическое руководство. Получение списка таблиц FileTable и связанных объектов  
  Чтобы получить список таблиц FileTable, выполните запрос к одному из следующих представлений каталогов:  
   
 -   [sys.filetables (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)  
@@ -47,7 +47,7 @@ SELECT object_id, OBJECT_NAME(object_id) AS 'Object Name'
 GO  
 ```  
   
-##  <a name="BasicsDisabling"></a> Отключить и снова включить нетранзакционный доступ на уровне базы данных  
+##  <a name="disabling-and-re-enabling-non-transactional-access-at-the-database-level"></a><a name="BasicsDisabling"></a> Отключить и снова включить нетранзакционный доступ на уровне базы данных  
  Для монопольного доступа, необходимого для выполнения некоторых задач администрирования, может потребоваться временно отключить нетранзакционный доступ.  
   
  **Поведение инструкции ALTER DATABASE при изменении уровня нетранзакционного доступа**  
@@ -79,7 +79,7 @@ GO
   
 -   Если FILESTREAM отключен на уровне экземпляра, невидимыми будут все каталоги уровня базы данных этого экземпляра.  
   
-###  <a name="HowToDisable"></a> Практическое руководство. Отключение и повторное включение нетранзакционного доступа на уровне базы данных  
+###  <a name="how-to-disable-and-re-enable-non-transactional-access-at-the-database-level"></a><a name="HowToDisable"></a> Практическое руководство. Отключение и повторное включение нетранзакционного доступа на уровне базы данных  
  Дополнительные сведения см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  **Отключение полного нетранзакционного доступа**  
@@ -106,7 +106,7 @@ ALTER DATABASE database_name
 GO  
 ```  
   
-###  <a name="visible"></a> Практическое руководство. Обеспечение видимости таблиц FileTables в базе данных  
+###  <a name="how-to-ensure-the-visibility-of-the-filetables-in-a-database"></a><a name="visible"></a> Практическое руководство. Обеспечение видимости таблиц FileTables в базе данных  
  Каталог уровня базы данных и находящиеся в нем каталоги FileTable отображаются при соблюдении всех следующих условий.  
   
 1.  Функция FILESTREAM включена на уровне экземпляра.  
@@ -115,7 +115,7 @@ GO
   
 3.  На уровне базы данных указан допустимый каталог.  
   
-##  <a name="BasicsEnabling"></a> Отключение и повторное включение пространства имен FileTable на уровне таблицы  
+##  <a name="disabling-and-re-enabling-the-filetable-namespace-at-the-table-level"></a><a name="BasicsEnabling"></a> Отключение и повторное включение пространства имен FileTable на уровне таблицы  
  При отключении пространства имен FileTable отключаются все системные ограничения и триггеры, созданные в таблице FileTable. Это полезно в случаях, когда требуется значительная реорганизация таблицы FileTable с помощью операций [!INCLUDE[tsql](../../includes/tsql-md.md)] без дополнительных затрат на применение семантики FileTable. Но это может привести к несогласованному состоянию таблицы FileTable, что может не позволить снова включить пространство имен FileTable.  
   
  Отключение пространства имен FileTable имеет следующие результаты.  
@@ -138,7 +138,7 @@ GO
   
 -   Каталог таблицы FileTable, а также содержащиеся в нем файлы и каталоги появляются в файловой системе и становятся доступными для файлового ввода-вывода.  
   
-###  <a name="HowToEnableNS"></a> Практическое руководство. Отключение и повторное включение пространства имен FileTable на уровне таблицы  
+###  <a name="how-to-disable-and-re-enable-the-filetable-namespace-at-the-table-level"></a><a name="HowToEnableNS"></a> Практическое руководство. Отключение и повторное включение пространства имен FileTable на уровне таблицы  
  Вызовите инструкцию ALTER TABLE с параметром **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** .  
   
  **Отключение пространства имен FileTable**  
@@ -155,13 +155,13 @@ ALTER TABLE filetable_name
 GO  
 ```  
   
-##  <a name="BasicsKilling"></a> Уничтожение открытых дескрипторов файлов, связанных с таблицей FileTable  
+##  <a name="killing-open-file-handles-associated-with-a-filetable"></a><a name="BasicsKilling"></a> Уничтожение открытых дескрипторов файлов, связанных с таблицей FileTable  
  Открытые дескрипторы файлов, хранящихся в таблице FileTable, могут помешать монопольному доступу, который требуется для выполнения определенных задач по администрированию. Для включения срочных задач может потребоваться уничтожить открытые дескрипторы файлов, связанные с одной или несколькими таблицами FileTable.  
   
 > [!WARNING]  
 >  При уничтожении открытых дескрипторов файлов пользователи могут потерять несохраненные данные. Такое поведение согласуется с поведением самой файловой системы.  
   
-###  <a name="HowToListOpen"></a> Практическое руководство. Получение списка открытых дескрипторов файлов, связанных с таблицей FileTable  
+###  <a name="how-to-get-a-list-of-open-file-handles-associated-with-a-filetable"></a><a name="HowToListOpen"></a> Практическое руководство. Получение списка открытых дескрипторов файлов, связанных с таблицей FileTable  
  Выполните запрос к представлению каталога [sys.dm_filestream_non_transacted_handles (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql).  
   
 ```sql  
@@ -169,7 +169,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="HowToKill"></a> Практическое руководство. Уничтожение открытых дескрипторов файлов, связанных с таблицей FileTable  
+###  <a name="how-to-kill-open-file-handles-associated-with-a-filetable"></a><a name="HowToKill"></a> Практическое руководство. Уничтожение открытых дескрипторов файлов, связанных с таблицей FileTable  
  Чтобы уничтожить все открытые дескрипторы файлов в базе данных или в таблице FileTable либо конкретный дескриптор, вызовите хранимую процедуру [sp_kill_filestream_non_transacted_handles (Transact-SQL)](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles).  
   
 ```  
@@ -188,7 +188,7 @@ EXEC sp_kill_filestream_non_transacted_handles @handle_id = integer_handle_id;
 GO  
 ```  
   
-###  <a name="HowToIdentifyLocks"></a> Практическое руководство. Определение блокировок, имеющихся в таблицах FileTable  
+###  <a name="how-to-identify-the-locks-held-by-filetables"></a><a name="HowToIdentifyLocks"></a> Практическое руководство. Определение блокировок, имеющихся в таблицах FileTable  
  Большинство блокировок в таблице FileTable связано с файлами, открытыми приложениями.  
   
  **Определение открытых файлов и связанных с ними блокировок**  
@@ -202,7 +202,7 @@ SELECT opened_file_name
 GO  
 ```  
   
-##  <a name="BasicsSecurity"></a> Безопасность таблицы FileTable  
+##  <a name="filetable-security"></a><a name="BasicsSecurity"></a> Безопасность таблицы FileTable  
  Файлы и каталоги, хранящиеся в таблицах FileTable, защищаются только средствами безопасности SQL Server. Средства безопасности на уровне таблицы и столбцов применяются для доступа файловой системы, а также для доступа [!INCLUDE[tsql](../../includes/tsql-md.md)] . API-интерфейсы безопасности файловой системы Windows и параметры ACL не поддерживаются.  
   
  Права и разрешения на доступ, применимые к группам файлов и контейнерам FILESTREAM, также применяются и к таблице FileTable, поскольку данные файлов хранятся в столбце FILESTREAM таблицы FileTable.  
@@ -213,7 +213,7 @@ GO
  **Безопасность таблиц FileTable и доступ файловой системы**  
  Для открытия дескриптора файла или каталога, хранящегося в таблице FileTable, API-интерфейсам файловой системы требуются соответствующие разрешения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на всю строку таблицы FileTable (то есть разрешение на уровне таблицы). Если у пользователя нет соответствующего разрешения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на любой столбец таблицы FileTable, то доступ к файловой системе будет запрещен.  
   
-##  <a name="OtherBackup"></a> Резервное копирование и таблицы FileTable  
+##  <a name="backup-and-filetables"></a><a name="OtherBackup"></a> Резервное копирование и таблицы FileTable  
  Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется для резервного копирования таблицы FileTable, то резервная копия данных FILESTREAM создается со структурированными данными в базе данных. Если резервное копирование данных FILESTREAM при помощи реляционных данных выполнять нежелательно, для исключения файловых групп FILESTREAM можно воспользоваться частичным резервным копированием.  
   
  **Согласованность транзакций резервных копий таблиц FileTable**  
@@ -222,13 +222,13 @@ GO
   
  Однако, когда включен полный нетранзакционный доступ, таблица FileTable может содержать данные, которые были обновлены (с помощью нетранзакционного обновления) уже после выполнения транзакции, которую средство или процесс считывает из журнала транзакций. Это означает, что операция восстановления на момент времени для определенной транзакции может содержать данные FILESTREAM более свежие, чем транзакция. Это ожидаемое поведение при включенном нетранзакционном обновлении для таблиц FileTables.  
   
-##  <a name="Monitor"></a> Приложение SQL Server Profiler и таблицы FileTable  
+##  <a name="sql-server-profiler-and-filetables"></a><a name="Monitor"></a> Приложение SQL Server Profiler и таблицы FileTable  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler может включать в трассировку операции Windows по открытию и закрытию файлов, хранящихся в таблице FileTable.  
   
-##  <a name="OtherAuditing"></a> Аудит и таблицы FileTable  
+##  <a name="auditing-and-filetables"></a><a name="OtherAuditing"></a> Аудит и таблицы FileTable  
  Аудит таблицы FileTable проводится так же, как и для любых других таблиц. Однако шаблоны доступа Win32 не являются операциями на основе множеств. Одно действие в файловой системе преобразуется в несколько DML-операций Transact-SQL. Например, открытие файла в Microsoft Word преобразуется в несколько операций открытия/закрытия/создания/переименования/удаления и соответствующие DML-операции Transact-SQL. Это приводит к записи подробных сведений аудита, где трудно сопоставить записи, относящиеся к действиям файловой системы, и соответствующие записи аудита DML в Transact-SQL.  
   
-##  <a name="OtherDBCC"></a> DBCC и таблицы FileTable  
+##  <a name="dbcc-and-filetables"></a><a name="OtherDBCC"></a> DBCC и таблицы FileTable  
  С помощью инструкции DBCC CHECKCONSTRAINTS можно проверить ограничения для таблицы FileTable, включая системные ограничения.  
   
 ## <a name="see-also"></a>См. также:  

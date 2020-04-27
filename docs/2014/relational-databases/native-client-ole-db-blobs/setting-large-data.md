@@ -1,5 +1,5 @@
 ---
-title: Задание больших данных | Документация Майкрософт
+title: Сохранение больших объемов данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da56cbf334bca884e71469c63429135d6db84953
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140624"
 ---
 # <a name="setting-large-data"></a>Присваивание больших данных
@@ -41,7 +41,7 @@ ms.locfileid: "63140624"
 ## <a name="how-to-set-large-data"></a>Как сохранить большой объем данных  
  Для передачи указателя на свой собственный объект хранения потребитель создает метод доступа, который привязывает значение столбца BLOB, а затем вызывает метод **IRowsetChange::SetData** или **IRowsetChange::InsertRow** . Сохранение данных BLOB происходит следующим образом.  
   
-1.  Создайте структуру DBOBJECT, описывающую, каким образом должен производиться доступ к столбцу BLOB. Установите для элемента *dwFlag* структуры DBOBJECT значение STGM_READ, а для элемента *iid* значение IID_ISequentialStream (используемого интерфейса).  
+1.  Создайте структуру DBOBJECT, описывающую, каким образом должен производиться доступ к столбцу BLOB. Задайте для элемента *dwFlag* структуры DBOBJECT значение STGM_READ и задайте для элемента *IID* значение IID_ISequentialStream (предоставляемый интерфейс).  
   
 2.  Установите свойства в группе свойств DBPROPSET_ROWSET, чтобы включить возможность обновления для набора строк.  
   
@@ -717,7 +717,7 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Большие двоичные объекты и OLE](blobs-and-ole-objects.md)   
  [Использование типов больших значений](../native-client/features/using-large-value-types.md)  
   

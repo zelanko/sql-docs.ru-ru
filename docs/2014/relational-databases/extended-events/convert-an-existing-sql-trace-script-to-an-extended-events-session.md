@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015776"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Преобразование существующего скрипта трассировки SQL в сеанс расширенных событий
@@ -100,7 +100,7 @@ ms.locfileid: "63015776"
 ## <a name="to-create-the-extended-events-session"></a>Создание сеанса расширенных событий  
  Воспользуйтесь редактором запросов для создания сеанса расширенных событий и записи выходных данных в целевой файл. Следующие шаги описывают один запрос, там же объясняется, как строить запрос. Полный пример запроса см. в подразделе «Пример» этого раздела.  
   
-1.  Добавьте инструкции для создания сеанса событий, заменив s*ession_name* именем, которое нужно использовать для сеанса расширенных событий.  
+1.  Добавьте инструкции для создания сеанса событий, заменив*имя_сеанса* нужным именем сеанса расширенных событий.  
   
     ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -247,7 +247,7 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр эквивалентов расширенных событий для классов событий трассировки SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

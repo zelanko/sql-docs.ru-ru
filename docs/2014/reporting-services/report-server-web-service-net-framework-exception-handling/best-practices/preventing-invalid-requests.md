@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dcb850ad7e99768781b225978f531ff991766924
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046081"
 ---
 # <a name="preventing-invalid-requests"></a>Предотвращение недопустимых запросов
@@ -69,8 +69,8 @@ private void PublishReport()
   
  Дополнительные сведения о типах ошибок, которые могут быть устранены до отправки запросов на сервер отчетов, см. в разделе [Таблица ошибок SoapException](../soapexception-class/soapexception-errors-table.md). Дополнительные сведения об усовершенствовании предыдущего примера с помощью блоков try и catch см. в разделе [Использование блоков Try-Catch](using-try-and-catch-blocks.md).  
   
-## <a name="see-also"></a>См. также:  
- [Введение в обработку исключений в службах Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
+## <a name="see-also"></a>См. также  
+ [Введение в обработку исключений в Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
  [Класс SoapException в службах Reporting Services](../soapexception-class/reporting-services-soapexception-class.md)  
   
   

@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc3c063da7bb9133f8687a908c4bd7e0e13bae8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013821"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Идентификация ключевых столбцов с использованием sql:key-fields (SQLXML 4.0)
@@ -41,7 +41,7 @@ ms.locfileid: "66013821"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Создание подходящего вложения, когда \<sql:> связей не предоставляет достаточно сведений  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>А) Создание подходящего вложения, когда \<sql:> связей не предоставляет достаточно сведений  
  В этом примере показано, где необходимо указывать `sql:key-fields`.  
   
  Рассмотрим следующую схему. Схема указывает иерархию между элементами ** \<Order>** и ** \<Customer>** , в которых элемент ** \<Order>** является родительским, а элемент ** \<>Customer** является дочерним.  
@@ -124,7 +124,7 @@ ms.locfileid: "66013821"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>Б. Указание sql:key-fields для получения правильной вложенности в результате  
+### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>Б) Указание sql:key-fields для получения правильной вложенности в результате  
  В следующей схеме иерархия не указана с помощью ** \<SQL: relationship>**. В схеме все еще требуется указать заметку `sql:key-fields`, чтобы уникальным образом идентифицировать сотрудников в таблице HumanResources.Employee.  
   
 ```  

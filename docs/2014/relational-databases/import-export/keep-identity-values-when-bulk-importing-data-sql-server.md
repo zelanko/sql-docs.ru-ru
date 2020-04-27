@@ -15,23 +15,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011904"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Сохранение значений идентификаторов при массовом импорте данных (SQL Server)
   Файлы данных, содержащие значения идентификаторов, можно импортировать в экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию значения столбца идентификаторов в импортируемом файле данных не учитываются, и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически присваивает им уникальные значения на основе начального значения и значения приращения, указанных при создании таблицы.  
   
- Если файл данных не содержит значений для столбцов идентификаторов в таблице, то для указания того, что при импорте столбец идентификаторов в таблице нужно пропустить, применяется файл форматирования. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически присваивает столбцу уникальные значения.  
+ Если файл данных не содержит значений для столбцов идентификаторов в таблице, то для указания того, что при импорте столбец идентификаторов в таблице нужно пропустить, применяется файл форматирования. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически присваивает столбцу уникальные значения.  
   
  Чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не присваивал значения идентификаторов при массовом импорте строк в таблицу, используется соответствующий квалификатор команды для сохранения значений идентификаторов. При указании квалификатора сохранения значений идентификаторов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользуется значениями идентификаторов, имеющимися в файле данных. Ниже приведены эти квалификаторы.  
   
 |Get-Help|Квалификатор сохранения значений идентификаторов|Тип квалификатора|  
 |-------------|------------------------------|--------------------|  
-|`bcp`|**-E**|Переключатель|  
+|`bcp`|**-E**|Параметр|  
 |BULK INSERT|KEEPIDENTITY|Аргумент|  
 |Инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...).|KEEPIDENTITY|Табличное указание|  
   
@@ -74,10 +73,10 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
   
  Дополнительные сведения о создании файла форматирования см. в разделе [Создание файла форматирования (SQL Server)](create-a-format-file-sql-server.md).  
   
-### <a name="a-using-bcp-and-keeping-identity-values"></a>A. Использование команды bcp с сохранением значений идентификаторов  
+### <a name="a-using-bcp-and-keeping-identity-values"></a>А) Использование команды bcp с сохранением значений идентификаторов  
  В следующем примере показан способ сохранения значений идентификаторов при использовании команды `bcp` для массового импорта данных. Команда `bcp` использует файл форматирования `myDepartment-f-n-x.Xml` и содержит следующие параметры:  
   
-|Квалификаторы|Description|  
+|Квалификаторы|Описание|  
 |----------------|-----------------|  
 |**-E**|Указывает, что в столбец идентификаторов загружаются значения идентификаторов, находящиеся в файле данных.|  
 |**-T**|Указывает, что `bcp` программа подключается к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с доверенным соединением.|  
@@ -89,7 +88,7 @@ bcp AdventureWorks.HumanResources.myDepartment in C:\myDepartment-n.Dat -f C:\my
   
 ```  
   
-### <a name="b-using-bulk-insert-and-keeping-identity-values"></a>Б. Использование BULK INSERT с сохранением значений идентификаторов  
+### <a name="b-using-bulk-insert-and-keeping-identity-values"></a>Б) Использование BULK INSERT с сохранением значений идентификаторов  
  В следующем примере BULK INSERT используется для массового импорта данных из файла `myDepartment-c.Dat` в таблицу `AdventureWorks.HumanResources.myDepartment` . Инструкция использует файл форматирования `myDepartment-f-n-x.Xml` и включает параметр KEEPIDENTITY для сохранения значений идентификаторов, находящихся в файле данных.  
   
  В редакторе запросов среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] выполните:  
@@ -131,49 +130,49 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
--   [Не заменяйте значения NULL или используйте значение по умолчанию во время &#40;ного импорта SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
+-   [Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [Подготовка данных к экспорту или импорту &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
+-   [Подготовка данных к массовому экспорту или импорту (SQL Server)](prepare-data-for-bulk-export-or-import-sql-server.md)  
   
  **Использование файла форматирования**  
   
--   [Создайте файл форматирования &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
+-   [Создание файла форматирования (SQL Server)](create-a-format-file-sql-server.md)  
   
--   [Использование файла форматирования для SQL Server &#40;данных при выполнении операций импорта&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
+-   [Использование файла форматирования для массового импорта данных (SQL Server)](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [Используйте файл форматирования для преобразования столбцов таблицы в поля файла данных &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
--   [Используйте файл форматирования для пропуска поля данных &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
+-   [Использование файла форматирования для пропуска поля данных (SQL Server)](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [Используйте файл форматирования для пропуска столбца таблицы &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
+-   [Пропуск столбца таблицы с помощью файла форматирования (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
  **Использование форматов данных для массового импорта или экспорта**  
   
 -   [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [Используйте символьный формат для импорта или экспорта &#40;данных SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Использование символьного формата для импорта и экспорта данных (SQL Server)](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Используйте собственный формат для импорта или экспорта &#40;данных SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Использование собственного формата для импорта и экспорта данных (SQL Server)](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Используйте символьный формат Юникода для импорта или экспорта &#40;данных SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Использование символьного формата Юникод для импорта и экспорта данных (SQL Server)](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Используйте собственный формат Юникода для импорта или экспорта &#40;данных SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Использование собственного формата Юникод для импорта и экспорта данных (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
- **Указание форматов данных для совместимости при использовании программы bcp**  
+ **Задание форматов данных для совместимости с помощью программы bcp**  
   
-1.  [Укажите признаки конца поля и строки &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+1.  [Определение признаков конца поля и строки (SQL Server)](specify-field-and-row-terminators-sql-server.md)  
   
-2.  [Указание длины префикса в файлах данных с помощью программы bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+2.  [Определение длины префикса в файлах данных с помощью программы bcp (SQL Server)](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
-3.  [Указание типа файлового хранилища с помощью программы bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+3.  [Указание типа файлового хранилища с помощью программы bcp (SQL Server)](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>См. также:  
- [&#41;BACKUP &#40;Transact-SQL](/sql/t-sql/statements/backup-transact-sql)   
+ [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Табличные указания &#40;&#41;Transact-SQL](/sql/t-sql/queries/hints-transact-sql-table)  
+ [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
+ [Табличные указания (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table)  
   
   

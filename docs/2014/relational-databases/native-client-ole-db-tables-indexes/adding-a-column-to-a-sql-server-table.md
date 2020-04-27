@@ -1,5 +1,5 @@
 ---
-title: Добавление столбца в таблицу SQL Server | Документация Майкрософт
+title: Добавление столбца к таблице SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 32e78feae791788e0aad87079546ea8c7d49e734
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046513"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>Добавление столбца к таблице SQL Server
@@ -37,7 +37,7 @@ ms.locfileid: "63046513"
   
  Имя столбца задается в виде символьной строки в Юникоде в элементе *pwszName* объединения *uName* в элементе *dbcid* параметра *pColumnDesc* типа DBCOLUMNDESC. Элемент *eKind* должен быть равен DBKIND_NAME.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы и индексы](tables-and-indexes.md)   
  [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)  
   

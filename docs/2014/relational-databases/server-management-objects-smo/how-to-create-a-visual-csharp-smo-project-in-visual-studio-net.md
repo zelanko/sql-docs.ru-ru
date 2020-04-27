@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 371da8231138fb43e9b001808b9fb88ad09543b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63131641"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>создание проекта SMO на языке Visual C# в среде Visual Studio .NET
@@ -28,7 +28,7 @@ ms.locfileid: "63131641"
   
 1.  Запустите среду [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] (или [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)]).  
   
-2.  В меню **Файл** выберите пункт **Создать проект**. Раскроется диалоговое окно **Новый проект**.  
+2.  В меню **Файл** выберите пункт **Создать проект**. Откроется диалоговое окно **Новый проект** .  
   
 3.  В диалоговом окне **типы проектов** выберите **Visual C#**, а затем выберите **Windows**. В области [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] установленные шаблоны выберите **приложение Windows**.  
   

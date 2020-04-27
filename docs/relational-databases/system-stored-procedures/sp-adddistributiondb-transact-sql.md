@@ -16,10 +16,10 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771352"
 ---
 # <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
@@ -75,13 +75,13 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @security_mode = ] security_mode`Режим безопасности, используемый при соединении с распространителем. *security_mode* имеет **тип int**и значение по умолчанию 1. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности; **1** указывает встроенную проверку подлинности Windows.  
   
-`[ @login = ] 'login'`Имя входа, используемое при соединении с распространителем для создания базы данных распространителя. Это необходимо, если параметру *security_mode* присвоено значение **0**. Аргумент *Login* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @login = ] 'login'`Имя входа, используемое при соединении с распространителем для создания базы данных распространителя. Это необходимо, если параметру *security_mode* присвоено значение **0**. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL.  
   
 `[ @password = ] 'password'`Пароль, используемый при соединении с распространителем. Это необходимо, если параметру *security_mode* присвоено значение **0**. Аргумент *Password* имеет тип **sysname**и значение по умолчанию NULL.  
   
 `[ @createmode = ] createmode`*createmode* имеет **тип int**, значение по умолчанию 1 и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**1** (по умолчанию)|Создайте базу данных или используйте существующую базу данных, а затем примените файл **инстдист. SQL** , чтобы создать объекты репликации в базе данных распространителя.|  
@@ -95,7 +95,7 @@ sp_adddistributiondb [ @database= ] 'database'
  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  **sp_adddistributiondb** используется во всех типах репликации. Однако эта хранимая процедура может выполняться только на стороне распространителя.  
@@ -163,7 +163,7 @@ GO
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_adddistributiondb**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   

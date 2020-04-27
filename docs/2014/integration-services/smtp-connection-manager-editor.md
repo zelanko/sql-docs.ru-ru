@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 527c8f647c963c2c1c03171eeb154a790ab1994a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055561"
 ---
 # <a name="smtp-connection-manager-editor"></a>редактор диспетчера SMTP-сеансов
@@ -27,7 +27,7 @@ ms.locfileid: "66055561"
  Дополнительные сведения о диспетчере SMTP-соединений см. в разделе [SMTP Connection Manager](connection-manager/smtp-connection-manager.md).  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Задает уникальное имя диспетчера соединений.  
   
  **Описание**  
@@ -45,10 +45,10 @@ ms.locfileid: "66055561"
 > [!NOTE]  
 >  При использовании Microsoft Exchange в качестве SMTP-сервера может потребоваться задать для `True`параметра **использовать проверку подлинности Windows** значение. Серверы Exchange можно настроить так, чтобы они запрещали использовать соединения SMTP, не прошедшие проверку подлинности.  
   
- **Включение SSL (SSL)**  
+ **Включить протокол SSL**  
  Выберите, чтобы отправляемые почтовые сообщения шифровались по протоколу SSL.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

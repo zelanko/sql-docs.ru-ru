@@ -15,31 +15,31 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058991"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Редактор задачи «Выполнение SQL» (страница «Общие»)
   Используйте страницу **Общие** диалогового окна **Редактор задачи «Выполнение SQL»** для настройки задачи «Выполнение SQL» и формирования инструкции SQL, которую запускает задача.  
   
- Сведения об этой задаче см. в разделах [Задача "Выполнение SQL"](control-flow/execute-sql-task.md), [Параметры и коды возврата в задаче "Выполнение SQL"](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)и [Результирующие наборы в задаче "Выполнение SQL"](../../2014/integration-services/result-sets-in-the-execute-sql-task.md). Дополнительные сведения о языке Transact-SQL см. в [Справочнике по Transact-SQL (компонент Database Engine)](/sql/t-sql/language-reference).  
+ Сведения об этой задаче см. в разделах [Задача "Выполнение SQL"](control-flow/execute-sql-task.md), [Параметры и коды возврата в задаче "Выполнение SQL"](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md) и [Результирующие наборы в задаче "Выполнение SQL"](../../2014/integration-services/result-sets-in-the-execute-sql-task.md). Дополнительные сведения о языке Transact-SQL см. в [Справочнике по Transact-SQL (компонент Database Engine)](/sql/t-sql/language-reference).  
   
 ## <a name="static-options"></a>Статические параметры  
- **Название**  
+ **Имя**  
  Укажите уникальное имя для задачи «Выполнение SQL» в рабочем процессе. Предоставляемое имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
  **Описание**  
  Приведите описание задачи «Выполнение SQL». Рекомендуется описать назначение задачи, чтобы сделать пакеты самодокументируемыми и более простыми в обслуживании.  
   
  **Счетчик**  
- Укажите максимальное число секунд, в течение которых будет выполняться задача до истечения времени ожидания. Значение 0 указывает на бесконечное время. Значение по умолчанию равно 0.  
+ Укажите максимальное число секунд, в течение которых будет выполняться задача до истечения времени ожидания. Значение 0 указывает на бесконечное время. Значение по умолчанию — 0.  
   
 > [!NOTE]  
 >  Хранимые процедуры не завершаются по истечении времени ожидания, если в них моделируются функции ожидания при помощи предоставления времени для выполнения соединений и завершения транзакций, большего, чем время в секундах, задаваемое параметром **Время ожидания**. Однако хранимые процедуры, выполняющие запросы, всегда ограничены по времени, что задается параметром **Время ожидания**.  
   
- **CodePage**  
+ **Страница**  
  Укажите кодовую страницу, используемую при преобразовании значений переменных в Юникоде. По умолчанию используется кодовая страница локального компьютера.  
   
 > [!NOTE]  
@@ -54,34 +54,33 @@ ms.locfileid: "66058991"
  **ConnectionType**  
  Выберите тип, используемый диспетчером соединений для соединения с источником данных. В качестве возможных типов соединения могут быть: **OLE DB**, **ODBC**, **ADO**, **ADO.NET** и **SQLMOBILE**.  
   
- **См. также:** [Диспетчер соединений OLE DB](connection-manager/ole-db-connection-manager.md), [Диспетчер соединений ODBC](connection-manager/odbc-connection-manager.md), диспетчер [соединений ADO](connection-manager/ado-connection-manager.md), [Диспетчер подключений ADO.NET](connection-manager/ado-net-connection-manager.md), [Диспетчер соединений SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md) .  
+ **См. также:** [Диспетчер соединений OLE DB](connection-manager/ole-db-connection-manager.md), [Диспетчер соединений ODBC](connection-manager/odbc-connection-manager.md), [Диспетчер соединений ADO](connection-manager/ado-connection-manager.md), [Диспетчер соединений ADO.NET](connection-manager/ado-net-connection-manager.md), [Диспетчер соединений SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Соединен**  
- Выберите соединение из списка определенных диспетчеров соединений. Для создания соединения выберите \<**Создать соединение...**>.  
+ Выберите соединение из списка определенных диспетчеров соединений. Чтобы создать новое соединение, выберите \< **создать соединение...**>.  
   
  **SQLSourceType**  
  Выберите тип источника для инструкции SQL, выполняемой этой задачей.  
   
  В зависимости от типа диспетчера соединений, используемого задачей «Выполнение SQL», в параметризованных инструкциях SQL необходимо использовать определенные маркеры параметров.  
   
- **См. также:** Раздел "Выполнение параметризованных команд SQL" в [задаче "Выполнение SQL](control-flow/execute-sql-task.md) "  
+ **См. также:** подраздел «Выполнение параметризованных команд SQL» в разделе [Execute SQL Task](control-flow/execute-sql-task.md)  
   
  Это свойство имеет параметры, указанные в следующей таблице.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**Прямой ввод**|Задайте источник для инструкции Transact-SQL. При выборе этого значения отображается динамический параметр **SQLStatement**.|  
 |**Соединение с файлом**|Выберите файл, содержащий инструкцию Transact-SQL. При установке этого параметра отображается динамический параметр **Подключение файла**.|  
-|**Перемен**|В качестве источника задайте переменную, определяющую инструкцию Transact-SQL. При выборе этого значения отображается динамический параметр **SourceVariable**.|  
+|**Переменная**|В качестве источника задайте переменную, определяющую инструкцию Transact-SQL. При выборе этого значения отображается динамический параметр **SourceVariable**.|  
   
- **куериссторедпроцедуре**  
+ **QueryIsStoredProcedure**  
  Указывает, является ли заданная для запуска инструкция SQL хранимой процедурой. Если задача использует диспетчер соединений ADO, это свойство доступно только для чтения и записи. В противном случае свойство доступно только для чтения и имеет значение `false`.  
   
  **BypassPrepare**  
- Укажите, нужно ли разработать инструкцию SQL.  
-  `true` ― пропустить подготовку; `false` ― подготовить инструкцию SQL перед выполнением. Этот параметр доступен только с соединениями OLE DB, поддерживающими подготовку.  
+ Укажите, нужно ли разработать инструкцию SQL.  `true` ― пропустить подготовку; `false` ― подготовить инструкцию SQL перед выполнением. Этот параметр доступен только с соединениями OLE DB, поддерживающими подготовку.  
   
- **См. также:**  [подготовленное выполнение](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
+ **См. также:**  [Подготовленное выполнение](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
  **Обзор**  
  Укажите расположение файла, содержащего инструкцию SQL, при помощи диалогового окна **Открыть** . Выберите файл, содержимое которого копируется как инструкция SQL в свойство **SQLStatement** .  
@@ -96,15 +95,15 @@ ms.locfileid: "66058991"
   
 ### <a name="sqlsourcetype--direct-input"></a>WQLQuerySource = Прямой ввод  
  **SQLStatement**  
- Введите инструкцию SQL для выполнения в окне параметров или нажмите кнопку обзора (...) для ввода инструкции SQL в диалоговом окне **Ввод SQL-запроса**, либо нажмите кнопку **Создать запрос** для составления инструкции при помощи диалогового окна **Построитель запросов**.  
+ Введите инструкцию SQL для выполнения в поле "параметр" или нажмите кнопку обзора (...), чтобы ввести инструкцию SQL в диалоговом окне **Ввод SQL-запроса** , или нажмите кнопку **построить запрос** , чтобы составить инструкцию, используя диалоговое окно **конструктор запросов** .  
   
- **См. также:** [конструктор запросов](../../2014/integration-services/query-builder.md)  
+ **См. также:** [Построитель запросов](../../2014/integration-services/query-builder.md)  
   
 ### <a name="sqlsourcetype--file-connection"></a>WQLQuerySource = Подключение файла  
  **FileConnection**  
  Выберите существующий диспетчер подключений файлов или нажмите кнопку \<**Создать подключение...**>, чтобы создать новый диспетчер подключений.  
   
- **См. также:** [Диспетчер соединения файлов](connection-manager/file-connection-manager.md), [Редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Переменная  
  **SourceVariable**  
@@ -112,7 +111,7 @@ ms.locfileid: "66058991"
   
  **См. также:** [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md), [Добавить переменную](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "Выполнение SQL" &#40;страница "Сопоставление параметров"&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
  [Редактор задачи "Выполнение SQL" &#40;страница "результирующий набор"&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  

@@ -1,5 +1,5 @@
 ---
-title: SLMoreResults (Визуальный водитель FoxPro ODBC) Документы Майкрософт
+title: SQLMoreResults (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: dc59b1dd-c158-4b45-ab46-638be1fa49b8
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 68b9c0b698156af480db322ce349986e8936d7a0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "81299504"
 ---
 # <a name="sqlmoreresults-visual-foxpro-odbc-driver"></a>SQLMoreResults (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Эта тема содержит Visual FoxPro ODBC Драйвер-специфической информации. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полная  
+ Поддержка: полная  
   
- Соответствие ODBC API: Уровень 2  
+ Соответствие API-интерфейса ODBC: уровень 2  
   
- Определяет, ожидаются ли дополнительные результаты на ручке оператора, *hstmt*, содержащем SELECT, UPDATE, INSERT или DELETE-заявления, и если да, то инициализирует обработку для этих результатов.  
+ Определяет, ожидаются ли дополнительные результаты в маркере инструкции, *хстмт*, СОДЕРЖАЩЕМ инструкции SELECT, Update, INSERT или DELETE, и, если это так, инициализирует обработку для этих результатов.  
   
- Для получения более подробной информации, *ODBC Programmer's Reference*см. [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md)
+ Дополнительные сведения см. в разделе [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md) в *справочнике программиста по ODBC*.

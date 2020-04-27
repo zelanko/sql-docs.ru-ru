@@ -216,10 +216,12 @@
               href: big-data-cluster/spark-history-server.md
         - name: Диагностика
           items:
-            - name: Устранение неполадок Kubernetes
+            - name: Устранение неполадок в Kubernetes
               href: big-data-cluster/cluster-troubleshooting-commands.md
-            - name: "Область группы Active\_Directory"
+            - name: "Интеграция Active\_Directory"
               href: big-data-cluster/troubleshoot-active-directory.md
+            - name: "Права администратора для\_HDFS"
+              href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: Справочник
       items:
         - name: Партнеры BDC

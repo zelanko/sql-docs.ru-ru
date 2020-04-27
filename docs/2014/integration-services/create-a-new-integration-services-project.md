@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3a1d8542ba5cc689cef60fc81641c37c96ea790
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060215"
 ---
 # <a name="create-a-new-integration-services-project"></a>Создание нового проекта служб Integration Services
@@ -27,7 +27,7 @@ ms.locfileid: "66060215"
   
 ### <a name="to-create-a-new-integration-services-project"></a>Создание нового проекта служб Integration Services  
   
-1.  Откройте среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+1.  Откройте [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  В меню **Файл** укажите **Создать**, затем нажмите **Проект**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66060215"
   
 8.  Нажмите кнопку **ОК** , чтобы добавить решение в **проводник решения**r и добавить проект в решение.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Integration Services &#40;проектов&#41; SSIS](integration-services-ssis-projects-and-solutions.md)   
  [Добавление или удаление проектом служб Integration Services из решения](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
   

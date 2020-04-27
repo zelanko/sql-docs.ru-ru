@@ -38,10 +38,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011725"
 ---
 # <a name="database-level-roles"></a>Роли уровня базы данных
@@ -58,26 +58,26 @@ ms.locfileid: "63011725"
   
  В следующей таблице представлены предопределенные роли уровня базы данных и их возможности. Эти роли существуют во всех базах данных.  
   
-|Имя роли уровня базы данных|Description|  
+|Имя роли уровня базы данных|Описание|  
 |-------------------------------|-----------------|  
 |**db_owner**|Члены предопределенной роли базы данных **db_owner** могут выполнять все действия по настройке и обслуживанию базы данных, а также удалять базу данных.|  
 |**db_securityadmin**|Элементы предопределенной роли базы данных **db_securityadmin** могут изменять членство в роли и управлять разрешениями. Добавление участников к этой роли может привести к непреднамеренному повышению прав доступа.|  
 |**db_accessadmin**|Члены предопределенной роли базы данных **db_accessadmin** могут добавлять или удалять права удаленного доступа к базе данных для имен входа и групп Windows, а также имен входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |**db_backupoperator**|Члены предопределенной роли базы данных **db_backupoperator** могут создавать резервные копии базы данных.|  
 |**db_ddladmin**|Члены предопределенной роли базы данных **db_ddladmin** могут выполнять любые команды языка определения данных (DDL) в базе данных.|  
-|**db_datawriter.**|Члены предопределенной роли базы данных **db_datawriter** могут добавлять, удалять или изменять данные во всех пользовательских таблицах.|  
-|**db_datareader;**|Элементы предопределенной роли базы данных **db_datareader** могут считывать все данные из всех пользовательских таблиц.|  
+|**db_datawriter**|Члены предопределенной роли базы данных **db_datawriter** могут добавлять, удалять или изменять данные во всех пользовательских таблицах.|  
+|**db_datareader**|Элементы предопределенной роли базы данных **db_datareader** могут считывать все данные из всех пользовательских таблиц.|  
 |**db_denydatawriter**|Члены предопределенной роли базы данных **db_denydatawriter** не могут добавлять, изменять или удалять данные в пользовательских таблицах базы данных.|  
 |**db_denydatareader**|Члены предопределенной роли базы данных **db_denydatareader** не могут считывать данные из пользовательских таблиц базы данных.|  
   
 ## <a name="msdb-roles"></a>Роли базы данных msdb  
  База данных msdb содержит специальные роли, показанные в следующей таблице.  
   
-|Имя роли базы данных msdb|Description|  
+|Имя роли базы данных msdb|Описание|  
 |--------------------|-----------------|  
 |`db_ssisadmin`<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|Члены этих ролей базы данных могут администрировать и использовать службы [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], обновленные с предыдущей версии, могут содержать более старую версию роли, имя которой присвоено с помощью служб DTS, а не служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Дополнительные сведения см. в разделе [Роли служб Integration Services (службы SSIS)](../../../integration-services/security/integration-services-roles-ssis-service.md).|  
 |`dc_admin`<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|Члены этих ролей базы данных могут администрировать и использовать сборщик данных. Дополнительные сведения см. в разделе [Data Collection](../../data-collection/data-collection.md).|  
-|**PolicyAdministratorRole**|Члены роли базы данных **db_ PolicyAdministratorRole** могут выполнять все действия по настройке и обслуживанию политик и условий средства «Управление на основе политики». Дополнительные сведения см. в разделах [Администрирование серверов с помощью управления на основе политик](../../policy-based-management/administer-servers-by-using-policy-based-management.md).|  
+|**PolicyAdministratorRole**|Члены роли базы данных **db_ PolicyAdministratorRole** могут выполнять все действия по настройке и обслуживанию политик и условий средства "Управление на основе политики". Дополнительные сведения см. в разделах [Администрирование серверов с помощью управления на основе политик](../../policy-based-management/administer-servers-by-using-policy-based-management.md).|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|Члены этих ролей базы данных могут администрировать и использовать зарегистрированные группы серверов.|  
 |**dbm_monitor**|Создается в базе `msdb` данных, когда первая база данных регистрируется в мониторе зеркального отображения баз данных. Роль **dbm_monitor** не имеет членов до тех пор, пока системный администратор не назначит ее пользователям.|  
   
@@ -87,31 +87,31 @@ ms.locfileid: "63011725"
 ## <a name="working-with-database-level-roles"></a>Работа с ролями уровня базы данных  
  В следующей таблице описаны команды, представления и функции, предназначенные для работы с ролями уровня баз данных.  
   
-|Компонент|Тип|Description|  
+|Компонент|Тип|Описание|  
 |-------------|----------|-----------------|  
 |[sp_helpdbfixedrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql)|Метаданные|Возвращает список всех предопределенных ролей базы данных.|  
 |[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql)|Метаданные|Отображает разрешения предопределенной роли базы данных.|  
 |[sp_helprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprole-transact-sql)|Метаданные|Возвращает информацию о ролях, относящихся к текущей базе данных.|  
 |[sp_helprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql)|Метаданные|Возвращает сведения о членах роли в текущей базе данных.|  
-|[sys. database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)|Метаданные|Возвращает одну строку для каждого члена каждой роли базы данных.|  
+|[sys.database_role_members (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)|Метаданные|Возвращает одну строку для каждого члена каждой роли базы данных.|  
 |[IS_MEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-member-transact-sql)|Метаданные|Указывает, является ли текущий пользователь членом указанной группы Microsoft Windows или роли базы данных Microsoft SQL Server.|  
-|[Создание роли &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql)|Get-Help|Создает новую роль базы данных в текущей базе данных.|  
-|[ALTER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-role-transact-sql)|Get-Help|Изменяет имя роли базы данных.|  
-|[УДАЛИТЬ роль &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-role-transact-sql)|Get-Help|Удаляет роль из базы данных.|  
-|[sp_addrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrole-transact-sql)|Get-Help|Создает новую роль базы данных в текущей базе данных.|  
-|[sp_droprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprole-transact-sql)|Get-Help|Удаляет роль базы данных из текущей базы данных.|  
-|[sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)|Get-Help|Добавляет пользователя базы данных, роль базы данных, имя входа Windows или группу Windows к роли текущей базы данных.|  
+|[CREATE ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql)|Команда|Создает новую роль базы данных в текущей базе данных.|  
+|[ALTER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-role-transact-sql)|Команда|Изменяет имя роли базы данных.|  
+|[DROP ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-role-transact-sql)|Команда|Удаляет роль из базы данных.|  
+|[sp_addrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrole-transact-sql)|Команда|Создает новую роль базы данных в текущей базе данных.|  
+|[sp_droprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprole-transact-sql)|Команда|Удаляет роль базы данных из текущей базы данных.|  
+|[sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)|Команда|Добавляет пользователя базы данных, роль базы данных, имя входа Windows или группу Windows к роли текущей базы данных.|  
 |[sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)|Get-Help|Удаляет учетную запись безопасности из роли SQL Server в текущей базе данных.|  
   
 ## <a name="public-database-role"></a>Роль базы данных public  
  Каждый пользователь базы данных является членом роли базы данных **public** . Если для пользователя не были предоставлены или запрещены конкретные разрешения на защищаемый объект, он наследует разрешения роли **public** на этот объект.  
   
 ## <a name="related-content"></a>См. также  
- [Представления каталога безопасности &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)  
+ [Представления каталога безопасности (Transact-SQL)](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)  
   
- [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/security-stored-procedures-transact-sql)  
+ [Системные хранимые процедуры &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/security-stored-procedures-transact-sql)  
   
- [Функции безопасности &#40;&#41;Transact-SQL](/sql/t-sql/functions/security-functions-transact-sql)  
+ [Функции безопасности &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)  
   
  [Обеспечение безопасности SQL Server](../securing-sql-server.md)  
   

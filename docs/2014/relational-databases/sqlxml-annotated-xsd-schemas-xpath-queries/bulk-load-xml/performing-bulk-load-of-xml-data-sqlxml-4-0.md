@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 09f8c1cf3b6c9226dc87a0a95c57f4c5719f0d03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013369"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>Выполнение массовой загрузки XML-данных (SQLXML 4.0)
   Массовая загрузка XML является самостоятельным объектом COM, который позволяет загрузить частично структурированные XML-данные в таблицы Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о групповой загрузке XML &#40;SQLXML 4,0&#41;](introduction-to-xml-bulk-load-sqlxml-4-0.md)  
  Содержит основные сведения о массовой загрузке XML-данных при помощи программы XML Bulk Load. Разделы включают в себя описание потоковых XML-данных, а также синхронные и асинхронные операции массовой загрузки.  
   

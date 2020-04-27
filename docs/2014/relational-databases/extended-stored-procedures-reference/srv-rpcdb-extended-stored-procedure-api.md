@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7eb462881ab9ae5d6221498a84fc2b79e0524bc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046659"
 ---
 # <a name="srv_rpcdb-extended-stored-procedure-api"></a>srv_rpcdb (API-интерфейс расширенных хранимых процедур)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
   
  Возвращает компонент имени базы данных для текущей удаленной хранимой процедуры.  
   
@@ -49,7 +49,7 @@ SRV_PROC * srvproc,int *len );
  *len*  
  Указатель на переменную типа `int`, которая получает длину имени базы данных. Если переменная *len* имеет значение NULL, длина имени базы данных не возвращается.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  Указатель DBCHAR на строку, оканчивающуюся нулевым байтом, для части текущей удаленной хранимой процедуры, представляющей имя базы данных. При отсутствии текущей удаленной хранимой процедуры возвращается значение NULL, а параметру *len* присваивается значение –1.  
   
 ## <a name="remarks"></a>Remarks  

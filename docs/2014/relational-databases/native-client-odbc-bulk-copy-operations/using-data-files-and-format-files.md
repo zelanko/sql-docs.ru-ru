@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c49ccb59a8e6ab1b027de02afee37252e8cc482
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206832"
 ---
 # <a name="using-data-files-and-format-files"></a>Использование файлов данных и файлов форматирования
@@ -51,7 +51,7 @@ ms.locfileid: "68206832"
   
  Функция **bcp_control** управляет несколькими параметрами при выполнении операции копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из файла данных. **bcp_control** задает параметры, такие как максимальное количество ошибок перед завершением, строка в файле, с которой начинается копирование, строка, которую нужно присвоить, и размер пакета.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполнение операций с массовым копированием &#40;ODBC&#41;](performing-bulk-copy-operations-odbc.md)  
   
   

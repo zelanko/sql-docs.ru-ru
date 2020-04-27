@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022596"
 ---
 # <a name="configure-an-oracle-publisher"></a>Настройка издателя Oracle
@@ -26,20 +26,20 @@ ms.locfileid: "63022596"
   
 2.  На каждую из публикуемых таблиц предоставьте разрешение SELECT непосредственно (не через роль) пользователю с правами администратора Oracle, созданному на шаге 1.  
   
-3.  Установите клиентское программное обеспечение и поставщик OLE DB Oracle [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на распространителе, а затем закройте и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] перезапустите экземпляр. Если распространитель запущен на 64-разрядной платформе, необходимо использовать 64-разрядную версию поставщика OLE DB Oracle.  
+3.  Установите на распространитель [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] клиентское ПО Oracle и поставщик OLE DB, а затем остановите и перезапустите экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Если распространитель запущен на 64-разрядной платформе, необходимо использовать 64-разрядную версию поставщика OLE DB Oracle.  
   
 4.  Настройте базу данных Oracle как издатель на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Список объектов, которые могут реплицироваться из базы данных Oracle, приводится в статье [Рассмотрение структуры и ограничений издателей Oracle](design-considerations-and-limitations-for-oracle-publishers.md).  
   
 > [!NOTE]  
->  Необходимо быть членом предопределенной роли сервера **sysadmin** , чтобы включить издатель или распространитель и создать публикацию или подписку Oracle из публикации Oracle.  
+>   Необходимо быть членом предопределенной роли сервера **sysadmin** , чтобы включить издатель или распространитель и создать публикацию или подписку Oracle из публикации Oracle.  
   
 ## <a name="creating-the-replication-administrative-user-schema-within-the-oracle-database"></a>Создание схемы администратора репликации в базе данных Oracle  
  Агенты репликации подключаются к базе данных Oracle и выполняют операции в контексте созданной пользовательской схемы. Этой схеме должны быть предоставлены некоторые разрешения, перечисленные далее. Данная схема является владельцем всех объектов, созданных в процессе репликации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на издателе Oracle, за исключением открытого синонима **MSSQLSERVERDISTRIBUTOR**. Дополнительные сведения об объектах, создаваемых в базе данных Oracle, см. в разделе [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md).  
   
 > [!NOTE]  
->  При удалении открытого синонима **MSSQLSERVERDISTRIBUTOR** и пользователя сконфигурированной репликации Oracle с параметром **CASCADE** из издателя Oracle удаляются все объекты репликации.  
+>   При удалении открытого синонима **MSSQLSERVERDISTRIBUTOR** и пользователя сконфигурированной репликации Oracle с параметром **CASCADE** из издателя Oracle удаляются все объекты репликации.  
   
  Для помощи в настройке пользовательской схемы репликации предоставляется образец скрипта. Скрипт доступен в следующем каталоге после установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: * \<Drive>*:\\\Program Files\Microsoft SQL Server\\*\<имя_экземпляра>* \MSSQL\Install\oracleadmin.SQL. Он также содержится в разделе [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md).  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63022596"
   
  В универсальном установщике Oracle необходимо ввести следующие сведения:  
   
-|Сведения|Description|  
+|Сведения|Описание|  
 |-----------------|-----------------|  
 |Oracle Home|Это путь к каталогу, в который устанавливается программное обеспечение Oracle. Примите значение по умолчанию (C:\oracle\ora90 или похожее) или задайте другой путь. Дополнительные сведения о каталоге Oracle Home см. в подразделе «Рассмотрение Oracle Home» далее в этом разделе.|  
 |Имя каталога Oracle Home|Псевдоним для пути к каталогу Oracle Home.|  
@@ -97,7 +97,7 @@ ms.locfileid: "63022596"
   
  После успешного подключения к издателю Oracle попробуйте подключиться к базе данных под учетной записью и паролем, связанным с созданной схемой администратора репликации. Необходимо выполнить следующие действия при использовании той же учетной записи Windows, которую использует служба [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
-1.  Нажмите кнопку **Пуск** и выберите команду **Выполнить**.  
+1.  Нажмите кнопку **Пуск**, затем щелкните **Выполнить**.  
   
 2.  Введите `cmd` и нажмите кнопку **ОК**.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "63022596"
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
-     Например: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
+     Пример: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
 4.  Если настройка сети прошла удачно, будет выполнен вход и появится окно сеанса `SQL` .  
   
@@ -128,10 +128,10 @@ ms.locfileid: "63022596"
   
  Чтобы настроить издатель Oracle и создать публикацию, см. раздел [Create a Publication from an Oracle Database](../publish/create-a-publication-from-an-oracle-database.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Рекомендации по администрированию для издателей Oracle](administrative-considerations-for-oracle-publishers.md)   
  [Сопоставление типов данных для издателей Oracle](data-type-mapping-for-oracle-publishers.md)   
  [Глоссарий терминов для публикации Oracle](glossary-of-terms-for-oracle-publishing.md)   
- [Общие сведения о публикации Oracle](oracle-publishing-overview.md)  
+ [Обзор публикации Oracle](oracle-publishing-overview.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042880"
 ---
 # <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Урок 3. Обработка структуры и моделей временных рядов
@@ -146,9 +146,9 @@ OPENQUERY (<source data definition>)
  После окончания выполнения запроса можно создавать прогнозы с использованием обработанных моделей интеллектуального анализа данных. В следующем занятии будет создано несколько прогнозов на основе созданных моделей интеллектуального анализа данных.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 4. Создание прогнозов временных рядов с использованием расширений интеллектуального анализа данных](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
+ [Занятие 4: Создание прогнозов на основе временных рядов с помощью расширений интеллектуального анализа данных](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Требования к обработке и рекомендации &#40;&#41;интеллектуального анализа данных](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   
  [&#62;запроса источника данных&#60;](/sql/dmx/source-data-query)   
  [OPENQUERY &#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&#41;](/sql/dmx/source-data-query-openquery)  

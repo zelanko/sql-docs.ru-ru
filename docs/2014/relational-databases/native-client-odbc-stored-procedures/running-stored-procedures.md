@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6bdf66ed9214a151886caedcf2247935a07f7811
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206729"
 ---
 # <a name="running-stored-procedures"></a>Выполнение хранимых процедур
-  Хранимая процедура представляет собой исполняемый объект, хранящийся в базе данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]принтер  
+  Хранимая процедура представляет собой исполняемый объект, хранящийся в базе данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает:  
   
 -   Хранимые процедуры  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68206729"
   
      Пример вызова хранимой процедуры см. в разделе [обработка кодов возврата и выходных параметров &#40;&#41;ODBC ](../native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Вызов хранимой процедуры](calling-a-stored-procedure.md)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68206729"
   
 -   [Обработка результатов хранимой процедуры](processing-stored-procedure-results.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
  [Разделы руководства по выполнению хранимых процедур &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   

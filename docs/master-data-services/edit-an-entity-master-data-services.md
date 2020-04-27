@@ -13,10 +13,10 @@ ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4329f618b812bb566d974c5434ef0362b1383f2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729297"
 ---
 # <a name="edit-an-entity-master-data-services"></a>Изменение сущности (Master Data Services)
@@ -25,18 +25,18 @@ ms.locfileid: "73729297"
 
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменить сущность.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
--   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
+-   Необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** .  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-edit-an-entity"></a>Изменение сущности  
   
 1.  В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]щелкните область **Администрирование системы**.  
   
-2.  На странице **Manage Model** (Управление моделью) выберите в сетке модель и щелкните **Сущности**.  
+2.  На странице **Управление моделью** выберите модель в сетке и щелкните **сущности**.  
   
 3.  На странице **Manage Entity** (Управление сущностью) в сетке выберите строку сущности, которую нужно изменить, а затем щелкните **Изменить**.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73729297"
   
 8.  Установите или снимите флажок **Автоматически создавать значения кода** .  
   
-     Дополнительные сведения см. в разделе [Автоматическое создание кода &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)  
+     Дополнительные сведения см. в разделе [Автоматическое создание кодов (службы Master Data Services)](../master-data-services/automatic-code-creation-master-data-services.md)  
   
 9. Установите или снимите флажок **Включить сжатие данных** . Сжатие строк включено по умолчанию.  
   
@@ -71,9 +71,9 @@ ms.locfileid: "73729297"
   
  ![Значок состояния "ОК"](../master-data-services/media/mds-statusicon-ok.png "Значок состояния "ОК"")  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Явные иерархии &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Удаление сущности &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
- [Сущности &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
+ [Сущности (службы Master Data Services)](../master-data-services/entities-master-data-services.md)  
   
   

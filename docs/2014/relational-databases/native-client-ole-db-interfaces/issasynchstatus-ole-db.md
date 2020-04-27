@@ -1,5 +1,5 @@
 ---
-title: Метод ISSAsynchStatus (OLE DB) | Документация Майкрософт
+title: ISSAsynchStatus (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -17,33 +17,33 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aeb6c6c789bfe1ca2af5616fb0a1ef9785700224
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127761"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
-  **Метод ISSAsynchStatus** предоставляет поддержку для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] асинхронных операций. Этот необязательный интерфейс наследует основной интерфейс OLE DB — **IDBAsynchStatus**. Помимо методов **Abort** и **GetStatus** , унаследованных от **IDBAsynchStatus**, **ISSAsynchStatus** предоставляет один новый метод, который используется для ожидания конца асинхронной операции или истечения назначенного времени.  
+  Интерфейс**ISSAsynchStatus** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает асинхронные операции. Этот необязательный интерфейс наследует основной интерфейс OLE DB — **IDBAsynchStatus**. Помимо методов **Abort** и **GetStatus** , унаследованных от **IDBAsynchStatus**, **ISSAsynchStatus** предоставляет один новый метод, который используется для ожидания конца асинхронной операции или истечения назначенного времени.  
   
-|Метод|Description|  
+|Метод|Описание|  
 |------------|-----------------|  
-|[Метод ISSAsynchStatus:: Abort &#40;OLE DB&#41;](issasynchstatus-abort-ole-db.md)|Отменяет операцию асинхронного выполнения.|  
-|[&#40;OLE DB метод ISSAsynchStatus:: Status&#41;](issasynchstatus-getstatus-ole-db.md)|Возвращает состояние операции асинхронного выполнения.|  
-|[Метод ISSAsynchStatus:: WaitForAsynchCompletion &#40;OLE DB&#41;](issasynchstatus-waitforasynchcompletion-ole-db.md)|Ждет завершения синхронной операции или истечения назначенного времени.|  
+|[ISSAsynchStatus::Abort (OLE DB)](issasynchstatus-abort-ole-db.md)|Отменяет операцию асинхронного выполнения.|  
+|[ISSAsynchStatus::Abort (OLE DB)](issasynchstatus-getstatus-ole-db.md)|Возвращает состояние операции асинхронного выполнения.|  
+|[ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)](issasynchstatus-waitforasynchcompletion-ole-db.md)|Ждет завершения синхронной операции или истечения назначенного времени.|  
   
 ## <a name="remarks"></a>Remarks  
  Реализация метода **ISSAsynchStatus::GetStatus** в интерфейсе **ISSAsynchStatus** аналогична методу **IDBAsynchStatus::GetStatus** , за одним исключением: если инициализация объекта источника данных прервана преждевременно, возвращается не DB_E_CANCELED, а E_UNEXPECTED (хотя **ISSAsynchStatus::WaitForAsynchCompletion** возвращает DB_E_CANCELED). Это происходит потому, что объект источника данных не остается в обычном состоянии, следующем за аварийным прерыванием операции, чтобы можно было предпринимать новые попытки инициализации.  
   
  Следующие методы поддерживают асинхронное выполнение в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   **ICommand:: Execute**  
+-   **ICommand::Execute**  
   
--   **IOpenRowset:: OpenRowset**  
+-   **IOpenRowset::OpenRowset**  
   
--   **IMultipleResults:: в результате**  
+-   **IMultipleResults::GetResult**  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Интерфейсы &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)   
  [Выполнение асинхронных операций](../native-client/features/performing-asynchronous-operations.md)  
   

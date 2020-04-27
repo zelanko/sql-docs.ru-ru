@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144726"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Устранение неполадок при переполнении журнала транзакций (ошибка SQL Server 9002)
@@ -58,9 +58,9 @@ ms.locfileid: "63144726"
 > [!IMPORTANT]  
 >  Если база данных повреждена, см. раздел [Резервные копии заключительного фрагмента журнала (SQL Server)](../backup-restore/tail-log-backups-sql-server.md).  
   
--   [Создание резервной копии журнала транзакций &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)  
+-   [Создание резервной копии журнала транзакций (SQL Server)](../backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A>ОБЪЕКТАХ  
+-   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)  
   
 ### <a name="freeing-disk-space"></a>Освободите место на диске  
  Возможно, следует освободить место на диске, где находится файл журнала транзакций для базы данных. Для этого можно удалить или переместить другие файлы. Освобожденное место на диске позволит системе восстановления автоматически увеличить размер файла журнала.  
@@ -96,10 +96,10 @@ ms.locfileid: "63144726"
   
 -   [Добавление файлов данных или журналов в базу данных](../databases/add-data-or-log-files-to-a-database.md)  
   
-## <a name="see-also"></a>См. также:  
- [&#41;Transact-SQL ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql)   
+## <a name="see-also"></a>См. также  
+ [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [Управление размером файла журнала транзакций](manage-the-size-of-the-transaction-log-file.md)   
  [Резервные копии журналов транзакций &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md)   
- [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
+ [sp_add_log_file_recover_suspect_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
   
   

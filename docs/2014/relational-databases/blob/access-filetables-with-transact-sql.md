@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b56bba0567a96b7bdd7b75ad191d553ffa019930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010429"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Доступ к таблицам FileTable с помощью Transact-SQL
   Описывает, как команды языка обработки данных DML [!INCLUDE[tsql](../../includes/tsql-md.md)] работают c таблицами FileTable.  
   
-##  <a name="BasicsInsert"></a> Операции INSERT в таблицах FileTable  
+##  <a name="insert-operations-on-filetables"></a><a name="BasicsInsert"></a> Операции INSERT в таблицах FileTable  
  С операциями **INSERT** в таблицах FileTable связаны следующие моменты:  
   
 -   Все столбцы атрибутов файла имеют ограничения NO NULL. Если значения не заданы явным образом, предоставляются соответствующие значения по умолчанию.  
@@ -31,7 +31,7 @@ ms.locfileid: "66010429"
   
 -   Приложение может получить **path_locator** для файла или каталога, указав путь файловой системы для функции [GetPathLocator (Transact-SQL)](/sql/relational-databases/system-functions/getpathlocator-transact-sql).  
   
-##  <a name="BasicsUpdate"></a> Операции UPDATE в таблицах FileTable  
+##  <a name="update-operations-on-filetables"></a><a name="BasicsUpdate"></a> Операции UPDATE в таблицах FileTable  
  С операциями UPDATE в таблицах **FileTable** связаны следующие моменты:  
   
 -   Разрешается обновлять любые данные, определяемые пользователем.  
@@ -40,14 +40,14 @@ ms.locfileid: "66010429"
   
 -   Обновления данных FILESTREAM в столбце **file_stream** не влияют ни на какие другие столбцы, включая отметки времени.  
   
-##  <a name="BasicsDelete"></a> Операции DELETE в таблицах FileTable  
+##  <a name="delete-operations-on-filetables"></a><a name="BasicsDelete"></a> Операции DELETE в таблицах FileTable  
  С операциями **DELETE** в таблицах FileTable связаны следующие моменты.  
   
 -   При удалении строки удаляется соответствующий файл или каталог из файловой системы.  
   
 -   Невозможно удалить строку, если она относится к каталогу, который содержит другие файлы или каталоги.  
   
-##  <a name="BasicsConstraints"></a> Ограничения, необходимые для операций DML в таблицах FileTable  
+##  <a name="constraints-that-are-enforced-for-dml-operations-on-filetables"></a><a name="BasicsConstraints"></a> Ограничения, необходимые для операций DML в таблицах FileTable  
  Определяемые системой ограничения обеспечивают сохранение целостности иерархии пространства имен файлов во время операций DML. Принудительно применяются следующие ограничения.  
   
 -   При установке или изменении **name** файла или каталога:  

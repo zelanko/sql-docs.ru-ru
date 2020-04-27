@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 388d400160e3fa7b3240c7a9c014bcf36ae25f3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212096"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Определение сопоставителя статей публикации слиянием
@@ -30,15 +30,15 @@ ms.locfileid: "68212096"
   
      [Рекомендации](#Recommendations)  
   
--   **Для указания арбитра статей публикации слиянием используется:**  
+-   **Для определения арбитра статей публикации слиянием используется:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   Репликация слиянием допускает следующие типы сопоставителей статей:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68212096"
   
     -   IIS-сервер [!INCLUDE[msCoName](../../../includes/msconame-md.md)] для подписки по запросу, которая использует веб-синхронизацию  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  После регистрации сопоставителя дайте указание статье использовать сопоставитель на вкладке **Сопоставитель** диалогового окна **Свойства статьи — \<статья>**, которое доступно в мастере создания публикаций и в диалоговом окне **Свойства публикации — \<публикация>**. Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации](create-a-publication.md) и [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-resolver"></a>Указание сопоставителя  
@@ -75,13 +75,13 @@ ms.locfileid: "68212096"
   
 7.  Повторите этот процесс для каждой статьи, которая запрашивает сопоставитель.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-register-a-custom-conflict-resolver"></a>Регистрация пользовательского сопоставителя конфликтов  
   
 1.  Если планируется зарегистрировать собственный пользовательский сопоставитель конфликтов, создайте один из следующих типов.  
   
-    -   Сопоставитель на основе управляемого кода в качестве обработчика бизнес-логики. Дополнительные сведения см. в [статье реализация обработчика бизнес-логики для статьи публикации слиянием](../implement-a-business-logic-handler-for-a-merge-article.md).  
+    -   Сопоставитель на основе управляемого кода в качестве обработчика бизнес-логики. Дополнительные сведения см. в статье [Реализация обработчика бизнес-логики для статьи публикации слиянием](../implement-a-business-logic-handler-for-a-merge-article.md).  
   
     -   Арбитр на основе хранимых процедур и арбитр на основе COM. Дополнительные сведения см. в разделе [Реализация пользовательского арбитра конфликтов для статьи публикации слиянием](../implement-a-custom-conflict-resolver-for-a-merge-article.md).  
   
@@ -134,7 +134,7 @@ ms.locfileid: "68212096"
   
 2.  Выполните процедуру [sp_unregistercustomresolver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql) на распространителе. Укажите полное имя пользовательского сопоставителя из шага 1 в параметре **@article_resolver**.  
   
-###  <a name="TsqlExample"></a>Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Примеры (Transact-SQL)  
  В этом примере создается новая статья и указывается, что усредняющий сопоставитель конфликтов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при возникновении конфликта должен использоваться для вычисления среднего значения в столбце **UnitPrice** .  
   
  [!code-sql[HowTo#sp_addmerge_resolver](../../../snippets/tsql/SQL15/replication/howto/tsql/mergearticleresolvers.sql#sp_addmerge_resolver)]  
@@ -143,7 +143,7 @@ ms.locfileid: "68212096"
   
  [!code-sql[HowTo#sp_changemerge_resolver](../../../snippets/tsql/SQL15/replication/howto/tsql/mergearticleresolvers.sql#sp_changemerge_resolver)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенное обнаружение и разрешение конфликтов при репликации слиянием](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Реализация обработчика бизнес-логики для статьи публикации слиянием](../implement-a-business-logic-handler-for-a-merge-article.md)  
   

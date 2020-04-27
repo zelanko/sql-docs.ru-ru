@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bd73d32a58e156a3ae8577d41bbdd4725f85656
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206644"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Поддержка высокого уровня доступности и аварийного восстановления собственного клиента SQL Server
@@ -28,8 +28,7 @@ ms.locfileid: "68206644"
 >  Увеличение времени ожидания соединения и реализация логики повторного соединения позволяют повысить вероятность соединения приложения с группой доступности. Кроме того, в связи с возможностью неудачного подключения при отработке отказа группы доступности следует реализовать логику повторного соединения, обеспечивающую неограниченное число попыток соединения до достижения успеха.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>Соединение с помощью MultiSubnetFailover  
- При установлении соединения с прослушивателем группы доступности SQL Server 2012 или экземпляром отказоустойчивого кластера SQL Server 2012 всегда необходимо указывать `MultiSubnetFailover=Yes`. 
-  `MultiSubnetFailover` дает возможность группам доступности и экземпляру отказоустойчивого кластера в SQL Server 2012 быстрее выполнить отработку отказа, а также значительно сократить время перехода на другой ресурс для топологий AlwaysOn с одной или несколькими подсетями. При отработке отказа с в нескольких подсетях клиент будет выполнять попытки соединения параллельно. Во время отработки отказа в подсети собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет активно выполнять попытки повторного TCP-соединения.  
+ При установлении соединения с прослушивателем группы доступности SQL Server 2012 или экземпляром отказоустойчивого кластера SQL Server 2012 всегда необходимо указывать `MultiSubnetFailover=Yes`. `MultiSubnetFailover` дает возможность группам доступности и экземпляру отказоустойчивого кластера в SQL Server 2012 быстрее выполнить отработку отказа, а также значительно сократить время перехода на другой ресурс для топологий AlwaysOn с одной или несколькими подсетями. При отработке отказа с в нескольких подсетях клиент будет выполнять попытки соединения параллельно. Во время отработки отказа в подсети собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет активно выполнять попытки повторного TCP-соединения.  
   
  Свойство соединения `MultiSubnetFailover` указывает, что приложение развертывается в группе доступности или на экземпляре отказоустойчивого кластера, а также что собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client выполнит попытку соединения с базой данных в основном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], попытавшись установить соединение со всеми IP-адресами группы доступности. Если `MultiSubnetFailover=Yes` для соединения задано значение, клиент ПОВТОРЯЕТ попытки TCP-подключения быстрее, чем интервалы повторной передачи TCP по умолчанию для операционной системы. Это позволяет ускорить восстановление соединения после отработки отказа в группе доступности AlwaysOn или в экземпляре отказоустойчивого кластера AlwaysOn; метод может применяться к группам доступности и экземплярам отказоустойчивых кластеров как с одной, так и с несколькими подсетями.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "68206644"
   
  Ключевое слово `ApplicationIntent` не работает с базами данных прежних версий, доступными только для чтения.  
   
- База данных может допускать или не допускать рабочую нагрузку чтения для целевой базы данных AlwaysOn. (Это `ALLOW_CONNECTIONS` делается с помощью предложения операторов `PRIMARY_ROLE` и `SECONDARY_ROLE` [!INCLUDE[tsql](../../../includes/tsql-md.md)] .)  
+ База данных может допускать или не допускать рабочую нагрузку чтения для целевой базы данных AlwaysOn. (Это выполняется с помощью предложения `ALLOW_CONNECTIONS` инструкций `PRIMARY_ROLE` и `SECONDARY_ROLE`[!INCLUDE[tsql](../../../includes/tsql-md.md)].)  
   
  Ключевое слово `ApplicationIntent` служит для включения маршрутизации только для чтения.  
   
@@ -109,13 +108,11 @@ ms.locfileid: "68206644"
   
  Приложение собственного клиента ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для создания соединения может использовать одну из трех функций.  
   
-|Компонент|Description|  
+|Компонент|Описание|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../native-client-odbc-api/sqlbrowseconnect.md)|Список серверов, возвращаемый `SQLBrowseConnect`, не содержит имен виртуальных сетей. Будет отображен только список серверов без указания того, является ли сервер отдельным, сервером-источником или сервером-получателем в отказоустойчивом кластере, в котором содержатся два экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], включенные для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], или более. При возникновении ошибки подключения к серверу причина может заключаться в несоответствии настройки `ApplicationIntent` конфигурации сервера.<br /><br /> Поскольку `SQLBrowseConnect` не распознает серверы в отказоустойчивых кластерах, содержащих два или более экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], которые были включены для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], `SQLBrowseConnect` не учитывает ключевое слово строки подключения `MultiSubnetFailover`.|  
-|[SQLConnect](../../native-client-odbc-api/sqlconnect.md)|
-  `SQLConnect` поддерживает `ApplicationIntent` и `MultiSubnetFailover` с помощью имени DSN или свойств соединения.|  
-|[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)|
-  `SQLDriverConnect` поддерживает `ApplicationIntent` и `MultiSubnetFailover` с использованием ключевых слов строки подключения, свойств соединения и имени DSN.|  
+|[SQLConnect](../../native-client-odbc-api/sqlconnect.md)|`SQLConnect` поддерживает `ApplicationIntent` и `MultiSubnetFailover` с помощью имени DSN или свойств соединения.|  
+|[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)|`SQLDriverConnect` поддерживает `ApplicationIntent` и `MultiSubnetFailover` с использованием ключевых слов строки подключения, свойств соединения и имени DSN.|  
   
 ## <a name="ole-db"></a>OLE DB  
  OLE DB в собственном клиенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не поддерживает ключевое слово `MultiSubnetFailover`.  
@@ -137,16 +134,13 @@ ms.locfileid: "68206644"
  В приложении собственного клиента OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для указания назначения приложения может использоваться один из следующих методов.  
   
  `IDBInitialize::Initialize`  
- 
-  `IDBInitialize::Initialize` использует ранее настроенный набор свойств для инициализации источника данных и создания объекта источника данных. Укажите назначение приложения в качестве свойства поставщика или в виде расширенной строки свойств.  
+ `IDBInitialize::Initialize` использует ранее настроенный набор свойств для инициализации источника данных и создания объекта источника данных. Укажите назначение приложения в качестве свойства поставщика или в виде расширенной строки свойств.  
   
  `IDataInitialize::GetDataSource`  
- 
-  `IDataInitialize::GetDataSource` принимает строку подключения, которая может содержать ключевое слово `Application Intent`.  
+ `IDataInitialize::GetDataSource` принимает строку подключения, которая может содержать ключевое слово `Application Intent`.  
   
  `IDBProperties::GetProperties`  
- 
-  `IDBProperties::GetProperties` получает значение свойства, которое в настоящее время задано для источника данных.  Значение `Application Intent` можно получить с помощью свойств DBPROP_INIT_PROVIDERSTRING и SSPROP_INIT_APPLICATIONINTENT.  
+ `IDBProperties::GetProperties` получает значение свойства, которое в настоящее время задано для источника данных.  Значение `Application Intent` можно получить с помощью свойств DBPROP_INIT_PROVIDERSTRING и SSPROP_INIT_APPLICATIONINTENT.  
   
  `IDBProperties::SetProperties`  
  Чтобы задать значение свойства `ApplicationIntent`, вызовите `IDBProperties::SetProperties`, передав свойство `SSPROP_INIT_APPLICATIONINTENT` со значением `ReadWrite` или `ReadOnly` или свойство `DBPROP_INIT_PROVIDERSTRING` со значением, содержащим `ApplicationIntent=ReadOnly` или `ApplicationIntent=ReadWrite`.  
@@ -155,8 +149,8 @@ ms.locfileid: "68206644"
   
  После установки неявных соединений эти подключения будут использовать настройку назначения приложения для родительского подключения. Аналогичным образом несколько сеансов, созданных с использованием одного источника данных, будут наследовать настройки назначения приложения от источника данных.  
   
-## <a name="see-also"></a>См. также:  
- [Компоненты собственного клиента SQL Server](sql-server-native-client-features.md)   
+## <a name="see-also"></a>См. также  
+ [SQL Server Native Client функции](sql-server-native-client-features.md)   
  [Использование ключевых слов строки подключения с собственным клиентом SQL Server](../applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

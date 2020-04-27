@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70151829"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Соединение с отчетом или веб-каналом данных (SSAS)
@@ -26,7 +26,7 @@ ms.locfileid: "70151829"
  **Понятное имя подключения**  
  Введите понятное имя для соединения с потоком данных.  
   
- **Путь к отчету**  
+ **Путь отчета**  
  Перечисляет URL-адреса для отчета служб SQL Server Reporting Services, который формирует каналы данных. Нажмите кнопку **Обзор** , чтобы указать URL-адрес для отчета.  
   
  Щелкните **Просмотр отчета**, чтобы просмотреть отчет.  

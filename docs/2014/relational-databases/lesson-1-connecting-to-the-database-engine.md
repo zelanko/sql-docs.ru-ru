@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63145500"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Соединение с компонентом Database Engine
@@ -22,16 +22,14 @@ ms.locfileid: "63145500"
   
   
   
-##  <a name="tools"></a>Средства для начало работы  
- Компонент [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] поставляется с разнообразными средствами. В этом разделе описываются первые необходимые средства и то, как выбрать правильное средство для работы. Все средства доступны из меню **Пуск** . Такие средства, как среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], не устанавливаются по умолчанию. Их нужно выбрать во время установки. Дополнительные сведения о средствах, описанных ниже, см. в электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . 
-  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] содержит только подмножество средств.  
+##  <a name="tools-for-getting-started"></a><a name="tools"></a>Средства для начало работы  
+ Компонент [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] поставляется с разнообразными средствами. В этом разделе описываются первые необходимые средства и то, как выбрать правильное средство для работы. Все средства доступны из меню **Пуск** . Такие средства, как среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], не устанавливаются по умолчанию. Их нужно выбрать во время установки. Дополнительные сведения о средствах, описанных ниже, см. в электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] содержит только подмножество средств.  
   
 ### <a name="basic-tools"></a>Основные средства  
   
 -   Среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] является основным средством администрирования компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] и написания исходного кода на языке [!INCLUDE[tsql](../includes/tsql-md.md)]. Она расположена в оболочке [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Она не входит в [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , но ее можно загрузить отдельно из [Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=144346).  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Диспетчер конфигурации устанавливается с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и с клиентскими средствами. Он позволяет включать серверные протоколы, настраивать параметры протокола, например порты TCP, настраивать автоматический запуск служб сервера и настраивать соединение клиентских компьютеров. Это средство может настроить дополнительные параметры соединения, но не активирует возможности.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Диспетчер конфигурации устанавливается с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и с клиентскими средствами. Он позволяет включать серверные протоколы, настраивать параметры протокола, например порты TCP, настраивать автоматический запуск служб сервера и настраивать соединение клиентских компьютеров. Это средство может настроить дополнительные параметры соединения, но не активирует возможности.  
   
 ### <a name="sample-database"></a>Образец базы данных  
  Образцы баз данных и примеры с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]не поставляются. Большинство примеров, описанных в электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , используют образец базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] .  
@@ -42,9 +40,9 @@ ms.locfileid: "63145500"
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>Запуск диспетчера конфигурации SQL Server  
   
--   В меню **Пуск** последовательно укажите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Средства настройки**и выберите пункт **Диспетчер конфигурации SQL Server**.  
+-   В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Средства настройки**и щелкните **Диспетчер конфигурации SQL Server**.  
   
-##  <a name="connect"></a>Подключение с помощью Management Studio  
+##  <a name="connecting-with-management-studio"></a><a name="connect"></a>Подключение с помощью Management Studio  
  Если известно имя экземпляра или подключение выполняется членом группы «Администраторы», соединиться с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)] с помощью средств, выполняемых на этом же компьютере, не составляет труда. Следующие процедуры должны исполняться на том же компьютере, на котором находится [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>Определение имени экземпляра компонента Database Engine  
@@ -78,7 +76,7 @@ ms.locfileid: "63145500"
   
 4.  Нажмите кнопку **Соединить**.  
   
-##  <a name="additional"></a>Авторизация дополнительных подключений  
+##  <a name="authorizing-additional-connections"></a><a name="additional"></a>Авторизация дополнительных подключений  
  Теперь, после подключения к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в качестве администратора, одной из первых задач будет обеспечить возможность подключения других пользователей. Это делается посредством создания имени входа и предоставления ему разрешения на доступ к базе данных в качестве пользователя. Имена входа могут быть или именами входа для проверки подлинности Windows, использующей учетные данные Windows, или именами входа для проверки подлинности SQL Server, который хранит учетные данные в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и не зависит от учетных данных Windows. По возможности используйте проверку подлинности Windows.  
   
 ##### <a name="create-a-windows-authentication-login"></a>Создание имени входа для проверки подлинности Windows  
@@ -100,10 +98,9 @@ ms.locfileid: "63145500"
 7.  Подтвердите настройки по умолчанию для полей **Защищаемые объекты** и **Состояние** , и нажмите кнопку **ОК** , чтобы создать имя входа.  
   
 > [!IMPORTANT]  
->  Это базовые сведения, позволяющие начать работу. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] предоставляет безопасную среду; безопасность безусловно важна при выполнении операций с базой данных.  
+>  Это базовые сведения, позволяющие начать работу. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] предоставляет безопасную среду; безопасность безусловно важна при выполнении операций с базой данных.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 2. Соединение с другого компьютера](lesson-2-connecting-from-another-computer.md)  
+ [Урок 2. Подключение с другого компьютера](lesson-2-connecting-from-another-computer.md)  
   
   

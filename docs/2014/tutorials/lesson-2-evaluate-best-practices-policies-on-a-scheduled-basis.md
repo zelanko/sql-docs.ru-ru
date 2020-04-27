@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 29513ec37a946b9ec613ccc483048396149dd15a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042678"
 ---
-# <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>Занятие 2. Выполнение политик рекомендаций по расписанию
+# <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>Урок 2. Выполнение политик рекомендаций по расписанию
   Можно настроить запланированные оценки рекомендованных политик на одном или нескольких экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы настроить рекомендованные политики на выполнение в соответствии с расписанием, необходимо импортировать эти политики в целевой экземпляр.  
   
  Чтобы развернуть запланированные политики на нескольких серверах, можно импортировать политики на одном экземпляре, настроить расписания для каждой из них, экспортировать запланированные политики в одну из папок, а затем развертывать эти запланированные политики на целевых экземплярах с помощью зарегистрированных серверов.  
@@ -41,7 +41,7 @@ ms.locfileid: "63042678"
   
 -   [Развертывание запланированных политик на нескольких экзмплярах](../../2014/tutorials/deploy-scheduled-policies-to-multiple-instances.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Администрирование нескольких серверов с использованием центральных серверов управления](../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

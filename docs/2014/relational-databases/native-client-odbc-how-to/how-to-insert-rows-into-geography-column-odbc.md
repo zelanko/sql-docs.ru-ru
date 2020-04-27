@@ -11,13 +11,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206808"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Как вставлять строки в столбец Geography (ODBC)
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Руководство. Вставка строк в столбец Geography (ODBC)
   В этом примере выполняется вставка двух строк в таблицу со столбцом типа geography из WellKnownBinary (WKB) с помощью двух различных привязок (SQLCCHAR и SQLCBINARY). Затем выбирается одна строка из этой таблицы, для ее отображения используется метод ::STAsText(). WKB равен 0x01010000000700ECFAD03A4C4001008000B5DF07C0. Приложение выводит в консоль следующие данные: POINT(56.4595 -2.9842).  
   
  Этому образцу не требуется источник данных ODBC, но по умолчанию образец работает на локальном экземпляре SQL Server.  

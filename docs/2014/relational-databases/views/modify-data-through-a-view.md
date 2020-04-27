@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d87430c64bac133523d7001a88a894bb3985a5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211674"
 ---
 # <a name="modify-data-through-a-view"></a>Изменение данных через представление
@@ -38,18 +38,18 @@ ms.locfileid: "68211674"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   См. раздел "Обновляемые представления" статьи [CREATE VIEW (Transact-SQL)](/sql/t-sql/statements/create-view-transact-sql).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимы разрешения UPDATE, INSERT или DELETE для целевой таблицы в зависимости от выполняемого действия.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-modify-table-data-through-a-view"></a>Изменение данных таблицы с помощью представления  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68211674"
     > [!IMPORTANT]  
     >  Нельзя вставить строку, если представление ссылается на несколько базовых таблиц.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-update-table-data-through-a-view"></a>Обновление данных таблицы с помощью представления  
   

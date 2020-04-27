@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0288e88e10433a3c74487b1fd1418b14a58094b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012166"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Поддержка типов данных xml в SQLXML 4.0
@@ -44,12 +44,11 @@ ms.locfileid: "66012166"
   
 -   При синтаксическом анализе XML SQLXML 4.0 использует поддержку, предусмотренную в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Столбец `xml` может быть сопоставлен либо как типизированный, либо как нетипизированный XML. В обоих случаях SQLXML 4.0 не проверяет входной XML.  Если входной XML недопустим или имеет неверный формат, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщает об этом SQLXML и передает пользователю сведения об ошибках, возвращенные сервером.  
   
--   SQLXML 4.0 зависит от ограниченной поддержки DTD, реализованной в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет использовать внутреннее DTD в типе данных `xml`, с помощью которого можно определять значения по умолчанию и заменять ссылки на сущности их развернутым содержимым. SQLXML передает XML-данные серверу «как есть» (в том числе внутренние DTD). Можно преобразовывать определения DTD в документы схем XML (XSD) при помощи инструментов сторонних компаний и загружать эти данные вместе со встроенными схемами XSD в базу данных.  
+-   SQLXML 4.0 зависит от ограниченной поддержки DTD, реализованной в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет использовать внутреннее DTD в типе данных `xml`, с помощью которого можно определять значения по умолчанию и заменять ссылки на сущности их развернутым содержимым. SQLXML передает XML-данные серверу «как есть» (в том числе внутренние DTD). Можно преобразовывать определения DTD в документы схем XML (XSD) при помощи инструментов сторонних компаний и загружать эти данные вместе со встроенными схемами XSD в базу данных.  
   
 -   SQLXML 4,0 не сохраняет инструкции по обработке XML-декларации (например,) в зависимости от поведения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Вместо этого XML-декларация рассматривается как директива синтаксическому анализатору XML [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а его атрибуты (версия, кодировка и автономность) после преобразования данных в тип `xml` будут потеряны. Все XML-данные хранятся в кодировке UCS-2. Все остальные инструкции по обработке в экземпляре XML сохраняются, они допустимы в столбцах `xml` и могут поддерживаться SQLXML.  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server &#40;XML-данных&#41;](../xml/xml-data-sql-server.md)  
+ [Данные XML (SQL Server)](../xml/xml-data-sql-server.md)  
   
   

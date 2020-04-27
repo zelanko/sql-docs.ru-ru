@@ -14,31 +14,31 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211992"
 ---
 # <a name="create-a-resource-pool"></a>Создание пула ресурсов
   Можно создать пул ресурсов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Перед началом:**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Создание пула ресурсов с помощью:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
+-   **To create a resource pool, using:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="LimitationsRestrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Ограничения  
  Максимальный процент использования ЦП должен быть больше минимального или равен ему. Максимальный процент использования памяти должен быть больше минимального или равен ему.  
   
  Сумма значений минимальных процентов использования ЦП и минимальных процентов использования памяти для всех пулов ресурсов не должна превышать 100.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для создания пула ресурсов требуется разрешение CONTROL SERVER.  
   
-##  <a name="CreRPProp"></a>Создание пула ресурсов с помощью SQL Server Management Studio  
- **Создание пула ресурсов с помощью[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="create-a-resource-pool-using-sql-server-management-studio"></a><a name="CreRPProp"></a> Создание пула ресурсов в среде SQL Server Management Studio  
+ **Создание пула ресурсов с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]откройте обозреватель объектов и рекурсивно разверните узел **Управление** вплоть до узла **Регулятор ресурсов**.  
   
@@ -52,8 +52,8 @@ ms.locfileid: "68211992"
   
 6.  Чтобы сохранить изменения, нажмите кнопку **ОК**.  
   
-##  <a name="CreRPTSQL"></a>Создание пула ресурсов с помощью Transact-SQL  
- **Создание пула ресурсов с помощью[!INCLUDE[tsql](../../includes/tsql-md.md)]**  
+##  <a name="create-a-resource-pool-using-transact-sql"></a><a name="CreRPTSQL"></a>Создание пула ресурсов с помощью Transact-SQL  
+ **Создание пула ресурсов с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  Выполните инструкцию `CREATE RESOURCE POOL`, указав значения свойств, которые необходимо присвоить.  
   
@@ -70,7 +70,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Resource Governor](resource-governor.md)   
  [Включить Resource Governor](enable-resource-governor.md)   
  [Resource Governor пул ресурсов](resource-governor-resource-pool.md)   

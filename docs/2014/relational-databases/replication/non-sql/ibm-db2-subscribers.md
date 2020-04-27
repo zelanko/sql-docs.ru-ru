@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022203"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]поддерживает принудительные подписки на IBM DB2/AS 400, DB2/MVS и DB2/универсальную базу данных с помощью поставщиков OLE DB, которые входят [!INCLUDE[msCoName](../../../includes/msconame-md.md)] в состав Host Integration Server.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает принудительные подписки на IBM DB2/AS 400, DB2/MVS и DB2/Universal Database через поставщики OLE DB, включенные в состав [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server.  
   
 ## <a name="configuring-an-ibm-db2-subscriber"></a>Настройка подписчика IBM DB2  
  Чтобы настроить подписчик IBM DB2, выполните следующие шаги:  
@@ -89,7 +89,7 @@ ms.locfileid: "63022203"
   
 -   Если хотите предварительно создать таблицы на подписчике вместо того, чтобы они были созданы репликацией, используйте параметр только поддержка репликации. Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](../initialize-a-transactional-subscription-without-a-snapshot.md).  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]допускает более длинные имена таблиц и столбцов, чем DB2:  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] допускает наличие более длинных имен таблиц и столбцов, чем DB2:  
   
     -   Если база данных публикации содержит таблицы с именами длиннее, чем имена, поддерживаемые на подписчике версией DB2, укажите альтернативное имя для свойства статьи destination_table. Дополнительные сведения об установке свойств во время создания публикации см. в статье, посвященной [созданию публикации на SQL Server 2016](../publish/create-a-publication.md), а также в статье об [определении статьи](../publish/define-an-article.md).  
   
@@ -107,7 +107,7 @@ ms.locfileid: "63022203"
 |`char(1-254)`|CHAR(1-254)|  
 |`char(255-8000)`|VARCHAR(255-8000)|  
 |`date`|DATE|  
-|`datetime`|TIMESTAMP|  
+|`datetime`|timestamp|  
 |`datetime2(0-7)`|VARCHAR(27)|  
 |`datetimeoffset(0-7)`|VARCHAR(34)|  
 |`decimal(1-31, 0-31)`|DECIMAL(1-31, 0-31)|  
@@ -126,11 +126,11 @@ ms.locfileid: "63022203"
 |`numeric(32-38, 0-38)`|VARCHAR(41)|  
 |`nvarchar(1-4000)`|VARCHAR(1-4000)|  
 |`nvarchar(max)`|VARCHAR (0)<sup>1</sup>|  
-|`real`|REAL|  
-|`smalldatetime`|TIMESTAMP|  
+|`real`|real|  
+|`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
-|`sql_variant`|Недоступно|  
+|`sql_variant`|Н/Д|  
 |`sysname`|VARCHAR(128)|  
 |`text`|VARCHAR (0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  
@@ -165,8 +165,8 @@ ms.locfileid: "63022203"
   
      В некоторых средах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` DB2 элемент данных не ограничивается однобайтовыми символами. значение длины элемента типа CHAR или VARCHAR должно учитывать. Следует также принять во внимание символы *shift in* (сдвиг внутрь) и *shift out* (сдвиг наружу), если в них есть необходимость. При репликации таблиц со `nchar` столбцами и `nvarchar` может потребоваться указать более большую максимальную длину для типа данных в пользовательском скрипте создания. Сведения об указании пользовательского скрипта создания см. в описании шага 5 в подразделе «Настройка подписчика IBM DB2» данного раздела.  
   
-## <a name="see-also"></a>См. также:  
- [Подписчики, не относящиеся к SQL Server](non-sql-server-subscribers.md)   
- [Подписка на публикации](../subscribe-to-publications.md)  
+## <a name="see-also"></a>См. также  
+ [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

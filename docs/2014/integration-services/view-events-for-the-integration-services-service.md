@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4be91309e4feb34bd8dfd85aee8e3e0cd1f82ffd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054664"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>просмотреть события службы Integration Services
@@ -32,7 +32,7 @@ ms.locfileid: "66054664"
   
 ### <a name="to-view-service-events-for-integration-services-in-sql-server-management-studio"></a>Просмотр событий службы, относящихся к службам Integration Services, в среде SQL Server Management Studio  
   
-1.  Откройте среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Откройте [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  В меню **Файл** выберите пункт **Подключить к обозревателю объектов**.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66054664"
   
 9. В меню **Консоль** выберите **Выход** для закрытия диалогового окна **Просмотр событий** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление службой Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)   
  [Добавление журнала для счетчиков производительности потока данных](performance/performance-counters.md)  
   

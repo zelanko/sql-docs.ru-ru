@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3301be2f0af9960a48602a1b540fa2cac2f39914
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021362"
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication-sql-server-management-studio"></a>Добавление и удаление статей в публикации (среда SQL Server Management Studio)
@@ -42,7 +42,7 @@ ms.locfileid: "63021362"
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Определение статьи](define-an-article.md)   
  [Публикация данных и объектов базы данных](publish-data-and-database-objects.md)  
   

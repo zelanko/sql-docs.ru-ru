@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011172"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Управление и наблюдение за полнотекстовым поиском для экземпляра сервера
@@ -29,7 +29,7 @@ ms.locfileid: "66011172"
   
 -   Настройка полнотекстового поиска в пользовательской базе данных. Такая настройка включает в себя создание одного или нескольких полнотекстовых каталогов для базы данных и определение полнотекстового индекса на каждой таблице или на индексированном представлении, где требуется выполнять полнотекстовые запросы.  
   
-##  <a name="props"></a> Просмотр или изменение свойств сервера для средств полнотекстового поиска  
+##  <a name="viewing-or-changing-server-properties-for-full-text-search"></a><a name="props"></a> Просмотр или изменение свойств сервера для средств полнотекстового поиска  
  В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно просматривать свойства полнотекстового поиска в экземпляре [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>Просмотр и изменение свойств сервера для полнотекстового поиска  
@@ -67,7 +67,7 @@ ms.locfileid: "66011172"
         > [!NOTE]  
         >  Режим полнотекстового обновления также можно задать с помощью действия [upgrade_option](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) процедуры **sp_fulltext_service**.  
   
-##  <a name="metadata"></a> Просмотр дополнительных свойств сервера полнотекстового поиска  
+##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> Просмотр дополнительных свойств сервера полнотекстового поиска  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] Функции могут использоваться для получения значений различных свойств полнотекстового поиска уровня сервера. Данные сведения касаются прежде всего администрирования и устранения неполадок в полнотекстовом поиске.  
   
  В следующей таблице перечислены полнотекстовые свойства экземпляра сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и соответствующие функции [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
@@ -78,35 +78,35 @@ ms.locfileid: "66011172"
 |`LoadOSResources`|Указывает, зарегистрированы ли средства разбиения по словам и фильтры операционной системы и используются ли они в этом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|FULLTEXTSERVICEPROPERTY|  
 |`VerifySignature`|Указывает, загружает ли средство полнотекстового поиска только подписанные двоичные файлы.|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a>Наблюдение за операциями полнотекстового поиска  
+##  <a name="monitoring-full-text-search-activity"></a><a name="monitor"></a>Наблюдение за операциями полнотекстового поиска  
  Для наблюдения за действиями полнотекстового поиска на экземпляре сервера могут оказаться полезными несколько функций и динамических административных представлений.  
   
- **Просмотр сведений о полнотекстовых каталогах с выполняющимся действием заполнения**  
+ **Просмотр сведений о полнотекстовых каталогах, в которых в данный момент выполняются действия по заполнению**  
   
--   [sys. dm_fts_active_catalogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql)  
+-   [sys.dm_fts_active_catalogs (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql)  
   
- **Просмотр текущей активности процесса узла управляющей программы фильтрации**  
+ **Просмотр текущих действий процесса в узле управляющей программы фильтрации**  
   
--   [sys. dm_fts_fdhosts &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-fdhosts-transact-sql)  
+-   [sys.dm_fts_fdhosts (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-fdhosts-transact-sql)  
   
- **Просмотр сведений о выполняющемся индексе заполнения**  
+ **Просмотр сведений о текущих заполнениях индексов**  
   
--   [sys. dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)  
+-   [sys.dm_fts_index_population (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)  
   
- **Для просмотра буферов памяти в пуле памяти, используемых в рамках сканирования или диапазона сканирования.**  
+ **Просмотр буферов в пуле памяти, которые используются в процессе сканирования или диапазона сканирования.**  
   
--   [sys. dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)  
+-   [sys.dm_fts_memory_buffers (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)  
   
- **Просмотр пулов общей памяти, доступных компоненту средства сбора полнотекстовых данных для полнотекстового сканирования или диапазона полнотекстового сканирования**  
+ **Просмотр пулов общей памяти, доступных сборщику полнотекстовых данных для полнотекстового сканирования или диапазона полнотекстового сканирования**  
   
--   [sys. dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
+-   [sys.dm_fts_memory_pools (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   
  **Просмотр сведений о каждом пакете полнотекстового индексирования**  
   
--   [sys. dm_fts_outstanding_batches &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql)  
+-   [sys.dm_fts_outstanding_batches (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql)  
   
- **Просмотр сведений о конкретных диапазонах, связанных с выполняющимся заполнением**  
+ **Просмотр сведений о конкретных диапазонах, связанных с текущим заполнением**  
   
--   [sys. dm_fts_population_ranges &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql)  
+-   [sys.dm_fts_population_ranges (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql)  
   
   

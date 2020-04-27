@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067680"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
@@ -27,7 +27,7 @@ ms.locfileid: "63067680"
 > [!NOTE]  
 >  Атрибуты ODBC идентификаторов столбца доступны не во всех результирующих наборах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Идентификатор поля|Description|  
+|Идентификатор поля|Описание|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|Можно использовать для результирующих наборов, полученных от инструкций, которые формируют серверные курсоры, или для выполненных инструкций SELECT, содержащих предложение FOR BROWSE.|  
 |SQL_DESC_BASE_COLUMN_NAME|Можно использовать для результирующих наборов, полученных от инструкций, которые формируют серверные курсоры, или для выполненных инструкций SELECT, содержащих предложение FOR BROWSE.|  
@@ -76,7 +76,7 @@ ms.locfileid: "63067680"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Добавлены связанные с драйвером поля дескриптора для предоставления дополнительных сведений для обозначения имени коллекции XML-схем, имени схемы и имени каталога соответственно. При наличии в этих свойствах неалфавитных символов использование кавычек или escape-символа не требуется. Эти новые поля дескриптора приведены в следующей таблице:  
   
-|Имя столбца|Тип|Description|  
+|Имя столбца|Type|Описание|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|Имя каталога, в котором определено имя коллекции схем XML. Если обнаружить имя каталога невозможно, то эта переменная содержит пустую строку.<br /><br /> Эти сведения возвращаются из поля записи SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME IRD, предназначенного для чтения и записи.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAM E|CharacterAttributePtr|Имя схемы, в которой определено имя коллекции схем XML. Если обнаружить имя схемы невозможно, то эта переменная содержит пустую строку.<br /><br /> Эти сведения возвращаются из поля записи SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME IRD, предназначенного для чтения и записи.|  
@@ -84,7 +84,7 @@ ms.locfileid: "63067680"
   
  Кроме того, в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] представлены новые поля дескриптора для получения дополнительных сведений для столбца результирующего набора с определяемым пользователем типом данных (UDT) и для параметра UDT хранимой процедуры или параметризированного запроса. При наличии в этих свойствах неалфавитных символов использование кавычек или escape-символа не требуется. Эти новые поля дескриптора приведены в следующей таблице:  
   
-|Имя столбца|Тип|Description|  
+|Имя столбца|Type|Описание|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|Имя каталога, содержащего определяемый пользователем тип.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|Имя схемы, содержащей определяемый пользователем тип.|  
@@ -106,7 +106,7 @@ ms.locfileid: "63067680"
   
  Дополнительные сведения см. в разделе [Поддержка разреженных столбцов &#40;&#41;ODBC ](../native-client/odbc/sparse-columns-support-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функция SQLColAttribute](https://go.microsoft.com/fwlink/?LinkId=59334)   
  [Сведения о реализации API ODBC](odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](sqlsetstmtattr.md)  

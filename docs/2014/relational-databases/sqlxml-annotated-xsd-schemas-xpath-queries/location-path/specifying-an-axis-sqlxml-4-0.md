@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8da239fd8a6bbf559f89ba5fd1b0fa0ab10ec190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012651"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Определение оси (SQLXML 4.0)
@@ -39,8 +39,7 @@ ms.locfileid: "66012651"
     child::Customer  
     ```  
   
-     В следующем запросе XPath `child` является осью. 
-  `Customer` является проверкой узла.  
+     В следующем запросе XPath `child` является осью. `Customer` является проверкой узла.  
   
 -   `parent`  
   
@@ -52,8 +51,7 @@ ms.locfileid: "66012651"
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     Это аналогично указанию `child::Customer`. В данном запросе XPath `child` и `parent` являются осями. 
-  `Customer` и `Order` являются проверками узла.  
+     Это аналогично указанию `child::Customer`. В данном запросе XPath `child` и `parent` являются осями. `Customer` и `Order` являются проверками узла.  
   
 -   `attribute`  
   

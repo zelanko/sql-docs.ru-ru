@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aba8bdc3182cd0e3784908a8af32b6f2fbebd6e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010185"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Совместимость FILESTREAM с другими компонентами SQL Server
   Поскольку данные FILESTREAM находятся в файловой системе, в данном разделе приводятся основные сведения, рекомендации и ограничения по использованию FILESTREAM со следующими компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [Службы SQL Server Integration Services (SSIS)](#ssis)  
+-   [Службы SQL Server Integration Services](#ssis)  
   
 -   [Распределенные запросы и связанные серверы](#distqueries)  
   
@@ -45,18 +45,18 @@ ms.locfileid: "66010185"
   
 -   [Автономные базы данных](#contained)  
   
-##  <a name="ssis"></a> Службы SQL Server Integration Services  
+##  <a name="sql-server-integration-services-ssis"></a><a name="ssis"></a> Службы SQL Server Integration Services  
  Службы SQL Server Integration Services (SSIS) обрабатывают данные FILESTREAM в потоке данных как любые другие данные большого двоичного объекта с использованием типа данных DT_IMAGE SSIS.  
   
  Загрузку файлов из файловой системы в столбец FILESTREAM можно выполнить с помощью преобразования «Импорт столбца». Преобразование «Экспорт столбца» также можно использовать, чтобы извлечь файлы из столбца FILESTREAM в другую папку файловой системы.  
   
-##  <a name="distqueries"></a>Распределенные запросы и связанные серверы  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distqueries"></a>Распределенные запросы и связанные серверы  
  Вы можете работать с данными FILESTREAM с помощью распределенных запросов и связанных серверов, рассматривая их как `varbinary(max)` данные. Не допускается применение функции FILESTREAM **PathName()** в распределенных запросах, в которых используется четырехкомпонентное имя, даже если имя относится к локальному серверу. Однако вы можете применять функцию **PathName()** во внутреннем запросе передаваемого запроса, в котором используется **OPENQUERY()**.  
   
-##  <a name="encryption"></a>Ключ  
+##  <a name="encryption"></a><a name="encryption"></a>Ключ  
  Данные FILESTREAM не шифруются, даже если включено прозрачное шифрование данных.  
   
-##  <a name="DatabaseSnapshot"></a>Моментальные снимки базы данных  
+##  <a name="database-snapshots"></a><a name="DatabaseSnapshot"></a>Моментальные снимки базы данных  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]не поддерживает [моментальные снимки базы данных](../databases/database-snapshots-sql-server.md) для файловых групп FILESTREAM. Если файловая группа FILESTREAM включена в предложение CREATE DATABASE ON, выполнение этой инструкции завершится сбоем и приведет к возникновению ошибки.  
   
  При использовании FILESTREAM моментальные снимки базы данных можно создавать для стандартных файловых групп (отличных от FILESTREAM). В таких моментальных снимках баз данных файловые группы FILESTREAM отмечаются как вне сети.  
@@ -65,7 +65,7 @@ ms.locfileid: "66010185"
   
  `Could not continue scan with NOLOCK due to data movement.`  
   
-##  <a name="Replication"></a>Репликации  
+##  <a name="replication"></a><a name="Replication"></a> Репликация  
  Столбец `varbinary(max)`, атрибут FILESTREAM которого включен на издателе, может быть реплицирован на подписчик с атрибутом FILESTREAM или без него. Чтобы указать способ репликации этого столбца, используйте диалоговое окно **Свойства статьи — \<статья>** либо параметр @schema_option процедуры [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) или [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Данные, реплицированные в столбец типа `varbinary(max)` без атрибута FILESTREAM, не должны превышать установленный в 2 ГБ предел для данного типа данных; в противном случае формируется ошибка выполнения. Рекомендуется реплицировать атрибут FILESTREAM, если не выполняется репликация данных на [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] подписчики, независимо от указанного параметра схемы.  
   
 > [!NOTE]  
@@ -97,30 +97,29 @@ ms.locfileid: "66010185"
   
 -   Репликация слиянием позволяет синхронизировать данные FILESTREAM во время HTTPS-соединения при помощи [веб-синхронизации](../replication/merge/merge-replication.md). Размер этих данных не должен превышать ограничение в 50 МБ для веб-синхронизации, иначе возникнет ошибка выполнения.  
   
-##  <a name="LogShipping"></a>Доставка журналов  
- [Доставка журналов](../../database-engine/log-shipping/about-log-shipping-sql-server.md) поддерживает FILESTREAM. Как на сервере-источнике, так и на сервере-получателе должна быть запущена версия [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]или более поздняя версия и должен быть включен параметр FILESTREAM.  
+##  <a name="log-shipping"></a><a name="LogShipping"></a> Доставка журналов  
+ В[доставке журналов](../../database-engine/log-shipping/about-log-shipping-sql-server.md) предусмотрена поддержка FILESTREAM. Как на сервере-источнике, так и на сервере-получателе должна быть запущена версия [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]или более поздняя версия и должен быть включен параметр FILESTREAM.  
   
-##  <a name="DatabaseMirroring"></a>Зеркальное отображение базы данных  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a>Зеркальное отображение базы данных  
  Зеркальное отображение базы данных не поддерживает FILESTREAM. Создание файловой группы FILESTREAM на основном сервере невозможно. Настройка зеркального отображения для базы данных, содержащей файловые группы FILESTREAM, невозможна.  
   
-##  <a name="FullText"></a>Полнотекстовое индексирование  
+##  <a name="full-text-indexing"></a><a name="FullText"></a>Полнотекстовое индексирование  
  [Полнотекстовое индексирование](../indexes/indexes.md) работает со столбцом FILESTREAM так же, как и со `varbinary(max)` столбцом. В таблице FILESTREAM должен присутствовать столбец, в котором содержится расширение имени файла для каждого блока больших двоичных объектов (BLOB) FILESTREAM. Дополнительные сведения см. в статьях [Запрос с полнотекстовым поиском](../search/query-with-full-text-search.md), [Настройка и управление фильтрами для поиска](../search/configure-and-manage-filters-for-search.md) и [sys.fulltext_document_types (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
  Полнотекстовый поиск индексирует содержимое блоков больших двоичных объектов (BLOB) FILESTREAM. Индексирование таких файлов, как изображения, может оказаться нецелесообразным. При обновлении блоков больших двоичных объектов (BLOB) FILESTREAM выполняется их повторное индексирование.  
   
-##  <a name="FailoverClustering"></a>Отказоустойчивая кластеризация  
+##  <a name="failover-clustering"></a><a name="FailoverClustering"></a>Отказоустойчивая кластеризация  
  В целях отказоустойчивой кластеризации файловые группы FILESTREAM могут быть помещены на общий диск. Параметр FILESTREAM должен быть включен на каждом узле кластера, на котором будет размещен экземпляр FILESTREAM. Дополнительные сведения см. в статье [Установка FILESTREAM в отказоустойчивом кластере](set-up-filestream-on-a-failover-cluster.md).  
   
-##  <a name="SQLServerExpress"></a>SQL Server Express  
- 
-  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] предусмотрена поддержка FILESTREAM. Ограничение размера базы данных в 10 ГБ не включает контейнер данных FILESTREAM.  
+##  <a name="sql-server-express"></a><a name="SQLServerExpress"></a>SQL Server Express  
+ [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] предусмотрена поддержка FILESTREAM. Ограничение размера базы данных в 10 ГБ не включает контейнер данных FILESTREAM.  
   
-##  <a name="contained"></a>Автономные базы данных  
+##  <a name="contained-databases"></a><a name="contained"></a>Автономные базы данных  
  Для использования функции FILESTREAM требуется выполнение определенной настройки вне базы данных. Поэтому база данных, использующая FILESTREAM или FileTable, не является полностью автономной.  
   
  Для автономности базы данных можно установить значение PARTIAL при необходимости использовать некоторые функции автономных баз данных, например такие, как функция автономных пользователей. В этом случае следует иметь в виду, что некоторые параметры базы данных не хранятся в самой базе данных и не перемещаются автоматически при перемещении базы данных.  
   
-## <a name="see-also"></a>См. также:  
- [Большие двоичные объекты &#40;данные&#41; &#40;SQL Server&#41;](binary-large-object-blob-data-sql-server.md)  
+## <a name="see-also"></a>См. также  
+ [Данные большого двоичного объекта (SQL Server)](binary-large-object-blob-data-sql-server.md)  
   
   

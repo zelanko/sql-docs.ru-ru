@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7591cff38ac08d9fd36d7b39f180613fbdd12961
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63066442"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Поддержка управляющих объектов SQL Server SMO для In-Memory OLTP
@@ -54,7 +54,7 @@ ms.locfileid: "63066442"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>  
   
-## <a name="code-sample"></a>Пример кода  
+## <a name="code-sample"></a>Образец кода  
  Этот пример выполняет следующее.  
   
 -   Создает базу данных с оптимизированной для памяти файловой группой и оптимизированным для памяти файлом.  
@@ -171,7 +171,7 @@ public class A {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поддержка SQL Server для In-Memory OLTP](sql-server-support-for-in-memory-oltp.md)  
   
   

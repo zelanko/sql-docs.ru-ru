@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e046351ca3dc7977691fc98e24453ccbf8e6af53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144415"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>просмотреть конфликты данных для публикаций транзакций (среда SQL Server Management Studio)
@@ -62,8 +62,8 @@ ms.locfileid: "63144415"
   
 6.  Закройте средство просмотра конфликтов репликации.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Одноранговая репликация транзакций](transactional/peer-to-peer-transactional-replication.md)   
- [Обнаружение и разрешение конфликтов обновления посредством очередей](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
+ [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   
   

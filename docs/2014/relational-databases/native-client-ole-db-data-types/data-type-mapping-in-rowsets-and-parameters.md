@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0979892b6770b9a9c2d0d9c4e8a0d734d873c085
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63062203"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Сопоставление типов данных в наборах строк и параметрах
@@ -36,29 +36,29 @@ ms.locfileid: "63062203"
 |**bigint**|DBTYPE_I8|  
 |**binary**|DBTYPE_BYTES|  
 |**bit**|DBTYPE_BOOL|  
-|**типа**|DBTYPE_STR|  
+|**char**|DBTYPE_STR|  
 |**datetime**|DBTYPE_DBTIMESTAMP|  
 |**datetime2**|DBTYPE_DBTIME2|  
-|**Decimal**|DBTYPE_NUMERIC|  
+|**decimal**|DBTYPE_NUMERIC|  
 |**float**|DBTYPE_R8|  
-|**Эскиз**|DBTYPE_BYTES|  
+|**image**|DBTYPE_BYTES|  
 |**int**|DBTYPE_I4|  
 |**money**|DBTYPE_CY|  
 |**nchar**|DBTYPE_WSTR|  
 |**ntext**|DBTYPE_WSTR|  
-|**ISNUMERIC**|DBTYPE_NUMERIC|  
+|**numeric**|DBTYPE_NUMERIC|  
 |**nvarchar**|DBTYPE_WSTR|  
-|**Real**|DBTYPE_R4|  
+|**real**|DBTYPE_R4|  
 |**smalldatetime**|DBTYPE_DBTIMESTAMP|  
 |**smallint**|DBTYPE_I2|  
 |**smallmoney**|DBTYPE_CY|  
 |**sql_variant**|DBTYPE_VARIANT, DBTYPE_SQLVARIANT|  
-|**имеет sysname**|DBTYPE_WSTR|  
-|**полнотекстовым**|DBTYPE_STR|  
-|**TIMESTAMP**|DBTYPE_BYTES|  
+|**sysname**|DBTYPE_WSTR|  
+|**text**|DBTYPE_STR|  
+|**timestamp**|DBTYPE_BYTES|  
 |**tinyint**|DBTYPE_UI1|  
-|**(UDT)**|DBTYPE_UDT|  
-|**UNIQUEIDENTIFIER**|DBTYPE_GUID|  
+|**БАЙТ**|DBTYPE_UDT|  
+|**uniqueidentifier**|DBTYPE_GUID|  
 |**varbinary**|DBTYPE_BYTES|  
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
@@ -78,7 +78,7 @@ ms.locfileid: "63062203"
  Свойство сеанса SSPROP_ALLOWNATIVEVARIANT должно быть равно true.  
   
 ## <a name="provider-specific-property-ssprop_allownativevariant"></a>Специфическое для поставщика свойство SSPROP_ALLOWNATIVEVARIANT  
- При выборке данных можно явно указать разновидность типа данных, которые должны быть возвращены для столбца или для параметра. **IColumnsInfo** также можно использовать для получения сведений о столбцах и их использования для привязки. Если интерфейс **IColumnsInfo** используется для получения сведений о столбце с целью привязки, а свойство сеанса SSPROP_ALLOWNATIVEVARIANT имеет значение FALSE (по умолчанию), для столбцов **sql_variant** возвращается DBTYPE_VARIANT. Если свойство SSPROP_ALLOWNATIVEVARIANT имеет значение FALSE, DBTYPE_SQLVARIANT не поддерживается. Если свойство SSPROP_ALLOWNATIVEVARIANT имеет значение TRUE, возвращается тип столбца DBTYPE_SQLVARIANT. В этом случае в буфере сохраняется структура SSVARIANT. При выборке данных **sql_variant** как данных типа DBTYPE_SQLVARIANT свойство сеанса SSPROP_ALLOWNATIVEVARIANT должно быть равно TRUE.  
+ При выборке данных можно явно указать разновидность типа данных, которые должны быть возвращены для столбца или для параметра. Интерфейс **IColumnsInfo** может также использоваться с целью получения сведений о столбце и их применения для привязки. Если интерфейс **IColumnsInfo** используется для получения сведений о столбце с целью привязки, а свойство сеанса SSPROP_ALLOWNATIVEVARIANT имеет значение FALSE (по умолчанию), для столбцов **sql_variant** возвращается DBTYPE_VARIANT. Если свойство SSPROP_ALLOWNATIVEVARIANT имеет значение FALSE, DBTYPE_SQLVARIANT не поддерживается. Если свойство SSPROP_ALLOWNATIVEVARIANT имеет значение TRUE, возвращается тип столбца DBTYPE_SQLVARIANT. В этом случае в буфере сохраняется структура SSVARIANT. При выборке данных **sql_variant** как данных типа DBTYPE_SQLVARIANT свойство сеанса SSPROP_ALLOWNATIVEVARIANT должно быть равно TRUE.  
   
  Свойство SSPROP_ALLOWNATIVEVARIANT является частью специфического для поставщика набора свойств DBPROPSET_SQLSERVERSESSION и свойством сеанса.  
   
@@ -89,9 +89,9 @@ ms.locfileid: "63062203"
   
 |||  
 |-|-|  
-|Свойство SSPROP_ALLOWNATIVEVARIANT|Тип: VT_BOOL<br /><br /> Чтение и запись в R/W<br /><br /> Значение по умолчанию: VARIANT_FALSE<br /><br /> Описание: определяет, имеют ли данные, полученные в результате выборки, тип DBTYPE_VARIANT или DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: возвращается тип столбца DBTYPE_SQLVARIANT. В этом случае в буфере сохраняется структура SSVARIANT.<br /><br /> VARIANT_FALSE: возвращается столбец типа DBTYPE_VARIANT, и в буфере сохраняется структура VARIANT.|  
+|Свойство SSPROP_ALLOWNATIVEVARIANT|Тип: VT_BOOL.<br /><br /> Ч/З Чтение/запись<br /><br /> Значение по умолчанию: VARIANT_FALSE<br /><br /> Описание. Определяет тип для извлеченных данных: DBTYPE_VARIANT или DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: Возвращается тип столбца DBTYPE_SQLVARIANT, и в буфер помещается структура SSVARIANT.<br /><br /> VARIANT_FALSE: Возвращается тип столбца DBTYPE_VARIANT, и в буфер помещается структура VARIANT.|  
   
 ## <a name="see-also"></a>См. также:  
- [Типы данных &#40;OLE DB&#41;](data-types-ole-db.md)  
+ [Типы данных (OLE DB)](data-types-ole-db.md)  
   
   
