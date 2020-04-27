@@ -16,21 +16,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dc5681577b051ebb26959856a9eb775ae2ae409f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62842851"
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>Обратная совместимость компонента SQL Server Database Engine
   В подразделах раздела об обратной совместимости описаны отличия в поведении для разных версий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Устаревшие функции компонента Database Engine в SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)|Устаревшие функции [!INCLUDE[ssDE](../includes/ssde-md.md)] в этом выпуске.|  
-|[Неподдерживаемые функции ядра СУБД в SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)|Функции компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , не поддерживаемые в этой версии.|  
-|[Критические изменения в функциях компонента ядра СУБД в SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md)|
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] , которые могут потребовать изменений в приложениях.|  
-|[Изменения в работе функций компонента Database Engine в SQL Server 2014](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)|Другие изменения в функциях баз данных в этой версии.|  
+|[Неподдерживаемые функции ядро СУБД в SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)|Функции компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , не поддерживаемые в этой версии.|  
+|[Критические изменения в функциях ядро СУБД в SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md)|[!INCLUDE[ssDE](../includes/ssde-md.md)] , которые могут потребовать изменений в приложениях.|  
+|[Изменения в работе функций ядра СУБД в SQL Server 2014](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)|Другие изменения в функциях баз данных в этой версии.|  
   
   

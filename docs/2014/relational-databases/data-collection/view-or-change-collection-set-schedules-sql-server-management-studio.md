@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 348a50b1f199fa28b9bc67718b47ee4819bdde87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873495"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Просмотр и изменение расписаний набора элементов сбора (среда SQL Server Management Studio)
@@ -99,7 +99,7 @@ ms.locfileid: "62873495"
   
 6.  Чтобы сохранить изменения и закрыть диалоговое окно **Свойства набора элементов сбора данных** , нажмите кнопку **ОК** .  
   
-####  <a name="CollectionSet"></a> Диалоговое окно «Свойства набора элементов сбора данных»  
+####  <a name="data-collection-set-properties-dialog-box"></a><a name="CollectionSet"></a> Диалоговое окно «Свойства набора элементов сбора данных»  
  **Страница «Общие»**  
   
  Эта страница используется для настройки методов сбора и передачи данных, расписаний и сроков хранения в хранилище управляющих данных. На этой странице также содержатся сведения о наборах сбора, таких как типы сборщиков и частота сбора, и входных параметрах, используемых для набора сбора.  

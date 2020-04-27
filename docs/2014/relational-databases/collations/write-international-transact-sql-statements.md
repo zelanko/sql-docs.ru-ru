@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 64dc9129373a57de2924b2983e14266a67d4915e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873522"
 ---
 # <a name="write-international-transact-sql-statements"></a>Написание инструкций Transact-SQL, адаптированных к международному использованию
@@ -38,7 +38,7 @@ ms.locfileid: "62873522"
   
          **{TS '** yyyy**-**_mm_**-**_ддхх_**:**_mm_**:**_СС_[**.** _FFF_] **'}** Например: **{TS '** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **'}**  
   
-         **{d '** _гггг_ **-** _мм_ **-** _дд_ **'}** , например: **{d '** 1998**-** 09**-** 24 **'}**  
+         **{ d'** _гггг_ **-** _мм_ **-** _дд_ **'}** , например: **{ d'** 1998**-** 09**-** 24 **'}**  
   
          **{t '** _чч_ **:** _мм_ **:** _СС_ **'}** , например: **{t '** 10:02:20 **'}**  
   

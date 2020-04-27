@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62872210"
 ---
 # <a name="create-a-database-mail-profile"></a>Создание профиля компонента Database Mail
@@ -26,25 +26,25 @@ ms.locfileid: "62872210"
   
 
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
  Создайте одну или несколько учетных записей компонента Database Mail для профиля. Дополнительные сведения о создании компонента Database Mail см. в разделе [Создание учетной записи компонента Database Mail](create-a-database-mail-account.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
  Открытый профиль дает возможность всем пользователям получать доступ к базе данных **msdb** , отправив туда почтовое сообщение из этого профиля. Персональный профиль может использоваться как пользователем, так и ролью. Предоставление роли доступа к профилю создает более простую обслуживаемую архитектуру. Для отправки почты пользователь должен быть членом роли **DatabaseMailUserRole** в базе данных **msdb** , а также иметь доступ как минимум к одному профилю Database Mail.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Пользователь, создающий учетные записи профилей и выполняющий хранимые процедуры, должен быть членом предопределенной роли сервера sysadmin.  
   
 
   
-##  <a name="SSMSProcedure"></a>Использование мастера настройки Database Mail  
- **Создание профиля Database Mail**  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="SSMSProcedure"></a> Использование мастера настройки компонента Database Mail  
+ **Создание профиля компонента Database Mail**  
   
 -   В обозревателе объектов подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого необходимо настроить компонент Database Mail, и разверните дерево сервера.  
   
--   Разверните узел **Управление** .  
+-   Разверните узел **Управление**  
   
 -   Дважды щелкните компонент Database Mail, чтобы открыть мастер настройки компонента Database Mail.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62872210"
   
 -   На странице **Завершение работы мастера** просмотрите действия, которые будут выполнены, и нажмите кнопку **Готово** , чтобы завершить создание нового профиля.  
   
--   **Чтобы настроить Database Mail закрытый профиль, выполните следующие действия.**  
+-   **Настройка закрытого профиля компонента Database Mail.**  
   
     -   Откройте мастер настройки компонента Database Mail.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62872210"
   
     -   На странице **Завершение работы мастера** просмотрите действия, которые необходимо выполнить, и нажмите кнопку **Готово** , чтобы завершить настройку профиля.  
   
--   **Чтобы настроить Database Mail открытый профиль, выполните следующие действия.**  
+-   **Настройка открытого профиля компонента Database Mail.**  
   
     -   Откройте мастер настройки компонента Database Mail.  
   
@@ -84,23 +84,23 @@ ms.locfileid: "62872210"
   
 ## <a name="using-transact-sql"></a>Использование Transact-SQL  
   
-###  <a name="PrivateProfile"></a>Создание Database Mail личного профиля  
+###  <a name="to-create-a-database-mail-private-profile"></a><a name="PrivateProfile"></a>Создание Database Mail личного профиля  
   
 -   Подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Чтобы создать новый профиль, выполните системную хранимую процедуру [sysmail_add_profile_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql) следующим образом:  
   
-     **Ексекутемсдб. dbo. sysmail_add_profile_sp**  
+     **EXECUTEmsdb.dbo.sysmail_add_profile_sp**  
   
      *@profile_name*= '*Имя профиля*'  
   
      *@description*= '*Описание*'  
   
-     где *@profile_name* — имя профиля, а *@description* — описание профиля. Этот параметр необязателен.  
+     где *@profile_name* — имя профиля, а *@description* — описание профиля. Это необязательный параметр.  
   
 -   Для каждой учетной записи выполните хранимую процедуру [sysmail_add_profileaccount_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql), как показано ниже.  
   
-     **Ексекутемсдб. dbo. sysmail_add_profileaccount_sp**  
+     **EXECUTEmsdb.dbo.sysmail_add_profileaccount_sp**  
   
      *@profile_name*= '*Имя профиля*'  
   
@@ -112,11 +112,11 @@ ms.locfileid: "62872210"
   
 -   Всем ролям или пользователям баз данных, отправляющим письма с использованием этого профиля, следует предоставить доступ к профилю. Для этого выполните хранимую процедуру [sysmail_add_principalprofile_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql), как показано ниже.  
   
-     **Ексекутемсдб. sysmail_add_principalprofile_sp**  
+     **EXECUTEmsdb.sysmail_add_principalprofile_sp**  
   
      *@profile_name*= '*Имя профиля*'  
   
-     *@ principal_name* = '*имя пользователя или роли базы данных*'  
+     *@ principal_name* = '*Имя пользователя или роли базы данных*'  
   
      *@is_default*= '*Состояние профиля по умолчанию* '  
   
@@ -154,23 +154,23 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
  
   
-###  <a name="PublicProfile"></a>Создание Database Mail общего профиля  
+###  <a name="to-create-a-database-mail-public-profile"></a><a name="PublicProfile"></a>Создание Database Mail общего профиля  
   
 -   Подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Чтобы создать новый профиль, выполните системную хранимую процедуру [sysmail_add_profile_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql) следующим образом:  
   
-     **Ексекутемсдб. dbo. sysmail_add_profile_sp**  
+     **EXECUTEmsdb.dbo.sysmail_add_profile_sp**  
   
      *@profile_name*= '*Имя профиля*'  
   
      *@description*= '*Описание*'  
   
-     где *@profile_name* — имя профиля, а *@description* — описание профиля. Этот параметр необязателен.  
+     где *@profile_name* — имя профиля, а *@description* — описание профиля. Это необязательный параметр.  
   
 -   Для каждой учетной записи выполните хранимую процедуру [sysmail_add_profileaccount_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql), как показано ниже.  
   
-     **Ексекутемсдб. dbo. sysmail_add_profileaccount_sp**  
+     **EXECUTEmsdb.dbo.sysmail_add_profileaccount_sp**  
   
      *@profile_name*= '*Имя профиля*'  
   
@@ -182,11 +182,11 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
 -   Чтобы предоставить открытый доступ, выполните хранимую процедуру [sysmail_add_principalprofile_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql), как показано ниже.  
   
-     **Ексекутемсдб. sysmail_add_principalprofile_sp**  
+     **EXECUTEmsdb.sysmail_add_principalprofile_sp**  
   
      *@profile_name*= '*Имя профиля*'  
   
-     *@ principal_name* = '**Public** или **0**'  
+     *@ principal_name* = '**открытый** или **0**'  
   
      *@is_default*= '*Состояние профиля по умолчанию* '  
   

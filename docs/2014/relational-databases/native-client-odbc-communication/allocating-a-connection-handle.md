@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 12962333f722032797470943d3f5ffc79d0cdee6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62865006"
 ---
 # <a name="allocating-a-connection-handle"></a>Выделение дескриптора соединения
@@ -38,7 +38,7 @@ ms.locfileid: "62865006"
   
  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента имеет ряд расширенных атрибутов подключения, которые приложение может использовать для повышения его функциональности. Некоторые из этих атрибутов управляют теми же параметрами, которые могут быть указаны в источниках данных и использованы для переопределения любого параметра, заданного в источнике данных. Например, если приложение использует заключенные в кавычки идентификаторы, оно может назначить специфическому для драйвера атрибуту SQL_COPT_SS_QUOTED_IDENT значение SQL_QI_ON, чтобы этот параметр был установлен всегда, независимо от настройки источника данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Взаимодействие с SQL Server &#40;ODBC&#41;](communicating-with-sql-server-odbc.md)  
   
   

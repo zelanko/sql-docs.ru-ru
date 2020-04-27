@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: df384324ba16aac03a4c889cf4f3959c23374510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874689"
 ---
 # <a name="sqltriggercontext-object"></a>SqlTriggerContext, объект
@@ -26,7 +26,7 @@ ms.locfileid: "62874689"
   
  Дополнительные сведения см. в справочной документации по классу `Microsoft.SqlServer.Server.SqlTriggerContext` в документации по пакету .NET Framework SDK.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Триггеры CLR](../../database-engine/dev-guide/clr-triggers.md)   
  [EVENTDATA (Transact-SQL)](/sql/t-sql/functions/eventdata-transact-sql)  
   

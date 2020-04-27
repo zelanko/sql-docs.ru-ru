@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4f45545212b494f955c6b9be97ccf0df7efeb622
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869916"
 ---
 # <a name="mssqlserver_1457"></a>MSSQLSERVER_1457
@@ -49,7 +49,7 @@ ms.locfileid: "62869916"
   
 ## <a name="see-also"></a>См. также:  
  [SQL Server &#40;зеркального отображения базы данных&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [&#41;Transact-SQL ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [Настройка SQL Server &#40;зеркального отображения базы данных&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Удаление SQL Server &#40;зеркального отображения базы данных&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)   
  [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  

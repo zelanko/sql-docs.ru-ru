@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871541"
 ---
 # <a name="move-system-databases"></a>Перемещение системных баз данных
@@ -50,9 +50,9 @@ ms.locfileid: "62871541"
 > [!IMPORTANT]  
 >  При перемещении системной базы данных с последующим перестроением базы данных master необходимо заново переместить системную базу данных, поскольку операция перестроения устанавливает все системные базы данных в расположение по умолчанию.  
   
-##  <a name="Intro"></a>**В этом разделе**  
+##  <a name="in-this-topic"></a><a name="Intro"></a> **В этом разделе**  
   
--   [Запланированное перемещение и запланированная процедура обслуживания диска](#Planned)  
+-   [Запланированное перемещение и процедура запланированного обслуживания диска](#Planned)  
   
 -   [Процедура восстановления после сбоя](#Failure)  
   
@@ -60,11 +60,11 @@ ms.locfileid: "62871541"
   
 -   [Перемещение базы данных Resource](#Resource)  
   
--   [Дальнейшие действия. После перемещения всех системных баз данных](#Follow)  
+-   [Продолжение: после перемещения всех системных баз данных](#Follow)  
   
 -   [Примеры](#Examples)  
   
-##  <a name="Planned"></a>Запланированное перемещение и запланированная процедура обслуживания диска  
+##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a>Запланированное перемещение и запланированная процедура обслуживания диска  
  Чтобы переместить данные системной базы данных или файл журнала в рамках запланированного перемещения (операции запланированного обслуживания), следуйте следующим указаниям: Данная процедура применима ко всем системным базам данных, кроме master и Resource.  
   
 1.  Для каждого перемещаемого файла выполните следующую инструкцию.  
@@ -73,11 +73,11 @@ ms.locfileid: "62871541"
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-2.  Остановите работу экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или выключите систему для проведения работ по обслуживанию дисков. Дополнительные сведения см. в статье [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+2.  Остановите работу экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или выключите систему для проведения работ по обслуживанию дисков. Дополнительные сведения см. в статьях [Запуск, остановка, приостановка, возобновление и перезапуск ядро СУБД, агент SQL Server или службы Обозреватель SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Переместите файл или файлы в новое расположение.  
   
-4.  Перезапустите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или сервер. Дополнительные сведения см. в статье [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+4.  Перезапустите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или сервер. Дополнительные сведения см. в статьях [Запуск, остановка, приостановка, возобновление и перезапуск ядро СУБД, агент SQL Server или службы Обозреватель SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 5.  Проверьте изменения в файле с помощью следующего запроса.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62871541"
   
 2.  Отправкой тестового сообщения проверьте работоспособность компонента Database Mail.  
   
-##  <a name="Failure"></a>Процедура восстановления после сбоя  
+##  <a name="failure-recovery-procedure"></a><a name="Failure"></a>Процедура восстановления после сбоя  
  Если нужно перенести файл из-за сбоя оборудования, необходимо выполнить приведенные ниже действия для его перемещения на новое место. Данная процедура применима ко всем системным базам данных, кроме master и Resource.  
   
 > [!IMPORTANT]  
@@ -123,7 +123,7 @@ ms.locfileid: "62871541"
         NET START MSSQL$instancename /f /T3608  
         ```  
   
-     Дополнительные сведения см. в статье [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+     Дополнительные сведения см. в статьях [Запуск, остановка, приостановка, возобновление и перезапуск ядро СУБД, агент SQL Server или службы Обозреватель SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Для каждого перемещаемого файла используйте команды **sqlcmd** или [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] для выполнения следующей инструкции.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "62871541"
     WHERE database_id = DB_ID(N'<database_name>');  
     ```  
   
-##  <a name="master"></a>Перемещение базы данных master  
+##  <a name="moving-the-master-database"></a><a name="master"></a>Перемещение базы данных master  
  Чтобы переместить базу данных master, выполните следующие действия.  
   
 1.  В меню **Пуск** выберите **Все программы**, укажите **Microsoft SQL Server**, затем **Средства настройки**и выберите пункт **Диспетчер конфигурации SQL Server**.  
@@ -193,10 +193,10 @@ ms.locfileid: "62871541"
     GO  
     ```  
   
-##  <a name="Resource"></a>Перемещение базы данных Resource  
+##  <a name="moving-the-resource-database"></a><a name="Resource"></a>Перемещение базы данных Resource  
  База данных Resource находится в каталоге \<*диск*>:\Program Files\Microsoft SQL Server\MSSQL\<версия.\<*имя_экземпляра*>\MSSQL\Binn\\. Эту базу данных нельзя переместить.  
   
-##  <a name="Follow"></a>Дальнейшие действия. После перемещения всех системных баз данных  
+##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a>Дальнейшие действия. После перемещения всех системных баз данных  
  Если все системные базы данных перемещаются на новый диск или том либо на другой сервер с другой буквой диска, выполните следующие обновления.  
   
 -   Измените путь к журналу агента SQL Server. Если этого не сделать, то агент SQL Server не сможет запуститься.  
@@ -221,7 +221,7 @@ ms.locfileid: "62871541"
   
 4.  Остановите и запустите службу SQL Server, чтобы завершить изменение.  
   
-##  <a name="Examples"></a> Примеры  
+##  <a name="examples"></a><a name="Examples"></a> Примеры  
   
 ### <a name="a-moving-the-tempdb-database"></a>A. Перемещение базы данных tempdb  
  В следующем примере показано перемещение файлов базы данных `tempdb` и журнала на новое место в рамках запланированного перемещения.  
@@ -263,7 +263,7 @@ ms.locfileid: "62871541"
   
 5.  Удалите файлы `tempdb.mdf` и `templog.ldf` из исходного местоположения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [База данных ресурсов](resource-database.md)   
  [База данных tempdb](tempdb-database.md)   
  [База данных master](master-database.md)   
@@ -272,7 +272,7 @@ ms.locfileid: "62871541"
  [Перемещение пользовательских баз данных](move-user-databases.md)   
  [Перемещение файлов базы данных](move-database-files.md)   
  [Запуск, остановка, приостановка, возобновление и перезапуск ядро СУБД, агент SQL Server или службы обозреватель SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
- [&#41;Transact-SQL ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [Перестроение системных баз данных](system-databases.md)  
   
   

@@ -12,10 +12,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62837707"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>Получение помощи (SQL Server 2014)
@@ -29,7 +29,7 @@ ms.locfileid: "62837707"
   
  Если вы не нашли нужную информацию в этих источниках, можно отправить вопросы на форумах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] сообщества и в группы новостей или открыть обращение [!INCLUDE[msCoName](../includes/msconame-md.md)] в службу поддержки.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Получение помощи по SQL Server](../../2014/getting-started/getting-sql-server-assistance.md)  
  Содержит ссылки на первичные источники сведений о [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Раздел также содержит ссылки на поддерживаемые сайты.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62837707"
  [Отзывы по SQL Server 2014](../../2014/getting-started/providing-feedback-for-sql-server-2014.md)  
  Описание способов предоставления предложений и отчетов об ошибках по функциям продукта и пользовательскому интерфейсу, отправки отзывов о документации и автоматической [!INCLUDE[msCoName](../includes/msconame-md.md)] отправки отчетов об ошибках и данных об использовании для анализа.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Новые возможности SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)   
  [Установка SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)  
   

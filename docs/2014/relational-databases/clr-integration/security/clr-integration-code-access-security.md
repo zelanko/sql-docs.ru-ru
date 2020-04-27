@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d829ef131bc8772ce2d84391513ffa52b2f2ff1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873740"
 ---
 # <a name="clr-integration-code-access-security"></a>Управление доступом для кода на основе интеграции со средой CLR
@@ -57,10 +57,8 @@ ms.locfileid: "62873740"
   
 |Разрешение|Значения и описание|  
 |----------------|-----------------------------|  
-|`SecurityPermission`|
-  `Execution:` разрешение на выполнение управляемого кода.|  
-|`SqlClientPermission`|
-  `Context connection = true`, `context connection = yes`. Можно использовать только контекстное соединение; в строке соединения можно задавать только значение «context connection=true» или «context connection=yes».<br /><br /> **Алловбланкпассворд = false:**  Пустые пароли не допускаются.|  
+|`SecurityPermission`|`Execution:` разрешение на выполнение управляемого кода.|  
+|`SqlClientPermission`|`Context connection = true`, `context connection = yes`. Можно использовать только контекстное соединение; в строке соединения можно задавать только значение «context connection=true» или «context connection=yes».<br /><br /> **Алловбланкпассворд = false:**  Пустые пароли не допускаются.|  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
  Сборки EXTERNAL_ACCESS имеют те же разрешения, `SAFE` что и сборки, с дополнительной возможностью доступа к внешним системным ресурсам, таким как файлы, сети, переменные среды и реестр.  
@@ -71,32 +69,18 @@ ms.locfileid: "62873740"
 |----------------|-----------------------------|  
 |`DistributedTransactionPermission`|`Unrestricted:`Распределенные транзакции разрешены.|  
 |`DNSPermission`|`Unrestricted:`Разрешение на запрос сведений с серверов доменных имен.|  
-|`EnvironmentPermission`|
-  `Unrestricted:` разрешается полный доступ к системным и пользовательским переменным среды.|  
-|`EventLogPermission`|
-  `Administer:` разрешаются следующие действия: создание источника события, чтение существующих журналов, удаление источников событий или журналов, формирование ответов на записи, очистка журнала событий, прослушивание событий и доступ к коллекции всех журналов событий.|  
-|`FileIOPermission`|
-  `Unrestricted:` разрешен полный доступ к файлам и папкам.|  
-|`KeyContainerPermission`|
-  `Unrestricted:` разрешен полный доступ к ключевым контейнерам.|  
-|`NetworkInformationPermission`|
-  `Access:` разрешено выполнять команду ping.|  
+|`EnvironmentPermission`|`Unrestricted:` разрешается полный доступ к системным и пользовательским переменным среды.|  
+|`EventLogPermission`|`Administer:` разрешаются следующие действия: создание источника события, чтение существующих журналов, удаление источников событий или журналов, формирование ответов на записи, очистка журнала событий, прослушивание событий и доступ к коллекции всех журналов событий.|  
+|`FileIOPermission`|`Unrestricted:` разрешен полный доступ к файлам и папкам.|  
+|`KeyContainerPermission`|`Unrestricted:` разрешен полный доступ к ключевым контейнерам.|  
+|`NetworkInformationPermission`|`Access:` разрешено выполнять команду ping.|  
 |`RegistryPermission`|Предоставляет право чтения разделов `HKEY_CLASSES_ROOT`, `HKEY_LOCAL_MACHINE`, `HKEY_CURRENT_USER`, `HKEY_CURRENT_CONFIG` и `HKEY_USERS.`|  
-|`SecurityPermission`|
-  `Assertion:` способность подтверждать, что все объекты, вызывающие этот код, имеют нужные разрешения на эту операцию.<br /><br /> 
-  `ControlPrincipal:` способность манипулировать основным объектом.<br /><br /> 
-  `Execution:` разрешение на выполнение управляемого кода.<br /><br /> 
-  `SerializationFormatter:` способность предоставлять услуги сериализации.|  
-|**смтппермиссион**|
-  `Access:` разрешены исходящие соединения с портом сервера SMTP 25.|  
-|`SocketPermission`|
-  `Connect:` разрешены исходящие соединения для всех портов и протоколов по транспортному адресу.|  
-|`SqlClientPermission`|
-  `Unrestricted:` разрешен полный доступ к источнику данных.|  
-|`StorePermission`|
-  `Unrestricted:` разрешен полный доступ к хранилищам сертификатов X.509.|  
-|`WebPermission`|
-  `Connect:` разрешены исходящие соединения с веб-ресурсами.|  
+|`SecurityPermission`|`Assertion:` способность подтверждать, что все объекты, вызывающие этот код, имеют нужные разрешения на эту операцию.<br /><br /> `ControlPrincipal:` способность манипулировать основным объектом.<br /><br /> `Execution:` разрешение на выполнение управляемого кода.<br /><br /> `SerializationFormatter:` способность предоставлять услуги сериализации.|  
+|**смтппермиссион**|`Access:` разрешены исходящие соединения с портом сервера SMTP 25.|  
+|`SocketPermission`|`Connect:` разрешены исходящие соединения для всех портов и протоколов по транспортному адресу.|  
+|`SqlClientPermission`|`Unrestricted:` разрешен полный доступ к источнику данных.|  
+|`StorePermission`|`Unrestricted:` разрешен полный доступ к хранилищам сертификатов X.509.|  
+|`WebPermission`|`Connect:` разрешены исходящие соединения с веб-ресурсами.|  
   
 ### <a name="unsafe"></a>UNSAFE  
  Набор UNSAFE предоставляет сборкам неограниченный доступ к внутренним и внешним ресурсам [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Код, вызываемый на выполнение из сборки `UNSAFE`, может также вызывать неуправляемый код.  
@@ -104,13 +88,12 @@ ms.locfileid: "62873740"
  Сборки `UNSAFE` получают набор разрешений `FullTrust`.  
   
 > [!IMPORTANT]  
->  
-  `SAFE` является рекомендованной установкой разрешений для сборок, которые выполняют задачи вычисления и управления данными без доступа к ресурсам вне [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. `EXTERNAL_ACCESS`сборки по умолчанию выполняются в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] качестве учетной записи службы. `EXTERNAL_ACCESS` разрешение на выполнение должно предоставляться только именам входа, доверенным для запуска от имени учетной записи службы. С точки зрения безопасности сборки `EXTERNAL_ACCESS` и `UNSAFE` являются идентичными. Но сборки `EXTERNAL_ACCESS` предоставляют различные средства защиты, обладающие надежностью и прочностью, которые не предусмотрены в сборках `UNSAFE`. Указание `UNSAFE` позволяет коду в сборке выполнять недопустимые операции с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения о создании сборок среды CLR в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]см. в разделе [Управление сборками интеграции со средой CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
+>  `SAFE` является рекомендованной установкой разрешений для сборок, которые выполняют задачи вычисления и управления данными без доступа к ресурсам вне [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. `EXTERNAL_ACCESS`сборки по умолчанию выполняются в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] качестве учетной записи службы. `EXTERNAL_ACCESS` разрешение на выполнение должно предоставляться только именам входа, доверенным для запуска от имени учетной записи службы. С точки зрения безопасности сборки `EXTERNAL_ACCESS` и `UNSAFE` являются идентичными. Но сборки `EXTERNAL_ACCESS` предоставляют различные средства защиты, обладающие надежностью и прочностью, которые не предусмотрены в сборках `UNSAFE`. Указание `UNSAFE` позволяет коду в сборке выполнять недопустимые операции с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения о создании сборок среды CLR в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]см. в разделе [Управление сборками интеграции со средой CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
   
 ## <a name="accessing-external-resources"></a>Доступ к внешним ресурсам  
  Если сборка с определяемыми пользователем типами (UDT), хранимыми процедурами или конструкциями другого типа зарегистрирована с набором разрешений `SAFE`, то управляемый код, который выполняется в конструкции, не способен получить доступ к внешним ресурсам. Но если задан набор разрешений `EXTERNAL_ACCESS` или `UNSAFE` и в управляемом коде предпринимается попытка получить доступ к внешним ресурсам, то в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] применяются следующие правила.  
   
-|Если командлет|То|  
+|Если|То|  
 |--------|----------|  
 |Контекст выполнения соответствует имени входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|Попытки получить доступ к внешним ресурсам отклоняются, и активизируется исключение безопасности.|  
 |Контекст выполнения соответствует имени входа Windows, и контекстом выполнения является первоначальный вызывающий объект.|Доступ к внешнему ресурсу предоставляется в контексте безопасности учетной записи [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
@@ -125,11 +108,11 @@ ms.locfileid: "62873740"
 ||`SAFE`|`EXTERNAL_ACCESS`|`UNSAFE`|  
 |`Code Access Security Permissions`|Только выполнение|Выполнение и доступ к внешним ресурсам|Неограниченное (включая P/Invoke)|  
 |`Programming model restrictions`|Да|Да|Без ограничений|  
-|`Verifiability requirement`|Да|Да|нет|  
+|`Verifiability requirement`|Да|Да|Нет|  
 |`Local data access`|Да|Да|Да|  
-|`Ability to call native code`|нет|нет|Да|  
+|`Ability to call native code`|Нет|Нет|Да|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Безопасность интеграции со средой CLR](clr-integration-security.md)   
  [Атрибуты защиты узла и программирование интеграции со средой CLR](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
  [Ограничения модели программирования интеграции со средой CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   

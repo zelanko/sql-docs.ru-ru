@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62855719"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Урок 2. Добавление моделей интеллектуального анализа данных в структуру интеллектуального анализа временных рядов
+# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Урок 2. Добавление моделей в структуру интеллектуального анализа данных на основе временных рядов
   На этом занятии будет добавлена новая модель интеллектуального анализа данных в структуру интеллектуального анализа данных, созданную на [занятии 1: создание модели и структуры интеллектуального анализа данных временных рядов](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
   
 ## <a name="alter-mining-structure-statement"></a>Инструкция ALTER MINING STRUCTURE  
@@ -220,7 +220,7 @@ WITH DRILLTHROUGH
 ## <a name="next-lesson"></a>Следующее занятие  
  [Урок 3. Обработка структуры и моделей временных рядов](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Алгоритм временных рядов (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   

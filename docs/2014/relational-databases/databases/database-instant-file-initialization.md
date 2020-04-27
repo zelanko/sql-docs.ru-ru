@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 491c8a63c7ee3ed06c90356c58820f34ed3c0bf9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62872100"
 ---
 # <a name="database-instant-file-initialization"></a>Мгновенная инициализация файлов базы данных
@@ -57,7 +57,7 @@ ms.locfileid: "62872100"
   
 5.  Нажмите кнопку **Применить**, а затем закройте `Local Security Policy` все диалоговые окна.  
   
-### <a name="security-considerations"></a>Соображения безопасности  
+### <a name="security-considerations"></a>Вопросы безопасности  
  Поскольку удаленное содержимое диска перезаписывается только по мере записи новых данных в файлы, доступ к удаленному содержимому может получить неавторизованный участник. По мере подключения файла базы данных к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]угроза раскрытия сведений уменьшается благодаря списку управления доступом на уровне пользователей (DACL) в файле. DACL разрешает доступ к файлу только учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и локальному администратору. Однако при отсоединении файла доступ к нему может получить пользователь или служба, не обладающие правом SE_MANAGE_VOLUME_NAME. Аналогичная угроза существует при резервном копировании базы данных. Удаленное содержимое может стать доступным неавторизованному пользователю или службе, если файл резервного копирования не защищен соответствующим DACL.  
   
  Если вероятность раскрытия удаленного содержимого является серьезной проблемой, необходимо выполнить одно из следующих действия (или оба).  
@@ -69,7 +69,7 @@ ms.locfileid: "62872100"
 > [!NOTE]  
 >  Отключение мгновенной инициализации файлов влияет только на создаваемые или увеличивающиеся в размере файлы после отзыва прав пользователя.  
   
-## <a name="see-also"></a>См. также:  
- [Создание &#40;базы данных SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
+## <a name="see-also"></a>См. также  
+ [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
   
