@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c1c423bad8742b0a9760945e3823d6ef159c1e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67046700"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>Подготовка данных к массовому экспорту или импорту (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "67046700"
   
 -   Для массового экспорта из таблицы или представления в файл данных необходимо разрешение SELECT в таблице или представлении, над которым производится операция массового копирования.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может использовать параллельные Просмотры для получения данных. Поэтому обычно не гарантируется определенный порядок размещения в файле данных строк таблицы, над которыми была выполнена операция массового экспорта из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы строки таблицы для массового экспорта размещались в файле данных в определенном порядке, примените параметр **queryout** для массового экспорта из запроса и укажите предложение ORDER BY.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может использовать параллельный просмотр для получения данных. Поэтому обычно не гарантируется определенный порядок размещения в файле данных строк таблицы, над которыми была выполнена операция массового экспорта из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы строки таблицы для массового экспорта размещались в файле данных в определенном порядке, примените параметр **queryout** для массового экспорта из запроса и укажите предложение ORDER BY.  
   
 ## <a name="data-file-format-requirements-for-bulk-import"></a>Требования к формату файлов данных для массового импорта  
  Файл, из которого необходимо импортировать данные, должен отвечать следующим основным требованиям.  
@@ -50,12 +50,12 @@ ms.locfileid: "67046700"
   
 -   Данные могут быть в символьном или исходном двоичном формате, включая Юникод.  
   
--   Для импорта данных с использованием команды **bcp** , инструкции BULK INSERT или инструкции INSERT… SELECT * FROM OPENROWSET(BULK...), целевая таблица должна уже существовать.  
+-   Для импорта данных с использованием команды **bcp**, инструкции BULK INSERT или инструкции INSERT… SELECT * FROM OPENROWSET(BULK...), целевая таблица должна уже существовать.  
   
 -   Каждое поле в файле данных должно быть совместимо с соответствующим столбцом в целевой таблице. Например, поле типа `int` нельзя загрузить в столбец типа `datetime`. Дополнительные сведения см. в статьях [Форматы данных для массового экспорта или импорта (SQL Server)](data-formats-for-bulk-import-or-bulk-export-sql-server.md) и [Указание форматов данных для совместимости с помощью программы bcp (SQL Server)](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
     > [!NOTE]  
-    >  Указать для импорта из файла данных не весь файл, а подмножество строк можно с помощью команды **bcp** с параметром **-F** *first_row* и (или) параметром **-L** *last_row*. Дополнительные сведения см. в разделе [bcp Utility](../../tools/bcp-utility.md).  
+    >  Указать для импорта из файла данных не весь файл, а подмножество строк можно с помощью команды **bcp** с параметром **-F** *первая_строка* и параметром **-L** *последняя_строка*. Дополнительные сведения см. в разделе [bcp Utility](../../tools/bcp-utility.md).  
   
 -   Чтобы импортировать данные из файлов данных фиксированной длины или с полями фиксированной длины, следует использовать файл форматирования. Дополнительные сведения см. в разделе [XML-файлы форматирования (SQL Server)](xml-format-files-sql-server.md).  
   
@@ -67,13 +67,13 @@ ms.locfileid: "67046700"
   
      Чтобы выполнить массовый импорт данных из файла [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro, таблицы Visual FoxPro (DBF) или листа [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (XLS), данные необходимо преобразовать в CSV-файл, который соответствует описанным ранее ограничениям. Этот файл обычно имеет расширение CSV. Затем его можно использовать как файл данных в операции массового импорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     На 32-разрядных системах возможно импортировать данные CSV в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] без оптимизации массового импорта с помощью параметра [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql) с поставщиком OLE DB для Jet. Поставщик Jet обрабатывает текстовые файлы как таблицы со схемой, определенной в файле schema.ini, который расположен в том же каталоге, что и источник данных.  Для CSV-данных одним из параметров в файле schema.ini будет «FORMAT=CSVDelimited». Чтобы использовать такое решение, нужно представлять принципы работы поставщика Jet Test IISAMm: знать синтаксис строки соединения, правила использования schema.ini, параметры реестра и т. д.  Лучшими источниками для получения таких сведений служат справка Microsoft Access и статьи базы знаний. Дополнительные сведения см. в статье [Инициализация драйвера источников текстовых данных](https://docs.microsoft.com/office/client-developer/access/desktop-database-reference/initializing-the-text-data-source-driver), [Использование распределенного запроса SQL Server 7.0 со связанным доступом для баз данных с защищенным доступом](https://go.microsoft.com/fwlink/?LinkId=128504), [Инструкции. Использование Jet OLE DB Provider 4.0 для подключения к базам данных ISAM](https://go.microsoft.com/fwlink/?LinkId=128505)и [Как открывать текстовые файлы с разделителями с помощью Text IIsam Jet Provider](https://go.microsoft.com/fwlink/?LinkId=128501).  
+     На 32-разрядных системах возможно импортировать данные CSV в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] без оптимизации массового импорта с помощью параметра [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql) с поставщиком OLE DB для Jet. Поставщик Jet обрабатывает текстовые файлы как таблицы со схемой, определенной в файле schema.ini, который расположен в том же каталоге, что и источник данных.  Для CSV-данных одним из параметров в файле schema.ini будет «FORMAT=CSVDelimited». Чтобы использовать такое решение, нужно представлять принципы работы поставщика Jet Test IISAMm: знать синтаксис строки соединения, правила использования schema.ini, параметры реестра и т. д.  Лучшими источниками для получения таких сведений служат справка Microsoft Access и статьи базы знаний. Дополнительные сведения см. в разделах [Инициализация драйвера текстового источника данных](https://docs.microsoft.com/office/client-developer/access/desktop-database-reference/initializing-the-text-data-source-driver), [Как использовать распределенный запрос SQL Server 7.0 со связанным сервером для защищенных баз данных Access](https://go.microsoft.com/fwlink/?LinkId=128504), [Как использовать поставщик Jet OLE DB 4.0 для подключения к базам данных ISAM](https://go.microsoft.com/fwlink/?LinkId=128505) (на английском языке) и [Как открыть текстовые файлы с разделителями с помощью драйвера Text IIsam поставщика Jet](https://go.microsoft.com/fwlink/?LinkId=128501) (на английском языке).  
   
  Кроме того, для массового импорта данных из файла данных в таблицу необходимо следующее.  
   
 -   Пользователи должны иметь разрешения INSERT и SELECT в таблице. Пользователи также должны иметь разрешение ALTER TABLE в случае использования параметров, требующих операций DDL, например отмены ограничений.  
   
--   При массовом импорте данных с использованием инструкций BULK INSERT или INSERT ... SELECT * FROM OPENROWSET(BULK...), файл данных должен быть доступен для операций чтения из профиля безопасности процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (если пользователь регистрируется с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) или из процедуры входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, выполняемой с делегированными полномочиями безопасности. В дополнение пользователь должен иметь разрешение ADMINISTER BULK OPERATIONS для чтения файла.  
+-   При массовом импорте данных с использованием инструкций BULK INSERT или INSERT ... SELECT * FROM OPENROWSET(BULK...), файл данных должен быть доступен для операций чтения из профиля безопасности процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (если пользователь регистрируется с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) или из процедуры входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, выполняемой с делегированными полномочиями безопасности. В дополнение пользователь должен иметь разрешение ADMINISTER BULK OPERATIONS для чтения файла.  
   
 > [!NOTE]  
 >  Массовый импорт в секционированное представление не поддерживается, и попытки массового импорта данных в секционированное представление завершаются неудачно.  
@@ -90,8 +90,8 @@ ms.locfileid: "67046700"
 ## <a name="see-also"></a>См. также:  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [Типы данных &#40;&#41;Transact-SQL](/sql/t-sql/data-types/data-types-transact-sql)   
- [Используйте символьный формат для импорта или экспорта &#40;данных SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)   
- [Используйте собственный формат для импорта или экспорта &#40;данных SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+ [Типы данных (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)   
+ [Использование символьного формата для импорта и экспорта данных (SQL Server)](use-character-format-to-import-or-export-data-sql-server.md)   
+ [Использование собственного формата для импорта и экспорта данных (SQL Server)](use-native-format-to-import-or-export-data-sql-server.md)  
   
   

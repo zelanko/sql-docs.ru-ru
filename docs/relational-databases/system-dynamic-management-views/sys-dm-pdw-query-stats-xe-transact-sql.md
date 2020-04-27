@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8cb9980f74bdb37b1fab43db352e35c43151c390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899145"
 ---
 # <a name="sysdm_pdw_query_stats_xe-transact-sql"></a>sys. dm_pdw_query_stats_xe (Transact-SQL)
@@ -24,21 +24,21 @@ ms.locfileid: "67899145"
 
   Это динамическое административное представление является устаревшим и будет удалено в следующем выпуске. В этом выпуске он возвращает 0 строк.  
   
-|Имя столбца|Тип данных|Description|Диапазонный индекс|  
+|Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
-|event|**nvarchar (60)**|Ключ для этого представления.||  
+|event|**nvarchar(60)**|Ключ для этого представления.||  
 |event_id|**nvarchar (36)**|||  
 |create_time|**datetime**|||  
 |session_id|**int**|Идентификатор сеанса.|См. раздел session_id в [sys. dm_pdw_exec_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
 |cpu|**int**|||  
 |reads|**int**|Число логических операций чтения с начала события.||  
 |writes|**int**|Число логических операций записи с начала события.||  
-|sql_text|**nvarchar (4000)**|||  
+|sql_text|**nvarchar(4000)**|||  
 |client_app_name|**nvarchar(255)**|||  
 |tsql_stack|**nvarchar(255)**|||  
 |pdw_node_id|**int**|Узел, на котором работает экземпляр XEvent.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

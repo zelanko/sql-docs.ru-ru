@@ -18,10 +18,10 @@ ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0bc8ea22699762927a026ae4cc811500c193555c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68072755"
 ---
 # <a name="sp_addextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
@@ -48,10 +48,10 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 `[ @dllname = ] 'dll'`Имя библиотеки DLL, содержащей функцию. *DLL* имеет тип **varchar (255)** и не имеет значения по умолчанию. Рекомендуется указывать полный путь DLL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- None  
+ Отсутствуют  
   
 ## <a name="remarks"></a>Remarks  
  После создания расширенной хранимой процедуры ее необходимо добавить в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью **sp_addextendedproc**. Дополнительные сведения см. [в разделе Добавление расширенной хранимой процедуры в SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  
@@ -76,11 +76,11 @@ EXEC sp_addextendedproc xp_hello, 'c:\xp_hello.dll';
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [ВЫПОЛНЕНИЕ &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
+ [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
  [ПРЕДОСТАВЛЕНИЕ &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [ОТОЗВАТЬ &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
  [sp_helpextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

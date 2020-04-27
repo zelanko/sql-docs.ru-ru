@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e3aec7e136b656b7f33646d50b746e410263059a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284988"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Функциональная область управления интеграцией (диспетчер основных данных)
@@ -36,9 +36,9 @@ ms.locfileid: "67284988"
   
  [Создание представления подписки &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)  
   
- [Удаление представления подписки &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)  
+ [Удаление представления подписки (службы Master Data Services)](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Веб-приложение диспетчера основных данных](../../2014/master-data-services/master-data-manager-web-application.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ebc71c304939a977ac34cc2fad819edd463614fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67894996"
 ---
 # <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
@@ -46,13 +46,13 @@ sp_manage_jobs_by_login
   
 `[ @current_owner_login_name = ] 'current_owner_login_name'`Имя входа текущего владельца задания. Аргумент *current_owner_login_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @new_owner_login_name = ] 'new_owner_login_name'`Имя входа нового владельца задания. Используйте этот параметр, только ** если действие **переназначено**. Аргумент *new_owner_login_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @new_owner_login_name = ] 'new_owner_login_name'`Имя входа нового владельца задания. Используйте этот параметр, только *action* если действие **переназначено**. Аргумент *new_owner_login_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- None  
+ Отсутствуют  
   
 ## <a name="permissions"></a>Разрешения  
  Для выполнения этой хранимой процедуры пользователям должна быть предоставлена предопределенная роль сервера **sysadmin** .  
@@ -71,8 +71,8 @@ EXEC dbo.sp_manage_jobs_by_login
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

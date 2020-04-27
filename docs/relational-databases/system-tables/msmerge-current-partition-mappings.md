@@ -18,10 +18,10 @@ ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a0297b8af4e5cba9fe96df935d6d1b43a8e2d5f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907231"
 ---
 # <a name="msmerge_current_partition_mappings"></a>MSmerge_current_partition_mappings
@@ -29,15 +29,15 @@ ms.locfileid: "67907231"
 
   В **MSmerge_current_partition_mappings** таблице хранится по одной строке для каждого идентификатора секции, к которому принадлежит данная измененная строка. Эта таблица хранится в базе данных публикации.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|Номер публикации, который хранится в **sysmergepublications**.|  
 |**tablenick**|**int**|Псевдоним опубликованной таблицы.|  
-|**rowguid**|**UNIQUEIDENTIFIER**|Идентификатор данной строки.|  
+|**rowguid**|**uniqueidentifier**|Идентификатор данной строки.|  
 |**partition_id**|**int**|Идентификатор секции, к которой принадлежит строка. Значение равно-1, если изменение строки относится ко всем подписчикам.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

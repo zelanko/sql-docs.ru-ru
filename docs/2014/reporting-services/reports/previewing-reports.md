@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 21928cd6637815000983e8a0fe05aa4e77d1c216
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67412975"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Предварительный просмотр отчетов в службах SQL Server Reporting Services (SSRS)
@@ -55,7 +55,7 @@ ms.locfileid: "67412975"
 
  Отчеты также можно протестировать путем публикации их на тестовом сервере. Публикация отчета на тестовом сервере происходит точно так же, как публикация на производственном сервере. Сведения о публикации отчета см. в разделе [Публикация отчетов на сервере отчетов](publishing-reports-to-a-report-server.md).  
   
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
  - [Печать отчетов (построитель отчетов и службы SSRS)](../report-builder/print-reports-report-builder-and-ssrs.md)
  - [Печать отчета (построитель отчетов и службы SSRS)](../report-builder/print-a-report-report-builder-and-ssrs.md)

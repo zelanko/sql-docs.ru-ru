@@ -18,10 +18,10 @@ ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 74860a8f4c8dee263ea7ee0eea75679c721d1fa5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68032978"
 ---
 # <a name="sp_addapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
@@ -49,7 +49,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 `[ @password = ] 'password'`Пароль, необходимый для активации роли приложения. Аргумент *Password* имеет тип **sysname**и не имеет значения по умолчанию. *пароль* не может иметь значение null.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  В ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователи (и роли) не полностью отличались от схем. Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], схемы полностью отличаются от ролей. Эта новая архитектура отражена в поведении CREATE APPLICATION ROLE. Эта инструкция заменяет **sp_addapprole**.  
@@ -80,7 +80,7 @@ EXEC sp_addapprole 'SalesApp', 'x97898jLJfcooFUYLKm387gf3' ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Создание роли приложения &#40;&#41;Transact-SQL](../../t-sql/statements/create-application-role-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)  
   
   

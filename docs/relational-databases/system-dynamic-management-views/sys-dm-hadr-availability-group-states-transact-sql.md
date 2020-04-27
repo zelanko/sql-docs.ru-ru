@@ -20,10 +20,10 @@ ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 91efefbdc28480cf2a3b3fb579dba0946dba8a2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900778"
 ---
 # <a name="sysdm_hadr_availability_group_states-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
@@ -34,25 +34,25 @@ ms.locfileid: "67900778"
 > [!NOTE]  
 >  Чтобы получить полный список, выполните запрос к представлению каталога [sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) .  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**group_id**|**UNIQUEIDENTIFIER**|Уникальный идентификатор группы доступности.|  
+|**group_id**|**uniqueidentifier**|Уникальный идентификатор группы доступности.|  
 |**primary_replica**|**varchar (128)**|Имя экземпляра сервера, на котором размещена текущая первичная реплика.<br /><br /> NULL = не первичная реплика, или не удается связаться с отказоустойчивым кластером WSFC.|  
 |**primary_recovery_health**|**tinyint**|Указывает состояние работоспособности (восстановления) первичной реплики, одно из следующих значений:<br /><br /> 0 = выполняется<br /><br /> 1 = в сети<br /><br /> NULL<br /><br /> Во вторичных репликах столбец **primary_recovery_health** имеет значение null.|  
-|**primary_recovery_health_desc**|**nvarchar (60)**|Описание **primary_replica_health**, одно из следующих:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
+|**primary_recovery_health_desc**|**nvarchar(60)**|Описание **primary_replica_health**, одно из следующих:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**secondary_recovery_health**|**tinyint**|Указывает состояние восстановления реплики вторичной реплики, одно из следующих:<br /><br /> 0 = выполняется<br /><br /> 1 = в сети<br /><br /> NULL<br /><br /> В первичной реплике **secondary_recovery_health** столбец имеет значение null.|  
-|**secondary_recovery_health_desc**|**nvarchar (60)**|Описание **secondary_recovery_health**, одно из следующих:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
+|**secondary_recovery_health_desc**|**nvarchar(60)**|Описание **secondary_recovery_health**, одно из следующих:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**synchronization_health**|**tinyint**|Отражает сводный показатель **synchronization_health** всех реплик доступности в группе доступности. Ниже приведены возможные значения и их описания.<br /><br /> 0: неработоспособен. Ни одна из реплик доступности не имеет работоспособного **synchronization_health** (2 = работоспособный).<br /><br /> 1: частично работоспособен. Некоторые, но не все реплики доступности находятся в исправном состоянии.<br /><br /> 2: исправен. Все реплики доступности находятся в исправном состоянии синхронизации.<br /><br /> Сведения о работоспособности синхронизации реплики см. в столбце **synchronization_health** в [sys. Dm_hadr_availability_replica_states &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md).|  
-|**synchronization_health_desc**|**nvarchar (60)**|Описание **synchronization_health**, одно из следующих:<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
+|**synchronization_health_desc**|**nvarchar(60)**|Описание **synchronization_health**, одно из следующих:<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Мониторинг групп доступности &#40;&#41;Transact-SQL](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Always On группы доступности &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Always On динамические административные представления и функции групп доступности &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
+ [Динамические представления управления и функции, связанные с группами доступности AlwaysOn (Transact-SQL)](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
   
   

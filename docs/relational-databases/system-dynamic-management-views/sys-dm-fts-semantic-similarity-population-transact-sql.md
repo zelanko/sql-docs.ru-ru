@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 280ab197ef9347c6a209be7ef05e8f1ce2dfd23e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900875"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
@@ -34,19 +34,19 @@ ms.locfileid: "67900875"
     
 ||||  
 |-|-|-|  
-|**Имя столбца**|**Тип**|**Описание**|  
+|**Имя столбца**|**Type**|**Описание**|  
 |**database_id**|**int**|Идентификатор базы данных, в которой содержится заполняемый полнотекстовый индекс.|  
 |**catalog_id**|**int**|Идентификатор полнотекстового каталога, в котором содержится полнотекстовый индекс.|  
 |**table_id**|**int**|Идентификатор таблицы, в которой содержится заполняемый полнотекстовый индекс.|  
 |**document_count**|**int**|Общее количество документов в заполнении.|  
 |**document_processed_count**|**int**|Число документов, обработанных с начала этого цикла заполнения|  
 |**completion_type**|**int**|Состояние завершения данного заполнения.|  
-|**completion_type_description**|**nvarchar (120)**|Описание типа завершения.|  
+|**completion_type_description**|**nvarchar(120)**|Описание типа завершения.|  
 |**worker_count**|**int**|Число рабочих потоков, связанных с извлечением данных о подобии|  
-|**состояние**|**int**|Состояние операции заполнения. Примечание. Некоторые состояния являются временными. Это может быть:<br /><br /> 3 = запускается<br /><br /> 5 = выполняется нормально<br /><br /> 7 = обработка остановлена<br /><br /> 11 = заполнение прервано|  
-|**status_description**|**nvarchar (120)**|Описание состояния заполнения.|  
+|**status**|**int**|Состояние операции заполнения. Примечание. Некоторые состояния являются временными. Это может быть:<br /><br /> 3 = запускается<br /><br /> 5 = выполняется нормально<br /><br /> 7 = обработка остановлена<br /><br /> 11 = заполнение прервано|  
+|**status_description**|**nvarchar(120)**|Описание состояния заполнения.|  
 |**start_time**|**datetime**|Время начала заполнения.|  
-|**incremental_timestamp**|**TIMESTAMP**|Для полного заполнения содержит отметку времени его начала. Для остальных типов заполнения содержит последнюю зафиксированную контрольную точку (это значение отражает процесс заполнения).|  
+|**incremental_timestamp**|**timestamp**|Для полного заполнения содержит отметку времени его начала. Для остальных типов заполнения содержит последнюю зафиксированную контрольную точку (это значение отражает процесс заполнения).|  
   
 ## <a name="general-remarks"></a>Общие замечания  
  Дополнительные сведения см. в разделе [Управление семантическим поиском и наблюдение за](../../relational-databases/search/manage-and-monitor-semantic-search.md)ним.  
@@ -54,7 +54,7 @@ ms.locfileid: "67900875"
 ## <a name="metadata"></a>Метаданные  
  Дополнительные сведения о состоянии семантического индексирования см. в статье [sys. dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
@@ -67,7 +67,7 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление и наблюдение за семантическим поиском](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   

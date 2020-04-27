@@ -17,10 +17,10 @@ ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8e6f6a7cb749ff2b22a1f7563b43ce07e060aab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67911556"
 ---
 # <a name="childcount-property-ado-md"></a>Свойство ChildCount (многомерные объекты ADO)
@@ -39,7 +39,7 @@ ms.locfileid: "67911556"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Member (многомерные объекты ADO)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство Children (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/children-property-ado-md.md)   
  [Свойство Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
  [Коллекция Members (многомерные объекты ADO)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)

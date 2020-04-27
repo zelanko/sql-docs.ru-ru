@@ -18,10 +18,10 @@ ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68072671"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
@@ -54,13 +54,13 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  Имя входа на локальный сервер. *локаллогин* имеет тип **sysname**и значение по умолчанию NULL. Значение NULL указывает, что эта запись применяется ко всем локальным именам входа, подключающимся к *рмтсрвнаме*. Если значение не равно NULL, *локаллогин* может [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] быть именем входа или именем входа Windows. Имени входа Windows должен быть предоставлен либо прямой доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо доступ через членство в группе Windows, обладающей нужными правами доступа.  
   
  `[ @rmtuser = ] 'rmtuser'`  
- Удаленное имя входа, используемое для ** подключения к @useself рмтсрвнаме, если имеет значение false. Если удаленный сервер является экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который не использует проверку подлинности Windows, *рмтусер* является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа. *рмтусер* имеет тип **sysname**и значение по умолчанию NULL.  
+ Удаленное имя входа, используемое для *rmtsrvname* подключения к @useself рмтсрвнаме, если имеет значение false. Если удаленный сервер является экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который не использует проверку подлинности Windows, *рмтусер* является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа. *рмтусер* имеет тип **sysname**и значение по умолчанию NULL.  
   
  `[ @rmtpassword = ] 'rmtpassword'`  
  Пароль, связанный с *рмтусер*. *рмтпассворд* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  Когда пользователь входит на локальный сервер и выполняет распределенный запрос, который обращается к таблице на связанном сервере, то для открытия таблицы локальный сервер должен войти на связанный сервер под именем данного пользователя. Учетные данные входа, с помощью которых локальный сервер будет входить на связанный сервер, задаются с помощью хранимой процедуры sp_addlinkedsrvlogin.  
@@ -97,7 +97,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 EXEC sp_addlinkedsrvlogin 'Accounts';  
 ```  
   
- или  
+ Или  
   
 ```  
 EXEC sp_addlinkedsrvlogin 'Accounts', 'true';  
@@ -106,7 +106,7 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'true';
 > [!NOTE]  
 >  Если для отдельных имен входа созданы явные сопоставления, то они имеют преимущество перед любыми глобальными сопоставлениями для данного связанного сервера.  
   
-### <a name="b-connecting-a-specific-login-to-the-linked-server-by-using-different-user-credentials"></a>Б. Подключение указанного имени входа к связанному серверу с помощью других учетных данных  
+### <a name="b-connecting-a-specific-login-to-the-linked-server-by-using-different-user-credentials"></a>Б) Подключение указанного имени входа к связанному серверу с помощью других учетных данных  
  В следующем примере создается сопоставление, гарантирующее, что пользователь Windows `Domain\Mary` будет подключаться к связанному серверу `Accounts` с помощью имени входа `MaryP` и пароля `d89q3w4u`.  
   
 ```  
@@ -116,10 +116,10 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'false', 'Domain\Mary', 'MaryP', 'd89q3w4u
 > [!IMPORTANT]  
 >  В этом примере проверка подлинности Windows не применяется. Пароли передаются в незашифрованном виде. Пароли могут быть видны в определениях источника данных и скриптах, сохраненных на диске и в составе резервных копий, а также в файлах журналов. Никогда не используйте для таких соединений пароль администратора. За инструкциями по безопасности среды обратитесь к сетевому администратору.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога связанных серверов &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_droplinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: b75eb53da9961025e3310f27e4a12608dd4fda78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899362"
 ---
 # <a name="sysdm_pdw_network_credentials-transact-sql"></a>sys. dm_pdw_network_credentials (Transact-SQL)
@@ -24,11 +24,11 @@ ms.locfileid: "67899362"
 
   Возвращает список всех сетевых учетных данных, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] хранящихся в устройстве для всех целевых серверов. Результаты перечисляются для узла управления и каждого из вычислений.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |pdw_node_id|**int**|Уникальный числовой идентификатор, связанный с узлом.|  
-|target_server_name|**nvarchar (32)**|IP-адрес целевого сервера, доступ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] к которому будет осуществляться с помощью учетных данных пользователя и пароля.|  
-|Имя пользователя|**nvarchar (32)**|Имя пользователя, для которого хранится пароль.|  
+|target_server_name|**nvarchar(32)**|IP-адрес целевого сервера, доступ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] к которому будет осуществляться с помощью учетных данных пользователя и пароля.|  
+|username|**nvarchar(32)**|Имя пользователя, для которого хранится пароль.|  
 |last_modified|**datetime**|Дата и время последней операции, которая изменила учетные данные.|  
   
 ## <a name="permissions"></a>Разрешения  
@@ -37,7 +37,7 @@ ms.locfileid: "67899362"
 ## <a name="general-remarks"></a>Общие замечания  
  Ключ для этого динамического административного представления *pdw_node_id* и *target_server_name*.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

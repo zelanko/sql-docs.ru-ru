@@ -21,10 +21,10 @@ ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e817b17de8a8af93a13628334337686abbe66b5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900689"
 ---
 # <a name="sysdm_hadr_auto_page_repair-transact-sql"></a>sys.dm_hadr_auto_page_repair (Transact-SQL)
@@ -34,24 +34,24 @@ ms.locfileid: "67900689"
   
   В следующей таблице определяется значение различных столбцов.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Идентификатор базы данных, которой принадлежит строка.|  
 |**file_id**|**int**|Идентификатор файла, в котором находится страница.|  
 |**page_id**|**bigint**|Идентификатор страницы в файле.|  
-|**error_type**|**int**|Тип ошибки. Значения могут быть такими:<br /><br /> **-** 1 = все ошибки оборудования 823<br /><br /> 1 = ошибки 824, кроме неверной контрольной суммы или разрыва страницы (например, неверный идентификатор страницы);<br /><br /> 2 = неверная контрольная сумма;<br /><br /> 3 = разрыв страницы.|  
+|**error_type**|**int**|Тип ошибки. Допустимые значения:<br /><br /> **-** 1 = все ошибки оборудования 823<br /><br /> 1 = ошибки 824, кроме неверной контрольной суммы или разрыва страницы (например, неверный идентификатор страницы);<br /><br /> 2 = неверная контрольная сумма;<br /><br /> 3 = разрыв страницы.|  
 |**page_status**|**int**|Состояние попытки восстановления страниц:<br /><br /> 2 = в очереди на запрос к участнику;<br /><br /> 3 = запрос отправлен участнику;<br /><br /> 4 = страница успешно исправлена.<br /><br /> 5 = не удалось восстановить страницу во время последней попытки или автоматического восстановления страницы, попытается снова восстановить страницу.|  
 |**modification_time**|**datetime**|Время последнего изменения состояния страницы.|  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Автоматическое восстановление страниц &#40;группы доступности:&#41;зеркального отображения базы данных](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
- [Управление таблицей suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
+ [Управление таблицей suspect_pages (SQL Server)](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   
   
 

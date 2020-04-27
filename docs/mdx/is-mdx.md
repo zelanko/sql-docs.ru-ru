@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: aaf4151d8291ccd4249892c6ef8fce8a3d280f6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905982"
 ---
 # <a name="is-mdx"></a>IS (многомерные выражения)
@@ -28,7 +28,7 @@ Expression1 IS ( Expression2 | NULL )
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Expression1*  
+ *Выражения*  
  Допустимое многомерное выражение, возвращающее ссылку на многомерный объект.  
   
  *Expression2*  
@@ -61,7 +61,7 @@ Expression1 IS ( Expression2 | NULL )
   
  `[Adventure Works]`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-operator-reference-mdx.md)  
   
   

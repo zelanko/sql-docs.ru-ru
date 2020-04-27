@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 959c595f4ac394bbaf50c07b27a4679d9a30556e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67915134"
 ---
 # <a name="sysdatabase_event_session_events-azure-sql-database"></a>sys.database_event_session_events (база данных SQL Azure)
@@ -27,13 +27,13 @@ ms.locfileid: "67915134"
 |-|  
 |**Применимо к**версии [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 12 и всем более поздним версиям.|  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Идентификатор сеанса событий. Не допускает значение NULL.|  
 |event_id|**int**|Идентификатор события. Этот идентификатор уникален внутри объекта сеанса событий. Не допускает значение NULL.|  
-|name|**имеет sysname**|Имя события. Не допускает значение NULL.|  
-|Пакет|**имеет sysname**|Имя пакета событий, который содержит событие. Не допускает значение NULL.|  
-|module|**имеет sysname**|Имя модуля, который содержит событие. Не допускает значение NULL.|  
+|name|**sysname**|Имя события. Не допускает значение NULL.|  
+|пакет|**sysname**|Имя пакета событий, который содержит событие. Не допускает значение NULL.|  
+|module|**sysname**|Имя модуля, который содержит событие. Не допускает значение NULL.|  
 |predicate|**nvarchar (3000)**|Выражение предиката, применяемое к событию. Допускает значение NULL.|  
 |predicate_xml|**nvarchar (3000)**|Выражение предиката XML, применяемое к событию. Допускает значение NULL.|  
   
@@ -45,10 +45,10 @@ ms.locfileid: "67915134"
   
 ||||  
 |-|-|-|  
-|С|Кому|Связь|  
+|Исходный тип|Кому|Связь|  
 |sys. database_event_session_events. event_session_id|sys. database_event_sessions. event_session_id|Многие к одному|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   
   

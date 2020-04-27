@@ -15,16 +15,16 @@ ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9464af64c9b55d49aa23336d48a21480c4c54013
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919109"
 ---
 # <a name="delete-method-example-vbscript"></a>Пример метода Delete (VBScript)
 В этом примере используется метод [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) для удаления указанной записи из [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- Используйте следующий пример на странице Active Server (ASP). Чтобы просмотреть этот полнофункциональный пример, необходимо либо иметь источник данных Адвворкс. mdb (установленный вместе с пакетом SDK), расположенный в папке C:\Program Files\Microsoft Platform Сдк\самплес\датаакцесс\рдс\рдстест\адвворкс.МДБ, либо изменить путь в примере кода, чтобы он отражал фактическое расположение этого файла. Это файл базы данных Microsoft Access.  
+ Используйте следующий пример на странице Active Server (ASP). Чтобы просмотреть этот полнофункциональный пример, необходимо либо иметь источник данных Адвворкс. mdb (установленный вместе с пакетом SDK), расположенный в папке C:\Program Files\Microsoft Platform Сдк\самплес\датаакцесс\рдс\рдстест\адвворкс.МДБ, либо изменить путь в примере кода, чтобы отразить фактическое расположение этого файла. Это файл базы данных Microsoft Access.  
   
  Используйте **Find** для поиска файла адовбс. Inc и поместите его в каталог, который планируется использовать. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **делетевбс. ASP**. Результат можно просмотреть в любом клиентском браузере.  
   
@@ -169,6 +169,6 @@ End Sub
 <!-- EndDeleteVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Delete (набор записей ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -18,10 +18,10 @@ ms.assetid: 4fc1822a-5d6e-4034-a2e2-363210232d3b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8de7dd1571f7b9082144e97c8b35d9a39d6cabe8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907321"
 ---
 # <a name="msdynamicsnapshotviews-transact-sql"></a>MSdynamicsnapshotviews (Transact-SQL)
@@ -29,11 +29,11 @@ ms.locfileid: "67907321"
 
   Таблица **мсдинамикснапшотвиевс** отслеживает все временные представления моментальных снимков отфильтрованных данных, созданные агентом моментальных снимков, и используется системой для очистки представлений в случае аварийного завершения работы агент SQL Server или агент моментальных снимков. Эта таблица хранится в базах данных публикации и подписки.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**dynamic_snapshot_view_name**|**имеет sysname**|Имя временного представления моментального снимка отфильтрованных данных.|  
+|**dynamic_snapshot_view_name**|**sysname**|Имя временного представления моментального снимка отфильтрованных данных.|  
   
-## <a name="see-also"></a>См. также:  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [Таблицы репликации (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

@@ -21,10 +21,10 @@ ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c51a69eb3604b937b9bf2aaf9a09aa383f2c1490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046448"
 ---
 # <a name="sysfn_cdc_get_max_lsn-transact-sql"></a>sys.fn_cdc_get_max_lsn (Transact-SQL)
@@ -41,8 +41,8 @@ ms.locfileid: "68046448"
 sys.fn_cdc_get_max_lsn ()  
 ```  
   
-## <a name="return-types"></a>Типы возвращаемого значения  
- **двоичный (10)**  
+## <a name="return-types"></a>Типы возвращаемых данных  
+ **binary(10)**  
   
 ## <a name="remarks"></a>Remarks  
  Эта функция возвращает максимальный номер LSN в столбце start_lsn таблицы [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Этот последний номер LSN, обрабатываемый процессом отслеживания, когда изменения передаются в таблицы изменений базы данных. Он служит в качестве верхней конечной точки для любой временной шкалы, связанной с экземплярами отслеживания, определенными для базы данных.  
@@ -63,7 +63,7 @@ GO
 SELECT sys.fn_cdc_get_max_lsn()AS max_lsn;  
 ```  
   
-### <a name="b-setting-the-high-endpoint-of-a-query-range"></a>Б. Установка верхней конечной точки запроса по диапазону  
+### <a name="b-setting-the-high-endpoint-of-a-query-range"></a>Б) Установка верхней конечной точки запроса по диапазону  
  В следующем примере номер LSN, возвращенный функцией `sys.fn_cdc_get_max_lsn`, используется для установки верхней конечной точки запроса по диапазону для экземпляра отслеживания `HumanResources_Employee`.  
   
 ```  
@@ -76,8 +76,8 @@ SELECT * FROM cdc.fn_cdc_get_all_changes_HumanResources_Employee(@from_lsn, @to_
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
- [&#40;SQL Server журнала транзакций&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
+ [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

@@ -10,10 +10,10 @@ ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 32d5e23579b99b323da870d2608b2d197520f99f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67909023"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Сопоставление кодировок MySQL и SQL Server (MySQLToSQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67909023"
   
 2.  **обычные** символьные типы данных целевой базы данных:  
   
-    1.  **типа**  
+    1.  **char**  
   
     2.  **varchar**  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67909023"
     |GBK|GBK китайский (упрощенное письмо)|NCHAR/NVARCHAR (по умолчанию)|  
     |latin5|ISO 8859-9 турецкая|CHAR/VARCHAR (по умолчанию)|  
     |armscii8|АРМСЦИИ-8 Армянский|CHAR/VARCHAR (по умолчанию)|  
-    |обратно|Юникод UTF-8|NCHAR/NVARCHAR (по умолчанию)|  
+    |utf8|Юникод UTF-8|NCHAR/NVARCHAR (по умолчанию)|  
     |ucs2|UCS-2 Юникод|NCHAR/NVARCHAR (по умолчанию)|  
     |cp866|DOS, Русский|CHAR/VARCHAR (по умолчанию)|  
     |keybcs2|DOS Каменикки чешский — словацкий|CHAR/VARCHAR (по умолчанию)|  

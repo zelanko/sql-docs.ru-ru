@@ -21,10 +21,10 @@ ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 556518a5fc2950ff69e6a872df5387b4c8367c6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122568"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
@@ -61,12 +61,11 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  Этот параметр может принимать одно из двух значений, в зависимости от значения, выбранного @closed_high_end_point при вызове sys. sp_cdc_generate_wrapper_function для создания скрипта для создания функции-оболочки:  
   
--   @closed_high_end_point= 1  
+-   @closed_high_end_point = 1  
   
      В результирующий набор включаются только строки из таблицы CDC. <capture_instance>_CT изменения, \_ \_которые имеют значение в $Start _lsn и соответствующее время фиксации, меньшее или равное **start_time** .  
   
--   
-  @closed_high_end_point = 0  
+-   @closed_high_end_point = 0  
   
      В результирующий набор включаются только строки в таблице cdc. <capture_instance>_CT таблицы изменений \_ \_, имеющие значение в $Start _lsn и соответствующее время фиксации, строго меньшее **start_time** .  
   
@@ -75,7 +74,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
  *<row_filter_option>* :: = {все | все с маской | все с помощью Merge}  
  Параметр, управляющий содержимым столбцов метаданных, а также строк, возвращаемых в результирующем наборе. Может быть одним из следующих:  
   
- все  
+ all  
  Возвращает окончательное содержимое измененной строки в столбцах содержимого и операцию, необходимую, чтобы применить строку в столбце метаданных __CDC_OPERATION.  
   
  all with mask  
@@ -94,9 +93,9 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип столбца|Description|  
+|Имя столбца|Тип столбца|Описание|  
 |-----------------|-----------------|-----------------|  
-|\<столбцы из @column_list>|**различные**|Столбцы, идентифицированные в аргументе **column_list** , в sp_cdc_generate_wrapper_function при вызове для создания скрипта для создания оболочки. Если *column_list* имеет значение null, все записанные исходные столбцы будут отображаться в результирующем наборе.|  
+|\<столбцы из @column_list>|**различать**|Столбцы, идентифицированные в аргументе **column_list** , в sp_cdc_generate_wrapper_function при вызове для создания скрипта для создания оболочки. Если *column_list* имеет значение null, все записанные исходные столбцы будут отображаться в результирующем наборе.|  
 |__CDC_OPERATION|**nvarchar (2)**|Код операции, указывающий операцию, необходимую для применения строки к целевой среде. Операция будет зависеть от значения аргумента, *row_filter_option* , переданного в следующем вызове:<br /><br /> *row_filter_option* = "все", "все с маской"<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> 'UN' — операция обновления<br /><br /> *row_filter_option* = "все с слиянием"<br /><br /> «D» — операция удаления<br /><br /> 'M' — операция вставки либо обновления|  
 |\<столбцы из @update_flag_list>|**bit**|Битовый флаг, имя которого образуется добавлением _uflag к имени столбца. Флаг принимает значение, не равное NULL, только если *row_filter_option* **= "все с маской"** и \__CDC_OPERATION **= "UN"**. Если соответствующий столбец изменялся в окне запроса, флагу присваивается значение 1. В противном случае флагу присваивается значение 0.|  
   
@@ -119,7 +118,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  Шаблон конфигурации системы отслеживания измененных данных "Создание экземпляра оболочки CDC возвращающие табличное для схемы" показывает, как использовать хранимую процедуру sp_cdc_generate_wrapper_function, чтобы получить скрипты создания для всех функций-оболочек для функций запросов, определенных схемой. Затем шаблон создает эти скрипты. Дополнительные сведения о шаблонах см. в разделе [Обозреватель шаблонов](../../ssms/template/template-explorer.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
  [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   

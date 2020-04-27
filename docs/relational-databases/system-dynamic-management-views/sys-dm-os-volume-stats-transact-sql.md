@@ -19,10 +19,10 @@ ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e7ec8171b569adbf887c1e153fb2b41619778f48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899722"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
@@ -38,9 +38,9 @@ ms.locfileid: "67899722"
 sys.dm_os_volume_stats (database_id, file_id)  
 ```  
   
-##  <a name="Arguments"></a>Даваемых  
+##  <a name="arguments"></a><a name="Arguments"></a>Даваемых  
  *database_id*  
- Идентификатор базы данных. *database_id* имеет **тип int**и не имеет значения по умолчанию. Не может быть NULL.  
+ Идентификатор базы данных. Аргумент *database_id* имеет тип **int** и не имеет значения по умолчанию. Не может быть NULL.  
   
  *file_id*  
  Идентификатор файла. *file_id* имеет **тип int**и не имеет значения по умолчанию. Не может быть NULL.  
@@ -49,7 +49,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ||||  
 |-|-|-|  
-|**Столбец**|**Тип данных**|**Описание**|  
+|**Рубрик**|**Тип данных**|**Описание**|  
 |**database_id**|**int**|Идентификатор базы данных. Не может иметь значение null.|  
 |**file_id**|**int**|Идентификатор файла. Не может иметь значение null.|  
 |**volume_mount_point**|**nvarchar(512)**|Точка подключения, с которой ассоциирован корень тома. Может возвращать пустую строку.|  
@@ -64,7 +64,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**is_read_only**|**bit**|Указывает, помечен ли том как доступный только для чтения. Не может иметь значение null.|  
 |**is_compressed**|**bit**|Указывает, сжат ли том в настоящее время. Не может иметь значение null.|  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Требуется разрешение `VIEW SERVER STATE`.  
@@ -80,7 +80,7 @@ FROM sys.master_files AS f
 CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id);  
 ```  
   
-### <a name="b-return-total-space-and-available-space-for-the-current-database"></a>Б. Получение сведений об общем и доступном пространстве для текущей базы данных  
+### <a name="b-return-total-space-and-available-space-for-the-current-database"></a>Б) Получение сведений об общем и доступном пространстве для текущей базы данных  
  В следующем примере выполняется возврат значения общего и доступного пространства (в байтах) для файлов текущей базы данных.  
   
 ```sql  
@@ -89,7 +89,7 @@ FROM sys.database_files AS f
 CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   

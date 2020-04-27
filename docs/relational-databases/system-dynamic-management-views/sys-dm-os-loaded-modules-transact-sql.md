@@ -19,10 +19,10 @@ ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f43e03e482bb7125100ed7bed56337fb75a2e711
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900091"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67900091"
 > [!NOTE]  
 >  Чтобы вызвать эту функцию [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]из, используйте имя **sys. dm_pdw_nodes_os_loaded_modules**.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**base_address**|**varbinary(8)**|Адрес модуля в процессе.|  
 |**file_version**|**varchar (23)**|Версия файла. Отображается в следующем формате:<br /><br /> x.x:x.x|  
@@ -44,16 +44,16 @@ ms.locfileid: "67900091"
 |**private_build**|**bit**|1 = Модуль является внутренней сборкой загруженного модуля.|  
 |**special_build**|**bit**|1 = Модуль является специальной сборкой загруженного модуля.|  
 |**языке**|**int**|Язык сведений о версии модуля.|  
-|**company**|**nvarchar(256)**|Имя компании, создавшей модуль.|  
+|**во**|**nvarchar(256)**|Имя компании, создавшей модуль.|  
 |**nописание**|**nvarchar(256)**|Описание модуля.|  
 |**name**|**nvarchar(255)**|Имя модуля. Включает полный путь к модулю.|  
-|**pdw_node_id**|**int**|**Применимо к**:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|**pdw_node_id**|**int**|**Область применения**: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также:  
- [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>См. также  
+ [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

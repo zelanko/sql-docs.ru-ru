@@ -18,10 +18,10 @@ ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fffa30d0e252392c41cee34c1875b12b5b7a53b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907493"
 ---
 # <a name="msdbms_map-transact-sql"></a>MSdbms_map (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67907493"
 
   Таблица **MSdbms_map** содержит сведения о типе исходных данных, а также ссылку на сведения о типе данных назначения по умолчанию для пар исходной и целевой СУБД. Эта таблица хранится в базе данных **msdb** и используется для разнородной публикации.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**map_id**|**int**|Уникальным образом идентифицирует сопоставление типа данных.|  
 |**src_dbms_id**|**int**|Идентифицирует СУБД источника, указывая ее **dbms_id** в таблице [MSdbms](../../relational-databases/system-tables/msdbms-transact-sql.md) .|  
@@ -44,10 +44,10 @@ ms.locfileid: "67907493"
 |**src_nullable**|**bit**|Показывает, допускает ли целевой столбец в данном сопоставлении значения NULL; причем NULL означает, что это определение не требуется.|  
 |**default_datatype_mapping_id**|**int**|Определяет сопоставление типов данных по умолчанию, указывая его **map_id** в таблице [MSdbms_datatype_mapping](../../relational-databases/system-tables/msdbms-datatype-mapping-transact-sql.md).|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разнородная репликация базы данных](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Указание сопоставлений типов данных для издателя Oracle](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

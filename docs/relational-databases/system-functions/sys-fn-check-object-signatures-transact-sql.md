@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046309"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
@@ -52,7 +52,7 @@ fn_ check_object_signatures (
   
 -   'asymmetric key'  
   
- \@Аргумент *Class* имеет тип **sysname**.  
+ Аргумент \@*class* имеет тип **sysname**.  
   
  { \@ *Thumbprint* }  
  Хэш SHA-1 сертификата, с помощью которого был зашифрован ключ, или идентификатор GUID асимметричного ключа, которым был зашифрован этот ключ. \@*отпечаток* имеет тип **varbinary (20)**.  
@@ -60,9 +60,9 @@ fn_ check_object_signatures (
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
  В следующей таблице перечислены столбцы, возвращаемые **fn_check_object_signatures** .  
   
-|Столбец|Тип|Description|  
+|Столбец|Type|Описание|  
 |------------|----------|-----------------|  
-|type|**nvarchar (120)**|Возвращает описание типа или сборки.|  
+|type|**nvarchar(120)**|Возвращает описание типа или сборки.|  
 |entity_id|**int**|Возвращает идентификатор оцениваемого объекта.|  
 |is_signed|**int**|Возвращает значение 0, если объект не был подписан с помощью предоставленного отпечатка. Возвращает значение 1, если объект подписан с помощью предоставленного отпечатка.|  
 |is_signature_valid|**int**|Если значение is_signed равно 1, возвращает значение 0, если подпись не является допустимой. Возвращает значение 1, если подпись является допустимой.<br /><br /> Если значение is_signed равно 0, всегда возвращает 0.|  
@@ -91,7 +91,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [IS_OBJECTSIGNED &#40;Transact-SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
   
   

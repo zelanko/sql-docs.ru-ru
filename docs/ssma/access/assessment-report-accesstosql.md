@@ -13,10 +13,10 @@ ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c28fb4cf5d110e01b156fc6ce985b2cb2fb7bfe1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910687"
 ---
 # <a name="assessment-report-accesstosql"></a>Отчет об оценке (Акцесстоскл)
@@ -36,6 +36,6 @@ ms.locfileid: "67910687"
   
 Чтобы просмотреть сведения о сообщении, щелкните **ошибки**, **предупреждения**или **сообщения**, а затем разверните сообщение. SSMA отобразит список объектов, имеющих эту ошибку. Щелкните объект, чтобы отобразить все сведения о преобразовании для объекта.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Справочник по пользовательскому интерфейсу (доступ)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

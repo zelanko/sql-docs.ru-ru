@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8a00388e067878d9c2165cbae6844f8020b7c63e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905605"
 ---
 # <a name="linkmember-mdx"></a>LinkMember (многомерные выражения)
@@ -51,9 +51,9 @@ SELECT  Hierarchize
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Hierarchize &#40;&#41;многомерных выражений](../mdx/hierarchize-mdx.md)   
  [Предков &#40;&#41;многомерных выражений](../mdx/ascendants-mdx.md)   
- [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

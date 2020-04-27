@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 514774acc7255f2f499bfe7fdd6e731944ab67fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67285044"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Параллельная установка служб Reporting Services и служб IIS (собственный режим SSRS)
@@ -51,16 +51,16 @@ ms.locfileid: "67285044"
   
  Одним из признаков конфликта портов является следующее сообщение об ошибке: "System.IO.FileLoadException. Процесс не может получить доступ к файлу, так как этот файл занят другим процессом. (Исключение в HRESULT: 0x80070020)".  
   
-## <a name="url-reservations-for-iis-60-70-80-85-with-includesssql14includessssql14-mdmd-reporting-services"></a>Резервирования URL-адресов для служб IIS 6.0, 7.0, 8.0 и 8.5 со службами [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services  
+## <a name="url-reservations-for-iis-60-70-80-85-with-sssql14-reporting-services"></a>Резервирования URL-адресов для служб IIS 6.0, 7.0, 8.0 и 8.5 со службами [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services  
  Изучение правил приоритета, приведенных в предыдущем разделе, позволяет разобраться, как резервирования URL-адресов, определенные для служб Reporting Services и IIS, поддерживают совместимость. Службы Reporting Services получают запросы, в которых явно указаны имена виртуальных каталогов для их приложений; службы IIS получают все остальные запросы, которые могут затем быть направлены приложениям, запущенным в рамках модели процесса IIS.  
   
-|Приложение|Резервирование URL-адресов|Description|Прием запроса|  
+|Приложение|Резервирование URL-адресов|Описание|Прием запроса|  
 |-----------------|---------------------|-----------------|---------------------|  
 |Сервер отчетов|http://+:80/ReportServer|Сильный шаблон для доступа к порту 80, с указанием виртуального каталога сервера отчетов.|Получает все запросы на порт 80, в которых указан виртуальный каталог сервера отчетов. Веб-служба сервера отчетов получает все запросы, отправленные по адресу http://\<имя_компьютера>/reportserver.|  
 |Диспетчер отчетов|http://+:80/Reports|Сильный шаблон для доступа к порту 80, с указанием виртуального каталога Reports.|Получает все запросы на порт 80, в которых указан виртуальный каталог reports. Диспетчер отчетов получает все запросы к http://\<ComputerName>/Reports.|  
 |IIS|http://*:80/|Слабый шаблон для доступа к порту 80.|Получает любые оставшиеся запросы на порт 80, которые не получены другим приложением.|  
   
-## <a name="side-by-side-deployments-of-includesscurrentincludessscurrent-mdmd-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>Параллельное развертывание [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и служб SQL Server 2005 Reporting Services на службы IIS 6.0, 7.0, 8.0, 8.5  
+## <a name="side-by-side-deployments-of-sscurrent-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>Параллельное развертывание [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и служб SQL Server 2005 Reporting Services на службы IIS 6.0, 7.0, 8.0, 8.5  
  Если веб-сайты IIS имеют имена виртуальных каталогов, идентичные используемым в службах Reporting Services, возникают проблемы функциональной совместимости служб IIS и служб Reporting Services. Например, предположим, что имеется следующая конфигурация.  
   
 -   Веб-сайт в службах IIS, который назначен на порт 80 и виртуальный каталог с именем Reports.  
@@ -79,7 +79,7 @@ ms.locfileid: "67285044"
   
 ## <a name="see-also"></a>См. также:  
  [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](configure-report-server-urls-ssrs-configuration-manager.md)   
- [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](configure-a-url-ssrs-configuration-manager.md)   
+ [Настройка URL-адреса &#40;SSRS Configuration Manager&#41;](configure-a-url-ssrs-configuration-manager.md)   
  [Установка сервера отчетов служб Reporting Services в собственном режиме](install-reporting-services-native-mode-report-server.md)  
   
   

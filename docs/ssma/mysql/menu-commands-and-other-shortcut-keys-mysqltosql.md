@@ -10,10 +10,10 @@ ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 585243f46296808a5ed190c3e6d9448eec1c63da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908802"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Команды меню и другие сочетания клавиш (MySQLToSQL)
@@ -179,6 +179,6 @@ ms.locfileid: "67908802"
 |Запустить краткие сведения.|CTRL + SHIFT + ПРОБЕЛ|  
 |Переход к объявлению.|F12|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Сочетания клавиш &#40;&#41;MySQLToSQL](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
   

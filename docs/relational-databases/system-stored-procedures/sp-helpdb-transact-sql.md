@@ -18,10 +18,10 @@ ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67903022"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
@@ -42,29 +42,29 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 `[ @dbname = ] 'name'`Имя базы данных, для которой сообщается информация. Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию. Если параметр *Name* не указан, **sp_helpdb** отчеты по всем базам данных в представлении каталога **sys. databases** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**name**|**имеет sysname**|имя базы данных.|  
+|**name**|**sysname**|имя базы данных.|  
 |**db_size**|**nvarchar (13)**|Общий размер базы данных.|  
-|**владельцев**|**имеет sysname**|Владелец базы данных, например **SA**.|  
+|**владельцев**|**sysname**|Владелец базы данных, например **SA**.|  
 |**DBID**|**smallint**|Идентификатор базы данных.|  
-|**создан**|**nvarchar(11)**|Дата создания базы данных.|  
-|**состояние**|**nvarchar (600)**|Разделенный запятыми список значений параметров базы данных, которые в данный момент установлены для базы данных.<br /><br /> Перечислены только включенные параметры с логическими значениями. Параметры, не являющиеся логическими, перечислены с соответствующими значениями в виде *option_name*=*значения*.<br /><br /> Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).|  
+|**created**|**nvarchar(11)**|Дата создания базы данных.|  
+|**status**|**nvarchar (600)**|Разделенный запятыми список значений параметров базы данных, которые в данный момент установлены для базы данных.<br /><br /> Перечислены только включенные параметры с логическими значениями. Параметры, не являющиеся логическими, перечислены с соответствующими значениями в виде *option_name*=*значения*.<br /><br /> Дополнительные сведения см. в разделе [ALTER database &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |**compatibility_level**|**tinyint**|Уровень совместимости базы данных: 60, 65, 70, 80 или 90.|  
   
  Если указано *имя* , то существует дополнительный результирующий набор, который показывает размещение файлов для указанной базы данных.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**nchar (128)**|Логическое имя файла.|  
 |**ИД**|**smallint**|Идентификатор файла.|  
 |**файлов**|**nchar (260)**|Имя файла в операционной системе (физическое имя файла).|  
-|**filegroup**|**nvarchar(128**|Файловая группа, к которой принадлежит файл.<br /><br /> NULL = файл является файлом журнала. Такой файл никогда не является частью файловой группы.|  
-|**изменять**|**nvarchar (18)**|Размер файла в мегабайтах.|  
+|**файловой группы**|**nvarchar(128)**|Файловая группа, к которой принадлежит файл.<br /><br /> NULL = файл является файлом журнала. Такой файл никогда не является частью файловой группы.|  
+|**size**|**nvarchar (18)**|Размер файла в мегабайтах.|  
 |**MAXSIZE**|**nvarchar (18)**|Определяет максимальный размер, до которого может вырасти файл. Значение UNLIMITED в этом поле означает, что файл может расти, пока диск не будет заполнен.|  
 |**growth**|**nvarchar (18)**|Значение прироста размера файла. Размер пространства, добавляемого в файл каждый раз, когда требуется новое пространство.|  
 |**Загрузка**|**varchar (9)**|Применение файла. Для файла данных значением является **"только данные"** , а для файла журнала — **"только журнал"**.|  
@@ -86,7 +86,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 EXEC sp_helpdb N'AdventureWorks2012';  
 ```  
   
-### <a name="b-returning-information-about-all-databases"></a>Б. Информация, возвращаемая обо всех базах данных  
+### <a name="b-returning-information-about-all-databases"></a>Б) Информация, возвращаемая обо всех базах данных  
  В следующем примере отображается информация обо всех базах данных, работающих на сервере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```sql  
@@ -94,14 +94,14 @@ EXEC sp_helpdb;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [&#41;Transact-SQL ALTER DATABASE &#40;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Создание &#40;базы данных SQL Server&#41;Transact-SQL](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [sys. databases &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
+ [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys. FILEGROUP &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

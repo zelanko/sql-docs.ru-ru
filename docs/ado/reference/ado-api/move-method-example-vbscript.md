@@ -15,16 +15,16 @@ ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d2075987e8c3faae9003b0edc4010fe7e4cedb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918167"
 ---
 # <a name="move-method-example-vbscript"></a>Пример метода Move (VBScript)
 В этом примере метод [Move](../../../ado/reference/ado-api/move-method-ado.md) используется для размещения указателя записи на основе вводимых пользователем данных.  
   
- Используйте следующий пример на странице Active Server (ASP). Чтобы просмотреть этот полнофункциональный пример, необходимо либо иметь источник данных Адвворкс. mdb (установленный вместе с пакетом SDK), расположенный в папке C:\Program Files\Microsoft Platform Сдк\самплес\датаакцесс\рдс\рдстест\адвворкс.МДБ, либо изменить путь в примере кода, чтобы он отражал фактическое расположение этого файла. Это файл базы данных Microsoft Access.  
+ Используйте следующий пример на странице Active Server (ASP). Чтобы просмотреть этот полнофункциональный пример, необходимо либо иметь источник данных Адвворкс. mdb (установленный вместе с пакетом SDK), расположенный в папке C:\Program Files\Microsoft Platform Сдк\самплес\датаакцесс\рдс\рдстест\адвворкс.МДБ, либо изменить путь в примере кода, чтобы отразить фактическое расположение этого файла. Это файл базы данных Microsoft Access.  
   
  Используйте **Find** для поиска файла адовбс. Inc и поместите его в каталог, который планируется использовать. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **мовевбс. ASP**. Результат можно просмотреть в любом браузере.  
   
@@ -182,6 +182,6 @@ End Sub
 <!-- EndMoveVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

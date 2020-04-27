@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e2881a2a118306f9d567236516f05bb29ad2d60a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68186574"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Занятие 3. Использование программы командной строки dta
-  Программа командной строки **dta** предоставляет функции в дополнение к возможностям, предоставляемым помощник по настройке ядра СУБД.  
+  Программа командной строки **dta** расширяет функциональные возможности помощника по настройке ядра СУБД.  
   
  Применяя XML-схему помощника по настройке ядра СУБД, пользователь может создавать входные файлы данной программы с помощью удобных для себя средств XML. Эта схема устанавливается вместе со службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и находится по следующему адресу: C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
   

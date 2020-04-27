@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7e7fb32de254729c4173fab260e5797db5f2cc2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67793304"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup-replication-transact-sql-programming"></a>инициализировать подписку на публикацию транзакций из резервной копии (программирование репликации на языке Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67793304"
   
     -   Если значение равно **0**, выполните хранимую процедуру [sp_changepublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) на издателе в базе данных публикации. Укажите значение **allow_initialize_from_backup** для ** \@свойства** и значение `true` для ** \@параметра значение**.  
   
-2.  В новой публикации выполните хранимую процедуру [sp_addpublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) на издателе в базе данных публикации. Укажите значение `true` для **allow_initialize_from_backup**. Дополнительные сведения см. в разделе [Create a Publication](publish/create-a-publication.md).  
+2.  В новой публикации выполните хранимую процедуру [sp_addpublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) на издателе в базе данных публикации. Укажите значение `true` для **allow_initialize_from_backup**. Дополнительные сведения см. [в разделе Создание публикации](publish/create-a-publication.md).  
   
     > [!WARNING]  
     >  Чтобы предотвратить отсутствие данных подписчика, при использовании процедуры **sp_addpublication** с `@allow_initialize_from_backup = N'true'`всегда используйте `@immediate_sync = N'true'`.  
@@ -45,7 +45,7 @@ ms.locfileid: "67793304"
   
 4.  Восстановите резервную копию на подписчике, выполнив инструкцию [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql).  
   
-5.  На издателе в базе данных издателя выполните хранимую процедуру [sp_addsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Укажите следующие параметры:  
+5.  На издателе в базе данных издателя выполните хранимую процедуру [sp_addsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Укажите значения следующих параметров.  
   
     -   sync_type — значение " **инициализировать с резервной копией**". ** \@**  
   
@@ -69,7 +69,7 @@ ms.locfileid: "67793304"
   
 7.  (Необязательно) Запустите агент распространителя. Дополнительные сведения см. в разделе [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) или [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Копирование баз данных с помощью резервного копирования и восстановления](../databases/copy-databases-with-backup-and-restore.md)   
  [Резервное копирование и восстановление баз данных SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   

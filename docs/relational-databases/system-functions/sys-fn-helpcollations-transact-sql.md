@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee626b9eef8cf2f2e80217b2a3709271a227f293
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906127"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
@@ -45,13 +45,12 @@ fn_helpcollations ()
 
  **fn_helpcollations** возвращает следующие сведения.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|Имя|**имеет sysname**|Имя стандартных параметров сортировки|  
-|Description|**nvarchar (1000)**|Описание параметров сортировки|  
+|Имя|**sysname**|Имя стандартных параметров сортировки|  
+|Описание|**nvarchar (1000)**|Описание параметров сортировки|  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает параметры сортировки Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]также поддерживает ограниченное число (<80) параметров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сортировки, которые были разработаны до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддержки параметров сортировки Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]параметры сортировки по-прежнему поддерживаются для обеспечения обратной совместимости, но не должны использоваться для новых задач разработки. Дополнительные сведения о параметрах сортировки Windows см. в статье [Имя параметров сортировки Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md). Дополнительные сведения о параметрах сортировки см. в разделе [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает параметры сортировки Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]также поддерживает ограниченное число (<80) параметров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сортировки, которые были разработаны до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддержки параметров сортировки Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]параметры сортировки по-прежнему поддерживаются для обеспечения обратной совместимости, но не должны использоваться для новых задач разработки. Дополнительные сведения о параметрах сортировки Windows см. в статье [Имя параметров сортировки Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md). Дополнительные сведения о параметрах сортировки см. в разделе [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Примеры
 
@@ -81,8 +80,8 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
  (7 row(s) affected)  
  ```
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Сортировка &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
+[COLLATE (Transact-SQL)](~/t-sql/statements/collations.md)   
 [COLLATIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
 [Поддержка параметров сортировки базы данных для хранилища данных SQL Azure](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  

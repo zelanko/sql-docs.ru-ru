@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110144"
 ---
 # <a name="viewing-tuning-reports"></a>Просмотр отчетов настройки
@@ -46,6 +46,6 @@ ms.locfileid: "66110144"
  Изучена вкладка **Отчеты** графического интерфейса помощника по настройке ядра СУБД для сеанса настройки MySession. Выполните эти шаги, чтобы ознакомиться с отчетами, созданными для сеанса настройки EvaluateMySession. Дважды щелкните сеанс **EvaluateMySession** на панели **Монитор сеансов** .  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 3. Использование служебной программы dta для командной строки](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [Урок 3. Использование программы командной строки dta](lesson-3-using-the-dta-command-prompt-utility.md)  
   
   

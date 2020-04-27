@@ -13,10 +13,10 @@ ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f84faca18ad1f4f4bf7e036fa4ccbe0335154a63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917334"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Свойства, методы и события объекта Recordset
@@ -112,7 +112,7 @@ ms.locfileid: "67917334"
   
  [Метод Save](../../../ado/reference/ado-api/save-method.md)  
   
- [Метод Seek](../../../ado/reference/ado-api/seek-method.md)  
+ [Seek, метод](../../../ado/reference/ado-api/seek-method.md)  
   
  [Метод Supports](../../../ado/reference/ado-api/supports-method.md)  
   
@@ -135,5 +135,5 @@ ms.locfileid: "67917334"
   
  [События Виллмове и Мовекомплете](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

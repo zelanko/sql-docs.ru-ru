@@ -16,10 +16,10 @@ ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4dc881b96a1e2641d4946340c9462455197f2043
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919256"
 ---
 # <a name="cursortype-property-ado"></a>Свойство CursorType (ADO)
@@ -40,9 +40,9 @@ ms.locfileid: "67919256"
 |Для набора записей этого примеры CursorType|Метод поддержки должен возвращать значение true для всех этих констант|  
 |----------------------------------------|---------------------------------------------------------------------|  
 |**адопенфорвардонли**|none|  
-|**адопенкэйсет**|**адбукмарк**, **адхолдрекордс**, **адмовепревиаус**, **адресинк**|  
-|**адопендинамик**|**адмовепревиаус**|  
-|**адопенстатик**|**адбукмарк**, **адхолдрекордс**, **адмовепревиаус**, **адресинк**|  
+|**adOpenKeyset**|**адбукмарк**, **адхолдрекордс**, **адмовепревиаус**, **адресинк**|  
+|**adOpenDynamic**|**adMovePrevious**|  
+|**adOpenStatic**|**адбукмарк**, **адхолдрекордс**, **адмовепревиаус**, **адресинк**|  
   
 > [!NOTE]
 >  Хотя **поддерживает**(**адупдатебатч**) значение true для динамических и последовательных курсоров, для пакетных обновлений следует использовать курсор KEYSET или static. Задайте для свойства [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) значение **адлоккбатчоптимистик** , а для свойства **CursorLocation** значение **адусеклиент** , чтобы включить службу курсора для OLE DB, которая необходима для пакетных обновлений.  
@@ -55,7 +55,7 @@ ms.locfileid: "67919256"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры свойств примеры CursorType, LockType и EditMode (Visual Basic)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [Пример свойств примеры CursorType, LockType и EditMode (Visual c++)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [Метод Supports](../../../ado/reference/ado-api/supports-method.md)

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 69c4a15108e682659cd95a20b4fc4ec5c41da007
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905903"
 ---
 # <a name="kpicurrenttimemember-mdx"></a>KPICurrentTimeMember (многомерные выражения)
@@ -34,7 +34,7 @@ KPICurrentTimeMember(KPI_Name)
 ## <a name="remarks"></a>Remarks  
  Ключевой показатель эффективности может содержать различные элементы времени из элемента по умолчанию измерения времени.  
   
-## <a name="see-also"></a>См. также:  
- [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

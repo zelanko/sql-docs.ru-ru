@@ -17,10 +17,10 @@ ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 157e38c2c9c23ff8f7e92af40385b0962c6dcb70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918076"
 ---
 # <a name="moverecord-method-ado"></a>Метод MoveRecord (ADO)
@@ -34,10 +34,10 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Source*  
+ *Источник*  
  Необязательный параметр. **Строковое** значение, содержащее URL-адрес, указывающий перемещаемую **запись** . Если *Source* не указан или указывает пустую строку, перемещается объект, представленный этой **записью** . Например, если **запись** представляет файл, содержимое файла перемещается в расположение, указанное в поле *назначение*.  
   
- *Destination*  
+ *Назначение*  
  Необязательный параметр. **Строковое** значение, содержащее URL-адрес, указывающий расположение, куда будет перемещен *источник* .  
   
  *Имен*  
@@ -49,7 +49,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *Параметры*  
  Необязательный параметр. Значение [моверекордоптионсенум](../../../ado/reference/ado-api/moverecordoptionsenum.md) , значение по умолчанию — **адмовеунспеЦифиед**. Задает поведение этого метода.  
   
- *Асинхронный режим*  
+ *Async*  
  Необязательный параметр. **Логическое** значение, которое при **значении true**указывает, что эта операция должна быть асинхронной.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
@@ -73,7 +73,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 ## <a name="applies-to"></a>Применяется к  
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [Методы MoveFirst, MoveLast, MoveNext и MovePrevious (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Методы MoveFirst, MoveLast, MoveNext и MovePrevious (служба удаленных рабочих столов)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

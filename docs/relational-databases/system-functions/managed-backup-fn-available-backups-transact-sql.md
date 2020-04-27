@@ -21,10 +21,10 @@ ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1c7bb6e33dfd2ee6640e9588011d3686a72a0188
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68140672"
 ---
 # <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup. fn_available_backups (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68140672"
 managed_backup.fn_available_backups ([@database_name = ] 'database name')  
 ```  
   
-##  <a name="Arguments"></a>Даваемых  
+##  <a name="arguments"></a><a name="Arguments"></a>Даваемых  
  @database_name  
  Имя базы данных. Значение @database_name типа — nvarchar (512).  
   
@@ -49,7 +49,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 Если база данных удалена, затем создана повторно, возвращаются резервные наборы данных для всех баз данных. Выходные данные упорядочиваются по database_guid, уникально идентифицирующим каждую базу данных.   
 Если в LSN имеются разрывы, означающие разрыв в цепочке журналов, таблица будет содержать отдельную строку для каждого пропущенного сегмента номера LSN.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|URL-адрес файла резервной копии.|  
 |backup_type|NVARCHAR (6)|"DB" для резервного копирования базы данных "LOG" для резервной копии журнала|  
@@ -68,7 +68,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Для этой функции требуются разрешения **SELECT** .  
@@ -82,7 +82,7 @@ FROM managed_backup.fn_available_backups ('MyDB')
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server управляемого резервного копирования Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
  [Восстановление из резервных копий в Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
   

@@ -17,10 +17,10 @@ ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97c7f1c143c83dd35ca5ff17e9776d79fb734ff9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917926"
 ---
 # <a name="open-method-ado-record"></a>Метод Open (объект Record ADO)
@@ -34,7 +34,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Source*  
+ *Источник*  
  Необязательный параметр. **Вариант** , который может представлять URL-адрес сущности, представляемый этим объектом **записи** , **команду**, Открытый [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) или другой объект **записи** , строку, содержащую инструкцию SQL SELECT или имя таблицы.  
   
  *ActiveConnection*  
@@ -76,7 +76,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 ## <a name="applies-to"></a>Применяется к  
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Open (подключение ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Метод Open (набор записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Метод Open (поток ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   

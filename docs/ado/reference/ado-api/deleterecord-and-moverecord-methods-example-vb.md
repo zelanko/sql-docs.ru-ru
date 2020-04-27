@@ -16,10 +16,10 @@ ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c449e2a7c52b069478a07e4e2fa902c3b0527e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919103"
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>Примеры методов Делетерекорд и MoveRecord (Visual Basic)
@@ -148,7 +148,7 @@ End Sub
 'EndDeleteRecordVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Делетерекорд (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)   
  [Метод Flush (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
  [Метод дочернего элемента (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   

@@ -13,10 +13,10 @@ ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: eda3f15f0d9ca1cfe04c25bfee5f2ece827e8b83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67909006"
 ---
 # <a name="managing-passwords-mysqltosql"></a>Управление паролями (MySQLToSQL)
@@ -73,7 +73,7 @@ SSMA позволяет защитить пароль базы данных.
   
         Выполните команду `SSMAforMySQLConsole.exe` с`-securepassword` параметром `-remove` и в командной строке, передав идентификаторы серверов, чтобы удалить зашифрованные пароли из защищенного файла хранилища, присутствующего на локальном компьютере.  
   
-        Пример  
+        Пример.  
 
             C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -remove all
             C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -remove "source_1,target_1"  
@@ -82,7 +82,7 @@ SSMA позволяет защитить пароль базы данных.
   
         Выполните команду `SSMAforMySQLConsole.exe` с `-securepassword` параметром `-list` и в командной строке, чтобы вывести список всех идентификаторов серверов, пароли которых были зашифрованы.  
   
-        Пример  
+        Пример.  
         
             C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -list  
   
@@ -93,7 +93,7 @@ SSMA позволяет защитить пароль базы данных.
 ## <a name="exporting-or-importing-encrypted-passwords"></a>Экспорт или Импорт зашифрованных паролей  
 Консольное приложение SSMA позволяет экспортировать зашифрованные пароли баз данных, находящиеся в файле на локальном компьютере, в защищенный файл и наоборот. Это помогает сделать зашифрованные пароли независимыми от компьютера. Функция экспорта считывает идентификатор и пароль сервера из локального защищенного хранилища и сохраняет их в зашифрованном файле. Пользователю предлагается ввести пароль для защищенного файла. Убедитесь, что пароль имеет длину 8 символов или более. Этот защищенный файл переносим на разные компьютеры. Функция импорта считывает идентификатор сервера и сведения о пароле из защищенного файла. Пользователю предлагается ввести пароль для защищенного файла и добавить сведения в локально защищенное хранилище.  
   
-Пример  
+Пример.  
 
     Export password
     
@@ -111,7 +111,7 @@ SSMA позволяет защитить пароль базы данных.
     
     Please confirm password: xxxxxxxx  
   
-Пример  
+Пример.  
 
     Import an encrypted password
     
@@ -129,6 +129,6 @@ SSMA позволяет защитить пароль базы данных.
     
     Please confirm password: xxxxxxxx  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Исполнение консоли SSMA (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

@@ -17,10 +17,10 @@ ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f394d5e3b3021ca240675d6979152c63b903190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918619"
 ---
 # <a name="find-method-ado"></a>Метод Find (ADO)
@@ -43,7 +43,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *сеарчдиректион*  
  Необязательный параметр. Значение [сеарчдиректионенум](../../../ado/reference/ado-api/searchdirectionenum.md) , указывающее, должен ли поиск начинаться с текущей строки или из следующей доступной строки в направлении поиска. Неудачный поиск останавливается в конце **набора записей** , если значение равно **адсеарчфорвард**. Неудачный поиск останавливается в начале **набора записей** , если значение равно **адсеарчбакквард**.  
   
- *Запуск*  
+ *Start*  
  Необязательный параметр. **Вариант** закладки, которая выступает в качестве начальной положения для поиска.  
   
 ## <a name="remarks"></a>Remarks  
@@ -66,8 +66,8 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода Find (Visual Basic)](../../../ado/reference/ado-api/find-method-example-vb.md)   
  [Свойство index](../../../ado/reference/ado-api/index-property.md)   
  [Свойство optimize — Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [Метод Seek](../../../ado/reference/ado-api/seek-method.md)
+ [Seek, метод](../../../ado/reference/ado-api/seek-method.md)

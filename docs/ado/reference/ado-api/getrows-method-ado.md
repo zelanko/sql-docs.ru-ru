@@ -17,10 +17,10 @@ ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d96b7968c7aba8d1249db2f43b53fc8a22596419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918452"
 ---
 # <a name="getrows-method-ado"></a>Метод GetRows (ADO)
@@ -37,10 +37,10 @@ array = recordset.GetRows(Rows, Start, Fields )
  Возвращает **вариант** , значение которого является двумерным массивом.  
   
 #### <a name="parameters"></a>Параметры  
- *Сквоз*  
+ *Строки*  
  Необязательный параметр. Значение [жетровсоптионенум](../../../ado/reference/ado-api/getrowsoptionenum.md) , указывающее количество извлекаемых записей. Значение по умолчанию — **аджетровсрест**.  
   
- *Запуск*  
+ *Start*  
  Необязательный параметр. **Строковое** значение или **вариант** , результатом которого является закладка для записи, из которой должна начинаться операция **GetRows** . Можно также использовать значение [букмаркенум](../../../ado/reference/ado-api/bookmarkenum.md) .  
   
  *Поля*  
@@ -60,6 +60,6 @@ array = recordset.GetRows(Rows, Start, Fields )
 ## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода GetRows (Visual Basic)](../../../ado/reference/ado-api/getrows-method-example-vb.md)   
  [Пример метода GetRows (Visual C++)](../../../ado/reference/ado-api/getrows-method-example-vc.md)   

@@ -21,10 +21,10 @@ ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122626"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
@@ -42,8 +42,8 @@ fn_my_permissions ( securable , 'securable_class' )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *securable*  
- Имя защищаемого объекта. Если защищаемым объектом является сам сервер или база данных, то этому аргументу должно быть присвоено значение NULL. *защищаемый объект* — это скалярное выражение типа **sysname**. *защищаемый объект* может быть многокомпонентным именем.  
+ *защищаемые*  
+ Имя защищаемого объекта. Если защищаемым объектом является сам сервер или база данных, то этому аргументу должно быть присвоено значение NULL. Аргумент *securable* является скалярным выражением типа **sysname**. *защищаемый объект* может быть многокомпонентным именем.  
   
  "*securable_class*"  
  Имя класса защищаемых объектов, для которого перечислены разрешения. *securable_class* имеет тип **sysname**. *securable_class* должен быть одним из следующих: роль приложения, сборка, асимметричный ключ, сертификат, контракт, база данных, конечная точка, полнотекстовый каталог, имя входа, тип сообщения, объект, привязка удаленной службы, роль, маршрут, схема, сервер, служба, симметричный ключ, тип, пользователь, коллекция схем XML.  
@@ -51,10 +51,10 @@ fn_my_permissions ( securable , 'securable_class' )
 ## <a name="columns-returned"></a>Возвращаемые столбцы  
  В следующей таблице перечислены столбцы, возвращаемые **fn_my_permissions** . Каждая возвращаемая строка описывает разрешение относительно защищаемого объекта в текущем контексте безопасности. Возвращает NULL в случае неудачного завершения запроса.  
   
-|Имя столбца|Тип|Description|  
+|Имя столбца|Type|Описание|  
 |-----------------|----------|-----------------|  
-|entity_name|**имеет sysname**|Имя защищаемого объекта, на который предоставлены перечисленные разрешения.|  
-|subentity_name|**имеет sysname**|Имя столбца, если у защищаемого объекта есть столбцы, в противном случае — NULL.|  
+|entity_name|**sysname**|Имя защищаемого объекта, на который предоставлены перечисленные разрешения.|  
+|subentity_name|**sysname**|Имя столбца, если у защищаемого объекта есть столбцы, в противном случае — NULL.|  
 |permission_name|**nvarchar**|Имя разрешения.|  
   
 ## <a name="remarks"></a>Remarks  
@@ -92,7 +92,7 @@ SELECT * FROM fn_my_permissions(NULL, 'SERVER');
 GO  
 ```  
   
-### <a name="b-listing-effective-permissions-on-the-database"></a>Б. Перечисление действующих разрешений в базе данных  
+### <a name="b-listing-effective-permissions-on-the-database"></a>Б) Перечисление действующих разрешений в базе данных  
  Следующий пример возвращает список действующих разрешений для вызывающей стороны в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
@@ -159,13 +159,13 @@ REVERT;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции безопасности &#40;&#41;Transact-SQL](../../t-sql/functions/security-functions-transact-sql.md)   
  [Разрешения &#40;ядро СУБД&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Защищаемые объекты](../../relational-databases/security/securables.md)   
  [Иерархия разрешений &#40;ядро СУБД&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys. fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [Представления каталога безопасности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [ВЫПОЛНИТЬ как &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
+ [EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

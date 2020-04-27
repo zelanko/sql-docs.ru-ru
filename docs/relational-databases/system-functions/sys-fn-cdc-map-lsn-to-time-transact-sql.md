@@ -21,10 +21,10 @@ ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c3573b876a10b4400969bf63200682e91bfc45fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046345"
 ---
 # <a name="sysfn_cdc_map_lsn_to_time-transact-sql"></a>sys.fn_cdc_map_lsn_to_time (Transact-SQL)
@@ -52,7 +52,7 @@ sys.fn_cdc_map_lsn_to_time ( lsn_value )
  Эта функция может использоваться для определения времени фиксации изменения на основе значения **__ $ start_lsn** , возвращенного в строке данных об изменениях.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в роли **Public** .  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере функция `sys.fn_cdc_map_lsn_to_time` используется для определения времени фиксации, связанного с последним изменением, которое было обработано в заданном интервале LSN для экземпляра отслеживания `HumanResources_Employee`.  
@@ -67,7 +67,7 @@ SELECT sys.fn_cdc_map_lsn_to_time(@max_lsn);
 GO   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CDC. lsn_time_mapping &#40;&#41;Transact-SQL](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
  [sys. fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
  [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   

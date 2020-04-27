@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900920"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
@@ -44,7 +44,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *query_string*  
  Запрос, который необходимо подвергнуть синтаксическому анализу. *QUERY_STRING* может быть цепочкой строк, [содержащей](../../t-sql/queries/contains-transact-sql.md) поддержку синтаксиса. Например, можно включить словоформы, тезаурус и логические операторы.  
   
- *намного*  
+ *lcid*  
  Идентификатор локали (LCID) средства разбиения по словам, используемого для синтаксического анализа *QUERY_STRING*.  
   
  *stoplist_id*  
@@ -55,7 +55,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *accent_sensitivity*  
  Логическое значение, управляющее полнотекстовым поиском с учетом или без учета диакритических знаков. *accent_sensitivity* имеет **бит**и имеет одно из следующих значений:  
   
-|Значение|Учитывать диакритические знаки:...|  
+|Применение|Учитывать диакритические знаки:...|  
 |-----------|----------------------------|  
 |0|Не учитывать<br /><br /> Слова, совпадающие во всем, кроме диакритических знаков, рассматриваются как идентичные.|  
 |1|Закрытые данные<br /><br /> Слова, сходные по начертанию, но различающиеся диакритическими знаками, рассматриваются как разные.|  
@@ -65,21 +65,16 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|ключевое слово|**varbinary (128)**|Шестнадцатеричное представление данного ключевого слова, возвращенное средством разбиения по словам. Это представление используется для хранения ключевых слов в полнотекстовом индексе. Это значение не читается человеком, но оно полезно для связи заданного ключевого слова с выходными данными, возвращаемыми другими динамическими административными представлениями, возвращающими содержимое полнотекстового индекса, например [sys. dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) и [sys. dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Примечание.** Оксфф представляет специальный символ, указывающий на конец файла или набора данных.|  
+|ключевое слово|**varbinary(128)**|Шестнадцатеричное представление данного ключевого слова, возвращенное средством разбиения по словам. Это представление используется для хранения ключевых слов в полнотекстовом индексе. Это значение не читается человеком, но оно полезно для связи заданного ключевого слова с выходными данными, возвращаемыми другими динамическими административными представлениями, возвращающими содержимое полнотекстового индекса, например [sys. dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) и [sys. dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Примечание.** Оксфф представляет специальный символ, указывающий на конец файла или набора данных.|  
 |group_id|**int**|Содержит целочисленное значение, помогающее различить логическую группу, из которой был сформирован данный термин. Например, выражение `Server AND DB OR FORMSOF(THESAURUS, DB)"` формирует следующие значения group_id для английского языка.<br /><br /> 1: сервер<br />2: БАЗА ДАННЫХ<br />3: БАЗА ДАННЫХ|  
 |phrase_id|**int**|Содержит целочисленное значение, помогающее различать варианты альтернативных форм составных слов, формируемые средством разбиения по словам, таким средствам, как полнотекстовой поиск. Иногда составные слова (например, «multi-million») определяются средством разбиения по словам в нескольких альтернативных формах. Эти альтернативные формы (фразы) необходимо как-то различать.<br /><br /> Например, строка `multi-million` формирует следующие значения phrase_id для английского языка.<br /><br /> 1 для`multi`<br />1 для`million`<br />2 для`multimillion`|  
 |occurrence|**int**|Указывает расположение каждого термина в результате анализа. Например, для фразы `SQL Server query processor` вхождение будет содержать следующие значения вхождения терминов из фразы для английского языка.<br /><br /> 1 для`SQL`<br />2 для`Server`<br />3 для`query`<br />4 для`processor`|  
-|special_term|**nvarchar (4000)**|Содержит сведения о характеристиках термина, выданного средством разбиения по словам, в том числе:<br /><br /> Точное совпадение<br /><br /> пропускаемое слово;<br /><br /> конец предложения;<br /><br /> конец абзаца;<br /><br /> конец раздела.|  
-|display_term|**nvarchar (4000)**|Содержит немашинную (предназначенную для человека) форму ключевого слова. Как и в случае с функциями, предназначенными для доступа к содержимому полнотекстового индекса, этот отображаемый термин может не быть идентичным исходному термину в силу ограниченности денормализации. Однако он должен быть достаточно точным, чтобы позволить отличить его от исходных входных данных.|  
-|expansion_type|**int**|Содержит сведения о природе расширения данного термина, в том числе:<br /><br /> 0 — отдельное слово;<br /><br /> 2 — расширение-словоформа;<br /><br /> 4 — расширение/замена тезауруса.<br /><br /> Например, предположим, что тезаурус определяет слово run как расширение слова `jog`:<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> Термин `FORMSOF (FREETEXT, run)` формирует следующие выходные данные:<br /><br /> 
-  `run` со значением expansion_type=0;<br /><br /> 
-  `runs` со значением expansion_type=2;<br /><br /> 
-  `running` со значением expansion_type=2;<br /><br /> 
-  `ran` со значением expansion_type=2;<br /><br /> 
-  `jog` со значением expansion_type=4.|  
-|source_term|**nvarchar (4000)**|Термин или фраза, из которой сформирован или создан в результате анализа данный термин. Например, запрос для `word breakers" AND stemmers'` выдает следующие значения source_term для английского языка.<br /><br /> `word breakers`для display_term`word`<br />`word breakers`для display_term`breakers`<br />`stemmers`для display_term`stemmers`|  
+|special_term|**nvarchar(4000)**|Содержит сведения о характеристиках термина, выданного средством разбиения по словам, в том числе:<br /><br /> Точное соответствие<br /><br /> пропускаемое слово;<br /><br /> конец предложения;<br /><br /> конец абзаца;<br /><br /> конец раздела.|  
+|display_term|**nvarchar(4000)**|Содержит немашинную (предназначенную для человека) форму ключевого слова. Как и в случае с функциями, предназначенными для доступа к содержимому полнотекстового индекса, этот отображаемый термин может не быть идентичным исходному термину в силу ограниченности денормализации. Однако он должен быть достаточно точным, чтобы позволить отличить его от исходных входных данных.|  
+|expansion_type|**int**|Содержит сведения о природе расширения данного термина, в том числе:<br /><br /> 0 — отдельное слово;<br /><br /> 2 — расширение-словоформа;<br /><br /> 4 — расширение/замена тезауруса.<br /><br /> Например, предположим, что тезаурус определяет слово run как расширение слова `jog`:<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> Термин `FORMSOF (FREETEXT, run)` формирует следующие выходные данные:<br /><br /> `run` со значением expansion_type=0;<br /><br /> `runs` со значением expansion_type=2;<br /><br /> `running` со значением expansion_type=2;<br /><br /> `ran` со значением expansion_type=2;<br /><br /> `jog` со значением expansion_type=4.|  
+|source_term|**nvarchar(4000)**|Термин или фраза, из которой сформирован или создан в результате анализа данный термин. Например, запрос для `word breakers" AND stemmers'` выдает следующие значения source_term для английского языка.<br /><br /> `word breakers`для display_term`word`<br />`word breakers`для display_term`breakers`<br />`stemmers`для display_term`stemmers`|  
   
 ## <a name="remarks"></a>Remarks  
  **sys. dm_fts_parser** поддерживает синтаксис и функции полнотекстовых предикатов, таких как [Contains](../../t-sql/queries/contains-transact-sql.md) и [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), и функций, таких как [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) и [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
@@ -144,7 +139,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0, 0);  
 ```  
   
-### <a name="b-displaying-the-output-of-a-given-word-breaker-in-the-context-of-stoplist-filtering"></a>Б. Отображение выходных данных указанного средства разбиения по словам в контексте фильтрации по списку стоп-слов  
+### <a name="b-displaying-the-output-of-a-given-word-breaker-in-the-context-of-stoplist-filtering"></a>Б) Отображение выходных данных указанного средства разбиения по словам в контексте фильтрации по списку стоп-слов  
  В следующем примере средство разбиения по словам для английского языка с кодом языка 1033, имеющее список английских стоп-слов с идентификатором 77, возвращает выходные данные для следующей строки запроса:  
   
  `"The Microsoft business analysis" OR "MS revenue"`  
@@ -166,9 +161,9 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS re
 SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции полнотекстового поиска и семантического поиска &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [Полнотекстовый поиск](../../relational-databases/search/full-text-search.md)   
+ [Компонент Full-text Search](../../relational-databases/search/full-text-search.md)   
  [Настройка средств разбиения по словам и парадигматические модули для поиска и управление ими](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Настройка файлов тезауруса для полнотекстового поиска и управление ими](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
  [Настройка стоп-слова и списков для полнотекстового поиска и управление ими](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   

@@ -16,16 +16,16 @@ ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ae822794b1b06a975e1cc3cd397b5a5f00036dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918249"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 Указывает тип блокировки, помещаемой в записи во время редактирования.  
   
-|Постоянно|Значение|Description|  
+|Константа|Применение|Описание|  
 |--------------|-----------|-----------------|  
 |**адлоккбатчоптимистик**|4|Обозначает обновления оптимистических пакетов. Требуется для режима пакетного обновления.|  
 |**adLockOptimistic**|3|Обозначает оптимистичную блокировку, запись по записям. Поставщик использует оптимистичную блокировку, блокируя записи только при вызове метода [Update](../../../ado/reference/ado-api/update-method.md) .|  
@@ -36,7 +36,7 @@ ms.locfileid: "67918249"
 ## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
  Пакет: **com. MS. WFC. Data**  
   
-|Постоянно|  
+|Константа|  
 |--------------|  
 |Адоенумс. LockType. БАТЧОПТИМИСТИК|  
 |Адоенумс. LockType. ОПТИМИСТИЧный|  

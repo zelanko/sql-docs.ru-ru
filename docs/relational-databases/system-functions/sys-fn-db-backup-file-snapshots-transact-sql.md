@@ -13,10 +13,10 @@ ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5159b72cb91cfdcf21129c6216cab4cf0e8d4dea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68120274"
 ---
 # <a name="sysfn_db_backup_file_snapshots-transact-sql"></a>sys. fn_db_backup_file_snapshots (Transact-SQL)
@@ -40,17 +40,17 @@ sys.fn_db_backup_file_snapshots
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |file_id|**int**|Идентификатор файла для базы данных. Не допускает значение NULL.|  
 |snapshot_time|**nvarchar(260)**|Метка времени моментального снимка, возвращаемая REST API. Возвращает значение NULL, если моментальный снимок не существует.|  
-|snapshot_url|**nvarchar (360)**|Полный URL-адрес моментального снимка файла. Возвращает значение NULL, если моментальный снимок не существует.|  
+|snapshot_url|**nvarchar(360)**|Полный URL-адрес моментального снимка файла. Возвращает значение NULL, если моментальный снимок не существует.|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DATABASE STATE на базу данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)   
- [sp_delete_backup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
+ [sp_delete_backup (Transact-SQL)](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
   
   

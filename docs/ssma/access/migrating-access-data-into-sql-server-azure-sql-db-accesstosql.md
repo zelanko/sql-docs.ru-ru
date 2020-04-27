@@ -19,10 +19,10 @@ ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8f0e93efee0c57c904c32ec52fbb560f973f21b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907143"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>Перенос данных доступа в SQL Server в базе данных SQL Azure (Акцесстоскл)
@@ -50,10 +50,10 @@ ms.locfileid: "67907143"
   
 Вы также можете выполнить миграцию данных за пределами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA с помощью программы командной строки [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **bcp** или. Дополнительные сведения об этих средствах см [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . в электронной документации по.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 Если у вас есть доступ к приложениям базы данных, которые вы хотите продолжить использовать после миграции, свяжите таблицы базы данных Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с таблицами или SQL Azure. Дополнительные сведения см. [в разделе Связывание приложений Access с SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-[Задание параметров преобразования и миграции](setting-conversion-and-migration-options-accesstosql.md)  
+[Настройка параметров преобразования и миграции](setting-conversion-and-migration-options-accesstosql.md)  
   

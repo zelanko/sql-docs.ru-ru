@@ -16,10 +16,10 @@ ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70a751db424cec07a0ac617b3620316a07936400
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917967"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>Примеры свойств NumericScale и Precision (Visual C++)
@@ -133,6 +133,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство NumericScale (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
  [Свойство Precision (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

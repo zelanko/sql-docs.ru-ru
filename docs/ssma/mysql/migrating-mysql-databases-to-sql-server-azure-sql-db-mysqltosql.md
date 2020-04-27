@@ -10,10 +10,10 @@ ms.assetid: 8006f9a0-394d-4238-8dc5-44255134628b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 33dd7faf67e82f1259ac87a0ef8e0eb5fdf2927d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908789"
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>Перенос баз данных MySQL в SQL Server в базе данных SQL Azure (MySQLToSql)
@@ -38,7 +38,7 @@ ms.locfileid: "67908789"
   
 7.  [Преобразование баз данных MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-8.  [Синхронизация](loading-converted-database-objects-into-sql-server-mysqltosql.md)  
+8.  [Синхронизиру](loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 9. Это можно сделать одним из следующих способов:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "67908789"
 > [!NOTE]  
 > Вы не можете перенести схемы Information_schema и MySQL.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Установка SSMA для MySQL &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)  
 [Начало работы с SSMA для MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
   

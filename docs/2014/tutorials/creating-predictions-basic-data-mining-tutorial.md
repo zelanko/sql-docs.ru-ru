@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 456aec6c6b9d0d1a5d0ee1d9949507a37577130c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67597532"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Создание прогнозов (учебник по интеллектуальному анализу данных — начальный уровень)
@@ -169,7 +169,7 @@ ms.locfileid: "67597532"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Использование детализации в данных структуры &#40;учебник по основам интеллектуального анализа данных&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
   

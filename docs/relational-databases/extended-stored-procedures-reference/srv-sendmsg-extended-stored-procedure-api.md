@@ -20,17 +20,17 @@ ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 62fa2db01ff17008a0b6a7cd4e5fd0a2bce71189
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910916"
 ---
 # <a name="srv_sendmsg-extended-stored-procedure-api"></a>srv_sendmsg (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
   
  Отправляет клиенту сообщение.  
   
@@ -75,34 +75,34 @@ msglen
  *srvproc*  
  Указатель на структуру SRV_PROC, который представляет собой дескриптор соединения с клиентом (в данном случае — дескриптор, который получил запрос языка). Структура содержит сведения, которые используются библиотекой API-интерфейса расширенных хранимых процедур для управления связью и передачи данных между приложением и клиентом.  
   
- *мсгтипе*  
+ *msgtype*  
  Является либо SRV_MSG_INFO, либо SRV_MSG_ERROR, в зависимости от того, отправляет сервер информационное сообщение или сообщение об ошибке.  
   
  *msgnum*  
  4-байтовый номер сообщения.  
   
- *см*  
+ *class*  
  Указывает серьезность ошибки. Серьезность, меньше или равная 10, считается информационным сообщением.  
   
  *state*  
  Предоставляет код состояния ошибки для текущего сообщения. Код состояния ошибки предоставляет информацию о контексте ошибки. Допустимые значения кода состояния — от 0 до 255.  
   
- *рпкнаме*  
+ *rpcname*  
  Не поддерживается в текущей версии.  
   
- *рпкнамелен*  
+ *rpcnamelen*  
  Не поддерживается в текущей версии.  
   
- *линенум*  
+ *linenum*  
  Представляет собой номер строки в пакете языковых команд, к которому относится сообщение. Номера строк начинаются с 1. Если параметр *linenum* не применяется к сообщению, установите его равным 0.  
   
- *Сообщение*  
+ *message*  
  Является указателем на символьную строку, которая должна быть отправлена клиенту.  
   
  *msglen*  
  Задает длину *message* в байтах. Если *message*заканчивается нулевым байтом, задайте для параметра *msglen* значение SRV_NULLTERM.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  SUCCEED или FAIL  
   
 ## <a name="remarks"></a>Remarks  
@@ -112,7 +112,7 @@ msglen
   
  Для отправки сообщений в Юникоде лучше использовать функцию **srv_wsendmsg**, чем функцию** srv_sendmsg**.  
   
- Дополнительные сведения см. в статье [данные в Юникоде и серверные кодовые страницы](../../relational-databases/extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
+ Дополнительные сведения см. в статье [Данные в Юникоде и кодовые страницы сервера](../../relational-databases/extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
   
 > [!IMPORTANT]  
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  

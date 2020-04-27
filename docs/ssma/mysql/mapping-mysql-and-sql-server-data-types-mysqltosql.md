@@ -13,10 +13,10 @@ ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 99e86d99a4214b1ccdf317e75218fe22bb2c7af7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908993"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Сопоставление типов данных MySQL и SQL Server (MySQLToSQL)
@@ -78,9 +78,9 @@ SSMA имеет набор сопоставлений типов данных п
   
     2.  Щелкните **Удалить**.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 Следующим шагом процесса миграции является [Создание отчета оценки](assessing-mysql-databases-for-conversion-mysqltosql.md) или [Преобразование объектов базы данных MySQL в SQL Server или SQL Azure синтаксис](converting-mysql-databases-mysqltosql.md). При создании отчета объекты MySQL автоматически преобразуются во время оценки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Перенос баз данных MySQL в SQL Server Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

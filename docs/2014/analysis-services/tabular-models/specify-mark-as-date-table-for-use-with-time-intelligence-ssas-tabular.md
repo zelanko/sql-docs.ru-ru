@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284882"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>Указание таблицы дат для использования с логикой операций со временем (табличные службы SSAS)
@@ -36,7 +36,7 @@ ms.locfileid: "67284882"
   
 1.  В конструкторе моделей щелкните таблицу дат.  
   
-2.  В меню **Таблица** выберите пункт **Дата**, а затем пункт **Пометить как таблицу дат** .  
+2.  Откройте меню **Таблица** , выберите пункт **Дата**, а затем пункт **Пометить как таблицу дат**  
   
 3.  В диалоговом окне **Пометить как таблицу дат** в списке **Дата** выберите столбец, который будет служить уникальным идентификатором. Этот столбец должен содержать уникальные значения и иметь тип данных Date. Пример:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "67284882"
   
 4.  При необходимости создайте связи между таблицами фактов и таблицей дат.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Вычисления &#40;табличных&#41;SSAS](calculations-ssas-tabular.md)   
  [Функции логики операций со временем &#40;DAX&#41;](/dax/time-intelligence-functions-dax)  
   

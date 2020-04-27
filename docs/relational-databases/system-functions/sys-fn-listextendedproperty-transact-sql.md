@@ -27,10 +27,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a2516d24b65e509ffc04c0f9979721ad6eefa22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68082701"
 ---
 # <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
@@ -89,10 +89,10 @@ fn_listextendedproperty (
   
 |Имя столбца|Тип данных|  
 |-----------------|---------------|  
-|objtype|**имеет sysname**|  
-|objname|**имеет sysname**|  
-|name|**имеет sysname**|  
-|value|**sql_variant**|  
+|objtype|**sysname**|  
+|objname|**sysname**|  
+|name|**sysname**|  
+|значение|**sql_variant**|  
   
  Возвращение пустой таблицы означает отсутствие у объекта расширенных свойств или отсутствие у пользователя разрешений на просмотр этих свойств. При возвращении расширенных свойств самой базы данных столбцы objtype и objname принимают значения NULL.  
   
@@ -141,7 +141,7 @@ GO
   
  `(1 row(s) affected)`  
   
-### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>Б. Отображение расширенных свойств для всех столбцов таблицы  
+### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>Б) Отображение расширенных свойств для всех столбцов таблицы  
  В следующем примере перечисляются расширенные свойства для столбцов в `ScrapReason` таблице. Она хранится в схеме `Production`.  
   
 ```  
@@ -177,7 +177,7 @@ FROM fn_listextendedproperty (NULL, 'schema', 'Sales', 'table', default, NULL, N
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   

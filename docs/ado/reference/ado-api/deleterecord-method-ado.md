@@ -17,10 +17,10 @@ ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919086"
 ---
 # <a name="deleterecord-method-ado"></a>Метод DeleteRecord (ADO)
@@ -34,10 +34,10 @@ Record.DeleteRecord Source, Async
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Source*  
+ *Источник*  
  Необязательный параметр. **Строковое** значение, содержащее URL-адрес, определяющий сущность (например, файл или каталог) для удаления. Если *Source* не указан или указывает пустую строку, сущность, представленная текущей [записью](../../../ado/reference/ado-api/record-object-ado.md) , удаляется. Если запись является записью коллекции ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) из **адколлектионрекорд**, например каталога), все дочерние элементы (например, подкаталоги) также будут удалены.  
   
- *Асинхронный режим*  
+ *Async*  
  Необязательный параметр. **Логическое** значение, которое при **значении true**указывает, что операция удаления — асинхронного.  
   
 ## <a name="remarks"></a>Remarks  
@@ -51,7 +51,7 @@ Record.DeleteRecord Source, Async
 ## <a name="applies-to"></a>Применяется к  
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Delete (коллекция полей ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
  [Метод Delete (Коллекция параметров ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [Метод Delete (объект Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)

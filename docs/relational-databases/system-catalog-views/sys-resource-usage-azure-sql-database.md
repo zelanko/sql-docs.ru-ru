@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 3be4ff07923759af53b929852d4dbaa4088a77f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904421"
 ---
 # <a name="sysresource_usage-azure-sql-database"></a>sys.resource_usage (база данных SQL Azure)
@@ -42,13 +42,13 @@ ms.locfileid: "67904421"
   
  Для каждой пользовательской базы данных существует одна строка для каждого часа в непрерывном формате. Даже если база данных не использовалась в течение этого часа, для него существует соответствующая строка, а значение usage_in_seconds для этой базы данных будет равно 0. Сведения об использовании хранилища и номере SKU добавляются для часа соответствующим образом.  
   
-|Столбцы|Тип данных|Description|  
+|Столбцы|Тип данных|Описание|  
 |-------------|---------------|-----------------|  
 |time|**datetime**|Время (UTC) в почасовых приращениях.|  
 |database_name|**nvarchar**|Имя пользовательской базы данных.|  
-|sku|**nvarchar**|Имя SKU. Допустимы следующие значения:<br /><br /> Интернет<br /><br /> Рабочий телефон<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium|  
+|sku|**nvarchar**|Имя SKU. Допустимы следующие значения:<br /><br /> Интернет<br /><br /> Business Edition<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium|  
 |usage_in_seconds|**int**|Время ЦП, использованное в течение часа.<br /><br /> Примечание. Этот столбец является устаревшим для версии 11 и не применяется к версии 12. **Значение всегда равно 0.**|  
-|storage_in_megabytes|**Decimal**|Максимальный объем хранилища в течение часа, включающий данные базы данных, индексы, хранимые процедуры и метаданные.|  
+|storage_in_megabytes|**decimal**|Максимальный объем хранилища в течение часа, включающий данные базы данных, индексы, хранимые процедуры и метаданные.|  
   
 ## <a name="permissions"></a>Разрешения  
  Это представление доступно для всех ролей пользователей с разрешениями на подключение к виртуальной базе данных **master** .  

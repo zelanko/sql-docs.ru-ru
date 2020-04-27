@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7e736adef1648785ec0d037688c340f31a0e1bda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67915102"
 ---
 # <a name="sysdatabase_event_session_targets-azure-sql-database"></a>sys.database_event_session_targets (база данных SQL Azure)
@@ -27,13 +27,13 @@ ms.locfileid: "67915102"
 |-|  
 |**Применимо к**версии [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 12 и всем более поздним версиям.|  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Идентификатор сеанса событий. Не допускает значение NULL.|  
 |target_id|**int**|Идентификатор цели. Идентификатор уникален внутри объекта сеанса событий. Не допускает значение NULL.|  
-|name|**имеет sysname**|Имя цели события. Не допускает значение NULL.|  
-|Пакет|**имеет sysname**|Имя пакета событий, который содержит цель события. Не допускает значение NULL.|  
-|module|**имеет sysname**|Имя модуля, который содержит цель события. Не допускает значение NULL.|  
+|name|**sysname**|Имя цели события. Не допускает значение NULL.|  
+|пакет|**sysname**|Имя пакета событий, который содержит цель события. Не допускает значение NULL.|  
+|module|**sysname**|Имя модуля, который содержит цель события. Не допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DATABASE STATE на сервере.  
@@ -43,10 +43,10 @@ ms.locfileid: "67915102"
   
 ||||  
 |-|-|-|  
-|С|Кому|Связь|  
+|Исходный тип|Кому|Связь|  
 |sys. database_event_session_targets. event_session_id|sys. database_event_sessions. event_session_id|Многие к одному|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   
   

@@ -20,10 +20,10 @@ ms.assetid: a1e5f9cb-c350-4bb4-a04f-7394f6f25d62
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b4e6437a07aa571fc538f2630124dd52496d08e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906170"
 ---
 # <a name="sysfn_hadr_distributed_ag_replica-transact-sql"></a>sys. fn_hadr_distributed_ag_replica (Transact-SQL)
@@ -50,9 +50,9 @@ sys.fn_hadr_distributed_ag_replica( lag_Id, replica_id )
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
  Возвращает следующие данные.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**group_id**|**UNIQUEIDENTIFIER**|Уникальный идентификатор (GUID) локальной группы доступности.|  
+|**group_id**|**uniqueidentifier**|Уникальный идентификатор (GUID) локальной группы доступности.|  
   
 ## <a name="examples"></a>Примеры  
   
@@ -67,11 +67,11 @@ SELECT * FROM sys.fn_hadr_distributed_ag_replica(@lagId, @replicaId)
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции группы доступности AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Группы доступности AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Распределенные группы доступности &#40;группы доступности AlwaysOn&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)  
- [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [Создание группы доступности &#40;&#41;Transact-SQL](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   

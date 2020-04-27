@@ -13,10 +13,10 @@ ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 83a4a2d1bea5074cc268590d4074bde631f28694
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908834"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>Перенос данных MySQL в SQL Server в базе данных SQL Azure (MySQLToSQL)
@@ -63,7 +63,7 @@ ms.locfileid: "67908834"
   
 **Перенос данных**  
   
-1.  Проверьте следующее.  
+1.  Проверьте выполнение следующих условий.  
   
     -   Поставщики MySQL устанавливаются на компьютере, на котором выполняется SSMA.  
   
@@ -107,6 +107,6 @@ ms.locfileid: "67908834"
 > [!NOTE]  
 > Если в качестве целевой базы данных используется SQL Express Edition, то разрешена только миграция данных на стороне клиента, а миграция данных на стороне сервера не поддерживается.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Перенос баз данных MySQL в SQL Server Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

@@ -21,10 +21,10 @@ ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a76835272ed86faeab807f97f6e8801985062733
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68059202"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
@@ -48,12 +48,12 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |msgnum|**int**|Идентификатор сообщения об ошибке.|  
 |severity|**tinyint**|Степень серьезности сообщения, от 1 до 25.|  
 |state|**smallint**|Номер состояния ошибки, отмеченной точкой в коде, в котором она произошла.|  
-|Message|**nvarchar (2048)**|Текст сообщения ошибки.|  
+|сообщение|**nvarchar (2048)**|Текст сообщения ошибки.|  
   
 ## <a name="permissions"></a>Разрешения  
  Для руководств планов области OBJECT требуются разрешения VIEW DEFINITION или ALTER на соответствующий объект и разрешения на компиляцию запроса или пакета, представленного в структуре плана. Например, если пакет содержит инструкции SELECT, необходимы разрешения SELECT на соответствующие объекты.  
@@ -74,7 +74,7 @@ CROSS APPLY fn_validate_plan_guide(plan_guide_id);
 GO  
 ```  
   
-### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>Б. Тестирование проверки руководства плана перед изменением базы данных  
+### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>Б) Тестирование проверки руководства плана перед изменением базы данных  
  В следующем примере используется явная транзакция для удаления индекса. `sys.fn_validate_plan_guide` Функция выполняется, чтобы определить, будет ли это действие делать недействительными структуры плана в базе данных. В зависимости от результатов выполнения этой функции инструкция `DROP INDEX` фиксируется либо выполняется откат транзакции, а индекс не удаляется.  
   
 ```sql  
@@ -92,9 +92,9 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Структуры планов](../../relational-databases/performance/plan-guides.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
+ [sp_create_plan_guide_from_handle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
   
   

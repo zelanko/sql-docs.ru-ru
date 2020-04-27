@@ -15,10 +15,10 @@ ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58da870e9c65be459e6bd4a8c35bb84aef325c61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917586"
 ---
 # <a name="prepared-property-example-vc"></a>Пример свойства Prepared (Visual C++)
@@ -143,6 +143,6 @@ void PrintComError(_com_error &e) {
  **Результаты производительности:**  
 **Не подготовлено: 0,016 с**  
 **Подготовлено: 0,016 с**   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Свойство Prepared (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

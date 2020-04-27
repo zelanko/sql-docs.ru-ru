@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: aa07788bc00cc3317024d287f1054a67c6447356
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905886"
 ---
 # <a name="kpistatus-mdx"></a>KPIStatus (многомерные выражения)
@@ -28,7 +28,7 @@ KPIStatus(KPI_Name)
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *KPI_Name*  
+ *Название_КПЭ*  
  Допустимое строковое выражение, указывающее имя ключевого показателя эффективности.  
   
 ## <a name="remarks"></a>Remarks  
@@ -53,7 +53,7 @@ Descendants
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

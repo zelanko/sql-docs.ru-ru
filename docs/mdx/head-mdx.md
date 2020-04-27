@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6e6d8da7a5813f7e99c022e19f18de2800598885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906006"
 ---
 # <a name="head-mdx"></a>Head (многомерные выражения)
@@ -31,7 +31,7 @@ Head(Set_Expression [ ,Count ] )
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
- *Расчета*  
+ *Count*  
  Допустимое числовое выражение, указывающее количество возвращаемых кортежей.  
   
 ## <a name="remarks"></a>Remarks  
@@ -54,11 +54,11 @@ Head
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [&#41;&#40;с хвостовиком хвоста](../mdx/tail-mdx.md)   
  [Элемент &#40;кортежа&#41; &#40;многомерных выражений&#41;](../mdx/item-tuple-mdx.md)   
  [Элемент &#40;элемента&#41; &#40;многомерных выражений&#41;](../mdx/item-member-mdx.md)   
  [Ранжирование &#40;&#41;многомерных выражений](../mdx/rank-mdx.md)   
- [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

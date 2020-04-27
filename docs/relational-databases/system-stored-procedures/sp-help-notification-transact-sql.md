@@ -18,10 +18,10 @@ ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906098"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
@@ -50,7 +50,7 @@ sp_help_notification
   
 `[ @enum_type = ] 'enum_type'`Возвращаемые сведения о *object_type*. в большинстве случаев *ENUM_TYPE* фактически. *enum_type*имеет **тип char (10)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |ACTUAL|Выводит только *object_types* , связанные с *именем*.|  
 |ALL|Список всех*object_types* , включая те, которые не связаны с *именем*.|  
@@ -58,7 +58,7 @@ sp_help_notification
   
 `[ @notification_method = ] notification_method`Числовое значение, определяющее возвращаемые столбцы метода уведомления. *notification_method* имеет тип **tinyint**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Электронная почта. возвращает только столбец **use_email** .|  
 |**2**|Пейджер: возвращает только столбец **use_pager** .|  
@@ -68,15 +68,15 @@ sp_help_notification
 `[ @target_name = ] 'target_name'`Имя предупреждения для поиска (если *object_type* — оповещения) или имя оператора для поиска (если *object_type* является операторами). *target_name* требуется только в том случае, если *enum_type* является целевым объектом. Аргумент *target_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-valves"></a>Значения кодов возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Если *object_type* — **предупреждения**, результирующий набор перечисляет все предупреждения для данного оператора.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|Идентификатор предупреждения.|  
-|**alert_name**|**имеет sysname**|Имя предупреждения.|  
+|**alert_name**|**sysname**|Имя предупреждения.|  
 |**use_email**|**int**|Уведомление оператора происходит по электронной почте.<br /><br /> **1** = да<br /><br /> **0** = нет|  
 |**use_pager**|**int**|Уведомление оператора происходит по пейджеру.<br /><br /> **1** = да<br /><br /> **0** = нет|  
 |**use_netsend**|**int**|Уведомление оператора происходит с помощью сетевого всплывающего окна.<br /><br /> **1** = да<br /><br /> **0** = нет|  
@@ -86,10 +86,10 @@ sp_help_notification
   
  Если **object_type** — **Операторы**, результирующий набор перечисляет все операторы для данного предупреждения.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|Идентификационный номер оператора.|  
-|**operator_name**|**имеет sysname**|Имя оператора.|  
+|**operator_name**|**sysname**|Имя оператора.|  
 |**use_email**|**int**|Уведомление оператора происходит по электронной почте.<br /><br /> **1** = да<br /><br /> **0** = нет|  
 |**use_pager**|**int**|Уведомление оператора происходит по пейджеру.<br /><br /> **1** = да<br /><br /> **0** = нет|  
 |**use_netsend**|**int**|Для уведомления оператора используется всплывающее сетевое сообщение.<br /><br /> **1** = да<br /><br /> **0** = нет|  
@@ -120,7 +120,7 @@ EXEC dbo.sp_help_notification
 GO  
 ```  
   
-### <a name="b-listing-operators-for-a-specific-alert"></a>Б. Список операторов для указанного предупреждения  
+### <a name="b-listing-operators-for-a-specific-alert"></a>Б) Список операторов для указанного предупреждения  
  В следующем примере возвращаются все операторы, которые получают уведомления любого вида для предупреждения `Test Alert`.  
   
 ```  
@@ -135,10 +135,10 @@ EXEC sp_help_notification
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

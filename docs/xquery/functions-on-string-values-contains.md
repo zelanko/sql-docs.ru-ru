@@ -16,10 +16,10 @@ ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899029"
 ---
 # <a name="functions-on-string-values---contains"></a>Функции со строковыми значениями — contains
@@ -48,8 +48,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
   
  Функция contains() использует параметры сортировки кодовых точек Юникода языка XQuery по умолчанию для сравнения строк.  
   
- Значение подстроки, указанное для *$arg 2* , должно быть меньше 4000 символов или равно ему. Если указанное значение превышает 4000 символов, возникает динамическое условие ошибки, а функция contains () возвращает пустую последовательность вместо логического значения **true** или **false**. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не вызывает динамические ошибки в выражениях XQuery.  
+ Значение подстроки, указанное для *$arg 2* , должно быть меньше 4000 символов или равно ему. Если указанное значение превышает 4000 символов, возникает динамическое условие ошибки, а функция contains () возвращает пустую последовательность вместо логического значения **true** или **false**. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не вызывает динамические ошибки в выражениях XQuery.  
   
  Чтобы получить возможность сравнения без учета регистра, можно использовать функции [верхнего](../xquery/functions-on-string-values-upper-case.md) или нижнего регистра.  
   
@@ -59,7 +58,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа XML в базе данных AdventureWorks.  
   
-### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. Использование функции contains() языка XQuery для поиска указанной строки символов  
+### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>А) Использование функции contains() языка XQuery для поиска указанной строки символов  
  В следующем запросе выполняется поиск продуктов, сводное описание которых содержат слово «Aerodynamic». Запрос возвращает ProductID и элемент> <`Summary` для таких продуктов.  
   
 ```  
@@ -109,7 +108,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

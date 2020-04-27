@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68185745"
 ---
 # <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Урок 1. Выполнение политик рекомендаций по запросу
@@ -24,14 +24,14 @@ ms.locfileid: "68185745"
   
  Это занятие содержит следующие разделы:  
   
--   [Выполнение оценки по запросу с помощью обозревателя объектов](../ssms/object/object-explorer.md) (для одного экземпляра)  
+-   [Perform an On-Demand Evaluation by Using Object Explorer](../ssms/object/object-explorer.md) (для единственного экземпляра)  
   
--   [Выполнение оценки по запросу с помощью компонента "зарегистрированные серверы](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md) " (для одного или нескольких экземпляров)  
+-   [Perform an On-Demand Evaluation by Using Registered Servers](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md) (для одного или нескольких экземпляров)  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Perform an On-Demand Evaluation by Using Object Explorer](../ssms/object/object-explorer.md)  
   
-## <a name="see-also"></a>См. также:  
- [Занятие 2. Выполнение политик рекомендаций по расписанию](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+## <a name="see-also"></a>См. также  
+ [Урок 2. Выполнение политик рекомендаций по расписанию](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
   

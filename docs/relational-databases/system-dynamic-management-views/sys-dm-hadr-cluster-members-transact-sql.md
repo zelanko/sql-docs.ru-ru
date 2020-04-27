@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8b28b708aabfdf3ec4e569aab6d8a95e2330b370
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900768"
 ---
 # <a name="sysdm_hadr_cluster_members-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
@@ -45,13 +45,13 @@ ms.locfileid: "67900768"
  > [!TIP]
  > Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]версии, это динамическое административное представление поддерживает Always on экземпляры отказоустойчивого кластера в дополнение к группам доступности Always on.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**member_name**|**nvarchar(128**|Имя элемента, которое может быть именем компьютера, буквой диска или путем к общей папке.|  
+|**member_name**|**nvarchar(128)**|Имя элемента, которое может быть именем компьютера, буквой диска или путем к общей папке.|  
 |**member_type**|**tinyint**|Тип элемента. Одно из следующих значений:<br /><br /> 0 = узел WSFC<br /><br /> 1 = следящий диск<br /><br /> 2 = следящая общая папка<br /><br /> 3 = облачный следящий сервер|  
 |**member_type_desc**|**nvarchar(50)**|Описание **MEMBER_TYPE**, одно из следующих:<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS<br /><br /> CLOUD_WITNESS|  
 |**member_state**|**tinyint**|Состояние элемента, одно из следующих значений:<br /><br /> 0 = вне сети<br /><br /> 1 = в сети|  
-|**member_state_desc**|**nvarchar (60)**|Описание **member_state**, одно из следующих:<br /><br /> РАБОТАЕТ<br /><br /> СБОЙ|  
+|**member_state_desc**|**nvarchar(60)**|Описание **member_state**, одно из следующих:<br /><br /> UP<br /><br /> СБОЙ|  
 |**number_of_quorum_votes**|**tinyint**|Число голосов, принадлежащих этому члену кворума. Для отсутствия большинства: кворумов только на диск. по умолчанию используется значение 0. Для других типов кворума это значение по умолчанию равно 1.|  
   
 ## <a name="permissions"></a>Разрешения  

@@ -28,10 +28,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 730508fca6b6f9d3e9515e9ec496971a4b758279
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046521"
 ---
 # <a name="sysfn_builtin_permissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
@@ -68,18 +68,18 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  Эквивалентен DEFAULT.  
   
  **"**<securable_class>**"**  
- При вызове с именем одного защищаемого класса Sys. fn_builtin_permissions возвратит все разрешения, которые применяются к классу. <securable_class> — строковый литерал, для которого требуются кавычки. **nvarchar (60)**  
+ При вызове с именем одного защищаемого класса Sys. fn_builtin_permissions возвратит все разрешения, которые применяются к классу. <securable_class> — строковый литерал, для которого требуются кавычки. **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
   
-|Имя столбца|Тип данных|Параметры сортировки|Description|  
+|Имя столбца|Тип данных|Параметры сортировки|Описание|  
 |-----------------|---------------|---------------|-----------------|  
-|class_desc|**nvarchar (60)**|Параметры сортировки сервера|Описание защищаемого класса.|  
-|permission_name|**nvarchar (60)**|Параметры сортировки сервера|Имя разрешения.|  
-|type|**varchar (4)**|Параметры сортировки сервера|Код компактных типов разрешений. См. таблицу далее.|  
-|covering_permission_name|**nvarchar (60)**|Параметры сортировки сервера|Если значение не NULL, то это имя разрешения на данный класс, который содержит в себе другие разрешения данного класса.|  
-|parent_class_desc|**nvarchar (60)**|Параметры сортировки сервера|Если значение не NULL, то это имя родительского класса, который содержит текущий класс.|  
-|parent_covering_permission_name|**nvarchar (60)**|Параметры сортировки сервера|Если значение не NULL, то это имя разрешения на родительский класс, который содержит в себе другие разрешения класса.|  
+|class_desc|**nvarchar(60)**|Параметры сортировки сервера|Описание защищаемого класса.|  
+|permission_name|**nvarchar(60)**|Параметры сортировки сервера|Имя разрешения.|  
+|type|**varchar(4)**|Параметры сортировки сервера|Код компактных типов разрешений. См. таблицу далее.|  
+|covering_permission_name|**nvarchar(60)**|Параметры сортировки сервера|Если значение не NULL, то это имя разрешения на данный класс, который содержит в себе другие разрешения данного класса.|  
+|parent_class_desc|**nvarchar(60)**|Параметры сортировки сервера|Если значение не NULL, то это имя родительского класса, который содержит текущий класс.|  
+|parent_covering_permission_name|**nvarchar(60)**|Параметры сортировки сервера|Если значение не NULL, то это имя разрешения на родительский класс, который содержит в себе другие разрешения класса.|  
   
 ### <a name="permission-types"></a>Типы разрешений  
   
@@ -163,7 +163,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|CERTIFICATE|  
 |CL|CONTROL|CONTRACT|  
 |CL|CONTROL|DATABASE|  
-|CL|CONTROL<br /> **Применимо к** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] : [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]и. |DATABASE SCOPED CREDENTIAL|
+|CL|CONTROL<br /> **Применимо к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
 |CL|CONTROL|ENDPOINT|  
 |CL|CONTROL|FULLTEXT CATALOG|  
 |CL|CONTROL|FULLTEXT STOPLIST|  
@@ -182,8 +182,8 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|TYPE|  
 |CL|CONTROL|Пользователь|  
 |CL|CONTROL|XML SCHEMA COLLECTION|  
-|CO|CONNECT.|DATABASE|  
-|CO|CONNECT.|ENDPOINT|  
+|CO|CONNECT|DATABASE|  
+|CO|CONNECT|ENDPOINT|  
 |CORP|CONNECT REPLICATION|DATABASE|  
 |COSQ|CONNECT SQL|SERVER|  
 |CP|CHECKPOINT|DATABASE|  
@@ -242,7 +242,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |RF;|REFERENCES|CERTIFICATE|  
 |RF;|REFERENCES|CONTRACT|  
 |RF;|REFERENCES|DATABASE|  
-|RF;|REFERENCES<br /> **Применимо к** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] : [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]и. |DATABASE SCOPED CREDENTIAL|
+|RF;|REFERENCES<br /> **Применимо к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
 |RF;|REFERENCES|FULLTEXT CATALOG|  
 |RF;|REFERENCES|FULLTEXT STOPLIST|  
 |RF;|REFERENCES|SEARCH PROPERTY LIST|  
@@ -260,32 +260,32 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |SPLN|SHOWPLAN|DATABASE|  
 |SUQN|SUBSCRIBE QUERY NOTIFICATIONS|DATABASE|  
 |SUS|SELECT ALL USER SECURABLES<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
-|В|TAKE OWNERSHIP|ASSEMBLY|  
-|В|TAKE OWNERSHIP|ASYMMETRIC KEY|  
-|В|TAKE OWNERSHIP<br />**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
-|В|TAKE OWNERSHIP|CERTIFICATE|  
-|В|TAKE OWNERSHIP|CONTRACT|  
-|В|TAKE OWNERSHIP|DATABASE|  
-|В|TAKE OWNERSHIP<br /> **Применимо к** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] : [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]и. |DATABASE SCOPED CREDENTIAL|
-|В|TAKE OWNERSHIP|ENDPOINT|  
-|В|TAKE OWNERSHIP|FULLTEXT CATALOG|  
-|В|TAKE OWNERSHIP|FULLTEXT STOPLIST|  
-|В|TAKE OWNERSHIP|SEARCH PROPERTY LIST|  
-|В|TAKE OWNERSHIP|MESSAGE TYPE|  
-|В|TAKE OWNERSHIP|OBJECT|  
-|В|TAKE OWNERSHIP|REMOTE SERVICE BINDING|  
-|В|TAKE OWNERSHIP|ROLE|  
-|В|TAKE OWNERSHIP|ROUTE|  
-|В|TAKE OWNERSHIP|SCHEMA|  
-|В|TAKE OWNERSHIP<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
-|В|TAKE OWNERSHIP|SERVICE|  
-|В|TAKE OWNERSHIP|SYMMETRIC KEY|  
-|В|TAKE OWNERSHIP|TYPE|  
-|В|TAKE OWNERSHIP|XML SCHEMA COLLECTION|  
+|TO|TAKE OWNERSHIP|ASSEMBLY|  
+|TO|TAKE OWNERSHIP|ASYMMETRIC KEY|  
+|TO|TAKE OWNERSHIP<br />**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
+|TO|TAKE OWNERSHIP|CERTIFICATE|  
+|TO|TAKE OWNERSHIP|CONTRACT|  
+|TO|TAKE OWNERSHIP|DATABASE|  
+|TO|TAKE OWNERSHIP<br /> **Применимо к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|TO|TAKE OWNERSHIP|ENDPOINT|  
+|TO|TAKE OWNERSHIP|FULLTEXT CATALOG|  
+|TO|TAKE OWNERSHIP|FULLTEXT STOPLIST|  
+|TO|TAKE OWNERSHIP|SEARCH PROPERTY LIST|  
+|TO|TAKE OWNERSHIP|MESSAGE TYPE|  
+|TO|TAKE OWNERSHIP|OBJECT|  
+|TO|TAKE OWNERSHIP|REMOTE SERVICE BINDING|  
+|TO|TAKE OWNERSHIP|ROLE|  
+|TO|TAKE OWNERSHIP|ROUTE|  
+|TO|TAKE OWNERSHIP|SCHEMA|  
+|TO|TAKE OWNERSHIP<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
+|TO|TAKE OWNERSHIP|SERVICE|  
+|TO|TAKE OWNERSHIP|SYMMETRIC KEY|  
+|TO|TAKE OWNERSHIP|TYPE|  
+|TO|TAKE OWNERSHIP|XML SCHEMA COLLECTION|  
 |UMSK|UNMASK<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
-|РАБОТАЕТ|UPDATE|DATABASE|  
-|РАБОТАЕТ|UPDATE|OBJECT|  
-|РАБОТАЕТ|UPDATE|SCHEMA|  
+|UP|UPDATE|DATABASE|  
+|UP|UPDATE|OBJECT|  
+|UP|UPDATE|SCHEMA|  
 |VW|VIEW DEFINITION|APPLICATION ROLE|  
 |VW|VIEW DEFINITION|ASSEMBLY|  
 |VW|VIEW DEFINITION|ASYMMETRIC KEY|  
@@ -293,7 +293,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|CERTIFICATE|  
 |VW|VIEW DEFINITION|CONTRACT|  
 |VW|VIEW DEFINITION|DATABASE|  
-|VW|VIEW DEFINITION<br /> **Применимо к** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] : [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]и. |DATABASE SCOPED CREDENTIAL|
+|VW|VIEW DEFINITION<br /> **Применимо к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
 |VW|VIEW DEFINITION|ENDPOINT|  
 |VW|VIEW DEFINITION|FULLTEXT CATALOG|  
 |VW|VIEW DEFINITION|FULLTEXT STOPLIST|  
@@ -343,7 +343,7 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT);
 SELECT * FROM sys.fn_builtin_permissions('');  
 ```  
   
-### <a name="b-listing-permissions-that-can-be-set-on-a-symmetric-key"></a>Б. Листинг разрешений для симметричного ключа   
+### <a name="b-listing-permissions-that-can-be-set-on-a-symmetric-key"></a>Б) Листинг разрешений для симметричного ключа   
 Укажите класс, чтобы получить все возможные разрешения для этого класса.   
 ```sql  
 SELECT * FROM sys.fn_builtin_permissions(N'SYMMETRIC KEY');  
@@ -356,14 +356,14 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT)
     WHERE permission_name = 'SELECT';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Иерархия разрешений &#40;ядро СУБД&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [ПРЕДОСТАВЛЕНИЕ &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
  [УДАЛИТЬ схему &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [Разрешения &#40;ядро СУБД&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [sys. fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
- [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
+ [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   
 

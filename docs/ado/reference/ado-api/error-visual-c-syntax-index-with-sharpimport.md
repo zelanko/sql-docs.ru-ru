@@ -16,10 +16,10 @@ ms.assetid: 1ee59754-59c8-48e2-a4fb-242fa788c1f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23208742a3c103bd25a38477a55106485fea018d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918915"
 ---
 # <a name="error-visual-c-syntax-index-with-import"></a>Ошибка (Visual C++ индекс синтаксиса с #import)
@@ -48,5 +48,5 @@ _bstr_t GetSQLState( );
 __declspec(property(get=GetSQLState)) _bstr_t SQLState;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Error](../../../ado/reference/ado-api/error-object.md)

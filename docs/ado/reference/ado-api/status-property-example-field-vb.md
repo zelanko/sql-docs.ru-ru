@@ -15,10 +15,10 @@ ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c28a0b615a9f250c8539e87abf9fefbc11f513ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67916829"
 ---
 # <a name="status-property-example-field-vb"></a>Пример свойства Status (объект Field) (Visual Basic)
@@ -85,13 +85,13 @@ End Sub
 Attribute VB_Name = "StatusField"  
 ```  
   
- Следующий код удаляет **поле** из **записи** , открытой в документе, доступном только для чтения. Для параметра **Status** будет задано значение **адфиелдпендингделете**. Во время [обновления](../../../ado/reference/ado-api/update-method.md)удаление завершится ошибкой и **** будет отображаться состояние **адфиелдпендингделете** Plus **адфиелдпермиссиондениед**. [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) очищает параметр **состояния** "ожидание".  
+ Следующий код удаляет **поле** из **записи** , открытой в документе, доступном только для чтения. Для параметра **Status** будет задано значение **адфиелдпендингделете**. Во время [обновления](../../../ado/reference/ado-api/update-method.md)удаление завершится ошибкой и **Status** будет отображаться состояние **адфиелдпендингделете** Plus **адфиелдпермиссиондениед**. [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) очищает параметр **состояния** "ожидание".  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)   
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Свойство Status (объект Field ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)

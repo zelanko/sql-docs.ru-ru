@@ -10,10 +10,10 @@ ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c2c903ef29ab1a103bc9aa4f7b061e83ee7f2a95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67896373"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>Параметры миграции данных (MySQLToSQL)
@@ -51,6 +51,6 @@ ms.locfileid: "67896373"
   
 -   **Отмена:** Нажмите кнопку **"Отмена"** , чтобы восстановить параметры до внесения изменений.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Перенос данных MySQL в SQL Server и SQL Azure](https://msdn.microsoft.com/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  
   

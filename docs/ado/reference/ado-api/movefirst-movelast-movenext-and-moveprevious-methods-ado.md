@@ -26,10 +26,10 @@ ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5f0cdacc6e0d7e5512dbc259815e5b9562c9b68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918113"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>Методы MoveFirst, MoveLast, MoveNext и MovePrevious (ADO)
@@ -60,7 +60,7 @@ recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
 ## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры методов MoveFirst, MoveLast, MoveNext и MovePrevious (Visual Basic)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)   
  [Пример методов MoveFirst, MoveLast, MoveNext и MovePrevious (VBScript)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)   
  [Пример методов MoveFirst, MoveLast, MoveNext и MovePrevious (Visual c++)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)   

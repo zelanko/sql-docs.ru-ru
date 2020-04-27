@@ -21,10 +21,10 @@ ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0b2475a3881cb73d9dd82ee7fc311e7288aa4738
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900650"
 ---
 # <a name="sysdm_hadr_cluster_networks-transact-sql"></a>sys.dm_hadr_cluster_networks (Transact-SQL)
@@ -37,9 +37,9 @@ ms.locfileid: "67900650"
  > [!TIP]
  > Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]версии, это динамическое административное представление поддерживает Always on экземпляры отказоустойчивого кластера в дополнение к группам доступности Always on.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**member_name**|**nvarchar(128**|Имя компьютера, принадлежащее узлу в кластере WSFC.|  
+|**member_name**|**nvarchar(128)**|Имя компьютера, принадлежащее узлу в кластере WSFC.|  
 |**network_subnet_ip**|**nvarchar (48)**|IP-адрес подсети, к которой принадлежит компьютер. Это может быть адрес IPv4 или IPv6.|  
 |**network_subnet_ipv4_mask**|**nvarchar (45)**|Маска подсети, задающая подсеть, к которой принадлежит IP-адрес. **network_subnet_ipv4_mask** , чтобы указать параметры DHCP-<network_subnet_option> в предложении WITH DHCP инструкции [CREATE Availability Group](../../t-sql/statements/create-availability-group-transact-sql.md) или [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .<br /><br /> NULL = подсеть IPv6.|  
 ||||  
@@ -47,13 +47,13 @@ ms.locfileid: "67900650"
 |**is_public**|**bit**|Является ли сеть в кластере WSFC общедоступной или закрытой, одно из следующих значений:<br /><br /> 0 = закрытая<br /><br /> 1 = общедоступная|  
 |**is_ipv4**|**bit**|Тип подсети, одно из следующих значений:<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также:  
- [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>См. также  
+ [Отказоустойчивая кластеризация и Always On группы доступности &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [Мониторинг групп доступности &#40;&#41;Transact-SQL](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [sys. dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
  [Запросы к системному каталогу SQL Server вопросы и ответы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   

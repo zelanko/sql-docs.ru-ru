@@ -22,16 +22,16 @@ ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905175"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает конфигурацию системы отслеживания измененных данных для каждой таблицы, включенной для системы отслеживания измененных данных в текущей базе данных. Для каждой исходной таблицы может возвращаться до двух строк — по одной строке для каждого экземпляра отслеживания. Система отслеживания измененных данных доступна не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  Возвращает конфигурацию системы отслеживания измененных данных для каждой таблицы, включенной для системы отслеживания измененных данных в текущей базе данных. Для каждой исходной таблицы может возвращаться до двух строк — по одной строке для каждого экземпляра отслеживания. Система отслеживания измененных данных доступна не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживаемых различными выпусками, см. [в разделе функции, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,24 +60,24 @@ sys.sp_cdc_help_change_data_capture
  Если *source_name* не равно null, *source_schema* также должен иметь значение, отличное от NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|source_schema|**имеет sysname**|Имя схемы исходной таблицы.|  
-|source_table|**имеет sysname**|Имя исходной таблицы.|  
-|capture_instance|**имеет sysname**|Имя экземпляра отслеживания.|  
+|source_schema|**sysname**|Имя схемы исходной таблицы.|  
+|source_table|**sysname**|Имя исходной таблицы.|  
+|capture_instance|**sysname**|Имя экземпляра отслеживания.|  
 |object_id|**int**|Идентификатор таблицы изменений, связанной с исходной таблицей.|  
 |source_object_id|**int**|Идентификатор исходной таблицы.|  
-|start_lsn|**двоичный (10)**|Регистрационный номер LSN, представляющий нижнюю конечную точку для запроса к таблице изменений.<br /><br /> NULL = не установлена нижняя конечная точка.|  
-|end_lsn|**двоичный (10)**|Номер LSN, представляющий верхнюю конечную точку для запроса к таблице изменений. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] этот столбец всегда имеет значение NULL.|  
+|start_lsn|**binary(10)**|Регистрационный номер LSN, представляющий нижнюю конечную точку для запроса к таблице изменений.<br /><br /> NULL = не установлена нижняя конечная точка.|  
+|end_lsn|**binary(10)**|Номер LSN, представляющий верхнюю конечную точку для запроса к таблице изменений. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] этот столбец всегда имеет значение NULL.|  
 |supports_net_changes|**bit**|Включена поддержка отслеживания сетевых изменений.|  
 |has_drop_pending|**bit**|Не используется в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].|  
-|имя_роли|**имеет sysname**|Имя роли базы данных, которая использовалась для управления доступом к информации об изменениях.<br /><br /> NULL = роль не используется.|  
-|index_name|**имеет sysname**|Имя индекса, который использовался для уникальной идентификации строк в исходной таблице.|  
-|filegroup_name|**имеет sysname**|Имя файловой группы, в которой расположена таблица изменений.<br /><br /> NULL = таблица изменений расположена в файловой группе по умолчанию для базы данных.|  
+|имя_роли|**sysname**|Имя роли базы данных, которая использовалась для управления доступом к информации об изменениях.<br /><br /> NULL = роль не используется.|  
+|index_name|**sysname**|Имя индекса, который использовался для уникальной идентификации строк в исходной таблице.|  
+|filegroup_name|**sysname**|Имя файловой группы, в которой расположена таблица изменений.<br /><br /> NULL = таблица изменений расположена в файловой группе по умолчанию для базы данных.|  
 |create_date|**datetime**|Дата включения экземпляра отслеживания.|  
 |index_column_list|**nvarchar(max)**|Список столбцов индекса, который использовался для уникальной идентификации строк в исходной таблице.|  
 |captured_column_list|**nvarchar(max)**|Список отслеживаемых исходных столбцов.|  
@@ -102,7 +102,7 @@ EXECUTE sys.sp_cdc_help_change_data_capture
 GO  
 ```  
   
-### <a name="b-returning-change-data-capture-configuration-information-for-all-tables"></a>Б. Возвращение сведений о конфигурации системы отслеживания изменений для всех таблиц  
+### <a name="b-returning-change-data-capture-configuration-information-for-all-tables"></a>Б) Возвращение сведений о конфигурации системы отслеживания изменений для всех таблиц  
  В следующем примере возвращаются данные конфигурации для всех активных таблиц в базе данных, которые содержат информацию об изменениях, доступ к которой может получать вызывающий объект.  
   
 ```  

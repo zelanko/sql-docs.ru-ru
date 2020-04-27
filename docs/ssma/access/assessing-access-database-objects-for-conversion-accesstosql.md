@@ -19,10 +19,10 @@ ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4c2f5bc6953ab0e96397ca728391cbe22a73dd50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910693"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Оценка объектов базы данных Access для преобразования (Акцесстоскл)
@@ -56,9 +56,9 @@ ms.locfileid: "67910693"
   
 Следует исправить ошибки перед повторным запуском отчета о оценке или преобразовать схемы. Чтобы найти ошибки, нажмите кнопку **ошибки** в области сообщения, а затем разверните каждую ошибку, чтобы просмотреть список объектов, в которых произошла ошибка. Если щелкнуть объект в области сообщения, все ошибки и предупреждения для этого объекта будут отображаться в области сведений.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 [Преобразование объектов базы данных Access](converting-access-database-objects-accesstosql.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

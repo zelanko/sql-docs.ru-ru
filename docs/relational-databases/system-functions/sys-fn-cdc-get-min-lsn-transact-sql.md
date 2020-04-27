@@ -21,10 +21,10 @@ ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046403"
 ---
 # <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
@@ -45,8 +45,8 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
  **"** *capture_instance_name* **"**  
  Имя экземпляра отслеживания. *capture_instance_name* имеет тип **sysname**.  
   
-## <a name="return-types"></a>Типы возвращаемого значения  
- **двоичный (10)**  
+## <a name="return-types"></a>Типы возвращаемых данных  
+ **binary(10)**  
   
 ## <a name="remarks"></a>Remarks  
  Возвращает значение 0x00000000000000000000, если экземпляр отслеживания не существует или если участник не авторизован для доступа к данным изменений, связанным с этим экземпляром отслеживания.  
@@ -68,7 +68,7 @@ SELECT sys.fn_cdc_get_min_lsn ('HumanResources_Employee')AS min_lsn;
   
 ```  
   
-### <a name="b-verifying-the-low-endpoint-of-a-query-range"></a>Б. Проверка нижней конечной точки диапазона запроса  
+### <a name="b-verifying-the-low-endpoint-of-a-query-range"></a>Б) Проверка нижней конечной точки диапазона запроса  
  Следующий пример использует минимальное значение номера LSN, возвращенное функцией `sys.fn_cdc_get_min_lsn` для проверки того, является ли предложенная нижняя конечная точка запроса данных изменений действительной для текущей временной шкалы экземпляра отслеживания `HumanResources_Employee`. В примере предполагается, что предыдущая верхняя точка номера LSN для экземпляра отслеживания была сохранена и является доступной для установки переменной `@save_to_lsn`. Для этого примера переменной `@save_to_lsn` присвоено значение 0x000000000000000000, чтобы принудительно запустить раздел обработки ошибок.  
   
 ```  
@@ -94,8 +94,8 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. fn_cdc_get_max_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
- [&#40;SQL Server журнала транзакций&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
+ [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

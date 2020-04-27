@@ -18,10 +18,10 @@ ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5a6b0660635812a216525665832b0f16f64538b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67894939"
 ---
 # <a name="msmerge_dynamic_snapshots-transact-sql"></a>Таблица MSmerge_dynamic_snapshots (Transact-SQL)
@@ -29,13 +29,13 @@ ms.locfileid: "67894939"
 
   В **MSmerge_dynamic_snapshots** таблице отслеживается расположение моментального снимка отфильтрованных данных для каждой секции, определенной для публикации слиянием с параметризованными фильтрами строк. Эта таблица хранится в базе данных **публикации** .  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**int**|Идентификатор секции для слияния.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Расположение моментального снимка отфильтрованных данных секции.|  
 |**last_updated**|**datetime**|Дата последнего обновления моментального снимка отфильтрованных данных.|  
   
-## <a name="see-also"></a>См. также:  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [Таблицы репликации (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

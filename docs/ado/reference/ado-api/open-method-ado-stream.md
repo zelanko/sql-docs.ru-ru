@@ -17,10 +17,10 @@ ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6549fd10b173a8e133c941ea4315634badb3f35f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917829"
 ---
 # <a name="open-method-ado-stream"></a>Метод Open (объект Stream ADO)
@@ -34,13 +34,13 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Source*  
+ *Источник*  
  Необязательный параметр. Значение **типа Variant** , указывающее источник данных для **потока**. *Источник* может содержать абсолютную строку URL-адреса, указывающую на существующий узел в хорошо известной древовидной структуре, такой как электронная почта или файловая система. URL-адрес должен быть указан с помощью ключевого слова URL-адреса ("URL =*схема*://*сервер*/*Папка*"). Кроме того, *источник* может содержать ссылку на уже открытый объект [Record](../../../ado/reference/ado-api/record-object-ado.md) , который открывает поток по умолчанию, связанный с **записью**. Если параметр *Source* не указан, экземпляр **потока** создается и открывается, который по умолчанию связан без базового источника. Дополнительные сведения о схемах URL-адресов и соответствующих поставщиках см. в разделе [абсолютные и относительные URL-адреса](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
  *Режим*  
  Необязательный параметр. Значение [коннектмодинум](../../../ado/reference/ado-api/connectmodeenum.md) , указывающее режим доступа для результирующего **потока** (например, чтение, запись или только чтение). Значение по умолчанию — **адмодеункновн**. Дополнительные сведения о режимах доступа см. в описании свойства [mode](../../../ado/reference/ado-api/mode-property-ado.md) . Если *режим* не указан, он наследуется исходным объектом. Например, если исходная **запись** открыта в режиме только для чтения, **поток** также будет открыт в режиме только для чтения по умолчанию.  
   
- *опеноптионс*  
+ *OpenOptions*  
  Необязательный параметр. Значение [стреамопеноптионсенум](../../../ado/reference/ado-api/streamopenoptionsenum.md) . Значение по умолчанию — **адопенстреамунспеЦифиед**.  
   
  *Имен*  
@@ -61,7 +61,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
 ## <a name="applies-to"></a>Применяется к  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Open (подключение ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Метод Open (запись ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Метод Open (набор записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   

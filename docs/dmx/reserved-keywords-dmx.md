@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fa17a4fb673ad6508fbfc70d5bab39e398d6c3aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928459"
 ---
 # <a name="reserved-keywords-dmx"></a>Зарезервированные ключевые слова (расширения интеллектуального анализа данных)
@@ -34,7 +34,7 @@ ms.locfileid: "67928459"
   
  Если база данных содержит имена, совпадающие с зарезервированными ключевыми словами, для обращения к ее объектам необходимо использовать идентификаторы с разделителями. Дополнительные сведения см. в разделе [идентификаторы &#40;&#41;расширений интеллектуального анализа данных ](../dmx/identifiers-dmx.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)   
  [Расширения интеллектуального анализа данных &#40;синтаксические обозначения&#41; DMX](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   

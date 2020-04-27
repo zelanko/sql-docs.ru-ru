@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 052402d3a394e8da3e08828992127d3cd89b95ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900167"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67900167"
 
 Возвращает одну строку, отображающую сведения о версии операционной системы.  
   
-|Имя столбца |Тип данных |Description |  
+|Имя столбца |Тип данных |Описание |  
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |Тип операционной системы: Windows или Linux. |
 |**host_distribution** |**nvarchar(256)** |Описание операционной системы. |
@@ -43,7 +43,7 @@ ms.locfileid: "67900167"
 ## <a name="remarks"></a>Remarks  
 Это представление похоже на [sys. dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), добавляя столбцы для различения Windows и Linux.
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
 По `SELECT` умолчанию `sys.dm_os_host_info` разрешение предоставляется `public` роли. Если параметр отозван, требуется `VIEW SERVER STATE` разрешение на сервере.   
@@ -65,7 +65,7 @@ FROM sys.dm_os_host_info;
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |
- |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
+ |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
 
 Ниже приведен пример результирующего набора для Linux:
  
@@ -74,7 +74,7 @@ FROM sys.dm_os_host_info;
  |Linux |Ubuntu |16.04  |   |NULL   |1033 |  
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
  

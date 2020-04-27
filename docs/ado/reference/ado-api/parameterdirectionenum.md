@@ -16,16 +16,16 @@ ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 68aaa0bfb8aa72c9e94a8b5db65768fe85895f0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917740"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 Указывает, представляет ли [параметр](../../../ado/reference/ado-api/parameter-object.md) входной параметр, выходной параметр, как входной, так и выходной параметр, или возвращаемое значение из хранимой процедуры.  
   
-|Постоянно|Значение|Description|  
+|Константа|Применение|Описание|  
 |--------------|-----------|-----------------|  
 |**адпараминпут**|1|По умолчанию. Указывает, что параметр представляет входной параметр.|  
 |**адпараминпутаутпут**|3|Указывает, что параметр представляет как входной, так и выходной параметр.|  
@@ -36,7 +36,7 @@ ms.locfileid: "67917740"
 ## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
  Пакет: **com. MS. WFC. Data**  
   
-|Постоянно|  
+|Константа|  
 |--------------|  
 |Адоенумс. Параметердиректион. INPUT|  
 |Адоенумс. Параметердиректион. ИНПУТАУТПУТ|  

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67792614"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Добавление следящего сервера для зеркального отображения базы данных с использованием проверки подлинности Windows (язык Transact-SQL)
@@ -48,7 +48,7 @@ ms.locfileid: "67792614"
   
      Если конечная точка на следящем сервере отсутствует, см. раздел [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
-2.  Если экземпляры участников запущены от имени пользователей других доменов, создайте имя входа для разных учетных записей в базе данных master каждого экземпляра. Дополнительные сведения см. в статье [Разрешение сетевого доступа к конечной точке зеркального отображения базы данных с использованием проверки подлинности Windows (SQL Server)](../database-mirroring-allow-network-access-windows-authentication.md).  
+2.  Если экземпляры участников запущены от имени пользователей других доменов, создайте имя входа для разных учетных записей в базе данных master каждого экземпляра. Дополнительные сведения см. в разделе [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md).  
   
 3.  Подключите следящий сервер к основному, выполнив следующую инструкцию:  
   
@@ -62,7 +62,7 @@ ms.locfileid: "67792614"
   
      Здесь \<*системный_адрес>*  — строка, однозначно идентифицирующая целевой компьютер, а \<*порт>*  — номер порта, используемого конечной точкой зеркального отображения экземпляра сервера-партнера. Дополнительные сведения см. в разделе [Указание сетевого адреса сервера (зеркальное отображение базы данных)](specify-a-server-network-address-database-mirroring.md).  
   
-     Например, на экземпляре основного сервера следующая инструкция ALTER DATABASE установит следящий сервер. Имя базы данных — **AdventureWorks**, адрес системы — DBSERVER3 (имя следящей системы), а порт, используемый конечной точкой зеркального отображения базы данных на следящем сервере, — `7022`:  
+     Например, на экземпляре основного сервера следующая инструкция ALTER DATABASE установит следящий сервер. Имя базы данных — **AdventureWorks**, системный адрес — DBSERVER3 — имя системы-свидетеля, а порт, используемый конечной точкой зеркального отображения базы данных следящего сервера `7022`:  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -124,10 +124,10 @@ ms.locfileid: "67792614"
 > [!NOTE]  
 >  Сетевой адрес сервера определяет целевой экземпляр сервера по номеру порта, который соответствует конечной точке этого экземпляра.  
   
- Подробный пример настройки зеркального отображения базы данных, в котором показана настройка защиты, подготовка зеркальной базы данных, настройка участников и добавление следящего сервера, см. в разделе [Настройка зеркального отображения базы данных (SQL Server)](database-mirroring-sql-server.md).  
+ Подробный пример настройки зеркального отображения базы данных, в котором показана настройка защиты, подготовка зеркальной базы данных, настройка партнеров и добавление следящего сервера, см. в разделе [Настройка зеркального отображения базы данных (SQL Server)](database-mirroring-sql-server.md).  
   
-## <a name="see-also"></a>См. также:  
- [&#41;Transact-SQL ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql)   
+## <a name="see-also"></a>См. также  
+ [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [Разрешить сетевой доступ к конечной точке зеркального отображения базы данных с помощью &#40;SQL Server проверки подлинности Windows&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
  [Создание конечной точки зеркального отображения базы данных для проверки подлинности Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
  [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4c8def0fad1ae7eddb9de2e7206923b872c41ed2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67046770"
 ---
 # <a name="mssqlserver_2814"></a>MSSQLSERVER_2814
@@ -75,7 +75,7 @@ ms.locfileid: "67046770"
   
 3.  Если ошибка повторится, обратитесь в службу поддержки пользователей Майкрософт.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL:StmtRecompile, класс событий](../event-classes/sql-stmtrecompile-event-class.md)  
   
   

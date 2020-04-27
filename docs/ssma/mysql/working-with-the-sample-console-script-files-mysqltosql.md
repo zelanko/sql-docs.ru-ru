@@ -12,10 +12,10 @@ ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6dacba33ecbaa7bdeb51d0a31438c3cbdb21969f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904894"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Работа с примерами файлов сценариев консоли (MySQLToSQL)
@@ -54,7 +54,7 @@ ms.locfileid: "67904894"
   
     Дополнительные сведения о создании отчетов см. в разделе [Создание отчетов &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md).  
   
-    **Заметки о**  
+    **Примечания.**  
   
     -   Убедитесь, что аргумент командной строки файла переменной value передается в консольное приложение, а Вариаблевалуефилесампле. XML обновляется с учетом указанных пользователем значений.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "67904894"
   
     Сопоставление схемы базы данных источника с целевой схемой.  
   
-    **attribute**  
+    **Версию**  
   
     -   `source-schema:`Указывает базу данных источника, которую необходимо преобразовать.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "67904894"
   
     2.  Если пользователь должен оценить несколько объектов или баз данных, он может указать несколько `metabase-object` узлов, как показано в `convert-schema` примере 4 примера файла сценария консоли.  
   
-    **attribute**  
+    **Версию**  
   
     `object-name`: Укажите имя базы данных-источника или объект, который необходимо преобразовать. Убедитесь, что соответствующие `object-type` изменения основаны на типе объекта, который указан в`object-name`  
   
@@ -105,7 +105,7 @@ ms.locfileid: "67904894"
   
     2.  Если пользователь должен оценить несколько объектов или баз данных, он может указать несколько `metabase-object` узлов, как показано в `synchronize-target` примере 3 примера файла сценария консоли.  
   
-    **attribute**  
+    **Версию**  
   
     `object-name:`Укажите имя базы данных или объекта SQL Server, который необходимо создать. Убедитесь, что соответствующие `object-type` изменения основаны на типе объекта, который указан в`object-name`  
   
@@ -117,11 +117,11 @@ ms.locfileid: "67904894"
   
     2.  Если пользователь должен оценить несколько объектов или баз данных, он может указать несколько `metabase-object` узлов, как показано в `migrate-data` примере 2 примера файла сценария консоли.  
   
-    **attribute**  
+    **Версию**  
   
     `object-name:`Указывает имя базы данных-источника или таблицы, которые необходимо перенести. Убедитесь, что соответствующие `object-type` изменения основаны на типе объекта, который указан в`object-name`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Создание файлов переменных значений &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
 [Создание файлов подключения к серверу &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
 [Создание отчетов &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)  

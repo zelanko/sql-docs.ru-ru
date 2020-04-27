@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68185798"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Развертывание запланированных политик на нескольких экзмплярах
@@ -28,7 +28,7 @@ ms.locfileid: "68185798"
   
  Выполнение этих задач будет производиться на компьютере, где производилось выполнение предыдущих задач этого занятия.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Эта задача предусматривает следующие предварительные условия.  
   
 -   Должено быть завершено выполнение предыдущих задач этого занятия.  
@@ -92,12 +92,12 @@ ms.locfileid: "68185798"
 ## <a name="summary"></a>Сводка  
  В этом учебнике было показано, как по требованию и по расписанию производить оценки политик рекомендаций для одного или более экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="next"></a>Далее  
+## <a name="next"></a>Дальше  
  Данный учебник завершен. Чтобы вернуться к началу работы, см. раздел [учебник. Оценка рекомендаций с помощью управления на основе политик](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
   
  Чтобы просмотреть список [!INCLUDE[ssDE](../includes/ssde-md.md)] учебников, щелкните [ядро СУБД учебники](../relational-databases/database-engine-tutorials.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Администрирование серверов с помощью управления на основе политик](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

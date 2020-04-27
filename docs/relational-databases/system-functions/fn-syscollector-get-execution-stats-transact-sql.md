@@ -18,10 +18,10 @@ ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 71a070de7c74d353be395628566c0bd3f63fd99a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68042742"
 ---
 # <a name="fn_syscollector_get_execution_stats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
@@ -46,7 +46,7 @@ fn_syscollector_get_execution_stats ( log_id )
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |avg_row_count_in|**int**|Среднее количество строк, введенных задачами потока данных пакета.<br /><br /> Примечание. задача потока данных — это [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] компонент, обрабатывающий данные. Эти данные имеют реляционный формат, поэтому у данной задачи входной набор данных состоит из строк. Это строки, обрабатываемые задачей. После преобразования данных они выводятся в виде результирующего набора, состоящего из строк. Задача потока данных преобразует данные и выводит результирующий набор, состоящий из строк. Эти выходные данные — строки, вышедшие из задачи.|  
 |min_row_count_in|**int**|Минимальное количество строк, введенных задачами потока данных пакета.|  
@@ -61,7 +61,7 @@ fn_syscollector_get_execution_stats ( log_id )
 ## <a name="permissions"></a>Разрешения  
  Для **dc_operator**требуется SELECT.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [syscollector_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)  
   

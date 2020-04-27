@@ -16,10 +16,10 @@ ms.assetid: 0b20fbb8-6b83-48ec-b442-f96c8a4bafbb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0343954f549f2cba4b535b8ab4ebafec5a842015
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918287"
 ---
 # <a name="lineseparator-property-ado"></a>Свойство LineSeparator (ADO)
@@ -36,5 +36,5 @@ ms.locfileid: "67918287"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

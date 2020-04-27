@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e6d3880c4be8925e6b85a20af1324537e3977ecc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68103285"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68103285"
   
  Чтобы получить сведения из этих представлений, укажите полное имя **INFORMATION_SCHEMA.** _view_name_.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**nvarchar (** 128 **)**|Имя каталога процедуры, для которой это является параметром.|  
 |**SPECIFIC_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы процедуры, для которой это является параметром.<br /><br /> <strong> \* \* Важно \* !</strong> Не используйте INFORMATION_SCHEMA представления для определения схемы объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
@@ -56,20 +56,20 @@ ms.locfileid: "68103285"
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Основание системы счисления точности приблизительных числовых данных, точных числовых данных, целочисленных данных или денежных данных. В противном случае возвращается значение NULL.|  
 |**NUMERIC_SCALE**|**tinyint**|Масштаб приблизительных числовых данных, точных числовых данных, целочисленных данных или денежных данных. В противном случае возвращается значение NULL.|  
 |**DATETIME_PRECISION**|**smallint**|Точность в долях секунды, если параметр имеет тип **DateTime** или **smalldatetime**. В противном случае возвращается значение NULL.|  
-|**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL. Зарезервирован для использования в будущем.|  
-|**INTERVAL_PRECISION**|**smallint**|NULL. Зарезервирован для использования в будущем.|  
-|**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
-|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
-|**USER_DEFINED_TYPE_NAME**|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
-|**SCOPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
-|**SCOPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
-|**SCOPE_NAME**|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
+|**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL. Зарезервировано для последующего использования.|  
+|**INTERVAL_PRECISION**|**smallint**|NULL. Зарезервировано для последующего использования.|  
+|**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
+|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
+|**USER_DEFINED_TYPE_NAME**|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
+|**SCOPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
+|**SCOPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
+|**SCOPE_NAME**|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные представления &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Представления информационной схемы &#40;&#41;Transact-SQL](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys. Columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys. Objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys. parameters &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
+ [sys.parameters (Transact-SQL)](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
   
   

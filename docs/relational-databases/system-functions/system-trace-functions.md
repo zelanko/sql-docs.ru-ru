@@ -13,19 +13,18 @@ ms.assetid: 166426e1-555d-4ce4-bae3-248dcac56883
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b5666ac53572ac728ff8bb0581eeafae9dce185e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67950940"
 ---
 # <a name="system-trace-functions"></a>Системные функции трассировки
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет следующие системные функции трассировки.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [fn_trace_geteventinfo](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)  
   
  [fn_trace_getfilterinfo](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)  

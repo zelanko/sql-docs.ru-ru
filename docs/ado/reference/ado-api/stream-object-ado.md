@@ -16,10 +16,10 @@ ms.assetid: 0514531f-009d-4519-abc3-d727014a39f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c70a22a3048c769aac343d51e621e4d755d3baeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67916722"
 ---
 # <a name="stream-object-ado"></a>Объект Stream (ADO)
@@ -76,5 +76,5 @@ ms.locfileid: "67916722"
   
 -   [Свойства, методы и события объекта Stream](../../../ado/reference/ado-api/stream-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Записи и потоки](../../../ado/guide/data/records-and-streams.md)

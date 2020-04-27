@@ -18,10 +18,10 @@ ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5868120af1e98c4b2f3be78f2cf7927df53b42d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68072662"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
@@ -72,14 +72,14 @@ sp_addlogin [ @loginame = ] 'login'
  [ @encryptopt= ] "*encryption_option*"  
  Этот аргумент определяет, передается ли пароль в виде открытого текста или в виде его хэша. Шифрование при этом не выполняется. Слово «шифрование» используется в этом контексте для обратной совместимости. Если в процедуру передан открытый пароль, он хэшируется. Хэш сохраняется. *encryption_option* имеет тип **varchar (20)** и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
-|NULL|Пароль передан как открытый текст. Это значение используется по умолчанию.|  
+|NULL|Пароль передан как открытый текст. Это значение по умолчанию.|  
 |**skip_encryption**|Хэширование пароля уже выполнено. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен сохранить его значение без повторного хэширования.|  
 |**skip_encryption_old**|Указанный пароль был хэширован более ранней версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен сохранить его значение без повторного хэширования. Этот вариант предоставлен только для выполнения обновлений.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  Имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут содержать от 1 до 128 символов, включая буквы, символы и цифры. Имена входа не могут содержать обратную\\косую черту (); быть зарезервированным именем входа, например SA или public, или уже существует; или иметь значение NULL или быть пустой строкой (`''`).  
@@ -96,7 +96,7 @@ sp_addlogin [ @loginame = ] 'login'
   
  В следующей таблице указаны некоторые хранимые процедуры, используемые совместно с sp_addlogin.  
   
-|Хранимая процедура|Description|  
+|Хранимая процедура|Описание|  
 |----------------------|-----------------|  
 |[sp_grantlogin](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)|Добавляет пользователя или группу Windows.|  
 |[sp_password](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md)|Изменяет пароль пользователя.|  
@@ -116,7 +116,7 @@ EXEC sp_addlogin 'Victoria', 'B1r12-36';
 GO  
 ```  
   
-### <a name="b-creating-a-sql-server-login-that-has-a-default-database"></a>Б. Создание имени входа на SQL Server с базой данных по умолчанию  
+### <a name="b-creating-a-sql-server-login-that-has-a-default-database"></a>Б) Создание имени входа на SQL Server с базой данных по умолчанию  
  В следующем примере создается имя входа на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для пользователя `Albert` с паролем `B5432-3M6` и базой данных `corporate` по умолчанию.  
   
 ```  
@@ -138,7 +138,7 @@ EXEC sp_addlogin 'TzTodorov', '709hLKH7chjfwv', 'AdventureWorks2012', N'бълг
 EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x0123456789ABCDEF0123456789ABCDEF  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание имени входа &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   

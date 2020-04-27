@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67624411"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Устранение проблем нехватки памяти
@@ -41,7 +41,7 @@ ms.locfileid: "67624411"
   
     > [!IMPORTANT]  
     >  Если сервер выполняется на ВМ и не выделен, установите такое же значение MIN_MEMORY_PERCENT, как и MAX_MEMORY_PERCENT.   
-    > Дополнительные сведения см. в статье [Использование In-Memory OLTP в среде ВМ](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
+    > Дополнительные сведения см. в разделе рекомендации по использованию выполняющейся [в памяти OLTP в среде виртуальных машин](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
   
     ```sql  
   
@@ -69,9 +69,9 @@ ms.locfileid: "67624411"
 ## <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a>устранить влияния нехватки свободной памяти на рабочую нагрузку  
  Очевидно, проще всего вообще избегать ситуаций, связанных с нехваткой памяти. Помочь в этом может хорошее планирование и отслеживание. Однако даже самое хорошее планирование не гарантирует стабильной работы, и возникновение нехватки памяти всегда возможно. Для устранения этой ситуации необходимо выполнить два действия.  
   
-1.  [Открытие приложения уровня данных (выделенное административное соединение)](#open-a-dac-dedicated-administrator-connection) 
+1.  [Откройте выделенное административное соединение](#open-a-dac-dedicated-administrator-connection) 
   
-2.  [Предпринять действия по исправлению](#take-corrective-action) 
+2.  [Примените действие по исправлению](#take-corrective-action) 
   
 ### <a name="open-a-dac-dedicated-administrator-connection"></a>Откройте выделенное административное соединение  
  В Microsoft SQL Server есть выделенное административное соединение. С помощью выделенного административного соединения администратор может обращаться к запущенному экземпляру ядра СУБД SQL Server для устранения неполадок на сервере, даже если сервер не отвечает на другие клиентские соединения. Выделенные административные соединения доступны в программе `sqlcmd` и в среде SQL Server Management Studio (SSMS).  
@@ -105,7 +105,7 @@ ms.locfileid: "67624411"
   
 > [!IMPORTANT]  
 >  Если сервер выполняется на ВМ и не выделен, установите такое же значение MIN_MEMORY_PERCENT, как и MAX_MEMORY_PERCENT.   
-> Дополнительные сведения см. в статье [Использование In-Memory OLTP в среде ВМ](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
+> Дополнительные сведения см. в разделе рекомендации по использованию выполняющейся [в памяти OLTP в среде виртуальных машин](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
   
 ```sql  
   
@@ -128,11 +128,11 @@ GO
  Дополнительные сведения о максимальных значениях параметра MAX_MEMORY_PERCENT см в разделе [Процент памяти, доступной для оптимизированных для памяти таблиц и индексов](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes).  
   
 ##### <a name="install-additional-memory"></a>Установка дополнительной памяти  
- В конечном счете наилучшим решением является установка дополнительной памяти. Если выбран этот вариант, то необходимо учитывать, что, скорее всего, также можно будет увеличить значение MAX_MEMORY_PERCENT (см. подраздел [Изменение параметров MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT для существующего пула](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)), так как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вряд ли будет нужно больше памяти, а это позволит выделить большую часть или даже всю установленную новую память пулу ресурсов.  
+ В конечном счете наилучшим решением является установка дополнительной памяти. Если вы сделаете это, помните, что вы можете также увеличить значение MAX_MEMORY_PERCENT (ознакомьтесь с изменениями в подразделах [MIN_MEMORY_PERCENT и max_memory_percent в существующем пуле](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)), так как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , скорее всего, потребуется больше памяти, что позволит вам делать большинство, если не все недавно установленная память будет доступна для пула ресурсов.  
   
 > [!IMPORTANT]  
 >  Если сервер выполняется на ВМ и не выделен, установите такое же значение MIN_MEMORY_PERCENT, как и MAX_MEMORY_PERCENT.   
-> Дополнительные сведения см. в статье [Использование In-Memory OLTP в среде ВМ](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
+> Дополнительные сведения см. в разделе рекомендации по использованию выполняющейся [в памяти OLTP в среде виртуальных машин](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>Устранение ошибок выделения страниц, возникших из-за нехватки памяти при наличии достаточных ресурсов памяти  
  Если появляется сообщение об ошибке "запрещение выделения страниц для базы данных"*\<DatabaseName>*"из-за нехватки памяти в пуле ресурсов"*\<resourcePoolName>*". Дополнительные сведения<https://go.microsoft.com/fwlink/?LinkId=330673>см. в разделе "". а доступной физической памяти достаточно для выделения страницы, это может быть связано с отключенным регулятором ресурсов. Если регулятор ресурсов отключен, то MEMORYBROKER_FOR_RESERVE вызывает искусственную нагрузку на ресурсы памяти.  
@@ -141,10 +141,10 @@ GO
   
  См. в разделе [Включение регулятора ресурсов](https://technet.microsoft.com/library/bb895149.aspx) дополнительные сведения об ограничениях, а также рекомендации по включению регулятора ресурсов через обозреватель объектов, свойства регулятора ресурсов или Transact-SQL.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление памятью для выполняющейся в памяти OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md)   
  [Мониторинг и устранение неполадок использования памяти](monitor-and-troubleshoot-memory-usage.md)   
  [Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [Рекомендации. Использование выполняющейся в памяти OLTP в среде виртуальной машины](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)  
+ [Использование In-Memory OLTP в среде ВМ](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)  
   
   

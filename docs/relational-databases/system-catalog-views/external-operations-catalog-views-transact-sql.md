@@ -13,10 +13,10 @@ ms.assetid: 9abc595c-346d-42dc-a227-a73cd0a356eb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 10a934dc922b21bec8f0df12d4970ce6ddc81576
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016632"
 ---
 # <a name="external-operations-catalog-views-transact-sql"></a>Представления каталога внешних операций (Transact-SQL)
@@ -24,10 +24,10 @@ ms.locfileid: "68016632"
 
   Ниже приведены представления каталога внешних объектов данных, таких как источники данных, форматы файлов и таблицы. Используйте эти представления для запроса состояния таких элементов, как таблицы Hadoop, используемые в операциях Polybase.  
   
- [sys. external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)  
+ [sys.external_tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)  
   
- [sys. external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
+ [sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
- [sys. external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)  
+ [sys.external_file_formats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)  
   
   
