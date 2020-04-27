@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211689"
 ---
 # <a name="view-user-defined-functions"></a>Просмотр определяемых пользователем функций
@@ -43,14 +43,14 @@ ms.locfileid: "68211689"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для использования **sys.sql_expression_dependencies** в поиске всех зависимостей функции необходимо разрешение VIEW DEFINITION на базу данных и разрешение SELECT на представление **sys.sql_expression_dependencies** для базы данных. Определения системных объектов, например полученные в OBJECT_DEFINITION, видимы для всех.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>Отображение свойств определяемой пользователем функции  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68211689"
   
 3.  Щелкните знак «плюс», чтобы развернуть папку, содержащую функцию, для которой нужно просмотреть свойства.  
   
-    -   Функция с табличным значением  
+    -   Table-valued Function  
   
     -   Скалярная функция  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68211689"
      **База данных**  
      Имя базы данных, содержащей эту функцию.  
   
-     **Сервер**  
+     **Server**  
      Имя текущего экземпляра сервера.  
   
      **Пользователь**  
@@ -82,22 +82,22 @@ ms.locfileid: "68211689"
      **Дата создания**  
      Дата создания функции.  
   
-     **Выполнить как**  
+     **Выполнить от имени**  
      Контекст выполнения для функции.  
   
      **Название**  
      Имя текущей функции.  
   
-     **Схемы**  
+     **Схема**  
      Схема, которой принадлежит функция.  
   
      **Системный объект**  
      Указывает принадлежность функции к системным объектам. Возможные значения: True и False.  
   
-     **Значения NULL ANSI**  
+     **Значения NULL по стандарту ANSI**  
      Указывает, был ли объект создан с параметром ANSI NULL.  
   
-     **зашифрованные;**  
+     **Зашифрована**  
      Указывает, зашифрована ли функция. Возможные значения: True и False.  
   
      **Тип функции**  
@@ -106,10 +106,10 @@ ms.locfileid: "68211689"
      **Заключенный в кавычки идентификатор**  
      Показывает, был ли объект создан с параметром «заключенный в кавычки идентификатор».  
   
-     **Привязано к схеме**  
+     **Привязка к схеме**  
      Указывает, привязана ли функция к схеме. Возможные значения: True и False. Дополнительные сведения о функциях, привязанных к схеме, см. в подразделе SCHEMABINDING раздела [CREATE FUNCTION (Transact-SQL)](/sql/t-sql/statements/create-function-transact-sql).  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>Получение определения и свойств функции  
   

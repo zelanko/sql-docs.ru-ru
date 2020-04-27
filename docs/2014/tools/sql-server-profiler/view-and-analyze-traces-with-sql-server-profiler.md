@@ -20,21 +20,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fd9b95821ee673e259273f880aefe8606fe81d71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211029"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Просмотр и анализ трассировок с помощью приложения SQL Server Profiler
-  Просмотр данных событий, перехваченных при трассировке с помощью программы [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает данные с учетом определенных свойств трассировки. Одним способом анализа данных сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является их копирование в другую программу, например в сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в помощник по настройке ядра СУБД [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)]Помощник по настройке компонента может использовать файл трассировки, содержащий пакет SQL и события удаленного вызова процедур (RPC), если столбец **текстовых** данных включен в трассировку. Для обеспечения того, чтобы при использовании помощника по настройке [!INCLUDE[ssDE](../../includes/ssde-md.md)] Д были захвачены правильные события и столбцы, используйте стандартный шаблон настройки, который поставляется с приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+  Просмотр данных событий, перехваченных при трассировке с помощью программы [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает данные с учетом определенных свойств трассировки. Одним способом анализа данных сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является их копирование в другую программу, например в сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в помощник по настройке ядра СУБД [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] Если столбец данных **Текст** включен в трассировку, помощник по настройке может использовать файл трассировки, который содержит пакет инструкций SQL и события удаленного вызова процедуры (RPC). Для обеспечения того, чтобы при использовании помощника по настройке [!INCLUDE[ssDE](../../includes/ssde-md.md)] Д были захвачены правильные события и столбцы, используйте стандартный шаблон настройки, который поставляется с приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
  При открытии трассировки с помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]трассировка не должна иметь обязательно расширение файла TRC, если файл был создан либо с помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , либо системными хранимыми процедурами средства трассировки SQL.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] также может считывать LOG-файл средства трассировки SQL и общие файлы сценариев SQL. При открытии LOG-файла средства трассировки SQL, который имеет расширение, отличное от LOG, например trace.txt, укажите значение **SQLTrace_Log** в качестве формата файла.  
+>  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] также может считывать LOG-файл средства трассировки SQL и общие файлы сценариев SQL. При открытии LOG-файла средства трассировки SQL, который имеет расширение, отличное от LOG, например trace.txt, укажите значение **SQLTrace_Log** в качестве формата файла.  
   
  Можно настроить формат отображения даты и времени в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , чтобы облегчить анализ трассировки.  
   
@@ -84,11 +82,11 @@ AND     CPU < (Duration * 1000)
  Такой же метод может быть применен для поиска сгруппированных событий. Как только будут найдены искомые события, сгруппируйте их по **ClientProcessID**, **имя_приложения**или другому классу событий для просмотра соответствующей деятельности в хронологическом порядке.  
   
 ## <a name="see-also"></a>См. также:  
- [Просмотр сохраненной &#40;трассировки на языке Transact-SQL&#41;](../../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md)   
- [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql)   
- [Просмотр сведений о фильтре &#40;SQL Server Profiler&#41;](view-filter-information-sql-server-profiler.md)   
- [Просмотр сведений о фильтре &#40;&#41;Transact-SQL](../../relational-databases/sql-trace/view-filter-information-transact-sql.md)   
+ [Просмотр сохраненной трассировки (Transact-SQL)](../../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md)   
+ [sys.fn_trace_getinfo (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql)   
+ [Просмотр сведений фильтров (приложение SQL Server Profiler)](view-filter-information-sql-server-profiler.md)   
+ [Просмотр сведений фильтров (Transact-SQL)](../../relational-databases/sql-trace/view-filter-information-transact-sql.md)   
  [Открытие файла трассировки (приложение SQL Server Profiler)](open-a-trace-file-sql-server-profiler.md)   
- [Открытие таблицы трассировки (приложение SQL Server Profiler)](open-a-trace-table-sql-server-profiler.md)  
+ [Открыть таблицу трассировки (приложение SQL Server Profiler)](open-a-trace-table-sql-server-profiler.md)  
   
   

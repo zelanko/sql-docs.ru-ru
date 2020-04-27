@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d43e86596e30352286cb94e8994177247856a7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206985"
 ---
 # <a name="modify-a-partition-function"></a>Изменение функции секционирования
@@ -37,9 +37,9 @@ ms.locfileid: "68206985"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Инструкция ALTER PARTITION FUNCTION может использоваться только для разделения одной секции на две или для слияния двух секций в одну. Чтобы изменить способ секционирование таблиц или индексов (например, с 10 секций до 5), вы можете использовать один из следующих вариантов.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "68206985"
   
 -   Все файловые группы, обрабатываемые ALTER PARTITION FUNCTION, должны находиться в режиме в сети.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для выполнения инструкции ALTER PARTITION FUNCTION может использоваться одно из перечисленных ниже разрешений.  
   
 -   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin** .  
@@ -69,7 +69,7 @@ ms.locfileid: "68206985"
   
 -   Разрешение CONTROL SERVER или ALTER ANY DATABASE на сервере базы данных, в которой была создана функция секционирования.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  **Изменение функции секционирования**  
   
  Это действие не может быть выполнено при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Чтобы изменить функцию секционирования, необходимо сначала удалить функцию, после чего создать новую с нужными свойствами при помощи мастера создания секций. Дополнительные сведения см. в разделе  
@@ -84,7 +84,7 @@ ms.locfileid: "68206985"
   
 4.  В диалоговом окне **Удаление объекта** убедитесь, что выбрана верная функция секционирования, и нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>Разбиение одной секции на две  
   

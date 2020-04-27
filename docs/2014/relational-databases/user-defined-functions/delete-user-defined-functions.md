@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f6c2580e17c204b534ec4c8ebadec3a1e992a4d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196465"
 ---
 # <a name="delete-user-defined-functions"></a>Удаление определенных пользователем функций
@@ -34,20 +34,20 @@ ms.locfileid: "68196465"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Удалить функцию не удастся, если в базе данных имеются функции Transact-SQL или представления, которые ссылаются на эту функцию и были созданы с помощью SCHEMABINDING, или при наличии вычисляемых столбцов, ограничений CHECK либо DEFAULT, которые ссылаются на эту функцию.  
   
 -   Удалить функцию не удастся, если имеются вычисляемые столбцы, которые ссылаются на эту функцию и были индексированы.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на схему, которой принадлежит функция, или разрешение CONTROL на функцию.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-delete-a-user-defined-function"></a>Удаление определяемой пользователем функции  
   
@@ -68,9 +68,9 @@ ms.locfileid: "68196465"
 5.  В диалоговом окне **Удаление объекта** нажмите кнопку **ОК**.  
   
     > [!IMPORTANT]  
-    >  Нажмите кнопку " **отобразить зависимости** " в диалоговом окне **удаления объекта** , чтобы открыть диалоговое окно "**зависимости** _function_name_". При этом будут отображены все объекты, зависящие от функции, и все объекты, от которых зависит функция.  
+    >  Щелкните **Показать зависимости** в диалоговом окне **Удаление объекта** , чтобы открыть диалоговое окно _имя_функции_**Зависимости** . При этом будут отображены все объекты, зависящие от функции, и все объекты, от которых зависит функция.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-delete-a-user-defined-function"></a>Удаление определяемой пользователем функции  
   

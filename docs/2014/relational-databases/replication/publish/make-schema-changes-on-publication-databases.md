@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68199457"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Внесение изменений схем в базы данных публикации
@@ -89,7 +89,7 @@ ms.locfileid: "68199457"
   
 -   Чтобы добавить в таблицу новый столбец и не включить его в существующую публикацию, отключите репликацию изменений схемы, а затем выполните инструкцию ALTER TABLE \<таблица> ADD \<столбец>.  
   
--   Чтобы включить имеющийся столбец в существующую публикацию, используйте [sp_articlecolumn (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) или диалоговое окно **Свойства публикации — \<публикация>** .  
+-   Чтобы включить имеющийся столбец в существующую публикацию, используйте [sp_articlecolumn (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) или диалоговое окно **Свойства публикации — \<публикация>**.  
   
      Дополнительные сведения см. в разделе [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Это потребует повторной инициализации подписок.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "68199457"
   
 -   Для удаления столбца из имеющийся публикации и удаления столбца из таблицы на издателе выполните инструкцию ALTER TABLE \<таблица> DROP \<столбец>. По умолчанию столбец затем удаляется из таблицы на всех подписчиках.  
   
--   Чтобы удалить столбец из имеющейся публикации, но сохранить его в таблице на издателе, используйте [sp_articlecolumn (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) или диалоговое окно **Свойства публикации — \<публикация>** .  
+-   Чтобы удалить столбец из имеющейся публикации, но сохранить его в таблице на издателе, используйте [sp_articlecolumn (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) или диалоговое окно **Свойства публикации — \<публикация>**.  
   
      Дополнительные сведения см. в разделе [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Это потребует создания нового моментального снимка.  
   
@@ -144,10 +144,9 @@ ms.locfileid: "68199457"
         ||100RTM, собственный режим моментального снимка|100RTM, символьный режим моментального снимка|Все другие уровни совместимости|  
         |-|-----------------------------|--------------------------------|------------------------------------|  
         |`hierarchyid`|Разрешить изменения|Блокировать изменения|Блокировать изменения|  
-        |`geography`перетаскивани`geometry`|Разрешить изменения|Разрешить изменение<sup>1</sup>|Блокировать изменения|  
+        |`geography` и `geometry`|Разрешить изменения|Разрешить изменение<sup>1</sup>|Блокировать изменения|  
         |`filestream`|Разрешить изменения|Блокировать изменения|Блокировать изменения|  
-        |
-  `date`, `time`, `datetime2` и `datetimeoffset`|Разрешить изменения|Разрешить изменение<sup>1</sup>|Блокировать изменения|  
+        |`date`, `time`, `datetime2` и `datetimeoffset`|Разрешить изменения|Разрешить изменение<sup>1</sup>|Блокировать изменения|  
   
          <sup>1</sup> SQL Server Compact подписчики преобразуют эти типы данных на подписчике.  
   
@@ -159,9 +158,9 @@ ms.locfileid: "68199457"
   
 ## <a name="see-also"></a>См. также:  
  [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)   
- [ALTER VIEW (Transact-SQL)](/sql/t-sql/statements/alter-view-transact-sql)   
- [ALTER PROCEDURE (Transact-SQL)](/sql/t-sql/statements/alter-procedure-transact-sql)   
- [ALTER FUNCTION (Transact-SQL)](/sql/t-sql/statements/alter-function-transact-sql)   
+ [ALTER VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-view-transact-sql)   
+ [Инструкция ALTER PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
+ [ALTER FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-function-transact-sql)   
  [ALTER TRIGGER (Transact-SQL)](/sql/t-sql/statements/alter-trigger-transact-sql)   
  [Публикация данных и объектов базы данных](publish-data-and-database-objects.md)   
  [Regenerate Custom Transactional Procedures to Reflect Schema Changes](../transactional/transactional-articles-regenerate-to-reflect-schema-changes.md) (Повторное создание пользовательских процедур транзакций для отражения изменений схем)  

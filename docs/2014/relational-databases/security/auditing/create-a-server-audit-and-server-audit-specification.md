@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ec1c7205597224e5fca27942ca25ad4e197ec0d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198411"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Создание аудита сервера и спецификации аудита сервера
@@ -41,17 +41,17 @@ ms.locfileid: "68198411"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Аудит должен существовать, прежде чем для него будет создана спецификация аудита сервера. Спецификация аудита сервера после создания находится в отключенном состоянии.  
   
 -   Инструкция CREATE SERVER AUDIT относится к области транзакции. Если выполняется откат транзакции, происходит также откат этой инструкции.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
 -   Чтобы создать, изменить или удалить аудит сервера, участникам требуется разрешение ALTER ANY SERVER AUDIT или CONTROL SERVER.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68198411"
   
 -   После того как создана спецификация аудита сервера, ее могут просмотреть участники с разрешениями CONTROL SERVER или ALTER ANY SERVER AUDIT, учетная запись sysadmin или участники, имеющие явный доступ к аудиту.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>Создание аудита сервера  
   
@@ -128,7 +128,7 @@ ms.locfileid: "68198411"
   
      В диалоговом окне **Создание спецификации аудита сервера** доступны следующие параметры.  
   
-     **Название**  
+     **имя**;  
      Имя спецификации аудита сервера. Этот текст формируется автоматически во время создания новой спецификации аудита сервера, однако он доступен для изменения.  
   
      **Аудит**  
@@ -154,7 +154,7 @@ ms.locfileid: "68198411"
   
 3.  По завершении нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>Создание аудита сервера  
   

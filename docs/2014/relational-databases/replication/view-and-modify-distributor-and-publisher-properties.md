@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212027"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Просмотр и изменение свойств издателя и распространителя
@@ -41,20 +41,20 @@ ms.locfileid: "68212027"
   
      [Объекты Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
--   Для издателей, которые используют версии, предшествующие [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], пользователь, являющийся членом предопределенной роли сервера **sysadmin** , может зарегистрировать подписчиков на странице **Подписчики** . Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]больше нет необходимости в явной регистрации подписчиков для репликации.  
+-   Для издателей, которые используют версии, предшествующие [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], пользователь, являющийся членом предопределенной роли сервера **sysadmin**, может зарегистрировать подписчиков на странице **Подписчики**. Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]больше нет необходимости в явной регистрации подписчиков для репликации.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>Просмотр и изменение свойств распространителя  
   
-1.  Подключитесь к распространителю в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]и раскройте узел сервера.  
+1.  Подключитесь к распространителю в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]и разверните узел сервера.  
   
 2.  Щелкните правой кнопкой папку **Репликация** , затем щелкните **Свойства распространителя**.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68212027"
   
 4.  Измените свойства, если необходимо, и нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Свойства издателя и распространителя можно просмотреть программно с помощью хранимых процедур репликации.  
   
 #### <a name="to-view-distributor-and-distribution-database-properties"></a>Просмотр свойств распространителя и базы данных распространителя  
@@ -104,7 +104,7 @@ ms.locfileid: "68212027"
   
 4.  Чтобы изменить свойства издателя с помощью распространителя, выполните на распространителе хранимую процедуру [sp_changedistpublisher](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) .  
   
-###  <a name="TsqlExample"></a>Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Примеры (Transact-SQL)  
  В следующем примере скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] возвращает сведения о распространителе и базе данных распространителя.  
   
  [!code-sql[HowTo#sp_helpdistributor](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_helpdistributor)]  
@@ -122,7 +122,7 @@ ms.locfileid: "68212027"
   
  [!code-sql[HowTo#sp_changedistributor_password](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_changedistributor_password)]  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>Просмотр и изменение свойств распространителя  
   
@@ -173,7 +173,7 @@ ms.locfileid: "68212027"
 5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> . Передайте новое значение пароля в параметре *password* .  
   
     > [!IMPORTANT]  
-    >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](https://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+    >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо сохранить учетные данные, используйте [службы шифрования](https://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Windows.  
   
 6.  (Необязательно) Выполните следующие шаги, чтобы изменить пароль на каждом удаленном издателе, использующем данный распространитель.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "68212027"
   
     5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> . Передайте новое значение пароля из шага 5 в параметре *password* .  
   
-###  <a name="PShellExample"></a>Пример (объекты RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a>Пример (объекты RMO)  
  В этом примере показано, как изменить свойства распространителя и базы данных-распространителя.  
   
 > [!IMPORTANT]  
@@ -197,7 +197,7 @@ ms.locfileid: "68212027"
   
  [!code-vb[HowTo#rmo_vb_ChangeDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changedistpub)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные понятия объекты Replication Management Objects](concepts/replication-management-objects-concepts.md)   
  [Отключение публикации и распространения](disable-publishing-and-distribution.md)   
  [Настройка распространения](configure-distribution.md)   

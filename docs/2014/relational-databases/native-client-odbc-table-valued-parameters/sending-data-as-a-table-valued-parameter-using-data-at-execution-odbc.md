@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205461"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Отправка данных в виде возвращающего табличное значение параметра с использованием данных времени выполнения (ODBC)
@@ -30,7 +30,7 @@ ms.locfileid: "68205461"
   
  При вызове SQLPutData для табличного значения *датаптр* используется для количества доступных строк (в этом примере всегда 1). *StrLen_or_IndPtr* всегда должно быть равно 0. При передаче всех строк табличного значения SQLPutData вызывается со значением *датаптр* , равным 0.  
   
-## <a name="prerequisite"></a>Предварительные требования  
+## <a name="prerequisite"></a>Необходимое условие  
  Эта процедура предполагает, что на сервере выполнен следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ```  
@@ -183,7 +183,7 @@ from @Items
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Описание  
  В этом примере показано, как можно использовать потоковую передачу строк, по одной строке на каждый вызов SQLPutData с помощью ODBC TVP, аналогично использованию программы BCP. exe для загрузки данных в базу данных.  
   
  Перед построением образца измените имя сервера в строке соединения.  
@@ -371,7 +371,7 @@ EXIT:
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Описание  
  В этом примере показано, как можно использовать потоковую передачу строк, несколько строк для каждого вызова SQLPutData с помощью ODBC TVP, аналогично использованию программы BCP. exe для загрузки данных в базу данных.  
   
  Перед построением образца измените имя сервера в строке соединения.  
@@ -577,7 +577,7 @@ EXIT:
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры программирования с использованием возвращающих табличное значение параметров ODBC](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  
   
   

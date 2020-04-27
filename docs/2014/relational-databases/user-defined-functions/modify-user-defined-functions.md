@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 77fbdc3bf2f579d585a802d5ed137cfe2a149c2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196448"
 ---
 # <a name="modify-user-defined-functions"></a>Изменение определяемых пользователем функций
@@ -34,9 +34,9 @@ ms.locfileid: "68196448"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
  Инструкцию ALTER FUNCTION нельзя использовать для выполнения следующих действий.  
   
 -   Преобразование скалярной функции в функцию с табличным значением или наоборот.  
@@ -45,12 +45,12 @@ ms.locfileid: "68196448"
   
 -   Преобразование функции Transact-SQL в функцию CLR или наоборот.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требует разрешения ALTER для функции или для схемы. Если в функции указан определяемый пользователем тип, требуется разрешение EXECUTE на этот тип.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-modify-a-user-defined-function"></a>Изменение определяемой пользователем функции  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68196448"
   
 6.  В меню **Файл** выберите пункт **Сохранить**_имя_функции_.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-modify-a-user-defined-function"></a>Изменение определяемой пользователем функции  
   

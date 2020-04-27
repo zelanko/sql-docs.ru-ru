@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac4965e665013cad4cd17068633a812cc5813826
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205526"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>Выполнение добавочной отправки и получение данных с помощью FILESTREAM (ODBC)
@@ -23,7 +23,7 @@ ms.locfileid: "68205526"
  Дополнительные сведения о компоненте FILESTREAM см. в разделе [Поддержка filestream &#40;&#41;ODBC ](../native-client/odbc/filestream-support-odbc.md).  
   
 ## <a name="example"></a>Пример  
- Перед компиляцией и запуском этого образца включите поддержку FILESTREAM ([включить и настроить FILESTREAM](../blob/enable-and-configure-filestream.md)).  
+ Прежде чем переходить к компиляции и запуску этого примера, включите поддержку FILESTREAM ([включение и настройка FILESTREAM](../blob/enable-and-configure-filestream.md)).  
   
  Первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) создает базу данных, которая используется в этом образце. Для выполнения этого скрипта экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь доступ с возможностью (например, войдите в систему с учетной записью Local System).  
   

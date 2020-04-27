@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0643c6fbf8e9a6aa649d4d335117bcb4f5b35208
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206850"
 ---
 # <a name="maintenance-plans"></a>Планы обслуживания
@@ -29,7 +29,7 @@ ms.locfileid: "68206850"
 ## <a name="benefits-of-maintenance-plans"></a>Преимущества планов обслуживания  
  В компоненте [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)]планы обслуживания создают пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , выполняемый заданием агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Планы обслуживания можно запускать вручную или автоматически через заданные интервалы.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]планы обслуживания предоставляют следующие возможности.  
+ Планы обслуживания [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] обеспечивают следующие функциональные возможности.  
   
 -   Создание рабочего процесса различных типовых задач обслуживания. Можно создавать и пользовательские скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68206850"
 |-|-|  
 |**Описание**|**Раздел**|  
 |Описывает создание плана обслуживания с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].|[Создание плана обслуживания](create-a-maintenance-plan.md)|  
-|Описывает создание плана обслуживания с помощью области конструктора плана обслуживания.|[Создание плана обслуживания &#40;область конструктора планов обслуживания&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
-|Содержит сведения о функциональных возможностях планов обслуживания, доступных в обозревателе объектов.|[Узел Планы обслуживания &#40;обозреватель объектов&#41;](../../ssms/object/object-explorer.md)|  
+|Описывает создание плана обслуживания с помощью области конструктора плана обслуживания.|[Создание плана обслуживания (область конструктора планов обслуживания)](create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
+|Содержит сведения о функциональных возможностях планов обслуживания, доступных в обозревателе объектов.|[Узел "Планы обслуживания" (обозреватель объектов)](../../ssms/object/object-explorer.md)|  
   
   

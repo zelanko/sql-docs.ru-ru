@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211295"
 ---
 # <a name="view-information-about-an-alert"></a>Просмотр сведений о предупреждении
@@ -38,14 +38,14 @@ ms.locfileid: "68211295"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  По умолчанию только члены предопределенной роли сервера **sysadmin** могут просматривать сведения о предупреждении. Другим пользователям должна быть предоставлена предопределенная роль базы данных **SQLAgentOperatorRole** в базе данных **msdb** .  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-view-information-about-an-alert"></a>Просмотр сведений о предупреждении  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68211295"
   
 4.  Щелкните правой кнопкой мыши предупреждение, в котором содержатся сведения для просмотра, и выберите пункт **Свойства**.  
   
-     Дополнительные сведения о доступных параметрах, содержащихся в диалоговом окне**Свойства предупреждения** _alert_name_, см. в следующих статьях:  
+     Для получения дополнительных сведений о допустимых параметрах, содержащихся в диалоговом окне _Свойства предупреждения_**имя_предупреждения** , см. следующие разделы:  
   
     -   [Свойства предупреждения — новое оповещение &#40;общие&#41;страницы](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
@@ -65,11 +65,11 @@ ms.locfileid: "68211295"
   
     -   [Свойства предупреждения: страница "новые параметры &#40;предупреждений"&#41;](alert-properties-new-alert-options-page.md)  
   
-    -   [Свойства предупреждений &#40;странице журнала&#41;](alert-properties-history-page.md)  
+    -   [Свойства предупреждения (страница "Журнал")](alert-properties-history-page.md)  
   
-5.  После завершения нажмите кнопку **ОК**.  
+5.  По окончании нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-view-information-about-an-alert"></a>Просмотр сведений о предупреждении  
   

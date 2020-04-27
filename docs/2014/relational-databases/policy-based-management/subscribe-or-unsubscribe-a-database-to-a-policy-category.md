@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d0139376adc28b07877389a023b19310b06417ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212131"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>Подписка базы данных на категорию политики или отмена подписки
@@ -28,20 +28,20 @@ ms.locfileid: "68212131"
   
      [Безопасность](#Security)  
   
--   **Для подписки или отмены подписки базы данных на категорию политики. используется:**  
+-   **Для подписки базы данных на категорию политики или отмены подписки используется:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо членство в предопределенной роли базы данных db_owner.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-subscribe-or-unsubscribe-a-database-to-a-policy-category"></a>Подписка базы данных на категорию политики или отмена подписки  
   
@@ -56,16 +56,16 @@ ms.locfileid: "68212131"
      Развернуть столбец  
      Щелкните, чтобы развернуть категорию политики. Перечисляет все политики, включенные в категорию.  
   
-     **Название**  
+     **Имя**  
      Имя категории политики.  
   
      **Подписаны**  
      Указывает, имеет ли цель подписку на категорию политики. Если этот флажок не установлен, то категория политики задается для варианта **Обязательные подписки базы данных**. Это означает, что категория политики может применяться ко всем базам данных на сервере.  
   
-     **Политик**  
+     **Политика**  
      Если группы политик развернуты, отображаются политики в категории политики.  
   
-     **Enabled**  
+     **Включен**  
      Указывает, включены или выключены политики.  
   
      **Режим выполнения**  
@@ -76,9 +76,9 @@ ms.locfileid: "68212131"
   
 4.  Чтобы подписаться на категорию управления на основе политик, установите флажок категории в столбце **Подписка** . Чтобы отменить подписку на категорию, снимите флажок.  
   
-5.  После завершения нажмите кнопку **ОК**.  
+5.  По окончании нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-subscribe-a-database-to-a-policy-category"></a>Подписка базы данных на категорию политики  
   

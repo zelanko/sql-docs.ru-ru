@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7aecff691139b1041a928c42c3df2987c992cd91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68199320"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>Задание уровня совместимости для публикаций слиянием
@@ -26,13 +26,13 @@ ms.locfileid: "68199320"
   
  **В этом разделе**  
   
--   **Установка уровня совместимости для публикаций слиянием с помощью:**  
+-   **Для установки уровня совместимости для публикаций слиянием используется:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Установите уровень совместимости на странице **Типы подписчиков** мастера создания публикации. Дополнительные сведения о доступе к этому мастеру см. в разделе [Create a Publication](create-a-publication.md). После создания моментального снимка публикации уровень совместимости можно увеличить, но нельзя снизить. Увеличьте уровень совместимости на странице **Общие** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md). При повышении уровня совместимости публикации все существующие подписки на серверах, использующих версии с меньшими уровнями совместимости, более не смогут синхронизироваться.  
   
 > [!NOTE]  
@@ -46,16 +46,16 @@ ms.locfileid: "68199320"
   
 -   На странице **Общие** диалогового окна **Свойства публикации — \<публикация>** выберите **Уровень совместимости**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Уровень совместимости для публикации слиянием можно программно установить при создании публикации или программно изменить позже. Установить или изменить свойства публикации можно с помощью хранимых процедур репликации.  
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>Установка уровня совместимости для публикации слиянием  
   
-1.  На издателе выполните [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), указав значение, **@publication_compatibility_level** чтобы сделать публикацию совместимой с более старыми версиями [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Create a Publication](create-a-publication.md).  
+1.  На издателе выполните [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), указав значение, **@publication_compatibility_level** чтобы сделать публикацию совместимой с более старыми версиями [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения см. [в разделе Создание публикации](create-a-publication.md).  
   
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>Изменение уровня совместимости для публикации слиянием  
   
-1.  Выполните [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), указав **publication_compatibility_level** для **@property** и соответствующий уровень совместимости публикации для **@value**.  
+1.  Выполните хранимую процедуру [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), указав значение **publication_compatibility_level** для параметра **@property** и соответствующий уровень совместимости публикации в параметре **@value**.  
   
 #### <a name="to-determine-the-publication-compatibility-level-of-a-merge-publication"></a>Определение уровня совместимости для публикации слиянием  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68199320"
   
 2.  Найдите уровень совместимости публикации в столбце **backward_comp_level** результирующего набора.  
   
-###  <a name="TsqlExample"></a>Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Примеры (Transact-SQL)  
  В примере создается публикация слиянием и устанавливается уровень совместимости публикации.  
   
 ```  
@@ -128,7 +128,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Create a Publication](create-a-publication.md)  
   
   

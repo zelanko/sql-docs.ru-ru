@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196435"
 ---
 # <a name="create-indexed-views"></a>Создание индексированных представлений
@@ -29,7 +29,7 @@ ms.locfileid: "68196435"
   
   
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
  Чтобы создать индексированное представление, нужно выполнить следующие шаги. Точность при их выполнении критически важна для успешной реализации индексированного представления.  
   
 1.  Убедитесь в правильности параметров SET для всех существующих таблиц, на которые ссылается представление.  
@@ -42,7 +42,7 @@ ms.locfileid: "68196435"
   
 5.  Создайте уникальный кластеризованный индекс для представления.  
   
-###  <a name="Restrictions"></a>Обязательные параметры SET для индексированных представлений  
+###  <a name="required-set-options-for-indexed-views"></a><a name="Restrictions"></a>Обязательные параметры SET для индексированных представлений  
  Если при выполнении запроса активны разные параметры SET, выполнение одного и того же выражения может дать разные результаты в [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Например, если параметр SET CONCAT_NULL_YIELDS_NULL равен ON, выражение **'** abc **'** + NULL возвращает значение NULL. Но если параметр CONCAT_NULL_YIEDS_NULL равен OFF, то же самое выражение дает результат **'** abc **'**.  
   
  Для правильной поддержки представлений и получения согласованных результатов некоторые параметры SET индексированных представлений должны иметь определенные значения. Для параметров SET в следующей таблице должны быть заданы значения, показанные в столбце **рекуиредвалуе** при выполнении следующих условий.  
@@ -55,7 +55,7 @@ ms.locfileid: "68196435"
   
 -   Индексированное представление используется оптимизатором запросов для создания плана запроса.  
   
-    |Параметры SET|Обязательное значение|Значение сервера по умолчанию|По умолчанию<br /><br /> Значение OLE DB и ODBC|По умолчанию<br /><br /> Значение DB-Library|  
+    |Параметры SET|Обязательное значение|Значение сервера по умолчанию|Значение по умолчанию<br /><br /> Значение OLE DB и ODBC|Значение по умолчанию<br /><br /> Значение DB-Library|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -120,7 +120,7 @@ ms.locfileid: "68196435"
     |Полнотекстовые предикаты (CONTAIN, FREETEXT)|Функция SUM, ссылающаяся на выражение, допускающее значение NULL|ORDER BY|  
     |Определяемая пользователем агрегатная функция CLR|В начало|Операторы CUBE, ROLLUP или GROUPING SETS|  
     |MIN, MAX|Операторы UNION, EXCEPT или INTERSECT|TABLESAMPLE|  
-    |Переменные таблицы|OUTER APPLY или CROSS APPLY|PIVOT, UNPIVOT|  
+    |Табличные переменные|OUTER APPLY или CROSS APPLY|PIVOT, UNPIVOT|  
     |Наборы разреженных столбцов|Встроенные функции или функции с табличным значением с несколькими инструкциями|OFFSET|  
     |CHECKSUM_AGG|||  
   
@@ -130,12 +130,12 @@ ms.locfileid: "68196435"
   
 -   Если определение представления содержит предложение GROUP BY, ключ уникального кластеризованного индекса может включать только столбцы, указанные в этом предложении.  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
  При ссылке на строковые литералы `datetime` и `smalldatetime` из индексированных представлений рекомендуется явно преобразовывать литерал к нужному типу даты при помощи детерминированного стиля формата даты. Список детерминированных стилей форматирования даты см. в разделе [Функции CAST и CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql). Выражения, включающие неявные преобразования символьных строк в типы `datetime` или `smalldatetime`, считаются недетерминированными. Это связано с тем, что результаты зависят от значений параметров LANGUAGE и DATEFORMAT, определенных для сеанса сервера. Например, результат выражения `CONVERT (datetime, '30 listopad 1996', 113)` зависит от значения параметра LANGUAGE, поскольку строка`listopad`в различных языках обозначает разные месяцы. Аналогичным образом, вычисляя выражение `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерпретирует строку `'2000-12-01'` в соответствии со значением параметра DATEFORMAT.  
   
  Неявное преобразование символьных данных между различными параметрами сортировки не в Юникоде также считается недетерминированным.  
   
-###  <a name="Considerations"></a>Следует  
+###  <a name="considerations"></a><a name="Considerations"></a>Следует  
  Значение параметра **large_value_types_out_of_row** столбца в индексированном представлении наследуется от значения соответствующего столбца базовой таблицы. Это значение задается с помощью хранимой процедуры [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Для столбцов, созданных из выражений, установкой по умолчанию является 0. Это означает, что типы больших значений хранятся в строке.  
   
  Индексированные представления могут создаваться на секционированной таблице и сами могут быть секционированными.  
@@ -146,12 +146,12 @@ ms.locfileid: "68196435"
   
  Индексы таблиц и представлений могут быть отключены. При отключении кластеризованного индекса таблицы индексы представлений, связанных с ней, также отключаются.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для выполнения этой инструкции требуется разрешение CREATE VIEW в отношении базы данных и разрешение ALTER в отношении схемы, в которой создается представление.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-create-an-indexed-view"></a>Создание индексируемого представления  
   
@@ -210,7 +210,7 @@ ms.locfileid: "68196435"
   
  Дополнительные сведения см. в статье [CREATE VIEW (Transact-SQL)](/sql/t-sql/statements/create-view-transact-sql).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   
  [Настройка ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [Настройка ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
@@ -218,6 +218,6 @@ ms.locfileid: "68196435"
  [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)   
  [Настройка CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
  [Настройка NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
- [Настройка QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)  
+ [SET QUOTED_IDENTIFIER (Transact-SQL)](/sql/t-sql/statements/set-quoted-identifier-transact-sql)  
   
   

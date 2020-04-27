@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198995"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Обнаружение конфликтов в одноранговой репликации
@@ -99,7 +99,7 @@ ms.locfileid: "68198995"
   
     5.  Выполнить [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): укажите "p2p_continue_onconflict" для @property параметра и `false` для @value параметра.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Одноранговая репликация транзакций](peer-to-peer-transactional-replication.md)  
   
   
