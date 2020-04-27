@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 323bf0c943d12a2d05e5fde80194d35d9ab733cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206564"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>Агент SQL Server, объект JobSteps
@@ -29,7 +29,7 @@ ms.locfileid: "68206564"
 |----------|-----------------|  
 |**Активные шаги**|Этот счетчик сообщает о текущем количестве выполняющихся шагов заданий.|  
 |**Шаги в очереди**|Этот счетчик сообщает о количестве шагов заданий, готовых к запуску, но еще не выполняющихся агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**Всего повторных попыток**|Этот счетчик сообщает общее число [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] повторных попыток выполнения шага задания с момента последнего перезапуска сервера.|  
+|**Общее количество попыток выполнить шаг**|Этот счетчик сообщает общее число повторных попыток [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запустить шаг задания с момента последнего перезапуска сервера.|  
   
  Каждый из счетчиков объекта содержит следующие экземпляры.  
   
@@ -41,17 +41,17 @@ ms.locfileid: "68206564"
 |**ANALYSISQUERY**|Сведения о шагах задания, использующих подсистему ANALYSISQUERY.|  
 |**CmdExec**|Сведения о шагах задания, использующих подсистему **CmdExec** .|  
 |**Distribution**|Сведения об шагах задания, использующих подсистему **Distribution** .|  
-|**Через**|Сведения о шагах задания, использующих подсистему [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
-|**Модуля**|Сведения о шагах задания, использующих подсистему **LogReader** .|  
-|**AutoMerge**|Сведения о шагах задания, использующих подсистему **Merge** .|  
+|**Dts**|Сведения о шагах задания, использующих подсистему [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
+|**LogReader**|Сведения о шагах задания, использующих подсистему **LogReader** .|  
+|**Объединить**|Сведения о шагах задания, использующих подсистему **Merge** .|  
 |**PowerShell**|Сведения о шагах задания, использующих подсистему **PowerShell** .|  
 |**QueueReader**|Сведения о шагах задания, использующих подсистему **QueueReader** .|  
 |**Моментальный снимок**|Сведения о шагах задания, использующих подсистему **Snapshot** .|  
 |**TSQL**|Сведения о шагах задания, выполняющих инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
 ## <a name="see-also"></a>См. также:  
- [Управление шагами заданий](../../ssms/agent/manage-job-steps.md)   
+ [Управление шагами задания](../../ssms/agent/manage-job-steps.md)   
  [Использование объектов производительности](../../ssms/agent/use-performance-objects.md)   
- [Мониторинг использования ресурсов &#40;системном мониторе&#41;](monitor-resource-usage-system-monitor.md)  
+ [Наблюдение за использованием ресурсов (системный монитор)](monitor-resource-usage-system-monitor.md)  
   
   

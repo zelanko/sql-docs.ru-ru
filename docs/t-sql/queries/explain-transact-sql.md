@@ -10,20 +10,18 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 3523b88b978bb2e08a9c712a30daf14b11fab299
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c4ebe0f59ede7d82ac15260eaa4f2265453fcc57
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636213"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138247"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
   Возвращает план запроса для инструкции [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] без выполнения инструкции. Используйте EXPLAIN, чтобы узнать, каким операциям потребуется перемещение данных, и определить предполагаемые затраты на операции запроса. `WITH RECOMMENDATIONS` применяется к Хранилищу данных SQL Azure (предварительная версия).
-  
- Дополнительные сведения о планах запросов см. в разделе "Основные сведения о планах запросов" в [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   

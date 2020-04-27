@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cb490ab23d146dc8131c16e22b0d63f07b79d482
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207038"
 ---
 # <a name="processing-results-odbc"></a>Обработка результатов (ODBC)
@@ -62,7 +62,7 @@ ms.locfileid: "68207038"
   
  Процесс получения строк из источника данных и передачи их в приложение называется выборкой.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Определение характеристик результирующего набора &#40;ODBC&#41;](determining-the-characteristics-of-a-result-set-odbc.md)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68207038"
   
 -   [Автоматическое преобразование символьных данных](autotranslation-of-character-data.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
  [Разделы руководства по обработке результатов &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
   

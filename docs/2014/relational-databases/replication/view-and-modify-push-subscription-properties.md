@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5dc55cc688f4e40d188492636c3653556f88b1c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212011"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>Просмотр и изменение свойств принудительной подписки
@@ -37,7 +37,7 @@ ms.locfileid: "68212011"
   
      [Объекты Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Просмотр и изменение свойств принудительной подписки со стороны издателя:  
   
 -   В диалоговом окне **Свойства подписки — \<издатель>: \<база данных публикации>**, которое доступно из среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -64,7 +64,7 @@ ms.locfileid: "68212011"
   
 4.  Измените свойства, если необходимо, и нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Принудительные подписки могут быть изменены программно, кроме того, с помощью хранимых процедур репликации можно программно получить доступ к их свойствам. Хранимые процедуры, используемые для этого, зависят от типа публикации, к которой принадлежит подписка.  
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Просмотр свойств принудительной подписки на публикацию моментальных снимков или транзакций  
@@ -96,15 +96,15 @@ ms.locfileid: "68212011"
   
 1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql). Укажите **@publication** и **@subscriber**.  
   
-2.  На издателе выполните [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), указав **@subscriber**.  
+2.  На издателе выполните хранимую процедуру [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), указав параметр **@subscriber**.  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>Изменение свойств принудительной подписки на публикацию слиянием  
   
 1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql). Укажите **@publication**, **@subscriber**, **@subscriber_db**, изменяемое свойство подписки **@property**, а новое значение — как. **@value**  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Пример (Transact-SQL)  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
  Какие именно классы объектов RMO для этого применяются, зависит от типа публикации этой подписки.  
   
 #### <a name="to-view-or-modify-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Просмотр и изменение свойств принудительной подписки на публикацию моментальных снимков или транзакций  
@@ -139,9 +139,9 @@ ms.locfileid: "68212011"
   
 7.  Чтобы просмотреть новые значения, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> , который выполняет повторную загрузку свойств для подписки (необязательно).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр сведений и выполнение задач с помощью монитора репликации](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Рекомендации по обеспечению безопасности репликации](security/replication-security-best-practices.md)   
- [Подписка на публикации](subscribe-to-publications.md)  
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

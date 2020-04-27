@@ -1,5 +1,6 @@
 ---
 title: Вопросы и ответы о JDBC Driver
+description: На этой странице содержатся ответы на часто задаваемые вопросы о драйвере Microsoft JDBC Driver для SQL Server.
 ms.custom: ''
 ms.date: 03/24/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 78fe63a54214ad7ff231ebf5df2353ef09d0fc09
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 835b8850d68b49f1701767e314d08c843bd77fc3
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219170"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728317"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Вопросы и ответы о JDBC Driver
 

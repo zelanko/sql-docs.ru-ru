@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c0353c89dbfc14032d33dfa49fa0c08e698cb5c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211210"
 ---
 # <a name="creating-a-database-tutorial"></a>Создание базы данных (учебник)
@@ -41,9 +41,9 @@ ms.locfileid: "68211210"
 >  Когда в одном пакете представлено несколько инструкций, они разделяются с помощью ключевого слова GO. Ключевое слово GO является необязательным, если в пакете содержится только одна инструкция.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Создание таблицы &#40;учебнике&#41;](lesson-1-2-creating-a-table.md)  
+ [Создание таблицы (учебник)](lesson-1-2-creating-a-table.md)  
   
-## <a name="see-also"></a>См. также:  
- [Создание &#40;базы данных SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
+## <a name="see-also"></a>См. также  
+ [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
   

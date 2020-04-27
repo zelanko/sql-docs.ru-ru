@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212003"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Создать и проверить определяемую пользователем функцию-классификатор
@@ -27,7 +27,7 @@ ms.locfileid: "68212003"
   
  Пример, показанный в следующей процедуре, иллюстрирует возможности создания довольно сложной определяемой пользователем функции-классификатора.  
   
- В этом примере:  
+ Пример.  
   
 -   Пул ресурсов (pProductionProcessing) и группа рабочей нагрузки (gProductionProcessing) создаются для рабочей обработки в течение определенного диапазона времени.  
   
@@ -118,8 +118,7 @@ ms.locfileid: "68212003"
 4.  Создайте функцию-классификатор, использующую функции и значения времени, которые можно оценить со временем в таблице подстановки. Дополнительные сведения об использовании таблиц подстановки в функции-классификаторе см. в разделе "Рекомендации по использованию таблиц подстановки в функции-классификаторе" этой статьи.  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] представлен расширенный набор типов данных и функций даты и времени. Дополнительные сведения см. в статье [Типы данных и функции даты и времени (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  
+    >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] представлен расширенный набор типов данных и функций даты и времени. Дополнительные сведения см. в статье [Типы данных и функции даты и времени (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  
   
     ```  
     CREATE FUNCTION fnTimeClassifier()  
@@ -263,7 +262,7 @@ ms.locfileid: "68212003"
         > [!WARNING]  
         >  Рекомендуется использовать именно эти методы. Если что-то не позволяет использовать эти методы, рекомендуем связаться со службой технической поддержки Майкрософт для эффективного устранения возможных проблем.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Resource Governor](resource-governor.md)   
  [Включить Resource Governor](enable-resource-governor.md)   
  [Resource Governor пул ресурсов](resource-governor-resource-pool.md)   
