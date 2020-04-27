@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07fc0207020887d7e3ceb8716ee76c78a55d2bac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101118"
 ---
 # <a name="site-settings-page-report-manager"></a>Страница «Настройки сайта» (диспетчер отчетов)
@@ -35,7 +35,7 @@ ms.locfileid: "66101118"
      **Примечание.** Если в меню нет пункта **Параметры сайта** , значит у вас нет необходимых разрешений, дополнительные сведения см. в подразделе "Параметры сайта" статьи [Настройка сервера отчетов в собственном режиме для ЛОКАЛЬНОГО администрирования &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Укажите заголовок, который будет использоваться для данного экземпляра диспетчера отчетов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . По умолчанию используется заголовок "[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]".  
   
  **Выбрать для журнала отчета параметры по умолчанию**  
@@ -66,7 +66,7 @@ ms.locfileid: "66101118"
  **Расписания**  
  Щелкните эту ссылку, чтобы открыть страницу «Расписания», позволяющую определять стандартные общие расписания, которые пользователи могут выбрать для своих отчетов и подписок.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Стандартные роли](security/role-definitions-predefined-roles.md)   

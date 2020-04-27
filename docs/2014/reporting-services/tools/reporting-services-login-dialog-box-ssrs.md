@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 232ee51614a668b07263c3e3a4182f23652135bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099873"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Диалоговое окно «Имя входа служб Reporting Services» (службы SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66099873"
 -   **Примечание** . Если вы впервые опубликовали отчет на сервере отчетов, с момента **установки свойства Deployment** для проекта, убедитесь, что указанное имя сервера имеет вид `http://localhost/reportserver`, а не `http://localhost/reports`. Указание каталога `reports` на локальном сервере вместо каталога `reportserver` косвенно вызывает открытие этого диалогового окна. Дополнительные сведения о настройке параметра **TargetServerURL** см. в разделе [Задание свойств развертывания (службы Reporting Services)](set-deployment-properties-reporting-services.md).  
   
 ## <a name="options"></a>Параметры  
- **Сервер**  
+ **Server**  
  Отображает имя сервера отчетов. Например, `http://localhost/reportserver`. Для серверов отчетов, использующих порт, отличный от порта по умолчанию 80, включается номер порта. Например, `http://localhost:81/reportserver`.  
   
  **User name**  
@@ -34,7 +34,7 @@ ms.locfileid: "66099873"
  **Пароль**  
  Введите пароль для входа в данную веб-службу.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Подключения к данным, источники данных и строки подключения в Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Указание учетных данных и сведений о соединении для источников данных отчета](../report-data/specify-credential-and-connection-information-for-report-data-sources.md) [конструктор отчетов Справка F1](report-designer-f1-help.md)  
   

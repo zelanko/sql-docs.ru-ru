@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9b597f8aab58d2fd9a4dd44e9361469656bec32c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101271"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>Страница «Выбор общего набора данных» (диспетчер отчетов)
@@ -48,12 +48,12 @@ ms.locfileid: "66101271"
  **Применить**  
  Сохраните изменения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Страница "содержимое" &#40;диспетчер отчетов&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Управление общими наборами данных](report-data/manage-shared-datasets.md)   
  [Справка F1 диспетчер отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
- [Элементы отчета и наборы данных в построителе отчетов](report-data/report-parts-and-datasets-in-report-builder.md)   
- [Внедренные и общие наборы данных &#40;построитель отчетов и службы SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Элементы отчета и наборы данных в построитель отчетов](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Внедренные и общие наборы данных (построитель отчетов и службы SSRS)](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

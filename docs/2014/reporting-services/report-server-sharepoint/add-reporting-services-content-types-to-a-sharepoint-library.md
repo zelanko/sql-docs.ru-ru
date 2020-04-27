@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 468acea55c334ffda169daff2b5da4c417348a3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104293"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>добавить на веб-страницу веб-часть средства просмотра отчетов (службы Reporting Services в режиме интеграции с SharePoint)
@@ -55,10 +55,10 @@ ms.locfileid: "66104293"
   
 9. Нажмите кнопку **Применить** в нижней части панели средств, а затем кнопку **ОК** , чтобы закрыть панель.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Веб-часть "средство просмотра отчетов" на сайте SharePoint](../report-viewer-web-part-on-a-sharepoint-site.md)   
  [Настройка веб-части «Средство просмотра отчетов»](../customize-the-report-viewer-web-part.md)   
- [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Предоставление разрешений на элементы сервера отчетов на сайте SharePoint](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Установка или удаление надстройки Reporting Services для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

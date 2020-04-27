@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48dca8e9ce522f2520521441b2e7eea349ff099b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096438"
 ---
 # <a name="cluster-network-configuration"></a>Конфигурация сети кластера
@@ -26,7 +26,7 @@ ms.locfileid: "66096438"
 ## <a name="options"></a>Параметры  
  Сетевое имя отказоустойчивого кластера — это имя, используемое для обнаружения экземпляра отказоустойчивого кластера в сети. ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
   
- **Параметры сети** — укажите тип IP-адреса и IP-адрес для экземпляра отказоустойчивого кластера.  
+ **Сетевые параметры** — тип IP-адреса и IP-адрес для конкретного экземпляра отказоустойчивого кластера.  
   
  Во время операций добавления или удаления узла [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображает доступный только для чтения список существующих IP-адресов для отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

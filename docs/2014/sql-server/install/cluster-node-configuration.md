@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd1abb5a1bdce0e758d4f36c861917064b20fee9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096428"
 ---
 # <a name="cluster-node-configuration"></a>Настройка узла кластера
@@ -26,6 +26,6 @@ ms.locfileid: "66096428"
 ## <a name="options"></a>Параметры  
  Имя экземпляра — используйте раскрывающийся список, чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отказоустойчивого кластера для изменения. ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
   
- **Имя этого узла** . в этом поле будет указано имя компьютера, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] программа установки. Это узел отказоустойчивого кластера, который будет добавлен в экземпляр кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или удален из кластера.  
+ **Имя узла** . В этом поле отображается имя компьютера с выполняющейся программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это узел отказоустойчивого кластера, который будет добавлен в экземпляр кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или удален из кластера.  
   
   

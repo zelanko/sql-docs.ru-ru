@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bcff47cf725fd5b9fd059e6a06b075be00c5e808
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098694"
 ---
 # <a name="view-page-resources-report-manager"></a>Страница «Вид», ресурсы (диспетчер отчетов)
@@ -22,7 +22,7 @@ ms.locfileid: "66098694"
   
  В дополнение к просмотру ресурсов на странице «Просмотр» можно устанавливать свойства и безопасность. Дополнительные сведения см. в статьях [Общие свойства, ресурсы &#40;диспетчер отчетов](../../2014/reporting-services/general-properties-page-resources-report-manager.md) [Страница свойств&#41;и безопасность, элементы &#40;диспетчер отчетов&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)  
   

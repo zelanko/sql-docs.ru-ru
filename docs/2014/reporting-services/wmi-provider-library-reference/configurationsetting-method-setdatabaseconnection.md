@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f722ac82f839b76bfb76d21d4a23aae884ade038
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098103"
 ---
 # <a name="setdatabaseconnection-method-wmi-msreportserver_configurationsetting"></a>Метод SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting)
@@ -43,10 +43,10 @@ public void BackupEncryptionKey(string Server,
 ```  
   
 ## <a name="parameters"></a>Параметры  
- *Сервер*  
+ *Server*  
  Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещается база данных сервера отчетов.  
   
- *имя_базы_данных*  
+ *DatabaseName*  
  Имя базы данных сервера отчетов.  
   
  *CredentialsType*  
@@ -58,13 +58,13 @@ public void BackupEncryptionKey(string Server,
   
 -   2 — служба Windows.  
   
- *Имен*  
+ *UserName*  
  Имя учетной записи, которая используется для соединения с базой данных сервера отчетов.  
   
  *Пароль*  
  Пароль, используемый для соединения с базой данных сервера отчетов.  
   
- *СОСТАВ*  
+ *HRESULT*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
@@ -86,7 +86,7 @@ public void BackupEncryptionKey(string Server,
  Метод SetDatabaseConnection не предоставляет разрешения указанным учетным записям. Следует вызвать метод [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) для каждой учетной записи, которой требуется доступ к базе данных сервера отчетов, и запустить получившийся скрипт.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

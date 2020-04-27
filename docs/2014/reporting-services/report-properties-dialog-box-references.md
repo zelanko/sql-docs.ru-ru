@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e57e0eb15c8c0ae7e326927ab14493f21c52cc14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104298"
 ---
 # <a name="report-properties-dialog-box-references"></a>Диалоговое окно «Свойства отчета» — «Ссылки»
@@ -42,15 +42,15 @@ ms.locfileid: "66104298"
  **Удаление**  
  Чтобы удалить экземпляр класса, выберите его и нажмите кнопку **Удалить** .  
   
- **Работает**.  
+ **Вверх**  
  Применительно к классам, характеризующимся наличием зависимостей, допускается перемещение этой ссылки в более высокую позицию списка.  
   
- **Крывающей**  
+ **Вниз**  
  Применительно к классам, характеризующимся наличием зависимостей, допускается перемещение этой ссылки в более низкую позицию списка.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS)](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Ссылки на коллекции переменных отчета и группы (построитель отчетов и службы SSRS)](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
+ [Коллекции переменных отчета и группы ссылаются на &#40;построитель отчетов и службы SSRS&#41;](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

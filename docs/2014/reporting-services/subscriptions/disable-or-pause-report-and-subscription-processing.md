@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1607637630c507588602dd7e566917ce1eeb6080
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100914"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Приостановка обработки отчета и подписки
@@ -46,9 +46,9 @@ ms.locfileid: "66100914"
 ## <a name="pause-a-shared-schedule"></a>Приостановка общего расписания  
  Если отчет или подписка выполняется по общему расписанию, можно приостановить расписание для предотвращения процесса обработки. Обработка всех отчетов и подписок, управляемая данным расписанием, откладывается до возобновления выполнения расписания. Дополнительные сведения см. в разделе [Приостановка и возобновление общих расписаний](schedules.md).  
   
-## <a name="see-also"></a>См. также:  
- [Reporting Services сервера отчетов &#40;в основном режиме&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+## <a name="see-also"></a>См. также  
+ [Сервер отчетов служб Reporting Services (основной режим)](../report-server/reporting-services-report-server-native-mode.md)   
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md)   
- [Страница «Свойства безопасности», элементы &#40;диспетчер отчетов&#41;](../security-properties-page-items-report-manager.md)  
+ [Страница "Свойства безопасности", элементы (диспетчер отчетов)](../security-properties-page-items-report-manager.md)  
   
   

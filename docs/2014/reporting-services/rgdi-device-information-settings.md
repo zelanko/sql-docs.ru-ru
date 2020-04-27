@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 78377afa1f1f71f8553a17df30a904a275afd577
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102482"
 ---
 # <a name="rgdi-device-information-settings"></a>Настройки сведений об устройстве RGDI
@@ -22,12 +22,12 @@ ms.locfileid: "66102482"
   
 |Параметр|Значение|  
 |-------------|-----------|  
-|`Page`|Задает страницу отчета, которую необходимо подготовить к просмотру. По умолчанию используется значение `1`.|  
+|`Page`|Задает страницу отчета, которую необходимо подготовить к просмотру. Значение по умолчанию — `1`.|  
 |`RGDIVersion`|Этот параметр не действует.|  
   
-## <a name="see-also"></a>См. также:  
- [Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Настройка параметров модулей подготовки отчетов в RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+## <a name="see-also"></a>См. также  
+ [Передача настроек сведений об устройстве в модули подготовки отчетов](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Настройка параметров модуля подготовки отчетов в файле RSReportServer. config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Технический справочник (службы SSRS)](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

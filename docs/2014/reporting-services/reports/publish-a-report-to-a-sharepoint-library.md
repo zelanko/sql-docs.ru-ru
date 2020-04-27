@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1cc957af5596acbf2478d55645b1386283970e33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102529"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>опубликовать отчет в библиотеке SharePoint
@@ -30,9 +30,9 @@ ms.locfileid: "66102529"
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте существующий или новый проект сервера отчетов.  
   
-2.  В меню **Проект** выберите пункт **Свойства**. Откроется диалоговое окно _Страницы свойств\<_ **проекта>** .  
+2.  В меню **Проект** выберите пункт **Свойства**. Откроется диалоговое окно **страницы свойств** _ \<проекта>_.  
   
-3.  В списке **Конфигурация** выберите имя конфигурации сборки решения, предназначенной для формирования и публикации отчета. Текущая конфигурация представлена в списке как **Активная**( *\<конфигурация>* ).  
+3.  В списке **Конфигурация** выберите имя конфигурации сборки решения, предназначенной для формирования и публикации отчета. Текущая конфигурация указана как **Активная**(*\<>конфигурации *).  
   
 4.  Если в проекте публикуются общие источники данных и перезаписываются ранее опубликованные общие источники данных, присвойте свойству **OverwriteDataSources** значение **True**.  
   
@@ -48,11 +48,11 @@ ms.locfileid: "66102529"
   
 9. В обозревателе решений щелкните правой кнопкой мыши отчет, который необходимо опубликовать, и выберите команду **Развернуть**. Отчет будет опубликован в местоположении, которое указано в свойстве **TargetReportFolder**. Ошибки развертывания появляются в окне «Вывод».  
   
-## <a name="see-also"></a>См. также:  
- [Диалоговое окно страниц свойств проекта](../tools/project-property-pages-dialog-box.md)   
- [Задание свойства развертывания (службы Reporting Services)](../tools/set-deployment-properties-reporting-services.md)   
+## <a name="see-also"></a>См. также  
+ [Диалоговое окно "страницы свойств проекта"](../tools/project-property-pages-dialog-box.md)   
+ [Задание свойств развертывания &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [Публикация отчетов на сервере отчетов](publishing-reports-to-a-report-server.md)   
- [Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме SharePoint &#40;службы SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме интеграции с SharePoint &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [Использование ODC-файла подключения к данным Office в отчетах (службы Reporting Services в режиме интеграции с SharePoint)](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

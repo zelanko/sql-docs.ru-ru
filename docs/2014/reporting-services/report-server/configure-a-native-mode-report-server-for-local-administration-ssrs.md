@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d1725e49ce825d3d57a3b41857e26a3843fbfc7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104193"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66104193"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Собственный режим|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (собственный режим)|  
   
 -   [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]  
   
@@ -49,29 +49,29 @@ ms.locfileid: "66104193"
   
  Это позволяет повысить общую безопасность системы, предотвращая использование стандартных, встроенных назначений ролей, которые службы Reporting Services создают для локальных администраторов.  
   
--   [Общие сведения об изменениях конфигурации](#bkmk_configuraiton_overview)  
+-   [Обзор изменений в конфигурации](#bkmk_configuraiton_overview)  
   
--   [Настройка локального сервера отчетов и диспетчер отчетов администрирования](#bkmk_configure_local_server)  
+-   [Настройка администрирования локального сервера отчетов и диспетчера отчетов](#bkmk_configure_local_server)  
   
--   [Настройка SQL Server Management Studio (SSMS) для локального администрирования сервера отчетов](#bkmk_configure_ssms)  
+-   [Настройка среды SQL Server Management Studio (SSMS) для локального администрирования сервера отчетов](#bkmk_configure_ssms)  
   
 -   [Настройка среды SQL Server Data Tools BI (SSDT) для публикации в локальном сервере отчетов](#bkmk_configure_ssdt)  
   
--   [Дополнительные сведения](#bkmk_addiitonal_informaiton)  
+-   [Дополнительная информация](#bkmk_addiitonal_informaiton)  
   
-##  <a name="bkmk_configuraiton_overview"></a>Общие сведения об изменениях конфигурации  
+##  <a name="overview-of-configuration-changes"></a><a name="bkmk_configuraiton_overview"></a>Общие сведения об изменениях конфигурации  
  Следующие изменения в конфигурации настраивают сервер так, что можно использовать разрешения стандартного пользователя при выполнении операций сервера отчетов и управлении его содержимым.  
   
 -   Добавление URL-адресов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в доверенные сайты. По умолчанию Internet Explorer, запущенный на перечисленных ОС, выполняется в **защищенном режиме**, в котором запросы браузера изолируются от процессов высокого уровня, выполняющихся на том же компьютере. Защищенный режим для приложений сервера отчетов можно отключить, добавив их в список «Надежные сайты».  
   
 -   Создание назначений ролей, которые предоставляют права администратора сервера отчетов, разрешение на управление содержимым и процессом работы сервера отчетов без применения функции обозревателя **Запуск от имени администратора** . Создав назначение ролей для учетной записи пользователя Windows, можно получить доступ к серверу отчетов с разрешениями «Диспетчер содержимого» и «Системный администратор» через назначения ролей, определенные явным образом и созданные на замену стандартным встроенным назначениям ролей, которые были созданы службами Reporting Services.  
   
-##  <a name="bkmk_configure_local_server"></a>Настройка локального сервера отчетов и диспетчер отчетов администрирования  
+##  <a name="to-configure-local-report-server-and-report-manager-administration"></a><a name="bkmk_configure_local_server"></a>Настройка локального сервера отчетов и диспетчер отчетов администрирования  
  Выполните действия по настройке этого раздела, если при переходе на локальный сервер отчетов возникают следующие ошибки.  
   
 -   У пользователя `'Domain\[user name]`отсутствуют необходимые разрешения. Убедитесь, что предоставлены достаточные разрешения и учтены ограничения контроля учетных записей Windows.  
   
-###  <a name="bkmk_site_settings"></a>Параметры доверенного сайта в браузере  
+###  <a name="trusted-site-settings-in-the-browser"></a><a name="bkmk_site_settings"></a>Параметры доверенного сайта в браузере  
   
 1.  Откройте окно браузера с разрешением «Запуск от имени администратора». В меню **Пуск** укажите **Все программы**, щелкните правой кнопкой мыши пункт **Internet Explorer**и выберите **Запуск от имени администратора**.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66104193"
   
 3.  В качестве URL-адреса укажите URL-адрес диспетчера отчетов. Инструкции см. в разделе [Диспетчер отчетов (службы SSRS в собственном режиме)](../report-manager-ssrs-native-mode.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-4.  Щелкните **инструменты**.  
+4.  Выберите меню **Сервис**.  
   
 5.  Выберите пункт **Свойства обозревателя**.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "66104193"
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-###  <a name="bkmk_configure_folder_settings"></a>диспетчер отчетов параметры папки  
+###  <a name="report-manager-folder-settings"></a><a name="bkmk_configure_folder_settings"></a> Параметры каталога диспетчера отчетов  
   
 1.  На домашней странице диспетчера отчетов щелкните ссылку **Параметры папки**.  
   
@@ -111,16 +111,16 @@ ms.locfileid: "66104193"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-###  <a name="bkmk_configure_site_settings"></a>диспетчер отчетов параметры сайта  
+###  <a name="report-manager-site-settings"></a><a name="bkmk_configure_site_settings"></a> Параметры сайта диспетчера отчетов  
   
 1.  Откройте браузер с правами администратора и перейдите к диспетчеру отчетов `http://<server name>/reports`.  
   
 2.  В верхнем углу домашней страницы нажмите кнопку **Параметры сайта** .  
   
     > [!TIP]  
-    >  **Примечание.** Если параметр **Site Settings (параметры сайта** ) не отображается, закройте и снова откройте браузер и перейдите к диспетчеру отчетов с правами администратора.  
+    >  **Примечание.** Если вариант **Параметры сайта** недоступен, закройте и повторно откройте браузер и перейдите к диспетчеру отчетов с правами администратора.  
   
-3.  Щелкните **Безопасность**.  
+3.  Щелкните пункт **Безопасность**.  
   
 4.  Нажмите кнопку **Создать назначения ролей**.  
   
@@ -134,10 +134,10 @@ ms.locfileid: "66104193"
   
 9. Повторно откройте диспетчер отчетов в Internet Explorer без использования функции **Запуск от имени администратора**.  
   
-##  <a name="bkmk_configure_ssms"></a>Настройка SQL Server Management Studio (SSMS) для локального администрирования сервера отчетов  
+##  <a name="to-configure-sql-server-management-studio-ssms-for-local-report-server-administration"></a><a name="bkmk_configure_ssms"></a>Настройка SQL Server Management Studio (SSMS) для локального администрирования сервера отчетов  
  По умолчанию доступ ко всем свойствам сервера отчетов, предусмотренным в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , отсутствует, если не выполнен запуск [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] с правами администратора.  
   
- **Для настройки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ** свойств ролей и назначений ролей, чтобы не нужно было каждый [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] раз запускать с повышенными правами:  
+ **Настройка назначений ролей [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** и назначений ролей необходимо каждый раз запускать [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] с повышенным уровнем разрешений.  
   
 -   Нажмите кнопку **Пуск** , укажите **Все программы**, **SQL Server 2014**, щелкните правой кнопкой мыши **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**, а затем выберите команду **Запуск от имени администратора**.  
   
@@ -157,18 +157,18 @@ ms.locfileid: "66104193"
   
  Теперь при открытии [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] без запуска **от имени администратора** у вас будет доступ к свойствам сервера отчетов.  
   
-##  <a name="bkmk_configure_ssdt"></a>Настройка SQL Server Data Tools BI (SSDT) для публикации на локальном сервере отчетов  
+##  <a name="to-configure-sql-server-data-tools-bi-ssdt-to-publish-to-a-local-report-server"></a><a name="bkmk_configure_ssdt"></a>Настройка SQL Server Data Tools BI (SSDT) для публикации на локальном сервере отчетов  
  Если вы установили [!INCLUDE[SSDTDev11](../../includes/ssdtdev11-md.md)] в одной из операционных систем, приведенных в первом подразделе, и желаете, чтобы SSDT взаимодействовала с локальным сервером отчетов (в собственном режиме) без получения ошибок о допуске пользователя, нужно открывать [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с повышенными разрешениями или же настроить роли служб отчетности. Например, при недостатке разрешений могут возникнуть следующие проблемы.  
   
 -   При попытке развертывания элементов отчета на локальном сервере отчетов отображается сообщение об ошибке, похожее на приведенное в окне **Список ошибок** .  
   
     -   Предоставленные пользователю "домен\\<user name\>" разрешения недостаточны для выполнения данной операции.  
   
- **Для запуска с повышенными правами при каждом открытии SSDT:**  
+ **Запуск SSDT с повышенным уровнем разрешений**  
   
 1.  На начальном экране введите `sql server` , а затем щелкните правой кнопкой мыши **SQL Server Data Tools для Visual Studio**. Нажмите **Запуск от имени администратора**  
   
-     **Или**в более старых операционных системах:  
+     **Или**при работе на старых операционных системах выполните следующее.  
   
      Нажмите кнопку **Пуск** , нажмите **Все программы**, **SQL Server 2014**, щелкните правой кнопкой мыши **SQL Server Data Tools**, а затем выберите команду **Запуск от имени администратора**.  
   
@@ -178,14 +178,14 @@ ms.locfileid: "66104193"
   
  После этого можно приступать к развертыванию отчетов и других элементов на локальном сервере отчетов.  
   
- **Для настройки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] назначений ролей не нужно каждый раз запускать SSDT с повышенными правами:**  
+ **Настройка назначений ролей [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] без необходимости каждый раз запускать SSDT с повышенным уровнем разрешений**  
   
 -   Смотрите предыдущие разделы [Параметры каталога диспетчера отчетов](#bkmk_configure_folder_settings) и [Параметры сайта диспетчера отчетов](#bkmk_configure_site_settings) данной темы.  
   
-##  <a name="bkmk_addiitonal_informaiton"></a>Дополнительные сведения  
+##  <a name="additional-information"></a><a name="bkmk_addiitonal_informaiton"></a>Дополнительные сведения  
  Еще одно распространенное действие по настройке администрирования [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] — открытие порта номер 80 в брандмауэре Windows для разрешения доступа к компьютеру с сервером отчетов. Инструкции см. в разделе [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление сервером отчетов Reporting Services в собственном режиме](manage-a-reporting-services-native-mode-report-server.md)  
   
   

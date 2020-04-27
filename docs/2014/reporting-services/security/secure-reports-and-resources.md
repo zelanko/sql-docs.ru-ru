@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff0bd8ce8d5024d0d6e2e624c03bcc675af8fbb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101669"
 ---
 # <a name="secure-reports-and-resources"></a>Защищенные отчеты и ресурсы
@@ -77,7 +77,7 @@ ms.locfileid: "66101669"
  (create-and-manage-role-assignments.md)   
  [Настройка доступа к построитель отчетов](../report-server/configure-report-builder-access.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](granting-permissions-on-a-native-mode-report-server.md)   
- [Защита совместно используемых элементов источника данных](secure-shared-data-source-items.md)   
+ [Защита общих элементов источника данных](secure-shared-data-source-items.md)   
  [Сохраненные учетные данные в источнике данных Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

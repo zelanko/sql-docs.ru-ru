@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4c3e943bcf63f4bcdff22d5425bf474d8aa4d80d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098179"
 ---
 # <a name="removesslcertificatebindings-method-wmi-msreportserver_configurationsetting"></a>Метод RemoveSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting)
@@ -47,16 +47,16 @@ public void RemoveSSLCertificateBindings(string Application,
  *IPAddress*  
  IP-адрес для приложения.  
   
- *Порт*  
+ *порт*.  
  Порт SSL, связанный с привязкой.  
   
- *намного*  
+ *lcid*  
  Локаль, используемая для возвращаемых сообщений об ошибке.  
   
- *Ошибка*  
+ *Error*  
  [out] Описания возникших ошибок.  
   
- *СОСТАВ*  
+ *HRESULT*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
@@ -66,7 +66,7 @@ public void RemoveSSLCertificateBindings(string Application,
  При помощи этого метода выполняется удаление конкретной привязки, заданной в файле rsreportserver.config и, при указании дополнительных параметров, в файле HTTP.SYS.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

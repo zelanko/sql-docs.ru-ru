@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 20c37fac040290a057bc03cbeb27cc43246efec2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102911"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Функции и задачи служб Reporting Services (SSRS)
@@ -46,10 +46,10 @@ ms.locfileid: "66102911"
   
  [Расширения (SSRS)](extensions-ssrs.md)  
   
- [Инструментальные средства служб Reporting Services](tools/reporting-services-tools.md)  
+ [Средства Reporting Services](tools/reporting-services-tools.md)  
   
-## <a name="see-also"></a>См. также:  
- [Службы Reporting Services (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+## <a name="see-also"></a>См. также  
+ [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Новые возможности &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)  
   
   

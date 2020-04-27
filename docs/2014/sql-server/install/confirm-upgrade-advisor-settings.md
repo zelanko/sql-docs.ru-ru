@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2384dd7c53c95d460cb1b749472abb2c9010f2c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096070"
 ---
 # <a name="confirm-upgrade-advisor-settings"></a>Подтверждение настроек помощника по обновлению
@@ -36,7 +36,7 @@ ms.locfileid: "66096070"
  **Просмотреть заявление о конфиденциальности.**  
  Щелкните эту ссылку, чтобы прочитать [!INCLUDE[msCoName](../../includes/msconame-md.md)] политику конфиденциальности в Интернете.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Работа с советником по переходу](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [Справочник по пользовательскому интерфейсу помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   

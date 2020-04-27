@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2866b0b8a72e48dbb6c93b37b2a1a83e20e12821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102541"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>опубликовать общий источник данных в библиотеке SharePoint
@@ -30,13 +30,13 @@ ms.locfileid: "66102541"
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте существующий или создайте новый проект сервера отчетов.  
   
-2.  В меню **Проект** выберите **Свойства**. Откроется диалоговое окно _Страницы свойств\<_ **проекта>** .  
+2.  В меню **Проект** выберите **Свойства**. Откроется диалоговое окно **страницы свойств** _ \<проекта>_.  
   
 3.  Выберите **Конфигурацию** для публикации на сайте SharePoint,  
   
 4.  Если в проекте публикуются общие источники данных и перезаписываются ранее опубликованные общие источники данных, присвойте свойству **OverwriteDataSources** значение **True**.  
   
-5.  Для значения свойства **TargetDataSourceFolder**введите URL-адрес библиотеки SharePoint или папки библиотеки (необязательно). Например, *http://TestServer/TestSite/Documents/DataSources*.  
+5.  Для значения свойства **TargetDataSourceFolder**введите URL-адрес библиотеки SharePoint или папки библиотеки (необязательно). (например, *http://TestServer/TestSite/Documents/DataSources* ).  
   
      Если значение не указано, то будет использовано значение свойства **TargetReportFolder** .  
   
@@ -51,11 +51,11 @@ ms.locfileid: "66102541"
     > [!NOTE]  
     >  После публикации общего источника данных на сайте SharePoint, расширение имени файла меняется на RSDS. Общий источник данных можно изменять и управлять им непосредственно с сайта SharePoint. Дополнительные сведения см. в разделе [Создание общих источников данных и управление ими (службы Reporting Services в режиме интеграции с SharePoint)](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md).  
   
-## <a name="see-also"></a>См. также:  
- [опубликовать отчет в библиотеке SharePoint](publish-a-report-to-a-sharepoint-library.md)   
- [Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме SharePoint &#40;службы SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
- [Диалоговое окно страниц свойств проекта](../tools/project-property-pages-dialog-box.md)   
- [Задание свойства развертывания (службы Reporting Services)](../tools/set-deployment-properties-reporting-services.md)   
+## <a name="see-also"></a>См. также  
+ [Публикация отчета в библиотеке SharePoint](publish-a-report-to-a-sharepoint-library.md)   
+ [Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме интеграции с SharePoint &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [Диалоговое окно "страницы свойств проекта"](../tools/project-property-pages-dialog-box.md)   
+ [Задание свойств развертывания &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [Публикация отчетов на сервере отчетов](publishing-reports-to-a-report-server.md)   
  [Использование ODC-файла подключения к данным Office в отчетах (службы Reporting Services в режиме интеграции с SharePoint)](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   

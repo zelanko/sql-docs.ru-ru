@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 432b41216418cd1ad1bae70557c95a589f5e78dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101141"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Указание учетных данных в построителе отчетов
@@ -73,7 +73,7 @@ ms.locfileid: "66101141"
 ### <a name="no-credentials"></a>Без учетных данных  
  Для этого источника данных учетные данные не требуются. Чтобы запустить этот отчет на сервере отчетов, необходимо настроить учетную запись автоматического выполнения. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) в [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] документации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312)по.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поддержка установки, удаления и построитель отчетов](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
  [Внедренные и общие подключения к данным или источники данных &#40;построитель отчетов и службы SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Диалоговое окно "Параметры построитель отчетов", параметры &#40;построитель отчетов&#41;](report-builder/set-default-options-for-report-builder.md)   

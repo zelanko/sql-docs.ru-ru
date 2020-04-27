@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3de8f9e708149669a65b8abf4114227392aa15a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102712"
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>Настройка свойств выполнения для отчета (диспетчер отчетов)
@@ -44,13 +44,13 @@ ms.locfileid: "66102712"
   
     -   Если нужно создать моментальный снимок немедленно, выберите **Создать моментальный снимок отчета при нажатии кнопки «Применить» на этой странице**.  
   
-3.  Нажмите кнопку **Применить**.  
+3.  Щелкните **Применить**.  
   
-## <a name="see-also"></a>См. также:  
- [Установка свойств обработки отчетов](../report-server/set-report-processing-properties.md)   
+## <a name="see-also"></a>См. также  
+ [Установка свойств обработки отчета](../report-server/set-report-processing-properties.md)   
  [Открытие и закрытие диспетчер отчетов &#40;отчетов&#41;](../reports/open-and-close-a-report-report-manager.md)   
- [Страница "содержимое" &#40;диспетчер отчетов&#41;](../contents-page-report-manager.md)   
+ [Страница "Содержимое" (диспетчер отчетов)](../contents-page-report-manager.md)   
  [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Страница "Свойства параметров обработки" &#40;диспетчер отчетов&#41;](../processing-options-properties-page-report-manager.md)  
+ [Страница "Свойства параметров обработки" (диспетчер отчетов)](../processing-options-properties-page-report-manager.md)  
   
   

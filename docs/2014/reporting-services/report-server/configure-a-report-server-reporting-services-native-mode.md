@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10e4a4befd8300863d8637a87e8c9bd03622d0af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104069"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Настройка сервера отчетов (службы Reporting Services в собственном режиме)
@@ -58,10 +58,10 @@ ms.locfileid: "66104069"
   
  Проверьте правильность установки, выполнив создание папки, передачу элементов и запуск отчетов. Следуйте инструкциям в разделе [Проверка установки служб Reporting Services](../install-windows/verify-a-reporting-services-installation.md) для проверки установки.  
   
-## <a name="see-also"></a>См. также:  
- [Управление сервером отчетов Reporting Services в собственном режиме](manage-a-reporting-services-native-mode-report-server.md)   
+## <a name="see-also"></a>См. также  
+ [Управление сервером отчетов служб Reporting Services в собственном режиме](manage-a-reporting-services-native-mode-report-server.md)   
  [Настройка брандмауэра для доступа к серверу отчетов](configure-a-firewall-for-report-server-access.md)   
- [Настройка сервера отчетов в собственном режиме для локального администрирования &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
+ [Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (службы SSRS)](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
  [Настройка сервера отчетов для удаленного администрирования](configure-a-report-server-for-remote-administration.md)   
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   

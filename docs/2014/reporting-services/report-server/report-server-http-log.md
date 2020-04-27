@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103400"
 ---
 # <a name="report-server-http-log"></a>Журнал HTTP-запросов сервера отчетов
@@ -30,12 +30,12 @@ ms.locfileid: "66103400"
 |||  
 |-|-|  
 |**Имя файла**|Имена файлов журнала по умолчанию:<br /><br /> `ReportServerService_HTTP_<timestamp>.log.`<br /><br /> Можно задать другой префикс имени файла, изменив атрибут HttpTraceFileName в файле конфигурации ReportingServicesService.exe.config. Отметки времени создаются на основе времени по Гринвичу (UTC).|  
-|**Размещение файла**|Файлы записываются в следующую папку:<br /><br /> `\Microsoft SQL Server\<SQL Server Instance>\Reporting Services\LogFiles`|  
+|**Расположение файла**|Файлы записываются в следующую папку:<br /><br /> `\Microsoft SQL Server\<SQL Server Instance>\Reporting Services\LogFiles`|  
 |**Формат файла**|Этот файл имеет формат EN-US. Он представляет собой текстовый ASCII-файл.|  
 |**Создание и хранение файла**|Журнал HTTP создается после его включения в файле конфигурации, перезапуска службы и обработки сервером отчетов HTTP-запроса. Если необходимые параметры были настроены, но файл журнала отсутствует, откройте какой-либо отчет или запустите одно из приложений сервера отчетов (например, диспетчер отчетов), чтобы был сформирован HTTP-запрос для создания этого файла.<br /><br /> После каждого перезапуска службы и последующего HTTP-запроса на сервер отчетов создается новый экземпляр файла журнала.<br /><br /> По умолчанию размер журналов трассировки ограничен 32 МБ, а срок их хранения — 14 дней.|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>Параметры конфигурации для журнала HTTP сервера отчетов  
- Чтобы настроить HTTP-журнал сервера отчетов, используйте блокнот для изменения файла **ReportingServicesService. exe. config** . Этот файл конфигурации находится в папке \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
+ Чтобы настроить конфигурацию журнала HTTP-сервера отчетов, измените файл **ReportingServicesService.exe.config** с помощью программы "Блокнот". Этот файл конфигурации находится в папке \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
   
  Чтобы разрешить применение сервера HTTP, добавьте запись `http:4` в раздел RStrace файла ReportingServicesService.exe.config. Все другие записи файла журнала HTTP являются необязательными. Следующий пример содержит все параметры, так что можно вставить целый раздел над разделом RStrace, а затем удалить ненужные параметры.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66103400"
 |CookieSent|Содержимое куки-файла, отправленного сервером.|нет|  
 |Referrer|Предыдущий сайт, посещенный клиентом.|нет|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Журнал трассировки службы сервера отчетов](report-server-service-trace-log.md)   
  [Файлы и источники журналов служб Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
  [Справочник по ошибкам и событиям (службы Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)  

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fdbca5818e3430c0445444f3fb98b426e5f8a79c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103210"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Задание значений времени ожидания при обработке отчетов и общих наборов данных (SSRS)
@@ -54,10 +54,10 @@ ms.locfileid: "66103210"
 > [!NOTE]  
 >  Можно установить значение `RunningRequestsDbCycle` в файле RSReportServer.config для изменения периодичности оценки заданий.  
   
-## <a name="see-also"></a>См. также:  
- [Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Reporting Services сервера отчетов &#40;в основном режиме&#41;](reporting-services-report-server-native-mode.md)   
- [Управление запущенным процессом](../subscriptions/manage-a-running-process.md)   
- [Диспетчер отчетов (службы SSRS в собственном режиме)](../report-manager-ssrs-native-mode.md)  
+## <a name="see-also"></a>См. также  
+ [Настройка параметров обработки &#40;Reporting Services в режиме интеграции с SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Сервер отчетов служб Reporting Services (основной режим)](reporting-services-report-server-native-mode.md)   
+ [Управление выполняющимся процессом](../subscriptions/manage-a-running-process.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md)  
   
   

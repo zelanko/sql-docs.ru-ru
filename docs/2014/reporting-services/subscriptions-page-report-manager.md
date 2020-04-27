@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eec92d7c58b68b14374666f65489f145fa863422
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101091"
 ---
 # <a name="subscriptions-page-report-manager"></a>Страница «Подписки» (диспетчер отчетов)
@@ -62,7 +62,7 @@ ms.locfileid: "66101091"
  **Описание**  
  Показывает описание подписки.  
   
- **Необходимость**  
+ **Триггер**  
  Указывает критерии запуска подписки. Триггер **TimedSubscription** основывается на расписании, определяющем время запуска подписки. Триггер **SnapshotUpdated** основывается на обновлении, внесенном в моментальный снимок отчета.  
   
  **Владелец**  
@@ -78,7 +78,7 @@ ms.locfileid: "66101091"
   
  Подписку нельзя обработать, если она деактивирована. Для обновления подписки и перевода ее в исправное состояние откройте подписку, а затем сохраните ее.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Создание, изменение и удаление стандартных подписок &#40;Reporting Services в основном режиме&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Создание, изменение и удаление расписаний](subscriptions/create-modify-and-delete-schedules.md)   

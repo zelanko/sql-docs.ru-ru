@@ -11,10 +11,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 4ff1cd03eb260d892c22c36285fa07d912994510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096813"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Настройка служб Analysis Services — каталоги данных
@@ -22,14 +22,14 @@ ms.locfileid: "66096813"
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
   
-|Description|Каталог по умолчанию|Рекомендации|  
+|Описание|Каталог по умолчанию|Рекомендации|  
 |-----------------|-----------------------|---------------------|  
 |Корневой каталог данных|C:\Program Files\Microsoft SQL Server\MSAS12. \<InstanceId> \olap\data\|убедитесь, что папка \Program files\Microsoft SQL Server \ защищена с ограниченными разрешениями. Во многих конфигурациях производительность служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] зависит от производительности хранилища, в котором размещается каталог данных. Поместите этот каталог в доступном хранилище, имеющем самое высокое быстродействие. При установке отказоустойчивых кластеров каталоги данных должны находиться на общем диске.|  
 |Каталог файла журнала|C:\Program Files\Microsoft SQL Server\MSAS12. \<InstanceId> \Olap\log.\|. это каталог для [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] файлов журнала, который включает журнал FlightRecorder. При увеличении времени существования «черного ящика» позаботьтесь о том, чтобы в каталоге журнала было достаточно места.|  
-|Каталог временных данных|C:\Program Files\Microsoft SQL Server\MSAS12. \<InstanceId> \Олап\темп\|помещает временный каталог в подсистему хранения данных высокой производительности.|  
+|Каталог temp|C:\Program Files\Microsoft SQL Server\MSAS12. \<InstanceId> \Олап\темп\|помещает временный каталог в подсистему хранения данных высокой производительности.|  
 |Каталог резервного копирования|C:\Program Files\Microsoft SQL Server\MSAS12. \<InstanceId> \Олап\баккуп\|. это каталог для [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] файлов резервных копий по умолчанию. Здесь же системная служба PowerPivot кэширует файлы данных PowerPivot для установок SharePoint.<br /><br /> Убедитесь, что заданы соответствующие разрешения, чтобы предотвратить потерю данных, а также что группа пользователей для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] имеет достаточные разрешения для записи в каталог резервных копий. Использование подключенных дисков для размещения каталогов резервного копирования не поддерживается.|  
   
-## <a name="notes"></a>Заметки  
+## <a name="notes"></a>Примечания  
   
 -   Экземпляры служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], развернутые в ферме SharePoint, хранят файлы приложений, файлы данных и свойства в базах данных содержимого и базах данных приложений служб.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66096813"
   
     -   в каталог, в котором находятся системные файлы  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расположение файлов для экземпляра по умолчанию и именованных экземпляров SQL Server](../../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)  
   
   

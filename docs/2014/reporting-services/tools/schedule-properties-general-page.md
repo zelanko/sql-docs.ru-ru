@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 98d013126fe1db1b8101d5ae451f658546f6d1f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099740"
 ---
 # <a name="schedule-properties-general-page"></a>Свойства расписания (страница «Общие»)
@@ -29,10 +29,10 @@ ms.locfileid: "66099740"
  Чтобы открыть эту страницу, запустите среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключитесь к серверу отчетов, откройте папку **Общие расписания** , щелкните одно из общих расписаний правой кнопкой мыши и выберите пункт **Свойства**.  
   
 > [!NOTE]  
->  Эта функция доступна не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и данная страница не открывается при работе с выпуском, в котором отсутствует эта функция. Дополнительные сведения о функциях, поддерживаемых выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+>  Эта функция доступна не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и данная страница не открывается при работе с выпуском, в котором отсутствует эта функция. Список функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживаемых различными выпусками, см. [в разделе функции, поддерживаемые различными выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Указывает имя общего расписания.  
   
  **Начать выполнение расписания**  
@@ -41,7 +41,7 @@ ms.locfileid: "66099740"
  **Остановить выполнения расписания**  
  Задает конечную дату этого расписания.  
   
- **Тип**  
+ **Type**  
  Задает шаблон повторения, основанный главным образом на часах, днях, неделях или месяцах, либо определяет разовый запуск.  
   
  **Час (шаблон повторений)**  
@@ -56,12 +56,12 @@ ms.locfileid: "66099740"
  **Месяц (шаблон повторений)**  
  Указывает параметры запуска запланированной операции через определенный интервал в месяцах или когда шаблон повторения основан на месяцах. В ежемесячном расписании время его запуска может задаваться с указанием дня, часа и минут. Отдельные месяцы могут исключаться из расписания.  
   
- **Однократно**  
+ **После**  
  Указывает расписание, выполняемое один раз в заданные дату и время.  
   
-## <a name="see-also"></a>См. также:  
- [Справка F1 по использованию сервера отчетов среде Management Studio](report-server-in-management-studio-f1-help.md)   
- [Подключение к серверу отчетов в среде Management Studio](connect-to-a-report-server-in-management-studio.md)   
+## <a name="see-also"></a>См. также  
+ [Сервер отчетов в справке Management Studio F1](report-server-in-management-studio-f1-help.md)   
+ [Соединение с сервером отчетов в Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Создание, изменение и удаление расписаний](../subscriptions/create-modify-and-delete-schedules.md)   
  [Расписания](../subscriptions/schedules.md)  
   

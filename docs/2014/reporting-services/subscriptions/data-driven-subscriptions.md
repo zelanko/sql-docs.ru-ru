@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 90733af47898116236d94c9b9f6ccc6d9fc542ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100866"
 ---
 # <a name="data-driven-subscriptions"></a>управляемая данными подписка
@@ -46,21 +46,21 @@ ms.locfileid: "66100866"
   
 -   Дополнительные сведения о выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживающих функциональность управляемых данными подписок, см. в разделе функции, поддерживаемые различными [выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (.https://go.microsoft.com/fwlink/?linkid=232473)  
   
--   Выберите источник данных подписки, который будет поставлять серверу отчетов данные схемы. Примеры поддерживаемых типов источников данных включают в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] себя реляционные данные, Oracle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , базы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] данных, данные пакета, источники данных ODBC и OLE DB источники данных. Дополнительные сведения о требованиях к источникам данных подписчиков см. в разделе [Use an External Data Source for Subscriber Data &#40;Data-Driven Subscription&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
+-   Выберите источник данных подписки, который будет поставлять серверу отчетов данные схемы. Примеры поддерживаемых типов источников данных включают реляционные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], базы данных Oracle, базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], данные пакетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], источники данных ODBC и OLE DB. Дополнительные сведения о требованиях к источникам данных подписчиков см. в разделе [Использование внешнего источника данных подписчика (управляемая данными подписка)](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
 ## <a name="working-with-data-driven-subscriptions"></a>Работа с подписками, управляемыми данными  
  В следующих подразделах содержатся дополнительные сведения об управляемых данными подписках.  
   
-|Разделы|Description|  
+|Разделы|Описание|  
 |------------|-----------------|  
-|[Create, Modify, and Delete a Data-Driven Subscription](data-driven-subscriptions.md)|Объясняет, как создать, изменить или удалить управляемую данными подписку.|  
-|[Использовать внешний источник данных для данных подписчика &#40;управляемой данными подписки&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Содержит сведения об источниках данных, которые можно использовать для управляемой данными подписки.|  
-|[Создание управляемой данными подписки &#40;руководство по службам SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)|Содержит пошаговые инструкции для изучения того, как создать управляемую данными подписку.|  
+|[Создание, изменение и удаление управляемой данными подписки](data-driven-subscriptions.md)|Объясняет, как создать, изменить или удалить управляемую данными подписку.|  
+|[Использование внешнего источника данных подписчика (управляемая данными подписка)](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Содержит сведения об источниках данных, которые можно использовать для управляемой данными подписки.|  
+|[Создание управляемой данными подписки (учебник по службам SSRS)](../create-a-data-driven-subscription-ssrs-tutorial.md)|Содержит пошаговые инструкции для изучения того, как создать управляемую данными подписку.|  
 |[Кэширование отчетов (службы SSRS)](../report-server/caching-reports-ssrs.md)|Описывает использование с управляемой данными подпиской отсутствующего поставщика доставки для предварительной загрузки кэша.|  
   
 ## <a name="see-also"></a>См. также:  
  [Подписки и доставка (службы Reporting Services)](subscriptions-and-delivery-reporting-services.md)   
  [Страница создания управляемой данными подписки &#40;диспетчер отчетов&#41;](../create-data-driven-subscription-page-report-manager.md)   
- [Предварительная загрузка диспетчер отчетов &#40;кэша&#41;](../report-server/preload-the-cache-report-manager.md)  
+ [Предварительная загрузка кэша (диспетчер отчетов)](../report-server/preload-the-cache-report-manager.md)  
   
   

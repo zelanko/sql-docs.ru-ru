@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00590faa3ef5fb63338465d85202f4010cd3b72d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104154"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configure a Firewall for Report Server Access
@@ -45,27 +45,27 @@ ms.locfileid: "66104154"
   
 3.  Выберите **Правила для входящих подключений.**  
   
-4.  В окне **действия** щелкните **новое правило** **.**  
+4.  Выберите **Создать правило** в окне **Действия****.**  
   
 5.  Выберите **Тип правила** в разделе **Порт**.  
   
-6.  Щелкните **Далее**.  
+6.  Нажмите кнопку **Далее**.  
   
 7.  На странице **Протокол и порты** выберите **TCP**.  
   
 8.  Выберите **Указанные локальные порты** и введите значение **80**.  
   
-9. Щелкните **Далее**.  
+9. Нажмите кнопку **Далее**.  
   
 10. На странице **Действие** выберите **Разрешить соединение**.  
   
-11. Щелкните **Далее**.  
+11. Нажмите кнопку **Далее**.  
   
 12. На странице **Профиль** выберите необходимые параметры для среды.  
   
-13. Щелкните **Далее**.  
+13. Нажмите кнопку **Далее**.  
   
-14. На странице **Имя** введите имя**ReportServer (TCP через порт 80)** .  
+14. На странице **Имя** введите имя**ReportServer (TCP через порт 80)**.  
   
 15. Нажмите кнопку **Готово**.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66104154"
   
 11. Перезагрузите компьютер.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
  После открытия порта, прежде чем удаленные пользователи смогут производить доступ к серверу отчетов, им необходимо предоставить доступ к корневой папке и на уровне сайта. Даже если порт правильно открыт, пользователи не смогут соединяться с сервером отчетов, если им не предоставлены необходимые разрешения. Дополнительные сведения см. в разделе [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../security/grant-user-access-to-a-report-server.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Правильность открытия порта можно также проверить, открыв диспетчер отчетов с другого компьютера. Дополнительные сведения см. в разделе [Диспетчер отчетов (службы SSRS в собственном режиме)](../report-manager-ssrs-native-mode.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -103,7 +103,7 @@ ms.locfileid: "66104154"
 ## <a name="see-also"></a>См. также:  
  [Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Создание базы данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Создание базы данных сервера отчетов &#40;службы SSRS Configuration Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Управление сервером отчетов Reporting Services в собственном режиме](manage-a-reporting-services-native-mode-report-server.md)  
   

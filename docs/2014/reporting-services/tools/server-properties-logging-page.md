@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a04c27fd790a1ad5c4ba453b43af5983a6440e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099531"
 ---
 # <a name="server-properties-logging-page"></a>Свойства сервера (страница «Регистрация»)
@@ -25,17 +25,17 @@ ms.locfileid: "66099531"
  Чтобы открыть эту страницу, запустите среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключитесь к серверу отчетов, щелкните правой кнопкой мыши имя сервера отчетов и выберите **Свойства**. Нажмите кнопку **Ведение журнала** , чтобы открыть эту страницу.  
   
 ## <a name="options"></a>Параметры  
- **Включить ведение журнала выполнения отчетов**  
+ **Включить ведение журнала выполнения отчета**  
  Щелкните, чтобы создать и сохранить данные о действиях с отчетами на сервере. Если этот параметр включен, то сервер отчетов отслеживает используемые отчеты, частоту выполнения отчетов, типы выполненных операций с отчетами, форматы вывода и тех, кто вызвал отчет на выполнение. Дополнительные сведения о дополнительных точках данных, записанных в журнал, см. в разделе [Журнал выполнения сервера отчетов и представление ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
- **Удалить записи журнала старше этого числа дней**  
+ **Удалить записи журнала, произведенные более заданного количества дней тому назад**  
  Задается количество дней, после которого записи журнала будут удалены из журнала выполнения отчета. Значение по умолчанию — 60 суток.  
   
-## <a name="see-also"></a>См. также:  
- [Установка свойств сервера отчетов (среда Management Studio)](set-report-server-properties-management-studio.md)   
- [Подключение к серверу отчетов в среде Management Studio](connect-to-a-report-server-in-management-studio.md)   
+## <a name="see-also"></a>См. также  
+ [Установка свойств сервера отчетов &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
+ [Соединение с сервером отчетов в Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Файлы и источники журналов служб Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
- [Справка F1 по использованию сервера отчетов среде Management Studio](report-server-in-management-studio-f1-help.md)   
+ [Сервер отчетов в справке Management Studio F1](report-server-in-management-studio-f1-help.md)   
  [Журнал выполнения сервера отчетов и представление ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md)  
   
   

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d08e9900453fe259d727e202489d728e0dce47e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097874"
 ---
 # <a name="setwindowsserviceidentity-method-wmi-msreportserver_configurationsetting"></a>Метод SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting)
@@ -41,16 +41,16 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ```  
   
 ## <a name="parameters"></a>Параметры  
- *Параметру usebuiltinaccount присвоено*  
+ *UseBuiltInAccount*  
  Показывает, является ли указанная учетная запись встроенной учетной записью Windows.  
   
- *Учетной записи*  
+ *Учетная запись*  
  Учетная запись Windows, которая используется для запуска службы Windows, имеет формат «ДОМЕН\псевдоним».  
   
  *Пароль*  
  Пароль для учетной записи.  
   
- *СОСТАВ*  
+ *HRESULT*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
@@ -63,10 +63,10 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
   
  Метод SetWindowsServiceIdentity задает разрешения для файлов и папок в установочном каталоге сервера отчетов.  
   
- Учетной записи, указанной ** в параметре `LogonAsService` Account, требуются права в Windows. Метод предоставляет эти права указанной учетной записи.  
+ Учетной записи, указанной *Account* в параметре `LogonAsService` Account, требуются права в Windows. Метод предоставляет эти права указанной учетной записи.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

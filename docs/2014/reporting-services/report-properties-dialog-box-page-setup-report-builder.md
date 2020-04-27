@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4be5a0ba8575467467a6d73a7d6fac27e914463f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104367"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>Диалоговое окно «Свойства отчета» — «Параметры страницы» (построитель отчетов)
@@ -47,7 +47,7 @@ ms.locfileid: "66104367"
  **Вверх**  
  Устанавливает расстояние между верхней границей отчета и верхней кромкой первой строки отчета.  
   
- **Нижнее**  
+ **Нижний**  
  Устанавливает расстояние между нижней границей отчета и нижней кромкой его последней строки.  
   
  **Слева**  
@@ -56,9 +56,9 @@ ms.locfileid: "66104367"
  **Правильно**  
  Устанавливает расстояние между правым краем отчета и правой границей строк отчета.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Построитель отчетов справки по диалоговым окнам, панелям и мастерам](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Разбиение на страницы в Reporting Services &#40;построитель отчетов и SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Диалоговое окно "Свойства отчета", "&#40;кода построитель отчетов&#41;](../../2014/reporting-services/report-properties-dialog-box-code-report-builder.md)   
  [Диалоговое окно "Свойства отчета", ссылки &#40;построитель отчетов&#41;](../../2014/reporting-services/report-properties-dialog-box-references-report-builder.md)  
   

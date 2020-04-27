@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c62e2793f11853158b7b31d1e79feb4ae59977de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098298"
 ---
 # <a name="listreportserversindatabase-method-wmi-msreportserver_configurationsetting"></a>Метод ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting)
@@ -54,16 +54,16 @@ public void ListReportServersInDatabase (out string[] MachineNames,
  *InstallationIDs[]*  
  [out] Массив, который содержит коды установки каждого установленного сервера отчетов в базе данных.  
   
- *Для инициализации []*  
+ *IsInitialized[]*  
  [out] Массив, который содержит состояние инициализации каждого установленного сервера отчетов в базе данных.  
   
- *Недопустим*  
+ *Длина*  
  [out] Длина массивов, возвращаемых методом. Все возвращенные массивы имеют одинаковую длину.  
   
- *СОСТАВ*  
+ *HRESULT*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
- *Екстендедеррорс []*  
+ *ExtendedErrors[]*  
  [out] Массив строк, содержащий дополнительные ошибки, возвращенные в результате вызова.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
@@ -73,7 +73,7 @@ public void ListReportServersInDatabase (out string[] MachineNames,
  Метод ListReportServersInDatabase выводит список установленных серверов отчетов, которые имеются в базе данных сервера отчетов, независимо от наличия у них доступа к защищенным сведениям, и возвращает сопоставленный набор массивов с данными о каждом установленном сервере отчетов.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

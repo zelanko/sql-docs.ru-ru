@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd493fae67e3aa47c5c53cd3ad12d018b0b72f70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102642"
 ---
 # <a name="limit-report-history-report-manager"></a>Ограничение размеров журнала отчета (диспетчер отчетов)
@@ -34,7 +34,7 @@ ms.locfileid: "66102642"
   
 2.  Для сохранения всех без исключения моментальных снимков журнала отчетов выберите **Хранить в журнале отчета неограниченное количество моментальных снимков** . Кроме того, чтобы задать максимальное число моментальных снимков, которые могут храниться для каждого отчета, выберите **Ограничить количество копий журнала отчета** .  
   
-3.  Нажмите кнопку **Применить**.  
+3.  Щелкните **Применить**.  
   
 ### <a name="to-configure-report-history-for-a-specific-report"></a>Настройка журнала для определенного отчета  
   
@@ -46,8 +46,8 @@ ms.locfileid: "66102642"
   
 4.  Выберите параметры отчета и нажмите кнопку **Применить**. Подробные сведения о каждом параметре см. в разделе [Страница "Свойства параметров моментального снимка" (диспетчер отчетов)](../snapshot-options-properties-page-report-manager.md).  
   
-## <a name="see-also"></a>См. также:  
- [Добавление моментального снимка к журналу отчета (диспетчер отчетов)](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Диспетчер отчетов (службы SSRS в собственном режиме)](../report-manager-ssrs-native-mode.md)  
+## <a name="see-also"></a>См. также  
+ [Добавление моментального снимка в журнал отчета &#40;диспетчер отчетов&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md)  
   
   

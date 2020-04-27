@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 322fa77d7d8620de87aaf862242da3c5c83126cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096343"
 ---
 # <a name="complete-image-progress"></a>Ход выполнения завершения образа
   Страница **Ход выполнения завершения образа** мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет наблюдать за состоянием установки завершения образа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . После завершения этого шага на данной странице будут перечислены состояния для каждого настроенного и завершенного компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и чтение файлов журналов программы установки SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

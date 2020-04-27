@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 556abc4ff00df4393c756f62072254e417653f40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101866"
 ---
 # <a name="role-assignments"></a>Назначения ролей
@@ -60,9 +60,9 @@ ms.locfileid: "66101866"
   
  Дополнительные сведения о стандартных назначениях ролей, обеспечивающих безопасность по умолчанию, см. в разделе [Стандартные роли](role-definitions-predefined-roles.md).  
   
-## <a name="see-also"></a>См. также:  
- [Создание, удаление и изменение ролей (среда Management Studio)](role-definitions-create-delete-or-modify.md)   
- [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](grant-user-access-to-a-report-server.md)   
+## <a name="see-also"></a>См. также  
+ [Создание, удаление или изменение роли &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
+ [Предоставление пользователям доступа к серверу отчетов &#40;диспетчер отчетов&#41;](grant-user-access-to-a-report-server.md)   
  [Изменение или удаление назначения роли &#40;диспетчер отчетов&#41;](role-assignments-modify-or-delete.md)   
  [Установка разрешений для элементов сервера отчетов на сайте SharePoint &#40;Reporting Services в режиме интеграции с SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](granting-permissions-on-a-native-mode-report-server.md)  

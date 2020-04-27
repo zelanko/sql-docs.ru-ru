@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ddd145c5073003a8dc189e3ed9b1bbb25dc11d09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096932"
 ---
 # <a name="word-device-information-settings"></a>Настройки сведений об устройстве Word
@@ -26,14 +26,14 @@ ms.locfileid: "66096932"
 |Параметр|Значение|  
 |-------------|-----------|  
 |`AutoFit`|`False`. Для автоподбора установлено значение `false` в какой-либо таблице Word.<br /><br /> `True`. Для автоподбора установлено значение `true` во всех таблицах Word.<br /><br /> `Never`. Значения автоподбора не установлены ни в одной из таблиц Word, производится возврат к поведению по умолчанию для Word.<br /><br /> `Default`. Автоподбор установлен для таблиц, более узких, чем физическая область отрисовки (ширина физической страницы, включая поля) на логической странице.|  
-|`ExpandToggles`|Указывает, должны ли все переключаемые элементы отображаться в полностью раскрытом состоянии. По умолчанию используется значение `false`.|  
-|`FixedPageWidth`|Указывает, будет ли ширина страницы, записанная в DOC-файл, увеличиваться, чтобы уместилась самая широкая страница в тексте отчета. По умолчанию используется значение `false`.|  
-|**омисиперлинкс**|Указывает, опускать ли действие гиперссылки для всех элементов, где оно установлено. По умолчанию используется значение `false`.|  
-|`OmitDrillthroughs`|Указывает, опускать ли действие детализации для всех элементов, где оно установлено. По умолчанию используется значение `false`.|  
+|`ExpandToggles`|Указывает, должны ли все переключаемые элементы отображаться в полностью раскрытом состоянии. Значение по умолчанию — `false`.|  
+|`FixedPageWidth`|Указывает, будет ли ширина страницы, записанная в DOC-файл, увеличиваться, чтобы уместилась самая широкая страница в тексте отчета. Значение по умолчанию — `false`.|  
+|**OmitHyperlinks**|Указывает, опускать ли действие гиперссылки для всех элементов, где оно установлено. Значение по умолчанию — `false`|  
+|`OmitDrillthroughs`|Указывает, опускать ли действие детализации для всех элементов, где оно установлено. Значение по умолчанию — `false`|  
   
-## <a name="see-also"></a>См. также:  
- [Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Настройка параметров модулей подготовки отчетов в RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+## <a name="see-also"></a>См. также  
+ [Передача настроек сведений об устройстве в модули подготовки отчетов](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Настройка параметров модуля подготовки отчетов в файле RSReportServer. config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Технический справочник (службы SSRS)](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

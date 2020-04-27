@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08fc68575e2515907f31e82cf3609d73da1c95d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099787"
 ---
 # <a name="schedule-properties-reports-page"></a>Свойства расписания (страница отчетов)
@@ -27,7 +27,7 @@ ms.locfileid: "66099787"
  Чтобы открыть эту страницу, запустите среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключитесь к серверу отчетов, откройте папку **Общие расписания** , щелкните одно из общих расписаний правой кнопкой мыши, выберите пункт **Свойства**, после чего нажмите кнопку **Отчеты**.  
   
 > [!NOTE]  
->  Эта функция поддерживается не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о функциях, поддерживаемых выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+>  Эта функция поддерживается не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживаемых различными выпусками, см. [в разделе функции, поддерживаемые различными выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="options"></a>Параметры  
  **Папка**  
@@ -36,11 +36,11 @@ ms.locfileid: "66099787"
  **Отчет**  
  Позволяет задать имя отчета, использующего расписание.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание, изменение и удаление расписаний](../subscriptions/create-modify-and-delete-schedules.md)   
  [Расписания](../subscriptions/schedules.md)   
- [Справка F1 по использованию сервера отчетов среде Management Studio](report-server-in-management-studio-f1-help.md)   
- [Подключение к серверу отчетов в среде Management Studio](connect-to-a-report-server-in-management-studio.md)   
+ [Сервер отчетов в справке Management Studio F1](report-server-in-management-studio-f1-help.md)   
+ [Соединение с сервером отчетов в Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Настройка общих свойств для диспетчер отчетов &#40;отчетов&#41;](../configure-general-properties-for-a-report-report-manager.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aae8b41dbd3751b21a7dc015b0a8157cf650185a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099334"
 ---
 # <a name="troubleshoot-report-builder"></a>Устранение неполадок в построителе отчетов
@@ -25,7 +25,7 @@ ms.locfileid: "66099334"
  Следующие разделы помогут устранить неполадки отчетов, с точки зрения автора отчетов или администратора сервера отчетов.  
   
 ## <a name="report-authors"></a>Авторы отчетов  
- [Устранение неполадок в отчетах: отчеты &#40;построитель отчетов и службы SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md).  
   
  [Устранение неполадок элементов отчетов &#40;построитель отчетов и SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66099334"
   
  Если ответ на вопрос найти не удалось, [напишите отзыв](https://go.microsoft.com/fwlink/?LinkId=118791).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установка, удаление и поддержка построителя отчетов](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
   

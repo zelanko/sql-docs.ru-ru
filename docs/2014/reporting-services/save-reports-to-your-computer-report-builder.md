@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 493e042e58c5a13bc94f299197ac8a75972f7ed6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102312"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Сохранение отчетов на компьютере (построитель отчетов)
@@ -22,7 +22,7 @@ ms.locfileid: "66102312"
   
 ### <a name="to-save-a-report"></a>Сохранение отчета  
   
-1.  В построителе отчетов нажмите кнопку **Сохранить**. Откроется диалоговое окно **Сохранить как** _\<элемент отчета>_ .  
+1.  В построителе отчетов нажмите кнопку **Сохранить**. Откроется диалоговое окно « **Сохранить как**_\<элемент отчета>_ ».  
   
     > [!NOTE]  
     >  Во время повторного сохранения отчет автоматически сохраняется в предыдущем расположении. Чтобы изменить расположение, используйте параметр **Сохранить как** .  
@@ -35,7 +35,7 @@ ms.locfileid: "66102312"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Сохранение отчета с другим именем  
   
-1.  Нажмите кнопку «Построитель отчетов» и выберите **Сохранить как**. Откроется диалоговое окно **Сохранить как** _\<элемент отчета>_ .  
+1.  Нажмите кнопку «Построитель отчетов» и выберите **Сохранить как**. Откроется диалоговое окно « **Сохранить как**_\<элемент отчета>_ ».  
   
 2.  Перейдите в папку компьютера, куда нужно сохранить отчет.  
   
@@ -43,10 +43,10 @@ ms.locfileid: "66102312"
   
 4.  В поле **Элементы типа**выберите тип сохраняемого элемента отчета. Для отчетов используется тип «Отчеты» (RDL).  
   
-## <a name="see-also"></a>См. также:  
- [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Поиск, просмотр отчетов и управление ими &#40;построитель отчетов и SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Экспорт отчетов &#40;построитель отчетов и SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
- [Сохранение отчетов (построитель отчетов)](report-builder/saving-reports-report-builder.md)   
+ [Сохранение отчетов &#40;построитель отчетов&#41;](report-builder/saving-reports-report-builder.md)   
  [Экспорт отчета в файл другого типа (построитель отчетов и службы SSRS)](../../2014/reporting-services/export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   
   

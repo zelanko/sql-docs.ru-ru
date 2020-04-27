@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a7956d71bf9cf477049864c5f4eb341fd276a48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097343"
 ---
 # <a name="msreportserver_configurationsetting-class"></a>MSReportServer_ConfigurationSetting, класс
@@ -45,7 +45,7 @@ public class MSReportServer_ConfigurationSetting
  Все открытые статические (**Shared** в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) элементы этого типа можно использовать в многопотоковых операциях. Для элементов экземпляра потокобезопасность не гарантируется.  
   
 ## <a name="example"></a>Пример  
- Чтобы выполнить следующий код, добавьте имя сервера вместо каждого \< *ServerName*>. Путь обновления должен указывать на фактическое расположение установки, если оно отличается от расположения по умолчанию. Приведенный ниже пример кода проходит по всем свойствам класса [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) и выводит на консоль имя каждого свойства и его значение.  
+ Чтобы запустить приведенный ниже код, добавьте имя сервера вместо каждого местозаполнителя \<*имя_сервера*>. Путь обновления должен указывать на фактическое расположение установки, если оно отличается от расположения по умолчанию. Приведенный ниже пример кода проходит по всем свойствам класса [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) и выводит на консоль имя каждого свойства и его значение.  
   
 ```vb  
 Imports System  
@@ -170,9 +170,9 @@ class Class1
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
- **Платформа:**[!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **Платформа:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9012a5cbc130ac79963e033c8c3d93807d946445
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098436"
 ---
 # <a name="getadminsiteurl-method-wmi"></a>Метод GetAdminSiteUrl (WMI)
@@ -34,17 +34,17 @@ public void GetAdminSiteUrl(out string AdminSiteUrl, out Int32 HRESULT);
 ```  
   
 ## <a name="parameters"></a>Параметры  
- *админситеурл*  
+ *AdminSiteUrl*  
  [out] Строка, содержащая абсолютный URL-адрес веб-сайта центра администрирования фермы SharePoint, с которой интегрирован сервер отчетов.  
   
- *СОСТАВ*  
+ *HRESULT*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение *HRESULT* , являющееся признаком успешного или неуспешного завершение вызова метода. Значение 0 указывает, что вызов метода завершился успешно. Ненулевое значение указывает, что произошла ошибка.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Методы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-methods.md)  

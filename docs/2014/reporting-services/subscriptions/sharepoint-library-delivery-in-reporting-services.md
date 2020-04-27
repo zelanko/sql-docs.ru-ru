@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a62ec076b9dc61cd01d18796f04bbaa04eb93b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100698"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Доставка библиотек SharePoint в службах Reporting Services
   Сервер отчетов, настроенный на работу в режиме интеграции с SharePoint, располагает модулем доставки, с помощью которого можно отправить отчет в библиотеку SharePoint.  
   
- Перед использованием модуля доставки SharePoint необходимо создать подписку на странице приложения на сайте SharePoint, а затем в качестве типа доставки выбрать **Библиотека документов SharePoint** . Модуль доставки SharePoint нельзя использовать для подписок, создаваемых в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или диспетчер отчетов.  
+ Перед использованием модуля доставки SharePoint необходимо создать подписку на странице приложения на сайте SharePoint, а затем в качестве типа доставки выбрать **Библиотека документов SharePoint** . Модуль доставки SharePoint не может быть использован для подписок, созданных в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или в диспетчере отчетов.  
   
 > [!NOTE]  
 >  Модуль доставки не поддерживает доставку отчетов на сайт SharePoint, если сервер отчетов работает в собственном режиме. При попытке программного вызова модуля доставки для сервера отчетов, работающего в собственном режиме, будет возвращена ошибка `rsDeliveryExtensionNotFound`, а в журнале сервера отчетов зарегистрирована ошибка `rsOperationNotSupportedSharePointMode`.  
@@ -85,7 +85,7 @@ ms.locfileid: "66100698"
  Эта функция позволяет автоматически копировать последнюю версию файла в несколько мест. Файл копируется в том случае, если включен режим **Заменить** . Если вы использовали **автоинкремент** или **нет**, произойдет сбой доставки, и возникнет `rsDeliveryError` ошибка.  
   
 ## <a name="see-also"></a>См. также:  
- [Создание и управление подписками для серверов отчетов в режиме интеграции с SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Подписки и доставка (службы Reporting Services)](subscriptions-and-delivery-reporting-services.md)   
  [Задание учетных данных и сведениях о соединении для источников данных отчета](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   

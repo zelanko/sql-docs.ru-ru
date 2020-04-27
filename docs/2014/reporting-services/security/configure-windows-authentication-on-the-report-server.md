@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102117"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Настройка проверки подлинности Windows на сервере отчетов
@@ -45,8 +45,7 @@ ms.locfileid: "66102117"
  Следующие параметры настраиваются для сервера отчетов, работающего в собственном режиме. Если развертывание сервера отчетов производилось в режиме интеграции с SharePoint, то необходимо пользоваться настройками проверки подлинности по умолчанию, в которых задана встроенная безопасность Windows. Сервер отчетов использует внутренние функции модуля проверки подлинности Windows по умолчанию для поддержки серверов отчетов в режиме интеграции с SharePoint.  
   
 ## <a name="extended-protection-for-authentication"></a>Расширенная защита для проверки подлинности  
- Начиная с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], доступна поддержка расширенной защиты для проверки подлинности. Функция [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует привязку каналов и служб для повышения уровня защиты проверки подлинности. Функции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать в ОС, поддерживающей расширенную защиту. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] определяется параметрами в файле RSReportServer.config. Это можно сделать как в текстовом редакторе, так и при помощи средств WMI API. Дополнительные сведения см. в статье [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
+ Начиная с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], доступна поддержка расширенной защиты для проверки подлинности. Функция [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует привязку каналов и служб для повышения уровня защиты проверки подлинности. Функции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать в ОС, поддерживающей расширенную защиту. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] определяется параметрами в файле RSReportServer.config. Это можно сделать как в текстовом редакторе, так и при помощи средств WMI API. Дополнительные сведения см. в статье [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>Настройка сервера отчетов на использование встроенной безопасности Windows  
   
@@ -54,8 +53,7 @@ ms.locfileid: "66102117"
   
 2.  Найдите> `Authentication` <.  
   
-3.  Выберите и скопируйте наиболее подходящую из следующих XML-структур. 
-  `RSWindowsNegotiate`, `RSWindowsNTLM` и `RSWindowsKerberos` можно указывать в любом порядке. Включите сохраняемость проверки подлинности, если нужно проверить подлинность соединений, а не каждого отдельного запроса. При сохраняемости проверки подлинности все запросы, для которых требуется проверка подлинности, разрешены в продолжение существования соединения.  
+3.  Выберите и скопируйте наиболее подходящую из следующих XML-структур. `RSWindowsNegotiate`, `RSWindowsNTLM` и `RSWindowsKerberos` можно указывать в любом порядке. Включите сохраняемость проверки подлинности, если нужно проверить подлинность соединений, а не каждого отдельного запроса. При сохраняемости проверки подлинности все запросы, для которых требуется проверка подлинности, разрешены в продолжение существования соединения.  
   
      Первая XML-структура является настройкой по умолчанию, если учетной записью службы сервера отчетов является учетная запись NetworkService или LocalSystem:  
   
@@ -78,7 +76,7 @@ ms.locfileid: "66102117"
           <EnableAuthPersistence>true</EnableAuthPersistence>  
     ```  
   
-     \</Аусентикатион>  
+     \</Authentication>  
   
      Третья XML-структура указывает все пакеты безопасности, используемые во встроенной безопасности Windows:  
   
@@ -102,7 +100,7 @@ ms.locfileid: "66102117"
   
      Также невозможно использование синтаксиса `Custom` с типами `RSWindows`.  
   
-5.  При необходимости измените параметры расширенной защиты. По умолчанию расширенная защита отключена.  Если эти записи отсутствуют, возможно, на компьютере не установлена версия служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с поддержкой расширенной защиты. Дополнительные сведения см. [в разделе Расширенная защита для проверки подлинности with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
+5.  При необходимости измените параметры расширенной защиты. По умолчанию расширенная защита отключена.  Если эти записи отсутствуют, возможно, на компьютере не установлена версия служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с поддержкой расширенной защиты. Дополнительные сведения см. в разделе [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
   
     ```  
           <RSWindowsExtendedProtectionLevel>Allow</RSWindowsExtendedProtectionLevel>  
@@ -115,7 +113,7 @@ ms.locfileid: "66102117"
   
 8.  Перезапустите сервер отчетов, чтобы очистить все открытые сеансы.  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a>Устранение ошибок проверки подлинности Kerberos при соединении с сервером отчетов  
+##  <a name="resolving-kerberos-authentication-errors-when-connecting-to-a-report-server"></a><a name="proxyfirewallRSWindowsNegotiate"></a>Устранение ошибок проверки подлинности Kerberos при соединении с сервером отчетов  
  На сервере отчетов, настроенном для проверки подлинности протоколов Negotiate или Kerberos, клиентское соединение с сервером отчетов завершится неудачей в случае ошибки проверки подлинности Kerberos. Известно, что ошибки проверки подлинности протокола Kerberos происходят вследствие следующих причин.  
   
 -   Служба сервера отчетов выполняется с доменной учетной записью пользователя Windows, и для учетной записи не зарегистрировано имя участника-службы (SPN).  
@@ -206,7 +204,7 @@ ms.locfileid: "66102117"
   
 -   Дополнительные сведения о Kerberos и серверах отчетов см. на странице [Развертывание решений бизнес-аналитики с помощью SharePoint, служб Reporting Services и сервера мониторинга PerformancePoint с Kerberos.](https://go.microsoft.com/fwlink/?LinkID=177751)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Проверка подлинности с использованием сервера отчетов](authentication-with-the-report-server.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](granting-permissions-on-a-native-mode-report-server.md)   
  [Файл конфигурации RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   

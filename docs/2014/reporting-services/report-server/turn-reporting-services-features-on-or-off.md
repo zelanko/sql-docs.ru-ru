@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf44b6af30d5db32c006c5a7d9b59d1810840d18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103190"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Включение и отключение компонентов служб Reporting Services
@@ -35,7 +35,7 @@ ms.locfileid: "66103190"
   
 -   [Встроенная безопасность Windows для источников данных для отчетов](#WinIntSec)  
   
-##  <a name="RSWebSvc"></a>Веб-служба сервера отчетов  
+##  <a name="report-server-web-service"></a><a name="RSWebSvc"></a>Веб-служба сервера отчетов  
   
 #### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>Включение или выключение веб-службы сервера отчетов методом изменения конфигурации  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66103190"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Sched"></a>Запланированные события и доставка  
+##  <a name="scheduled-events-and-delivery"></a><a name="Sched"></a> Запланированные события и доставка  
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>Включение или выключение запланированных событий и доставки методом изменения конфигурации  
   
@@ -108,16 +108,16 @@ ms.locfileid: "66103190"
   
 4.  В разделе **Свойства аспекта**можно выполнить следующие действия.  
   
-    -   Чтобы включить запланированные события и доставку, задайте **** для `True`присвойте scheduleeventsandreportdeliveryenabled значение.  
+    -   Чтобы включить запланированные события и доставку, задайте **ScheduleEventsAndReportDeliveryEnabled** для `True`присвойте scheduleeventsandreportdeliveryenabled значение.  
   
-    -   Чтобы отключить запланированные события и доставку, задайте **** для `False`присвойте scheduleeventsandreportdeliveryenabled значение.  
+    -   Чтобы отключить запланированные события и доставку, задайте **ScheduleEventsAndReportDeliveryEnabled** для `False`присвойте scheduleeventsandreportdeliveryenabled значение.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 > [!NOTE]  
 >  Фоновую обработку нельзя отключить полностью, поскольку она обеспечивает функциональные возможности обслуживания базы данных, необходимые для операций сервера.  
   
-##  <a name="ReportManager"></a>диспетчер отчетов  
+##  <a name="report-manager"></a><a name="ReportManager"></a>диспетчер отчетов  
   
 #### <a name="to-turn-on-or-off-report-manager-by-editing-configuration"></a>Включение или отключение диспетчера отчетов методом изменения конфигурации  
   
@@ -153,7 +153,7 @@ ms.locfileid: "66103190"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ReportBuilder"></a>построитель отчетов  
+##  <a name="report-builder"></a>Построитель отчетов <a name="ReportBuilder"></a>  
   
 #### <a name="to-turn-on-or-off-report-builder-by-using-sql-server-management-studio"></a>Включение или отключение построителя отчетов с использованием среды SQL Server Management Studio  
   
@@ -169,7 +169,7 @@ ms.locfileid: "66103190"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="WinIntSec"></a>Встроенная безопасность Windows  
+##  <a name="windows-integrated-security"></a><a name="WinIntSec"></a> Встроенная безопасность Windows  
   
 #### <a name="to-turn-on-or-off-windows-integrated-security-by-using-sql-server-management-studio"></a>Включение или отключение встроенной безопасности Windows с использованием среды SQL Server Management Studio  
   
@@ -179,13 +179,13 @@ ms.locfileid: "66103190"
   
 3.  В диалоговом окне **Свойства сервера** в области **Выбор страницы**щелкните **Безопасность**.  
   
-    -   Чтобы включить встроенную безопасность Windows, установите флажок **включить встроенную безопасность Windows для источников данных отчета** .  
+    -   Чтобы включить встроенную безопасность Windows, установите флажок **Использовать встроенную безопасность Windows для источников данных для отчетов** .  
   
-    -   Чтобы отключить встроенную безопасность Windows, снимите флажок **включить встроенную безопасность Windows для источников данных отчета** .  
+    -   Чтобы отключить встроенную безопасность Windows, снимите флажок **Использовать встроенную безопасность Windows для источников данных для отчетов** .  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

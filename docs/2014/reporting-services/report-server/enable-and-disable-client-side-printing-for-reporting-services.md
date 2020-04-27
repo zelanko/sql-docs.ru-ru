@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea5016aa51a25bd296d2e77516b30b84a7a28cec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103929"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Включение и отключение печати на стороне клиента для служб Reporting Services
@@ -75,7 +75,7 @@ ms.locfileid: "66103929"
   
 -   Напишите скрипт или код, чтобы задать системному свойству сервера отчетов **EnableClientPrinting** значение`false.`  
   
- Следующий образец скрипта иллюстрирует один из способов отключения клиентской печати. Скомпилируйте и запустите следующий код [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] для присвоения свойству **EnableClientPrinting** значения **False**. После выполнения кода перезапустите IIS.  
+ Следующий образец скрипта иллюстрирует один из способов отключения клиентской печати. Скомпилируйте и запустите следующий код [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], чтобы присвоить свойству **EnableClientPrinting** значение **False**. После выполнения кода перезапустите IIS.  
   
 ### <a name="sample-script"></a>Образец скрипта  
   

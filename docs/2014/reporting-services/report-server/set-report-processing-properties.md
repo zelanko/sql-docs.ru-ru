@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a793fa513ef13c9cafc210a411971a0363f5976d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103240"
 ---
 # <a name="set-report-processing-properties"></a>Установка свойств обработки отчетов
@@ -55,10 +55,10 @@ ms.locfileid: "66103240"
   
  Если выполняется это условие, сервер отчетов отключит подписку в следующий раз, когда она должна выполняться по расписанию. Для повторного включения подписки откройте, а затем сохраните ее. При открытии подписки сервер отчетов обновляет значения параметров подписки теми, что указаны для моментального снимка. Дополнительные сведения о подписках см. в разделе [Подписки и доставка (службы Reporting Services)](../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-## <a name="see-also"></a>См. также:  
- [Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+## <a name="see-also"></a>См. также  
+ [Настройка параметров обработки &#40;Reporting Services в режиме интеграции с SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Настройка свойств выполнения для диспетчер отчетов &#40;отчетов&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Основные понятия служб Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md)   
+ [Reporting Services концепции &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [Как добавить моментальный снимок в журнал отчета](add-a-snapshot-to-report-history-report-manager.md)   
  [Задание учетных данных и сведениях о соединении для источников данных отчета](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   

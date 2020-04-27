@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 33f9329031c589c533277b1e681ea1cb7bae49b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098142"
 ---
 # <a name="reserveurl-method-wmi-msreportserver_configurationsetting"></a>Метод ReserveURL (WMI MSReportServer_ConfigurationSetting)
@@ -42,27 +42,27 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  *URLString*  
  URL-адрес для резервирования.  
   
- *намного*  
+ *lcid*  
  Локаль, используемая для возвращаемых сообщений об ошибке.  
   
  *Ошибка*  
  [out] Описания возникших ошибок.  
   
- *СОСТАВ*  
+ *HRESULT*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение *HRESULT* , являющееся признаком успешного или неуспешного завершение вызова метода. Значение 0 означает, что вызов метода завершился успешно; код ошибки означает, что произошла ошибка.  
   
 ## <a name="remarks"></a>Remarks  
- *UrlString* не включает имя виртуального каталога. Метод [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) служит специально для этой цели.  
+ Строка*UrlString* не включает имя виртуального каталога. Метод [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) служит специально для этой цели.  
   
  Для текущей учетной записи службы Windows создаются зарезервированные URL-адреса. Изменение учетной записи Windows требует обновления всех зарезервированных URL-адресов вручную.  
   
  Этот метод вызывает жесткую очистку всех доменов приложений. После завершения этой операции выполняется перезапуск всех доменов приложений.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

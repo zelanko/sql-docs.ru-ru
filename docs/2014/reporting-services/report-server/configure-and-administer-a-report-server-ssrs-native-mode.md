@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e31465f0f1099536e262442db894e5d6bfd6d37e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104001"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)
@@ -36,7 +36,7 @@ ms.locfileid: "66104001"
   
 -   Дополнительно можно изменить файлы конфигурации для изменения настроек приложений. Дополнительные сведения о каждом файле и рекомендации по их изменению см. в разделе [Reporting Services Configuration Files](reporting-services-configuration-files.md).  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
  Описывает способ определения URL-адресов, используемых для доступа к серверу отчетов и диспетчеру отчетов.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "66104001"
  [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
  Описывает, как настроить пользовательскую учетную запись для обработки отчетов в автоматическом режиме.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка доступа к построитель отчетов](configure-report-builder-access.md)   
  [Файлы конфигурации служб Reporting Services](reporting-services-configuration-files.md)   
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Защита и обеспечение безопасности служб Reporting Services](../security/reporting-services-security-and-protection.md)   
- [Сервер отчетов служб Reporting Services (собственный режим)](reporting-services-report-server-native-mode.md)  
+ [Reporting Services безопасность и защита](../security/reporting-services-security-and-protection.md)   
+ [Сервер отчетов служб Reporting Services (основной режим)](reporting-services-report-server-native-mode.md)  
   
   

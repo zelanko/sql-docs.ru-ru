@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 009d7527f71966003d02e5963de451fda9710ae4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098840"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Загрузка документов в библиотеку SharePoint (службы Reporting Services в режиме SharePoint)
@@ -47,8 +47,8 @@ ms.locfileid: "66098840"
   
  Отчет может содержать параметры, поэтому пользователи могут фильтровать данные. Можно настроить параметры на использование конкретных значений или изменить способ их представления для пользователя. Дополнительные сведения см. в разделе [Настройка параметров опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-## <a name="see-also"></a>См. также:  
- [опубликовать отчет в библиотеке SharePoint](reports/publish-a-report-to-a-sharepoint-library.md)   
+## <a name="see-also"></a>См. также  
+ [Публикация отчета в библиотеке SharePoint](reports/publish-a-report-to-a-sharepoint-library.md)   
  [Публикация общего источника данных в библиотеке SharePoint](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

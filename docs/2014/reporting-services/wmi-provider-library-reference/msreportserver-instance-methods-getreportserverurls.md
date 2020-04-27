@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f600d7bf2515cb77c587e5c9c3d5f8d1db1e343f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097190"
 ---
 # <a name="getreportserverurls-method-wmi-msreportserver_instance"></a>Метод GetReportServerUrls (WMI MSReportServer_Instance)
@@ -35,16 +35,16 @@ public void GetReportServerUrls(out string[] applicationName,
 ```  
   
 ## <a name="parameters"></a>Параметры  
- *ApplicationName []*  
+ *ApplicationName[]*  
  Массив, который содержит установленные приложения. Значения: либо `ReportServerWebService`, либо `ReportManager`.  
   
- *URL-адреса []*  
+ *URLs[]*  
  Массив, который содержит успешно зарегистрированные URL-адреса.  
   
- *Недопустим*  
+ *Длина*  
  Целое значение, представляющее длину возвращенных массивов.  
   
- *СОСТАВ*  
+ *HRESULT*  
  Значение, показывающее успешное завершение или код ошибки.  
   
 ## <a name="return-values"></a>Возвращаемые значения  
@@ -53,7 +53,7 @@ public void GetReportServerUrls(out string[] applicationName,
  Методы, доступные в управляющих объектах WMI, вызываются с помощью функции InvokeMethod. Дополнительные сведения см. в разделе «Выполнение методов в управляющих объектах» документации по инструментарию WMI платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Пространство имен:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

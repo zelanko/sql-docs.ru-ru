@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d187fbe95a75091b0cbcf4bf09225c5f60a9af01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096890"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>После обновления новые зарезервированные ключевые слова не могут быть использованы в качестве идентификаторов
@@ -27,7 +27,7 @@ ms.locfileid: "66096890"
 ## <a name="component"></a>Компонент  
  Компонент Database Engine  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Для уровня совместимости 90 и ниже следующие слова не являются зарезервированными и могут использоваться в качестве идентификаторов и имен объектов в скриптах [!INCLUDE[tsql](../../includes/tsql-md.md)]. Для уровня совместимости 100 эти слова являются зарезервированными ключевыми словами и не должны использоваться в качестве идентификаторов и имен объектов.  
   
 -   EXTERNAL  
@@ -52,12 +52,12 @@ ms.locfileid: "66096890"
 -   Для ссылок на объект пользуйтесь идентификаторами с разделителями. Например, оператор `CREATE TABLE [MERGE] ([MERGE] int);` использует квадратные скобки для разделения имени объекта при слиянии.  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- [Зарезервированные ключевые слова &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
+ [Зарезервированные ключевые слова (Transact-SQL)](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
   
- [&#41;Transact-SQL &#40;MERGE](/sql/t-sql/statements/merge-transact-sql)  
+ [MERGE (Transact-SQL)](/sql/t-sql/statements/merge-transact-sql)  
   
  [Идентификаторы с разделителями (компонент Database Engine)](https://go.microsoft.com/fwlink/?LinkId=112509)  
   
- [Уровень совместимости ALTER DATABASE &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
+ [Уровень совместимости инструкции ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   
   

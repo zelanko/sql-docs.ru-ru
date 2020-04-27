@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f631783aad92757edd4faae41cd43c06c431887
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096607"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>Изменение формата хранения для типов xs:dateTime, xs:date и xs:time
@@ -28,7 +28,7 @@ ms.locfileid: "66096607"
 ## <a name="component"></a>Компонент  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Формат хранения в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для типов xs: DateTime, xs: Date и xs: Time был изменен для поддержки значений со сведениями о часовом поясе или без них, а также для разрешения сохранения часового пояса.  
   
  Если коллекция XML-схем ссылается на один из таких типов, XML-индексы на всех столбцах, связанных с коллекцией, будут выключены до обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Запросы к ним с помощью инструкций SELECT и запросов XQUERIES будут возможны, но XML-индекс при этом использоваться не будет. Отрицательное значение года вызовет ошибку времени выполнения.  
@@ -185,7 +185,7 @@ EXECUTE DateTimeInvestigation 1;
   
  Для использования XML-индексов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] необходимо после обновления перестроить XML-индексы или заново ввести все XML-столбцы, использующие типы xs:date, xs:time или xs:dateTime.  
   
-## <a name="see-also"></a>См. также:  
- [Проблемы обновления компонента Database Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
+## <a name="see-also"></a>См. также  
+ [Проблемы обновления ядра СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

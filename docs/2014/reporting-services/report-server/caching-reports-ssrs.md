@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58785d54954278d2dcb839ef3e707859682a9d37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104111"
 ---
 # <a name="caching-reports-ssrs"></a>Кэширование отчетов (службы SSRS)
@@ -69,13 +69,13 @@ ms.locfileid: "66104111"
   
  Если отчет не может быть по какой-то причине передан для обработки из экземпляра, хранящегося в кэше (например, если значения параметра отличаются от используемых для создания кэшированного отчета), то сервер отчетов повторно запускает отчет.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Установка свойств обработки отчетов](set-report-processing-properties.md)   
  [Основные понятия служб Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md)   
  [Предварительная загрузка диспетчер отчетов &#40;кэша&#41;](preload-the-cache-report-manager.md)   
  [Расписания](../subscriptions/schedules.md)   
  [Общие наборы данных кэша &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)   
- [Параметры обновления кэша &#40;диспетчер отчетов&#41;](../cache-refresh-options-report-manager.md)  
+ [Параметры обновления кэша (диспетчер отчетов)](../cache-refresh-options-report-manager.md)  
   
   

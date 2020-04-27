@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf21cc35bb41837b65d2a2b3c2c946ffae34864f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101261"
 ---
 # <a name="shared-data-source-properties-dialog-box-credentials"></a>Диалоговое окно «Свойства общего источника данных» — «Учетные данные»
@@ -44,9 +44,9 @@ ms.locfileid: "66101261"
  **Нет учетных данных**  
  Выберите этот параметр, чтобы учетные данные не запрашивались при доступе к источнику данных. Этот параметр работает, только если источник данных не принимает учетные данные или если учетные данные передаются каким-то другим способом.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Подключения к данным, источники данных и строки подключения в Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Указание учетных данных и сведений о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Диалоговое окно «Свойства общего источника данных» — «Общие»](../../2014/reporting-services/shared-data-source-properties-dialog-box-general.md)  
+ [Задание учетных данных и сведениях о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Диалоговое окно "Свойства общего источника данных" — "Общие"](../../2014/reporting-services/shared-data-source-properties-dialog-box-general.md)  
   
   

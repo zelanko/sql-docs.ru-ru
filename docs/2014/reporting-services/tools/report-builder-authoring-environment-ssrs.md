@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b431dc6249cfabfb8e943b09304eeb7b10bc7e94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100118"
 ---
 # <a name="report-builder-ssrs"></a>Построитель отчетов (SSRS)
@@ -43,9 +43,9 @@ ms.locfileid: "66100118"
   
  У построителя отчетов и конструктора отчетов много общего. Дополнительные сведения о построителе отчетов см. в документации по [построителю отчетов](https://go.microsoft.com/fwlink/?LinkId=154494) на сайте msdn.microsoft.com.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка доступа к построитель отчетов](../report-server/configure-report-builder-access.md)   
- [Инструментальные средства служб Reporting Services](reporting-services-tools.md)   
+ [Средства Reporting Services](reporting-services-tools.md)   
  [Разработка отчетов с использованием конструктора отчетов (SSRS)](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   

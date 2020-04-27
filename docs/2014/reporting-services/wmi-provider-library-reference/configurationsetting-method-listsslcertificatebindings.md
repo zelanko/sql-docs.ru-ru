@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a2a33d7aa992fd434b29fd519c805f57b2b46fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098361"
 ---
 # <a name="listsslcertificatebindings-method-wmi-msreportserver_configurationsetting"></a>Метод ListSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting)
@@ -42,25 +42,25 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
  *LCID*  
  Локаль, используемая для возвращаемых сообщений об ошибке.  
   
- *Приложение []*  
+ *Application[]*  
  [out] Приложения, которые имеют привязки к сертификатам.  
   
- *CertificateHash []*  
+ *CertificateHash[]*  
  [out] Значения хэша для сертификата.  
   
- *IPAddress []*  
+ *IPAddress[]*  
  [out] IP-адрес для приложений.  
   
- *Порт []*  
+ *Port[]*  
  [out] Номер порта сохраняется в привязке в файле rsreportserver.config.  
   
- *Ошибки []*  
+ *Errors[]*  
  [out] Описания возникших ошибок.  
   
- *Недопустим*  
+ *Длина*  
  [out] Длина массива, возвращаемого методом.  
   
- *СОСТАВ*  
+ *HRESULT*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
@@ -69,7 +69,7 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

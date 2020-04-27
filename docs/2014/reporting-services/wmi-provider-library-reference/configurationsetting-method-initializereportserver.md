@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5ea9e6e4e36e62828f3036c3765ba42c202448c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098349"
 ---
 # <a name="initializereportserver-method-wmi-msreportserver_configurationsetting"></a>Метод InitializeReportServer (WMI MSReportServer_ConfigurationSetting)
@@ -44,10 +44,10 @@ public void InitializeReportServer(string InstallationID,
  *InstallationID*  
  Строка, используемая для шифрования ключа шифрования перед его возвращением.  
   
- *СОСТАВ*  
+ *HRESULT*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
- *Екстендедеррорс []*  
+ *ExtendedErrors[]*  
  [out] Массив строк, содержащий дополнительные ошибки, возвращенные в результате вызова.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
@@ -63,7 +63,7 @@ public void InitializeReportServer(string InstallationID,
  Если `true` [для свойства "](configurationsetting-property-isinitialized.md) InitializeReportServer" сервера отчетов задано значение при вызове метода, метод возвращает результат, не пытаясь зашифровать ключ шифрования.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

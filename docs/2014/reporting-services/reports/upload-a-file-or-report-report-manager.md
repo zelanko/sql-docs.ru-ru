@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 56a9c380b8cc88202cdcb4c4dca54aab2d1fa4a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102397"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>Передача файла или отчета (диспетчер отчетов)
@@ -36,7 +36,7 @@ ms.locfileid: "66102397"
   
 1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md).  
   
-2.  В диспетчере отчетов перейдите на страницу **Содержимое** . Перейдите к папке, в которую нужно добавить элемент.  
+2.  В диспетчер отчетов перейдите на страницу **содержимое** . Перейдите к папке, в которую нужно добавить элемент.  
   
 3.  Щелкните **Передать файл**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66102397"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание, удаление или изменение общего источника данных &#40;диспетчер отчетов&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Страница "содержимое" &#40;диспетчер отчетов&#41;](../contents-page-report-manager.md)   
  [Страница "Отправка файла" &#40;диспетчер отчетов&#41;](../upload-file-page-report-manager.md)   

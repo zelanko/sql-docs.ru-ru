@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f31a95815c3a6c365d179a350846ec6f9a8bb795
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098608"
 ---
 # <a name="backupencryptionkey-method-wmi-msreportserver_configurationsetting"></a>Метод BackupEncryptionKey (WMI MSReportServer_ConfigurationSetting)
@@ -46,23 +46,23 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
  *Пароль*  
  Строка, используемая для шифрования ключа шифрования перед его возвращением.  
   
- *KeyFile []*  
+ *KeyFile[]*  
  [out] Массив, содержащий зашифрованный ключ шифрования.  
   
- *Недопустим*  
+ *Длина*  
  [out] Длина массива, возвращаемого методом.  
   
- *СОСТАВ*  
+ *HRESULT*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
- *Екстендедеррорс []*  
+ *ExtendedErrors[]*  
  [out] Массив строк, содержащий дополнительные ошибки, возвращенные в результате вызова.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение *HRESULT* , являющееся признаком успешного или неуспешного завершение вызова метода. Значение 0 указывает, что вызов метода завершился успешно. Ненулевое значение указывает, что произошла ошибка.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

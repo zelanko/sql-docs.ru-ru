@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e2a35e4d6fefb6830774ffd7b2c3bc13a5e097c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101365"
 ---
 # <a name="set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs"></a>Установка интервала привязки в датчике (построитель отчетов и службы SSRS)
@@ -34,13 +34,13 @@ ms.locfileid: "66101365"
   
 3.  В свойстве **указатели** нажмите кнопку (...). Откроется окно редактора коллекции указателей.  
   
-4.  Задайте для **** `True`свойства снаппинженаблед значение.  
+4.  Задайте для **SnappingEnabled** `True`свойства снаппинженаблед значение.  
   
 5.  Задайте для **снаппингинтервал** значение, представляющее интервал привязки. Указатель будет привязан к ближайшей кратной величине указанного значения.  
   
-## <a name="see-also"></a>См. также:  
- [Форматирование шкал на датчике (построитель отчетов и службы SSRS)](report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [Форматирование указателей на датчике &#40;построитель отчетов и службы SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Форматирование шкалы на &#40;датчика построитель отчетов и SSRS&#41;](report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [Форматирование указателей в построитель отчетов &#40;датчика и SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Датчики (построитель отчетов и службы SSRS)](report-design/gauges-report-builder-and-ssrs.md)  
   
   

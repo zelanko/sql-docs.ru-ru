@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4edd0b6e3928a2bc3a280403a87eda5bb797e620
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099481"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Учебник. Инструкции по поиску и запуску средств служб Reporting Services (SSRS)
@@ -37,13 +37,13 @@ ms.locfileid: "66099481"
   
 -   [Диспетчер отчетов (собственный режим)](#bkmk_report_manager)  
   
--   [Среда Management Studio](#bkmk_managements_studio)  
+-   [Management Studio](#bkmk_managements_studio)  
   
--   [SQL Server Data Tools с конструктор отчетов и мастером отчетов](#bkmk_ssdt)  
+-   [SQL Server Data Tools с конструктором и мастером отчетов](#bkmk_ssdt)  
   
 -   [построитель отчетов](#bkmk_report_builder)  
   
-##  <a name="bkmk_configuration_manager"></a>Диспетчер конфигурации служб Reporting Services (собственный режим)  
+##  <a name="reporting-services-configuration-manager-native-mode"></a><a name="bkmk_configuration_manager"></a>Диспетчер конфигурации служб Reporting Services (собственный режим)  
  Используйте диспетчер конфигурации для работы в собственном режиме, чтобы выполнить следующее:, , , , и.  
   
 -   Укажите учетную запись службы.  
@@ -58,7 +58,7 @@ ms.locfileid: "66099481"
   
 -   Настройте автоматическую обработку отчетов и доставку отчетов по электронной почте.  
   
- **Установка:** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration Manager устанавливается при установке [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в основном режиме. Дополнительные сведения см. в разделе [Install Reporting Services Report Server в собственном режиме](../install-windows/install-reporting-services-native-mode-report-server.md)  
+ **Установка** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] устанавливается одновременно с установкой служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в основном режиме. Дополнительные сведения см. в разделе [Установка сервера отчетов служб Reporting Services в собственном режиме](../install-windows/install-reporting-services-native-mode-report-server.md).  
   
 #### <a name="to-start-the-reporting-services-configuration-manager"></a>Запуск диспетчера конфигурации служб Reporting Services  
   
@@ -76,17 +76,17 @@ ms.locfileid: "66099481"
   
      Если указан удаленный компьютер, для установления соединения нажмите кнопку **Найти** . Сервер отчетов должен быть заранее настроен для удаленного администрирования. Дополнительные сведения о подготовке сервера отчетов для удаленного администрирования см. в разделе [Настройка сервера отчетов для удаленного администрирования](../report-server/configure-a-report-server-for-remote-administration.md).  
   
-3.  В разделе **В разделеstance Name**выберите экземпляр служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , который необходимо настроить. В списке отображаются только экземпляры сервера отчетов [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]и [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Более ранние версии служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]настраивать нельзя.  
+3.  В поле **Имя экземпляра** выберите экземпляр служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], который вам нужно настроить. В списке отображаются только экземпляры сервера отчетов [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]и [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Более ранние версии служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]настраивать нельзя.  
   
 4.  Нажмите кнопку **Соединить**.  
   
 5.  Убедиться, что средство запущено, можно, сравнив полученные результаты со следующим изображением:  
   
-     ![средство настройки служб Reporting Services](../media/rs-ui-reportserverconfigkatmai.gif "средство настройки служб Reporting Services")  
+     ![Средство конфигурации служб Reporting Services](../media/rs-ui-reportserverconfigkatmai.gif "средство настройки служб Reporting Services")  
   
- **Дальнейшие действия:** [Настройка и администрирование сервера отчетов &#40;служб SSRS в собственном режиме&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) и [Диспетчер конфигурации служб Reporting Services &#40;собственном режиме&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ **Дальнейшие действия:** [Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) и [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
-##  <a name="bkmk_report_manager"></a>Диспетчер отчетов (собственный режим)  
+##  <a name="report-manager-native-mode"></a><a name="bkmk_report_manager"></a>Диспетчер отчетов (собственный режим)  
  Для установки разрешений, управления подписками и расписаниями, а также работы с отчетами используйте [диспетчер отчетов &#40;служб SSRS в собственном режиме&#41;](../report-manager-ssrs-native-mode.md) . Диспетчер отчетов также можно использовать для просмотра отчетов.  
   
  **Установка:** Диспетчер отчетов устанавливается при установке [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в собственном режиме: [Install Reporting Services сервер отчетов в собственном режиме](../install-windows/install-reporting-services-native-mode-report-server.md)  
@@ -105,7 +105,7 @@ ms.locfileid: "66099481"
   
  **Дальнейшие действия.** [Настройте диспетчер отчетов &#40;основном режиме&#41;](../report-server/configure-web-portal.md).  
   
-##  <a name="bkmk_managements_studio"></a>Management Studio  
+##  <a name="management-studio"></a><a name="bkmk_managements_studio"></a> Management Studio  
  Администраторы сервера отчетов могут использовать среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для управления сервером отчетов наряду с другими серверными компонентами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Use SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md).  
   
 #### <a name="to-start-sql-server-management-studio"></a>Начало работы в среде SQL Server Management Studio  
@@ -116,7 +116,7 @@ ms.locfileid: "66099481"
   
      **Ни**  
   
-     Нажмите кнопку **Пуск**, а затем последовательно выберите **Все программы**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]и **SQL Server Management Studio**. Отобразится диалоговое окно **Подключение к серверу**.  
+     Нажмите кнопку **Пуск**, а затем последовательно выберите **Все программы**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]и **SQL Server Management Studio**. Откроется диалоговое окно **Соединение с сервером** .  
   
 2.  Если диалоговое окно **Соединение с сервером** отсутствует, то в **обозревателе объектов**нажмите **Подключиться** и выберите **службы Reporting Services**.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66099481"
   
 5.  Нажмите кнопку **Соединить**. Предусмотрена возможность развернуть корневой узел, чтобы задать свойства сервера, изменить определения ролей или отключить те или иные компоненты сервера отчетов.  
   
-##  <a name="bkmk_ssdt"></a>SQL Server Data Tools с конструктор отчетов и мастером отчетов  
+##  <a name="sql-server-data-tools-with-report-designer-and-report-wizard"></a><a name="bkmk_ssdt"></a>SQL Server Data Tools с конструктор отчетов и мастером отчетов  
  Конструктор отчетов доступен в составе среды [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] — бизнес-аналитики для Visual Studio 2012. Области конструктора в этом средстве содержат вложенные окна, мастера и меню, используемые для доступа к функциям создания отчетов. Это средство конструктора отчетов становится доступным при выборе шаблона проекта сервера отчетов или мастера сервера отчетов. Дополнительные сведения см. в разделе [Службы Reporting Services в SQL Server Data Tools (SSDT)](reporting-services-in-sql-server-data-tools-ssdt.md).  
   
 #### <a name="to-start-report-designer"></a>Запуск конструктора отчетов  
@@ -143,7 +143,7 @@ ms.locfileid: "66099481"
   
 4.  В списке **Шаблоны** выберите значение **Проект сервера отчетов**. На следующей диаграмме показано, как шаблоны проекта выглядят в диалоговом окне.  
   
-     ![Диалоговое окно шаблона «Создание проекта»](../media/rs-ui-newrsproject.gif "Диалоговое окно шаблона «Создание проекта»")  
+     ![Диалоговое окно "Создание шаблона проекта"](../media/rs-ui-newrsproject.gif "Диалоговое окно "Создание шаблона проекта"")  
   
 5.  Введите имя и местоположение проекта или нажмите кнопку **Обзор** и выберите местоположение.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "66099481"
   
  Чтобы приступить к работе над первым отчетом, см. раздел [Создание простого табличного отчета &#40;учебник по службам SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md). Дополнительные сведения о конструкторах запросов, которые можно использовать в конструктор отчетов, см. в разделе [средства проектирования запросов в конструктор отчетов SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md).  
   
-##  <a name="bkmk_report_builder"></a>построитель отчетов  
+##  <a name="report-builder"></a>Построитель отчетов <a name="bkmk_report_builder"></a>  
  Используйте [построитель отчетов &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md) для создания отчетов в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] разработки, похожей на Office. Можно настраивать и обновлять существующие отчеты, независимо от того, были ли они созданы в конструкторе отчетов или в предыдущих версиях построителя отчетов. Свяжитесь с администратором, чтобы узнать расположение файла ReportBuilder3.msi, который нужно запустить для установки построителя отчетов на локальном компьютере.  
   
  **Установка:** Выбранная версия построителя отчетов устанавливается либо [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в собственном режиме, либо в режиме интеграции с SharePoint. Изолированная версия построителя отчетов доступна как отдельная загрузка.  См. статью [Установка изолированной версии построитель отчетов &#40;построитель отчетов&#41;](../install-windows/install-report-builder.md)  
@@ -198,7 +198,7 @@ ms.locfileid: "66099481"
   
 3.  Для открытия документации по построителю отчетов щелкните **Справка построителя отчетов** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поддержка установки, удаления и построитель отчетов](../install-uninstall-and-report-builder-support.md)   
  [Reporting Services установки в режиме интеграции с SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](../install-windows/install-reporting-services-sharepoint-mode.md)   
  [Сервер отчетов Reporting Services](../reporting-services-report-server.md)   

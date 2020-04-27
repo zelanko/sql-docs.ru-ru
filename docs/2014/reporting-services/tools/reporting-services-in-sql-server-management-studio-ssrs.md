@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e148fa4f7a5340217a2efe2374312568eee43435
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099932"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Службы Reporting Services в среде SQL Server Management Studio (SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66099932"
   
  В этом разделе приведены пошаговые инструкции по выполнению с помощью среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]различных задач, связанных с отчетами. Создание общих расписаний и управление ими также выполняется с помощью диспетчера отчетов.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Подключение к серверу отчетов в среде Management Studio](connect-to-a-report-server-in-management-studio.md)  
   
@@ -42,10 +42,10 @@ ms.locfileid: "66099932"
   
 -   [Удаление элемента (среда Management Studio)](delete-an-item-management-studio.md)  
   
--   [Отмена &#40;Management Studio заданий сервера отчетов&#41;](cancel-report-server-jobs-management-studio.md)  
+-   [Отмена заданий сервера отчетов (среда Management Studio)](cancel-report-server-jobs-management-studio.md)  
   
-## <a name="see-also"></a>См. также:  
- [Справка F1 по использованию сервера отчетов среде Management Studio](report-server-in-management-studio-f1-help.md)   
+## <a name="see-also"></a>См. также  
+ [Сервер отчетов в справке Management Studio F1](report-server-in-management-studio-f1-help.md)   
  [Общие сведения о среде SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
   
   

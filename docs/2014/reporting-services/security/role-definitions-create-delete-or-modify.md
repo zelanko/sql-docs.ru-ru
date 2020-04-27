@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 066c69298126cbc635d388d75659b98dcff95917
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101810"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>Создание, удаление и изменение ролей (среда Management Studio)
@@ -75,9 +75,9 @@ ms.locfileid: "66101810"
   
          Укажите задачи, которые могут выполнять члены этой роли, а затем нажмите кнопку **ОК** , чтобы применить изменения.  
   
-## <a name="see-also"></a>См. также:  
- [Подключение к серверу отчетов в среде Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)   
+## <a name="see-also"></a>См. также  
+ [Соединение с сервером отчетов в Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)   
  (create-and-manage-role-assignments.md)   
- [Reporting Services в SQL Server Management Studio &#40;SSRS&#41;](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [Службы Reporting Services в среде SQL Server Management Studio (SSRS)](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

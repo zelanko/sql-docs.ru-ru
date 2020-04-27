@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a73f3be75a7f0cadf633943aeafffb7217d8e29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101162"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>Страница «Свойства параметров моментального снимка» (диспетчер отчетов)
@@ -60,8 +60,8 @@ ms.locfileid: "66101162"
  **Применить**  
  Щелкните, чтобы сохранить изменения.  
   
-## <a name="see-also"></a>См. также:  
- [Добавление моментального снимка к журналу отчета (диспетчер отчетов)](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+## <a name="see-also"></a>См. также  
+ [Добавление моментального снимка в журнал отчета &#40;диспетчер отчетов&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Создание, изменение и удаление моментальных снимков в журнале отчетов](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)  

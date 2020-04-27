@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9088ab3e90b4fb341cc8125e45d498783953039d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100579"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Поддерживаемые функции отчетов Access (службы SSRS)
@@ -56,14 +56,14 @@ ms.locfileid: "66100579"
   
 |||||  
 |-|-|-|-|  
-|Образ —|Метка|график;|Прямоугольник|  
+|Изображение|Метка|график;|Прямоугольник|  
 |SubForm|SubReport<br /><br /> **Примечание** . При преобразовании элемента управления вложенного отчета в основной отчет сам вложенный отчет преобразуется отдельно.|TextBox||  
   
  Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] не поддерживают следующие элементы управления:  
   
 |||||  
 |-|-|-|-|  
-|BoundObjectFrame|CheckBox|Поле со списком|CommandButton|  
+|BoundObjectFrame|CheckBox|ComboBox|CommandButton|  
 |CustomControl|ListBox|ObjectFrame|OptionButton|  
 |TabControl|ToggleButton|||  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66100579"
 |IsHyperlink|IsVisible|KeepTogether (группа)|Слева|  
 |LeftMargin|LineSlant|LineSpacing|LinkChildFields|  
 |LinkMasterFields|NewRowOrCol|PageFooter|PageHeader|  
-|Страницы|Фотография|PictureTiling (отчет)|ReadingOrder|  
+|Страницы|Рисунок|PictureTiling (отчет)|ReadingOrder|  
 |RepeatSection|RightMargin|RunningSum|SizeMode|  
 |TextAlign|TOP|TopMargin|Ширина|  
   
@@ -158,8 +158,8 @@ ms.locfileid: "66100579"
 |-|-|-|-|  
 |Дата|Date$|DateAdd|DateDiff|  
 |DatePart|DateSerial|DateValue|День|  
-|Hour|Минута|Месяц|MonthName|  
-|Now|Секунда|Time|Time$|  
+|Час|Минута|Месяц|MonthName|  
+|Сейчас|Секунда|Время|Time$|  
 |Таймер|TimeSerial|TimeValue|День недели|  
 |WeekdayName|Год|||  
   
@@ -206,19 +206,19 @@ ms.locfileid: "66100579"
   
 |||||  
 |-|-|-|-|  
-|Get-Help|Command$|CurDir|CurDir$|  
+|Команда|Command$|CurDir|CurDir$|  
 |DeleteSetting|Dir|Dir$|Environ|  
 |Environ$|EOF|FileAttr|FileDateTime|  
 |FileLen|FreeFile|GetAllSettings|GetAttr|  
 |GetSetting|Loc|LOF|QBColor|  
 |RGB|SaveSetting|Seek|SetAttr|  
-|Оболочка|Spc|Tab||  
+|Shell|Spc|Вкладка||  
   
  Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] не поддерживают следующие функции взаимодействия.  
   
 |||||  
 |-|-|-|-|  
-|DoEvents|Входящий|Входные данные|Input$|  
+|DoEvents|В|Входные данные|Input$|  
   
 #### <a name="inspection-functions"></a>Функции проверки  
  Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживают следующие функции проверки.  
@@ -239,7 +239,7 @@ ms.locfileid: "66100579"
 |||||  
 |-|-|-|-|  
 |Abs|Atn|Cos|Exp|  
-|Исправление|Int|Журнал|Rnd|  
+|Fix|Int|Журнал|Rnd|  
 |Round|Sgn|Sin|Sqr|  
 |Tan||||  
   
@@ -255,7 +255,7 @@ ms.locfileid: "66100579"
   
 |||||  
 |-|-|-|-|  
-|Выберите|IIf|Переключатель||  
+|Choose|IIf|Параметр||  
   
 #### <a name="sql-aggregate-functions"></a>Агрегатные функции SQL  
  Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживают следующие агрегатные функции SQL.  
@@ -274,9 +274,9 @@ ms.locfileid: "66100579"
 |Формат|Format$|InStr|InStrRev|  
 |LCase|LCase$|Слева|Left$|  
 |Len|LTrim|LTrim$|Mid|  
-|Mid$|Замените|Right|Right$|  
+|Mid$|Replace|Right|Right$|  
 |RTrim|Пробел|Space$|StrComp|  
-|StrConv|String|String$|StrReverse|  
+|StrConv|Строка|String$|StrReverse|  
 |Trim|Trim$|UCase|UCase$|  
   
 ### <a name="constants"></a>Константы  
@@ -288,8 +288,7 @@ ms.locfileid: "66100579"
  При импорте параметры хранимых процедур всегда преобразуются к строковому типу данных. После импорта отчета необходимо вручную восстановить для параметров нужные типы.  
   
 ### <a name="object-names"></a>Имена объектов  
- В Access поля могут иметь такое же имя, как элементы управления; в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] это не так. 
-  [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 6.0 позволяет использовать пробелы в именах переменных, а Visual Basic .NET — нет. При импорте имена таких объектов заменяются допустимыми именами, а объектам с одинаковыми именами присваиваются уникальные имена. Просматриваются все выражения, и имена переменных, соответствующих переименованным объектам, заменяются новыми именами.  
+ В Access поля могут иметь такое же имя, как элементы управления; в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] это не так. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 6.0 позволяет использовать пробелы в именах переменных, а Visual Basic .NET — нет. При импорте имена таких объектов заменяются допустимыми именами, а объектам с одинаковыми именами присваиваются уникальные имена. Просматриваются все выражения, и имена переменных, соответствующих переименованным объектам, заменяются новыми именами.  
   
 ## <a name="rectangles-and-containment"></a>Прямоугольники и включение  
  В определении отчета служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] прямоугольники могут содержать другие элементы отчета. Любой прямоугольник, превышающий размеры элемента отчета и перекрывающий более 90% его поверхности, становится контейнером этого элемента.  
@@ -297,7 +296,7 @@ ms.locfileid: "66100579"
 ## <a name="bitmaps"></a>Битовые карты  
  Все битовые карты, внедренные в отчет, преобразуются при импорте в формат BMP, независимо от первоначального формата. Например, если отчет содержит файлы в формате JPG или GIF, то ресурсы, импортированные вместе с отчетом, будут преобразованы в BMP-файлы. Битовые карты хранятся в отчете в виде внедренных изображений. Дополнительные сведения о внедренных образах см. в разделе [images &#40;построитель отчетов and SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
   
-## <a name="other-considerations"></a>Дополнительные рекомендации  
+## <a name="other-considerations"></a>Другие вопросы  
  Дополнительно к приведенным выше сведениям при импорте отчетов Access необходимо учитывать следующие замечания.  
   
 -   Условное форматирование не преобразуется.  

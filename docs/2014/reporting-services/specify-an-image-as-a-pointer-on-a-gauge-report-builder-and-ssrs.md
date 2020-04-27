@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c7a57987a5d1cd0ac7984db3b716521d9c7a09af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101149"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>Задание изображения для указателя на датчике (построитель отчетов и службы SSRS)
@@ -56,10 +56,10 @@ ms.locfileid: "66101149"
   
 10. В **транспарентколор**выберите значение цвета, которое нужно удалить из изображения. Таким образом, создается цельное изображение указателя на датчике.  
   
-## <a name="see-also"></a>См. также:  
- [Форматирование указателей на датчике &#40;построитель отчетов и службы SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также  
+ [Форматирование указателей в построитель отчетов &#40;датчика и SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Добавление датчика в построитель отчетов &#40;отчетов и службы SSRS&#41;](report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md)   
- [Форматирование линий, цветов и изображений (построитель отчетов и службы SSRS)](report-design/images-report-builder-and-ssrs.md)   
+ [Форматирование линий, цветов и изображений &#40;построитель отчетов и SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Датчики (построитель отчетов и службы SSRS)](report-design/gauges-report-builder-and-ssrs.md)  
   
   

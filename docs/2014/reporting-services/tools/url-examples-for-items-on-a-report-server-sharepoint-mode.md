@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099453"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме SharePoint (SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "66099453"
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL-адрес сайта или дочернего сайта SharePoint  
  При развертывании отчета или источника данных необходимо указывать URL-адрес сайта и вложенного сайта SharePoint, если он есть. В URL-адресе имя сайта указывается сразу после имени сервера, например http://*имя_сервера/сайт* или http://*имя_сервера/сайт/дочерний_сайт*.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] В 2007 или [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] веб-приложении сайт и дочерний сайт часто соответствуют вкладкам на главном сайте. Чтобы узнать имя сайта, выберите **Корневая папка**, а затем **Все содержимое сайта**. Прокрутите страницу до конца и найдите раздел **Сайты и рабочие области**. В этом разделе отображается список сайтов.  
+ В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 или веб-приложении [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] сайт и дочерний сайт часто соответствуют вкладкам на основном сайте. Чтобы узнать имя сайта, выберите **Корневая папка**, а затем **Все содержимое сайта**. Прокрутите страницу до конца и найдите раздел **Сайты и рабочие области**. В этом разделе отображается список сайтов.  
   
 ### <a name="url-for-a-sharepoint-library"></a>URL-адрес библиотеки SharePoint  
  При развертывании отчета или связанного элемента в библиотеке SharePoint необходимо указывать URL-адрес этой библиотеки. Точная структура URL-адреса для библиотеки зависит от версии SharePoint.  
@@ -102,7 +102,7 @@ ms.locfileid: "66099453"
 |Образец отчета "Company Sales" (Продажи компании) в папке **Documents/Doc** на экземпляре [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] или [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl|  
 |Образец отчета «Продажи компании» в папке **Центр отчетов** на экземпляре [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] или [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl|  
   
-##  <a name="publishingToDocLib"></a>Публикация из средства Authoring Tool в библиотеку SharePoint  
+##  <a name="publishing-from-an-authoring-tool-to-a-sharepoint-library"></a><a name="publishingToDocLib"></a> Публикация в библиотеке SharePoint из средств разработки  
  Если публикация отчетов и связанных с ними файлов в библиотеке производится при помощи средства разработки отчетов, все файлы перед добавлением проверяются. При передаче отчетов и связанных файлов с помощью действия **Передача** из библиотеки SharePoint никакая проверка не проводится. Является ли файл допустимым, будет неизвестно до тех пор, пока к отчету не будет осуществлен доступ для управления, изменения или запуска.  
   
 > [!NOTE]  
@@ -136,7 +136,7 @@ ms.locfileid: "66099453"
   
 ## <a name="see-also"></a>См. также:  
  [опубликовать отчет в библиотеке SharePoint](../reports/publish-a-report-to-a-sharepoint-library.md)   
- [Публикация общего источника данных в библиотеке SharePoint](../reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [Публикация общего источника данных в библиотеку SharePoint](../reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Диалоговое окно страниц свойств проекта](project-property-pages-dialog-box.md)  
   
   

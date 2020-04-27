@@ -13,23 +13,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c6599a087efa16a1fa83a37e1a26b362b971cbc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096459"
 ---
 # <a name="cluster-resource-group"></a>Группа кластерных ресурсов
   Страница «Группа кластерных ресурсов» используется для указания диска, на котором будет располагаться группа кластерных ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Параметры  
- Укажите имя группы ресурсов кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Существует два варианта.  
+ Укажите имя группы ресурсов кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Имеются две возможности.  
   
 -   Использование раскрывающегося списка, чтобы указать использование существующей группы.  
   
 -   Введите имя создаваемой группы. Обратите внимание, что имя «Доступное хранилище» является недопустимым именем группы.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Инструкции. Создание отказоустойчивого кластера SQL Server](https://go.microsoft.com/fwlink/?LinkId=190960)  
   
   

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68024e36dd5f8188097ebcc673056c1b6d11e59b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100888"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Доставка электронной почтой в службах Reporting Services
@@ -28,7 +28,7 @@ ms.locfileid: "66100888"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Режим интеграции с SharePoint &#124; SharePoint 2010 и SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Собственный режим|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Режим интеграции с SharePoint &#124; SharePoint 2010 и SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (собственный режим)|  
   
 ## <a name="e-mail-delivery-options"></a>Параметры доставки электронной почты  
  Электронная почта сервера отчетов рассылает отчеты следующим образом.  
@@ -47,7 +47,7 @@ ms.locfileid: "66100888"
   
      Если браузер поддерживает HTML 4.0 и MHTML, а вы выбираете формат подготовки отчета веб-архива, то отчет внедряется в текст сообщения. Все другие форматы подготовки отчета (CSV, PDF и т. д.) рассылают отчеты в виде вложений. Эту функцию можно отключить в файле конфигурации RSReportServer.  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]не проверяет размер вложения или сообщения перед отправкой отчета. Если вложение или сообщение превышает максимальный предел, допустимый почтовым сервером, отчет не будет доставлен. Для больших отчетов выберите другой вариант доставки отчетов (например, URL-адрес или уведомление).  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не проверяют размер вложения или сообщения перед отправкой отчета. Если вложение или сообщение превышает максимальный предел, допустимый почтовым сервером, отчет не будет доставлен. Для больших отчетов выберите другой вариант доставки отчетов (например, URL-адрес или уведомление).  
   
  При создании подписки устанавливаются параметры доставки отчетов, которые определяют, как доставляется отчет. Например, при выборе в подписке параметра **Включить ссылку** электронное сообщение будет содержать гиперссылку на отчет.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66100888"
   
  Дополнительные сведения о настройке сервера отчетов в режиме интеграции с SharePoint см. в следующих разделах:  
   
--   [Настройка электронной почты для Reporting Services приложения службы &#40;SharePoint 2010 и SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [Настройка электронной почты для приложения служб Reporting Services (SharePoint 2010 и SharePoint 2013)](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Задачи и разрешения](../security/tasks-and-permissions.md)   

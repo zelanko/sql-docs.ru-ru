@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: c89596d916f9a8ec2fea91cdea8f72b1958c5b6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102829"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Сервер отчетов служб Reporting Services (режим SharePoint)
@@ -32,7 +32,7 @@ ms.locfileid: "66102829"
   
  **В этом разделе:**  
   
--   [Сводка функций](#bkmk_featuresum)  
+-   [Сводка по функциям](#bkmk_featuresum)  
   
 -   [Подключенный и локальный режимы](#bkmk_connectedandlocal)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66102829"
   
 -   [Связанные задачи](#bkmk_relatedtasks)  
   
-##  <a name="bkmk_featuresum"></a>Сводка функций
+##  <a name="feature-summary"></a><a name="bkmk_featuresum"></a>Сводка функций
 
  Настройка сервера отчетов для работы в режиме интеграции с SharePoint предоставляет следующие дополнительные возможности (доступные только при развертывании в этом режиме).  
   
@@ -74,15 +74,15 @@ ms.locfileid: "66102829"
   
 -   AAM-зоны, развертывания, направленные в сторону Интернета, и токены пользователя SharePoint для списков SharePoint.  
   
-##  <a name="bkmk_connectedandlocal"></a>Подключенный и локальный режимы
+##  <a name="connected-mode-and-local-mode"></a><a name="bkmk_connectedandlocal"></a>Подключенный и локальный режимы
 
  В выпуске SQL Server 2008 R2 введен новый *локальный режим* для просмотра отчетов с сервера SharePoint 2010 с установленной надстройкой служб Microsoft SQL Server 2008 R2 Reporting Services (или более поздней версии) для продуктов SharePoint 2010.  
   
--   *Локальный режим*: локальный режим позволяет подготавливать отчеты локально из библиотеки документов SharePoint без интеграции с сервером [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] отчетов. Надстройка служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для продуктов SharePoint является обязательной в отличие от сервера отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Надстройка может быть установлена несколькими различными способами, в том числе с помощью средства подготовки продуктов SharePoint 2010. Дополнительные сведения о локальном режиме см. [в разделе Отчеты о локальном и подключенном режимах в средстве просмотра отчетов &#40;Reporting Services в режиме интеграции с sharepoint&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) и [где найти надстройку Reporting Services для продуктов SharePoint](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   *Локальный режим*. Локальный режим позволяет подготавливать отчеты локально из библиотеки документов SharePoint без интеграции с сервером отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Надстройка служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для продуктов SharePoint является обязательной в отличие от сервера отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Надстройка может быть установлена несколькими различными способами, в том числе с помощью средства подготовки продуктов SharePoint 2010. Дополнительные сведения о локальном режиме см. [в разделе Отчеты о локальном и подключенном режимах в средстве просмотра отчетов &#40;Reporting Services в режиме интеграции с sharepoint&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) и [где найти надстройку Reporting Services для продуктов SharePoint](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
--   *Подключенный режим*. подключенный режим поддерживается путем интеграции сервера [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] отчетов с фермой SharePoint с помощью центра администрирования SharePoint. Интеграция с сервером отчетов обеспечивает комплексные возможности работы с отчетами, предоставляя функции совместной работы SharePoint 2010 и серверные функции сервера отчетов, в том числе подписку, моментальные снимки и серверную обработку.  
+-   *Подключенный режим*. Подключенный режим поддерживается путем интеграции сервера отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] с фермой SharePoint с помощью центра администрирования SharePoint. Интеграция с сервером отчетов обеспечивает комплексные возможности работы с отчетами, предоставляя функции совместной работы SharePoint 2010 и серверные функции сервера отчетов, в том числе подписку, моментальные снимки и серверную обработку.  
   
-##  <a name="bkmk_unsupportedsharepoint"></a>Неподдерживаемые функции SharePoint
+##  <a name="unsupported-sharepoint-features"></a><a name="bkmk_unsupportedsharepoint"></a>Неподдерживаемые функции SharePoint
 
  При работе в режиме интеграции доступны не все компоненты SharePoint. Далее приведен список функций SharePoint, с которыми службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] не интегрируются напрямую.  
   
@@ -100,14 +100,14 @@ ms.locfileid: "66102829"
   
      История версий документов библиотеки настраивается на странице "Параметры версий" окна "Параметры библиотеки".  
   
-##  <a name="bkmk_supportedcombinations"></a>Поддерживаемые сочетания надстройки SharePoint и сервера отчетов
+##  <a name="supported-combinations-of-the-sharepoint-add-in-and-report-server"></a><a name="bkmk_supportedcombinations"></a>Поддерживаемые сочетания надстройки SharePoint и сервера отчетов
 
  Не все функции поддерживаются во всех сочетаниях сервера отчетов, надстройки служб Reporting Services для SharePoint и продуктов SharePoint. Дополнительные сведения см. в разделе [Поддерживаемые сочетания SharePoint и Reporting Services Server и надстройки &#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 > [!NOTE]  
 >  Правильная версия надстройки служб Reporting Services должна использоваться с соответствующей версией продуктов SharePoint.  
   
-##  <a name="bkmk_components"></a>Компоненты, обеспечивающие интеграцию
+##  <a name="components-that-provide-integration"></a><a name="bkmk_components"></a>Компоненты, обеспечивающие интеграцию
 
  Чтобы объединить серверы в одном развертывании, необходимо интегрировать установку [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] с экземпляром продуктов SharePoint.  
   
@@ -122,10 +122,9 @@ ms.locfileid: "66102829"
   
  После установки надстройки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] на SharePoint и настройки обоих серверов для интеграции можно передать или опубликовать тип содержимого сервера отчетов в библиотеке SharePoint, а затем просматривать эти документы и управлять ими с сайта SharePoint. Передача или публикация содержимого сервера отчетов является важным первым шагом. Веб-части и страницы становятся доступны при выборе определений отчетов RDL, моделей отчетов SMDL и источников общих данных RSDS на сайте SharePoint.  
   
-##  <a name="bkmk_language"></a>Рекомендации по языку
+##  <a name="language-considerations"></a><a name="bkmk_language"></a>Рекомендации по языку
 
- 
-  [!INCLUDE[SPF2010](../includes/spf2010-md.md)] и [!INCLUDE[SPS2010](../includes/sps2010-md.md)] поддерживают гораздо больше языков, чем [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+ [!INCLUDE[SPF2010](../includes/spf2010-md.md)] и [!INCLUDE[SPS2010](../includes/sps2010-md.md)] поддерживают гораздо больше языков, чем [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  Если настроить сервер отчетов для работы с развертыванием продукта SharePoint, можно получить сочетание языков. Далее описано, какой язык будут иметь пользовательский интерфейс, документация и сообщения.  
   
@@ -137,17 +136,17 @@ ms.locfileid: "66102829"
   
  Если язык, используемый продуктом или технологией SharePoint, отличается от языка сервера отчетов, службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] будут использовать язык из той же языковой группы, который ближе всего к языку SharePoint. Если подходящий язык недоступен, сервер отчетов будет использовать английский язык.  
   
-##  <a name="bkmk_relatedtasks"></a> Связанные задачи
+##  <a name="related-tasks"></a><a name="bkmk_relatedtasks"></a> Связанные задачи
 
  В следующей таблице перечислены задачи, связанные с сервером отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме SharePoint.  
   
-|**Задача**|**Ссылку**|  
+|**Задача**|**Ссылка**|  
 |--------------|--------------|  
 |Подробные шаги по установке и настройке службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции SharePoint.|[Установите Reporting Services режим SharePoint для sharepoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) и [добавьте дополнительный сервер отчетов в ферму &#40;горизонтальное масштабирование SSRS&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
 |Горизонтально масштабируемое развертывание [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint путем добавления дополнительных серверов отчетов.|[Добавьте дополнительный сервер отчетов в ферму &#40;масштабируемые&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) и [топологии развертывания для функций бизнес-аналитики SQL Server в SharePoint](../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md) .|  
 |Добавление дополнительных клиентских веб-интерфейсов SharePoint с установленными компонентами [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для просмотра и отображения элементов отчетов.|[Добавление дополнительного клиентского веб-интерфейса служб Reporting Services в ферме](install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
-|Настройка электронной почты для подписок и предупреждений об изменении данных в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .|[Настройка электронной почты для Reporting Services приложения службы &#40;SharePoint 2010 и SharePoint 2013&#41;](install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
+|Настройка электронной почты для подписок и предупреждений об изменении данных в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .|[Настройка электронной почты для приложения служб Reporting Services (SharePoint 2010 и SharePoint 2013)](install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
 |Последние сведения об этом выпуске доступны на TechNet Wiki.|[SQL Server 2012 Reporting Services советы, приемы и устранение неполадок](https://go.microsoft.com/fwlink/?LinkId=221297).|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установка или удаление надстройки Reporting Services для sharepoint &#40;sharepoint 2010 и sharepoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md) [требования к оборудованию и программному обеспечению для Reporting Services в](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md) [веб-части «Средство просмотра отчетов](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md) в режиме интеграции с SharePoint» на сайте SharePoint

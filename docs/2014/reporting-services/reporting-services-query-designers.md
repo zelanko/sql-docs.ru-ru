@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c004b098f900606c2263391cf9363b6e5be2b97b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102875"
 ---
 # <a name="reporting-services-query-designers"></a>Конструкторы запросов служб Reporting Services
@@ -30,7 +30,7 @@ ms.locfileid: "66102875"
   
 -   **По типу конструктора запросов.** Например, источник данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживает и графический и текстовый конструкторы запросов.  
   
--   **По варианту языка запросов.** Например, язык запросов, такой как [!INCLUDE[tsql](../includes/tsql-md.md)] , может иметь разный синтаксис в зависимости от типа источника данных. [!INCLUDE[msCoName](../includes/msconame-md.md)] Язык и язык Oracle SQL имеют некоторую разновидность синтаксиса для команды [!INCLUDE[tsql](../includes/tsql-md.md)] запроса.  
+-   **По версии языка запросов.** Например, язык запросов, такой как [!INCLUDE[tsql](../includes/tsql-md.md)] , может иметь разный синтаксис в зависимости от типа источника данных. [!INCLUDE[msCoName](../includes/msconame-md.md)] Язык и язык Oracle SQL имеют некоторую разновидность синтаксиса для команды [!INCLUDE[tsql](../includes/tsql-md.md)] запроса.  
   
 -   **По поддержке указания схемы в именах объектов базы данных.** Если источник данных использует указание схемы в идентификаторе объекта базы данных, она должна указываться в запросе для всех имен, имеющих схему, отличную от схемы по умолчанию. Например, `SELECT FirstName, LastName FROM [Person].[Person]`.  
   
@@ -53,13 +53,13 @@ ms.locfileid: "66102875"
   
 -   [Пользовательский интерфейс конструктора запросов моделей отчетов](report-data/report-model-query-designer-user-interface.md)  
   
--   [Пользовательский интерфейс конструктора запросов BI SAP NetWeaver](report-data/sap-netweaver-bi-query-designer-user-interface.md)  
+-   [Пользовательский интерфейс конструктора запросов SAP NetWeaver BI](report-data/sap-netweaver-bi-query-designer-user-interface.md)  
   
 -   [Конструктор запросов к спискам SharePoint](../../2014/reporting-services/sharepoint-list-query-designer.md)  
   
 -   [Пользовательский интерфейс текстового конструктора запросов](../../2014/reporting-services/text-based-query-designer-user-interface.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Добавление данных из внешних источников данных &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md)   
  [Модули обработки данных и поставщики данных .NET Framework &#40;службы SSRS&#41;](report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md)   

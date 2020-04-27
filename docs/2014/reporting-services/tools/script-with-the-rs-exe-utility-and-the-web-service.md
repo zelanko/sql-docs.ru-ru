@@ -17,27 +17,27 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d84bb8722fd31a08ff7788ad31c601b377c23d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099722"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Создание скриптов с помощью программы rs.exe и веб-службы
-  Разработчики и администраторы сервера отчетов могут выполнять на сервере отчетов операции с помощью программы **rs** (RS.exe). С помощью этой служебной программы можно программно администрировать сервер отчетов с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]скриптов, написанных с помощью.  
+  Разработчики и администраторы сервера отчетов могут выполнять на сервере отчетов операции с помощью программы **rs** (RS.exe). Эта программа позволяет управлять сервером отчетов программными средствами с помощью скриптов на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]скрипты можно использовать для запуска любой из операций веб-службы сервера отчетов. С помощью сценариев можно копировать параметры безопасности в несколько отчетов на сервере, создавать или удалять элементы, копировать элементы сервера отчетов с одного сервера на другой и т. д. Дополнительные сведения о среде скриптов см. в разделе [Запуск файла скрипта служб Reporting Services](run-a-reporting-services-script-file.md). Файлы скриптов имеют определенный формат и написаны на языке [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. Дополнительные сведения см. в разделе [Форматирование файла скрипта служб Reporting Services](format-a-reporting-services-script-file.md).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать для запуска любых операций веб-службы сервера отчетов. С помощью сценариев можно копировать параметры безопасности в несколько отчетов на сервере, создавать или удалять элементы, копировать элементы сервера отчетов с одного сервера на другой и т. д. Дополнительные сведения о среде скриптов см. в разделе [Запуск файла скрипта служб Reporting Services](run-a-reporting-services-script-file.md). Файлы скриптов имеют определенный формат и написаны на языке [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. Дополнительные сведения см. в разделе [Форматирование файла скрипта служб Reporting Services](format-a-reporting-services-script-file.md).  
   
  Примеры скриптов см. в:  
   
  [Пример Reporting Services сценария RS. exe для переноса содержимого между серверами отчетов](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
- [SQL Server Reporting Services образцы продуктов](https://go.microsoft.com/fwlink/?LinkId=177889).  
+ [Образцы продуктов служб SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889)  
   
 ## <a name="see-also"></a>См. также:  
- [Создание скриптов для задач развертывания и администрирования](script-deployment-and-administrative-tasks.md)   
+ [Написание скриптов для задач развертывания и администрирования](script-deployment-and-administrative-tasks.md)   
  [Веб-служба сервера отчетов](../report-server-web-service/report-server-web-service.md)   
  [Технический справочник (службы SSRS)](../technical-reference-ssrs.md)   
- [Программа RS. exe &#40;службы SSRS&#41;](rs-exe-utility-ssrs.md)  
+ [Служебная программа RS.exe (SSRS)](rs-exe-utility-ssrs.md)  
   
   
