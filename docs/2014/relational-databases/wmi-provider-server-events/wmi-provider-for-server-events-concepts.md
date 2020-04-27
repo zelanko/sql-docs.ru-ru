@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a0ef44b57e092c13b4046b250c99fca5eaea101
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211571"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Основные понятия о поставщике WMI для событий сервера
   Поставщик WMI для событий сервера позволяет использовать инструментарий управления Windows (WMI) для наблюдения за событиями в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Основные сведения о поставщике WMI для событий сервера](understanding-the-wmi-provider-for-server-events.md)  
  Содержит основные сведения об архитектуре поставщика и описывает программирование агента SQL Server для работы с поставщиком.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68211571"
  [Использование WQL с поставщиком WMI для событий сервера](using-wql-with-the-wmi-provider-for-server-events.md)  
  Рассказывает о синтаксисе языка запросов WMI (WMI Query Language, WQL) и его использовании для программирования работы с поставщиком.  
   
- [Создание предупреждения агента SQL Server при помощи поставщика WMI для событий сервера](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
+ [Образец. Создание предупреждения агента SQL Server с помощью поставщика WMI для событий сервера](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  Иллюстрирует использование поставщика WMI для возвращения трассировочной информации о событиях сервера, на основании которой создается предупреждение агента SQL Server.  
   
  [Пример. Использование поставщика событий WMI с .NET Framework](sample-using-the-wmi-event-provider-with-the-net-framework.md)  

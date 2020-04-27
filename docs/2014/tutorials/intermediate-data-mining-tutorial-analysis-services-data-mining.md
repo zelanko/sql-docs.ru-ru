@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4c244701d8a58765061ef3bde1f918c8be5a941d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63017182"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>Учебник по интеллектуальному анализу данных — средний уровень (службы Analysis Services — интеллектуальный анализ данных)
@@ -52,13 +52,13 @@ ms.locfileid: "63017182"
   
  Предстоит разработать отдельные модели для каждого региона, а также общую модель, которую можно использовать для перекрестного прогнозирования.  
   
- [Занятие 3. Создание сценария потребительской корзины &#40;учебнике по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Урок 3. Построение сценария покупательского поведения (учебник по интеллектуальному анализу данных — средний уровень)](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
  Цель этого занятия — добавить новое представление источника данных и научиться работать со вложенными таблицами и ключами. На этих данных рассматривается создание моделей интеллектуального анализа данных, которые могут использоваться в сценарии потребительской корзины. Также будут рассмотрены модели интеллектуального анализа данных, построенные с помощью алгоритма [!INCLUDE[msCoName](../includes/msconame-md.md)] взаимосвязей.  
   
  [Занятие 4. Создание сценария кластеризации последовательностей &#40;учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
  На этом занятии рассматривается создание моделей интеллектуального анализа данных, которые могут использоваться в сценарии кластеризации последовательностей. Кроме того, вы узнаете, как исследовать модели интеллектуального анализа данных [!INCLUDE[msCoName](../includes/msconame-md.md)] , построенные с помощью алгоритма кластеризации последовательностей.  
   
- [Занятие 5. Создание моделей нейронной сети и логистической регрессии &#40;учебнике по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Занятие 5. Построение моделей нейронной сети и логистической регрессии (учебник по интеллектуальному анализу данных — средний уровень)](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
  На этом занятии с помощью алгоритмов нейронной сети и логистической регрессии (Майкрософт) нужно создать несколько связанных моделей интеллектуального анализа данных. Также вы узнаете, как с помощью представлений источников данных можно исследовать базовые данные моделей.  
   
 ## <a name="requirements"></a>Требования  
@@ -68,12 +68,11 @@ ms.locfileid: "63017182"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с базой данных [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с базой данных [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
  В целях повышения безопасности образцы баз данных по умолчанию не установлены. Чтобы установить официальные базы данных для [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], посетите страницу [образцов баз данных SQL Microsoft](https://go.microsoft.com/fwlink/?LinkId=88417) и выберите соответствующую версию образца базы данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Учебник по основам интеллектуального анализа данных](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Учебник по DMX-покупателям велосипедов](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [Учебник по расширениям интеллектуального анализа данных потребительской корзины](../../2014/tutorials/market-basket-dmx-tutorial.md)  

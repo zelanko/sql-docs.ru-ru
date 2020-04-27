@@ -18,10 +18,10 @@ ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f410024e1458d20e436df72cc2978ce41b5d60df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "74095502"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
@@ -81,13 +81,13 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @pager_days = ] pager_days`Число, указывающее дни, когда оператор доступен для страниц (с учетом указанного времени начала или окончания). *pager_days*имеет тип **tinyint**и значение по умолчанию **0** , указывающее, что оператор никогда не может получить страницу. Допустимые значения: от **0** до **127**. *pager_days*вычисляется путем добавления отдельных значений для требуемых дней. Например, с понедельника по пятницу будет **2**+**4**+**8**+**16**+**32** = **62**. В следующей таблице перечислены значения для каждого дня недели.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Воскресенье|  
 |**2**|Понедельник|  
 |**4**|Вторник|  
 |**8**|Среда|  
-|**глубин**|Четверг|  
+|**16**|Четверг|  
 |**32**|Пятница|  
 |**64**|Суббота|  
   
@@ -99,15 +99,14 @@ sp_add_operator [ @name = ] 'name'
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- None  
+ Отсутствуют  
   
 ## <a name="remarks"></a>Remarks  
  **sp_add_operator** должны запускаться из базы данных **msdb** .  
   
  Отправка сообщений на пейджер поддерживается системой электронной почты, в которой должна быть функция отправки пейджинговых сообщений через электронную почту.  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_add_operator**.  
@@ -130,10 +129,10 @@ EXEC dbo.sp_add_operator
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

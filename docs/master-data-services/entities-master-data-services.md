@@ -14,10 +14,10 @@ ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 9326cafa216ad11e7b7a818d34fe035220402c33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728154"
 ---
 # <a name="entities-master-data-services"></a>Сущности (службы основных данных)
@@ -43,7 +43,7 @@ ms.locfileid: "73728154"
  Сущности также могут содержать явные иерархии (неоднородные структуры на основе одной сущности) и коллекции (одноразовые комбинации подмножеств элементов). Дополнительные сведения см. в разделах [Явные иерархии (службы Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md) и [Коллекции (службы Master Data Services)](../master-data-services/collections-master-data-services.md).  
   
 ## <a name="using-entities-as-constrained-lists"></a>Использование сущностей в качестве ограниченных списков  
- Когда пользователи назначают атрибуты элементам в сущности, можно предоставить им выбор из ограниченного списка значений. Для этого используйте сущность для заполнения списка значений атрибута. Такой атрибут называется атрибутом на основе домена. Дополнительные сведения см. в разделе [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
+ Когда пользователи назначают атрибуты элементам в сущности, можно предоставить им выбор из ограниченного списка значений. Для этого используйте сущность для заполнения списка значений атрибута. Такой атрибут называется атрибутом на основе домена. Дополнительные сведения см. в разделе [Атрибуты на основе домена (службы Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md).  
   
 ## <a name="base-entities"></a>Базовые сущности  
  Базовая сущность является отправной точкой для пользователей при навигации по объектам в модели. Базовая сущность определяет макет экрана, когда пользователь открывает функциональную область **Обозреватель** и щелкает пункт **Обозреватель** на панели меню. Чтобы указать сущность в качестве базовой, необходимо перейти к функциональной области **Администрирование системы** . На странице **Представление модели** перетащите сущность из дерева с правой стороны на имя модели в дереве с левой стороны.  
@@ -67,17 +67,17 @@ ms.locfileid: "73728154"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание новой сущности.|[Создание сущности &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)|  
-|Изменение имени существующей сущности.|[Изменение &#40;сущности Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)|  
-|Удаление существующей сущности.|[Удаление сущности &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)|  
-|Назначение разрешения сущностям.|[Назначение разрешений объекта модели &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|Создание новой сущности.|[Создание сущности (службы Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)|  
+|Изменение имени существующей сущности.|[Изменение сущности (службы Master Data Services)](../master-data-services/edit-an-entity-master-data-services.md)|  
+|Удаление существующей сущности.|[Удаление сущности (службы Master Data Services)](../master-data-services/delete-an-entity-master-data-services.md)|  
+|Назначение разрешения сущностям.|[Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Модели &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
+-   [Модели (службы Master Data Services)](../master-data-services/models-master-data-services.md)  
   
--   [Master Data Services &#40;членов&#41;](../master-data-services/members-master-data-services.md)  
+-   [Элементы (службы Master Data Services)](../master-data-services/members-master-data-services.md)  
   
--   [Master Data Services &#40;атрибутов&#41;](../master-data-services/attributes-master-data-services.md)  
+-   [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)  
   
   

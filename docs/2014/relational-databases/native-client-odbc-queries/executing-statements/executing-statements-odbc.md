@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1517e17a7b0ecaf9137e3af21e076dacc2fd98f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207065"
 ---
 # <a name="executing-statements-odbc"></a>Выполнение инструкций (ODBC)
@@ -33,7 +33,7 @@ ms.locfileid: "68207065"
   
  Как при непосредственном, так и при подготовленном выполнении может выполняться одиночная инструкция [!INCLUDE[tsql](../../../includes/tsql-md.md)] или пакет инструкций SQL, может также вызываться хранимая процедура.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Прямое выполнение](direct-execution.md)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68207065"
   
 -   [Действие параметров ISO](effects-of-iso-options.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполняя запросы &#40;ODBC&#41;](../executing-queries-odbc.md)  
   
   

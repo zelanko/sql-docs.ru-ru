@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc53253c93f5f52c6bbe00941eadbf14b65d5f64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206818"
 ---
 # <a name="using-cursors-odbc"></a>Использование курсоров (ODBC)
@@ -48,7 +48,7 @@ ms.locfileid: "68206818"
   
  Серверные курсоры, реализованные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживают функции модели курсора ODBC. Драйвер для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует серверные курсоры для поддержки функций работы с курсорами API ODBC.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Способы реализации курсоров](implementation/how-cursors-are-implemented.md)  
   
@@ -64,13 +64,13 @@ ms.locfileid: "68206818"
   
 -   [Позиционированные обновления &#40;ODBC&#41;](positioned-updates-odbc.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
  [ЗАКРЫТЬ &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/close-transact-sql)   
  [Курсоры](../../relational-databases/cursors.md)   
  [ОСВОБОЖДЕНИЕ &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/deallocate-transact-sql)   
  [ОБЪЯВИТь курсор &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
  [ПОЛУЧЕНИЕ &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/fetch-transact-sql)   
- [Откройте &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/open-transact-sql)  
+ [OPEN (Transact-SQL)](/sql/t-sql/language-elements/open-transact-sql)  
   
   

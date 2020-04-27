@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8679d1e430ff2755aac32721ff40184cbe0a3c6a
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 8263000b7a6fb166657e48777cc0d8c4c007ddd2
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529091"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087374"
 ---
 # <a name="sql-server-backup-to-url"></a>Резервное копирование в SQL Server по URL-адресу
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "81529091"
 
 - Если сервер обращается к Azure через прокси-сервер, необходимо использовать флаг трассировки 1819, а затем настроить конфигурацию прокси WinHTTP одним из следующих способов.
    - Служебная программа [proxycfg.exe](/windows/win32/winhttp/proxycfg-exe--a-proxy-configuration-tool) в Windows XP, Windows Server 2003 и более ранних версиях. 
-   - Служебная программа [netsh.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131) в Windows Vista и Windows Server 2008 или более поздней версии. 
+   - Служебная программа [netsh.exe](/windows/win32/winsock/netsh-exe) в Windows Vista и Windows Server 2008 или более поздней версии. 
   
 ## <a name="supported-arguments--statements"></a>Поддерживаемые аргументы и инструкции
 

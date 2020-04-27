@@ -16,12 +16,12 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 38ccbeaf23e6d2daab46739064e30c4fc508d10f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d164711a45b34b0974b2cca3d13fc216c378ed8b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75501925"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087424"
 ---
 # <a name="power-query-source-preview"></a>Источник Power Query (предварительная версия)
 
@@ -70,7 +70,7 @@ ms.locfileid: "75501925"
 
 ![Тип редактора диспетчера подключений источника PQ](media/power-query-source/pq-source-connection-manager-editor-kind.png)
 
-Некоторые из этих источников (**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata**, **Sybase**) требуют дополнительных установок драйверов ADO.NET, которые можно получить из статьи [Требования к источнику данных (Power Query)](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a). Вы можете использовать пользовательский интерфейс установки для их установки в Azure-SSIS IR (ознакомьтесь со статьей [Пользовательская установка для среды выполнения интеграции Azure–SSIS](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)).
+Некоторые из этих источников (**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata**, **Sybase**) требуют дополнительных установок драйверов ADO.NET, которые можно получить из статьи [Требования к источнику данных (Power Query)](/power-bi/desktop-data-source-prerequisites). Вы можете использовать пользовательский интерфейс установки для их установки в Azure-SSIS IR (ознакомьтесь со статьей [Пользовательская установка для среды выполнения интеграции Azure–SSIS](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)).
 
 Для параметра **Путь к источнику данных** вы можете ввести зависящие от источника данных свойства, формирующие строку подключения без сведений о проверке подлинности. Например, путь для источника данных **SQL** формируется как `<Server>;<Database>`. Вы можете нажать кнопку **Изменить**, чтобы назначить значения зависящим от источника данных свойствам, образующим путь.
 

@@ -1,5 +1,5 @@
 ---
-title: Аналитические услуги сервера S'L 2014 Документы Майкрософт
+title: SQL Server 2014 Analysis Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/06/2020
 ms.prod: sql-server-2014
@@ -19,36 +19,36 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 986356e6ebf7697bf0b425553f6803659a0fc5cb
-ms.sourcegitcommit: 8f99d15c5b23d9f3c08a77e2b8bea5772f570493
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/07/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80760300"
 ---
 # <a name="sql-server-2014-analysis-services"></a>SQL Server 2014 Analysis Services
 
-  Аналитические службы S'L Server 2014 — это аналитический механизм данных, используемый в решениях поддержки решений и бизнес-аналитики (BI), предоставляющий аналитические данные для бизнес-отчетов и клиентских приложений, таких как Excel, Reporting Services и другие сторонние инструменты BI. 
+  SQL Server 2014 Analysis Services — это модуль аналитических данных, используемый в решениях для поддержки принятия решений и бизнес-аналитики (BI), предоставляющий аналитические данные для бизнес-отчетов и клиентских приложений, таких как Excel, отчеты Reporting Services и другие сторонние средства бизнес-аналитики. 
 
-## <a name="about-sql-server-analysis-services-documentation"></a>О документации по анализу серверов S'L
+## <a name="about-sql-server-analysis-services-documentation"></a>Документация по SQL Server Analysis Services
 
-Документация разделена по версии. В настоящее время вы находитесь в документации аналитического сервиса S'L Server 2014.
+Документация разделена по версии. В настоящее время вы используете SQL Server 2014 Analysis Services документацию.
 
-- Чтобы узнать больше о сервере S'L [SQL Server previous versions documentation](https://docs.microsoft.com/previous-versions/sql/)2012 и более ранних версиях, см.
-- Чтобы узнать больше о сервере S'L 2014, [см.](../2014-toc/index.yml)
-- Чтобы узнать больше о сервере S'L [Analysis Services documentation](https://docs.microsoft.com/analysis-services/)Server 2016 и позже, см.
-- Чтобы узнать больше об службах анализа Azure, смотрите [документацию аналитических служб Azure.](https://docs.microsoft.com/azure/analysis-services/)
+- Дополнительные сведения о SQL Server 2012 и более ранних версиях см. в [документации по SQL Server предыдущих версий](https://docs.microsoft.com/previous-versions/sql/).
+- Дополнительные сведения о SQL Server 2014 см. в [электронной документации по SQL Server 2014](../2014-toc/index.yml)
+- Дополнительные сведения о SQL Server 2016 и более поздних версиях см. в [документации по Analysis Services](https://docs.microsoft.com/analysis-services/).
+- Дополнительные сведения о Azure Analysis Services см. в [документации по Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/).
 
-## <a name="analysis-services-workflow"></a>Рабочий процесс аналитических служб
+## <a name="analysis-services-workflow"></a>Рабочий процесс Analysis Services
 
-Типичный рабочий процесс включает в себя создание модели oLAP или табликовых данных, развертывание модели в качестве базы данных в экземплярсервера, обработку базы данных для загрузки данных, а затем назначение разрешений для обеспечения доступа к данным. После подготовки доступ к этой многоцелевой модели данных может осуществляться любым клиентским приложением, поддерживающим [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в качестве источника данных.  
+Типичный рабочий процесс включает создание модели OLAP или табличных данных, развертывание модели в качестве базы данных на экземпляре сервера, обработку базы данных для ее загрузки с данными, а затем назначение разрешений для разрешения доступа к данным. После подготовки доступ к этой многоцелевой модели данных может осуществляться любым клиентским приложением, поддерживающим [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в качестве источника данных.  
   
- Для создания модели используйте инструменты для данных серверов (см. [Инструменты и приложения, используемые в аналитических службах),](tools-and-applications-used-in-analysis-services.md)выбирая шаблон проекта Tabular или Multidimensional и Data Mining. Шаблон проекта содержит папки для всех объектов, необходимых в модели. Для создания всех основных элементов, таких как источники данных, представления источников данных, измерения, кубы и роли, можно использовать мастеры.  
+ Чтобы создать модель, используйте SQL Server Data Tools (см. раздел [средства и приложения, используемые в Analysis Services](tools-and-applications-used-in-analysis-services.md)), выбрав шаблон проекта табличный или многомерный и интеллектуальный анализ данных. Шаблон проекта содержит папки для всех объектов, необходимых в модели. Для создания всех основных элементов, таких как источники данных, представления источников данных, измерения, кубы и роли, можно использовать мастеры.  
   
  Модели заполняются данными из внешних систем обработки данных. Обычно это хранилища данных, размещенные в системе управления реляционными базами данных SQL Server или Oracle (табличные модели поддерживают дополнительные типы источников данных). Модели определяют объекты запроса, такие как кубы, указывают измерения, которые могут использоваться в нескольких кубах, вычисления и ключевые показатели эффективности, которые инкапсулируют бизнес-логику, а также такие режимы работы, как навигация и детализация.  
   
- Для использования модели она развернута в экземпляре сервера, который запускает базы данных в определенном режиме сервера, делая данные доступными для авторизованных пользователей, которые подключаются через Excel или другие приложения.  
+ Чтобы использовать модель, она развертывается на экземпляре сервера, где выполняются базы данных в определенном режиме сервера, делая их доступными для полномочных пользователей, подключающихся через Excel или другие приложения.  
   
- Вы можете установить экземпляр в одном из трех серверных режимов:  
+ Экземпляр можно установить в одном из трех режимов сервера:  
   
 -   Как табличный экземпляр, выполняющий табличные модели.  
   
@@ -60,27 +60,27 @@ ms.locfileid: "80760300"
   
  Основная документация по службам Analysis Services организована по разделам, которые соответствуют типу создаваемого объекта. Дополнительные сведения о каждом режиме или функциональной области см. в разделах по следующим ссылкам.  
   
- **Просмотр контента по районам**  
- ![Малый файл Фолдер значок](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") [Сравнение табулярных и многомерных решений &#40;SSAS&#41;](comparing-tabular-and-multidimensional-solutions-ssas.md)  
+ **Просмотр содержимого по областям**  
+ ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") [Сравнение табличных и многомерных решений &#40;SSAS&#41;](comparing-tabular-and-multidimensional-solutions-ssas.md)  
   
- ![Малый файл Фолдер значок](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") [Анализ служб instance Управления](instances/analysis-services-instance-management.md)  
+ ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") [Analysis Services управление экземплярами](instances/analysis-services-instance-management.md)  
   
- ![Малый файл Фолдер](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") [иконописного моделирования &#40;SSAS Tabular&#41;](tabular-models/tabular-models-ssas.md)  
+ ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") [табличное моделирование &#40;ТАБЛИЧные&#41;SSAS](tabular-models/tabular-models-ssas.md)  
   
- ![Малый файл Фолдер значок](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") [многомерное моделирование &#40;SSAS&#41;](multidimensional-models/multidimensional-models-ssas.md)  
+ ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") [многомерное моделирование &#40;SSAS&#41;](multidimensional-models/multidimensional-models-ssas.md)  
   
- ![Малый файл Фолдер значок данных](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") [&#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
+ ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") [интеллектуальный анализ данных &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
   
- ![Малый файл Фолдер значок](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") [PowerPivot для SharePoint &#40;SSAS&#41;](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
+ ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") [PowerPivot для SharePoint &#40;SSAS&#41;](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   
 > [!NOTE]  
->  Функции [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] различаются в зависимости от выпуска. Многомерные модели и модели интеллектуального анализа данных поддерживаются в стандартном выпуске, но с меньшим количеством функций по сравнению с выпусками более высокого уровня. Табличные модели и PowerPivot для SharePoint являются функциями высокого уровня, которые отсутствуют в стандартном выпуске. Для получения дополнительной информации [см.](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+>  Функции [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] различаются в зависимости от выпуска. Многомерные модели и модели интеллектуального анализа данных поддерживаются в стандартном выпуске, но с меньшим количеством функций по сравнению с выпусками более высокого уровня. Табличные модели и PowerPivot для SharePoint являются функциями высокого уровня, которые отсутствуют в стандартном выпуске. Дополнительные сведения см. [в разделе функции, поддерживаемые различными Выпусками SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-## <a name="see-also"></a>См. также:  
- [Учебники по анализу &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
- [Установка для сервера S'L 2014](../database-engine/install-windows/installation-for-sql-server.md)   
- [&#41;&#41;справочные службы &#40;анализа разработчика](analysis-services-developer-documentation.md)   
- [Ресурсный центр сервера S'L](https://go.microsoft.com/fwlink/?linkID=219676)   
+## <a name="see-also"></a>См. также  
+ [Учебники по Analysis Services &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
+ [Установка для SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
+ [&#40;Analysis Services с руководством разработчика&#41;](analysis-services-developer-documentation.md)   
+ [Центр ресурсов SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)   
  [SQLCat.com](https://go.microsoft.com/fwlink/?linkID=220963)  
   
   

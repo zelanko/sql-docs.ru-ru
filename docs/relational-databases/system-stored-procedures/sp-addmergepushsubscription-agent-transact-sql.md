@@ -16,10 +16,10 @@ ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb74cc0887d68ea01fabe7f6168c0d23275d8f4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68769162"
 ---
 # <a name="sp_addmergepushsubscription_agent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68769162"
   Вводит новое задание агента для подготовки расписания синхронизации принудительной подписки для публикации слиянием. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
 > [!IMPORTANT]  
->  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. [в разделе Enable encrypted connections to the ядро СУБД &#40;диспетчер конфигурации SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -97,16 +97,16 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_type = ] frequency_type`Частота, с которой следует запланировать агент слияния. *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Один раз.|  
 |**2**|По запросу|  
 |**4**|Ежедневно|  
-|**8**|Еженедельно|  
-|**глубин**|Ежемесячная|  
+|**8**|Weekly (Еженедельно);|  
+|**16**|Ежемесячно|  
 |**32**|Ежемесячно с относительной датой|  
 |**64**|Автозапуск|  
-|**128**|Повторение|  
+|**128**|Повторяющееся задание|  
 |NULL (по умолчанию)||  
   
 > [!NOTE]  
@@ -114,41 +114,41 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`Дни, в которые выполняется агент слияния. *frequency_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Воскресенье|  
 |**2**|Понедельник|  
-|**3-5**|Вторник|  
+|**3**|Вторник|  
 |**4**|Среда|  
-|**5.0**|Четверг|  
+|**5**|Четверг|  
 |**6**|Пятница|  
 |**7**|Суббота|  
 |**8**|День|  
-|**8**|дни недели;|  
-|**штук**|По выходным дням|  
+|**9**|По рабочим дням|  
+|**10**|По выходным дням|  
 |NULL (по умолчанию)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Дата агент слияния. Этот параметр используется, если *frequency_type* установлен в значение **32** (ежемесячное относительное расписание). *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Первый|  
 |**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
-|**глубин**|Последний|  
+|**16**|Последний|  
 |NULL (по умолчанию)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию NULL.  
   
 `[ @frequency_subday = ] frequency_subday`Частота повторного планирования в течение заданного периода. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
 |**2**|Секунда|  
 |**4**|Минута|  
-|**8**|Hour|  
+|**8**|Час|  
 |NULL (по умолчанию)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Интервал для *frequency_subday*. *frequency_subday_interval* имеет **тип int**и значение по умолчанию NULL.  
@@ -164,7 +164,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 `[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Указывает, можно ли синхронизировать подписку с помощью диспетчера синхронизации Windows. *enabled_for_syncmgr* имеет тип **nvarchar (5)** и значение по умолчанию false. Если **значение равно false**, подписка не зарегистрирована в диспетчере синхронизации. Если **значение — true**, подписка регистрируется в диспетчере синхронизации и может быть синхронизирована [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]без запуска.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  **sp_addmergepushsubscription_agent** используется в репликации слиянием и использует функции, аналогичные [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
@@ -175,9 +175,9 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_addmergepushsubscription_agent**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание принудительной подписки](../../relational-databases/replication/create-a-push-subscription.md)   
- [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
  [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89fc6a74486cad96be0baee374721e06520acfcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015307"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>Миграция в In-Memory OLTP
@@ -44,9 +44,9 @@ ms.locfileid: "63015307"
   
 -   [Реализация IDENTITY в таблице, оптимизированной для памяти](implementing-identity-in-a-memory-optimized-table.md)  
   
- Дополнительные сведения о методологиях миграции см. в разделе [Выполняемая в памяти OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](https://msdn.microsoft.com/library/dn673538.aspx).  
+ Сведения о методологиях миграции см. [в разделе Общие шаблоны рабочих нагрузок в памяти OLTP и рекомендации по миграции](https://msdn.microsoft.com/library/dn673538.aspx).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполняющаяся в памяти OLTP &#40;оптимизации в памяти&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Оценка требований к объему памяти для таблиц, оптимизированных для памяти](memory-optimized-tables.md)  
   

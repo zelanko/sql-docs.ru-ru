@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 126b05adab3a07099f6c9110e18e54910f5b2f25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "73982990"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
@@ -47,7 +47,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *путь*  
+ *path*  
  Путь к файлам для чтения. *путь* может содержать подстановочные знаки и включает имя файла. *путь* имеет тип **nvarchar (260)**. Значение по умолчанию отсутствует. В контексте базы данных SQL Azure это значение является URL-адресом HTTP для файла в службе хранилища Azure.
   
  *мдпас*  
@@ -67,15 +67,15 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|module_guid|**UNIQUEIDENTIFIER**|Идентификатор GUID модуля событий. Не допускает значение NULL.|  
-|package_guid|**UNIQUEIDENTIFIER**|Идентификатор GUID пакета событий. Не допускает значение NULL.|  
+|module_guid|**uniqueidentifier**|Идентификатор GUID модуля событий. Не допускает значение NULL.|  
+|package_guid|**uniqueidentifier**|Идентификатор GUID пакета событий. Не допускает значение NULL.|  
 |object_name|**nvarchar(256)**|Имя события. Не допускает значение NULL.|  
 |event_data|**nvarchar(max)**|Содержимое события в формате XML. Не допускает значение NULL.|  
 |file_name|**nvarchar(260)**|Имя файла, содержащего событие. Не допускает значение NULL.|  
 |file_offset|**bigint**|Смещение блока в файле, содержащем событие. Не допускает значение NULL.|  
-|timestamp_utc|**datetime2**|**Применимо к**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] и более [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]поздним и.<br /><br />Дата и время (часовой пояс UTC) события. Не допускает значение NULL.|  
+|timestamp_utc|**datetime2**|**Применимо к**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Дата и время (часовой пояс UTC) события. Не допускает значение NULL.|  
 
   
 ## <a name="remarks"></a>Remarks  
@@ -93,9 +93,9 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 SELECT * FROM sys.fn_xe_file_target_read_file('C:\traces\*.xel', 'C:\traces\metafile.xem', null, null);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления расширенных событий](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [Представления каталога расширенных событий (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [Представления каталога расширенных событий &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   
   

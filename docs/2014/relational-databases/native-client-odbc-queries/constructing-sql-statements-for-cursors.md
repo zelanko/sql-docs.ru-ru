@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3dc86f27ab9e111c5d93c91de65c51da9008ba33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207081"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Конструирование инструкций SQL для курсоров
   Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента использует серверные курсоры для реализации функции курсора, определенной в спецификации ODBC. Приложение ODBC управляет поведением курсора с помощью [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) для установки различных атрибутов операторов. К ним относятся атрибуты и их значения по умолчанию.  
   
-|attribute|По умолчанию|  
+|Атрибут|Значение по умолчанию|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
@@ -55,7 +55,7 @@ ms.locfileid: "68207081"
   
      Инструкции SQL, которые выполняют хранимую процедуру, содержащую более одной инструкции SELECT. К ним относятся инструкции SELECT, которые заполняют параметры или переменные.  
   
--   Keywords  
+-   Ключевые слова  
   
      Инструкции SQL, которые содержат ключевые слова FOR BROWSE или INTO.  
   
@@ -99,7 +99,7 @@ szErrorMsgString: [Microsoft][SQL Server Native Client][SQL Server]
   
  Приложения ODBC, получающие эти ошибки, должны сбросить все атрибуты инструкции курсора в их значения по умолчанию перед попыткой выполнить инструкцию.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполняя запросы &#40;ODBC&#41;](executing-queries-odbc.md)  
   
   

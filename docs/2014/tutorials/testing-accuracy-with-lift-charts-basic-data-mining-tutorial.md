@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 06cefcdac192b715fe843f842088456f769cdd24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042686"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>Проверка точности при помощи диаграмм точности прогнозов (учебник интеллектуального анализа данных — начальный уровень)
@@ -26,7 +26,7 @@ ms.locfileid: "63042686"
   
 -   [Настройка параметров диаграммы точности](#BKMK_Selecting)  
   
-##  <a name="BKMK_InputData"></a>Выбор входных данных  
+##  <a name="choosing-the-input-data"></a><a name="BKMK_InputData"></a>Выбор входных данных  
  Первым шагом в проверке точности моделей интеллектуального анализа данных является выбор источника данных, который будет использоваться для проверки. Будет проверено, насколько хорошо работают модели на проверочных данных, а затем эти модели будут использованы с внешними данными.  
   
 #### <a name="to-select-the-data-set"></a>Выбор набора данных  
@@ -37,7 +37,7 @@ ms.locfileid: "63042686"
   
      Дополнительные сведения о других параметрах см. в разделе [Выбор типа диаграммы точности и установка параметров диаграммы](../../2014/analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md).  
   
-##  <a name="BKMK_Selecting"></a>Настройка параметров диаграммы точности  
+##  <a name="setting-accuracy-chart-parameters"></a><a name="BKMK_Selecting"></a>Настройка параметров диаграммы точности  
  Чтобы создать диаграмму точности, необходимо определить три вещи:  
   
 -   Какие модели следует включить в диаграмму точности?  
@@ -81,7 +81,7 @@ ms.locfileid: "63042686"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Тестирование фильтрованной модели &#40;учебник по интеллектуальному анализу данных (Basic)&#41;](../../2014/tutorials/testing-a-filtered-model-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диаграмма точности прогнозов &#40;Analysis Services&#41;интеллектуального анализа данных](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [Вкладка диаграммы точности прогнозов &#40;представление диаграммы точности интеллектуального анализа данных&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)  
   

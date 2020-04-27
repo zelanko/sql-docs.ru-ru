@@ -1,5 +1,5 @@
 ---
-title: Использование режима MARS | Документация Майкрософт
+title: Использование режима MARS | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5cbf5efeb5b5381636b57d50b86a5affa4a2595
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206633"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Использование режима MARS
@@ -70,7 +70,7 @@ ms.locfileid: "68206633"
  Вы сможете избежать проблем, если при управлении состоянием соединений (SET, USE) и транзакциями (BEGIN TRAN, COMMIT, ROLLBACK) будете использовать вызовы API, а не инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)], если не будете включать эти инструкции в пакеты из нескольких инструкций, также содержащие точки выхода, и если будете сериализовать выполнение таких пакетов посредством использования либо отмены всех результатов.  
   
 > [!NOTE]  
->  Пакет хранимых процедур, начинающий ручную или неявную транзакцию с активированным режимом MARS, должен завершать транзакцию до выхода пакета. В противном случае по завершении выполнения пакета [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] осуществляет откат всех изменений, внесенных транзакцией. Такая транзакция управляется [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] как транзакция контекста пакета. Это новый тип транзакции, реализованный в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] с тем, чтобы существующие верно выполняемые хранимые процедуры можно было использовать в режиме MARS. Дополнительные сведения о транзакциях с областью действия пакета см. в разделе [инструкции Transaction &#40;&#41;Transact-SQL ](/sql/t-sql/language-elements/transactions-transact-sql).  
+>  Пакет хранимых процедур, начинающий ручную или неявную транзакцию с активированным режимом MARS, должен завершать транзакцию до выхода пакета. В противном случае по завершении выполнения пакета [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] осуществляет откат всех изменений, внесенных транзакцией. Такая транзакция управляется [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] как транзакция контекста пакета. Это новый тип транзакции, реализованный в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] с тем, чтобы существующие верно выполняемые хранимые процедуры можно было использовать в режиме MARS. Дополнительные сведения о транзакциях контекста пакета см. в статье [Инструкции Transact-SQL](/sql/t-sql/language-elements/transactions-transact-sql).  
   
  Пример использования режима MARS из ADO см. в разделе [Использование ADO с SQL Server Native Client](../applications/using-ado-with-sql-server-native-client.md).  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68206633"
   
  Для свойства источника данных DBPROP_MULTIPLECONNECTIONS по умолчанию применяется значение VARIANT_TRUE. Это значит, что поставщик создаст несколько соединений для поддержки ряда параллельных объектов команд и наборов строк. Если включен режим MARS, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент может поддерживать несколько объектов команд и наборов строк в одном соединении, поэтому MULTIPLE_CONNECTIONS по умолчанию имеет значение VARIANT_FALSE.  
   
- Дополнительные сведения об улучшениях, внесенных в набор свойств DBPROPSET_SQLSERVERDBINIT, см. в разделе [Свойства инициализации и авторизации](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Дополнительные сведения об улучшениях, появившихся в наборе свойств DBPROPSET_SQLSERVERDBINIT, см. в статье [Initialization and Authorization Properties](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md) (Свойства инициализации и авторизации).  
   
 ### <a name="sql-server-native-client-ole-db-provider-example"></a>Пример поставщика OLE DB для собственного клиента SQL Server  
  В этом примере объект источника данных создается с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного поставщика OLE DB, а режим MARS включается с помощью свойства DBPROPSET_SQLSERVERDBINIT, установленного перед созданием объекта Session.  
@@ -195,8 +195,8 @@ SQLFetch(hstmt1);
 SQLFetch(hstmt2);  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Компоненты собственного клиента SQL Server](sql-server-native-client-features.md)   
+## <a name="see-also"></a>См. также  
+ [SQL Server Native Client функции](sql-server-native-client-features.md)   
  [Использование результирующих наборов по умолчанию в SQL Server](../../native-client-odbc-cursors/implementation/using-sql-server-default-result-sets.md)  
   
   

@@ -14,10 +14,10 @@ ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: db9187a5a30a740e8d790a8b84b5dae597de8bfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728179"
 ---
 # <a name="entity-permissions-master-data-services"></a>Разрешения сущности (службы Master Data Services)
@@ -37,19 +37,19 @@ ms.locfileid: "73728179"
 > [!NOTE]  
 >  Эти разрешения применяются только к функциональной области **Обозреватель** пользовательского интерфейса.  
   
-|Разрешение|Description|  
+|Разрешение|Описание|  
 |----------------|-----------------|  
 |**Чтение**|Пользователь может просматривать элементы, атрибуты, членство в иерархии или коллекциях.|  
-|**Создания**|Пользователь может создавать элементы и назначать значения атрибутов во время создания.|  
-|**Обновляют**|Пользователь может обновлять элементы, атрибуты, членство в иерархии или коллекциях.|  
+|**Создать**|Пользователь может создавать элементы и назначать значения атрибутов во время создания.|  
+|**Обновление**|Пользователь может обновлять элементы, атрибуты, членство в иерархии или коллекциях.|  
 |**Удаление**|Пользователь может удалять элементы.|  
-|**Запретить**|Запрет любого доступа к сущности.|  
+|**Deny**|Запрет любого доступа к сущности.|  
   
  Разрешения на чтение, создание, обновление и удаление можно использовать в различных комбинациях. Когда назначаются разрешения на создание, обновление и удаление, автоматически добавляется и разрешение на чтение.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Назначение разрешений объекта модели &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Разрешения объекта модели &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Сущности &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
+ [Сущности (службы Master Data Services)](../master-data-services/entities-master-data-services.md)  
   
   

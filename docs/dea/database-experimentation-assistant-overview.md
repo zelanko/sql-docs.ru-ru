@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75247116"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Общие сведения о Database Experimentation Assistant
@@ -113,6 +113,6 @@ Database Experimentation Assistant (ДЕА) — это решение экспе
 
 ДЕА регулируется заявлением [о конфиденциальности Майкрософт](https://aka.ms/dea-privacy).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - В статье рассматривается [процесс сравнения рабочих нагрузок](database-experimentation-assistant-get-started.md), объясняющий процесс сравнения рабочих нагрузок в двух средах.

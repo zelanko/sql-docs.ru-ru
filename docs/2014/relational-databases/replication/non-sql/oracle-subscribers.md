@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022225"
 ---
 # <a name="oracle-subscribers"></a>Подписчики Oracle
@@ -123,11 +123,11 @@ ms.locfileid: "63022225"
 |`nvarchar(1-1000)`|VARCHAR2(1-2000)|  
 |`nvarchar(1001-4000)`|NCLOB|  
 |`nvarchar(max)`|NCLOB|  
-|`real`|REAL|  
+|`real`|real|  
 |`smalldatetime`|DATE|  
 |`smallint`|NUMBER(5,0)|  
 |`smallmoney`|NUMBER(10,4)|  
-|`sql_variant`|Недоступно|  
+|`sql_variant`|Н/Д|  
 |`sysname`|VARCHAR2(128)|  
 |`text`|CLOB|  
 |`time(0-7)`|VARCHAR(16)|  
@@ -142,8 +142,8 @@ ms.locfileid: "63022225"
 |`varchar(max)`|CLOB|  
 |`xml`|NCLOB|  
   
-## <a name="see-also"></a>См. также:  
- [Подписчики, не относящиеся к SQL Server](non-sql-server-subscribers.md)   
- [Подписка на публикации](../subscribe-to-publications.md)  
+## <a name="see-also"></a>См. также  
+ [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

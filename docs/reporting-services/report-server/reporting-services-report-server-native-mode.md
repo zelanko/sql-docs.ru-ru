@@ -1,6 +1,6 @@
 ---
 title: Сервер отчетов служб Reporting Services (собственный режим) | Документы Майкрософт
-ms.date: 06/06/2019
+ms.date: 04/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4d4a78281f9e42921f31f8d02c5f167dd13d06d5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66826902"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086843"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Сервер отчетов служб Reporting Services (собственный режим)
   Сервер отчетов, настроенный для работы в основном режиме, выполняется как сервер приложений, обеспечивающий все функции обработки и управления исключительно через компоненты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -50,9 +50,13 @@ ms.locfileid: "66826902"
 -   Членство в локальной группе администраторов на компьютере сервера отчетов. Если установка включает серверные компоненты, выполняющиеся на удаленных компьютерах, необходимы разрешения администратора на этих компьютерах, если управление этими серверами осуществляется через удаленное соединение.  
   
 -   Разрешения администратора базы данных для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , размещающего эту базу данных.  
-  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
 -   Чтобы установить службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на контроллере домена, необходимо иметь права администратора домена.  
-  
+
+::: moniker-end
+
 ##  <a name="managing-content"></a><a name="bkmk_managecontent"></a> Управление содержимым  
  В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]управление содержимым подразумевает управление отчетами, моделями, папками, ресурсами и общими источниками данных. Всеми этими элементами можно управлять независимо друг от друга посредством свойств и настроек безопасности. Любой элемент можно переместить в другое место в пространстве имен папок сервера отчетов. Для эффективного управления элементами необходимо знать, какие задачи выполняет диспетчер содержимого.  
   

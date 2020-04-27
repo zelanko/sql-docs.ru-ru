@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f3d0d91de95e82fcd174aa9290e208afda5bef91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211394"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Прикрепление целевого сервера к главному
@@ -40,7 +40,7 @@ ms.locfileid: "68211394"
   
      [SMO](#PowerShellProcedure)  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-enlist-a-target-server"></a>Прикрепление целевого сервера  
   
@@ -50,15 +50,15 @@ ms.locfileid: "68211394"
   
 3.  Завершите работу мастера настройки целевого сервера, который проводит пользователя по этапам процесса.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-enlist-a-target-server"></a>Прикрепление целевого сервера  
   
 1.  Используйте хранимую процедуру `sp_msx_enlist`.  Дополнительные сведения см. в разделе [sp_msx_enlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)  
   
-##  <a name="PowerShellProcedure"></a>Использование управляющие объекты SQL Server (SMO)  
+##  <a name="using-sql-server-management-objects-smo"></a><a name="PowerShellProcedure"></a>Использование управляющие объекты SQL Server (SMO)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Автоматизация администрирования в масштабах предприятия](automated-administration-across-an-enterprise.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Наборы строк | Документация Майкрософт
+title: Наборы строк | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c78f634f78cdcd970c1d731071a291930cf00ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206656"
 ---
 # <a name="rowsets"></a>Наборы строк
@@ -44,11 +44,11 @@ ms.locfileid: "68206656"
   
  Потребители освобождают наборы строк с помощью метода **IRowset::Release**. При освобождении набора строк освобождаются все дескрипторы строк, удерживаемые потребителем для данного набора строк. При освобождении набора строк методы доступа не освобождаются. Если используется интерфейс **IAccessor**, его нужно освободить отдельно.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Создание набора строк с помощью интерфейса IOpenRowset](creating-a-rowset-with-iopenrowset.md)  
   
--   [Создание наборов строк при помощи метода ICommand::Execute](creating-rowsets-with-icommand-execute.md)  
+-   [Создание наборов строк с помощью метода ICommand::Execute](creating-rowsets-with-icommand-execute.md)  
   
 -   [Свойства и поведение наборов строк](rowset-properties-and-behaviors.md)  
   
@@ -56,13 +56,13 @@ ms.locfileid: "68206656"
   
 -   [Выборка строк](fetching-rows.md)  
   
--   [Выборка одной строки при помощи интерфейса IRow](fetching-a-single-row-with-irow.md)  
+-   [Выборка одной строки с помощью интерфейса IRow](fetching-a-single-row-with-irow.md)  
   
 -   [Закладки](bookmarks.md)  
   
 -   [Обновление данных в наборах строк](updating-data-in-rowsets.md)  
   
-## <a name="see-also"></a>См. также:  
- [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
+## <a name="see-also"></a>См. также  
+ [SQL Server Native Client (OLE DB)](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

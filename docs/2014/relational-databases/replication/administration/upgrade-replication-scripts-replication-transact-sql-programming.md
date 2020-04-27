@@ -20,14 +20,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd3f6498cbfb4ef8cf38e27879d619472a6693ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210762"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>обновить скрипты репликации (программирование репликации на языке Transact-SQL)
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)]файлы скриптов можно использовать для программной настройки топологии репликации. Дополнительные сведения см. в статье [Основные понятия системных хранимых процедур репликации](../concepts/replication-system-stored-procedures-concepts.md).  
+  Настройка топологии репликации программным способом возможна при помощи файлов скриптов на языке[!INCLUDE[tsql](../../../includes/tsql-md.md)] . Дополнительные сведения см. в статье [Основные понятия системных хранимых процедур репликации](../concepts/replication-system-stored-procedures-concepts.md).  
   
 > [!IMPORTANT]  
 >  Хотя обновление скриптов, выполняемых членами роли `sysadmin`, не является обязательным, рекомендуется внести в существующие скрипты изменения, описанные в настоящем разделе. Для всех агентов репликации следует указывать учетные записи, наделенные минимальным числом разрешений, как это описано в подразделе «Разрешения, необходимые для агентов» раздела [Replication Agent Security Model](../security/replication-agent-security-model.md).  
@@ -40,11 +40,11 @@ ms.locfileid: "68210762"
   
 -   **sp_addpushsubscription_agent**:  
   
-     Теперь необходимо выполнить [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) , чтобы явно добавить задание и указать учетные данные Windows (**@job_login** и **@job_password**), при которых задание агент распространения выполняется на распространителе. В версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]это выполнялось автоматически при создании принудительной подписки.  
+     Теперь пользователь должен выполнять хранимую процедуру [sp_addpushsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql), чтобы явным образом добавить задание и передать учетные данные Windows(в параметрах **@job_login** и **@job_password**), с которыми задание агента распространителя будет выполняться на распространителе. В версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]это выполнялось автоматически при создании принудительной подписки.  
   
 -   **sp_addmergepushsubscription_agent**:  
   
-     Теперь необходимо выполнить [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql) , чтобы явно добавить задание и указать учетные данные Windows (**@job_login** и **@job_password**), при которых задание агент слияния выполняется на распространителе. В версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]это выполнялось автоматически при создании принудительной подписки.  
+     Теперь пользователь должен выполнить процедуру [sp_addpushsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql), чтобы явным образом добавить задание и передать учетные данные Windows (в параметрах **@job_login** и **@job_password**), с использованием которых задание агента слияния будет выполняться на распространителе. В версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]это выполнялось автоматически при создании принудительной подписки.  
   
 -   **sp_addpullsubscription_agent**:  
   
@@ -89,7 +89,7 @@ ms.locfileid: "68210762"
   
 1.  После вызова хранимой процедуры, которая создает подписку, обязательно выполните хранимую процедуру, формирующую задание агента распространителя для синхронизации подписки. Используемая хранимая процедура зависит от типа подписки.  
   
-    -   Для подписки по запросу обновите выполнение [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) для предоставления учетных данных Windows, с которыми агент распространения выполняется на подписчике для **@job_name** и. **@job_password** Это необходимо сделать после вызова хранимой процедуры [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Дополнительные сведения см. в статье [Создание подписки по запросу](../create-a-pull-subscription.md).  
+    -   Для подписки по запросу обновите вызов процедуры [sp_addpullsubscription_agent (Transact-SQL) ](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql), указав в параметрах **@job_name** и **@job_password** учетные данные Windows, с использованием которых агент распространителя будет запускаться на подписчике. Это необходимо сделать после вызова хранимой процедуры [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Дополнительные сведения см. в статье [Создание подписки по запросу](../create-a-pull-subscription.md).  
   
     -   Для принудительной подписки выполните процедуру [sp_addpushsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) на издателе. Укажите **@subscriber**, **@subscriber_db**, **@publication**, учетные данные Windows, с которыми агент распространения выполняется на **@job_name** распространителе **@job_password**для и, и расписание для этого задания агента. Дополнительные сведения см. в разделе [Указание расписаний синхронизации](../specify-synchronization-schedules.md). Это необходимо сделать после вызова процедуры [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Дополнительные сведения см. в статье [Создание принудительной подписки](../create-a-push-subscription.md).  
   
@@ -105,7 +105,7 @@ ms.locfileid: "68210762"
   
 1.  После вызова хранимой процедуры, которая создает подписку, обязательно выполните хранимую процедуру, формирующую задание агента слияния для синхронизации подписки. Используемая хранимая процедура зависит от типа подписки.  
   
-    -   Для подписки по запросу обновите выполнение [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) для предоставления учетных данных Windows, с которыми агент слияния выполняется на подписчике для **@job_name** и. **@job_password** Это необходимо сделать после вызова процедуры [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Дополнительные сведения см. в статье [Создание подписки по запросу](../create-a-pull-subscription.md).  
+    -   Для подписки по запросу обновите вызов процедуры [sp_addmergepullsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql), указав в параметрах **@job_name** и **@job_password** учетные данные Windows, с использованием которых агент слияния будет запускаться на подписчике. Это необходимо сделать после вызова процедуры [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Дополнительные сведения см. в статье [Создание подписки по запросу](../create-a-pull-subscription.md).  
   
     -   Для принудительной подписки, выполните процедуру [sp_addmergepushsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql) на издателе. Укажите **@subscriber**, **@subscriber_db**, **@publication**, учетные данные Windows, с которыми будет запускаться **@job_name** агент слияния на распространителе **@job_password**, и расписание для этого задания агента. Дополнительные сведения см. в разделе [Указание расписаний синхронизации](../specify-synchronization-schedules.md). Это необходимо сделать после вызова хранимой процедуры [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Дополнительные сведения см. в статье [Создание принудительной подписки](../create-a-push-subscription.md).  
   
@@ -118,7 +118,7 @@ ms.locfileid: "68210762"
  Ниже приведено обновление предыдущего примера скрипта, который создает публикацию транзакций для запуска в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздних версиях. Эта публикация поддерживает немедленное обновление с переключением на обновление отработки отказа. Значения по умолчанию для новых параметров были объявлены явно.  
   
 > [!NOTE]  
->  Учетные данные Windows предоставляются во время выполнения с помощью переменных сценария **sqlcmd** .  
+>   Учетные данные Windows предоставляются во время выполнения с помощью переменных сценария **sqlcmd** .  
   
  [!code-sql[HowTo#sp_createtranpub_NWpostupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwtranpublication.sql#sp_createtranpub_nwpostupgrade)]  
   
@@ -131,7 +131,7 @@ ms.locfileid: "68210762"
  Ниже приведен предыдущий пример скрипта для создания публикации слиянием, обновленный для запуска в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздних версиях. Значения по умолчанию для новых параметров были объявлены явно.  
   
 > [!NOTE]  
->  Учетные данные Windows предоставляются во время выполнения с помощью переменных сценария **sqlcmd** .  
+>   Учетные данные Windows предоставляются во время выполнения с помощью переменных сценария **sqlcmd** .  
   
  [!code-sql[HowTo#sp_createmergepub_NWpostupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwmergepublication.sql#sp_createmergepub_nwpostupgrade)]  
   
@@ -144,7 +144,7 @@ ms.locfileid: "68210762"
  Ниже приведен предыдущий пример скрипта для создания принудительной подписки для публикации транзакций, обновленный для запуска в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздних версиях. Значения по умолчанию для новых параметров были объявлены явно.  
   
 > [!NOTE]  
->  Учетные данные Windows предоставляются во время выполнения с помощью переменных сценария **sqlcmd** .  
+>   Учетные данные Windows предоставляются во время выполнения с помощью переменных сценария **sqlcmd** .  
   
  [!code-sql[HowTo#sp_createtranpushsub_NWpostupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwpushsub.sql#sp_createtranpushsub_nwpostupgrade)]  
   
@@ -157,7 +157,7 @@ ms.locfileid: "68210762"
  Ниже приведен предыдущий пример скрипта, создающий принудительную подписку для публикации слиянием, обновленный для запуска в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздних версиях. Значения по умолчанию для новых параметров были объявлены явно.  
   
 > [!NOTE]  
->  Учетные данные Windows предоставляются во время выполнения с помощью переменных сценария **sqlcmd** .  
+>   Учетные данные Windows предоставляются во время выполнения с помощью переменных сценария **sqlcmd** .  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpostupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwpushsub.sql#sp_createmergepushsub_nwpostupgrade)]  
   
@@ -170,7 +170,7 @@ ms.locfileid: "68210762"
  Ниже приведен предыдущий пример скрипта для создания подписки по запросу для публикации транзакций, обновленный для запуска в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздних версиях. Значения по умолчанию для новых параметров были объявлены явно.  
   
 > [!NOTE]  
->  Учетные данные Windows предоставляются во время выполнения с помощью переменных сценария **sqlcmd** .  
+>   Учетные данные Windows предоставляются во время выполнения с помощью переменных сценария **sqlcmd** .  
   
  [!code-sql[HowTo#sp_createtranpullsub_NWpostupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwpullsub.sql#sp_createtranpullsub_nwpostupgrade)]  
   
@@ -183,14 +183,14 @@ ms.locfileid: "68210762"
  Ниже приведен предыдущий пример скрипта, создающий подписку по запросу для публикации слиянием, обновленный для запуска в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздних версиях. Значения по умолчанию для новых параметров были объявлены явно.  
   
 > [!NOTE]  
->  Учетные данные Windows предоставляются во время выполнения с помощью переменных сценария **sqlcmd** .  
+>   Учетные данные Windows предоставляются во время выполнения с помощью переменных сценария **sqlcmd** .  
   
  [!code-sql[HowTo#sp_createmergepullsub_NWpostupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwpullsub.sql#sp_createmergepullsub_nwpostupgrade)]  
   
 ## <a name="see-also"></a>См. также:  
  [Create a Publication](../publish/create-a-publication.md)   
  [Создание принудительной подписки](../create-a-push-subscription.md)   
- [Создание подписки по запросу](../create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../create-a-pull-subscription.md)   
  [Просмотр и изменение параметров безопасности репликации](../security/view-and-modify-replication-security-settings.md)   
  [MSSQL_ENG021797](../mssql-eng021797.md)   
  [MSSQL_ENG021798](../mssql-eng021798.md)   

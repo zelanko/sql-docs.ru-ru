@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6f6efdfac89014116957990ef2db21cf52e76a4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046036"
 ---
 # <a name="reporting-services-soapexception-class"></a>Класс SoapException в службах Reporting Services
@@ -27,15 +27,15 @@ ms.locfileid: "63046036"
   
  В представленной ниже таблице приведен список открытых свойств класса **SoapException**.  
   
-|Открытое свойство|Description|  
+|Открытое свойство|Описание|  
 |---------------------|-----------------|  
 |**Субъекта**|Код, который вызвал исключение. Это значение представляет собой URL-адрес метода веб-службы.|  
-|**Описание**|Сведения об ошибках, определяемые приложением. Значение задается сервером отчетов и имеет формат XML. Дополнительные сведения см. в разделах [Свойство Detail](detail-property.md) и [Использование свойства Detail для обработки определенных ошибок](../best-practices/using-the-detail-property-to-handle-specific-errors.md).|  
+|**Налог**|Сведения об ошибках, определяемые приложением. Значение задается сервером отчетов и имеет формат XML. Дополнительные сведения см. в разделах [Свойство Detail](detail-property.md) и [Использование свойства Detail для обработки определенных ошибок](../best-practices/using-the-detail-property-to-handle-specific-errors.md).|  
 |**HelpLink**|URL-адрес или URN файла справки, связанного с ошибкой. Обычно это значение задается веб-службой, которая определяет URL-адрес для справки и поддержки [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] предоставляют возможность задавать несколько ссылок на разделы справки, посвященные возникающим ошибкам, поэтому сведения о ссылке на справку на сервере отчетов определяются в свойстве **Detail**. Дополнительные сведения см. в разделе [Элемент HelpLink](helplink-element.md).|  
 |**Сообщение**|Содержательное, локализованное сообщение с описанием ошибки. Этот текст может отображаться в пользовательском интерфейсе приложения.|  
   
-## <a name="see-also"></a>См. также:  
- [Введение в обработку исключений в службах Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
+## <a name="see-also"></a>См. также  
+ [Введение в обработку исключений в Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
  [Таблица ошибок SoapException](soapexception-errors-table.md)  
   
   

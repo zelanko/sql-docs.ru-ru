@@ -23,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211016"
 ---
 # <a name="sqlservr-application"></a>Приложение sqlservr
-  Приложение **sqlservr** запускает, останавливает, приостанавливает и возобновляет работу экземпляра [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] из командной строки.  
+  Приложение **sqlservr** запускает, останавливает, приостанавливает и возобновляет работу экземпляра [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] операциями из командной строки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -61,13 +61,13 @@ ms.locfileid: "68211016"
  Запускает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с минимальной конфигурацией. Эта функция полезна в случае, если установленные значения конфигурации (например, слишком большой объем выделяемой памяти) не позволяют выполнить запуск сервера.  
   
  **-e** _error_log_path_  
- Указывает полный путь к файлу журнала ошибок. Если значение не указано, то расположением по умолчанию является * \<диск>*: \Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog для экземпляра по умолчанию и * \<диска>*: \Program Files\Microsoft SQL Server\MSSQL $*instance_name*\log\errorlog — для именованного экземпляра. Между параметрами **-e** и *error_log_path* нет пробелов.  
+ Указывает полный путь к файлу журнала ошибок. Если значение не указано, то расположением по умолчанию является * \<диск>*: \Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog для экземпляра по умолчанию и * \<диска>*: \Program Files\Microsoft SQL Server\MSSQL $*instance_name*\log\errorlog — для именованного экземпляра. Между параметрами **-e** и *error_log_path*нет пробелов.  
   
  **-l** _master_log_path_  
  Указывает полный путь к файлу журнала транзакций базы данных **master** . Между параметрами **-l** и *master_log_path*нет пробелов.  
   
  **-m**  
- Указывается для запуска экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в однопользовательском режиме. Если [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запущен в однопользовательском режиме, к нему может подключиться только один пользователь. Механизм CHECKPOINT, гарантирующий, что завершенные транзакции регулярно записываются из дискового кэша в устройство хранения базы данных, не запускается. (Как правило, этот параметр используется при появлении проблем с системными базами данных, требующими исправления.) Включает параметр **sp_configure allow updates** . По умолчанию параметр **Разрешить обновления** отключен.  
+ Указывается для запуска экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в однопользовательском режиме. Если [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запущен в однопользовательском режиме, к нему может подключиться только один пользователь. Механизм CHECKPOINT, гарантирующий, что завершенные транзакции регулярно записываются из дискового кэша в устройство хранения базы данных, не запускается. (Как правило, этот параметр используется при появлении проблем с системными базами данных, требующими исправления.) Включает параметр **sp_configure allow updates** . По умолчанию параметр **allow updates** отключен.  
   
  **-n**  
  Позволяет запустить именованный экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Если не указать параметр **-s** , будет выполнена попытка запуска экземпляра по умолчанию. Перед запуском программы **sqlservr.exe**в командной строке необходимо перейти в каталог BINN соответствующего экземпляра. Например, если экземпляр Instance1 должен использовать \mssql$Instance1 для своих двоичных файлов, для запуска **sqlservr.exe -s instance1**пользователь должен быть в каталоге \mssql$Instance1\binn. Если экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запускается с параметром **-n** , целесообразно также использовать параметр **-e** , иначе события [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не будут регистрироваться.  
@@ -76,7 +76,7 @@ ms.locfileid: "68211016"
  Указывает, что экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] фактически должен запускаться с установленным флагом трассировки (*trace#*). Флаги трассировки используются для запуска сервера в нестандартном режиме. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
 > [!IMPORTANT]  
->  При указании флага трассировки укажите **-T**, чтобы передать номер флага трассировки. Знак t в нижнем регистре (**-t**) также принимается [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Однако в этом случае **-t** установит другие внутренние флаги трассировки, необходимые специалистам службы поддержки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+>  При указании флага трассировки укажите **-T** , чтобы передать номер флага трассировки. Знак t в нижнем регистре (**-t**) также принимается [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Однако в этом случае **-t** установит другие внутренние флаги трассировки, необходимые специалистам службы поддержки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **-v**  
  Отображает номер версии сервера.  
@@ -100,12 +100,12 @@ ms.locfileid: "68211016"
  Использование значения меньше, чем значение по умолчанию, увеличивает объем памяти, доступной для буферного пула и стеков потоков. Это может обеспечить некоторое повышение производительности при рабочих нагрузках, интенсивно использующих память в системах, использующих небольшое количество расширенных хранимых процедур, распределенных запросов или объектов автоматизации.  
   
 ## <a name="remarks"></a>Remarks  
- В большинстве случаев программа sqlserver.exe используется только для устранения неполадок или в ходе масштабных операций обслуживания. Если [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запущен из командной строки с помощью программы sqlservr.exe, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запускается не в качестве службы, поэтому остановить [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью команды **net** невозможно. Пользователи могут подключаться к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], однако средства [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] отображают состояние службы, поэтому диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] правильно показывает, что служба остановлена. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]может подключиться к серверу, но также указывает на то, что служба остановлена.  
+ В большинстве случаев программа sqlserver.exe используется только для устранения неполадок или в ходе масштабных операций обслуживания. Если [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запущен из командной строки с помощью программы sqlservr.exe, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запускается не в качестве службы, поэтому остановить [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью команды **net** невозможно. Пользователи могут подключаться к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], однако средства [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] отображают состояние службы, поэтому диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] правильно показывает, что служба остановлена. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] может подключаться к серверу, но также укажет, что служба остановлена.  
   
 ## <a name="compatibility-support"></a>Поддержка совместимости  
  Параметр **-h**  не поддерживается в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Этот параметр использовался в более ранних версиях 32-битных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для резервирования виртуального адресного пространства для метаданных памяти с «горячей» заменой при включенных расширениях AWE. Дополнительные сведения см. в разделе [Discontinued SQL Server Features in SQL Server 2014](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Параметры запуска службы Database Engine](../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   

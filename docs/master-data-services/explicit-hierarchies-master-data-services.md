@@ -15,10 +15,10 @@ ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: b80665b6a3b3167b362be7912c70f81ce2add2ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729254"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Явные иерархии (службы основных данных)
@@ -87,15 +87,15 @@ ms.locfileid: "73729254"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание новой явной иерархии.|[Создание явной иерархии &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|Изменение имени существующей явной иерархии.|[Измените имя явной иерархии &#40;Master Data Services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
-|Удаление существующей явной иерархии.|[Удаление Master Data Services явной иерархии &#40;&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
+|Создание новой явной иерархии.|[Создание явной иерархии (службы Master Data Services)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|Изменение имени существующей явной иерархии.|[Изменение имени явной иерархии (службы Master Data Services)](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
+|Удаление существующей явной иерархии.|[Удаление явной иерархии (службы Master Data Services)](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>См. также  
   
--   [Производные иерархии &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+-   [Производные иерархии (службы Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [&#40;коллекций Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
+-   [Коллекции (службы Master Data Services)](../master-data-services/collections-master-data-services.md)  
   
   

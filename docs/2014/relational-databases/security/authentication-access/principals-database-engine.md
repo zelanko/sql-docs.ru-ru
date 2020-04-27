@@ -29,14 +29,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011915"
 ---
 # <a name="principals-database-engine"></a>Субъекты (компонент Database Engine)
-  *Субъекты* — это сущности, которые [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут запрашивать ресурсы. Как и другие компоненты модели авторизации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участников можно иерархически упорядочить. Область влияния субъекта зависит от его области определения (Windows, сервер, база данных) и того, неделимый это субъект или коллективный. Имя входа Windows является примером индивидуального (неделимого) субъекта, а группа Windows — коллективного. Каждый субъект имеет идентификатор безопасности (SID).  
+  *Субъекты* — это сущности, которые могут запрашивать ресурсы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Как и другие компоненты модели авторизации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участников можно иерархически упорядочить. Область влияния субъекта зависит от его области определения (Windows, сервер, база данных) и того, неделимый это субъект или коллективный. Имя входа Windows является примером индивидуального (неделимого) субъекта, а группа Windows — коллективного. Каждый субъект имеет идентификатор безопасности (SID).  
   
  **Субъекты уровня Windows**  
   
@@ -44,9 +44,9 @@ ms.locfileid: "63011915"
   
 -   Локальное имя входа Windows  
   
- ****-**** **Субъекты** уровня SQL Server  
+ **SQL Server**-**level** **Субъекты** уровня SQL Server  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Пользователей  
+-   Имя входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 -   Роль сервера  
   
@@ -70,26 +70,19 @@ ms.locfileid: "63011915"
 ## <a name="certificate-based-sql-server-logins"></a>Имена входа SQL Server на основе сертификата  
  Субъекты уровня сервера, имеющие имена, заключенные в хэш-символы (##), — только для внутреннего системного пользования. Следующие участники создаются из сертификатов при установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и не должны удаляться.  
   
--   
-  \##MS_SQLResourceSigningCertificate##  
+-   \##MS_SQLResourceSigningCertificate##  
   
--   
-  \##MS_SQLReplicationSigningCertificate##  
+-   \##MS_SQLReplicationSigningCertificate##  
   
--   
-  \##MS_SQLAuthenticatorCertificate##  
+-   \##MS_SQLAuthenticatorCertificate##  
   
--   
-  \##MS_AgentSigningCertificate##  
+-   \##MS_AgentSigningCertificate##  
   
--   
-  \##MS_PolicyEventProcessingLogin##  
+-   \##MS_PolicyEventProcessingLogin##  
   
--   
-  \##MS_PolicySigningCertificate##  
+-   \##MS_PolicySigningCertificate##  
   
--   
-  \##MS_PolicyTsqlExecutionLogin##  
+-   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>Пользователь-гость  
  Каждая база данных включает в себя пользователя **guest**. Разрешения, предоставленные пользователю **guest** , наследуются пользователями, которые имеют доступ к базе данных, но не обладают учетной записью пользователя в ней. **Гостевой** пользователь нельзя удалить, но его можно отключить, отменив его `CONNECT` разрешение. `CONNECT` Разрешение можно отозвать, выполнив `REVOKE CONNECT FROM GUEST` в любой базе данных, отличной от Master или tempdb.  
@@ -100,7 +93,7 @@ ms.locfileid: "63011915"
 ## <a name="related-tasks"></a>Связанные задачи  
  Данный раздел электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] содержит следующие подразделы.  
   
--   [Разделы руководства по управлению именами для входа, пользователями и схемами](managing-logins-users-and-schemas-how-to-topics.md)  
+-   [Инструкции по управлению именами входа, пользователями и схемами](managing-logins-users-and-schemas-how-to-topics.md)  
   
 -   [Роли уровня сервера](server-level-roles.md)  
   
@@ -108,8 +101,8 @@ ms.locfileid: "63011915"
   
 -   [Роли приложения](application-roles.md)  
   
-## <a name="see-also"></a>См. также:  
- [Защита SQL Server](../securing-sql-server.md)   
+## <a name="see-also"></a>См. также  
+ [Обеспечение безопасности SQL Server](../securing-sql-server.md)   
  [sys. database_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql)   
  [sys. server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)   
  [sys. sql_logins &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql)   

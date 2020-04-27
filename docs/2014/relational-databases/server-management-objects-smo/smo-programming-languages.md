@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: feca89ac2ac888c2fa9f082595e761e898dea971
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211920"
 ---
 # <a name="programming-languages"></a>Языки программирования
   В этом разделе описано, как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] программировать управляющие объекты (SMO [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) в Visual Basic [!INCLUDE[msCoName](../../includes/msconame-md.md)] .net, Visual C# .NET [!INCLUDE[msCoName](../../includes/msconame-md.md)] и Visual C++.  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Приступая к работе с Visual Basic .NET](../../database-engine/dev-guide/getting-started-in-visual-basic-net.md)|Содержит сведения о том, как начать программирование объекта SMO на языке Visual Basic .NET.|  
 |[Начало работы в Visual C&#35; .NET](smo-programming-getting-started-in-visual-csharp-net.md)|Содержит сведения о том, как начать программирование объекта SMO на языке Visual C# .NET.|  

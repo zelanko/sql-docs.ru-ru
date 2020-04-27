@@ -16,10 +16,10 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2190e31245cde19eca4c5a47f21ac48e12f57f53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771391"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
@@ -53,12 +53,12 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @security_mode = ] security_mode`Реализованный режим безопасности. Этот параметр используется только агентами репликации для соединения с издателем подписок, обновляемых посредством очередей, или с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателем, отличным от. *security_mode* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**0**|Агенты репликации на распространителе используют для подключения к издателю проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1** (по умолчанию)|Агенты репликации на распространителе используют для подключения к издателю проверку подлинности Windows.|  
   
-`[ @login = ] 'login'`Имя входа. Этот параметр является обязательным, если *security_mode* равен **0**. Аргумент *Login* имеет тип **sysname**и значение по умолчанию NULL. Он используется агентами репликации для подключения к издателю.  
+`[ @login = ] 'login'`Имя входа. Этот параметр является обязательным, если *security_mode* равен **0**. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. Он используется агентами репликации для подключения к издателю.  
   
 `[ @password = ] 'password']`Пароль. Аргумент *Password* имеет тип **sysname**и значение по умолчанию NULL. Он используется агентами репликации для подключения к издателю.  
   
@@ -79,14 +79,14 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @thirdparty_flag = ] thirdparty_flag`Имеет значение, когда издатель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]имеет значение. *thirdparty_flag* имеет **бит**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
-|**0** (по умолчанию)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]СУБД.|  
+|**0** (по умолчанию)|База данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1**|База данных, отличная от базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 `[ @publisher_type = ] 'publisher_type'`Указывает тип издателя, если не [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]является издателем. Аргумент *publisher_type* имеет тип sysname и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> (по умолчанию).|Используется издатель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**СУБД**|Задает стандартного издателя Oracle.|  
@@ -95,7 +95,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  Дополнительные сведения о различиях между издателем Oracle и издателем шлюза Oracle см. в разделе [Настройка издателя Oracle](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  **sp_adddistpublisher** используется репликацией моментальных снимков, репликацией транзакций и репликацией слиянием.  
@@ -106,7 +106,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_adddistpublisher**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e9e19d6d6453acedff16e46dbd2d90d92a3b9587
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211823"
 ---
 # <a name="modify-primary-keys"></a>Изменение первичных ключей
@@ -35,14 +35,14 @@ ms.locfileid: "68211823"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требуется разрешение ALTER на таблицу.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-modify-a-primary-key"></a>Изменение первичного ключа  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68211823"
   
 4.  В меню **Файл** выберите пункт **Сохранить**_table name_.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Изменение первичного ключа**  
   
  Чтобы изменить ограничение PRIMARY KEY с использованием Transact-SQL, необходимо сначала удалить существующее ограничение PRIMARY KEY, а затем создать новое с другим определением. Дополнительные сведения см. в разделах [Delete Primary Keys](delete-primary-keys.md) и [Create Primary Keys](create-primary-keys.md).  

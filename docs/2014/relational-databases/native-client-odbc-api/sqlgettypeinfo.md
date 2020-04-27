@@ -15,17 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60c4c4d364f9c07e9ca241dd357535f7f7acb42d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046702"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
   Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента сообщает дополнительный столбец USERTYPE в результирующем наборе `SQLGetTypeInfo`. USERTYPE возвращает определение типа данных DB-Library. Этот столбец полезен разработчикам, которые переносят существующие приложения DB-Library в ODBC.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рассматривает идентификатор как атрибут, а в ODBC он считается типом данных. Чтобы устранить это несоответствие `SQLGetTypeInfo` , возвращает типы данных: **интидентити**, **смаллинтидентити**, **тининтидентити**, **деЦималидентити**и **нумериЦидентити**. Столбец `SQLGetTypeInfo` результирующего набора AUTO_UNIQUE_VALUE сообщает значение true для этих типов данных.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рассматривает идентификатор как атрибут, а в ODBC он считается типом данных. Чтобы устранить это несоответствие `SQLGetTypeInfo` , возвращает типы данных: **интидентити**, **смаллинтидентити**, **тининтидентити**, **деЦималидентити**и **нумериЦидентити**. Столбец `SQLGetTypeInfo` результирующего набора AUTO_UNIQUE_VALUE сообщает значение true для этих типов данных.  
   
  Для типа **varchar**, **nvarchar** и **varbinary**драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента по-своемуу отчету 8000, 4000 и 8000 соответственно для COLUMN_SIZE значения, хотя на самом деле он не ограничен. Это делается в целях обратной совместимости.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "63046702"
 ## <a name="sqlgettypeinfo-support-for-large-clr-udts"></a>Поддержка SQLGetTypeInfo для больших определяемых пользователем типов данных среды CLR  
  Функция `SQLGetTypeInfo` поддерживает определяемые пользователем типы больших данных CLR. Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функция SQLGetTypeInfo](https://go.microsoft.com/fwlink/?LinkId=59356)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

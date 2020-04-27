@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211809"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Указание вычисляемых столбцов в таблице
@@ -36,22 +36,22 @@ ms.locfileid: "68211809"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Limitations"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Limitations"></a> Ограничения  
   
 -   Вычисляемый столбец нельзя использовать ни в качестве определения ограничения DEFAULT или FOREIGN KEY, ни вместе с определением ограничения NOT NULL. Однако если вычисляемый столбец определен детерминированным выражением и тип данных результата допускается для индексных столбцов, то вычисляемый столбец может быть использован как ключевой столбец в индексе или как часть ограничений PRIMARY KEY или UNIQUE. Например, если таблица содержит столбцы a и b со значениями целого типа, то вычисляемый столбец a + b может быть индексирован, но вычисляемый столбец a+DATEPART(dd, GETDATE()) не может быть индексирован, так как значение может меняться при каждом следующем вычислении.  
   
 -   Вычисляемый столбец не может быть целевым столбцом инструкций INSERT или UPDATE.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требуется разрешение ALTER на таблицу.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-###  <a name="NewColumn"></a> Добавление нового вычисляемого столбца  
+###  <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> Добавление нового вычисляемого столбца  
   
 1.  В **обозревателе объектов**разверните таблицу, в которую нужно добавить новый вычисляемый столбец. Щелкните правой кнопкой мыши **Столбцы** и выберите **Создать столбец**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68211809"
   
 5.  Выберите **Да** или **Нет** в раскрывающемся списке для дочернего свойства **Материализованный** , чтобы указать, следует ли сохранять данные.  
   
-6.  В меню **Файл** выберите пункт **Сохранить**_table name_.  
+6.  В меню **Файл** выберите команду **Сохранить**_имя_таблицы_.  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>Добавление определения вычисляемого столбца к существующему столбцу  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68211809"
   
 3.  Добавьте новый столбец и укажите формулу вычисляемого столбца в соответствии с предыдущей процедурой, чтобы добавить новый вычисляемый столбец.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-add-a-computed-column-when-creating-a-table"></a>Добавление вычисляемого столбца при создании таблицы  
   
@@ -133,6 +133,6 @@ ms.locfileid: "68211809"
   
     ```  
   
-     Дополнительные сведения см. в разделе [ALTER table &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
+     Дополнительные сведения см. в разделе [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql).  
   
 ###  <a name="TsqlExample"></a>  
