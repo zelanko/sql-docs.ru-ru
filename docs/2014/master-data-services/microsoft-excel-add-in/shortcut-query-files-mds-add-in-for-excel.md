@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 11e875d5b171194c3ac8ba4ad33fad51cacacffe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482658"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>Файлы ярлыков запросов (надстройка MDS для Excel)
@@ -45,15 +45,15 @@ ms.locfileid: "65482658"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Сохранение содержимого активного листа в виде файла ярлыка запроса.|[Сохранение файла ярлыка запроса &#40;надстройка MDS для Excel&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
-|Отправка файла ярлыка запроса, который представляет содержимое активного листа.|[Отправка надстройка MDS для Excel &#40;файла ярлыка запроса&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|Сохранение содержимого активного листа в виде файла ярлыка запроса.|[Сохранение файла ярлыка запроса (надстройка MDS для Excel)](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|Отправка файла ярлыка запроса, который представляет содержимое активного листа.|[Отправка файла ярлыка запроса по электронной почте (надстройка MDS для Excel)](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Подключения &#40;надстройка MDS для Excel&#41;](connections-mds-add-in-for-excel.md)  
+-   [Соединения (надстройка MDS для Excel)](connections-mds-add-in-for-excel.md)  
   
 -   [Надстройка Master Data Services для Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
--   [Master Data Services &#40;безопасности&#41;](../security-master-data-services.md)  
+-   [Безопасность (службы Master Data Services)](../security-master-data-services.md)  
   
   

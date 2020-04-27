@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c8777250946ad689c324314ecbbdff7bf9dcc9b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482904"
 ---
 # <a name="master-data-manager-web-application"></a>Веб-приложение диспетчера основных данных
@@ -22,14 +22,14 @@ ms.locfileid: "65482904"
   
  Функциональная область «Обозреватель» веб-приложения является единственной областью, которую не используют администраторы. «Обозреватель» предназначен для тех, кто обновляет основные данные на регулярной основе. Эти пользователи имеют разрешение на данные, необходимые для выполнения своей работы.  
   
- [Функциональная область обозревателя &#40;диспетчер основных данных&#41;](../../2014/master-data-services/explorer-functional-area-master-data-manager.md)  
+ [Функциональная область обозревателя (диспетчер основных данных)](../../2014/master-data-services/explorer-functional-area-master-data-manager.md)  
   
- [Диспетчер основных данных &#40;функциональной области управления версиями&#41;](../../2014/master-data-services/version-management-functional-area-master-data-manager.md)  
+ [Функциональная область управления версиями (диспетчер основных данных)](../../2014/master-data-services/version-management-functional-area-master-data-manager.md)  
   
- [Диспетчер основных данных &#40;функциональной области управления интеграцией&#41;](../../2014/master-data-services/integration-management-functional-area-master-data-manager.md)  
+ [Функциональная область управления интеграцией (диспетчер основных данных)](../../2014/master-data-services/integration-management-functional-area-master-data-manager.md)  
   
- [Диспетчер основных данных &#40;функциональной области системного администрирования&#41;](../../2014/master-data-services/system-administration-functional-area-master-data-manager.md)  
+ [Функциональная область системного администрирования (диспетчер основных данных)](../../2014/master-data-services/system-administration-functional-area-master-data-manager.md)  
   
- [&#40;диспетчер основных данных функциональной области разрешений пользователей и групп&#41;](../../2014/master-data-services/user-and-group-permissions-functional-area-master-data-manager.md)  
+ [Функциональная область разрешений пользователей и групп (диспетчер основных данных)](../../2014/master-data-services/user-and-group-permissions-functional-area-master-data-manager.md)  
   
   

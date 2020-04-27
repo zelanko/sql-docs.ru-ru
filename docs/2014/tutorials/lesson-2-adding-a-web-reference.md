@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316011"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>Урок 2. Добавление веб-ссылки
@@ -44,13 +44,13 @@ ms.locfileid: "63316011"
   
      В среде [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] будет загружено описание службы и создан класс-посредник для взаимодействия приложения с веб-службой сервера отчетов. Также для обеспечения работоспособности веб-ссылки необходимо добавить ссылку на пространство имен <xref:System.Web.Services>.  
   
-7.  В меню Проект выберите пункт **Добавить ссылку**.  
+7.  В меню «Проект» выберите пункт **Добавить ссылку**.  
   
 8.  В диалоговом окне **Добавить ссылку** на вкладке **.NET** выберите **System.Web.Services**и нажмите кнопку **ОК**.  
   
  Дополнительные сведения см. в разделе [Доступ к API-интерфейсу SOAP](../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Веб-служба сервера отчетов](../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Занятие 3. доступ к веб-службе](../../2014/tutorials/lesson-3-accessing-the-web-service.md)   
  [Доступ к веб-службе сервера отчетов с помощью Visual Basic или учебника по Visual C&#35; &#40;SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  

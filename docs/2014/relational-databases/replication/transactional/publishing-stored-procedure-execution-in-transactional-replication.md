@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63272814"
 ---
-# <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publishing Stored Procedure Execution in Transactional Replication
+# <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Публикация выполнения хранимых процедур в репликации транзакций
   Если существует одна или несколько хранимых процедур, выполняемых на издателе и влияющих на опубликованные таблицы, рассмотрите возможность включения в публикацию этих хранимых процедур в виде статей выполнения хранимых процедур. Определение процедуры (инструкция CREATE PROCEDURE) реплицируется на подписчик при инициализации подписки. Когда процедура выполняется на издателе, репликация выполняет соответствующую процедуру на подписчике. Это может обеспечить значительное повышение производительности в случаях, когда выполняются крупные пакетные операции, поскольку реплицируется только выполнение процедуры и исключается необходимость репликации отдельных изменений для каждой строки. Например, предположим, что создана следующая хранимая процедура в базе данных публикации:  
   
 ```  
@@ -93,7 +93,7 @@ COMMIT TRANSACTION T2
   
  Если требуется использование настройки XACT_ABORT OFF, укажите для агента распространителя параметр **-SkipErrors** . Это позволит агенту продолжить применение изменений на подписчике, даже если возникнет ошибка.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Article Options for Transactional Replication](article-options-for-transactional-replication.md)  
   
   

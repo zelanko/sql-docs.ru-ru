@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 525e0286d8d82f501981c9e936caca581886b9b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481229"
 ---
-# <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Задача 10. Настройка составного домена для использования службы ссылочных данных
+# <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Задача 10. Настройка составного домена для использования службы эталонных данных
   В этой задаче вы настраиваете составной домен **проверки адресов** для использования службы **проверки адресов Melissa Data-Address** . Во время выполнения при проведении очистки данных службы DQS передают значения доменов в домен проверки адреса, чтобы служба выполнила очистку данных. Дополнительные сведения см. [в статье преобразование домена или составного домена в справочные данные](https://msdn.microsoft.com/library/hh213030.aspx) .  
   
 1.  На главной странице **клиента DQS**в разделе **последние базы знаний** щелкните **поставщики (Управление доменами)** , чтобы открыть страницу **Управление доменами** .  
@@ -48,7 +48,7 @@ ms.locfileid: "65481229"
   
 9. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.  
   
-## <a name="next-step"></a>Дальнейшее действие  
- [Задача 11. Публикация базы знаний](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  
+## <a name="next-step"></a>Следующий шаг  
+ [Задача 11. Публикация базы знаний](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  
   
   

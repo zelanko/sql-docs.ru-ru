@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264891"
 ---
 # <a name="custom-report-item-class-libraries"></a>Библиотеки классов пользовательского элемента отчета
@@ -46,8 +46,7 @@ ms.locfileid: "63264891"
 |`AltReportItem`|Альтернативный объект — элемент отчета, который будет использоваться там, где не поддерживается элемент управления времени выполнения для пользовательского элемента отчета.|  
 |`Style`|Свойства стиля для пользовательского элемента отчета.|  
 |`Adornment`|Окно дополнения, используемое для интерактивного редактирования элемента управления.|  
-|`Site`|
-  `ISite` компонента.|  
+|`Site`|`ISite` компонента.|  
 |`DesignerVerbCollection`|Набор пользовательских команд, доступных через контекстное меню элемента управления.|  
   
 #### <a name="public-methods"></a>Открытые методы  
@@ -131,7 +130,7 @@ ms.locfileid: "63264891"
 |`DataSetName`|Имя набора данных, содержащего поля, которые предназначены для перетаскивания.|  
 |`Fields`|Коллекция полей (`Microsoft.ReportDesigner.Field`), которые предназначены для перетаскивания.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Язык определения отчетов &#40;службы SSRS&#41;](../reports/report-definition-language-ssrs.md)   
  [Создание компонента времени выполнения пользовательского элемента отчета](creating-a-custom-report-item-run-time-component.md)   
  [Создание компонента времени разработки пользовательского элемента отчета](creating-a-custom-report-item-design-time-component.md)  

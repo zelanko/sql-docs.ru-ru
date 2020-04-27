@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7d14023208ddb9cac2eb5c2f3c3c2770f2363dc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478947"
 ---
 # <a name="reorder-columns-mds-add-in-for-excel"></a>Переупорядочение порядка столбцов (надстройка MDS для Excel)
@@ -22,7 +22,7 @@ ms.locfileid: "65478947"
   
  При переупорядочивании атрибутов в диалоговом окне **Фильтр** данные загружаются в Excel в новом порядке. Однако при следующей фильтрации данных атрибутов будет использоваться порядок, заданный первоначально. Чтобы изменить порядок окончательно, администратор должен сделать это в области **Администрирование системы** диспетчера основных данных. Дополнительные сведения см. в статье [Change the Order of Attributes](../change-the-order-of-attributes.md).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
@@ -49,7 +49,7 @@ ms.locfileid: "65478947"
   
 8.  Нажмите кнопку **Загрузить данные**. Лист заполняется данными, управляемыми MDS, а столбцы отображаются в указанном вами порядке.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Загрузка надстройка MDS для Excel &#40;данных&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
   

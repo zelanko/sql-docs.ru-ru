@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a053eb55547da9030eebe9036667cca2e14606f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264963"
 ---
 # <a name="custom-report-item-architecture"></a>Архитектура пользовательских элементов отчета
@@ -32,9 +32,9 @@ ms.locfileid: "63264963"
   
  ![Пользовательский элемент отчета (компонент времени разработки)](../../../2014/reporting-services/media/customreportitemdesign-timecomponentarchitecture.gif "Пользовательский элемент отчета (компонент времени разработки)")  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание компонента времени выполнения пользовательского элемента отчета](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Создание компонента времени разработки пользовательского элемента отчета](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [Развертывание пользовательского элемента отчета](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Руководство. развернуть пользовательский элемент отчета](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: 7c7745d69e234f81c2a331d214789e93e9fd4014
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "64568264"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Настройка таблицы стилей для средства просмотра HTML-страниц и диспетчера отчетов
@@ -29,7 +29,7 @@ ms.locfileid: "64568264"
 ## <a name="reporting-services-style-sheets"></a>Таблицы стилей служб Reporting Services  
  В следующей таблице описываются файлы таблиц стилей (CSS), которые используются экземпляром служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-|Таблица стилей|Description|  
+|Таблица стилей|Описание|  
 |-----------------|-----------------|  
 |Htmlviewer.css|Образец таблицы стилей, который можно использовать в качестве шаблона для создания собственных таблиц стилей для панели инструментов **Отчет** в средстве просмотра HTML-страниц.<br /><br /> Стили по умолчанию, используемые в средстве просмотра HTML-страниц, внедрены в сервер отчетов. Их образец и содержится в файле Htmlviewer.css.|  
 |ReportingServices.css|Определяет стили диспетчера отчетов.|  
@@ -65,7 +65,7 @@ ms.locfileid: "64568264"
 http://localhost/reportserver?/AdventureWorksSampleReports/Product+Line+Sales&rs:Command=Render&rc:Stylesheet=MyStyleSheet  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Средство просмотра HTML-страниц и панель инструментов отчета](html-viewer-and-the-report-toolbar.md)   
  [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)  

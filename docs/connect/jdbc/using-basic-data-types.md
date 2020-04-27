@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1ab207deaa0632e2e4026aa4950c720ba6b22d75
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 97c0d4b269bfda9a9c01bf8b08f93e2b2f5f83d5
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625567"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728375"
 ---
 # <a name="using-basic-data-types"></a>Использование базовых типов данных
 
@@ -101,20 +101,20 @@ ms.locfileid: "81625567"
 
 Если вам нужно обновить данные в источнике с помощью параметризированного запроса, вы можете задать тип данных для параметров одним из методов set\<Тип> класса [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md), также известных как *методы задания*. В следующем примере метод [prepareStatement](reference/preparestatement-method-sqlserverconnection.md) используется для предварительной компиляции параметризированного запроса, затем метод [setString](reference/setstring-method-sqlserverpreparedstatement.md) задает строковое значение параметра, после чего вызывается метод [executeUpdate](reference/executeupdate-method.md).  
   
-[!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
+[!code[JDBC#UsingBasicDataTypes4](codesnippet/Java/using-basic-data-types_4.java)]  
   
-Дополнительные сведения о параметризованных запросах см. в [этой статье](../../connect/jdbc/using-an-sql-statement-with-parameters.md).  
+Дополнительные сведения о параметризованных запросах см. в [этой статье](using-an-sql-statement-with-parameters.md).  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>Передача параметров хранимой процедуре
 
 Если вам нужно передать параметры типа хранимой процедуре, вы можете задать параметры по имени или индексу с помощью методов set\<Тип> класса [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). В следующем примере метод [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) используется для вызова хранимой процедуры, затем с помощью метода [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) задается параметр для вызова, после чего вызывается метод [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md).  
   
-[!code[JDBC#UsingBasicDataTypes5](../../connect/jdbc/codesnippet/Java/using-basic-data-types_5.java)]  
+[!code[JDBC#UsingBasicDataTypes5](codesnippet/Java/using-basic-data-types_5.java)]  
   
 > [!NOTE]  
 > В данном примере возвращается результирующий набор с результатами запуска хранимой процедуры.
 
-Дополнительные сведения об использовании драйвера JDBC с хранимыми процедурами и входными параметрами см. в [этой статье](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
+Дополнительные сведения об использовании драйвера JDBC с хранимыми процедурами и входными параметрами см. в [этой статье](using-a-stored-procedure-with-input-parameters.md).  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>Извлечение параметров из хранимой процедуры
 

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0378394c274e66d71eebd642188f20194d29236b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480004"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Создание пакета развертывания модели при помощи MDSModelDeploy
@@ -27,7 +27,7 @@ ms.locfileid: "65480004"
  Если необходимо развернуть пакет, содержащий только объекты модели, можно воспользоваться мастером развертывания моделей в веб-приложении [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Дополнительные сведения см. в разделе [Создание пакета развертывания модели с помощью мастера](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
 > [!NOTE]  
 > Эта версия средства MDSModelDeploy не может использовать больше гигабайт (ГБ) памяти. При создании или развертывании больших моделей с помощью **объектов модели и параметров данных** может возникнуть ошибка "недостаточно памяти" или "поток слишком длинный". Чтобы устранить эту проблему, используйте промежуточное развертывание MDS для развертывания данных. или обновите до версии MDS 2016 или более поздней, которая включает обновленную версию средства MDSModelDeploy.
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
 1.  Для запуска средства MDSModelDeploy требуются следующие основные разрешения.  
@@ -58,11 +58,11 @@ ms.locfileid: "65480004"
   
  Для создания пакета модели модель должна существовать. Дополнительные сведения см. в разделе [Создание модели (службы Master Data Services)](create-a-model-master-data-services.md).  
   
- Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../../2014/master-data-services/administrators-master-data-services.md).  
+ Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Создание пакета развертывания модели с помощью MDSModelDeploy  
   
-1.  Откройте окно командной строки.  
+1.  Откройте командную строку.  
   
 2.  Перейдите к расположению файла MDSModelDeploy.exe.  
   
@@ -94,12 +94,12 @@ ms.locfileid: "65480004"
   
 6.  Нажмите клавишу ВВОД. После успешного создания пакета отображается сообщение "Операция MDSModelDeploy успешно завершена".  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
   
 -   [Развертывание пакета развертывания модели при помощи MDSModelDeploy](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Параметры развертывания модели &#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
- [Развертывание моделей &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+ [Развертывание моделей (службы Master Data Services)](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

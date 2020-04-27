@@ -18,10 +18,10 @@ ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 21fe2a05c87caf5270967381e9ebeefc1069729f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "70810395"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
@@ -60,12 +60,12 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_type = ] freq_type`Значение, указывающее, когда должно выполняться задание. *freq_type* имеет **тип int**, значение по умолчанию **0**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
 |**4**|Ежедневно|  
-|**8**|Еженедельно|  
-|**глубин**|Ежемесячная|  
+|**8**|Weekly (Еженедельно);|  
+|**16**|Ежемесячно|  
 |**32**|Ежемесячно относительно *freq_interval*|  
 |**64**|Запускать при запуске службы агента SQL|  
 |**128**|Запуск при простое компьютера (не поддерживается в [управляемый экземпляр базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
@@ -84,7 +84,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_subday_type = ] freq_subday_type`Указывает единицы для *freq_subday_interval*. *freq_subday_type* имеет **тип int**, значение по умолчанию **0**и может принимать одно из следующих значений.  
   
-|Значение|Описание (единица измерения)|  
+|Применение|Описание (единица измерения)|  
 |-----------|--------------------------|  
 |**0x1**|В указанное время|  
 |**0x2**|Секунды|  
@@ -95,13 +95,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_relative_interval = ] freq_relative_interval`Вхождение *freq_interval* задания в каждый месяц, если *freq_interval* — 32 (ежемесячное относительное значение). *freq_relative_interval* имеет **тип int**, значение по умолчанию **0**и может принимать одно из следующих значений. *freq_relative_interval* игнорируется в тех случаях, когда *freq_type* не равно 32.  
   
-|Значение|Описание (единица измерения)|  
+|Применение|Описание (единица измерения)|  
 |-----------|--------------------------|  
 |**1**|Первый|  
 |**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
-|**глубин**|Последний|  
+|**16**|Последний|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`Число недель или месяцев между запланированным выполнением задания. *freq_recurrence_factor* используется только в том случае, если *freq_type* имеет значение **8**, **16**или **32**. *freq_recurrence_factor* имеет **тип int**и значение по умолчанию **0**.  
   
@@ -129,14 +129,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- None  
+ Отсутствуют  
   
 ## <a name="remarks"></a>Remarks  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -163,7 +162,7 @@ EXEC dbo.sp_add_schedule
 GO  
 ```  
   
-### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>Б. Создание расписания, присоединение расписания к нескольким заданиям  
+### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>Б) Создание расписания, присоединение расписания к нескольким заданиям  
  В следующем примере создается расписание с именем `NightlyJobs`. Задания, использующие это расписание, выполняются на сервере каждый день в `01:00`. В этом примере расписание подключается к заданиям `BackupDatabase` и `RunReports`.  
   
 > [!NOTE]  
@@ -191,7 +190,7 @@ EXEC sp_attach_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание и присоединение расписаний к заданиям](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
  [Планирование задания](../../ssms/agent/schedule-a-job.md)   
  [Создание расписания](../../ssms/agent/create-a-schedule.md)   
@@ -200,6 +199,6 @@ GO
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
+ [sp_attach_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

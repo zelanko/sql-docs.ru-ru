@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00d51c24583231f28ec15dd86c1848ba95c345d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255392"
 ---
 # <a name="updatable-subscriptions"></a>Обновляемые подписки
-  При репликации транзакций реплицированные данные должны рассматриваться как доступные только для чтения. Однако можно изменить реплицированные данные на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчике с помощью обновляемых подписок. Если нужно изменить данные на подписчике, выберите один из следующих параметров в зависимости от потребностей.  
+  В случае репликации транзакций реплицированные данные следует рассматривать как находящиеся в режиме только для чтения; однако изменить реплицированные данные в подписчике [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно с помощью обновляемых подписок. Если нужно изменить данные на подписчике, выберите один из следующих параметров в зависимости от потребностей.  
   
 |Тип обновляемой подписки|Требования|  
 |---------------------------------|------------------|  
@@ -36,9 +36,9 @@ ms.locfileid: "63255392"
 -   Выберите **Ставить изменения в очередь и фиксировать при первой возможности** для подписки, обновляемой посредством очередей.  
   
 ## <a name="see-also"></a>См. также:  
- [Создание подписки по запросу](create-a-pull-subscription.md)   
- [Создание принудительной подписки](create-a-push-subscription.md)   
- [Подписка на публикации](subscribe-to-publications.md)   
- [Обновляемые подписки для репликации транзакций](transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Create a Push Subscription](create-a-push-subscription.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)   
+ [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

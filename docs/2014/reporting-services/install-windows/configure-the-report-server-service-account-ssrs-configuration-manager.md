@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
 ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261071"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "63261071"
   
 - Автоматически добавляет новую учетную запись к группе сервера отчетов, созданной на локальном компьютере. Эта группа указывается в списках управления доступом (ACL), которые обеспечивают защиту файлов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-- Автоматически обновляет разрешения на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] вход в экземпляр, используемый для размещения базы данных сервера отчетов. Новая учетная запись будет добавлена к роли **RSExecRole**.  
+- Автоматически обновляет разрешения на вход в экземпляр компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], на котором размещена база данных сервера отчетов. Новая учетная запись будет добавлена к роли **RSExecRole**.  
   
      Старое имя входа в базе данных автоматически не удаляется. Не забывайте удалять учетные записи, которые больше не используются. Дополнительные сведения см. в статье [Администрирование базы данных сервера отчетов (службы Reporting Services в собственном режиме)](../report-server/report-server-database-ssrs-native-mode.md) в электронной документации по SQL Server.  
   
@@ -64,9 +64,9 @@ ms.locfileid: "63261071"
   
 - [Учетная запись службы &#40;&#41;служб SSRS в собственном режиме ](../../sql-server/install/service-account-ssrs-native-mode.md).  
   
-- [Настройте учетные записи службы Windows и разрешения](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) в Электронная документация на SQL Server.  
+- [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) в электронной документации по SQL Server.  
   
-- [В этом разделе содержатся инструкции по планированию безопасности служб и учетных записей службы](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
+- [Руководство по планированию безопасности учетных записей и служб](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
   
 ## <a name="updating-an-expired-password"></a>Обновление пароля с истекшим сроком действия
 
@@ -112,11 +112,11 @@ ms.locfileid: "63261071"
   
 9. Дождитесь, когда служба остановится.  
   
-10. Щелкните **Пуск**.  
+10. Нажмите **Запуск**.  
   
 > [!NOTE]  
 > Для настройки служб, например, режима интеграции SharePoint со службами отчетов, продуктам и технологиям SharePoint требуется учетные записи домена.  
   
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Дальнейшие действия
 
  [Настройка учетной записи службы &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [учетная запись службы &#40;служб SSRS в собственном режиме&#41;](../../sql-server/install/service-account-ssrs-native-mode.md) [Настройка url-адресов сервера отчетов &#40;SSRS Configuration Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md) Диспетчер конфигурации служб Reporting Services [&#40;в основном режиме&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)

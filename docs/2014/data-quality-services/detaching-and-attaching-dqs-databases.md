@@ -11,29 +11,29 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aca595e33a831e472f06a349e12920aced6dd71f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480701"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Присоединение и отсоединение баз данных DQS
   В этом разделе описывается, как отсоединять и присоединять базы данных DQS.  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Limitations"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Limitations"></a> Ограничения  
  Список ограничений см. в статье [Присоединение и отсоединение базы данных (SQL Server)](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Убедитесь, что не существует текущих операций или процессов в DQS. Это можно проверить с помощью экрана **Мониторинг активности** . Дополнительные сведения о работе с этим экраном см. в разделе [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
   
 -   Убедитесь, что на сервере [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]нет подключенных пользователей.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
 -   Для отсоединения баз данных DQS учетная запись пользователя Windows должна входить в предопределенную роль сервера db_owner на экземпляре SQL Server.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65480701"
   
 -   Для завершения любых выполняемых операций или остановки каких-либо процессов в службах DQS необходимо быть членом роли dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="Detach"></a>Отсоединение баз данных DQS  
+##  <a name="detach-dqs-databases"></a><a name="Detach"></a>Отсоединение баз данных DQS  
  При отсоединении базы данных DQS с помощью среды SQL Server Management Studio отсоединенные файлы остаются на компьютере, их можно повторно присоединить к этому же экземпляру SQL Server либо они могу быть перемещены на другой сервер и присоединены там. Файлы базы данных DQS обычно доступны в следующем расположении на компьютере со службами Data Quality Services: C:\Program Files\Microsoft SQL Server\MSSQL12. *<Instance_Name>* \MSSQL\DATA.  
   
 1.  Запустите среду Microsoft SQL Server Management Studio и подключитесь к соответствующему экземпляру SQL Server.  
@@ -56,7 +56,7 @@ ms.locfileid: "65480701"
   
  Базы данных DQS также можно отсоединять с использованием инструкций Transact-SQL с помощью хранимой процедуры sp_detach_db. Дополнительные сведения об отсоединении баз данных с помощью инструкций Transact-SQL см. в подразделе [Using Transact-SQL](../relational-databases/databases/detach-a-database.md#TsqlProcedure) раздела [Detach a Database](../relational-databases/databases/detach-a-database.md).  
   
-##  <a name="Attach"></a>Присоединение баз данных DQS  
+##  <a name="attach-dqs-databases"></a><a name="Attach"></a>Присоединение баз данных DQS  
  Используйте следующие указания для присоединения базы данных DQS к тому же экземпляру SQL Server (от которого она была отсоединена) или другому экземпляру SQL Server, на котором установлен [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] .  
   
 1.  Запустите среду Microsoft SQL Server Management Studio и подключитесь к соответствующему экземпляру SQL Server.  
@@ -71,7 +71,7 @@ ms.locfileid: "65480701"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  Панель **Сведения базы данных** (внизу) отображает имя присоединяемых файлов. Чтобы проверить или изменить путь к файлу, нажмите кнопку **Обзор** (...).  
+5.  Панель **Сведения базы данных** (внизу) отображает имя присоединяемых файлов. Чтобы проверить или изменить путь к файлу, нажмите кнопку **обзора** (...).  
   
 6.  Чтобы присоединить базу данных DQS_MAIN, нажмите кнопку **ОК** .  
   
@@ -99,7 +99,7 @@ ms.locfileid: "65480701"
   
  Базы данных DQS также можно присоединять с помощью инструкций Transact-SQL. Дополнительные сведения о присоединении баз данных с помощью инструкций Transact-SQL см. в подразделе [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) раздела [Attach a Database](../relational-databases/databases/attach-a-database.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)  
   
   

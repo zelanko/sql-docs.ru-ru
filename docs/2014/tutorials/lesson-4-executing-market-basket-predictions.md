@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312113"
 ---
-# <a name="lesson-4-executing-market-basket-predictions"></a>Урок 4. Прогнозирование "Потребительской корзины"
+# <a name="lesson-4-executing-market-basket-predictions"></a>Занятие 4: Прогнозирование покупательского поведения
   На этом занятии будет использоваться инструкция DMX `SELECT` для создания прогнозов на основе моделей взаимосвязей, созданных на [занятии 2. Добавление моделей интеллектуального анализа данных в структуру интеллектуального анализа данных для рынка](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Прогнозирующий запрос создается с помощью инструкции расширений интеллектуального анализа данных `SELECT` с добавлением предложения `PREDICTION JOIN`. Дополнительные сведения о синтаксисе прогнозирующего подключения см. в разделе [SELECT FROM &#60;model&#62; PREDICTION join &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
   
  Форма **Выбор из \<модели> прогнозного подключения** `SELECT` инструкции содержит три части:  
@@ -226,7 +226,7 @@ SELECT <select list> FROM [<mining model>]
   
  Сведения об использовании расширений интеллектуального анализа данных в другом прогнозном сценарии см. в руководстве по использованию расширений интеллектуального анализа [данных Bike](../../2014/tutorials/bike-buyer-dmx-tutorial.md)Buyer.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры запросов к модели взаимосвязей](../../2014/analysis-services/data-mining/association-model-query-examples.md)   
  [Интерфейсы запросов интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-query-tools.md)  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: adb1203276e64f21f1834fc0ce0f0b5bb12a9321
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 12abdfd169aaea9f2108d2b4776eb99cc4bd2ce7
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528338"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728392"
 ---
 # <a name="troubleshooting-connectivity"></a>Устранение неполадок с подключением
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "81528338"
 -   При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver требует, чтобы на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] была установлена проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], отличная от проверки по умолчанию. Убедитесь, что этот параметр включен при установке или настройке вашего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также раздел  
- [Диагностика проблем с JDBC Driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
- [Подключение к SQL Server с помощью JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [Диагностика проблем с JDBC Driver](diagnosing-problems-with-the-jdbc-driver.md)   
+ [Подключение к SQL Server с помощью JDBC Driver](connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

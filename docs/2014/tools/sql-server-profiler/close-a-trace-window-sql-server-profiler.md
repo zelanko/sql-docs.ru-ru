@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 19e4ca323ff61f9a5629706e3dcfad7cb7c51688
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316196"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>закрыть окно трассировки (приложение SQL Server Profiler)
@@ -33,7 +33,7 @@ ms.locfileid: "63316196"
 >  Если трассировка в настоящий момент выполняется, при закрытии окна трассировки выполнение соответствующей трассировки будет остановлено.  
   
 ## <a name="see-also"></a>См. также:  
- [Шаблоны и разрешения приложения SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)   
+ [Шаблоны и разрешения SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)   
  [Приложение SQL Server Profiler](sql-server-profiler.md)  
   
   

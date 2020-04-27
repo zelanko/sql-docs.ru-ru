@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8eebb47569a4ccc96437a3e16379c794b83642dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478508"
 ---
 # <a name="transactions-master-data-services"></a>Транзакции (службы Master Data Services)
@@ -56,12 +56,12 @@ ms.locfileid: "65478508"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Отмена действия путем обращения транзакции (только администраторы).|[Отмена Master Data Services &#40;транзакций&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
+|Отмена действия путем обращения транзакции (только администраторы).|[Отмена транзакции (службы Master Data Services)](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Администраторы &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
+-   [Администраторы (службы Master Data Services)](../../2014/master-data-services/administrators-master-data-services.md)  
   
--   [Заметки &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
+-   [Заметки (службы Master Data Services)](../../2014/master-data-services/annotations-master-data-services.md)  
   
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1d1b2e20347cafb4717880de8fd224950f76b036
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480734"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>Экспорт базы знаний в файл .dqs
@@ -24,17 +24,17 @@ ms.locfileid: "65480734"
   
  Файл данных DQS, созданный в процессе экспорта, зашифровывается, его просмотр становится невозможным.  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
  Чтобы экспортировать базу знаний в файл данных DQS, необходимо создать и открыть базу знаний. Файл DQS не требуется, он будет создан в процессе экспорта.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для экспорта базы знаний в файл данных DQS необходимо быть членом роли dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="Export"></a>Экспорт базы знаний в файл DQS  
+##  <a name="export-a-knowledge-base-to-a-dqs-file"></a><a name="Export"></a>Экспорт базы знаний в файл DQS  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "65480734"
   
 5.  В диалоговом окне **Экспортировать базу знаний** убедитесь, что в строке состояния сообщается о завершении экспорта. Нажмите кнопку **ОК**.  
   
-##  <a name="FollowUp"></a>Дальнейшие действия. После экспорта домена в файл DQS  
+##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a>Дальнейшие действия. После экспорта домена в файл DQS  
  После экспорта базы знаний в файл DQS можно импортировать базу знаний на тот же сервер [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] (с новым именем) или на другой сервер [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
   

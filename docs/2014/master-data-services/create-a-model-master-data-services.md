@@ -14,19 +14,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 637d4e648d4d2b5c64d4635af8f96d0f2258b2f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479935"
 ---
 # <a name="create-a-model-master-data-services"></a>Создание модели (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]модель создается для того, чтобы содержать объекты.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
--   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
+-   Необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** .  
   
 ### <a name="to-create-a-model"></a>Создание модели  
   
@@ -46,11 +46,11 @@ ms.locfileid: "65479935"
   
 8.  Нажмите **Сохранить модель**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
   
--   [Создание сущности &#40;Master Data Services&#41;](create-an-entity-master-data-services.md)  
+-   [Создание сущности (службы Master Data Services)](create-an-entity-master-data-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Модели &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   
  [Сущности &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
  [Удаление &#40;модели Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)   

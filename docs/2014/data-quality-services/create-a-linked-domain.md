@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c9d5f86ba0be02ba21529aafc02897195ff4396
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481013"
 ---
 # <a name="create-a-linked-domain"></a>Создание связанного домена
@@ -33,17 +33,17 @@ ms.locfileid: "65481013"
   
  Примером является запись, которая содержит следующие поля: имя клиента, фамилия клиента и отчество. Предположим, вы сопоставили имя и отчество клиента с доменом "Имя" и сделали домен "Имя" и домен "Фамилия" частью составного домена "Полное имя". Проблема заключается в том, что отчество будет добавляться в составной домен без фамилии. Но если связать поля имени и отчества с доменом и связать два домена, то вы можете добавить домен "Имя клиента" в составной домен "Полное имя" и не добавлять поле "Отчество" в составной домен, тем самым предотвратив добавление отчества в составной домен.  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
  Необходимое условие создания связанного домена — наличие базы знаний и домена, с которым нужно установить связь.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для создания связанного домена необходимо быть членом роли dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="Create"></a>Создание связанного домена  
+##  <a name="create-a-linked-domain"></a><a name="Create"></a>Создание связанного домена  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -60,9 +60,9 @@ ms.locfileid: "65481013"
   
 6.  При необходимости вы можете изменить имя или описание связанного домена на вкладке «Свойства домена».  
   
-7.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
+7.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [Завершение операции по управлению доменами](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="Map"></a>Сопоставьте два поля со связанными доменами  
+##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a>Сопоставьте два поля со связанными доменами  
   
 1.  Откройте базу знаний для операции обнаружения знаний и сопоставьте базу знаний с базой данных и таблицей или представлением.  
   
@@ -72,10 +72,10 @@ ms.locfileid: "65481013"
   
 4.  В диалоговом окне «Создание домена» введите имя домена и описание, а затем нажмите кнопку «ОК».  
   
-##  <a name="FollowUp"></a>Дальнейшие действия. После создания связанного домена  
+##  <a name="follow-up-after-creating-a-linked-domain"></a><a name="FollowUp"></a>Дальнейшие действия. После создания связанного домена  
  После создания связанного домена можно выполнить другие задачи управления для этого домена, провести обнаружение знаний с целью добавить набор знаний в домен или добавить в домен политику сопоставления. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../../2014/data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../../2014/data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../../2014/data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Behavior"></a>Поведение связанного домена  
+##  <a name="behavior-of-a-linked-domain"></a><a name="Behavior"></a>Поведение связанного домена  
  Параметры связанного домена вы можете изменить следующим образом.  
   
 -   Вы можете изменить имя и описание связанного домена.  

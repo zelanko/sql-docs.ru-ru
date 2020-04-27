@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffb122b96182b1079c95adf13d26c9a4949f6ddf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478807"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>Публикация данных из Excel в MDS (надстройка MDS для Excel)
@@ -24,14 +24,14 @@ ms.locfileid: "65478807"
 >  -   Комментарии в ячейках, управляемых MDS, при публикации изменений удаляются.  
 > -   Формула не поддерживается в ячейке, управляемой MDS. Формула в управляемой MDS ячейке обрабатывается как текстовое значение.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
   
 -   Активный лист должен содержать данные, управляемые MDS, и в эти данные должны быть внесены изменения или дополнения.  
   
--   Если добавляются новые элементы, то для них не нужно указывать значение **Code** , если формирование кодов сущностей производится автоматически. Дополнительные сведения см. в разделе [Автоматическое создание кодов (службы Master Data Services)](../automatic-code-creation-master-data-services.md).  
+-   Если добавляются новые элементы, то для них не нужно указывать значение **Code** , если формирование кодов сущностей производится автоматически. Дополнительные сведения см. в разделе [Автоматическое создание кода &#40;Master Data Services&#41;](../automatic-code-creation-master-data-services.md).  
   
 ### <a name="to-publish-data-to-the-mds-repository"></a>Публикация данных в репозитории MDS  
   
@@ -46,11 +46,11 @@ ms.locfileid: "65478807"
 > [!NOTE]  
 >  Если при добавлении на лист новых элементов (строк) их не удалось успешно опубликовать в репозитории MDS, то, возможно, у вас нет разрешения **Обновление** для всех атрибутов листа. На вкладке **Просмотр** в группе **Изменения** нажмите **Снять защиту листа** и повторите попытку публикации.  
   
-## <a name="next-steps"></a>Next Steps  
- [Применение бизнес-правил &#40;надстройка MDS для Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)  
+## <a name="next-steps"></a>Дальнейшие действия  
+ [Применение бизнес-правил (надстройка MDS для Excel)](apply-business-rules-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Публикация &#40;данных надстройка MDS для Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   
- [Проверка надстройка MDS для Excel &#40;данных&#41;](validating-data-mds-add-in-for-excel.md)  
+ [Проверка данных (надстройка MDS для Excel)](validating-data-mds-add-in-for-excel.md)  
   
   

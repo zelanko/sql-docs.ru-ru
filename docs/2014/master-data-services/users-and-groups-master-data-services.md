@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58373531871a5db8ff859280de52cbe21562bfb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478618"
 ---
 # <a name="users-and-groups-master-data-services"></a>Пользователи и группы (службы Master Data Services)
@@ -34,17 +34,17 @@ ms.locfileid: "65478618"
   
  Чтобы выполнять действия в функциональной области **Обозреватель** пользовательского интерфейса, группе или пользователю должен быть назначен доступ к функциональной области **Обозреватель** , а также назначено разрешение на доступ к объектам модели.  
   
- Если пользователю или группе необходим доступ к другим функциональным областям, то такой пользователь или группа должны быть администратором. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
+ Если пользователю или группе необходим доступ к другим функциональным областям, то такой пользователь или группа должны быть администратором. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ## <a name="best-practice"></a>Рекомендации  
  Чтобы упростить администрирование, создайте группы и присвойте каждой группе разрешение для функциональных областей и объектов моделей. Затем можно добавлять пользователей в группы и удалять из них, не задействуя пользовательский интерфейс [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .  
   
  Не присваивайте отдельным пользователям дополнительные разрешения и не включайте пользователей в несколько групп, имеющих доступ к службам [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Кроме того, не используйте разрешения для элементов иерархии, за исключением случаев, когда группе необходим был ограниченный доступ к определенным элементам.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление Master Data Services &#40;пользователя&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)   
  [Добавление Master Data Services &#40;группы&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)   
  [Удаление пользователей или групп &#40;Master Data Services&#41;](../../2014/master-data-services/delete-users-or-groups-master-data-services.md)   
- [Проверка разрешений пользователя &#40;Master Data Services&#41;](../../2014/master-data-services/test-a-user-s-permissions-master-data-services.md)  
+ [Проверка разрешений пользователя (службы Master Data Services)](../../2014/master-data-services/test-a-user-s-permissions-master-data-services.md)  
   
   

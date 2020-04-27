@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f92a74caa74c5cf15e917cd6c15aef9506a60180
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482842"
 ---
 # <a name="exporting-data-master-data-services"></a>Экспорт данных (службы Master Data Services)
@@ -40,18 +40,18 @@ ms.locfileid: "65482842"
 -   элементы во всех явных иерархиях многоуровневого типа или типа «родители-потомки» для сущности.  
   
 ## <a name="subscription-views-can-become-out-of-date"></a>Представления подписки могут устаревать  
- После создания представления подписки для сущности или иерархии изменения связанных объектов модели не будут автоматически отображаться в представлении. Может потребоваться повторное создание представления подписки в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , чтобы в ней отразились изменения в объектах модели. При изменении объектов модели значение в столбце **Изменено** на странице **Экспорт** меняется на **True** . **Значение true** указывает, что необходимо изменить представление подписки и сохранить его, что создает представление заново.  
+ После создания представления подписки для сущности или иерархии изменения связанных объектов модели не будут автоматически отображаться в представлении. Может потребоваться повторное создание представления подписки в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , чтобы в ней отразились изменения в объектах модели. При изменении объектов модели значение в столбце **Изменено** на странице **Экспорт** меняется на **True** . Значение**True** указывает на необходимость изменить представление подписки и сохранить его, после чего оно будет создано повторно.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
 |Создание представления подписки основных данных.|[Создание представления подписки &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)|  
-|Удаление существующих представлений подписки.|[Удаление представления подписки &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)|  
+|Удаление существующих представлений подписки.|[Удаление представления подписки (службы Master Data Services)](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Форматы представления подписки &#40;Master Data Services&#41;](../../2014/master-data-services/subscription-view-formats-master-data-services.md)  
+-   [Форматы представления подписки (Master Data Services)](../../2014/master-data-services/subscription-view-formats-master-data-services.md)  
   
 -   [Представления](../relational-databases/views/views.md)  
   
