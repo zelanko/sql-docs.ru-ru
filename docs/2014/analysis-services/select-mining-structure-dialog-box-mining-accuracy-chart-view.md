@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 833410b6daa15924f0875cee77ad432aa9fac369
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069490"
 ---
 # <a name="select-mining-structure-dialog-box-mining-accuracy-chart-view"></a>Диалоговое окно «Выбор структуры интеллектуального анализа данных» (просмотр диаграммы точности интеллектуального анализа данных)
@@ -29,9 +29,9 @@ ms.locfileid: "66069490"
   
  Диалоговое окно содержит древовидный список всех структур интеллектуального анализа данных, существующих в базе данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Хотя можно развернуть каждую структуру интеллектуального анализа данных и просмотреть существующие в ней модели, данное диалоговое окно можно использовать только для выбора структуры интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конструктор диаграмм точности интеллектуального анализа &#40;&#41;интеллектуального анализа данных](mining-accuracy-chart-designer-data-mining.md)   
  [Задачи тестирования и проверки и инструкции &#40;&#41;интеллектуального анализа данных](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Тестирование и проверка &#40;&#41;интеллектуального анализа данных](data-mining/testing-and-validation-data-mining.md)  
+ [Тестирование и проверка (интеллектуальный анализ данных)](data-mining/testing-and-validation-data-mining.md)  
   
   

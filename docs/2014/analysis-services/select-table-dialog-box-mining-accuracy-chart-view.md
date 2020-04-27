@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 242c6451cc6dc018e4972be7a16305b676845687
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069269"
 ---
 # <a name="select-table-dialog-box-mining-accuracy-chart-view"></a>Диалоговое окно «Выбор таблицы» (представление диаграммы точности интеллектуального анализа данных)
@@ -31,9 +31,9 @@ ms.locfileid: "66069269"
  **Имя таблицы или представления**  
  Выберите таблицу или представление, доступное в источнике данных, выбранном в текущий момент.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конструктор диаграмм точности интеллектуального анализа &#40;&#41;интеллектуального анализа данных](mining-accuracy-chart-designer-data-mining.md)   
  [Задачи тестирования и проверки и инструкции &#40;&#41;интеллектуального анализа данных](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Тестирование и проверка &#40;&#41;интеллектуального анализа данных](data-mining/testing-and-validation-data-mining.md)  
+ [Тестирование и проверка (интеллектуальный анализ данных)](data-mining/testing-and-validation-data-mining.md)  
   
   

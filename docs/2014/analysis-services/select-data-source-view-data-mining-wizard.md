@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5126ab2c44dbd5045af86cda54068b9ec8ed2f03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069674"
 ---
 # <a name="select-data-source-view-data-mining-wizard"></a>Выбор представления источников данных (мастер интеллектуального анализа данных)
@@ -25,7 +25,7 @@ ms.locfileid: "66069674"
 > [!NOTE]  
 >  Данная страница отображается только при выборе **На основе существующей реляционной базы данных или хранилища данных** на странице **Выбор метода определения** мастера интеллектуального анализа.  
   
- **Дополнительные сведения:** [представления источников данных в многомерных моделях](multidimensional-models/data-source-views-in-multidimensional-models.md), [мастер интеллектуального анализа данных &#40;Analysis Services-&#41;интеллектуального анализа данных ](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Создание реляционной структуры интеллектуального анализа](data-mining/create-a-relational-mining-structure.md)  
+ **Дополнительные сведения:** [Представления источников данных в многомерных моделях](multidimensional-models/data-source-views-in-multidimensional-models.md), [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Параметры  
  **Доступные представления источников данных**  
@@ -37,7 +37,7 @@ ms.locfileid: "66069674"
  **Обзор**  
  Щелкните, чтобы открыть диалоговое окно просмотра **Представление источника данных** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 мастера интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Создание структуры интеллектуального анализа данных &#40;мастер интеллектуального анализа данных&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
  [Определение типов таблиц &#40;мастера интеллектуального анализа данных&#41;](specify-table-types-data-mining-wizard.md)  

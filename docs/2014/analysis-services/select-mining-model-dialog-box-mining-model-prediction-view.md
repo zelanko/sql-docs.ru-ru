@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6e79a86b4438eeacf5c1184b73a5edf0e9ea9d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069406"
 ---
 # <a name="select-mining-model-dialog-box-mining-model-prediction-view"></a>Диалоговое окно «Выбор модели интеллектуального анализа данных» (представление прогноза модели интеллектуального анализа данных)
@@ -26,9 +26,9 @@ ms.locfileid: "66069406"
   
  Это диалоговое окно содержит древовидный список представлений для каждой структуры интеллектуального анализа данных, имеющейся в базе данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и всех связанных моделей интеллектуального анализа данных. Для выбора соответствующей модели интеллектуального анализа данных можно раскрыть каждую структуру интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Прогнозирование конструктор запросов &#40;интеллектуального анализа данных&#41;](prediction-query-builder-data-mining.md)   
  [Интерфейсы запросов интеллектуального анализа данных](data-mining/data-mining-query-tools.md)   
- [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

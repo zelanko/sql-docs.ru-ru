@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e02b4da19c3fe8cef9d31b304b1aeecdaa906bdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069515"
 ---
 # <a name="select-existing-dimensions-cube-wizard"></a>Выбор существующих измерений (мастер кубов)
@@ -30,7 +30,7 @@ ms.locfileid: "66069515"
   
  По умолчанию отображаются все измерения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Кубы в многомерных моделях](multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bbe0f137f029fb364adafd6f3959c7e22984b73f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069511"
 ---
 # <a name="select-language-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Выбор языка» (службы Analysis Services — многомерные данные)
@@ -34,7 +34,7 @@ ms.locfileid: "66069511"
  **Выберите язык для нового перевода**  
  Выберите язык для нового перевода из списка доступных языков. Уже выбранные языки не будут показаны в этом списке.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Переводы &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
  [Сведения о переводе &#40;вкладка Переводы, конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
