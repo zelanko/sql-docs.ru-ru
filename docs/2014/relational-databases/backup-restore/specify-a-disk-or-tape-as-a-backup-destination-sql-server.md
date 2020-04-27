@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ab1a5e0e9838975b8c0e4912a8179784f488d43e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921094"
 ---
 # <a name="specify-a-disk-or-tape-as-a-backup-destination-sql-server"></a>Указание в качестве назначения резервного копирования диска или ленты (SQL Server)
@@ -45,16 +45,16 @@ ms.locfileid: "62921094"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Разрешения BACKUP DATABASE и BACKUP LOG назначены по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator** .  
   
  Проблемы, связанные с владельцем и разрешениями у физических файлов на устройстве резервного копирования, могут помешать операции резервного копирования. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь возможность считывать и записывать данные на устройстве; учетная запись, от имени которой выполняется служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должна иметь разрешения на запись. Однако процедура [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql), добавляющая запись для устройства резервного копирования в системные таблицы, не проверяет разрешения на доступ к файлу. Проблемы физического файла устройства резервного копирования могут не проявляться до момента доступа к физическому ресурсу во время операции резервного копирования или восстановления.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-specify-a-disk-or-tape-as-a-backup-destination"></a>Указание в качестве назначения резервного копирования диска или ленты.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62921094"
   
      Чтобы удалить носитель резервной копии, выберите его и нажмите кнопку **Удалить**. Чтобы просмотреть содержимое носителя резервной копии, выберите его и щелкните **Содержимое**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-specify-a-disk-or-tape-as-a-backup-destination"></a>Указание в качестве назначения резервного копирования диска или ленты.  
   

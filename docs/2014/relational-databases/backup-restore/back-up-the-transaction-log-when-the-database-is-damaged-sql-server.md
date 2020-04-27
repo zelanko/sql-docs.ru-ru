@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69e887cc2a8f35710a0c7c910e0e912d6a4a0a61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922855"
 ---
 # <a name="back-up-the-transaction-log-when-the-database-is-damaged-sql-server"></a>Создание резервной копии журнала транзакций при повреждении базы данных (SQL Server)
@@ -40,24 +40,24 @@ ms.locfileid: "62922855"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Инструкция BACKUP не разрешена в явных и неявных транзакциях.  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   В базе данных, использующей модель полного восстановления или модель восстановления с неполным протоколированием, в большинстве случаев требуется, чтобы перед восстановлением базы данных была создана резервная копия заключительного фрагмента журнала. Также необходимо выполнить резервное копирование заключительного фрагмента журнала базы данных-источника перед переходом на другой ресурс конфигурации доставки журналов. Восстановление резервной копии заключительного фрагмента журнала в качестве заключительной резервной копии перед восстановлением базы данных позволяет избежать потери работы после сбоя. Дополнительные сведения о резервных копиях заключительного фрагмента журнала см. в разделе [Резервные копии заключительного фрагмента журнала (SQL Server)](tail-log-backups-sql-server.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Разрешения BACKUP DATABASE и BACKUP LOG назначены по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator** .  
   
  Проблемы, связанные с владельцем и разрешениями у физических файлов на устройстве резервного копирования, могут помешать операции резервного копирования. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь возможность считывать и записывать данные на устройстве; учетная запись, от имени которой выполняется служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должна иметь разрешения на запись. Однако процедура [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql), добавляющая запись для устройства резервного копирования в системные таблицы, не проверяет разрешения на доступ к файлу. Проблемы физического файла устройства резервного копирования могут не проявляться до момента доступа к физическому ресурсу во время операции резервного копирования или восстановления.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-back-up-the-tail-of-the-transaction-log"></a>Создание резервной копии заключительного фрагмента журнала транзакций  
   
@@ -136,7 +136,7 @@ ms.locfileid: "62922855"
   
     -   [Параметр конфигурации сервера «Просмотр или настройка параметра сжатия резервных копий по умолчанию»](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-create-a-backup-of-the-currently-active-transaction-log"></a>Создание резервной копии активного журнала транзакций  
   
@@ -150,7 +150,7 @@ ms.locfileid: "62922855"
   
          Это предложение позволяет выполнить резервное копирование активной части журнала транзакций, даже если база данных недоступна, при условии, что файл журнала транзакций доступен и не поврежден.  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
   
 > [!NOTE]  
 >  В этом примере используется метод [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], который опирается на простую модель восстановления. Чтобы разрешить создание резервных копий журналов, перед созданием полной резервной копии база данных должна быть настроена на использование модели полного восстановления. Дополнительные сведения см. в разделе [Просмотр или изменение модели восстановления базы данных (SQL Server)](view-or-change-the-recovery-model-of-a-database-sql-server.md).  

@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920841"
 ---
 # <a name="deploying-clr-database-objects"></a>Развертывание объектов базы данных CLR
@@ -67,7 +67,7 @@ ms.locfileid: "62920841"
   
  `CREATE ASSEMBLY HelloWorld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE;`  
   
-1.  Процедура, функция, статистическое выражение, определяемый пользователем тип или триггер должны быть созданы в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Если сборка `HelloWorld` содержит метод с именем `HelloWorld` в классе `Procedures`, в запрос можно добавить следующий код [!INCLUDE[tsql](../../../includes/tsql-md.md)] для создания в `hello` процедуры с именем [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+1.  Процедура, функция, статистическое выражение, определяемый пользователем тип или триггер должны быть созданы в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Если сборка `HelloWorld` содержит метод с именем `HelloWorld` в классе `Procedures`, в запрос можно добавить следующий код [!INCLUDE[tsql](../../../includes/tsql-md.md)] для создания в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] процедуры с именем `hello`.  
   
  `CREATE PROCEDURE hello`  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62920841"
   
 4.  На панели **Выбор параметров скрипта** нажмите кнопку **Далее**или измените параметры, а затем нажмите кнопку **Далее**.  
   
-5.  На панели **Выбор типов объектов** выберите тип развертываемого объекта базы данных. Щелкните **Далее**.  
+5.  На панели **Выбор типов объектов** выберите тип развертываемого объекта базы данных. Нажмите кнопку **Далее**.  
   
 6.  Для каждого типа объектов, выбранного на панели **Выбор типов объектов** , отображается **панель \<выбор типа>** . На этой панели можно выбирать из всех экземпляров этого типа объекта базы данных, зарегистрированного в указанной базе данных. Выберите один или несколько объектов и нажмите кнопку **Далее**.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "62920841"
   
  При выполнении развертывания среда Visual Studio запустит данный скрипт после развертывания проекта.  
   
-## <a name="see-also"></a>См. также:  
- [Общеязыковая среда выполнения &#40;концепции программирования интеграции&#41; среды CLR](common-language-runtime-clr-integration-programming-concepts.md)  
+## <a name="see-also"></a>См. также  
+ [Основные понятия о программировании интеграции со средой (CLR)](common-language-runtime-clr-integration-programming-concepts.md)  
   
   

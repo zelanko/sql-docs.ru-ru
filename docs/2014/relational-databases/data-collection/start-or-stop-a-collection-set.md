@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 96f5a873e8d172254e1ea18abbd0c570b27a35ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918467"
 ---
 # <a name="start-or-stop-a-collection-set"></a>Запуск или остановка набора элементов сбора
@@ -41,28 +41,28 @@ ms.locfileid: "62918467"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Хранимые процедуры и представления каталога сборщика данных хранятся в базе данных **msdb** .  
   
 -   В отличие от обычных хранимых процедур, параметры хранимых процедур для сборщика данных жестко типизированы и не поддерживают автоматическое преобразование типов данных. Если эти параметры не вызываются вместе с правильными типами данных входных параметров, как указано в описании аргумента, хранимая процедура возвращает ошибку.  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Должен быть запущен агент SQL Server.  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   Для получения информации о наборах элементов сбора запросите представление каталога [syscollector_collection_sets](/sql/relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql) .  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требуется членство в предопределенной роли базы данных **dc_operator** . Если набор элементов сбора не имеет учетной записи-посредника, требуется членство в предопределенной роли сервера **sysadmin** . Примеры  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-start-a-collection-set"></a>Запуск набора сбора  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62918467"
   
      Результат этого действия выводится в окне, а красный круг на значке набора сбора означает его остановку.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-start-a-collection-set"></a>Запуск набора сбора  
   

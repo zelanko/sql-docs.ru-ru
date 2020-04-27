@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ffd706cdb17bd73281ee4a62842362b09c6311ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922558"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Основные понятия о программировании интеграции со средой CLR
@@ -36,7 +36,7 @@ ms.locfileid: "62922558"
  [Общие сведения об интеграции&#41; среды CLR &#40;](common-language-runtime-integration-overview.md)  
  Содержит общие сведения о среде CLR и описывает способы и преимущества использования технологии в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Описывает преимущества использования среды CLR для создания объектов базы данных.  
   
- [Сборки &#40;ядро СУБД&#41;](assemblies-database-engine.md)  
+ [Сборки (компонент Database Engine)](assemblies-database-engine.md)  
  Описывает использование в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сборок для развертывания функций, хранимых процедур, триггеров, пользовательских статистических функций и определяемых пользователем типов данных, написанных на одном из языков управляемого кода, поддерживаемых средой CLR [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, а не на языке [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  [Создание объектов базы данных с помощью среды CLR &#40;интеграция&#41; CLR](database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
@@ -60,10 +60,10 @@ ms.locfileid: "62922558"
  [Наблюдение и устранение неполадок в управляемых объектах базы данных](monitoring-and-troubleshooting-managed-database-objects.md)  
  Данный раздел содержит информацию о средствах, которые можно использовать для наблюдения и диагностики управляемых объектов базы данных и сборок, работающих в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Сценарии использования и примеры для среды CLR &#40;интеграции&#41; CLR](../../database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Сценарии использования и примеры интеграции со средой CLR](../../database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
  Описывает сценарии использования и образцы кода, использующие объекты CLR.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сборки &#40;ядро СУБД&#41;](assemblies-database-engine.md)   
  [Установка пакета SDK платформы .NET Framework](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   

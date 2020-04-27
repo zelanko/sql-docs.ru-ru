@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d5783f393cbbe70e89e2d1ee4b7e05481fdc3ab9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922115"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>Включение или отключение вычисления контрольных сумм резервных копий во время резервного копирования или восстановления (SQL Server)
@@ -36,11 +36,11 @@ ms.locfileid: "62922115"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  BACKUP  
  Разрешения BACKUP DATABASE и BACKUP LOG назначены по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator** .  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62922115"
   
  Разрешения на выполнение инструкции RESTORE даются ролям, в которых данные о членстве всегда доступны серверу. Так как членство в предопределенной роли базы данных может быть проверено только тогда, когда база данных доступна и не повреждена, что не всегда имеет место при выполнении инструкции RESTORE, члены предопределенной роли базы данных **db_owner** не имеют разрешений RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-enable-or-disable-checksums-during-a-backup-operation"></a>Включение или отключение вычисления контрольных сумм во время создания резервной копии  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62922115"
   
 2.  На странице **Параметры** в разделе **Надежность** выберите параметр **Вычислять контрольную сумму перед записью на носитель**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-enable-or-disable-backup-checksum-for-a-backup-operation"></a>Включение или отключение вычисления контрольных сумм для операции создания резервной копии  
   

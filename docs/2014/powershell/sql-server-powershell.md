@@ -11,14 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: acfa87245449566c1f91b447910f5194eda192b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922588"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
-  
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] поддерживает Windows PowerShell — многофункциональную оболочку для работы со скриптами, позволяющую администраторам и разработчикам автоматизировать администрирование серверов и развертывание приложений. Язык Windows PowerShell поддерживает более сложные логические конструкции по сравнению со сценариями [!INCLUDE[tsql](../includes/tsql-md.md)] , что дает администраторам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] возможность создавать надежно работающие сценарии администрирования. Сценарии Windows PowerShell также можно использовать для администрирования других серверных продуктов [!INCLUDE[msCoName](../includes/msconame-md.md)] . В результате администраторы получают возможность использовать общий язык сценариев для разных серверов.  
   
 ## <a name="sql-server-powershell-components"></a>Компоненты SQL Server PowerShell  
@@ -26,7 +25,7 @@ ms.locfileid: "62922588"
   
 -   Поставщик [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , который предоставляет простой механизм навигации, аналогичный путям в файловой системе. Можно построить пути, аналогичные путям файловой системы, где диску соответствует управляющая объектная модель [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , а узлы основаны на классах объектной модели. Затем можно использовать привычные команды, такие как **cd** и **dir** , чтобы перемещаться по путям, аналогично переходу по структуре папок в окне командной строки. Для выполнения действий на узлах пути можно использовать другие команды, например **ren** или **del**.  
   
--   Набор командлетов, которые являются командами, используемыми в сценариях Windows PowerShell для указания действия [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Модуль [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживают такие действия, как запуск скрипта **sqlcmd** , содержащего инструкции [!INCLUDE[tsql](../includes/tsql-md.md)] или XQuery.  
+-   Набор командлетов, которые являются командами, используемыми в сценариях Windows PowerShell для указания действия [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Командлеты [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживают такие действия, как запуск скрипта **sqlcmd** , содержащего инструкции [!INCLUDE[tsql](../includes/tsql-md.md)] или XQuery.  
   
  Дополнительные сведения о Windows PowerShell см. в разделе [Руководство по началу работы с Windows PowerShell](https://msdn.microsoft.com/library/hh857337.aspx).  
   
@@ -41,11 +40,11 @@ ms.locfileid: "62922588"
 |Описание способа загрузки только сборок объектов SMO без поставщика и командлетов.|[Загрузка сборки объектов SMO в Windows PowerShell](load-the-smo-assemblies-in-windows-powershell.md)|  
 |Описание способа запуска сеанса Windows PowerShell щелчком правой кнопкой мыши узла в **обозревателе объектов**. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]запускает сеанс Windows PowerShell, загружает `sqlps` модуль и задает путь поставщика SQL Server к выбранному объекту.|[Запуск Windows PowerShell из среды SQL Server Management Studio](run-windows-powershell-from-sql-server-management-studio.md)|  
 |Описание создания шагов задания агента SQL Server для запуска скрипта Windows PowerShell. Пользователь может планировать выполнение заданий в указанное время или в ответ на события.|[Использование Windows PowerShell в шагах агента SQL Server](run-windows-powershell-steps-in-sql-server-agent.md)|  
-|Описание использования поставщика [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для перемещения по иерархии объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|[SQL Server PowerShell, поставщик](sql-server-powershell-provider.md)|  
+|Описание использования поставщика [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для перемещения по иерархии объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|[Поставщик SQL Server PowerShell](sql-server-powershell-provider.md)|  
 |Описание использования командлетов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , содержащих действия компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , например запуск скрипта [!INCLUDE[tsql](../includes/tsql-md.md)] .|[Использование командлетов компонента Database Engine](../database-engine/use-the-database-engine-cmdlets.md)|  
 |Описание способа указания идентификаторов с разделителями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , содержащих символы, не поддерживаемые в Windows PowerShell.|[Идентификаторы SQL Server в PowerShell](sql-server-identifiers-in-powershell.md)|  
-|Описание создания подключения с проверкой подлинности SQL Server. По умолчанию компоненты SQL Server PowerShell используют подключение с помощью проверки подлинности Windows и учетных данных процесса, в котором выполняется Windows PowerShell.|[Управление проверкой подлинности в PowerShell ядра СУБД ](manage-authentication-in-database-engine-powershell.md)|  
-|Описание использования переменных, реализованных поставщиком SQL Server PowerShell, для управления количеством объектов, перечисляемых при использовании функции завершения по клавише TAB в Windows PowerShell. Это особенно полезно при работе с базами данных, содержащими большое количество объектов.|[Управление &#40;заполнения нажатием клавиши TAB SQL Server PowerShell&#41;](manage-tab-completion-sql-server-powershell.md)|  
-|Описание использования командлета Get-Help для получения сведений о компонентах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в среде Windows PowerShell.|[Get Help SQL Server PowerShell](../database-engine/get-help-sql-server-powershell.md)|  
+|Описание создания подключения с проверкой подлинности SQL Server. По умолчанию компоненты SQL Server PowerShell используют подключение с помощью проверки подлинности Windows и учетных данных процесса, в котором выполняется Windows PowerShell.|[Управление проверкой подлинности в компонент Database Engine PowerShell](manage-authentication-in-database-engine-powershell.md)|  
+|Описание использования переменных, реализованных поставщиком SQL Server PowerShell, для управления количеством объектов, перечисляемых при использовании функции завершения по клавише TAB в Windows PowerShell. Это особенно полезно при работе с базами данных, содержащими большое количество объектов.|[Управление завершением по нажатию клавиши Tab (SQL Server PowerShell)](manage-tab-completion-sql-server-powershell.md)|  
+|Описание использования командлета Get-Help для получения сведений о компонентах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в среде Windows PowerShell.|[Получение справок по SQL Server PowerShell](../database-engine/get-help-sql-server-powershell.md)|  
   
   

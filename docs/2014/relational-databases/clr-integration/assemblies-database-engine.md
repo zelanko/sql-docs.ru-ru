@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4830a677125cb03e2c53ed78065d94d5265d4a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920782"
 ---
 # <a name="assemblies-database-engine"></a>Сборки (компонент Database Engine)
@@ -50,13 +50,13 @@ ms.locfileid: "62920782"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Конструирование сборок](assemblies-designing.md)|Объясняет, что необходимо учесть перед созданием сборки. Включает в себя упаковку сборок, разрешения кода доступа и другие ограничения.|  
 |[Реализация сборок](assemblies-implementing.md)|Объясняет, как правильно создать и удалить сборку, как и когда необходимо изменить сборку, а также как получить метаданные о сборке.|  
 |[Получение сведений о сборках](assemblies-getting-information.md)|Перечисляет представления и функции каталога, которые могут запрашиваться для метаданных о сборках.|  
   
-## <a name="see-also"></a>См. также:  
- [Общеязыковая среда выполнения &#40;концепции программирования интеграции&#41; среды CLR](common-language-runtime-clr-integration-programming-concepts.md)  
+## <a name="see-also"></a>См. также  
+ [Основные понятия о программировании интеграции со средой (CLR)](common-language-runtime-clr-integration-programming-concepts.md)  
   
   

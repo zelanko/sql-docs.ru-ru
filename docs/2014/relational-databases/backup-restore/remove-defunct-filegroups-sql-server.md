@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2a59277110d91ffd40a2db7d62fd3a01aa109dfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921556"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>Удаление уничтоженных файловых групп (SQL Server)
@@ -43,26 +43,26 @@ ms.locfileid: "62921556"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Сведения в этом разделе относятся к базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , содержащим несколько файлов или файловых групп (а для простой модели восстановления — к файловым группам, доступным только для чтения).  
   
 -   При удалении файловой группы вне сети все файлы группы помечаются удаленными.  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   Если восстановление невосстановленной файловой группы не предполагается, необходимо сделать ее *уничтоженной* , удалив из базы данных. Такая файловая группа не может быть восстановлена в данной базе данных, однако при этом сохраняются ее метаданные. После того как файловая группа стала уничтоженной, базу данных можно перезапустить, и в процессе восстановления будет восстановлена согласованность базы данных между восстановленными файловыми группами.  
   
      Например, объявление файловой группы как нефункционирующей позволяет разрешить отложенные транзакции, возникшие из-за файловой группы вне сети, которая больше не нужна в базе данных. Транзакции, отложенные из-за того, что файловая группа находилась в режиме «вне сети», выходят из отложенного состояния после того, как эта файловая группа перестанет функционировать. Дополнительные сведения см. в разделе [Отложенные транзакции (SQL Server)](deferred-transactions-sql-server.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на базу данных.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-remove-defunct-filegroups"></a>Удаление уничтоженных файловых групп  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62921556"
   
 6.  В списке **Строки** выберите файловую группу для удаления, нажмите кнопку **Удалить**, а затем кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-remove-defunct-filegroups"></a>Удаление уничтоженных файловых групп  
   

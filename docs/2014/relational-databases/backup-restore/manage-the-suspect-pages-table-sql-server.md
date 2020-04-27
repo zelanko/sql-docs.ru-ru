@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922022"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>Управление таблицей suspect_pages (SQL Server)
@@ -30,9 +30,9 @@ ms.locfileid: "62922022"
   
  Страница считается «подозрительной», если при попытке ее чтения компонентом [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] обнаруживается одна из следующих ошибок.  
   
--   [Ошибка 823](../errors-events/mssqlserver-823-database-engine-error.md) , вызванная циклической проверкой избыточности (CRC), выданной операционной системой, например ошибка диска (некоторые ошибки оборудования)  
+-   [Ошибка 823](../errors-events/mssqlserver-823-database-engine-error.md) , которая вызывается проверкой циклической контрольной суммы (CRC), запущенной операционной системой; например ошибка диска (происходит при некоторых ошибках оборудования)  
   
--   [Ошибка 824](../errors-events/mssqlserver-824-database-engine-error.md), например обрыв страницы (любая логическая ошибка)  
+-   [Ошибка 824](../errors-events/mssqlserver-824-database-engine-error.md), например разрыв страницы (или любая другая логическая ошибка)  
   
  Идентификатор каждой "подозрительной" страницы записывается в таблицу **suspect_pages** . В эту таблицу [!INCLUDE[ssDE](../../includes/ssde-md.md)] записывает все подозрительные страницы, которые встретились при обработке, в частности:  
   
@@ -58,9 +58,9 @@ ms.locfileid: "62922022"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   **Ошибки, заносящиеся в таблицу suspect_pages**  
   
@@ -115,12 +115,12 @@ ms.locfileid: "62922022"
   
      Администратор базы данных может также вставлять или обновлять записи. Например, обновление строк может оказаться полезным, если администратор базы данных знает, что какая-нибудь из сомнительных страниц на самом деле исправна, но хочет на время сохранить соответствующую запись.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Сведения в таблице **suspect_pages** доступны любому пользователю, имеющему доступ к базе данных **msdb** . Информация в таблице suspect_pages может обновляться любым пользователем, обладающим разрешением UPDATE. Члены предопределенной роли базы данных **db_owner** в **msdb** или предопределенной роли сервера **sysadmin** могут вставлять, обновлять и удалять записи.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>Управление таблицей suspect_pages  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62922022"
   
 4.  В окне запроса измените, обновите или удалите необходимые строки.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>Управление таблицей suspect_pages  
   
