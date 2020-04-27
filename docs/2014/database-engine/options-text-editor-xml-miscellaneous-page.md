@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089208"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Параметры ("Текстовый редактор" — "XML" — страница "Разное")
@@ -38,7 +38,7 @@ ms.locfileid: "66089208"
  **Автоматически загружать DTD и схемы**  
  Схемы и определения типов документов (DTD) автоматически загружаются с адресов HTTP. Эта функция использует System.Net в режиме автоматического определения прокси-сервера. Этот флажок выбран по умолчанию.  
   
-## <a name="outlining"></a>Структура  
+## <a name="outlining"></a>Структуризация  
  **Включать режим создания структуры при открытии файлов**  
  Включает функцию структурирования при открытии файла. Этот флажок выбран по умолчанию.  
   

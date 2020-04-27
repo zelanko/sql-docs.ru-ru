@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9032249e880f11f27edd53e23d4ca54a47b920db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087153"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>Подключение к базе данных SQL Azure (SSAS)
@@ -25,8 +25,7 @@ ms.locfileid: "66087153"
 > [!NOTE]  
 >  При подключении к набору данных Azure DataMarket см. раздел [Соединение с отчетом или веб-каналом данных (SSAS)](connect-to-a-report-or-data-feed-ssas.md).  
   
- 
-  [!INCLUDE[ssSDS](../includes/sssds-md.md)] — это размещаемая реляционная база данных, соединение с которой устанавливается с проверкой подлинности SQL Server. Дополнительные сведения о [!INCLUDE[ssSDS](../includes/sssds-md.md)]см. на веб-сайте [SQL Database](https://go.microsoft.com/fwlink/?LinkID=157856). Для соединения с источником данных на компьютере должен быть установлен соответствующий поставщик.  
+ [!INCLUDE[ssSDS](../includes/sssds-md.md)] — это размещаемая реляционная база данных, соединение с которой устанавливается с проверкой подлинности SQL Server. Дополнительные сведения о [!INCLUDE[ssSDS](../includes/sssds-md.md)]см. на веб-сайте [SQL Database](https://go.microsoft.com/fwlink/?LinkID=157856). Для соединения с источником данных на компьютере должен быть установлен соответствующий поставщик.  
   
 > [!NOTE]  
 >  При выборе базы данных на этой странице используются учетные данные текущего пользователя. Тем не менее импорт не будет успешным, если пользователь, указанный на странице сведений об олицетворении, не имеет достаточных прав для чтения из выбранной базы данных.  

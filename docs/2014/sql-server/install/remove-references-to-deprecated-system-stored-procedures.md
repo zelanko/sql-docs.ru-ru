@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e841956adf08f9ac14a3f1360839e9132bf9cd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093104"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>Удаление ссылок на устаревшие системные хранимые процедуры
@@ -26,7 +26,7 @@ ms.locfileid: "66093104"
 ## <a name="component"></a>Компонент  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
   
 ### <a name="documented-system-stored-procedures"></a>Документированные системные хранимые процедуры  
  Были удалены следующие системные хранимые процедуры.  
@@ -101,7 +101,7 @@ ms.locfileid: "66093104"
 ### <a name="undocmented-system-stored-procedures"></a>Недокументированные системные хранимые процедуры  
  Чтобы заменить недокументированные системные хранимые процедуры, можно создать хранимые процедуры CLR с равнозначной функциональностью. Дополнительные сведения см. в разделе «Хранимые процедуры CLR» электронной документации по SQL Server.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Проблемы обновления ядро СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)  
   

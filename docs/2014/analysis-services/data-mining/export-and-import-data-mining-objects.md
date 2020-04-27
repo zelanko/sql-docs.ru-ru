@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2f79f8bf9a1d0ff01ba97d29662fab026d4adcd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084472"
 ---
 # <a name="export-and-import-data-mining-objects"></a>Экспорт и импорт объектов интеллектуального анализа данных
@@ -52,7 +52,7 @@ ms.locfileid: "66084472"
 ## <a name="remarks"></a>Remarks  
  Невозможно импортировать модель или структуру на сервер, если на этом сервере уже существует модель или структура с таким же именем. Кроме того, невозможно экспортировать объект интеллектуального анализа данных и затем изменить имя этого объекта в файле экспорта. Следовательно, если предполагается возможность возникновения конфликта имен, следует либо удалить объект интеллектуального анализа данных на целевом сервере, либо переименовать этот объект интеллектуального анализа данных до выполнения операции экспорта определения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление решениями и объектами интеллектуального анализа данных](management-of-data-mining-solutions-and-objects.md)  
   
   

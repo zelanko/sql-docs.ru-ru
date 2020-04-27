@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9abaf092d00a8acaf6c0b3ef963c940199068ce9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082710"
 ---
 # <a name="view-and-save-the-results-of-a-prediction-query"></a>Просмотр и сохранение результатов прогнозирующего запроса
@@ -45,7 +45,7 @@ ms.locfileid: "66082710"
   
 4.  Выберите представление источника данных из списка **Добавить к представлению источника данных** , если необходимо добавить таблицу к представлению источника данных.  
   
-5.  Выберите команду **Сохранить**.  
+5.  Нажмите кнопку **Сохранить**.  
   
     > [!WARNING]  
     >  Если место назначения не поддерживает иерархические наборы строк, можно добавить в результаты ключевое слово FALTTENED для сохранения результатов в виде плоской таблицы.  

@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 451efaa1bb6968c2e2f43e5fad01646e507ae8ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082870"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Задачи и решения по тестированию и проверке (интеллектуальный анализ данных)
@@ -43,7 +43,7 @@ ms.locfileid: "66082870"
   
  Дополнительные сведения об использовании диаграммы точности интеллектуального анализа см. в разделе [Тестирование и проверка (интеллектуальный анализ данных)](testing-and-validation-data-mining.md).  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Создать диаграмму точности прогнозов, диаграмму роста прибыли или матрицу классификации](create-a-lift-chart-profit-chart-or-classification-matrix.md)  
   

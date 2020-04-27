@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 802d39742b932b3721941e3d3c314b209b4e823c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088929"
 ---
 # <a name="sql-server-profiler---destination-table"></a>Приложение SQL Server Profiler — Целевая таблица
@@ -37,9 +37,9 @@ ms.locfileid: "66088929"
  **Таблица**  
  Позволяет указать имя таблицы, в которой необходимо хранить трассировку.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сохранение результатов трассировки в таблицу &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
- [Шаблоны и разрешения приложения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Шаблоны и разрешения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Приложение SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

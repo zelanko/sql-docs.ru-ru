@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 20c42e7d57415875acd1aebeaa3a674285468dc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094364"
 ---
 # <a name="installation-how-to-topics"></a>Инструкции по установке
@@ -25,7 +25,7 @@ ms.locfileid: "66094364"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|Методический раздел, описывающий типичную установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи мастера установки.|  
 |[Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|Методический раздел, в котором приведены образцы синтаксиса и параметров для запуска установки в автоматическом режиме.|  
@@ -38,7 +38,7 @@ ms.locfileid: "66094364"
 |[Удаление существующего экземпляра SQL Server (программа установки)](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)|Методический раздел, описывающий удаление изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вручную.|  
 |[Инструкции по обновлению](../../../2014/sql-server/install/upgrade-how-to-topics.md)|Методические разделы, описывающие обновление изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или экземпляра, входящего в кластер.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Планирование установки SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   
  [Обновление до SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Установка собственного клиента SQL Server](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  

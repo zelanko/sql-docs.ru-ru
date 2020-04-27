@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085581"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Создание запроса содержимого к модели интеллектуального анализа данных
@@ -46,11 +46,11 @@ ms.locfileid: "66085581"
   
 6.  В строке `SELECT` * \<выберите список, список \* *выражений, введите имена столбцов в наборе строк схемы содержимого модели интеллектуального анализа данных.  
   
-     Чтобы просмотреть список столбцов, которые можно возвратить в запросах содержимого модели интеллектуального анализа данных, см. раздел [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-analysis-services-data-mining.md).  
+     Чтобы просмотреть список столбцов, которые можно возвратить в запросах содержимого модели интеллектуального анализа данных, см. раздел [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-analysis-services-data-mining.md).  
   
 7.  При желании можно ввести условие в предложении шаблона WHERE, чтобы ограничить число возвращаемых строк.  
   
-8.  Нажмите **Execute (Выполнить)**.  
+8.  Нажмите кнопку **Выполнить**.  
   
 ## <a name="querying-the-data-mining-schema-rowsets"></a>Запрос набора строк схемы интеллектуального анализа данных  
   
@@ -70,14 +70,14 @@ ms.locfileid: "66085581"
   
      `WHERE MODEL_NAME = '<model name>'`  
   
-4.  Нажмите **Execute (Выполнить)**.  
+4.  Нажмите кнопку **Выполнить**.  
   
      На панели «Результат» отобразится содержимое модели.  
   
     > [!NOTE]  
     >  Чтобы просмотреть список всех наборов строк схемы, которые можно запросить в текущем экземпляре, используется следующий запрос: `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. Список наборов строк схемы, относящихся к интеллектуальному анализу данных, см. в разделе [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [&#40;содержимого моделей интеллектуального анализа данных Analysis Services — интеллектуальный анализ&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   

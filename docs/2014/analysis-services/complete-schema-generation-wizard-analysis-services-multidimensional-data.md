@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6491d0a73aa28d8dd396bf1befa321ed6f1cb9b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087743"
 ---
 # <a name="completing-the-wizard-schema-generation-wizard-analysis-services---multidimensional-data"></a>Завершение работы мастера (мастер формирования схем) (службы Analysis Services — многомерные данные)
@@ -26,7 +26,7 @@ ms.locfileid: "66087743"
  **Сводка**  
  Отображает заданные вами параметры.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 мастера формирования схем &#40;Analysis Services многомерных данных&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
  [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 687f7fb96ee5a2b96d80562c20d536eeeb308379
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088119"
 ---
 # <a name="choose-enhancement-business-intelligence-wizard"></a>Выбор расширения (мастер бизнес-аналитики)
@@ -26,7 +26,7 @@ ms.locfileid: "66088119"
  **Имеющиеся расширения**  
  Выберите расширение бизнес-аналитики для добавления. В следующей таблице перечислены имеющиеся расширения.  
   
-|Расширение|Description|  
+|Расширение|Описание|  
 |-----------------|-----------------|  
 |**Определить логику операций со временем**|Добавить дополнительные представления времени для выбранной иерархии. Они включают представления периода на дату, представления скользящего среднего и представления между периодами.<br /><br /> Примечание. Данный параметр доступен только для кубов.|  
 |**Определить логику операций со счетами**|Присвойте стандартную бухгалтерскую классификацию, например доходы или расходы, элементам атрибута счета.<br /><br /> Если статистическая функция для мер установлена в состояние *ByAccount*, то экземпляр служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] использует бухгалтерскую классификацию для статистической обработки мер по элементам атрибута счета по времени.|  
@@ -41,7 +41,7 @@ ms.locfileid: "66088119"
  **Описание**  
  Предоставляет краткое описание выбранного расширения бизнес-аналитики.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 мастера бизнес-аналитики](business-intelligence-wizard-f1-help.md)   
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Конструктор измерений &#40;Analysis Services многомерных данных&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

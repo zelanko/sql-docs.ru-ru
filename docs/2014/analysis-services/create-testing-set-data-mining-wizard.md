@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086791"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Создание проверочного набора (Мастер интеллектуального анализа данных)
@@ -34,7 +34,7 @@ ms.locfileid: "66086791"
   
 -   Секционировать данные невозможно, если предпринимается попытка прогнозирования значения, которое хранится во вложенной таблице.  
   
- **Дополнительные сведения см.** в статьях [тестирование и проверка &#40;&#41;интеллектуального анализа данных ](data-mining/testing-and-validation-data-mining.md), [Создание реляционной структуры интеллектуального анализа](data-mining/create-a-relational-mining-structure.md) [данных, учебник по основам интеллектуального анализа](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **Дополнительные сведения:** [Тестирование и проверка (интеллектуальный анализ данных)](data-mining/testing-and-validation-data-mining.md), [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md), [Учебник по основам интеллектуального анализа данных](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>Параметры  
  **Процент проверочных данных**  
@@ -47,7 +47,7 @@ ms.locfileid: "66086791"
   
  Значение по умолчанию — NULL. Это означает отсутствие какого-либо предела.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 мастера интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Предлагать связанные столбцы &#40;мастер интеллектуального анализа данных&#41;](suggest-related-columns-data-mining-wizard.md)   
  [Определение типов таблиц &#40;мастера интеллектуального анализа данных&#41;](specify-table-types-data-mining-wizard.md)   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a66a940e916cc05bb3fe502cb6f4d10a9c2fae6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082135"
 ---
 # <a name="define-dimension-intelligence-business-intelligence-wizard"></a>Определение логики операций с измерениями (мастер бизнес-аналитики)
@@ -38,7 +38,7 @@ ms.locfileid: "66082135"
  **Атрибут измерения**  
  Выберите существующий атрибут измерения, с которым будет сопоставлен соответствующий тип атрибута.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 мастера бизнес-аналитики](business-intelligence-wizard-f1-help.md)   
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Конструктор измерений &#40;Analysis Services многомерных данных&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

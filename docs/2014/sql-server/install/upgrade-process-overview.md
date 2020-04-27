@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb4bfb2073427d0f48b3d4a7ac7b7ab496299030
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091521"
 ---
 # <a name="upgrade-process-overview"></a>Общие сведения о процессе обновления
@@ -36,7 +36,7 @@ ms.locfileid: "66091521"
   
 2.  Создайте резервную копию данных и системных настроек.  
   
-3.  Запустите Помощник по обновлению.  
+3.  Запустите помощник по обновлению.  
   
      Помощник по обновлению не изменяет данные или параметры компьютера.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66091521"
   
 9. Устраните любые проблемы, возникающие после обновления и миграции.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск помощника по обновлению &#40;пользовательского интерфейса&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
  [Использование отчетов](../../../2014/sql-server/install/using-reports.md)   
  [Работа с помощником по обновлению](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

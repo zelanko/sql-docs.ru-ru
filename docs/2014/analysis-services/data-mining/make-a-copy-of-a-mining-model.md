@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7464c7d780a420b0f95b59ebde02494bd40661e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084223"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>создать копию модели интеллектуального анализа данных
@@ -57,7 +57,7 @@ ms.locfileid: "66084223"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Фильтры для моделей интеллектуального анализа данных &#40;Analysis Services интеллектуального анализа&#41;](mining-models-analysis-services-data-mining.md)   
  [Задачи и инструкции по модели интеллектуального анализа данных](mining-model-tasks-and-how-tos.md)   
  [удалить фильтр из модели интеллектуального анализа данных](delete-a-filter-from-a-mining-model.md)  

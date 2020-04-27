@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eb0b6349eac28bbd2abc22b9483ef74edf1bf33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088193"
 ---
 # <a name="change-the-directquery-partition-ssas-tabular"></a>Изменение секции DirectQuery (табличные службы SSAS)
@@ -44,7 +44,7 @@ ms.locfileid: "66088193"
   
 4.  Выберите другую секцию в раскрывающемся списке **Имя секции** и при необходимости измените параметры обработки.  
   
-## <a name="see-also"></a>См. также:  
- [Секции &#40;табличные&#41;SSAS](tabular-models/partitions-ssas-tabular.md)  
+## <a name="see-also"></a>См. также  
+ [Секции (табличные службы SSAS)](tabular-models/partitions-ssas-tabular.md)  
   
   

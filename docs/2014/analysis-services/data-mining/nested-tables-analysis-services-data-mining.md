@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 865eea502ecc7e807533b75501634fb6d3356583
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083251"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Вложенные таблицы (службы Analysis Services — интеллектуальный анализ данных)
@@ -65,8 +65,8 @@ ms.locfileid: "66083251"
   
  Дополнительные сведения о создании и использовании фильтров для моделей см. в разделе [Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-models-analysis-services-data-mining.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Структуры интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ&#41;](mining-structures-analysis-services-data-mining.md)  
+ [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-structures-analysis-services-data-mining.md)  
   
   

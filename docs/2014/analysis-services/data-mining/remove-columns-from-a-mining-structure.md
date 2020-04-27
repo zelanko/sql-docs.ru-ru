@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebc79ed1221b729cfac3fb3d34ed5d9683dc6875
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082962"
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>удалить столбцы из структуры интеллектуального анализа данных
@@ -43,7 +43,7 @@ ms.locfileid: "66082962"
   
 4.  В диалоговом окне **Удаление объектов** нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задачи и инструкции по структуре интеллектуального анализа данных](mining-structure-tasks-and-how-tos.md)  
   
   

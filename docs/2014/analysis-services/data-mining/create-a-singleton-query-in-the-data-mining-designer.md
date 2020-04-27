@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085309"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Создание одноэлементного запроса в конструкторе интеллектуального анализа данных
@@ -79,7 +79,7 @@ AS [t]
   
      Откроется новый экран, в котором отобразится результат запроса. Чтобы просмотреть созданную DMX-инструкцию, щелкните **SQL**.  
   
-## <a name="see-also"></a>См. также:  
- [Прогнозирующие запросы &#40;&#41;интеллектуального анализа данных](prediction-queries-data-mining.md)  
+## <a name="see-also"></a>См. также  
+ [Прогнозирующие запросы (интеллектуальный анализ данных)](prediction-queries-data-mining.md)  
   
   

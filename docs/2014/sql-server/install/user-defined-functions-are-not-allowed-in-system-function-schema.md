@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091331"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-system_function_schema"></a>В схеме system_function_schema запрещены определяемые пользователем функции
@@ -26,7 +26,7 @@ ms.locfileid: "66091331"
 ## <a name="component"></a>Компонент  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Хранение системных объектов и доступ к ним изменились следующим образом.  
   
 -   Системные объекты хранятся в базе данных **ресурсов** только для чтения, а прямые обновления системных объектов не допускаются.  
@@ -64,7 +64,7 @@ ms.locfileid: "66091331"
   
 -   База данных Resource  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)   
  [Проблемы обновления ядро СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Удалите инструкции, изменяющие системные объекты](../../../2014/sql-server/install/remove-statements-that-modify-system-objects.md)   

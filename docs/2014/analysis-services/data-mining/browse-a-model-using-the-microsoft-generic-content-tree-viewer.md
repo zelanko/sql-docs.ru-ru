@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bb080721ccb3e5b5aef190eda3d1088df09762c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086071"
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Просмотр модели в средстве просмотра деревьев содержимого общего вида (Майкрософт)
@@ -48,8 +48,8 @@ SELECT * FROM [<mining model name>].CONTENT
   
  Дополнительные сведения см. в статье [Запросы интеллектуального анализа данных](data-mining-queries.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Средство просмотра деревьев содержимого общего вида (Майкрософт) &#40;интеллектуального анализа данных&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
- [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

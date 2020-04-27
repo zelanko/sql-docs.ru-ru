@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463363e2e239c348c626cf1ef1d61e621877814
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082153"
 ---
 # <a name="define-currency-conversion-business-intelligence-wizard"></a>Определение конвертации валюты (мастер бизнес-аналитики)
@@ -50,7 +50,7 @@ ms.locfileid: "66082153"
  **Существующий скрипт конвертации валюты**  
  Выберите раздел существующего скрипта многомерных выражений, содержащий ранее определенную функцию конвертации валюты, который необходимо заменить или дополнить.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 мастера бизнес-аналитики](business-intelligence-wizard-f1-help.md)   
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Конструктор измерений &#40;Analysis Services многомерных данных&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

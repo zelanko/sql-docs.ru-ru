@@ -15,19 +15,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84d04729e2f4c00c5d127a706727567c44855cd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093681"
 ---
 # <a name="only-sysadmin-users-can-write-job-step-log-files-to-the-file-system"></a>Только пользователи с правами sysadmin могут записывать файлы журнала шага задания в файловую систему
   По желанию пользователя [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ведет журнал шагов задания.  
   
 ## <a name="component"></a>Компонент  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Субагент  
+ Агент[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  В [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент может записывать журналы в файловую систему для заданий, принадлежащих членам предопределенной роли сервера **sysadmin** . Если владелец задания не является членом роли **sysadmin** , а учетная запись-посредник включена, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент может записывать журналы в файловую систему, используя учетные данные учетной записи-посредника.  
   
  После обновления задания, которые принадлежат пользователям, не являющимся членами предопределенной роли сервера **sysadmin** , больше не могут записывать журналы в файловую систему. Вместо этого эти пользователи могут выбрать параметр для записи журналов в таблицу в базе данных **msdb** . Члены роли **sysadmin** могут по-прежнему записывать файлы журнала в файловую систему.  
@@ -37,7 +37,7 @@ ms.locfileid: "66093681"
   
  Дополнительные сведения см. в разделах «Создание заданий», «Создание шагов задания» и «Обработка множественных шагов задания» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Проблемы обновления агента SQL Server](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
   

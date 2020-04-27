@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d358a47631f2ca048e41b9e0d978795e175c5966
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086324"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Учебники по интеллектуальному анализу данных (службы Analysis Services)
@@ -24,7 +24,7 @@ ms.locfileid: "66086324"
   
  Пошаговые учебники, перечисленные далее, помогут узнать, как максимально использовать службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], чтобы выполнять современный анализ для решения проблем бизнеса, которые невозможно решить традиционными методами бизнес-анализа.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Учебник по основам интеллектуального анализа данных](../tutorials/basic-data-mining-tutorial.md)  
   
@@ -47,22 +47,22 @@ ms.locfileid: "66086324"
      В этих занятиях рассматриваются такие современные методы, как использование вложенных таблиц, перекрестного прогнозирования, представлений пользовательских источников данных и именованных запросов, а также фильтров данных в запросах интеллектуального анализа данных. Вы также приобретете опыт использования средств интеллектуального анализа данных, предоставляемых службами [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## <a name="reference"></a>Справочник  
- [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](/sql/dmx/data-mining-extensions-dmx-reference)  
   
-## <a name="related-sections"></a>См. также  
+## <a name="related-sections"></a>Связанные разделы  
  [Средства интеллектуального анализа данных](data-mining/data-mining-tools.md)  
   
- [Логическая &#40;архитектуры Analysis Services-&#41;интеллектуального анализа данных](data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [Логическая архитектура (службы Analysis Services — интеллектуальный анализ данных)](data-mining/logical-architecture-analysis-services-data-mining.md)  
   
- [Логическая архитектура &#40;Analysis Services многомерных данных&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
+ [Логическая архитектура (службы Analysis Services — многомерные данные)](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
  [Проекты интеллектуального анализа данных](data-mining/data-mining-projects.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Решения интеллектуального анализа данных](data-mining/data-mining-solutions.md)   
  [Microsoft SQL Server ресурсов интеллектуального анализа данных](https://go.microsoft.com/fwlink/?LinkId=97965)   
- [Создание и запрос моделей интеллектуального анализа данных с помощью расширений интеллектуального анализа: учебники &#40;Analysis Services-интеллектуальный анализ данных&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Создание моделей интеллектуального анализа данных и выполнение к ним запросов с помощью расширений интеллектуального анализа данных: учебники (службы Analysis Services — интеллектуальный анализ данных)](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

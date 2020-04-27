@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082110"
 ---
 # <a name="define-new-measures-cube-wizard"></a>Определить новые меры (мастер кубов)
@@ -55,7 +55,7 @@ ms.locfileid: "66082110"
   
  Чтобы изменить тип данных, нажмите тип данных, а затем выберите тип данных из списка.  
   
- **Статистической обработки**  
+ **Агрегирование**  
  Перечисляет статистические функции для меры.  
   
  Чтобы изменить статистическую функцию, выберите ее, а затем выберите тип данных из списка.  
@@ -83,7 +83,7 @@ ms.locfileid: "66082110"
   
  Чтобы изменить тип данных, нажмите тип данных, а затем выберите тип данных из списка.  
   
- **Статистической обработки**  
+ **Агрегирование**  
  Перечисляет статистические функции для меры.  
   
  Чтобы изменить статистическую функцию, выберите ее, а затем выберите тип данных из списка.  
@@ -93,7 +93,7 @@ ms.locfileid: "66082110"
   
  Для удаления новой меры из куба нажмите кнопку **X** для этой меры.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 мастера кубов](cube-wizard-f1-help.md)   
  [Объекты куба &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Кубы в многомерных моделях](multidimensional-models/cubes-in-multidimensional-models.md)   

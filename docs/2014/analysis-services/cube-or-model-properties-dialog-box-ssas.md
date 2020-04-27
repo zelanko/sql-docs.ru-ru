@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6857ece2f81ffdba839ec1a7f0ef420ec5d0acdf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086601"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Диалоговое окно «Свойства куба или модели» (SSAS)
@@ -34,10 +34,10 @@ ms.locfileid: "66086601"
   
 |Термин|Определение|  
 |----------|----------------|  
-|**Название**|Отображает имя куба или модели.|  
-|**УДОСТОВЕРЕНИЯ**|Отображает идентификатор куба или модели.|  
+|**Имя**|Отображает имя куба или модели.|  
+|**Идентификатор**|Отображает идентификатор куба или модели.|  
 |**Описание**|Отображает описание куба или модели.|  
-|**Создать отметку времени**|Отображает дату и время создания куба или модели.|  
+|**Отметка времени создания**|Отображает дату и время создания куба или модели.|  
 |**Последнее обновление схемы**|Отображает дату и время последнего обновления метаданных куба или модели.|  
 |**Режим обработки кэша скриптов**|Выберите режим обработки, который следует использовать для кэша скриптов куба или модели. Дополнительные сведения о значениях этого свойства см. в разделе <xref:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode%2A>.|  
 |**Режим обработки**|Выберите режим обработки для указанного куба или модели. Дополнительные сведения о значениях этого свойства см. в разделе <xref:Microsoft.AnalysisServices.Cube.ProcessingMode%2A>.|  
@@ -45,7 +45,7 @@ ms.locfileid: "66086601"
 |**Состояние**|Отображает состояние обработки куба или модели. Дополнительные сведения о значениях этого свойства см. в разделе <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**LastProcessed**|Отображает дату и время последней обработки куба или модели.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Объекты куба &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   

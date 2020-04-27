@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39d3c0dbd23499072ddd0ca2cd21748d92103c8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093563"
 ---
 # <a name="overview-of-sql-server-setup-documentation"></a>Обзор документации по установке SQL Server
@@ -23,7 +23,7 @@ ms.locfileid: "66093563"
 ## <a name="documentation-available-during-setup"></a>Документация, доступная во время установки  
  Во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]нажмите кнопку **Справка** на странице мастера установки или клавишу F1 на клавиатуре, чтобы немедленно получить информацию, необходимую для завершения операции.  
   
-## <a name="overview-of-includessnoversionincludesssnoversion-mdmd-installation-topics"></a>Общие сведения о разделах по установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="overview-of-ssnoversion-installation-topics"></a>Общие сведения о разделах по установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Независимо от того, производится установка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или из командной строки, можно подготовиться к установке, ознакомившись со следующими разделами.  
   
 -   [Планирование установки SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md)  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b550291b06918cce7adb430b0b05d1f37018fd78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086380"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>добавить модель интеллектуального анализа данных к существующей структуре интеллектуального анализа данных
@@ -38,7 +38,7 @@ ms.locfileid: "66086380"
   
  На вкладке **модели интеллектуального анализа данных** появится новая модель интеллектуального анализа данных. Модель использует столбцы по умолчанию, существующие в структуре. Дополнительные сведения об изменении столбцов см. в разделе [Изменение свойств модели интеллектуального анализа данных](change-the-properties-of-a-mining-model.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задачи и инструкции по модели интеллектуального анализа данных](mining-model-tasks-and-how-tos.md)  
   
   

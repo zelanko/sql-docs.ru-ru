@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088291"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>Вычисления (конструктор кубов) (службы Analysis Services — многомерные данные)
@@ -34,7 +34,7 @@ ms.locfileid: "66088291"
      Для опытных пользователей в этом представлении целиком отображается скрипт многомерных выражений, связанный с кубом, а также доступные в кубе метаданные, функции и инструментальные средства.  
   
 ## <a name="panes"></a>Панели  
- **Панель инструментов**  
+ **Панелей**  
  Используйте панель инструментов как в представлении формы, так и в представлении скриптов для выполнения общих операций на этой вкладке. Дополнительные сведения об этой панели см. в разделе [панель инструментов &#40;вычисления, конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Организатор скриптов**  
@@ -44,7 +44,7 @@ ms.locfileid: "66088291"
  Панель **Средства вычисления** в обоих представлениях (форма и скрипт) используется для отображения метаданных, функций и инструментальных средств, доступных в кубе. Дополнительные сведения об этой панели см. в разделе [Средства вычисления (вкладка "Вычисления", конструктор кубов) (службы Analysis Services — многомерные данные)](calculation-tools-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Редактор скриптов**  
- Панель **Редактор скриптов** в представлении скриптов используется для редактирования всего скрипта куба, в представлении формы — для редактирования команд скрипта куба. Дополнительные сведения об этой панели см. в разделе [Редактор скриптов (вкладка "Вычисления", конструктор кубов) (службы Analysis Services — многомерные данные)](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md).  
+ Панель **Редактор скриптов** в представлении скриптов используется для редактирования всего скрипта куба, в представлении формы — для редактирования команд скрипта куба. Дополнительные сведения об этой панели см. в разделе [Редактор скриптов (вкладка "Вычисления", конструктор кубов) (службы Analysis Services — многомерные данные)](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Редактор формы вычисляемых элементов**  
  Панель **Редактор формы вычисляемых элементов** в представлении формы используется для редактирования вычисляемых элементов в скрипте куба. Дополнительные сведения об этой панели см. в разделе [Редактор формы вычисляемых элементов (вкладка "Вычисления", конструктор кубов) (службы Analysis Services — многомерные данные)](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "66088291"
  **Редактор формы именованных наборов**  
  Панель **Редактор формы именованных наборов** в представлении формы используется для редактирования именованных наборов в скрипте куба. Дополнительные сведения об этой панели см. в разделе [Редактор формы именованных наборов (вкладка "Вычисления", конструктор кубов) (службы Analysis Services — многомерные данные)](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объекты куба &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Времен](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Основные принципы создания скриптов многомерных выражений &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   

@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: fd68ebe406fc7168746c804e585fa7465ee8c527
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089281"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Options (Text Editor - Plain Text - General Page)
@@ -55,7 +55,7 @@ ms.locfileid: "66089281"
   
  Эта установка не оказывает влияния на команды **Копировать** и **Вырезать** в случае, если строка не пуста. Если ничего не выделено, копируется или вырезается вся строка. Если затем выбрать команду **Вставить**, вставляется текст всей строки, включая символ конца строки.  
   
-## <a name="display"></a>Отобразить  
+## <a name="display"></a>Отображение  
  **Номера строк**  
  Позволяет отобразить номер строки рядом с каждой строкой текста.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66089281"
  **Открывать URL-адреса одним щелчком**  
  Измените курсор на указывающую руку при его проходе над URL-адресом в редакторе. Можно щелкнуть URL-адрес для отображения указанной страницы в браузере.  
   
- **Панель навигации**  
+ **Панель переходов**  
  Этот флажок недоступен.  
   
   

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8812bba6d87e29ed8a4533bb87e645f42120015
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094291"
 ---
 # <a name="installation-type"></a>Тип установки
@@ -31,6 +31,6 @@ ms.locfileid: "66094291"
   
  Вы можете добавить только функции, поддерживаемые SysPrep,[!INCLUDE[ssDE](../../includes/ssde-md.md)] и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]в подготовленный образ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Другие функции, не поддерживаемые SysPrep, могут быть добавлены только после завершения подготовленного экземпляра.  
   
- **Примечание** . Невозможно добавить компоненты в экземпляр отказоустойчивого кластера после его установки. Чтобы добавить компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в существующий отказоустойчивый кластер, необходимо установить отдельный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ **Примечание.** После установки экземпляра отказоустойчивого кластера добавить в него компоненты невозможно. Чтобы добавить компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в существующий отказоустойчивый кластер, необходимо установить отдельный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   

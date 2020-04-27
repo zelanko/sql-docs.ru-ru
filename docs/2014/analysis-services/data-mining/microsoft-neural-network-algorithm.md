@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a7330fab8b4c0ecdff296e0daa5e529442fd8b94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083873"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
@@ -88,7 +88,7 @@ ms.locfileid: "66083873"
   
 -   Не поддерживается создание измерений интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Технический справочник по алгоритму нейронной сети (Майкрософт)](microsoft-neural-network-algorithm-technical-reference.md)   
  [Содержимое моделей интеллектуального анализа данных для моделей нейронных сетей &#40;Analysis Services — интеллектуальный анализ&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Примеры запросов к модели нейронной сети](neural-network-model-query-examples.md)   

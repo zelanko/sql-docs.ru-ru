@@ -14,21 +14,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fe326421861cfd3c38dbf0fb0a6042d05945d022
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091610"
 ---
 # <a name="upgrade-advisor-how-to-topics"></a>Инструкции по работе с помощником по обновлению
   В этом разделе описаны общие методы использования помощника по обновлению.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Установка помощника по обновлению](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)  
   
  [Запуск помощника по обновлению](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)  
   
- [Как запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)  
+ [Запуск мастера анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)  
   
  [Просмотр отчета помощника по обновлению](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66091610"
   
  [Экспорт отчетов](../../../2014/sql-server/install/how-to-export-reports.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Работа с помощником по обновлению](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

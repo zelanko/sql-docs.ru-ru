@@ -13,26 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0c52d2598c2fff79d9d7dd6cb99468871f12639
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086607"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Конструктор кубов (службы Analysis Services — многомерные данные)
-  
   **Конструктор кубов** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] используется для изменения различных свойств существующего куба, включая группы мер и меры, измерения куба и их связи, вычисления, ключевые показатели эффективности, действия, секции, перспективы и переводы, включенные в куб, а также для обзора данных, содержащихся в кубе. Диалоговое окно **Конструктор кубов** можно открыть следующими способами:  
   
 -   Щелкнув правой кнопкой мыши куб в **обозревателе решений** и выбрав в контекстном меню пункт **Открыть** или **Конструктор представлений** .  
   
 -   Дважды щелкнув куб в окне **обозреватель решений**.  
   
- 
-  **Конструктор кубов** содержит следующие вкладки:  
+ **Конструктор кубов** содержит следующие вкладки:  
   
 ## <a name="tabs"></a>Вкладки  
   
-|Tab|Определение|  
+|Вкладка|Определение|  
 |---------|----------------|  
 |**Структура кубов**|Эта вкладка используется для создания и изменения групп мер и отдельных мер, добавления измерений куба и отображения объектов, включенных в куб из связанных представлений источников данных. Дополнительные сведения об этой вкладке см. в разделе [Структура куба (конструктор кубов) (службы Analysis Services — многомерные данные)](cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Использование измерений**|Эта вкладка используется для создания и изменения связи между измерениями куба и группами мер, включенными в куб. Дополнительные сведения об этой вкладке см. в разделе [Использование измерений (конструктор кубов) (службы Analysis Services — многомерные данные)](dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
@@ -44,7 +42,7 @@ ms.locfileid: "66086607"
 |**Translations**|Эта вкладка используется для создания и изменения переводов групп мер, отдельных мер, измерений куба, перспектив, ключевых показателей эффективности, действий, именованных наборов и вычисляемых элементов, включенных в куб. Дополнительные сведения об этой вкладке см. в разделе [Переводы (конструктор кубов) (службы Analysis Services — многомерные данные)](translations-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Браузер**|Эта вкладка используется для обзора данных и метаданных в кубе. Дополнительные сведения об этой вкладке см. в разделе [Браузер (конструктор кубов) (службы Analysis Services — многомерные данные)](browser-cube-designer-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объекты куба &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Кубы в многомерных моделях](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  

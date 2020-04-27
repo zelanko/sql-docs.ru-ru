@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28b623333adaced772f85572091543f124894f4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084816"
 ---
 # <a name="data-mining-ssas"></a>Интеллектуальный анализ данных (службы SSAS)
@@ -46,18 +46,18 @@ ms.locfileid: "66084816"
   
 -   Защита и развертывание: обеспечивает безопасность на основе ролей через [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], в том числе раздельные разрешения для детализации на моделирование и структурирование данных. Простота развертывания моделей на других серверах, которая предоставляет пользователям доступ к закономерностям и прогнозированию  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  В подразделах этого раздела описаны основные возможности интеллектуального анализа данных SQL Server и связанные с ним задачи.  
   
 -   [Основные понятия интеллектуального анализа данных](data-mining-concepts.md)  
   
--   [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+-   [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining-algorithms-analysis-services-data-mining.md)  
   
--   [Структуры интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ&#41;](mining-structures-analysis-services-data-mining.md)  
+-   [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-structures-analysis-services-data-mining.md)  
   
--   [Модели интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ&#41;](mining-models-analysis-services-data-mining.md)  
+-   [Модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-models-analysis-services-data-mining.md)  
   
--   [Тестирование и проверка &#40;&#41;интеллектуального анализа данных](testing-and-validation-data-mining.md)  
+-   [Тестирование и проверка (интеллектуальный анализ данных)](testing-and-validation-data-mining.md)  
   
 -   [Запросы интеллектуального анализа данных](data-mining-queries.md)  
   
@@ -67,6 +67,6 @@ ms.locfileid: "66084816"
   
 -   [Архитектора интеллектуального анализа данных](data-mining-architecture.md)  
   
--   [Общие сведения о безопасности &#40;&#41;интеллектуального анализа данных](security-overview-data-mining.md)  
+-   [Общие сведения о безопасности (интеллектуальный анализ данных)](security-overview-data-mining.md)  
   
   

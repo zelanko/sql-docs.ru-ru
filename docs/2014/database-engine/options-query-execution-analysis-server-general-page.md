@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 9d299e8ffc5faceb86bcccd6bd508f09ef3c80b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089416"
 ---
 # <a name="options-query-execution-analysis-server-general-page"></a>Параметры (выполнение запроса-сервер анализа данных-страница "Общие")
@@ -26,7 +26,7 @@ ms.locfileid: "66089416"
  **Время ожидания выполнения**  
  Задает значение по умолчанию в диалоговом окне **Создание соединения** . В этом окне отображается количество секунд ожидания перед отменой запроса. Значение 0 указывает на бесконечное ожидание или отсутствие времени ожидания. Это значение равно 0 в новой установке.  
   
- **Восстановить значения по умолчанию**  
+ **По умолчанию**  
  Позволяет вернуть исходные значения по умолчанию для всех параметров на данной странице.  
   
   

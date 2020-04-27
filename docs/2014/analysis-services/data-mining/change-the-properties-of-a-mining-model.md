@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c34cbfd2ea88d863239c068300c65531fd19f5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085882"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Изменение свойств модели интеллектуального анализа данных
@@ -50,7 +50,7 @@ ms.locfileid: "66085882"
   
      Новое значение вступает в силу после выбора другого элемента в конструкторе.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задачи и инструкции по модели интеллектуального анализа данных](mining-model-tasks-and-how-tos.md)  
   
   

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 072a3220ba5c6997c463031733bbbe0ce2587fe1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088908"
 ---
 # <a name="script-an-extended-event-session"></a>создать скрипт сеанса расширенных событий
@@ -22,7 +22,7 @@ ms.locfileid: "66088908"
   
 -   **Новое окно редактора запросов**  
   
--   **File**  
+-   **Файл**  
   
 -   **Буфер обмена**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66088908"
   
 3.  В диалоговом окне **Свойства сеанса** измените сеанс событий и выберите в раскрывающемся списке **Скрипт** , где нужно создать скрипт измененного сеанса из списка.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные события](../relational-databases/extended-events/extended-events.md)  
   
   

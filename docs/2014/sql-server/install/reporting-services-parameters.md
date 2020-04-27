@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4fe2f4f387dfbdf7a10ed34a5415f5f2b0d27353
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092541"
 ---
 # <a name="reporting-services-parameters"></a>Параметры служб Reporting Services
@@ -26,7 +26,7 @@ ms.locfileid: "66092541"
  **Имя экземпляра служб Reporting Services**  
  Выберите из списка экземпляр служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Работа с советником по переходу](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [Справочник по пользовательскому интерфейсу помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84abbb855673183910099f0a34d70702d34da7fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085602"
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>Копирование представления модели интеллектуального анализа данных
@@ -65,7 +65,7 @@ ms.locfileid: "66085602"
   
 5.  Щелкните правой кнопкой мыши панель **Сведения об узле** повторно и выберите команду **Копировать**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](mining-model-viewer-tasks-and-how-tos.md)  
   
   

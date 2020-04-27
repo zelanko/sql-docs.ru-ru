@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5204b27fb4745f8005a328dc62503f7db418387d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093852"
 ---
 # <a name="modify-stored-procedures-that-use-discontinued-full-text-search-properties"></a>Измените хранимые процедуры, в которых используются неподдерживаемые свойства полнотекстового поиска
@@ -26,7 +26,7 @@ ms.locfileid: "66093852"
 ## <a name="component"></a>Компонент  
  Компонент Full-text Search  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Следующие свойства и настройки, связанные с полнотекстовым поиском, были удалены.  
   
 -   **DataTimeout**  
@@ -46,7 +46,7 @@ ms.locfileid: "66093852"
 ## <a name="corrective-action"></a>Действие по исправлению  
  Измените хранимые процедуры, чтобы удалить эти свойства.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Работа с помощником по обновлению](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

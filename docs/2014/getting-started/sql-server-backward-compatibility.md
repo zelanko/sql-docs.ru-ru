@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd93707ef139b1751d918af43efed72574d58aa5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088507"
 ---
 # <a name="sql-server-backward-compatibility"></a>Обратная совместимость SQL Server
@@ -22,14 +22,14 @@ ms.locfileid: "66088507"
   
  В этой части раздела освещаются такие темы, как программирование данных, средства настройки контактной зоны, программа установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], службы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и другие широкие функциональные изменения.  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Функции SQL Server, устаревшие в SQL Server 2014](../../2014/getting-started/deprecated-sql-server-features-in-sql-server-2014.md)|Устаревшие функции [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в этом выпуске. В этом разделе описывается конфигурация [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и функции программы установки.|  
 |[Функции SQL Server, больше не поддерживаемые в SQL Server 2014](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)|Функции [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], неподдерживаемые в этом выпуске. В этом разделе описывается конфигурация [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и функции программы установки.|  
 |[Критические изменения функций SQL Server в SQL Server 2014](../../2014/getting-started/breaking-changes-to-sql-server-features-in-sql-server-2014.md)|Изменения, которые могут потребовать изменений в приложениях. В этом разделе описывается конфигурация [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и функции программы установки.|  
 |[Изменения в работе функций SQL Server в SQL Server 2014](../../2014/getting-started/behavior-changes-to-sql-server-features-in-sql-server-2014.md)|Изменения поведения функций [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в этом выпуске. В этом разделе описывается конфигурация [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и функции программы установки.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обратная совместимость](../../2014/getting-started/backward-compatibility.md)  
   
   

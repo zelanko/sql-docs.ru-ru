@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 100e796bb27d1e60db000a364a0432273dd5cafb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094235"
 ---
 # <a name="integration-services-parameters"></a>Параметры служб Integration Services
@@ -24,7 +24,7 @@ ms.locfileid: "66094235"
   
 ## <a name="options"></a>Параметры  
  **Анализировать пакеты служб SSIS на компьютере**  
- Выберите этот параметр для анализа пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на компьютере. Этот флажок установлен по умолчанию.  
+ Выберите этот параметр для анализа пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на компьютере. По умолчанию этот параметр выбран.  
   
  **Анализировать файлы пакетов служб SSIS**  
  Выберите этот параметр для анализа пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в файловой системе.  
@@ -32,7 +32,7 @@ ms.locfileid: "66094235"
  **Путь к пакетам служб SSIS**  
  Укажите UNC-путь или локальный адрес, по которому размещены пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Имена файлов включать не нужно. Если указанный путь недоступен, вы не сможете нажать кнопку **Далее**. По умолчанию путь пустой. Это поле доступно только при выборе пункт **Анализ файлов пакетов служб SSIS**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Работа с советником по переходу](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [Справочник по пользовательскому интерфейсу помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   

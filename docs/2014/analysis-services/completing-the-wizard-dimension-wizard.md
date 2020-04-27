@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4efca206c40c685f81c2c4629714e285ba6119af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087598"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>Завершение работы мастера (мастер измерений)
@@ -33,7 +33,7 @@ ms.locfileid: "66087598"
 -   В [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]обозревателе решений **** щелкните правой кнопкой мыши папку **Измерения** для проекта [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а затем выберите команду **Новое измерение**.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Введите имя нового измерения.  
   
  **Предварительный просмотр**  
@@ -43,9 +43,9 @@ ms.locfileid: "66087598"
  Выберите этот режим для формирования схемы, необходимой для поддержки измерения. Выбор этого параметра открывает мастер формирования схем.  
   
 > [!NOTE]  
->  Этот параметр отображается в случае, если на странице **Выбор метода создания** выбрана команда **Создать в источнике данных таблицу времени** или **Создать в источнике данных таблицу, не содержащую время** . Дополнительные сведения см. в разделе [Выбор метода создания (мастер измерений)](select-creation-method-dimension-wizard.md).  
+>  Этот параметр отображается в случае, если на странице **Выбор метода создания** выбрана команда **Создать в источнике данных таблицу времени** или **Создать в источнике данных таблицу, не содержащую время**. Дополнительные сведения см. в разделе [Выбор метода создания (мастер измерений)](select-creation-method-dimension-wizard.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 мастера измерений](dimension-wizard-f1-help.md)   
  [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  

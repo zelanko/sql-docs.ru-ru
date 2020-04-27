@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e4d9b0eaa65eada55fec398b058d8e17aaa53a03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084372"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Импорт проекта интеллектуального анализа данных с помощью мастера импорта служб Analysis Services
@@ -52,13 +52,13 @@ ms.locfileid: "66084372"
     > [!WARNING]  
     >  Импортируемые объекты указывать нельзя; при выборе существующей базы данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] импортируются все многомерные объекты и объекты интеллектуального анализа данных.  
   
-     Щелкните **Далее**.  
+     Нажмите кнопку **Далее**.  
   
 5.  На странице **Завершение работы мастера**отображается ход выполнения операции импорта. Отменить операцию или изменить импортируемые объекты нельзя. По завершении нажмите кнопку **Готово** .  
   
      Новый проект будет автоматически открыт в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-## <a name="see-also"></a>См. также:  
- [Свойства проекта &#40;табличные&#41;SSAS](../tabular-models/properties-ssas-tabular.md)  
+## <a name="see-also"></a>См. также  
+ [Свойства проекта (табличные службы SSAS)](../tabular-models/properties-ssas-tabular.md)  
   
   

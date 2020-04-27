@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a6e6d0ade60dbb42fca9bda9ee78f4dbb50064a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082730"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Использование данных вложенной таблицы в качестве входных для диаграммы точности
@@ -53,7 +53,7 @@ ms.locfileid: "66082730"
   
      Если необходимо изменить связь между вложенной таблицей и таблицей вариантов, нажмите кнопку **Изменить соединение** , после чего откроется диалоговое окно **Создание связи** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выбор и сопоставьте данные тестирования модели](choose-and-map-model-testing-data.md)   
  [Применение фильтров к данным проверки модели](apply-filters-to-model-testing-data.md)  
   

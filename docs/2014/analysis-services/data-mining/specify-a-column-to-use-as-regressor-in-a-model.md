@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf035895142ae48cb59f6256e7249710d9709b92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082911"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Указание столбца, который будет использоваться в модели в качестве регрессора
@@ -59,10 +59,10 @@ ms.locfileid: "66082911"
   
      В средстве просмотра модель представляется единственным узлом, содержащим формулу регрессии. Можно просмотреть формулу в окне **Обозначения интеллектуального анализа данных**или получить коэффициенты для формулы с помощью запросов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Алгоритм линейной регрессии (Майкрософт)](microsoft-linear-regression-algorithm.md)   
  [Запросы интеллектуального анализа данных](data-mining-queries.md)   
  [Технический справочник по алгоритму линейной регрессии (Майкрософт)](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии &#40;Analysis Services-интеллектуальный анализ данных&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

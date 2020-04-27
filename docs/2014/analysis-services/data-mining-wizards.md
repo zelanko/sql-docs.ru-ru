@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7db22d59ffa9ce2fcb8b4875bd1dafcf7018e567
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086307"
 ---
 # <a name="data-mining-wizards"></a>Мастера интеллектуального анализа данных
@@ -25,7 +25,7 @@ ms.locfileid: "66086307"
   
  В следующей таблице описаны мастера, используемые для создания источников интеллектуального анализа данных, представлений и объектов.  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Справка F1 мастера источников данных &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)|Используйте мастер источников данных для определения нового источника данных.|  
 |[Справка F1 мастера представлений источников данных &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)|Используйте мастер представления источников данных для определения представления нового источника данных.|  
@@ -37,7 +37,7 @@ ms.locfileid: "66086307"
   
  Дополнительные сведения о мастерах, помогающих при проектировании и работе с многомерными данными, см. в разделе [Мастера служб Analysis Services (многомерные данные)](analysis-services-wizards-multidimensional-data.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Средства интеллектуального анализа данных](data-mining/data-mining-tools.md)   
  [Учебник по основам интеллектуального анализа данных](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Создание структуры интеллектуального анализа данных OLAP](data-mining/create-an-olap-mining-structure.md)   

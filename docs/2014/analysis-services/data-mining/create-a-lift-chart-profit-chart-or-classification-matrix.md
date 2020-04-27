@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 033965a6152edaf3d62fcd8c29476651648c1697
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085407"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Создать диаграмму точности прогнозов, диаграмму роста прибыли или матрицу классификации
@@ -102,7 +102,7 @@ ms.locfileid: "66085407"
   
      Эти затраты учитываются один раз для всей целевой совокупности.  
   
-     **Индивидуальные издержки**  
+     **Индивидуальная стоимость**  
      Расходы, добавляющиеся к фиксированным издержкам, которые могут быть связаны с обращением к каждому заказчику. Например, сюда можно включить почтовые расходы по доставке рекламных писем или расходы на оплату телефонных переговоров.  
   
      Эти расходы должны быть одинаковы для всей целевой совокупности. Каждое значение умножается на число целевых вариантов.  
@@ -110,8 +110,8 @@ ms.locfileid: "66085407"
      **Доход на единицу**  
      Сумма прибыли, связанная с каждой успешной продажей.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диаграмма точности прогнозов &#40;Analysis Services&#41;интеллектуального анализа данных](lift-chart-analysis-services-data-mining.md)   
- [Матрица классификации &#40;Analysis Services — интеллектуальный анализ данных&#41;](classification-matrix-analysis-services-data-mining.md)  
+ [Матрица классификации (службы Analysis Services — интеллектуальный анализ данных)](classification-matrix-analysis-services-data-mining.md)  
   
   

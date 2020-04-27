@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 86894159dd702466823bed8f2185caaa4295b3ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086355"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>добавить вложенную таблицу в структуру интеллектуального анализа данных
@@ -43,7 +43,7 @@ ms.locfileid: "66086355"
   
      К структуре интеллектуального анализа данных добавлен новый столбец таблицы, содержащий ключевой столбец. Дополнительные сведения о способе добавления новых столбцов см. в разделе [Добавление столбцов к структуре интеллектуального анализа данных](add-columns-to-a-mining-structure.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задачи и инструкции по структуре интеллектуального анализа данных](mining-structure-tasks-and-how-tos.md)  
   
   

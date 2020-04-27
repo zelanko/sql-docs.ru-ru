@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89eaf3b59f6d779a01168b00d51acbee1e96ca7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085849"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Выбор и сопоставление входных данных для прогнозирующего запроса
@@ -117,7 +117,7 @@ ms.locfileid: "66085849"
   
      Если связь уже имеется, то столбцы в модели интеллектуального анализа данных автоматически сопоставляются со столбцами, имеющими то же имя во входной таблице. Связь между вложенной таблицей и таблицей вариантов можно изменить, нажав кнопку **Изменить соединение**, после чего откроется диалоговое окно **Создание связи** .  
   
-## <a name="see-also"></a>См. также:  
- [Прогнозирующие запросы &#40;&#41;интеллектуального анализа данных](prediction-queries-data-mining.md)  
+## <a name="see-also"></a>См. также  
+ [Прогнозирующие запросы (интеллектуальный анализ данных)](prediction-queries-data-mining.md)  
   
   

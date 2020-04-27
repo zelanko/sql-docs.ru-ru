@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce2086e998704e893beaa92aabd2e51129a0450f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084209"
 ---
 # <a name="manually-edit-a-prediction-query"></a>Изменение прогнозирующего запроса вручную
@@ -42,9 +42,9 @@ ms.locfileid: "66084209"
     > [!NOTE]  
     >  Если созданный запрос содержит ошибку, в окне результатов не будут показаны результаты и не будет выведено сообщение об ошибке. Чтобы исправить ошибку, нажмите кнопку **Конструктор** или выберите один из пунктов — **Конструктор** или **Запрос** — в меню **Модель интеллектуального анализа данных** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запросы интеллектуального анализа данных](data-mining-queries.md)   
  [Прогнозирование конструктор запросов &#40;интеллектуального анализа данных&#41;](../prediction-query-builder-data-mining.md)   
- [Занятие 6. Создание и работа с прогнозами &#40;учебник по основам интеллектуального анализа данных&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Занятие 6. Создание прогнозов и работа с ними (учебник по интеллектуальному анализу данных — начальный уровень)](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

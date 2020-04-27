@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 83c0d1ad4d63d361754c5e2183081c30c7c51f2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089984"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>Параметры (выполнение запроса-SQL Server-страница "Общие")
@@ -36,7 +36,7 @@ ms.locfileid: "66089984"
  Введите слово, которое будет использоваться для разделения инструкций языка [!INCLUDE[tsql](../includes/tsql-md.md)] на пакеты. Значение по умолчанию — GO.  
   
  **По умолчанию открывать новые запросы в режиме SQLCMD**  
- При установке этого флажка новые запросы будут открываться в режиме SQLCMD. Дополнительные сведения о режиме SQLCMD см. [в разделе изменение скриптов SQLCMD с помощью редактора запросов](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  
+ При установке этого флажка новые запросы будут открываться в режиме SQLCMD. Дополнительные сведения о режиме SQLCMD см. в разделе [Изменение скриптов SQLCMD при помощи редактора запросов](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  
   
  При выборе этого параметра следует учитывать следующие ограничения.  
   
@@ -46,10 +46,10 @@ ms.locfileid: "66089984"
   
 -   Поскольку редактор запросов не может ответить на подсказки и приглашения операционной системы, будьте внимательны и не запускайте интерактивные инструкции.  
   
- **Восстановить значения по умолчанию**  
+ **По умолчанию**  
  Выберите этот пункт для сброса всех значений этой страницы и установки значений по умолчанию.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Программа sqlcmd](../tools/sqlcmd-utility.md)  
   
   

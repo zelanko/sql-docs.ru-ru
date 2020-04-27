@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3ee155c70a8b10d4437d6b2f374c8b9497bf3faa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092920"
 ---
 # <a name="remove-udt39s-named-after-the-reserved-ordpath-data-type"></a>Удалить определяемый пользователем тип&#39;s с именем после зарезервированного типа данных НЕВЕРНАЯ ORDPATH
@@ -23,7 +23,7 @@ ms.locfileid: "66092920"
 ## <a name="component"></a>Компонент  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Имена терминов, используемых во встроенных типах данных, не должны использоваться в качестве имен определяемых пользователем типов среды CLR или их псевдонимов.  
   
 ## <a name="corrective-action"></a>Действие по исправлению  

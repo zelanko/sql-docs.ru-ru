@@ -14,10 +14,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14fc681ea05e47d733c164588db817d903f8fd0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088630"
 ---
 # <a name="about-the-sql-server-license-terms"></a>Об условиях лицензионного соглашения SQL Server
@@ -58,15 +58,15 @@ ms.locfileid: "66088630"
 |Корейский|KOR|1042|  
 |Немецкий|DEU|1031|  
 |Испанский|ESN|3082|  
-|Китайский (упрощенный)|CHS|2052|  
-|Китайский, традиционное письмо|CHT|1028|  
+|Китайский, упрощенное письмо|CHS|2052|  
+|Китайский (традиционный)|CHT|1028|  
 |Португальский (Бразилия)|PTB|1046|  
 |Русский|RUS|1049|  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-licensing-options"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Варианты лицензирования  
+## <a name="ssnoversion-licensing-options"></a>Варианты лицензирования[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Дополнительные сведения о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ценах и вариантах лицензирования см. на [Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) (https://www.microsoft.com/sqlserver/sql-server-2014.aspx) веб-сайте.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Рекомендации по лицензированию для SQL Server](../../2014/sql-server/install/licensing-considerations-for-sql-server.md)   
  [Заявление о конфиденциальности Microsoft SQL Server](../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
  [Юридическое уведомление для документации](../../2014/getting-started/legal-notice-for-documentation.md)  

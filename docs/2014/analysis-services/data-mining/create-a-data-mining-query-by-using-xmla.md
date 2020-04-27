@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec69c7225d4c509d93787e667612269c4de91e23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085547"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Создание запроса интеллектуального анализа данных с помощью XMLA
@@ -60,7 +60,7 @@ ms.locfileid: "66085547"
   
      `</Restrictions>`  
   
-4.  Нажмите **Execute (Выполнить)**.  
+4.  Нажмите кнопку **Выполнить**.  
   
      На панели **Результаты** отображается список имен столбцов для указанного набора строк схемы.  
   
@@ -94,11 +94,11 @@ ms.locfileid: "66085547"
   
      `</Restrictions>`  
   
-5.  Нажмите **Execute (Выполнить)**.  
+5.  Нажмите кнопку **Выполнить**.  
   
      На панели результатов выводится определение схемы и значения для заданной модели.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [&#40;содержимого моделей интеллектуального анализа данных Analysis Services — интеллектуальный анализ&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   

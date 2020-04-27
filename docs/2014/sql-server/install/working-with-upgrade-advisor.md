@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b80e11ffdf12037b466531b0d5b10a2b9f3a2e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66090958"
 ---
 # <a name="working-with-upgrade-advisor"></a>Работа с помощником по обновлению
@@ -39,14 +39,14 @@ ms.locfileid: "66090958"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Общие сведения о помощнике по обновлению](../../../2014/sql-server/install/overview-of-upgrade-advisor.md)|Содержит общие сведения о процессе обновления, мастере анализа помощника по обновлению и средстве просмотра отчетов помощника по обновлению.|  
 |[Инструкции по работе с помощником по обновлению](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|Содержит инструкции по выполнению общих процедур помощника по обновлению.|  
 |[Справочник по пользовательскому интерфейсу помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)|Содержит разделы, которые появляются при нажатии клавиши F1 или кнопки **Справка** на страницах мастера анализа помощника по обновлению.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установка помощника по обновлению](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
- [Разрешение проблем при обновлении](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
+ [Решение проблем при обновлении](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

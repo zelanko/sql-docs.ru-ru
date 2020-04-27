@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a53db9413ce7877182ca5f9c768bb1e1ef71e383
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086845"
 ---
 # <a name="create-edit-named-calculation-dialog-box-analysis-services"></a>Диалоговое окно «Создание именованного вычисления» (Analysis Services)
-  Чтобы определить или изменить именованное вычисление для таблицы [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] в представлении источника данных, используйте диалоговое окно **Создать именованное вычисление/изменение названного вычисления** в. Диалоговое окно **Создание именованного вычисления/Изменение именованного вычисления** можно открыть следующими способами:  
+  Используйте диалоговое окно **Создание именованного вычисления/Изменение именованного вычисления** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для определения или редактирования именованного вычисления для таблицы в представлении источника данных. Диалоговое окно **Создание именованного вычисления/Изменение именованного вычисления** можно открыть следующими способами:  
   
 -   нажмите кнопку **Создать именованное вычисление** на панели **Панель инструментов****конструктора представлений источников данных**;  
   
@@ -46,8 +46,8 @@ SELECT <Table Name in Data Source>.* , <Expression> AS <Column Name> FROM <Table
   
  The expression can contain references to other tables, by means of a sub-select statement. If the expression would require parentheses in a SELECT statement, the expression entered must be enclosed between parentheses.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Конструктор представлений источников данных &#40;Analysis Services многомерных данных&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Конструктор представлений источников данных (службы Analysis Services — многомерные данные)](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

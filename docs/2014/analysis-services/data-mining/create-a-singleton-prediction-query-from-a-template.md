@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085492"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>создать одноэлементный прогнозирующий запрос из шаблона
@@ -90,9 +90,9 @@ AS [t]
   
      В образце кода, приведенном в начале данного раздела, вот что было задано в качестве дополнительного условия: `'45' as [Age]`.  
   
-11. Нажмите **Execute (Выполнить)**.  
+11. Нажмите кнопку **Выполнить**.  
   
-## <a name="see-also"></a>См. также:  
- [Учебник по созданию прогнозов &#40;Basic Data Mining&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+## <a name="see-also"></a>См. также  
+ [Создание прогнозов (учебник по интеллектуальному анализу данных — начальный уровень)](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

@@ -14,23 +14,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15574819cf0f0fec0d95fa2353c187cc55091e56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084196"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Управление решениями и объектами интеллектуального анализа данных
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]предоставляет клиентские средства, которые можно использовать для управления существующими структурами и моделями интеллектуального анализа данных. В этом разделе описаны операции управления, которые могут выполняться с помощью каждой из сред.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] содержит клиентские средства, предназначенные для управления структурами и моделями интеллектуального анализа данных. В этом разделе описаны операции управления, которые могут выполняться с помощью каждой из сред.  
   
  Кроме этого, управление объектами интеллектуального анализа данных может осуществляться программно через объекты AMO или путем соединения с базами данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из других клиентов, например надстройки интеллектуального анализа данных для [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Перемещение объектов интеллектуального анализа данных](moving-data-mining-objects.md)  
   
- [Требования к обработке и рекомендации &#40;&#41;интеллектуального анализа данных](processing-requirements-and-considerations-data-mining.md)  
+ [Требования к обработке и связанные замечания (интеллектуальный анализ данных)](processing-requirements-and-considerations-data-mining.md)  
   
- [Использование SQL Server Profiler для мониторинга &#40;интеллектуального анализа данных Analysis Services — интеллектуальный анализ данных&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [Наблюдение за интеллектуальным анализом данных с помощью приложения SQL Server Profiler (службы Analysis Services — интеллектуальный анализ данных)](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>Обнаружение объектов интеллектуального анализа данных  
  Обработанные структуры и модели интеллектуального анализа данных хранятся в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "66084196"
 >  Некоторые клиенты, например надстройки интеллектуального анализа данных для [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007, также позволяют создавать модели интеллектуального анализа данных сеанса и структуры интеллектуального анализа данных; в них используются соединения с экземплярами, но создаваемые структуры и модели интеллектуального анализа данных при этом сохраняются только на протяжении сеанса. Этими моделями можно управлять через клиент точно так же, как структурами и моделями, сохраненными в базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , но после отключения от экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]объекты удаляются.  
   
 ## <a name="managing-data-mining-objects-in-sql-server-data-tools"></a>Управление объектами интеллектуального анализа данных в среде SQL Server Data Tools.  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]предоставляет функции, упрощающие создание, просмотр и изменение объектов интеллектуального анализа данных.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , упрощают создание, просмотр и изменение объектов интеллектуального анализа данных.  
   
  По следующим ссылкам можно получить полезные сведения об изменении объектов интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66084196"
   
 -   [Изменение свойств модели интеллектуального анализа данных](change-the-properties-of-a-mining-model.md)  
   
--   [Просмотр или изменение флагов модели &#40;&#41;интеллектуального анализа данных](modeling-flags-data-mining.md)  
+-   [Просмотр или изменение флагов моделирования (интеллектуальный анализ данных)](modeling-flags-data-mining.md)  
   
 -   [Просмотр или изменение параметров алгоритма](view-or-change-algorithm-parameters.md)  
   
@@ -79,21 +79,21 @@ ms.locfileid: "66084196"
   
 -   <xref:Microsoft.AnalysisServices>  
   
- **Ограничения:** None.  
+ **Ограничения.** Нет.  
   
 ### <a name="data-mining-extensions-dmx"></a>Расширения интеллектуального анализа данных  
  Расширения интеллектуального анализа данных могут быть использованы вместе с другими интерфейсами команд, например с [!INCLUDE[vstecado](../../includes/vstecado-md.md)] или ADOMD.Net, для создания и удаления структур и моделей интеллектуального анализа данных, а также создания запросов к ним.  
   
--   [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41; DDL](/sql/dmx/dmx-statements-data-definition)  
+-   [Инструкции определения расширений интеллектуального анализа данных](/sql/dmx/dmx-statements-data-definition)  
   
- **Ограничения:** Некоторые свойства не могут быть изменены с помощью расширений интеллектуального анализа данных.  
+ **Ограничения.** Некоторые свойства нельзя изменять с помощью расширения интеллектуального анализа данных.  
   
 ### <a name="xml-for-analysis-xmla"></a>XML для аналитики (XMLA)  
  XML для аналитики, или XMLA, — это язык описания данных DDL для всех служб Analysis Services. XMLA позволяет управлять большинством объектов интеллектуального анализа данных и операциями на сервере. Все операции управления между клиентом и сервером можно выполнять с помощью XMLA. Для удобства при создании оболочки для XML можно использовать язык скриптов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ASSL).  
   
- **Ограничения:** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] создает некоторые инструкции XMLA, которые поддерживаются только для внутреннего использования, и не могут использоваться в скриптах XML DDL.  
+ **Ограничения.** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] формируются некоторые XMLA-инструкции, поддерживаемые только для внутреннего использования. Их использование в скриптах XML DDL невозможно.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [&#40;Analysis Services с руководством разработчика&#41;](../analysis-services-developer-documentation.md)  
   
   

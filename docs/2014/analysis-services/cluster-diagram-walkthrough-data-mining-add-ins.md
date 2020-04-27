@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087905"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Пошаговое руководство по диаграмме кластеров (надстройки интеллектуального анализа данных)
@@ -123,7 +123,7 @@ ms.locfileid: "66087905"
   
      Однако, если вы примените любое особое форматирование, отличное от форматирования по умолчанию мастера, в том числе с использованием некоторых фонов, возможно, эти цифры будут невидимы.  
   
-     **Ползунок**  
+     **Slider**  
      Фильтрует строки между кластерами. Перемещение ползунка вверх удаляет все, кроме наиболее важных взаимосвязей.  
   
      **Заливка**  
@@ -139,7 +139,7 @@ ms.locfileid: "66087905"
   
     -   Добавление диаграммы сравнения кластеров.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Устранение неполадок диаграмм интеллектуального анализа данных Visio &#40;SQL Server надстроек интеллектуального анализа данных&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
   
   

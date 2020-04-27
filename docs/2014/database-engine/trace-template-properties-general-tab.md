@@ -15,31 +15,31 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eaed6350c6a6dde394e2ccff1617ac3bab2ba19c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088696"
 ---
 # <a name="trace-template-properties-general-tab"></a>Свойства шаблона трассировки (вкладка «Общие»)
   Вкладка **Общие** диалогового окна **Свойства шаблона трассировки** используется для создания новых шаблонов трассировки с использованием следующих параметров. Чтобы открыть это диалоговое окно, в меню приложения [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Файл** выберите **Шаблоны**, а затем выберите **Создать шаблон**.  
   
 ## <a name="options"></a>Параметры  
- **Выбор типа сервера**  
+ **Выберите тип сервера**  
  Задайте тип сервера, для которого будет использоваться этот шаблон.  
   
  **Имя нового шаблона**  
  Введите описательное имя шаблона.  
   
- **Создание нового шаблона на основе существующего**  
+ **Использовать существующий шаблон в качестве основы**  
  Выберите шаблон из списка, чтобы создать шаблон на основе существующего. Все выбранные события, столбцы данных и фильтры первоначально соответствуют событиям, столбцам данных и фильтрам существующего шаблона, а затем могут редактироваться по мере необходимости.  
   
- **Использовать как шаблон по умолчанию для выбранного типа сервера**  
+ **Применять как шаблон по умолчанию для выбранного типа сервера**  
  Этот шаблон используется по умолчанию для трассировок, созданных для этого типа сервера.  
   
-## <a name="see-also"></a>См. также:  
- [Создание шаблона трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [Шаблоны и разрешения приложения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+## <a name="see-also"></a>См. также  
+ [Создание шаблона трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [Шаблоны и разрешения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Приложение SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

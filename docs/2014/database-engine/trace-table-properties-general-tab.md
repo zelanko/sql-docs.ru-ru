@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 79976111570e2f9cb153c853567f0f2091f77eb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088742"
 ---
 # <a name="trace-table-properties-general-tab"></a>Свойства таблицы трассировки (вкладка «Общие»)
@@ -36,18 +36,18 @@ ms.locfileid: "66088742"
  **Тип поставщика трассировки**  
  Тип сервера, обеспечившего трассировку.  
   
- **Версия**  
+ **version**  
  Версия сервера, обеспечившего трассировку.  
   
- **Сквоз**  
+ **Строки**  
  Число строк в таблице трассировки.  
   
  **Размер данных (количество страниц)**  
  Число страниц данных в таблице трассировки.  
   
-## <a name="see-also"></a>См. также:  
- [Открытие таблицы трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
- [Приложение SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
+## <a name="see-also"></a>См. также  
+ [Откройте таблицу трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+ [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
  [Шаблоны и разрешения приложения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

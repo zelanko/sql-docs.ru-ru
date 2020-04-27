@@ -31,22 +31,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85de606ecea93aba80714d4266e9897dd856879f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092501"
 ---
 # <a name="resolving-upgrade-issues"></a>Разрешение проблем при обновлении
   В подразделах данного раздела содержатся описания проблем, которые могут быть выявлены, а также проблем, которые не могут быть выявлены, но которые могут повлиять на обновление или работу после обновления. Проблемы упорядочены по компонентам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
--   [Последние сведения о проблемах при обновлении](../../../2014/sql-server/install/late-breaking-upgrade-issues.md)  
+-   [Сведения о последних критических проблемах при обновлении](../../../2014/sql-server/install/late-breaking-upgrade-issues.md)  
   
--   [Проблемы обновления компонента Database Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
+-   [Проблемы обновления ядра СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
--   [Проблемы обновления компонента Full-Text Search](../../../2014/sql-server/install/full-text-search-upgrade-issues.md)  
+-   [Проблемы обновления полнотекстового поиска](../../../2014/sql-server/install/full-text-search-upgrade-issues.md)  
   
 -   [Проблемы репликации при обновлении](../../../2014/sql-server/install/replication-upgrade-issues.md)  
   
@@ -60,15 +60,15 @@ ms.locfileid: "66092501"
 ### [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
  Если в отчете по обновлению компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] присутствуют перечисленные ниже задачи, то обновление до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] станет возможным только после того, как указанные действия будут выполнены.  
   
--   [Отсоедините базу данных с идентификатором 32767](../../../2014/sql-server/install/detach-database-id-32767.md)  
+-   [Отсоедините базу данных с идентификатором 32767](../../../2014/sql-server/install/detach-database-id-32767.md)  
   
--   [Переименование имен входа, которые совпадают с именами предопределенной роли сервера](../../../2014/sql-server/install/rename-logins-matching-fixed-server-role-names.md)  
+-   [Переименование имен для входа, которые совпадают с именами предопределенной роли сервера](../../../2014/sql-server/install/rename-logins-matching-fixed-server-role-names.md)  
   
 -   [Переименуйте пользователя с именем sys](../../../2014/sql-server/install/rename-user-sys.md)  
   
 -   [При помощи хранимой процедуры sp_rename переименуйте повторяющиеся имена индексов](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

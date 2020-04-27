@@ -18,18 +18,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dd8ae8bb1080d92bb6a4ad1ba982f1dffc6d51f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093635"
 ---
 # <a name="other-replication-upgrade-issues"></a>Другие проблемы при обновлении репликации
   В данном разделе описываются некоторые проблемы, которые могут возникнуть при обновлении, но не затронуты помощником по обновлению.  
   
 ## <a name="versions-supported"></a>Поддерживаемые версии  
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает обновление реплицируемых баз данных с предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При обновлении узла нет необходимости останавливать работу других узлов. Соблюдайте следующие правила, определяющие допустимые версии объектов репликации в топологии.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает обновление реплицируемых баз данных с предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При обновлении узла нет необходимости останавливать работу других узлов. Соблюдайте следующие правила, определяющие допустимые версии объектов репликации в топологии.  
   
  При репликации между различными версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функциональные возможности чаще всего ограничиваются возможностями более ранней из используемых версий.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66093635"
   
 -   Элементы управления ActiveX распространителя и слияния стали устаревшими. Аналогичная функциональность обеспечивается для приложений с управляемым кодом с помощью объектов RMO. Дополнительные сведения см. в разделе «Синхронизация подписок (программирование объектов RMO)» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Проблемы репликации при обновлении](../../../2014/sql-server/install/replication-upgrade-issues.md)  
   
   

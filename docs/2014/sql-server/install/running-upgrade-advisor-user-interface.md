@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aecaea9bef359ad24aebbd20dd5e9547497043b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092449"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>Запуск помощника по обновлению (пользовательский интерфейс)
@@ -74,7 +74,7 @@ ms.locfileid: "66092449"
   
 -   [Экспорт отчетов](../../../2014/sql-server/install/how-to-export-reports.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Как запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Справочник по пользовательскому интерфейсу помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [Устранение проблем с обновлением](../../../2014/sql-server/install/resolving-upgrade-issues.md)   

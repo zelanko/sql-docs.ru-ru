@@ -36,10 +36,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc3a08e707f6b51059145c69fdee15f78c933135
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091233"
 ---
 # <a name="using-reports"></a>Использование отчетов
@@ -81,7 +81,7 @@ ms.locfileid: "66091233"
   
  Если нужно передавать информацию другим лицам, можно отправить им отчет в формате XML. Или, если необходимо использовать другое приложение, можно экспортировать отчет в файл значений с разделителями-запятыми, который можно использовать, чтобы создать электронную таблицу, текстовый файл или сообщение электронной почты.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Руководство. Просмотр отчета советника по переходу](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
  [Руководство. экспорт отчетов](../../../2014/sql-server/install/how-to-export-reports.md)   
  [Как фильтровать отчеты](../../../2014/sql-server/install/how-to-filter-reports.md)   

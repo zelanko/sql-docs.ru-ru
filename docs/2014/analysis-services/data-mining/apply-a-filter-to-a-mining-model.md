@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0370d4fceada5c0a287c4a071691ea20d5a28f6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086223"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Применение фильтра к модели интеллектуального анализа данных
@@ -70,7 +70,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 9. Щелкните следующую строку сетки.  
   
-     Созданное условие фильтра автоматически добавится к содержимому текстового поля «Выражение». Например `[Income] > '30000'`.  
+     Созданное условие фильтра автоматически добавится к содержимому текстового поля «Выражение». Например, `[Income] > '30000'`  
   
 10. Щелкните текстовое поле **AND/OR** в следующей строке сетки, чтобы добавить условие.  
   
@@ -125,7 +125,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     >  Если какая-либо часть критерия фильтра изменена вручную, то сетка становится недоступной и работать с выражением фильтра в дальнейшем можно только в режиме изменения текста. Чтобы снова перейти в режим изменения с помощью сетки, необходимо очистить критерий фильтра и начать сначала.  
   
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Фильтры для моделей интеллектуального анализа данных &#40;Analysis Services интеллектуального анализа&#41;](mining-models-analysis-services-data-mining.md)   
  [Задачи и инструкции по модели интеллектуального анализа данных](mining-model-tasks-and-how-tos.md)   
  [удалить фильтр из модели интеллектуального анализа данных](delete-a-filter-from-a-mining-model.md)  

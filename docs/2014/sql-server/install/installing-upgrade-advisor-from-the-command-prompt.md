@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b694af5b760ae3c1ead1e4984c35ef61c0fa602
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094339"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>Установка помощника по обновлению из командной строки
@@ -32,7 +32,7 @@ ms.locfileid: "66094339"
   
  В следующей таблице приведены наиболее часто применяемые параметры.  
   
-|Аргумент|Description|  
+|Аргумент|Описание|  
 |--------------|-----------------|  
 |/q [n&#124;b&#124;r&#124;f]|Задает уровень пользовательского интерфейса (UI):<br /><br /> n = без интерфейса<br /><br /> b = базовый интерфейс (только ход выполнения, без подсказок)<br /><br /> r = сокращенный интерфейс (диалоговое окно в конце установки)<br /><br /> f = полный интерфейс|  
 |/L|Определяет параметры файла журнала. Чтобы записывать все сообщения в *log_file_name*, используйте **-L\*v**_log_file_name_. Чтобы регистрировать только сообщения об ошибках `-Le`, используйте *log_file_name*.|  
@@ -67,7 +67,7 @@ SQLUA.msi /qn REMOVE=ALL
 Msiexec.exe /i C:\Downloads\SQLUA.msi /qn REMOVE=ALL  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установка помощника по обновлению](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
  [Компоненты, необходимые для помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
   

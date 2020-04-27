@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2a8dfe06f3f05dead3686d0319ba0958388994ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088318"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Свойства вычисления» (службы Analysis Services — многомерные данные)
@@ -31,13 +31,13 @@ ms.locfileid: "66088318"
 > [!NOTE]  
 >  Команды скриптов не отображаются.  
   
- **Папка отображения**  
+ **Папка для просмотра**  
  Введите имя папки отображения, в которой будут отображаться вычисления в приложениях-клиентах, включая среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] и [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  **Связанная группа мер**  
  Выберите группу мер, в которой вычисляемый элемент и именованный набор должны отображаться в клиентских приложениях, включая среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] и среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Вычисления &#40;конструкторе кубов&#41; &#40;Analysis Services многомерных данных&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   

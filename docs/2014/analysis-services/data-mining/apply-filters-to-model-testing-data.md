@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16c5a556159caa1227268bc3488a19d25fa9e296
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086147"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Применение фильтров к данным проверки модели
@@ -77,7 +77,7 @@ ms.locfileid: "66086147"
   
 8.  Используйте столбцы **Оператор**и **Значение** , чтобы определить метод фильтрации столбцов.  
   
-     **Примечание** . Значения типа не следует заключать в кавычки.  
+     **ПРИМЕЧАНИЕ.** Значения следует вводить без кавычек.  
   
 9. Щелкните текстовое поле **И/ИЛИ** и выберите логический оператор, чтобы определить метод сочетания нескольких условий.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66086147"
   
      Условие фильтра применяется к источнику данных при создании диаграммы точности.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выбор и сопоставьте данные тестирования модели](choose-and-map-model-testing-data.md)   
  [Использование данных вложенной таблицы в качестве входных для диаграммы точности](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [Выбор типа диаграммы точности и задание параметров диаграммы](choose-an-accuracy-chart-type-and-set-chart-options.md)  

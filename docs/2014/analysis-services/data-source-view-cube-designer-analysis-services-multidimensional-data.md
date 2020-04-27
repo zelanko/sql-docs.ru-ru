@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b5c5f1389e0761ba0665e37e842b23b58c70cfe2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082530"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Представление источника данных (вкладка «Структура куба» конструктора кубов) (службы Analysis Services — многомерные данные)
@@ -41,10 +41,10 @@ ms.locfileid: "66082530"
  **Показывать только используемые таблицы**  
  Выводит в данной панели только таблицы, используемые кубом из связанного представления источников данных.  
   
- **Показать понятные имена**  
+ **Показывать понятные имена**  
  Устанавливает режим отображения понятных имен для объектов в данной панели.  
   
- **Выбрать все**  
+ **Выделить все**  
  Выделяет все объекты на панели.  
   
  **Найти таблицу**  
@@ -82,7 +82,7 @@ ms.locfileid: "66082530"
  **Копировать диаграмму из**  
  Выберите одну из диаграмм, включенных в это представление данных, связанное с выбранным кубом, для отображения на панели **Представление источника данных** .  
   
- **Zoom**  
+ **Масштабирование**  
  Выберите доступный вариант масштаба.  
   
  **Свойства**  
@@ -136,7 +136,7 @@ ms.locfileid: "66082530"
  **Свойства**  
  Отображает окно **Свойства** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для выбранной связи.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Панель инструментов &#40;вкладка «Структура куба», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [Меры &#40;вкладка «Структура куба», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [Измерения &#40;вкладка «Структура куба», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   

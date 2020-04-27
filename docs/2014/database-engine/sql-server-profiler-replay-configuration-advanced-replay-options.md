@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0bf91032c1514037c754fd489ac266cf68063fa4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089731"
 ---
 # <a name="sql-server-profiler---replay-configuration-advanced-replay-options"></a>Приложение SQL Server Profiler — Конфигурация воспроизведения (дополнительные параметры воспроизведения)
@@ -42,7 +42,7 @@ ms.locfileid: "66089731"
  **Время начала**  
  Дата и время из файла трассировки источника, когда должно начаться воспроизведение.  
   
- **Время окончания**  
+ **Время завершения**  
  Дата и время из файла трассировки источника, когда должно завершиться воспроизведение.  
   
  **Интервал ожидания монитора исправности (сек)**  
@@ -57,7 +57,7 @@ ms.locfileid: "66089731"
  **Интервал ожидания монитора заблокированных процессов (сек)**  
  Устанавливает, как часто монитор заблокированных процессов ищет заблокированные или блокирующие процессы.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Воспроизведение таблицы трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Воспроизведение файла трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Воспроизведение трассировок](../tools/sql-server-profiler/replay-traces.md)  

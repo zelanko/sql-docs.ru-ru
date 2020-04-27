@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6019a328463d27b4495ae0db70e844eb4e05d747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089968"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>Параметры (страница "Результаты запроса/SQL Server/Многосерверные")
@@ -35,7 +35,7 @@ ms.locfileid: "66089968"
  **Добавить имя входа к результатам**  
  Установите данный флажок, чтобы включить дополнительный столбец, в котором указывается имя входа, использованное для подключения к серверу, предоставившему каждую из строк.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание сервера централизованного управления и группы серверов &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
  [Выполнение инструкции на нескольких серверах одновременно (среда SQL Server Management Studio)](../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md)  
   

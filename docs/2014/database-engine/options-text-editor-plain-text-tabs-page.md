@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0e060f1bccb544edd4e82c759b737e05c4bb980b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089862"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Параметры ("Текстовый редактор" — "Обычный текст" — страница "Вкладки")
@@ -26,7 +26,7 @@ ms.locfileid: "66089862"
  Параметры для обычного текстового редактора можно также задать в диалоговом окне **Все языки/Общие** . Если диалоговое окно **Все языки** используется для задания различных параметров для других редакторов среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , таких как DMX или MDX, необходимо сбросить параметры обычного текстового редактора с помощью этого окна.  
   
 ## <a name="indenting"></a>Отступы  
- **None**  
+ **Нет**  
  Не делать отступ при создании новой строки нажатием клавиши ВВОД. Курсор помещается в первый столбец новой строки.  
   
  **Блок**  

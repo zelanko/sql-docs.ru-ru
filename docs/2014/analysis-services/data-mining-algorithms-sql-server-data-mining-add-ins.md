@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e0bf6c0c1126dff29107636e0956d92d4b314a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086509"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>Алгоритмы интеллектуального анализа данных (надстройки интеллектуального анализа данных SQL Server)
@@ -57,7 +57,7 @@ ms.locfileid: "66086509"
   
 -   В **клиенте интеллектуального анализа данных**после запуска мастера нажмите кнопку **Параметры**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [&#40;запросов SQL Server надстройки интеллектуального анализа данных&#41;](query-sql-server-data-mining-add-ins.md)   
  [Расширенное моделирование &#40;надстройки интеллектуального анализа данных для Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
   

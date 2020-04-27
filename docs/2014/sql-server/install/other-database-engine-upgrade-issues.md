@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f247f9addde6baa949f3260d7a9d9f86ce0c5bff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093702"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Другие проблемы обновления компонента Database Engine
@@ -54,7 +54,7 @@ ms.locfileid: "66093702"
 ## <a name="new-data-types"></a>Новые типы данных  
  Следующие типы данных будут зарезервированными системными типами. Перед обновлением или сразу после обновления необходимо переименовать существующие конфликтующие типы, определяемые пользователем.  
   
--   "География"  
+-   Geography  
   
 -   Geometry  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66093702"
   
 4.  Удалите схему CDC с помощью инструкции DROP SCHEMA.  
   
-## <a name="see-also"></a>См. также:  
- [Проблемы обновления компонента Database Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
+## <a name="see-also"></a>См. также  
+ [Проблемы обновления ядра СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

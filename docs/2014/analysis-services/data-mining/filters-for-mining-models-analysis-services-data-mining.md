@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084430"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
@@ -116,12 +116,12 @@ ms.locfileid: "66084430"
 -   Сворачивание исключенных значений в категорию в рамках определения структуры интеллектуального анализа данных.  
   
 ## <a name="related-resources"></a>Связанные ресурсы  
- Дополнительные сведения о синтаксисе фильтров и примеры выражений фильтра см. в разделе [Model Filter Syntax and Examples &#40;Analysis Services - Data Mining&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md).  
+ Дополнительные сведения о синтаксисе фильтров и примеры выражений фильтра см. в разделе [Синтаксис и примеры фильтра модели (службы Analysis Services — интеллектуальный анализ данных)](model-filter-syntax-and-examples-analysis-services-data-mining.md).  
   
  Сведения об использовании фильтров модели при тестировании модели интеллектуального анализа данных см. в разделе [Выбор типа диаграммы точности и задание параметров диаграммы](choose-an-accuracy-chart-type-and-set-chart-options.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Синтаксис и примеры фильтров моделей &#40;Analysis Services — интеллектуальный анализ данных&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Тестирование и проверка &#40;&#41;интеллектуального анализа данных](testing-and-validation-data-mining.md)  
+ [Тестирование и проверка (интеллектуальный анализ данных)](testing-and-validation-data-mining.md)  
   
   

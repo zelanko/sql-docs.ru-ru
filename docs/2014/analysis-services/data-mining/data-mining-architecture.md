@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3975bee14daad82291b5d343999ef4ebca7e6fbc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085082"
 ---
 # <a name="data-mining-architecture"></a>Архитектора интеллектуального анализа данных
@@ -32,18 +32,18 @@ ms.locfileid: "66085082"
   
  Дополнительные сведения о реализации интеллектуального анализа данных в решении бизнес-аналитики см. в разделе «Руководства к решениям» в библиотеке MSDN.  
   
-## <a name="in-this-section"></a>в этом разделе  
- [Логическая &#40;архитектуры Analysis Services-&#41;интеллектуального анализа данных](logical-architecture-analysis-services-data-mining.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Логическая архитектура (службы Analysis Services — интеллектуальный анализ данных)](logical-architecture-analysis-services-data-mining.md)  
   
- [Физическая архитектура &#40;Analysis Services-интеллектуальный анализ данных&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [Физическая архитектура (службы Analysis Services — интеллектуальный анализ данных)](physical-architecture-analysis-services-data-mining.md)  
   
  [Службы интеллектуального анализа данных и источники данных](data-mining-services-and-data-sources.md)  
   
  [Управление решениями и объектами интеллектуального анализа данных](management-of-data-mining-solutions-and-objects.md)  
   
- [Общие сведения о безопасности &#40;&#41;интеллектуального анализа данных](security-overview-data-mining.md)  
+ [Общие сведения о безопасности (интеллектуальный анализ данных)](security-overview-data-mining.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Программирование многомерной модели](../multidimensional-models/multidimensional-model-programming.md)   
  [Программирование интеллектуального анализа данных](../dev-guide/data-mining-programming.md)  
   

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091091"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Предупреждение об использовании GEOMETRY, GEOGRAPHY и HIERARCHYID на стороне клиента
@@ -23,7 +23,7 @@ ms.locfileid: "66091091"
 ## <a name="component"></a>Компонент  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Сборка **Microsoft. SqlServer. types. dll**, которая содержит типы пространственных данных, обновлена с версии 10,0 до версии 11,0. Пользовательские приложения, ссылающиеся на эту сборку, могут завершаться с ошибками, если выполняются следующие условия.  
   
 -   При перемещении пользовательского приложения с компьютера, на [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] котором установлено приложение, на компьютер, на котором установлено [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] только приложение, произойдет сбой приложения из-за отсутствия ссылки на версию 10,0 для сборки **sqltypes** . Может отображаться следующее сообщение об ошибке: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
@@ -82,7 +82,7 @@ ms.locfileid: "66091091"
   
 -   Для разрешения этой проблемы в строке подключения можно указать значение «SQL Server 2012» для атрибута «Type System Version», что обеспечивает в SqlClient принудительную загрузку версии 11.0 сборки. Этот атрибут строки подключения доступен только в платформе .NET 4.5 и выше.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Проблемы обновления ядро СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md
 )  

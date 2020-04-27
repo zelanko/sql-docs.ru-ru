@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44fd7290f48c995ae9cfc92476f1a33fbdc0e8be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086302"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>Справка F1 мастера интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
@@ -30,8 +30,7 @@ ms.locfileid: "66086302"
   
  Дополнительные сведения см. в разделе [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md).  
   
- 
-  **Мастер интеллектуального анализа данных** содержит следующие этапы.  
+ **Мастер интеллектуального анализа данных** содержит следующие этапы.  
   
 -   Выберите тип источника данных, на базе которого будет создаваться модель интеллектуального анализа данных.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66086302"
   
  После создания структуры интеллектуального анализа данных и необязательной модели интеллектуального анализа данных с помощью **Конструктора моделей интеллектуального анализа данных** можно изменить их свойства.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Мастер интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [Конструктор интеллектуального анализа данных](data-mining/data-mining-designer.md)   
  [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md)   

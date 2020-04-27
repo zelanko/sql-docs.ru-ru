@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de19592ec5a94e99cc87c40dac476e75546c7968
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086775"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>диалоговое окно "Создание/Изменение связи" (службы Analysis Services — многомерные данные)
@@ -31,7 +31,7 @@ ms.locfileid: "66086775"
 -   Щелкните правой кнопкой мыши связь на панели **Диаграмма****конструктора представлений источника данных** и выберите пункт **Изменить связь**.  
   
 > [!NOTE]  
->  В **конструкторе представления источников данных** можно создать связи, не существующие в базовом источнике данных, и удалить связи, созданные **конструктором представления источников данных** из существующих связей внешних ключей в базовом источнике данных.  
+>   В **конструкторе представления источников данных** можно создать связи, не существующие в исходном источнике данных, и удалить связи, созданные **конструктором представления источников данных** из существующих связей внешних ключей в исходном источнике данных.  
   
 ## <a name="options"></a>Параметры  
  **Исходная таблица (внешний ключ)**  
@@ -52,8 +52,8 @@ ms.locfileid: "66086775"
  **Описание**  
  Введите необязательное описание связи.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Конструктор представлений источников данных &#40;Analysis Services многомерных данных&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Конструктор представлений источников данных (службы Analysis Services — многомерные данные)](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

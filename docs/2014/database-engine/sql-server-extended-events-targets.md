@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7be4c1cc392516ffaf6d1e36fc10b93b517d772
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088871"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
@@ -51,7 +51,7 @@ ms.locfileid: "66088871"
   
      Используется для хранения данных о событиях в памяти по принципу очереди (FIFO) или по принципу FIFO для каждого события. Это асинхронная цель.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные события](../relational-databases/extended-events/extended-events.md)   
  [SQL Server пакетов расширенных событий](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
  [Сеансы расширенных событий SQL Server](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   

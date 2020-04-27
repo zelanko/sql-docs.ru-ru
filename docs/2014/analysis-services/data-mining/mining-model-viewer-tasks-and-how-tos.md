@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083483"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Задачи и инструкции средства просмотра моделей интеллектуального анализа данных
   Конструктор интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] содержит несколько средств, которые можно использовать для просмотра моделей интеллектуального анализа данных. Следующие разделы содержат пошаговые инструкции по выполнению задач, для которых характерно использование вкладки конструктора **Средство просмотра моделей интеллектуального анализа данных** .  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Выбор модели интеллектуального анализа данных и средства просмотра интеллектуального анализа данных](select-a-mining-model-and-a-data-mining-viewer.md)  
   
@@ -41,12 +41,12 @@ ms.locfileid: "66083483"
   
 -   [выполнить детализацию до данных вариантов из модели интеллектуального анализа данных](drill-through-to-case-data-from-a-mining-model.md)  
   
--   [Просмотр формулы для модели временных рядов &#40;интеллектуального анализа данных&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Просмотр формулы для модели временных рядов (интеллектуальный анализ данных)](view-the-formula-for-a-time-series-model-data-mining.md)  
   
 -   [изменить цвета, используемые в средстве просмотра интеллектуального анализа данных](change-the-colors-used-in-the-data-mining-viewer.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Учебник по основам интеллектуального анализа данных](../../tutorials/basic-data-mining-tutorial.md)   
- [Средства просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](../mining-model-viewers-data-mining-model-designer.md)  
+ [Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)](../mining-model-viewers-data-mining-model-designer.md)  
   
   

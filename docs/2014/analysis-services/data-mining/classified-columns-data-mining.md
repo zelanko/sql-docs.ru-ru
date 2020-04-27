@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c96ee3cbaa5ae25404d61054dccd1860c6596f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085687"
 ---
 # <a name="classified-columns-data-mining"></a>Классифицированные столбцы (интеллектуальный анализ данных)
@@ -46,7 +46,7 @@ ms.locfileid: "66085687"
  **ВАРИАЦИЯ**  
  Значение в столбце является отклонением связанного значения.  
   
- **STDEV**  
+ **СТАНДОТКЛОН**  
  Значение в столбце является среднеквадратичным отклонением связанного значения.  
   
  **PROBABILITY_VARIANCE**  
@@ -58,9 +58,9 @@ ms.locfileid: "66085687"
  **ТЕХНИЧЕСКОЙ**  
  Значение в столбце является весом, коэффициентом репликации объекта, связанного значения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Типы содержимого &#40;&#41;интеллектуального анализа данных](content-types-data-mining.md)   
  [Структуры интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ&#41;](mining-structures-analysis-services-data-mining.md)   
- [Типы данных &#40;&#41;интеллектуального анализа данных](data-types-data-mining.md)  
+ [Типы данных (интеллектуальный анализ данных)](data-types-data-mining.md)  
   
   

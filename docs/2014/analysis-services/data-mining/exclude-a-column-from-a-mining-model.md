@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 70049092909b625a1f304f16f153bf4287d5bcdf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084560"
 ---
 # <a name="exclude-a-column-from-a-mining-model"></a>исключить столбец из модели интеллектуального анализа данных
@@ -32,7 +32,7 @@ ms.locfileid: "66084560"
   
 2.  Выберите пункт **Пропустить** из раскрывающегося списка.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задачи и инструкции по модели интеллектуального анализа данных](mining-model-tasks-and-how-tos.md)  
   
   

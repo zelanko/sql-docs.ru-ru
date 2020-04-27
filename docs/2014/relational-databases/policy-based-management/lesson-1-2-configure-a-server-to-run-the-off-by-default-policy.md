@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8beb6998d78ad9a113ce18323133de7ed39ead56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66090640"
 ---
 # <a name="configure-a-server-to-run-the-off-by-default-policy"></a>Настройка сервера для выполнения политики «Отключено по умолчанию»
@@ -43,6 +43,6 @@ ms.locfileid: "66090640"
 10. Закройте диалоговые окна **Подробный просмотр результатов** и **Вычисление политик** .  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 2. Создание и применение политики стандартов именования](lesson-2-create-and-apply-a-naming-standards-policy.md)  
+ [Урок 2. Создание и применение политики стандартов именования](lesson-2-create-and-apply-a-naming-standards-policy.md)  
   
   

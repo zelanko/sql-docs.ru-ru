@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 997d637d109c04dbecb3105538f51fa6ece0518f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092443"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Запуск помощника по обновлению (командная строка)
@@ -54,13 +54,13 @@ where <server_info> is any combination of the following:
  Задает имя компьютера для проведения анализа. Это может быть локальный компьютер (значение по умолчанию) или удаленный компьютер.  
   
  **-Instance** _instance_name_  
- Задает имя анализируемого экземпляра. Значения по умолчанию нет. Если этот параметр не указан, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] просматриваться не будет. Значением для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию является MSSQLSERVER. Для именованного экземпляра укажите имя экземпляра.  
+ Задает имя анализируемого экземпляра. Нет значения по умолчанию. Если этот параметр не указан, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] просматриваться не будет. Значением для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию является MSSQLSERVER. Для именованного экземпляра укажите имя экземпляра.  
   
  **-Асинстанце**  _AS_instance_name_  
- Задает имя экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для анализа. Значения по умолчанию нет. Если это значение не указано, то службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] просматриваться не будут. Значением для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] по умолчанию является MSSQLServerOLAPService. Для именованного экземпляра укажите имя экземпляра.  
+ Задает имя экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для анализа. Нет значения по умолчанию. Если это значение не указано, то службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] просматриваться не будут. Значением для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] по умолчанию является MSSQLServerOLAPService. Для именованного экземпляра укажите имя экземпляра.  
   
  **-Рсинстанце**  _RS_instance_name_  
- Задает имя экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для анализа. Значения по умолчанию нет. Если это значение не указано, то службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] просматриваться не будут. Значением для экземпляра по умолчанию служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] является ReportServer. Для именованного экземпляра укажите имя экземпляра.  
+ Задает имя экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для анализа. Нет значения по умолчанию. Если это значение не указано, то службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] просматриваться не будут. Значением для экземпляра по умолчанию служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] является ReportServer. Для именованного экземпляра укажите имя экземпляра.  
   
  **-SqlUser** _login_ID_  
  При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это значение является именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которое помощник по обновлению использует для соединения с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если имя входа не указано, для соединения с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется проверка подлинности Windows.  
@@ -74,7 +74,7 @@ where <server_info> is any combination of the following:
 ## <a name="return-values"></a>Возвращаемые значения  
  В следующей таблице показаны значения, возвращаемые **UpgradeAdvisorWizardCmd** .  
   
-|Значение|Description|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |0|Анализ успешно завершен, проблем с обновлением не обнаружено.|  
 |положительное целое число|Анализ успешно завершен, обнаружены проблемы с обновлением.|  
@@ -121,28 +121,28 @@ where <server_info> is any combination of the following:
   
 ## <a name="element-descriptions"></a>Описание элементов  
   
-|Tag|Определение|Наличие|  
+|Тег|Определение|Наличие|  
 |---------|----------------|----------------|  
 |`Configuration`|Родительский элемент для файла конфигурации помощника по обновлению.|Должен присутствовать один раз в каждом файле конфигурации.|  
-|`Server`|Имя анализируемого сервера.|Может присутствовать один раз в каждом файле конфигурации. По умолчанию используется локальный компьютер.|  
+|`Server`|Имя анализируемого сервера.|Может присутствовать один раз в каждом файле конфигурации. Значением по умолчанию является локальный компьютер.|  
 |`Instance`|Имя экземпляра анализируемого компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].|Может присутствовать один раз в каждом файле конфигурации. Значением по умолчанию является экземпляр по умолчанию.<br /><br /> Требуется один раз для каждого файла конфигурации, если на сервере имеется элемент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или элемент `IntegrationServices`.|  
 |`Components`|Содержит элементы, указывающие анализируемые компоненты.|Должен присутствовать один раз в каждом файле конфигурации.|  
 |`SQLServer`|Содержит настройки анализа для экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].|Может присутствовать один раз в каждом файле конфигурации. Если не задан, базы данных компонента служб [!INCLUDE[ssDE](../../includes/ssde-md.md)] не анализируются.|  
 |Значение `Databases` для элемента `SQLServer`|Содержит список анализируемых баз данных.|Необязательный `SQLServer` один раз для каждого элемента. Если этот элемент отсутствует, выполняется анализ всех баз данных на экземпляре.|  
-|Значение `Database` для элемента `SQLServer`|Задает имя базы данных для анализа.|Должен присутствовать не менее одного раза, если присутствует элемент `Databases`. Если элемент `Database` содержит значение «*», будут проанализированы все базы данных в экземпляре. Значения по умолчанию нет.|  
+|Значение `Database` для элемента `SQLServer`|Задает имя базы данных для анализа.|Должен присутствовать не менее одного раза, если присутствует элемент `Databases`. Если элемент `Database` содержит значение «*», будут проанализированы все базы данных в экземпляре. Нет значения по умолчанию.|  
 |`TraceFiles`|Содержит список анализируемых файлов трассировки.|Необязательный `SQLServer` один раз для каждого элемента.|  
-|`TraceFile`|Задает путь и имя анализируемого файла трассировки.|Должен присутствовать не менее одного раза, если присутствует элемент `TraceFiles`. Значения по умолчанию нет.|  
+|`TraceFile`|Задает путь и имя анализируемого файла трассировки.|Должен присутствовать не менее одного раза, если присутствует элемент `TraceFiles`. Нет значения по умолчанию.|  
 |`BatchFiles`|Содержит список анализируемых пакетных файлов.|Необязательный `SQLServer` один раз для каждого элемента.|  
-|`BatchFile`|Задает анализируемый пакетный файл. Может быть указан несколько раз.|Должен присутствовать не менее одного раза, если присутствует элемент `BatchFiles`. Значения по умолчанию нет.|  
+|`BatchFile`|Задает анализируемый пакетный файл. Может быть указан несколько раз.|Должен присутствовать не менее одного раза, если присутствует элемент `BatchFiles`. Нет значения по умолчанию.|  
 |`BatchSeparator`|Задает разделитель пакетов, используемый в пакетных файлах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Необязательный `SQLServer` один раз для каждого элемента. Значение по умолчанию — GO.|  
 |`AnalysisServices`|Содержит параметры анализа для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Может присутствовать один раз в каждом файле конфигурации. Если не задан, базы данных компонента служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не анализируются.|  
-|`ASInstance`|Задает имя экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Требуется один раз на каждый элемент `AnalysisServices`. Значения по умолчанию нет.|  
+|`ASInstance`|Задает имя экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Требуется один раз на каждый элемент `AnalysisServices`. Нет значения по умолчанию.|  
 |Значение `Databases` для элемента `Analysis Services`|Содержит список анализируемых баз данных.|Необязательный `AnalysisServices` один раз для каждого элемента. Если этот элемент отсутствует, выполняется анализ всех баз данных на экземпляре.|  
-|Значение `Database` для элемента `AnalysisServices`|Задает имя базы данных для анализа.|Должен присутствовать не менее одного раза, если присутствует элемент `Databases`. Если элемент `Database` содержит значение «*», будут проанализированы все базы данных в экземпляре. Значения по умолчанию нет.|  
+|Значение `Database` для элемента `AnalysisServices`|Задает имя базы данных для анализа.|Должен присутствовать не менее одного раза, если присутствует элемент `Databases`. Если элемент `Database` содержит значение «*», будут проанализированы все базы данных в экземпляре. Нет значения по умолчанию.|  
 |`ReportingServices`|Указывает, что будет запущен анализ служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Может присутствовать один раз в каждом файле конфигурации. Если не указан, анализ служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не выполняется.|  
-|`RSInstance`|Задает имя экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Требуется один раз на каждый элемент `ReportingServices`. Значения по умолчанию нет.|  
+|`RSInstance`|Задает имя экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Требуется один раз на каждый элемент `ReportingServices`. Нет значения по умолчанию.|  
 |`IntegrationServices`|Содержит параметры анализа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Может присутствовать один раз в каждом файле конфигурации. Если не указан, анализ служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не выполняется.|  
-|`PackagePath`|Задает путь к набору пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Необязательный `IntegrationServices` один раз для каждого элемента. Если этот элемент отсутствует, будет выполнен анализ экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а пакеты, хранящиеся вне экземпляра, анализироваться не будут. Значения по умолчанию нет.|  
+|`PackagePath`|Задает путь к набору пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Необязательный `IntegrationServices` один раз для каждого элемента. Если этот элемент отсутствует, будет выполнен анализ экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а пакеты, хранящиеся вне экземпляра, анализироваться не будут. Нет значения по умолчанию.|  
   
 ## <a name="examples"></a>Примеры  
   
@@ -153,14 +153,14 @@ where <server_info> is any combination of the following:
 UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"  
 ```  
   
-### <a name="b-run-upgrade-advisor-using-default-configuration-settings"></a>Б. Запуск помощника по обновлению с помощью настроек конфигурации, установленных по умолчанию  
+### <a name="b-run-upgrade-advisor-using-default-configuration-settings"></a>Б) Запуск помощника по обновлению с помощью настроек конфигурации, установленных по умолчанию  
  В следующем примере показано, как запустить помощник по обновлению из командной строки, используя параметры конфигурации по умолчанию и проверку подлинности Windows.  
   
 ```  
 UpgradeAdvisorWizardCmd -Server MyServer -Instance MyInst   
 ```  
   
-### <a name="c-run-upgrade-advisor-using-includessnoversionincludesssnoversion-mdmd-authentication"></a>В. Запуск помощника по обновлению с помощью проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="c-run-upgrade-advisor-using-ssnoversion-authentication"></a>В. Запуск помощника по обновлению с помощью проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  В следующем примере показано, как запустить помощник по обновлению из командной строки с использованием файла конфигурации. В примере указывается имя пользователя и пароль [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
@@ -168,7 +168,7 @@ UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"
     -SqlUser "MyUserName" -SqlPassword "QweRTy-55"  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Устранение проблем с обновлением](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Работа с советником по переходу](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [Запуск помощника по обновлению &#40;пользовательского интерфейса&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)  

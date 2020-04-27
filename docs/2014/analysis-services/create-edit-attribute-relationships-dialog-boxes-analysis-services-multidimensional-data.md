@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 544fc09037c0670c7ba44adf7b270e46899621a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086939"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Диалоговые окна «Создание связи атрибутов» и «Изменение связи атрибутов» (вкладка «Конструктор связей», конструктор измерений) (службы Analysis Services — многомерные данные)
@@ -39,7 +39,7 @@ ms.locfileid: "66086939"
 2.  На диаграмме связей атрибутов или списке **Связи атрибутов** щелкните атрибут правой кнопкой мыши, а затем выберите пункт **Изменить связь атрибутов**.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  В группе **Исходный атрибут** указывается имя атрибута, от которого исходит связь.  
   
  В группе **Связанный атрибут** указывается имя атрибута, на который направлена связь.  
@@ -53,7 +53,7 @@ ms.locfileid: "66086939"
  **Тип отношений**  
  Указывает тип создаваемой связи — **гибкая (может изменяться со временем)** или **жесткая (не изменяется со временем)**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Связи атрибутов &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

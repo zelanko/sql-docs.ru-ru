@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a41d72ce6c0234e6419b55a9fe1895226d884fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083486"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Задачи и инструкции по модели интеллектуального анализа данных
   Используйте вкладку **Модели интеллектуального анализа данных** конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для управления и обработки моделей в структуре интеллектуального анализа данных.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [добавить модель интеллектуального анализа данных к существующей структуре интеллектуального анализа данных](add-a-mining-model-to-an-existing-mining-structure.md)  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66083486"
   
 -   [изменить дискретизацию столбца в модели интеллектуального анализа данных](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [Просмотр или изменение флагов модели &#40;&#41;интеллектуального анализа данных](modeling-flags-data-mining.md)  
+-   [Просмотр или изменение флагов моделирования (интеллектуальный анализ данных)](modeling-flags-data-mining.md)  
   
 -   [Указание столбца, который будет использоваться в модели в качестве регрессора](specify-a-column-to-use-as-regressor-in-a-model.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66083486"
   
 -   [создать измерение интеллектуального анализа данных](create-a-data-mining-dimension.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задачи и инструкции по структуре интеллектуального анализа данных](mining-structure-tasks-and-how-tos.md)   
  [Модели интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ&#41;](mining-models-analysis-services-data-mining.md)   
  [Основные понятия интеллектуального анализа данных](data-mining-concepts.md)  

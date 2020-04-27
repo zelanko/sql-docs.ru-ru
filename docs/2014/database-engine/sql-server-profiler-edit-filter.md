@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2828316739e53a94b248a8fffcf020ed16692241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089782"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler - Edit Filter
@@ -25,7 +25,7 @@ ms.locfileid: "66089782"
 > [!NOTE]  
 >  Для столбцов данных строкового типа критерии фильтрации будут показаны как строковое значение LIKE или NOT LIKE.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Фильтрация событий в SQL Server Profiler &#40;трассировки&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [Фильтрация событий на основе времени окончания события &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)   
  [Отфильтруйте события на основе времени начала события &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)   

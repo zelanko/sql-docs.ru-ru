@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01862762cdea7ea0ef49c12a3c82ee1fd1c972cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087079"
 ---
 # <a name="connect-to-database-dialog-box"></a>Диалоговое окно «Соединение с базой данных»
@@ -31,7 +31,7 @@ ms.locfileid: "66087079"
 |**Добавить в решение**|Выберите этот параметр для добавления базы данных к текущему решению.|  
 |**Закрыть решение**|Выберите этот параметр для добавления базы данных к новому решению.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

@@ -26,10 +26,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4619eeea35df4de16c3b980ecc0ea685488970eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088574"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
@@ -37,17 +37,17 @@ ms.locfileid: "66088574"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Обратная совместимость SQL Server](../../2014/getting-started/sql-server-backward-compatibility.md)|Содержит разделы, описывающие изменения в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], которые могут потребовать внесения изменений в приложения. В этой части раздела освещаются такие темы, как программирование данных, средства настройки контактной зоны, программа установки, службы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и другие широкие функциональные изменения.|  
-|[Обратная совместимость компонента SQL Server Database Engine](../database-engine/sql-server-database-engine-backward-compatibility.md)|Содержит подразделы, описывающие изменения в [!INCLUDE[ssDE](../includes/ssde-md.md)], которые относятся к службам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и могут потребовать внесения изменений в приложения.|  
+|[Обратная совместимость компонента ядра СУБД SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md)|Содержит подразделы, описывающие изменения в [!INCLUDE[ssDE](../includes/ssde-md.md)], которые относятся к службам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и могут потребовать внесения изменений в приложения.|  
 |[Analysis Services Backward Compatibility](../../2014/analysis-services/analysis-services-backward-compatibility.md)|Содержит подразделы, описывающие изменения в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], которые относятся к службам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и могут потребовать внесения изменений в приложения.|  
 |[Обратная совместимость служб Reporting Services](../integration-services/integration-services-backward-compatibility.md)|Описывает изменения в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], которые могут потребовать внесения изменений в существующие приложения служб DTS.|  
 |[Обратная совместимость служб Reporting Services](../reporting-services/reporting-services-backward-compatibility.md)|Содержит подразделы, которые описывают изменения в службах [!INCLUDE[ssRS](../includes/ssrs.md)] для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], которые могут потребовать внесения изменений в существующие решения [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
 |[Обратная совместимость &#40;Master Data Services&#41;](../master-data-services/backward-compatibility-master-data-services.md)|Содержит подразделы, которые описывают изменения в службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], которые могут потребовать внесения изменений в существующие решения [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].|  
 |[Обратная совместимость репликации](../../2014/relational-databases/replication/replication-backward-compatibility.md)|Содержит подразделы, описывающие изменения в компоненте [!INCLUDE[ssDE](../includes/ssde-md.md)] для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], которые могут потребовать внесения изменений в существующие решения репликации.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установка SQL Server 2014](../database-engine/install-windows/install-sql-server.md)   
  [Обновление до SQL Server 2014](../database-engine/install-windows/upgrade-sql-server.md)  
   

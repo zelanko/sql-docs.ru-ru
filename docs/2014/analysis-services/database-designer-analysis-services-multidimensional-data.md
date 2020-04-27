@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf63755b657ae55085decc9c84e25ee1dd51c553
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082412"
 ---
 # <a name="database-designer-analysis-services---multidimensional-data"></a>Конструктор баз данных (службы Analysis Services — многомерные данные)
@@ -27,10 +27,10 @@ ms.locfileid: "66082412"
  Используйте вкладку **Общие** , чтобы изменить свойства базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  [Предупреждения](warnings-database-designer-analysis-services-multidimensional-data.md)  
- Чтобы просмотреть и отклонить правила глобально, а также просмотреть и повторно включить конкретные экземпляры отклоненных предупреждений, используется вкладка **Предупреждения**.  
+ Чтобы просмотреть и отклонить правила глобально, а также просмотреть и повторно включить конкретные экземпляры отклоненных предупреждений, используется вкладка **Предупреждения** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Базы данных многомерной модели &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Базы данных многомерных моделей (службы SSAS)](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

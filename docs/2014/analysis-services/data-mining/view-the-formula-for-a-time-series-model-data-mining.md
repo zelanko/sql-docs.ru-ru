@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43382b5dd8a20de1454bfc3d6a16aa68c99e34a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082600"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Просмотр формулы для модели временных рядов (интеллектуальный анализ данных)
@@ -77,7 +77,7 @@ ms.locfileid: "66082600"
   
 5.  Если вкладка **Условные обозначения интеллектуального анализа данных** недоступна, щелкните узел правой кнопкой мыши и выберите **Показать обозначения**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](mining-model-viewer-tasks-and-how-tos.md)   
  [Просмотр модели с помощью средства просмотра временных рядов (Майкрософт)](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Примеры запросов моделей временных рядов](time-series-model-query-examples.md)  

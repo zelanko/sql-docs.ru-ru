@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4a60b80b19bd8c04964e30c035cf2330605fc25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086580"
 ---
 # <a name="cube-structure-cube-designer-analysis-services---multidimensional-data"></a>Структура куба (конструктор кубов) (службы Analysis Services — многомерные данные)
@@ -28,12 +28,12 @@ ms.locfileid: "66086580"
   
 |Панель|Определение|  
 |----------|----------------|  
-|**Панель инструментов**|Используйте панель инструментов для выполнения общих действий на этой вкладке. Дополнительные сведения об этой панели см. в разделе [панель инструментов &#40;вкладка Структура куба, конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Панелей**|Используйте панель инструментов для выполнения общих действий на этой вкладке. Дополнительные сведения об этой панели см. в разделе [панель инструментов &#40;вкладка Структура куба, конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**меры**|панель **Меры** позволяет создавать и изменять группы мер и сами меры для выбранного куба. Дополнительные сведения об этой панели см. в разделе [Меры (вкладка "Структура куба", конструктор кубов) (службы Analysis Services — многомерные данные)](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Измерения**|Панель **Измерения** позволяет включать и изменять измерения для выбранного куба. Дополнительные сведения об этой панели см. в разделе [Измерения (вкладка "Структура куба", конструктор кубов) (службы Analysis Services — многомерные данные)](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Представление источника данных**|Панель **Представление источника данных** позволяет просматривать и изменять представление источника данных, связанное с выбранным кубом. Дополнительные сведения об этой панели см. в разделе [Представление источника данных (вкладка "Структура куба", конструктор кубов) (службы Analysis Services — многомерные данные)](data-source-view-cube-designer-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Логическая архитектура &#40;Analysis Services многомерных данных&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Кубы в многомерных моделях](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Настройка свойств мер](multidimensional-models/configure-measure-properties.md)   

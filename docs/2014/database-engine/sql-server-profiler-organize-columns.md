@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f0ad3d1204e8c27d91ecb3b586d56a27d45eeb4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089759"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>Приложение SQL Server Profiler — организация столбцов
@@ -28,7 +28,7 @@ ms.locfileid: "66089759"
   
  При выполнении группирования или статистической обработки событий, отображаемых в трассировочном окне, столбцы, выбранные для группирования или статистической обработки, остаются зафиксированными в окне просмотра, но можно прокрутить окно влево или вправо для просмотра других столбцов данных.  
   
- Для доступа в данное диалоговое окно следует открыть существующий файл или таблицу трассировки и выбрать в меню **Файл** приложения [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Свойства** . В диалоговом окне **Свойства трассировки** перейдите на вкладку **Выбор событий** и выберите **Упорядочение столбцов**. Также можно выбрать **Упорядочение столбцов** на вкладке **Выбор событий** при создании новой трассировки.  
+ Для доступа в данное диалоговое окно откройте существующий файл или таблицу трассировки и выберите пункт **Свойства** в меню [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Файл**. В диалоговом окне **Свойства трассировки** перейдите на вкладку **Выбор событий** и выберите **Упорядочение столбцов**. Также можно выбрать **Упорядочение столбцов** на вкладке **Выбор событий** при создании новой трассировки.  
   
 ## <a name="options"></a>Параметры  
  **Группы**  
@@ -41,17 +41,17 @@ ms.locfileid: "66089759"
  **Столбцы**  
  Список столбцов данных, доступных для перемещения на панель **Группы**. Щелкните знак плюса (**+**) слева от **столбца** , чтобы развернуть список.  
   
- **Работает**.  
+ **Вверх**  
  После выбора столбца данных нажмите **Вверх** для перемещения столбца данных вверх на панель **Группы**. Можно также нажать **Вверх** для изменения порядка показа столбцов в окне трассировки.  
   
- **Крывающей**  
+ **Вниз**  
  После выбора столбца данных нажмите **Вниз** для перемещения столбца данных с панели **Группы**. Можно также нажать **Вниз** для изменения порядка показа столбцов в окне трассировки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Упорядочение столбцов, отображаемых в &#40;трассировки SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
- [Создание трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [Создание шаблона трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [Открытие файла трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
+ [Создание SQL Server Profiler &#40;трассировки&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [Создание шаблона трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [Откройте файл трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [Открытие таблицы трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   
   

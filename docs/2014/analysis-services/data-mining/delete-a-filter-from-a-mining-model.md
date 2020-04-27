@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084733"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>удалить фильтр из модели интеллектуального анализа данных
@@ -38,7 +38,7 @@ ms.locfileid: "66084733"
   
 4.  В диалоговом окне **Фильтр модели** щелкните правой кнопкой строку в сетке, которая содержит условие, которое необходимо удалить.  
   
-5.  Нажмите кнопку **Удалить**.  
+5.  Выберите команду **Удалить**.  
   
 ### <a name="to-clear-the-filter-on-a-mining-model-in-the-filter-editor-dialog-box"></a>Очистка фильтра модели интеллектуального анализа данных в диалоговом окне «Редактор фильтров»  
   
@@ -58,9 +58,9 @@ ms.locfileid: "66084733"
   
 3.  Нажмите клавишу "BACKSPACE" или "DELETE".  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Детализация до данных вариантов из модели интеллектуального анализа данных](drill-through-to-case-data-from-a-mining-model.md)   
  [Задачи и инструкции по модели интеллектуального анализа данных](mining-model-tasks-and-how-tos.md)   
- [Фильтры для моделей интеллектуального анализа данных &#40;Analysis Services интеллектуального анализа&#41;](mining-models-analysis-services-data-mining.md)  
+ [Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-models-analysis-services-data-mining.md)  
   
   

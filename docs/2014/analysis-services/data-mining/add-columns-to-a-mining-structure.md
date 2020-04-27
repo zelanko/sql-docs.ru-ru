@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85a713bb9da24a67ebe8fdd097535c5a9d5ac98e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086226"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>добавить столбцы к структуре интеллектуального анализа данных
@@ -44,7 +44,7 @@ ms.locfileid: "66086226"
 > [!NOTE]  
 >  При добавлении уже существующего столбца в структуру будет включена копия, а к имени будет добавлена цифра 1. Можно изменить имя скопированного столбца на более наглядное, введя новое имя в качестве значения свойства **Имя** столбца структуры интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задачи и инструкции по структуре интеллектуального анализа данных](mining-structure-tasks-and-how-tos.md)  
   
   

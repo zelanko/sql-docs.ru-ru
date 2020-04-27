@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 812a08d00fca0b3a61f5cb038e1585fee08c06d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086763"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>Создание структуры интеллектуального анализа данных (мастер интеллектуального анализа данных)
@@ -24,7 +24,7 @@ ms.locfileid: "66086763"
   
  При создании модели интеллектуального анализа данных необходимо также указать применяемый алгоритм интеллектуального анализа данных. Если создается только структура, модель интеллектуального анализа данных можно добавить к структуре позже.  
   
- **Дополнительные сведения:** [алгоритмы интеллектуального анализа данных &#40;Analysis Services —&#41;интеллектуального ](data-mining/data-mining-algorithms-analysis-services-data-mining.md)анализа данных, [&#40;Analysis Services — интеллектуальный ](data-mining/data-mining-wizard-analysis-services-data-mining.md)анализ данных, [Создание реляционной структуры интеллектуального анализа](data-mining/create-a-relational-mining-structure.md)  
+ **Дополнительные сведения:** [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-algorithms-analysis-services-data-mining.md), [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-wizard-analysis-services-data-mining.md) и [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md).  
   
 ## <a name="options"></a>Параметры  
  **Создать структуру и модель интеллектуального анализа данных**  
@@ -42,7 +42,7 @@ ms.locfileid: "66086763"
  **Описание**  
  Отображает описание выбранного алгоритма.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 мастера интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Выберите представление источника данных &#40;мастер интеллектуального анализа данных&#41;](select-data-source-view-data-mining-wizard.md)   
  [Выберите метод определения &#40;мастер интеллектуального анализа данных&#41;](select-the-definition-method-data-mining-wizard.md)  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 69301cf56a4102acd54d11b9f5849ea58b141e03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083040"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>запросить параметры, используемые для создания модели интеллектуального анализа данных
@@ -31,7 +31,7 @@ ms.locfileid: "66083040"
 2.  Щелкните правой кнопкой мыши имя экземпляра, выберите **Создать запрос**, а затем **Расширения интеллектуального анализа данных**.  
   
     > [!NOTE]  
-    >  Можно также создать запрос к модели интеллектуального анализа данных с помощью шаблона **Многомерное выражение** .  
+    >   Можно также создать запрос к модели интеллектуального анализа данных с помощью шаблона **Многомерное выражение**  
   
 3.  Если в экземпляре содержится несколько баз данных, выберите в списке **Доступные базы данных** на панели инструментов базу данных, содержащую модель, к которой нужно создать запрос.  
   
@@ -66,7 +66,7 @@ WHERE MODEL_NAME = 'TM Clustering'
   
  CLUSTER_COUNT=10,CLUSTER_SEED=0,CLUSTERING_METHOD=1,MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_STATES=100,MINIMUM_SUPPORT=1,MODELLING_CARDINALITY=10,SAMPLE_SIZE=50000,STOPPING_TOLERANCE=10  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задачи и инструкции по запросам интеллектуального анализа данных](data-mining-query-tasks-and-how-tos.md)   
  [Запросы интеллектуального анализа данных](data-mining-queries.md)  
   

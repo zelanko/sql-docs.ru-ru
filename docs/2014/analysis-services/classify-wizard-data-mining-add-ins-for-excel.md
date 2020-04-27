@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a62d937a733ea41b85a83224a043ff4ad7ecdd29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087930"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Мастер классификации (надстройки интеллектуального анализа данных для Excel)
@@ -81,7 +81,7 @@ ms.locfileid: "66087930"
 ### <a name="requirements"></a>Требования  
  Чтобы использовать мастер **классификации** , необходимо подключиться к [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] базе данных. Сведения о создании подключения см. в разделе [Подключение к источнику данных &#40;клиент интеллектуального анализа данных для Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание модели интеллектуального анализа данных](creating-a-data-mining-model.md)  
   
   

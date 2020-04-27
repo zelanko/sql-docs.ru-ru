@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3831943533939f7b9f8e31f09b80c71cc61b8d3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094432"
 ---
 # <a name="install-sql-server-management-tools"></a>Установка базовой версии средств управления SQL Server
@@ -26,7 +26,7 @@ ms.locfileid: "66094432"
   
 -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по настройке базы данных  
+-   Помощник по настройке базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Средства командной строки, такие, как программы sqlcmd.exe и osql.exe.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66094432"
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Средства управления могут работать параллельно на одном компьютере с более ранними версиями средств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управления.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции, поддерживаемые различными выпусками SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Выпуски и компоненты SQL Server 2014](../editions-and-components-of-sql-server-2016.md)   
  [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   

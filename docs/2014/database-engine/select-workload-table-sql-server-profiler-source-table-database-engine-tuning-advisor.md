@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 973680d07c3bd6a304e63f4b3fde0e228f0f7bff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088882"
 ---
 # <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>SQL Server Profiler-Source Table-помощник по настройке ядра СУБД — выбор таблицы рабочей нагрузки
@@ -42,9 +42,9 @@ ms.locfileid: "66088882"
  **Таблица**  
  Задайте имя таблицы трассировки, из которой должна читаться трассировка.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сохранение результатов трассировки в таблицу &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
- [Шаблоны и разрешения приложения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Шаблоны и разрешения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [помощник по настройке ядра СУБД](../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

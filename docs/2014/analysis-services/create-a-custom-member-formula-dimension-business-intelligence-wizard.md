@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3976d9bd4c6f76e9bb970bce280c1e2da0d6fe22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086953"
 ---
 # <a name="create-a-custom-member-formula-dimension-business-intelligence-wizard"></a>Создание нестандартной формулы элемента (измерение) (мастер бизнес-аналитики)
@@ -26,7 +26,7 @@ ms.locfileid: "66086953"
  **Измерение**  
  Выбор измерения, с которым мастер будет связывать атрибуты, содержащиеся в этом измерении, с нестандартными формулами элементов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справка F1 мастера бизнес-аналитики](business-intelligence-wizard-f1-help.md)   
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Конструктор измерений &#40;Analysis Services многомерных данных&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

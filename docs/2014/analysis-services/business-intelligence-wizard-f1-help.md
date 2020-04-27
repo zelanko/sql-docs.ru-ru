@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25496be8f8cfc877b72ab6fd511446d9e194e2b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088399"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>Справка F1 мастера бизнес-аналитики
@@ -44,7 +44,7 @@ ms.locfileid: "66088399"
   
  После расширения куба или измерения в мастере бизнес-аналитики для изменения их свойств можно воспользоваться конструктором кубов, конструктором измерений или мастером бизнес-аналитики в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Выбор расширения &#40;мастере бизнес-аналитики&#41;](choose-enhancement-business-intelligence-wizard.md)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66088399"
   
 -   [Завершение работы мастера &#40;мастера бизнес-аналитики&#41;](completing-the-wizard-business-intelligence-wizard.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Конструктор измерений &#40;Analysis Services многомерных данных&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
  [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
