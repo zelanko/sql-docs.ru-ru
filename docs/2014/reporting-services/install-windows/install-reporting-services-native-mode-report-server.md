@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba2744f759a59ae4360bcd0d7c09dc45c7a4bdbf
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173503"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Установка сервера отчетов служб Reporting Services в собственном режиме
@@ -26,9 +26,9 @@ ms.locfileid: "78173503"
 
 ||
 |-|
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме|
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (собственный режим)|
 
-##  <a name="bkmk_top"></a>В этом разделе
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a>В этом разделе
 
 -   [Что такое конфигурация по умолчанию?](#bkmk_whatisdefaultconfiguration)
 
@@ -42,7 +42,7 @@ ms.locfileid: "78173503"
 
 -   [Установка в собственном режиме при помощи командной строки](#bkmk_commandline)
 
-##  <a name="bkmk_whatisdefaultconfiguration"></a>Что такое конфигурация по умолчанию?
+##  <a name="what-is-the-default-configuration"></a><a name="bkmk_whatisdefaultconfiguration"></a>Что такое конфигурация по умолчанию?
  При выборе конфигурации по умолчанию для собственного режима программой установки устанавливаются следующие компоненты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :
 
 -   Служба сервера отчетов (в состав которой входит веб-служба сервера отчетов, приложение фоновой обработки и диспетчер отчетов)
@@ -69,21 +69,21 @@ ms.locfileid: "78173503"
 
  Программа установки не производит настройку учетной записи автоматического выполнения, электронной почты сервера отчетов, резервного копирования ключей шифрования и масштабного развертывания. Для настройки этих свойств вы можете использовать диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).
 
-##  <a name="bkmk_whentoinstalldefaultconfig"></a>Когда следует устанавливать конфигурацию по умолчанию для основного режима
+##  <a name="when-to-install-the-default-configuration-for-native-mode"></a><a name="bkmk_whentoinstalldefaultconfig"></a>Когда следует устанавливать конфигурацию по умолчанию для основного режима
  При конфигурации по умолчанию службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливаются в рабочее состояние, и сервер отчетов можно использовать сразу после завершения программы установки. Выберите этот режим, чтобы сократить количество шагов и пропустить выполнение задач настройки, которые в противном случае пришлось бы выполнять в средстве настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
 
  Установка конфигурации по умолчанию не гарантирует, что сервер отчетов будет работать после завершения программы установки. Регистрация URL-адресов по умолчанию может завершиться ошибкой при запуске службы. Всегда тестируйте установку, чтобы убедиться, что служба запускается и выполняется правильно.
 
-##  <a name="bkmk_requirements"></a>Необходимость
+##  <a name="requirements"></a><a name="bkmk_requirements"></a> Требования
  Этот режим настройки для задания основных параметров, необходимых для приведения сервера отчетов в рабочее состояние, использует параметры конфигурации по умолчанию. К нему предъявляются следующие требования.
 
 -   Оборудование должно соответствовать минимальным требованиям для работы Microsoft SQL Server. Дополнительные сведения см. в разделе [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] должны быть установлены вместе в одном и том же экземпляре. Экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] размещает базу данных сервера отчетов, которую создает и настраивает программа установки.
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] должны устанавливаться на одном и том же экземпляре. Экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] размещает базу данных сервера отчетов, которую создает и настраивает программа установки.
 
 -   Учетная запись пользователя, использованная для выполнения программы установки, должна быть членом локальной группы администраторов. Кроме того, она должна обладать разрешениями для доступа и создания баз данных в экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , на котором размещены базы данных сервера отчетов.
 
--   Программа установки должна иметь возможность использовать значения по умолчанию, чтобы резервировать URL-адреса, которые обеспечивают доступ к серверу и диспетчеру отчетов. Этими значениями являются порт 80, строгий подстановочный знак и имена виртуальных каталогов в формате **ReportServer_\<***имя_экземпляра***>** и **Reports_\<***имя_экземпляра***>**.
+-   Программа установки должна иметь возможность использовать значения по умолчанию, чтобы резервировать URL-адреса, которые обеспечивают доступ к серверу и диспетчеру отчетов. Этими значениями являются порт 80, строгий подстановочный знак и имена виртуальных каталогов в формате **ReportServer_\<***имя_экземпляра***>** и **Reports_\<***имя_экземпляра***>** .
 
 -   Программа установки должна иметь возможность создания баз данных сервера отчетов с использованием значений по умолчанию. Это значения **ReportServer** и **ReportServerTempDB**. Если от предыдущей установки остались базы данных, то программа установки будет заблокирована, поскольку она не сможет настроить сервер отчетов в конфигурации по умолчанию для собственного режима. Чтобы снять блокировку программы установки, следует переименовать, переместить или удалить базы данных.
 
@@ -91,7 +91,7 @@ ms.locfileid: "78173503"
 
  Не пытайтесь изменить настройки компьютера только для продолжения установки по умолчанию. Это может потребовать несколько часов работы, тогда как этот параметр установки может значительно сэкономить время. Наилучшим решением является установка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме «только файлы» и затем настройка сервера отчетов для использования определенных значений.
 
-##  <a name="bkmk_defaultURLreservations"></a>Резервирования URL-адресов по умолчанию
+##  <a name="default-url-reservations"></a><a name="bkmk_defaultURLreservations"></a>Резервирования URL-адресов по умолчанию
  Резервирование URL-адреса состоит из префикса, имени узла, номера порта и имени виртуального каталога.
 
 |Часть|Описание|
@@ -107,7 +107,7 @@ ms.locfileid: "78173503"
 
 -   http://+:80/reports, предоставляет доступ к диспетчер отчетов.
 
-##  <a name="bkmk_installwithwizard"></a>Установка собственного режима с помощью мастера установки SQL Server
+##  <a name="install-native-mode-with-the-sql-server-installation-wizard"></a><a name="bkmk_installwithwizard"></a>Установка собственного режима с помощью мастера установки SQL Server
  В следующем списке описываются конкретные шаги и параметры служб  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , выбираемые в мастере установки SQL Server. В этом списке описаны не все страницы мастера установки, а только страницы, связанные со службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , которые являются частью установки в собственном режиме.
 
 1.  На странице **Роль установки** выберите **Установка компонентов SQL Server**.
@@ -116,7 +116,7 @@ ms.locfileid: "78173503"
 
 2.  Выберите следующие компоненты на странице **Выбор компонентов** :
 
-    -   **Службы ядро СУБД Services**, если только экземпляр ядра СУБД уже не установлен.
+    -   **Службы компонента Database Engine**, если еще не установлен компонент database engine.
 
     -   **Reporting Services Native**.
 
@@ -136,7 +136,7 @@ ms.locfileid: "78173503"
 
     -   Откройте браузер с правами администратора и подключитесь к диспетчеру отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , например `http://loclahost/Reports`.
 
-    -   Откройте браузер с правами администратора и подключитесь к странице сервера отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Например, `http://loclahost/ReportServer`
+    -   Откройте браузер с правами администратора и подключитесь к странице сервера отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Например,  `http://loclahost/ReportServer`
 
  Дополнительные сведения см. в подразделе «Собственный режим» следующих двух разделов:
 
@@ -144,7 +144,7 @@ ms.locfileid: "78173503"
 
  [Устранение неполадок при установке служб Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)
 
-##  <a name="bkmk_commandline"></a>Установка собственного режима с помощью командной строки
+##  <a name="install-native-mode-with-the-command-line"></a><a name="bkmk_commandline"></a>Установка собственного режима с помощью командной строки
  Следующий пример использует службу компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , поскольку это необходимо для конфигурации по умолчанию.
 
 ```
@@ -156,6 +156,6 @@ SERVICE" /RSSVCSTARTUPTYPE="Manual" /RSINSTALLMODE="DefaultNativeMode"
  Дополнительные сведения и примеры см. в разделе [Установка в режиме командной строки Reporting Services режим интеграции с SharePoint и основной режим](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md) [установки SQL Server 2014 из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) .
 
 ## <a name="see-also"></a>См. также:
- [Устранение неполадок при установке Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md) [Проверка Reporting Services установки](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) [Настройка учетной записи службы сервера отчетов &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md) [Настройка url-адресов сервера отчетов &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [Настройка подключения к базе данных сервера отчетов &#40;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md) службы SSRS Configuration Manager&#41;[только](../../reporting-services/install-windows/files-only-installation-reporting-services.md) &#40;[Reporting Services&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md) [ Подключения на сервере отчетов в собственном режиме](../security/configure-ssl-connections-on-a-native-mode-report-server.md) [Настройка URL-адресов сервера отчетов &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) [Быстрый запуск SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)
+ [Устранение неполадок при установке Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md) [Проверка Reporting Services установки](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) [Настройка учетной записи службы сервера отчетов &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md) [Настройка url-адресов сервера отчетов &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [Настройка подключения к базе данных сервера отчетов &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md) [установка только файлов &#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md) [инициализации сервера отчетов &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md) [настроить SSL-соединения на сервере отчетов, собственном режиме,](../security/configure-ssl-connections-on-a-native-mode-report-server.md) [Настройте URL сервера отчетов &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) [Быстрый запуск установки SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)
 
 

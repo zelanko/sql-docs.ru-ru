@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 23fd1a0c896436dad27ab771e2ed04c775938091
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77429019"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
@@ -37,9 +37,9 @@ ms.locfileid: "77429019"
 > - Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_exec_query_stats**.    
 
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**sql_handle**|**varbinary (64)**  |Токен, однозначно определяющий пакет или хранимую процедуру, частью которой является запрос.<br /><br /> **sql_handle**, а также с **statement_start_offset** и **statement_end_offset**можно использовать для получения текста SQL запроса путем вызова функции динамического управления **sys. dm_exec_sql_text** .|  
+|**sql_handle**|**varbinary (64)**  |Токен, однозначно определяющий пакет или хранимую процедуру, частью которой является запрос.<br /><br /> Столбец **sql_handle** вместе со столбцами **statement_start_offset** и **statement_end_offset** может использоваться для получения SQL-текста запроса с помощью вызова функции динамического управления **sys.dm_exec_sql_text**.|  
 |**statement_start_offset**|**int**|Начальная позиция запроса, описываемого строкой, в соответствующем тексте пакета или сохраняемом объекте, в байтах, начиная с 0.|  
 |**statement_end_offset**|**int**|Конечная позиция запроса, описываемого строкой, в соответствующем тексте пакета или сохраняемом объекте, в байтах, начиная с 0. Для версий, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]предшествующих, значение-1 обозначает конец пакета. Конечные комментарии больше не включаются.|  
 |**plan_generation_num**|**bigint**|Порядковый номер, который может использоваться для проведения различия между экземплярами планов после рекомпиляции.|  
@@ -153,7 +153,7 @@ GROUP BY query_stats.query_hash
 ORDER BY 2 DESC;  
 ```  
   
-### <a name="b-returning-row-count-aggregates-for-a-query"></a>Б. Возврат статистического выражения счетчика строк для запроса  
+### <a name="b-returning-row-count-aggregates-for-a-query"></a>Б) Возврат статистического выражения счетчика строк для запроса  
  В следующем примере показан возврат сведений о статистическом выражении счетчика строк (общее число строк, минимальное число строк, максимальное число строк и число строк при последнем выполнении) для запросов.  
   
 ```sql  
@@ -173,13 +173,13 @@ WHERE qt.text like '%SELECT%'
 ORDER BY qs.execution_count DESC;  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
 [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
 [sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
 [sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
 [sys. dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
 [sys. dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
-[sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
+[sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
 
 

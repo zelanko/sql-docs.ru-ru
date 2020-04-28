@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bcf16dc7d63e6a4acca6c30871666d1ffe996192
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171723"
 ---
-# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Задача 4. Создание проекта служб SSIS с помощью SQL Server Data Tools
+# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Задача 4. Создание проекта SSIS с помощью SQL Server Data Tools
   В этой задаче вы создадите проект служб SSIS с помощью **SQL Server Data Tools** для автоматизации очистки и сопоставления данных поставщика.
 
 1.  Запустите **SQL Server Data Tools**. Нажмите кнопку Пуск, укажите **все программы**, разверните **Microsoft SQL Server 2012**и щелкните **SQL Server Data Tools**.
@@ -38,7 +38,7 @@ ms.locfileid: "78171723"
 
 7.  Введите **CleanseAndCurate. dtsx** и нажмите клавишу **Ввод**. Убедитесь, что **расширение** остается в виде **dtsx**.
 
-## <a name="next-step"></a>Дальнейшее действие
- [Задача 5. Добавление задачи потока данных](task-5-adding-data-flow-task.md)
+## <a name="next-step"></a>Следующий шаг
+ [Задача 5. Добавление задачи потока данных](task-5-adding-data-flow-task.md)
 
 

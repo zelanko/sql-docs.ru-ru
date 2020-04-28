@@ -17,10 +17,10 @@ ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c7da3db641d6e0b9aa53d570a7d0cf9bdc731477
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322264"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
@@ -42,13 +42,13 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] 'dbname'`Имя базы данных. Аргумент *dbname* имеет тип **sysname**и значение по умолчанию NULL. Если значение NULL, используется текущая база данных.  
+`[ @dbname = ] 'dbname'`Имя базы данных. Аргумент*dbname* имеет тип **sysname**и значение по умолчанию NULL. Если значение NULL, используется текущая база данных.  
   
 `[ @type = ] type`Тип репликации, для которого удаляются объекты базы данных. *Type имеет тип* **nvarchar (5)** и может принимать одно из следующих значений.  
   
 |||  
 |-|-|  
-|**Tran**|Удаляет публикуемые объекты репликации транзакций.|  
+|**tran**|Удаляет публикуемые объекты репликации транзакций.|  
 |**AutoMerge**|Удаляет публикуемые объекты репликации слиянием.|  
 |**both** (по умолчанию)|Удаляет все публикуемые объекты репликации.|  
   
@@ -84,6 +84,6 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Отключение публикации и распространения](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

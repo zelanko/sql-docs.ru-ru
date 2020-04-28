@@ -18,10 +18,10 @@ ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 239ba5021363be583572d5d24887233261e359cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76909694"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Выполнение команд консоли SSMA (MySQLToSQL)
@@ -748,7 +748,7 @@ Convert-SQL-оператор
 />  
 ```  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 Сведения о параметрах командной строки см. [в разделе Параметры командной строки в консоли SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md) .  
   
 Дополнительные сведения о примерах файлов сценариев консоли см. [в разделе Работа с примерами файлов сценариев консоли &#40;MySQLToSQL&#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)  

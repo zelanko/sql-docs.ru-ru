@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d779c02d895088cff2ae59aff6722acd8db79adf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76971395"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Предоставление разрешений на сервер отчетов в собственном режиме
@@ -63,17 +63,17 @@ ms.locfileid: "76971395"
 ## <a name="tasks-and-tools-for-managing-permissions"></a>Задачи и средства для управления разрешениями  
  Используйте следующие средства для управления определениями ролей и назначениями ролей.  
   
-|Инструмент|Задания|  
+|Инструмент|Задачи|  
 |----------|-----------|  
 |Среда Management Studio — используется для просмотра, изменения, создания и удаления определений ролей.|[Создание, удаление и изменение ролей (среда Management Studio)](role-definitions-create-delete-or-modify.md)|  
 |Диспетчер отчетов — используется для присвоения ролей пользователям и группам.|[Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](grant-user-access-to-a-report-server.md)<br /><br /> [Изменение или удаление назначения ролей (диспетчер отчетов)](role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>См. также:  
  [Стандартные роли](role-definitions-predefined-roles.md)   
- [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Предоставление разрешений на элементы сервера отчетов на сайте SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Проверка подлинности с использованием сервера отчетов](authentication-with-the-report-server.md)   
  (create-and-manage-role-assignments.md)   
- [Защита и обеспечение безопасности служб Reporting Services](reporting-services-security-and-protection.md)   
- [Управление содержимым сервера отчетов (службы Reporting Services в собственном режиме)](../report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Reporting Services безопасность и защита](reporting-services-security-and-protection.md)   
+ [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

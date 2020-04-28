@@ -19,10 +19,10 @@ ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8d2c324f032f9cdd3206f6f2bed77fba74c2c0f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322127"
 ---
 # <a name="msmerge_conflict_publication_article-transact-sql"></a>MSmerge_conflict_publication_article (Transact-SQL)
@@ -30,15 +30,15 @@ ms.locfileid: "75322127"
 
   **MSmerge_conflict_publication_articleная** таблица содержит сведения о строках, которые были изменены или были отменены для достижения конвергенции данных. Для каждой реплицируемой таблицы в публикации существует таблица конфликтов, при этом к имени таблицы конфликтов добавляется имя публикации и имя статьи. Таблицы конфликтов по статьям расположены в базе данных, которая используется для занесения в журнал конфликтов; обычно ею является база данных публикации, однако при децентрализованном занесении в журнал конфликтов ею может быть и база данных подписки.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**_имя\_столбца\_статьи_**|**variable**|Представляет столбец в реплицируемой таблице. В данной системной таблице содержится по одному столбцу на каждый столбец статьи таблицы.|  
-|**rowguid**|**UNIQUEIDENTIFIER**|Идентификатор строки конфликта.|  
+|**_имя\_столбца\_статьи_**|**перемен**|Представляет столбец в реплицируемой таблице. В данной системной таблице содержится по одному столбцу на каждый столбец статьи таблицы.|  
+|**rowguid**|**uniqueidentifier**|Идентификатор строки конфликта.|  
 |**ModifiedDate**|**datetime**|Время возникновения конфликта.|  
-|**Идентификатор\_источника\_DataSource**|**UNIQUEIDENTIFIER**|Подписка, для которой изменение строк было отменено или конфликт был потерян.|  
+|**Идентификатор\_источника\_DataSource**|**uniqueidentifier**|Подписка, для которой изменение строк было отменено или конфликт был потерян.|  
   
 ## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

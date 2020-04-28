@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245192"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Настройка отладчика Transact-SQL
@@ -150,8 +150,7 @@ ms.locfileid: "75245192"
 ## <a name="requirements-for-starting-the-debugger"></a>Требования к запуску отладчика  
  Все попытки запустить отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] должны также отвечать следующим требованиям.  
   
-* 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] должна быть запущена под учетной записью, которая является членом предопределенной роли сервера sysadmin.  
+* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] должна быть запущена под учетной записью, которая является членом предопределенной роли сервера sysadmin.  
   
 * Окно редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] должно быть подключено с помощью имени входа для проверки подлинности Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которое является членом предопределенной роли сервера sysadmin.  
   

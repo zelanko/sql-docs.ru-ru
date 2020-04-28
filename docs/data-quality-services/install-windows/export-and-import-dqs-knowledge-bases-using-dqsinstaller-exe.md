@@ -12,10 +12,10 @@ ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: ae87b9daebdef6b81c4d96abc253820cf7cb8228
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75558156"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
@@ -26,7 +26,7 @@ ms.locfileid: "75558156"
   
  Эта функция позволяет создать резервную копию *всех* баз знаний на сервере [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] одновременно без необходимости экспортировать каждую из баз знаний в DQS-файл по отдельности с помощью [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]. Аналогичным образом вы можете импортировать *все* базы знаний из файла резервной копии на другой сервер [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] одновременно, не импортируя каждую из баз знаний по отдельности из DQS-файла с помощью [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]. Это особенно полезно при создании и восстановлении резервных копий баз знаний, когда выполняется удаление сервера [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] на одном компьютере и его повторная установка на другом компьютере. Все базы знаний в существующей установке [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] несложно экспортировать в файл резервной копии DQS (.dqsb), а затем импортировать все базы знаний из файла резервной копии после установки [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] на другом компьютере.  
   
-##  <a name="export"></a>Экспорт баз знаний в файл. dqsb  
+##  <a name="exporting-knowledge-bases-to-dqsb-file"></a><a name="export"></a>Экспорт баз знаний в файл. dqsb  
  Все базы знаний из существующего сервера [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] вы можете экспортировать в любое время, в том числе и при удалении [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].  
   
 -   Для экспорта всех баз знаний на сервере [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] в файл резервной копии DQS (.dqsb) запустите программу DQSInstaller.exe с параметром `exportkbs` из командной строки, введя полный путь к файлу и имя файла, в который будут экспортированы базы знаний. Например, для экспорта всех баз знаний в файл DQSBackup.dqsb на диске C: выполните следующую команду:  
@@ -47,7 +47,7 @@ ms.locfileid: "75558156"
     > [!NOTE]  
     >  Если при удалении [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] в параметре командой строки `uninstall` не будут указаны полные путь к файлу и имя файла резервной копии DQS, то отображается сообщение, которое предупреждает об удалении всех баз знаний и позволяет определить, продолжить ли процесс удаления.  
   
-##  <a name="import"></a>Импорт баз знаний из файла. dqsb  
+##  <a name="importing-knowledge-bases-from-dqsb-file"></a><a name="import"></a>Импорт баз знаний из файла. dqsb  
  После завершения установки [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] вы можете импортировать все базы знаний из файла резервной копии DQS (.dqsb). Для импорта баз знаний необходим допустимый файл резервной копии DQS (.dqsb).  
   
  Запустите программу DQSInstaller.exe с параметром `importkbs` из командной строки, задав полный путь к файлу и имя файла, из которого следует импортировать базы знаний. Например, для импорта всех баз знаний из файла DQSBackup.dqsb на диске C: выполните следующую команду:  

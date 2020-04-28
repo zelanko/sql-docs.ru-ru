@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 24763f190172da637d19df7ce36553b7341bd894
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76761988"
 ---
 # <a name="assess-an-apps-data-access-layer-with-data-migration-assistant"></a>Оценка уровня доступа к данным приложения с помощью Помощник по миграции данных
@@ -104,7 +104,7 @@ ms.locfileid: "76761988"
 
 Теперь в дополнение к переходу к базе данных для миграции пользователи также имеют представление с точки зрения приложения.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 * [Общие сведения о Помощник по миграции данных](../dma/dma-overview.md)
 * [Помощник по миграции данных: параметры конфигурации](../dma/dma-configurationsettings.md)

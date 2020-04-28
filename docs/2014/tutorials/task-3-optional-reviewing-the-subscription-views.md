@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d567ccb528d881057829eb4b1071410e37e944fe
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171739"
 ---
-# <a name="task-3-optional-reviewing-the-subscription-views"></a>Задача 3 (дополнительно). Просмотр представлений подписки
+# <a name="task-3-optional-reviewing-the-subscription-views"></a>Задача 3 (необязательно). Проверка представлений подписки
   В этой задаче вы ознакомитесь с созданием представлений SQL с помощью среды SQL Server Management Studio.
 
 1.  Запустите **SQL Server Management Studio**. Нажмите кнопку **Пуск** , выберите пункт **все программы**, щелкните **Microsoft SQL Server 2012**, а затем — **SQL Server Management Studio**.
@@ -30,5 +30,5 @@ ms.locfileid: "78171739"
 
      ![SQL Server Management Studio — представление mdm.Suppliers](../../2014/tutorials/media/et-reviewingthesubscriptionviews.jpg "SQL Server Management Studio — представление mdm.Suppliers")
 
-## <a name="next-step"></a>Дальнейшее действие
- [Задача 4. Создание проекта служб SSIS с помощью SQL Server Data Tools](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)
+## <a name="next-step"></a>Следующий шаг
+ [Задача 4. Создание проекта SSIS с помощью SQL Server Data Tools](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)

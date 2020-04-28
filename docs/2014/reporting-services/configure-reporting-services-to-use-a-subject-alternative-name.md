@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5bbbf363c8d6ebb452f6628676de1b8918e6f245
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173940"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Настройка Reporting Services для использования альтернативного имени субъекта
@@ -22,7 +22,7 @@ ms.locfileid: "78173940"
 
 ||
 |-|
-|**[!INCLUDE[applies](../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в собственном режиме|
+|**[!INCLUDE[applies](../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (собственный режим)|
 
  Инструкции применяются к URL-адресу службы отчетов, а также URL-адресу веб-службы.
 

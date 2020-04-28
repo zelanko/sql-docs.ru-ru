@@ -21,10 +21,10 @@ ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e7bb477901dee22c70bb47cd0eaf7da5eb163b7f
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77507541"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-SQL)
@@ -47,7 +47,7 @@ EXEC managed_backup.sp_backup_config_schedule
     ,[@log_backup_freq = ] 'frequency of log backup'  
 ```  
   
-##  <a name="Arguments"></a>Даваемых  
+##  <a name="arguments"></a><a name="Arguments"></a>Даваемых  
  @database_name  
  Имя базы данных для включения управляемого резервного копирования в определенной базе данных. Если задано значение NULL или *, то эта управляемая резервная копия применяется ко всем базам данных на сервере.  
   
@@ -73,15 +73,15 @@ EXEC managed_backup.sp_backup_config_schedule
 >  Если модель восстановления изменяется с Simple на Full, необходимо перенастроить log_backup_freq с `0:00` ненулевым значением.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Требуется членство в роли базы данных **db_backupoperator** , с разрешениями **ALTER ANY CREDENTIAL** и **EXECUTE** для хранимой процедуры **sp_delete_backuphistory** .  
   
 ## <a name="see-also"></a>См. также:  
  [managed_backup. sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
- [managed_backup. sp_backup_config_advanced &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
+ [managed_backup.sp_backup_config_advanced (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
   
   

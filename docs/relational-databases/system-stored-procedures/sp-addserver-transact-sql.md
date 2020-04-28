@@ -21,10 +21,10 @@ ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1d89da6675fba33af3c6e2d1c054273b6e420ec3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172311"
 ---
 # <a name="sp_addserver-transact-sql"></a>sp_addserver (Transact-SQL)
@@ -44,7 +44,7 @@ sp_addserver [ @server = ] 'server' ,
 ```
 
 ## <a name="arguments"></a>Аргументы
-`[ @server = ] 'server'`Имя сервера. Имена серверов должны быть уникальными и соответствовать правилам именования [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, за исключением того, что пробелы не допускаются. *Server* имеет тип **sysname**и не имеет значения по умолчанию.
+`[ @server = ] 'server'`Имя сервера. Имена серверов должны быть уникальными и соответствовать правилам именования [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, за исключением того, что пробелы не допускаются. Аргумент*server* имеет тип **sysname**и не имеет значения по умолчанию.
 
  Если на одном компьютере установлено несколько экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то каждый экземпляр работает, как на отдельном сервере. Укажите именованный экземпляр, обратившись к *серверу* как *servername\instancename*.
 
@@ -57,14 +57,14 @@ sp_addserver [ @server = ] 'server' ,
 `[ @duplicate_ok = ] 'duplicate_OK'`Указывает, разрешено ли повторяющееся имя сервера. duplicate_OK имеет тип **varchar (13)** и значение по умолчанию NULL. ** \@** duplicate_OK может иметь только значение **duplicate_OK** или null. ** \@** Если указано **duplicate_OK** и добавляемое имя сервера уже существует, ошибка не возникает. Если именованные параметры не используются, ** \@** необходимо указать Local.
 
 ## <a name="return-code-values"></a>Значения кода возврата
- 0 (успех) или 1 (сбой).
+ 0 (успешное завершение) или 1 (неуспешное завершение)
 
 ## <a name="remarks"></a>Remarks
  Чтобы задать или очистить параметры сервера, используйте **sp_serveroption**.
 
  **sp_addserver** нельзя использовать внутри определяемой пользователем транзакции.
 
- Использование **sp_addserver** для добавления удаленного сервера прекращено. Вместо этого используйте [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) .
+ Использование **sp_addserver** для добавления удаленного сервера прекращено.  Вместо этого используйте хранимую процедуру [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).
 
 ## <a name="permissions"></a>Разрешения
  Требует членства в предопределенной роли сервера **setupadmin** .

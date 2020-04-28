@@ -20,10 +20,10 @@ ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cc488958513f4a84ac776ff26f1fe2c867f8fa74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76761838"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
@@ -36,15 +36,15 @@ ms.locfileid: "76761838"
 
 Эта таблица хранится в базе данных **msdb** .  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Уникальный идентификатор строки.|  
-|**job_id**|**UNIQUEIDENTIFIER**|Идентификатор задания.|  
+|**job_id**|**uniqueidentifier**|Идентификатор задания.|  
 |**step_id**|**int**|Идентификатор этапа в задании.|  
-|**step_name**|**имеет sysname**|Имя этапа.|  
+|**step_name**|**sysname**|Имя этапа.|  
 |**sql_message_id**|**int**|Идентификатор любого сообщения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] об ошибке, возвращенного при сбое задания.|  
 |**sql_severity**|**int**|Уровень серьезности любой ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Сообщение**|**nvarchar (4000)**|Текст ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если он имеется.|  
+|**message**|**nvarchar(4000)**|Текст ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если он имеется.|  
 |**run_status**|**int**|Состояние выполнения задания.<br /><br /> **0** = сбой<br /><br /> **1** = успех<br /><br /> **2** = повторная попытка<br /><br /> **3** = отменено<br /><br />**4** = выполняется|  
 |**run_date**|**int**|Дата начала выполнения задания или этапа. Для внутрипроцессного журнала это дата и время записи журнала.|  
 |**run_time**|**int**|Время начала задания или шага в формате **ЧЧММСС** .|  
@@ -53,7 +53,7 @@ ms.locfileid: "76761838"
 |**operator_id_netsent**|**int**|Идентификатор оператора, уведомленного при помощи сообщения о завершении задания.|  
 |**operator_id_paged**|**int**|Идентификатор оператора, уведомленного по пейджеру о завершении задания.|  
 |**retries_attempted**|**int**|Количество повторных попыток выполнения задания или этапа.|  
-|**сервером**|**имеет sysname**|Имя сервера, на котором выполнялось задание.|  
+|**сервером**|**sysname**|Имя сервера, на котором выполнялось задание.|  
   
   ## <a name="example"></a>Пример
  Следующий [!INCLUDE[tsql](../../includes/tsql-md.md)] запрос преобразует **run_time** и **run_duration** столбцы в более понятный формат.  Выполните скрипт в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].

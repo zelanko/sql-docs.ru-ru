@@ -24,10 +24,10 @@ helpviewer_keywords:
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4ee73a840be6ec29e3ac34c4c43fe0c8e87185f6
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77903913"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
@@ -35,13 +35,13 @@ ms.locfileid: "77903913"
 
 Возвращает строку для каждого классифицированного элемента в базе данных.
 
-|Имя столбца|Тип данных|Description|
+|Имя столбца|Тип данных|Описание|
 |-----------------|---------------|-----------------|  
-|**см**|**int**|Определяет класс элемента, для которого существует классификация. Всегда будет иметь значение 1 (представляет столбец)|  
+|**class**|**int**|Определяет класс элемента, для которого существует классификация. Всегда будет иметь значение 1 (представляет столбец)|  
 |**class_desc**|**varchar (16)**|Описание класса элемента, для которого существует классификация. всегда будет иметь значение *OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|Представляет идентификатор таблицы, содержащей классифицированный столбец, соответствующий sys. all_objects. object_id|  
 |**minor_id**|**int**|Представляет идентификатор столбца, на котором существует классификация, соответствующая sys. all_columns. column_id|   
-|**заголовка**|**sysname**|Метка (удобное для чтения), назначенная для классификации чувствительности|  
+|**label**|**sysname**|Метка (удобное для чтения), назначенная для классификации чувствительности|  
 |**label_id**|**sysname**|Идентификатор, связанный с меткой, который может использоваться системой защиты информации, например Azure Information Protection (точка административного установки).|  
 |**information_type**|**sysname**|Тип сведений (для человека), назначенный для классификации чувствительности|  
 |**information_type_id**|**sysname**|Идентификатор, связанный с типом данных, который может использоваться системой защиты информации, например Azure Information Protection (точка административного ввода).|  
@@ -78,11 +78,11 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 ## <a name="permissions"></a>Разрешения  
  Требует разрешения на **Просмотр любого чувствительности** . 
  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
 ## <a name="see-also"></a>См. также:  
 
-[Добавить КЛАССИФИКАЦИю ЧУВСТВИТЕЛЬНости (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+[ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
 [DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 

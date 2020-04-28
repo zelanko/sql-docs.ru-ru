@@ -18,10 +18,10 @@ ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3ba1648da108762b03155eb93e1ee11c53a75583
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75831766"
 ---
 # <a name="xp_sprintf-transact-sql"></a>xp_sprintf (Transact-SQL)
@@ -40,23 +40,23 @@ xp_sprintf { string OUTPUT , format }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Строка*  
+ *строка*  
  Переменная типа **varchar** , которая получает выходные данные.  
   
  OUTPUT  
  При указании помещает значение переменной в выходной параметр.  
   
- *формат*  
+ *format*  
  — Это символьная строка форматирования с заполнителями для значений *аргументов* , аналогичная функции, которая поддерживается в C-Language **sprintf** . В настоящее время поддерживается только аргумент форматирования %s.  
   
- *параметр*  
+ *argument*  
  Символьная строка, представляющая значение соответствующего аргумента форматирования.  
   
- *\n*  
+ *n*  
  Заполнитель, показывающий, что можно указать максимум 50 аргументов.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  **xp_sprintf** возвращает следующее сообщение:  
@@ -64,7 +64,7 @@ xp_sprintf { string OUTPUT , format }
  `The command(s) completed successfully.`  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в роли **Public** .  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

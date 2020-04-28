@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca5a4561c4b3f55044eb63068036105d878f150c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175083"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>Счетчики производительности для объектов производительности ReportServer:Service и ReportServerSharePoint:Service
@@ -41,7 +41,7 @@ ms.locfileid: "78175083"
 
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Режим интеграции с SharePoint | Собственный режим.
 
-##  <a name="bkmk_ReportServer"></a> Счетчики производительности ReportServer:Service (сервер отчетов в собственном режиме)
+##  <a name="reportserverservice-performance-counters-native-mode-report-server"></a><a name="bkmk_ReportServer"></a> Счетчики производительности ReportServer:Service (сервер отчетов в собственном режиме)
  Объект производительности `ReportServer:Service` включает коллекцию счетчиков для отслеживания связанных с HTTP и памятью событий для экземпляра сервера отчетов. Этот объект производительности отображается однократно для каждого экземпляра служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] на компьютере; счетчики объекта производительности можно добавлять или удалять для каждого экземпляра. Счетчики для экземпляра по умолчанию отображаются в формате `ReportServer:Service`. Счетчики для именованных экземпляров отображаются в `ReportServer$<`формате *instance_name*`>:Service`.
 
  Объект `ReportServer:Service` производительности был впервые использован в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]и предоставляет подмножество счетчиков, включенных в службы IIS (IIS) и [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] в предыдущих версиях. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Эти новые счетчики являются уникальными для служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Они отслеживают связанные с HTTP события для сервера отчетов, такие как запросы, соединения и попытки входа. Кроме того, этот объект производительности включает счетчики для отслеживания событий управления памятью.
@@ -54,7 +54,7 @@ ms.locfileid: "78175083"
 (get-counter -listset "ReportServer:Service").paths
 ```
 
-|Счетчик|Описание|
+|Счетчик|Description|
 |-------------|-----------------|
 |`Active connections`|Количество активных в текущий момент соединений на сервере.|
 |`Bytes Received Total`|Число байт, полученных сервером. Этот счетчик ведет подсчет общего приблизительного числа байтов, полученных как диспетчером отчетов, так и сервером отчетов.|
@@ -78,10 +78,10 @@ ms.locfileid: "78175083"
 |`Requests/sec`|Количество обрабатываемых за секунду запросов. Это значение отражает текущую пропускную способность приложения.|
 |`Tasks Queued`|Число задач, ожидающих доступности потока для обработки. Каждый запрос, выполненный к серверу отчетов, соответствует одной или нескольким задачам. Этот счетчик представляет только число задач, готовых к обработке; он не включает число выполняющихся в настоящее время задач.|
 
-##  <a name="bkmk_ReportServerSharePoint"></a>ReportServerSharePoint: Service (сервер отчетов в режиме SharePoint)
+##  <a name="reportserversharepointservice-sharepoint-mode-report-server"></a><a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (сервер отчетов в режиме SharePoint)
  Объект `ReportServerSharePoint:Service` производительности был добавлен в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].
 
- ![Содержимое, связанное с PowerShell](../media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Следующий сценарий Windows PowerShell вернет список счетчиков производительности для CounterSetName
+ ![Содержимое, связанное с PowerShell](../media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Следующий скрипт Windows PowerShell вернет список счетчиков производительности для CounterSetName
 
 ```
 (get-counter -listset "ReportServerSharePoint:Service").paths
@@ -93,8 +93,8 @@ ms.locfileid: "78175083"
 |`Memory Shrink Amount`|
 |`Memory Shrink Notifications/Sec`|
 
-##  <a name="bkmk_powershell"></a>Использование командлетов PowerShell для возврата списков
- ![Содержимое, связанное с PowerShell](../media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Следующий сценарий Windows PowerShell вернет список счетчиков производительности для CounterSetName "ReportServerSharePoint: Service":
+##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a>Использование командлетов PowerShell для возврата списков
+ ![Содержимое, связанное с PowerShell](../media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Следующий скрипт Windows PowerShell вернет список счетчиков производительности для CounterSetName "ReportServerSharePoint:Service":
 
 ```
 (get-counter -listset "ReportServerSharePoint:Service").paths

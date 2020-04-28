@@ -17,10 +17,10 @@ ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6c5c3c2573465072de0d1f0a7c08d47df5d387b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75321809"
 ---
 # <a name="sp_mschange_snapshot_agent_properties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
@@ -65,13 +65,13 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
 `[ @frequency_type = ] frequency_type`Частота, с которой выполняется агент моментальных снимков. *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
 |**2**|По запросу|  
 |**4**|Ежедневно|  
-|**8**|Еженедельно|  
-|**штук**|Ежемесячная|  
+|**8**|Weekly (Еженедельно);|  
+|**10**|Ежемесячно|  
 |**20**|Ежемесячно, в соответствии с заданным интервалом|  
 |**40**|При запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
@@ -79,12 +79,12 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
 `[ @frequency_subday = ] frequency_subday`Единицы измерения для *freq_subday_interval*. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
 |**2**|Секунда|  
 |**4**|Минута|  
-|**8**|Hour|  
+|**8**|Час|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Интервал для *frequency_subday*. *frequency_subday_interval* имеет **тип int**и не имеет значения по умолчанию.  
   
@@ -120,7 +120,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
 `[ @publisher_type = ] 'publisher_type'`Указывает тип издателя, если издатель не выполняется в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аргумент *publisher_type* имеет тип **sysname**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Используется издатель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**СУБД**|Задает стандартного издателя Oracle.|  
@@ -142,6 +142,6 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  Только члены предопределенной роли сервера **sysadmin** на распространителе могут выполнять **sp_MSchange_snapshot_agent_properties**.  
   
 ## <a name="see-also"></a>См. также:  
- [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)  
+ [sp_addpublication_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)  
   
   

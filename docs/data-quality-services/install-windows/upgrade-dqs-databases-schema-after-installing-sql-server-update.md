@@ -12,17 +12,17 @@ ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: db5009ef7f5c9ff2a57022d30b2eb9f009fb6ab8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75558071"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Обновление схемы баз данных DQS после установки SQL Server обновления
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  После установки обновления SQL Server (обновления, исправления или накопительного обновления) на ранее настроенном экземпляре DQS можно обновить схему баз данных DQS, запустив файл DQSInstaller.exe с параметром командной строки **upgrade**. В противном случае может появиться сообщение об ошибке при попытке соединения с сервером DQS через клиент Data Quality:  
+  После установки обновления SQL Server (обновления, исправления или накопительного обновления) на ранее настроенном экземпляре DQS можно обновить схему баз данных DQS, запустив файл DQSInstaller.exe с параметром командной строки **upgrade** . В противном случае может появиться сообщение об ошибке при попытке соединения с сервером DQS через клиент Data Quality:  
   
 ```  
 An error occurred in the Microsoft .NET Framework while trying to load assembly id 65581.  
@@ -61,7 +61,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
   
 6.  После успешного обновления схемы баз данных DQS отображается сообщение о завершении.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
  Войдите на обновленный сервер из клиентского приложения Data Quality.  
   
  Дополнительные сведения об обновлении схемы баз данных DQS после установки обновлений SQL Server и о шагах по устранению связанных с обновлением неполадок см. в статье [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565)(Обновления службы DQS: установка накопительных обновлений или исправлений для служб Data Quality Services).  

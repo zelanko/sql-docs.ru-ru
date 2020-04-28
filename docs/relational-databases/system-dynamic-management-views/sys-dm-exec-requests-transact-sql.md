@@ -21,10 +21,10 @@ ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 16939894f9e43e4538a8d56e76632af891d9714a
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77429025"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
@@ -33,30 +33,30 @@ ms.locfileid: "77429025"
 
 Возвращает сведения о каждом запросе, который выполняется в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о запросах см. в разделе [руководств по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md).
    
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Идентификатор сеанса, к которому относится данный запрос. Не допускает значение NULL.|  
 |request_id|**int**|Идентификатор запроса. Уникален в контексте сеанса. Не допускает значение NULL.|  
 |start_time|**datetime**|Метка времени поступления запроса. Не допускает значение NULL.|  
-|status|**nvarchar (30)**|Состояние запроса. Может применяться один из перечисленных ниже типов.<br /><br /> Историческая справка<br />Запущен<br />Готово к запуску<br />В режиме ожидания<br />Suspended<br /><br /> Не допускает значение NULL.|  
-|command|**nvarchar (32)**|Тип выполняемой в данный момент команды. Основные типы команд:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Текст запроса можно получить при помощи функции sys.dm_exec_sql_text, передав ей значение столбца sql_handle. Внутренние системные процессы устанавливают команду в соответствии с выполняемой задачей. Например:<br /><br /> LOCK MONITOR;<br />CHECKPOINTLAZY;<br />WRITER.<br /><br /> Не допускает значение NULL.|  
+|status|**nvarchar(30)**|Состояние запроса. Может иметь одно из следующих значений.<br /><br /> История<br />Запущен<br />Готово к запуску<br />В режиме ожидания<br />Приостановлена<br /><br /> Не допускает значение NULL.|  
+|command|**nvarchar(32)**|Тип выполняемой в данный момент команды. Основные типы команд:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Текст запроса можно получить при помощи функции sys.dm_exec_sql_text, передав ей значение столбца sql_handle. Внутренние системные процессы устанавливают команду в соответствии с выполняемой задачей. Например:<br /><br /> LOCK MONITOR;<br />CHECKPOINTLAZY;<br />WRITER.<br /><br /> Не допускает значение NULL.|  
 |sql_handle|**varbinary (64)**|Токен, однозначно определяющий пакет или хранимую процедуру, частью которой является запрос. Допускает значение NULL.| 
 |statement_start_offset|**int**|Указывает, что в байтах, начиная с 0, начальной позицией выполняемой в данный момент инструкции для выполняемого в данный момент пакета или сохраненного объекта. Можно использовать вместе с функциями `sql_handle`, и `statement_end_offset` `sys.dm_exec_sql_text` динамической функцией управления, чтобы получить текущую выполняемую инструкцию для запроса. Допускает значение NULL.|  
 |statement_end_offset|**int**|Указывает в байтах, начиная с 0, конечную точку выполняемой в данный момент инструкции для выполняемого в данный момент пакета или сохраненного объекта. Можно использовать вместе с функциями `sql_handle`, и `statement_start_offset` `sys.dm_exec_sql_text` динамической функцией управления, чтобы получить текущую выполняемую инструкцию для запроса. Допускает значение NULL.|  
 |plan_handle|**varbinary (64)**|Токен, однозначно определяющий план выполнения запроса для выполняемого в данный момент пакета. Допускает значение NULL.|  
 |database_id|**smallint**|Идентификатор базы данных, к которой выполняется запрос. Не допускает значение NULL.|  
 |user_id|**int**|Идентификатор пользователя, отправившего данный запрос. Не допускает значение NULL.|  
-|connection_id|**UNIQUEIDENTIFIER**|Идентификатор соединения, по которому поступил запрос. Допускает значение NULL.|  
+|connection_id|**uniqueidentifier**|Идентификатор соединения, по которому поступил запрос. Допускает значение NULL.|  
 |blocking_session_id|**smallint**|Идентификатор сеанса, блокирующего данный запрос. Если этот столбец имеет значение NULL или равен 0, запрос не блокируется или сведения о сеансе блокирующего сеанса недоступны (или не могут быть идентифицированы).<br /><br /> -2 = Блокирующий ресурс принадлежит потерянной распределенной транзакции.<br /><br /> -3 = Блокирующий ресурс принадлежит отложенной транзакции восстановления.<br /><br /> -4 = Идентификатор сеанса владельца кратковременной блокировки определить на данный момент не удалось из-за переходов между внутренними состояниями кратковременной блокировки.|  
-|wait_type|**nvarchar (60)**|Если запрос в настоящий момент блокирован, в столбце содержится тип ожидания. Допускает значение NULL.<br /><br /> Сведения о типах ожиданий см. в разделе [sys. dm_os_wait_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|wait_type|**nvarchar(60)**|Если запрос в настоящий момент блокирован, в столбце содержится тип ожидания. Допускает значение NULL.<br /><br /> Сведения о типах ожиданий см. в разделе [sys. dm_os_wait_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |wait_time|**int**|Если запрос в настоящий момент блокирован, в столбце содержится продолжительность текущего ожидания (в миллисекундах). Не допускает значение NULL.|  
-|last_wait_type|**nvarchar (60)**|Если запрос был блокирован ранее, в столбце содержится тип последнего ожидания. Не допускает значение NULL.|  
+|last_wait_type|**nvarchar(60)**|Если запрос был блокирован ранее, в столбце содержится тип последнего ожидания. Не допускает значение NULL.|  
 |wait_resource|**nvarchar(256)**|Если запрос в настоящий момент блокирован, в столбце указан ресурс, освобождения которого ожидает запрос. Не допускает значение NULL.|  
 |open_transaction_count|**int**|Число транзакций, открытых для данного запроса. Не допускает значение NULL.|  
 |open_resultset_count|**int**|Число результирующих наборов, открытых для данного запроса. Не допускает значение NULL.|  
 |transaction_id|**bigint**|Идентификатор транзакции, в которой выполняется запрос. Не допускает значение NULL.|  
-|context_info|**varbinary (128)**|Значение CONTEXT_INFO сеанса. Допускает значение NULL.|  
-|percent_complete|**Real**|Процент завершения работы для следующих команд.<br /><br /> ALTER INDEX REORGANIZE<br />параметра AUTO_SHRINK с ALTER DATABASE<br />BACKUP DATABASE<br />DBCC CHECKDB<br />DBCC CHECKFILEGROUP<br />DBCC CHECKTABLE<br />DBCC INDEXDEFRAG<br />DBCC SHRINKDATABASE<br />DBCC SHRINKFILE<br />RECOVERY<br />RESTORE DATABASE<br />ROLLBACK<br />TDE ENCRYPTION<br /><br /> Не допускает значение NULL.|  
+|context_info|**varbinary(128)**|Значение CONTEXT_INFO сеанса. Допускает значение NULL.|  
+|percent_complete|**real**|Процент завершения работы для следующих команд.<br /><br /> ALTER INDEX REORGANIZE<br />параметра AUTO_SHRINK с ALTER DATABASE<br />BACKUP DATABASE<br />DBCC CHECKDB<br />DBCC CHECKFILEGROUP<br />DBCC CHECKTABLE<br />DBCC INDEXDEFRAG<br />DBCC SHRINKDATABASE<br />DBCC SHRINKFILE<br />RECOVERY<br />RESTORE DATABASE<br />ROLLBACK<br />TDE ENCRYPTION<br /><br /> Не допускает значение NULL.|  
 |estimated_completion_time|**bigint**|Только для внутреннего использования. Не допускает значение NULL.|  
 |cpu_time|**int**|Время ЦП (в миллисекундах), затраченное на выполнение запроса. Не допускает значение NULL.|  
 |total_elapsed_time|**int**|Общее время, истекшее с момента поступления запроса (в миллисекундах). Не допускает значение NULL.|  
@@ -66,7 +66,7 @@ ms.locfileid: "77429025"
 |writes|**bigint**|Число операций записи, выполненных данным запросом. Не допускает значение NULL.|  
 |logical_reads|**bigint**|Число логических операций чтения, выполненных данным запросом. Не допускает значение NULL.|  
 |text_size|**int**|Установка параметра TEXTSIZE для данного запроса. Не допускает значение NULL.|  
-|Язык|**nvarchar(128**|Установка языка для данного запроса. Допускает значение NULL.|  
+|Язык|**nvarchar(128)**|Установка языка для данного запроса. Допускает значение NULL.|  
 |date_format|**nvarchar (3)**|Установка параметра DATEFORMAT для данного запроса. Допускает значение NULL.|  
 |date_first|**smallint**|Установка параметра DATEFIRST для данного запроса. Не допускает значение NULL.|  
 |quoted_identifier|**bit**|1 = Параметр QUOTED_IDENTIFIER для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
@@ -92,9 +92,9 @@ ms.locfileid: "77429025"
 |statement_context_id|**bigint**|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Необязательный внешний ключ к sys. query_context_settings.<br /><br />Этот столбец имеет значение NULL, если хранилище запросов не включено для базы данных. |  
 |dop |**int** |**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.<br /><br /> Степень параллелизма запроса. |  
 |parallel_worker_count |**int** |**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.<br /><br /> Количество зарезервированных параллельных рабочих ролей, если это параллельный запрос.  |  
-|external_script_request_id |**UNIQUEIDENTIFIER** |**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.<br /><br /> Идентификатор запроса внешнего скрипта, связанный с текущим запросом. |  
+|external_script_request_id |**uniqueidentifier** |**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.<br /><br /> Идентификатор запроса внешнего скрипта, связанный с текущим запросом. |  
 |is_resumable |**bit** |**Область применения**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] и более поздних версий.<br /><br /> Указывает, является ли запрос возобновляемой операцией с индексом. |  
-|page_resource |**Binary (8)** |**Применимо к**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8-байтовое шестнадцатеричное представление ресурса страницы, если `wait_resource` столбец содержит страницу. Дополнительные сведения см. в разделе [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
+|page_resource |**Binary (8)** |**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8-байтовое шестнадцатеричное представление ресурса страницы, если `wait_resource` столбец содержит страницу. Дополнительные сведения см. в разделе [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**bigint**|Область **применения**: масштабирование базы данных SQL Azure<br /><br /> Число операций чтения сервера страниц, выполненных этим запросом. Не допускает значение NULL.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
@@ -124,7 +124,7 @@ SELECT * FROM sys.dm_exec_sql_text(< copied sql_handle >);
 GO  
 ```
 
-### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>Б. Поиск всех блокировок, которые содержит выполняемый пакет
+### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>Б) Поиск всех блокировок, которые содержит выполняемый пакет
 
 В следующем примере производится запрос к **sys. dm_exec_requests** для поиска интересного пакета и `transaction_id` копирования его из выходных данных.
 
@@ -192,5 +192,5 @@ GO
 [sys. dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
 [sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
 [SQL Server, объект статистики SQL](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     
-[Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[Руководством по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md#DOP)       
 [Инструкции по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)    

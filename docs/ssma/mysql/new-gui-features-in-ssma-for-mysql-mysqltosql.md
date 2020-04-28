@@ -10,10 +10,10 @@ ms.assetid: 0e59e2dc-1e4a-47c0-a5c3-ae7b5f5e469c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4fd1316850a064a8d1aed3d2994642d44111f421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76909684"
 ---
 # <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>Новые функции графического пользовательского интерфейса в SSMA для MySQL (MySQLToSQL)
@@ -47,7 +47,7 @@ ms.locfileid: "76909684"
 ## <a name="bookmarks"></a>Закладки  
 Эта функция позволяет задать одну или несколько закладок в исходном или целевом коде, быстро найти закладку с помощью сочетаний клавиш, управлять закладками с помощью удобного диалогового окна.  
   
-### <a name="toggle-bookmark"></a>Переключить закладку  
+### <a name="toggle-bookmark"></a>Закладка  
 Задать или удалить закладку можно следующими способами.  
   
 -   Использовать кнопку "Переключить закладку" поверх исходного или целевого окна SQL  

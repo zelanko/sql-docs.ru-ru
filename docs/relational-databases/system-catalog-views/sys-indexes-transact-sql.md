@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3208f538a1c1e111913c0808a8213743fed41bcc
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77179295"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
@@ -32,13 +32,13 @@ ms.locfileid: "77179295"
 
   Содержит строку для каждого индекса или кучи табличного объекта, такого как таблица, представление или функция с табличным значением.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Идентификатор объекта, которому принадлежит данный индекс.|  
-|**name**|**имеет sysname**|Имя индекса. **имя** уникально только в пределах объекта.<br /><br /> NULL = куча.|  
+|**name**|**sysname**|Имя индекса. **имя** уникально только в пределах объекта.<br /><br /> NULL = куча.|  
 |**index_id**|**int**|Идентификатор индекса. **index_id** уникален только в пределах объекта.<br /><br /> 0 = куча;<br /><br /> 1 = кластеризованный индекс;<br /><br /> > 1 = некластеризованный индекс|  
 |**type**|**tinyint**|Тип индекса:<br /><br /> 0 = куча;<br /><br /> 1 = кластеризованный<br /><br /> 2 = некластеризованный.<br /><br /> 3 = XML.<br /><br /> 4 = пространственный.<br /><br /> 5 = кластеризованный индекс columnstore. **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> 6 = некластеризованный индекс columnstore. **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> 7 = некластеризованный хэш-индекс. **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.|  
-|**type_desc**|**nvarchar (60)**|Описание типа индекса.<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> Clustered COLUMNSTORE — **применяется к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздним версиям.<br /><br /> Некластеризованный COLUMNSTORE — **применяется к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздним версиям.<br /><br /> Некластеризованный хэш: некластеризованные хэш-индексы поддерживаются только для таблиц, оптимизированных для памяти. Представление sys.hash_indexes отображает текущие хэш-индексы и свойства хэша. Дополнительные сведения см. в разделе [sys. hash_indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.|  
+|**type_desc**|**nvarchar(60)**|Описание типа индекса.<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> Clustered COLUMNSTORE — **применяется к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздним версиям.<br /><br /> Некластеризованный COLUMNSTORE — **применяется к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздним версиям.<br /><br /> Некластеризованный хэш: некластеризованные хэш-индексы поддерживаются только для таблиц, оптимизированных для памяти. Представление sys.hash_indexes отображает текущие хэш-индексы и свойства хэша. Дополнительные сведения см. в разделе [sys. hash_indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.|  
 |**is_unique**|**bit**|1 = индекс уникален.<br /><br /> 0 = индекс не уникален.<br /><br /> Всегда равен 0 для кластеризованных индексов columnstore.|  
 |**data_space_id**|**int**|Идентификатор пространства данных этого индекса. Пространством данных может быть или файловая группа, или схема секционирования.<br /><br /> 0 = **object_id** является возвращающей табличное значение функцией или индексом в памяти.|  
 |**ignore_dup_key**|**bit**|1 = параметр IGNORE_DUP_KEY имеет значение ON.<br /><br /> 0 = параметр IGNORE_DUP_KEY имеет значение OFF.|  
@@ -59,7 +59,7 @@ ms.locfileid: "77179295"
 > Бит **optimize_for_sequential_key** поддерживается только в версиях SQL Server 2019 CTP 3,1 и выше.
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращаются все индексы для таблицы `Production.Product` в [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базе данных.  
@@ -89,7 +89,7 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys. index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys. xml_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [sys. Objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   

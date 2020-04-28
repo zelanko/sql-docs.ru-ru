@@ -18,10 +18,10 @@ ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a5e4ad5d6f3d0b2e35633694d65e58dd782cc3ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75688259"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
@@ -114,7 +114,7 @@ WHERE scope_batch LIKE N'SELECT WorkOrderID, p.Name, OrderQty, DueDate%';
 GO  
 ```  
   
-### <a name="b-creating-multiple-plan-guides-for-a-multistatement-batch"></a>Б. Создание нескольких руководств планов для пакета из нескольких инструкций  
+### <a name="b-creating-multiple-plan-guides-for-a-multistatement-batch"></a>Б) Создание нескольких руководств планов для пакета из нескольких инструкций  
  В следующем примере создается структура плана для двух инструкций, входящих в пакет из нескольких инструкций. Структуры планов создаются в явной транзакции, поэтому план запроса для пакета не удаляется из кэша планов после создания первой структуры плана. Пример начинается с выполнения пакета из нескольких инструкций. План для пакета исследуется с помощью динамических административных представлений. Обратите внимание, что возвращается строка для каждой инструкции в пакете. Затем создается структура плана для первой и третьей инструкций в пакете путем указания параметра `@statement_start_offset`. Последняя инструкция в примере осуществляет проверку существования структур плана.  
   
  [!code-sql[PlanGuides#Create_From_Handle2](../../relational-databases/system-stored-procedures/codesnippet/tsql/sp-create-plan-guide-fro_1.sql)]  
@@ -126,6 +126,6 @@ GO
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys. dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
- [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
+ [sp_control_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
   
   

@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c6953214bd5e5353643cb16b75ed51ac18783256
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171773"
 ---
-# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Задача 3. Создание и запуск проекта служб DQS для сопоставления
+# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Задача 3. Создание и запуск проекта качества данных для сопоставления
   В этой задаче вы создадите проект служб DQS для операции сопоставления и выполните сопоставление очищенных данных поставщика, чтобы удалить все повторяющиеся значения.
 
 1.  На главной странице **клиента DQS**нажмите кнопку **Создать проект качества данных**.
@@ -46,7 +46,7 @@ ms.locfileid: "78171773"
 
 12. Нажмите кнопку **Далее** , чтобы перейти к странице **Экспорт** .
 
-## <a name="next-step"></a>Дальнейшее действие
- [Задача 4. Экспорт результатов действия сопоставления в файл Excel](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)
+## <a name="next-step"></a>Следующий шаг
+ [Задача 4. Экспорт результатов сопоставления в файл Excel](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)
 
 

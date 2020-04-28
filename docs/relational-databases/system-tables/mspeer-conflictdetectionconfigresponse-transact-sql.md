@@ -19,10 +19,10 @@ ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6ed3a127d2527b35c301ab7f3d05305c4f8d2ced
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322135"
 ---
 # <a name="mspeer_conflictdetectionconfigresponse-transact-sql"></a>MSpeer_conflictdetectionconfigresponse (Transact-SQL)
@@ -30,23 +30,23 @@ ms.locfileid: "75322135"
 
   Используется в одноранговой репликации для сохранения ответа каждого из узлов на запрос настройки на уровне топологии. Эта таблица хранится в базе данных публикации.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |request_id|**int**|Определяет запись запроса конфигурации конфликтов в [MSpeer_conflictdetectionconfigrequest](../../relational-databases/system-tables/mspeer-conflictdetectionconfigrequest-transact-sql.md) таблице.|  
-|peer_node|**имеет sysname**|Имя экземпляра сервера, сформировавшего ответ.|  
-|peer_db|**имеет sysname**|База данных подписки на одноранговом узле, сформировавшем ответ.|  
-|peer_version|**имеет sysname**|Определяет номер версии издателя.|  
-|peer_db_version|**имеет sysname**|Указывает номер версии одноранговой базы данных.|  
+|peer_node|**sysname**|Имя экземпляра сервера, сформировавшего ответ.|  
+|peer_db|**sysname**|База данных подписки на одноранговом узле, сформировавшем ответ.|  
+|peer_version|**sysname**|Определяет номер версии издателя.|  
+|peer_db_version|**sysname**|Указывает номер версии одноранговой базы данных.|  
 |is_peer|**bit**|Указывает, является ли узел подписчиком, доступным только для чтения. Значение **0** указывает на подписчик только для чтения.|  
 |conflict_detection_enabled|**bit**|Указывает, включено ли обнаружение конфликтов для топологии.|  
 |originator_id|**varbinary (16)**|Указывает каждый узел в топологии с целью обнаружения конфликтов. Дополнительные сведения см. в разделе [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |peer_conflict_retention|**int**|Срок (в днях), в течение которого метаданные хранятся в таблицах конфликтов.|  
 |peer_subscriptions|**XML**|Сведения об узле, сформировавшем ответ на запрос.|  
-|progress_phase|**nvarchar (32)**|Определяет текущую стадию обработки как одно из следующих значений:<br /><br /> Started<br /><br /> Собраны данные о версии однорангового узла<br /><br /> Собранные данные о состоянии|  
+|progress_phase|**nvarchar(32)**|Определяет текущую стадию обработки как одно из следующих значений:<br /><br /> Запущено<br /><br /> Собраны данные о версии однорангового узла<br /><br /> Собранные данные о состоянии|  
 |modified_date|**datetime**|Дата и время завершения стадии.|  
   
 ## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

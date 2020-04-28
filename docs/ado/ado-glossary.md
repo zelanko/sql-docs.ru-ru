@@ -13,16 +13,16 @@ ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4b92f9c8b65db459d46aff51b7aed58c3ff6e307
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76940435"
 ---
 # <a name="ado-glossary-terms"></a>Термины глоссария ADO
 В этом разделе определяются термины, относящиеся к ADO.
 
-## <a name="a"></a>A
+## <a name="a"></a>Объект
  абсолютный URL-адрес полный URL-адрес, указывающий расположение ресурса, расположенного в Интернете или интрасети. См. также *URL-адрес* и *ОТНОСИТЕЛЬНЫЙ URL-адрес*.
 
  Элемент управления ActiveX с собственной регистрацией, внутрипроцессный COM-компонент, который часто имеет визуальный элемент во время разработки или выполнения. Элементы управления ActiveX также могут взаимодействовать с активным контейнером документа, таким как Microsoft Internet Explorer.

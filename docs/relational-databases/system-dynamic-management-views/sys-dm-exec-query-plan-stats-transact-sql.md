@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 279f1a8fbe3ec78dc0cae30d9879615b169075bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75656996"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-SQL)
@@ -41,11 +41,11 @@ sys.dm_exec_query_plan_stats(plan_handle)
 
 *Plan_handle* можно получить из следующих объектов DMO:  
   
--   [sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-   [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
--   [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
+-   [sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
--   [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-   [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
 -   [sys. dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
@@ -53,7 +53,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 
 ## <a name="table-returned"></a>Возвращаемая таблица
 
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|
 |**DBID**|**smallint**|Идентификатор базы данных, в контексте которой выполнялась компиляция инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], соответствующей данному плану. Для нерегламентированных и подготовленных инструкций SQL это идентификатор базы данных, в которой происходила компиляция инструкции.<br /><br /> Столбец может содержать значение NULL.|  
 |**ИД**|**int**|Идентификатор объекта (например хранимой процедуры или определяемой пользователем функции) для этого плана запроса. Для нерегламентированных и подготовленных пакетов этот столбец содержит значение **NULL**.<br /><br /> Столбец может содержать значение NULL.|  
@@ -75,13 +75,13 @@ sys.dm_exec_query_plan_stats(plan_handle)
 В следующих случаях результат инструкции Showplan, **эквивалентный фактическому плану выполнения** , возвращается в **query_plan** столбец возвращаемой таблицы для **sys. dm_exec_query_plan_stats**.  
 
 -   Этот план можно найти в [представлении каталога sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
-    **AND**    
+    **ПЕРЕТАСКИВАНИ**    
 -   Выполняемый запрос является сложным или потребляет ресурсы.
 
 В следующих случаях в столбце **query_plan** возвращаемой таблицы для **sys. dm_exec_query_plan_stats**возвращается **упрощенный результат <sup>1</sup> ** Showplan.  
 
 -   Этот план можно найти в [представлении каталога sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
-    **AND**    
+    **ПЕРЕТАСКИВАНИ**    
 -   Запрос достаточно прост, обычно разбитый на категории в рамках рабочей нагрузки OLTP.
 
 <sup>1</sup> начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] версии CTP 2,5 это относится к инструкции Showplan, которая содержит только оператор корневого узла (SELECT). Для [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,4 это — кэшированный план, доступный через `sys.dm_exec_cached_plans`.
@@ -89,7 +89,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 В следующих случаях выходные данные **sys. dm_exec_query_plan_stats** **не возвращаются** .
 
 -   План запроса, указанный с помощью *plan_handle* , был исключен из кэша планов.     
-    **OR**    
+    **НИ**    
 -   На первом месте план запроса не был кэширован. Дополнительные сведения см. в разделе [кэширование и повторное использование плана выполнения ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
   
 > [!NOTE] 
@@ -115,7 +115,7 @@ SELECT * FROM sys.dm_exec_query_plan_stats(< copied plan_handle >);
 GO  
 ```   
 
-### <a name="b-looking-at-last-known-actual-query-execution-plan-for-all-cached-plans"></a>Б. Просмотр последнего известного плана выполнения запроса для всех кэшированных планов
+### <a name="b-looking-at-last-known-actual-query-execution-plan-for-all-cached-plans"></a>Б) Просмотр последнего известного плана выполнения запроса для всех кэшированных планов
   
 ```sql  
 SELECT *   
@@ -148,6 +148,6 @@ GO
 
 ## <a name="see-also"></a>См. также:
   [Флаги трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
- [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с выполнением &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 

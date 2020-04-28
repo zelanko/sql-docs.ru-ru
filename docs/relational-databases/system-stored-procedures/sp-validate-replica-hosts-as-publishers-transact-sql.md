@@ -17,10 +17,10 @@ ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9375be2a2af2b7653b3f0f036405533f1571ff3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75320013"
 ---
 # <a name="sp_validate_replica_hosts_as_publishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
@@ -51,7 +51,7 @@ sp_validate_replica_hosts_as_publishers
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет.  
+ Отсутствует.  
   
 ## <a name="remarks"></a>Remarks  
  Если для издателя и базы данных публикации не существует записи, **sp_validate_redirected_publisher** возвращает значение NULL для выходного параметра * \@redirected_publisher*. В противном случае происходит возврат связанного перенаправленного издателя как в случае успеха, так и в случае неудачи.  
@@ -61,7 +61,7 @@ sp_validate_replica_hosts_as_publishers
  Если проверка завершается неудачно, формируются соответствующие ошибки.  **sp_validate_redirected_publisher** наилучшим образом выдать все проблемы, а не только первый.  
   
 > [!NOTE]  
->  **sp_validate_replica_hosts_as_publishers** завершится со следующей ошибкой при проверке узлов вторичной реплики, которые не разрешают доступ на чтение, или если требуется указать намерение Read.  
+>  Работа**sp_validate_replica_hosts_as_publishers** завершится сбоем со следующей ошибкой при проверке узлов вторичной реплики, которые не допускают доступ для чтения либо требуют указания намерения чтения.  
 >   
 >  Сообщение 21899, уровень 11, состояние 1, процедура **sp_hadr_verify_subscribers_at_publisher**, строка 109  
 >   

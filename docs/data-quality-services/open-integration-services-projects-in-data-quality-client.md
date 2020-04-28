@@ -12,10 +12,10 @@ ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: a070f5a279cdddfb78d3188c210faf43661d5516
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75557849"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Открытие проектов служб Integration Services в клиенте DQS
@@ -24,9 +24,9 @@ ms.locfileid: "75557849"
 
   Компонент очистки DQS в Integration Services позволяет запускать проект очистки в пакетном режиме. Но иногда полезно просмотреть результаты очистки в пакете служб Integration Services, подобно тому, как вы можете просмотреть результаты очистки на вкладке **Просмотр результатов и управление ими** операции очистки в проекте служб DQS. Службы DQS позволяют открывать проекты служб Integration Services в [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] точно так же, как любой другой проект служб DQS, с экрана **Открытие проекта** и интерактивно обрабатывать результаты очистки в проекте служб Integration Services.  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="LimitationsRestrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Ограничения  
   
 -   На экране **Открытие проекта** в клиенте [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]доступны только завершенные проекты служб Integration Services. Завершившиеся с ошибкой или выполняемые проекты недоступны на экране **Открытие проекта** .  
   
@@ -34,26 +34,26 @@ ms.locfileid: "75557849"
   
 -   Нельзя удалить заблокированный проект служб Integration Services из [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Чтобы проект можно было удалить, его необходимо сначала разблокировать.  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
  Необходимо успешно завершить выполняемый проект служб Integration Services, содержащий проект с компонентом DQS Cleansing, чтобы просмотреть и открыть его в [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для управления проектом служб Integration Services необходимо иметь роль dqs_kb_editor или dqs_kb_operator в базе данных DQS_MAIN.  
   
   
-##  <a name="Open"></a>Открытие проекта Integration Services  
+##  <a name="open-an-integration-services-project"></a><a name="Open"></a> Открытие проекта служб Integration Services  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  На [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] главном экране щелкните **Open Data Quality Project (открыть проект**служб DQS). Появится экран **Открытие проекта** .  
+2.  На главном экране [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] нажмите кнопку **Открыть проект служб DQS**. Появится экран **Открытие проекта** .  
   
 3.  На экране **Открытие проекта** проект служб Integration Services вы можете определить любым из следующих способов:  
   
     1.  **Имя проекта**: Integration Services проекты перечислены с использованием следующей терминологии именования: "Package. DQS Cleansing_*\<Дата \<>время>*_ {GUID}". При каждом успешном выполнении того же пакета в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]новый пакет появляется на экране **Открытие проекта** .  
   
-    2.  **Тип проекта**: Integration Services проекты имеют тип проекта **SSIS** на экране **Открытие проекта** .  
+    2.  **Тип проекта**— проекты служб Integration Services, которые относятся к типу **SSIS** , на экране **Открытие проекта** .  
   
      Выберите проект и нажмите кнопку **Далее**.  
   
@@ -66,6 +66,6 @@ ms.locfileid: "75557849"
   
 ## <a name="see-also"></a>См. также:  
  [Преобразование «Очистка DQS»](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
- [Проекты Integration Services (SSIS)](../integration-services/integration-services-ssis-projects-and-solutions.md)  
+ [Проекты служб Integration Services (SSIS)](../integration-services/integration-services-ssis-projects-and-solutions.md)  
   
   

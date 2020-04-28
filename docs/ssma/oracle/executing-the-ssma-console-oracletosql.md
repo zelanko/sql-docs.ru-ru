@@ -15,10 +15,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 60843fc3c41d089c28847e724585e62992089be1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76909536"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>Выполнение команд консоли SSMA (OracleToSQL)
@@ -42,7 +42,7 @@ create-new-project
   
 -   `project-type:`Необязательный атрибут. Указывает тип проекта, т. е. проект SQL-Server-2005 или проект SQL-Server-2008 или проект SQL-Server-2012 или SQL-Server-2014. Значение по умолчанию — "SQL-Server-2014".  
   
-**Пример**.  
+**Пример.**  
   
 ```xml  
 <create-new-project  
@@ -741,7 +741,7 @@ Convert-SQL-оператор
    sql-files="<folder-name>\*.sql" />  
 ```  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 Сведения о параметрах командной строки см. [в разделе Параметры командной строки в консоли SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md) .  
   
 Сведения о примерах файлов сценариев консоли см. [в разделе Работа с примерами файлов сценариев консоли &#40;OracleToSQL&#41;](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)  

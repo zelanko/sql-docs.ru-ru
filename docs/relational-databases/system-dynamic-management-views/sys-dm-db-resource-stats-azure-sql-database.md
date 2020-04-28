@@ -20,18 +20,18 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 9165a4a371a611a5b9c2d962e700b424a60a9384
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175160"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Возвращает сведения об использовании ЦП, ввода-вывода и памяти для базы данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Новая строка создается каждые 15 секунд, даже если в базе данных не выполняется никаких действий. Исторические данные хранятся примерно один час.  
+  Возвращает сведения об использовании ЦП, ввода-вывода и памяти для базы данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Существует одна строка для каждых 15 секунд, даже если в базе данных не выполняется никаких действий. Исторические данные хранятся примерно один час.  
   
-|Столбцы|Тип данных|Description|  
+|Столбцы|Тип данных|Описание|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|Время в формате UTC, указывающее окончание текущего отчетного интервала.|  
 |avg_cpu_percent|**Decimal (5, 2)**|Средний уровень использования вычислительных мощностей в процентах от предела для уровня службы.|  
@@ -101,4 +101,4 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sys. resource_stats &#40;&#41;уровней служб базы данных SQL Azure](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)
+ [sys. resource_stats &#40;&#41;уровней служб базы данных SQL Azure](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [Service Tiers](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)

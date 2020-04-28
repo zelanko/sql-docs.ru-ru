@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 56418adbefec0dc996fd83ce70415e86ec9509a3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171664"
 ---
-# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Задача 6. Убедитесь, что атрибут на основе домена создан с помощью диспетчера основных данных
+# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Задача 6. Проверка создания атрибута на основе домена в диспетчере основных данных
   В этой задаче вы проверите, создана ли сущность **Штат** в службах **MDS** и является ли атрибут **Штат** сущности **Поставщик** атрибутом на основе домена, который зависит от сущности **Штат**, с помощью **диспетчера основных данных**.
 
 1.  Перейдите в веб-приложение **диспетчера основных данных**.
@@ -56,7 +56,7 @@ ms.locfileid: "78171664"
     |Нью-Йорк|Нью-Йорк|
     |OH|Огайо|
     |OK|Оклахома|
-    |OR|Орегон|
+    |ИЛИ|Орегон|
     |PA|Пенсильвания|
     |SC|Южная Каролина|
     |KS|Канзас|
@@ -78,7 +78,7 @@ ms.locfileid: "78171664"
 
      ![Атрибут «Штат» с обновленными кодом и названиями](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "Атрибут «Штат» с обновленными кодом и названиями")
 
-## <a name="next-step"></a>Дальнейшее действие
- [Задача 7. Просмотр изменений, выполненных с помощью диспетчера основных данных в Excel](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)
+## <a name="next-step"></a>Следующий шаг
+ [Задача 7. Просмотр изменений в диспетчере основных данных из Excel](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)
 
 

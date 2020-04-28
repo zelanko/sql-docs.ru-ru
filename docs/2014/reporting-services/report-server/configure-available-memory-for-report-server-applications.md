@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 30f21dc69f4607f04a68fe0b099d1fd65dbdfc1f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172267"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Настройка доступной памяти для приложений сервера отчетов
@@ -66,7 +66,7 @@ ms.locfileid: "78172267"
 
  В следующей таблице приведены описания параметров `WorkingSetMaximum`, `WorkingSetMinimum`, `MemorySafetyMargin` и `MemoryThreshold`. Параметры конфигурации задаются в файле [RSReportServer.config](rsreportserver-config-configuration-file.md).
 
-|Элемент|Описание|
+|Элемент|Description|
 |-------------|-----------------|
 |`WorkingSetMaximum`|Порог памяти, после которого больше не будут приниматься новые запросы на предоставление памяти от приложений сервера отчетов.<br /><br /> По умолчанию сервер отчетов устанавливает значение `WorkingSetMaximum` равным объему доступной памяти в компьютере. Это значение обнаруживается при запуске службы.<br /><br /> Этот параметр не появляется в файле конфигурации RSReportServer.config, если не добавить его вручную. Чтобы сервер отчетов использовал меньше памяти, можно изменить файл RSReportServer.config, добавив элемент и значение. Диапазон допустимых значений — от 0 до максимального целого числа. Значение указывается в килобайтах.<br /><br /> При достижении значения `WorkingSetMaximum` сервер отчетов прекращает принимать новые запросы. Обрабатываемые в это время запросы продолжают выполняться. Новые запросы принимаются лишь после того, как объем использованной памяти станет меньше значения, указанного параметром `WorkingSetMaximum`.<br /><br /> Если существующие запросы по-прежнему занимают дополнительную память по достижении значения `WorkingSetMaximum`, все домены приложений сервера отчетов будут очищены. Дополнительные сведения см. в разделе [Application Domains for Report Server Applications](application-domains-for-report-server-applications.md).|
 |`WorkingSetMinimum`|Нижний предел потребления ресурсов; сервер отчетов не будет освобождать память, если общее использование памяти ниже этого предела.<br /><br /> Его значение по умолчанию рассчитывается при запуске службы. В соответствии с этим расчетом, запрашиваемый объем выделенной памяти составляет 60 процентов от `WorkingSetMaximum`.<br /><br /> Этот параметр не появляется в файле конфигурации RSReportServer.config, если не добавить его вручную. Чтобы изменить это значение, необходимо добавить элемент `WorkingSetMinimum` в файл RSReportServer.config. Диапазон допустимых значений — от 0 до максимального целого числа. Значение указывается в килобайтах.|
@@ -87,8 +87,7 @@ ms.locfileid: "78172267"
 ```
 
 #### <a name="about-aspnet-memory-configuration-settings"></a>О параметрах конфигурации памяти ASP.NET
- Хотя веб-служба сервера отчетов и диспетчер отчетов представляют собой приложения [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], ни одно из приложений не реагирует на параметры конфигурации памяти, указанные в разделе `processModel` файла machine.config для приложений [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], работающих в режиме совместимости с IIS 5.0. 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] считывают параметры конфигурации памяти только из файла RSReportServer.config.
+ Хотя веб-служба сервера отчетов и диспетчер отчетов представляют собой приложения [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], ни одно из приложений не реагирует на параметры конфигурации памяти, указанные в разделе `processModel` файла machine.config для приложений [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], работающих в режиме совместимости с IIS 5.0. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] считывают параметры конфигурации памяти только из файла RSReportServer.config.
 
 ## <a name="see-also"></a>См. также:
  Файл конфигурации [RSReportServer](rsreportserver-config-configuration-file.md) файл конфигурации [RSReportServer](rsreportserver-config-configuration-file.md) [изменение файла конфигурации Reporting Services &#40;RSReportServer. config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md) [домены приложений для приложений сервера отчетов](application-domains-for-report-server-applications.md)

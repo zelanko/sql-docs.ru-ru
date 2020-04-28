@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 88f843db8280220b75025dc286fe692957bf2b77
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173963"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
@@ -31,14 +31,14 @@ ms.locfileid: "78173963"
 
 ||
 |-|
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Собственный режим &#124; [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint|
+|**[!INCLUDE[applies](../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Собственный режим &#124; [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Режим интеграции с SharePoint.|
 
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]
 
 
 
-##  <a name="bkmk_data_sources"></a>Внедренные и общие источники данных
+##  <a name="embedded-and-shared-data-sources"></a><a name="bkmk_data_sources"></a>Внедренные и общие источники данных
  Различие между общими и внедренными источниками данных состоит в способе создания, хранения и управления.
 
 -   В конструкторе отчетов создайте внедренные или общие источники данных в рамках среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] проекта. Можно выбрать, следует ли использовать их локально для предварительного просмотра или для развертывания их в качестве части проекта на сервере отчетов или сайте SharePoint. Можно использовать пользовательские данные модули, которые были установлены на локальном компьютере и на сервере отчетов или сайте SharePoint, где развертываются отчеты.
@@ -49,7 +49,7 @@ ms.locfileid: "78173963"
 
 -   В построителе отчетов перейдите на сервер отчетов или веб-сайт SharePoint и выберите общий источник данных или создайте внедренные источники данных в отчете. В построителе отчетов невозможно создать общий источник данных. Нельзя использовать пользовательские модули обработки данных в построителе отчетов
 
-##  <a name="bkmk_DataConnections"></a>Встроенные модули обработки данных
+##  <a name="built-in-data-extensions"></a><a name="bkmk_DataConnections"></a>Встроенные модули обработки данных
  Модули обработки данных по умолчанию [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включают в себя следующие типы подключений к данным:
 
 -   Microsoft SQL Server
@@ -80,15 +80,14 @@ ms.locfileid: "78173963"
 
  Полный список источников данных и версий, поддерживаемых [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], см. в разделе [Источники данных, поддерживаемые службами Reporting Services (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md).
 
-##  <a name="bkmk_create_data_source"></a>Создание источника данных
+##  <a name="create-a-data-source"></a><a name="bkmk_create_data_source"></a>Создание источника данных
  Чтобы создать источник данных, необходима следующая информация.
 
--   **Тип источника данных** Тип соединения, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]например. Выберите это значение из раскрывающегося списка типов соединений.
+-   **Тип источника данных** . Тип соединения, например [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Выберите это значение из раскрывающегося списка типов соединений.
 
--   **Сведения о подключении** Сведения о соединении включают имя и расположение источника данных, а также свойства соединения, относящиеся к каждому поставщику данных. 
-  *Строка подключения* — это текстовое представление сведений о соединении. Например, если источник данных представляет собой базу данных SQL Server, можно задать имя этой базы данных. Для внедренных источников данных можно также написать строки подключения на основе выражений, вычисляемых во время выполнения. Дополнительные сведения см. в подразделе [Строки подключения на основе выражений](#bkmk_Expressions_in_connection_strings) далее в этом разделе.
+-   **Информация о соединении** . Информация о соединении включает имя и расположение источника данных, а также свойства соединения, которые являются специфическими для каждого поставщика данных. *Строка подключения* — это текстовое представление сведений о соединении. Например, если источник данных представляет собой базу данных SQL Server, можно задать имя этой базы данных. Для внедренных источников данных можно также написать строки подключения на основе выражений, вычисляемых во время выполнения. Дополнительные сведения см. в подразделе [Строки подключения на основе выражений](#bkmk_Expressions_in_connection_strings) далее в этом разделе.
 
--   **Учетные данные** Вы предоставляете учетные данные, необходимые для доступа к данным. Владелец источника данных должен предоставить пользователю соответствующие разрешения для доступа как к источнику данных, так и конкретным данным в источнике данных. Например, для подключения к образцу базы данных [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] , установленному на сетевом сервере, нужно иметь разрешение на подключение к серверу, а также разрешение на доступ к базе данных для чтения.
+-   **Учетные данные** . Укажите учетные данные, необходимые для доступа к данным. Владелец источника данных должен предоставить пользователю соответствующие разрешения для доступа как к источнику данных, так и конкретным данным в источнике данных. Например, для подключения к образцу базы данных [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] , установленному на сетевом сервере, нужно иметь разрешение на подключение к серверу, а также разрешение на доступ к базе данных для чтения.
 
     > [!NOTE]
     >  Управление учетными данными производится независимо от источника данных. Учетные данные, нужные для предварительного просмотра отчета на локальном компьютере, могут не совпадать с учетными данными, нужными для просмотра опубликованного отчета. После того как источник данных сохранен на сервере отчетов или сайте SharePoint, может потребоваться изменить учетные данные для работы из этого местоположения. Дополнительные сведения см. в разделе [Учетные данные для источников данных](#bkmk_credentials).
@@ -98,7 +97,7 @@ ms.locfileid: "78173963"
 
  Область данных отчета отображает внедренные источники данных и ссылки на общие источники данных, добавленных к докладу. В построителе отчетов ссылка на общий источник данных указывает общий источник данных на сервере отчетов или сайте SharePoint. В конструкторе отчетов ссылка на общий источник данных указывает общий источник данных в обозревателе решений в папке «Общие источники данных».
 
-##  <a name="bkmk_credentials"></a>Учетные данные для источников данных
+##  <a name="credentials-for-data-sources"></a><a name="bkmk_credentials"></a>Учетные данные для источников данных
  Учетные данные могут быть сохранены и управляться независимо от сведений о соединении. Учетные данные используются для создания источника данных, запуска запроса набора данных, а также предварительного просмотра отчета.
 
 > [!NOTE]
@@ -116,13 +115,13 @@ ms.locfileid: "78173963"
 
 -   [Задание учетных данных и сведениях о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md)
 
--   [Указание соединений для пользовательских модулей обработки данных](report-data/specify-connections-for-custom-data-processing-extensions.md)
+-   [Определение подключений для пользовательских модулей обработки данных](report-data/specify-connections-for-custom-data-processing-extensions.md)
 
 -   [Указание учетных данных в построителе отчетов](../../2014/reporting-services/specify-credentials-in-report-builder.md)
 
 -   [Добавление и проверка подключения к данным или источника данных &#40;построитель отчетов и служб SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)
 
-##  <a name="bkmk_connection_examples"></a>Примеры стандартных строк подключения
+##  <a name="common-connection-string-examples"></a><a name="bkmk_connection_examples"></a> Примеры общих строк подключения
  Строки подключения являются текстовым представлением свойств соединения для поставщика данных. Следующая таблица содержит примеры строк соединения для различных типов подключения к данным.
 
 |**Источник данных**|**Пример**|**Описание**|
@@ -137,21 +136,21 @@ ms.locfileid: "78173963"
 |Табличный шаблон базы данных служб Analysis Services с торговым представителем|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Задайте тип источника данных `Microsoft SQL Server Analysis Services`. Укажите имя перспективы в параметре cube=. Дополнительные сведения см. в разделе [Перспективы (табличные службы SSAS)](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular).|
 |Источник данных — модель отчета на сервере отчетов, сконфигурированном в собственном режиме|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|Укажите URL-адрес сервера отчетов или библиотеки документов, а также путь к опубликованной модели в пространстве имен папки сервера отчетов или папки библиотеки документов.
 |Источник данных — модель отчета на сервере отчетов, сконфигурированном в режиме интеграции с SharePoint|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|Укажите URL-адрес сервера отчетов или библиотеки документов, а также путь к опубликованной модели в пространстве имен папки сервера отчетов или папки библиотеки документов.|
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]сервер [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 2000|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Установите тип источника данных `OLE DB Provider for OLAP Services 8.0`.<br /><br /> Задав для свойства [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] значение [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], можно добиться более быстрого соединения с источниками данных служб `ConnectTo` 2000 `8.0`. Чтобы установить это свойство, воспользуйтесь диалоговым окном **Свойства соединения** на вкладке **Дополнительные свойства** .|
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Сервер служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 2000|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Установите тип источника данных `OLE DB Provider for OLAP Services 8.0`.<br /><br /> Задав для свойства [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] значение [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], можно добиться более быстрого соединения с источниками данных служб `ConnectTo` 2000 `8.0`. Чтобы установить это свойство, воспользуйтесь диалоговым окном **Свойства соединения** на вкладке **Дополнительные свойства** .|
 |Сервер Oracle|`data source=myserver`|Установите тип источника данных `Oracle`. Клиентские средства Oracle должны быть установлены на том компьютере, где работает конструктор отчетов, и на сервере отчетов. Дополнительные сведения см. в разделе [Тип соединения Oracle (службы SSRS)](report-data/oracle-connection-type-ssrs.md).|
 |Источник данных SAP NetWeaver BI|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Установите тип источника данных `SAP NetWeaver BI`. Дополнительные сведения см. в разделе [Тип соединения SAP NetWeaver BI (службы SSRS)](report-data/sap-netweaver-bi-connection-type-ssrs.md).|
 |Источник данных Hyperion Essbase|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Установите тип источника данных `Hyperion Essbase`. Дополнительные сведения см. в разделе [Тип соединения Hyperion Essbase (службы SSRS)](report-data/hyperion-essbase-connection-type-ssrs.md).|
-|Источник данных типа Teradata|`data source=`\<NNN>. \<Nnn>. \<Nnn>. \<Nnn>`;`|Установите тип источника данных `Teradata`. Строка подключения представляет собой IP-адрес в виде четырех полей, каждое из которых содержит от одного до трех числовых разрядов. Дополнительные сведения см. в разделе [Тип соединения Teradata (службы SSRS)](report-data/teradata-connection-type-ssrs.md).|
+|Источник данных типа Teradata|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|Установите тип источника данных `Teradata`. Строка подключения представляет собой IP-адрес в виде четырех полей, каждое из которых содержит от одного до трех числовых разрядов. Дополнительные сведения см. в разделе [Тип соединения Teradata (службы SSRS)](report-data/teradata-connection-type-ssrs.md).|
 |Источник XML-данных, веб-служба|`data source=http://adventure-works.com/results.aspx`|Установите тип источника данных `XML`. Строка подключения является URL-адресом веб-службы, поддерживающей язык определения веб-служб (язык WSDL). Дополнительные сведения см. в разделе [Тип соединения XML (службы SSRS)](report-data/xml-connection-type-ssrs.md).|
 |Источник XML-данных, XML-документ|`http://localhost/XML/Customers.xml`|Установите тип источника данных `XML`. Строкой соединения является URL-адрес XML-документа.|
-|Источник XML-данных, внедренный XML-документ|*Пустой*|Установите тип источника данных `XML`. XML-данные внедрены в определение отчета.|
+|Источник XML-данных, внедренный XML-документ|*Пусто*|Установите тип источника данных `XML`. XML-данные внедрены в определение отчета.|
 
-Если не удается подключиться к серверу отчетов с помощью `localhost`, убедитесь, что сетевой протокол для TCP/IP включен. Дополнительные сведения см. в разделе [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md).
+Если не удается подключиться к серверу отчетов с помощью `localhost`, убедитесь, что сетевой протокол для TCP/IP включен. Дополнительные сведения см. в статье [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md).
 
-##  <a name="bkmk_special_password_characters"></a>Специальные символы в пароле
+##  <a name="special-characters-in-a-password"></a><a name="bkmk_special_password_characters"></a> Специальные символы пароля
  Если источник данных ODBC или SQL настроен так, что запрашивает пароль, или пароль включен в строку подключения, а пользователь вводит пароль со специальными символами, такими как знаки препинания, некоторые базовые драйверы источников данных не могут проверить специальные символы. При обработке отчета сообщение «Неверный пароль» может быть признаком этой ошибки. Если смена пароля нецелесообразна, администратор базы данных может сохранить соответствующие учетные данные на сервере как часть имени системного источника данных ODBC (DSN). Дополнительные сведения см. в разделе «OdbcConnection.ConnectionString» документации по пакету SDK платформы [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .
 
-##  <a name="bkmk_Expressions_in_connection_strings"></a>Строки подключения на основе выражений
+##  <a name="expression-based-connection-strings"></a><a name="bkmk_Expressions_in_connection_strings"></a>Строки подключения на основе выражений
  Строки подключения на основе выражений вычисляются во время выполнения. Например, можно задать источник данных в качестве параметра, включить ссылку на этот параметр в строку соединения и позволить пользователю выбрать источник данных для отчета. Например, у многонациональной компании есть серверы данных в нескольких странах. Благодаря тому, что строка соединения зависит от выражения, пользователь, выполняющий отчет о продажах, перед запуском может выбрать источник данных для определенной страны.
 
  Следующий пример иллюстрирует использование выражения источника данных в строке соединения [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Пример предполагает создание параметра отчета с именем `ServerName`:
@@ -175,4 +174,4 @@ ms.locfileid: "78173963"
 -   Перед публикацией отчета замените статическую строку соединения выражением. Перед тем как заменять статическую строку соединения выражением, завершите конструирование отчета. Если в запросе используется выражение, этот отчет невозможно выполнить в конструкторе отчетов. Более того, список полей в области данных отчета и список параметров не будут обновляться автоматически.
 
 ## <a name="see-also"></a>См. также:
- [Внедренные и общие подключения к данным или источники данных &#40;построитель отчетов и службы SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) [Управление источниками данных отчета](report-data/manage-report-data-sources.md) [Свойства источника данных,](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md) [диалоговое окно Свойства общего источника данных учетные данные, учетные данные](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md) [Создание, изменение и удаление общих источников данных &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md) [Задание свойств развертывания &#40;Reporting Services](tools/set-deployment-properties-reporting-services.md)&#41;[Указание учетных данных и сведений о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md) [Добавление и проверка подключения к данным или источника данных &#40;Построитель отчетов и службы SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)
+ [Внедренные и общие подключения к данным или источники данных &#40;построитель отчетов и SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) [Управление источниками данных отчетов](report-data/manage-report-data-sources.md) [Свойства источника данных,](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md) [диалоговое окно Свойства общего источника данных учетные данные, учетные данные](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md) [Создание, изменение и удаление общих источников данных &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md) [Задание свойств развертывания &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md) [Указание учетных данных и сведений о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md) [Добавление и проверка подключения к данным или источника данных &#40;построитель отчетов](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)

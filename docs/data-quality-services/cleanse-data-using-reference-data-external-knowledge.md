@@ -12,10 +12,10 @@ ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: fc0135ed4e4956d6bd98fc0b467a5b6d0a25a013
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75557909"
 ---
 # <a name="cleanse-data-using-external-knowledge-reference-data---data-quality-services-dqs"></a>Очистка данных с помощью (внешних) эталонные данные базы знаний — службы Data Quality Services (DQS)
@@ -48,15 +48,15 @@ ms.locfileid: "75557909"
   
 ## <a name="before-you-begin"></a>Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
  Следует предварительно сопоставить требуемые домены в базе знаний DQS с соответствующей службой ссылочных данных. Кроме того, база знаний должна содержать набор знаний о типе данных, которые требуется очистить. Например, если требуется очистить исходные данные, содержащие адреса в США, необходимо сопоставить домены с поставщиком службы ссылочных данных, предоставляющим высококачественные данные по адресам в США. Дополнительные сведения см. в разделе [Добавление домена или составного домена к ссылочным данным](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для выполнения очистки данных необходимо иметь роль dqs_kb_editor или dqs_kb_operator в базе данных DQS_MAIN.  
   
-##  <a name="Cleanse"></a>Очистка данных с помощью набора знаний эталонных данных  
+##  <a name="cleanse-your-data-using-reference-data-knowledge"></a><a name="Cleanse"></a> Очистка данных с использованием набора знаний о ссылочных данных  
  Мы будем использовать тот же пример использования доменов, сопоставленных в предыдущем разделе, [присоединить домен или составной домен к ссылочным данным](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)с помощью службы данных Melissa в Azure Marketplace. Теперь мы будем использовать те же домены для очистки образцов адресов в США. Шаги по очистке данных описаны в разделе [Очистка данных с использованием набора знаний служб DQS &#40;внутренних&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md). Однако мы будем привлекать ваше внимание к важным деталям в ходе этого процесса.  
   
 1.  Создайте проект служб DQS и выберите действие **Очистка** . См. раздел [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md).  
@@ -78,16 +78,16 @@ ms.locfileid: "75557909"
   
      **Исходное значение:**  
   
-    |Строка адреса|City|State|Zip|  
+    |Строка адреса|Город|Состояние|Почтовый индекс|  
     |------------------|----------|-----------|---------|  
-    |1 msft way|Редмонд||98052|  
+    |1 msft way|Redmond||98052|  
   
      **Предлагаемые значения:**  
   
-    |Строка адреса|City|State|Zip|  
+    |Строка адреса|Город|Состояние|Почтовый индекс|  
     |------------------|----------|-----------|---------|  
-    |1 Microsoft Way|Редмонд|WA|98052|  
-    |PO Box 1|Редмонд|WA|98073|  
+    |1 Microsoft Way|Redmond|WA|98052|  
+    |PO Box 1|Redmond|WA|98073|  
   
      ![Очистка с помощью службы ссылочных данных](../data-quality-services/media/dqs-rdscleansing.JPG "Очистка с помощью службы ссылочных данных")  
   

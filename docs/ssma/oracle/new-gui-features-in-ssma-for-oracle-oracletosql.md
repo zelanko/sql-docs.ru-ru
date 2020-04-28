@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 295372026ec0a1eed0abb4e62a10bc56fd279d56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76910217"
 ---
 # <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>Новые функции графического пользовательского интерфейса в SSMA для Oracle (OracleToSQL)
@@ -48,7 +48,7 @@ ms.locfileid: "76910217"
 ## <a name="bookmarks"></a>Закладки  
 Эта функция позволяет задать одну или несколько закладок в исходном или целевом коде, быстро найти закладку с помощью сочетаний клавиш, управлять закладками с помощью удобного диалогового окна.  
   
-### <a name="toggle-bookmark"></a>Переключить закладку  
+### <a name="toggle-bookmark"></a>Закладка  
 Задать или удалить закладку можно следующими способами.  
   
 -   Использовать кнопку "Переключить закладку" поверх исходного или целевого окна SQL  

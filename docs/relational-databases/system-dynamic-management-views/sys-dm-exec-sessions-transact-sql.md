@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f9c87a6900b8ee19e18efb76506d1bed5a645202
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76516275"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
@@ -40,17 +40,17 @@ ms.locfileid: "76516275"
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Идентификатор сеанса, связанный со всеми активными первичными соединениями. Не допускает значение NULL.|  
 |login_time|**datetime**|Время подключения сеанса. Не допускает значение NULL.|  
-|host_name|**nvarchar(128**|Имя клиентской рабочей станции, указанное в сеансе. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.<br /><br /> **Примечание по безопасности.** Клиентское приложение предоставляет имя рабочей станции и может предоставлять неточные данные. Не следует полагаться на функцию HOST_NAME для обеспечения безопасности.|  
-|program_name|**nvarchar(128**|Имя клиентской программы, которая инициировала сеанс. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.|  
+|host_name|**nvarchar(128)**|Имя клиентской рабочей станции, указанное в сеансе. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.<br /><br /> **Примечание по безопасности.** Клиентское приложение предоставляет имя рабочей станции и может предоставлять неточные данные. Не следует полагаться на функцию HOST_NAME для обеспечения безопасности.|  
+|program_name|**nvarchar(128)**|Имя клиентской программы, которая инициировала сеанс. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.|  
 |host_process_id|**int**|Идентификатор процесса клиентской программы, которая инициировала сеанс. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.|  
 |client_version|**int**|Версия TDS-протокола интерфейса, который используется клиентом для подключения к серверу. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.|  
-|client_interface_name|**nvarchar (32)**|Имя библиотеки или драйвера, используемое клиентом для обмена данными с сервером. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.|  
-|security_id|**varbinary (85)**|Идентификатор безопасности Microsoft Windows, связанный с именем входа. Не допускает значение NULL.|  
-|login_name|**nvarchar(128**|Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], под которым выполняется текущий сеанс. Чтобы узнать первоначальное имя входа, с помощью которого был создан сеанс, см. параметр original_login_name. Может быть именем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа, прошедшим проверку подлинности, или именем пользователя домена, прошедшего проверку подлинности Windows. Не допускает значение NULL.|  
-|nt_domain|**nvarchar(128**|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> Домен Windows для клиента, если во время сеанса применяется проверка подлинности Windows или доверительное соединение. Для внутренних сеансов и пользователей, не принадлежащих к домену, это значение равно NULL. Допускает значение NULL.|  
-|nt_user_name|**nvarchar(128**|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> Имя пользователя Windows для клиента, если во время сеанса используется проверка подлинности Windows или доверительное соединение. Для внутренних сеансов и пользователей, не принадлежащих к домену, это значение равно NULL. Допускает значение NULL.|  
-|status|**nvarchar (30)**|Состояние сеанса. Возможные значения:<br /><br /> **Выполняется** — в данный момент выполняется один или несколько запросов<br /><br /> **Спящий режим** — в данный момент запросы не выполняются<br /><br /> **Неактивный** сеанс был сброшен из-за пула соединений и теперь находится в состоянии предварительного входа.<br /><br /> Предварительное **Подключение** — сеанс находится в классификаторе Resource Governor.<br /><br /> Не допускает значение NULL.|  
-|context_info|**varbinary (128)**|Значение параметра CONTEXT_INFO для сеанса. Сведения о контексте задаются пользователем с помощью инструкции [set CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) . Допускает значение NULL.|  
+|client_interface_name|**nvarchar(32)**|Имя библиотеки или драйвера, используемое клиентом для обмена данными с сервером. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.|  
+|security_id|**varbinary(85)**|Идентификатор безопасности Microsoft Windows, связанный с именем входа. Не допускает значение NULL.|  
+|login_name|**nvarchar(128)**|Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], под которым выполняется текущий сеанс. Чтобы узнать первоначальное имя входа, с помощью которого был создан сеанс, см. параметр original_login_name. Может быть именем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа, прошедшим проверку подлинности, или именем пользователя домена, прошедшего проверку подлинности Windows. Не допускает значение NULL.|  
+|nt_domain|**nvarchar(128)**|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> Домен Windows для клиента, если во время сеанса применяется проверка подлинности Windows или доверительное соединение. Для внутренних сеансов и пользователей, не принадлежащих к домену, это значение равно NULL. Допускает значение NULL.|  
+|nt_user_name|**nvarchar(128)**|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> Имя пользователя Windows для клиента, если во время сеанса используется проверка подлинности Windows или доверительное соединение. Для внутренних сеансов и пользователей, не принадлежащих к домену, это значение равно NULL. Допускает значение NULL.|  
+|status|**nvarchar(30)**|Состояние сеанса. Возможные значения:<br /><br /> **Running** — в данный момент выполняется один или несколько запросов.<br /><br /> **Sleeping** — в данный момент запросы не выполняются.<br /><br /> **Неактивный** сеанс был сброшен из-за пула соединений и теперь находится в состоянии предварительного входа.<br /><br /> **Preconnect** — Сеанс находится в классификаторе регулятора ресурсов.<br /><br /> Не допускает значение NULL.|  
+|context_info|**varbinary(128)**|Значение параметра CONTEXT_INFO для сеанса. Сведения о контексте задаются пользователем с помощью инструкции [set CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) . Допускает значение NULL.|  
 |cpu_time|**int**|Время ЦП, использованное данным сеансом, в миллисекундах. Не допускает значение NULL.|  
 |memory_usage|**int**|Количество 8-килобайтовых страниц памяти, используемых данным сеансом. Не допускает значение NULL.|  
 |total_scheduled_time|**int**|Общее время, назначенное данному сеансу (включая его вложенные запросы) для исполнения, в миллисекундах. Не допускает значение NULL.|  
@@ -63,7 +63,7 @@ ms.locfileid: "76516275"
 |logical_reads|**bigint**|Количество логических операций чтения, выполненных в данном сеансе. Не допускает значение NULL.|  
 |is_user_process|**bit**|0, если сеанс является системным. В противном случае значение равно 1. Не допускает значение NULL.|  
 |text_size|**int**|Значение параметра TEXTSIZE для данного сеанса. Не допускает значение NULL.|  
-|Язык|**nvarchar(128**|Значение параметра LANGUAGE для данного сеанса. Допускает значение NULL.|  
+|Язык|**nvarchar(128)**|Значение параметра LANGUAGE для данного сеанса. Допускает значение NULL.|  
 |date_format|**nvarchar (3)**|Значение параметра DATEFORMAT для данного сеанса. Допускает значение NULL.|  
 |date_first|**smallint**|Значение параметра DATEFIRST для данного сеанса. Не допускает значение NULL.|  
 |quoted_identifier|**bit**|Значение параметра QUOTED_IDENTIFIER для данного сеанса. Не допускает значение NULL.|  
@@ -79,8 +79,8 @@ ms.locfileid: "76516275"
 |deadlock_priority|**int**|Значение параметра DEADLOCK_PRIORITY для данного сеанса. Не допускает значение NULL.|  
 |row_count|**bigint**|Количество строк, возвращенных сеансом на текущий момент времени. Не допускает значение NULL.|  
 |prev_error|**int**|Идентификатор последней ошибки, возвращенной в данном сеансе. Не допускает значение NULL.|  
-|original_security_id|**varbinary (85)**|Идентификатор безопасности [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, связанный с параметром original_login_name. Не допускает значение NULL.|  
-|original_login_name|**nvarchar(128**|Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с помощью которого клиент создал данный сеанс. Это может быть имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], прошедшее проверку подлинности, имя пользователя домена Windows, прошедшее проверку подлинности, или пользователь автономной базы данных. Обратите внимание, что после первоначального соединения для сеанса может быть выполнено много неявных или явных переключений контекста. Например, если используется параметр [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) . Не допускает значение NULL.|  
+|original_security_id|**varbinary(85)**|Идентификатор безопасности [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, связанный с параметром original_login_name. Не допускает значение NULL.|  
+|original_login_name|**nvarchar(128)**|Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с помощью которого клиент создал данный сеанс. Это может быть имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], прошедшее проверку подлинности, имя пользователя домена Windows, прошедшее проверку подлинности, или пользователь автономной базы данных. Обратите внимание, что после первоначального соединения для сеанса может быть выполнено много неявных или явных переключений контекста. Например, если используется параметр [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) . Не допускает значение NULL.|  
 |last_successful_logon|**datetime**|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> Время последнего успешного входа в систему для имени original_login_name до запуска текущего сеанса.|  
 |last_unsuccessful_logon|**datetime**|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> Время последнего неуспешного входа в систему для имени original_login_name до запуска текущего сеанса.|  
 |unsuccessful_logons|**bigint**|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> Число неуспешных попыток входа в систему для имени original_login_name между временем last_successful_logon и временем login_time.|  
@@ -114,7 +114,7 @@ ms.locfileid: "76516275"
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|С|Кому|Подключить/Применить|Связь|  
+|Исходный тип|Кому|Подключить/Применить|Связь|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|Один к нулю или один ко многим.|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|Один к нулю или один ко многим.|  
@@ -133,7 +133,7 @@ FROM sys.dm_exec_sessions
 GROUP BY login_name;  
 ```  
   
-### <a name="b-finding-long-running-cursors"></a>Б. Поиск курсоров, выполняющихся продолжительное время  
+### <a name="b-finding-long-running-cursors"></a>Б) Поиск курсоров, выполняющихся продолжительное время  
  В следующем примере производится поиск курсоров, открытых дольше заданного периода времени, определяются их создатели и соответствующие им сеансы.  
   
 ```sql  
@@ -184,8 +184,8 @@ WHERE c.session_id = @@SPID;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

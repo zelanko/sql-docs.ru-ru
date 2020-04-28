@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a77024e62402cea0a37b945e0539274fee9a3c6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173333"
 ---
 # <a name="report-data-pane-report-builder"></a>Область данных отчета (построитель отчетов)
@@ -29,7 +29,7 @@ ms.locfileid: "78173333"
 
  **Параметры** Представляет коллекцию параметров отчета, каждый из которых может быть однозначным или многозначным. Дополнительные сведения см. в разделе [Параметры отчета (построитель отчетов и конструктор отчетов)](report-design/report-parameters-report-builder-and-report-designer.md).
 
- **Образы** Представляет набор изображений, используемых в отчете. Дополнительные сведения см. в разделе [Изображения (построитель отчетов и службы SSRS)](report-design/images-report-builder-and-ssrs.md).
+ **Изображения** Представляет набор изображений, используемых в отчете. Дополнительные сведения см. в разделе [Изображения (построитель отчетов и службы SSRS)](report-design/images-report-builder-and-ssrs.md).
 
  **Источники данных** Представляет внедренный источник данных или ссылку на общий источник данных. Источник данных предоставляет данные для отчета. Источник данных служит родительским узлом для коллекции использующих его наборов данных. Дополнительные сведения см. в разделе [Добавление данных в отчет &#40;построитель отчетов и SSRS&#41;](report-data/report-datasets-ssrs.md) и [подключения к данным, источники данных и строки подключения в построитель отчетов](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).
 

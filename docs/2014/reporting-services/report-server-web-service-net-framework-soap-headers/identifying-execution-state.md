@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63c64ee04bc7ece5af8e4040f7795f6f8fbe1c51
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172214"
 ---
 # <a name="identifying-execution-state"></a>Определение состояния выполнения
@@ -39,7 +39,7 @@ ms.locfileid: "78172214"
 
  На следующей диаграмме показаны пути обработки отчетов и подготовки их к просмотру.
 
- ![Путь обработки или преобразования отчета для просмотра](../../../2014/reporting-services/media/rs-render-process-diagram.gif "Путь обработки или подготовки отчета к просмотру")
+ ![Путь обработки или преобразования отчета для просмотра](../../../2014/reporting-services/media/rs-render-process-diagram.gif "Путь обработки или преобразования отчета для просмотра")
 
  Для поддержки описанных выше функций текущий метод Render протокола SOAP был разбит на несколько методов, которые представляют этапы инициализации объекта выполнения, обработки и подготовки к просмотру.
 

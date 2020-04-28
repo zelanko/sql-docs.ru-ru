@@ -10,10 +10,10 @@ ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5d3fb45d6220d10e9a6d5cc786fc09f33ce5ee59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76909714"
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>Новые функции графического пользовательского интерфейса в SSMA для DB2 (DB2ToSQL)
@@ -47,7 +47,7 @@ ms.locfileid: "76909714"
 ## <a name="bookmarks"></a>Закладки  
 Эта функция позволяет задать одну или несколько закладок в исходном или целевом коде, быстро найти закладку с помощью сочетаний клавиш, управлять закладками с помощью удобного диалогового окна.  
   
-### <a name="toggle-bookmark"></a>Переключить закладку  
+### <a name="toggle-bookmark"></a>Закладка  
 Задать или удалить закладку можно следующими способами.  
   
 -   Использовать кнопку "Переключить закладку" поверх исходного или целевого окна SQL  

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9fea6ae71046de3cf1a6b4dc765b1a2a19e149
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173585"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "78173585"
 
  Серверы отчетов в режиме интеграции с SharePoint используют инфраструктуру продуктов SharePoint для горизонтального масштабирования. Горизонтальное масштабирование в режиме SharePoint выполняется путем добавления в ферму SharePoint дополнительных серверов отчетов в режиме интеграции с SharePoint. Сведения о масштабном развертывании в режиме интеграции с SharePoint см. в статье [Добавление дополнительного сервера отчетов в ферму (горизонтально масштабируемые службы SSRS)](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).
 
- **Масштабное развертывание состоит из следующих элементов:**
+ **Масштабное развертывание включает в себя следующие компоненты.**
 
 -   Два или более экземпляра сервера отчетов, совместно использующие общую базу данных сервера отчетов.
 
@@ -37,7 +37,7 @@ ms.locfileid: "78173585"
 
  Службы Reporting Services не присутствуют в кластерах службы кластеров (Майкрософт). Однако можно создать базу данных сервера отчетов на экземпляре компонента Database Engine, который является частью отказоустойчивого кластера.
 
- **Чтобы спланировать, установить и настроить масштабное развертывание, выполните следующие действия.**
+ **Чтобы произвести планирование, установку и настройку масштабного развертывания, выполните следующие шаги.**
 
 -   Дополнительные сведения об установке экземпляров сервера отчетов см. в разделе [install SQL Server 2014 мастера установки &#40;установки&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации.
 
@@ -59,8 +59,7 @@ ms.locfileid: "78173585"
 
 1.  Установите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютер, на котором будут расположены базы данных сервера отчетов. Как минимум, следует установить компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
 
-2.  При необходимости активируйте сервер отчетов для удаленных соединений. В некоторых версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удаленные соединения TCP/IP и именованные каналы по умолчанию не разрешены. Чтобы проверить, разрешены ли удаленные соединения, запустите средство диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выясните значение параметров конфигурации сети для целевого экземпляра. Если удаленный экземпляр является именованным, убедитесь в том, что на целевом сервере включена и запущена служба браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщает номер порта, используемый для подключения к именованному экземпляру.
+2.  При необходимости активируйте сервер отчетов для удаленных соединений. В некоторых версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удаленные соединения TCP/IP и именованные каналы по умолчанию не разрешены. Чтобы проверить, разрешены ли удаленные соединения, запустите средство диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выясните значение параметров конфигурации сети для целевого экземпляра. Если удаленный экземпляр является именованным, убедитесь в том, что на целевом сервере включена и запущена служба браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщает номер порта, используемый для подключения к именованному экземпляру.
 
 ### <a name="to-install-the-first-report-server-instance"></a>Установка первого экземпляра сервера отчетов
 
@@ -106,20 +105,20 @@ ms.locfileid: "78173585"
 
 2.  Выберите пункт **Масштабное развертывание** , чтобы открыть страницу "Масштабное развертывание". Здесь должны отображаться две записи: по одной для каждого экземпляра сервера отчетов, подключенного к базе данных сервера отчетов. Первый экземпляр сервера отчетов должен быть присоединен. Второй экземпляр сервера отчетов должен быть в состоянии «Ожидание соединения». Если в развертывании подобные записи не отображаются, проверьте соединение с первым сервером отчетов, который должен быть настроен и инициализирован для использования базы данных сервера отчетов.
 
-     ![Частичный снимок страницы "масштабное развертывание"](../../../2014/sql-server/install/media/scaloutscreen.gif "Частичный снимок экрана страницы "Масштабное развертывание"")
+     ![Частичный снимок экрана страницы "Масштабное развертывание"](../../../2014/sql-server/install/media/scaloutscreen.gif "Частичный снимок экрана страницы "Масштабное развертывание"")
 
 3.  На странице Масштабное развертывание выберите экземпляр сервера отчетов, который ожидает присоединение к развертыванию, и нажмите кнопку **Добавить сервер**.
 
     > [!NOTE]
     >  **Вопрос.** При попытке присоединить Reporting Services экземпляр сервера отчетов к масштабному развертыванию могут возникать сообщения об ошибках, аналогичные "доступ запрещен".
     > 
-    >  **Обходной путь:** Создайте резервную [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] копию ключа шифрования из первого [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] экземпляра и восстановите ключ на втором [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сервере отчетов. Затем попытайтесь включить в масштабное развертывание [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] второй экземпляр сервера отчетов.
+    >  **Обходное решение.** Создайте резервную копию ключа шифрования [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из первого экземпляра [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и восстановите его на второй сервер отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Затем попытайтесь включить в масштабное развертывание [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] второй экземпляр сервера отчетов.
 
 4.  Теперь оба экземпляра сервера отчетов можно проверить, чтобы убедиться в их рабочем состоянии. Чтобы проверить второй экземпляр, можно при помощи программы настройки служб Reporting Services подключиться к серверу отчетов и щелкнуть URL-адрес веб-службы или URL-адрес диспетчера отчетов.
 
  Если серверы отчетов планируется запускать в кластере со сбалансированной нагрузкой, необходима дополнительная настройка. Дополнительные сведения см. в статье [настроить сервер отчетов в кластере с балансированием сетевой нагрузки](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).
 
 ## <a name="see-also"></a>См. также:
- [Настройка учетной записи службы &#40;ssrs Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [Настройка URL-адреса &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) [Создание базы данных сервера отчетов в собственном режиме &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md) [Настройка url-адресов сервера отчетов &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [Настройка подключения к базе данных сервера отчетов &#40;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md) службы SSRS Configuration Manager&#41;[Добавление и удаление ключей шифрования &#40;служб SSRS](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) Configuration Manager [Управление отчетами Сервер отчетов служб в собственном режиме](../report-server/manage-a-reporting-services-native-mode-report-server.md)
+ [Настройка учетной записи службы &#40;ssrs Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [Настройка URL-адреса &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) [Создание базы данных сервера отчетов в собственном режиме &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md) [Настройка url-адресов сервера отчетов &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [Настройка подключения к базе данных сервера отчетов &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md) [Добавление и удаление ключей шифрования &#40;служб SSRS](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) [Manage a Reporting Services Native Mode Report Server](../report-server/manage-a-reporting-services-native-mode-report-server.md) Configuration Manager
 
 

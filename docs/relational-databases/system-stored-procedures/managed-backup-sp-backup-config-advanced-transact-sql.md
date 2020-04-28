@@ -21,10 +21,10 @@ ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0178d4df6a5941b8896e6ff530802fd4c6bc6909
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77652953"
 ---
 # <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup. sp_backup_config_advanced (Transact-SQL)
@@ -45,7 +45,7 @@ EXEC managed_backup.sp_backup_config_advanced
     ,[@local_cache_path = ] 'NOT AVAILABLE'  
 ```  
   
-##  <a name="Arguments"></a>Даваемых  
+##  <a name="arguments"></a><a name="Arguments"></a>Даваемых  
  @database_name  
  Имя базы данных для включения управляемого резервного копирования в определенной базе данных. Если задано значение NULL или *, то эта управляемая резервная копия применяется ко всем базам данных на сервере.  
   
@@ -70,15 +70,15 @@ EXEC managed_backup.sp_backup_config_advanced
  @encryptor_name  
  Имя существующего сертификата или асимметричного ключа для шифрования резервной копии. Аргумент @encryptor_name имеет тип **sysname**. При использовании асимметричного ключа он должен быть сконфигурирован поставщиком расширенного управления ключами (EKM). Этот параметр является необязательным, если для параметра задано значение @encryption_algorithm NO_ENCRYPTION.  
   
- Дополнительные сведения см. в разделе [Расширенное управление ключами &#40;Расширенный поиск ключей&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Дополнительные сведения см. в статье [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  @local_cache_path  
  Этот параметр пока не поддерживается.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Требуется членство в роли базы данных **db_backupoperator** , с разрешениями **ALTER ANY CREDENTIAL** и **EXECUTE** для хранимой процедуры **sp_delete_backuphistory** .  
@@ -98,6 +98,6 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [managed_backup. sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
- [managed_backup. sp_backup_config_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
+ [managed_backup.sp_backup_config_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   
   

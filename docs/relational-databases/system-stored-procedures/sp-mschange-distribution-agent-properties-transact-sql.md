@@ -17,10 +17,10 @@ ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1a2e2e3c0074c3fcc53298c2556c786c9b7057db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322282"
 ---
 # <a name="sp_mschange_distribution_agent_properties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
@@ -60,7 +60,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
   
  В следующей таблице приводятся свойства задания агента распространителя, доступные для изменения, а также ограничения на значения этих свойств.  
   
-|Свойство|Значение|Description|  
+|Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Имя входа учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которой выполняется агент.|  
 |**distrib_job_password**||Пароль учетной записи Windows, под которой запускается задание агента.|  
@@ -72,10 +72,10 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 |**subscriber_provider**||Уникальный программный идентификатор (PROGID), с которым зарегистрирован поставщик OLE DB для источника данных, не относящихся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Это свойство допустимо только для* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *подписчиков,* отличных от.|  
 |**subscriber_providerstring**||Идентифицирующая источник данных строка соединения, зависящая от поставщика OLE DB. *Данное свойство допустимо только для подписчиков, отличных от подписчика SQL Server.*|  
 |**subscriber_security_mode**|**1**|Проверка подлинности Windows.<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
-||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Идентификаци.|  
-|**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Абонент|  
+||**0**;|Проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**subscriber_type**|**0**;|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Абонент|  
 ||**1**|Сервер источника данных ODBC|  
-||**3-5**|Поставщик OLE DB|  
+||**3**|Поставщик OLE DB|  
 |**SubscriptionStreams**||Обозначает количество соединений, разрешенных для агента распространителя с тем, чтобы он применял пакеты изменений параллельно с подписчиком. *Не поддерживается для подписчиков, отличных от* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *, издателей Oracle* и одноранговых подписок.|  
   
 > [!NOTE]  

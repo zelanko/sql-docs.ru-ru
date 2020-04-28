@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6155f01b055f123277222a8c3a9359f907ca18cf
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171844"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>Разрешения, необходимые для запуска приложения SQL Server Profiler
@@ -62,7 +62,7 @@ ms.locfileid: "78171844"
 
  На следующей диаграмме показан процесс проверки разрешений во время воспроизведения трассировок:
 
- ![Разрешения на воспроизведение трассировки приложения SQL Server Profiler](../../database-engine/media/replaytracedecisiontree.gif "Разрешения на воспроизведение трассировки приложения SQL Server Profiler")
+ ![Разрешения на воспроизведение трассировки SQL Server Profiler](../../database-engine/media/replaytracedecisiontree.gif "Разрешения на воспроизведение трассировки SQL Server Profiler")
 
 ## <a name="see-also"></a>См. также:
  [SQL Server Profiler хранимых процедур &#40;Transact-SQL&#41;отслеживания](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql) [воспроизведения](replay-traces.md) [создают трассировку &#40;SQL Server Profiler](create-a-trace-sql-server-profiler.md)&#41;[воспроизведения таблицы трассировки](replay-a-trace-table-sql-server-profiler.md) &#40;SQL Server Profiler&#41;[воспроизведения файла трассировки](replay-a-trace-file-sql-server-profiler.md) &#40;SQL Server Profiler

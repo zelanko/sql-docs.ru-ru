@@ -13,18 +13,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a40d8b72dbac45e4546281198e4af000032a94c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173843"
 ---
 # <a name="data-processing-extensions-overview"></a>Общие сведения о модулях обработки данных
-  Модули обработки данных в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяют соединяться с источником данных и получать данные. Они также служат мостом между источником данных и набором данных. В основе модулей обработки данных [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] лежит набор интерфейсов поставщиков данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].
+  Модули обработки данных в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяют соединяться с источником данных и получать данные. Они также служат мостом между источником данных и набором данных. Модули обработки данных [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] построены на наборе интерфейсов поставщиков данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].
 
  В следующей таблице перечисляются модули обработки данных, включенные в службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].
 
-|Модуль обработки данных|Описание|
+|Модуль обработки данных|Description|
 |-------------------------------|-----------------|
 |Модуль обработки данных для служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Использует поставщик данных платформы .NET Framework для SQL Server с целью подключения и получения данных из [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].|
 |Модуль обработки данных OLE DB|Использует поставщик данных платформы .NET Framework для OLE DB. С помощью данного модуля сервер отчетов может осуществлять запрос к любым источникам данных с поставщиком OLE DB.|

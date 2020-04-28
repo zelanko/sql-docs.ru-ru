@@ -18,10 +18,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8ff8490824c6a0ccb45b383535e830cabff83407
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77479352"
 ---
 # <a name="sequences-transact-sql"></a>ПОСЛЕДОВАТЕЛЬНОСТИ (Transact-SQL)
@@ -32,11 +32,11 @@ ms.locfileid: "77479352"
 
 Чтобы получить сведения из этих представлений, укажите полное имя **INFORMATION_SCHEMA**_. view_name_.
 
-|Имя столбца|Тип данных|Description|
+|Имя столбца|Тип данных|Описание|
 |-----------------|---------------|-----------------|
-|**SEQUENCE_CATALOG**|**nvarchar(128**|Квалификатор последовательности|
+|**SEQUENCE_CATALOG**|**nvarchar(128)**|Квалификатор последовательности|
 |**SEQUENCE_SCHEMA**|**nvarchar (** 128) * *|Имя схемы, содержащей последовательность|
-|**SEQUENCE_NAME**|**nvarchar(128**|Имя последовательности|
+|**SEQUENCE_NAME**|**nvarchar(128)**|Имя последовательности|
 |**DATA_TYPE**|**nvarchar (** 128 **)**|Тип данных Sequence|
 |**NUMERIC_PRECISION**|**tinyint**|Точность последовательности|
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Основание системы счисления точности приблизительных числовых данных, точных числовых данных, целочисленных данных или денежных данных. Иначе возвращается значение NULL.|
@@ -59,4 +59,4 @@ SELECT * FROM test.INFORMATION_SCHEMA.SEQUENCES;
 ## <a name="see-also"></a>См. также:
 
 - [Представления информационной схемы &#40;&#41;Transact-SQL](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
-- [sys. sequences &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)
+- [sys.sequences (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)

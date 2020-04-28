@@ -15,19 +15,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9d174bb43388af9ea3fe02d839c7a3fcfec202c
-ms.sourcegitcommit: 0381fd3b76933db7bb1c1ee6a3b29de1f08c7ce4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77646323"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Изменения в работе функций компонента Database Engine в SQL Server 2014
   В этом разделе описаны изменения в компоненте [!INCLUDE[ssDE](../includes/ssde-md.md)]. Изменения в работе оказывают влияние на способ выполнения функций или взаимодействие между ними в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] по сравнению с предыдущими версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="SQL14"></a>Изменения в работе[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="behavior-changes-in-sssql14"></a><a name="SQL14"></a>Изменения в работе[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  В предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запросы к XML-документу, содержащие строки длиннее определенной длины (более 4020 символов), могут возвращать неверные результаты. В [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] такие результаты возвращаются верно.  
   
-## <a name="Denali"></a>Изменения в работе[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="behavior-changes-in-sssql11"></a><a name="Denali"></a>Изменения в работе[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>Обнаружение метаданных  
  Усовершенствования в, [!INCLUDE[ssDE](../includes/ssde-md.md)] начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , позволяют SQLDescribeCol получить более точные описания ожидаемых результатов, чем возвращенные SQLDescribeCol в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Обнаружение метаданных](../relational-databases/native-client/features/metadata-discovery.md).  
@@ -83,9 +83,9 @@ SELECT geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
   
 |Исходный тип данных XS|Целевой тип данных SQL Server|  
 |-------------------------|--------------------------------------|  
-|byte<br /><br /> short<br /><br /> INT<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|tinyint;<br /><br /> smallint<br /><br /> INT<br /><br /> bigint<br /><br /> Decimal<br /><br /> NUMERIC|  
+|byte<br /><br /> short<br /><br /> INT<br /><br /> Целое число<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|tinyint<br /><br /> smallint<br /><br /> INT<br /><br /> BIGINT<br /><br /> Decimal<br /><br /> NUMERIC|  
 |Decimal|Decimal<br /><br /> NUMERIC|  
-|FLOAT|real;|  
+|FLOAT|real|  
 |double|FLOAT|  
   
  Новые правила повышают производительность, если можно пропустить промежуточное преобразование. Однако при сбое преобразования данных появляются сообщения об ошибке, отличные от тех, которые возникают при преобразовании из промежуточного значения xs:string. Например, если метод value не смог преобразовать значение 100 000 типа `int` в `smallint`, то предыдущее сообщение об ошибке будет выглядеть так:  
@@ -105,7 +105,7 @@ SELECT geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  В более ранних версиях было получено сообщение *"Проверка сведений об удостоверении:\<текущее значение идентификатора" текущее значение идентификатора> ",\<значение текущего столбца" текущее значение столбца> ". Выполнение DBCC завершено. Если команда DBCC выводит сообщения об ошибках, обратитесь к системному администратору».* Сообщение не изменяется, если `DBCC CHECKIDENT` указывается с `NORESEED`параметром, без второго параметра или без переначального значения. Дополнительные сведения см. в разделе [DBCC CHECKIDENT (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>Изменилась работа функции exist() типа данных XML  
- Поведение `exist()` функции изменилось при сравнении типа данных XML со значением NULL, равным 0 (нулю). Рассмотрим следующий пример:  
+ Поведение `exist()` функции изменилось при сравнении типа данных XML со значением NULL, равным 0 (нулю). Рассмотрим следующий пример.  
   
 ```sql  
 DECLARE @test XML;  
@@ -128,6 +128,6 @@ SELECT COUNT(1) WHERE @test.exist('/dogs') IS NULL; -- 1 expected, 1 returned
  [Критические изменения в функциях ядро СУБД в SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md)   
  [Устаревшие функции ядро СУБД в SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)   
  [Неподдерживаемые функции ядро СУБД в SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Уровень совместимости ALTER DATABASE &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
+ [Уровень совместимости инструкции ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   
   

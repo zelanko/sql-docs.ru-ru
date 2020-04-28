@@ -10,10 +10,10 @@ ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e68a58135e28989c2661ee531e2b4bf3c86a0104
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76910227"
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>Новые функции графического пользовательского интерфейса в SSMA для доступа к SQL
@@ -47,7 +47,7 @@ ms.locfileid: "76910227"
 ## <a name="bookmarks"></a>Закладки  
 Эта функция позволяет задать одну или несколько закладок в исходном или целевом коде, быстро найти закладку с помощью сочетаний клавиш, управлять закладками с помощью удобного диалогового окна.  
   
-### <a name="toggle-bookmark"></a>Переключить закладку  
+### <a name="toggle-bookmark"></a>Закладка  
 Задать или удалить закладку можно следующими способами.  
   
 -   Использовать кнопку "Переключить закладку" поверх исходного или целевого окна SQL  

@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0dea40f9c4e4c0672db78ca7e841cb7cedca857e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174353"
 ---
-# <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Контрольный список. Использование PowerShell для проверки PowerPivot для SharePoint
+# <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Контрольный список: использование PowerShell для проверки PowerPivot для SharePoint
   Ни одна из операций установки или восстановления [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] не завершена без прохождения проверочного теста, который подтверждает работоспособность служб и данных. В этой статье рассказывается о том, как выполнить эти шаги с помощью Windows PowerShell. Каждому шагу посвящен отдельный подраздел с тем, чтобы можно было перейти непосредственно к конкретным задачам. Например, выполните скрипт, приведенный в подразделе [Базы данных](#bkmk_databases) этого раздела для проверки имени приложения службы и баз данных содержимого, если необходимо запланировать их для обслуживания или резервного копирования.
 
 |||
@@ -28,13 +28,13 @@ ms.locfileid: "78174353"
 |-|
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|
 
- **В этом разделе**: элементы с письмом в следующем оглавлении соответствуют областям диаграммы. На диаграмме показано:
+ **В этой статье**. Обозначенные буквами элементы в содержании соответствуют областям на схеме. На диаграмме показано:
 
 |||
 |-|-|
-|[Подготовка среды PowerShell](#bkmk_prerequisites)<br /><br /> [Симптомы и рекомендуемые действия](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services службы Windows](#bkmk_windows_service)<br /><br /> **(Б)** [PowerPivotSystemService и PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **(C)** [приложения службы PowerPivot и прокси-серверы](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [базы данных](#bkmk_databases)<br /><br /> [Компоненты SharePoint](#bkmk_features)<br /><br /> [Задания таймера](#bkmk_timer_jobs)<br /><br /> [Правила определения исправности](#bkmk_health_rules)<br /><br /> **(E)** [журналы Windows и ULS](#bkmk_logs)<br /><br /> [Поставщик MSOLAP](#bkmk_msolap)<br /><br /> [Клиентская библиотека ADOMD.Net](#bkmk_adomd)<br /><br /> [Правила сбора данных об исправности](#bkmk_health_collection)<br /><br /> [Решения](#bkmk_solutions)<br /><br /> [Действия по проверке вручную](#bkmk_manual)<br /><br /> [Дополнительные ресурсы](#bkmk_more_resources)<br /><br /> [Полный сценарий PowerShell](#bkmk_full_script)|![проверка powerpivot с помощью powershell](../../../sql-server/install/media/ssas-powershell-component-verification.png "проверка powerpivot с помощью powershell")|
+|[Подготовка среды PowerShell](#bkmk_prerequisites)<br /><br /> [Симптомы и рекомендуемые действия](#bkmk_symptoms)<br /><br /> **(A)** [Службы Analysis Services для Windows](#bkmk_windows_service)<br /><br /> **(Б)** [PowerPivotSystemService и PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **(В)** [Приложения службы PowerPivot и прокси-серверы](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Базы данных](#bkmk_databases)<br /><br /> [Компоненты SharePoint](#bkmk_features)<br /><br /> [Задания таймера](#bkmk_timer_jobs)<br /><br /> [Правила определения исправности](#bkmk_health_rules)<br /><br /> **(E)** [Журналы Windows и ULS](#bkmk_logs)<br /><br /> [Поставщик MSOLAP](#bkmk_msolap)<br /><br /> [Клиентская библиотека ADOMD.Net](#bkmk_adomd)<br /><br /> [Правила сбора данных об исправности](#bkmk_health_collection)<br /><br /> [Решения](#bkmk_solutions)<br /><br /> [Действия по проверке вручную](#bkmk_manual)<br /><br /> [Дополнительные ресурсы](#bkmk_more_resources)<br /><br /> [Полный скрипт PowerShell](#bkmk_full_script)|![проверка powerpivot с помощью powershell](../../../sql-server/install/media/ssas-powershell-component-verification.png "проверка powerpivot с помощью powershell")|
 
-##  <a name="bkmk_prerequisites"></a>Подготовка среды PowerShell
+##  <a name="prepare-your-powershell-environment"></a><a name="bkmk_prerequisites"></a> Подготовка среды PowerShell
  В этом разделе описаны действия по подготовке среды PowerShell. В зависимости от текущей конфигурации среды создания скриптов некоторые действия могут не потребоваться.
 
  **Разрешения PowerShell**
@@ -43,11 +43,11 @@ ms.locfileid: "78174353"
 
  Get-SPLogEvent: для выполнения этого командлета необходимо иметь **права администратора** на компьютере.
 
- **SharePoint и [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] ** Модуль
+ **SharePoint и модуль [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]**
 
  Если при запуске связанных с SharePoint командлетов отображается сообщение об ошибке, похожее на следующее, выполните команду Add-PSSnapin:
 
- Термин "Get-PowerPivotSystemService" **не распознан как имя командлета**, функции, файла скрипта или действующей программы. Проверьте правильность написания имени, а также наличие и правильность пути, после чего повторите попытку.
+ Термин "Get-PowerPivotSystemService" **не распознан как имя командлета**, функции, файла скрипта или действующей программы. Проверьте правильность написания имени, а если включен путь, то проверьте правильность пути и повторите попытку.
 
 ```
 Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
@@ -61,7 +61,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
 |-|-|
 |![набор приложений общего характера powerpivot в sharepoint](../../../sql-server/install/media/ssas-powerpivot-logo.png "набор приложений общего характера powerpivot в sharepoint")|При желании можно проверить большинство компонентов в центре администрирования с помощью панели управления [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Чтобы открыть панель мониторинга в центре администрирования, выберите **Общие параметры приложения**, а затем щелкните **Панель мониторинга управления** в **PowerPivot**. Дополнительные сведения о панели мониторинга см. в разделе [PowerPivot Management Dashboard and Usage Data](../../power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|
 
-##  <a name="bkmk_symptoms"></a>Симптомы и рекомендуемые действия
+##  <a name="symptoms-and-recommended-actions"></a><a name="bkmk_symptoms"></a>Симптомы и рекомендуемые действия
  В следующей таблице приведен список симптомов или проблем и предложенный подраздел, в котором приведены сведения о том, как устранить данную проблему.
 
 |Симптом|См. в разделе|
@@ -71,7 +71,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
 |Некоторые части панели мониторинга управления|При установке PowerPivot для SharePoint в ферму с такой топологией (центр администрирования без службы Excel Services или PowerPivot для SharePoint) необходимо загрузить и установить клиентскую библиотеку Microsoft ADOMD.NET, если требуется иметь полный доступ к встроенным на панели управления PowerPivot отчетам. Некоторые отчеты с панели мониторинга используют ADOMD.NET для доступа к внутренним данным, предоставляющим сведения об обработке запросов PowerPivot и исправности сервера в ферме. Дополнительные сведения см. в разделе [ADOMD.Net client Library](#bkmk_adomd) и в статье [Установка ADOMD.NET на веб-серверах, обслуживающих клиентские запросы, под управлением центра администрирования](../../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md).|
 |\<> содержимого в будущем||
 
-##  <a name="bkmk_windows_service"></a>Служба Analysis Services Windows
+##  <a name="analysis-services-windows-service"></a><a name="bkmk_windows_service"></a> Службы Analysis Services для Windows
  Приведенный в этом разделе скрипт проверяет экземпляр служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Убедитесь, что служба **запущена**.
 
 ```powershell
@@ -84,12 +84,12 @@ Name              DisplayName                                Status
 MSOLAP$POWERPIVOT SQL Server Analysis Services (POWERPIVOT) Running
 ```
 
-##  <a name="bkmk_engine_and_system_service"></a>PowerPivotSystemService и PowerPivotEngineService
+##  <a name="powerpivotsystemservice-and-powerpivotengineservice"></a><a name="bkmk_engine_and_system_service"></a>PowerPivotSystemService и PowerPivotEngineService
  Приведенные в этом разделе скрипты проверяют системные службы [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] . Имеется одна системная служба для развертывания SharePoint 2013 и две для развертывания SharePoint 2010.
 
  **PowerPivotSystemService**
 
- Состояние должно быть **В сети**.
+ Проверьте состояние "в **сети**".
 
 ```powershell
 Get-PowerPivotSystemService | Select typename, status, applications, farm | Format-Table -Property * -AutoSize | Out-Default
@@ -104,7 +104,7 @@ SQL Server PowerPivot Service Application Online {Default PowerPivot Service App
  **PowerPivotEngineService**
 
 > [!NOTE]
->  **Пропустите этот скрипт, если** вы используете SharePoint 2013. PowerPivotEngineService не входит в развертывание SharePoint 2013. При выполнении командлета Get-PowerPivot службы**Engine**Service в SharePoint 2013 откроется сообщение об ошибке примерно следующего содержания. Это сообщение об ошибке возвращается, даже если запущена команда PSSnapin, описанная в разделе предварительных требований этого раздела.
+>  **Пропустите этот скрипт, если** используется SharePoint 2013. PowerPivotEngineService не входит в развертывание SharePoint 2013. При выполнении командлета Get-PowerPivot службы**Engine**Service в SharePoint 2013 откроется сообщение об ошибке примерно следующего содержания. Это сообщение об ошибке возвращается, даже если запущена команда PSSnapin, описанная в разделе предварительных требований этого раздела.
 > 
 >  Термин «Get-PowerPivotEngineService» не распознан в качестве имени командлета
 
@@ -122,8 +122,8 @@ Instances : {POWERPIVOT}
 Farm      : SPFarm Name=SharePoint_Config
 ```
 
-##  <a name="bkmk_powerpivot_service_application"></a>Приложения службы PowerPivot и прокси-серверы
- Проверьте состояние "в **сети**". Приложение служб Excel не использует базы данных приложения службы, поэтому командлет не возвращает имя базы данных. Запишите базу данных, которая используется приложением службы [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , чтобы можно было удостовериться в том, что она находится в сети в подразделе базы данных далее в этом разделе.
+##  <a name="powerpivot-service-applications-and-proxies"></a><a name="bkmk_powerpivot_service_application"></a>Приложения службы PowerPivot и прокси-серверы
+ Состояние должно быть **В сети**. Приложение служб Excel не использует базы данных приложения службы, поэтому командлет не возвращает имя базы данных. Запишите базу данных, которая используется приложением службы [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , чтобы можно было удостовериться в том, что она находится в сети в подразделе базы данных далее в этом разделе.
 
  **Приложение службы PowerPivot и Excel**
 
@@ -153,7 +153,7 @@ Status      : Online
 > [!NOTE]
 >  Следующий образец кода сначала возвращает свойство applicationpool приложения службы [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] по умолчанию. Имя анализируется из строки и используется для получения сведений о состоянии объекта пула приложений.
 > 
->  Состояние должно быть **В сети**. Если состояние находится не в сети или отображается сообщение "ошибка HTTP" при просмотре [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] сайта, убедитесь, что учетные данные удостоверения в ПУЛАХ приложений IIS все еще верны. Имя пула приложений IIS — это значение свойства идентификатора, возвращаемого командой Get-SPServiceApplicationPool.
+>  Проверьте состояние "в **сети**". Если состояние находится не в сети или отображается сообщение "ошибка HTTP" при просмотре [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] сайта, убедитесь, что учетные данные удостоверения в ПУЛАХ приложений IIS все еще верны. Имя пула приложений IIS — это значение свойства идентификатора, возвращаемого командой Get-SPServiceApplicationPool.
 
 ```powershell
 $poolname = [string](Get-PowerPivotServiceApplication | Select -Property applicationpool)
@@ -174,7 +174,7 @@ SharePoint Web Services System Online DOMAIN\account     89b50ec3-49e3-4de7-881a
 
  **Прокси-серверы приложения службы PowerPivot и Excel**
 
- Состояние должно быть **В сети**.
+ Проверьте состояние "в **сети**".
 
 ```powershell
 Get-SPServiceApplicationProxy | Select typename, status, unattendedaccount, displayname | Where {$_.TypeName -Like "*powerpivot*" -Or $_.TypeName -Like "*excel services*"} | Format-Table -Property * -AutoSize | Out-Default
@@ -187,8 +187,8 @@ PowerPivot Service Application Proxy                     Online PowerPivotUnatte
 Excel Services Application Web Service Application Proxy Online                             Excel Services Application
 ```
 
-##  <a name="bkmk_databases"></a>База
- Следующий скрипт возвращает состояние баз данных приложений служб и все базы данных содержимого. Проверьте состояние "в **сети**".
+##  <a name="databases"></a><a name="bkmk_databases"></a> Базы данных
+ Следующий скрипт возвращает состояние баз данных приложений служб и все базы данных содержимого. Состояние должно быть **В сети**.
 
 ```powershell
 Get-SPDatabase | Select name, status, server, typename | Where {$_.TypeName -eq "content database" -Or $_.TypeName -Like "*Gemini*"} | Format-Table -Property * -AutoSize | Out-Default
@@ -202,7 +202,7 @@ DefaultWebApplicationDB-f0db1a8e-4c22-408c-b9b9-153bd74b0312               Onlin
 SharePoint_Admin_3cadf0b098bf49e0bb15abd487f5c684                          Online TESTSERVER\POWERPIVOT    Content Database
 ```
 
-##  <a name="bkmk_features"></a>Функции SharePoint
+##  <a name="sharepoint-features"></a><a name="bkmk_features"></a>Функции SharePoint
  Убедитесь в том, что компоненты сайта, сети и фермы находятся в сети.
 
 ```powershell
@@ -217,7 +217,7 @@ PowerPivotAdmin Online   Web SPFarm Name=SharePoint_Config
 PowerPivot      Online  Farm SPFarm Name=SharePoint_Config
 ```
 
-##  <a name="bkmk_timer_jobs"></a>Задания таймера
+##  <a name="timer-jobs"></a><a name="bkmk_timer_jobs"></a>Задания таймера
  Убедитесь в том, что задания таймера находятся **В сети**. Служба [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] EngineService не установлена на сервере SharePoint 2013, поэтому скрипт не сформирует список заданий таймера EngineService в развертывании SharePoint 2013.
 
 ```powershell
@@ -240,7 +240,7 @@ Online Health Analysis Job (Weekly, SQL Server PowerPivot Service Application, A
 Online PowerPivot Setup Extension Timer Job                                                 4/1/2014 1:40:31 AM  MidTierService
 ```
 
-##  <a name="bkmk_health_rules"></a>Правила определения исправности
+##  <a name="health-rules"></a><a name="bkmk_health_rules"></a>Правила определения исправности
  В развертывании SharePoint 2013 меньше правил. Полный список правил для каждой среды SharePoint и объяснение использования правил см. в разделе [PowerPivot Health Rules-configure](../../power-pivot-sharepoint/configure-power-pivot-health-rules.md).
 
 ```powershell
@@ -259,14 +259,14 @@ ASADOMDNETHealthRule             True PowerPivot: ADOMD.NET is not installed on 
 MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should have 'Full Read' permission on all associated SPWebApplications.
 ```
 
-##  <a name="bkmk_logs"></a>Журналы Windows и ULS
+##  <a name="windows-and-uls-logs"></a><a name="bkmk_logs"></a>Журналы Windows и ULS
  **Журнал событий Windows**
 
  Следующая команда выполняет поиск в журнале событий Windows событий, связанных с экземпляром [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме SharePoint. Сведения об отключении событий или изменении уровня событий см. в разделе [Настройка и просмотр файлов журнала SharePoint и журнала диагностики &#40;PowerPivot для SharePoint&#41;](../../power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).
 
- **Имя службы:** MSOLAP $ POWERPIVOT
+ **Имя службы:** MSOLAP$POWERPIVOT.
 
- **Отображаемое имя в службах Windows:** SQL Server Analysis Services (POWERPIVOT)
+ **Отображаемое имя в службах Windows:** SQL Server Analysis Services (POWERPIVOT).
 
 ```powershell
 Get-EventLog "application" | Where-Object {$_.source -Like "msolap`$powerpivot*"}  | Select timegenerated, entrytype , source, message | Format-Table -property * -AutoSize | Out-Default
@@ -318,7 +318,7 @@ Message     : EXCEPTION: System.TimeoutException: The request channel timed out 
               System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout...
 ```
 
-##  <a name="bkmk_msolap"></a>Поставщик MSOLAP
+##  <a name="msolap-provider"></a><a name="bkmk_msolap"></a>Поставщик MSOLAP
  Проверьте поставщик MSOLAP. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]и [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] требует MSOLAP. 5.
 
 ```powershell
@@ -337,7 +337,7 @@ MSOLAP.5   Oledb        Microsoft OLE DB Provider for OLAP Services 11.0
 
  Дополнительные сведения см. в статьях [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](../../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) и [Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](https://technet.microsoft.com/library/hh758436.aspx).
 
-##  <a name="bkmk_adomd"></a>Клиентская библиотека ADOMD.Net
+##  <a name="adomdnet-client-library"></a><a name="bkmk_adomd"></a>Клиентская библиотека ADOMD.Net
 
 ```powershell
 Get-WMIObject -Class win32_product | Where-Object {$_.name -Like "*ado*"} | Select name, version, vendor | Format-Table -Property * -AutoSize | out-default
@@ -352,7 +352,7 @@ Microsoft SQL Server 2005 Analysis Services ADOMD.NET 9.00.1399.06 Microsoft Cor
 
  Дополнительные сведения можно найти в статье [Установка ADOMD.NET на веб-серверах, обслуживающих клиентские запросы, под управлением центра администрирования](../../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md).
 
-##  <a name="bkmk_health_collection"></a>Правила сбора данных о работоспособности
+##  <a name="health-data-collection-rules"></a><a name="bkmk_health_collection"></a>Правила сбора данных о работоспособности
  Убедитесь в том, что в поле **Состояние** указано значение «В сети», а в поле **Включен** — значение True.
 
 ```powershell
@@ -370,7 +370,7 @@ PowerPivot Unload Data Usage Online    True AnalysisServicesUnloads             
 
  Дополнительные сведения см. в статье [PowerPivot Usage Data Collection](../../power-pivot-sharepoint/power-pivot-usage-data-collection.md).
 
-##  <a name="bkmk_solutions"></a>Решения
+##  <a name="solutions"></a><a name="bkmk_solutions"></a>Решения
  Если другие компоненты находятся в сети, то проверку решений можно пропустить. Однако, если правила определения исправности отсутствуют, убедитесь в том, что существует два решения PowerPivot и при этом они имеют состояние **В сети** и **Развернуто**.
 
 ```powershell
@@ -398,19 +398,19 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
 
  Дополнительные сведения о развертывании решений SharePoint см. в разделе [Развертывание пакетов решений (SharePoint Server 2010)](https://technet.microsoft.com/library/cc262995\(v=office.14\).aspx).
 
-##  <a name="bkmk_manual"></a>Действия по проверке вручную
+##  <a name="manual-verification-steps"></a><a name="bkmk_manual"></a> Действия по выполнению проверки вручную
  В этом разделе описаны шаги по проверке, которые нельзя выполнить с помощью командлетов PowerShell.
 
- **Запланированное обновление данных:** Настройте расписание обновления книги так, чтобы она **также обновлялась как можно скорее**.  Дополнительные сведения см. в разделе "Проверка обновления данных" раздела [Обновление данных и источники данных, не поддерживающие проверку подлинности Windows &#40;PowerPivot для SharePoint&#41;](../../power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md).
+ **Плановое обновление данных.** Для расписания обновления книги задайте **Кроме того, как можно скорее обновите данные**.  Дополнительные сведения см. в разделе "Проверка обновления данных" раздела [Обновление данных и источники данных, не поддерживающие проверку подлинности Windows &#40;PowerPivot для SharePoint&#41;](../../power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md).
 
-##  <a name="bkmk_more_resources"></a>Дополнительные ресурсы
- [Командлеты администрирования веб-сервера (IIS) в Windows PowerShell](https://technet.microsoft.com/library/ee790599.aspx).
+##  <a name="more-resources"></a><a name="bkmk_more_resources"></a>Дополнительные ресурсы
+ [Командлеты для администрирования веб-сервера (IIS) в Windows PowerShell](https://technet.microsoft.com/library/ee790599.aspx).
 
- [PowerShell для проверки служб, сайтов IIS и состояния пула приложений в SharePoint](https://gallery.technet.microsoft.com/office/PowerShell-to-check-a6ed72a0).
+ [PowerShell для проверки служб, состояние веб-сайтов IIS и пула приложений в SharePoint](https://gallery.technet.microsoft.com/office/PowerShell-to-check-a6ed72a0).
 
  [Ссылка на Windows PowerShell для SharePoint 2013](https://technet.microsoft.com/library/ee890108\(v=office.15\).aspx)
 
- [Справочник по Windows PowerShell для SharePoint Foundation 2010](https://technet.microsoft.com/library/ee890105\(v=office.14\).aspx)
+ [Ссылка на Windows PowerShell для SharePoint Foundation 2010](https://technet.microsoft.com/library/ee890105\(v=office.14\).aspx)
 
  [Управление службами Excel с помощью Windows PowerShell (SharePoint Server 2010)](https://technet.microsoft.com/library/ff191201\(v=office.14\).aspx)
 
@@ -418,7 +418,7 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
 
  [Использование командлета Get-EvenLog](https://technet.microsoft.com/library/ee176846.aspx)
 
-##  <a name="bkmk_full_script"></a>Полный сценарий PowerShell
+##  <a name="full-powershell-script"></a><a name="bkmk_full_script"></a>Полный сценарий PowerShell
  Следующий скрипт содержит все команды, приведенные в предыдущих разделах. Скрипт выполняет команды в том же порядке, в котором они перечислены в этом разделе. Скрипт содержит некоторые дополнительные изменения команд, приведенных в этом разделе, на тот случай, если необходима дополнительная фильтрация. Изменения отключаются с помощью символа комментария (#). Скрипт также содержит некоторые инструкции для проверки служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint. Инструкции [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] отключаются с помощью символа комментария (#).
 
 ```powershell

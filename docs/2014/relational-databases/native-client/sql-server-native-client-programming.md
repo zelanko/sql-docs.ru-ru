@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c288ade95434bc06fcbf7613a71c2106631128e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929546"
 ---
 # <a name="sql-server-native-client-programming"></a>Программирование собственного клиента SQL Server
@@ -39,7 +39,7 @@ ms.locfileid: "76929546"
   
  Хотя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент использует компоненты приложения Windows DAC, он не зависит явно от конкретной версии приложения уровня данных Windows. Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать с версией выделенного административного соединения Windows, которая устанавливается с любой операционной системой, поддерживаемой собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Новые возможности собственного клиента SQL Server](sql-server-native-client.md)  
  Предоставляет список наиболее значительных новых функциональных возможностей Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -49,7 +49,7 @@ ms.locfileid: "76929546"
  [Компоненты собственного клиента SQL Server](features/sql-server-native-client-features.md)  
  Описываются функции, поддерживаемые собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Построение приложений с использованием SQL Server Native Client](applications/building-applications-with-sql-server-native-client.md)  
+ [Построение приложений с использованием собственного клиента SQL Server](applications/building-applications-with-sql-server-native-client.md)  
  Представлены общие сведения о разработке с помощью собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая отличия от Windows DAC, используемые компоненты и способ использования совместно с ADO.  
   
  В этом разделе также обсуждается установка и развертывание собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая способ распространения библиотеки собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -57,10 +57,10 @@ ms.locfileid: "76929546"
  [Системные требования для собственного клиента SQL Server](system-requirements-for-sql-server-native-client.md)  
  Обсуждаются системные ресурсы, необходимые для использования с собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [SQL Server Native Client &#40;OLE DB&#41;](ole-db/sql-server-native-client-ole-db.md)  
+ [SQL Server Native Client (OLE DB)](ole-db/sql-server-native-client-ole-db.md)  
  Предоставляются сведения об использовании поставщика OLE DB собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [SQL Server Native Client &#40;ODBC&#41;](odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client (ODBC)](odbc/sql-server-native-client-odbc.md)  
  Предоставляются сведения об использовании драйвера ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Поиск дополнительных сведений о собственном клиенте SQL Server](finding-more-sql-server-native-client-information.md)  
@@ -72,6 +72,6 @@ ms.locfileid: "76929546"
 ## <a name="see-also"></a>См. также:  
  [Обновление приложения с SQL Server 2005 Native Client](applications/updating-an-application-from-sql-server-2005-native-client.md)   
  [Разделы руководства по ODBC](../native-client-odbc-how-to/odbc-how-to-topics.md)   
- [Инструкции по OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [OLE DB инструкций](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ca879d51f947ec078b3c1b7e14842ea926f0240
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174853"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Просмотр отчетов служб Reporting Services на устройствах с Microsoft Surface и Apple iOS
@@ -47,16 +47,16 @@ ms.locfileid: "78174853"
 
 2.  Откройте отчет, выполнив одно из следующих действий.
 
-    -   **Начать с электронной почты:** В сообщении электронной почты, созданном [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] подпиской, выберите URL-адрес отчета. Отчет откроется в браузере.
+    -   **Начните с электронной почты.** В сообщении электронной почты, созданном при помощи подписки [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , выберите URL-адрес отчета. Отчет откроется в браузере.
 
-    -   **Запуск с сервера отчетов:** Просмотрите каталог на сервере [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] отчетов, а затем выберите имя отчета, чтобы открыть отчет.
+    -   **Запуск с сервера отчетов:** Чтобы запустить отчет, откройте каталог на сервере отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и выберите имя отчета.
 
-    -   **Запуск из библиотеки документов SharePoint:** Перейдите к библиотеке документов SharePoint, содержащей [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] отчеты, а затем выберите имя отчета. Можно просматривать отчет и работать с ним.
+    -   **Запуск из библиотеки документов SharePoint:** Откройте библиотеку документов SharePoint, в которой хранятся отчеты [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , и выберите имя отчета. Можно просматривать отчет и работать с ним.
 
         > [!IMPORTANT]
-        >  При использовании iPad свойство **Скрытый просмотр** в Safari должно быть отключено.
+        >   При использовании iPad свойство **Скрытый просмотр** в Safari должно быть отключено.
 
-    -   **Веб-часть SharePoint:** Если веб-часть была добавлена на страницу SharePoint, можно просматривать [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] отчеты.
+    -   **Веб-часть SharePoint:** Если на страницу SharePoint была добавлена веб-часть, то можно просматривать отчеты [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .
 
 3.  На устройстве Microsoft Surface можно также открыть отчет с использованием диспетчера отчетов. Просмотрите каталог в диспетчере отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и выберите имя отчета, чтобы открыть его.
 
