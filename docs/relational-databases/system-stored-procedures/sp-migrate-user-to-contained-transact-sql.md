@@ -18,10 +18,10 @@ ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d5bcafb24313851f58fd18fc19ebabd0ee98f6dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022336"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
@@ -52,7 +52,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
  *disable_login* отключает имя входа в базе данных master. Чтобы подключиться, если имя входа отключено, соединение должно предоставить имя автономной базы данных в качестве **первоначального каталога** в строке подключения.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  **sp_migrate_user_to_contained** создает пользователя автономной базы данных с паролем независимо от свойств или разрешений имени входа. Например, процедура может быть выполнена, если имя входа отключено или если пользователю отказано **в** доступе к базе данных.  
@@ -69,7 +69,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
 -   **sp_migrate_user_to_contained** нельзя использовать в системной базе данных.  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
  При миграции пользователей следите за тем, чтобы не отключить и не удалить все имена входа администраторов экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если все имена для входа удалены, см. раздел [Подключение к SQL Server при блокировке системных администраторов](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).  
   
  Если указано имя входа **Builtin** \ администраторы, то администратор может подключиться, запустив приложение с помощью команды **Запуск от имени администратора** .  
@@ -90,7 +90,7 @@ sp_migrate_user_to_contained
   
 ```  
   
-### <a name="b-migrating-all-database-users-with-logins-to-contained-database-users-without-logins"></a>Б. Преобразование всех пользователей базы данных с именами входа в пользователей автономной базы данных без имен входа  
+### <a name="b-migrating-all-database-users-with-logins-to-contained-database-users-without-logins"></a>Б) Преобразование всех пользователей базы данных с именами входа в пользователей автономной базы данных без имен входа  
  В следующем примере выполняется миграция всех пользователей, основанных на имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в пользователей автономной базы данных с паролями. Этот пример исключает имена входа, которые не были включены. Этот пример должен выполняться в автономной базе данных.  
   
 ```sql  
