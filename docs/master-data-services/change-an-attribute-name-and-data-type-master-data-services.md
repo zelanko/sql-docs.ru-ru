@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: c5885c2aebb718f212ac22bee8773ceab2df2f6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729679"
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>Изменение имени атрибута и типа данных (службы Master Data Services)
@@ -29,15 +29,15 @@ ms.locfileid: "73729679"
 ## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
--   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
+-   Необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** .  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-change-an-attribute-name-and-type"></a>Изменение имени атрибута и типа данных  
   
 1.  В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]щелкните область **Администрирование системы**.  
   
-2.  На странице **Manage Model** (Управление моделью) выберите в сетке модель и щелкните **Сущности**.  
+2.  На странице **Управление моделью** выберите модель в сетке и щелкните **сущности**.  
   
 3.  На странице **Управление сущностью** выберите строку сущности, для которой необходимо создать атрибут.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "73729679"
   
 6.  Выберите строку для атрибута, который необходимо изменить, а затем нажмите **Изменить**.  
   
-7.  Введите новое имя атрибута в поле **Имя** . Список слов, которые не должны использоваться как имена атрибутов, см. в разделе [Зарезервированные слова (службы Master Data Services)](../master-data-services/reserved-words-master-data-services.md).  
+7.  Введите новое имя атрибута в поле **Имя** . Список слов, которые не должны использоваться в качестве имен атрибутов, см. в разделе [зарезервированные слова &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md).  
   
 8.  Выберите другой тип в списке **Тип атрибута** .  
   
@@ -62,6 +62,6 @@ ms.locfileid: "73729679"
 ## <a name="see-also"></a>См. также:  
  [Создание текстового атрибута &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
  [Удаление атрибута &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)   
- [Master Data Services &#40;атрибутов&#41;](../master-data-services/attributes-master-data-services.md)  
+ [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)  
   
   

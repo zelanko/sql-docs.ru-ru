@@ -11,10 +11,10 @@ ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a62ad36e17fd25a922615ed4d7b8a49c12a14adf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728612"
 ---
 # <a name="change-the-order-of-attributes"></a>Изменение порядка атрибутов
@@ -26,15 +26,15 @@ ms.locfileid: "73728612"
 ## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
--   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
+-   Необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** .  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-change-the-order-of-an-attribute"></a>Изменение порядка атрибутов  
   
 1.  В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]щелкните область **Администрирование системы**.  
   
-2.  На странице **Manage Model** (Управление моделью) выберите в сетке модель и щелкните **Сущности**.  
+2.  На странице **Управление моделью** выберите модель в сетке и щелкните **сущности**.  
   
 3.  На странице **Управление сущностью** выберите строку сущности, для которой необходимо создать атрибут.  
   
@@ -56,6 +56,6 @@ ms.locfileid: "73728612"
 7.  Щелкните **Вверх** или **Вниз**.  
   
 ## <a name="see-also"></a>См. также:  
- [Master Data Services &#40;атрибутов&#41;](../master-data-services/attributes-master-data-services.md)  
+ [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)  
   
   

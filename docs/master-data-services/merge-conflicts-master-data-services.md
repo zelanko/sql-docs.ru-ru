@@ -11,10 +11,10 @@ ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 028c1c20516d6f058e60dad6121aee0230d78817
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729029"
 ---
 # <a name="merge-conflicts-master-data-services"></a>Слияние конфликтов (Master Data Services)
@@ -47,6 +47,6 @@ ms.locfileid: "73729029"
 4.  Нажав кнопку **Применить**, можно внести дополнительные изменения и опубликовать данные снова. Можно также нажать кнопку **Отменить** , чтобы отменить обновление и повторно загрузить последнюю версию с сервера.  
   
 ## <a name="see-also"></a>См. также:  
- [Master Data Services &#40;членов&#41;](../master-data-services/members-master-data-services.md)  
+ [Элементы (службы Master Data Services)](../master-data-services/members-master-data-services.md)  
   
   

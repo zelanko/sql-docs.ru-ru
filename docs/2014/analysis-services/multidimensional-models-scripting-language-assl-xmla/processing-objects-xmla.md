@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ab38ea9b58e891d813a3ca73f43d20a364275da0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727600"
 ---
 # <a name="processing-objects-xmla"></a>Обработка объектов (XMLA)
@@ -54,7 +54,7 @@ ms.locfileid: "62727600"
   
  В следующей таблице приведены константы для свойства `Type`, а также различные объекты, которые можно обрабатывать при помощи каждой константы.  
   
-|`Type`значений|Применимые объекты|  
+|Значение `Type`|Применимые объекты|  
 |--------------------|------------------------|  
 |*ProcessFull*|Куб, база данных, измерение, группа мер, модель интеллектуального анализа данных, структура интеллектуального анализа данных, секция|  
 |*ProcessAdd*|Измерение, секция|  
@@ -99,7 +99,7 @@ ms.locfileid: "62727600"
  Дополнительные сведения о слиянии секций с помощью XML для аналитики (XMLA) см. в разделе [Слияние секций &#40;xmla&#41;](merging-partitions-xmla.md).  
   
 ## <a name="handling-processing-errors"></a>Обработка ошибок  
- Свойство [ErrorConfiguration](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/errorconfiguration-element-xmla) `Process` команды позволяет указать способ обработки ошибок, обнаруженных при обработке объекта. Например, при обработке измерения службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] обнаруживают повторяющиеся значение в ключевом столбце ключевого атрибута. Поскольку ключи атрибутов должны быть уникальны, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] удаляют повторяющиеся записи. Основываясь на [](https://docs.microsoft.com/bi-reference/assl/properties/keyduplicate-element-assl) свойстве KeyDuplicate `ErrorConfiguration`объекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , может:  
+ Свойство [ErrorConfiguration](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/errorconfiguration-element-xmla) `Process` команды позволяет указать способ обработки ошибок, обнаруженных при обработке объекта. Например, при обработке измерения службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] обнаруживают повторяющиеся значение в ключевом столбце ключевого атрибута. Поскольку ключи атрибутов должны быть уникальны, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] удаляют повторяющиеся записи. Основываясь на [KeyDuplicate](https://docs.microsoft.com/bi-reference/assl/properties/keyduplicate-element-assl) свойстве KeyDuplicate `ErrorConfiguration`объекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , может:  
   
 -   Пропустить ошибку и продолжить обработку измерения.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62727600"
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Описание  
  В следующем примере производится полная обработка образца базы данных [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ### <a name="code"></a>Код  
@@ -127,7 +127,7 @@ ms.locfileid: "62727600"
 </Process>  
 ```  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Описание  
  В следующем примере выполняется добавочная обработка **Internet_Sales_2004** секции в группе мер **Internet Sales** Куба **Adventure Works DW** в [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] образце [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных. `Process` Команда добавляет агрегаты для дат заказов позже 31 декабря 2006 в секцию, используя нелинейную привязку запроса в `Bindings` свойстве `Process` команды для получения строк таблицы фактов, из которых формируются агрегаты для добавления в секцию.  
   
 ### <a name="code"></a>Код  

@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e9bdc0c104b212f3c26389c1792b6b617634a12a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714921"
 ---
 # <a name="natively-compiled-stored-procedures"></a>скомпилированные в собственном коде хранимые процедуры
@@ -45,7 +45,7 @@ ms.locfileid: "62714921"
   
 -   [Вызов хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным](calling-natively-compiled-stored-procedures-from-data-access-applications.md)  
   
-## <a name="see-also"></a>См. также:  
- [Таблицы, оптимизированные для памяти](memory-optimized-tables.md)  
+## <a name="see-also"></a>См. также  
+ [Оптимизированные для памяти таблицы](memory-optimized-tables.md)  
   
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9157db745b999711966f0019747ba1d61823569e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400915"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>Мониторинг активных запросов — Параллельное хранилище данных
@@ -22,7 +22,7 @@ ms.locfileid: "74400915"
 ## <a name="prerequisites"></a>Предварительные требования  
 Независимо от метода, используемого для наблюдения за активными запросами, имя входа должно иметь разрешения, описанные в разделе "использование всей консоли администрирования" раздела [предоставление разрешений на использование консоли администрирования](grant-permissions.md#grant-permissions-to-use-the-admin-console).  
   
-## <a name="PermsAdminConsole"></a>Мониторинг активных запросов  
+## <a name="monitor-active-queries"></a><a name="PermsAdminConsole"></a>Мониторинг активных запросов  
 Для наблюдения за активными запросами можно использовать как консоль администрирования, так и системные представления SQL Server PDW. Выполните приведенные далее инструкции.  
   
 ### <a name="to-monitor-active-queries-by-using-the-admin-console"></a>Наблюдение за активными запросами с помощью консоли администрирования  

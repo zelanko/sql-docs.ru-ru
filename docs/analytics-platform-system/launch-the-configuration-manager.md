@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401056"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Запуск Configuration Manager в системе аналитики платформы
@@ -24,7 +24,7 @@ ms.locfileid: "74401056"
 ### <a name="prerequisites"></a>Предварительные требования  
 Системная платформа аналитики**Configuration Manager** может запускаться только администратором домена устройства. Для запуска этого средства необходим пароль администратора домена устройства. Сведения о создании дополнительных администраторов APS см. в статье [Создание администратора домена aps &#40;тд&#41;](create-an-aps-domain-administrator-aps.md).  
   
-## <a name="Accessing"></a>Запуск средства Configuration Manager  
+## <a name="launch-the-configuration-manager-tool"></a><a name="Accessing"></a>Запуск средства Configuration Manager  
 Чтобы запустить Configuration Manager, используйте удаленный рабочий стол для подключения к узлу элемента управления PDW (**_PDW_region_-CTL01**) и войдите в систему как _appliance_domain_**\ администратор**. При запуске программы **Configuration Manager** используйте команду **Запуск от имени администратора** , чтобы убедиться в том, что учетные данные администратора используются.  
   
 #### <a name="to-launch-from-a-browser-window"></a>Запуск из окна браузера  

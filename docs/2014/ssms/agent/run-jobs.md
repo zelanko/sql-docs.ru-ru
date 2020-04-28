@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22d1b8074fb40cdd7eda3a5f57704b893242cfcd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62666831"
 ---
 # <a name="run-jobs"></a>Запуск заданий
-  Для управления заданиями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] либо управляющие объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Для управления заданиями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] либо управляющие объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62666831"
 |Описывает остановку задания агента [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Остановка задания](stop-a-job.md)|  
 |Описывает включение и отключение задания агента [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Disable or Enable a Job](disable-or-enable-a-job.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [dbo. sysdownloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
   
   

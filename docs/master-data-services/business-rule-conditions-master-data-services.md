@@ -11,10 +11,10 @@ ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ab2b632307f966a0f8e37d290c3cc12d52cda064
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728717"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>Условия бизнес-правил (службы Master Data Services)
@@ -28,7 +28,7 @@ ms.locfileid: "73728717"
   
 ## <a name="business-rule-conditions"></a>Условия бизнес-правил  
   
-|Имя условия|Description|  
+|Название условия|Описание|  
 |--------------------|-----------------|  
 |**равно**|Выбранный атрибут **равен** указанному атрибуту или указанному значению атрибута либо пуст.<br /><br /> Это условие допустимо для текстовых, числовых значений, дат и ссылок.|  
 |**не равно**|Выбранный атрибут **не равен** указанному атрибуту или указанному значению атрибута либо пуст.<br /><br /> Это условие допустимо для текстовых, числовых значений, дат и ссылок.|  
@@ -57,6 +57,6 @@ ms.locfileid: "73728717"
 ## <a name="see-also"></a>См. также:  
  [Действия бизнес-правил &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)   
  [Бизнес-правила &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Создание и публикация бизнес-правила &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+ [Создание и публикация бизнес-правила (службы Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   

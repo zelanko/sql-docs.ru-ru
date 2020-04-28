@@ -21,10 +21,10 @@ ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 7eb05640fbc702d5c9b01081d462e2c9f0204457
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844468"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (база данных SQL Azure)
@@ -33,9 +33,9 @@ ms.locfileid: "73844468"
 
   Содержит статистику для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] событий **подключения к** базе данных, предоставляя обзор успешных и неудачных попыток подключения к базе данных. Дополнительные сведения о событиях подключения см. в статье типы событий в [sys. event_log &#40;&#41;базы данных SQL Azure ](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Статистика|Тип|Description|  
+|Статистика|Тип|Описание|  
 |---------------|----------|-----------------|  
-|**database_name**|**имеет sysname**|Имя базы данных.|  
+|**database_name**|**sysname**|Имя базы данных.|  
 |**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Время всегда кратно 5 минутам. Пример:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Дата и время окончания интервала статистической обработки в формате UTC. **End_time** всегда находится в течение 5 минут позже, чем соответствующая **start_time** в той же строке.|  
 |**success_count**|**int**|Число успешных соединений.|  
@@ -101,6 +101,6 @@ WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';
 
 ## <a name="see-also"></a>См. также:
 
- [Устранение проблем с подключением к базе данных SQL Azure](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
+ [Устранение неполадок подключения к базе данных SQL Azure](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
   
   

@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f0abc089809e6b811f0ff64684bdaeed742ebcae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74190352"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
@@ -35,9 +35,9 @@ ms.locfileid: "74190352"
 > [!NOTE] 
 > Чтобы вызвать эту функцию ** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или **, используйте имя **sys. dm_pdw_nodes_os_wait_stats**.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar (60)**|Имя типа времени ожидания. Дополнительные сведения см. в подразделе [Типы случаев ожидания](#WaitTypes) ниже в данном разделе.|  
+|wait_type|**nvarchar(60)**|Имя типа ожидания. Дополнительные сведения см. в подразделе [Типы случаев ожидания](#WaitTypes) ниже в данном разделе.|  
 |waiting_tasks_count|**bigint**|Число ожиданий данного типа. Этот счетчик наращивается каждый раз при начале ожидания.|  
 |wait_time_ms|**bigint**|Общее время ожидания данного типа в миллисекундах. Это время включает в себя время signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Максимальное время ожидания данного типа.|  
@@ -49,7 +49,7 @@ ms.locfileid: "74190352"
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
-##  <a name="WaitTypes"></a>Типы ожиданий  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a>Типы ожиданий  
  **Ожиданий ресурсов** Ожидание ресурсов происходит, когда Рабочая роль запрашивает доступ к ресурсу, который недоступен из-за того, что ресурс используется другим исполнителем или пока недоступен. Примерами ожидания ресурсов являются блокировки, кратковременные блокировки, сетевые ожидания и ожидания дискового ввода-вывода. Ожидания блокировок и кратковременных блокировок представляют собой ожидания объектов синхронизации.  
   
 **Ожидания очередей**  
@@ -88,7 +88,7 @@ GO
   
  В следующей таблице перечислены типы ожиданий, с которыми могут сталкиваться задачи.  
 
-|type |Description| 
+|type |Описание| 
 |-------------------------- |--------------------------| 
 |ABR |Указано только в ознакомительных целях. Не поддерживается. Совместимость с будущими версиями не гарантируется.| | 
 |AM_INDBUILD_ALLOCATION |Только для внутреннего применения. <br />**Область применения**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] и более поздних версий.| 
@@ -216,7 +216,7 @@ GO
 |ENABLE_EMPTY_VERSIONING |Только для внутреннего применения. <br /> **Область применения**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] и более поздних версий.| 
 |ENABLE_VERSIONING |Происходит, когда SQL Server ожидает завершения всех транзакций обновления в этой базе данных перед объявлением базы данных, готовой к переходу в режим изоляции моментальных снимков. Это состояние используется, когда SQL Server включает изоляцию моментального снимка с помощью инструкции ALTER DATABASE.| 
 |ERROR_REPORTING_MANAGER |Имеет место в процессе синхронизации нескольких параллельных инициализаций журнала ошибок.| 
-|EXCHANGE; |Имеет место в процессе синхронизации в итераторе обмена обработчика запросов при параллельных запросах.| 
+|EXCHANGE |Имеет место в процессе синхронизации в итераторе обмена обработчика запросов при параллельных запросах.| 
 |EXECSYNC |Имеет место в процессе синхронизации в обработчике запросов в областях, не относящихся к итератору обмена, при параллельных запросах. Примерами таких областей являются битовые карты, большие двоичные объекты (LOB) и итератор подкачки. Это состояние ожидания может часто использоваться объектами LOB.| 
 |EXECUTION_PIPE_EVENT_INTERNAL |Имеет место при синхронизации между производителем и потребителем пакетного выполнения, переданных через контекст соединения.| 
 |EXTERNAL_RG_UPDATE |Только для внутреннего применения. <br /> **Область применения**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] и более поздних версий.| 
@@ -668,7 +668,7 @@ GO
 |PREEMPTIVE_OS_SETFILEVALIDDATA |Только для внутреннего применения.| 
 |PREEMPTIVE_OS_SETNAMEDSECURITYINFO |Только для внутреннего применения.| 
 |PREEMPTIVE_OS_SQLCLROPS |Только для внутреннего применения.| 
-|PREEMPTIVE_OS_SQMLAUNCH |Только для внутреннего применения. <br /> **Применимо к** [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] : [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]с до. |  
+|PREEMPTIVE_OS_SQMLAUNCH |Только для внутреннего применения. <br /> **Применимо к**: с [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] до [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
 |PREEMPTIVE_OS_VERIFYSIGNATURE |Только для внутреннего применения.| 
 |PREEMPTIVE_OS_VERIFYTRUST |Только для внутреннего применения. <br /> **Область применения**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] и более поздних версий.| 
 |PREEMPTIVE_OS_VSSOPS |Только для внутреннего применения.| 
@@ -935,7 +935,7 @@ GO
 |VIA_ACCEPT |Имеет место при завершении соединения с поставщиком VIA во время запуска.| 
 |VIEW_DEFINITION_MUTEX |Имеет место в процессе синхронизации доступа к кэшированным определениям представлений.| 
 |WAIT_FOR_RESULTS |Имеет место при ожидании срабатывания триггера уведомления запроса.| 
-|WAIT_ON_SYNC_STATISTICS_REFRESH |Имеет место при ожидании завершения синхронного обновления статистики до того, как компиляция и выполнение запроса могут быть возобновлены.<br /> Область **применения**: начиная с[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
+|WAIT_ON_SYNC_STATISTICS_REFRESH |Имеет место при ожидании завершения синхронного обновления статистики до того, как компиляция и выполнение запроса могут быть возобновлены.<br /> **Область применения**: Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |Только для внутреннего применения. <br /> **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |Только для внутреннего применения. <br /> **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.| 
 |WAIT_XLOGREAD_SIGNAL |Только для внутреннего применения. <br /> **Область применения**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и более поздних версий.| 
@@ -1025,7 +1025,7 @@ GO
   
  Сведения о матрице совместимости блокировок см. в разделе [sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
     
  [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys. dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   

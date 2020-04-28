@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: a5ebe1ee911f7500505cdbd1962d28c35461a635
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399463"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Удаление обновлений Майкрософт в системе аналитики платформы
@@ -28,7 +28,7 @@ ms.locfileid: "74399463"
   
 -   Сведения об учетной записи администратора домена <em> <Fabric Domain> </em>структуры для входа на узел **-HST01** .  
   
-## <a name="HowToUninstallMSFT"></a>Удаление обновлений Майкрософт  
+## <a name="to-uninstall-microsoft-updates"></a><a name="HowToUninstallMSFT"></a>Удаление обновлений Майкрософт  
   
 1.  Войдите на <em> <Fabric Domain> </em>узел **-HST01** в качестве администратора домена структуры.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "74399463"
     ```  
   
 ## <a name="next-steps"></a>Дальнейшие действия
-Дополнительные сведения см. в разделе:
+Дополнительные сведения можно найти в разделе
 - [Загрузите и примените обновления Майкрософт &#40;&#41;платформы аналитики](download-and-apply-microsoft-updates.md) 
 - [Применить исправления системы аналитики к системе &#40;Analytics Platform&#41;](apply-analytics-platform-system-hotfixes.md)  
 - [Удаление исправлений системы аналитики &#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  

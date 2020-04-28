@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056543"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Настройка параметров для Помощник по миграции данных
@@ -152,6 +152,6 @@ maxDataReaderDegreeOfParallelism="8"/>
 </workflowSettings>
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Загрузка Помощник по миграции данных](https://www.microsoft.com/download/details.aspx?id=53595)

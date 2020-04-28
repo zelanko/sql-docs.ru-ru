@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782655"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
@@ -46,7 +46,7 @@ RETCODE bcp_gettypename (
  *полями*  
  Указывает, запрашивает ли токен тип max.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  Строка, содержащая имя типа SQL, соответствующего типу BCP. Если указывается недопустимый тип BCP, возвращается пустая строка.  
   
 ## <a name="remarks"></a>Remarks  
@@ -56,8 +56,8 @@ RETCODE bcp_gettypename (
   
 |Имя типа BCP|MaxType|Выходные данные|  
 |-------------------|-------------|------------|  
-|**SQLDECIMAL**|Можно использовать|**Decimal**|  
-|**SQLNUMERIC**|Можно использовать|**ISNUMERIC**|  
+|**SQLDECIMAL**|Можно использовать|**decimal**|  
+|**SQLNUMERIC**|Можно использовать|**numeric**|  
 |**SQLINT1**|Можно использовать|**tinyint**|  
 |**SQLINT2**|Можно использовать|**smallint**|  
 |**SQLINT4**|Можно использовать|**int**|  
@@ -66,31 +66,31 @@ RETCODE bcp_gettypename (
 |**SQLDATETIME**|Можно использовать|**datetime**|  
 |**SQLBITN**|Можно использовать|**bit-null**|  
 |**SQLBIT**|Можно использовать|**bit**|  
-|**SQLBIGCHAR**|нет|**типа**|  
-|**SQLCHARACTER**|нет|**типа**|  
-|**SQLBIGVARCHAR**|нет|**varchar**|  
-|**SQLVARCHAR**|нет|**varchar**|  
-|**SQLTEXT**|Можно использовать|**полнотекстовым**|  
-|**SQLBIGBINARY**|нет|**binary**|  
-|**SQLBINARY**|нет|**Двоичный**|  
-|**SQLBIGVARBINARY**|нет|**Varbinary**|  
-|**SQLVARBINARY**|нет|**Varbinary**|  
-|**SQLIMAGE**|Можно использовать|**Изображение**|  
+|**SQLBIGCHAR**|Нет|**char**|  
+|**SQLCHARACTER**|Нет|**char**|  
+|**SQLBIGVARCHAR**|Нет|**varchar**|  
+|**SQLVARCHAR**|Нет|**varchar**|  
+|**SQLTEXT**|Можно использовать|**text**|  
+|**SQLBIGBINARY**|Нет|**binary**|  
+|**SQLBINARY**|Нет|**Двоичный**|  
+|**SQLBIGVARBINARY**|Нет|**Varbinary**|  
+|**SQLVARBINARY**|Нет|**Varbinary**|  
+|**SQLIMAGE**|Можно использовать|**ОС контейнера**|  
 |**SQLINTN**|Можно использовать|**int-null**|  
 |**SQLDATETIMN**|Можно использовать|**datetime-null**|  
 |**SQLMONEYN**|Можно использовать|**money-null**|  
 |**SQLFLTN**|Можно использовать|**float-null**|  
 |**склаопсум**|Можно использовать|**Функции**|  
 |**склаопавг**|Можно использовать|**Обращения**|  
-|**склаопкнт**|Можно использовать|**Расчета**|  
+|**склаопкнт**|Можно использовать|**Count**|  
 |**склаопмин**|Можно использовать|**Минимум**|  
 |**склаопмакс**|Можно использовать|**Максимальной**|  
 |**SQLDATETIM4**|Можно использовать|**smalldatetime**|  
 |**SQLMONEY4**|Можно использовать|**Smallmoney**|  
 |**SQLFLT4**|Можно использовать|**Real**|  
-|**SQLUNIQUEID**|Можно использовать|**UNIQUEIDENTIFIER**|  
-|**SQLNCHAR**|нет|**Nchar**|  
-|**SQLNVARCHAR**|нет|**Nvarchar**|  
+|**SQLUNIQUEID**|Можно использовать|**uniqueidentifier**|  
+|**SQLNCHAR**|Нет|**Nchar**|  
+|**SQLNVARCHAR**|Нет|**Nvarchar**|  
 |**SQLNTEXT**|Можно использовать|**Типы**|  
 |**SQLVARIANT**|Можно использовать|**sql_variant**|  
 |**SQLINT8**|Можно использовать|**Bigint**|  

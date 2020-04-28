@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 7aa82ee5c5a617c3564ac9246f2e42bebcab220e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844356"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>Хранимые процедуры хранилища данных SQL
@@ -24,7 +24,7 @@ ms.locfileid: "73844356"
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]предоставляет встроенные процедуры, которые можно использовать для выполнения операций, связанных с ролями базы данных. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]включает следующие системные процедуры:  
   
-##  <a name="AggregateFunctions"></a>[Sp_datatype_info_90 хранилища данных SQL &#40;&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
+##  <a name="sp_datatype_info_90-40sql-data-warehouse41"></a><a name="AggregateFunctions"></a>[Sp_datatype_info_90 хранилища данных SQL &#40;&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
   
  [sp_pdw_add_network_credentials хранилища данных SQL &#40;&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
   
@@ -43,6 +43,6 @@ ms.locfileid: "73844356"
   
 ## <a name="see-also"></a>См. также:  
  [Системные хранимые функции &#40;&#41;Transact-SQL](~/relational-databases/system-functions/system-functions-category-transact-sql.md)   
- [Типы данных &#40;&#41;Transact-SQL](../../t-sql/data-types/data-types-transact-sql.md)  
+ [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
   
   

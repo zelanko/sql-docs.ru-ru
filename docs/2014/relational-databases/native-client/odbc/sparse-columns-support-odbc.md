@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6e1583dad869860bdd2f555a354850c7f7a1198
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62691960"
 ---
 # <a name="sparse-columns-support-odbc"></a>Поддержка разреженных столбцов (ODBC)
@@ -41,7 +41,7 @@ ms.locfileid: "62691960"
   
 -   [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)  
   
-## <a name="see-also"></a>См. также:  
- [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)  
+## <a name="see-also"></a>См. также  
+ [SQL Server Native Client (ODBC)](sql-server-native-client-odbc.md)  
   
   

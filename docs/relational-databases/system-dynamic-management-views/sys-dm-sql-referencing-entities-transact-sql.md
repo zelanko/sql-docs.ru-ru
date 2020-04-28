@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bd09706d1b3de9ebe4a5b333f79be9644c433e7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982343"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
@@ -74,13 +74,13 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|referencing_schema_name|**имеет sysname**|Схема, которой принадлежит ссылающаяся сущность. Допускает значение NULL.<br /><br /> Значение NULL для триггеров DDL уровня базы данных или сервера.|  
-|referencing_entity_name|**имеет sysname**|Имя ссылающейся сущности. Не допускает значение NULL.|  
+|referencing_schema_name|**sysname**|Схема, которой принадлежит ссылающаяся сущность. Допускает значение NULL.<br /><br /> Значение NULL для триггеров DDL уровня базы данных или сервера.|  
+|referencing_entity_name|**sysname**|Имя ссылающейся сущности. Не допускает значение NULL.|  
 |referencing_id|**int**|Идентификатор ссылающейся сущности. Не допускает значение NULL.|  
 |referencing_class|**tinyint**|Класс ссылающейся сущности. Не допускает значение NULL.<br /><br /> 1 = объект<br /><br /> 12 = триггер DDL уровня базы данных<br /><br /> 13 = триггер DDL уровня сервера|  
-|referencing_class_desc|**nvarchar (60)**|Описание класса ссылающейся сущности.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
+|referencing_class_desc|**nvarchar(60)**|Описание класса ссылающейся сущности.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|Указывает разрешение идентификатора упоминаемой сущности, полученного во время выполнения (так как он зависит от схемы вызывающего объекта).<br /><br /> Значение 1 означает, что ссылающаяся сущность может ссылаться на данный объект. При этом разрешение упоминаемой сущности зависит от вызывающего объекта и не может быть определено. Данная ситуация возможна только при вызове в инструкции EXECUTE не связанной со схемой ссылки на хранимую процедуру, расширенную хранимую процедуру или определяемую пользователем функцию.<br /><br /> Значение 0 означает, что упоминаемая сущность не зависит от вызывающего объекта.|  
   
 ## <a name="exceptions"></a>Исключения  
@@ -103,20 +103,20 @@ sys.dm_sql_referencing_entities (
 |-----------------|------------------------|-----------------------|  
 |Таблица|Да*|Да|  
 |Представление|Да|Да|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]хранимая процедура * *|Да|Да|  
-|Хранимая процедура CLR|нет|Да|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]определяемая пользователем функция|Да|Да|  
-|Определяемая пользователем функция CLR|нет|Да|  
-|Триггер CLR (DML и DDL)|нет|нет|  
-|Триггер DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|нет|  
-|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня базы данных|Да|нет|  
-|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня сервера|Да|нет|  
-|Расширенные хранимые процедуры|нет|Да|  
-|Очередь|нет|Да|  
-|Синоним|нет|Да|  
-|Тип (псевдоним и определяемый пользователем тип данных CLR)|нет|Да|  
-|Коллекция схем XML|нет|Да|  
-|Функция секционирования|нет|Да|  
+|Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Да|Да|  
+|Хранимая процедура CLR|Нет|Да|  
+|Определяемая пользователем функция [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Да|  
+|Определяемая пользователем функция CLR|Нет|Да|  
+|Триггер CLR (DML и DDL)|Нет|Нет|  
+|Триггер DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Нет|  
+|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня базы данных|Да|Нет|  
+|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня сервера|Да|Нет|  
+|Расширенные хранимые процедуры|Нет|Да|  
+|Очередь|Нет|Да|  
+|Синоним|Нет|Да|  
+|Тип (псевдоним и определяемый пользователем тип данных CLR)|Нет|Да|  
+|Коллекция схем XML|Нет|Да|  
+|Функция секционирования|Нет|Да|  
   
  \*Таблица обрабатывается как ссылающаяся сущность, только если она ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] модуль, определяемый пользователем тип или коллекцию схем XML в определении вычисляемого СТОЛБЦА, проверочного ограничения или ограничения по умолчанию.  
   
@@ -124,13 +124,13 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="permissions"></a>Разрешения  
   
-### <a name="includesskatmaiincludessskatmai-mdmd---includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+### <a name="sskatmai---sssql11"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
 -   Необходимо разрешение CONTROL для указанного объекта. Если упоминаемая сущность является функцией секционирования, необходимо разрешение CONTROL на базу данных.  
   
 -   Необходимо разрешение SELECT на представление sys. dm_sql_referencing_entities. Разрешение SELECT по умолчанию предоставляется роли public.  
   
-### <a name="includesssql14includessssql14-mdmd---includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+### <a name="sssql14---sscurrent"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 -   Не требуются какие-либо разрешения на указанный объект. Частичные результаты могут быть возвращены, если пользователь имеет разрешение VIEW DEFINITION лишь на некоторые из указываемых сущностей.  
   
@@ -153,7 +153,7 @@ FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');
 GO  
 ```  
   
-### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>Б. Получение списка сущностей, ссылающихся на заданный тип  
+### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>Б) Получение списка сущностей, ссылающихся на заданный тип  
  В следующем примере возвращается список сущностей, ссылающихся на псевдоним типа `dbo.Flag`. Результирующий набор показывает, что этот тип используется двумя хранимыми процедурами. `dbo.Flag` Тип также используется в определении нескольких столбцов в `HumanResources.Employee` таблице. Однако, поскольку тип не находится в определении вычисляемого столбца, ограничения CHECK или ограничения по УМОЛЧАНИю в таблице, для `HumanResources.Employee` таблицы не возвращаются никакие строки.  
   
 ```sql  
@@ -175,7 +175,7 @@ GO
  ``` 
  
 ## <a name="see-also"></a>См. также:  
- [sys. dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
- [sys. sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
+ [sys.dm_sql_referenced_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
+ [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
   

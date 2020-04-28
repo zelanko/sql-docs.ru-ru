@@ -1,5 +1,5 @@
 ---
-title: Transactions
+title: Транзакции
 ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7ce5d8456d1857c3e62239deadf217e5d9841caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728900"
 ---
 # <a name="transactions-master-data-services"></a>Транзакции (службы Master Data Services)
@@ -54,13 +54,13 @@ ms.locfileid: "73728900"
   
  Кроме того, для очистки журналов транзакций можно вызвать следующие хранимые процедуры.  
   
-|Хранимая процедура|Description|  
+|Хранимая процедура|Описание|  
 |----------------------|-----------------|  
 |mdm.udpTransactionsCleanup|Очищает журнал транзакций|  
 |mdm.udpValidationsCleanup|Очищает журнал проверки|  
 |mdm.udpEntityStagingBatchTableCleanup|Очищает промежуточную таблицу|  
   
- **Образец**  
+ **Пример**  
   
 ```  
 DECLARE @CleanupOlderThanDate date = '2014-11-11',  
@@ -90,15 +90,15 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Отмена действия путем обращения транзакции (только администраторы).|[Отмена Master Data Services &#40;транзакций&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)|  
+|Отмена действия путем обращения транзакции (только администраторы).|[Отмена транзакции (службы Master Data Services)](../master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- Публикация блога [Transactions, Validation Issue and Staging table cleanup](https://go.microsoft.com/fwlink/p/?LinkId=615374) (Транзакции, проблема проверки и очистка промежуточной таблицы) на портале msdn.com.  
+ Публикация блога [Transactions, Validation Issue and Staging table cleanup](https://go.microsoft.com/fwlink/p/?LinkId=615374)(Транзакции, проблема проверки и очистка промежуточной таблицы) на портале msdn.com.  
   
 ## <a name="related-content"></a>См. также  
   
--   [Администраторы &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
+-   [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md)  
   
--   [Заметки &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
+-   [Заметки (службы Master Data Services)](../master-data-services/annotations-master-data-services.md)  
   
   

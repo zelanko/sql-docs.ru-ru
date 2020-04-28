@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5cbed66f53189668518e04848002ae69adb8c614
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400920"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>Физические компоненты устройства — системная платформа аналитики
@@ -21,7 +21,7 @@ ms.locfileid: "74400920"
   
 <!-- MISSING LINKS See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  -->  
   
-## <a name="diagrams"></a>Схемы компонентов  
+## <a name="component-diagrams"></a><a name="diagrams"></a>Схемы компонентов  
 Здесь отображаются имена физических компонентов и их расположение в первой стойке 6-расчетного устройства узла.  
   
 ![Имена компонентов региона PDW — HP](./media/pdw-and-appliance-fabric-physical-components/APS_HW_ComponentNames-HP.png "APS_HW_ComponentNames HP")  
@@ -34,7 +34,7 @@ ms.locfileid: "74400920"
   
 ![Имена компонентов PDW](./media/pdw-and-appliance-fabric-physical-components/APS_HW_Names.png "APS_HW_Names")  
   
-## <a name="pdw"></a>Компоненты PDW  
+## <a name="pdw-components"></a><a name="pdw"></a>Компоненты PDW  
 Виртуальные машины PDW входят в состав области PDW.  
   
 *PDW_region*CTL01  
@@ -46,7 +46,7 @@ ms.locfileid: "74400920"
 *PDW_region*-CMP01 с помощью *PDW_Region*-CMP06  
 Виртуальная машина, на которой выполняется узел вычислений. На этой 6-кластерной диаграмме узлов узлы, HSA01 через HSA06, запускают виртуальные машины с виртуальными машинами CMP01 через CMP06 соответственно.  
   
-## <a name="fabric"></a>Компоненты структуры устройств  
+## <a name="appliance-fabric-components"></a><a name="fabric"></a>Компоненты структуры устройств  
 Эти компоненты являются частью структуры устройства.  
   
 ### <a name="virtual-machines"></a>Виртуальные машины  

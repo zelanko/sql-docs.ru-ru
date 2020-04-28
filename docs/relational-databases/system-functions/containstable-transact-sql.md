@@ -34,10 +34,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d1e4af8a90a4f83d8200f02910f3e445b49fca91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983211"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
@@ -113,16 +113,16 @@ CONTAINSTABLE
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Таблица*  
+ *table*  
  Имя таблицы, у которой есть полнотекстовый индекс. *Таблица* может представлять собой одно-, два, три или четыре части имени объекта базы данных. При выполнении запроса к представлению задействуется только базовая таблица с полнотекстовым индексированием.  
   
  *Таблица* не может указывать имя сервера и не может использоваться в запросах к связанным серверам.  
   
  *column_name*  
- Имя одного или нескольких столбцов с полнотекстовым индексом для поиска. Столбцы должны иметь тип **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** или **varbinary(max)**.  
+ Имя одного или нескольких столбцов с полнотекстовым индексом для поиска. Столбцы должны иметь тип **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** или **varbinary(max)** .  
   
  *column_list*  
- Указывает, что можно задать несколько столбцов, разделенных запятыми. *column_list* должны быть заключены в круглые скобки. Если задан аргумент *language_term*, то у всех столбцов в *column_list* должен быть одинаковый язык.  
+ Указывает, что можно задать несколько столбцов, разделенных запятыми. *column_list* должен быть заключен в скобки. Если задан аргумент *language_term*, то у всех столбцов в *column_list* должен быть одинаковый язык.  
   
  \*  
  Указывает, что все столбцы с полнотекстовым индексом в *таблице* должны использоваться для поиска заданного условия поиска. Если не определен аргумент *language_term*, язык для всех столбцов таблицы должен быть одинаковым.  
@@ -132,9 +132,9 @@ CONTAINSTABLE
   
  Если в одном столбце хранятся документы на различных языках в виде больших двоичных объектов, то идентификатор локали заданного документа определяет, какой язык должен использоваться для индексирования его содержимого. Указание аргумента *LANGUAGE**language_term* при запросе к такому столбцу может повысить вероятность хорошего соответствия.  
   
- При указании в виде строки *language_term* соответствует значению столбца **Alias** в представлении совместимости [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) .  Строка должна быть заключена в одинарные кавычки, как в "*language_term*". Если значением аргумента *language_term* является целое число, оно представляет собой действительный код языка. Если значение *language_term* задано в шестнадцатеричной форме, то после символов "0x" должна следовать шестнадцатеричная запись кода языка. Шестнадцатеричное значение не может иметь более восьми знаков, включая начальные нули.  
+ При указании в виде строки *language_term* соответствует значению столбца **Alias** в представлении совместимости [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) .  Строка должна быть заключена в одиночные кавычки: '*language_term*'. Если значением аргумента *language_term* является целое число, оно представляет собой действительный код языка. Если значение *language_term* задано в шестнадцатеричной форме, то после символов "0x" должна следовать шестнадцатеричная запись кода языка. Шестнадцатеричное значение не может иметь более восьми знаков, включая начальные нули.  
   
- Если значение указано в двухбайтовой кодировке (DBCS), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразует его в Юникод.  
+ Если значение находится в формате двухбайтовой кодировки (DBCS), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразует его в Юникод.  
   
  Если указанный язык является недопустимым или связанные с ним ресурсы не установлены, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке. Для использования нейтральных языковых ресурсов следует указать 0x0 в качестве значения аргумента *language_term*.  
   
@@ -190,7 +190,7 @@ SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green') ORDER BY RANK DESC;
 SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green or Black') ORDER BY RANK DESC;  
 ```  
   
-### <a name="b-returning-rank-values"></a>Б. Получение значений ранга  
+### <a name="b-returning-rank-values"></a>Б) Получение значений ранга  
  В следующем примере выполняется поиск всех названий продуктов, содержащих слова «frame», «wheel» или «tire», при этом для каждого слова задается определенный вес. Для каждой строки набора результатов, удовлетворяющей условию поиска, отображается относительная «близость» к совпадению (ранг). Кроме того, строки с более высоким рангом возвращаются первыми.  
   
 ```  
@@ -283,10 +283,10 @@ GO
 ## <a name="see-also"></a>См. также:  
  [Ограничение результатов поиска по РАНГу](../../relational-databases/search/limit-search-results-with-rank.md)   
  [Запрос с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md)   
- [Создание запросов полнотекстового поиска &#40;визуальных инструментов для баз данных&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [Создание запросов полнотекстового поиска (визуальные инструменты для баз данных)](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [СОДЕРЖИТ &#40;&#41;Transact-SQL](../../t-sql/queries/contains-transact-sql.md)   
  [Запрос с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [ИЗ &#40;&#41;Transact-SQL](../../t-sql/queries/from-transact-sql.md)  
+ [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)  
   
   

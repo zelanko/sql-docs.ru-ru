@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62679825"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Выборочный XML-индекс (SXI)
@@ -32,7 +32,7 @@ ms.locfileid: "62679825"
   
  Функция селективного XML-индекса также поддерживает вторичные селективные XML-индексы для узлов, которые были индексированы селективным XML-индексом. Эти вторичные селективные индексы являются эффективными и еще более повышают производительность запросов.  
   
-##  <a name="benefits"></a> Преимущества селективных XML-индексов  
+##  <a name="benefits-of-selective-xml-indexes"></a><a name="benefits"></a> Преимущества селективных XML-индексов  
  Селективные XML-индексы дают следующие преимущества:  
   
 1.  Значительное улучшение производительности запросов к типу данных XML для типичных нагрузок по запросам.  
@@ -45,7 +45,7 @@ ms.locfileid: "62679825"
   
 
   
-##  <a name="compare"></a> Селективные XML-индексы и первичные XML-индексы  
+##  <a name="selective-xml-indexes-and-primary-xml-indexes"></a><a name="compare"></a> Селективные XML-индексы и первичные XML-индексы  
   
 > [!IMPORTANT]  
 >  Создание селективного XML-индекса вместо обычного XML-индекса в большинстве случаев приводит к повышению производительности и более эффективному использованию хранилища.  
@@ -58,7 +58,7 @@ ms.locfileid: "62679825"
   
 
   
-##  <a name="example"></a> Простой пример селективного XML-индекса  
+##  <a name="simple-example-of-a-selective-xml-index"></a><a name="example"></a> Простой пример селективного XML-индекса  
  Рассмотрим следующий фрагмент XML как XML-документ в таблице из приблизительно 500 000 строк.  
   
 ```xml  
@@ -103,7 +103,7 @@ FOR
   
 ## <a name="supported-features-prerequisites-and-limitations"></a>Поддерживаемые функции, предварительные требования и ограничения  
   
-###  <a name="features"></a> Поддерживаемые функции XML  
+###  <a name="supported-xml-features"></a><a name="features"></a> Поддерживаемые функции XML  
  Селективные XML-индексы поддерживают XQuery, поддерживаемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в методах exist(), value() и nodes().  
   
 -   Для методов exist(), value() и nodes() селективные XML-индексы содержат достаточно данных для преобразования всего выражения.  
@@ -116,7 +116,7 @@ FOR
   
 
   
-###  <a name="unsupported"></a> Неподдерживаемые функции XML  
+###  <a name="unsupported-xml-features"></a><a name="unsupported"></a> Неподдерживаемые функции XML  
  Селективные XML-индексы не поддерживают следующие функции, поддерживаемые в реализации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML:  
   
 -   Индексирование узлов со сложными типами XS: типами объединений, типами последовательностей и типами списков.  
@@ -133,7 +133,7 @@ FOR
   
 
   
-###  <a name="prereq"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="prereq"></a> Предварительные требования  
  Следующие предварительные условия должны существовать до создания селективного XML-индекса для XML-столбца в пользовательской таблице.  
   
 -   Кластеризованный индекс должен существовать для первичного ключа таблицы пользователя.  
@@ -144,7 +144,7 @@ FOR
   
 
   
-###  <a name="limits"></a> Ограничения  
+###  <a name="limitations"></a><a name="limits"></a> Ограничения  
  **Общие требования и ограничения**  
   
 -   Каждый селективный XML-индекс может быть создан только для одного XML-столбца.  
@@ -197,7 +197,7 @@ FOR
   
 
   
-##  <a name="reltasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Связанные задачи  
   
 |||  
 |-|-|  

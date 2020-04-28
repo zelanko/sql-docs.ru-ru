@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399764"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Удаление исправлений для системы аналитики платформы 
@@ -30,7 +30,7 @@ ms.locfileid: "74399764"
   
 -   Номер статьи базы знаний для удаляемого исправления.  
   
-## <a name="HowToUninstallPDW"></a>Удаление исправления SQL Server PDW  
+## <a name="to-uninstall-a-sql-server-pdw-hotfix"></a><a name="HowToUninstallPDW"></a>Удаление исправления SQL Server PDW  
   
 1.  Войдите в <em><appliance_domain узел></em> **-HST01** в качестве администратора домена структуры.  
   

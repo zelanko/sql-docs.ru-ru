@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62726120"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Модули персонализации служб Analysis Services
@@ -41,8 +41,7 @@ ms.locfileid: "62726120"
  При запуске службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] загружает необходимые сборки и определяет, какие классы имеют <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> настраиваемый атрибут.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] определяет специальные атрибуты как способ описания программного кода и влияния на поведение времени выполнения. Дополнительные сведения см. в разделе «[Общие сведения об атрибутах](https://go.microsoft.com/fwlink/?LinkId=82929)» в руководстве [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] разработчика на сайте MSDN.  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] определяет специальные атрибуты как способ описания программного кода и влияния на поведение времени выполнения. Дополнительные сведения см. в разделе «[Общие сведения об атрибутах](https://go.microsoft.com/fwlink/?LinkId=82929)» в руководстве [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] разработчика на сайте MSDN.  
   
  Для всех классов с <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> пользовательским атрибутом [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] вызывает конструкторы по умолчанию. Вызов всех конструкторов при запуске представляет собой удобный момент для построения новых объектов независимо от действий пользователя.  
   
@@ -79,14 +78,11 @@ ms.locfileid: "62726120"
   
  **Свойства**  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A> — строковое значение, представляющее собой идентификатор сеанса текущего соединения (только для чтения).  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A> — строковое значение, представляющее собой идентификатор сеанса текущего соединения (только для чтения).  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture%2A> — ссылка на культуру заказчика, связанная с текущим сеансом (только для чтения).  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture%2A> — ссылка на культуру заказчика, связанная с текущим сеансом (только для чтения).  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User%2A> — ссылка на интерфейс идентификации, представляющий текущего пользователя (только для чтения).  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User%2A> — ссылка на интерфейс идентификации, представляющий текущего пользователя (только для чтения).  
   
  **События**  
   
@@ -97,22 +93,18 @@ ms.locfileid: "62726120"
 #### <a name="new-properties-in-the-context-class"></a>Новые свойства в классе Context  
  У класса <xref:Microsoft.AnalysisServices.AdomdServer.Context> появились два новых свойства:  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context.Server%2A> — ссылка на новый объект сервера (только для чтения);  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Context.Server%2A> — ссылка на новый объект сервера (только для чтения);  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection%2A> — ссылка на новый объект <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection> (только для чтения).  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection%2A> — ссылка на новый объект <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection> (только для чтения).  
   
 #### <a name="new-server-class"></a>Новый класс Server  
  Новый класс <xref:Microsoft.AnalysisServices.AdomdServer.Server> содержит несколько модулей персонализации, доступ к которым предоставляется через свойства и события.  
   
  **Свойства**  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A> — строка, представляющая собой имя сервера (только для чтения).  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A> — строка, представляющая собой имя сервера (только для чтения).  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server.Culture%2A> — ссылка на глобальную культуру, связанную с сервером.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Culture%2A> — ссылка на глобальную культуру, связанную с сервером.  
   
  **События**  
   
@@ -123,13 +115,13 @@ ms.locfileid: "62726120"
 #### <a name="adomdcommand-class"></a>Класс AdomdCommand  
  Класс <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> теперь поддерживает следующие команды многомерных выражений:  
   
--   [Инструкция CREATE MEMBER &#40;&#41;многомерных выражений](/sql/mdx/mdx-data-definition-create-member)  
+-   [Инструкция CREATE MEMBER (многомерные выражения)](/sql/mdx/mdx-data-definition-create-member)  
   
 -   [Инструкция обновления элемента &#40;многомерных выражений&#41;](/sql/mdx/mdx-data-definition-update-member)  
   
 -   [Инструкция DROP MEMBER &#40;&#41;многомерных выражений](/sql/mdx/mdx-data-definition-drop-member)  
   
--   [Инструкция CREATE SET &#40;многомерных выражениях&#41;](/sql/mdx/mdx-data-definition-create-set)  
+-   [Инструкция CREATE SET (многомерные выражения)](/sql/mdx/mdx-data-definition-create-set)  
   
 -   [Инструкция DROP SET &#40;&#41;многомерных выражений](/sql/mdx/mdx-data-definition-drop-set)  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fc3ae8c7e11a3f5a4aa71e91463cbe80ab70c7e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62735636"
 ---
 # <a name="keepexisting-element-dta"></a>Элемент KeepExisting (DTA)
@@ -38,8 +38,7 @@ ms.locfileid: "62735636"
   
 |Характеристика|Description|  
 |--------------------|-----------------|  
-|**Тип данных и длина**|
-  `string`, ограничение длины определяется сервером.|  
+|**Тип данных и длина**|`string`, ограничение длины определяется сервером.|  
 |**Допустимые значения**|**NONE**<br /> Существующих структур нет.<br /><br /> **ALL**<br /> Все существующие структуры.<br /><br /> **ALIGNED**<br /> Все структуры, выровненные по секциям.<br /><br /> **CL_IDX**<br /> Все кластеризованные индексы по таблицам.<br /><br /> **IDX**<br /> Все кластеризованные и некластеризованные индексы по таблицам.<br /><br /> С этим элементом следует использовать только одно из данных значений.|  
 |**Значение по умолчанию**|Нет.|  
 |**Наличие**|Необязательный параметр. Может использоваться только один раз для каждого элемента `TuningOptions`.|  

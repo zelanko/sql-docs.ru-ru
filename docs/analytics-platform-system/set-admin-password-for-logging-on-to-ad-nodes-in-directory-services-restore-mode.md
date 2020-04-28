@@ -10,20 +10,20 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbbf42106602a25b03072a9c9abfb04f04d3c49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400334"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Настройка пароля администратора для входа на узлы AD в режиме восстановления служб каталогов (DSRM) — система платформы аналитики
 Режим восстановления служб каталогов (DSRM) — это режим загрузки для восстановления или восстановления домен Active Directory служб (AD DS). Он используется для входа на узлы AD устройств после сбоя AD DS или при необходимости восстановления AD DS. Пароль для DSRM был инициализирован во время настройки устройства на сайте поставщика оборудования и должен быть изменен администратором устройства. Система аналитики платформы имеет два AD DS (контроллеры домена); ** _appliance_domain_-AD01** и ** _appliance_domain_-AD02**. Для каждого узла AD устройства Active Directory измените пароль DSRM, выполнив следующие действия.  
   
-## <a name="HowToDSRM"></a>Сброс пароля администратора  
+## <a name="to-reset-the-administrator-password"></a><a name="HowToDSRM"></a>Сброс пароля администратора  
   
 1.  Откройте окно командной строки на узле AD устройства <strong> _appliance_domain_-AD_xx_</strong>виртуальной машине.  
   
-2.  В командной строке выполните следующую команду: `ntdsutil`.  
+2.  В командной строке введите `ntdsutil`.  
   
 3.  В командной строке **ntdsutil** введите `set dsrm password`.  
   

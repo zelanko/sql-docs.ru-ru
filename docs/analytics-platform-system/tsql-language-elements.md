@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 148dc3033fdcf0fe9b5e86f4e3efa69717c32dfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399837"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Элементы языка T-SQL для параллельного хранилища данных
@@ -27,58 +27,58 @@ ms.locfileid: "74399837"
 * [обсуждения](../t-sql/language-elements/comment-transact-sql.md)
 * [постоянным](../t-sql/data-types/constants-transact-sql.md)
 * [типы данных](../t-sql/data-types/data-types-transact-sql.md)
-* [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
+* [РАБОТАТЬ](../t-sql/language-elements/execute-transact-sql.md)
 * [выражения](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
-* [Решение для свойства IDENTITY](../t-sql/statements/create-table-transact-sql-identity-property.md)
-* [PRINT](../t-sql/language-elements/print-transact-sql.md)
-* [USE](../t-sql/language-elements/use-transact-sql.md)
+* [Временное решение свойства IDENTITY](../t-sql/statements/create-table-transact-sql-identity-property.md)
+* [ПЕЧАТАЛ](../t-sql/language-elements/print-transact-sql.md)
+* [ИСПОЛЬЗУЕТ](../t-sql/language-elements/use-transact-sql.md)
 
 ## <a name="batches-control-of-flow-and-variables"></a>Пакеты, управление потоком и переменные
 * [BEGIN...END](../t-sql/language-elements/begin-end-transact-sql.md)
-* [BREAK](../t-sql/language-elements/break-transact-sql.md)
-* [DECLARE @local_variable](../t-sql/language-elements/declare-local-variable-transact-sql.md)
-* [IF...ELSE](../t-sql/language-elements/if-else-transact-sql.md)
+* [РАЗБИЕНИ](../t-sql/language-elements/break-transact-sql.md)
+* [ДЕКЛАРИРОВАТЬ@local_variable](../t-sql/language-elements/declare-local-variable-transact-sql.md)
+* [Если... Кроме](../t-sql/language-elements/if-else-transact-sql.md)
 * [RAISERROR](../t-sql/language-elements/raiserror-transact-sql.md)
 * [SET@local_variable](../t-sql/language-elements/set-local-variable-transact-sql.md)
-* [THROW](../t-sql/language-elements/throw-transact-sql.md)
-* [TRY...CATCH](../t-sql/language-elements/try-catch-transact-sql.md)
-* [WHILE](../t-sql/language-elements/while-transact-sql.md)
+* [ДАЧЕ](../t-sql/language-elements/throw-transact-sql.md)
+* [Попробуйте... CATCH](../t-sql/language-elements/try-catch-transact-sql.md)
+* [При](../t-sql/language-elements/while-transact-sql.md)
 
 ## <a name="operators"></a>Операторы
-* [+ (Добавить)](../t-sql/language-elements/add-transact-sql.md)
+* [+ (сложение)](../t-sql/language-elements/add-transact-sql.md)
 * [+ (Объединение строк)](../t-sql/language-elements/string-concatenation-transact-sql.md)
 * [-(Отрицательное значение)](../t-sql/language-elements/unary-operators-negative.md)
-* [-(Вычитание)](../t-sql/language-elements/subtract-transact-sql.md)
-* [* (Умножение)](../t-sql/language-elements/multiply-transact-sql.md)
-* [/(Деление)](../t-sql/language-elements/divide-transact-sql.md)
-* [Остаток от деления](../t-sql/language-elements/modulo-transact-sql.md)
+* [- (вычитание)](../t-sql/language-elements/subtract-transact-sql.md)
+* [* (умножение)](../t-sql/language-elements/multiply-transact-sql.md)
+* [/ (Деление)](../t-sql/language-elements/divide-transact-sql.md)
+* [Модуля](../t-sql/language-elements/modulo-transact-sql.md)
 
 ## <a name="wildcard-characters-to-match"></a>Подстановочные знаки для сопоставления
 * [= (равно)](../t-sql/language-elements/equals-transact-sql.md)
 * [> (больше)](../t-sql/language-elements/greater-than-transact-sql.md)
 * [< (меньше)](../t-sql/language-elements/less-than-transact-sql.md)
-* [>= (отлично от или равно)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
+* [>= (больше или равно)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
 * [<= (меньше или равно)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<>  (не равно)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
 * [\!= (Не равно)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
-* [AND](../t-sql/language-elements/and-transact-sql.md)
+* [ПЕРЕТАСКИВАНИ](../t-sql/language-elements/and-transact-sql.md)
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
-* [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
-* [IN](../t-sql/language-elements/in-transact-sql.md)
+* [СУЩЕСТВУЮЩЕМ](../t-sql/language-elements/exists-transact-sql.md)
+* [ОКНЕ](../t-sql/language-elements/in-transact-sql.md)
 * [Нет](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
-* [NOT](../t-sql/language-elements/not-transact-sql.md)
-* [OR](../t-sql/language-elements/or-transact-sql.md)
+* [НЕДОСТАТОЧНО](../t-sql/language-elements/not-transact-sql.md)
+* [НИ](../t-sql/language-elements/or-transact-sql.md)
 
-### <a name="bitwise-operators"></a>Битовые операторы
-* [& (побитовое и)](../t-sql/language-elements/bitwise-and-transact-sql.md)
+### <a name="bitwise-operators"></a>Побитовые операторы
+* [& (побитовое И)](../t-sql/language-elements/bitwise-and-transact-sql.md)
 * [| (Побитовый оператор ИЛИ)](../t-sql/language-elements/bitwise-or-transact-sql.md)
 * [^ (Побитовое исключающее или)](../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)
 * [~ (побитовое НЕ)](../t-sql/language-elements/bitwise-not-transact-sql.md)
-* [^ = (Побитовое исключающее или равно)](../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)
-* [| = (Побитовое или равно)](../t-sql/language-elements/bitwise-or-equals-transact-sql.md)
-* [&= (побитовое и равно)](../t-sql/language-elements/bitwise-and-equals-transact-sql.md)
+* [^= (побитовое исключающее ИЛИ РАВНО)](../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)
+* [|= (побитовое ИЛИ РАВНО)](../t-sql/language-elements/bitwise-or-equals-transact-sql.md)
+* [&= (побитовое И РАВНО)](../t-sql/language-elements/bitwise-and-equals-transact-sql.md)
 
 ## <a name="functions"></a>Функции
 * [@@DATEFIRST](../t-sql/functions/datefirst-transact-sql.md)
@@ -95,9 +95,9 @@ ms.locfileid: "74399837"
 * [ATN2](../t-sql/functions/atn2-transact-sql.md)
 * [BINARY_CHECKSUM](../t-sql/functions/binary-checksum-transact-sql.md)
 * [CASE](../t-sql/language-elements/case-transact-sql.md)
-* [Приведение и преобразование](../t-sql/functions/cast-and-convert-transact-sql.md)
+* [CAST и CONVERT](../t-sql/functions/cast-and-convert-transact-sql.md)
 * [CEILING](../t-sql/functions/ceiling-transact-sql.md)
-* [CHAR](../t-sql/functions/char-transact-sql.md)
+* [ТИПА](../t-sql/functions/char-transact-sql.md)
 * [CHARINDEX](../t-sql/functions/charindex-transact-sql.md)
 * [CHECKSUM](../t-sql/functions/checksum-transact-sql.md)
 * [COALESCE](../t-sql/language-elements/coalesce-transact-sql.md)
@@ -162,8 +162,8 @@ ms.locfileid: "74399837"
 * [OBJECT_ID](../t-sql/functions/object-id-transact-sql.md)
 * [OBJECT_NAME](../t-sql/functions/object-name-transact-sql.md)
 * [OBJECTPROPERTY](../t-sql/functions/objectproperty-transact-sql.md)
-* [оибжектпропертекс](../t-sql/functions/objectpropertyex-transact-sql.md)
-* [Скалярные функции ODBC](../t-sql/functions/odbc-scalar-functions-transact-sql.md)
+* [OIBJECTPROPERTYEX](../t-sql/functions/objectpropertyex-transact-sql.md)
+* [Скалярные функции ODBCS](../t-sql/functions/odbc-scalar-functions-transact-sql.md)
 * [Предложение OVER](../t-sql/queries/select-over-clause-transact-sql.md)
 * [PARSENAME](../t-sql/functions/parsename-transact-sql.md)
 * [PATINDEX](../t-sql/functions/patindex-transact-sql.md)
@@ -215,7 +215,7 @@ ms.locfileid: "74399837"
 * [TYPE_ID](../t-sql/functions/type-id-transact-sql.md)
 * [TYPE_NAME](../t-sql/functions/type-name-transact-sql.md)
 * [TYPEPROPERTY](../t-sql/functions/typeproperty-transact-sql.md)
-* [UNICODE](../t-sql/functions/unicode-transact-sql.md)
+* [Юникод](../t-sql/functions/unicode-transact-sql.md)
 * [UPPER](../t-sql/functions/upper-transact-sql.md)
 * [Пользователь](../t-sql/functions/user-transact-sql.md)
 * [USER_NAME](../t-sql/functions/user-name-transact-sql.md)
@@ -224,7 +224,7 @@ ms.locfileid: "74399837"
 * [YEAR](../t-sql/functions/year-transact-sql.md)
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
-## <a name="transactions"></a>Transactions
+## <a name="transactions"></a>Транзакции
 * [провод](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>Сеансы диагностики
@@ -253,27 +253,27 @@ ms.locfileid: "74399837"
 * [sp_tables](../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)
 * [sp_unprepare](../relational-databases/system-stored-procedures/sp-unprepare-transact-sql.md)
 
-## <a name="set-statements"></a>Инструкции SET
-* [ЗАДАТЬ ANSI_DEFAULTS](../t-sql/statements/set-ansi-defaults-transact-sql.md)
-* [ЗАДАТЬ ANSI_NULL_DFLT_OFF](../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)
-* [ЗАДАТЬ ANSI_NULL_DFLT_ON](../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)
-* [ЗАДАТЬ ANSI_NULLS](../t-sql/statements/set-ansi-nulls-transact-sql.md)
-* [ЗАДАТЬ ANSI_PADDING](../t-sql/statements/set-ansi-padding-transact-sql.md)
-* [ЗАДАТЬ ANSI_WARNINGS](../t-sql/statements/set-ansi-warnings-transact-sql.md)
+## <a name="set-statements"></a>SET, инструкции
+* [SET ANSI_DEFAULTS](../t-sql/statements/set-ansi-defaults-transact-sql.md)
+* [SET ANSI_NULL_DFLT_OFF](../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)
+* [SET ANSI_NULL_DFLT_ON](../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)
+* [SET ANSI_NULLS](../t-sql/statements/set-ansi-nulls-transact-sql.md)
+* [SET ANSI_PADDING](../t-sql/statements/set-ansi-padding-transact-sql.md)
+* [SET ANSI_WARNINGS](../t-sql/statements/set-ansi-warnings-transact-sql.md)
 * [SET ARITHABORT](../t-sql/statements/set-arithabort-transact-sql.md)
-* [ЗАДАТЬ ARITHIGNORE](../t-sql/statements/set-arithignore-transact-sql.md)
-* [ЗАДАТЬ CONCAT_NULL_YIELDS_NULL](../t-sql/statements/set-concat-null-yields-null-transact-sql.md)
+* [SET ARITHIGNORE](../t-sql/statements/set-arithignore-transact-sql.md)
+* [SET CONCAT_NULL_YIELDS_NULL](../t-sql/statements/set-concat-null-yields-null-transact-sql.md)
 * [SET DATEFIRST](../t-sql/statements/set-datefirst-transact-sql.md)
 * [SET DATEFORMAT](../t-sql/statements/set-dateformat-transact-sql.md)
-* [ЗАДАТЬ FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
-* [ЗАДАТЬ IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
-* [ЗАДАТЬ LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
-* [ЗАДАТЬ NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
-* [ЗАДАТЬ QUOTED_IDENTIFIER](../t-sql/statements/set-quoted-identifier-transact-sql.md)
+* [SET FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
+* [SET IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
+* [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
+* [SET NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
+* [SET QUOTED_IDENTIFIER](../t-sql/statements/set-quoted-identifier-transact-sql.md)
 * [SET ROWCOUNT](../t-sql/statements/set-rowcount-transact-sql.md)
 * [SET TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)
 * [SET TRANSACTION ISOLATION LEVEL](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
-* [ЗАДАТЬ XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
+* [SET XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 Дополнительные справочные сведения см. в статьях [инструкции t-SQL](tsql-statements.md) и [системные представления t-SQL](tsql-system-views.md).

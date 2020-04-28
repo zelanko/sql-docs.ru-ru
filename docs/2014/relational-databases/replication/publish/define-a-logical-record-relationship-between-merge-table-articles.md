@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c1c5be804f60fa57b677a418c19d8aadee23f22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62691664"
 ---
-# <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Define a Logical Record Relationship Between Merge Table Articles
+# <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Определение связи логических записей между статьями таблиц слияния
   В данном разделе описывается процесс определения связи логических записей между статьями таблиц слияния в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO.  
   
  Репликация слиянием позволяет определить связь между связанными строками в различных таблицах. Эти строки затем могут быть обработаны во время синхронизации как элементы транзакции. Логическая запись может быть определена между двумя статьями независимо от наличия связи фильтров соединения между ними. Дополнительные сведения см. в статье [Группирование изменений в связанных строках с помощью логических записей](../merge/group-changes-to-related-rows-with-logical-records.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "62691664"
   
      [Ограничения](#Restrictions)  
   
--   **Для определения связи логических записей между статьями таблицы слияния используется:**  
+-   **Для определения связи логических записей между статьями таблиц слияния используется:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
@@ -43,13 +43,13 @@ ms.locfileid: "62691664"
   
      [Объекты Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Если добавление, изменение или удаление логической записи выполняется после инициализации подписок на публикацию, следует создать новый моментальный снимок и повторно инициализировать все подписки после внесения изменений. Дополнительные сведения о требованиях к изменениям свойств см. в статье [Изменение свойств публикации и статьи](change-publication-and-article-properties.md).  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Определите логические записи в диалоговом окне **Добавить соединение**, которое доступно в мастере создания публикаций и диалоговом окне **Свойства публикации — \<публикация>**. Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации](create-a-publication.md) и [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md).  
   
  Логические записи могут определяться в диалоговом окне **Добавление соединения** , только если они применяются к фильтру соединения в публикации слиянием и если публикация соответствует требованиям для использования предварительно вычисляемых секций. Чтобы определить логические записи, которые не применяются к фильтрам соединения, и чтобы установить обнаружение и разрешение конфликтов на уровне логических записей, следует использовать хранимые процедуры.  
@@ -82,7 +82,7 @@ ms.locfileid: "62691664"
   
     -   На странице **Фильтрация строк** мастера создания публикаций или в диалоговом окне **Свойства публикации — \<публикация>** выберите фильтр в области **Отфильтрованные таблицы**, а затем нажмите кнопку **Удалить**. Если удаляемый фильтр соединения расширен за счет других фильтров, эти фильтры также будут удалены.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  С помощью хранимых процедур репликации можно программно задать связь логических записей между статьями.  
   
 #### <a name="to-define-a-logical-record-relationship-without-an-associated-join-filter"></a>Определение связи логических записей без сопутствующего фильтра соединения  
@@ -108,9 +108,9 @@ ms.locfileid: "62691664"
   
 4.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql). Укажите **@publication**, имя одной **@article**статьи в связи для, имя второй статьи **@join_articlename**в параметре, имя для связи **@filtername**, предложение, определяющее связь между двумя статьями **@join_filterclause**, тип объединения для **@join_unique_key** и одно из следующих значений для: **@filter_type**  
   
-    -   **2** — определяет логическую связь.  
+    -   **2** — определяет логическую связь;  
   
-    -   **3** — определяет логическую связь с фильтром соединений.  
+    -   **3** — определят логическую связь с фильтром соединения.  
   
     > [!NOTE]  
     >  Фильтр соединения не используется, направление связи между двумя статьями несущественно.  
@@ -144,12 +144,12 @@ ms.locfileid: "62691664"
   
 2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_dropmergefilter](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql). Укажите **@publication**, имя одной из статей в связи для **@article**и имя связи из шага 1 в параметре. **@filtername**  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Пример (Transact-SQL)  
  В этом примере разрешается использование предварительно вычисляемых секций в существующей публикации и создается логическая запись, в которую входят две новые статьи для таблиц `SalesOrderHeader` и `SalesOrderDetail` .  
   
  [!code-sql[HowTo#sp_AddMergeLogicalRecord](../../../snippets/tsql/SQL15/replication/howto/tsql/createlogicalrecordpub.sql#sp_addmergelogicalrecord)]  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
   
 > [!NOTE]  
 >  Репликация слиянием позволяет указывать, что конфликты должны отслеживаться и разрешаться на уровне логических записей, но эти параметры нельзя задать с помощью объектов RMO.  
@@ -194,14 +194,14 @@ ms.locfileid: "62691664"
   
 10. Повторите шаги 8 и 9 для каждой оставшейся связи логических записей в публикации.  
   
-###  <a name="PShellExample"></a>Пример (объекты RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a>Пример (объекты RMO)  
  В этом примере создается логическая запись, составленная из двух новых статей для таблиц `SalesOrderHeader` и `SalesOrderDetail` .  
   
  [!code-csharp[HowTo#rmo_CreateLogicalRecord](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createlogicalrecord)]  
   
  [!code-vb[HowTo#rmo_vb_CreateLogicalRecord](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createlogicalrecord)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Определение и изменение фильтра соединений между статьями публикации слиянием](define-and-modify-a-join-filter-between-merge-articles.md)   
  [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Определение и изменение статического фильтра строк](define-and-modify-a-static-row-filter.md)   

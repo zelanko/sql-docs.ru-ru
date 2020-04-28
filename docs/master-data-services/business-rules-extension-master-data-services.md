@@ -11,10 +11,10 @@ ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 24df0fcbece66a86786550e81f3e385d6454f4b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728684"
 ---
 # <a name="business-rules-extension-master-data-services"></a>Расширение бизнес-правил (Master Data Services)
@@ -65,7 +65,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 |||  
 |-|-|  
-|**Схемы**|**Разрешения**|  
+|**схема**|**Разрешения**|  
 |mdm|SELECT|  
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
@@ -75,7 +75,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 -   Иметь разрешение на доступ к функциональной области "Администрирование системы".  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в разделе [администраторы &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
+-   необходимо быть администратором модели. Дополнительные сведения см. в разделе [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
   
 -   Пользовательские сценарии были добавлены в базу данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
@@ -116,6 +116,6 @@ CREATE PROCEDURE [usr].[YourAction]
 ## <a name="see-also"></a>См. также:  
  [Бизнес-правила &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Условия бизнес-правил &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
- [Действия бизнес-правил &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
+ [Действия бизнес-правил (службы Master Data Services)](../master-data-services/business-rule-actions-master-data-services.md)  
   
   

@@ -19,16 +19,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 682f015215218f362f0ca57557b9d6afb6edee08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882377"
 ---
 # <a name="disable-publishing-and-distribution"></a>Отключение публикации и распространения
   В данном разделе описывается отключение публикации и распространения в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
   
- Можно сделать следующее:  
+ Можно сделать следующее.  
   
 -   Удалите все базы данных распространителя на распространителе.  
   
@@ -48,26 +48,26 @@ ms.locfileid: "73882377"
   
      [Transact-SQL](#TsqlProcedure)  
   
-     [Объекты Replication Management Objects (RMO)](#RMOProcedure)  
+     [объекты RMO;](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Для отключения публикации и распространения все базы данных распространителей и публикаций должны находиться в режиме «в сети». Если для баз данных распространителя или публикации существуют какие-либо *моментальные снимки базы данных* , то их необходимо удалить до отключения публикации и распространения. Моментальный снимок базы данных — это копия базы данных вне сети, доступная только для чтения и не связанная с моментальным снимком репликации. Дополнительные сведения см. в разделе [Моментальные снимки базы данных (SQL Server)](../databases/database-snapshots-sql-server.md).  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Отключить публикацию и распространение можно с помощью мастера отключения публикации и распространения.  
   
 #### <a name="to-disable-publishing-and-distribution"></a>Отключение публикации и распространения  
   
-1.  Подключитесь к издателю или распространителю, который необходимо [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]отключить в, а затем разверните узел сервера.  
+1.  Подключитесь к издателю или распространителю, который необходимо отключить, в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], а затем раскройте узел сервера.  
   
 2.  Щелкните правой кнопкой мыши папку **Репликация** и выберите **Отключить публикацию и распространение**.  
   
 3.  Выполните шаги, предлагаемые мастером отключения публикации и распространителя.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Публикацию и распространение можно отключить программно с помощью хранимых процедур репликации.  
   
 #### <a name="to-disable-publishing-and-distribution"></a>Отключение публикации и распространения  
@@ -89,7 +89,7 @@ ms.locfileid: "73882377"
     > [!NOTE]  
     >  Если все объекты публикации репликации и распространения не удалены перед выполнением хранимых процедур [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) и [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql), эти процедуры возвратят ошибку. Чтобы удалить все объекты, связанные с репликацией, при удалении издателя или распространителя, параметру ** \@no_checks** должно быть присвоено значение **1**. Если издатель или распространитель отключен или недоступен, параметру ** \@ignore_distributor** может быть присвоено значение **1** , чтобы их можно было удалить; Однако все публикации и распространение объектов, которые остались позади, необходимо удалить вручную.  
   
-###  <a name="TsqlExample"></a>Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере скрипта удаляются объекты репликации из базы данных подписки.  
   
  [!code-sql[HowTo#sp_removedbreplication](../../snippets/tsql/SQL15/replication/howto/tsql/dropdistpub.sql#sp_removedbreplication)]  
@@ -98,7 +98,7 @@ ms.locfileid: "73882377"
   
  [!code-sql[HowTo#sp_DropDistPub](../../snippets/tsql/SQL15/replication/howto/tsql/dropdistpub.sql#sp_dropdistpub)]  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
   
 #### <a name="to-disable-publishing-and-distribution"></a>Отключение публикации и распространения  
   
@@ -118,7 +118,7 @@ ms.locfileid: "73882377"
   
 8.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> . Передайте значение `true` для *Force* , чтобы удалить все объекты репликации на распространителе, не проверяя, отключены ли все локальные базы данных публикации, а также удалены ли базы данных распространителя.  
   
-###  <a name="PShellExample"></a>Примеры (объекты RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Примеры (объекты RMO)  
  В этом примере удаляется как регистрация издателя на распространителе, так и база данных распространителя, а также удаляется распространитель.  
   
  [!code-csharp[HowTo#rmo_DropDistPub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_dropdistpub)]  
@@ -132,7 +132,7 @@ ms.locfileid: "73882377"
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
 ## <a name="see-also"></a>См. также:  
- [Основные понятия объекты Replication Management Objects](concepts/replication-management-objects-concepts.md)   
- [Основные понятия системных хранимых процедур репликации](concepts/replication-system-stored-procedures-concepts.md)  
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+ [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)  
   
   

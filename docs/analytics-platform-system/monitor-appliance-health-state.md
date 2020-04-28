@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b99123f81fcdddd74dc72d485d97e428ca59ed84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400995"
 ---
 # <a name="monitor-appliance-health-state"></a>Мониторинг состояния работоспособности устройства
@@ -22,7 +22,7 @@ ms.locfileid: "74400995"
 ## <a name="to-monitor-the-appliance-state"></a>Мониторинг состояния устройства  
 Системный администратор может использовать консоль администрирования или динамические административные представления SQL Server PDW (DMV) для получения полной иерархии узлов, компонентов и программного обеспечения. На следующей схеме представлено общее представление о компонентах, которые SQL Server PDW мониторов.  
   
-![Обзор мониторинга](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
+![Общие сведения о мониторинге](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
   
 ### <a name="monitor-component-status-by-using-the-admin-console"></a>Мониторинг состояния компонента с помощью консоли администрирования  
 Чтобы получить состояние компонента с помощью консоли администрирования, выполните следующие действия.  
@@ -69,7 +69,7 @@ ORDER BY
   
 Для свойства Status могут возвращаться следующие значения:  
   
--   кнопку "ОК"  
+-   ОК  
   
 -   Некритическая  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee70338b5a46ec60d808e489d982fd80692c5d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400624"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Включение или выключение устройства для аналитики системы платформы
@@ -25,9 +25,9 @@ ms.locfileid: "74400624"
   
 Подключения к SQL Server PDW узлам можно выполнять с помощью IP-адресов, назначенных узлам, или с компьютера **HST01** , используя приложения **Диспетчер отказоустойчивости кластеров** (**Cluadmin. msc**) или **диспетчера Hyper-V** (**виртмгмт. msc**) и щелкая правой кнопкой мыши имя узла.  
   
-## <a name="PowerOff"></a>Выключение устройства  
+## <a name="power-off-the-appliance"></a><a name="PowerOff"></a>Выключение устройства  
   
-### <a name="before-you-begin"></a>Перед началом работы  
+### <a name="before-you-begin"></a>Перед началом  
 Перед выключением устройства необходимо завершить все действия на устройстве. Чтобы завершить все действия:  
   
 -   Используйте страницу **сеансы** консоли администрирования для обнаружения текущих пользователей. Свяжитесь с ними и попросите их выйти из системы.  
@@ -61,7 +61,7 @@ ms.locfileid: "74400624"
   
 9. Завершите работу блоков распределения питания (PDU).  
   
-## <a name="PowerOn"></a>Включение устройства  
+## <a name="power-on-the-appliance"></a><a name="PowerOn"></a>Включение устройства  
   
 ### <a name="to-power-on-the-appliance"></a>Включение питания устройства  
   

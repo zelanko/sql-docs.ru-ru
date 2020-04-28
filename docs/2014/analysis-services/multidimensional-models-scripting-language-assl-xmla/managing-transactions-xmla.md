@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad8a77d1d8552dc811c1232afb53c142452658db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727243"
 ---
 # <a name="managing-transactions-xmla"></a>Управление транзакциями (XMLA)
@@ -57,7 +57,7 @@ ms.locfileid: "62727243"
 ## <a name="rolling-back-a-transaction"></a>Откат транзакции  
  Команда `RollbackTransaction` осуществляет откат результатов команд, выполненных после того, как в текущем сеансе была выполнена команда `BeginTransaction`. Команда `RollbackTransaction` выполняет откат активной транзакции независимо от текущего значения счетчика ссылок транзакции и устанавливает счетчик ссылок транзакции в нуль. Если отсутствуют активные транзакции (то есть счетчик ссылок на транзакции в текущем сеансе уже имеет нулевое значение), команда `RollbackTransaction` вызывает ошибку.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разработка с использованием XMLA в службах Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

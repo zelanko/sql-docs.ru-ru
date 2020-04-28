@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400972"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Мониторинг с помощью системы платформы System Center Operations Manager-Analytics
@@ -44,7 +44,7 @@ ms.locfileid: "74400972"
 ### <a name="alerts"></a>видны узлы  
 Оповещения — это место, где можно найти текущие оповещения для управления.  
   
-![видны узлы](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
+![Предупреждения](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>Устройства  
 Устройства — это место обнаружения и отслеживания SQL Server PDW устройств в вашей среде. Если устройство не отображается здесь и вы создали для него подключение ODBC, то может возникнуть проблема с учетной записью Пдвватчер. Если они отображаются как "не отслеживается", возможно, у вашей учетной записи Пдвмонитор есть какая-то ошибка. Подождите, так как SCOM не вносит изменения в реальном времени, но периодически проверяет наличие новых устройств для отслеживания и периодически отправляет запросы на устройства для мониторинга.  
@@ -56,10 +56,10 @@ ms.locfileid: "74400972"
   
 ![Диаграмма устройств](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM3.png "SCOM_SCOM3")  
   
-### <a name="nodes"></a>Nodes  
+### <a name="nodes"></a>Узлы  
 Наконец, представление узлы позволяет просматривать работоспособность устройства с помощью каждого узла:  
   
-![Nodes](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
+![Узлы](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
 ## <a name="see-also"></a>См. также:  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

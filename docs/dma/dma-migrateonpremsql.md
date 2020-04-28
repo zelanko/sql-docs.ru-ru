@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056536"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Обновление SQL Server с помощью Помощник по миграции данных
@@ -33,7 +33,7 @@ ms.locfileid: "74056536"
 
 2. Задайте тип исходного и целевого серверов, чтобы **SQL Server** , если выполняется обновление локальной SQL Server до более поздней версии локального SQL Server.
 
-3. Нажмите кнопку **Создать**.
+3. Нажмите кнопку **создания**.
 
    ![Создание проекта миграции](../dma/media/NewCreate.png)
 
@@ -41,7 +41,7 @@ ms.locfileid: "74056536"
 
 1. В качестве источника введите SQL Server имя экземпляра в поле **имя сервера** в разделе **сведения о сервере источника** . 
 
-2. Выберите **тип проверки подлинности** , поддерживаемый экземпляром SQL Server источника.
+2. Выберите **Тип проверки подлинности**, поддерживаемый исходным экземпляром SQL Server.
 
 3. В качестве целевого объекта введите SQL Server имя экземпляра в поле **имя сервера** в разделе **сведения о целевом сервере** . 
 
@@ -107,7 +107,7 @@ ms.locfileid: "74056536"
 
 2. Просмотрите сохраненный файл, чтобы получить сведения о миграции имени входа, а затем проверьте изменения.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Помощник по миграции данных (DMA)](../dma/dma-overview.md)
 - [Помощник по миграции данных: параметры конфигурации](../dma/dma-configurationsettings.md)

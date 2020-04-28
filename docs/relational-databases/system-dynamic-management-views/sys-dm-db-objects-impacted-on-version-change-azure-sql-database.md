@@ -21,10 +21,10 @@ ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 0255f7260044ee5c09d020f3ba6310d24bc8cb74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73843863"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (база данных SQL Azure)
@@ -32,13 +32,13 @@ ms.locfileid: "73843863"
 
   Это системное представление уровня базы данных предназначено для отображения ранних предупреждений, позволяющих определить объекты, которые затрагиваются при обновлении выпуска в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Можно использовать это представление до или после обновления для получения полного перечисления затронутых объектов. Чтобы запросить полный отчет для всего сервера, потребуется запросить это представление в каждой базе данных.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|класс|**тип int** НЕ NULL|Класс объекта, который будет затронут:<br /><br /> **1** = ограничение<br /><br /> **7** = индексы и кучи|  
-|class_desc|**nvarchar (60)** НЕ NULL|Описание класса:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
+|class|**тип int** НЕ NULL|Класс объекта, который будет затронут:<br /><br /> **1** = ограничение<br /><br /> **7** = кучи и индексы|  
+|class_desc|**nvarchar (60)** НЕ NULL|Описание класса:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **НОМЕР**|  
 |major_id|**тип int** НЕ NULL|Код объекта ограничения или код объекта таблицы, содержащей индекс или кучу.|  
-|minor_id|**тип int** ЗАКАНЧИВАЮЩ|**Null** для ограничений<br /><br /> Index_id для индексов и куч|  
-|dependency|**nvarchar (60)** НЕ NULL|Описание зависимости, которая вызывает применение затрагиваемого ограничения или индекса. Такое же значение используется для предупреждений, созданных во время обновления.<br /><br /> Примеры:<br /><br /> **пространство** (для внутреннего)<br /><br /> **Geometry** (для системного определяемого пользователем типа)<br /><br /> **geography::P Арсе** (для системного метода определяемого пользователем типа)|  
+|minor_id|**тип int** ЗАКАНЧИВАЮЩ|значение **NULL** для ограничений<br /><br /> Index_id для индексов и куч|  
+|dependency|**nvarchar (60)** НЕ NULL|Описание зависимости, которая вызывает применение затрагиваемого ограничения или индекса. Такое же значение используется для предупреждений, созданных во время обновления.<br /><br /> Примеры<br /><br /> Значение **space** (для встроенной функции)<br /><br /> **geometry** (для системного, определяемого пользователем типа)<br /><br /> **geography::Parse** (для системного, определяемого пользователем метода)|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DATABASE STATE.  
@@ -68,6 +68,6 @@ class  class_desc        major_id    minor_id    dependency
 |Порядок|Затрагиваемый объект|Действие по исправлению|  
 |-----------|---------------------|-----------------------|  
 |1|**Индексы**|Перестройте любой индекс, идентифицируемый **sys. dm_db_objects_impacted_on_version_change** например:`ALTER INDEX ALL ON <table> REBUILD`<br />или диспетчер конфигурации служб<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Объект**|Все ограничения, обозначенные как **sys.dm_db_objects_impacted_on_version_change**, должны быть еще раз проверены после повторного вычисления данных типа Geometry и Geography в базовой таблице. Для ограничений выполните проверку с помощью инструкции ALTER TABLE. <br />Пример: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />или диспетчер конфигурации служб<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|2|**Объектами**|Все ограничения, обозначенные как **sys.dm_db_objects_impacted_on_version_change**, должны быть еще раз проверены после повторного вычисления данных типа Geometry и Geography в базовой таблице. Для ограничений выполните проверку с помощью инструкции ALTER TABLE. <br />Пример: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />или диспетчер конфигурации служб<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

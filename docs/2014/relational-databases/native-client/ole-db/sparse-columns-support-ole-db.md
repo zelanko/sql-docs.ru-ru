@@ -1,5 +1,5 @@
 ---
-title: Поддержка разреженных столбцов (OLE DB) | Документация Майкрософт
+title: Поддержка разреженных столбцов (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b286ba7bde145a9a3676f38f329a8efbd932a4cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62667650"
 ---
 # <a name="sparse-columns-support-ole-db"></a>Поддержка разреженных столбцов (OLE DB)
   В этом разделе приводятся сведения о поддержке разреженных столбцов поставщиком OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения о разреженных столбцах см. [в разделе Поддержка разреженных столбцов в SQL Server Native Client](../features/sparse-columns-support-in-sql-server-native-client.md). Например, [отображение метаданных столбца и каталога для разреженных столбцов (OLE DB)](../../native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   
 ## <a name="ole-db-statement-metadata"></a>Метаданные инструкции OLE DB  
- В версии [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] появилось новое значение DBCOLUMNFLAGS_SS_ISCOLUMNSET флага DBCOLUMNFLAGS. Это значение должно задаваться для столбцов со значениями `column_set`. Флаг DBCOLUMNFLAGS можно получить с помощью параметра *dwFlags* из IColumnsInfo:: жетколумнсинфо и DBCOLUMN_FLAGS столбца набора строк, возвращаемого IColumnsRowset:: жетколумнсровсет.  
+ В версии [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] появилось новое значение DBCOLUMNFLAGS_SS_ISCOLUMNSET флага DBCOLUMNFLAGS. Это значение должно задаваться для столбцов со значениями `column_set`. Флаг DBCOLUMNFLAGS можно получить с помощью параметра *dwFlags* IColumnsInfo::GetColumnsInfo и столбца DBCOLUMN_FLAGS набора строк, возвращаемого IColumnsRowset::GetColumnsRowset.  
   
 ## <a name="ole-db-catalog-metadata"></a>Метаданные каталога OLE DB  
  В DBSCHEMA_COLUMNS были добавлены два дополнительных столбца, специфичных для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -47,17 +47,17 @@ ms.locfileid: "62667650"
 ## <a name="ole-db-support-for-sparse-columns"></a>Поддержка разреженных столбцов в OLE DB  
  Для поддержки разреженных столбцов были изменены следующие интерфейсы OLE DB в собственном клиенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-|Тип или функция-элемент|Description|  
+|Тип или функция-элемент|Описание|  
 |-----------------------------|-----------------|  
-|IColumnsInfo:: Жетколумнсинфо|DBCOLUMNFLAGS_SS_ISCOLUMNSET задано новое значение флага DBCOLUMNFLAGS для `column_set` столбцов в *dwFlags*.<br /><br /> Значение DBCOLUMNFLAGS_WRITE устанавливается для столбцов `column_set`.|  
-|Иколумсровсет:: Жетколумнсровсет|Новое значение DBCOLUMNFLAGS_SS_ISCOLUMNSET флага DBCOLUMNFLAGS задается для столбцов `column_set` в DBCOLUMN_FLAGS.<br /><br /> DBCOLUMN_COMPUTEMODE устанавливается в значение DBCOMPUTEMODE_DYNAMIC для столбцов `column_set`.|  
-|IDBSchemaRowset:: Жетсчемаровсет|DBSCHEMA_COLUMNS возвращает два новых столбца: SS_IS_COLUMN_SET и SS_IS_SPARSE.<br /><br /> DBSCHEMA_COLUMNS возвращает только те столбцы, которые не являются членами `column_set`.<br /><br /> Добавлены два новых набора строк схемы: DBSCHEMA_COLUMNS_EXTENDED возвратит все столбцы независимо от их разреженности `column_set` . DBSCHEMA_SPARSE_COLUMN_SET возвращает только те столбцы, которые являются членами столбца `column_set`. Новые наборы строк содержат те же столбцы и ограничения, что и DBSCHEMA_COLUMNS.|  
-|IDBSchemaRowset:: GetSchema|Метод IDBSchemaRowset::GetSchemas включает идентификаторы GUID для новых наборов строк DBSCHEMA_COLUMNS_EXTENDED и DBSCHEMA_SPARSE_COLUMN_SET в списке доступных наборов строк схемы.|  
+|IColumnsInfo::GetColumnsInfo|DBCOLUMNFLAGS_SS_ISCOLUMNSET задано новое значение флага DBCOLUMNFLAGS для `column_set` столбцов в *dwFlags*.<br /><br /> Значение DBCOLUMNFLAGS_WRITE устанавливается для столбцов `column_set`.|  
+|IColumsRowset::GetColumnsRowset|Новое значение DBCOLUMNFLAGS_SS_ISCOLUMNSET флага DBCOLUMNFLAGS задается для столбцов `column_set` в DBCOLUMN_FLAGS.<br /><br /> DBCOLUMN_COMPUTEMODE устанавливается в значение DBCOMPUTEMODE_DYNAMIC для столбцов `column_set`.|  
+|IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS возвращает два новых столбца: SS_IS_COLUMN_SET и SS_IS_SPARSE.<br /><br /> DBSCHEMA_COLUMNS возвращает только те столбцы, которые не являются членами `column_set`.<br /><br /> Добавлены два новых набора строк схемы: DBSCHEMA_COLUMNS_EXTENDED возвратит все столбцы независимо от их разреженности `column_set` . DBSCHEMA_SPARSE_COLUMN_SET возвращает только те столбцы, которые являются членами столбца `column_set`. Новые наборы строк содержат те же столбцы и ограничения, что и DBSCHEMA_COLUMNS.|  
+|IDBSchemaRowset::GetSchemas|Метод IDBSchemaRowset::GetSchemas включает идентификаторы GUID для новых наборов строк DBSCHEMA_COLUMNS_EXTENDED и DBSCHEMA_SPARSE_COLUMN_SET в списке доступных наборов строк схемы.|  
 |ICommand::Execute|Если **используется \* SELECT из** *таблицы* , то возвращаются все столбцы, не являющиеся членами разреженности `column_set`, а также XML-столбец, содержащий значения всех столбцов, отличных от NULL, которые являются элементами разреженного `column_set`, если они есть.|  
-|IOpenRowset::OpenRowset|IOpenRowset:: OPENROWSET возвращает набор строк с теми же столбцами, что и ICommand:: Execute, с запросом **SELECT \* ** для той же таблицы.|  
+|IOpenRowset::OpenRowset|IOpenRowset::OpenRowset возвращает набор строк с теми же столбцами, что и ICommand::Execute, с запросом **select \*** в той же таблице.|  
 |ITableDefinition|Этот интерфейс не изменился для разреженных столбцов или столбцов `column_set`. Приложения, которым необходимо изменить схему, должны выполнить соответствующий код [!INCLUDE[tsql](../../../includes/tsql-md.md)] напрямую.|  
   
-## <a name="see-also"></a>См. также:  
- [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)  
+## <a name="see-also"></a>См. также  
+ [SQL Server Native Client (OLE DB)](sql-server-native-client-ole-db.md)  
   
   

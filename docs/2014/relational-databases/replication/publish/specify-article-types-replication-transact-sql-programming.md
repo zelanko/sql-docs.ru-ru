@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bcd980bb7fe77e2d207e568802dfd7e69e9a1484
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882120"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>задать типы статей (программирование репликации на языке Transact-SQL)
@@ -34,9 +34,9 @@ ms.locfileid: "73882120"
   
 1.  Выполните процедуру [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)на издателе в базе данных публикации. Укажите одно из следующих значений для ** \@типа** , чтобы определить тип статьи:  
   
-    -   **logbased** — статья таблицы на основе журнала, которая используется по умолчанию для репликации транзакций и моментальных снимков. Репликация автоматически создает хранимую процедуру, применяемую для горизонтальной фильтрации, и представление, определяющее статью с вертикальной фильтрацией.  
+    -   **logbased** — журнальная статья таблицы (значение по умолчанию для репликации транзакций и моментальных снимков). Репликация автоматически создает хранимую процедуру, применяемую для горизонтальной фильтрации, и представление, определяющее статью с вертикальной фильтрацией.  
   
-    -   **logbased manualfilter** — статья на основе журнала с горизонтальной фильтрацией, где хранимая процедура, используемая для горизонтальной фильтрации, создается и определяется пользователем вручную и задается для ** \@фильтра**. Дополнительные сведения см. в статье [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+    -   **logbased manualfilter** — статья на основе журнала с горизонтальной фильтрацией, где хранимая процедура, используемая для горизонтальной фильтрации, создается и определяется пользователем вручную и задается для ** \@фильтра**. Дополнительные сведения см. в разделе [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
     -   **logbased manualview** — статья на основе журнала с вертикальной фильтрацией, в которой представление, определяющее вертикально фильтруемую статью, создается и определяется пользователем и задается для ** \@sync_object**. Дополнительные сведения см. в разделах [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) и [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73882120"
   
      Таким образом определяется новая статья для публикации. Дополнительные сведения см. в статье [определить статью](define-an-article.md).  
   
-2.  Выполните процедуру **sp_articlefilter** для статей **logbased manualboth** и [logbased manualfilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) , чтобы создать хранимую процедуру фильтрации для статьи с горизонтальной фильтрацией. Дополнительные сведения см. в статье [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+2.  Выполните процедуру **sp_articlefilter** для статей **logbased manualboth** и [logbased manualfilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) , чтобы создать хранимую процедуру фильтрации для статьи с горизонтальной фильтрацией. Дополнительные сведения см. в разделе [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
 3.  Выполните процедуру **sp_articleview**для статей **logbased manualboth**, **logbased manualview** и [logbased manualfilter](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) , чтобы создать представление, определяющее статью с вертикальной фильтрацией. Дополнительные сведения см. в разделе [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
@@ -52,13 +52,13 @@ ms.locfileid: "73882120"
   
 1.  Выполните процедуру [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)на издателе в базе данных публикации. Укажите одно из следующих значений для ** \@типа** , чтобы определить тип статьи:  
   
-    -   **индексированное представление logbased** — статья индексированного представления, основанная на журнале. Репликация автоматически создает хранимую процедуру, применяемую для горизонтальной фильтрации, и представление, определяющее статью с вертикальной фильтрацией.  
+    -   **indexed view logbased** — журнальная статья индексированного представления. Репликация автоматически создает хранимую процедуру, применяемую для горизонтальной фильтрации, и представление, определяющее статью с вертикальной фильтрацией.  
   
-    -   **Просмотр только схемы** — статья с представлением только схемы. Также необходимо выполнить репликацию базовой таблицы.  
+    -   **view schema only** — статья со схемой, соответствующая представлению. Также необходимо выполнить репликацию базовой таблицы.  
   
-    -   **только схема индексированного представления** — статья индексированного представления только для схемы. Также необходимо выполнить репликацию базовой таблицы.  
+    -   **indexed view schema only** — статья со схемой, соответствующая индексированному представлению. Также необходимо выполнить репликацию базовой таблицы.  
   
-    -   **индексированное представление logbased manualfilter** — статья индексированного представления по горизонтали с горизонтальной фильтрацией, где хранимая процедура, используемая для горизонтальной фильтрации, создается и определяется пользователем вручную и задается для ** \@фильтра**. Дополнительные сведения см. в статье [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+    -   **индексированное представление logbased manualfilter** — статья индексированного представления по горизонтали с горизонтальной фильтрацией, где хранимая процедура, используемая для горизонтальной фильтрации, создается и определяется пользователем вручную и задается для ** \@фильтра**. Дополнительные сведения см. в разделе [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
     -   **индексированное представление logbased manualview** — статья с отфильтрованным индексированным представлением на основе журнала, в которой представление, определяющее вертикально фильтруемую статью, создается и определяется пользователем и задается для ** \@sync_object**. Дополнительные сведения см. в разделах [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) и [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73882120"
   
      Таким образом определяется новая статья для публикации. Дополнительные сведения см. в статье [определить статью](define-an-article.md).  
   
-2.  Выполните процедуру **sp_articlefilter** для статей **logbased manualboth** и [logbased manualfilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) , чтобы создать хранимую процедуру фильтрации для статьи с горизонтальной фильтрацией. Дополнительные сведения см. в статье [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+2.  Выполните процедуру **sp_articlefilter** для статей **logbased manualboth** и [logbased manualfilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) , чтобы создать хранимую процедуру фильтрации для статьи с горизонтальной фильтрацией. Дополнительные сведения см. в разделе [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
 3.  Выполните процедуру **sp_articleview**для статей **logbased manualboth**, **logbased manualview** и [logbased manualfilter](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) , чтобы создать представление, определяющее статью с вертикальной фильтрацией. Дополнительные сведения см. в разделе [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
@@ -74,13 +74,13 @@ ms.locfileid: "73882120"
   
 1.  Выполните процедуру [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)на издателе в базе данных публикации. Укажите одно из следующих значений для ** \@типа** , чтобы определить тип статьи:  
   
-    -   **proc schema only** — статья хранимой процедуры только со схемой.  
+    -   **proc schema only** — статья со схемой, соответствующая хранимой процедуре.  
   
-    -   **proc exec** — реплицирует выполнение хранимой процедуры всем подписчикам статьи. Дополнительные сведения см. в статье [Publishing Stored Procedure Execution in Transactional Replication](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+    -   **proc exec** — производит репликацию выполнения хранимой процедуры на всех подписчиках статьи. Дополнительные сведения см. в статье [Publishing Stored Procedure Execution in Transactional Replication](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
-    -   **Serializable proc exec** — реплицирует выполнение хранимой процедуры только в том случае, если она выполняется в контексте сериализуемой транзакции. Дополнительные сведения см. в статье [Publishing Stored Procedure Execution in Transactional Replication](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+    -   **serializable proc exec** — производит репликацию выполнения хранимой процедуры только в том случае, если она выполняется в контексте сериализуемой транзакции. Дополнительные сведения см. в статье [Publishing Stored Procedure Execution in Transactional Replication](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
-    -   **func schema only** — статья определяемой пользователем функции, которая доступна только для схемы.  
+    -   **func schema only** — статья со схемой, соответствующая определяемой пользователем функции.  
   
      Таким образом определяется новая статья для публикации. Дополнительные сведения см. в статье [определить статью](define-an-article.md).  
   
@@ -88,11 +88,11 @@ ms.locfileid: "73882120"
   
 1.  В базе данных публикации на издателе выполните процедуру [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Укажите одно из следующих значений для ** \@типа** , чтобы определить тип статьи:  
   
-    -   **Таблица** — статья таблицы.  
+    -   **table** — статья таблицы.  
   
-    -   **только схема индексированного представления** — статья индексированного представления только для схемы.  
+    -   **indexed view schema only** — статья со схемой, соответствующая индексированному представлению.  
   
-    -   **Просмотр только схемы** — статья с представлением только схемы.  
+    -   **view schema only** — статья со схемой, соответствующая представлению.  
   
      Таким образом определяется новая статья для публикации. Дополнительные сведения см. в статье [определить статью](define-an-article.md).  
   
@@ -100,9 +100,9 @@ ms.locfileid: "73882120"
   
 1.  В базе данных публикации на издателе выполните процедуру [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Укажите одно из следующих значений для ** \@типа** , чтобы определить тип статьи:  
   
-    -   **func schema only** — статья определяемой пользователем функции, которая доступна только для схемы.  
+    -   **func schema only** — статья со схемой, соответствующая определяемой пользователем функции.  
   
-    -   **proc schema only** — статья хранимой процедуры только со схемой.  
+    -   **proc schema only** — статья со схемой, соответствующая хранимой процедуре.  
   
      Таким образом определяется новая статья для публикации. Дополнительные сведения см. в статье [определить статью](define-an-article.md).  
   

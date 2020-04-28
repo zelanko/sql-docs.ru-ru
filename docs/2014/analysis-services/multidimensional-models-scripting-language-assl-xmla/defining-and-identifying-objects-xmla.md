@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad6c8de47577eccd7797517c8080957d7afe1abd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727561"
 ---
 # <a name="defining-and-identifying-objects-xmla"></a>Определение и идентификация объектов (XMLA)
@@ -37,7 +37,7 @@ ms.locfileid: "62727561"
 ## <a name="object-definitions"></a>Определения объектов  
  Команды [CREATE](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla) и [ALTER](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla) в XMLA CREATE или ALTER, соответственно, объекты в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляре. Определения этих объектов представлены элементом [ObjectDefinition](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/objectdefinition-element-xmla) , содержащим элементы из ASSL. Идентификаторы объектов можно явно указать для всех основных и многих вспомогательных объектов с помощью элемента [ID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) . Если элемент `ID` не используется, то уникальный идентификатор предоставляется экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. При этом используется соглашение об именах, которое зависит от объекта, которому назначается идентификатор. Дополнительные сведения об использовании команд `Create` и `Alter` для определения объектов см. в разделе [Создание и изменение объектов &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объектный элемент &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)   
  [Элемент ParentObject &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)   
  [Исходный элемент &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)   

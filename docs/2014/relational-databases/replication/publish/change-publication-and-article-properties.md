@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c43c81612ffd851d7ea0e0679f79f3c8fec91037
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882350"
 ---
 # <a name="change-publication-and-article-properties"></a>Изменение свойств публикации и статьи
@@ -36,7 +36,7 @@ ms.locfileid: "73882350"
 |Изменение сжатия моментального снимка.|**sp_changepublication**|**compress_snapshot**|Создание моментального снимка.|  
 |Изменение параметров FTP-протокола для моментального снимка.|**sp_changepublication**|**enabled_for_internet**<br /><br /> **ftp_address**<br /><br /> **ftp_login**<br /><br /> **ftp_password**<br /><br /> **ftp_port**<br /><br /> **ftp_subdirectory**|Создание моментального снимка.|  
 |Изменение расположения скрипта, запускаемого перед моментальным снимком или после него.|**sp_changepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|Создание моментального снимка (требуется также при изменении содержимого скрипта).<br /><br /> Для применения нового скрипта к подписчику требуется повторная инициализация.|  
-|Включение или отключение поддержки для[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] подписчиков, отличных от.|**sp_changepublication**|**is_enabled_for_het_sub**|Создание моментального снимка.|  
+|Включение или выключение поддержки для подписчиков, отличных от подписчиков [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|**sp_changepublication**|**is_enabled_for_het_sub**|Создание моментального снимка.|  
 |Изменение отчета о конфликтах подписок, обновляемых посредством очередей|**sp_changepublication**|**centralized_conflicts**|Может быть изменена только при отсутствии активных подписок.|  
 |Изменение политики разрешения конфликтов для подписок, обновляемых посредством очередей|**sp_changepublication**|**conflict_policy**|Может быть изменена только при отсутствии активных подписок.|  
   
@@ -52,15 +52,15 @@ ms.locfileid: "73882350"
 |Изменение фильтра строк.|**sp_changearticle**|**Фильтрация**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
 |Изменение параметров схемы.|**sp_changearticle**|**schema_option**|Создание моментального снимка.|  
 |Изменение порядка обработки таблиц на подписчике до применения моментального снимка.|**sp_changearticle**|**pre_creation_cmd**|Создание моментального снимка.|  
-|Изменение состояния статьи|**sp_changearticle**|**состояние**|Создание моментального снимка.|  
+|Изменение состояния статьи|**sp_changearticle**|**status**|Создание моментального снимка.|  
 |Изменение команды INSERT, UPDATE или DELETE.|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
 |Изменение имени целевой таблицы|**sp_changearticle**|**dest_table**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
 |Изменение владельца (схемы) целевой таблицы.|**sp_changearticle**|**destination_owner**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
-|Изменение сопоставление типов данных (применимо только к публикации Oracle).|**sp_changearticlecolumndatatype**|**\@Тип**<br /><br /> **\@length**<br /><br /> **\@precision**<br /><br /> **\@Измените**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
+|Изменение сопоставление типов данных (применимо только к публикации Oracle).|**sp_changearticlecolumndatatype**|**\@Тип**<br /><br /> **\@недопустим**<br /><br /> **\@precision**<br /><br /> **\@Измените**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
   
 ## <a name="publication-properties-for-merge-replication"></a>Свойства публикации для репликации слиянием  
   
-|Description|Хранимая процедура|Свойства|Требования|  
+|Описание|Хранимая процедура|Свойства|Требования|  
 |-----------------|----------------------|----------------|------------------|  
 |Изменение формата моментального снимка|**sp_changemergepublication**|**sync_mode**|Создание моментального снимка.|  
 |Изменение расположения моментального снимка.|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Создание моментального снимка.|  
@@ -70,7 +70,7 @@ ms.locfileid: "73882350"
 |Изменение скриптов, запускаемых перед моментальным снимком или после него.|**sp_changemergepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|Создание моментального снимка (требуется также при изменении содержимого скрипта).<br /><br /> Для применения нового скрипта к подписчику требуется повторная инициализация.|  
 |Добавление фильтра соединения или логической записи.|**sp_addmergefilter**|Все параметры.|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
 |Удаление фильтра соединения или логической записи.|**sp_dropmergefilter**|Все параметры.|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
-|Изменение фильтра соединения или логической записи.|**sp_changemergefilter**|**\@свойства**<br /><br /> **\@значений**|Новый моментальный снимок<br /><br /> Повторная инициализация подписок.|  
+|Изменение фильтра соединения или логической записи.|**sp_changemergefilter**|**\@свойства**<br /><br /> **\@значений**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
 |Отключение использования параметризованных фильтров (включение параметризованных фильтров не требует никаких специальных действий).|**sp_changemergepublication**|Значение **false** для **dynamic_filters**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
 |Включение или выключение использования предварительно вычисляемых секций.|**sp_changemergepublication**|**use_partition_groups**|Создание моментального снимка.|  
 |Включить или отключить [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] оптимизацию секций.|**sp_changemergepublication**|**keep_partition_changes**|Повторная инициализация подписок.|  
@@ -79,7 +79,7 @@ ms.locfileid: "73882350"
   
 ## <a name="article-properties-for-merge-replication"></a>Свойства статьи для репликации слиянием  
   
-|Description|Хранимая процедура|Свойства|Требования|  
+|Описание|Хранимая процедура|Свойства|Требования|  
 |-----------------|----------------------|----------------|------------------|  
 |Удаление статьи с последним параметризованным фильтром в публикации.|**sp_dropmergearticle**|Все параметры|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
 |Удаление статьи, являющейся родителем в фильтре соединения или в логической записи (это побочный эффект удаления соединения).|**sp_dropmergearticle**|Все параметры|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
@@ -93,7 +93,7 @@ ms.locfileid: "73882350"
 |Изменение владельца целевой таблицы.|**sp_changemergearticle**|**destination_owner**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
   
 ## <a name="see-also"></a>См. также:  
- [Вопросы и ответы об администрировании репликации](../administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Вопросы и ответы по администрированию репликации](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [Создание и применение моментального снимка](../create-and-apply-the-snapshot.md)   
  [Повторная инициализация подписок](../reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   
@@ -109,6 +109,6 @@ ms.locfileid: "73882350"
  [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)   
  [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)   
  [sp_dropmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql)   
- [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)  
+ [sp_mergearticlecolumn (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)  
   
   

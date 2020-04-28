@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882339"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Добавление и удаление статей в существующих публикациях
@@ -33,11 +33,11 @@ ms.locfileid: "73882339"
  Добавление статьи включает следующие операции: добавление статьи в публикацию, создание нового моментального снимка публикации, синхронизация подписки для применения схемы и данных для новой статьи.  
   
 > [!NOTE]
->  Если статья добавляется в публикацию слиянием, а существующая статья зависит от новой статьи, необходимо указать порядок обработки для обеих статей с помощью параметра ** \@processing_order** [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) и [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Рассмотрим следующий сценарий: необходимо опубликовать таблицу без публикации функции, на которую ссылается эта таблица. Если функция не будет опубликована, то таблица не сможет быть создана на подписчике. При добавлении функции к публикации: задайте значение **1** для параметра **\@processing_order** процедуры **sp_addmergearticle** и значение **2** для параметра **\@processing_order** процедуры **sp_changemergearticle**, указав имя таблицы в параметре **\@article**. Этот порядок обработки гарантирует создание функции на подписчике до создания таблицы, которая зависит от нее. Можно использовать различные числа для каждой статьи при условии, что число для функции меньше числа для таблицы.  
+>  Если статья добавляется в публикацию слиянием, а существующая статья зависит от новой статьи, необходимо указать порядок обработки для обеих статей с помощью параметра ** \@processing_order** [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) и [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Рассмотрим следующий сценарий: необходимо опубликовать таблицу без публикации функции, на которую ссылается эта таблица. Если функция не будет опубликована, то таблица не сможет быть создана на подписчике. При добавлении функции в публикацию: Укажите значение **1** для параметра ** \@processing_order** **sp_addmergearticle**; и укажите значение **2** для параметра ** \@processing_order** **sp_changemergearticle**, указав имя таблицы для параметра ** \@article**. Этот порядок обработки гарантирует создание функции на подписчике до создания таблицы, которая зависит от нее. Можно использовать различные числа для каждой статьи при условии, что число для функции меньше числа для таблицы.  
   
 1.  Добавьте одну или несколько статей с помощью следующих методов:  
   
-    -   [Добавление и удаление статей в &#40;публикации SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)  
+    -   [Add Articles to and Drop Articles from a Publication](add-articles-to-and-drop-articles-from-a-publication.md) (Добавление и удаление статей в публикации)  
   
     -   [Определение статьи](define-an-article.md)  
   

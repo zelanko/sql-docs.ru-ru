@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d55ecc81d9ae71b33e068b2d1d68ea1775ed6c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728507"
 ---
 # <a name="database-dimension-properties"></a>Свойства измерений базы данных
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]службах характеристики измерения определяются метаданными для измерения, основанными на параметрах различных свойств измерения, а также в атрибутах или иерархиях, содержащихся в измерении. Следующая таблица содержит описания свойств измерений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |`AttributeAllMemberName`|Задает имя элемента «Все» для атрибутов измерения.|  
 |`Collation`|Задает параметры сортировки, применяемые в измерении.|  
@@ -51,10 +51,10 @@ ms.locfileid: "62728507"
 > [!NOTE]  
 >  Дополнительные сведения о задании значений свойств ErrorConfiguration и UnknownMember при работе со значениями NULL и другими проблемами целостности данных см. в разделе [обработка проблем целостности данных в Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Атрибуты и иерархии атрибутов](attributes-and-attribute-hierarchies.md)   
  [Пользовательские иерархии](user-hierarchies.md)   
  [Связи измерений](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Измерения &#40;Analysis Services многомерных данных&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Измерения (службы Analysis Services — многомерные данные)](dimensions-analysis-services-multidimensional-data.md)  
   
   

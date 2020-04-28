@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62689067"
 ---
 # <a name="bcp_init"></a>bcp_init
@@ -71,7 +71,7 @@ eDirection
  *eDirection*  
  Направление копирования (DB_IN или DB_OUT). Значение DB_IN указывает на копирование из переменных программы или пользовательского файла в таблицу. Значение DB_OUT указывает на копирование из таблицы базы данных в пользовательский файл. Если используется значение DB_OUT, необходимо указать имя пользовательского файла.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  SUCCEED или FAIL.  
   
 ## <a name="remarks"></a>Remarks  
@@ -228,7 +228,7 @@ int main() {
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

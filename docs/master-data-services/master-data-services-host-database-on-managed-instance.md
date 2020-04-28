@@ -14,10 +14,10 @@ ms.author: lle
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: b4bb1a89e997486e88b6d4ca48a9a550d1c552b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729016"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Размещение базы данных MDS на управляемом экземпляре
@@ -65,7 +65,7 @@ ms.locfileid: "73729016"
      - Монитор запросов
      - Производительность
      - Сжатие статического содержимого
-     - безопасность
+     - Безопасность
      - Фильтрация запросов
      - Проверка подлинности Windows
        > [!NOTE]
@@ -78,7 +78,7 @@ ms.locfileid: "73729016"
      - Службы WCF
      - Активация HTTP (требуется)
      - Совместное использование TCP-порта
-     - Служба активации Windows
+     - Служба активации процессов Windows
      - Модель процесса
      - Среда .NET
      - API-интерфейсы конфигурации
@@ -164,7 +164,7 @@ ms.locfileid: "73729016"
 
 1. В области **веб-конфигурация** в окне **веб-приложение** выберите созданное приложение и нажмите кнопку **выбрать** в разделе **связать приложение с базой данных** .
 
-1. Выберите **подключить** и выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных, которую необходимо связать с веб-приложением. Нажмите кнопку **ОК**.
+1. Выберите **подключить** и выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных, которую необходимо связать с веб-приложением. Щелкните **ОК**.
 
    Настройка веб-сайта завершена. Теперь на странице **веб-конфигурация** отображается выбранный веб-сайт, созданное веб-приложение и [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] база данных, связанная с приложением.
 
@@ -198,9 +198,9 @@ MDS также поддерживает проверку подлинности 
    <add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;User ID=UserName;Password=MyPassword!;" />
    ```
 
-## <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd-and-sql-database-version"></a>Обновление [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] и версия базы данных SQL
+## <a name="upgrade-ssmdsshort_md-and-sql-database-version"></a>Обновление [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] и версия базы данных SQL
 
-### <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd"></a>Обновления[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+### <a name="upgrade-ssmdsshort_md"></a>Обновления[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 
 Установите **накопительное обновление SQL Server 2019**. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]будет обновлен автоматически.
 
@@ -229,9 +229,9 @@ MDS также поддерживает проверку подлинности 
 
 1. По завершении всех задач нажмите кнопку **Готово** .
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [База данных служб Master Data Services](../master-data-services/master-data-services-database.md)
 - [Веб-приложение диспетчера основных данных](../master-data-services/master-data-manager-web-application.md)
-- [Страница конфигурации базы данных &#40;диспетчер конфигурации Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
-- [Новые возможности Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)
+- [Страница "Конфигурация базы данных" (диспетчер конфигурации служб Master Data Services)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
+- [Новые возможности Master Data Services (MDS)](../master-data-services/what-s-new-in-master-data-services-mds.md)

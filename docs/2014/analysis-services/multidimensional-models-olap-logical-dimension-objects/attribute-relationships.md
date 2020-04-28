@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81d51c8778cfbc6e3891dfb3b6783db48f0c65a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728520"
 ---
 # <a name="attribute-relationships"></a>можно изменить расположение фигур на вкладке
@@ -52,13 +52,13 @@ ms.locfileid: "62728520"
   
 -   CustomerName  
   
--   Age  
+-   Возраст  
   
--   Пол  
+-   пол;  
   
--   Email  
+-   Электронная почта  
   
--   City  
+-   Город  
   
 -   Country  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62728520"
 ## <a name="attribute-relationship-queries"></a>Запросы связи атрибутов  
  Чтобы получить данные о связи атрибутов в форме свойств элементов, можно использовать запросы многомерных выражений с ключевым словом `PROPERTIES` инструкции многомерных выражений `SELECT`. Дополнительные сведения об использовании многомерных выражений для получения свойств элементов см. в разделе [использование свойств элементов &#40;&#41;многомерных выражений ](../multidimensional-models/mdx/mdx-member-properties.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Атрибуты и иерархии атрибутов](attributes-and-attribute-hierarchies.md)   
  [Справочник по свойствам атрибутов измерения](../multidimensional-models/dimension-attribute-properties-reference.md)   
  [Пользовательские иерархии](user-hierarchies.md)   

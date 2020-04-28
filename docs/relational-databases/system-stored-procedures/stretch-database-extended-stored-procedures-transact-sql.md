@@ -15,10 +15,10 @@ ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d82b6cb9049bf5a41cfb987a55bb6d5a7147c9bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74119270"
 ---
 # <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database расширенные хранимые процедуры (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "74119270"
 
  В этом разделе описаны расширенные хранимые процедуры, связанные с Stretch Database.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
 [sys. sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md) Удаляет подключение с проверкой подлинности между локальной базой данных с поддержкой Stretch и удаленной базой данных Azure.
 
 [sys. sp_rda_get_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md) Возвращает количество часов перенесенных данных, которые SQL Server сохранены в промежуточной таблице, чтобы обеспечить полное восстановление удаленной базы данных Azure, если восстановление необходимо.
@@ -47,6 +47,6 @@ ms.locfileid: "74119270"
  [sys. sp_rda_test_connection](../../relational-databases/system-stored-procedures/sys-sp-rda-test-connection-transact-sql.md) Проверяет подключение SQL Server к удаленному серверу Azure и сообщает о проблемах, которые могут препятствовать миграции данных.
  
 ## <a name="see-also"></a>См. также:  
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
+ [База данных Stretch](../../sql-server/stretch-database/stretch-database.md)  
   
   

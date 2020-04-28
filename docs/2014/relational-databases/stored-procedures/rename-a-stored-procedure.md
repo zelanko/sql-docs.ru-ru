@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b85a6a5e79c004eb3ed2c7c40c6e3b62d526e95a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721010"
 ---
 # <a name="rename-a-stored-procedure"></a>Изменение имени хранимой процедуры
@@ -37,9 +37,9 @@ ms.locfileid: "62721010"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Имена процедур должны соответствовать правилам для [идентификаторов](../databases/database-identifiers.md).  
   
@@ -47,16 +47,16 @@ ms.locfileid: "62721010"
   
 -   Изменение имени или определения процедуры может привести к тому, что все зависящие от нее объекты при выполнении будут возвращать ошибку, если они не будут обновлены в соответствии с внесенными в процедуру изменениями. Дополнительные сведения см. [в разделе Просмотр зависимостей хранимой процедуры](view-the-dependencies-of-a-stored-procedure.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  CREATE PROCEDURE  
  Требуется разрешение CREATE PROCEDURE на базу данных и разрешение ALTER на схему, в которой создается процедура, либо членство в предопределенной роли базы данных **db_ddladmin**.  
   
  ALTER PROCEDURE  
  Требуется разрешение ALTER на процедуру или членство в предопределенной роли базы данных **db_ddladmin**.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-rename-a-stored-procedure"></a>Изменение имени хранимой процедуры  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62721010"
   
 6.  Измените имя процедуры во всех зависимых от нее объектах и скриптах.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-rename-a-stored-procedure"></a>Изменение имени хранимой процедуры  
   
@@ -110,9 +110,9 @@ AS
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [ALTER PROCEDURE (Transact-SQL)](/sql/t-sql/statements/alter-procedure-transact-sql)   
- [Создание процедуры &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
+## <a name="see-also"></a>См. также  
+ [Инструкция ALTER PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
+ [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)   
  [Создание хранимой процедуры](../stored-procedures/create-a-stored-procedure.md)   
  [Изменение хранимой процедуры](../stored-procedures/modify-a-stored-procedure.md)   
  [Удаление хранимой процедуры](../stored-procedures/delete-a-stored-procedure.md)   

@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80bddac8f800c1b9394c1ed605007ab0f2137b88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727468"
 ---
 # <a name="canceling-commands-xmla"></a>Отмена команд (XMLA)
@@ -44,7 +44,7 @@ ms.locfileid: "62727468"
 ## <a name="canceling-sessions"></a>Отмена сеансов  
  Указав идентификатор сеанса для явного сеанса в свойстве [SessionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) `Cancel` команды, администратор базы данных или администратор сервера может отменить сеанс, включая выполняемую в данный момент команду. Администратор баз данных может отменять сеансы только для тех баз данных, на которые у него есть разрешения администратора.  
   
- Администратор базы данных может извлекать сведения об активных сеансах для указанной базы данных путем извлечения набора строк схемы DISCOVER_SESSIONS. Для получения набора строк схемы DISCOVER_SESSIONS администратор базы данных использует метод XMLA `Discover` и указывает соответствующий идентификатор базы данных для столбца ограничений SESSION_CURRENT_DATABASE в свойстве restriction [](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictions-element-xmla) `Discover` метода.  
+ Администратор базы данных может извлекать сведения об активных сеансах для указанной базы данных путем извлечения набора строк схемы DISCOVER_SESSIONS. Для получения набора строк схемы DISCOVER_SESSIONS администратор базы данных использует метод XMLA `Discover` и указывает соответствующий идентификатор базы данных для столбца ограничений SESSION_CURRENT_DATABASE в свойстве restriction [Restrictions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictions-element-xmla) `Discover` метода.  
   
 ## <a name="canceling-connections"></a>Отмена соединений  
  Указав идентификатор соединения в свойстве [ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla) `Cancel` команды, администратор сервера может отменить все сеансы, связанные с данным подключением, включая все выполняющиеся команды, и отменить подключение.  
@@ -60,7 +60,7 @@ ms.locfileid: "62727468"
 ## <a name="canceling-associated-sessions-and-connections"></a>Отмена ассоциированных сеансов и соединений  
  Можно задать для свойства [CancelAssociated](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cancelassociated-element-xmla) значение true, чтобы отменить соединения, сеансы и команды, связанные с соединением, сеансом или SPID, указанными `Cancel` в команде.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Discover &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)   
  [Разработка с использованием XMLA в службах Analysis Services](developing-with-xmla-in-analysis-services.md)  
   

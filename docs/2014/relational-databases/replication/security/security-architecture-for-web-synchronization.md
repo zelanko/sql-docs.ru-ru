@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ff0c6336bcbd3f9ad8c09f5a25f7317c0d2c4c7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73912805"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Архитектура безопасности для веб-синхронизации
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обеспечивает детальный контроль над конфигурацией безопасности веб-синхронизации. В этом разделе представлен подробный список всех компонентов, которые можно включать в настройку веб-синхронизации, и сведения о соединениях между компонентами. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает детализированную настройку безопасности веб-синхронизации. В этом разделе представлен подробный список всех компонентов, которые можно включать в настройку веб-синхронизации, и сведения о соединениях между компонентами. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
  На следующем рисунке показаны все возможные соединения, однако некоторые из них могут быть не обязательны в определенной топологии. Например, соединение с сервером FTP требуется, только если моментальный снимок доставляется по протоколу FTP.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "73912805"
 |Тип учетной записи|Где задана учетная запись|  
 |---------------------|------------------------------------|  
 |Пользователь Windows|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: параметры ** \@job_login** и ** \@job_password** [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> Объекты RMO: свойства <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> для <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.|  
-|Учетная запись службы Windows для агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager|  
+|Учетная запись службы Windows для агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager|  
 |Изолированное приложение|Агент слияния выполняется в контексте пользователя Windows, который выполняет это приложение|  
   
 ## <a name="b-connection-to-the-subscriber"></a>Б. Соединение с подписчиком  
@@ -136,7 +136,7 @@ ms.locfileid: "73912805"
 |Нужное разрешение имеют все пользователи Windows.|Диспетчер служб IIS.|  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка веб-синхронизации](../configure-web-synchronization.md)   
- [агент слияния репликации](../agents/replication-merge-agent.md)  
+ [Configure Web Synchronization](../configure-web-synchronization.md)   
+ [Replication Merge Agent](../agents/replication-merge-agent.md)  
   
   

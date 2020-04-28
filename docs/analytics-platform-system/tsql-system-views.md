@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: a7e6a0bda01de76787033607fbf35a0ca123ef95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399800"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Системные представления для параллельного хранилища данных платформы аналитики
@@ -61,7 +61,7 @@ ms.locfileid: "74399800"
 Следующие динамические административные представления применимы к параллельному хранилищу данных, но должны выполняться путем подключения к базе данных **master** .
 
 * [sys.database_service_objectives](../relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database.md)
-* [sys. dm_operation_status](../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
+* [sys.dm_operation_status](../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
 * [sys. fn_helpcollations ()](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
 
 ## <a name="sql-server-catalog-views"></a>Представления каталога SQL Server
@@ -105,7 +105,7 @@ ms.locfileid: "74399800"
 * [sys.partition_schemes](https://msdn.microsoft.com/library/ms189752.aspx)
 * [sys.partitions](https://msdn.microsoft.com/library/ms175012.aspx)
 * [sys.procedures](https://msdn.microsoft.com/library/ms188737.aspx)
-* [sys. schemas](https://msdn.microsoft.com/library/ms176011.aspx)
+* [sys.schemas](https://msdn.microsoft.com/library/ms176011.aspx)
 * [sys.securable_classes](https://msdn.microsoft.com/library/ms408301.aspx)
 * [sys.sql_expression_dependencies](https://msdn.microsoft.com/library/bb677315.aspx)
 * [sys.sql_modules](https://msdn.microsoft.com/library/ms175081.aspx)
@@ -215,14 +215,14 @@ ms.locfileid: "74399800"
 
 ## <a name="sql-server-information_schema-views"></a>Представления INFORMATION_SCHEMA SQL Server
 * [CHECK_CONSTRAINTS](../relational-databases/system-information-schema-views/check-constraints-transact-sql.md)
-* [COLUMNS](../relational-databases/system-information-schema-views/columns-transact-sql.md)
-* [PARAMETERS](../relational-databases/system-information-schema-views/parameters-transact-sql.md)
+* [СТОЛБЦЕ](../relational-databases/system-information-schema-views/columns-transact-sql.md)
+* [ПАРАМЕТРЫ](../relational-databases/system-information-schema-views/parameters-transact-sql.md)
 * [ROUTINES](../relational-databases/system-information-schema-views/routines-transact-sql.md)
 * [SCHEMATA](../relational-databases/system-information-schema-views/schemata-transact-sql.md)
-* [TABLES](../relational-databases/system-information-schema-views/tables-transact-sql.md)
+* [ТАБЛИЦЕ](../relational-databases/system-information-schema-views/tables-transact-sql.md)
 * [VIEW_COLUMN_USAGE](../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)
 * [VIEW_TABLE_USAGE](../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)
-* [VIEWS](../relational-databases/system-information-schema-views/views-transact-sql.md)
+* [Представления](../relational-databases/system-information-schema-views/views-transact-sql.md)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 Дополнительные справочные сведения см. в разделе [элементы языка t-SQL](tsql-language-elements.md) и [инструкции t-SQL](tsql-statements.md).

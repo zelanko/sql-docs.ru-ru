@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400141"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>база данных tempdb в параллельном хранилище данных
@@ -21,7 +21,7 @@ ms.locfileid: "74400141"
   
 Дополнительные сведения о системных базах данных см. в разделе [системные базы данных](system-databases.md).  
   
-## <a name="Basics"></a>Ключевые термины и понятия  
+## <a name="key-terms-and-concepts"></a><a name="Basics"></a>Ключевые термины и понятия  
 *Локальная временная таблица*  
 *Локальная временная таблица* использует префикс # перед именем таблицы и является временной таблицей, созданной локальным сеансом пользователя. Каждый сеанс может получить доступ только к данным в локальных временных таблицах для собственного сеанса.  
   
@@ -51,7 +51,7 @@ SQL Server PDW удаляет таблицы из **базы данных tempdb
 ## <a name="general-remarks"></a>Общие замечания  
 SQL Server PDW выполняет те же операции с временными таблицами и с постоянными таблицами, если явно не указано иное. Например, данные в локальных временных таблицах, как и постоянные таблицы, либо распределяются, либо реплицируются между разными узлами вычислений.  
   
-## <a name="LimitationsRestrictions"></a>Ограничения  
+## <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a>Ограничения  
 Ограничения для базы данных SQL Server PDW**tempdb** . Вы *не можете:*  
   
 -   Создайте глобальную временную таблицу, которая начинается с # #.  
@@ -82,9 +82,9 @@ SQL Server PDW выполняет те же операции с временны
 ## <a name="permissions"></a>Разрешения  
 Любой пользователь может создавать временные объекты в базе данных tempdb. Если не предоставлены какие-либо дополнительные разрешения, то пользователи могут производить доступ только к тем объектам, которыми они владеют. Существует возможность отменить разрешение на соединение с базой данных tempdb, чтобы пользователь не мог ей пользоваться, но этого делать не рекомендуется, так как база данных tempdb необходима для работы некоторым подпрограммам.  
   
-## <a name="RelatedTasks"></a>Связанные задачи  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a>Связанные задачи  
   
-|Задания|Description|  
+|Задачи|Описание|  
 |---------|---------------|  
 |Создайте таблицу в **базе данных tempdb**.|Можно создать временную таблицу пользователя с помощью CREATE TABLE и CREATE TABLE в качестве инструкций SELECT. Дополнительные сведения см. в разделе [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) и [CREATE TABLE в качестве SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).|  
 |Просмотр списка существующих таблиц в **базе данных tempdb**.|`SELECT * FROM tempdb.sys.tables;`|  

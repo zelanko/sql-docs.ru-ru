@@ -16,10 +16,10 @@ ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0fdd70480a63e334aa3e178d19287b30937e2f53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056788"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
@@ -41,14 +41,14 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**jobnumber**|**int**|Номер задания Oracle.|  
 |**LASTDATE**|**varchar (22)**|Последняя дата выполнения задания.|  
 |**thisdate**|**varchar (22)**|Время изменения.|  
 |**nextdate**|**varchar (22)**|Следующая дата, когда задание будет запущено.|  
 |**broken**|**varchar(1)**|Флаг, означающий неудачное выполнение задания.|  
-|**пределах**|**varchar (200)**|Интервал для задания.|  
+|**interval**|**varchar (200)**|Интервал для задания.|  
 |**сбоев**|**int**|Количество неудачных выполнений для задания.|  
 |**xactsetjobwhat**|**varchar (200)**|Имя процедуры, выполняемой заданием.|  
 |**xactsetjob**|**varchar(1)**|Показывает состояние задания, может быть одним из следующих:<br /><br /> **1** — задание включено.<br /><br /> **0** — задание отключено.|  

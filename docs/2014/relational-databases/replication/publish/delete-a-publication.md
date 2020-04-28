@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa08a7f84cd413f1212cc73d4242b5da70fd33eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882282"
 ---
 # <a name="delete-a-publication"></a>Удаление публикации
@@ -35,7 +35,7 @@ ms.locfileid: "73882282"
   
      [объекты RMO;](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Удалите публикации из папки **Локальные публикации** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-delete-a-publication"></a>Удаление публикации  
@@ -46,7 +46,7 @@ ms.locfileid: "73882282"
   
 3.  Щелкните правой кнопкой мыши публикацию, которую требуется удалить, и выберите **Удалить**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Публикации могут быть удалены программно, с помощью хранимых процедур репликации. Какие именно хранимые процедуры для этого применяются, зависит от типа удаляемой публикации.  
   
 > [!NOTE]  
@@ -82,7 +82,7 @@ ms.locfileid: "73882282"
   
 3.  Чтобы удалить все метаданные репликации, оставшиеся в базе данных подписки, на подписчике в базе данных публикации выполните хранимую процедуру [sp_mergesubscription_cleanup (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql) (необязательно).  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В следующем примере показано удаление публикации транзакций и отключение функции публикации транзакций для базы данных. В этом примере предполагается, что все подписки были удалены ранее. Дополнительные сведения см. в разделе [Delete a Pull Subscription](../delete-a-pull-subscription.md) или [Delete a Push Subscription](../delete-a-push-subscription.md).  
   
  [!code-sql[HowTo#sp_droppublication](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droppublication)]  
@@ -91,7 +91,7 @@ ms.locfileid: "73882282"
   
  [!code-sql[HowTo#sp_dropmergepublication](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergepublication)]  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
  Публикации можно удалять программно с помощью объектов RMO. Классы RMO, используемые, чтобы удалить публикацию, зависят от типа удаляемой публикации.  
   
 #### <a name="to-remove-a-snapshot-or-transactional-publication"></a>Удаление публикации моментальных снимков или публикации транзакций  
@@ -112,7 +112,7 @@ ms.locfileid: "73882282"
   
     2.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение `false`, убедитесь, что база данных существует.  
   
-    3.  Установите свойство <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> в значение `false`.  
+    3.  Задайте для свойства <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> значение `false`.  
   
     4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> .  
   
@@ -136,13 +136,13 @@ ms.locfileid: "73882282"
   
     2.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение `false`, проверьте, существует ли база данных.  
   
-    3.  Установите свойство <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> в значение `false`.  
+    3.  Задайте для свойства <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> значение `false`.  
   
     4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> .  
   
 7.  Закройте соединения.  
   
-###  <a name="PShellExample"></a> Примеры (объекты RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Примеры (объекты RMO)  
  В следующем примере удаляется публикация транзакций. Если в этой базе данных не существует других публикаций транзакций, публикация транзакций также отключается.  
   
  [!code-csharp[HowTo#rmo_DropTranPub](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_droptranpub)]  

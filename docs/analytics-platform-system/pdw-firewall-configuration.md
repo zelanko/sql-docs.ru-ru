@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ed739ce12170aa6d0ab79b996de0075cd6723ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400887"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Конфигурация брандмауэра параллельного хранилища данных в системе платформы аналитики
@@ -35,7 +35,7 @@ ms.locfileid: "74400887"
 ## <a name="external-ports"></a>Внешние порты  
 Следующие порты открыты для клиентских подключений, поступающих за пределы PDW.  
   
-|Назначение|Порту #|Nodes|  
+|Назначение|Порту #|Узлы|  
 |-----------|-----------|---------|  
 |Доступ клиента SQL для PDW (TDS)|17001|ДОВЕРИЯ|  
 |Клиентский доступ загрузчика (dwloader & SSIS)|8001|ДОВЕРИЯ|  
@@ -51,7 +51,7 @@ ms.locfileid: "74400887"
 ## <a name="internal-ports"></a>Внутренние порты  
 Следующие порты используются в PDW для внутреннего взаимодействия, но не открываются для подключений, поступающих за пределы устройства PDW.  
   
-|Назначение|Порту #|Nodes|  
+|Назначение|Порту #|Узлы|  
 |-----------|-----------|---------|  
 |Трафик канала управления DMS|16450|CTL, CMP|  
 |Трафик канала данных DMS|16550|CTL, CMP|  

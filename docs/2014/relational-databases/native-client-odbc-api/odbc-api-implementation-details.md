@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8370db6cfcf3d410e563a0134221d0d48da09a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62715091"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
@@ -27,7 +27,7 @@ ms.locfileid: "62715091"
   
  Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует спецификации ODBC 3.51, а также спецификации ODBC 3.8 в случае использования пакета Windows 7 SDK. Полный справочник по ODBC см. в [справочнике программиста по ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) в Интернете.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [SQLBindCol](sqlbindcol.md)  
   
@@ -131,8 +131,8 @@ ms.locfileid: "62715091"
   
 -   [SQLTables](sqltables.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по SQL Server Native Client &#40;ODBC&#41;](../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)   
- [Построение приложений с использованием SQL Server Native Client](../native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [Построение приложений с использованием собственного клиента SQL Server](../native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

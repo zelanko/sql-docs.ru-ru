@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056617"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Запуск Помощник по миграции данных из командной строки
@@ -40,7 +40,7 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|Аргумент  |Description  | Обязательный (Y/N)
+|Аргумент  |Описание  | Обязательный (Y/N)
 |---------|---------|---------------|
 | `/help or /?`     | Использование текста справки дмакмд. exe        | Нет
 |`/AssessmentName`     |   Имя проекта оценки   | Да
@@ -248,7 +248,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|Аргумент  |Description  | Обязательный (Y/N)
+|Аргумент  |Описание  | Обязательный (Y/N)
 |---------|---------|---------------|
 |`/Action=SkuRecommendation` | Выполнение оценки номера SKU с помощью командной строки DMA | Да
 |`/SkuRecommendationInputDataFilePath` | Полный путь к файлу счетчика производительности, полученному с компьютера, на котором размещены базы данных | Да
@@ -337,6 +337,6 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /SkuRecommendationPreventPriceRefresh=true  
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 - [Помощник по миграции данных](https://aka.ms/get-dma) загрузить.
 - В этой статье [указывается правильный номер SKU базы данных SQL Azure для локальной базы данных](https://aka.ms/dma-sku-recommend-sqldb).

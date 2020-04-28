@@ -15,26 +15,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 413272be4ac4ce913704494a26e9642666deeb92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727319"
 ---
 # <a name="user-hierarchy-properties"></a>Свойства пользовательской иерархии
   В следующей таблице содержатся описания свойств пользовательской иерархии.  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |AllMemberName|Содержит заголовок на языке по умолчанию для элемента «Все» иерархии.|  
 |AllowDuplicateNames|Определяет, допустимы ли в иерархии дублирующиеся имена. Возможные значения: True и False. Значение по умолчанию равно True.|  
-|Description|Содержит описание иерархии.|  
+|Описание|Содержит описание иерархии.|  
 |DisplayFolder|Задает папку, в которой необходимо выдавать список иерархии для пользователей.|  
 |ID|Содержит уникальный идентификатор (ID) иерархии.|  
-|MemberNamesUnique|Определяет, должны ли быть уникальными имена элементов иерархии. Возможные значения: True и False. Значение по умолчанию — False.|  
-|Имя|Содержит имя иерархии.|  
+|MemberNamesUnique|Определяет, должны ли быть уникальными имена элементов иерархии. Возможные значения: True и False. По умолчанию используется значение False.|  
+|name|Содержит имя иерархии.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пользовательские иерархии](user-hierarchies.md)   
  [Свойства уровня](user-hierarchies-level-properties.md)  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd161820fd53d45642848697bce9589a98dec4ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401039"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>Загрузка данных в Параллельное хранилище данных
@@ -25,7 +25,7 @@ ms.locfileid: "74401039"
 ## <a name="load-with-dwloader"></a>Загрузка с помощью dwloader  
 Использование [загрузчика командной строки dwloader](dwloader.md) — самый быстрый способ загрузить данные в PDW.  
   
-![Загрузка процесса](media/loading-process.png "Загрузка процесса")  
+![Идет загрузка процесса](media/loading-process.png "Загрузка процесса")  
   
 dwloader загружает данные непосредственно на вычисленные узлы без передачи данных через управляющий узел. Чтобы загрузить данные, dwloader сначала взаимодействует с узлом управления для получения контактной информации для вычислений узлов. dwloader настраивает канал связи с каждым расчетным узлом, а затем отправляет 256 КБ данных на вычисленные узлы циклическим образом.  
   
@@ -43,7 +43,7 @@ For more information, see [Prepared statements](prepared-statements.md).
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
-|Задача|Description|  
+|Задача|Описание|  
 |--------|---------------|  
 |Создайте промежуточную базу данных.|[Создание промежуточной базы данных](staging-database.md)|  
 |Загрузка с Integration Services.|[Загрузка с помощью служб Integration Services](load-with-ssis.md)|  

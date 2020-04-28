@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400363"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Отправка отзывов телеметрии в корпорацию Майкрософт для платформы аналитики
@@ -22,10 +22,10 @@ ms.locfileid: "74400363"
 > [!NOTE]  
 > В этом выпуске Корпорация Майкрософт активно не отслеживает данные телеметрии. Данные собираются только в целях анализа.  
   
-## <a name="privacy"></a>Уровень  
+## <a name="privacy"></a><a name="privacy"></a>Конфиденциальность  
 Чтобы обеспечить максимальную защиту конфиденциальности, ТД поставляется без включения телеметрии. Перед включением этой функции сначала ознакомьтесь с заявлением [о конфиденциальности Microsoft Analytics Platform System](https://go.microsoft.com/fwlink/?LinkId=400902). Чтобы принять участие в этой инструкции, выполните сценарий PowerShell, описанный ниже.  
   
-## <a name="enable"></a>Включить телеметрию  
+## <a name="enable-telemetry"></a><a name="enable"></a>Включить телеметрию  
 **Пересылка DNS:** Для отправки данных телеметрии в корпорацию Майкрософт требуется Системная платформа аналитики для подключения к Интернету через сервер пересылки DNS. Чтобы включить эту функцию, необходимо включить пересылку DNS на всех узлах и виртуальных машинах рабочей нагрузки. Вызовите `Enable-RemoteMonitoring` команду с `SetupDnsForwarder` параметром, чтобы правильно настроить пересылку DNS и включить телеметрию. Вызовите `Enable-RemoteMonitoring` команду без `SetupDnsForwarder` параметра, если пересылка DNS уже настроена и вы хотите включить только мониторинг пульса.  
   
 > [!IMPORTANT]  
@@ -42,7 +42,7 @@ ms.locfileid: "74400363"
     > [!NOTE]  
     > Для импорта необходимо использовать две точки в команде.  
   
-    **Пример**.  
+    **Пример.**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -75,7 +75,7 @@ ms.locfileid: "74400363"
   
 Неважно, чтобы `Enable-RemoteMonitoring` команда выполнялась несколько раз. Если DNS-сервер пересылки уже настроен, вы получите предупреждающее сообщение, указывающее, что это так.  
   
-## <a name="disable"></a>Отключить телеметрию  
+## <a name="disable-telemetry"></a><a name="disable"></a>Отключить телеметрию  
 При отключении телеметрии будут остановлены все операции, которые передают сведения о состоянии устройства в службу мониторинга APS в облаке.  
   
 > [!IMPORTANT]  
@@ -92,7 +92,7 @@ ms.locfileid: "74400363"
     > [!NOTE]  
     > Для импорта необходимо использовать две точки в команде.  
   
-    **Пример**.  
+    **Пример.**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -100,7 +100,7 @@ ms.locfileid: "74400363"
   
 4.  Вызов `Disable-RemoteMonitoring` команды без параметров. Эта команда перестанет отправлять отзыв. (Это не повлияет на локальный мониторинг.) Однако команда не отключит сервер пересылки DNS и (или) отключает подключение к Интернету. Это необходимо сделать вручную после успешного отключения обратной связи.  
   
-    **Пример**.  
+    **Пример.**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  
@@ -111,7 +111,7 @@ ms.locfileid: "74400363"
 Неважно, чтобы `Disable-RemoteMonitoring` команда выполнялась несколько раз.  
   
 ## <a name="next-steps"></a>Дальнейшие действия
-Дополнительные сведения см. в разделе:
+Дополнительные сведения можно найти в разделе
 - [Мониторинг устройства с помощью консоли администрирования &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 - [Мониторинг устройства с помощью системных представлений &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)  
 - [Мониторинг устройства с помощью системы System Center Operations Manager &#40;Analytics Platform&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  

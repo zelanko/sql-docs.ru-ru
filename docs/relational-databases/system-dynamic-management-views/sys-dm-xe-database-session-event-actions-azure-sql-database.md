@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 322a54a4f3bbd5f4880df6f52a085f5d7141d335
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844451"
 ---
 # <a name="sysdm_xe_database_session_event_actions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions (база данных SQL Azure)
@@ -27,20 +27,20 @@ ms.locfileid: "73844451"
 |-|  
 |**Применимо к**версии [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 12 и всем будущим версиям.|  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|Адрес сеанса событий в памяти. Не допускает значение NULL.|  
-|action_name|**nvarchar (60)**|Имя действия. Не допускает значение NULL.|  
-|action_package_guid|**UNIQUEIDENTIFIER**|Идентификатор GUID пакета, который содержит это действие. Не допускает значение NULL.|  
-|event_name|**nvarchar (60)**|Имя события, для которого предназначено действие. Не допускает значение NULL.|  
-|event_package_guid|**UNIQUEIDENTIFIER**|Идентификатор GUID пакета, который содержит это событие. Не допускает значение NULL.|  
+|action_name|**nvarchar(60)**|Имя действия. Не допускает значение NULL.|  
+|action_package_guid|**uniqueidentifier**|Идентификатор GUID пакета, который содержит это действие. Не допускает значение NULL.|  
+|event_name|**nvarchar(60)**|Имя события, для которого предназначено действие. Не допускает значение NULL.|  
+|event_package_guid|**uniqueidentifier**|Идентификатор GUID пакета, который содержит это событие. Не допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DATABASE STATE.  
   
 ### <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|С|Кому|Связь|  
+|Исходный тип|Кому|Связь|  
 |----------|--------|------------------|  
 |sys. dm_xe_database_session_event_actions. event_session_address|sys. dm_xe_database_sessions. Address|«многие к одному»|  
 |sys. dm_xe_database_session_event_actions. action_name<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name<br /><br /> sys. dm_xe_database_session_events. event_package_guid|«многие к одному»|  

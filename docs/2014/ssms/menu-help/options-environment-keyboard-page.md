@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b65f5a5d337877010c4704b6ac067ced655e99f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62662075"
 ---
 # <a name="options-environment-keyboard-page"></a>Options (Environment-Keyboard Page)
-  Диалоговое окно **Параметры** позволяет настроить схему клавиатуры для среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Здесь можно выбрать схему клавиатуры. Чтобы открыть эту страницу, выберите пункт **Параметры** в меню **Сервис** , выберите папку **Среда** , затем выберите пункт **Клавиатура**.  
+  Диалоговое окно **Параметры** позволяет настроить схему клавиатуры для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Здесь можно выбрать схему клавиатуры. Чтобы открыть эту страницу, выберите пункт **Параметры** в меню **Сервис** , выберите папку **Среда** , затем выберите пункт **Клавиатура**.  
   
  Раскрывающийся список **Раскладка клавиатуры** содержит все доступные коллекции сочетаний клавиш. Для загрузки нужной раскладки выберите ее из этого списка. Для выхода из окна **Параметры** нажмите кнопку **ОК**. Выбранная раскладка будет загружена в среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Standard Edition**  
- Стандартная схема используется по умолчанию в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и похожа на [!INCLUDE[msCoName](../../includes/msconame-md.md)] сочетания клавиш Visual Studio.  
+ Стандартная раскладка — это раскладка, которая устанавливается по умолчанию в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и очень похожа на раскладку клавиатуры [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio.  
   
  Сетка **Сочетание клавиш** позволяет связать хранимую процедуру с сочетанием клавиш.  
   
- **Сочетания**  
+ **Сочетание**  
  Сочетание клавиш для выполнения хранимой процедуры.  
   
  **Хранимая процедура**  

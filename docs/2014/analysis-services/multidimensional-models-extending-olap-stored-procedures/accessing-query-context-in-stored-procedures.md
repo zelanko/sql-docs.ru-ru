@@ -16,25 +16,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93624a612126e9103144b8b53272122e66202b8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702666"
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>Доступ к контексту запросов в хранимых процедурах
   Контекст выполнения хранимой процедуры доступен в рамках кода хранимой процедуры как объект `Context` модели объектов сервера ADOMD.NET. Этот контекст доступен только для чтения и не может быть изменен хранимой процедурой. На этом объекте доступны следующие свойства.  
   
-|Свойство|Тип|Description|  
+|Свойство|Type|Описание|  
 |--------------|----------|-----------------|  
 |**CurrentCube**|Cube|Куб для текущего контекста запросов.|  
-|**CurrentDatabaseName**|String|Идентификатор текущей базы данных.|  
-|**CurrentConnection**|Подключение|Ссылка на объект подключения в текущем контексте.|  
-|**Pass;**|Целое число|Номера прохода для текущего контекста.|  
+|**CurrentDatabaseName**|Строка|Идентификатор текущей базы данных.|  
+|**CurrentConnection**|Соединение|Ссылка на объект подключения в текущем контексте.|  
+|**Успех**|Целое число|Номера прохода для текущего контекста.|  
   
  Объект `Context` существует, когда модель объектов многомерных выражений используется в хранимой процедуре. Он не доступен, когда модель объектов многомерных выражений используется на клиенте. Объект `Context` не передается явным образом хранимой процедуре и не возвращается ею. Он доступен во время выполнения хранимой процедуры.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление сборками многомерной модели](../multidimensional-models/multidimensional-model-assemblies-management.md)   
  [Определение хранимых процедур](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

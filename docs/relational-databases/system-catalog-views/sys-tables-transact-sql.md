@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d1a6d6be7a51cf03442bb5576556b10c5c099ab0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983310"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73983310"
 
   Возвращает по одной строке для каждой пользовательской таблицы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |\<наследуемые столбцы>||Список столбцов, наследуемых этим представлением, см. в разделе [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |lob_data_space_id|**int**|Ненулевое значение — это идентификатор пространства данных (файловой группы или схемы секционирования), хранящего данные больших двоичных объектов (LOB) для этой таблицы. Примерами типов данных LOB являются **varbinary (max)**, **varchar (max)**, **Geography**или **XML**.<br /><br /> 0 = таблица не содержит данных LOB.|  
@@ -49,24 +49,24 @@ ms.locfileid: "73983310"
 |large_value_types_out_of_row|**bit**|1 = типы больших значений хранятся вне строк. Дополнительные сведения см. в разделе [sp_tableoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
 |is_tracked_by_cdc|**bit**|1 = в таблице включена система отслеживания измененных данных. Дополнительные сведения см. в разделе [sys. sp_cdc_enable_table &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).|  
 |lock_escalation|**tinyint**|Значение параметра LOCK_ESCALATION для таблицы.<br /><br /> 0 = TABLE<br /><br /> 1 = DISABLE<br /><br /> 2 = AUTO|  
-|lock_escalation_desc|**nvarchar (60)**|Текстовое описание параметра lock_escalation для таблицы. Возможные значения: TABLE, AUTO и DISABLE.|  
-|is_filetable|**bit**|**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]поздним и.<br /><br /> 1 = таблица имеет тип FileTable.<br /><br /> Дополнительные сведения о таблицах FileTable см. в разделе [Таблицы FileTable (SQL Server)](../../relational-databases/blob/filetables-sql-server.md).|  
-|устойчивость|**tinyint**|**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]поздним и.<br /><br /> Возможные следующие значения.<br /><br /> 0 = SCHEMA_AND_DATA<br /><br /> 1 = SCHEMA_ONLY<br /><br /> Значением по умолчанию является значение 0.|  
-|durability_desc|**nvarchar (60)**|**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]поздним и.<br /><br /> Допустимы следующие значения:<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> Значение SCHEMA_AND_DATA указывает, что таблица является надежной и оптимизированной для памяти. SCHEMA_AND_DATA — это значение по умолчанию для таблиц, оптимизированных для памяти. Значение SCHEMA_ONLY указывает, что табличные данные не будут сохранены после перезапуска базы данных с объектами, оптимизированными для памяти.|  
-|is_memory_optimized|**bit**|**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]поздним и.<br /><br /> Допустимы следующие значения:<br /><br /> 0 = не оптимизировано для памяти.<br /><br /> 1 = оптимизировано для памяти<br /><br /> Значение по умолчанию — 0.<br /><br /> Оптимизированные для памяти таблицы — это хранящиеся в памяти пользовательские таблицы, схемы которых сохраняются на диске аналогично другим пользовательским таблицам. Доступ к оптимизированным для памяти таблицам можно осуществлять из скомпилированных в собственном коде хранимых процедур.|  
-|temporal_type|**tinyint**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]поздним и.<br /><br /> Числовое значение, представляющее тип таблицы:<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
-|temporal_type_desc|**nvarchar (60)**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]поздним и.<br /><br /> Текстовое описание типа таблицы:<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
-|history_table_id|**int**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]поздним и.<br /><br /> Если temporal_type в (2, 4) возвращает object_id таблицы, которая поддерживает исторические данные, в противном случае возвращает значение NULL.|  
+|lock_escalation_desc|**nvarchar(60)**|Текстовое описание параметра lock_escalation для таблицы. Возможные значения: TABLE, AUTO и DISABLE.|  
+|is_filetable|**bit**|**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> 1 = таблица имеет тип FileTable.<br /><br /> Дополнительные сведения о таблицах FileTable см. в разделе [Таблицы FileTable (SQL Server)](../../relational-databases/blob/filetables-sql-server.md).|  
+|устойчивость|**tinyint**|**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Возможные следующие значения.<br /><br /> 0 = SCHEMA_AND_DATA<br /><br /> 1 = SCHEMA_ONLY<br /><br /> Значением по умолчанию является значение 0.|  
+|durability_desc|**nvarchar(60)**|**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Допустимы следующие значения:<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> Значение SCHEMA_AND_DATA указывает, что таблица является надежной и оптимизированной для памяти. SCHEMA_AND_DATA — это значение по умолчанию для таблиц, оптимизированных для памяти. Значение SCHEMA_ONLY указывает, что табличные данные не будут сохранены после перезапуска базы данных с объектами, оптимизированными для памяти.|  
+|is_memory_optimized|**bit**|**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Допустимы следующие значения:<br /><br /> 0 = не оптимизировано для памяти.<br /><br /> 1 = оптимизировано для памяти<br /><br /> Значение по умолчанию — 0.<br /><br /> Оптимизированные для памяти таблицы — это хранящиеся в памяти пользовательские таблицы, схемы которых сохраняются на диске аналогично другим пользовательским таблицам. Доступ к оптимизированным для памяти таблицам можно осуществлять из скомпилированных в собственном коде хранимых процедур.|  
+|temporal_type|**tinyint**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Числовое значение, представляющее тип таблицы:<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
+|temporal_type_desc|**nvarchar(60)**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Текстовое описание типа таблицы:<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
+|history_table_id|**int**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Если temporal_type в (2, 4) возвращает object_id таблицы, которая поддерживает исторические данные, в противном случае возвращает значение NULL.|  
 |is_remote_data_archive_enabled|**bit**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздним версиям и[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Указывает, включена ли таблица с растяжением.<br /><br /> 0 = таблица не поддерживает растяжение.<br /><br /> 1 = таблица поддерживает растяжение.<br /><br /> Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
 |is_external|**bit**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]поздним [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)], и.<br /><br /> Указывает, что таблица является внешней таблицей.<br /><br /> 0 = таблица не является внешней таблицей.<br /><br /> 1 = таблица является внешней таблицей.| 
 |history_retention_period|**int**|**Применимо к**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Числовое значение, представляющее продолжительность временного периода хранения журнала в единицах, указанных с помощью history_retention_period_unit. |  
 |history_retention_period_unit|**int**|**Применимо к**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Числовое значение, представляющее тип временной единицы хранения истории. <br /><br />-1: БЕСКОНЕЧНОСТЬ <br /><br />3: ДЕНЬ <br /><br />4: НЕДЕЛЯ <br /><br />5: МЕСЯЦ <br /><br />6: ГОД |  
 |history_retention_period_unit_desc|**nvarchar (10)**|**Применимо к**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Текстовое описание типа временной единицы срока хранения истории. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
-|is_node|**bit**|**Применимо к** [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] : [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]и. <br/><br/>1 = это таблица узла графа. <br /><br />0 = это не таблица узла графа. |  
-|is_edge|**bit**|**Применимо к** [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] : [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]и. <br/><br/>1 = это краевая таблица графа. <br /><br />0 = это не краевая таблица графа. |  
+|is_node|**bit**|**Применимо к**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] и [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = это таблица узла графа. <br /><br />0 = это не таблица узла графа. |  
+|is_edge|**bit**|**Применимо к**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] и [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = это краевая таблица графа. <br /><br />0 = это не краевая таблица графа. |  
 
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращаются все пользовательские таблицы, у которых нет первичного ключа.  
@@ -83,7 +83,7 @@ GO
   
 В следующем примере показано, как можно предоставить доступ к связанным временным данным.  
    
-**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]поздним и.
+**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].
   
 ```  
 SELECT T1.object_id, T1.name as TemporalTableName, SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema,  
@@ -111,7 +111,7 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
   
 ## <a name="see-also"></a>См. также:  
  [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [DBCC CHECKDB &#40;&#41;Transact-SQL](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
  [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)   
  [Запросы к системному каталогу SQL Server вопросы и ответы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   

@@ -32,10 +32,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727650"
 ---
 # <a name="cube-properties"></a>Свойства куба
@@ -46,7 +46,7 @@ ms.locfileid: "62727650"
   
  Дополнительные сведения о настройке свойств куба см. в разделе [конструктор кубов &#40;Analysis Services многомерных данных&#41;](../cube-designer-analysis-services-multidimensional-data.md).  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |`AggregationPrefix`|Общий префикс, используемый для имен агрегатов.|  
 |`Collation`|Код локали (LCID) и флаг сравнения, отделенный символом подчеркивания, например Latin1_General_C1_AS.|  
@@ -70,7 +70,7 @@ ms.locfileid: "62727650"
 > [!NOTE]  
 >  Дополнительные сведения о задании значений для свойства ErrorConfiguration при работе со значениями NULL и другими проблемами целостности данных см. [в разделе Обработка проблем целостности данных в Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Упреждающее кэширование &#40;секций&#41;](partitions-proactive-caching.md)  
   
   

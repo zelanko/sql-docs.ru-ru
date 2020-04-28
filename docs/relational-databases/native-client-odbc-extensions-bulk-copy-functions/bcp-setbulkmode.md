@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46da93307d28b5be6aec3fbcbff31322e96ea634
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782399"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
@@ -46,7 +46,7 @@ RETCODE bcp_setbulkmode (
  *property*  
  Константа типа BYTE. Список констант см. в таблице в подразделе «Примечания».  
   
- *пфиелд*  
+ *pField*  
  Указатель на значение признака конца поля.  
   
  *cbField*  
@@ -58,7 +58,7 @@ RETCODE bcp_setbulkmode (
  *cbRow*  
  Длина в байтах значения признака конца строки.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  SUCCEED или FAIL  
   
 ## <a name="remarks"></a>Remarks  
@@ -68,7 +68,7 @@ RETCODE bcp_setbulkmode (
   
  В следующей таблице перечислены константы для параметра *property* .  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|Указывает символьный режим вывода.<br /><br /> Соответствует параметру-c в BCP. EXE и для bcp_setcolfmt со свойством **BCP_FMT_TYPE** , для которого задано значение **SQLCHARACTER**.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Указывает режим вывода в Юникоде.<br /><br /> Соответствует параметру-w в BCP. EXE и bcp_setcolfmt со свойством **BCP_FMT_TYPE** , имеющим значение **SQLNCHAR**.|  
@@ -81,7 +81,7 @@ RETCODE bcp_setbulkmode (
   
  При попытке вызвать bcp_setbulkmode с последовательностью вызовов функций, включающих bcp_setcolfmt, bcp_control и bcp_readfmt, один из вызовов функций возвратит ошибку последовательности. Если вы решите устранить ошибку, вызовите bcp_init, чтобы сбросить все параметры и начать заново.  
   
- Ниже приведены некоторые примеры вызовов функций, которые приводят к ошибке последовательности функций:  
+ Ниже приведены примеры вызовов функций, которые приводят к ошибке последовательности функций:  
   
 ```  
 bcp_init("table", DB_IN);  

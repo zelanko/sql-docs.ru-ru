@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3897c5e41e16af0a8162b63794760aa4d740353d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727700"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>Aggregations and Aggregation Designs
@@ -47,7 +47,7 @@ ms.locfileid: "62727700"
   
  Агрегаты проектируются при помощи мастеров, но не вычисляются до момента обработки секции, для которой они были спроектированы. Если после создания агрегата структура куба изменилась либо в исходных таблицах куба были изменены или добавлены данные, то обычно требуется проверка агрегатов куба и его повторная обработка.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Режимы хранения и обработка секции](partitions-partition-storage-modes-and-processing.md)  
   
   

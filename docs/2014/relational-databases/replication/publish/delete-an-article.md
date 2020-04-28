@@ -20,42 +20,42 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4be2287a1c0d43ccfdfaeaca3378f6d10f100134
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882274"
 ---
 # <a name="delete-an-article"></a>Удаление статьи
   В данном разделе описывается удаление статьи в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов RMO. Сведения об условиях, при которых статьи могут быть удалены, и о том, требуется ли при удалении статьи создание нового моментального снимка или повторная инициализация подписок, см. в [этой статье](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Статьи можно удалять программно, с помощью хранимых процедур репликации. Хранимые процедуры, используемые для этого, зависят от типа публикации, к которой принадлежит статья.  
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>Удаление статьи из публикации моментальных снимков или публикации транзакций  
   
-1.  Чтобы удалить статью, указанную в параметре [](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)article **, из публикации, указанной в параметре \@** publication **, выполните процедуру \@sp_droparticle &#40;Transact-SQL&#41;**. Укажите значение **1** в параметре **\@force_invalidate_snapshot**.  
+1.  Чтобы удалить статью, указанную в параметре **\@article**, из публикации, указанной в параметре **\@publication**, выполните процедуру [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql). Укажите значение **1** для ** \@force_invalidate_snapshot**.  
   
 2.  (Необязательно) Чтобы полностью удалить опубликованный объект из базы данных, выполните команду `DROP <objectname>` на издателе для базы данных публикации.  
   
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>Удаление статьи из публикации слиянием  
   
-1.  Чтобы удалить статью, указанную в параметре [](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)article **, из публикации, указанной в параметре \@** publication **, выполните процедуру \@sp_dropmergearticle &#40;Transact-SQL&#41;**. При необходимости укажите значение **1** в параметре **\@force_invalidate_snapshot** и значение **1** в параметре **\@force_reinit_subscription**.  
+1.  Чтобы удалить статью, указанную в параметре **\@article**, из публикации, указанной в параметре **\@publication**, выполните процедуру [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql). При необходимости укажите значение **1** для ** \@force_invalidate_snapshot** и значение **1** для ** \@force_reinit_subscription**.  
   
 2.  (Необязательно) Чтобы полностью удалить опубликованный объект из базы данных, выполните команду `DROP <objectname>` на издателе для базы данных публикации.  
   
-###  <a name="TsqlExample"></a>Примеры (Transact-SQL)  
- В следующем примере удаляется статья из публикации транзакций. Так как это изменение приведет к недействительности существующего моментального снимка, в параметре **** force_invalidate_snapshot** указывается значение \@1**.  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Примеры (Transact-SQL)  
+ В следующем примере удаляется статья из публикации транзакций. Так как это изменение делает недействительным существующий моментальный снимок, для параметра ** \@force_invalidate_snapshot** указывается значение **1** .  
   
  [!code-sql[HowTo#sp_droparticle](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droparticle)]  
   
- В следующем примере две статьи удаляются из публикации слиянием. Так как эти изменения приведут к недействительности существующего моментального снимка, в параметре **** force_invalidate_snapshot** указывается значение \@1**.  
+ В следующем примере две статьи удаляются из публикации слиянием. Так как эти изменения делают недействительным существующий моментальный снимок, для параметра ** \@force_invalidate_snapshot** указывается значение **1** .  
   
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergearticle)]
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergearticles.sql#sp_dropmergearticle)]  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
  Удаление статьи можно произвести программным путем с помощью объектов RMO. Какие именно классы RMO будут для этого применяться, зависит от типа публикации, которой принадлежит подписка.  
   
 #### <a name="to-delete-an-article-that-belongs-to-a-snapshot-or-transactional-publication"></a>Удаление статьи, принадлежащей публикации моментальных снимков или транзакций  
@@ -92,6 +92,6 @@ ms.locfileid: "73882274"
   
 ## <a name="see-also"></a>См. также:  
  [Добавление и удаление статей в существующих публикациях](add-articles-to-and-drop-articles-from-existing-publications.md)   
- [Основные понятия системных хранимых процедур репликации](../concepts/replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)  
   
   

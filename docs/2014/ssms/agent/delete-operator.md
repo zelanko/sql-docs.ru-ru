@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c8d483b6ed67c67b901fcd25a4eeb76a550ce385
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62666605"
 ---
 # <a name="delete-operator"></a>Удаление оператора
@@ -26,13 +26,13 @@ ms.locfileid: "62666605"
  **Объект для удаления**  
  Отображает оператор, подлежащий удалению.  
   
- **Назначить повторно**  
+ **Переназначить на**  
  Переназначает уведомления для оператора, подлежащего удалению.  
   
  **Свойства**  
  Отображает свойства оператора, которому должны быть повторно назначены уведомления.  
   
-## <a name="see-also"></a>См. также:  
- [Операторы](operators.md)  
+## <a name="see-also"></a>См. также  
+ [Инструкции](operators.md)  
   
   

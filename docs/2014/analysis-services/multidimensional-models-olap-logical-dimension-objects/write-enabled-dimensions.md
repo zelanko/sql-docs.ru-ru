@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f76ba993508807e57e73d5e53ea25a4cbe382529
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727453"
 ---
 # <a name="write-enabled-dimensions"></a>Измерения, доступные для записи
@@ -54,14 +54,14 @@ ms.locfileid: "62727453"
 > [!NOTE]  
 >  Обратная запись в измерения не поддерживается связанными измерениями.  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
  Обновление измерений, доступных для записи, могут выполнять только бизнес-пользователи, которые являются членами ролей базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , и которым было предоставлено разрешение на чтение измерения и запись в него. Для каждой роли можно контролировать возможность обновления тех или иных элементов. Чтобы бизнес-пользователи могли обновлять измерения, доступные для записи, их клиентское приложение должно поддерживать такую возможность. Для таких пользователей измерение, доступное для записи, должно содержаться в кубе, который подвергался обработке с момента последнего изменения измерения. Дополнительные сведения см. в разделе [Предоставление доступа к объектам и операциям (Analysis Services)](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
  Пользователи и группы, входящие в роль «Администраторы», могут обновлять элементы атрибутов и значения свойств связанных элементов измерения, доступного для записи, даже если оно не включено в куб.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойства измерения базы данных](database-dimension-properties.md)   
  [Секции, доступные для записи](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Измерения &#40;Analysis Services многомерных данных&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Измерения (службы Analysis Services — многомерные данные)](dimensions-analysis-services-multidimensional-data.md)  
   
   

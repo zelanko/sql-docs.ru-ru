@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62701996"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Управление соединениями и сеансами (XMLA)
@@ -41,7 +41,7 @@ ms.locfileid: "62701996"
   
  В спецификации протокола SOAP консорциума World Wide Web (W3C) рекомендуется использовать заголовки SOAP для построения новых протоколов поверх сообщений SOAP. В приведенной далее таблице перечислены элементы и атрибуты заголовков SOAP, которые XMLA определяет для запуска, ведения и закрытия сеанса.  
   
-|Заголовок SOAP|Description|  
+|Заголовок SOAP|Описание|  
 |-----------------|-----------------|  
 |BeginSession|Этот заголовок запрашивает у поставщика создание нового сеанса. В ответ поставщик должен создать новый сеанс и возвратить его идентификатор, как часть заголовка Session в ответе SOAP.|  
 |SessionId|Область значения содержит идентификатор сеанса, который необходимо использовать в каждом вызове метода в течение сеанса. В ответе SOAP поставщик отправляет этот тег, а клиент также должен отправлять этот атрибут с каждым элементом заголовка Session.|  
@@ -105,7 +105,7 @@ ms.locfileid: "62701996"
     </SOAP-ENV:Header>  
     ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разработка с использованием XMLA в службах Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

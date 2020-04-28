@@ -18,10 +18,10 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982110"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "73982110"
 
 Записывает диагностические данные и сведения о работоспособности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выявления потенциальных неполадок. Процедура работает в повторяющемся режиме и периодически отправляет результаты. Ее можно вызывать из обычного соединения или соединения приложения уровня данных.  
   
-**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (и более поздним версиям).  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше).  
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,19 +51,19 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
  Если указано значение, большее или равное 5, то хранимая процедура будет повторно выполняться, чтобы возвращать состояние работоспособности, пока не будет отменена вручную.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
-0 (успех) или 1 (сбой).  
+0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
 **sp_server_diagnostics** возвращает следующие сведения.  
   
-|Столбец|Тип данных|Description|  
+|Столбец|Тип данных|Описание|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Указывает отметку времени создания строки. Все строки в одном наборе данных имеют одинаковые отметки времени.|  
-|**component_type**|**имеет sysname**|Указывает, содержит ли строка сведения для компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уровня экземпляра или для Always on группы доступности:<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
-|**component_name**|**имеет sysname**|Указывает имя компонента или имя группы доступности:<br /><br /> система<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<имя группы доступности>*|  
+|**component_type**|**sysname**|Указывает, содержит ли строка сведения для компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уровня экземпляра или для Always on группы доступности:<br /><br /> экземпляр<br /><br /> Always On: AvailabilityGroup|  
+|**component_name**|**sysname**|Указывает имя компонента или имя группы доступности:<br /><br /> система<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> события<br /><br /> *\<имя группы доступности>*|  
 |**state**|**int**|Указывает состояние работоспособности компонента:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**имеет sysname**|Описывает столбец state. Далее представлены описания, соответствующие значениям в столбце state:<br /><br /> 0: неизвестно<br /><br /> 1: чистая очистка<br /><br /> 2: предупреждение<br /><br /> 3: ошибка|  
-|**data**|**varchar (max)**|Указывает данные, свойственные данному компоненту.|  
+|**state_desc**|**sysname**|Описывает столбец state. Далее представлены описания, соответствующие значениям в столбце state:<br /><br /> 0. Неизвестно<br /><br /> 1: чистая очистка<br /><br /> 2: предупреждение<br /><br /> 3: ошибка|  
+|**данные**|**varchar (max)**|Указывает данные, свойственные данному компоненту.|  
   
  Далее даны описания пяти компонентов.  
   
@@ -84,13 +84,13 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 В следующей таблице представлены компоненты и связанные с ними состояния работоспособности.  
   
-|Components|Удовлетворительно (1)|Предупреждение (2)|Ошибка (3)|Неизвестно (0)|  
+|Компоненты|Удовлетворительно (1)|Предупреждение (2)|Ошибка (3)|Неизвестно (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |система|x|x|x||  
 |resource|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
-|events||||x|  
+|события||||x|  
   
 Символ (x) в каждой строке представляет допустимые состояния исправности для компонента. Например, в компоненте io_subsystem показывается удовлетворительное состояние или предупреждение, а ошибки не показываются.  
  

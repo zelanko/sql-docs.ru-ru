@@ -11,10 +11,10 @@ ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 79cf6243b275ba6090eb76400a8dbf7f8dd01f0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728701"
 ---
 # <a name="business-rule-examples-master-data-services"></a>Примеры бизнес-правил (службы Master Data Services)
@@ -27,10 +27,10 @@ ms.locfileid: "73728701"
   
   
 ## <a name="business-rule-examples"></a>Примеры бизнес-правил  
-Образец модели |Сущность  |Имя бизнес-правила| Description  
+Образец модели |Объект  |Имя бизнес-правила| Описание  
 ---------|---------|---------|-----------|  
-Клиент    | Клиент   | Персональные условия оплаты| Задает условия оплаты по умолчанию для заказчиков.          
-В следующем бизнес-правиле, если значение атрибута CustomerType соответствует `is equal` [](../master-data-services/business-rule-conditions-master-data-services.md), то `defaults to` [](../master-data-services/business-rule-conditions-master-data-services.md) применяется к атрибуту PaymentTerms. В противном случае не выполняется никаких действий.  
+Customer    | Customer   | Персональные условия оплаты| Задает условия оплаты по умолчанию для заказчиков.          
+В следующем бизнес-правиле, если значение атрибута CustomerType соответствует `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-conditions-master-data-services.md) is applied to the PaymentTerms attribute. В противном случае не выполняется никаких действий.  
 ```  
 If  
     CustomerType is equal to 2  
@@ -42,10 +42,10 @@ Else
   
 **--------------------------------------------------**  
   
-Образец модели  |Сущность  |Имя бизнес-правила|Description    
+Образец модели  |Объект  |Имя бизнес-правила|Описание    
 ---------|---------|---------|---------------  
-Клиент     | Клиент    | Условия оплаты для организаций | Определяет условия оплаты по умолчанию для организаций.         
-В следующем бизнес-правиле, если значение атрибута CustomerType соответствует `is equal` [](../master-data-services/business-rule-conditions-master-data-services.md), то `defaults to` [](../master-data-services/business-rule-actions-master-data-services.md) применяется к атрибуту PaymentTerms. В противном случае не выполняется никаких действий.  
+Customer     | Customer    | Условия оплаты для организаций | Определяет условия оплаты по умолчанию для организаций.         
+В следующем бизнес-правиле, если значение атрибута CustomerType соответствует `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the PaymentTerms attribute. В противном случае не выполняется никаких действий.  
 ```  
 If  
     CustomerType is equal to 1  
@@ -58,10 +58,10 @@ Else
 **--------------------------------------------------**  
   
   
-Образец модели  |Сущность  |Имя бизнес-правила| Description    
+Образец модели  |Объект  |Имя бизнес-правила| Описание    
 ---------|---------|---------|-----------  
 Продукт     |  Продукт       | DaysToManufacture |Задает диапазон сроков собственного производства.          
-В следующем бизнес-правиле, если значение атрибута InHouseManufacture соответствует `is equal` [](../master-data-services/business-rule-conditions-master-data-services.md), то `must be between` [](../master-data-services/business-rule-actions-master-data-services.md) применяется к атрибуту DaysToManufacture. В противном случае не выполняется никаких действий.  
+В следующем бизнес-правиле, если значение атрибута InHouseManufacture соответствует `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `must be between` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the DaysToManufacture attribute. В противном случае не выполняется никаких действий.  
 ```  
 If  
     InHouseManufacture is equal to Y  
@@ -74,10 +74,10 @@ Else
 **--------------------------------------------------**  
   
   
-Образец модели  |Сущность  |Имя бизнес-правила|Description    
+Образец модели  |Объект  |Имя бизнес-правила|Описание    
 ---------|---------|---------|-------------  
 Продукт     |Продукт         |Обязательные поля| Задает обязательные поля для элементов сущности продукта.           
-В следующем правиле `is required` [](../master-data-services/business-rule-actions-master-data-services.md) выполняется для указанных атрибутов при любых условиях. Значения атрибутов не могут быть Null или пустыми.  
+В следующем правиле `is required` [validation action](../master-data-services/business-rule-actions-master-data-services.md) is taken for the specified attributes. Значения атрибутов не могут быть Null или пустыми.  
 ```  
 If  
     None  
@@ -99,10 +99,10 @@ Else
 **--------------------------------------------------**  
   
   
-Образец модели  |Сущность  |Имя бизнес-правила|Description    
+Образец модели  |Объект  |Имя бизнес-правила|Описание    
 ---------|---------|---------|-----------  
 Продукт     | Продукт        |  Стандартная стоимость| Устанавливает требование, согласно которому стандартная стоимость должна быть больше 0.        
-В следующем бизнес-правиле `must be greater than` [](../master-data-services/business-rule-actions-master-data-services.md) применяется к атрибуту StandardCost продуктов при любых условиях.  
+В следующем бизнес-правиле `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the StandardCost attribute of products.  
 ```  
 If  
     None  
@@ -115,11 +115,11 @@ Else
 **--------------------------------------------------**  
   
   
-Образец модели  |Сущность  |Имя бизнес-правила|Description    
+Образец модели  |Объект  |Имя бизнес-правила|Описание    
 ---------|---------|---------|------------  
 Продукт     | Продукт        | Стоимость MSRP FG|Указывает, что для готовой продукции розничная цена производителя и цена продавца должны быть больше 0.           
   
-В следующем бизнес-правиле, если значение атрибута FinishedGoodIndicator соответствует `is equal` [](../master-data-services/business-rule-conditions-master-data-services.md), то `must be greater than` [](../master-data-services/business-rule-actions-master-data-services.md) применяется к атрибутам MSRP и DealerCost.  
+В следующем бизнес-правиле, если значение атрибута FinishedGoodIndicator соответствует `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), the `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the MSRP and DealerCost attributes.  
 ```  
 If  
     FinishedGoodIndicator is equal to Y  
@@ -133,7 +133,7 @@ Else
 **--------------------------------------------------**  
   
   
-Образец модели  |Сущность  |Имя бизнес-правила|Description    
+Образец модели  |Объект  |Имя бизнес-правила|Описание    
 ---------|---------|---------|------------  
 Продукт     | Продукт        |  Имя по умолчанию| Задает название продукта по умолчанию на основе значений атрибутов Color и Class. Если значение атрибута Color не равно YLO, а значение атрибута Class не равно NA, название по умолчанию — Yellow NA.         
 В следующем бизнес-правиле, если значения атрибутов Color и Class не соответствуют условию правила `is equal` , то `defaults to` [](../master-data-services/business-rule-actions-master-data-services.md) применяется к атрибуту Name.  
@@ -154,7 +154,7 @@ Else
 Инструкции по настройке веб-сайта см. в разделе [Установка и настройка служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
 2. Щелкните образец модели, содержащий бизнес-правило из приведенных выше таблиц, а затем щелкните **Сущности**.  
 3. Выберите сущность, к которой применяется правило, как указано в таблицах выше, а затем щелкните **Бизнес-правила**.  
-4. Щелкните имя бизнес-правила, которое нужно просмотреть. В пользовательском интерфейсе отобразятся инструкции **If**, **Then** и **Else**.  
+4. Щелкните имя бизнес-правила, которое нужно просмотреть. В пользовательском интерфейсе отобразятся инструкции **If**, **Then** и **Else** .  
   
  
   

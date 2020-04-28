@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62689031"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
@@ -46,10 +46,10 @@ fIsMaxType
  *token*  
  Значение, указывающее токен типа BCP.  
   
- *полями*  
+ *поле*  
  Указывает, запрашивает ли токен тип max.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  Строка, содержащая имя типа SQL, соответствующего типу BCP. Если указывается недопустимый тип BCP, возвращается пустая строка.  
   
 ## <a name="remarks"></a>Remarks  
@@ -59,8 +59,8 @@ fIsMaxType
   
 |Имя типа BCP|MaxType|Выходные данные|  
 |-------------------|-------------|------------|  
-|`SQLDECIMAL`|Можно использовать|**Decimal**|  
-|`SQLNUMERIC`|Можно использовать|**ISNUMERIC**|  
+|`SQLDECIMAL`|Можно использовать|**decimal**|  
+|`SQLNUMERIC`|Можно использовать|**numeric**|  
 |`SQLINT1`|Можно использовать|**tinyint**|  
 |`SQLINT2`|Можно использовать|**smallint**|  
 |`SQLINT4`|Можно использовать|**int**|  
@@ -69,31 +69,31 @@ fIsMaxType
 |`SQLDATETIME`|Можно использовать|**datetime**|  
 |`SQLBITN`|Можно использовать|**bit-null**|  
 |`SQLBIT`|Можно использовать|**bit**|  
-|`SQLBIGCHAR`|нет|**типа**|  
-|`SQLCHARACTER`|нет|**типа**|  
-|`SQLBIGVARCHAR`|нет|**varchar**|  
-|`SQLVARCHAR`|нет|**varchar**|  
-|`SQLTEXT`|Можно использовать|**полнотекстовым**|  
-|`SQLBIGBINARY`|нет|**binary**|  
-|`SQLBINARY`|нет|**Двоичный**|  
-|`SQLBIGVARBINARY`|нет|**Varbinary**|  
-|`SQLVARBINARY`|нет|**Varbinary**|  
-|`SQLIMAGE`|Можно использовать|**Изображение**|  
+|`SQLBIGCHAR`|Нет|**char**|  
+|`SQLCHARACTER`|Нет|**char**|  
+|`SQLBIGVARCHAR`|Нет|**varchar**|  
+|`SQLVARCHAR`|Нет|**varchar**|  
+|`SQLTEXT`|Можно использовать|**text**|  
+|`SQLBIGBINARY`|Нет|**binary**|  
+|`SQLBINARY`|Нет|**Двоичный**|  
+|`SQLBIGVARBINARY`|Нет|**Varbinary**|  
+|`SQLVARBINARY`|Нет|**Varbinary**|  
+|`SQLIMAGE`|Можно использовать|**ОС контейнера**|  
 |`SQLINTN`|Можно использовать|**int-null**|  
 |`SQLDATETIMN`|Можно использовать|**datetime-null**|  
 |`SQLMONEYN`|Можно использовать|**money-null**|  
 |`SQLFLTN`|Можно использовать|**float-null**|  
 |`SQLAOPSUM`|Можно использовать|**Функции**|  
 |`SQLAOPAVG`|Можно использовать|**Обращения**|  
-|`SQLAOPCNT`|Можно использовать|**Расчета**|  
+|`SQLAOPCNT`|Можно использовать|**Count**|  
 |`SQLAOPMIN`|Можно использовать|**Минимум**|  
 |`SQLAOPMAX`|Можно использовать|**Максимальной**|  
 |`SQLDATETIM4`|Можно использовать|**smalldatetime**|  
 |`SQLMONEY4`|Можно использовать|**Smallmoney**|  
 |`SQLFLT4`|Можно использовать|**Real**|  
-|`SQLUNIQUEID`|Можно использовать|**UNIQUEIDENTIFIER**|  
-|`SQLNCHAR`|нет|**Nchar**|  
-|`SQLNVARCHAR`|нет|**Nvarchar**|  
+|`SQLUNIQUEID`|Можно использовать|**uniqueidentifier**|  
+|`SQLNCHAR`|Нет|**Nchar**|  
+|`SQLNVARCHAR`|Нет|**Nvarchar**|  
 |`SQLNTEXT`|Можно использовать|**Типы**|  
 |`SQLVARIANT`|Можно использовать|**sql_variant**|  
 |`SQLINT8`|Можно использовать|**Bigint**|  
@@ -115,7 +115,7 @@ fIsMaxType
   
  Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

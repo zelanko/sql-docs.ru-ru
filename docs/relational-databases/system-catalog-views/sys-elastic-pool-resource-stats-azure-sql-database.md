@@ -19,10 +19,10 @@ ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0712785a5af3e8cc3c606a597ba02e0075c88dd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73843874"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (база данных SQL Azure)
@@ -34,11 +34,11 @@ ms.locfileid: "73843874"
 |-|  
 |**Применимо к**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12.|  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime2**|Время в формате UTC, обозначающее начало 15 секунд отчетного интервала.|  
 |**end_time**|**datetime2**|Время в формате UTC, указывающее Окончание интервала составления отчета за 15 секунд.|  
-|**elastic_pool_name**|**nvarchar(128**|Имя пула эластичных баз данных.|  
+|**elastic_pool_name**|**nvarchar(128)**|Имя пула эластичных баз данных.|  
 |**avg_cpu_percent**|**Decimal (5, 2)**|Среднее использование вычислительных ресурсов в процентах от предела пула.|  
 |**avg_data_io_percent**|**Decimal (5, 2)**|Среднее использование ввода-вывода в процентах от предела пула.|  
 |**avg_log_write_percent**|**Decimal (5, 2)**|Среднее использование записи ресурсов в процентах от предела пула.|  

@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3dcc6eedc97b3d476d79420b4e067883e17f03d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702301"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Создание и изменение объектов (XMLA)
@@ -94,7 +94,7 @@ ms.locfileid: "62702301"
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Описание  
  В следующем примере создается реляционный источник данных, ссылающийся на [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] образец [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных.  
   
 ### <a name="code"></a>Код  
@@ -119,7 +119,7 @@ ms.locfileid: "62702301"
 </Create>  
 ```  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Описание  
  В следующем примере реляционный источник данных, созданный в предыдущем примере, изменяется путем задания времени ожидания запроса для источника данных, равного 30 секундам.  
   
 ### <a name="code"></a>Код  
@@ -145,7 +145,7 @@ ms.locfileid: "62702301"
 ### <a name="comments"></a>Комментарии  
  `ObjectExpansion` Атрибуту `Alter` команды было присвоено значение *ObjectProperties*. Этот параметр позволяет исключить элемент [ImpersonationInfo](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) , дополнительный объект, из источника данных, определенного в `ObjectDefinition`. Поэтому в качестве данных об олицетворении для этого источника данных остается заданной учетная запись службы, как указано в первом примере.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Execute &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)   
  [Разработка с помощью Analysis Services языка сценариев &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Разработка с использованием XMLA в службах Analysis Services](developing-with-xmla-in-analysis-services.md)  

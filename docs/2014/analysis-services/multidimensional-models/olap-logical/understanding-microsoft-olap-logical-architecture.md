@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 074659d42e1960c5f24cf4afa20668a3d8c823b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62725488"
 ---
 # <a name="logical-architecture-analysis-services---multidimensional-data"></a>Логическая архитектура (службы Analysis Services — многомерные данные)
@@ -31,7 +31,7 @@ ms.locfileid: "62725488"
   
  Также службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] поддерживают ядро локального куба, которое позволяет приложениям на отключенных клиентах просматривать локально хранимые многомерные данные. Дополнительные сведения см. в статье [требования к архитектуре клиента для разработки Analysis Services](../olap-physical/client-architecture-requirements-for-analysis-services-development.md) .  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  **Обзор логической архитектуры**  
  [Общие сведения об логической архитектуре &#40;Analysis Services многомерных данных&#41;](logical-architecture-overview-analysis-services-multidimensional-data.md)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62725488"
  [Серверные объекты &#40;Analysis Services многомерных данных&#41;](server-objects-analysis-services-multidimensional-data.md)  
   
  **Объекты базы данных**  
- [Объекты базы данных &#40;Analysis Services многомерных данных&#41;](database-objects-analysis-services-multidimensional-data.md)  
+ [Объекты баз данных (службы Analysis Services — многомерные данные)](database-objects-analysis-services-multidimensional-data.md)  
   
  **Объекты измерений**  
  [Объекты измерения &#40;Analysis Services многомерных данных&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md)  
@@ -50,8 +50,8 @@ ms.locfileid: "62725488"
  **Безопасность доступа пользователей**  
  [Архитектура безопасности доступа пользователей](understanding-microsoft-olap-logical-architecture.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные сведения об архитектуре Microsoft OLAP](../olap-physical/understanding-microsoft-olap-architecture.md)   
- [Физическая архитектура &#40;Analysis Services многомерных данных&#41;](../olap-physical/understanding-microsoft-olap-physical-architecture.md)  
+ [Физическая архитектура (службы Analysis Services — многомерные данные)](../olap-physical/understanding-microsoft-olap-physical-architecture.md)  
   
   

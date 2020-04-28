@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 11cd1134a770d62afeb50dd5da53c375b482b723
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704493"
 ---
 # <a name="summary-creating-database-objects"></a>Сводка. Создание объектов базы данных
@@ -25,7 +25,7 @@ ms.locfileid: "62704493"
 ## <a name="next-lesson"></a>Следующее занятие  
  [Занятие 2. Настройка разрешений на объекты базы данных](lesson-2-configuring-permissions-on-database-objects.md)  
   
-## <a name="see-also"></a>См. также:  
- [Создание &#40;базы данных SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
+## <a name="see-also"></a>См. также  
+ [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
   

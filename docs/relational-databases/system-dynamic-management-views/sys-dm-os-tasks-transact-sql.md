@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 086065aa79ca6fba7ad84e5b7e7f99f6f462f7dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74164905"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
@@ -35,10 +35,10 @@ ms.locfileid: "74164905"
 > [!NOTE]  
 > Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_os_tasks**.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|Адрес объекта в памяти.|  
-|**task_state**|**nvarchar (60)**|Состояние задачи. Может применяться один из перечисленных ниже типов.<br /><br /> Ожидание: ожидание рабочего потока.<br /><br /> ГОТОВ к запуску: готово к запуску, но ожидает получения такта.<br /><br /> ВЫПОЛНЯЕТСЯ: в данный момент выполняется в планировщике.<br /><br /> SUSPENDED: имеет рабочий, но ожидает события.<br /><br /> Готово: завершено.<br /><br /> СПИНЛУП: завис в спин-блокировке.|  
+|**task_state**|**nvarchar(60)**|Состояние задачи. Может иметь одно из следующих значений.<br /><br /> Ожидание: ожидание рабочего потока.<br /><br /> ГОТОВ к запуску: готово к запуску, но ожидает получения такта.<br /><br /> ВЫПОЛНЯЕТСЯ: в данный момент выполняется в планировщике.<br /><br /> SUSPENDED: имеет рабочий, но ожидает события.<br /><br /> Готово: завершено.<br /><br /> СПИНЛУП: завис в спин-блокировке.|  
 |**context_switches_count**|**int**|Число переключений контекста планировщика, которые задача уже выполнила.|  
 |**pending_io_count**|**int**|Количество физических операций ввода-вывода, выполняемых этой задачей.|  
 |**pending_io_byte_count**|**bigint**|Суммарное количество байт, обработанных в операциях ввода-вывода, выполняемых этой задачей.|  
@@ -82,7 +82,7 @@ SELECT
   ORDER BY session_id, request_id;  
 ```  
   
-### <a name="b-associating-session-ids-with-windows-threads"></a>Б. Сопоставление идентификатора сеанса с потоками Windows  
+### <a name="b-associating-session-ids-with-windows-threads"></a>Б) Сопоставление идентификатора сеанса с потоками Windows  
  Можно использовать следующий запрос для сопоставления значения идентификатора сеанса со значением идентификатора потока Windows. Затем можно наблюдать за производительностью потока в системном мониторе Windows. Следующий запрос не возвращает сведений для сеансов, находящихся в ждущем режиме.  
   
 ```  

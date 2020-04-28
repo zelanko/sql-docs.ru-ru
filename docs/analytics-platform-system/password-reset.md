@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 952dbda04b4f7132406e3a6de4479afea1be92e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400904"
 ---
 # <a name="password-reset---analytics-platform-system"></a>Сброс пароля — система платформы аналитики
@@ -33,7 +33,7 @@ ms.locfileid: "74400904"
 > [!IMPORTANT]  
 > Для устройства с обновлением 1 **Configuration Manager** неправильно изменяет пароль учетных записей локального администратора в ВИРТУАЛЬНОЙ машине PDW. Если это необходимо, обратитесь в службу поддержки пользователей, чтобы получить дополнительные инструкции.  
   
-**срок**  
+**sa**  
 Имя входа **SA** в SQL Server. **SA** является членом предопределенной роли сервера **sysadmin** и является администратором SQL Server. Пароль для имени входа **SA** также можно изменить с помощью инструкции **ALTER LOGIN** .  
   
 ## <a name="password-requirements"></a>Требования к паролю  

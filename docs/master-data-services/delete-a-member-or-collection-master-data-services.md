@@ -17,10 +17,10 @@ ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 789b372660e7df5282c700f57654162288dabb78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729375"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>Удаление элемента или коллекции (службы Master Data Services)
@@ -68,6 +68,6 @@ ms.locfileid: "73729375"
 ## <a name="see-also"></a>См. также:  
  [Повторная активация элемента или коллекции &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
  [Master Data Services &#40;членов&#41;](../master-data-services/members-master-data-services.md)   
- [&#40;коллекций Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
+ [Коллекции (службы Master Data Services)](../master-data-services/collections-master-data-services.md)  
   
   

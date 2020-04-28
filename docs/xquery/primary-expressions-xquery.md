@@ -20,10 +20,10 @@ ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74200515"
 ---
 # <a name="primary-expressions-xquery"></a>Первичные выражения (XQuery)
@@ -45,8 +45,7 @@ ms.locfileid: "74200515"
  Строковый литерал также может содержать символьную ссылку, XML-ссылку на символ Юникода, определяемую десятичным или шестнадцатеричным элементом кода. Например, символ евро может быть представлен ссылкой на символ "&\#8364;".  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует XML версии 1.0 в качестве основы при синтаксическом анализе.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует XML версии 1.0 в качестве основы при синтаксическом анализе.  
   
 ### <a name="examples"></a>Примеры  
  Следующие примеры иллюстрируют применение литералов, а также ссылок на сущности и символы.  

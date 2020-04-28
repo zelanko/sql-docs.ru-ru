@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92ceb297f1004770903f4eadd7323bfef98e7cd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62711469"
 ---
 # <a name="cursor-properties"></a>Свойства курсора
@@ -27,11 +27,11 @@ ms.locfileid: "62711469"
   
 -   [Размер набора строк курсора](cursor-rowset-size.md)  
   
--   [Параллелизм курсоров &#40;ODBC&#41;](cursor-concurrency-odbc.md)  
+-   [Параллелизм курсоров (ODBC)](cursor-concurrency-odbc.md)  
   
 -   [Уровень изоляции транзакций курсора](cursor-transaction-isolation-level.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование курсоров &#40;ODBC&#41;](../using-cursors-odbc.md)  
   
   

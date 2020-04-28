@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688796"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
@@ -55,7 +55,7 @@ cbRow
  *property*  
  Константа типа BYTE. Список констант см. в таблице в подразделе «Примечания».  
   
- *пфиелд*  
+ *pField*  
  Указатель на значение признака конца поля.  
   
  *cbField*  
@@ -67,7 +67,7 @@ cbRow
  *cbRow*  
  Длина в байтах значения признака конца строки.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  SUCCEED или FAIL  
   
 ## <a name="remarks"></a>Remarks  
@@ -77,7 +77,7 @@ cbRow
   
  В следующей таблице перечислены константы для параметра *property* .  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|Указывает символьный режим вывода.<br /><br /> Соответствует параметру-c в BCP. EXE и для bcp_setcolfmt со `BCP_FMT_TYPE` свойством, имеющим `SQLCHARACTER`значение.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Указывает режим вывода в Юникоде.<br /><br /> Соответствует параметру-w в BCP. EXE и bcp_setcolfmt со `BCP_FMT_TYPE` свойством, `SQLNCHAR`имеющим значение.|  
@@ -295,7 +295,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

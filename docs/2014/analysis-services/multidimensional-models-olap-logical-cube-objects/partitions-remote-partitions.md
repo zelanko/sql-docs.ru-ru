@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d092c33c8c350dc19b749fd3b31ccf1b8c73eac6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727364"
 ---
 # <a name="remote-partitions"></a>Удаленные секции
@@ -43,7 +43,7 @@ ms.locfileid: "62727364"
   
 |||  
 |-|-|  
-|тип хранилища;|Данные|  
+|Тип хранения|Данные|  
 |MOLAP|Статистические схемы секции и копия исходных данных секции|  
 |HOLAP|Статистические схемы секций|  
 |ROLAP|Данные секции отсутствуют|  
@@ -56,7 +56,7 @@ ms.locfileid: "62727364"
 ## <a name="archiving-and-restoring-remote-partitions"></a>Архивация и восстановление удаленных секций  
  Данные удаленных секций можно архивировать или восстанавливать, когда архивируется или восстанавливается хранящая их база данных. Если восстановление базы данных выполняется без восстановления удаленной секции, то прежде чем использовать данные секции, необходимо обработать удаленную секцию. Дополнительные сведения о архивировании и восстановлении баз данных см. в статье [резервное копирование и восстановление баз данных Analysis Services](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание &#40;Analysis Services удаленных секций и управление ими&#41;](../multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [Обработка объектов служб Analysis Services](../multidimensional-models/processing-analysis-services-objects.md)  
   

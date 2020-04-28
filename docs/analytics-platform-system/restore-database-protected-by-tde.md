@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 53707c62e018b9923f2bb923a4df46f6917d2902
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400438"
 ---
 # <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Восстановление базы данных, защищенной с помощью TDE, в Parallel Data Warehouse
@@ -61,8 +61,8 @@ RESTORE DATABASE AdventureWorksPDW2012
 ## <a name="see-also"></a>См. также:  
 [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)  
 [Создание sp_pdw_add_network_credentials главного ключа](../t-sql/statements/create-master-key-transact-sql.md) 
-[](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
+[sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
-[СОЗДАТЬ СЕРТИФИКАТ](../t-sql/statements/create-certificate-transact-sql.md)  
+[CREATE CERTIFICATE](../t-sql/statements/create-certificate-transact-sql.md)  
 [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)
   

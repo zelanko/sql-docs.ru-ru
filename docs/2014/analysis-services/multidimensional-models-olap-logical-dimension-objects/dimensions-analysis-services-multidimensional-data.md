@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc4a06bd637d6fce460fb15739f8b291c95a3361
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702426"
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>Измерения (службы Analysis Services — многомерные данные)
@@ -26,15 +26,15 @@ ms.locfileid: "62702426"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
-|[Общие сведения об измерениях &#40;Analysis Services многомерных данных&#41;](dimensions-analysis-services-multidimensional-data.md)|Содержит обзор основных понятий, связанных с измерениями.|  
+|[Введение в измерения (службы Analysis Services — многомерные данные)](dimensions-analysis-services-multidimensional-data.md)|Содержит обзор основных понятий, связанных с измерениями.|  
 |[Атрибуты и иерархии атрибутов](attributes-and-attribute-hierarchies.md)|Содержит описание атрибутов и их иерархий.|  
 |[Пользовательские иерархии](user-hierarchies.md)|Описывает пользовательские иерархии атрибутов.|  
 |[Измерения, доступные для записи](write-enabled-dimensions.md)|Содержит описание измерений, доступных для записи.|  
 |[Переводы измерений](dimension-translations.md)|Описывает переводы метаданных измерений.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Измерения в многомерных моделях](../multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Объекты куба &#40;Analysis Services многомерных данных&#41;](../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   

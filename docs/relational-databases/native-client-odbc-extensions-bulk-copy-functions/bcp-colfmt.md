@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 857022f04047178f9eaf2db2c59d2d99987afbaa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73783149"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
@@ -67,7 +67,7 @@ RETCODE bcp_colfmt (
   
 -   Если исходный столбец имеет тип **Decimal** или **numeric**, то используются точность и масштаб исходного столбца.  
   
- *кбиндикатор*  
+ *cbIndicator*  
  Длина в байтах признака длины и допустимости значений NULL в данных столбца. Допускаются следующие значения длины признака: 0 (если признак не используется), 1, 2, 4 или 8.  
   
  Чтобы задать для признака массового копирования использование по умолчанию, установите этот параметр в значение SQL_VARLEN_DATA.  
@@ -108,7 +108,7 @@ RETCODE bcp_colfmt (
   
  Если это значение равно 0, операция массового копирования пропускает столбец в файле данных.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  SUCCEED или FAIL.  
   
 ## <a name="remarks"></a>Remarks  

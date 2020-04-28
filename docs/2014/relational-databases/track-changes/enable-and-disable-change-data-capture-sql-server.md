@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62670580"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Включение и отключение отслеживания измененных данных (SQL Server)
@@ -164,10 +164,10 @@ EXEC sys.sp_cdc_disable_table
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Отслеживание измененных данных (SQL Server)](track-data-changes-sql-server.md)   
+## <a name="see-also"></a>См. также  
+ [Отслеживание изменений данных &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
  [Об SQL Server &#40;системы отслеживания измененных данных&#41;](../track-changes/about-change-data-capture-sql-server.md)   
- [Работа с информацией об изменениях (SQL Server)](work-with-change-data-sql-server.md)   
+ [Работа с &#40;ми данных изменений SQL Server&#41;](work-with-change-data-sql-server.md)   
  [Администрирование и наблюдение за отслеживанием измененных данных (SQL Server)](../track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   

@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62670934"
 ---
 # <a name="about-change-tracking-sql-server"></a>Об отслеживании изменений (SQL Server)
@@ -67,10 +67,10 @@ ms.locfileid: "62670934"
   
  Сведения об изменении, внесенном в каждую строку, могут быть получены с помощью отслеживания изменений. Например, тип операции DML, который вызвал изменение (вставку, обновление или удаление), или столбцы, измененные в ходе операции обновления.  
   
-## <a name="see-also"></a>См. также:  
- [Включение и отключение отслеживания изменений (SQL Server)](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
+## <a name="see-also"></a>См. также  
+ [Включение и отключение Отслеживание изменений &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
  [Работа с Отслеживание изменений &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
- [Управление отслеживанием изменений (SQL Server)](../track-changes/manage-change-tracking-sql-server.md)   
+ [Управление Отслеживание изменений &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
  [Отслеживание измененных данных (SQL Server)](../track-changes/track-data-changes-sql-server.md)  
   
   

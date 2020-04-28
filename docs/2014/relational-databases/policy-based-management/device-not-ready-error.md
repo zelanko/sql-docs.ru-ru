@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2801eb44acca5241ad051904747c370f5ef2b24b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62705260"
 ---
 # <a name="device-not-ready-error"></a>Ошибка отсутствия готовности устройства
@@ -25,8 +25,8 @@ ms.locfileid: "62705260"
 ## <a name="best-practices-recommendations"></a>Рекомендации  
  Дополнительные сведения об устранении этой ошибки см. в следующих статьях базы знаний Майкрософт:  
   
--   [Статья базы знаний Майкрософт 259237](https://go.microsoft.com/fwlink/?linkid=117746)  
+-   [Статья 259237 базы знаний Майкрософт](https://go.microsoft.com/fwlink/?linkid=117746)  
   
--   [Статья базы знаний Майкрософт 154690](https://go.microsoft.com/fwlink/?linkid=117747)  
+-   [Статья 154690 базы знаний Майкрософт](https://go.microsoft.com/fwlink/?linkid=117747)  
   
   

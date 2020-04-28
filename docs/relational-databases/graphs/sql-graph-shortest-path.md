@@ -19,10 +19,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
 ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056402"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
@@ -85,7 +85,7 @@ ms.locfileid: "74056402"
 ### <a name="last_value"></a>LAST_VALUE
 Для атрибутов проекта, начиная с последнего узла пути, можно использовать агрегатную функцию LAST_VALUE. Указание псевдонима краевой таблицы в качестве входных данных для этой функции является ошибкой, можно использовать только имена таблиц узлов или псевдонимы.
 
-**Последний узел**. последний узел ссылается на узел, который отображается последним в пути, независимо от направления стрелки в предикате Match. Например, `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Здесь последний узел в пути будет последним посещенным узлом P. 
+**Последний узел**. последний узел ссылается на узел, который отображается последним в пути, независимо от направления стрелки в предикате Match. Например: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Здесь последний узел в пути будет последним посещенным узлом P. 
 
 В то время как последний узел — это последний n-й узел в пути выходного графа для этого шаблона:`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
@@ -117,7 +117,7 @@ LAST_NODE поддерживается только в shortest_path.
 ## <a name="examples"></a>Примеры 
 В приведенных здесь примерах запросов мы будем использовать таблицы node и ребра, созданные в [примере SQL Graph](./sql-graph-sample.md) .
 
-### <a name="a--find-shortest-path-between-2-people"></a>A.  Найти кратчайший путь между 2 людьми
+### <a name="a--find-shortest-path-between-2-people"></a>А)  Найти кратчайший путь между 2 людьми
  В следующем примере мы найдут кратчайший путь между Джейкоб и Алисой. Нам потребуется узел Person и Фриендоф ребро, созданные на основе примера сценария Graph. 
 
  ```
@@ -137,7 +137,7 @@ FROM (
 WHERE Q.LastNode = 'Alice'
  ```
 
- ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>Б.  Поиск кратчайшего пути от заданного узла ко всем остальным узлам в графе. 
+ ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>Б)  Поиск кратчайшего пути от заданного узла ко всем остальным узлам в графе. 
  В следующем примере выполняется поиск всех людей, к которым подключен Джейкоб, в графе и кратчайшего пути, начиная с Джейкоб, для всех этих пользователей. 
 
  ```
@@ -212,5 +212,5 @@ WHERE Q.levels = 2
  [СОВПАДЕНИе (SQL Graph)](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [Вставить (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
- [Обработка графа с помощью SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)     
+ [Graph Processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Работа с графами в SQL Server 2017)     
  
