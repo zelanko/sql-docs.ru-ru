@@ -12,10 +12,10 @@ ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e1debb31cd70c73e3fecd569a58534377742a9a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948527"
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Подключение к Sybase ASE (SybaseToSQL)
@@ -114,7 +114,7 @@ ms.locfileid: "67948527"
   
 4.  Если будет предложено проверить текущий объект, нажмите кнопку **Да**.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
   
 -   Следующим шагом процесса миграции является [соединение с экземпляром SQL Server](connecting-to-sql-server-sybasetosql.md) / [подключения к экземпляру служб SQL Azure](connecting-to-azure-sql-db-sybasetosql.md)  
   

@@ -17,10 +17,10 @@ ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933291"
 ---
 # <a name="createparameter-method-ado"></a>Метод CreateParameter (ADO)
@@ -37,19 +37,19 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  Возвращает объект **параметра** .  
   
 #### <a name="parameters"></a>Параметры  
- *Название*  
+ *имя*;  
  Необязательный параметр. **Строковое** значение, содержащее имя объекта **параметра** .  
   
- *Тип*  
+ *Type*  
  Необязательный параметр. Значение [дататипинум](../../../ado/reference/ado-api/datatypeenum.md) , указывающее тип данных объекта **параметра** .  
   
- *Двух*  
+ *Направление*  
  Необязательный параметр. Значение [параметердиректионенум](../../../ado/reference/ado-api/parameterdirectionenum.md) , указывающее тип объекта **параметра** .  
   
  *Размер*  
  Необязательный параметр. Значение **типа Long** , указывающее максимальную длину значения параметра в символах или байтах.  
   
- *Value*  
+ *Значение*  
  Необязательный параметр. **Вариант** , указывающий значение для объекта **параметра** .  
   
 ## <a name="remarks"></a>Remarks  

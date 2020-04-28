@@ -18,10 +18,10 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946282"
 ---
 # <a name="sequencetype-expressions-xquery"></a>Выражения SequenceType (XQuery)
@@ -332,8 +332,7 @@ select @x.query(' declare namespace CustOrders="Customers";
 Expression cast as  AtomicType?  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] требует, чтобы после операнда `AtomicType` был указан вопросительный знак (?). Например, как показано в следующем запросе, `"2" cast as xs:integer?` Преобразует строковое значение в целое число:  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] требует, чтобы после операнда `AtomicType` был указан вопросительный знак (?). Например, как показано в следующем запросе, `"2" cast as xs:integer?` Преобразует строковое значение в целое число:  
   
 ```  
 declare @x xml  

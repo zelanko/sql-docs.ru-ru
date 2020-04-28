@@ -18,10 +18,10 @@ ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a6146a942e572e28692ceaafd77d6958cdab9dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964955"
 ---
 # <a name="users-collection-adox"></a>Коллекция Users (ADOX)
@@ -30,11 +30,11 @@ ms.locfileid: "67964955"
 ## <a name="remarks"></a>Remarks  
  Коллекция **пользователей** [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) представляет всех пользователей каталога. Коллекция **пользователей** для [группы](../../../ado/reference/adox-api/group-object-adox.md) представляет только тех пользователей, которые имеют членство в определенной группе.  
   
- Метод [append](../../../ado/reference/adox-api/append-method-adox-users.md) для коллекции **пользователей** уникален для ADOX. Вы можете:  
+ Метод [append](../../../ado/reference/adox-api/append-method-adox-users.md) для коллекции **пользователей** уникален для ADOX. Можно выполнить следующие действия.  
   
 -   Добавьте нового пользователя в коллекцию с помощью метода **append** .  
   
- Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете:  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Можно выполнить следующие действия.  
   
 -   Доступ к пользователю в коллекции со свойством [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   

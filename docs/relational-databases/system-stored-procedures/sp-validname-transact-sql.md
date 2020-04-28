@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c559c8a6af6add669e1cc4630b7bcfc9fc0aacc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936738"
 ---
 # <a name="sp_validname-transact-sql"></a>sp_validname (Transact-SQL)
@@ -46,17 +46,17 @@ sp_validname [@name =] 'name'
 `[ @raise_error = ] raise_error`Указывает, следует ли вызывать ошибку. *raise_error* имеет **бит**и значение по умолчанию 1. Это означает, что ошибки будут отображаться. 0 приводит к тому, что сообщения об ошибках появляться не будут.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в роли **Public** .  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="see-also"></a>См. также:  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Типы данных &#40;&#41;Transact-SQL](../../t-sql/data-types/data-types-transact-sql.md)   
+ [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [&#41;&#40;языка Transact-SQL на языке NCHAR](../../t-sql/functions/nchar-transact-sql.md)   
  [nchar и nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [&#41;Transact-SQL на языке ntext, Text и Image &#40;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

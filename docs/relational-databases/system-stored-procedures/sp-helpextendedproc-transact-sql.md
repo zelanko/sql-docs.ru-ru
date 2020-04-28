@@ -18,10 +18,10 @@ ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dcbe6d187b56b0b15ae829eeecf1811b02dfee7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67943507"
 ---
 # <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
@@ -45,14 +45,14 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 `[ @funcname = ] 'procedure'`Имя расширенной хранимой процедуры, для которой сообщается информация. Аргумент *PROCEDURE* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**name**|**имеет sysname**|Имя расширенной хранимой процедуры.|  
-|**Файл DLL.**|**nvarchar(255)**|Имя DLL.|  
+|**name**|**sysname**|Имя расширенной хранимой процедуры.|  
+|**компоновки**|**nvarchar(255)**|Имя DLL.|  
   
 ## <a name="remarks"></a>Remarks  
  Если указана *процедура* , **sp_helpextendedproc** отчеты по указанной расширенной хранимой процедуре. Если этот параметр не указан, **sp_helpextendedproc** возвращает все имена расширенных хранимых процедур и имена библиотек DLL, к которым принадлежит каждая расширенная хранимая процедура.  
@@ -72,7 +72,7 @@ EXEC sp_helpextendedproc;
 GO  
 ```  
   
-### <a name="b-reporting-help-on-a-single-extended-stored-procedure"></a>Б. Справочные сведения об одной расширенной хранимой процедуре  
+### <a name="b-reporting-help-on-a-single-extended-stored-procedure"></a>Б) Справочные сведения об одной расширенной хранимой процедуре  
  Следующий пример сообщает о `xp_cmdshell` расширенной хранимой процедуре.  
   
 ```  
@@ -85,6 +85,6 @@ GO
 ## <a name="see-also"></a>См. также:  
  [sp_addextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
  [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

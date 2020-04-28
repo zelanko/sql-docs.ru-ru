@@ -17,10 +17,10 @@ ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 522efa96e554a7b6eecb6e36c0771cbe95163a37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942404"
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>Хранимые процедуры сборщика данных (Transact-SQL)
@@ -67,6 +67,6 @@ ms.locfileid: "67942404"
 -   sp_syscollector_event_onstatsupdate  
   
 ## <a name="see-also"></a>См. также:  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

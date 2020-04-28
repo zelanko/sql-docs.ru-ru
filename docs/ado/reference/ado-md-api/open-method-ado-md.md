@@ -17,10 +17,10 @@ ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 089fad427989c26ed1ed22ec3e9267297a29b820
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949387"
 ---
 # <a name="open-method-ado-md"></a>Метод Open (многомерные объекты ADO)
@@ -34,7 +34,7 @@ Cellset.Open Source, ActiveConnection
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Source*  
+ *Источник*  
  Необязательный параметр. Значение **типа Variant** , результатом которого является допустимый многомерный запрос, например запрос многомерного выражения (MDX). *Исходный* аргумент соответствует свойству [Source](../../../ado/reference/ado-md-api/source-property-ado-md.md) . Дополнительные сведения о многомерных выражениях см. в OLE DB документации по [OLAP](https://msdn.microsoft.com/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3) в пакете SDK компонентов доступа к данным Microsoft.  
   
  *ActiveConnection*  

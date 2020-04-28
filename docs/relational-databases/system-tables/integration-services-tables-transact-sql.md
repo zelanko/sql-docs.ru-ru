@@ -18,10 +18,10 @@ ms.assetid: 683b181b-0091-4a9c-86db-bc577af43cec
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 61379adc04eddaf276fae37879674b63833b76e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990137"
 ---
 # <a name="integration-services-tables-transact-sql"></a>Таблицы служб Integration Services (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67990137"
 
   В подразделах этого раздела описываются системные таблицы базы данных msdb, в которых хранятся сведения, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]используемые.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [sysssislog](../../relational-databases/system-tables/sysssislog-transact-sql.md)  
  Содержит одну строку для каждой записи журнала, формируемой пакетом служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] во время выполнения.  
   

@@ -16,10 +16,10 @@ ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b659aa13a8704a060be12bb015bd0de0fd126562
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67985995"
 ---
 # <a name="aggregate-functions---avg"></a>Агрегатные функции — avg
@@ -56,7 +56,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A. Использование функции XQuery avg() для поиска на производстве расположения цехов, время работы в которых превышает среднее значение для всех цехов.  
+### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>А) Использование функции XQuery avg() для поиска на производстве расположения цехов, время работы в которых превышает среднее значение для всех цехов.  
  Можно переписать запрос, предоставленный [функцией min (XQuery)](../xquery/aggregate-functions-min.md) , для использования функции **AVG ()** .  
   
 ## <a name="implementation-limitations"></a>Ограничения реализации  

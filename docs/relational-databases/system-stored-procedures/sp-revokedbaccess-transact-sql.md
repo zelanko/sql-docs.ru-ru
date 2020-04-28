@@ -18,10 +18,10 @@ ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5eea0129b76a7bb7825987da98be40ba4a66d6fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67941717"
 ---
 # <a name="sp_revokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
@@ -45,7 +45,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 `[ @name_in_db = ] 'name'`Имя удаляемого пользователя базы данных. Аргумент *Name* имеет тип **sysname** и не имеет значения по умолчанию. *имя* может быть именем входа сервера, именем входа Windows или группой Windows и должно существовать в текущей базе данных. При указании имени входа Windows или группы Windows задавайте имя, известное в базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  При удалении пользователя базы данных также удаляются разрешения и псевдонимы этого пользователя.  
@@ -69,6 +69,6 @@ GO
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Удаление пользователя &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
- [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)  
+ [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)  
   
   

@@ -12,10 +12,10 @@ ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4f40fd6fa88b001eaa222789d6be35b83f9bf90a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948548"
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>Подключение к SQL Server (SybaseToSQL)
@@ -84,12 +84,12 @@ ms.locfileid: "67948548"
   
 ||||||||
 |-|-|-|-|-|-|-|
-|**Тип проекта и версия целевого сервера**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005<br /> (Версия: 9. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008<br /> (Версия: 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 <br />(Версия: 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(Версия: 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 <br />(Версия: 13. x)|SQL Azure|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005|Да|Да|Да|Да|Да||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008||Да|Да|Да|Да||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012|||Да|Да|Да||  
+|**Тип проекта и версия целевого сервера**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (Версия: 9. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (Версия: 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Версия: 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(Версия: 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Версия: 13. x)|SQL Azure|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Да|Да|Да|Да|Да||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Да|Да|Да|Да||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Да|Да|Да||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||Да|Да|| 
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||Да||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||Да||  
 |SQL Azure||||||Да|  
   
 > [!IMPORTANT]
@@ -113,7 +113,7 @@ ms.locfileid: "67948548"
   
 3.  Щелкните правой кнопкой мыши базы данных или отдельную базу данных или схему базы данных, а затем выберите **синхронизировать с базой данных**.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 Следующий шаг миграции зависит от потребностей проекта:  
   
 -   Если вы хотите настроить сопоставление между базами данных и схемами и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базами данных и схемами ASE, см. раздел [сопоставление схем Sybase ASE с SQL Server схемами &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md).  

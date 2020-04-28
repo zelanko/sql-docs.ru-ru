@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 303ceed8cc7078e4025f160d25ce1474d1be6aed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936786"
 ---
 # <a name="sysdm_exec_xml_handles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
@@ -47,7 +47,7 @@ dm_exec_xml_handles (session_id | 0 )
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Идентификатор сеанса, содержащего данный XML-документ.|  
 |**document_id**|**int**|Идентификатор XML-документа, возвращаемый **sp_xml_preparedocument**.|  

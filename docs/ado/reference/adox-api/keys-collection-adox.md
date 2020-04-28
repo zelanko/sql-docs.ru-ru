@@ -17,21 +17,21 @@ ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a84932192fc7f51f21a7fd65c06c7417ef02da92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965832"
 ---
 # <a name="keys-collection-adox"></a>Коллекция Keys (ADOX)
 Содержит все [Ключевые](../../../ado/reference/adox-api/key-object-adox.md) объекты [таблицы](../../../ado/reference/adox-api/table-object-adox.md).  
   
 ## <a name="remarks"></a>Remarks  
- Метод [append](../../../ado/reference/adox-api/append-method-adox-keys.md) для [коллекции Keys](../../../ado/reference/adox-api/keys-collection-adox.md) уникален для ADOX. Вы можете:  
+ Метод [append](../../../ado/reference/adox-api/append-method-adox-keys.md) для [коллекции Keys](../../../ado/reference/adox-api/keys-collection-adox.md) уникален для ADOX. Можно выполнить следующие действия.  
   
 -   Добавьте новый ключ в коллекцию с помощью метода [append](../../../ado/reference/adox-api/append-method-adox-keys.md) .  
   
- Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете:  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Можно выполнить следующие действия.  
   
 -   Доступ к ключу в коллекции со свойством [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   

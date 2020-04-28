@@ -17,21 +17,21 @@ ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cec2462f8726e7c580a7d6755394c6c3f07c85b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964771"
 ---
 # <a name="views-collection-adox"></a>Коллекция Views (ADOX)
 Содержит все объекты [представления](../../../ado/reference/adox-api/view-object-adox.md) каталога.  
   
 ## <a name="remarks"></a>Remarks  
- Метод [append](../../../ado/reference/adox-api/append-method-adox-views.md) для коллекции **views** уникален для ADOX. Вы можете:  
+ Метод [append](../../../ado/reference/adox-api/append-method-adox-views.md) для коллекции **views** уникален для ADOX. Можно выполнить следующие действия.  
   
 -   Добавьте новое представление в коллекцию с помощью метода **append** .  
   
- Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете:  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Можно выполнить следующие действия.  
   
 -   Доступ к представлению в коллекции со свойством [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   

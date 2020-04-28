@@ -14,10 +14,10 @@ ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3558fc1fecd343fff480cca3b45c468860a801f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963831"
 ---
 # <a name="onreadystatechange-event-rds"></a>Событие onReadyStateChange (служба удаленных рабочих столов)
@@ -34,7 +34,7 @@ onReadyStateChange
 ```  
   
 #### <a name="parameters"></a>Параметры  
- Нет.  
+ Отсутствует.  
   
 ## <a name="remarks"></a>Remarks  
  Свойство **ReadyState** отражает ход выполнения [RDS. Объект «элемент управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) данными» асинхронно извлекает данные в объект [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) . Используйте событие **onReadyStateChange** для отслеживания изменений в свойстве **ReadyState** при каждом возникновении. Это более эффективно, чем периодическая проверка значения свойства.  

@@ -20,10 +20,10 @@ ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e4336fdeeb0867018e9a2a630f2212cc06259482
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984905"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
@@ -31,10 +31,10 @@ ms.locfileid: "67984905"
 
   Содержит по одной строке для каждого оператора агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**удостоверения**|**int**|Идентификатор оператора.|  
-|**name**|**имеет sysname**|Имя оператора.|  
+|**идентификатор**|**int**|Идентификатор оператора.|  
+|**name**|**sysname**|Имя оператора.|  
 |**доступной**|**tinyint**|Состояние рассылки уведомлений по предупреждениям (логическое значение). Если значение равно **1**, этот оператор может получать уведомления при возникновении предупреждения.|  
 |**email_address**|**nvarchar (100)**|Адрес электронной почты оператора.|  
 |**last_email_date**|**int**|Дата последнего получения оператором уведомления о предупреждении по электронной почте.|  

@@ -16,10 +16,10 @@ ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 29e5718debadb4725bc9d9ebcd499c261ed23d54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67985758"
 ---
 # <a name="aggregate-functions---min"></a>Агрегатные функции — min
@@ -48,7 +48,7 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>A. Использование функции min() языка XQuery для поиска расположения цеха с наименьшим количеством рабочих часов  
+### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>А) Использование функции min() языка XQuery для поиска расположения цеха с наименьшим количеством рабочих часов  
  Следующий запрос в процессе производства модели продукта (ProductModelID=7) получает все расположения цехов с наименьшим количеством рабочих часов. Обычно возвращается одно расположение, как показано далее. Если несколько расположений имеют одинаковое количество рабочих часов, возвращаются все.  
   
 ```  

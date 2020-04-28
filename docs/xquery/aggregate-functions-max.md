@@ -16,10 +16,10 @@ ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e47539a350a2918ef24c47e3c1eca270d4aeb72e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67985951"
 ---
 # <a name="aggregate-functions---max"></a>Агрегатные функции — max
@@ -48,7 +48,7 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] типа **XML** в базе данных.  
   
-### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>A. Использование XQuery-функции max() для поиска в производственном процессе цехов с наибольшим количеством рабочих часов  
+### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>А) Использование XQuery-функции max() для поиска в производственном процессе цехов с наибольшим количеством рабочих часов  
  Запрос, предоставленный в [функции min (XQuery)](../xquery/aggregate-functions-min.md) , может быть переписан для использования функции **Max ()** .  
   
 ## <a name="implementation-limitations"></a>Ограничения реализации  

@@ -10,10 +10,10 @@ ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 29669535f3544dafea58e7064e6d2c5281f6102f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989698"
 ---
 # <a name="edit-type-mapping-db2tosql"></a>Изменение сопоставления типов (DB2ToSQL)
@@ -39,7 +39,7 @@ ms.locfileid: "67989698"
 **Кому**  
 Укажите максимальную длину для этого сопоставления. Например, для типа данных **nchar** можно ввести значение 20, чтобы указать, что это сопоставление относится к диапазону, завершающему значение **nchar (20)**.  
   
-**Тип целевого объекта**  
+**Тип результирующего значения**  
 Выберите тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных, с которым сопоставлен исходный тип данных. Когда SSMA создает таблицу или хранимую процедуру в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], тип данных источника изменится на этот тип данных.  
   
 Если тип данных имеет переменную длину, в разделе **целевой тип**появится следующее поле:  

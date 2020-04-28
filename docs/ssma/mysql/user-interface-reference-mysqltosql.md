@@ -10,16 +10,16 @@ ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 17a287b38eb1dd1c1d9e3cee6943f7c069a39c61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67944621"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Справочник по пользовательскому интерфейсу (MySQLToSQL)
 В этом разделе содержатся разделы справки по Помощник по миграции SQL Server (SSMA) для MySQL.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
 В следующей таблице приводится список диалоговых окон SSMA.  
   
 |||  

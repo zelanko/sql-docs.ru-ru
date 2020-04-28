@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3edce02f20a16ebd9814f995f00023f8f3b153de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986490"
 ---
 # <a name="syssysreferences-transact-sql"></a>sys.sysreferences (Transact-SQL)
@@ -36,15 +36,15 @@ ms.locfileid: "67986490"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**constid**|**int**|Идентификатор ограничения FOREIGN KEY.|  
 |**fkeyid**|**int**|Идентификатор ссылающейся таблицы.|  
 |**rkeyid**|**int**|Идентификатор ссылаемой таблицы.|  
 |**rkeyindid**|**smallint**|Индексный идентификатор уникального индекса ссылаемой таблицы, относящийся к ссылаемым ключевым столбцам.|  
 |**keycnt**|**smallint**|Количество столбцов в ключе.|  
-|**forkeys**|**varbinary (32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**refkeys**|**varbinary (32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**forkeys**|**varbinary(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**refkeys**|**varbinary(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**fkeydbid**|**smallint**|Зарезервировано.|  
 |**rkeydbid**|**smallint**|Зарезервировано.|  
 |**fkey1**|**smallint**|Идентификатор ссылочного столбца.|  
@@ -82,6 +82,6 @@ ms.locfileid: "67986490"
   
 ## <a name="see-also"></a>См. также:  
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Представления совместимости &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

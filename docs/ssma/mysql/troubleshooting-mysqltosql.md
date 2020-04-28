@@ -10,10 +10,10 @@ ms.assetid: 9435f6c2-16e7-41b1-906d-d9f09b336f8f
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: a531208e03c38af7edfa8baf071f855ecd89024d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67944645"
 ---
 # <a name="troubleshooting-mysqltosql"></a>Устранение неполадок (MySQLToSQL)
@@ -21,7 +21,7 @@ ms.locfileid: "67944645"
   
 Ошибки могут быть исправлены могут быть связаны с:  
   
-1.  Компонент  
+1.  Функция  
   
 2.  Процедура  
   

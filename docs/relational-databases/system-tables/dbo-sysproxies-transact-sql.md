@@ -20,10 +20,10 @@ ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1dd486757a912d8f0364f55570a368292cf39ab7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984903"
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (Transact-SQL)
@@ -31,14 +31,14 @@ ms.locfileid: "67984903"
 
   Определяет атрибуты учетной записи-посредника агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта таблица хранится в базе данных **msdb** .  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Идентификатор учетной записи-посредника.|  
-|**name**|**имеет sysname**|Имя учетной записи-посредника.|  
+|**name**|**sysname**|Имя учетной записи-посредника.|  
 |**credential_id**|**int**|Идентификатор учетных данных, используемых учетной записью-посредником.|  
 |**доступной**|**tinyint**|Состояние учетной записи-посредника:<br /><br /> **0** = отключено. **1** = включено.|  
 |**nописание**|**nvarchar(512)**|Описание, введенное пользователем при создании учетной записи-посредника.|  
-|**user_sid**|**varbinary (85)**|*Security_identifier* Microsoft Windows для пользователя или группы, связанных с учетными данными прокси-сервера.|  
+|**user_sid**|**varbinary(85)**|*Security_identifier* Microsoft Windows для пользователя или группы, связанных с учетными данными прокси-сервера.|  
 |**credential_date_created**|**datetime**|Дата и время создания учетных данных.|  
   
 ## <a name="remarks"></a>Remarks  

@@ -12,10 +12,10 @@ ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 507ac2a61043260435a18c90fb473130988e7f35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948514"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>Преобразование объектов базы данных SAP ASE (SybaseToSQL)
@@ -125,6 +125,6 @@ ms.locfileid: "67948514"
 ## <a name="next-steps"></a>Дальнейшие действия  
 Следующий шаг процесса миграции [загружает преобразованные объекты базы данных в SQL Server или SQL Azure (SybaseToSQL)](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
 [Миграция баз данных SAP ASE в SQL Server — база данных SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

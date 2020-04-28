@@ -22,10 +22,10 @@ ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946483"
 ---
 # <a name="path-expressions---specifying-axis"></a>Выражения пути — указание оси
@@ -43,14 +43,14 @@ ms.locfileid: "67946483"
   
  Выполнение XQuery в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживает следующие шаги оси:  
   
-|Ось|Description|  
+|Ось|Описание|  
 |----------|-----------------|  
 |**ребенок**|Возвращает дочерние элементы контекстного узла.|  
 |**descendant**|Возвращает всех потомков контекстного узла.|  
 |**источника**|Возвращает родительский элемент контекстного узла.|  
 |**версию**|Возвращает атрибуты контекстного узла.|  
 |**самообслуживания**|Возвращает сам контекстный узел.|  
-|**потомок или-Self**|Возвращает сам контекстный узел и всех его потомков.|  
+|**descendant-or-self**|Возвращает сам контекстный узел и всех его потомков.|  
   
  Все эти оси, за исключением **родительской** оси, являются прямыми осями. **Родительская** ось — это обратная ось, так как она выполняет поиск в обратном направлении в иерархии документа. Например, относительное выражение пути `child::ProductDescription/child::Summary` имеет два шага, и каждый шаг указывает ось `child`. Первый шаг получает дочерний элемент \<ProductDescription> элемента контекстного узла. Для каждого \<узла элемента ProductDescription> второй шаг извлекает дочерние \<элементы узла сводки> элементов.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "67946483"
 ## <a name="examples"></a>Примеры  
  Примеры запросов в этом разделе указываются для столбцов типа **XML** в базе данных **AdventureWorks** .  
   
-### <a name="a-specifying-a-child-axis"></a>A. Указание дочерней оси  
+### <a name="a-specifying-a-child-axis"></a>А) Указание дочерней оси  
  Для конкретной модели продукта следующий запрос получает \<компоненты,> дочерние узлы узла элемента \<ProductDescription> из описания каталога продуктов, хранящегося в `Production.ProductModel` таблице.  
   
 ```  
@@ -76,7 +76,7 @@ WHERE ProductModelID=19
   
 -   Оба шага в выражении пути указывают ось `child` и имена узлов, `ProductDescription` и `Features`, в качестве проверок узлов. Дополнительные сведения о тестировании узлов см. [в разделе Указание проверки узла в шаге выражения пути](../xquery/path-expressions-specifying-node-test.md).  
   
-### <a name="b-specifying-descendant-and-descendant-or-self-axes"></a>Б. Указание осей descendant или descendant-or-self  
+### <a name="b-specifying-descendant-and-descendant-or-self-axes"></a>Б) Указание осей descendant или descendant-or-self  
  Следующий пример использует ось descendant, а также ось descendant-or-self. Запрос в этом примере задается для переменной типа **XML** . Экземпляр XML упрощен, чтобы было легче проиллюстрировать различие в формируемых результатах.  
   
 ```  

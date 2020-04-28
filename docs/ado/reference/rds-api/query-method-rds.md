@@ -14,10 +14,10 @@ ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f646d5ebee63981c882f5e1ece147be0ff1677e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963826"
 ---
 # <a name="query-method-rds"></a>Метод Query (служба удаленных рабочих столов)
@@ -37,7 +37,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *набор записей*  
  Объектная переменная, представляющая объект **набора записей** .  
   
- *Фабрика данных*  
+ *DataFactory*  
  Объектная переменная, представляющая объект [RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) DataObject.  
   
  *Соединен*  

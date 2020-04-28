@@ -28,10 +28,10 @@ ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2cc48fa530730beec07aaca4bfb933c9ff8fb2b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986354"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>Несовместимые функции доступа (Акцесстоскл)
@@ -53,6 +53,6 @@ ms.locfileid: "67986354"
 |Выражения по умолчанию или правила проверки содержат функции доступа, которые не [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут быть преобразованы в или SQL Azure.|Доступ к выражениям по умолчанию или правилам проверки может включать в себя доступ к системным функциям или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяемым пользователем функциям, которые не сопоставляются с или SQL Azure. Использование функций, которые не сопоставляются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с или SQL Azure, не позволит загрузить выражения или правила проверки по умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в или SQL Azure.|  
   
 ## <a name="see-also"></a>См. также:  
-[Подготовка баз данных Access к миграции](preparing-access-databases-for-migration-accesstosql.md)  
+[Подготовка баз данных Access к миграции](preparing-access-databases-for-migration-accesstosql.md)  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

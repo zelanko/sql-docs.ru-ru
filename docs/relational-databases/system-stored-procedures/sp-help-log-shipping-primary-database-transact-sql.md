@@ -18,10 +18,10 @@ ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9559a882da12c3e2a7a48a0aaa656a554633aa6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937918"
 ---
 # <a name="sp_help_log_shipping_primary_database-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
@@ -46,15 +46,15 @@ sp_help_log_shipping_primary_database
 `[ @primary_id = ] 'primary_id'`Идентификатор базы данных источника для конфигурации доставки журналов. *primary_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |**primary_id**|Идентификатор базы данных-источника в конфигурации доставки журналов.|  
 |**primary_database**|Имя базы данных-источника в конфигурации доставки журналов.|  
-|**backup_directory**|Каталог, в котором хранятся файлы резервной копии журнала транзакций с сервера-источника.|  
+|**каталог_резервной_копии**|Каталог, в котором хранятся файлы резервной копии журнала транзакций с сервера-источника.|  
 |**backup_share**|Сетевой или UNC-путь к каталогу резервных копий.|  
 |**backup_retention_period**|Время хранения файла резервной копии журнала в каталоге резервных копий (в минутах).|  
 |**backup_compression**|Указывает, использует ли конфигурация доставки журналов [Сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br /> **0** = отключено. Не сжимать резервные копии журналов.<br /><br /> **1** = включено. Всегда сжимать резервные копии журналов.<br /><br /> **2** = использовать параметр [конфигурации сервера «Просмотр» или «Настройка сжатия резервных копий по умолчанию](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)». Это значение по умолчанию.<br /><br /> Сжатие резервной копии поддерживается только в [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (или в более поздней версии). В других выпусках это значение всегда равно 2.|  
@@ -85,6 +85,6 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

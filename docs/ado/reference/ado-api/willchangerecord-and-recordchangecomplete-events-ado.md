@@ -19,10 +19,10 @@ ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e632db34fbbacbee61cd943067052af27a8cfe8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938679"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>События WillChangeRecord и RecordChangeComplete (ADO)
@@ -37,7 +37,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *адреасон*  
+ *adReason*  
  Значение [евентреасоненум](../../../ado/reference/ado-api/eventreasonenum.md) , указывающее причину события. Его значением может быть **адрснадднев**, **адрснделете**, **адрснупдате**, **адрснундаупдате**, **адрснундоадднев**, **адрснундоделете**или **adRsnFirstChange**.  
   
  *крекордс*  
@@ -63,7 +63,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
 ## <a name="remarks"></a>Remarks  
  Событие **виллчанжерекорд** или **рекордчанжекомплете** может возникать для первого измененного поля в строке из-за следующих операций **с наборами записей** : [Update](../../../ado/reference/ado-api/update-method.md), [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)и [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md). Значение [примеры CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) **набора записей** определяет, какие операции приводят к возникновению событий.  
   
- Во время события **виллчанжерекорд** свойству **** [Filter фильтра](../../../ado/reference/ado-api/filter-property.md) набора записей присваивается значение **адфилтераффектедрекордс**. Это свойство нельзя изменить во время обработки события.  
+ Во время события **виллчанжерекорд** свойству **Recordset** [Filter фильтра](../../../ado/reference/ado-api/filter-property.md) набора записей присваивается значение **адфилтераффектедрекордс**. Это свойство нельзя изменить во время обработки события.  
   
  Необходимо присвоить параметру **адстатус** значение **адстатусунвантедевент** для каждого возможного значения **адреасон** , чтобы полностью отключить уведомление о событии для любого события, включающего параметр **адреасон** .  
   

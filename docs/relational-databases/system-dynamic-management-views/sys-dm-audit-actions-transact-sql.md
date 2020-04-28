@@ -19,10 +19,10 @@ ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e6a6c91cb31c9c3036bc95239f0aff9c75fda7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936975"
 ---
 # <a name="sysdm_audit_actions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
@@ -30,21 +30,21 @@ ms.locfileid: "67936975"
 
   Возвращает строку для каждого действия аудита, которое может быть зарегистрировано в журнале аудита, и каждой группы действий аудита, которая может быть настроена в составе аудита [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения об [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аудите см. в разделе [SQL Server audit &#40;ядро СУБД&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**action_id**|**varchar (4)**|Идентификатор действия аудита. Относится к значению **action_id** , записанному в каждую запись аудита. Допускает значение NULL. NULL для групп аудита.|  
+|**action_id**|**varchar(4)**|Идентификатор действия аудита. Относится к значению **action_id** , записанному в каждую запись аудита. Допускает значение NULL. NULL для групп аудита.|  
 |**action_in_log**|**bit**|Определяет возможность записи действия в журнал аудита. Имеет следующие значения:<br /><br /> 1 = да<br /><br /> 0 = нет|  
-|**name**|**имеет sysname**|Имя действия аудита или группы действий. Не допускает значение NULL.|  
-|**class_desc**|**nvarchar (120)**|Имя класса объекта, для которого применяется действие аудита. Может быть любым объектом области сервера, базы данных или схемы, но не включает объекты схемы. Не допускает значение NULL.|  
-|**parent_class_desc**|**nvarchar (120)**|Имя родительского класса для объекта, описываемого class_desc. Значение NULL, если class_desc — Server.|  
-|**covering_parent_action_name**|**nvarchar (120)**|Имя действия аудита или группа аудита, которая содержит действие аудита, описанное в этой строке. Используется, чтобы создать иерархию действий и охватывающие действия. Допускает значение NULL.|  
+|**name**|**sysname**|Имя действия аудита или группы действий. Не допускает значение NULL.|  
+|**class_desc**|**nvarchar(120)**|Имя класса объекта, для которого применяется действие аудита. Может быть любым объектом области сервера, базы данных или схемы, но не включает объекты схемы. Не допускает значение NULL.|  
+|**parent_class_desc**|**nvarchar(120)**|Имя родительского класса для объекта, описываемого class_desc. Значение NULL, если class_desc — Server.|  
+|**covering_parent_action_name**|**nvarchar(120)**|Имя действия аудита или группа аудита, которая содержит действие аудита, описанное в этой строке. Используется, чтобы создать иерархию действий и охватывающие действия. Допускает значение NULL.|  
 |**configuration_level**|**nvarchar (10)**|Указывает, что действие или группа действий, указанная в этой строке, настраивается на уровне группы или действия. Значение NULL, если действие нельзя настраивать.|  
-|**containing_group_name**|**nvarchar (120)**|Имя группы аудита, которая содержит указанное действие. Значение NULL, если значением имени является группа.|  
+|**containing_group_name**|**nvarchar(120)**|Имя группы аудита, которая содержит указанное действие. Значение NULL, если значением имени является группа.|  
   
 ## <a name="permissions"></a>Разрешения  
  Субъекты должны иметь разрешение **SELECT** . По умолчанию это разрешение предоставлено роли Public.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)].  Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Создание аудита сервера &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

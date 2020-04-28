@@ -30,10 +30,10 @@ ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7effaa973b7a39df6fc0b9385a5cfde4fdad18d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986319"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>Загрузка преобразованных объектов базы данных в SQL Server (Акцесстоскл)
@@ -136,7 +136,7 @@ ms.locfileid: "67986319"
 ## <a name="securing-objects-in-sql-server"></a>Защита объектов в SQL Server  
 После загрузки преобразованных объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно предоставлять и запрещать разрешения на эти объекты. Рекомендуется сделать это перед переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о защите объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в разделе «вопросы безопасности для баз данных и приложений баз данных» электронной [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] документации по.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 Следующий шаг процесса миграции — [Перенос данных в SQL Server](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md).  
   
 ## <a name="see-also"></a>См. также:  

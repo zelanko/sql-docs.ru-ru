@@ -18,10 +18,10 @@ ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: c316f48f3e590fcba419e125f8e327b25ee1ede6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933822"
 ---
 # <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
@@ -31,8 +31,7 @@ ms.locfileid: "67933822"
   Удаляет отображение удаленного имени входа на локальное имя входа, используемое для выполнения хранимых процедур удаленно, а не на локальном сервере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Используйте вместо него связанные серверы и хранимые процедуры связанных серверов.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Используйте вместо него связанные серверы и хранимые процедуры связанных серверов.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,12 +46,12 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="arguments"></a>Аргументы  
 `[ @remoteserver = ] 'remoteserver'`Имя удаленного сервера, сопоставленного с удаляемым удаленным именем входа. Аргумент *remoteserver* имеет тип **sysname**и не имеет значения по умолчанию. *Удаленный* том уже должен существовать.  
   
-`[ @loginame = ] 'login'`Необязательное имя входа на локальном сервере, связанное с удаленным сервером. Аргумент *Login* имеет тип **sysname**и значение по умолчанию NULL. *имя входа* должно уже существовать, если оно указано.  
+`[ @loginame = ] 'login'`Необязательное имя входа на локальном сервере, связанное с удаленным сервером. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. *имя входа* должно уже существовать, если оно указано.  
   
 `[ @remotename = ] 'remote_name'`Необязательное имя удаленного входа, сопоставленное с *именем входа* при входе с удаленного сервера. Аргумент *remote_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  Если указан только параметр *remoteserver* , то все удаленные имена входа для этого удаленного сервера удаляются с локального сервера. Если указано также *имя для входа* , то все удаленные имена *входа с удаленного* сервера, сопоставленные с этим конкретным локальным именем входа, удаляются из локальной службы. Если также указан параметр *remote_name* , то только удаленное имя входа удаленного пользователя из *remoteserver* удаляется с локального сервера.  
@@ -75,7 +74,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 EXEC sp_dropremotelogin 'ACCOUNTS';  
 ```  
   
-### <a name="b-dropping-a-login-mapping"></a>Б. Удаление сопоставления имени входа  
+### <a name="b-dropping-a-login-mapping"></a>Б) Удаление сопоставления имени входа  
  Следующий пример удаляет сопоставление удаленных имен входа с удаленного сервера `ACCOUNTS` на локальное имя входа `Albert`.  
   
 ```sql
@@ -98,6 +97,6 @@ EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';
  [sp_droplinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

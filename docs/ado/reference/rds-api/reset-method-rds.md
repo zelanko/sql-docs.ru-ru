@@ -14,10 +14,10 @@ ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 416aaefa95871e909a12117756ea59747c555650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963497"
 ---
 # <a name="reset-method-rds"></a>Метод Reset (служба удаленных рабочих столов)
@@ -37,7 +37,7 @@ DataControl.Reset(value)
  *DataControl*  
  Объектная переменная, представляющая [RDS. Объект элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
- *значений*  
+ *value*  
  Необязательный параметр. **Логическое** значение, равное **true** (по умолчанию), если необходимо выполнить фильтрацию по текущему набору строк с фильтрацией. **Значение false** указывает, что выполняется фильтрация по исходному набору строк, удаляя все предыдущие параметры фильтра.  
   
 ## <a name="remarks"></a>Remarks  

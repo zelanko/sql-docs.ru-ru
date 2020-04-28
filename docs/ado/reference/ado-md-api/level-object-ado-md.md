@@ -16,10 +16,10 @@ ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a44060ae4ffd9399c34d4cd8133f5ad7404ed5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949605"
 ---
 # <a name="level-object-ado-md"></a>Объект Level (многомерные объекты ADO)
@@ -42,11 +42,11 @@ ms.locfileid: "67949605"
   
  Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |CatalogName|Имя каталога, которому принадлежит куб.|  
 |CubeName|Имя куба.|  
-|Description|Понятное описание уровня.|  
+|Описание|Понятное описание уровня.|  
 |дименсионуникуенаме|Однозначное имя [измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |хиерарчюникуенаме|Однозначное имя иерархии.|  
 |левелкаптион|Метка или заголовок, связанный с уровнем.|  

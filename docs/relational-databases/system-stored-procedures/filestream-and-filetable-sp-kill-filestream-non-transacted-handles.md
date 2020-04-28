@@ -18,10 +18,10 @@ ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 98c986c26c8d0d0cc6e2b8ff3573f0a20d938975
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942265"
 ---
 # <a name="sp_kill_filestream_non_transacted_handles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-SQL)
@@ -52,7 +52,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-set"></a>Результирующий набор  
- Нет.  
+ Отсутствует.  
   
 ## <a name="general-remarks"></a>Общие замечания  
  *Handle_id* , необходимые **sp_kill_filestream_non_transacted_handles** , не связаны с session_id или единицей работы, используемыми в других командах **Kill** .  
@@ -62,7 +62,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
 ## <a name="metadata"></a>Метаданные  
  Для получения сведений об открытых нетранзакционных дескрипторах файлов запросите динамическое административное представление [sys. dm_filestream_non_transacted_handles &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Чтобы получить дескрипторы файлов из динамического административного представления **sys. dm_FILESTREAM_non_transacted_handles** и запуска **sp_kill_filestream_non_transacted_handles**, необходимо иметь разрешение **Просмотр состояния базы данных** .  

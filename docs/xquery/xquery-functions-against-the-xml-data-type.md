@@ -17,10 +17,10 @@ ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e885b537fbc86f3b70a8142c5513dbf16cb1c158
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67945998"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>Функции XQuery для типа данных xml
@@ -47,19 +47,19 @@ ms.locfileid: "67945998"
 |[Функции на узлах](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)|[number](../xquery/functions-on-nodes-number.md)|  
 ||[Функция local-name (XQuery)](../xquery/functions-on-nodes-local-name.md)|  
 ||[Функция namespace-uri (XQuery)](../xquery/functions-on-nodes-namespace-uri.md)|  
-|[Функции контекста](https://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[last](../xquery/context-functions-last-xquery.md)|  
-||[position](../xquery/context-functions-position-xquery.md)|  
-|[Функции над последовательностями](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[empty](../xquery/functions-on-sequences-empty.md)|  
+|[Функции контекста](https://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[Последняя](../xquery/context-functions-last-xquery.md)|  
+||[разместить](../xquery/context-functions-position-xquery.md)|  
+|[Функции над последовательностями](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[указано](../xquery/functions-on-sequences-empty.md)|  
 ||[distinct-values](../xquery/functions-on-sequences-distinct-values.md)|  
 ||[Функция id (XQuery)](../xquery/functions-on-sequences-id.md)|  
 |[Агрегатные функции &#40;&#41;XQuery](https://msdn.microsoft.com/library/be647ef1-291e-4a5d-ab18-07c759efe176)|[count](../xquery/aggregate-functions-count.md)|  
 ||[обращения](../xquery/aggregate-functions-avg.md)|  
 ||[минимум](../xquery/aggregate-functions-min.md)|  
-||[максимальной](../xquery/aggregate-functions-max.md)|  
+||[max](../xquery/aggregate-functions-max.md)|  
 ||[функции](../xquery/aggregate-functions-sum.md)|  
 |[Функции конструктора &#40;XQuery&#41;](../xquery/constructor-functions-xquery.md)|[Функции-конструкторы](../xquery/constructor-functions-xquery.md)|  
-|[Функции метода доступа к данным](../xquery/data-accessor-functions.md)|[Строка](../xquery/data-accessor-functions-string-xquery.md)|  
-||[data](../xquery/data-accessor-functions-data-xquery.md)|  
+|[Функции метода доступа к данным](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
+||[данные](../xquery/data-accessor-functions-data-xquery.md)|  
 |[Логические функции конструктора &#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)|[true (XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
 ||[Функция false (XQuery)](../xquery/boolean-constructor-functions-false-xquery.md)|  
 |[Функции, связанные с QName &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)|[expanded-QName (XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  
@@ -71,6 +71,6 @@ ms.locfileid: "67945998"
 ## <a name="see-also"></a>См. также:  
  [Методы типа данных XML](../t-sql/xml/xml-data-type-methods.md)   
  [Справочник по языку XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
- [SQL Server &#40;XML-данных&#41;](../relational-databases/xml/xml-data-sql-server.md)  
+ [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)  
   
   

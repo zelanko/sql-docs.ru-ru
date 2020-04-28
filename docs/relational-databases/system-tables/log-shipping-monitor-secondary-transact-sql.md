@@ -18,10 +18,10 @@ ms.assetid: afbe1bb7-89a7-4020-9408-0af64a043c2e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 838c810c28c03ae11237f449483789ed8dbbf740
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989957"
 ---
 # <a name="log_shipping_monitor_secondary-transact-sql"></a>log_shipping_monitor_secondary (Transact-SQL)
@@ -31,13 +31,13 @@ ms.locfileid: "67989957"
   
  Таблицы, связанные с ведением журналов и мониторингом, также используются на сервере-источнике и серверах-получателях.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**secondary_server**|**имеет sysname**|Имя дополнительного экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журналов.|  
-|**secondary_database**|**имеет sysname**|Имя базы данных-получателя в конфигурации доставки журналов.|  
-|**secondary_id**|**UNIQUEIDENTIFIER**|Идентификатор сервера-получателя в конфигурации доставки журналов.|  
-|**primary_server**|**имеет sysname**|Имя первичного экземпляра компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журнала.|  
-|**primary_database**|**имеет sysname**|Имя базы данных-источника в конфигурации доставки журналов.|  
+|**secondary_server**|**sysname**|Имя дополнительного экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журналов.|  
+|**secondary_database**|**sysname**|Имя базы данных-получателя в конфигурации доставки журналов.|  
+|**secondary_id**|**uniqueidentifier**|Идентификатор сервера-получателя в конфигурации доставки журналов.|  
+|**primary_server**|**sysname**|Имя первичного экземпляра компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журнала.|  
+|**primary_database**|**sysname**|Имя базы данных-источника в конфигурации доставки журналов.|  
 |**restore_threshold**|**int**|Время (в минутах), которое может пройти между операциями восстановления, прежде чем сформируется предупреждение.|  
 |**threshold_alert**|**int**|Предупреждение, создаваемое при истечении порогового срока восстановления.|  
 |**threshold_alert_enabled**|**bit**|Этот аргумент определяет, активированы ли предупреждения об истечении порогового срока восстановления. 1 = включено.<br /><br /> 0 = отключено.|  
@@ -62,6 +62,6 @@ ms.locfileid: "67989957"
  [sp_help_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
  [sp_help_log_shipping_monitor_secondary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)   
  [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
- [Системные таблицы &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Системные таблицы (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

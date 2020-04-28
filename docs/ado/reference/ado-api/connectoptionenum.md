@@ -16,24 +16,24 @@ ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 819fb89d7f8c43e76ba9260a72fafa68084bf880
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933449"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
 Указывает, должен ли метод [открытия](../../../ado/reference/ado-api/open-method-ado-connection.md) объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) возвращаться после установления соединения (синхронно) или до (асинхронно).  
   
-|Постоянно|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
-|**адасинкконнект**|16|Асинхронно открывает подключение. Для определения доступности подключения можно использовать событие [коннекткомплете](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md) .|  
-|**адконнектунспеЦифиед**|-1|По умолчанию. Синхронно открывает подключение.|  
+|**adAsyncConnect**|16|Асинхронно открывает подключение. Для определения доступности подключения можно использовать событие [коннекткомплете](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md) .|  
+|**adConnectUnspecified**|-1|По умолчанию. Синхронно открывает подключение.|  
   
 ## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
  Пакет: **com. MS. WFC. Data**  
   
-|Постоянно|  
+|Константа|  
 |--------------|  
 |AdoEnums.ConnectOption.ASYNCCONNECT|  
 |Адоенумс. Коннектоптион. КОННЕКТУНСПЕЦИФИЕД|  

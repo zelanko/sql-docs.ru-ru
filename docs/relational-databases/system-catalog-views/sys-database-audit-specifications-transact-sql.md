@@ -20,10 +20,10 @@ ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2a01e41c67c937a0a6d85e9f5c46427ab149b65b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67940208"
 ---
 # <a name="sysdatabase_audit_specifications-transact-sql"></a>sys.database_audit_specification (Transact-SQL)
@@ -31,9 +31,9 @@ ms.locfileid: "67940208"
 
   Содержит сведения о спецификациях аудита базы данных в аудите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на экземпляре сервера. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|Имя|**имеет sysname**|Имя спецификации аудита.|  
+|Имя|**sysname**|Имя спецификации аудита.|  
 |database_specification_id|**int**|Идентификатор спецификации базы данных.|  
 |create_date|**datetime**|Дата создания спецификации аудита.|  
 |modified_date|**datetime**|Дата последнего изменения спецификации аудита.|  
@@ -46,7 +46,7 @@ ms.locfileid: "67940208"
 ## <a name="permissions"></a>Разрешения  
  Доступ к этому представлению каталога имеют участники с разрешениями **ALTER ANY DATABASE AUDIT** или **View definition** , роль dbo и члены предопределенной роли базы данных db_owners. Кроме того, участнику не должно быть запрещено разрешение **View definition** .  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)].  Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Создание аудита сервера &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

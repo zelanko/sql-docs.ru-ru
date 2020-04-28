@@ -16,10 +16,10 @@ ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946012"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Функции расширения XQuery — sql:column()
@@ -131,10 +131,10 @@ select @x
   
 ## <a name="see-also"></a>См. также:  
  [SQL Server функции расширения XQuery](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
- [Сравнение типизированного XML с нетипизированным XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
+ [Сравнение типизированного и нетипизированного XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [SQL Server &#40;XML-данных&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Создание экземпляров XML-данных](../relational-databases/xml/create-instances-of-xml-data.md)   
  [Методы типа данных XML](../t-sql/xml/xml-data-type-methods.md)   
- [Язык изменения XML-данных &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [Язык модификации XML-данных (XML DML)](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

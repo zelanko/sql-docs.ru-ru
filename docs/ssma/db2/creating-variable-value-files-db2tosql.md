@@ -10,10 +10,10 @@ ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 945b7e86641c796e79bfb87b8b7b5de25949e4c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989768"
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>Создание файлов переменных значений (DB2ToSQL)
@@ -26,7 +26,7 @@ ms.locfileid: "67989768"
   
 **Примеры:**  
   
-**Пример 1:**  
+**Пример 1.**  
   
 ```  
 <!--Sample of variable value file commands-->  
@@ -47,7 +47,7 @@ ms.locfileid: "67989768"
   
 </variables>  
 ```  
-**Пример 2.**  
+**Пример 2:**  
   
 ```  
 <!--Sample of variable value file commands-->  
@@ -83,7 +83,7 @@ ms.locfileid: "67989768"
 </variables>  
 ```  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 Следующий шаг в работе консоли — [Создание файлов подключения к серверу &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
   
 ## <a name="see-also"></a>См. также:  

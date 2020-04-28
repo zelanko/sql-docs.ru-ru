@@ -16,10 +16,10 @@ ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ed4583b30ed1e4538a36079f9f7794704b819cda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946166"
 ---
 # <a name="xqueries-handling-relational-data"></a>Запросы XQuery, обрабатывающие реляционные данные

@@ -20,10 +20,10 @@ ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2fb62d70c1b0a41edf684a8216205fb43e070eea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984879"
 ---
 # <a name="dbosysproxylogin-transact-sql"></a>dbo.sysproxylogin (Transact-SQL)
@@ -31,12 +31,12 @@ ms.locfileid: "67984879"
 
   Регистрирует текущее соответствие учетных записей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетным записям-посредникам агента SQL Server. Эта таблица хранится в базе данных **msdb** .  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Идентификатор учетной записи-посредника агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это значение соответствует столбцу **proxy_id** в таблице **sysproxies** .|  
-|**sid**|**varbinary (85)**|*Security_identifier* Microsoft Windows для SQL Server имени входа.|  
+|**трансляцию**|**varbinary(85)**|*Security_identifier* Microsoft Windows для SQL Server имени входа.|  
 |**principal_id**|**int**|Идентификатор пользователя или группы, которая имеет разрешение на использование учетной записи-посредника для указанного шага подсистемы.|  
-|**Метки**|**int**|Тип имени входа:<br /><br /> **0** = пользователь или группа Windows, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также имя входа.<br /><br /> **** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Фиксированная системная роль<br /><br /> **2** = роль базы данных**msdb**|  
+|**flags**|**int**|Тип имени входа:<br /><br /> **0** = пользователь или группа Windows, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также имя входа.<br /><br /> **1** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Фиксированная системная роль<br /><br /> **2** = роль базы данных**msdb**|  
   
 ## <a name="remarks"></a>Remarks  
  Только члены предопределенной роли сервера **sysadmin** могут обращаться к этой таблице.  

@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 27a8f2ddee2e0ff0839317cf1652bcf353c0b66b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67940292"
 ---
 # <a name="syscryptographic_providers-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
@@ -32,12 +32,12 @@ ms.locfileid: "67940292"
 
   Возвращает одну строку для каждого зарегистрированного поставщика служб шифрования.  
     
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|Идентификационный номер поставщика служб шифрования.|  
-|**name**|**имеет sysname**|Имя поставщика служб шифрования.|  
-|**guid**|**UNIQUEIDENTIFIER**|Глобальный уникальный идентификатор поставщика (GUID).|  
-|**Версия**|**nvarchar(50)**|Версия поставщика в формате "*AA.BB.CCCC.dd*".|  
+|**name**|**sysname**|Имя поставщика служб шифрования.|  
+|**устройства**|**uniqueidentifier**|Глобальный уникальный идентификатор поставщика (GUID).|  
+|**version**|**nvarchar(50)**|Версия поставщика в формате "*AA.BB.CCCC.dd*".|  
 |**dll_path**|**nvarchar(512)**|Путь к библиотеке DLL, реализующей API-интерфейс расширенного управления ключами.|  
 |**is_enabled**|**bit**|Указывает, включен ли поставщик на сервере или нет:<br /><br /> 0 = не включен (по умолчанию);<br /><br /> 1 = включен|  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67940292"
  Представление **sys. cryptographic_providers** является видимым для общедоступного.  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Представления каталога безопасности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

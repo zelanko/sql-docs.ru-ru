@@ -18,10 +18,10 @@ ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 56468767e60d49d0fc92864cd613a4f36e84132a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67950529"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
@@ -77,7 +77,7 @@ OUTPUT
  0 (успешное завершение) или >0 (сбой)  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в роли **Public** .  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -107,7 +107,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;
 exec sp_xml_removedocument @hdoc;  
 ```  
   
-### <a name="b-preparing-an-internal-representation-for-a-well-formed-xml-document-with-a-dtd"></a>Б. Подготовка внутреннего представления для XML-документа правильного формата с DTD  
+### <a name="b-preparing-an-internal-representation-for-a-well-formed-xml-document-with-a-dtd"></a>Б) Подготовка внутреннего представления для XML-документа правильного формата с DTD  
  В следующем примере возвращается дескриптор вновь созданного внутреннего представления XML-документа, который передается как входной аргумент. Хранимая процедура проверяет корректность загруженного документа с помощью DTD, включенного в документ. При вызове процедуры `sp_xml_preparedocument` используется сопоставление префикса пространства имен по умолчанию.  
   
 ```  

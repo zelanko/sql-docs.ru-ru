@@ -18,10 +18,10 @@ ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5ad42a174f558202544650fb1580574f290d4466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946080"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery и статическая типизация
@@ -89,6 +89,6 @@ ms.locfileid: "67946080"
  Оператор сложения ('+') требует использования точных типов операндов. В результате выражение `(//r)[1] + 1` возвращает статическую ошибку с ранее описанным определением типа элемента <`r`>. Единственное решение — переписать его как `(//r)[1] cast as xs:int? +1`, где «?» обозначает появление 0 или 1. В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] требуется указывать «cast as» с «?», так как любое приведение может вызвать пустую последовательность в результате ошибок во время выполнения.  
   
 ## <a name="see-also"></a>См. также:  
- [Справочник по языку XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
+ [Справочник по языку XQuery (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  
   
   

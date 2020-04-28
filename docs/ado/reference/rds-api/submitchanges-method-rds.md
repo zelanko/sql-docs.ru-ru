@@ -14,10 +14,10 @@ ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 783ad55a2355759f7625d536272f5243cd1c61c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963280"
 ---
 # <a name="submitchanges-method-rds"></a>Метод SubmitChanges (служба удаленных рабочих столов)
@@ -37,7 +37,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *DataControl*  
  Объектная переменная, представляющая [RDS. Объект элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
- *Фабрика данных*  
+ *DataFactory*  
  Объектная переменная, представляющая объект [RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) DataObject.  
   
  *Соединен*  

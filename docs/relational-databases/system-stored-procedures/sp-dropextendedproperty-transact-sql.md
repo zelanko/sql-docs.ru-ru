@@ -18,10 +18,10 @@ ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 560cecf8b6cc0aff5b503602c521e503e7cc7fcf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67934013"
 ---
 # <a name="sp_dropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
@@ -77,7 +77,7 @@ sp_dropextendedproperty
  Имя указанного типа объекта уровня 2. Аргумент *level2_object_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  В целях указания расширенных свойств объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных классифицируются по трем уровням: 0, 1 и 2. Уровень 0 является высшим уровнем и определяется как «объекты в области базы данных». Объекты уровня 1 содержатся в схеме и в пользовательской области, а объекты уровня 2 содержатся в объектах уровня 1. Расширенные свойства могут быть определены для объектов на любом из этих уровней. Ссылки на объект определенного уровня должны снабжаться типами и именами всех объектов вышестоящих уровней.  
@@ -120,7 +120,7 @@ DROP TABLE T1;
 GO  
 ```  
   
-### <a name="b-dropping-an-extended-property-on-a-database"></a>Б. Удаление расширенного свойства базы данных  
+### <a name="b-dropping-an-extended-property-on-a-database"></a>Б) Удаление расширенного свойства базы данных  
  В следующем примере удаляется свойство с `MS_Description` именем из [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] образца базы данных. Так как это свойство относится к самой базе данных, типы и имена объектов не указываются.  
   
 ```  

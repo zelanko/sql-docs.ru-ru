@@ -18,10 +18,10 @@ ms.assetid: 5f629a29-1a62-40e6-ae33-6f6b7dd09a36
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d39ea859f1fd2cc3064d8d8c71c91ba6324f162c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989973"
 ---
 # <a name="log_shipping_monitor_primary-transact-sql"></a>log_shipping_monitor_primary (Transact-SQL)
@@ -31,11 +31,11 @@ ms.locfileid: "67989973"
   
  Таблицы, связанные с ведением журналов и мониторингом, также используются на сервере-источнике и серверах-получателях.   
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**primary_id**|**UNIQUEIDENTIFIER**|Идентификатор базы данных-источника в конфигурации доставки журналов.|  
-|**primary_server**|**имеет sysname**|Имя первичного экземпляра компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журнала.|  
-|**primary_database**|**имеет sysname**|Имя базы данных-источника в конфигурации доставки журналов.|  
+|**primary_id**|**uniqueidentifier**|Идентификатор базы данных-источника в конфигурации доставки журналов.|  
+|**primary_server**|**sysname**|Имя первичного экземпляра компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журнала.|  
+|**primary_database**|**sysname**|Имя базы данных-источника в конфигурации доставки журналов.|  
 |**backup_threshold**|**int**|Максимальное время ожидания (в минутах) между операциями резервного копирования перед созданием предупреждения.|  
 |**threshold_alert**|**int**|Предупреждение, создаваемое при превышении порогового значения.|  
 |**threshold_alert_enabled**|**bit**|Определяет, включены ли пороговые предупреждения резервного копирования. 1 = включено.<br /><br /> 0 = отключено.|  
@@ -56,6 +56,6 @@ ms.locfileid: "67989973"
  [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
  [sp_help_log_shipping_monitor_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)   
  [sp_delete_log_shipping_alert_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)   
- [Системные таблицы &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Системные таблицы (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

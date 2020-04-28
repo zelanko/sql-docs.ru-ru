@@ -18,10 +18,10 @@ ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a5e2f64294652586a87fcd25fda3c29517dc295d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990268"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>Таблица IHpublishercolumns (Transact-SQL)
@@ -31,17 +31,17 @@ ms.locfileid: "67990268"
   
 ## <a name="definition"></a>Определение  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**publishercolumn_id**|**int**|Идентифицирует опубликованный столбец.|  
 |**table_id**|**int**|Определяет исходную таблицу из [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) , к которой принадлежит столбец.|  
 |**publisher_id**|**smallint**|Обозначает издателя, отличного от SQL Server, который публикует столбец.|  
-|**name**|**имеет sysname**|Имя публикуемого столбца.|  
+|**name**|**sysname**|Имя публикуемого столбца.|  
 |**column_ordinal**|**int**|Определяет порядковый номер столбца.|  
 |**type**|**varchar (255)**|Тип данных исходного столбца издателя.|  
 |**length**|**bigint**|Длина данных исходного столбца издателя.|  
 |**прек**|**int**|Точность числовых данных исходного столбца издателя.|  
-|**Измените**|**int**|Масштаб данных исходного столбца издателя.|  
+|**масштаб**|**int**|Масштаб данных исходного столбца издателя.|  
 |**IsNullable**|**bit**|Указывает, допускает ли столбец значения NULL, где значение **1** означает, что значения NULL принимаются.|  
 |**iscaptured**|**bit**|Указывает, существует ли триггер, связанный со столбцом; триггер может существовать, даже если столбец не публикуется в статье. Значение **1** означает, что триггер существует в столбце.|  
   

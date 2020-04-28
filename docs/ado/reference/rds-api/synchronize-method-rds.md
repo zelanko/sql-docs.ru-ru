@@ -14,10 +14,10 @@ ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e280e5f8c9eda472c6448b199ffa94ac18c13751
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963267"
 ---
 # <a name="synchronize-method-rds"></a>Метод Synchronize (служба удаленных рабочих столов)
@@ -51,13 +51,13 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
   
  8 =*рефрешконфликтс* . не удается обновить все строки с ожидающими изменениями. Строки, которые не удалось обновить, обновляются текущими данными из базы данных.  
   
- *ппрекордсет*  
+ *ppRecordset*  
  Указатель на набор записей для синхронизации.  
   
  *пстатусаррай*  
  Вариант, используемый для возврата безопасного массива состояний строк для строк, затронутых синхронизацией. Не задается, если не задан ни один из следующих параметров синхронизации: *рефрешвисупдате*, *Refresh* и *рефрешконфликтс*.  
   
- *намного*  
+ *lcid*  
  КОД языка, используемый для создания любых ошибок, возвращаемых в *пинформатион*.  
   
  *пинформатион*  

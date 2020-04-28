@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 59ea64e16f1469c12461a559c3f102094615fa12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67950463"
 ---
 # <a name="sp_xp_cmdshell_proxy_account-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
@@ -50,11 +50,11 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
  *account_name*  
  Указывает имя входа Windows, которое будет использовано как учетная запись-посредник.  
   
- *пароль*  
+ *password*  
  Указывает пароль для учетной записи Windows.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  Учетные данные прокси-сервера будут называться **# #xp_cmdshell_proxy_account # #**.  
@@ -74,7 +74,7 @@ EXEC sp_xp_cmdshell_proxy_account 'ADVWKS\Max04', 'ds35efg##65';
 GO  
 ```  
   
-### <a name="b-dropping-the-proxy-credential"></a>Б. Удаление учетных данных для учетной записи-посредника  
+### <a name="b-dropping-the-proxy-credential"></a>Б) Удаление учетных данных для учетной записи-посредника  
  Следующий пример удаляет учетные данные учетной записи-посредника из хранилища учетных данных.  
   
 ```  
@@ -84,9 +84,9 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [xp_cmdshell &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
- [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md)   
- [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
+ [Создание УЧЕТных данных &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
+ [sys. Credentials &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
   
   

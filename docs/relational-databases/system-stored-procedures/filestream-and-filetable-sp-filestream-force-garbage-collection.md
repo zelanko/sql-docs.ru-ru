@@ -19,10 +19,10 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942287"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
@@ -46,23 +46,22 @@ sp_filestream_force_garbage_collection
  Обозначает имя базы данных, в которой будет запущен сборщик мусора.  
   
 > [!NOTE]  
-> `@dbname`аргумент имеет тип **sysname**. Если он не указан, предполагается текущая база данных.  
+> `@dbname` имеет тип **sysname**. Если он не указан, предполагается текущая база данных.  
   
  `[ @filename = ] 'logical_file_name'`  
- Обозначает логическое имя контейнера FILESTREAM, в котором будет запущен сборщик мусора. 
-  `@filename` является необязательным. Если логическое имя файла не указано, сборщик мусора очищает все контейнеры FILESTREAM в указанной базе данных.  
+ Обозначает логическое имя контейнера FILESTREAM, в котором будет запущен сборщик мусора. Аргумент `@filename` является необязательным. Если логическое имя файла не указано, сборщик мусора очищает все контейнеры FILESTREAM в указанной базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
   
 |||  
 |-|-|  
-|Значение|Description|  
+|Значение|Описание|  
 |0|Операция выполнена успешно|  
 |1|Ошибка при выполнении операции|  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*file_name*|Указывает имя контейнера FILESTREAM|  
 |*num_collected_items*|Указывает число элементов FILESTREAM (файлов и каталогов), которые были собраны как мусор (удалены) в данном контейнере.|  
@@ -89,7 +88,7 @@ sp_filestream_force_garbage_collection
 ## <a name="examples"></a>Примеры  
  В следующих примерах сборщик мусора запускается для контейнеров FILESTREAM в базе данных `FSDB`.  
   
-### <a name="a-specifying-no-container"></a>A. Без указания контейнера  
+### <a name="a-specifying-no-container"></a>А) Без указания контейнера  
   
 ```sql  
 USE FSDB;  
@@ -97,7 +96,7 @@ GO
 EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB';  
 ```  
   
-### <a name="b-specifying-a-container"></a>Б. С указанием контейнера  
+### <a name="b-specifying-a-container"></a>Б) С указанием контейнера  
   
 ```sql  
 USE FSDB;  
@@ -107,7 +106,7 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 ```  
   
 ## <a name="see-also"></a>См. также:  
-[Файловый поток](../../relational-databases/blob/filestream-sql-server.md)
+[Потока](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Таблицы FileTable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Динамические административные представления Filestream and FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Представления каталога Filestream и FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)

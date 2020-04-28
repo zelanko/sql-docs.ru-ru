@@ -18,10 +18,10 @@ ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 51e21d189a9302c2dc7b74a013846460e9cb7bc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946641"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
@@ -65,12 +65,12 @@ sp_update_schedule
   
 `[ @freq_type = ] freq_type`Значение, указывающее, когда должно выполняться задание. *freq_type*имеет **тип int**, значение по умолчанию **0**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
 |**4**|Ежедневно|  
-|**8**|Еженедельно|  
-|**глубин**|Ежемесячная|  
+|**8**|Weekly (Еженедельно);|  
+|**16**|Ежемесячно|  
 |**32**|Ежемесячно относительно *интервала FREQ*|  
 |**64**|Запустить, когда запускается служба SQLServerAgent|  
 |**128**|Запускать, когда компьютер простаивает|  
@@ -106,7 +106,7 @@ sp_update_schedule
 |**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
-|**глубин**|Последний|  
+|**16**|Последний|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`Число недель или месяцев между запланированным выполнением задания. *freq_recurrence_factor* используется только в том случае, если *freq_type* имеет значение **8**, **16**или **32**. *freq_recurrence_factor*имеет **тип int**и значение по умолчанию **0**.  
   
@@ -131,7 +131,7 @@ sp_update_schedule
  Все задания, которые используют расписание, немедленно используют новые установки. Однако изменение расписания не останавливает выполнение заданий.  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -166,6 +166,6 @@ GO
  [sp_add_jobschedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
+ [sp_attach_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

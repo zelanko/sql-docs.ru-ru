@@ -19,10 +19,10 @@ ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 21e5230e4f3efd86fe90382202f0b21a0187a214
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937066"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database-sys. dm_db_rda_migration_status
@@ -34,7 +34,7 @@ ms.locfileid: "67937066"
   
  В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]выходные данные **sys. dm_db_rda_migration_status** ограничены 200 строками.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|Идентификатор таблицы, из которой были перенесены строки.|  
 |**database_id**|**int**|Идентификатор базы данных, из которой были перенесены строки.|  
@@ -46,6 +46,6 @@ ms.locfileid: "67937066"
 |**error_state**|**int**|Если пакет не выполняется, состояние возникшей ошибки; в противном случае значение null.<br /><br /> **ERROR_STATE** указывает условие или расположение, в котором произошла ошибка.|  
   
 ## <a name="see-also"></a>См. также:  
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
+ [База данных Stretch](../../sql-server/stretch-database/stretch-database.md)  
   
   

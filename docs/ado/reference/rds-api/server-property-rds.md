@@ -16,10 +16,10 @@ ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d196a60986734c5717be9711af1fa28accee414
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963475"
 ---
 # <a name="server-property-rds"></a>Свойство Server (служба удаленных рабочих столов)
@@ -31,7 +31,7 @@ ms.locfileid: "67963475"
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Синтаксис  
- **НТТР**  
+ **HTTP**  
   
  Синтаксис времени разработки  
   
@@ -70,7 +70,7 @@ awebsrvr:port
 DataControl.Server="https://awebsrvr:port"  
 ```  
   
- **Служба**  
+ **DCOM**  
   
  Синтаксис времени разработки  
   
@@ -89,7 +89,7 @@ computername
 DataControl.Server="computername"  
 ```  
   
- **Внутрипроцессный**  
+ **Внутрипроцессно**  
   
  Синтаксис времени разработки  
   

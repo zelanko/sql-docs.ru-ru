@@ -18,10 +18,10 @@ ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6219f18bee08d5c20431cb87a2cb30795c515d7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67950470"
 ---
 # <a name="sp_xml_removedocument-transact-sql"></a>sp_xml_removedocument (Transact-SQL)
@@ -49,7 +49,7 @@ sp_xml_removedocument hdoc
  0 (успешное завершение) или >0 (сбой)  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в роли **Public** .  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример удаляет встроенное представление XML-документа. Переданный на вход дескриптор документа.  

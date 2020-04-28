@@ -18,10 +18,10 @@ ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946609"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Модули и прологи — пролог XQuery
@@ -45,8 +45,7 @@ WHERE ProductModelID=7
   
 -   Ключевое слово `declare namespace` определяет префикс пространств имен, который впоследствии используется в теле запроса.  
   
--   
-  `/AWMI:root/AWMI:Location[@LocationID="10"]` является текстом запроса.  
+-   `/AWMI:root/AWMI:Location[@LocationID="10"]` является текстом запроса.  
   
 ## <a name="namespace-declarations"></a>Объявление пространств имен  
  Объявление пространств имен задает префикс и связывает его с URI-кодом пространства имен, как показано в следующем запросе. В запросе `CatalogDescription` является столбцом типа **XML** .  

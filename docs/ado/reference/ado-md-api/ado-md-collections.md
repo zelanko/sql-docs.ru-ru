@@ -14,10 +14,10 @@ ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8b4e8d3c36054cd4e9dc49e940e60df51f17ddc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67940014"
 ---
 # <a name="ado-md-collections"></a>Коллекции многомерных объектов ADO
@@ -28,8 +28,8 @@ ms.locfileid: "67940014"
 |[кубедефс](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Содержит объекты **CubeDef** , представляющие куб из многомерного каталога.|  
 |[Измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Содержит объекты **измерения** , составляющие куб.|  
 |[Иерархии](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Содержит объекты **иерархии** набора из измерения.|  
-|[Levels](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Содержит объекты **уровня** , составляющие иерархию.|  
-|[Члены](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|Содержит объекты- **члены** уровня или расположения вдоль оси.|  
+|[Уровни](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Содержит объекты **уровня** , составляющие иерархию.|  
+|[Участники](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|Содержит объекты- **члены** уровня или расположения вдоль оси.|  
 |[Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|Содержит объекты **позиции** , определяющие точку на оси.|  
   
 ## <a name="see-also"></a>См. также:  

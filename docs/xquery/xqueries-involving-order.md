@@ -17,10 +17,10 @@ ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946112"
 ---
 # <a name="xqueries-involving-order"></a>Запросы XQuery, использующие упорядочивание
@@ -83,7 +83,7 @@ WHERE ProductModelID=7
   
  Предыдущий запрос извлекает только текстовые узлы. Если вместо этого требуется <`step` весь элемент>, удалите функцию **String ()** из запроса:  
   
-### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>Б. Найти все материалы и инструменты, используемые на втором участке цеха для производства продукта  
+### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>Б) Найти все материалы и инструменты, используемые на втором участке цеха для производства продукта  
  Для определенной модели продукта следующий запрос извлекает инструменты и материалы, используемые на втором участке цеха в последовательности участков цехов в производственном процессе.  
   
 ```sql

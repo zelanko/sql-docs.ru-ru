@@ -18,10 +18,10 @@ ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9985b0587316641955219eb5179ffd6ed07916d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990388"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
@@ -31,11 +31,11 @@ ms.locfileid: "67990388"
   
 ## <a name="definition"></a>Определение  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|Идентифицирует опубликованный столбец.|  
 |**publishercolumn_id**|**int**|Связывает опубликованный столбец со метаданными столбца, хранящимися в системной таблице [ихпублишерколумнс](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) .|  
-|**name**|**имеет sysname**|Указывает имя столбца.|  
+|**name**|**sysname**|Указывает имя столбца.|  
 |**article_id**|**int**|Идентифицирует статью, к которой относится столбец.|  
 |**column_ordinal**|**int**|Определяет порядковый номер столбца.|  
 |**mapped_type**|**tinyint**|Тип данных целевого столбца на подписчике.|  

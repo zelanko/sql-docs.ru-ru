@@ -19,10 +19,10 @@ ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f2f363998699846ca5020127f19be6dc0ad59712
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948633"
 ---
 # <a name="sysdm_broker_queue_monitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
@@ -31,11 +31,11 @@ ms.locfileid: "67948633"
   Возвращает по одной строке для каждого монитора очереди в экземпляре. Монитор очереди управляет активацией очереди.  
   
 
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Идентификатор объекта для базы данных, содержащей очередь, за которой следит монитор. Допускает значение NULL.|  
 |**queue_id**|**int**|Идентификатор объекта для очереди, за которой следит монитор. Допускает значение NULL.|  
-|**state**|**nvarchar (32)**|Состояние монитора. Допускает значение NULL. Возможны следующие варианты.<br /><br /> **Активный**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
+|**state**|**nvarchar(32)**|Состояние монитора. Допускает значение NULL. Возможны следующие варианты.<br /><br /> **Активный**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|Последний раз, когда инструкция RECEIVE из очереди возвратила пустой результат. Допускает значение NULL.|  
 |**last_activated_time**|**datetime**|Последний раз, когда монитор очереди активировал хранимую процедуру. Допускает значение NULL.|  
 |**tasks_waiting**|**int**|Количество сеансов, ожидающих в инструкции RECEIVE для этой очереди. Допускает значение NULL.<br /><br /> Примечание. это число включает в себя любой сеанс, в котором выполняется инструкция RECEIVE, независимо от того, начал ли монитор очереди сеанс. Это происходит, если вместе с RECEIVE используется инструкция WAITFOR. В основном, эти задачи ожидают прибытия сообщений в очередь.|  
@@ -75,8 +75,8 @@ INNER JOIN sys.databases t5 ON ( t5.database_id = DB_ID() );
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Service Broker связанные динамические административные представления &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления, связанные с компонентом Service Broker (Transact-SQL)](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

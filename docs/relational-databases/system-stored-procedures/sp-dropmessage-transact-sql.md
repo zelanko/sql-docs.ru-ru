@@ -18,10 +18,10 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a8e6a8187936e7a2f824315123937cf9c7eca9c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933869"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
@@ -45,10 +45,10 @@ sp_dropmessage [ @msgnum = ] message_number
 `[ @lang = ] 'language'`Язык сообщения для удаления. Если указано значение **ALL** , то все языковые версии *message_number* удаляются. *Language* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет.  
+ Отсутствует.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в предопределенных ролях сервера **sysadmin** и **serveradmin** .  
@@ -67,7 +67,7 @@ GO
 EXEC sp_dropmessage 50001;  
 ```  
   
-### <a name="b-dropping-a-user-defined-message-that-includes-a-localized-version"></a>Б. Удаление пользовательского сообщения, у которого есть локализованная версия  
+### <a name="b-dropping-a-user-defined-message-that-includes-a-localized-version"></a>Б) Удаление пользовательского сообщения, у которого есть локализованная версия  
  В следующем примере удаляется пользовательское сообщение с номером `60000`, у которого есть локализованная версия.  
   
 ```  
@@ -131,11 +131,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [&#41;инструкции RAISERROR &#40;Transact-SQL](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
+ [sp_addmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
- [sys. messages &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [sys.messages (Transact-SQL)](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

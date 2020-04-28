@@ -18,10 +18,10 @@ ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 95598885a80b1f697f5e1287e22c1048e737ba6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67944724"
 ---
 # <a name="sp_revokelogin-transact-sql"></a>Хранимая процедура sp_revokelogin (Transact-SQL)
@@ -45,7 +45,7 @@ sp_revokelogin [ @loginame= ] 'login'
 `[ @loginame = ] 'login'`Имя пользователя или группы Windows. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию. именем для *входа* может быть любое существующее имя пользователя или группа Windows в формате *компьютер имя*\\*пользователь или домен*\\*пользователь*.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  **sp_revokelogin** отключает соединения, используя учетную запись, указанную параметром *Login* . Но пользователи Windows, которым доступ к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был предоставлен через членство в группе Windows, тем не менее, могут установить соединение после того, как был запрещен их индивидуальный доступ. Аналогично, если параметр *Login* указывает имя группы Windows, то члены этой группы, которым был предоставлен доступ к экземпляру по отдельности, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будут по-прежнему иметь возможность подключения.  
@@ -72,7 +72,7 @@ sp_revokelogin [ADVWORKS\john]
 EXEC sp_revokelogin 'Corporate\MollyA';  
 ```  
   
- или  
+ либо  
   
 ```  
 EXEC sp_revokelogin [Corporate\MollyA];  
@@ -84,6 +84,6 @@ EXEC sp_revokelogin [Corporate\MollyA];
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

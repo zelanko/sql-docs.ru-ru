@@ -14,10 +14,10 @@ ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964546"
 ---
 # <a name="createobject-method-rds"></a>Метод CreateObject (служба удаленных рабочих столов)
@@ -34,16 +34,16 @@ ms.locfileid: "67964546"
 |HTTP|Set Object = DataObject. CreateObject ("ProgId", "HTTPS\://авебсрвр")|  
 |HTTPS|Set Object = DataObject. CreateObject ("ProgId", "HTTPS\://авебсрвр")|  
 |DCOM|Set Object = DataObject. CreateObject ("ProgId", "ComputerName")|  
-|Внутрипроцессный|Set Object = DataObject. CreateObject ("ProgId", "")|  
+|Внутрипроцессно|Set Object = DataObject. CreateObject ("ProgId", "")|  
   
 ## <a name="parameters"></a>Параметры  
- *Объект*  
+ *Объектами*  
  Объектная переменная, результатом которой является объект, который является типом, заданным в параметре *ProgID*.  
   
  *Пространство данных*  
  Объектная переменная, представляющая [RDS. Объект пространства](../../../ado/reference/rds-api/dataspace-object-rds.md) данных, используемый для создания экземпляра нового объекта.  
   
- *ID*  
+ *ProgID*  
  **Строковое** значение, содержащее программный идентификатор, указывающий бизнес-объект на стороне сервера, который реализует бизнес-правила приложения.  
   
  *авебсрвр* или *ComputerName*  

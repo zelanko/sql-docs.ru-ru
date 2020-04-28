@@ -18,10 +18,10 @@ ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e39be3cf32f04a60e554928f66cdc6123322f19c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966189"
 ---
 # <a name="groups-collection-adox"></a>Коллекция Groups (ADOX)
@@ -30,11 +30,11 @@ ms.locfileid: "67966189"
 ## <a name="remarks"></a>Remarks  
  Коллекция **Groups** [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) представляет все учетные записи групп каталога. Коллекция **Groups** для [пользователя](../../../ado/reference/adox-api/user-object-adox.md) представляет только группу, к которой принадлежит пользователь.  
   
- Метод [append](../../../ado/reference/adox-api/append-method-adox-groups.md) для коллекции **GROUPS** уникален для ADOX. Вы можете:  
+ Метод [append](../../../ado/reference/adox-api/append-method-adox-groups.md) для коллекции **GROUPS** уникален для ADOX. Можно выполнить следующие действия.  
   
 -   Добавьте новую группу безопасности в коллекцию с помощью метода **append** .  
   
- Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете:  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Можно выполнить следующие действия.  
   
 -   Доступ к группе в коллекции со свойством [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   

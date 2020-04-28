@@ -18,10 +18,10 @@ ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a75e78c8423b925ca2dfc617cbbae7e4bdcc11d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990159"
 ---
 # <a name="ihpublishertables-transact-sql"></a>IHpublishertables (Transact-SQL)
@@ -29,16 +29,16 @@ ms.locfileid: "67990159"
 
   Системная таблица **IHpublishertables** представляет метаданные, хранящиеся на издателе. Эта системная таблица содержит по одной строке для каждой исходной таблицы, опубликованной издателем, не являющимся издателем SQL Server, с помощью текущего распространителя. Эта таблица хранится в базе данных распространителя.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|Определяет опубликованную таблицу.|  
 |**publisher_id**|**smallint**|Определяет издателя, не являющегося издателем SQL Server, который публикует таблицу.|  
-|**name**|**имеет sysname**|Имя опубликованной таблицы.|  
-|**владельцев**|**имеет sysname**|Владелец таблицы.|  
+|**name**|**sysname**|Имя опубликованной таблицы.|  
+|**владельцев**|**sysname**|Владелец таблицы.|  
   
 ## <a name="see-also"></a>См. также:  
  [Разнородная репликация базы данных](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -20,17 +20,17 @@ ms.assetid: 8a74802f-34d6-4676-bf94-07df5f8bff66
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8703641b25f7e5956fe4204db9775b0ada90cba1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964138"
 ---
 # <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>Примеры свойств Филтерколумн, Филтеркритерион, FilterValue, SortColumn и SortDirection и метода Reset (VBScript)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем примере кода показано, как задать [RDS. Параметр сервера элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) **** данными в DesignTime и привязать его к таблице HTML с поддержкой данных, используя источник данных. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **филтерколумнвбс. ASP**.  
+ В следующем примере кода показано, как задать [RDS. Параметр сервера элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) **Server** данными в DesignTime и привязать его к таблице HTML с поддержкой данных, используя источник данных. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **филтерколумнвбс. ASP**.  
   
 ```  
 <!-- BeginFilterColumnVBS -->  

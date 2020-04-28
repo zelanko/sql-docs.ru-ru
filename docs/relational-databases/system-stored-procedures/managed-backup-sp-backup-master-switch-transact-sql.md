@@ -21,10 +21,10 @@ ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bb151279d1435c544de406e67384ce9ca1fdd11e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942062"
 ---
 # <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup. sp_backup_master_switch (Transact-SQL)
@@ -45,14 +45,14 @@ EXEC managed_backup.sp_backup_master_switch
                      [@new_state = ] { 0 | 1}  
 ```  
   
-##  <a name="Arguments"></a>Даваемых  
+##  <a name="arguments"></a><a name="Arguments"></a>Даваемых  
  @state  
  Задает состояние [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. @state Параметр имеет значение **bit**. При установке в значение 0 работа приостанавливается, а при установке в значение 1 — возобновляется.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
  Описаны проблемы безопасности, связанные с разрешениями statement.Include как подраздела (заголовок H3). Рассмотрите включение других подразделов для цепочки владения и аудита, если потребуется.  
   
 ### <a name="permissions"></a>Разрешения  
@@ -80,6 +80,6 @@ Go
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Управляемое резервное копирование SQL Server в Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [SQL Server управляемого резервного копирования Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

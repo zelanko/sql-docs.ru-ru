@@ -19,10 +19,10 @@ ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4dda607ace977be539dbed096a3d83ac5f220ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67950981"
 ---
 # <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67950981"
   
  Дополнительные сведения см. в статье [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md).  
   
-|**Столбец**|**Тип**|**Описание**|  
+|**Рубрик**|**Type**|**Описание**|  
 |----------------|--------------|---------------------|  
 |database_id|INT|Идентификатор базы данных, связанной с дескриптором.|  
 |object_id|INT|Идентификатор объекта таблицы FileTable, с которой связан дескриптор.|  
@@ -48,7 +48,7 @@ ms.locfileid: "67950981"
 |state_desc|nvarchar(120)|"ACTIVE",<br />"ЗАКРЫТо",<br />ЗАВЕРШЕН|  
 |current_workitem_type|INT|Состояние, в котором этот дескриптор обрабатывается в данный момент.|  
 |current_workitem_type_desc|nvarchar(120)|"Носетворкитемтипе",<br />"Ффтпрекреатеворкитем",<br />"Ффтжетфисикалфиленамеворкитем",<br />"Ффтпосткреатеворкитем",<br />"Ффтпреклеанупворкитем",<br />"Ффтпостклеанупворкитем",<br />"Ффтпреклосеворкитем",<br />"Ффткуеридиректориворкитем",<br />"Ффткуеринфоворкитем",<br />"Ффткуериволумеинфоворкитем",<br />"Ффтсетинфоворкитем",<br />"Ффтвритекомплетионворкитем"|  
-|fcb_id|bigint|Идентификатор блока управления файлами FileTable.|  
+|fcb_id|BIGINT|Идентификатор блока управления файлами FileTable.|  
 |item_id|varbinary (892)|Идентификатор элемента для файла или каталога. Может быть NULL для корневых дескрипторов сервера.|  
 |is_directory|bit|Представляет ли собой каталог.|  
 |item_name|nvarchar(512)|Имя элемента.|  
