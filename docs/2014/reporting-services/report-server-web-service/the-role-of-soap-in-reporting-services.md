@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e0b418e44436912b5ed1368ad7a316951872266
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62519208"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
@@ -59,7 +59,7 @@ public void DeleteItem(string item);
   
  Метод <xref:ReportService2010.ReportingService2010.DeleteItem%2A> не имеет возвращаемого значения, поэтому возвращается пустой ответ.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Доступ к API SOAP](accessing-the-soap-api.md)   
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md)   
  [Сервер отчетов Reporting Services](../reporting-services-report-server.md)   

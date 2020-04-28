@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653757"
 ---
-# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Урок 2. Формирование классов из RDL-схемы с помощью инструмента xsd
+# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Урок 2. Формирование классов из схемы языка определения отчетов с помощью инструмента xsd
   После создания проекта в среде [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] следующим шагом является получение локальной копии схемы определения отчета и запуск средства определения XML-схемы (Xsd.exe).  
   
 ### <a name="to-generate-the-rdl-classes"></a>Формирование RDL-классов  
@@ -54,8 +54,8 @@ ms.locfileid: "62653757"
 ## <a name="next-lesson"></a>Следующее занятие  
  На следующем занятии будет написан код для загрузки определения отчета с сервера отчетов с помощью классов, сформированных из RDL-схемы.  См. [занятие 3. Загрузка определения отчета с сервера отчетов](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обновление отчетов с использованием классов, созданных из учебника по схеме языка определения отчетов &#40;SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
- [Язык определения отчетов &#40;службы SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [Язык определения отчетов (службы SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

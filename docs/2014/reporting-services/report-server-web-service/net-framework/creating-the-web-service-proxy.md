@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf503b7da6fb4e3f3a3846a714b1062255f1a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520385"
 ---
 # <a name="creating-the-web-service-proxy"></a>Создание учетной записи-посредника веб-службы
@@ -31,7 +31,7 @@ ms.locfileid: "62520385"
 ## <a name="adding-the-proxy-using-the-wsdl-tool"></a>Добавление класса-посредника с помощью программы WSDL  
  Пакет SDK для [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] включает программу Wsdl.exe для работы с языком WSDL, которая позволяет создать прокси-класс веб-службы для использования в среде разработки [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Наиболее распространенным способом создания прокси клиента на языках, поддерживающих веб-службы (в настоящее время [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]это C# и), является использование средства WSDL.  
   
- **Добавление класса-посредника в проект с помощью WSDL. exe**  
+ **Добавление прокси-класса в проект с помощью Wsdl.exe**  
   
 1.  Запустите программу Wsdl.exe из командной строки, чтобы создать класс-посредник, указав (по крайней мере) URL-адрес для веб-службы сервера отчетов.  
   
@@ -128,7 +128,7 @@ Import myNamespace.myReferenceName
 using myNamespace.myReferenceName;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Веб-служба сервера отчетов](../report-server-web-service.md)   
  [Создание приложений с помощью веб-службы и .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)   
  [Технический справочник (службы SSRS)](../../technical-reference-ssrs.md)  

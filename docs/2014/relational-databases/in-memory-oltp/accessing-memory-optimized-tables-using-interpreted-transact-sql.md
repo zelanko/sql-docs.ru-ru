@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62468611"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Доступ к таблицам, оптимизированным для памяти, с помощью интерпретируемых инструкций Transact-SQL
@@ -39,7 +39,7 @@ ms.locfileid: "62468611"
 |Область|Не поддерживается|  
 |----------|-----------------|  
 |Доступ к таблицам|TRUNCATE TABLE<br /><br /> MERGE (оптимизированная для памяти таблица в качестве назначения)<br /><br /> Динамический курсор и курсор ключевого набора (они автоматически понижаются в статический).<br /><br /> Доступ из модулей CLR с использованием контекстного соединения.<br /><br /> Ссылка на оптимизированную для памяти таблицу из индексированного представления|  
-|Между базами данных|Запросы баз данных<br /><br /> Межбазовые транзакции<br /><br /> Связанные серверы|  
+|Между базами данных|Межбазовые запросы<br /><br /> Межбазовые транзакции<br /><br /> Связанные серверы|  
   
 ## <a name="table-hints"></a>Табличные указания  
  Дополнительные сведения о табличных указаниях см. в разделе. [Табличные указания &#40;&#41;Transact-SQL ](/sql/t-sql/queries/hints-transact-sql-table). Изоляция SNAPSHOT была добавлена для поддержки [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
@@ -58,7 +58,7 @@ ms.locfileid: "62468611"
 > [!NOTE]  
 >  Табличное указание уровня изоляции не требуется для обращения к таблицам, оптимизированным для памяти, с помощью запросов с автоматической фиксацией.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поддержка Transact-SQL для выполняющейся в памяти OLTP](transact-sql-support-for-in-memory-oltp.md)   
  [Миграция в In-Memory OLTP](migrating-to-in-memory-oltp.md)  
   

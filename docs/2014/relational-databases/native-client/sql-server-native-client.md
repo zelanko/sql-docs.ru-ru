@@ -11,16 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2a01b9d9d13bf5e9135d287553beb8b87c2dcd5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638852"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>Новые&#39;в SQL Server Native Client
-  
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] устанавливает [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client. 
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client отсутствует.  
+  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] устанавливает [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client отсутствует.  
   
  Других обновлений для драйвера ODBC в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client не будет. Преемник драйвера ODBC в клиенте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, называемый драйвером [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Windows, устанавливается вместе с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Дополнительные сведения о [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Windows см. в разделе [Microsoft ODBC Driver 11 для SQL Server — Windows](https://www.microsoft.com/download/details.aspx?id=36434).  
   
@@ -56,7 +54,7 @@ ms.locfileid: "62638852"
   
 -   [Изменение поведения драйвера ODBC при обработке преобразования символов](features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Компоненты собственного клиента SQL Server](features/sql-server-native-client-features.md)  
   
   

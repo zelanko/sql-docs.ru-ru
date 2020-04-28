@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62659587"
 ---
 # <a name="recommendation-element-dta"></a>Элемент Recommendation (DTA)
@@ -50,7 +50,7 @@ ms.locfileid: "62659587"
 |Связь|Элементы|  
 |------------------|--------------|  
 |**Родительский элемент**|[Элемент Table для схемы (DTA)](table-element-for-schema-dta.md)|  
-|**Дочерние элементы**|[Элемент Create (DTA)](create-element-dta.md)<br /><br /> `Drop`дерев. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](https://go.microsoft.com/fwlink/?linkid=43100).|  
+|**Дочерние элементы**|[Элемент Create (DTA)](create-element-dta.md)<br /><br /> Элемент `Drop`. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](https://go.microsoft.com/fwlink/?linkid=43100).|  
   
 ## <a name="remarks"></a>Remarks  
  Этот элемент с именем **RecommendationTypecomplexType** определен в схеме XML помощника по настройке ядра СУБД. Он используется для задания индексов в гипотетической конфигурации. Не путайте этот элемент `Recommendation` с другими типами, используемыми для задания секционирования (`RecommendationPType`) или представлений (`RecommendationViewType`). Дополнительные сведения об этих типах `Recommendation` элементов см. в [Помощник по настройке ядра СУБД схеме XML](https://go.microsoft.com/fwlink/?linkid=43100).  

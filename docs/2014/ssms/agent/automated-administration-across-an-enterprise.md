@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473154"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Автоматизация администрирования в масштабах предприятия
-  Автоматическое администрирование нескольких экземпляров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] называется *администрированием нескольких серверов*. Оно предназначено для выполнения следующих задач.  
+   Автоматическое администрирование нескольких экземпляров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] называется *администрированием нескольких серверов*. Оно предназначено для выполнения следующих задач.  
   
 -   Управления двумя или несколькими серверами.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62473154"
   
  На следующем рисунке показана связь между главным и целевыми серверами.  
   
- ![Конфигурация многосерверного администрирования](../../database-engine/media/multisvr.gif "Конфигурация многосерверного администрирования")  
+ ![Настройка администрирования нескольких серверов](../../database-engine/media/multisvr.gif "Настройка администрирования нескольких серверов")  
   
  При администрировании серверов подразделений крупного предприятия можно определить:  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62473154"
  Содержит сведения о том, как автоматизированное администрирование в многосерверном окружении использует функции самонастройки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server ядро СУБД обратной совместимости](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [Обратная совместимость компонента ядра СУБД SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [Регистрация серверов](../register-servers/register-servers.md)   
  [sp_add_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
  [sp_delete_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   

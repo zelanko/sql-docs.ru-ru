@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 725be263e30687a3f2ded90990e952e1cd97a185
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62629387"
 ---
 # <a name="subscribers"></a>Подписчики
@@ -26,7 +26,7 @@ ms.locfileid: "62629387"
   
 ## <a name="options"></a>Параметры  
  **Подписчики**  
- Установите флажок в сетке, чтобы включить соответствующий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или не источник[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных в качестве подписчика на публикацию, выбранную на странице **Публикация** . Если подписчика нет в списке, выберите пункт **Добавить подписчик** или **Добавить подписчик SQL Server**.  
+ Установите флажок на сетке, чтобы выбрать соответствующие [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или отличные от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источники данных в качестве подписчика публикации, выбранной на странице **Публикация** . Если подписчика нет в списке, выберите пункт **Добавить подписчик** или **Добавить подписчик SQL Server**.  
   
  **База данных подписки**  
  Данные и операции в данном столбце зависят от типов подписчиков, перечисленных в столбце **Подписчики** .  
@@ -48,11 +48,11 @@ ms.locfileid: "62629387"
   
 -   Подписка является принудительной.  
   
--   Издатель выбранной публикации [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии.  
+-   Издателем выбранной публикации является [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии.  
   
  При нажатии кнопки **Добавить подписчик** отображается меню с двумя пунктами: **Добавить подписчик SQL Server** и **Добавить подписчик, отличный от подписчика SQL Server**. Чтобы добавить подписчик Oracle или IBM DB2, выберите пункт **Добавить подписчик, отличный от подписчика SQL Server** .  
   
- **Добавить SQL Server подписчика**  
+ **Добавить подписчик SQL Server**  
  Добавьте сервер в список серверов, которые могут быть включены в качестве подписчиков. Данная кнопка отображается при выполнении одного или нескольких из перечисленных ниже условий.  
   
 -   Выбранная публикация является публикацией слиянием, публикацией моментальными снимками или публикацией транзакций с поддержкой обновляемых подписок.  
@@ -68,9 +68,9 @@ ms.locfileid: "62629387"
     -   Публикация допускает анонимные подписки.  
   
 ## <a name="see-also"></a>См. также:  
- [Создание подписки по запросу](create-a-pull-subscription.md)   
- [Создание принудительной подписки](create-a-push-subscription.md)   
- [Подписчики, не относящиеся к SQL Server](non-sql/non-sql-server-subscribers.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Create a Push Subscription](create-a-push-subscription.md)   
+ [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
  [Подписка на публикации](subscribe-to-publications.md)  
   
   

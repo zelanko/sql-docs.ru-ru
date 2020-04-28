@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62626051"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Наблюдение с помощью управления на основе политик и принудительное применение рекомендаций с помощью управления на основе политик
@@ -61,13 +61,13 @@ ms.locfileid: "62626051"
 |Журнал событий Windows: ошибка управления драйвером устройства|[Ошибка управления драйвером устройства](device-driver-control-error.md)|  
 |Журнал событий Windows, ошибка: устройство не готово|[Ошибка отсутствия готовности устройства](device-not-ready-error.md)|  
 |Журнал событий Windows: ошибка запроса ввода-вывода|[Обнаружить неудачный входящий запрос на выход](detect-failed-input-and-output-requests.md)|  
-|Журнал событий Windows: предупреждение об отложенном вводе-выводе|[Проверка наличия проблем с задержкой ввода-вывода в дисковых и выходных подсистемах](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
+|Журнал событий Windows: предупреждение об отложенном вводе-выводе|[Проверка на наличие проблем задержки ввода-вывода в подсистеме дискового ввода-вывода](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
 |Журнал событий Windows: ошибка ввода-вывода при сбое страницы физической памяти|[Input and Output Error During Hard Page Fault](input-and-output-error-during-hard-page-fault.md)|  
 |Журнал событий Windows: ошибка при повторном считывании|[Проверка на наличие проблем повторного чтения в подсистеме дискового ввода-вывода](check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |Журнал событий Windows: ошибка из-за истечения времени ожидания ввода-вывода системы хранения|[Время ожидания ввода-вывода для системы хранения](storage-system-input-output-time-out.md)|  
 |Журнал событий Windows: сбой в системе|[Непредвиденные сбои системы](unexpected-system-failures.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Работа с аспектами управления на основе политик](working-with-policy-based-management-facets.md)  
   
   

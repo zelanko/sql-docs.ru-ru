@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e88a164602f9bbe6ad42c3897285a484cac94466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62518664"
 ---
 # <a name="using-secure-web-service-methods"></a>Использование защищенных методов веб-службы
   При вызове некоторых из методов веб-служб сервера отчетов может потребоваться наличие безопасного соединения. То, для каких из методов требуется наличие безопасного соединения, определяется значением параметра `SecureConnectionLevel` в файле RSReportServer.config. Значение этого параметра должно быть целым числом и находиться в диапазоне от 0 и выше. Данные значения описываются в следующей таблице.  
   
-|Level|Description|  
+|Level|Описание|  
 |-----------|-----------------|  
 |**0**|Небезопасный. Для вызовов к API SOAP служб Reporting Services не требуется безопасное соединение.|  
 |Больше **0**|Безопасный уровень. Для всех вызовов к API-интерфейсу SOAP служб Reporting Services необходимо наличие безопасного соединения.|  

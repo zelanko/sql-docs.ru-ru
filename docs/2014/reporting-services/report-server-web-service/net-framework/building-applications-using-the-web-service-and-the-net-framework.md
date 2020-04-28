@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5136c67077ff90e7bbbd66ae72fed891267ba7a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520352"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Building Applications Using the Web Service and the .NET Framework
@@ -32,7 +32,7 @@ ms.locfileid: "62520352"
   
  Клиент веб-службы сервера отчетов — это любой компонент или приложение, которое обменивается данными с сервером отчетов посредством сообщений SOAP.  
   
- **Чтобы создать клиент веб-службы сервера отчетов с помощью .NET Framework, выполните следующие основные действия.**  
+ **Создать клиент веб-службы сервера отчетов с помощью платформы .NET Framework можно, выполнив следующие основные шаги.**  
   
 1.  Создание класса-посредника для веб-службы.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62520352"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Создание учетной записи-посредника веб-службы](creating-the-web-service-proxy.md)|Описывает способы добавления класса-посредника в проект с помощью [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|  
 |[Проверка подлинности веб-службы](web-service-authentication.md)|Описывает процесс проверки подлинности вызовов к веб-службе сервера отчетов.|  
@@ -59,10 +59,10 @@ ms.locfileid: "62520352"
 |[Использование защищенных методов веб-службы](using-secure-web-service-methods.md)|Описывает параметр **SecureConnectionLevel** и то, как он влияет на использование API-интерфейса SOAP служб Reporting Services.|  
 |[Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру](passing-device-information-settings-to-rendering-extensions.md)|Описываются настройки сведений об устройстве, используемые для подготовки отчетов в различных форматах.|  
 |[Параметры модулей доставки служб Reporting Services](reporting-services-delivery-extension-settings.md)|Описываются параметры, используемые для доставки отчетов с использованием электронной почты сервера отчетов.|  
-|[Использование заголовков SOAP в службах Reporting Services](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|Описывает использование заголовков SOAP в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
+|[Использование заголовков SOAP служб Reporting Services](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|Описывает использование заголовков SOAP в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
 |[Знакомство с обработкой исключений в службах Reporting Services](../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|Предоставляет сведения о процессе обработки ошибок в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Веб-служба сервера отчетов](../report-server-web-service.md)   
  [Технический справочник (службы SSRS)](../../technical-reference-ssrs.md)  
   

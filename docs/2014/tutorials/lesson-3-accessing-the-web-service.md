@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653787"
 ---
 # <a name="lesson-3-accessing-the-web-service"></a>Урок 3. Доступ к веб-службе
@@ -122,7 +122,7 @@ ms.locfileid: "62653787"
   
  Дополнительные сведения о создании и использовании класса-посредника для веб-службы сервера отчетов см. в разделе [Creating the Web Service Proxy](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Занятие 4. Запуск приложения &#40;VB — VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
  [Доступ к веб-службе сервера отчетов с помощью Visual Basic или учебника по Visual C&#35; &#40;SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   

@@ -14,30 +14,30 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1405c26761b41ab0ecbccfc4e2479b89a01a1f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62510352"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>Справка меню среды SQL Server Management Studio
-  Этот раздел содержит справку F1 для диалоговых окон и страниц, доступных в строке меню в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+  Этот раздел содержит справку F1 для диалоговых окон и страниц, доступных в строке меню среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  [О среде SQL Server Management Studio](about-sql-server-management-studio.md)  
   
  [Дополнительные параметры сохранения](advanced-save-options.md)  
   
- [Диалоговое окно «Выбор папок поиска» &#40;Visual Studio&#41;](choose-search-folders-dialog-box-visual-studio.md)  
+ [Диалоговое окно "Выбор папок поиска" (Visual Studio)](choose-search-folders-dialog-box-visual-studio.md)  
   
- [Выбор элементов панели элементов &#40;страница "задачи обслуживания"&#41;](choose-toolbox-items-maintenance-tasks-page.md)  
+ [Выбор элементов инструментария (страница "Задачи обслуживания")](choose-toolbox-items-maintenance-tasks-page.md)  
   
- [Страница "Настройка &#40;команд"&#41;](customize-commands-page.md)  
+ [Настройка (страница "Команды")](customize-commands-page.md)  
   
- [Страница "Настройка &#40;панелей инструментов"&#41;](customize-toolbars-page.md)  
+ [Настройка (страница "Панели инструментов")](customize-toolbars-page.md)  
   
- [Внешние инструменты](external-tools.md)  
+ [Внешние средства](external-tools.md)  
   
- [Открыть с помощью &#40;создать файл&#41;](open-with-new-file.md)  
+ [Открыть с помощью ("Создать файл")](open-with-new-file.md)  
   
  [Справка F1 по диалоговым окнам «Параметры»](options-dialog-boxes-f1-help.md)  
   
@@ -45,6 +45,6 @@ ms.locfileid: "62510352"
   
  [Сохранить изменения](save-changes.md)  
   
- [Диалоговое окно Windows &#40;Справка Microsoft Document Explorer&#41;](windows-dialog-box-microsoft-document-explorer-help.md)  
+ [Диалоговое окно Windows (справка по проводнику документов)](windows-dialog-box-microsoft-document-explorer-help.md)  
   
   

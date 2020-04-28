@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c5e165380c0f920ebf1366855e7801b6bb9089a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472999"
 ---
 # <a name="automatically-delete-a-job"></a>Автоматическое удаление задания
@@ -47,22 +47,22 @@ ms.locfileid: "62472999"
   
      [Безопасность](#Security)  
   
--   **Для указания ответов заданий используется:**  
+-   **Для задания ответов заданий используется:**  
   
      [Среда SQL Server Management Studio](#SSMS)  
   
      [Управляющие объекты SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
  Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-automatically-delete-a-job"></a>Автоматическое удаление задания  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]и разверните его.  
+1.  В **обозревателе объектов** подключитесь к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и разверните его.  
   
 2.  Разверните узел **Агент SQL Server**, выберите раздел **Задания**, щелкните правой кнопкой мыши задание, которое нужно изменить, и выберите пункт **Свойства**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62472999"
   
     -   Чтобы задание автоматически удалялось по завершении в любом случае, выберите пункт **По завершении задания** .  
   
-##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Использование управляющие объекты SQL Server  
  **Автоматическое удаление задания**  
   
  Вызовите свойство `DeleteLevel` класса `Job`, используя выбранный язык программирования, например Visual Basic, Visual C# или PowerShell. Дополнительные сведения см. в статье [Управляющие объекты SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

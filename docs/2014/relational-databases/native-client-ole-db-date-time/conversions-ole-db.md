@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638211"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>Привязки и преобразования (OLE DB)
@@ -28,15 +28,15 @@ ms.locfileid: "62638211"
   
 -   Формат строк `datetime` и `datetimeoffset`:  
   
-     *гггг*-** мм-*дд*[ *чч*:*мм*:*СС*[.* 9999999*] [?? *чч*:*мм*]]  
+     *гггг*-*mm*мм-*дд*[ *чч*:*мм*:*СС*[.* 9999999*] [?? *чч*:*мм*]]  
   
 -   Формат строк `time`:  
   
-     *чч*:*мм*:*СС*[.* 9999999*]  
+     *чч*:*мм*:*сс*[.*9999999*]  
   
 -   Формат строк `date`:  
   
-     *гггг*-** мм-*дд*  
+     *гггг*-*мм*-*дд*  
   
 > [!NOTE]  
 >  Предыдущие версии собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и SQLOLEDB реализовали преобразования OLE в случаях, когда стандартные преобразования возвращали ошибку. В результате некоторые преобразования, проводимые собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 10.0 и более поздних версий, отличаются от спецификации OLE DB.  
@@ -61,14 +61,14 @@ ms.locfileid: "62638211"
   
 -   Если усечение секунд или долей секунд происходит при преобразовании с клиента на сервер, устанавливается состояние DBSTATUS_S_TRUNCATED.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Преобразования, выполняемые при передаче от клиента к серверу](conversions-performed-from-client-to-server.md)  
  Описывает преобразования даты-времени, проводимые между клиентским приложением, написанным с помощью собственного клиента OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версией).  
   
  [Преобразования, выполняемые при передаче от сервера к клиенту](conversions-performed-from-server-to-client.md)  
  Описывает преобразования даты-времени, проводимые между [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версией) и клиентским приложением, написанным с помощью собственного клиента OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также:  
- [Улучшения даты и времени &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>См. также  
+ [Улучшения функций даты и времени &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

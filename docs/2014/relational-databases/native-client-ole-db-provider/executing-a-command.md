@@ -1,5 +1,5 @@
 ---
-title: Исполнение команды | Документация Майкрософт
+title: Выполнение команды | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f94cc014a04c3392fefb61f4fa291a8f5a44ad8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638459"
 ---
 # <a name="executing-a-command"></a>Выполнение команды
-  После установления соединения с источником данных потребитель вызывает метод **метода IDBCreateSession:: CreateSession** для создания сеанса. Сеанс выступает в роли фабрики для команд, наборов строк и транзакций.  
+  После подключения с источнику данных потребитель вызывает метод **IDBCreateSession::CreateSession** для создания сеанса. Сеанс выступает в роли фабрики для команд, наборов строк и транзакций.  
   
  Для непосредственной работы с отдельными таблицами и индексами потребитель запрашивает интерфейс `IOpenRowset`. Метод `IOpenRowset::OpenRowset` открывает и возвращает набор строк, содержащий все строки из единой базовой таблицы или индекса.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62638459"
   
  Для выполнения команды используется команда `Execute`. Командой может быть любая инструкция SQL или имя процедуры. Не все команды возвращают объект результирующего набора (набор строк). Такие команды, как SELECT * FROM Authors, возвращают результирующий набор.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание приложения поставщика OLE DB для собственного клиента SQL Server](creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
   

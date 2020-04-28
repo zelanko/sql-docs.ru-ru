@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19381b0c5dbe690a60b2c536a8da759205c08c31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62643451"
 ---
 # <a name="granting-access-to-a-database-object"></a>Предоставление доступа к объекту базы данных
-  Как администратор вы можете выполнить процедуру выбора из таблицы **Products** , а также представление **vw_Names** и выполнить **pr_Names** . Однако Мэри не может. Чтобы предоставить Mary необходимые разрешения, воспользуйтесь инструкцией GRANT.  
+   Будучи администратором, можно выполнять инструкцию SELECT из таблицы **Products** и представления **vw_Names**, а также выполнять процедуру **pr_Names**; однако Мэри всего этого не может. Чтобы предоставить Mary необходимые разрешения, воспользуйтесь инструкцией GRANT.  
   
 ### <a name="procedure-title"></a>Описание процедуры  
   
@@ -42,8 +42,8 @@ ms.locfileid: "62643451"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Сводка. Настройка разрешений на объекты базы данных](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ПРЕДОСТАВЛЕНИЕ &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
- [ОТОЗВАТЬ &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
+ [REVOKE (Transact-SQL)](/sql/t-sql/statements/revoke-transact-sql)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Метод ISSAsynchStatus:: Abort (OLE DB) | Документация Майкрософт'
+title: ISSAsynchStatus::Abort (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b61f5e3e44f9584fc3f93efb521585e3173b6c1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638720"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
@@ -36,10 +36,10 @@ HRESULT Abort(
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *параметру hChapter*[in]  
+ *hChapter*[in]  
  Дескриптор раздела, для которого прерывается операция. Если вызываемый объект не является объектом набора строк или операция не применяется к разделу, вызывающий должен установить параметру *hChapter* значение DB_NULL_HCHAPTER.  
   
- *eoperation отличного*[in]  
+ *eOperation*[in]  
  Операция, которая должна быть прервана. Это должно быть следующее значение.  
   
  DBASYNCHOP_OPEN — запрос на отмену применяется к асинхронному открытию или заполнению набора строк или асинхронной инициализации объекта источника данных.  
@@ -61,20 +61,20 @@ HRESULT Abort(
  Значение параметра *hChapter* не равно DB_NULL_HCHAPTER или значение параметра *eOperation* не равно DBASYNCH_OPEN.  
   
  E_UNEXPECTED  
- **Метод ISSAsynchStatus:: Abort** был вызван для объекта источника данных, для которого **IDBInitialize:: Initialize** не был вызван или не завершен.  
+ Метод**ISSAsynchStatus::Abort** был вызван для объекта источника данных, для которого не был вызван метод **IDBInitialize::Initialize** .  
   
  **Метод ISSAsynchStatus:: Abort** был вызван для объекта источника данных, для которого была вызвана **IDBInitialize:: Initialize** , но впоследствии была отменена до инициализации или истекло время ожидания. Объект источника данных все еще не инициализирован.  
   
- **Метод ISSAsynchStatus:: Abort** был вызван для набора строк, в котором ранее вызывался метод **ITransaction:: Commit** или **ITransaction:: Abort** , а набор строк не сохранил фиксацию или прерывание и находится в состоянии зомби.  
+ Интерфейс**ISSAsynchStatus::Abилиt** был вызван для набора строк, для которого ранее был вызван интерфейс **ITransaction::Commit** или **ITransaction::Abилиt** was previously called, and the rowset did not survive the commit или abилиt and is in a zombie state.  
   
- **Метод ISSAsynchStatus:: Abort** был вызван для набора строк, который асинхронно отменен на этапе инициализации. Набор строк находится в состоянии зомби.  
+ Интерфейс**ISSAsynchStatus::Abort** был вызван для набора строк, который был асинхронно отменен на стадии его инициализации. Набор строк находится в состоянии зомби.  
   
 ## <a name="remarks"></a>Remarks  
  При прерывании инициализации набора строк или объекта источника данных набор строк или объект источника данных может перейти в состояние зомби, когда все методы, кроме методов **IUnknown** , возвращают E_UNEXPECTED. В этом случае единственным возможным для потребителя действием является освобождение набора строк или объекта источника данных.  
   
  При вызове интерфейса **ISSAsynchStatus::Abort** и передаче параметру *eOperation* значения, отличного от DBASYNCHOP_OPEN, возвращается S_OK. Это не подразумевает, что сама операция была завершена или отменена.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполнение асинхронных операций](../native-client/features/performing-asynchronous-operations.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'ISSCommandWithParameters:: GetParameterProperties (OLE DB) | Документация Майкрософт'
+title: ISSCommandWithParameters::GetParameterProperties (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d492a64b6d8a4e8ddf7de27067f1f0bcfef205e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638086"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
@@ -36,10 +36,10 @@ SSPARAMPROPS **prgParamProperties);
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *пкпарамс*[out] [in]  
+ *pcParams*[out][in]  
  Указатель на область памяти, где содержится количество структур SSPARAMPROPS, возвращаемых в параметре *prgParamProperties*.  
   
- *пргпарампропертиес*[out]  
+ *prgParamProperties*[out]  
  Указатель на область памяти, в которую будет возвращен массив структур SSPARAMPROPS. Поставщик выделяет память для структур и возвращает адрес в эту память. Потребитель освобождает эту память с помощью **unalloc:: Free** , если она больше не нуждается в структурах. Перед вызовом метода **unalloc:: Free** для *пргпарампропертиес*потребитель должен также вызвать **вариантклеар** для свойства *управляемое vValue* каждой структуры DBPROP, чтобы предотвратить утечку памяти в случаях, когда вариант содержит ссылочный тип (например, BSTR). Если *пкпарамс* имеет нулевое значение на выходе или возникает ошибка, отличная от DB_E_ERRORSOCCURRED, поставщик не выделяет память и гарантирует, что *пргпарампропертиес* является пустым указателем на выходе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -60,13 +60,13 @@ SSPARAMPROPS **prgParamProperties);
   
  `};`  
   
-|Участник|Description|  
+|Участник|Описание|  
 |------------|-----------------|  
-|*иординал*|Порядковый номер переданного параметра.|  
-|*кпропертисетс*|Количество структур DBPROPSET в *rgPropertySets*.|  
+|*iOrdinal*|Порядковый номер переданного параметра.|  
+|*cPropertySets*|Количество структур DBPROPSET в *rgPropertySets*.|  
 |*rgPropertySets*|Указатель на буфер, в который будет возвращен массив структур DBPROPSET.|  
   
-## <a name="see-also"></a>См. также:  
- [ISSCommandWithParameters &#40;OLE DB&#41;](isscommandwithparameters-ole-db.md)  
+## <a name="see-also"></a>См. также  
+ [ISSCommandWithParameters (OLE DB)](isscommandwithparameters-ole-db.md)  
   
   

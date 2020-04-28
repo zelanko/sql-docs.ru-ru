@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524339"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Учебник. Приступая к работе с компонентом Database Engine
@@ -42,7 +42,7 @@ ms.locfileid: "62524339"
   
  Для работы с этим учебником в системе должны быть установлены следующие компоненты:  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]можно установить, запустив [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] программу установки или выполнив загрузку и установку из [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=144346).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] можно установить, запустив программу установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] либо выполнив загрузку и установку из [Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=144346).  
   
 ## <a name="see-also"></a>См. также:  
  [Руководство: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  

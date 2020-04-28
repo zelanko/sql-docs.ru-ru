@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bb04374ede05406fdf6d273a76a246bb35f5dac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637876"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>Базовый синтаксис предложения FOR XML
@@ -64,7 +64,7 @@ XML
  RAW[('*ElementName*')]  
  Принимает результат запроса и преобразует каждую строку результирующего набора в элемент XML с универсальным идентификатором \<row /> в качестве тега элемента. При использовании этой директивы можно дополнительно указать имя для элемента строки. Полученный в результате XML-документ будет использовать указанное имя *ElementName* в качестве элемента, сформированного для каждой строки. Дополнительные сведения см. в статье [Использование с RAW Mode для FOR XML](use-raw-mode-with-for-xml.md).  
   
- AUTO (АВТОМАТИЧЕСКИ)  
+ AUTO  
  Возвращает результаты запроса в виде простого вложенного дерева XML. Каждая таблица в предложении FROM, в которой хотя бы один столбец перечислен в предложении SELECT, представлена в виде элемента XML. Столбцы, перечисленные в предложении SELECT, сопоставлены с соответствующими атрибутами элемента. Дополнительные сведения см. в статье [Использование с AUTO Mode для FOR XML](use-auto-mode-with-for-xml.md).  
   
  EXPLICIT  
@@ -88,15 +88,15 @@ XML
  TYPE  
  Указывает на то, что запрос возвращает результаты в виде типа **xml** . Дополнительные сведения см. в статье [TYPE Directive in FOR XML Queries](type-directive-in-for-xml-queries.md).  
   
- ROOT [('*RootName*')]  
+ ROOT [('*имя_корневого_элемента*')]  
  Указывает, что к результирующему XML-документу будет добавлен один элемент верхнего уровня. Дополнительно можно указать имя корневого элемента, который необходимо сформировать. Значение по умолчанию — «root».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование режима RAW с FOR XML](use-raw-mode-with-for-xml.md)   
  [Использование режима AUTO с FOR XML](use-auto-mode-with-for-xml.md)   
  [Использование режима EXPLICIT с FOR XML](use-explicit-mode-with-for-xml.md)   
  [Использование режима PATH с FOR XML](use-path-mode-with-for-xml.md)   
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)   
- [ДЛЯ SQL Server &#40;XML&#41;](for-xml-sql-server.md)  
+ [FOR XML (SQL Server)](for-xml-sql-server.md)  
   
   

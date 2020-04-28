@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b661288c88a707eb81d4008b4c33c7497dfe40a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62643356"
 ---
 # <a name="send-data-to-a-filestream-column-using-isequentialstream-bound-to-icommandtext-parameter-ole-db"></a>Передача данных в столбец FILESTREAM с использованием интерфейса ISequentialStream с привязкой к параметру ICommandText (OLE DB)
@@ -23,7 +23,7 @@ ms.locfileid: "62643356"
  Дополнительные сведения о компоненте FILESTREAM см. в разделе [Поддержка filestream &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Пример  
- Перед компиляцией и запуском этого образца включите поддержку FILESTREAM ([включить и настроить FILESTREAM](../../blob/enable-and-configure-filestream.md)).  
+ Прежде чем переходить к компиляции и запуску этого примера, включите поддержку FILESTREAM ([включение и настройка FILESTREAM](../../blob/enable-and-configure-filestream.md)).  
   
  Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   

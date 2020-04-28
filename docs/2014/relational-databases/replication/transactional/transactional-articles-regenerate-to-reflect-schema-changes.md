@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a99a98fd0d471e8cb0f8ab880ae1a6c55e1b121
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655509"
 ---
 # <a name="regenerate-custom-transactional-procedures-to-reflect-schema-changes"></a>Повторное создание пользовательских процедур транзакций для отражения изменений схем
@@ -42,8 +42,8 @@ ms.locfileid: "62655509"
   
      При следующем изменении соответствующей схемы этот скрипт выполняется у каждого подписчика в той же транзакции, что и команда DDL. После завершения изменений схемы регистрация скрипта отменяется. Чтобы этот скрипт выполнялся при последующем изменении схемы, его необходимо повторно зарегистрировать.  
   
-## <a name="see-also"></a>См. также:  
- [Указание способа распространения изменений для статей транзакций](transactional-articles-specify-how-changes-are-propagated.md)   
+## <a name="see-also"></a>См. также  
+ [Укажите, как изменения распространяются для транзакционных статей](transactional-articles-specify-how-changes-are-propagated.md)   
  [Внесение изменений схем в базы данных публикации](../publish/make-schema-changes-on-publication-databases.md)  
   
   

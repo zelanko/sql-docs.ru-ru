@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 905114d0190a7d1e8441e98249664c985a433988
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473215"
 ---
 # <a name="assign-alerts-to-an-operator"></a>Assign Alerts to an Operator
@@ -41,22 +41,22 @@ ms.locfileid: "62473215"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]предоставляет простой графический способ управления всей системой предупреждений. Использование среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] рекомендуется для настройки инфраструктуры предупреждений.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает простой графический способ управления всей системой предупреждений. Использование среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] рекомендуется для настройки инфраструктуры предупреждений.  
   
--   Чтобы в ответ на предупреждение отправить уведомление, необходимо настроить агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для отправки почты. Дополнительные сведения см. [в статье настройка агент SQL Server mail для использования Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
+-   Чтобы в ответ на предупреждение отправить уведомление, необходимо настроить агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для отправки почты. Дополнительные сведения см. в статье [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
 -   Ошибки, возникающие при отправке сообщения по электронной почте или уведомления по пейджеру, регистрируются в журнале ошибок службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Только члены предопределенной роли сервера **sysadmin** могут назначать предупреждения операторам.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-assign-alerts-to-an-operator"></a>Назначение предупреждений оператору  
   
@@ -68,13 +68,13 @@ ms.locfileid: "62473215"
   
 4.  Щелкните правой кнопкой мыши оператора, для которого нужно назначить предупреждение, выберите пункт **Свойства**и перейдите на страницу **Уведомления** .  
   
-5.  В диалоговом окне**свойства** _Operator_name_в разделе **Выбор страницы**выберите пункт **уведомления**.  
+5.  В разделе _Выбор страницы_**диалогового окна** Свойства **имя_оператора**выберите **Уведомления**.  
   
 6.  В поле **Просмотр отправленных пользователю уведомлений по**выберите **Предупреждения** , чтобы просмотреть список предупреждений, отправляемых этому оператору, либо **Задания** , чтобы просмотреть список заданий, отправляющих уведомления этому оператору. Установите один или более перечисленных ниже флажков, чтобы выбрать способ доставки для каждого из уведомлений: **Электронная почта**, **Пейджер**или **Net send**.  
   
-7.  После завершения нажмите кнопку **ОК**.  
+7.  По окончании нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-assign-alerts-to-an-operator"></a>Назначение предупреждений оператору  
   

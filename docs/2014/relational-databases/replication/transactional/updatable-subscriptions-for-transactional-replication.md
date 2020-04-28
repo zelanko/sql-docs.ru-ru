@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655499"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
@@ -56,7 +56,7 @@ ms.locfileid: "62655499"
  **Переключение режимов обновления**  
   
  Для переключения между режимами обновления необходимо разрешить оба режима обновления для публикации и подписки, а затем можно переключаться между режимами по мере необходимости. Дополнительные сведения см. в разделе  
-[Переключение между режимами обновления для updatable транзакционной подписки.](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)  
+[Переключение между режимами обновления для обновляемой подписки на публикацию транзакций](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>Вопросы использования обновляемых подписок  
   
@@ -122,10 +122,10 @@ ms.locfileid: "62655499"
   
     -   Если ожидаются конфликты: не следует применять ограничения внешних ключей на издателе или подписчике, если используется политика разрешения конфликтов с приоритетом подписчика; не следует применять ограничения внешних ключей на подписчике, если используется политика разрешения конфликтов с приоритетом издателя.  
   
-## <a name="see-also"></a>См. также:  
- [Одноранговая транзакционная репликация](peer-to-peer-transactional-replication.md)   
- [Транзакционная репликация](transactional-replication.md)   
- [Публикация данных и объектов баз данных](../publish/publish-data-and-database-objects.md)   
+## <a name="see-also"></a>См. также  
+ [Одноранговая репликация транзакций](peer-to-peer-transactional-replication.md)   
+ [Репликация транзакций](transactional-replication.md)   
+ [Публикация данных и объектов базы данных](../publish/publish-data-and-database-objects.md)   
  [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

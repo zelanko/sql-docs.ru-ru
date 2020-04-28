@@ -1,5 +1,5 @@
 ---
-title: Выполнение хранимых процедур (OLE DB) | Документация Майкрософт
+title: Выполнение хранимых процедур (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0102fa66e65fa11f47eec9f49cd1fa90fb11f877
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638766"
 ---
 # <a name="running-stored-procedures-ole-db"></a>Выполнение хранимых процедур (OLE DB)
@@ -50,7 +50,7 @@ ms.locfileid: "62638766"
   
  Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента задает для свойства DBPROP_OUTPUTPARAMETERAVAILABILITY значение DBPROPVAL_OA_ATROWRELEASE, чтобы указать, что коды возврата и выходные параметры не возвращаются до тех пор, пока результирующий набор не будет обработан или освобожден.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры](stored-procedures.md)  
   
   

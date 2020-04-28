@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62626158"
 ---
 # <a name="sql-server-replication"></a>Репликация SQL Server
@@ -51,17 +51,17 @@ ms.locfileid: "62626158"
 -   [Create a Publication](publish/create-a-publication.md)    
 -   [Определение статьи](publish/define-an-article.md)   
 -   [Просмотр и изменение свойств публикации](publish/view-and-modify-publication-properties.md)   
--   [Просмотр и изменение свойств статьи](publish/view-and-modify-article-properties.md)    
+-   [View and Modify Article Properties (Просмотр и изменение свойств статьи)](publish/view-and-modify-article-properties.md)    
 -   [Удаление публикации](publish/delete-a-publication.md)   
 -   [Удаление статьи](publish/delete-an-article.md)    
--   [Создание публикации из Oracle Database](publish/create-a-publication-from-an-oracle-database.md)   
--   [Задание срока действия подписок](publish/set-the-expiration-period-for-subscriptions.md)  
+-   [Создание публикации из базы данных Oracle](publish/create-a-publication-from-an-oracle-database.md)   
+-   [Установка срока действия подписок](publish/set-the-expiration-period-for-subscriptions.md)  
 -   [Указание параметров схемы](publish/specify-schema-options.md)  
 -   [Репликация изменений схемы](publish/replicate-schema-changes.md)    
 -   [Управление столбцами идентификаторов](publish/manage-identity-columns.md)   
--   [Установка уровня совместимости для публикаций слиянием](publish/set-the-compatibility-level-for-merge-publications.md)  
+-   [Задание уровня совместимости для публикаций слиянием](publish/set-the-compatibility-level-for-merge-publications.md)  
   
-### <a name="snapshot-options"></a>Snapshot Options  
+### <a name="snapshot-options"></a>Параметры моментального снимка  
   
 -   [Настройка свойств моментального снимка](publish/configure-snapshot-properties-replication-transact-sql-programming.md)    
 -   [Доставка моментального снимка по протоколу FTP](publish/deliver-a-snapshot-through-ftp.md) 
@@ -72,18 +72,18 @@ ms.locfileid: "62626158"
 -   [Определение и изменение статического фильтра строк](publish/define-and-modify-a-static-row-filter.md)    
 -   [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
 -   [Оптимизация параметризованных фильтров строк](publish/optimize-parameterized-row-filters.md)    
--   [Определение и изменение фильтра соединений между статьями публикации слиянием](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
+-   [Определение и изменение фильтра соединения между статьями публикации слиянием](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
   
 ### <a name="transactional-replication-options"></a>Параметры репликации транзакций  
   
--   [Задание метода распространения изменений данных в транзакционные статьи](publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)    
+-   [Задание метода распространения для изменений данных в транзакционных статьях](publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)    
 -   [Включение обновляемых подписок для публикаций транзакций](publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
 ### <a name="merge-replication-options"></a>Параметры репликации слиянием  
   
 -   [Определение связи логических записей между статьями таблиц слияния](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
 -   [Указание свойств репликации слиянием](publish/specify-merge-replication-properties.md)    
--   [Указание арбитра статей публикации слиянием](publish/specify-a-merge-article-resolver.md)    
+-   [Определение арбитра для статей публикации слиянием](publish/specify-a-merge-article-resolver.md)    
 
   
 ## <a name="manage-subscriptions"></a>Управление подписками  
@@ -95,7 +95,7 @@ ms.locfileid: "62626158"
 -   [Просмотр и изменение свойств принудительной подписки](view-and-modify-push-subscription-properties.md)   
 -   [Удаление принудительной подписки](delete-a-push-subscription.md)   
 -   [Указание расписаний синхронизации](specify-synchronization-schedules.md)    
--   [Создание обновляемых подписок для публикаций транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+-   [Создание обновляемой подписки для публикации транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
 -   [Создание подписки для подписчика, отличного от подписчика SQL Server](create-a-subscription-for-a-non-sql-server-subscriber.md)  
   
 ## <a name="synchronize-subscriptions"></a>Синхронизация подписок  
@@ -109,9 +109,9 @@ ms.locfileid: "62626158"
 -   [Повторная инициализация подписки](reinitialize-a-subscription.md)    
 -   [Выполнение скриптов во время синхронизации](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
 -   [Реализация обработчика бизнес-логики для статьи публикации слиянием](implement-a-business-logic-handler-for-a-merge-article.md)  
--   [Отладка обработчика бизнес-логики &#40;программирование репликации&#41;](debug-a-business-logic-handler-replication-programming.md)    
+-   [Отладка обработчика бизнес-логики (программирование репликации)](debug-a-business-logic-handler-replication-programming.md)    
 -   [Управление поведением триггеров и ограничений во время синхронизации](control-behavior-of-triggers-and-constraints-in-synchronization.md)    
--   [Реализация пользовательского сопоставителя конфликтов для статьи публикации слиянием](implement-a-custom-conflict-resolver-for-a-merge-article.md)  
+-   [Реализация пользовательского арбитра конфликтов для статьи публикации слиянием](implement-a-custom-conflict-resolver-for-a-merge-article.md)  
   
 ## <a name="administeration"></a>Администрирование 
   
@@ -130,7 +130,7 @@ ms.locfileid: "62626158"
   
 ## <a name="monitor"></a>Монитор
   
--   [Предоставление пользователям без прав администратора разрешения на использование монитора репликации](monitor/allow-non-administrators-to-use-replication-monitor.md)    
+-   [Allow Non-Administrators to Use Replication Monitor](monitor/allow-non-administrators-to-use-replication-monitor.md) (Предоставление пользователям без прав администратора разрешения на использование монитора репликации)    
 -   [Программный мониторинг репликации](monitor/programmatically-monitor-replication.md)    
 -   [Просмотр реплицированных команд и другой информации в базе данных распространителя](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
 -   [Просмотр сведений о конфликтах для публикаций слиянием](view-conflict-information-for-merge-publications.md) 

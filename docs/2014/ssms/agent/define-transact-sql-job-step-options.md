@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 769e4cb9298ce2a92f7200d9e04743d6b16f842d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62523887"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Определение параметров для шагов заданий Transact-SQL
@@ -30,18 +30,18 @@ ms.locfileid: "62523887"
   
      [Безопасность](#Security)  
   
--   **Для определения параметров шага задания Transact-SQL используется:** ,  
+-   **Для определения параметров шага задания Transact-SQL с помощью:** ,  
   
      [Среда SQL Server Management Studio](#SSMS)  
   
      [Управляющие объекты SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
  Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-define-transact-sql-job-step-options"></a>Определение параметров шага задания Transact-SQL  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62523887"
   
 9. Если члену предопределенной роли сервера **sysadmin** нужно выполнить шаг задания в контексте другого имени входа SQL, ему следует выбрать имя входа SQL из списка **Выполнять от имени** .  
   
-##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Использование управляющие объекты SQL Server  
  **Определение параметров шага задания Transact-SQL**  
   
  Воспользуйтесь классом `JobStep` в любом языке программирования (Visual Basic, Visual C# или PowerShell).  

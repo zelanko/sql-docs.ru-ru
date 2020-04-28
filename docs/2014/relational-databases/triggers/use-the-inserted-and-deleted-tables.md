@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524380"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Использование таблиц inserted и deleted
@@ -49,8 +49,7 @@ ms.locfileid: "62524380"
 > [!NOTE]  
 >  Если действия триггера зависят от числа строк, данные в которых были изменены, воспользуйтесь проверками (например, проверкой параметра @@ROWCOUNT) при изменении данных в нескольких строках (инструкции INSERT, DELETE или UPDATE с инструкцией SELECT), а затем предпринимайте соответствующие действия.  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] не позволяет ссылаться на столбцы типов `text`, `ntext` и `image` в таблицах inserted и deleted триггеров AFTER. Однако эти типы данных включены в целях обратной совместимости. Предпочтительным способом хранения для данных большого объема является использование типов данных `varchar(max)`, `nvarchar(max)` и `varbinary(max)`. Как триггеры AFTER, так и триггеры INSTEAD OF поддерживают данные типов `varchar(max)`, `nvarchar(max)` и `varbinary(max)` в таблицах inserted и deleted. Дополнительные сведения см. в разделе [CREATE TRIGGER (Transact-SQL)](/sql/t-sql/statements/create-trigger-transact-sql).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] не позволяет ссылаться на столбцы типов `text`, `ntext` и `image` в таблицах inserted и deleted триггеров AFTER. Однако эти типы данных включены в целях обратной совместимости. Предпочтительным способом хранения для данных большого объема является использование типов данных `varchar(max)`, `nvarchar(max)` и `varbinary(max)`. Как триггеры AFTER, так и триггеры INSTEAD OF поддерживают данные типов `varchar(max)`, `nvarchar(max)` и `varbinary(max)` в таблицах inserted и deleted. Дополнительные сведения см. в разделе [CREATE TRIGGER (Transact-SQL)](/sql/t-sql/statements/create-trigger-transact-sql).  
   
  **Примеры использования таблицы inserted в триггере для выполнения бизнес-правил**  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472849"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>Прогноз взаимосвязей (учебник по интеллектуальному анализу данных — средний уровень)
@@ -161,7 +161,7 @@ ms.locfileid: "62472849"
   
 1.  В меню **модель интеллектуального анализа данных** выберите **одноэлементный запрос** еще раз, чтобы снять флажок.  
   
-2.  Появится сообщение об ошибке, предупреждая о том, что одноэлементный запрос будет утерян. Щелкните **Да**.  
+2.  Появится сообщение об ошибке, предупреждая о том, что одноэлементный запрос будет утерян. Нажмите кнопку **Да**.  
   
      Имя диалогового окна ввода меняется на **Выбор входных таблиц**.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "62472849"
   
  Можно попытаться создать подобный прогнозирующий запрос для нескольких моделей и узнать, изменятся ли результаты прогнозов после фильтрации. Дополнительные сведения о создании прогнозов и других типов запросов см. в разделе [примеры запросов модели взаимосвязей](../../2014/analysis-services/data-mining/association-model-query-examples.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Содержимое моделей интеллектуального анализа данных для моделей взаимосвязей &#40;Analysis Services — интеллектуальный анализ&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [PredictAssociation &#40;расширений интеллектуального анализа данных&#41;](/sql/dmx/predictassociation-dmx)   
  [Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  

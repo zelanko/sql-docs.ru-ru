@@ -1,5 +1,5 @@
 ---
-title: 'IRowsetFastLoad:: InsertRow (OLE DB) | Документация Майкрософт'
+title: IRowsetFastLoad::InsertRow (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c4cd4aff0a8868b8870374fcffb8c7b7169fe2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62511633"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
-  Добавляет строку в набор строк для массового копирования. Примеры см. в разделе [копирование данных использование IRowsetFastLoad &#40;OLE DB&#41;](../native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) и [Отправка данных больших двоичных объектов в SQL Server с помощью IRowsetFastLoad и ISEQUENTIALSTREAM ](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)&#40;OLE DB.  
+  Добавляет строку в набор строк для массового копирования. Примеры можно найти в статьях [Выполнение массового копирования данных с использованием интерфейса IRowsetFastLoad (OLE DB)](../native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) и [Отправка данных BLOB-объектов в SQL Server с помощью интерфейсов IROWSETFASTLOAD и ISEQUENTIALSTREAM (OLE DB)](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,10 +41,10 @@ pData
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *HACCESSOR*[in]  
+ *hAccessor*[in]  
  Дескриптор метода доступа, определяющий данные строк для массового копирования. Указанный метод доступа является методом доступа к строке, связывающий память потребителя, содержащую значения данных.  
   
- *pData*[вход]  
+ *pData*[in]  
  Указатель на память потребителя, содержащую значения данных. Дополнительные сведения см. в разделе [Структуры DBBINDING](https://go.microsoft.com/fwlink/?LinkId=65955).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -76,7 +76,7 @@ pData
   
  Массово скопированные строки форматируются на сервере для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Формат строки зависит от любых параметров, которые могли быть заданы для соединения или сеанса, например ANSI_PADDING. Этот параметр по умолчанию включен для любого соединения, установленного с помощью поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [IRowsetFastLoad &#40;OLE DB&#41;](irowsetfastload-ole-db.md)  
   
   

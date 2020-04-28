@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473205"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Назначение задания в категорию заданий
@@ -30,14 +30,14 @@ ms.locfileid: "62473205"
  Категории заданий помогают упорядочивать их, упрощая их фильтрацию и группирование. Например, все фоновые задания можно поместить в категорию «Обслуживание базы данных». Задание может быть отнесено либо к встроенной категории, либо к одной из созданных пользовательских категорий заданий.  
   
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
  Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md).  
   
   
   
-##  <a name="SSMS"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>Назначение задания в категорию заданий  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62473205"
 6.  Нажмите кнопку **ОК**.  
   
   
-##  <a name="TSQL"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Использование Transact-SQL  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>Назначение задания в категорию заданий  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62473205"
   
   
   
-##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Использование управляющие объекты SQL Server  
  **Назначение задания в категорию заданий**  
   
  Воспользуйтесь классом `JobCategory` в любом языке программирования (Visual Basic, Visual C# или PowerShell).  

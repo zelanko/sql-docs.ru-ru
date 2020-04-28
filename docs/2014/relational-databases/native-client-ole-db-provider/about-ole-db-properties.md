@@ -1,5 +1,5 @@
 ---
-title: Сведения о OLE DB свойствах | Документация Майкрософт
+title: Сведения о свойствах OLE DB | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e7c010beaf3aefa4f73314d8576a066dca6a167
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638076"
 ---
 # <a name="about-ole-db-properties"></a>О свойствах OLE DB
@@ -45,8 +45,8 @@ ms.locfileid: "62638076"
   
 7.  Вызов метода для установки свойств и передачи счетчика и массива структур DBPROPSET.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание приложения поставщика SQL Server Native Client OLE DB](creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [Свойства (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
+ [Свойства (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

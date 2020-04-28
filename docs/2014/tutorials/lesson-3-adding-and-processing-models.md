@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2596ed7eb2d714ff0790daa013a5e47ecd134b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653711"
 ---
 # <a name="lesson-3-adding-and-processing-models"></a>Урок 3. Добавление и обработка моделей
@@ -39,7 +39,7 @@ ms.locfileid: "62653711"
 ## <a name="next-lesson"></a>Следующее занятие  
  [Занятие 4. изучение моделей целевой рассылки &#40;учебник по основам интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>См. также:  
- [Добавление моделей интеллектуального анализа данных в структуру &#40;Analysis Services интеллектуального анализа&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
+## <a name="see-also"></a>См. также  
+ [Добавление моделей интеллектуального анализа данных в структуру (службы Analysis Services — интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
   
   

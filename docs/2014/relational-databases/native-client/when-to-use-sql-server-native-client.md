@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cc9a06601ed0819457b9348bb10cb33b4b92d37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637917"
 ---
 # <a name="when-to-use-sql-server-native-client"></a>Когда использовать собственный клиент SQL Server
@@ -36,9 +36,9 @@ ms.locfileid: "62637917"
   
  Сведения о различиях между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственным клиентом и компонентами MDAC см. в разделе [обновление приложения для SQL Server Native Client из MDAC](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server Native Client программирование](../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [Разделы руководства по ODBC](../native-client-odbc-how-to/odbc-how-to-topics.md)   
- [Инструкции по OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [OLE DB инструкций](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

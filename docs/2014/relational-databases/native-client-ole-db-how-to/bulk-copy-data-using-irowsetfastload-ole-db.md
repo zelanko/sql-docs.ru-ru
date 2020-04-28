@@ -1,5 +1,5 @@
 ---
-title: Групповое Копирование данных с использованием IRowsetFastLoad (OLE DB) | Документация Майкрософт
+title: Массовое копирование данных с использованием интерфейса IRowsetFastLoad (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a19029a98daa5411f0e915b62f3c7556cafad97a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655689"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Выполнение массового копирования данных с использованием интерфейса IRowsetFastLoad (OLE DB)
@@ -32,7 +32,7 @@ ms.locfileid: "62655689"
  Образцу требуется образец базы данных AdventureWorks, который можно загрузить с домашней страницы [Образцы кода и проекты сообщества Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) (возможно, на английском языке).  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, следует зашифровать их с помощью [API шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>Массовое копирование данных в таблицу SQL Server  
   

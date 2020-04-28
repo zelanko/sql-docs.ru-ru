@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8ca6b4b0c4449880a407e27df9becf340c84a2eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62643069"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolipaddress-class"></a>Свойство IPAddressName (класс ServerNetworkProtocolIPAddress)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объектами*  
+ *object*  
  A [класса ServerNetworkProtocolIPAdress](servernetworkprotocolipaddress-class.md) , который представляет IP-адрес сетевого протокола для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, указывающее имя IP-адреса.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

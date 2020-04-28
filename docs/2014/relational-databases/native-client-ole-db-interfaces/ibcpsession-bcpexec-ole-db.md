@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPExec (OLE DB) | Документация Майкрософт'
+title: IBCPSession::BCPExec (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c1d7e00f3412967a8257b27fa2c8637905e657cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62519318"
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
@@ -50,7 +50,7 @@ DBROWCOUNT *pRowsCopied);
  Метод выполнен успешно.  
   
  E_FAIL  
- Произошла ошибка, связанная с поставщиком. Подробные сведения можно получить при помощи интерфейса [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md).  
+ Произошла ошибка конкретного поставщика; для получения дополнительных сведений используйте интерфейс [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) .  
   
  E_UNEXPECTED  
  Непредвиденный вызов метода. Например, перед вызовом этого метода не был вызван метод **BCPInit** . Также возникает, если операция была прервана с использованием параметра BCP_OPTION_ABORT, а затем был вызван метод **BCPExec** .  
@@ -67,7 +67,7 @@ DBROWCOUNT *pRowsCopied);
  DB_S_ERRORSOCCURRED  
  Во время операции массового копирования произошли ошибки, и некоторые строки могли быть не скопированы. Количество ошибок все еще меньше минимально допустимого числа ошибок.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../native-client/features/performing-bulk-copy-operations.md)  
   

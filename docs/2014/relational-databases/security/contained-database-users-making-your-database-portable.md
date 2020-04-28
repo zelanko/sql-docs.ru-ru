@@ -14,18 +14,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a10f892c8fd635892d76061e9f33649340e69593
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655484"
 ---
-# <a name="contained-database-users---making-your-database-portable"></a>Пользователи автономной базы данных — создание переносимой базы данных
+# <a name="contained-database-users---making-your-database-portable"></a>Пользователи автономной базы данных — создание переносимой базы данных
   Используйте пользователей автономной базы данных для проверки подлинности подключений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] на уровне базы данных. Автономная база данных — это база данных, изолированная от других баз данных и от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (и базы данных master), на котором размещена эта база данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает пользователей автономной базы данных для проверки подлинности Windows и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При использовании [!INCLUDE[ssSDS](../../includes/sssds-md.md)]объединяйте пользователей автономной базы данных с правилами брандмауэра уровня базы данных. В этом разделе рассматриваются различия и преимущества использования модели автономной базы данных по сравнению с традиционной моделью имя для входа/ пользователь и правилами брандмауэра в Windows или на уровне сервера. Конкретные сценарии, управляемость или приложение бизнес-логики могут по-прежнему требовать использования традиционной модели имя для входа/ пользователь и правила брандмауэра на уровне сервера.  
   
 > [!NOTE]  
->  Поскольку [!INCLUDE[msCoName](../../includes/msconame-md.md)] развивает службу [!INCLUDE[ssSDS](../../includes/sssds-md.md)] и переходит к более высокому гарантированному соглашению об уровне обслуживания, может потребоваться переключиться на модель пользователя автономной базы данных и правила брандмауэра уровня базы данных для достижения более высокой доступности соглашения об уровне обслуживания и более высокой максимальной частоты команд Login для конкретной базы данных. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендуется рассмотреть такие изменения сегодня.  
+>  Поскольку [!INCLUDE[msCoName](../../includes/msconame-md.md)] развивает службу [!INCLUDE[ssSDS](../../includes/sssds-md.md)] и переходит к более высокому гарантированному соглашению об уровне обслуживания, может потребоваться переключиться на модель пользователя автономной базы данных и правила брандмауэра уровня базы данных для достижения более высокой доступности соглашения об уровне обслуживания и более высокой максимальной частоты команд Login для конкретной базы данных. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендуется рассмотреть такие изменения сегодня.  
   
 ## <a name="traditional-login-and-user-model"></a>Традиционная модель имени для входа и пользователя  
  В традиционной модели подключения пользователи Windows или участники групп Windows подключаются к [!INCLUDE[ssDE](../../includes/ssde-md.md)] , указывая учетные данные пользователей или групп, прошедших проверку подлинности в Windows. Кроме того, соединение может указать имя и пароль и использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (что является единственным допустимым вариантом при подключении к [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). В обоих случаях у базы данных master должно быть имя, которое соответствует учетным данным подключения. Когда [!INCLUDE[ssDE](../../includes/ssde-md.md)] подтвердит учетные данные для проверки подлинности Windows или выполнит проверку подлинности учетных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , соединение обычно пытается подключиться к пользовательской базе данных. Для подключения к пользовательской базе данных имя для входа должно быть сопоставлено (то есть, связано) с пользователем в базе данных. Строка подключения также может указывать на подключение к конкретной базе данных, что не является обязательным в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но требуется в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -45,19 +44,18 @@ ms.locfileid: "62655484"
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Правила брандмауэра Windows применяются для всех подключений и влияют на имена для входа (традиционной модели подключений) так же, как и на пользователей автономной базы данных. Дополнительные сведения о брандмауэре Windows см. в статье [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
-### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Брандмауэры  
- 
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] позволяет задавать отдельные правила брандмауэров для подключений на уровне сервера (имен для входа) и подключений уровня базы данных (пользователей автономной базы данных). При подключении к базе данных пользователя сначала проверяются правила брандмауэра базы данных. Если нет правил, позволяющих доступ к базе данных, проверяются правила брандмауэра на уровне сервера, что требует доступа к базе данных master логического сервера. Правила брандмауэра уровня базы данных в сочетании с пользователями автономной базы данных могут исключить необходимость доступа к базе данных master сервера во время подключения, повышая масштабируемость подключений.  
+### <a name="sssds-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Брандмауэры  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] позволяет задавать отдельные правила брандмауэров для подключений на уровне сервера (имен для входа) и подключений уровня базы данных (пользователей автономной базы данных). При подключении к базе данных пользователя сначала проверяются правила брандмауэра базы данных. Если нет правил, позволяющих доступ к базе данных, проверяются правила брандмауэра на уровне сервера, что требует доступа к базе данных master логического сервера. Правила брандмауэра уровня базы данных в сочетании с пользователями автономной базы данных могут исключить необходимость доступа к базе данных master сервера во время подключения, повышая масштабируемость подключений.  
   
  Дополнительные сведения о правилах брандмауэра [!INCLUDE[ssSDS](../../includes/sssds-md.md)] см. в следующих статьях:  
   
 -   [Брандмауэр базы данных SQL Azure](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
--   [Как настроить параметры брандмауэра (база данных SQL Azure)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
+-   [Руководство. Настройка параметров брандмауэра (база данных SQL Microsoft Azure)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
   
--   [sp_set_firewall_rule &#40;базе данных SQL Azure&#41;](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
+-   [sp_set_firewall_rule (база данных Azure SQL)](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
   
--   [sp_set_database_firewall_rule &#40;базе данных SQL Azure&#41;](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)  
+-   [sp_set_database_firewall_rule (база данных Azure SQL)](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)  
   
 ## <a name="syntax-differences"></a>Синтаксические отличия  
   
@@ -85,7 +83,7 @@ ms.locfileid: "62655484"
   
 -   Использование паролей одинаковой сложности с теми, которые обыкновенно используются для имен входа.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Автономные базы данных](../databases/contained-databases.md)   
  [Рекомендации по обеспечению безопасности автономных баз данных](../databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql)  

@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4a2c55573807feb4de947f1fa3b5af685b9f168
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638320"
 ---
 # <a name="stored-procedures"></a>Хранимые процедуры
-  Хранимая процедура ([хранимые процедуры &#40;ядро СУБД&#41;](../../stored-procedures/stored-procedures-database-engine.md)) — это исполняемый объект, хранящийся в базе данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]принтер  
+  Хранимая процедура ([Хранимые процедуры (компонент ядра СУБД)](../../stored-procedures/stored-procedures-database-engine.md)) — это исполняемый объект, хранящийся в базе данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает:  
   
 -   Хранимые процедуры  
   
@@ -32,13 +32,13 @@ ms.locfileid: "62638320"
   
      Динамически подключаемые библиотеки на языке C или C++ (DLL-библиотеки), написанные для API-интерфейса служб Open Data Services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] расширенных хранимых процедур. API-интерфейс служб Open Data Services расширяет возможности хранимых процедур, позволяя им использовать код на C или C++.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
--   [Выполнение хранимых процедур &#40;OLE DB&#41;](stored-procedures-running.md)  
+-   [Выполнение хранимых процедур (OLE DB)](stored-procedures-running.md)  
   
--   [Вызов хранимой процедуры &#40;OLE DB&#41;](stored-procedures-calling.md)  
+-   [Вызов хранимых процедур (OLE DB)](stored-procedures-calling.md)  
   
-## <a name="see-also"></a>См. также:  
- [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)  
+## <a name="see-also"></a>См. также  
+ [SQL Server Native Client (OLE DB)](sql-server-native-client-ole-db.md)  
   
   

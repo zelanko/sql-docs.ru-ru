@@ -1,5 +1,5 @@
 ---
-title: 'ISSAbort:: Abort (OLE DB) | Документация Майкрософт'
+title: ISSAbort::Abort (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ad1310112b3cd6ac536a55a82757ae99433372d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62511518"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
@@ -42,7 +42,7 @@ HRESULT Abort(void);
 >  Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], если состояние сервера XACT_ABORT имеет значение ON, вызов метода **ISSAbort::Abort** при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прекращает все транзакции, явные и неявные, и совершает их откат. Более ранние версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не прекратят текущих транзакций.  
   
 ## <a name="arguments"></a>Аргументы  
- Нет.  
+ Отсутствует.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  S_OK  
@@ -63,7 +63,7 @@ HRESULT Abort(void);
  E_OUTOFMEMORY  
  Ошибка, связанная с нехваткой памяти.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ISSAbort &#40;OLE DB&#41;](../../database-engine/dev-guide/issabort-ole-db.md)  
   
   

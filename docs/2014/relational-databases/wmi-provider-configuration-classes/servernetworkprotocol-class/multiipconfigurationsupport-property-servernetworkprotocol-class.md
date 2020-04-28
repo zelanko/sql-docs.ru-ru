@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a6813371e7641af1369f94f875ca0d9f96ad3a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62470061"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>Свойство MultiIpConfigurationSupport (класс ServerNetworkProtocol)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объектами*  
+ *object*  
  Объект [Свойства ProtocolName (класс класс servernetworkprotocol)](servernetworkprotocol-class.md) , представляющий сетевой протокол, используемый экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
@@ -45,7 +45,7 @@ object
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

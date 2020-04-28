@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b96e0bb7f28349e4d0b0ed5225f9b29e58de982f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637855"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>Создание, изменение и удаление вторичных селективных XML-индексов
   Описание создания нового вторичного селективного XML-индекса, а также изменения или удаления существующего вторичного селективного XML-индекса.  
   
-##  <a name="create"></a> Создание вторичного селективного XML-индекса  
+##  <a name="creating-a-secondary-selective-xml-index"></a><a name="create"></a> Создание вторичного селективного XML-индекса  
   
 ### <a name="how-to-create-a-secondary-selective-xml-index"></a>Инструкции. Создание вторичного селективного XML-индекса  
  **Создание вторичного селективного XML-индекса с использованием Transact-SQL**  
@@ -41,7 +41,7 @@ FOR
 ```  
   
   
-##  <a name="alter"></a> Изменение вторичного селективного XML-индекса  
+##  <a name="altering-a-secondary-selective-xml-index"></a><a name="alter"></a> Изменение вторичного селективного XML-индекса  
  Инструкция ALTER не поддерживается для вторичных селективных XML-индексов. Чтобы изменить вторичный селективный XML-индекс, удалите существующий индекс и создайте его повторно.  
   
 ### <a name="how-to-alter-a-secondary-selective-xml-index"></a>Инструкции. Изменение вторичного селективного XML-индекса  
@@ -67,7 +67,7 @@ FOR
 ```  
   
   
-##  <a name="drop"></a> Удаление вторичного селективного XML-индекса  
+##  <a name="dropping-a-secondary-selective-xml-index"></a><a name="drop"></a> Удаление вторичного селективного XML-индекса  
   
 ### <a name="how-to-drop-a-secondary-selective-xml-index"></a>Инструкции. Удаление вторичного селективного XML-индекса  
  **Удаление вторичного селективного XML-индекса с использованием Transact-SQL**  

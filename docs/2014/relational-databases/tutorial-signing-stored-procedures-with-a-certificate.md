@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524097"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Учебник. Подписывание хранимых процедур с помощью сертификата
@@ -48,7 +48,7 @@ ms.locfileid: "62524097"
  Каждый блок кода в этом примере объясняется по порядку. Чтобы скопировать весь пример, см. раздел [Пример целиком](#CompleteExample) в конце этого учебника.  
   
 ## <a name="1-configure-the-environment"></a>1. Настройка среды  
- Чтобы задать начальный контекст в этом примере, откройте в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] новый запрос и выполните следующий код, чтобы открыть базу данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Этот код изменяет контекст базы данных на `AdventureWorks2012`, затем создает новое имя входа сервера и новую учетную запись пользователя базы данных (`TestCreditRatingUser`) с использованием пароля.  
+ Чтобы задать начальный контекст в этом примере, откройте в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] новый запрос и выполните следующий код, чтобы открыть базу данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Этот код изменяет контекст базы данных на `AdventureWorks2012` , затем создает новое имя входа сервера и новую учетную запись пользователя базы данных (`TestCreditRatingUser`) с использованием пароля.  
   
 ```  
 USE AdventureWorks2012;  
@@ -78,7 +78,7 @@ GO
 ```  
   
 ## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3. Создание и подписывание хранимой процедуры с помощью сертификата  
- Используйте следующий код, чтобы создать хранимую процедуру, которая выбирает данные из таблицы `Vendor` в схеме базы данных `Purchasing`, ограничивая доступ и предоставляя его только для компаний с уровнем кредитоспособности 1. В первом разделе хранимой процедуры в целях демонстрации основных принципов работы выводится контекст учетной записи пользователя, с которой работает процедура. Удовлетворять требованиям не обязательно.  
+ Используйте следующий код, чтобы создать хранимую процедуру, которая выбирает данные из таблицы `Vendor` в схеме базы данных `Purchasing` , ограничивая доступ и предоставляя его только для компаний с уровнем кредитоспособности 1. В первом разделе хранимой процедуры в целях демонстрации основных принципов работы выводится контекст учетной записи пользователя, с которой работает процедура. Удовлетворять требованиям не обязательно.  
   
 ```  
 CREATE PROCEDURE TestCreditRatingSP  
@@ -142,7 +142,7 @@ GO
  Дополнительные сведения о предоставлении разрешений объектам см. в разделе [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql).  
   
 ## <a name="6-display-the-access-context"></a>6. Отображение контекста доступа  
- Для отображения прав, связанных с доступом хранимой процедуры, запустите следующий код, чтобы предоставить права на запуск хранимой процедуры пользователю `TestCreditRatingUser`.  
+ Для отображения прав, связанных с доступом хранимой процедуры, запустите следующий код, чтобы предоставить права на запуск хранимой процедуры пользователю `TestCreditRatingUser` .  
   
 ```  
 GRANT EXECUTE   
@@ -192,7 +192,7 @@ GO
   
  Дополнительные сведения об инструкции REVERT см. в разделе [REVERT (Transact-SQL)](/sql/t-sql/statements/revert-transact-sql).  
   
-##  <a name="CompleteExample"></a>Полный пример  
+##  <a name="complete-example"></a><a name="CompleteExample"></a>Полный пример  
  В этом разделе приведен полный код примера.  
   
 ```  
@@ -288,7 +288,7 @@ DROP CERTIFICATE TestCreditRatingCer;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Центр безопасности для ядра СУБД SQL Server и Базы данных Azure SQL](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Команды, создающие результаты с несколькими наборами строк | Документация Майкрософт
+title: Команды, формирующие результаты с несколькими наборами строк | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 04a7db670171f6f890f55a89e2da987ef2309f0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62657684"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Команды, формирующие результаты с несколькими наборами строк
@@ -42,14 +42,13 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
  Отправка нескольких инструкций SQL в одном пакете более эффективна, чем выполнение каждой инструкции SQL по отдельности. Отправка одного пакета уменьшает количество циклов приема-передачи данных с клиента на сервер.  
   
 ## <a name="stored-procedures"></a>Хранимые процедуры  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает результирующий набор для каждой инструкции в хранимой процедуре, поэтому большинство хранимых процедур [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает несколько результирующих наборов.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает результирующий набор для каждой инструкции в хранимой процедуре, поэтому большинство хранимых процедур [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает несколько результирующих наборов.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Обработка нескольких результирующих наборов при помощи интерфейса IMultipleResults](using-imultipleresults-to-process-multiple-result-sets.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Команды](commands.md)  
   
   

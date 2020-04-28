@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 384b5cc158600848dbca6528a4c8c39250a23908
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62629174"
 ---
 # <a name="clean-up-merge-metadata-replication-transact-sql-programming"></a>очистить метаданные слияния (программирование репликации на языке Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "62629174"
   
 3.  Повторите шаги 1 и 2 на подписчике для очистки метаданных в базе данных подписки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Окончание срока действия и отключение подписки](../subscription-expiration-and-deactivation.md)  
   
   

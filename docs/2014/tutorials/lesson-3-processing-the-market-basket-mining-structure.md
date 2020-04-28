@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653866"
 ---
-# <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Урок 3. Обработка структуры интеллектуального анализа "Потребительская корзина"
+# <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Урок 3. Обработка структуры интеллектуального анализа данных «Потребительская корзина»
   На этом занятии для обработки структур и моделей интеллектуального анализа данных, созданных на [занятии 1](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) , вы [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] будете использовать инструкцию [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx) , а также vAssocSeqLineItems и vAssocSeqOrders в образце базы. для этого нужно создать структуру интеллектуального анализа данных для рынка и [занятие 2: Добавление моделей интеллектуального анализа данных в структуру интеллектуального анализа данных для рынка](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
   
  При обработке структуры интеллектуального анализа данных службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] считывают исходные данные и создают структуры, поддерживающие модели интеллектуального анализа данных. При обработке модели интеллектуального анализа данных, данные, определенные структурой интеллектуального анализа данных, обрабатываются выбранным алгоритмом интеллектуального анализа данных. Алгоритм находит тренды и шаблоны и сохраняет эти данные в модели интеллектуального анализа данных. Поэтому в модели интеллектуального анализа данных содержатся не фактические исходные данные, а данные, выявленные алгоритмом. Дополнительные сведения об обработке моделей интеллектуального анализа данных см. в разделе [требования к обработке и рекомендации &#40;&#41;интеллектуального анализа ](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
@@ -192,6 +192,6 @@ RELATE [<case key>] TO [<foreign key>]
  В следующем занятии будут созданы несколько прогнозов, основанных на моделях интеллектуального анализа данных, которые были добавлены в структуру «Потребительская корзина».  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 4. Прогнозирование "Потребительской корзины"](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [Занятие 4: Прогнозирование покупательского поведения](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
   
   
