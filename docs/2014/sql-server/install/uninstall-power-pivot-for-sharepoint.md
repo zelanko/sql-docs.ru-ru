@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 51b6788c0bc41796f91f8dee74812ff79062cda3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798134"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>Удаление PowerPivot для SharePoint
@@ -38,7 +38,7 @@ ms.locfileid: "72798134"
   
 -   [Шаг 6. Контрольный список действий после удаления](#bkmk_post)  
   
-##  <a name="prereq"></a> Предварительные требования  
+##  <a name="prerequisites"></a><a name="prereq"></a> Предварительные требования  
   
 -   Для удаления функций и решений из фермы необходимо обладать правами администратора фермы SharePoint или администратора служебного приложения.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72798134"
   
 -   Для удаления служб Analysis Services и [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]необходимо быть администратором служб Analysis Services и членом локальной группы администраторов.  
   
-##  <a name="bkmk_before"></a> Шаг 1. Контрольный список действий перед удалением  
+##  <a name="step-1-pre-uninstall-checklist"></a><a name="bkmk_before"></a> Шаг 1. Контрольный список действий перед удалением  
  После удаления программного обеспечения для поддержки обработки запросов и данных с фермы будет отключен доступ к данным PowerPivot. В качестве первого шага необходимо предварительно удалить файлы и библиотеки, работа с которыми далее будет невозможна. Это позволит решить все проблемы отсутствия данных перед началом удаления программного обеспечения.  
   
 1.  Удалите все книги, документы и библиотеки PowerPivot, которые связаны с установкой PowerPivot для SharePoint. После удаления ПО эти библиотеки и документы перестанут работать.  
@@ -63,7 +63,7 @@ ms.locfileid: "72798134"
   
 5.  Можно также остановить службы и подождать несколько дней, а затем переустановить ПО. Этот шаг не является необходимым для удаления, но он позволяет возобновить обслуживание на время, необходимое для выполнения миграции данных или решения технических проблем, которые еще не решены.  
   
-##  <a name="bkmk_remove"></a> Шаг 2. Удаление функций и решений из SharePoint  
+##  <a name="step-2-remove-features-and-solutions-from-sharepoint"></a><a name="bkmk_remove"></a> Шаг 2. Удаление функций и решений из SharePoint  
  Используйте средство настройки PowerPivot для удаления служб и приложений PowerPivot из SharePoint.  
   
 -   Пользователь должен быть администратором фермы, администратором сервера в экземпляре служб Analysis Services и членом роли **db_owner** в базе данных конфигурации фермы.  
@@ -132,7 +132,7 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
   
  Кроме того, для удаления функций и решений можно воспользоваться PowerShell. Дополнительные сведения см. в [справочнике по PowerShell для PowerPivot для SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).  
   
-##  <a name="bkmk_uninstall"></a> Шаг 3. Запуск программы установки SQL Server для удаления программ с локального компьютера  
+##  <a name="step-3-run-sql-server-setup-to-remove-programs-from-the-local-computer"></a><a name="bkmk_uninstall"></a> Шаг 3. Запуск программы установки SQL Server для удаления программ с локального компьютера  
  Для удаления программных файлов необходимо запустить программу установки SQL Server в режиме удаления ПО. При этом будут удалены файлы и записи в реестре, созданные в процессе установки. Для удаления ПО можно использовать страницу «Программы и компоненты». [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] является компонентом установки SQL Server.  
   
  Частично удалить установленные компоненты можно, не затрагивая другие уже установленные экземпляры SQL Server (или функции в том же экземпляре). Например, можно удалить PowerPivot для SharePoint и оставить другие компоненты, например службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или ядро СУБД.  
@@ -145,10 +145,10 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
   
      В программе установки можно выбрать экземпляр **PowerPivot** , а затем установить флажки **Службы Analysis Services** и **Интеграция служб Analysis Services с SharePoint** , чтобы удалить только эти компоненты, оставив все остальные.  
   
-##  <a name="bkmk_addin"></a>Шаг 4. удаление надстройки PowerPivot для SharePoint  
+##  <a name="step-4-uninstall-the-powerpivot-for-sharepoint-add-in"></a><a name="bkmk_addin"></a>Шаг 4. удаление надстройки PowerPivot для SharePoint  
  Если развертывание служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] имеет два или более сервера и установлена надстройка служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , то, чтобы полностью удалить все файлы [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , удалите надстройку служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] на каждом сервере, где она установлена. Дополнительные сведения см. в разделе [Установка или удаление надстройки PowerPivot для SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
-##  <a name="verify"></a> Шаг 5. Проверка удаления  
+##  <a name="step-5-verify-uninstall"></a><a name="verify"></a> Шаг 5. Проверка удаления  
   
 1.  В центре администрирования в окне **Управление службами на сервере**установите соединение с сервером, с которого удалена надстройка PowerPivot для SharePoint.  
   
@@ -166,7 +166,7 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
   
     4.  В окне «Общие параметры приложения» убедитесь, что на странице отсутствует **Панель мониторинга управления PowerPivot** .  
   
-##  <a name="bkmk_post"></a> Шаг 6. Контрольный список действий после удаления  
+##  <a name="step-6-post-uninstall-checklist"></a><a name="bkmk_post"></a> Шаг 6. Контрольный список действий после удаления  
  Используйте следующий список, чтобы удалить программное обеспечение и файлы, которые не были удалены в процессе отмены установки.  
   
 1.  Удалите все файлы данных и вложенные папки из `C:\Program Files\Microsoft SQL Server\MSAS12.PowerPivot`, а затем удалите эту папку. На этом шаге также будут удалены все ранее кэшированные файлы в каталоге DATA.  

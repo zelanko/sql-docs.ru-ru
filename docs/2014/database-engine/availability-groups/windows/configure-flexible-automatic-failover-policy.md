@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 452d3ac4dae2164fa0fa172528ae398ea91fed31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797751"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>Настройка гибкой политики отработки отказа для обеспечения контроля над автоматическим переходом на другой ресурс (группы доступности AlwaysOn)
@@ -29,29 +29,28 @@ ms.locfileid: "72797751"
     > [!NOTE]  
     >  The flexible failover policy of an availability group cannot be configured by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Limitations"></a>Ограничения на автоматический переход на другой ресурс  
+###  <a name="limitations-on-automatic-failovers"></a><a name="Limitations"></a> Ограничения автоматического перехода на другой ресурс  
   
 -   Для автоматического перехода на другой ресурс текущая первичная реплика и одна вторичная реплика должны быть настроены в режиме доступности синхронной фиксации с автоматическим переходом на другой ресурс, а вторичная реплика должна быть синхронизирована с первичной.  
   
--   Если в группе доступности превышен порог сбоя WSFC, то кластер WSFC не выполняет автоматический переход на другой ресурс для этой группы доступности. Более того, группа ресурсов WSFC для группы доступности остается в состоянии сбоя, пока администратор кластера вручную не переведет сбойную группу ресурсов в режим «в сети» или пока администратор базы данных вручную не выполнит переход группы доступности на другой ресурс. 
-  *Порог сбоя WSFC* определяется как максимальное число сбоев, которые могут произойти в группе доступности за заданный период времени. По умолчанию используется период в шесть часов, а максимальное число сбоев за этот период по умолчанию равно *n*-1, где *n* — число узлов WSFC. Чтобы изменить пороговые значения сбоя для заданной группы доступности, используйте консоль диспетчера отработки отказа WSFC.  
+-   Если в группе доступности превышен порог сбоя WSFC, то кластер WSFC не выполняет автоматический переход на другой ресурс для этой группы доступности. Более того, группа ресурсов WSFC для группы доступности остается в состоянии сбоя, пока администратор кластера вручную не переведет сбойную группу ресурсов в режим «в сети» или пока администратор базы данных вручную не выполнит переход группы доступности на другой ресурс. *Порог сбоя WSFC* определяется как максимальное число сбоев, которые могут произойти в группе доступности за заданный период времени. По умолчанию используется период в шесть часов, а максимальное число сбоев за этот период по умолчанию равно *n*-1, где *n* — число узлов WSFC. Чтобы изменить пороговые значения сбоя для заданной группы доступности, используйте консоль диспетчера отработки отказа WSFC.  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Необходимо подключиться к экземпляру сервера, на котором размещена первичная реплика.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
 |Задача|Разрешения|  
 |----------|-----------------|  
 |Настройка гибкой политики отработки отказа для новой группы доступности|Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.|  
 |Изменение политики существующей группы доступности|Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.|  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Настройка гибкой политики отработки отказа**  
   
 1.  Подключитесь к экземпляру сервера, на котором находится первичная реплика.  
@@ -68,7 +67,7 @@ ms.locfileid: "72797751"
   
          Эти целочисленные значения следующим образом соответствуют уровням условий сбоя.  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)]Значений|Level|Автоматическая отработка отказа запускается при...|  
+        |Значение [!INCLUDE[tsql](../../../includes/tsql-md.md)]|Level|Автоматическая отработка отказа запускается при...|  
         |------------------------------|-----------|-------------------------------------------|  
         |1|Один|При остановке работы сервера. Служба SQL Server останавливается из-за отработки отказа или перезапуска.|  
         |2|Два|При отсутствии ответа от сервера. Удовлетворяется любое условие более низкого значения, служба SQL Server подключена к кластеру, а пороговое значение ожидания проверки работоспособности превышено, либо текущая первичная реплика находится в неисправном состоянии.|  
@@ -86,7 +85,7 @@ ms.locfileid: "72797751"
         ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT = 60000);  
         ```  
   
-##  <a name="PowerShellProcedure"></a>Использование PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Использование PowerShell  
 
 ### <a name="to-configure-the-flexible-failover-policy"></a>Настройка гибкой политики отработки отказа * *  
   
@@ -129,9 +128,9 @@ ms.locfileid: "72797751"
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [SQL Server PowerShell, поставщик](../../../powershell/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+-   [Получение справок по SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
@@ -139,4 +138,4 @@ ms.locfileid: "72797751"
  [Отказоустойчивость и режимы отработки отказа &#40;группы доступности AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [Отказоустойчивая кластеризация Windows Server &#40;&#41; WSFC с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Политика отработки отказа для экземпляров отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
- [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)  
+ [sp_server_diagnostics (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798327"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Установка PowerPivot из командной строки
@@ -27,7 +27,7 @@ ms.locfileid: "72798327"
   
  Компьютер должен быть присоединен к тому же домену, что и ферма SharePoint.  
   
-##  <a name="Commands"></a>Параметры установки на основе/ROLE  
+##  <a name="role-based-installation-options"></a><a name="Commands"></a>Параметры установки на основе/ROLE  
  При развертывании PowerPivot для SharePoint используется параметр `/ROLE` вместо параметра `/FEATURES`. Допустимые значения:  
   
 -   `SPI_AS_ExistingFarm`  
@@ -53,7 +53,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_Existing
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/SQLSVCACCOUNT=<DomainName\UserName> /SQLSVCPASSWORD=<StrongPassword> /SQLSYSADMINACCOUNTS=<DomainName\UserName> /AGTSVCACCOUNT=<DomainName\UserName> /AGTSVCPASSWORD=<StrongPassword> /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
-##  <a name="Join"></a>Изменение синтаксиса команды  
+##  <a name="modifying-the-command-syntax"></a><a name="Join"></a>Изменение синтаксиса команды  
  Используйте следующие шаги для изменения примера синтаксиса команды.  
   
 1.  Скопируйте следующую команду в Блокнот:  
@@ -90,7 +90,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 5.  Выделите всю команду и выберите команду **Копировать** в меню Правка.  
   
-6.  Откройте командную строку администратора. Для этого нажмите кнопку **Пуск**, щелкните правой кнопкой мыши командную строку и выберите **Запуск от имени администратора**.  
+6.  Откройте командную строку от имени учетной записи администратора. Для этого нажмите кнопку **Пуск**, щелкните правой кнопкой мыши командную строку и выберите **Запуск от имени администратора**.  
   
 7.  Перейдите в папку на диске или общую папку, которая содержит установочный носитель SQL Server.  
   

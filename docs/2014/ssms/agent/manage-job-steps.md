@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798218"
 ---
 # <a name="manage-job-steps"></a>Управление шагами задания
@@ -36,30 +36,30 @@ ms.locfileid: "72798218"
   
 -   Исполняемые программы и команды операционной системы.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]инструкции, включая хранимые процедуры и расширенные хранимые процедуры.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции, включающие хранимые процедуры и расширенные хранимые процедуры.  
   
 -   Скрипты PowerShell.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)]Скрипты ActiveX.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] скрипты ActiveX.  
   
 -   Задачи репликации.  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]операции.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] задачи.  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]пакеты.  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакеты.  
   
  Каждый шаг задания выполняется в определенном контексте безопасности. Если шаг задания указывает учетную запись-посредник, он выполняется в контексте безопасности учетных данных для учетной записи-посредника. Если шаг задания не указывает учетную запись-посредник, этот шаг выполняется в контексте учетной записи службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Только члены предопределенной роли сервера "sysadmin" могут создавать задания, которые не указывают учетную запись-посредник явным образом.  
   
  Так как шаги задания выполняются в контексте определенного пользователя [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, этот пользователь должен иметь разрешения и конфигурацию, необходимые для выполнения шага. Например, если создается задание, в котором требуется буква диска или путь в формате UNC, шаги задания могут выполняться под учетной записью пользователя Windows во время проверки задач. Однако для шага задания пользователь Windows должен иметь необходимые разрешения, конфигурации буквы диска или доступ к требуемому диску. В противном случае шаг задания завершится ошибкой. Во избежание этой проблемы нужно, чтобы учетная запись-посредник для каждого шага задания имела необходимые разрешения для задачи, которую выполняет шаг задания. Дополнительные сведения см. в статье [Центр безопасности для SQL Server ядро СУБД и базы данных SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).  
   
 ## <a name="job-step-logs"></a>Журналы шагов задания  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Агент может записывать выходные данные из некоторых шагов задания либо в файл операционной системы, либо в таблицу таблицу sysjobstepslogs базы данных msdb. Следующие шаги задания могут записывать выходные данные в оба адресата:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент может записывать выходные данные из определенных шагов задания в файл операционной системы или в таблицу "sysjobstepslogs" базы данных "msdb". Следующие шаги задания могут записывать выходные данные в оба адресата:  
   
 -   Исполняемые программы и команды операционной системы.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]инструкции.  
+-   Инструкции[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]операции.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] задачи.  
   
  Только шаги задания, которые выполняются пользователями, являющимися членами предопределенной роли сервера "sysadmin", могут записывать выходные данные шагов задания в файлы операционной системы. Если шаги задания выполняются пользователями, которые являются членами предопределенной роли базы данных SQLAgentUserRole, SQLAgentReaderRole или SQLAgentOperatorRole в базе данных "msdb", то выходные данные этих шагов задания могут быть записаны только в таблицу "sysjobstepslogs".  
   
@@ -89,10 +89,10 @@ ms.locfileid: "72798218"
   
  При необходимости можно открыть существующий файл [!INCLUDE[tsql](../../includes/tsql-md.md)] в качестве команды для шага задания.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]в шагах заданий не [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используются прокси-серверы агентов. Вместо этого шаг задания выполняется как владелец шага задания или как учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если владелец шага задания является членом предопределенной роли сервера "sysadmin". Члены предопределенной роли сервера "sysadmin" также могут указывать, что шаги задания [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняются в контексте другого пользователя, с помощью параметра *database_user_name* хранимой процедуры "sp_add_jobstep stored". Дополнительные сведения см. в разделе [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] в шагах задания не используются учетные записи-посредники агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Вместо этого шаг задания выполняется как владелец шага задания или как учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если владелец шага задания является членом предопределенной роли сервера "sysadmin". Члены предопределенной роли сервера "sysadmin" также могут указывать, что шаги задания [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняются в контексте другого пользователя, с помощью параметра *database_user_name* хранимой процедуры "sp_add_jobstep stored". Дополнительные сведения см. в разделе [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 > [!NOTE]  
->  Один шаг задания [!INCLUDE[tsql](../../includes/tsql-md.md)] может содержать несколько пакетов. [!INCLUDE[tsql](../../includes/tsql-md.md)]шаги задания могут содержать внедренные команды GO.  
+>  Один шаг задания [!INCLUDE[tsql](../../includes/tsql-md.md)] может содержать несколько пакетов. [!INCLUDE[tsql](../../includes/tsql-md.md)] шаги задания могут содержать внедренные команды GO.  
   
 ## <a name="powershell-scripting-job-steps"></a>Шаги заданий со скриптами PowerShell  
  При создании шага задания со скриптом PowerShell необходимо указать в качестве команды для шага одно из двух.  
@@ -149,14 +149,14 @@ Set oServer = nothing
  Настроив репликацию, можно указать выполнение агентов репликации одним из следующих способов: постоянно после запуска агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , по запросу или по расписанию. Дополнительные сведения об агентах репликации см. в разделе [Обзор агентов репликации](../../relational-databases/replication/agents/replication-agents-overview.md).  
   
 ## <a name="analysis-services-job-steps"></a>Шаги задания служб Analysis Services  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Агент поддерживает два отдельных типа шагов задания Analysis Services, шаги задания команды и шаги задания запроса.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент поддерживает два определенных типа шагов заданий служб Analysis Services: шаги задания команды и шаги задания запроса.  
   
 ### <a name="analysis-services-command-job-steps"></a>Шаги задания команды служб Analysis Services  
  При создании шага задания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо выполнить следующее.  
   
 -   Определить сервер базы данных OLAP, на котором необходимо выполнить шаг задания.  
   
--   Ввести инструкцию, которую необходимо выполнить. Для метода [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **служб** инструкция должна быть в формате XML. Инструкция может не содержать полный конверт SOAP или метод [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **XML для служб** инструкция должна быть в формате XML. Обратите внимание, что в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживаются полные конверты SOAP и метод **Discover** , но поддержки шагов заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нет.  
+-   Ввести инструкцию, которую необходимо выполнить. Для метода  **Execute** служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] инструкция должна быть в формате XML. Инструкция может не содержать полный конверт SOAP или XML-файл для метода  **Discover** служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Обратите внимание, что в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживаются полные конверты SOAP и метод **Discover** , но поддержки шагов заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нет.  
   
 ### <a name="analysis-services-query-job-steps"></a>Шаги задания запроса служб Analysis Services  
  При создании шага задания с запросом служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо:  
@@ -212,4 +212,4 @@ Set oServer = nothing
 ## <a name="see-also"></a>См. также:  
  [dbo. таблицу sysjobstepslogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [Создание заданий](create-jobs.md)   
- [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
+ [sp_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

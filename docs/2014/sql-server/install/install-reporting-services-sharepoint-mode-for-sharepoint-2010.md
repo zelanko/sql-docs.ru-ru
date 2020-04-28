@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 758c76bf243af66157aa06f761df010a1e086a91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798347"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>Установка служб Reporting Services в режиме SharePoint для SharePoint 2010
@@ -31,7 +31,7 @@ ms.locfileid: "72798347"
   
 
   
-##  <a name="bkmk_prereq"></a> Предварительные требования  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Предварительные требования  
   
 -   > [!IMPORTANT]  
     >  Диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] больше не требуется и может использоваться для настройки и администрирования служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint. Для настройки сервера отчетов в режиме Sharepoint используйте центр администрирования SharePoint. Дополнительные сведения см. [в разделе Управление приложением службы Reporting Services SharePoint](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "72798347"
   
 
   
-##  <a name="bkmk_install_SSRS"></a>Установка Reporting Services сервера отчетов в режиме интеграции с SharePoint  
+##  <a name="install-reporting-services-report-server-in-sharepoint-mode"></a><a name="bkmk_install_SSRS"></a>Установка Reporting Services сервера отчетов в режиме интеграции с SharePoint  
   
 1.  Запустите мастер установки SQL Server.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "72798347"
   
 8.  Выберите **SQL Server Установка компонентов** на странице **роль установки** .  
   
-     Нажмите кнопку **Далее**.  
+     Нажмите кнопку **Далее**  
   
      ![Установка компонентов SQL Server для роли установки](../../../2014/sql-server/install/media/rs-setuprole.gif "Установка компонентов SQL Server для роли установки")  
   
@@ -92,7 +92,7 @@ ms.locfileid: "72798347"
   
     -   **Reporting Services — SharePoint**  
   
-    -   **Reporting Services надстройки для продуктов SharePoint 2010**. ![Примечание](../../../2014/reporting-services/media/rs-fyinote.png "note") . Параметр мастера установки для установки надстройки является новым в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] выпуске.  
+    -   **Reporting Services надстройки для продуктов SharePoint 2010**. ![Примечание](../../../2014/reporting-services/media/rs-fyinote.png "Примечание") . Параметр мастера установки для установки надстройки является новым в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] выпуске.  
   
     -   Если экземпляр компонента SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]еще не установлен, для завершения установки можно также выбрать **Службы ядра СУБД** и **Полный набор средств управления** .  
   
@@ -126,7 +126,7 @@ ms.locfileid: "72798347"
   
 
   
-##  <a name="bkmk_install_SSRS_sharedservice"></a>Установка и запуск службы Reporting Services SharePoint  
+##  <a name="install-and-start-the-reporting-services-sharepoint-service"></a><a name="bkmk_install_SSRS_sharedservice"></a>Установка и запуск службы Reporting Services SharePoint  
  ![Содержимое, связанное с PowerShell](../../../2014/reporting-services/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")  
   
 > [!NOTE]  
@@ -134,7 +134,7 @@ ms.locfileid: "72798347"
   
  Необходимые файлы были установлены в процессе работы мастера установки SQL Server, но службы необходимо зарегистрировать в ферме SharePoint. В выпуске [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] появилась поддержка PowerShell для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме SharePoint. Следующие шаги позволяют открыть консоль управления SharePoint и запустить командлеты.  
   
-1.  Нажмите кнопку " **Пуск** "  
+1.  Нажмите кнопку **Пуск** .  
   
 2.  Щелкните группу **продуктов Microsoft SharePoint 2010** .  
   
@@ -169,7 +169,7 @@ ms.locfileid: "72798347"
     > [!NOTE]  
     >  Если служба Reporting Services остается в состоянии **запуска** и не меняется на " **запущена**", проверьте, запущена ли служба администрирования SharePoint 2010 в Windows Диспетчер сервера.  
 
-##  <a name="bkmk_create_serrviceapplication"></a>Создание приложения службы Reporting Services  
+##  <a name="create-a-reporting-services-service-application"></a><a name="bkmk_create_serrviceapplication"></a>Создание приложения службы Reporting Services  
  В этом разделе описаны шаги по созданию приложения службы и описания его свойств (в случае просмотра существующего приложения службы).  
   
 1.  В центре администрирования SharePoint в группе **Управление** приложениями щелкните **Управление приложениями служб**.  
@@ -203,8 +203,8 @@ ms.locfileid: "72798347"
   
 
   
-##  <a name="bkmk_powerview"></a>Активируйте компонент семейства веб-сайтов Power View.  
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], компонент [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] выпуска Enterprise Edition — это функция семейства веб-сайтов. Этот компонент активируется автоматически для корневых семейств веб-сайтов, созданных после установки надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Если вы планируете использовать [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], необходимо удостовериться в том, что этот компонент активирован.  
+##  <a name="activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a>Активируйте компонент семейства веб-сайтов Power View.  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], компонент [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] выпуска Enterprise Edition — это функция семейства веб-сайтов. Этот компонент активируется автоматически для корневых семейств веб-сайтов, созданных после установки надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Если вы планируете использовать [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], необходимо удостовериться в том, что этот компонент активирован.  
   
  При установке надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint 2010 после установки продукта SharePoint 2010 функция интеграции с сервером отчетов и функция интеграции с Power View будут активированы только для корневых семейств веб-сайтов. Для других семейств веб-сайтов необходимо активировать эти компоненты вручную.  
   
@@ -220,14 +220,14 @@ ms.locfileid: "72798347"
   
 5.  Найдите в списке **Компонент интеграции Power View** .  
   
-6.  Нажмите кнопку **Активировать**.  
+6.  Щелкните **Активировать**.  
   
  Эта процедура выполняется для каждого семейства веб-сайтов. Дополнительные сведения см. [в разделе Активация сервера отчетов и функций интеграции Power View в SharePoint](../../reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md) .  
   
-##  <a name="bkmk_additional_config"></a>Дополнительная настройка  
+##  <a name="additional-configuration"></a><a name="bkmk_additional_config"></a>Дополнительная настройка  
  В этом разделе описываются дополнительные действия по настройке, которые важны для большинства развертываний SharePoint.  
   
-###  <a name="bkmk_provision_agent"></a>Подготавливайте подписки и оповещения  
+###  <a name="provision-subscriptions-and-alerts"></a><a name="bkmk_provision_agent"></a>Подготавливайте подписки и оповещения  
  Для функций подписок и предупреждений об изменении данных в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] может потребоваться настройка разрешений для агента SQL Server. Если отображается сообщение об ошибке, указывающее, что необходим агент SQL Server, хотя агент SQL Server уже запущен, обновите разрешения. Щелкните ссылку **Подготовка подписок и предупреждений** на странице с сообщением об успешном создании приложения службы, чтобы перейти на страницу провизионирования агента SQL Server. Шаг подготовки необходим, если система развернута более чем на одном компьютере, например если экземпляр базы данных SQL Server находится на другом компьютере. Дополнительные сведения см. в статье о [подготовке подписок и предупреждений для приложений служб SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md) .  
   
 
@@ -238,14 +238,14 @@ ms.locfileid: "72798347"
 
   
 ### <a name="add-reporting-services-content-types"></a>Добавление типов содержимого служб Reporting Services  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]предоставляет предопределенные типы содержимого, используемые для управления файлами общих источников данных (RSDS), моделей отчетов (SMDL) и построитель отчетов RDL-файлов. После добавления в библиотеку типов содержимого **Отчет построителя отчетов**, **Модель отчета**и **Источник данных отчета** становится доступной команда **Создать** , позволяющая создавать новые документы этих типов. Дополнительные сведения см. в разделе [Добавление типов содержимого сервера отчетов в библиотеку &#40;Reporting Services в режиме интеграции с SharePoint&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] обеспечивают стандартные типы содержимого, предназначенные для управления файлами общих источников данных (RSDS), моделей отчетов (SMDL) и определений отчетов (RDL) построителя отчетов. После добавления в библиотеку типов содержимого **Отчет построителя отчетов**, **Модель отчета**и **Источник данных отчета** становится доступной команда **Создать** , позволяющая создавать новые документы этих типов. Дополнительные сведения см. в разделе [Добавление типов содержимого сервера отчетов в библиотеку &#40;Reporting Services в режиме интеграции с SharePoint&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 
   
 ### <a name="activate-the-file-sync-feature"></a>Активация функции синхронизации файлов  
- Если пользователи часто передают элементы опубликованных отчетов непосредственно в библиотеки документов SharePoint, может оказаться полезной функция синхронизации файлов сервера отчетов. Функция синхронизации файлов позволяет синхронизировать каталог сервера отчетов с элементами библиотек документов на более регулярной основе. Дополнительные сведения см. в статье [активировать функции синхронизации файлов сервера отчетов в центре администрирования SharePoint](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
+ Если пользователи часто передают элементы опубликованных отчетов непосредственно в библиотеки документов SharePoint, может оказаться полезной функция синхронизации файлов сервера отчетов. Функция синхронизации файлов позволяет синхронизировать каталог сервера отчетов с элементами библиотек документов на более регулярной основе. Дополнительные сведения см. [в разделе Активация компонента синхронизация файлов сервера отчетов в центре администрирования SharePoint](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Командлеты PowerShell для Reporting Services режиме SharePoint](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
  [Функции, поддерживаемые различными выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
- [Reporting Services службы SharePoint и приложений служб](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  
+ [Служба SharePoint и Служебные приложения службы Reporting Services](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  

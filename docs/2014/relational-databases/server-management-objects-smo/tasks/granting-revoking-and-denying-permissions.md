@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6c64c70965d00967e0cac254cf4d26f6ce25ec5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72796790"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Предоставление, отмена и запрет разрешений
@@ -252,4 +252,4 @@ foreach ( $spi in $spis)
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Иерархия разрешений &#40;ядро СУБД&#41;](../../security/permissions-hierarchy-database-engine.md)  
+ [Иерархия разрешений (компонент Database Engine)](../../security/permissions-hierarchy-database-engine.md)  

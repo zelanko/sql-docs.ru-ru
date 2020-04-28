@@ -23,23 +23,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd5575c94c9a74623efaa80c9470c54982a41d0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783111"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>Использование командлетов компонента Database Engine
   Командлеты Windows PowerShell представляют собой команды из одной функции, в именах которых, как правило, используется соглашение об именовании "глагол-существительное", например **Get-Help** или **Set-MachineName**. Поставщик [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для Windows PowerShell предоставляет командлеты, относящиеся к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="database-engine-cmdlets"></a>Командлеты Database Engine  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] реализовано небольшое количество командлетов для компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. Эти командлеты в основном используются для запуска существующих скриптов Transact-SQL из новых скриптов PowerShell, оценки политик управления на основе политик и помощи в задании идентификаторов SQL Server в путях поставщика SQL Server.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] реализовано небольшое количество командлетов для компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. Эти командлеты в основном используются для запуска существующих скриптов Transact-SQL из новых скриптов PowerShell, оценки политик управления на основе политик и помощи в задании идентификаторов SQL Server в путях поставщика SQL Server.  
   
  Большинство скриптов Windows PowerShell работают с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)] , используя поставщик SQL Server PowerShell и объектные модели управляемости SQL Server. Подробные сведения см. в статье [SQL Server PowerShell](../powershell/sql-server-powershell.md).  
   
 ### <a name="get-cmdlet-help"></a>Получение справки по командлету  
- В среде Windows PowerShell справочные сведения о каждом командлете можно получить с помощью командлета **Get-Help** . **Get-Help** возвращает такие сведения, как синтаксис, определения параметров, типы входных и выходных данных, а также описание действия, выполняемого командлетом. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+ В среде Windows PowerShell справочные сведения о каждом командлете можно получить с помощью командлета **Get-Help** . Командлет**Get-Help** возвращает такую информацию, как синтаксис, определения параметров, типы входных и выходных данных, а также описание действий, выполняемых командлетом. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
   
 ### <a name="partial-parameter-names"></a>Частичные имена параметров  
  Полное имя параметра командлета указывать не обязательно. Необходимо только указать достаточную часть имени, чтобы уникально отделить его от других параметров, поддерживаемых данным командлетом. В следующих примерах показано три способа задания параметра **Invoke-Sqlcmd -QueryTimeout** :  
@@ -60,7 +59,7 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
 |Описывает использование `Convert-UrnToPath` для преобразования универсального имени ресурса (URN) объекта управляемости SQL Server в эквивалентный путь поставщика SQL Server.|[Преобразование URNs в пути поставщика SQL Server](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)|  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server PowerShell, поставщик](../powershell/sql-server-powershell-provider.md)   
+ [Поставщик SQL Server PowerShell](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
  [Общие сведения о командлетах PowerShell для группы доступности AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   

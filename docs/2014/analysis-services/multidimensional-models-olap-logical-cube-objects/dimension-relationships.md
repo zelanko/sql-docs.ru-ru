@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c56cd6ee0e2a52ca523a9273e3c705eab2540191
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797619"
 ---
 # <a name="dimension-relationships"></a>Связи измерений
@@ -84,6 +84,6 @@ ms.locfileid: "72797619"
  Дополнительные сведения о связях "многие ко многим" см. в разделе Определение связи "многие ко многим" [и свойства связи "многие ко](../multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)многим".  
   
 ## <a name="see-also"></a>См. также:  
- [Измерения &#40;Analysis Services многомерных данных&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Измерения (службы Analysis Services — многомерные данные)](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

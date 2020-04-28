@@ -13,10 +13,10 @@ ms.assetid: 92323972-7943-4208-bbf4-050774fb6027
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 21ca5f7039b11b30c11a0fb707f6b6e89244bae2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73658916"
 ---
 # <a name="understanding-the-wmi-provider-for-configuration-management"></a>Основные сведения о поставщике WMI для управления конфигурацией
@@ -28,10 +28,10 @@ ms.locfileid: "73658916"
  Получение экземпляра  
  Получение экземпляра определенного типа класса.  
   
- Перечисление.  
+ Перечисление  
  Перечисление всех экземпляров типа класса.  
   
- Изменения  
+ Изменение  
  Изменение определенного экземпляра типа класса.  
   
  Классы содержат методы, позволяющие изменять их свойства.  

@@ -20,10 +20,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: ca6e7485e85665f06c2410438b902fa0647418ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73593751"
 ---
 # <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
@@ -69,9 +69,9 @@ sp_enclave_send_keys
 EXEC sp_enclave_send_keys;  
 ```
 
-## <a name="see-also"></a>См. также раздел
-- [Always Encrypted с безопасными анклавами.](../security/encryption/always-encrypted-enclaves.md) 
+## <a name="see-also"></a>См. также
+- [Always Encrypted с безопасными анклавами](../security/encryption/always-encrypted-enclaves.md) 
  
-- [Создание и использование индексов в столбцах с помощью Always Encrypted с Secure енклавес](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)
+- [Создание и использование индексов в столбцах с помощью Always Encrypted с безопасными анклавами](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)
 
 - [Учебник. Создание и использование индексов в столбцах с поддержкой анклава с использованием случайного шифрования](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

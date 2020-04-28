@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797777"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Устранение неполадок служебной программы SQL Server
@@ -166,4 +166,4 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 ## <a name="see-also"></a>См. также:  
  [Функции и задачи служебная программа SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Устранение неполадок SQL Server Работоспособность ресурсов &#40;служебная программа SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)
+ [Устранение неполадок исправности ресурсов SQL Server (служебная программа SQL Server)](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

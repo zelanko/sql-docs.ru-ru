@@ -13,10 +13,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 6e77239d019cb51e66a34a3a5b909e01c28a7faa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73633438"
 ---
 # <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys. dm_workload_management_workload_groups_stats (Transact-SQL)
@@ -24,10 +24,10 @@ ms.locfileid: "73633438"
 
 Возвращает статистику группы рабочей нагрузки и действующие значения группы рабочей нагрузки в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
-|Имя столбца|Тип данных|Description|Диапазонный индекс|  
+|Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |group_id|**int**|Уникальный идентификатор группы рабочей нагрузки.||
-|name|**имеет sysname**|Имя группы рабочей нагрузки.||
+|name|**sysname**|Имя группы рабочей нагрузки.||
 |statistics_start_time|**datetime**|Время начала сбора статистики для группы рабочей нагрузки.  Значение задается либо при создании группы рабочей нагрузки, либо при приостановке или изменении экземпляра.||
 |total_request_count|**bigint**|Совокупное количество выполненных запросов в группе рабочей нагрузки.||
 |total_shared_resource_reqeusts|**bigint**|Совокупное число завершенных запросов в группе рабочей нагрузки, которые использовали ресурсы из общего пула.||
@@ -39,6 +39,6 @@ ms.locfileid: "73633438"
 |effective_request_max_resource_grant_percent|**Decimal (5, 2)**|Эффективное значение времени выполнения для request_max_resource_grant_percent группы рабочей нагрузки, учитывая конфигурацию всех групп рабочей нагрузки.||
 |||||
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
  [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

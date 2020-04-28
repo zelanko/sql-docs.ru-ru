@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632739"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Использование помощника по обновлению для подготовки к обновлениям
@@ -56,14 +56,13 @@ ms.locfileid: "73632739"
 >  Отчеты могут содержать элемент «другие проблемы обновления». Этот элемент содержит ссылку на список проблем, которые не были обнаружены помощником по обновлению, но могут присутствовать на сервере или в приложениях. Необходимо просмотреть этот список и определиться с изменениями, которые необходимо произвести на сервере или в приложениях для исправления этих ошибок.  
   
 ## <a name="how-to-install-and-run-upgrade-advisor"></a>Установка и запуск помощника по обновлению  
- Место установки помощника по обновлению [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зависит от того, что именно необходимо проанализировать. Помощник по обновлению поддерживает удаленный анализ всех поддерживаемых компонентов, за исключением служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Если просмотр экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не производится, помощник по обновлению может быть установлен на любой компьютер, который способен подключаться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и удовлетворяет требованиям к установке помощника по обновлению. Дополнительные сведения см. в разделе [поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Для просмотра экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]следует установить помощник по обновлению на сервер отчетов.  
+ Место установки помощника по обновлению [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зависит от того, что именно необходимо проанализировать. Помощник по обновлению поддерживает удаленный анализ всех поддерживаемых компонентов, за исключением служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Если просмотр экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не производится, помощник по обновлению может быть установлен на любой компьютер, который способен подключаться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и удовлетворяет требованиям к установке помощника по обновлению. Дополнительные сведения см. в статье [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Для просмотра экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]следует установить помощник по обновлению на сервер отчетов.  
   
  Советник по переходу доступен в пакете дополнительных компонентов.  
   
  Ниже перечислены предварительные условия для установки и запуска помощника по обновлению.  
   
--   
-  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2), Windows 7 с пакетом обновления 1 (SP1) и [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1).  
+-   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2), Windows 7 с пакетом обновления 1 (SP1) и [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1).  
   
 -   Установщик Windows Installer, начиная с версии 4.5. Установщик Windows можно установить с [веб-сайта установщик Windows](https://www.microsoft.com/download/details.aspx?id=8483).  
   

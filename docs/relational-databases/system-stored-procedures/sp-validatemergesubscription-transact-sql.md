@@ -16,10 +16,10 @@ ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 932a54323ad8f6ffafbe8ff8f4a7f3c2dc58b0e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632988"
 ---
 # <a name="sp_validatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
@@ -48,11 +48,11 @@ sp_validatemergesubscription [@publication=] 'publication'
   
 `[ @level = ] 'level'`Тип выполняемой проверки. *Level* имеет тип **tinyint**и не имеет значения по умолчанию. Уровень может быть одним из значений.  
   
-|Значение уровня|Description|  
+|Значение уровня|Описание|  
 |-----------------|-----------------|  
 |**1**|Проверка достоверности только количества строк.|  
 |**2**|Проверка по количеству строк и контрольной сумме.|  
-|**3-5**|Проверка достоверности по количеству строк и двоичной контрольной сумме.|  
+|**3**|Проверка достоверности по количеству строк и двоичной контрольной сумме.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

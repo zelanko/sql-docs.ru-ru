@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797809"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Перемещение путей SQL Server PowerShell
@@ -25,13 +25,13 @@ ms.locfileid: "72797809"
   
  Поставщик [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] реализует подмножество командлетов поставщика, приведенных в следующей таблице.  
   
-|командлет|Канонический псевдоним|Псевдоним командной строки|Псевдоним оболочки UNIX|Description|  
+|командлет|Канонический псевдоним|Псевдоним командной строки|Псевдоним оболочки UNIX|Описание|  
 |------------|---------------------|---------------|----------------------|-----------------|  
-|**Get-Location**|**gl**|**pwd**|**pwd**|Возвращает текущий узел.|  
+|**Get-Location**|**gl**|**PWD**|**PWD**|Возвращает текущий узел.|  
 |`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|Изменяет текущий узел.|  
-|**Get-ChildItem**|**gci**|**dir**|**ls**|Перечисляет объекты, хранящиеся в текущем узле.|  
+|**Get-ChildItem**|**gci**|**dir**|**Местоположение**|Перечисляет объекты, хранящиеся в текущем узле.|  
 |**Get-Item**|**gi**|||Возвращает свойства текущего элемента.|  
-|**Rename-Item**|**rni**|**rn**|**ren**|Переименовывает объект.|  
+|**Rename-Item**|**rni**|**RN**|**ren**|Переименовывает объект.|  
 |**Remove-Item**|**ri**|**del, rd**|**rm, rmdir**|Удаляет объект.|  
   
 > [!IMPORTANT]  
@@ -44,7 +44,7 @@ ms.locfileid: "72797809"
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|Возвращает имя локального компьютера. Если соединения с экземплярами компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] на других компьютерах устанавливалось с помощью объектов SMO или инструментария WMI, также будут приведены имена этих компьютеров.|  
 |SQLSERVER:\SQL\\*ИмяКомпьютера*|Список экземпляров компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] на компьютере.|  
-|SQLSERVER:\SQL\\*ИмяКомпьютера*\\*ИмяЭкземпляра*|Список типов объектов верхнего уровня в экземпляре, таких как «Конечные точки», «Сертификаты» и «Базы данных».|  
+|SQLServer: \ SQL\\*ComputerName*\\*имя_экземпляра*|Список типов объектов верхнего уровня в экземпляре, таких как «Конечные точки», «Сертификаты» и «Базы данных».|  
 |Узел класса объектов, например «Базы данных»|Список объектов этого типа, например список баз данных: master, model, AdventureWorks20008R2.|  
 |Узел имени объекта, например AdventureWorks2012|Список типов объектов, содержащихся в этом объекте. Например, для базы данных будет выведен список типов объектов, таких как таблицы и представления.|  
   
@@ -131,7 +131,7 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server PowerShell, поставщик](sql-server-powershell-provider.md)   
- [Работа с  путями SQL Server PowerShell](work-with-sql-server-powershell-paths.md)   
- [Преобразование универсальных имен ресурса в пути поставщика SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
+ [Поставщик SQL Server PowerShell](sql-server-powershell-provider.md)   
+ [Работа с путями SQL Server PowerShell](work-with-sql-server-powershell-paths.md)   
+ [Преобразование URN в пути поставщика SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

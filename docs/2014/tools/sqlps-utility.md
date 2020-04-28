@@ -14,18 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ff96b99ee7982be89126e79687dbc8a2215f42f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798144"
 ---
 # <a name="sqlps-utility"></a>программа sqlps
   Программа `sqlps` запускает сеанс Windows PowerShell 2.0 с помощью поставщика [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell, а также загруженных и зарегистрированных командлетов. Можно вводить команды или скрипты PowerShell, в которых используются компоненты [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell для работы с экземплярами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и их объектами.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте модуль `sqlps` PowerShell. Дополнительные сведения о `sqlps` модуле см. в разделе [Импорт модуля sqlps](../database-engine/import-the-sqlps-module.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте модуль `sqlps` PowerShell. Дополнительные сведения о `sqlps` модуле см. в разделе [Импорт модуля sqlps](../database-engine/import-the-sqlps-module.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -108,7 +107,7 @@ ms.locfileid: "72798144"
 sqlps -NoLogo  
 ```  
   
-### <a name="b-run-a-sql-server-powershell-script-from-the-command-prompt"></a>Б. Запуск скрипта SQL Server PowerShell из командной строки
+### <a name="b-run-a-sql-server-powershell-script-from-the-command-prompt"></a>Б) Запуск скрипта SQL Server PowerShell из командной строки
   
 ```cmd
 sqlps -Command "&{.\MyFolder.MyScript.ps1}"  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 042bc1cfe2ccf09580d052b1a4bc045d03fc81ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72796838"
 ---
 # <a name="implementing-endpoints"></a>Реализация конечных точек
@@ -112,4 +112,4 @@ $ep.EndpointState;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server &#40;конечной точки зеркального отображения базы данных&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
+ [Конечная точка зеркального отображения базы данных (SQL Server)](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  

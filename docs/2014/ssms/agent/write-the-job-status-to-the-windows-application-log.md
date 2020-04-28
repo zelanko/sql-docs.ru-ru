@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ec615911233227c15f43e55125adfd6166cb51e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783372"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
@@ -46,16 +46,16 @@ ms.locfileid: "72783372"
   
      [Управляющие объекты SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
  Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-write-job-status-to-the-windows-application-log"></a>Запись данных о состоянии задания в журнал приложений Windows  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]и разверните его.  
+1.  В **обозревателе объектов** подключитесь к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и разверните его.  
   
 2.  Разверните узел **Агент SQL Server**, выберите раздел **Задания**, щелкните правой кнопкой мыши задание, которое нужно изменить, и выберите пункт **Свойства**.  
   
@@ -63,16 +63,13 @@ ms.locfileid: "72783372"
   
 4.  Установите флажок **Запись в журнал событий приложений Windows**, а затем выберите:  
   
-    -   
-  **При успешном завершении задания**для регистрации успешных завершений задания.  
+    -   **При успешном завершении задания**для регистрации успешных завершений задания.  
   
-    -   
-  **При ошибке задания**для регистрации завершений задания с ошибками.  
+    -   **При ошибке задания**для регистрации завершений задания с ошибками.  
   
-    -   
-  **При завершении задания** для регистрации любых состояний завершения задания.  
+    -   **При завершении задания** для регистрации любых состояний завершения задания.  
   
-##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Использование управляющие объекты SQL Server  
 
 ### <a name="to-write-job-status-to-the-windows-application-log"></a>Запись данных о состоянии задания в журнал приложений Windows
   

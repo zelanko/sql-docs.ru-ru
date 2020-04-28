@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 58b3f3315309a734a22e2732af5207b64e2f0a9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632925"
 ---
 # <a name="sysworkload_management_workload_classifier_details-transact-sql"></a>sys. workload_management_workload_classifier_details (Transact-SQL)
@@ -25,11 +25,11 @@ ms.locfileid: "73632925"
 
   Возвращает сведения для каждого классификатора.  
   
-|Имя столбца|Тип данных|Description|Диапазонный индекс|  
+|Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|Идентификатор классификатора.  Не допускает значение NULL.|
-|classifier_type|**имеет sysname**|Присоединение к [sys. workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md).|`membername`</br>`wlm_label`</br>`wlm_context`</br>`start_time`</br>`end_time`|
-|classifier_value|**имеет sysname**|Значение классификатора. Не допускает значение NULL.||
+|classifier_type|**sysname**|Присоединение к [sys. workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md).|`membername`</br>`wlm_label`</br>`wlm_context`</br>`start_time`</br>`end_time`|
+|classifier_value|**sysname**|Значение классификатора. Не допускает значение NULL.||
 
 ## <a name="permissions"></a>Разрешения
 

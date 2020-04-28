@@ -20,10 +20,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5875ad2268e14d6bbe276ea437c5ee201867105e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632770"
 ---
 # <a name="upgrade-advisor-prerequisites"></a>Компоненты, необходимые для помощника по обновлению
@@ -32,8 +32,7 @@ ms.locfileid: "73632770"
 ## <a name="prerequisites"></a>Предварительные требования  
  Ниже перечислены предварительные условия для установки и запуска помощника по обновлению.  
   
--   
-  [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] с пакетом обновления 1 (SP1), [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], начиная с версии с пакетом обновления 2 (SP2), Windows 7 или [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] R2.  
+-   [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] с пакетом обновления 1 (SP1), [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], начиная с версии с пакетом обновления 2 (SP2), Windows 7 или [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] R2.  
   
 -   Установщик Windows 4.5. Установщик Windows можно установить с [веб-сайта установщик Windows](https://www.microsoft.com/download/details.aspx?id=8483).  
   

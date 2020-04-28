@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 76b5b09a07189db127c970e75dac2894fdbea1ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73633448"
 ---
 # <a name="sysworkload_management_workload_groups-transact-sql"></a>sys. workload_management_workload_groups (Transact-SQL)
@@ -26,11 +26,11 @@ ms.locfileid: "73633448"
 
  Возвращает сведения о группах рабочей нагрузки.  
   
-|Имя столбца|Тип данных|Description|Диапазонный индекс|  
+|Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|
 |group_id|**int**|Уникальный идентификатор группы рабочей нагрузки. Не допускает значение NULL.||
-|name|**имеет sysname**|Имя группы рабочей нагрузки. Должен быть уникальным для экземпляра.  Не допускает значение NULL.||
-|importance|**nvarchar(128**|— Это относительная важность запроса в этой группе рабочей нагрузки и в группах рабочей нагрузки для общих ресурсов. Не допускает значение NULL.|Low, below_normal, обычная (по умолчанию), above_normal, High||
+|name|**sysname**|Имя группы рабочей нагрузки. Должен быть уникальным для экземпляра.  Не допускает значение NULL.||
+|importance|**nvarchar(128)**|— Это относительная важность запроса в этой группе рабочей нагрузки и в группах рабочей нагрузки для общих ресурсов. Не допускает значение NULL.|Low, below_normal, обычная (по умолчанию), above_normal, High||
 |min_percentage_resource|**tinyint**|Гарантированный объем ресурсов для запросов в группе рабочей нагрузки. Ресурсы не используются совместно с другими группами рабочей нагрузки. Не допускает значение NULL.||
 |cap_percentage_resource|**tinyint**|Жесткое ограничение выделения ресурсов в процентах для запросов в группе рабочей нагрузки. Ограничивает максимальное количество ресурсов, выделенных для указанного уровня. Диапазон допустимых значений — от 1 до 100.||
 |request_min_resource_grant_percent|**Decimal (5, 2)**|Указывает минимальный объем ресурсов, выделенных запросу. Допустимый диапазон значений — от 0,75 до 100.||

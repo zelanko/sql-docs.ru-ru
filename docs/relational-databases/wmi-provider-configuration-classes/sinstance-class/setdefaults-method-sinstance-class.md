@@ -18,10 +18,10 @@ ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3edec1ccd74e59a8bb79353e02939030bf43ce8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659086"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>Метод SetDefaults (класс SInstance)
@@ -36,12 +36,12 @@ object.SetDefaults(OverwriteAll)
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объектами*  
+ *object*  
  Объект [класса Класс SInstance](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) , представляющий экземпляр сервера.  
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |*овервритеалл*|Логическое значение, указывающее, следует ли перезаписывать существующее значение на экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] клиента: **true** , если существующие данные перезаписаны, или **значение false** , если существующие данные не перезаписываются.|  
   

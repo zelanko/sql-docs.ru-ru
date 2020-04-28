@@ -16,33 +16,32 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 524f9d4b3173a70d3491f2efc0f00f4061c4d6b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797966"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)
-  Для размещения реплики доступности для группы доступности экземпляр сервера должен иметь конечную точку зеркального отображения базы данных. Экземпляр сервера использует эту конечную точку для прослушивания сообщений [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , получаемых от реплик доступности, размещенных на других экземплярах сервера. Чтобы определить реплику доступности для группы доступности, необходимо задать URL-адрес конечной точки экземпляра сервера, на котором размещена реплика. 
-  *URL-адрес конечной точки* определяет транспортный протокол конечной точки зеркального отображения базы данных — TCP, системный адрес экземпляра сервера и номер порта, связанный с конечной точкой.  
+  Для размещения реплики доступности для группы доступности экземпляр сервера должен иметь конечную точку зеркального отображения базы данных. Экземпляр сервера использует эту конечную точку для прослушивания сообщений [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , получаемых от реплик доступности, размещенных на других экземплярах сервера. Чтобы определить реплику доступности для группы доступности, необходимо задать URL-адрес конечной точки экземпляра сервера, на котором размещена реплика. *URL-адрес конечной точки* определяет транспортный протокол для конечной точки зеркального отображения базы данных — TCP, системный адрес экземпляра сервера и номер порта, связанного с конечной точкой.  
   
 > [!NOTE]  
 >  Термин «URL-адрес конечной точки» является синонимом термина «сетевой адрес сервера», используемого в интерфейсе и документации по зеркальному отображению баз данных.  
   
 -   [Синтаксис для URL-адреса конечной точки](#SyntaxOfURL)  
   
--   [Поиск полного доменного имени системы](#Finding_FQDN)  
+-   [Определение полного доменного имени системы](#Finding_FQDN)  
   
 -   [Связанные задачи](#RelatedTasks)  
   
--   [Связанное содержимое](#RelatedContent)  
+-   [См. также](#RelatedContent)  
   
-##  <a name="SyntaxOfURL"></a>Синтаксис для URL-адреса конечной точки  
+##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a> Синтаксис для URL-адреса конечной точки  
  Синтаксис URL-адреса конечной точки имеет следующую форму:  
   
  TCP<strong>://</strong>*\<системный адрес>* <strong>:</strong>*\<порт>*  
   
- , где  
+ where  
   
 -   >системных адресов — это строка, однозначно идентифицирующая целевой компьютер. * \<* Обычно сетевой адрес представляет собой системное имя (если компьютеры входят в один домен), полное доменное имя или IP-адрес.  
   
@@ -54,9 +53,9 @@ ms.locfileid: "72797966"
   
     -   При указании полного доменного имени гарантируется правильная работа. Это локально определенная строка адреса, которая имеет различную форму в разных местах. Часто, но не всегда полное доменное имя представляет собой составное имя, состоящее из имени компьютера и нескольких компонентов доменов, разделенных точками, в следующем виде:  
   
-         _computer_name_ **.** _domain_segment_[... **.** _domain_segment_]  
+         _имя_компьютера_ **.** _компонент_домена_[...**.**_компонент_домена_]  
   
-         где *computer_name i*— сетевое имя компьютера, на котором работает экземпляр сервера, и *domain_segment*[... **.** _domain_segment_] — Это оставшаяся информация о домене сервера; Например: `localinfo.corp.Adventure-Works.com`.  
+         где *имя_компьютера*— сетевое имя компьютера, на котором запущен экземпляр сервера, а *сегмент_домена*[...**.**_сегмент_домена_] — остальные сведения о домене для сервера, например `localinfo.corp.Adventure-Works.com`.  
   
          Содержание и количество доменных сегментов определяется компанией или организацией. Дополнительные сведения см. в подразделе [Определение полного доменного имени](#Finding_FQDN)далее в этом разделе.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "72797966"
   
  `TCP://SYSTEM46:7022`  
   
-#### <a name="b-using-a-fully-qualified-domain-name"></a>Б. Использование полного доменного имени  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>Б) Использование полного доменного имени  
  В следующем URL-адресе конечной точки определено полное доменное имя `DBSERVER8.manufacturing.Adventure-Works.com`и порт `7024`.  
   
  `TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024`  
@@ -98,14 +97,14 @@ ms.locfileid: "72797966"
   
  `TCP://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022`  
   
-##  <a name="Finding_FQDN"></a>Поиск полного доменного имени системы  
+##  <a name="finding-the-fully-qualified-domain-name-of-a-system"></a><a name="Finding_FQDN"></a>Поиск полного доменного имени системы  
  Чтобы определить полное доменное имя системы, введите следующую команду в командной строке Windows:  
   
- **IPCONFIG/ALL**  
+ **IPCONFIG /ALL**  
   
  Чтобы сформировать полное доменное имя, следует сцепить значения *<имя_узла>* и *<основной_DNS_суффикс>* следующим образом:  
   
- _>host_name<_ **.** _<Primary_Dns_Suffix>_  
+ _<имя_узла>_ **.** _<основной_DNS_суффикс>_  
   
  Например, следующая конфигурация IP:  
   
@@ -120,38 +119,38 @@ ms.locfileid: "72797966"
 > [!NOTE]  
 >  Более подробные сведения о полном доменном имени можно получить у системного администратора.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Настройка конечной точки зеркального отображения базы данных**  
   
 -   [Создание конечной точки зеркального отображения базы данных для группы доступности AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [Создание конечной точки зеркального отображения базы данных для проверки подлинности Windows &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Использование сертификатов для конечной точки зеркального отображения базы данных &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [Разрешить использование сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
+    -   [Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [Разрешить использование сертификатов для входящих соединений в конечной точке зеркального отображения базы данных &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
+    -   [Включение использования сертификатов для входящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Укажите сетевой адрес сервера &#40;зеркальное отображение базы данных&#41;](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
+-   [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
 -   [Устранение неполадок &#40;конфигурации группы доступности AlwaysOn SQL Server&#41;Deleted](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
  **Просмотр сведений о конечной точке зеркального отображения базы данных**  
   
--   [sys. database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
+-   [sys.database_mirroring_endpoints (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
  **Добавление реплики доступности**  
   
--   [Добавление вторичной реплики в группу доступности &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [Добавление вторичной реплики к группе доступности (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [Присоединение вторичной реплики к группе доступности &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [Присоединение вторичной реплики к группе доступности (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>См. также:  
  [Создание и Настройка групп доступности &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [&#41;создания КОНЕЧНОЙ точки &#40;Transact-SQL](/sql/t-sql/statements/create-endpoint-transact-sql)  
+ [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql)  

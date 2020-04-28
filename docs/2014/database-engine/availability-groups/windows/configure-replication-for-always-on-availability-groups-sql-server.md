@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b70684a74677437d0491e1fc724c832bb7e0a67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797702"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Настройка репликации для групп доступности AlwaysOn (SQL Server)
   Настройка репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и групп доступности AlwaysOn включает в себя семь шагов. Каждый шаг более подробно описывается в следующих разделах.  
 
-##  <a name="step1"></a>1. Настройка публикаций и подписок баз данных  
+##  <a name="1-configure-the-database-publications-and-subscriptions"></a><a name="step1"></a>1. Настройка публикаций и подписок баз данных  
 
 ### <a name="configure-the-distributor"></a>Настройка распространителя
   
@@ -95,7 +95,7 @@ ms.locfileid: "72797702"
   
 3.  Создайте публикацию, статьи и подписки репликации. Дополнительные сведения о том, как настроить репликацию, см. в разделе «Публикация данных и объектов базы данных».  
   
-##  <a name="step2"></a>2. Настройка группы доступности AlwaysOn  
+##  <a name="2-configure-the-alwayson-availability-group"></a><a name="step2"></a>2. Настройка группы доступности AlwaysOn  
  В будущей первичной реплике создайте группу доступности с опубликованной (или которой предстоит публикация) базой данных в качестве базы данных-участника. При использовании мастера группы доступности можно либо разрешить мастеру выполнить первоначальную синхронизацию базы данных вторичной реплики, либо выполнить инициализацию вручную при помощи резервного копирования и восстановления.  
   
  Создайте прослушиватель DNS для группы доступности, которая будет использоваться агентами репликации для подключения к текущей первичной реплике. Указанное имя прослушивателя будет использоваться в качестве цели перенаправления для первоначального издателя и опубликованной базы данных. Например, если настройка группы доступности выполняется с помощью языка DDL, можно использовать следующий пример кода, чтобы указать прослушиватель для существующей группы доступности с именем `MyAG`:  
@@ -107,7 +107,7 @@ ALTER AVAILABILITY GROUP 'MyAG'
   
  Дополнительные сведения см. в статье [Создание и настройка групп доступности (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md).  
   
-##  <a name="step3"></a>3. Убедитесь, что все узлы вторичной реплики настроены для репликации.  
+##  <a name="3-insure-that-all-of-the-secondary-replica-hosts-are-configured-for-replication"></a><a name="step3"></a>3. Убедитесь, что все узлы вторичной реплики настроены для репликации.  
  На каждом узле вторичной реплики убедитесь, что служба [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] настроена для поддержки репликации. Следующий запрос можно запустить на каждом узле вторичной реплики, чтобы определить, установлена ли репликация:  
   
 ```sql
@@ -120,7 +120,7 @@ SELECT @installed;
   
  Если *@installed* значение равно 0, то [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] репликация должна быть добавлена в установку.  
   
-##  <a name="step4"></a>4. Настройка узлов вторичной реплики в качестве издателей репликации  
+##  <a name="4-configure-the-secondary-replica-hosts-as-replication-publishers"></a><a name="step4"></a>4. Настройка узлов вторичной реплики в качестве издателей репликации  
  Вторичная реплика не может выступать в роли издателя репликации или переиздающего подписчика, однако репликацию необходимо настроить так, чтобы вторичная реплика могла взять на себя нагрузку после отработки отказа. На распространителе настройте распространение для каждого узла вторичной реплики. Укажите ту же базу данных распространителя и рабочий каталог, что и при добавлении первоначального издателя к распространителю. При использовании хранимых процедур для настройки распространения примените `sp_adddistpublisher` для связи удаленных издателей с распространителем. Если *@login* и *@password* использовались для первоначального издателя, укажите одинаковые значения для каждого при добавлении узлов вторичной реплики в качестве издателей.  
   
 ```sql
@@ -147,7 +147,7 @@ EXEC sys.sp_addlinkedserver
     @server = 'MySubscriber';  
 ```  
   
-##  <a name="step5"></a>5. Перенаправление исходного издателя в имя прослушивателя группы доступности  
+##  <a name="5-redirect-the-original-publisher-to-the-ag-listener-name"></a><a name="step5"></a>5. Перенаправление исходного издателя в имя прослушивателя группы доступности  
  На распространителе, в базе данных распространителя, запустите хранимую процедуру `sp_redirect_publisher`, чтобы связать первоначального издателя и опубликованную базу данных с именем прослушивателя группы доступности.  
   
 ```sql
@@ -159,7 +159,7 @@ EXEC sys.sp_redirect_publisher
     @redirected_publisher = 'MyAGListenerName';  
 ```  
   
-##  <a name="step6"></a>6. запуск хранимой процедуры проверки репликации для проверки конфигурации  
+##  <a name="6-run-the-replication-validation-stored-procedure-to-verify-the-configuration"></a><a name="step6"></a>6. запуск хранимой процедуры проверки репликации для проверки конфигурации  
  На распространителе в базе данных распространителя запустите хранимую процедуру `sp_validate_replica_hosts_as_publishers` для проверки настройки всех узлов реплики для работы в качестве издателей опубликованной базы данных.  
   
 ```sql
@@ -185,10 +185,10 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
  Это ожидаемое поведение. Необходимо проверить наличие записей сервера подписчика на данных узлах вторичной реплики, выполнив запрос записей sysserver непосредственно на узле.  
   
-##  <a name="step7"></a>7. Добавление первоначального издателя в монитор репликации  
+##  <a name="7-add-the-original-publisher-to-replication-monitor"></a><a name="step7"></a> 7. Добавление первоначального издателя в монитор репликации  
  В каждой реплике группы доступности добавьте оригинального издателя в монитор репликации.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Репликация**  
   
 -   [Обслуживание базы данных публикации AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
@@ -199,23 +199,23 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
  **Создание и настройка группы доступности**  
   
--   [Использование мастера групп доступности &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Использование мастера групп доступности (среда SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Используйте диалоговое окно Создание группы доступности &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Использование диалогового окна "Создание группы доступности" (среда SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [Создание группы доступности &#40;&#41;Transact-SQL](create-an-availability-group-transact-sql.md)  
+-   [Создание группы доступности (Transact-SQL)](create-an-availability-group-transact-sql.md)  
   
--   [Создание SQL Server PowerShell &#40;группы доступности&#41;](../../../powershell/sql-server-powershell.md)  
+-   [Создание группы доступности (SQL Server PowerShell)](../../../powershell/sql-server-powershell.md)  
   
--   [Укажите URL-адрес конечной точки при добавлении или изменении &#40;реплики доступности SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [Создание конечной точки зеркального отображения базы данных для группы доступности AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [Присоединение вторичной реплики к группе доступности &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [Присоединение вторичной реплики к группе доступности (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [Вручную Подготовьте базу данных-получатель для группы доступности &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   [Присоединение базы данных-получателя к группе доступности &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
+-   [Присоединение базы данных-получателя к группе доступности (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
 -   [Создание или настройка прослушивателя группы доступности (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)  
   
@@ -223,4 +223,4 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
  [Предварительные требования, ограничения и рекомендации для группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Группы доступности AlwaysOn: взаимодействие (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
- [Репликация SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
+ [Репликация SQL Server](../../../relational-databases/replication/sql-server-replication.md)  

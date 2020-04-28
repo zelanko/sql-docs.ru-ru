@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60a96db6a7568c2af22242f10f96e7a2abf13937
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637834"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Установка изолированной версии построителя отчетов (построитель отчетов)
@@ -109,11 +109,11 @@ ms.locfileid: "73637834"
   
 2.  Щелкните **пакет x86**.  
   
-3.  Щелкните Сохранить.  
+3.  Нажмите кнопку «Сохранить».  
   
 4.  При необходимости перейдите в расположение для сохранения, убедитесь, что выбран параметр **Сохранить как** **установщик Windows пакет**, а затем нажмите кнопку **сохранить**.  
   
-5.  В меню **Пуск** выберите команду **Выполнить**.  
+5.  В меню **Пуск** выберите пункт **Выполнить..**.  
   
 6.  В текстовом поле Открыть введите .`cmd.`  
   

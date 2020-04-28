@@ -18,10 +18,10 @@ ms.assetid: 73dfe0b7-0237-4d92-8161-9264a10a28a7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2bf2057156191cb45b3528e691d78630bb3aedf4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73658782"
 ---
 # <a name="sha-property-securitycertificate-class"></a>Свойство SHA (класс SecurityCertificate)
@@ -36,7 +36,7 @@ object.SHA [= value]
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объектами*  
+ *object*  
  Объект [класса SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) , представляющий сертификат безопасности.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  

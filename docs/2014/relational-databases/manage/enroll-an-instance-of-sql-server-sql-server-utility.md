@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798081"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Регистрация экземпляра SQL Server (служебная программа SQL Server)
@@ -86,17 +86,17 @@ ms.locfileid: "72798081"
   
 -   [Регистрация экземпляра SQL Server](#Enrolling)  
   
-##  <a name="Welcome"></a> Введение в мастер регистрации экземпляров  
+##  <a name="introduction-to-enroll-instance-wizard"></a><a name="Welcome"></a> Введение в мастер регистрации экземпляров  
  Чтобы запустить мастер, раскройте дерево обозревателя программ в пункте управления программой, щелкните правой кнопкой мыши узел **Управляемые экземпляры** и выберите команду **Добавить экземпляр...**  
   
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
-##  <a name="Instance_name"></a> Укажите экземпляр SQL Server  
+##  <a name="specify-the-instance-of-sql-server"></a><a name="Instance_name"></a> Укажите экземпляр SQL Server  
  Чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в диалоговом окне соединения, нажмите кнопку **Подключить...** . Введите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате "имя_компьютера\имя_экземпляра". Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
-##  <a name="Connection_dialog"></a> Диалоговое окно подключения  
+##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> Диалоговое окно подключения  
  Проверьте в диалоговом окне «Соединение с сервером» тип сервера, имя компьютера и сведения обо имени экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
 > [!NOTE]  
@@ -104,7 +104,7 @@ ms.locfileid: "72798081"
   
  Для продолжения нажмите кнопку **Подключить...** .  
   
-##  <a name="Proxy_configuration"></a> Учетная запись набора элементов сбора служебной программы  
+##  <a name="utility-collection-set-account"></a><a name="Proxy_configuration"></a> Учетная запись набора элементов сбора служебной программы  
  Укажите учетную запись домена Windows для выполнения набора элементов сбора служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эта учетная запись используется как учетная запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для набора элементов сбора служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно также использовать имеющуюся служебную учетную запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы требования проверки были удовлетворены, следуйте приведенным ниже рекомендациям по настройке учетной записи.  
   
  Если выбран вариант со служебной учетной записью службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -113,7 +113,7 @@ ms.locfileid: "72798081"
   
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
-##  <a name="Validation_rules"></a> Проверка экземпляра SQL Server  
+##  <a name="sql-server-instance-validation"></a><a name="Validation_rules"></a> Проверка экземпляра SQL Server  
  В этой версии для регистрации экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны соблюдаться следующие условия.  
   
 |Условие|Действие по исправлению|  
@@ -140,7 +140,7 @@ ms.locfileid: "72798081"
   
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
-##  <a name="Summary"></a> Сводка регистрации экземпляров  
+##  <a name="summary-of-instance-enrollment"></a><a name="Summary"></a> Сводка регистрации экземпляров  
  На странице со сводкой приведены сведения об экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , добавляемом в программу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Параметры управляемого экземпляра:  
@@ -151,7 +151,7 @@ ms.locfileid: "72798081"
   
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
-##  <a name="Enrolling"></a> Регистрация экземпляра SQL Server  
+##  <a name="enrolling-the-instance-of-sql-server"></a><a name="Enrolling"></a> Регистрация экземпляра SQL Server  
  На странице регистрации отображается состояние операции.  
   
 -   Подготовка экземпляра к регистрации.  
@@ -182,7 +182,7 @@ ms.locfileid: "72798081"
   
  Чтобы удалить управляемые экземпляры из служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на панели **Навигация обозревателя программ** выберите **Управляемые экземпляры** , чтобы заполнить представление списка управляемых экземпляров, в представлении списка на панели [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Содержимое обозревателя программ **щелкните правой кнопкой мыши имя экземпляра** и выберите команду **Удалить экземпляр из списка управляемых**.  
   
-##  <a name="PowerShell_enroll"></a> Регистрация экземпляра SQL Server с помощью PowerShell  
+##  <a name="enroll-an-instance-of-sql-server-using-powershell"></a><a name="PowerShell_enroll"></a> Регистрация экземпляра SQL Server с помощью PowerShell  
  В следующем примере показана регистрация экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в существующей служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ```powershell

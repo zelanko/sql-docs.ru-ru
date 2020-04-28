@@ -16,10 +16,10 @@ ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6b09069cb5289e28d978a4f3b3483e14e63cebb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632748"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
@@ -53,17 +53,17 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
   
 ## <a name="result-set"></a>Результирующий набор  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|destination_server|**имеет sysname**|Имя сервера, на который реплицируются изменения.|  
-|pub_name|**имеет sysname**|Имя публикации.|  
-|destination_db_name|**имеет sysname**|Название базы данных, к которой реплицируются изменения.|  
+|destination_server|**sysname**|Имя сервера, на который реплицируются изменения.|  
+|pub_name|**sysname**|Имя публикации.|  
+|destination_db_name|**sysname**|Название базы данных, к которой реплицируются изменения.|  
 |is_dest_subscriber|**bit**|Свидетельствует об изменениях, реплицируемых на подписчика. Значение **1** указывает, что изменения реплицируются на подписчик. значение **0** означает, что изменения реплицируются на издатель.|  
-|article_name|**имеет sysname**|Название статьи для таблицы, где были произведены изменения.|  
+|article_name|**sysname**|Название статьи для таблицы, где были произведены изменения.|  
 |pending_deletes|**int**|Число удалений, ожидающих репликации.|  
 |pending_ins_and_upd|**int**|Число вставок и обновлений, ожидающих репликации.|  
 |is_delete|**bit**|Указывает, является ли ожидающее изменение удалением. Значение **1** указывает на то, что изменение является удалением. Требуется значение **1** в параметре @show_rows.|  
-|rowguid|**UNIQUEIDENTIFIER**|Идентификатор GUID, который определяет измененную строку. Требуется значение **1** в параметре @show_rows.|  
+|rowguid|**uniqueidentifier**|Идентификатор GUID, который определяет измененную строку. Требуется значение **1** в параметре @show_rows.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -81,6 +81,6 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
  Только члены предопределенной роли сервера sysadmin или предопределенной роли базы данных db_owner могут выполнять процедуру sp_showpendingchanges.  
   
 ## <a name="see-also"></a>См. также:  
- [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   
