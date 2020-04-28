@@ -12,10 +12,10 @@ ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921085"
 ---
 # <a name="ado-dynamic-property-index"></a>Индекс динамических свойств ADO
@@ -38,8 +38,8 @@ ms.locfileid: "67921085"
 |Определение столбца|DBPROP_COLUMNDEFINITION|  
 |Время ожидания соединения|DBPROP_INIT_TIMEOUT|  
 |Текущий каталог|DBPROP_CURRENTCATALOG|  
-|источник данных|DBPROP_INIT_DATASOURCE|  
-|Имя источника данных|DBPROP_DATASOURCENAME|  
+|Источник данных|DBPROP_INIT_DATASOURCE|  
+|Имя базы данных-источника|DBPROP_DATASOURCENAME|  
 |Потоковая модель объекта источника данных|DBPROP_DSOTHREADMODEL|  
 |Имя СУБД|DBPROP_DBMSNAME|  
 |Версия СУБД|DBPROP_DBMSVER|  
@@ -51,7 +51,7 @@ ms.locfileid: "67921085"
 |Уровни изоляции|DBPROP_SUPPORTEDTXNISOLEVELS|  
 |Хранение изоляции|DBPROP_SUPPORTEDTXNISORETAIN|  
 |Идентификатор локали|DBPROP_INIT_LCID|  
-|Location|DBPROP_INIT_LOCATION|  
+|Расположение|DBPROP_INIT_LOCATION|  
 |Максимальный размер индекса|DBPROP_MAXINDEXSIZE|  
 |Максимальный размер строки|DBPROP_MAXROWSIZE|  
 |Максимальный размер строки включает большой двоичный объект|DBPROP_MAXROWSIZEINCLUDESBLOB|  
@@ -76,7 +76,7 @@ ms.locfileid: "67921085"
 |Поведение при подготовке к прерыванию|DBPROP_PREPAREABORTBEHAVIOR|  
 |Действие подготовки к фиксации|DBPROP_PREPARECOMMITBEHAVIOR|  
 |Условие процедуры|DBPROP_PROCEDURETERM|  
-|Prompt|DBPROP_INIT_PROMPT|  
+|prompt|DBPROP_INIT_PROMPT|  
 |Понятное имя поставщика|DBPROP_PROVIDERFRIENDLYNAME|  
 |Provider Name|DBPROP_PROVIDERFILENAME|  
 |Версия поставщика|DBPROP_PROVIDERVER|  
@@ -91,7 +91,7 @@ ms.locfileid: "67921085"
 |DDL транзакции|DBPROP_SUPPORTEDTXNDDL|  
 |Идентификатор пользователя.|DBPROP_AUTH_USERID|  
 |Имя пользователя|DBPROP_USERNAME|  
-|Маркер окна|DBPROP_INIT_HWND|  
+|Дескриптор окна|DBPROP_INIT_HWND|  
   
 ## <a name="recordset-dynamic-properties"></a>Динамические свойства набора записей  
  Обратите внимание, что **динамические свойства** объекта **Recordset** выходят за пределы области видимости (становятся недоступными) при закрытии **набора записей** .  

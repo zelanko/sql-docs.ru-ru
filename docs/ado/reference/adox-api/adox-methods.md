@@ -14,10 +14,10 @@ ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c96f28070fd06b48b4aeac40c3db6b8e7179830a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928548"
 ---
 # <a name="adox-methods"></a>Методы ADOX
@@ -32,8 +32,8 @@ ms.locfileid: "67928548"
 |[Append (таблицы)](../../../ado/reference/adox-api/append-method-adox-tables.md)|Добавляет новый объект **Table** в коллекцию **Tables** .|  
 |[Добавить (пользователей)](../../../ado/reference/adox-api/append-method-adox-users.md)|Добавляет новый объект **User** в коллекцию **пользователей** .|  
 |[Append (представления)](../../../ado/reference/adox-api/append-method-adox-views.md)|Добавляет новый объект **представления** в коллекцию **представлений** .|  
-|[Пароля](../../../ado/reference/adox-api/changepassword-method-adox.md)|Изменяет пароль для учетной записи пользователя.|  
-|[Создания](../../../ado/reference/adox-api/create-method-adox.md)|Создает новый каталог.|  
+|[ChangePassword;](../../../ado/reference/adox-api/changepassword-method-adox.md)|Изменяет пароль для учетной записи пользователя.|  
+|[Создать](../../../ado/reference/adox-api/create-method-adox.md)|Создает новый каталог.|  
 |[Удаление](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Удаляет объект из коллекции.|  
 |[Примеры методов getobjectowner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Возвращает владельца объекта в каталоге.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Возвращает разрешения для группы или пользователя на объекте.|  

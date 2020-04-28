@@ -16,10 +16,10 @@ ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22a8cd4bb8d1bdddbaaa68e92349d9c728557ac0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921465"
 ---
 # <a name="adcprop_asyncthreadpriority_enum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
@@ -27,7 +27,7 @@ ms.locfileid: "67921465"
   
  Используйте эти константы с динамическим свойством " **набор записей** "**приоритета фонового потока**", которое указывается в индексе динамического свойства ADO-to-OLE DB и описано в [службе курсора Майкрософт для OLE DBной](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) документации.  
   
-|Постоянно|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**адприоритябовенормал**|4|Устанавливает приоритет между обычным и высшим.|  
 |**адприоритибеловнормал**|2|Устанавливает приоритет между наименьшим и нормальным.|  
@@ -38,7 +38,7 @@ ms.locfileid: "67921465"
 ## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
  Пакет: **com. MS. WFC. Data**  
   
-|Постоянно|  
+|Константа|  
 |--------------|  
 |Адоенумс. Адкпропасинксреадприорити. ABOVENORMAL|  
 |Адоенумс. Адкпропасинксреадприорити. BELOWNORMAL|  

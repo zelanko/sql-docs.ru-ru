@@ -13,10 +13,10 @@ ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929392"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Параметры проекта (миграция) (Акцесстоскл)
@@ -38,7 +38,7 @@ ms.locfileid: "67929392"
   
 -   **Полный режим**: false  
   
-**Пожарные триггеры**  
+**Запускать триггеры**  
 Указывает, должен ли SSMA запускать триггеры вставки при добавлении данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в таблицы.  
   
 -   **Режим по умолчанию**: false  
@@ -47,7 +47,7 @@ ms.locfileid: "67929392"
   
 -   **Полный режим**: false  
   
-**Сохранит удостоверение**  
+**Сохранять ИД**  
 Указывает, сохраняет ли SSMA значения идентификатора доступа при добавлении данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если это значение равно false, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присваивает значения идентификаторов.  
   
 -   **Режим по умолчанию**: true  
@@ -56,7 +56,7 @@ ms.locfileid: "67929392"
   
 -   **Полный режим**: false  
   
-**Сохранения значений NULL**  
+**Сохранять значения NULL**  
 Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], сохраняет ли SSMA значения NULL в исходных данных при добавлении данных в, независимо от значений по умолчанию, указанных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   **Режим по умолчанию**: true  

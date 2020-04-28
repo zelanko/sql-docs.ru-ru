@@ -16,10 +16,10 @@ ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa9e680e1626311f2cc10aa7c79fb583841fbc38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920118"
 ---
 # <a name="cancelupdate-method-ado"></a>Метод CancelUpdate (ADO)
@@ -41,7 +41,7 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
   
  Если вы используете режим редактирования и хотите переместить текущую запись (например, с помощью методов [Move](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)или [Close](../../../ado/reference/ado-api/close-method-ado.md) ), можно использовать **CancelUpdate** для отмены всех ожидающих изменений. Это может потребоваться, если обновление не удается успешно опубликовать в источнике данных. Например, попытка удаления, которая завершилась сбоем из-за нарушений ссылочной целостности, оставляет **набор записей** в режиме редактирования после вызова метода [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md).  
   
-## <a name="record"></a>Record  
+## <a name="record"></a>Записей  
  Метод **CancelUpdate** отменяет все ожидающие вставки или удаления объектов [полей](../../../ado/reference/ado-api/field-object.md) и отменяет отложенные обновления существующих полей и восстанавливает их исходные значения. Свойство [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) всех полей в коллекции **Fields** имеет значение **адфиелдок**.  
   
 ## <a name="applies-to"></a>Применяется к  

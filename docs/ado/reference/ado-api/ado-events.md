@@ -14,10 +14,10 @@ ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 35169313ae487514403f62c8e6d1ba2c262cb8a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921009"
 ---
 # <a name="ado-events"></a>События ADO
@@ -30,20 +30,20 @@ ms.locfileid: "67921009"
 |[Соедините](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Вызывается после завершения соединения.|  
 |[ендофрекордсет](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Вызывается при попытке переместиться в строку после конца **набора записей**.|  
 |[ексекутекомплете](../../../ado/reference/ado-api/executecomplete-event-ado.md)|Вызывается после завершения выполнения команды.|  
-|[фетчкомплете](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Вызывается после того, как все записи в длинной асинхронной операции были получены в **набор записей**.|  
+|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Вызывается после того, как все записи в длинной асинхронной операции были получены в **набор записей**.|  
 |[фетчпрогресс](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|Вызывается периодически во время длительной асинхронной операции, чтобы сообщить, сколько строк в данный момент было извлечено в **набор записей**.|  
-|[фиелдчанжекомплете](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Вызывается после изменения значения одного или нескольких объектов **полей** .|  
+|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Вызывается после изменения значения одного или нескольких объектов **полей** .|  
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|Вызывается всякий раз, когда возникает предупреждение во время операции **коннектионевент** .|  
 |[мовекомплете](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Вызывается после изменения текущей позицией в **наборе записей** .|  
-|[рекордчанжекомплете](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Вызывается после изменения одной или нескольких записей.|  
-|[рекордсетчанжекомплете](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Вызывается после изменения **набора записей** .|  
+|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Вызывается после изменения одной или нескольких записей.|  
+|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Вызывается после изменения **набора записей** .|  
 |[роллбакктранскомплете](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Вызывается после операции **RollbackTrans** .|  
-|[виллчанжефиелд](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Вызывается перед тем, как ожидающая операция изменяет значение одного или нескольких объектов **field** в **наборе записей**.|  
-|[виллчанжерекорд](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Вызывается до того, как одна или несколько записей (строк) изменяются в **наборе записей** .|  
-|[виллчанжерекордсет](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Вызывается до того, как ожидающая операция изменяет **набор записей**.|  
-|[виллконнект](../../../ado/reference/ado-api/willconnect-event-ado.md)|Вызывается перед началом соединения.|  
+|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Вызывается перед тем, как ожидающая операция изменяет значение одного или нескольких объектов **field** в **наборе записей**.|  
+|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Вызывается до того, как одна или несколько записей (строк) изменяются в **наборе записей** .|  
+|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Вызывается до того, как ожидающая операция изменяет **набор записей**.|  
+|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)|Вызывается перед началом соединения.|  
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|Вызывается непосредственно перед выполнением ожидающей команды в этом соединении и предоставляет пользователю возможность проверять и изменять параметры выполнения, ожидающие обработки.|  
-|[виллмове](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Событие **виллмове** вызывается *до* того, как операция ожидает изменения текущей позицией в **наборе записей**.|  
+|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Событие **виллмове** вызывается *до* того, как операция ожидает изменения текущей позицией в **наборе записей**.|  
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   

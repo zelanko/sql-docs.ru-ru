@@ -14,10 +14,10 @@ ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920899"
 ---
 # <a name="ado-properties"></a>Свойства ADO
@@ -38,10 +38,10 @@ ms.locfileid: "67920899"
 |[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)|Указывает поток, используемый в качестве входных данных для **командного** объекта.|  
 |[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)|Указывает текст команды, которая должна быть выдана поставщику.|  
 |[CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)|Указывает время ожидания при выполнении команды перед завершением попытки и генерацией ошибки.|  
-|[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|Указывает тип объекта **команды** .|  
+|[Тип команды](../../../ado/reference/ado-api/commandtype-property-ado.md)|Указывает тип объекта **команды** .|  
 |[Свойство ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)|Указывает сведения, используемые для установления соединения с источником данных.|  
 |[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|Указывает время ожидания при установлении соединения перед завершением попытки и генерацией ошибки.|  
-|[Расчета](../../../ado/reference/ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|Указывает расположение службы курсора.|  
 |[Примеры CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Указывает тип курсора, используемого в объекте **набора записей** .|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|Указывает имя элемента данных, который будет извлечен из объекта, на который ссылается свойство **DataSource** .|  
@@ -50,12 +50,12 @@ ms.locfileid: "67920899"
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|Указывает емкость данных для объекта **поля** .|  
 |[Описание](../../../ado/reference/ado-api/description-property.md)|Описывает объект **Error** .|  
 |[Указанный](../../../ado/reference/ado-api/dialect-property.md)|Указывает синтаксис и общие правила, которые поставщик будет использовать для синтаксического анализа свойств **CommandText** или **CommandStream** .|  
-|[Двух](../../../ado/reference/ado-api/direction-property.md)|Указывает, представляет ли **параметр** входной параметр, выходной параметр или оба значения, или значение, если параметр является возвращаемым значением хранимой процедуры.|  
+|[Направление](../../../ado/reference/ado-api/direction-property.md)|Указывает, представляет ли **параметр** входной параметр, выходной параметр или оба значения, или значение, если параметр является возвращаемым значением хранимой процедуры.|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Указывает состояние редактирования текущей записи.|  
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|Указывает, находится ли текущая координата в конце потока.|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Указывает фильтр для данных в **наборе записей**.|  
 |[HelpContext и HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|Указывает файл справки и раздел, связанный с объектом **Error** .<br /><br /> **Хелпконтекстид** возвращает идентификатор контекста в виде **длинного** значения для раздела в файле справки.<br /><br /> **HelpFile** возвращает **строковое** значение, результатом которого является полностью разрешенный путь к файлу справки.|  
-|[Номер](../../../ado/reference/ado-api/index-property.md)|Указывает имя индекса, действующего в настоящий момент для объекта **Recordset** .|  
+|[Индекс](../../../ado/reference/ado-api/index-property.md)|Указывает имя индекса, действующего в настоящий момент для объекта **Recordset** .|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|Указывает уровень изоляции для объекта **соединения** .|  
 |[Элемент](../../../ado/reference/ado-api/item-property-ado.md)|Указывает конкретный элемент коллекции по имени или порядковому номеру.|  
 |[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|Указывает двоичный символ, используемый в качестве разделителя строк в объектах текстового **потока** .|  
@@ -63,9 +63,9 @@ ms.locfileid: "67920899"
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|Указывает, какие записи должны быть упакованы обратно на сервер.|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|Указывает максимальное число записей, возвращаемых в **набор записей** из запроса.|  
 |[Режим](../../../ado/reference/ado-api/mode-property-ado.md)|Указывает доступные разрешения для изменения данных в **соединении**, **записи**или объекте **потока** .|  
-|[Название](../../../ado/reference/ado-api/name-property-ado.md)|Указывает имя объекта.|  
+|[имя](../../../ado/reference/ado-api/name-property-ado.md);|Указывает имя объекта.|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|Указывает код ошибки конкретного поставщика для конкретного объекта **ошибки** .|  
-|[Нумерация](../../../ado/reference/ado-api/number-property-ado.md)|Указывает число, которое однозначно определяет объект **ошибки** .|  
+|[Число](../../../ado/reference/ado-api/number-property-ado.md)|Указывает число, которое однозначно определяет объект **ошибки** .|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|Указывает масштаб числовых значений в объекте **параметра** или **поля** .|  
 |[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|Указывает значение **поля** , которое существовало в записи до внесения каких-либо изменений.|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Указывает, сколько страниц данных содержит объект **Recordset** .|  
@@ -73,7 +73,7 @@ ms.locfileid: "67920899"
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Задает контейнер объекта OLE DB **строки** для объекта **адорекордконструктион** , чтобы родительский элемент строки был включен в объект **записи** ADO.|  
 |[парентурл](../../../ado/reference/ado-api/parenturl-property-ado.md)|Указывает абсолютную строку URL-адреса, указывающую на родительскую **запись** текущего объекта **Record** .|  
 |[Разместить](../../../ado/reference/ado-api/position-property-ado.md)|Указывает текущую точку в объекте **потока** .|  
-|[Обеспечивают](../../../ado/reference/ado-api/precision-property-ado.md)|Указывает степень точности для числовых значений в объекте **параметра** или для числовых объектов **полей** .|  
+|[Точность](../../../ado/reference/ado-api/precision-property-ado.md)|Указывает степень точности для числовых значений в объекте **параметра** или для числовых объектов **полей** .|  
 |[Prepared](../../../ado/reference/ado-api/prepared-property-ado.md)|Указывает, следует ли сохранять скомпилированную версию команды перед выполнением.|  
 |[Поставщик](../../../ado/reference/ado-api/provider-property-ado.md)|Указывает имя поставщика для объекта **соединения** .|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Указывает количество записей в объекте **набора записей** .|  
@@ -90,10 +90,10 @@ ms.locfileid: "67920899"
 |[Состояние (набор записей ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Указывает состояние текущей записи, относящейся к пакетным обновлениям или другим массовым операциям.|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|Указывает, изменяется ли ссылка на базовые дочерние записи (то есть *глава*) в иерархическом объекте **Recordset** при изменении позиционирования родительской строки.|  
 |[Свойство Stream](../../../ado/reference/ado-api/stream-property.md)|Возвращает или задает OLE DB объект **потока** из или в объекте **адостреамконструктион** .|  
-|[Тип](../../../ado/reference/ado-api/type-property-ado.md)|Указывает операционный тип или тип данных для **параметра**, **поля**или объекта **Свойства** .|  
+|[Type](../../../ado/reference/ado-api/type-property-ado.md)|Указывает операционный тип или тип данных для **параметра**, **поля**или объекта **Свойства** .|  
 |[Type (поток ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Указывает тип данных, содержащихся в **потоке** (двоичный или текстовый).|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Указывает текущее значение в базе данных для объекта **поля** .|  
-|[Value](../../../ado/reference/ado-api/value-property-ado.md)|Указывает значение, присваиваемое **полю**, **параметру**или объекту **Свойства** .|  
+|[Значение](../../../ado/reference/ado-api/value-property-ado.md)|Указывает значение, присваиваемое **полю**, **параметру**или объекту **Свойства** .|  
 |[Версия](../../../ado/reference/ado-api/version-property-ado.md)|Указывает номер версии ADO.|  
   
 ## <a name="see-also"></a>См. также:  

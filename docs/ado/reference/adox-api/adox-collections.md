@@ -14,10 +14,10 @@ ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 453836f30e74dd604efe28d309ca69ea2ca26684
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928607"
 ---
 # <a name="adox-collections"></a>Коллекции ADOX
@@ -29,8 +29,8 @@ ms.locfileid: "67928607"
 |[Индексы](../../../ado/reference/adox-api/indexes-collection-adox.md)|Содержит все объекты **индекса** таблицы.|  
 |[Ключи](../../../ado/reference/adox-api/keys-collection-adox.md)|Содержит все **Ключевые** объекты таблицы.|  
 |[Процедуры](../../../ado/reference/adox-api/procedures-collection-adox.md)|Содержит все объекты **процедур** каталога.|  
-|[Таблице](../../../ado/reference/adox-api/tables-collection-adox.md)|Содержит все **табличные** объекты каталога.|  
-|[Пользователей](../../../ado/reference/adox-api/users-collection-adox.md)|Содержит все сохраненные **пользовательские** объекты каталога или группы.|  
+|[Таблицы](../../../ado/reference/adox-api/tables-collection-adox.md)|Содержит все **табличные** объекты каталога.|  
+|[Пользователи](../../../ado/reference/adox-api/users-collection-adox.md)|Содержит все сохраненные **пользовательские** объекты каталога или группы.|  
 |[Представления](../../../ado/reference/adox-api/views-collection-adox.md)|Содержит все объекты **представления** каталога.|  
   
 ## <a name="see-also"></a>См. также:  

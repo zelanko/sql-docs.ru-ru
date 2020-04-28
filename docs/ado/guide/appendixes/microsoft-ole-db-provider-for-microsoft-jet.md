@@ -15,16 +15,16 @@ ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926647"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Обзор поставщика Microsoft OLE DB для Microsoft Jet
 Поставщик OLE DB для Microsoft Jet позволяет ADO получать доступ к базам данных Microsoft Jet.
 
-## <a name="connection-string-parameters"></a>Параметры строки подключения
+## <a name="connection-string-parameters"></a>Параметры строки соединения
  Чтобы подключиться к этому поставщику, задайте для аргумента *поставщика* свойства [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) следующее значение:
 
 ```vb
@@ -42,11 +42,11 @@ Microsoft.Jet.OLEDB.4.0
 
  Строка состоит из следующих ключевых слов:
 
-|Ключевое слово|Description|
+|Ключевое слово|Описание|
 |-------------|-----------------|
 |**Поставщик**|Указывает поставщика OLE DB для Microsoft Jet.|
 |**Источник данных**|Указывает путь к базе данных и имя файла (например, `c:\Northwind.mdb`).|
-|**Идентификатор пользователя.**|Указывает имя пользователя. Если это ключевое слово не указано, по умолчанию`admin`используется строка "".|
+|**Идентификатор пользователя**|Указывает имя пользователя. Если это ключевое слово не указано, по умолчанию`admin`используется строка "".|
 |**Пароль**|Указывает пароль пользователя. Если это ключевое слово не указано, по умолчанию используется пустая строка ("").|
 
 > [!NOTE]
@@ -57,7 +57,7 @@ Microsoft.Jet.OLEDB.4.0
 
  В следующей таблице перечислены эти свойства вместе с соответствующим OLE DB именем свойства в круглых скобках.
 
-|Параметр|Description|
+|Параметр|Описание|
 |---------------|-----------------|
 |Jet OLEDB: сжатие освобожденного объема пространства (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|Указывает оценку объема пространства в байтах, которое может быть освобождено путем сжатия базы данных. Это значение допустимо только после установки подключения к базе данных.|
 |Jet OLEDB: Управление подключением (DBPROP_JETOLEDB_CONNECTIONCONTROL)|Указывает, могут ли пользователи подключаться к базе данных.|
@@ -91,7 +91,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>Специфические для поставщика набор записей и свойства команды
  Поставщик Jet также поддерживает несколько специфических для поставщика **наборов записей** и свойств **команд** . Доступ к этим свойствам и их настройка осуществляется с помощью коллекции **свойств** **набора записей** или объекта **команды** . В таблице перечислены имя свойства ADO и соответствующее OLE DB имя свойства в круглых скобках.
 
-|Имя свойства|Description|
+|Имя свойства|Описание|
 |-------------------|-----------------|
 |Jet OLEDB: групповые транзакции (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|Указывает, являются ли групповые операции SQL транзакционными. Большие операции с массовыми операциями могут завершаться ошибкой в связи с задержками ресурсов.|
 |Jet OLEDB: включение курсоров FAT (DBPROP_JETOLEDB_ENABLEFATCURSOR)|Указывает, должен ли модуль Jet кэшировать несколько строк при заполнении набора записей для удаленных источников строк.|
@@ -131,8 +131,8 @@ Microsoft.Jet.OLEDB.4.0
 |Термин каталога|DBPROP_CATALOGTERM|
 |Определение столбца|DBPROP_COLUMNDEFINITION|
 |Текущий каталог|DBPROP_CURRENTCATALOG|
-|источник данных|DBPROP_INIT_DATASOURCE|
-|Имя источника данных|DBPROP_DATASOURCENAME|
+|Источник данных|DBPROP_INIT_DATASOURCE|
+|Имя базы данных-источника|DBPROP_DATASOURCENAME|
 |Потоковая модель объекта источника данных|DBPROP_DSOTHREADMODEL|
 |Имя СУБД|DBPROP_DBMSNAME|
 |Версия СУБД|DBPROP_DBMSVER|
@@ -164,7 +164,7 @@ Microsoft.Jet.OLEDB.4.0
 |Поведение при подготовке к прерыванию|DBPROP_PREPAREABORTBEHAVIOR|
 |Действие подготовки к фиксации|DBPROP_PREPARECOMMITBEHAVIOR|
 |Условие процедуры|DBPROP_PROCEDURETERM|
-|Prompt|DBPROP_INIT_PROMPT|
+|prompt|DBPROP_INIT_PROMPT|
 |Понятное имя поставщика|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |Версия поставщика|DBPROP_PROVIDERVER|
@@ -179,7 +179,7 @@ Microsoft.Jet.OLEDB.4.0
 |DDL транзакции|DBPROP_SUPPORTEDTXNDDL|
 |Идентификатор пользователя.|DBPROP_AUTH_USERID|
 |Имя пользователя|DBPROP_USERNAME|
-|Маркер окна|DBPROP_INIT_HWND|
+|Дескриптор окна|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Динамические свойства набора записей
  Следующие свойства добавляются в коллекцию **Properties** объекта **Recordset** .

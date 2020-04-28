@@ -15,16 +15,16 @@ ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3acdfc7e03115b415e7641047e7621d5ab463e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926608"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Обзор простого поставщика Microsoft OLE DB
 Microsoft OLE DB Simple Provider (ОБЕЩАНие) позволяет ADO получать доступ к любым данным, для которых поставщик был написан с помощью [набора средств OLE DB простого поставщика (обещание)](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Простые поставщики предназначены для доступа к источникам данных, которым требуется только фундаментальная OLE DBная поддержка, например массивы в памяти или XML-документы.
 
-## <a name="connection-string-parameters"></a>Параметры строки подключения
+## <a name="connection-string-parameters"></a>Параметры строки соединения
  Чтобы подключиться к библиотеке DLL простого поставщика OLE DB, задайте для аргумента *поставщика* в качестве значения свойства [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) значение:
 
 ```vb
@@ -44,7 +44,7 @@ MSDAOSP
 
  Строка состоит из следующих ключевых слов:
 
-|Ключевое слово|Description|
+|Ключевое слово|Описание|
 |-------------|-----------------|
 |**Поставщик**|Указывает поставщика OLE DB для SQL Server.|
 |**Источник данных**|Указывает имя сервера.|

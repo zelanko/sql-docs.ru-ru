@@ -16,10 +16,10 @@ ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923465"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Функции Visual Basic для приложений
@@ -32,18 +32,18 @@ ms.locfileid: "67923465"
 |Чрб $|CInt|CLng|Cos|CSng|CStr|  
 |Cvar|CVDate|CVErr|Дата|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|День|DDB|  
-|Ошибка|Error$|Exp|Исправление|Формат|Format$|  
-|FV|Hex|Hex$|Hour|IIF|InStr|  
+|Ошибка|Error$|Exp|Fix|Формат|Format$|  
+|FV|Hex|Hex$|Час|IIF|InStr|  
 |Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|Слева|  
 |Извлекаем|Left$|Функция ЛЕВБ $|Len|Журнал|LTrim|  
 |LTrim$|Mid|Mid$|Минута|MIRR|Месяц|  
-|Now|NPer|NPV|Окт|Oct$|Pmt|  
+|Сейчас|NPer|NPV|Окт|Oct$|Pmt|  
 |PPmt|PV|QBColor|Тариф|RGB|Right|  
 |Функция RightB|Right$|Функция RightB $|Rnd|RTrim|RTrim $|  
 |Секунда|Sgn|Sin|SLN|Пробел|Space$|  
-|Sqr|Str|Str$|StrComp|StrConv|String|  
-|String$|SYD|Tan|Time|Time$|Таймер|  
+|Sqr|Str|Str$|StrComp|StrConv|Строка|  
+|String$|SYD|Tan|Время|Time$|Таймер|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|День недели|Год||  
   

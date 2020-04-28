@@ -14,16 +14,16 @@ ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b59f0f98122d37447e2e702304a31c44073bacfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926847"
 ---
 # <a name="datacontrol-object-error-codes"></a>Коды ошибок объектов элементов управления
 В следующей таблице перечислены службы [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Коды ошибок объектов элементов управления. Положительное десятичное преобразование двух младших байтов, отрицательное десятичное преобразование полного кода ошибки и шестнадцатеричные значения.
 
-|Клиент. Коды ошибок элементов управления|Номер|Description|
+|Клиент. Коды ошибок элементов управления|Число|Описание|
 |---------------------------------|------------|-----------------|
 |**IDS_AsyncPending**|4107 -2146824175 0x800A1011|Невозможно выполнить операцию, пока ожидается асинхронная операция.|
 |**IDS_BadInlineTablegram**|4105 -2146824183 0x800A1009|Недопустимый встроенный таблеграм.|

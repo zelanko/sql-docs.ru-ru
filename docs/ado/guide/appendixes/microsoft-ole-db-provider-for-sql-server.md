@@ -15,10 +15,10 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926617"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Обзор поставщика OLE DB Майкрософт для SQL Server
@@ -27,7 +27,7 @@ ms.locfileid: "67926617"
 > [!IMPORTANT]
 > Поставщик OLE DB Майкрософт для SQL Server (SQLOLEDB) остается устаревшим и не рекомендуется использовать его для новых задач разработки. Вместо этого используйте новый драйвер [Microsoft OLE DB для SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL), который будет обновлен с самыми последними серверными компонентами.
 
-## <a name="connection-string-parameters"></a>Параметры строки подключения
+## <a name="connection-string-parameters"></a>Параметры строки соединения
  Чтобы подключиться к поставщику, задайте для аргумента *поставщика* в качестве значения свойства [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) значение:
 
 ```vb
@@ -47,7 +47,7 @@ User ID=MyUserID;Password=MyPassword;"
 
  Строка состоит из следующих ключевых слов:
 
-|Ключевое слово|Description|
+|Ключевое слово|Описание|
 |-------------|-----------------|
 |**Поставщик**|Указывает поставщика OLE DB для SQL Server.|
 |**Источник данных** или **сервер**|Указывает имя сервера.|
@@ -61,14 +61,14 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="provider-specific-connection-parameters"></a>Параметры подключения, зависящие от поставщика
  Поставщик поддерживает несколько параметров соединения, зависящих от поставщика, помимо тех, которые определены в ADO. Как и в случае со свойствами соединения ADO, эти свойства, зависящие от поставщика, могут быть заданы через коллекцию [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) [соединения](../../../ado/reference/ado-api/connection-object-ado.md) или могут быть заданы как часть **ConnectionString**.
 
-|Параметр|Description|
+|Параметр|Описание|
 |---------------|-----------------|
 |Trusted_Connection|Указывает режим проверки подлинности пользователя. Для этого свойства можно задать значение **Да** или **нет**. Значение по умолчанию — **No**. Если для этого свойства задано значение **Да**, SQLOLEDB использует режим проверки подлинности Microsoft Windows NT для авторизации доступа пользователей к SQL Server базе данных, указанной значениями свойств **Location** и [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) . Если это свойство имеет значение **нет**, SQLOLEDB использует смешанный режим для авторизации доступа пользователей к базе данных SQL Server. Имя входа и пароль SQL Server указаны в свойствах **идентификатора пользователя** и **пароля** .|
 |Текущий язык|Указывает SQL Server имя языка. Указывает язык, используемый для выбора и форматирования системных сообщений. Язык должен быть установлен на SQL Server, иначе открытие подключения завершится ошибкой.|
 |Сетевой адрес|Указывает сетевой адрес SQL Server, заданный свойством **Location** .|
 |Network Library|Указывает имя сетевой библиотеки (DLL), используемой для связи с SQL Server. Не должно включать путь или расширение DLL. Значение по умолчанию предоставляется конфигурацией клиента SQL Server.|
 |Использовать процедуру для подготовки|Определяет, создает ли SQL Server временные хранимые процедуры при подготовке команд ( **подготовленным** свойством).|
-|Автоматическое преобразование|Указывает, преобразуются ли символы OEM/ANSI. Этому свойству можно присвоить значение **true** или **false**. Значение по умолчанию ― **True**. Если это свойство имеет значение **true**, SQLOLEDB выполняет преобразование символов OEM/ANSI, когда многобайтовые символьные строки извлекаются из SQL Server или отправляются в него. Если для этого свойства задано значение **false**, SQLOLEDB не выполняет преобразование символов OEM/ANSI в многобайтовой символьной строке данных.|
+|Автоматическое преобразование|Указывает, преобразуются ли символы OEM/ANSI. Этому свойству можно присвоить значение **true** или **false**. По умолчанию используется значение **True**. Если это свойство имеет значение **true**, SQLOLEDB выполняет преобразование символов OEM/ANSI, когда многобайтовые символьные строки извлекаются из SQL Server или отправляются в него. Если для этого свойства задано значение **false**, SQLOLEDB не выполняет преобразование символов OEM/ANSI в многобайтовой символьной строке данных.|
 |Packet Size|Указывает размер сетевого пакета в байтах. Значение свойства "размер пакета" должно находиться в диапазоне от 512 до 32767. Размер сетевого пакета SQLOLEDB по умолчанию — 4096.|
 |Имя приложения|Указывает имя клиентского приложения.|
 |Идентификатор рабочей станции|строка, идентифицирующая рабочую станцию.|
@@ -151,8 +151,8 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Определение столбца|DBPROP_COLUMNDEFINITION|
 |Время ожидания соединения|DBPROP_INIT_TIMEOUT|
 |Текущий каталог|DBPROP_CURRENTCATALOG|
-|источник данных|DBPROP_INIT_DATASOURCE|
-|Имя источника данных|DBPROP_DATASOURCENAME|
+|Источник данных|DBPROP_INIT_DATASOURCE|
+|Имя базы данных-источника|DBPROP_DATASOURCENAME|
 |Потоковая модель объекта источника данных|DBPROP_DSOTHREADMODEL|
 |Имя СУБД|DBPROP_DBMSNAME|
 |Версия СУБД|DBPROP_DBMSVER|
@@ -186,7 +186,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Поведение при подготовке к прерыванию|DBPROP_PREPAREABORTBEHAVIOR|
 |Действие подготовки к фиксации|DBPROP_PREPARECOMMITBEHAVIOR|
 |Условие процедуры|DBPROP_PROCEDURETERM|
-|Prompt|DBPROP_INIT_PROMPT|
+|prompt|DBPROP_INIT_PROMPT|
 |Понятное имя поставщика|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |Версия поставщика|DBPROP_PROVIDERVER|
@@ -201,7 +201,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |DDL транзакции|DBPROP_SUPPORTEDTXNDDL|
 |Идентификатор пользователя.|DBPROP_AUTH_USERID|
 |Имя пользователя|DBPROP_USERNAME|
-|Маркер окна|DBPROP_INIT_HWND|
+|Дескриптор окна|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Динамические свойства набора записей
  Следующие свойства добавляются в коллекцию **Properties** объекта **Recordset** .

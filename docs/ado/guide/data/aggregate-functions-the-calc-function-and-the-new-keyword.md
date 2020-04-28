@@ -16,10 +16,10 @@ ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a7ed836b9b57ddd690dd85dd94cc12cb967c472
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926001"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Агрегатные функции, функция CALC и ключевое слово NEW
@@ -27,7 +27,7 @@ ms.locfileid: "67926001"
   
  Псевдоним главы может быть полным, состоящим из имени каждого столбца главы, в который входит глава *, содержащая имя столбца,* разделенные точками. Например, если родительская глава, Chap1, содержит дочернюю главу Chap2, имеющую столбец Amount, то полное имя будет Chap1. Chap2. AMT.  
   
-|Агрегатные функции|Description|  
+|Агрегатные функции|Описание|  
 |-------------------------|-----------------|  
 |SUM (*раздел-Alias*.* имя столбца*)|Вычисляет сумму всех значений в указанном столбце.|  
 |AVG (*раздел-Alias*.* имя столбца*)|Вычисляет среднее всех значений в указанном столбце.|  
@@ -37,11 +37,11 @@ ms.locfileid: "67926001"
 |STDEV (*раздел-Alias*.* имя столбца*)|Вычисляет стандартное отклонение в указанном столбце.|  
 |ANY (*раздел-Alias*.* имя столбца*)|Значение указанного столбца. ANY имеет прогнозируемое значение, только если значение столбца одинаково для всех строк в главе.<br /><br /> **Примечание** . Если столбец не содержит одинаковое значение для всех строк главы, команда SHAPE произвольно возвращает одно из значений, которое является значением любой функции.|  
   
-|Вычисляемое выражение|Description|  
+|Вычисляемое выражение|Описание|  
 |---------------------------|-----------------|  
 |CALC (*выражение*)|Вычисляет произвольное выражение, но только для строки **набора записей** , содержащего функцию Calc. Любое выражение, использующее эти [функции Visual Basic для приложений (VBA)](../../../ado/guide/data/visual-basic-for-applications-functions.md) , разрешено.|  
   
-|СОЗДАТЬ ключевое слово|Description|  
+|СОЗДАТЬ ключевое слово|Описание|  
 |-----------------|-----------------|  
 |НОВОЕ *поле-Тип* [(*Ширина* &#124; *шкала* &#124; *точность* &#124; *Ошибка* [, *масштаб* &#124; *Ошибка*])]|Добавляет в **набор записей**пустой столбец указанного типа.|  
   
@@ -52,23 +52,23 @@ ms.locfileid: "67926001"
 |DBTYPE_BSTR|adBSTR|  
 |DBTYPE_BOOL|adBoolean|  
 |DBTYPE_DECIMAL|adDecimal|  
-|DBTYPE_UI1|адунсигнедтининт|  
-|DBTYPE_I1|адтининт|  
+|DBTYPE_UI1|adUnsignedTinyInt|  
+|DBTYPE_I1|adTinyInt|  
 |DBTYPE_UI2|adUnsignedSmallInt|  
-|DBTYPE_UI4|адунсигнединт|  
+|DBTYPE_UI4|adUnsignedInt|  
 |DBTYPE_I8|adBigInt|  
-|DBTYPE_UI8|адунсигнедбигинт|  
+|DBTYPE_UI8|adUnsignedBigInt|  
 |DBTYPE_GUID|адгуид|  
 |DBTYPE_BYTES|Адбинари, Адварбинари, Адлонгварбинари|  
 |DBTYPE_STR|Адчар, Адварчар, Адлонгварчар|  
 |DBTYPE_WSTR|Адвчар, Адварвчар, Адлонгварвчар|  
 |DBTYPE_NUMERIC|adNumeric|  
-|DBTYPE_DBDATE|аддбдате|  
+|DBTYPE_DBDATE|adDBDate|  
 |DBTYPE_DBTIME|adDBTime|  
-|DBTYPE_DBTIMESTAMP|аддбтиместамп|  
-|DBTYPE_VARNUMERIC|адварнумерик|  
+|DBTYPE_DBTIMESTAMP|adDBTimeStamp|  
+|DBTYPE_VARNUMERIC|adVarNumeric|  
 |DBTYPE_FILETIME|adFileTime|  
-|DBTYPE_ERROR|адеррор|  
+|DBTYPE_ERROR|adError|  
   
  Если новое поле имеет тип Decimal (в OLE DB, DBTYPE_DECIMAL или в ADO, АддеЦимал), необходимо указать значения точности и масштаба.  
   

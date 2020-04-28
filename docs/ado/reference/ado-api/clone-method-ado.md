@@ -17,10 +17,10 @@ ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7439f9a4a04582f4cf4c4878892ed0f4f33e228c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920019"
 ---
 # <a name="clone-method-ado"></a>Метод Clone (ADO)
@@ -40,7 +40,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  *рстдупликате*  
  Объектная переменная, идентифицирующая дубликат создаваемого объекта **набора записей** .  
   
- *рсторигинал*  
+ *rstOriginal*  
  Объектная переменная, определяющая объект **набора записей** для дублирования.  
   
  *LockType*  
@@ -67,19 +67,19 @@ rsNew.Filter = rsOriginal.Filter
   
  В следующей таблице приведен полный список всех событий **набора записей** . Указывает, являются ли они допустимыми и запускаются для всех клонов набора записей, созданных с помощью метода **clone** .  
   
-|Событие|Активировано в клонах?|  
+|событие|Активировано в клонах?|  
 |-----------|--------------------------|  
-|[ендофрекордсет](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|нет|  
-|[фетчкомплете](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|нет|  
-|[фетчпрогресс](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|нет|  
-|[фиелдчанжекомплете](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Да|  
-|[мовекомплете](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|нет|  
-|[рекордчанжекомплете](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Да|  
-|[рекордсетчанжекомплете](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|нет|  
-|[виллчанжефиелд](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Да|  
-|[виллчанжерекорд](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Да|  
-|[виллчанжерекордсет](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|нет|  
-|[виллмове](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|нет|  
+|[ендофрекордсет](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Нет|  
+|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Нет|  
+|[фетчпрогресс](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|Нет|  
+|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Да|  
+|[мовекомплете](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Нет|  
+|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Да|  
+|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Нет|  
+|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Да|  
+|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Да|  
+|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Нет|  
+|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Нет|  
   
 ## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

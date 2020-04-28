@@ -14,10 +14,10 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920929"
 ---
 # <a name="ado-methods"></a>Методы ADO
@@ -32,7 +32,7 @@ ms.locfileid: "67920929"
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Отменяет ожидающее пакетное обновление.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Отменяет все изменения, внесенные в текущую или новую строку объекта **набора записей** , или коллекцию **полей** объекта **Record** перед вызовом метода **Update** .|  
 |[Открытым](../../../ado/reference/ado-api/clear-method-ado.md)|Удаляет все объекты **Error** из коллекции **ошибок** .|  
-|[Клонировать](../../../ado/reference/ado-api/clone-method-ado.md)|Создает дубликат объекта **набора записей** из существующего объекта **набора записей** . При необходимости указывает, что клон доступен только для чтения.|  
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Клонировать)|Создает дубликат объекта **набора записей** из существующего объекта **набора записей** . При необходимости указывает, что клон доступен только для чтения.|  
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Закрывает открытый объект и все зависимые объекты.|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|Сравнивает две закладки и возвращает значение, указывающее на их относительные значения.|  
 |[копирекорд](../../../ado/reference/ado-api/copyrecord-method-ado.md)|Копирует файл или каталог и его содержимое в другое расположение.|  
@@ -65,17 +65,17 @@ ms.locfileid: "67920929"
 |[Метод put_OLEDBCommand](../../../ado/reference/ado-api/put-oledbcommand-method.md)|Этот метод не выполняет никаких операций — он всегда возвращает S_OK.|  
 |[Чтение](../../../ado/reference/ado-api/read-method.md)|Считывает указанное число байтов из объекта **потока** .|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|Считывает указанное число символов из объекта текстового **потока** .|  
-|[Обновить](../../../ado/reference/ado-api/refresh-method-ado.md)|Обновляет объекты в коллекции, чтобы отразить объекты, доступные в поставщике, и связанные с ним.|  
+|[Обновление](../../../ado/reference/ado-api/refresh-method-ado.md)|Обновляет объекты в коллекции, чтобы отразить объекты, доступные в поставщике, и связанные с ним.|  
 |[Повтор](../../../ado/reference/ado-api/requery-method.md)|Обновляет данные в объекте **набора записей** путем повторного выполнения запроса, на котором основан объект.|  
 |[Повторная синхронизация](../../../ado/reference/ado-api/resync-method.md)|Обновляет данные в текущем объекте **набора записей** или коллекции **полей** объекта **записи** из базовой базы данных.|  
-|[Сохранять](../../../ado/reference/ado-api/save-method.md)|Сохраняет **набор записей** в объекте File или **Stream** .|  
+|[Сохранить](../../../ado/reference/ado-api/save-method.md)|Сохраняет **набор записей** в объекте File или **Stream** .|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|Сохраняет двоичное содержимое **потока** в файл.|  
 |[Seek](../../../ado/reference/ado-api/seek-method.md)|Выполняет поиск индекса **набора записей** , чтобы быстро найти строку, совпадающую с указанными значениями, и изменяет положение текущей строки на эту строку.|  
 |[сетеос](../../../ado/reference/ado-api/seteos-method.md)|Задает расположение, которое является концом потока.|  
 |[скиплине](../../../ado/reference/ado-api/skipline-method.md)|Пропускает одну целую строку при чтении текстового потока.|  
 |[STAT](../../../ado/reference/ado-api/stat-method.md)|Возвращает статистические сведения о открытом потоке.|  
-|[Принтер](../../../ado/reference/ado-api/supports-method.md)|Определяет, поддерживает ли указанный объект **Recordset** определенный тип функциональности.|  
-|[Обновляют](../../../ado/reference/ado-api/update-method.md)|Сохраняет любые изменения, внесенные в текущую строку объекта **набора записей** , или коллекцию **Fields** объекта **Record** .|  
+|[Поддерживает](../../../ado/reference/ado-api/supports-method.md)|Определяет, поддерживает ли указанный объект **Recordset** определенный тип функциональности.|  
+|[Обновление](../../../ado/reference/ado-api/update-method.md)|Сохраняет любые изменения, внесенные в текущую строку объекта **набора записей** , или коллекцию **Fields** объекта **Record** .|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Записывает все ожидающие пакетные обновления на диск.|  
 |[запись](../../../ado/reference/ado-api/write-method.md)|Записывает двоичные данные в объект **потока** .|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|Записывает указанную текстовую строку в объект **потока** .|  

@@ -14,10 +14,10 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926638"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Обзор поставщика OLE DB Майкрософт для ODBC
@@ -31,7 +31,7 @@ ms.locfileid: "67926638"
 
  Это поставщик по умолчанию для ADO, и поддерживаются все зависящие от поставщика свойства и методы ADO.
 
-## <a name="connection-string-parameters"></a>Параметры строки подключения
+## <a name="connection-string-parameters"></a>Параметры строки соединения
  Чтобы подключиться к этому поставщику, задайте для аргумента **provider =** свойства [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) значение:
 
 ```
@@ -49,11 +49,11 @@ MSDASQL
 
  Строка состоит из следующих ключевых слов:
 
-|Ключевое слово|Description|
+|Ключевое слово|Описание|
 |-------------|-----------------|
 |**Поставщик**|Указывает поставщика OLE DB для ODBC.|
 |**DSN**|Указывает имя источника данных.|
-|**ТАКОЙ**|Указывает имя пользователя.|
+|**UID**|Указывает имя пользователя.|
 |**PWD**|Указывает пароль пользователя.|
 |**URL-адрес**|Указывает URL-адрес файла или каталога, опубликованного в веб-папке.|
 
@@ -92,7 +92,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-connection-properties"></a>Свойства соединения, зависящие от поставщика
  Поставщик OLE DB для ODBC добавляет несколько свойств в коллекцию [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) объекта **Connection** . В следующей таблице перечислены эти свойства с соответствующим OLE DB именем свойства в круглых скобках.
 
-|Имя свойства|Description|
+|Имя свойства|Описание|
 |-------------------|-----------------|
 |Доступные процедуры (KAGPROP_ACCESSIBLEPROCEDURES)|Указывает, имеет ли пользователь доступ к хранимым процедурам.|
 |Доступные таблицы (KAGPROP_ACCESSIBLETABLES)|Указывает, имеет ли пользователь разрешение на выполнение инструкций SELECT в таблицах базы данных.|
@@ -119,7 +119,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-recordset-and-command-properties"></a>Специфические для поставщика набор записей и свойства команды
  Поставщик OLE DB для ODBC добавляет несколько свойств в коллекцию **свойств** **набора записей** и объектов **команд** . В следующей таблице перечислены эти свойства с соответствующим OLE DB именем свойства в круглых скобках.
 
-|Имя свойства|Description|
+|Имя свойства|Описание|
 |-------------------|-----------------|
 |Обновления, операции удаления и вставки на основе запросов (KAGPROP_QUERYBASEDUPDATES)|Указывает, можно ли выполнять операции обновления, удаления и вставки с помощью запросов SQL.|
 |Тип параллелизма ODBC (KAGPROP_CONCURRENCY)|Указывает метод, используемый для уменьшения потенциальных проблем, вызванных двумя пользователями, пытающимися получить доступ к одним и тем же данным из источника данных одновременно.|
@@ -172,7 +172,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Доступность стандартных свойств **набора записей** ADO:
 
-|Свойство|форвардонли|Динамический|Keyset|Статическое|
+|Свойство|форвардонли|Динамический|Keyset|Статические|
 |--------------|-----------------|-------------|------------|------------|
 |[Примеры absolutepage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|недоступно|недоступно|чтение/запись|чтение/запись|
 |[Примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|недоступно|недоступно|чтение/запись|чтение/запись|
@@ -190,7 +190,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|чтение/запись|недоступно|Только для чтения|Только для чтения|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|чтение/запись|недоступно|Только для чтения|Только для чтения|
-|[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
+|[Источник](../../../ado/reference/ado-api/source-property-ado-recordset.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
 |[Состояние](../../../ado/reference/ado-api/state-property-ado.md)|Только для чтения|Только для чтения|Только для чтения|Только для чтения|
 |[Состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Только для чтения|Только для чтения|Только для чтения|Только для чтения|
 
@@ -198,27 +198,27 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Доступность стандартных методов **набора записей** ADO:
 
-|Метод|форвардонли|Динамический|Keyset|Статическое|
+|Метод|форвардонли|Динамический|Keyset|Статические|
 |------------|-----------------|-------------|------------|------------|
 |[Вызов](../../../ado/reference/ado-api/addnew-method-ado.md)|Да|Да|Да|Да|
 |[Отмена](../../../ado/reference/ado-api/cancel-method-ado.md)|Да|Да|Да|Да|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Да|Да|Да|Да|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Да|Да|Да|Да|
-|[Клонировать](../../../ado/reference/ado-api/clone-method-ado.md)|нет|нет|Да|Да|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Клонировать)|Нет|Нет|Да|Да|
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Да|Да|Да|Да|
 |[Удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Да|Да|Да|Да|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Да|Да|Да|Да|
 |[Переместить](../../../ado/reference/ado-api/move-method-ado.md)|Да|Да|Да|Да|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|Да|Да|Да|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|нет|Да|Да|Да|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Нет|Да|Да|Да|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|Да|Да|Да|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|нет|Да|Да|Да|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Нет|Да|Да|Да|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Да|Да|Да|Да|
 |[Открыть](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Да|Да|Да|Да|
 |[Повтор](../../../ado/reference/ado-api/requery-method.md)|Да|Да|Да|Да|
-|[Повторная синхронизация](../../../ado/reference/ado-api/resync-method.md)|нет|нет|Да|Да|
-|[Принтер](../../../ado/reference/ado-api/supports-method.md)|Да|Да|Да|Да|
-|[Обновляют](../../../ado/reference/ado-api/update-method.md)|Да|Да|Да|Да|
+|[Повторная синхронизация](../../../ado/reference/ado-api/resync-method.md)|Нет|Нет|Да|Да|
+|[Поддерживает](../../../ado/reference/ado-api/supports-method.md)|Да|Да|Да|Да|
+|[Обновление](../../../ado/reference/ado-api/update-method.md)|Да|Да|Да|Да|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Да|Да|Да|Да|
 
  * Не поддерживается для баз данных Microsoft Access.
@@ -242,8 +242,8 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Определение столбца|DBPROP_COLUMNDEFINITION|
 |Время ожидания соединения|DBPROP_INIT_TIMEOUT|
 |Текущий каталог|DBPROP_CURRENTCATALOG|
-|источник данных|DBPROP_INIT_DATASOURCE|
-|Имя источника данных|DBPROP_DATASOURCENAME|
+|Источник данных|DBPROP_INIT_DATASOURCE|
+|Имя базы данных-источника|DBPROP_DATASOURCENAME|
 |Потоковая модель объекта источника данных|DBPROP_DSOTHREADMODEL|
 |Имя СУБД|DBPROP_DBMSNAME|
 |Версия СУБД|DBPROP_DBMSVER|
@@ -255,7 +255,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Уровни изоляции|DBPROP_SUPPORTEDTXNISOLEVELS|
 |Хранение изоляции|DBPROP_SUPPORTEDTXNISORETAIN|
 |Идентификатор локали|DBPROP_INIT_LCID|
-|Location|DBPROP_INIT_LOCATION|
+|Расположение|DBPROP_INIT_LOCATION|
 |Максимальный размер индекса|DBPROP_MAXINDEXSIZE|
 |Максимальный размер строки|DBPROP_MAXROWSIZE|
 |Максимальный размер строки включает большой двоичный объект|DBPROP_MAXROWSIZEINCLUDESBLOB|
@@ -280,7 +280,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Поведение при подготовке к прерыванию|DBPROP_PREPAREABORTBEHAVIOR|
 |Действие подготовки к фиксации|DBPROP_PREPARECOMMITBEHAVIOR|
 |Условие процедуры|DBPROP_PROCEDURETERM|
-|Prompt|DBPROP_INIT_PROMPT|
+|prompt|DBPROP_INIT_PROMPT|
 |Понятное имя поставщика|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |Версия поставщика|DBPROP_PROVIDERVER|
@@ -295,7 +295,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |DDL транзакции|DBPROP_SUPPORTEDTXNDDL|
 |Идентификатор пользователя.|DBPROP_AUTH_USERID|
 |Имя пользователя|DBPROP_USERNAME|
-|Маркер окна|DBPROP_INIT_HWND|
+|Дескриптор окна|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Динамические свойства набора записей
  В коллекцию **свойств** объекта **набора записей** добавляются следующие свойства.
@@ -431,4 +431,4 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
  Дополнительные сведения о конкретной реализации и функциональных возможностях о поставщике OLE DB Майкрософт для ODBC см. в [справочнике по программированию OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) или на веб-сайте центра разработчиков для доступа к данным и хранилища на сайте MSDN.
 
 ## <a name="see-also"></a>См. также:
- [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [свойство CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) (ADO) свойство [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) (ADO) метод Execute (ADO) [(объект,](../../../ado/reference/ado-api/connection-object-ado.md) [команда ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md) [](../../../ado/reference/ado-api/open-method-ado-recordset.md) [Коллекция параметров](../../../ado/reference/ado-api/parameters-collection-ado.md) (ADO [)](../../../ado/reference/ado-api/properties-collection-ado.md) [свойство поставщика](../../../ado/reference/ado-api/provider-property-ado.md) (ADO) [объект Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) (ADO) [поддерживает метод](../../../ado/reference/ado-api/supports-method.md)
+ [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [свойство CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) (ADO) свойство [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) (ADO) метод Execute (ADO) [(объект,](../../../ado/reference/ado-api/connection-object-ado.md) [команда ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md) [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) [Коллекция параметров](../../../ado/reference/ado-api/parameters-collection-ado.md) (ADO [)](../../../ado/reference/ado-api/properties-collection-ado.md) [свойство поставщика](../../../ado/reference/ado-api/provider-property-ado.md) (ADO) [объект Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) (ADO) [поддерживает метод](../../../ado/reference/ado-api/supports-method.md)

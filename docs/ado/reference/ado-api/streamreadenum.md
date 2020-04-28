@@ -16,18 +16,18 @@ ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7700fc1ddc3cc619db224ac46006370898af1d62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928662"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
 Указывает, следует ли считывать весь поток или следующую строку из объекта [потока](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
-|Постоянно|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
-|**адреадалл**|-1|По умолчанию. Считывает все байты из потока от текущей позицией до маркера [EOS](../../../ado/reference/ado-api/eos-property.md) . Это единственное допустимое значение **стреамреаденум** с двоичными потоками ([тип](../../../ado/reference/ado-api/type-property-ado-stream.md) — **адтипебинари**).|  
+|**adReadAll**|-1|По умолчанию. Считывает все байты из потока от текущей позицией до маркера [EOS](../../../ado/reference/ado-api/eos-property.md) . Это единственное допустимое значение **стреамреаденум** с двоичными потоками ([тип](../../../ado/reference/ado-api/type-property-ado-stream.md) — **адтипебинари**).|  
 |**адреадлине**|-2|Считывает следующую строку из потока (назначается свойством [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) ).|  
   
 ## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  

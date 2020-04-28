@@ -14,10 +14,10 @@ ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920900"
 ---
 # <a name="ado-objects-and-interfaces"></a>Объекты и интерфейсы ADO
@@ -32,9 +32,9 @@ ms.locfileid: "67920900"
 |[адорекордсетконструктион](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)|Конструирует объект **набора записей** ADO из объекта OLE DB **набора строк** в приложении C/C++.|  
 |[Интерфейс ADOStreamConstruction](../../../ado/reference/ado-api/adostreamconstruction-interface.md)|Конструирует объект **потока** ADO из OLE DBного объекта **IStream** в приложении C/C++.|  
 |[Command](../../../ado/reference/ado-api/command-object-ado.md)|Определяет конкретную команду, которую необходимо выполнить для источника данных.<br /><br /> Объект **Command** не является надежным для сценариев.|  
-|[Соединен](../../../ado/reference/ado-api/connection-object-ado.md)|Представляет открытое соединение с источником данных.<br /><br /> Объект **соединения** является надежным для сценариев.|  
+|[Соединен](../../../ado/reference/ado-api/connection-object-ado.md)|Представляет открытое подключение к источнику данных.<br /><br /> Объект **соединения** является надежным для сценариев.|  
 |[Интерфейс IDSOShapeExtensions](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)|Возвращает базовый объект источника данных OLEDB для поставщика фигур.|  
-|[Ошибка](../../../ado/reference/ado-api/error-object.md)|Содержит сведения об ошибках доступа к данным, относящихся к одной операции, включающей в себя поставщик.<br /><br /> Объект **Error** не является надежным для скриптов.|  
+|[Error](../../../ado/reference/ado-api/error-object.md)|Содержит сведения об ошибках доступа к данным, относящихся к одной операции, включающей в себя поставщик.<br /><br /> Объект **Error** не является надежным для скриптов.|  
 |[Поле](../../../ado/reference/ado-api/field-object.md)|Представляет столбец данных с общим типом данных.|  
 |[Параметр](../../../ado/reference/ado-api/parameter-object.md)|Представляет параметр или аргумент, связанный с объектом **Command** на основе параметризованного запроса или хранимой процедуры.<br /><br /> Объект **параметра** не является надежным для скриптов.|  
 |[Свойство](../../../ado/reference/ado-api/property-object-ado.md)|Представляет динамическую характеристику объекта ADO, определяемого поставщиком.|  

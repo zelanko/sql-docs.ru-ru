@@ -16,10 +16,10 @@ ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920801"
 ---
 # <a name="adorecordconstruction-interface"></a>Интерфейс ADORecordConstruction
@@ -35,10 +35,10 @@ ms.locfileid: "67920801"
 |[Строки](../../../ado/reference/ado-api/row-property-ado.md)|Чтение и запись.<br />Возвращает или задает OLE DB объект **строки** от или в этом объекте ADO **Record** .|  
   
 ## <a name="methods"></a>Методы  
- Нет.  
+ Отсутствует.  
   
 ## <a name="events"></a>События  
- Нет.  
+ Отсутствует.  
   
 ## <a name="remarks"></a>Remarks  
  При наличии объекта **строки** OLE DB (`pRow`) построение объекта **записи** ADO (`adoR`) производится в следующие три основные операции:  

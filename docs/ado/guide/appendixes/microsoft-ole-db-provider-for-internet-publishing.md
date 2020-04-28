@@ -15,16 +15,16 @@ ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 19d719ddb4e5a2f7851a1d12dc4abe69069a354f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926751"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Обзор поставщика услуг Microsoft OLE DB для публикации в Интернете
 Поставщик Microsoft OLE DB для публикации в Интернете позволяет ADO получать доступ к ресурсам, обслуживаемым Microsoft FrontPage или Microsoft Internet Information Server. К ресурсам относятся исходные файлы веб-системы, такие как HTML-файлы, или папки Windows 2000.
 
-## <a name="connection-string-parameters"></a>Параметры строки подключения
+## <a name="connection-string-parameters"></a>Параметры строки соединения
  Чтобы подключиться к поставщику, задайте для аргумента *поставщика* свойства [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) значение:
 
 ```vb
@@ -48,11 +48,11 @@ MSDAIPP.DSO
 
  Строка состоит из следующих ключевых слов:
 
-|Ключевое слово|Description|
+|Ключевое слово|Описание|
 |-------------|-----------------|
 |**Поставщик**|Указывает поставщика OLE DB для публикации в Интернете.|
 |**Источник данных** или URL- **адрес**|Указывает URL-адрес файла или каталога, опубликованного в веб-папке.|
-|**Идентификатор пользователя.**|Указывает имя пользователя.|
+|**Идентификатор пользователя**|Указывает имя пользователя.|
 |**Пароль**|Указывает пароль пользователя.|
 
 > [!NOTE]

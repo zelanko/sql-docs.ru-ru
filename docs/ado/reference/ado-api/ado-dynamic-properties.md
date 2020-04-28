@@ -14,10 +14,10 @@ ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71396a071a42d7dd40a6537a2834541aab2b6bad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921096"
 ---
 # <a name="ado-dynamic-properties"></a>Динамические свойства ADO
@@ -30,7 +30,7 @@ ms.locfileid: "67921096"
 |||  
 |-|-|  
 |[Увеличить](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Указывает, следует ли создавать индекс для этого поля.|  
-|[Предупреждение](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Указывает, должен ли поставщик OLE DB запрашивать сведения об инициализации у пользователя.|  
+|[Prompt](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Указывает, должен ли поставщик OLE DB запрашивать сведения об инициализации у пользователя.|  
 |[Изменить имя формы](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Задает имя объекта **набора записей** .|  
 |[Команда повторной синхронизации](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Указывает указанную пользователем строку команды, которая выдается методом повторной **синхронизации** для обновления данных в таблице, указанной в динамическом свойстве **уникальной таблицы** .|  
 |[Уникальная таблица, уникальная схема, уникальный каталог](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**Уникальная таблица** Указывает имя базовой таблицы, в которой разрешены обновления, вставки и удаления.<br /><br /> **Уникальная схема** Указывает схему или имя владельца таблицы.<br /><br /> **Уникальный каталог** Указывает каталог или имя базы данных, содержащей таблицу.|  

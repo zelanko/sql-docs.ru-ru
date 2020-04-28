@@ -14,10 +14,10 @@ ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925131"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: простое приложение ADO
@@ -44,17 +44,17 @@ ms.locfileid: "67925131"
   
 |Тип элемента управления|Свойство|Значение|  
 |------------------|--------------|-----------|  
-|Форма|Имя|Form1|  
+|Form|Имя|Form1|  
 ||Высота:|6500|  
 ||Ширина|6500|  
 |Microsoft DataGrid|Имя|grdDisplay1|  
 |TextBox|Имя|txtDisplay1|  
-||Multiline|верно|  
+||Multiline|Да|  
 |Кнопка команды|Имя|кмджетдата|  
 ||Caption|Получение данных|  
 |Кнопка команды|Имя|кмдексаминедата|  
 ||Caption|Проверка данных|  
 |Кнопка команды|Имя|кмдедитдата|  
-||Caption|Изменить данные|  
+||Caption| Изменение данных|  
 |Кнопка команды|Имя|кмдупдатедата|  
 ||Caption|Обновление данных|

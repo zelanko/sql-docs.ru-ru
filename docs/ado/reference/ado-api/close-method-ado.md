@@ -18,10 +18,10 @@ ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8a1d153d1433a377bb488366111b75a986365132
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919934"
 ---
 # <a name="close-method-ado"></a>Метод Close (ADO)
@@ -37,7 +37,7 @@ object.Close
 ## <a name="remarks"></a>Remarks  
  Используйте метод **Close** , чтобы закрыть [соединение](../../../ado/reference/ado-api/connection-object-ado.md), [запись](../../../ado/reference/ado-api/record-object-ado.md), [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md)или объект [потока](../../../ado/reference/ado-api/stream-object-ado.md) , чтобы освободить все связанные системные ресурсы. Закрытие объекта не приводит к его удалению из памяти; можно изменить параметры свойств и открыть его позже. Чтобы полностью исключить объект из памяти, закройте объект и задайте для переменной объекта значение *Nothing* (в Visual Basic).  
   
-## <a name="connection"></a>Подключение  
+## <a name="connection"></a>Соединение  
  Использование метода **Close** для закрытия объекта **соединения** также закрывает все активные объекты **набора записей** , связанные с соединением. Объект [команды](../../../ado/reference/ado-api/command-object-ado.md) , связанный с закрываемым объектом **соединения** , будет сохранен, но больше не будет связан с объектом **соединения** . то есть свойство [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) будет иметь значение **Nothing**. Кроме того, коллекция [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) объекта **команды** будет очищать все параметры, определяемые поставщиком.  
   
  Позже можно вызвать метод [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) для повторного установления соединения с тем же или другим источником данных. Пока объект **соединения** закрыт, вызов всех методов, требующих открытого соединения с источником данных, приведет к ошибке.  

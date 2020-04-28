@@ -18,10 +18,10 @@ ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920387"
 ---
 # <a name="bof-eof-properties-ado"></a>Свойства BOF и EOF (ADO)
@@ -49,9 +49,9 @@ ms.locfileid: "67920387"
   
 ||MoveFirst<br /><br /> MoveLast|MovePrevious<br /><br /> Переместить < 0|Переместить 0|Метод<br /><br /> Переместить > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**true**, **EOF**=**false**|Разрешено|Ошибка|Ошибка|Разрешено|  
-|**BOF**=**false**, **EOF**=(**Истина** )|Разрешено|Разрешено|Ошибка|Ошибка|  
-|Оба значения **true**|Ошибка|Ошибка|Ошибка|Ошибка|  
+|**BOF**=**true**, **EOF**=**false**|Разрешено|Error|Error|Разрешено|  
+|**BOF**=**false**, **EOF**=(**Истина** )|Разрешено|Разрешено|Error|Error|  
+|Оба значения **true**|Error|Error|Error|Error|  
 |Оба значения **false**|Разрешено|Разрешено|Разрешено|Разрешено|  
   
  Разрешение метода **Move** не гарантирует, что метод сможет успешно обнаружить запись. Это только означает, что вызов указанного метода **Move** не приведет к ошибке.  

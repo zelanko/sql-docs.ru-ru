@@ -16,16 +16,16 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926678"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Поставщик OLE DB Майкрософт для службы Microsoft Active Directory
 Поставщик интерфейсов служб Active Directory (ADSI) позволяет ADO подключаться к разнородным службам каталогов через ADSI. Это дает приложениям ADO доступ только для чтения к службам каталогов Microsoft Windows NT 4,0 и Microsoft Windows 2000 в дополнение к любым LDAP-совместимым службам каталогов и службами каталогов Novell. Интерфейсы ADSI основаны на модели поставщика, поэтому при наличии нового поставщика, предоставляющего доступ к другому каталогу, приложение ADO будет иметь доступ к нему без проблем. Поставщик ADSI бесплатен и поддерживает Юникод.  
   
-## <a name="connection-string-parameters"></a>Параметры строки подключения  
+## <a name="connection-string-parameters"></a>Параметры строки соединения  
  Чтобы подключиться к этому поставщику, задайте для аргумента **поставщика** свойства [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) следующее значение:  
   
 ```vb
@@ -43,10 +43,10 @@ ADSDSOObject
   
  Строка состоит из следующих ключевых слов.  
   
-|Ключевое слово|Description|  
+|Ключевое слово|Описание|  
 |-------------|-----------------|  
 |**Поставщик**|Указывает поставщика OLE DB для службы Active Directory.|  
-|**Идентификатор пользователя.**|Указывает имя пользователя. Если это ключевое слово опущено, используется текущий вход.|  
+|**Идентификатор пользователя**|Указывает имя пользователя. Если это ключевое слово опущено, используется текущий вход.|  
 |**Пароль**|Указывает пароль пользователя. Значение, если ключевое слово пропущено. Затем используется текущий вход в систему.|  
   
 > [!NOTE]
@@ -59,12 +59,12 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|*Root*|Указывает **путь** к объекту, с которого начинается поиск (то есть корневой элемент поиска).|  
+|*Корневой*|Указывает **путь** к объекту, с которого начинается поиск (то есть корневой элемент поиска).|  
 |*Filter*|Указывает фильтр поиска в формате RFC 1960.|  
 |*Атрибуты*|Указывает разделенный запятыми список атрибутов, которые должны быть возвращены.|  
-|*Область*|Необязательный параметр. **Строка** , указывающая область поиска. Может применяться один из перечисленных ниже типов.<br /><br /> -Base — Поиск только базового объекта (корень поиска).<br />-Одноуровневой — Поиск только на одном уровне.<br />-Subtree — Поиск по всему поддереву.|  
+|*Область*|Необязательный параметр. **Строка** , указывающая область поиска. Может принимать следующие значения:<br /><br /> -Base — Поиск только базового объекта (корень поиска).<br />-Одноуровневой — Поиск только на одном уровне.<br />-Subtree — Поиск по всему поддереву.|  
   
  Пример:  
   
@@ -89,7 +89,7 @@ objectClass='user' AND objectCategory='Person'"
   
  **Доступность стандартных свойств набора записей ADO:**  
   
-|Свойство|доступность;|  
+|Свойство|Доступность|  
 |--------------|------------------|  
 |[Примеры absolutepage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|чтение/запись|  
 |[Примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|чтение/запись|  
@@ -108,21 +108,21 @@ objectClass='user' AND objectCategory='Person'"
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Только для чтения|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|чтение/запись|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Только для чтения|  
-|[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|чтение/запись|  
+|[Источник](../../../ado/reference/ado-api/source-property-ado-recordset.md)|чтение/запись|  
 |[Состояние](../../../ado/reference/ado-api/state-property-ado.md)|Только для чтения|  
 |[Состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Только для чтения|  
   
  **Доступность стандартных методов набора записей ADO:**  
   
-|Метод|Имеющ?|  
+|Метод|Доступно?|  
 |------------|----------------|  
-|[Вызов](../../../ado/reference/ado-api/addnew-method-ado.md)|нет|  
-|[Отмена](../../../ado/reference/ado-api/cancel-method-ado.md)|нет|  
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|нет|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|нет|  
-|[Клонировать](../../../ado/reference/ado-api/clone-method-ado.md)|Да|  
+|[Вызов](../../../ado/reference/ado-api/addnew-method-ado.md)|Нет|  
+|[Отмена](../../../ado/reference/ado-api/cancel-method-ado.md)|Нет|  
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Нет|  
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Нет|  
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Клонировать)|Да|  
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Да|  
-|[Удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|нет|  
+|[Удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Нет|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Да|  
 |[Переместить](../../../ado/reference/ado-api/move-method-ado.md)|Да|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|  
@@ -133,9 +133,9 @@ objectClass='user' AND objectCategory='Person'"
 |[Открыть](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Да|  
 |[Повтор](../../../ado/reference/ado-api/requery-method.md)|Да|  
 |[Повторная синхронизация](../../../ado/reference/ado-api/resync-method.md)|Да|  
-|[Принтер](../../../ado/reference/ado-api/supports-method.md)|Да|  
-|[Обновляют](../../../ado/reference/ado-api/update-method.md)|нет|  
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|нет|  
+|[Поддерживает](../../../ado/reference/ado-api/supports-method.md)|Да|  
+|[Обновление](../../../ado/reference/ado-api/update-method.md)|Нет|  
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Нет|  
   
  Дополнительные сведения о ADSI и особенностях поставщика см. в документации по интерфейсам Active Directory служб или на веб-странице ADSI.  
   

@@ -16,16 +16,16 @@ ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a872ee5f4af49d9fbe97621a5d2549fd9472202
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931249"
 ---
 # <a name="resyncenum"></a>ResyncEnum
 Указывает, перезаписываются ли базовые значения при вызове повторной [синхронизации](../../../ado/reference/ado-api/resync-method.md).  
   
-|Постоянно|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**адресинкаллвалуес**|2|По умолчанию. Перезаписывает данные, и ожидающие обновления отменяются.|  
 |**адресинкундерлингвалуес**|1|Не перезаписывает данные, а ожидающие обновления не отменяются.|  
@@ -33,7 +33,7 @@ ms.locfileid: "67931249"
 ## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
  Пакет: **com. MS. WFC. Data**  
   
-|Постоянно|  
+|Константа|  
 |--------------|  
 |Адоенумс. Resync. В ALLVALUES|  
 |Адоенумс. Resync. УНДЕРЛИНГВАЛУЕС|  

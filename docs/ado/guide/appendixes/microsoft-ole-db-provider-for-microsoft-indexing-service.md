@@ -15,10 +15,10 @@ ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926666"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Обзор службы Microsoft OLE DB Provider для Microsoft Indexing Service
@@ -26,7 +26,7 @@ ms.locfileid: "67926666"
 
  Поставщик бесплатен и поддерживает Юникод.
 
-## <a name="connection-string-parameters"></a>Параметры строки подключения
+## <a name="connection-string-parameters"></a>Параметры строки соединения
  Чтобы подключиться к этому поставщику, задайте для аргумента **provider =** свойства [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) значение:
 
 ```vb
@@ -44,7 +44,7 @@ MSIDXS
 
  Строка состоит из следующих ключевых слов:
 
-|Ключевое слово|Description|
+|Ключевое слово|Описание|
 |-------------|-----------------|
 |**Поставщик**|Указывает поставщика OLE DB для службы индексирования (Майкрософт). Обычно это единственное ключевое слово, указанное в строке подключения.|
 |**Источник данных**|Указывает имя каталога службы индексирования. Если это ключевое слово не указано, используется системный каталог по умолчанию.|
@@ -66,7 +66,7 @@ MSIDXS
 
  **Доступность стандартных свойств набора записей ADO:**
 
-|Свойство|доступность;|
+|Свойство|Доступность|
 |--------------|------------------|
 |[Примеры absolutepage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|чтение/запись|
 |[Примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|чтение/запись|
@@ -85,7 +85,7 @@ MSIDXS
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Только для чтения|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|чтение/запись|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Только для чтения|
-|[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|чтение/запись|
+|[Источник](../../../ado/reference/ado-api/source-property-ado-recordset.md)|чтение/запись|
 |[Состояние](../../../ado/reference/ado-api/state-property-ado.md)|Только для чтения|
 |[Состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Только для чтения|
 
@@ -93,15 +93,15 @@ MSIDXS
 
  **Доступность стандартных методов набора записей ADO:**
 
-|Метод|Имеющ?|
+|Метод|Доступно?|
 |------------|----------------|
-|[Вызов](../../../ado/reference/ado-api/addnew-method-ado.md)|нет|
+|[Вызов](../../../ado/reference/ado-api/addnew-method-ado.md)|Нет|
 |[Отмена](../../../ado/reference/ado-api/cancel-method-ado.md)|Да|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|нет|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|нет|
-|[Клонировать](../../../ado/reference/ado-api/clone-method-ado.md)|Да|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Нет|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Нет|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Клонировать)|Да|
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Да|
-|[Удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|нет|
+|[Удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Нет|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Да|
 |[Переместить](../../../ado/reference/ado-api/move-method-ado.md)|Да|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|
@@ -109,9 +109,9 @@ MSIDXS
 |[Открыть](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Да|
 |[Повтор](../../../ado/reference/ado-api/requery-method.md)|Да|
 |[Повторная синхронизация](../../../ado/reference/ado-api/resync-method.md)|Да|
-|[Принтер](../../../ado/reference/ado-api/supports-method.md)|Да|
-|[Обновляют](../../../ado/reference/ado-api/update-method.md)|нет|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|нет|
+|[Поддерживает](../../../ado/reference/ado-api/supports-method.md)|Да|
+|[Обновление](../../../ado/reference/ado-api/update-method.md)|Нет|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Нет|
 
  Для получения сведений о конкретной реализации и функциональных сведений о поставщике Microsoft OLE DB для службы индексирования Майкрософт обратитесь к [руководству по OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx)или посетите страницу веб-службы на веб-сайте Windows NT Server.
 

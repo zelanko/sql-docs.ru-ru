@@ -14,10 +14,10 @@ ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91bdf0cfbfe87075d2c9484bca7edd835a950ee6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925341"
 ---
 # <a name="formal-shape-grammar"></a>Грамматика формального формирования данных
@@ -53,11 +53,9 @@ ms.locfileid: "67925341"
 |\<> дочерняя ссылка|\<имя поля> &#124;<br /><br /> ПАРАМЕТР \<param-ref>|  
 |\<> param-ref|\<число>|  
 |\<> списка полей|\<имя поля> [, \<имя поля>]|  
-|
-  \<aggregate-exp>|SUM (\<> с полными именами полей) &#124;<br /><br /> AVG (\<полное имя поля>) &#124;<br /><br /> MIN (\<полное имя поля>) &#124;<br /><br /> MAX (\<полное имя поля>) &#124;<br /><br /> COUNT (\<> &#124; \<с полным псевдонимом>) &#124;<br /><br /> STDEV (\<полное имя поля>) &#124;<br /><br /> ANY (\<полное имя поля>)|  
+|\<aggregate-exp>|SUM (\<> с полными именами полей) &#124;<br /><br /> AVG (\<полное имя поля>) &#124;<br /><br /> MIN (\<полное имя поля>) &#124;<br /><br /> MAX (\<полное имя поля>) &#124;<br /><br /> COUNT (\<> &#124; \<с полным псевдонимом>) &#124;<br /><br /> STDEV (\<полное имя поля>) &#124;<br /><br /> ANY (\<полное имя поля>)|  
 |\<вычисляемый> exp|CALC (\<выражение>)|  
-|\<> с полным именем поля|
-  \<alias>.[\<alias>...]\<field-name>|  
+|\<> с полным именем поля|\<alias>.[\<alias>...]\<field-name>|  
 |\<псевдоним>|\<имя> в кавычках|  
 |\<имя поля>|\<в кавычках — имя> [[AS \<] псевдоним>]|  
 |\<имя> в кавычках|"\<String>" &#124;<br /><br /> "\<String>" &#124;<br /><br /> [\<String>] &#124;<br /><br /> \<имя>|  

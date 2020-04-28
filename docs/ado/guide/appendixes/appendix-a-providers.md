@@ -17,10 +17,10 @@ ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926973"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Приложение а. поставщики данных и служб
@@ -46,7 +46,7 @@ ms.locfileid: "67926973"
 |Служба Active Directory|[Поставщик OLE DB Майкрософт для службы Microsoft Active Directory](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
 |Базы данных Microsoft Jet|[Поставщик OLE DB для Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Microsoft SQL Server|[Поставщик Microsoft OLE DB для SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
-|базы данных Oracle;|[Поставщик Microsoft OLE DB для Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
+|базы данных Oracle;|[Поставщик OLE DB для Oracle (Microsoft)](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
 |Публикация в Интернете|[Поставщик OLE DB Майкрософт для публикации в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
 |Простые источники данных|[Простой поставщик Microsoft OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
 
@@ -73,4 +73,4 @@ ms.locfileid: "67926973"
  Для каждого поставщика, указанного здесь, если приложения позволяют пользователям вводить инструкции SQL в качестве команд поставщика, необходимо всегда проверять вводимые пользователем данные и бдительным атаки хакеров с помощью потенциально опасных инструкций SQL, таких как `DROP TABLE t1`, как часть вводимых пользователем данных.
 
 ## <a name="see-also"></a>См. также:
- Объект-соединение объекта [Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [(ADO](../../../ado/reference/ado-api/connection-object-ado.md) [) поставщик Microsoft OLE DB для веб-публикации](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [поставщика Microsoft OLE DB Active Directory для службы](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) Microsoft [OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) поставщик Microsoft OLE DB поставщик Майкрософт для [ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [поставщик OLE DB для Oracle (Майкрософт)](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) Microsoft OLE DB Provider для [SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) Microsoft OLE DB Provider для набора записей [Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [ Метод обновления объектов (ADO](../../../ado/reference/ado-api/recordset-object-ado.md) ) [(RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)
+ [Объект объекта (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [Connection Object](../../../ado/reference/ado-api/connection-object-ado.md) (ado) [поставщик Microsoft OLE DB для интернет-публикации](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [поставщика Microsoft OLE DB Active Directory для службы](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) Microsoft [OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) поставщик Microsoft OLE DB поставщик Майкрософт для [ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [поставщик OLE DB для Oracle (Майкрософт)](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) Microsoft OLE DB Provider для [SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) поставщика Microsoft OLE DB поставщик [Microsoft (ADO](../../../ado/reference/ado-api/properties-collection-ado.md) [) (](../../../ado/reference/ado-api/recordset-object-ado.md) [RDS) метод обновления](../../../ado/reference/rds-api/refresh-method-rds.md) Microsoft [Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)
