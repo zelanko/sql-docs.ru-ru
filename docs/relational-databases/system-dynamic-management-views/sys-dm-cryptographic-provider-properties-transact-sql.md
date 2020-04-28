@@ -19,10 +19,10 @@ ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cc1e0915fb48b42429bb2821476f98154ac39451
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005100"
 ---
 # <a name="sysdm_cryptographic_provider_properties-transact-sql"></a>sys.dm_cryptographic_provider_properties (Transact-SQL)
@@ -31,10 +31,10 @@ ms.locfileid: "68005100"
   Возвращает сведения о зарегистрированных поставщиках служб шифрования.  
   
  
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |provider_id|**int**|Идентификационный номер поставщика служб шифрования.|  
-|guid|**UNIQUEIDENTIFIER**|Глобальный уникальный идентификатор поставщика (GUID).|  
+|guid|**uniqueidentifier**|Глобальный уникальный идентификатор поставщика (GUID).|  
 |provider_version|**nvarchar(256)**|Версия поставщика в формате "*AA.BB.CCCC.dd*".|  
 |sqlcrypt_version|**nvarchar(256)**|Основной номер версии API [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] шифрования в формате "*AA.BB.CCCC.dd*".|  
 |friendly_name|**nvarchar (2048)**|Имя введено поставщиком.|  
@@ -55,7 +55,7 @@ ms.locfileid: "68005100"
  [Представления каталога безопасности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [Расширенное управление ключами &#40;управления РАСШИРЕНным ключом&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
- [Динамические административные представления и функции, связанные с безопасностью &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Создание поставщика служб шифрования &#40;&#41;Transact-SQL](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
+ [Динамические административные представления и функции, связанные с безопасностью (Transact-SQL)](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

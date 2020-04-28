@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 84cbfafdba3bca9b06f250ed9996f0a87e71a18c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026866"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
@@ -41,10 +41,10 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
   
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]существенно отличается от более поздних версий и обсуждается ниже в разделе [SQL Server 2014](#bkmk_2014).**
   
-## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]и более поздние версии  
+## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий  
  В следующей таблице описаны столбцы в `sys.dm_db_xtp_checkpoint_stats`, начиная с. **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**  
   
-|Имя столбца|Тип|Description|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|Последний номер LSN, отображаемый контроллером.|  
 |end_of_log_lsn|**numeric (38)**|Номер LSN конца журнала.|  
@@ -66,7 +66,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |checkpoints_closed|**bigint**|Число контрольных точек, закрытых с момента перезапуска базы данных.|  
 |last_closed_checkpoint_ts|**bigint**|Метка времени последней закрытой контрольной точки.|  
 |hardened_recovery_lsn|**numeric (38)**|Восстановление начнется с этого номера LSN.|  
-|hardened_root_file_guid|**UNIQUEIDENTIFIER**|Идентификатор GUID корневого файла, зафиксированного в результате последней выполненной контрольной точки.|  
+|hardened_root_file_guid|**uniqueidentifier**|Идентификатор GUID корневого файла, зафиксированного в результате последней выполненной контрольной точки.|  
 |hardened_root_file_watermark|**bigint**|**Только внутренние**. Насколько действительно можно считать корневой файл до (это внутренний релевантный тип, именуемый BSN).|  
 |hardened_truncation_lsn|**numeric (38)**|Номер LSN точки усечения.|  
 |log_bytes_since_last_close|**bigint**|Байтов от последнего близкого к текущему концу журнала.|  
@@ -79,14 +79,14 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |recovery_checkpoint_id|**bigint**|Идентификатор контрольной точки, которая будет использоваться при восстановлении.|  
 |recovery_checkpoint_ts|**bigint**|Метка времени контрольной точки восстановления.|  
 |bootstrap_recovery_lsn|**numeric (38)**|Номер LSN восстановления для начальной загрузки.|  
-|bootstrap_root_file_guid|**UNIQUEIDENTIFIER**|Идентификатор GUID корневого файла для начальной загрузки.|  
+|bootstrap_root_file_guid|**uniqueidentifier**|Идентификатор GUID корневого файла для начальной загрузки.|  
 |internal_error_code|**bigint**|Ошибка, обнаруженная любыми потоками контроллера, сериализатора, закрытия и слияния.|
 |bytes_of_large_data_serialized|**bigint**|Объем сериализованных данных. |  
   
-##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  В следующей таблице описаны столбцы в `sys.dm_db_xtp_checkpoint_stats`, для. **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**  
   
-|Имя столбца|Тип|Description|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|Число байтов журнала до регистрационного номера транзакции в журнале и в конце текущего потока транзакций.|  
 |total_log_blocks_processed|**bigint**|Общее количество блоков журнала, обработанных с момента запуска сервера.|  
@@ -108,6 +108,6 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
  Необходимо разрешение `VIEW DATABASE STATE` на сервере.  
   
 ## <a name="see-also"></a>См. также:  
- [Динамические административные представления оптимизированной для памяти таблицы &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

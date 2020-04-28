@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f0aa7017cd82dce5da8d3424ed67565e9fda101c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68003520"
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>Инструкции многомерных выражений для манипулирования данными (многомерные выражения)
@@ -22,17 +22,17 @@ ms.locfileid: "68003520"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Оператор CALL &#40;&#41;многомерных выражений](../mdx/mdx-data-manipulation-call.md)|Выполняет хранимую процедуру, которая возвращает значение void в текущей области или (по желанию) в указанном кубе.|  
 |[Инструкция CLEAR вычисления &#40;&#41;многомерных выражений](../mdx/mdx-data-manipulation-clear-calculations.md)|Удаляет все вычисления из куба и возвращает куб к этапу вычисления 0.|  
 |[Инструкция DRILLTHROUGH &#40;&#41;многомерных выражений](../mdx/mdx-data-manipulation-drillthrough.md)|Извлекает наборы строк, которые использовались для создания заданной ячейки куба.|  
-|[Инструкция SELECT &#40;&#41;многомерных выражений](../mdx/mdx-data-manipulation-select.md)|Извлекает данные из заданного куба.|  
+|[Инструкция SELECT (многомерные выражения)](../mdx/mdx-data-manipulation-select.md)|Извлекает данные из заданного куба.|  
 |[Инструкция UPDATE CUBE &#40;&#41;многомерных выражений](../mdx/mdx-data-manipulation-update-cube.md)|Обновляет значение указанной конечной или неконечной ячейки куба, по желанию размещая значение для указанной неконечной ячейки в зависимых конечных ячейках.|  
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по инструкциям многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-statement-reference-mdx.md)   
  [Инструкции определения данных многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-statements-mdx.md)   
- [Инструкции скриптов многомерных выражений &#40;многомерные выражения&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [Инструкции для создания скриптов многомерных выражений (многомерные выражения)](../mdx/mdx-scripting-statements-mdx.md)  
   
   

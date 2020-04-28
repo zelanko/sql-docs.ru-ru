@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 020d75e780dcc2036b70348fa57cf1007ce0e401
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037319"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Системные хранимые процедуры (Transact-SQL)
@@ -34,9 +34,9 @@ ms.locfileid: "68037319"
 
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] многие задачи администрирования и сбора информации можно выполнять с помощью системных хранимых процедур. Системные хранимые процедуры объединяются в категории, перечисленные в следующей таблице.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
-|Категория|Description|  
+|Категория|Описание|  
 |--------------|-----------------|  
 |[Активные хранимые процедуры георепликации](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Используется для управления конфигурациями активной георепликации в базе данных SQL Azure|  
 |[Хранимые процедуры для работы с каталогом](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|Используются для реализации функций словаря данных ODBC и изоляции ODBC-приложений от изменений во внутренних системных таблицах.|  
@@ -52,7 +52,7 @@ ms.locfileid: "68037319"
 |[Хранимые процедуры для работы с полнотекстовым поиском](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|Используются для создания полнотекстовых индексов и запросов к ним.|  
 |[Общие расширенные хранимые процедуры](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|Используются, чтобы предоставить внешним программам интерфейс к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения различных задач обслуживания.|  
 |[Хранимые процедуры для работы с доставкой журналов](../../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)|Используются для создания, изменения и отслеживания конфигураций доставки журналов.|  
-|[Хранимые процедуры хранилища управляющих данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|Используется для настройки хранилища управляющих данных.|  
+|[Хранимые процедуры хранилища данных управления (Transact-SQL)](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|Используется для настройки хранилища управляющих данных.|  
 |[Хранимые процедуры OLE Automation](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|Используются, чтобы включить стандартные объекты OLE-автоматизации использования в стандартном пакете [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |[Хранимые процедуры управления на основе политики](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|Используется для управления на основе политики.|  
 |[Хранимые процедуры PolyBase](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Добавление или удаление компьютера из масштабируемой группы Polybase.|  
@@ -172,7 +172,7 @@ ms.locfileid: "68037319"
 |sp_xml_schema_rowset2||  
   
 ## <a name="see-also"></a>См. также:  
- [Создание процедуры &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
+ [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [&#40;ядро СУБД хранимых процедур&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [Выполнение хранимых процедур &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)   
  [Выполнение хранимых процедур](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   

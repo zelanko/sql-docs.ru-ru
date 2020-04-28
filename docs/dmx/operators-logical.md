@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 947e9a26f697a4b6a62d2153afc882c68c3066dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008156"
 ---
 # <a name="operators---logical"></a>Операторы — логические
@@ -22,7 +22,7 @@ ms.locfileid: "68008156"
   
  В следующей таблице приводятся логические операторы, поддерживаемые расширениями интеллектуального анализа данных:  
   
-|Оператор|Description|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |[И &#40;&#41;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ](../dmx/and-dmx.md)|Выполняет логическое умножение двух числовых выражений.|  
 |[НЕ &#40;&#41;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ](../dmx/not-dmx.md)|Выполняет операцию логического отрицания над числовым выражением.|  

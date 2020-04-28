@@ -20,17 +20,17 @@ ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 47bfaa2ceb0885379bd5633f0160d2a9b24cf3c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036032"
 ---
 # <a name="srv_sendrow-extended-stored-procedure-api"></a>srv_sendrow (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
   
  Передает строку данных на клиент.  
   
@@ -47,7 +47,7 @@ srvproc
  *srvproc*  
  Указатель на структуру SRV_PROC, который представляет собой дескриптор соединения с клиентом (в данном случае — дескриптор, который получил запрос языка). Структура содержит сведения, которые используются библиотекой API-интерфейса расширенных хранимых процедур для управления связью и передачи данных между приложением и клиентом.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  SUCCEED или FAIL.  
   
 ## <a name="remarks"></a>Remarks  
@@ -62,6 +62,6 @@ srvproc
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>См. также:  
- [API srv_describe &#40;расширенных хранимых процедур&#41;](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)  
+ [srv_describe (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)  
   
   

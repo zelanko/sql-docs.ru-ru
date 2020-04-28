@@ -12,10 +12,10 @@ ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5185e8b1364fe2a5bae92c40c99e8f52bcd32ba7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028927"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>Загрузка преобразованных объектов базы данных в SQL Server (SybaseToSQL)
@@ -106,7 +106,7 @@ ms.locfileid: "68028927"
 ## <a name="securing-objects-in-sql-server"></a>Защита объектов в SQL Server  
 После загрузки преобразованных объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно предоставлять и запрещать разрешения на эти объекты. Рекомендуется сделать это перед переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о защите объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в разделе «вопросы безопасности для баз данных и приложений баз данных» электронной [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] документации по.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 Следующим шагом процесса миграции является [Перенос данных SYBASE ASE в SQL Server или SQL Azure (SybaseToSQL)](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811).  
   
 ## <a name="see-also"></a>См. также:  

@@ -12,10 +12,10 @@ ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68021022"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Запуск тестовых случаев (SybaseToSQL)
@@ -44,7 +44,7 @@ ms.locfileid: "68021022"
   
 Следующие объекты создаются в Sybase в базе данных SSMATESTER2005db или SSMATESTER2008db и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных ssmatesterdb_syb.  
   
-|Имя|Тип|Description|  
+|Имя|Тип|Описание|  
 |--------|--------|---------------|  
 |USER_TABLE $ TRG|Триггер|Активация аудита изменений в проверенной таблице.|  
 |USER_TABLE $ AUD|Таблица|Таблица, в которой сохраняются удаленные и перезаписанные строки.|  
@@ -56,7 +56,7 @@ ms.locfileid: "68021022"
   
 Следующий объект создается в базе данных проверенной таблицы в Sybase и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Имя|Тип|Description|  
+|Имя|Тип|Описание|  
 |--------|--------|---------------|  
 |USER_TABLE $ TRG|Триггер|Активация аудита изменений в проверенной таблице.|  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68021022"
 ### <a name="finalization"></a>Завершения  
 Во время завершения SSMA тестер очищает вспомогательные объекты, созданные на этапе **инициализации** .  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 [Просмотр отчетов о тестовых случаях &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
   
 ## <a name="see-also"></a>См. также:  

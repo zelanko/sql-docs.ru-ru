@@ -24,10 +24,10 @@ ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038900"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>Итерация и инструкция FLWOR (XQuery)

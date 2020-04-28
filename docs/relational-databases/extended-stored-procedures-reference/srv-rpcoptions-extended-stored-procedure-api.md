@@ -20,17 +20,17 @@ ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b3ee9e6d0b56da01d3d8dd1ea16bc3d21eb1ce5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005492"
 ---
 # <a name="srv_rpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
   
  Возвращает параметры времени выполнения для текущей удаленной хранимой процедуры.  
   
@@ -47,13 +47,13 @@ srvproc
  *srvproc*  
  Указатель на структуру SRV_PROC, представляющую собой дескриптор соединения с клиентом (в данном случае — дескриптор, получивший удаленную хранимую процедуру). Эта структура содержит сведения, которые используются библиотекой API-интерфейса расширенных хранимых процедур для управления связью и передачи данных между приложением и клиентом.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  Битовая карта, которая содержит флаги времени выполнения, соединенные логической операцией ИЛИ для текущей удаленной хранимой процедуры. При отсутствии текущей удаленной хранимой процедуры возвращается значение 0 и формируется сообщение.  
   
 ## <a name="remarks"></a>Remarks  
  В следующей таблице описывается каждый флаг времени выполнения.  
   
-|Флаг времени выполнения|Description|  
+|Флаг времени выполнения|Описание|  
 |--------------------|-----------------|  
 |SRV_NOMETADATA|Клиент запросил результаты без метаданных. Этот флаг используется только в том случае, если клиент взаимодействует с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Приложение API-интерфейса расширенных хранимых процедур не может исключить метаданные.|  
 |SRV_RECOMPILE|Клиент запросил повторную компиляцию удаленной хранимой процедуры перед ее выполнением. Этот флаг не может применяться к приложению API-интерфейса расширенных хранимых процедур.|  

@@ -15,10 +15,10 @@ ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038992"
 ---
 # <a name="constructor-functions-xquery"></a>Функции-конструкторы (XQuery)
@@ -137,7 +137,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. Использование функции dateTime() языка XQuery для получения описаний старой продукции  
+### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>А) Использование функции dateTime() языка XQuery для получения описаний старой продукции  
  В этом примере образец XML-документа сначала присваивается переменной типа **XML** . Этот документ содержит три примера <`ProductDescription`> элементов, каждый из которых содержит дочерний `DateCreated` элемент <>.  
   
  После этого выполняется запрос переменной, получающей описания только тех продуктов, которые были произведены до указанной даты. В целях сравнения запрос использует функцию конструктора **xs: DateTime ()** для ввода дат.  

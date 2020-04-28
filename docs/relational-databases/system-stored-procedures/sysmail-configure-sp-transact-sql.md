@@ -18,10 +18,10 @@ ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7984fba52f813644c9dcb25bca2beb123be85622
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017721"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
@@ -61,7 +61,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
   
 ||||  
 |-|-|-|  
-|Имя параметра|Description|Значение по умолчанию|  
+|Имя параметра|Описание|Значение по умолчанию|  
 |*AccountRetryAttempts*|Число попыток, предпринимаемых процессом внешней почты для отправки сообщения электронной почты с использованием каждой учетной записи в указанном профиле.|**1**|  
 |*AccountRetryDelay*|Время ожидания процесса внешней почты между попытками отправить сообщение (в секундах).|**5000**|  
 |*Параметре DatabaseMailExeMinimumLifeTime*|Минимальное время в секундах, в течение которого остается активным процесс внешней почты. Когда компонент Database Mail рассылает большое количество сообщений, необходимо увеличить это значение, чтобы поддержать этот компонент в активном состоянии и избежать дополнительной нагрузки из-за частых остановок и запусков.|**600**|  

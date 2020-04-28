@@ -18,10 +18,10 @@ ms.assetid: 507fc744-73d9-4cb7-8d2a-bcff88841c6a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f389e6fa58feba189955c3ac8f654a906f61588f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68009140"
 ---
 # <a name="sp_delete_log_shipping_secondary_primary-transact-sql"></a>sp_delete_log_shipping_secondary_primary (Transact-SQL)
@@ -46,10 +46,10 @@ sp_delete_log_shipping_secondary_primary
 `[ @primary_database = ] 'primary_database'`Имя базы данных на сервере-источнике. Аргумент *primary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет.  
+ Отсутствует.  
   
 ## <a name="remarks"></a>Remarks  
  **sp_delete_log_shipping_secondary_primary** должны запускаться из базы данных **master** на сервере-получателе. Эта хранимая процедура выполняет следующее:  
@@ -65,6 +65,6 @@ sp_delete_log_shipping_secondary_primary
   
 ## <a name="see-also"></a>См. также:  
  [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

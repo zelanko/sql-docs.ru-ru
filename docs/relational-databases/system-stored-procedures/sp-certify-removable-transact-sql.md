@@ -18,10 +18,10 @@ ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c39665f54a915282a6c59fe7d57b24d0cde0a5e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68045929"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
@@ -48,7 +48,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 `[ @autofix = ] 'auto'`Предоставляет системному администратору право владения базой данных и всеми объектами базы данных, а также удаляет всех пользователей базы данных, созданных пользователем, и нестандартных разрешений. *Auto* имеет тип **nvarchar (4)** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  Если база данных настроена правильно, **sp_certify_removable** выполняет следующие действия:  
@@ -92,8 +92,8 @@ EXEC sp_certify_removable inventory, AUTO;
 ## <a name="see-also"></a>См. также:  
  [Отсоединение и присоединение базы данных &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_create_removable &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
- [&#41;Transact-SQL ALTER DATABASE &#40;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_dbremove &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

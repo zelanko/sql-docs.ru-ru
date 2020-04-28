@@ -19,10 +19,10 @@ ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6c35168f1c77f0574b202b77da515dab497a3ec7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006656"
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>Подключение к базе данных SQL Azure (Акцесстоскл)
@@ -95,7 +95,7 @@ ms.locfileid: "68006656"
   
 Процедура повторного подключения к SQL Azure аналогична процедуре установки соединения.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 Следующий шаг миграции зависит от потребностей проекта:  
   
 -   Сведения о настройке сопоставления между схемами доступа и SQL Azure базами данных и схемами см. в разделе [Сопоставление баз данных Access с SQL Server схемами](mapping-source-and-target-databases-accesstosql.md).  

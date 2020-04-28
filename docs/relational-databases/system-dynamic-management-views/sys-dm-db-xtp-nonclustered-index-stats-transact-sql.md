@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 726fd7d44ed64dfee609ad29181a2077364d72e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026796"
 ---
 # <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68026796"
   
  Дополнительные сведения о оптимизированных для памяти некластеризованных индексах SQL Server см. [в разделе Общие сведения о внутренних компонентах выполняющейся в памяти OLTP](https://t.co/T6zToWc6y6), стр. 17.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Идентификатор объекта.|  
 |xtp_object_id|**bigint**|Идентификатор оптимизированной для памяти таблицы.|  
@@ -66,6 +66,6 @@ ms.locfileid: "68026796"
  Необходимо разрешение VIEW DATABASE STATE на текущую базу данных.  
   
 ## <a name="see-also"></a>См. также:  
- [Динамические административные представления оптимизированной для памяти таблицы &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

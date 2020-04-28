@@ -16,10 +16,10 @@ ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8ae792ba7f8422e841abbbe2f80b096497df993
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022447"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
@@ -53,10 +53,10 @@ sp_addscriptexec [ @publication = ] publication
 `[ @publisher = ] 'publisher'`Указывает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  ** при публикации с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя не следует использовать издатель.  
+>  *publisher* при публикации с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя не следует использовать издатель.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  **sp_addscriptexec** используется в репликации транзакций и репликации слиянием.  
@@ -80,6 +80,6 @@ sp_addscriptexec [ @publication = ] publication
 ## <a name="see-also"></a>См. также:  
  [Выполнение скриптов во время синхронизации &#40;программирование репликации на языке Transact-SQL&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
  [Синхронизация данных](../../relational-databases/replication/synchronize-data.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -19,16 +19,16 @@ ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 17ef15033281f040e00444dfbfc2e739bfa7a338
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004922"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает свойства добавочной статистики для указанного объекта базы данных (таблицы) из текущей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Использование `sys.dm_db_incremental_stats_properties` (который содержит номер секции) аналогичен `sys.dm_db_stats_properties`, который используется для недобавочной статистики. 
+  Возвращает свойства добавочной статистики для указанного объекта базы данных (таблицы) из текущей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Использование `sys.dm_db_incremental_stats_properties` (который содержит номер секции) аналогичен `sys.dm_db_stats_properties` , который используется для недобавочной статистики. 
   
   Эта функция была введена [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] в пакет обновления 2 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] (SP2) и пакет обновления 1 (SP1).
   
@@ -40,14 +40,14 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
   
 ## <a name="arguments"></a>Аргументы  
  *object_id*  
- Идентификатор объекта текущей базы данных, для которого запрашиваются свойства одной из добавочных статистик. *object_id* имеет **тип int**.  
+ Идентификатор объекта текущей базы данных, для которого запрашиваются свойства одной из добавочных статистик. *object_id* имеет тип **int**.  
   
  *stats_id*  
- Идентификатор статистики для указанного аргумента *object_id*. Идентификатор статистики может быть получен из динамического административного представления [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* имеет **тип int**.  
+ Идентификатор статистики для указанного аргумента *object_id*. Идентификатор статистики может быть получен из динамического административного представления [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* имеет тип **int**.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Идентификатор объекта (таблицы), для которого возвращаются свойства объекта статистики.|  
 |stats_id|**int**|Идентификатор объекта статистики. Уникален в пределах таблицы. Дополнительные сведения см. в статье [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|
@@ -59,11 +59,10 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 |unfiltered_rows|**bigint**|Общее количество строк в таблице до применения критерия фильтра (для отфильтрованной статистики). Если статистика не отфильтрована, то unfiltered_rows равно значению, которое возвращается в столбце rows.|  
 |modification_counter|**bigint**|Общее количество изменений в начальном столбце статистики (на основе которого строится гистограмма) с момента последнего обновления статистики.<br /><br /> Этот столбец не содержит сведения для таблиц, оптимизированных для памяти.|  
   
-## <a name="Remarks"></a> Замечания  
- 
-  `sys.dm_db_incremental_stats_properties` возвращает пустой набор строк, если выполняется любое из следующих условий:  
+## <a name="remarks"></a><a name="Remarks"></a>. Замечания  
+ `sys.dm_db_incremental_stats_properties` возвращает пустой набор строк, если выполняется любое из следующих условий:  
   
--   `object_id`или `stats_id` имеет значение null.   
+-   `object_id` или `stats_id` имеет значение NULL.   
 -   Указанный объект не найден или не соответствует таблице с добавочной статистикой.  
 -   Указанный идентификатор статистики не соответствует имеющейся статистике для указанного идентификатора объекта статистики.  
 -   Текущий пользователь не имеет разрешений на просмотр объекта статистики.
@@ -92,4 +91,4 @@ SELECT * FROM sys.dm_db_incremental_stats_properties (object_id('PartitionTable'
  [Динамические административные представления и функции, связанные с объектом, &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [sys. dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
- [sys. dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
+ [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 

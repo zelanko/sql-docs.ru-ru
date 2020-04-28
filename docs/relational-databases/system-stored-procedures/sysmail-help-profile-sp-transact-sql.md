@@ -18,10 +18,10 @@ ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2d8f2af3894377cc0922274ca26c231c003f3bd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044502"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
@@ -44,16 +44,16 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 `[ @profile_name = ] 'profile_name'`Имя профиля, для которого возвращаются сведения. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает результирующий набор со следующими столбцами.  
   
 ||||  
 |-|-|-|  
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |**profile_id**|**int**|Идентификатор профиля.|  
-|**name**|**имеет sysname**|Имя профиля.|  
+|**name**|**sysname**|Имя профиля.|  
 |**nописание**|**nvarchar(256)**|Описание профиля.|  
   
 ## <a name="remarks"></a>Remarks  

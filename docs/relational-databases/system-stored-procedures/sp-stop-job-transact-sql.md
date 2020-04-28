@@ -18,10 +18,10 @@ ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a0549d247078634feadced301570e00746d5ba7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032720"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-SQL)
@@ -67,7 +67,7 @@ sp_stop_job
  Если задание в данный момент выполняет шаг типа **CmdExec** или **PowerShell**, то выполняемый процесс (например, MyProgram. exe) принудительно завершается преждевременно. Преждевременное завершение может привести к непредсказуемому поведению, например файлы, используемые процессом, могут остаться открытыми. Следовательно, **sp_stop_job** следует использовать только в крайних обстоятельствах, если задание содержит шаги типа **CmdExec** или **PowerShell**.  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -96,6 +96,6 @@ GO
  [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
  [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

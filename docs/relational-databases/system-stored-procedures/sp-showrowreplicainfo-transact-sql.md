@@ -16,10 +16,10 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032892"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
@@ -50,25 +50,25 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
   
 ## <a name="result-sets-for-row-information"></a>Результирующие наборы сведений о строках  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**server_name**|**имеет sysname**|Имя сервера, содержащего базу данных с записью о версии строки.|  
-|**db_name**|**имеет sysname**|Имя базы данных, содержащей данную запись.|  
+|**server_name**|**sysname**|Имя сервера, содержащего базу данных с записью о версии строки.|  
+|**db_name**|**sysname**|Имя базы данных, содержащей данную запись.|  
 |**db_nickname**|**двоичный (6)**|Псевдоним базы данных, содержащей данную запись.|  
-|**Версия**|**int**|Версия записи.|  
+|**version**|**int**|Версия записи.|  
 |**current_state**|**nvarchar (9)**|Возвращает сведения о текущем состоянии строки.<br /><br /> **y** -строка Data представляет текущее состояние строки.<br /><br /> **n** -строковые данные не представляют текущее состояние строки.<br /><br /> н/д>неприменимо. ** \<**<br /><br /> неизвестное>— текущее состояние не может быть определено. ** \<**|  
 |**rowversion_table**|**nchar (17)**|Указывает, хранятся ли версии строк в таблице [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) или в [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) таблице.|  
 |**Метки**|**nvarchar(255)**|Дополнительные сведения о данной записи версии строки. Обычно это поле не заполнено.|  
   
 ## <a name="result-sets-for-column-information"></a>Результирующие наборы сведений о столбце  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**server_name**|**имеет sysname**|Имя сервера с базой данных, содержащей запись о версии столбца.|  
-|**db_name**|**имеет sysname**|Имя базы данных, содержащей данную запись.|  
+|**server_name**|**sysname**|Имя сервера с базой данных, содержащей запись о версии столбца.|  
+|**db_name**|**sysname**|Имя базы данных, содержащей данную запись.|  
 |**db_nickname**|**двоичный (6)**|Псевдоним базы данных, содержащей данную запись.|  
-|**Версия**|**int**|Версия записи.|  
-|**colname**|**имеет sysname**|Имя столбца, представленного данной записью о версии.|  
+|**version**|**int**|Версия записи.|  
+|**colname**|**sysname**|Имя столбца, представленного данной записью о версии.|  
 |**Метки**|**nvarchar(255)**|Дополнительные сведения о данной записи версии столбца. Обычно это поле не заполнено.|  
   
 ## <a name="result-set-for-both"></a>Результирующий набор для значения both  
@@ -82,6 +82,6 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
   
 ## <a name="see-also"></a>См. также:  
  [Обнаружение и разрешение конфликтов репликации слиянием](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

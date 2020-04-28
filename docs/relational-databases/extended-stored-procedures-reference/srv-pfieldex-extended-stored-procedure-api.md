@@ -20,17 +20,17 @@ ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1333cfc819b8027260c715ed3398c0099f96a854
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005553"
 ---
 # <a name="srv_pfieldex-extended-stored-procedure-api"></a>srv_pfieldex (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
   
  Возвращает указатель на данные, содержащие в запрошенном поле SRV_PROC.  
   
@@ -54,7 +54,7 @@ len
  *полями*  
  Указывает возвращаемое поле *srvproc*.  
   
-|Поле|Description|Тип возвращаемых данных|  
+|Поле|Описание|Тип возвращаемых данных|  
 |-----------|-----------------|------------------|  
 |SRV_MSGLCID|Код языка сообщения текущего сеанса.|ULONG*|  
 |SRV_INSTANCENAME|Имя экземпляра (для именованного экземпляра), иначе возвращает значение NULL.|WCHAR*|  
@@ -62,13 +62,13 @@ len
  *len*  
  Указатель на переменную типа **int**, которая содержит длину возвращенного значения *field* в байтах. Если значение *len* равно NULL, длина не возвращается. Если возвращается значение NULL, то параметру **len* задается значение 0.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  Указатель на данные, тип которых зависит от *field*. Если *len* имеет значение NULL или *srvproc* имеет значение NULL, возвращается значение NULL. Если *field* неизвестно, то возвращается значение NULL. Если возвращается значение NULL, то параметру **len* задается значение 0.  
   
 > [!IMPORTANT]  
 >  Буфер, возвращенный из сервера, должен быть доступен только для чтения. В противном случае состояние сервера может быть повреждено.  
   
 ## <a name="remarks"></a>Remarks  
- **Примечание по безопасности** Следует тщательно проанализировать исходный код расширенных хранимых процедур, а также протестировать скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
+ **Примечание по безопасности.** Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные DLL-библиотеки перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

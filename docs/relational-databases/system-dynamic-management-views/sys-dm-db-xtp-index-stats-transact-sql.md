@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6e6370f4cbfcbc38478e562c3b74ff24ffde962f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026834"
 ---
 # <a name="sysdm_db_xtp_index_stats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68026834"
  Дополнительные сведения см. в разделе выполняющаяся [в памяти OLTP &#40;&#41;оптимизации в памяти](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) и [рекомендации по использованию индексов в таблицах, оптимизированных для памяти](https://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b).  
 
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|Идентификатор объекта, которому принадлежит данный индекс.|  
 |xtp_object_id|**bigint**|Внутренний идентификатор, соответствующий текущей версии объекта.<br /><br /> Примечание. применяется к [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|  
@@ -60,6 +60,6 @@ ms.locfileid: "68026834"
  Необходимо разрешение VIEW DATABASE STATE на текущую базу данных.  
   
 ## <a name="see-also"></a>См. также:  
- [Динамические административные представления оптимизированной для памяти таблицы &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

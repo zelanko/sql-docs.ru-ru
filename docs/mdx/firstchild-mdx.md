@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c1bd2f37304131b881d49aaa874eaed13530fc0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032072"
 ---
 # <a name="firstchild-mdx"></a>FirstChild (многомерные выражения)
@@ -41,6 +41,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>См. также:  
  [LastChild &#40;&#41;многомерных выражений](../mdx/lastchild-mdx.md)   
- [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

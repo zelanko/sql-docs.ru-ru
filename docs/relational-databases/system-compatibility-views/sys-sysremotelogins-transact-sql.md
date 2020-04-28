@@ -21,10 +21,10 @@ ms.assetid: b7ffcfa6-aed8-41d4-8b70-845439ab813d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1c51ccd657c8a7c5f07bdaf836ba3e279e81c590
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018133"
 ---
 # <a name="syssysremotelogins-transact-sql"></a>sys.sysremotelogins (Transact-SQL)
@@ -35,16 +35,16 @@ ms.locfileid: "68018133"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**ремотесерверид**|**smallint**|Идентификация удаленного сервера.|  
-|**ремотеусернаме**|**имеет sysname**|Имя входа пользователя на удаленном сервере.|  
-|**состояние**|**smallint**|Возвращает 0.|  
-|**sid**|**varbinary (85)**|Идентификатор безопасности пользователя [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
+|**remoteserverid**|**smallint**|Идентификация удаленного сервера.|  
+|**remoteusername**|**sysname**|Имя входа пользователя на удаленном сервере.|  
+|**status**|**smallint**|Возвращает 0.|  
+|**трансляцию**|**varbinary(85)**|Идентификатор безопасности пользователя [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
 |**changedate**|**datetime**|Дата и время, когда был добавлен удаленный пользователь.|  
   
 ## <a name="see-also"></a>См. также:  
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Представления совместимости &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

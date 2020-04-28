@@ -10,10 +10,10 @@ ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5d4936638fc9e283caafffc2f2a7cfdbed396920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028762"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Параметры проекта (преобразование) (SybaseToSQL)
@@ -265,7 +265,7 @@ ASE пользовательские сообщения хранятся в ка
   
 Этот параметр указывает число, добавляемое к номеру сообщения пользователя ASE для преобразования его в сообщение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователя. Если в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представлении каталога **sys. messages** есть сообщения пользователя, может потребоваться изменить это число на большее значение. Это значит, что преобразованные номера сообщений не конфликтуют с существующими номерами сообщений.  
   
-Обратите внимание на следующее.  
+Следует отметить следующее.  
   
 -   Сообщения ASE в диапазоне 17000-19999 находятся в системной таблице sysmessages и не преобразуются.  
   
@@ -421,7 +421,7 @@ ASE поддерживает необязательный аргумент *user
 **SUBSTRING, функция**  
 В ASE функция `SUBSTRING(expression, start, length)` возвращает значение null, если значение начала больше, чем число символов в выражении, или если длина равна нулю. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure эквивалентное выражение возвращает пустую строку.  
   
--   Чтобы использовать поведение ASE, выберите **заменить функцию**. Все вызовы функции SUBSTRING заменяются вызовом метода SUBSTRING_VARCHAR или SUBSTRING_NVARCHAR или SUBSTRING_VARBINARY определяемой пользователем функции на основе типа переданных параметров (созданного в пользовательской папке с именем схемы 2SS ') для имитации Поведение ASE Sybase.  
+-   Чтобы использовать поведение ASE, выберите **заменить функцию**. Все вызовы функции SUBSTRING заменяются вызовом SUBSTRING_VARCHAR или SUBSTRING_NVARCHAR или SUBSTRING_VARBINARY определяемой пользователем функции, основанной на типе переданных параметров (созданном в пользовательском поле с именем схемы 2SS ') для эмуляции поведения ASE Sybase.  
   
 -   Чтобы использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поведение SQL Azure, выберите параметр **оставаться текущим синтаксисом**.  
   

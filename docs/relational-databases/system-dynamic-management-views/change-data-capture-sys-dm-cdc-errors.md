@@ -20,10 +20,10 @@ ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 506dae205356504c76d47ffe324b82f9f34665f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018002"
 ---
 # <a name="change-data-capture---sysdm_cdc_errors"></a>Система отслеживания измененных данных — sys. dm_cdc_errors
@@ -32,7 +32,7 @@ ms.locfileid: "68018002"
   Возвращает одну строку для каждой ошибки, встреченной во время сеанса просмотра журнала системы отслеживания измененных данных.  
  
  
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Идентификатор сеанса.<br /><br /> 0 = ошибка не происходила в течение сеанса просмотра журнала.|  
 |**phase_number**|**int**|Номер, указывающий этап, в котором находился сеанс во время возникновения ошибки. Описание каждого этапа см. в разделе [sys. dm_cdc_log_scan_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md).|  

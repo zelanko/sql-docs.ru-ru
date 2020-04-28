@@ -16,10 +16,10 @@ ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038944"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>Функции метода доступа к данным — string (XQuery)
@@ -54,7 +54,7 @@ fn:string($arg as item()?) as xs:string
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-using-the-string-function"></a>A. Использование строковой функции  
+### <a name="a-using-the-string-function"></a>А) Использование строковой функции  
  Следующий запрос получает узел <`Features`> дочернего элемента элемента <`ProductDescription`>.  
   
 ```  
@@ -97,7 +97,7 @@ These are the product highlights.
 3 yearsparts and labor...    
 ```  
   
-### <a name="b-using-the-string-function-on-various-nodes"></a>Б. Использование строковой функции в различных узлах  
+### <a name="b-using-the-string-function-on-various-nodes"></a>Б) Использование строковой функции в различных узлах  
  В следующем примере экземпляр XML назначается переменной типа xml. Запросы указываются для иллюстрации результата применения **String ()** к различным узлам.  
   
 ```  

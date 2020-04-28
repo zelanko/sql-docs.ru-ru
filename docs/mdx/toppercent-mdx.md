@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036592"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (многомерные выражения)
@@ -31,7 +31,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
- *Процент*  
+ *Percentage*  
  Допустимое числовое выражение, указывающее процент возвращаемых кортежей.  
   
 > [!IMPORTANT]  
@@ -69,9 +69,9 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ||Reseller Sales Amount|  
 |-|---------------------------|  
-|Торонто|$3 508 904,84|  
-|Лондон|$1 521 530,09|  
-|Сиэтл;|$1 209 418,16|  
+|Toronto|$3 508 904,84|  
+|London|$1 521 530,09|  
+|Seattle|$1 209 418,16|  
 |Париж|$1 170 425,18|  
   
  Исходный набор данных можно получить следующим запросом, возвращающим 588 строк:  
@@ -127,6 +127,6 @@ FROM [Adventure Works]
 |Touring-2000 Blue, 50|$157 444,56|$163 112,57|($5 668,01)|  
   
 ## <a name="see-also"></a>См. также:  
- [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

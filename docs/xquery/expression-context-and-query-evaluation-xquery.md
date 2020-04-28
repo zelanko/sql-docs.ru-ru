@@ -19,10 +19,10 @@ ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038922"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Контекст выражения и вычисление запросов (XQuery)
@@ -79,7 +79,7 @@ ms.locfileid: "68038922"
   
 -   При выполнении запроса к типизированному **XML-** столбцу или переменной компоненты коллекции схем XML, связанные со столбцом или переменной, импортируются в статический контекст. Дополнительные сведения см. [в разделе Сравнение типизированного XML с нетипизированным XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
--   Функция приведения также становится доступной в статическом контексте для каждого атомарного типа в импортированных схемах. Это продемонстрировано в следующем примере. В этом примере запрос задается для типизированной переменной **XML** . Коллекция XML-схем, связанная с данной переменной, определяет атомный тип myType. В соответствии с этим типом, функция приведения типа **MyType ()** доступна во время статического анализа. Выражение запроса (`ns:myType(0)`) возвращает значение myType.  
+-   Функция приведения также становится доступной в статическом контексте для каждого атомарного типа в импортированных схемах. Это продемонстрировано в следующем примере. В этом примере запрос задается для типизированной переменной **XML** . Коллекция XML-схем, связанная с данной переменной, определяет атомный тип myType. В соответствии с этим типом, функция приведения типа **MyType ()** доступна во время статического анализа. Выражение запроса (`ns:myType(0)`) возвращает значение myType.  
   
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
@@ -192,7 +192,7 @@ ms.locfileid: "68038922"
   
 ## <a name="see-also"></a>См. также:  
  [Основы XQuery](../xquery/xquery-basics.md)   
- [Сравнение типизированного XML с нетипизированным XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [Коллекции XML-схем &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)  
+ [Сравнение типизированного и нетипизированного XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
+ [Коллекции XML-схем (SQL Server)](../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

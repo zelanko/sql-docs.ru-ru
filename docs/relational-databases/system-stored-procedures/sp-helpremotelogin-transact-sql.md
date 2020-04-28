@@ -18,10 +18,10 @@ ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 11d71139786ac1442588f016bf8c576b92853cf3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997577"
 ---
 # <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67997577"
   Возвращает сведения об удаленных именах входа для конкретного удаленного сервера либо для всех удаленных серверов, определенных на локальном сервере.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]Вместо этого используйте связанные серверы и хранимые процедуры связанного сервера.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Используйте вместо этого связанные серверы и хранимые процедуры связанных серверов.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,16 +50,16 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
  Конкретное удаленное имя входа на удаленном сервере. Аргумент *remote_name* имеет тип **sysname**и значение по умолчанию NULL. Если параметр *remote_name* не указан, возвращаются сведения обо всех удаленных пользователях, определенных для *remoteserver* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|server|**имеет sysname**|Имя удаленного сервера, определенного на локальном сервере.|  
-|local_user_name|**имеет sysname**|Имя входа на локальном сервере, с которым сопоставлены удаленные имена входа.|  
-|remote_user_name|**имеет sysname**|Имя входа на удаленном сервере, сопоставленное с local_user_name.|  
-|options|**имеет sysname**|Доверенное = Удаленное имя входа не нуждается в подтверждении паролем при установке соединения с локальным сервером из удаленного сервера.<br /><br /> Не доверенное (или пустое) = Для подтверждения удаленного имени входа запрашивается пароль при установке соединения с локальным сервером из удаленного сервера.|  
+|server|**sysname**|Имя удаленного сервера, определенного на локальном сервере.|  
+|local_user_name|**sysname**|Имя входа на локальном сервере, с которым сопоставлены удаленные имена входа.|  
+|remote_user_name|**sysname**|Имя входа на удаленном сервере, сопоставленное с local_user_name.|  
+|параметры|**sysname**|Доверенное = Удаленное имя входа не нуждается в подтверждении паролем при установке соединения с локальным сервером из удаленного сервера.<br /><br /> Не доверенное (или пустое) = Для подтверждения удаленного имени входа запрашивается пароль при установке соединения с локальным сервером из удаленного сервера.|  
   
 ## <a name="remarks"></a>Remarks  
  Используйте sp_helpserver, чтобы получить список имен удаленных серверов, определенных на локальном сервере.  
@@ -76,7 +76,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 EXEC sp_helpremotelogin 'Accounts';  
 ```  
   
-### <a name="b-reporting-help-on-all-remote-users"></a>Б. Получение справки по всем удаленным пользователям  
+### <a name="b-reporting-help-on-all-remote-users"></a>Б) Получение справки по всем удаленным пользователям  
  В следующем примере отображаются сведения обо всех удаленных пользователях на всех удаленных серверах, известных локальному серверу.  
   
 ```  
@@ -88,6 +88,6 @@ EXEC sp_helpremotelogin;
  [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
  [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_remoteoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

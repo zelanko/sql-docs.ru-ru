@@ -16,10 +16,10 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004580"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Функции, связанные с QName — expanded-QName
@@ -52,7 +52,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] типа **XML** в базе данных.  
   
-### <a name="a-replacing-a-qname-type-node-value"></a>A. Замещение значения узла типа QName  
+### <a name="a-replacing-a-qname-type-node-value"></a>А) Замещение значения узла типа QName  
  Данный пример иллюстрирует изменение значения узла элемента типа QName. В примере выполняются следующие действия.  
   
 -   Создается коллекция XML-схем, которая определяет элемент типа QName.  
@@ -131,8 +131,8 @@ drop xml schema collection SC
 go  
 ```  
   
-### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>Б. Работа с ограничениями при использовании функции expanded-QName()  
- **Развернутая функция-QName** не может использоваться в конструкции XML. Это демонстрируется в следующем примере: Чтобы обойти это ограничение пример сначала вставляет узел, затем изменяет его.  
+### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>Б) Работа с ограничениями при использовании функции expanded-QName()  
+ **Развернутая функция-QName** не может использоваться в конструкции XML. Это показано в следующем примере. Чтобы обойти это ограничение пример сначала вставляет узел, затем изменяет его.  
   
 ```  
 -- if exists drop the table T  

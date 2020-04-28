@@ -16,17 +16,17 @@ ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b06364adefd62b4267d43bac50d79f8f1d37958a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022089"
 ---
 # <a name="localdbstartinstance-function"></a>Функция LocalDBStartInstance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Запускает экземпляр SQL Server Express LocalDB.  
   
- **Заголовочный файл:** sqlncli. h  
+ **Файл заголовка:** sqlncli.h  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,7 +52,7 @@ HRESULT LocalDBStartInstance(
  *lpcchSqlConnection*  
  [Вход/выход] На входе содержит размер буфера *wszSqlConnection* в символах, включая конечные значения NULL. На выходе, если указан недостаточный размер буфера, содержит требуемый размер буфера в символах, включая любые конечные символы NULL.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  S_OK  
  Функция выполнена успешно.  
   

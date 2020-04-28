@@ -18,10 +18,10 @@ ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7a2a4e8a7cf58f8c4519d15ae46e2b278fcd1383
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008959"
 ---
 # <a name="sp_delete_schedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
@@ -60,7 +60,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  По умолчанию расписание нельзя удалить, если оно прикреплено к заданию. Чтобы удалить расписание, присоединенное к заданию, укажите значение **1** для *force_delete*. Удаление расписания не приведет к остановке запущенных заданий.  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -88,7 +88,7 @@ EXEC dbo.sp_delete_schedule
 GO  
 ```  
   
-### <a name="b-deleting-a-schedule-attached-to-a-job"></a>Б. Удаление расписания, прикрепленного к заданию  
+### <a name="b-deleting-a-schedule-attached-to-a-job"></a>Б) Удаление расписания, прикрепленного к заданию  
  В следующем примере расписание `RunOnce` удаляется независимо от того, прикреплено ли оно к заданию.  
   
 ```  
@@ -103,6 +103,6 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Реализация заданий](../../ssms/agent/implement-jobs.md)   
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
+ [sp_add_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   
   

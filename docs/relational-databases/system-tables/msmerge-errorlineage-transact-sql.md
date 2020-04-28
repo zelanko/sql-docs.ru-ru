@@ -18,10 +18,10 @@ ms.assetid: 3bcbd328-c958-4cd4-a573-3c35539fa919
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1c3191191a9830a38a177ba3a3c353e5c34dedba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044757"
 ---
 # <a name="msmerge_errorlineage-transact-sql"></a>MSmerge_errorlineage (Transact-SQL)
@@ -29,14 +29,14 @@ ms.locfileid: "68044757"
 
   Таблица **MSmerge_errorlineage** содержит строки, которые были удалены на подписчике, но удаление не распространяется на издатель. Эта таблица хранится в базах данных публикации и подписки.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|Целочисленное значение, присваиваемое таблице, публикуемой для выполнения репликации слиянием. Соответствует полю псевдонима в таблице **sysmergearticles** .|  
-|**rowguid**|**UNIQUEIDENTIFIER**|Идентификатор строки.|  
+|**rowguid**|**uniqueidentifier**|Идентификатор строки.|  
 |**журнала преобразований**|**varbinary (501)**|Хранит список обновлений строки подписчиками и издателями. Используется для выявления и разрешения конфликтных ситуаций.|  
   
 ## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

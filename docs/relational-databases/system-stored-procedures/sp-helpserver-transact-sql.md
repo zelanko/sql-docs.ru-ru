@@ -18,10 +18,10 @@ ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997442"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
@@ -45,18 +45,18 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 `[ @optname = ] 'option'`Параметр, описывающий сервер. *параметр имеет тип* **varchar (** 35 **)** и значение по умолчанию NULL и должен иметь одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**совместимые параметры сортировки**|Влияет на выполнение распределенных запросов на связанных серверах. Если значение этого параметра равно true.|  
 |**доступ к данным**|Разрешает и запрещает доступ распределенных запросов к связанному серверу.|  
 |**dist**|Распространитель.|  
-|**дпуб**|Удаленный издатель для этого распространителя.|  
+|**dpub**|Удаленный издатель для этого распространителя.|  
 |**lazy schema validation**|Пропускает проверку схемы удаленных таблиц в начале запроса.|  
-|**Pub**|Издатель.|  
+|**pub**|Издатель.|  
 |**удаленного**|Включает RPC с определенного сервера.|  
 |**RPC out**|Включает RPC на определенный сервер.|  
-|**sub**|Подписчик.|  
-|**системой**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**Директор**|Подписчик.|  
+|**система**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**использовать удаленные параметры сортировки**|Применение параметров сортировки удаленного столбца вместо параметров сортировки локального сервера.|  
   
 `[ @show_topology = ] 'show_topology'`Связь указанного сервера с другими серверами. *show_topology* имеет тип **varchar (** 1 **)** и значение по умолчанию NULL. Если *show_topology* не равно **t** или имеет значение null, **sp_helpserver** возвращает столбцы, перечисленные в разделе результирующие наборы. Если *show_topology* равно **t**, то в дополнение к столбцам, перечисленным в результирующих наборах, **sp_helpserver** также возвращает сведения о **топкс** и **топи** .  
@@ -66,13 +66,13 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**name**|**имеет sysname**|Имя сервера.|  
-|**network_name**|**имеет sysname**|Сетевое имя сервера.|  
-|**состояние**|**varchar (** 70 **)**|Состояние сервера.|  
-|**удостоверения**|**char (** 4 **)**|Идентификационный номер сервера.|  
-|**collation_name**|**имеет sysname**|Параметры сортировки сервера.|  
+|**name**|**sysname**|Имя сервера.|  
+|**network_name**|**sysname**|Сетевое имя сервера.|  
+|**status**|**varchar (** 70 **)**|Состояние сервера.|  
+|**идентификатор**|**char (** 4 **)**|Идентификационный номер сервера.|  
+|**collation_name**|**sysname**|Параметры сортировки сервера.|  
 |**connect_timeout**|**int**|Значение времени ожидания для подключения к связанному серверу.|  
 |**query_timeout**|**int**|Значение времени ожидания для запросов к связанному серверу.|  
   
@@ -93,7 +93,7 @@ GO
 EXEC sp_helpserver;  
 ```  
   
-### <a name="b-displaying-information-about-a-specific-server"></a>Б. Вывод сведений об определенном сервере  
+### <a name="b-displaying-information-about-a-specific-server"></a>Б) Вывод сведений об определенном сервере  
  В следующем примере отображаются все сведения о сервере `SEATTLE2`.  
   
 ```  
@@ -114,6 +114,6 @@ EXEC sp_helpserver 'SEATTLE2';
  [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

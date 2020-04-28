@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 76d1572e1f99162c8daebeafadb0c8d75a53a4d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68046036"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
@@ -60,7 +60,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 `[ @futureonly = ] 'futureonly_flag'`Используется только при привязке правила к псевдониму типа данных. *future_only_flag* имеет тип **varchar (15)** и значение по умолчанию NULL. Этот параметр при задании значения **futureonly** предотвращает наследование нового правила существующими столбцами псевдонима типа данных. Если *futureonly_flag* имеет значение null, новое правило привязывается к любому столбцу псевдонима типа данных, который в настоящее время не имеет правила или который использует существующее правило типа данных псевдонима.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  К столбцу можно привязать новое правило (хотя рекомендуется использовать ПРОВЕРОЧное ограничение) или псевдоним типа данных с **sp_bindrule** без отмены привязки существующего правила. Старое правило замещается. Если правило привязано к столбцу с существующим ограничением CHECK, вычисляются все ограничения. Нельзя привязать правило к типу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -85,7 +85,7 @@ GO
 EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';  
 ```  
   
-### <a name="b-binding-a-rule-to-an-alias-data-type"></a>Б. Привязка правила к псевдониму типа данных  
+### <a name="b-binding-a-rule-to-an-alias-data-type"></a>Б) Привязка правила к псевдониму типа данных  
  Предполагая существование правила с именем `rule_ssn` и типа данных псевдонима с именем `ssn`, следующий пример привязывает `rule_ssn` к `ssn`. В инструкции CREATE TABLE столбцы типа `ssn` наследуют правило `rule_ssn`. Существующие `ssn` столбцы типа также наследуют `rule_ssn` правило, если только для *futureonly_flag*не указано значение **futureonly** или `ssn` к нему напрямую привязано правило. Правила, привязанные к столбцам, всегда имеют преимущество перед теми, которые привязаны к типам данных.  
   
 ```  
@@ -120,9 +120,9 @@ EXEC sp_bindrule rule1, '[t.2].c1' ;
 ## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Создание правила &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
+ [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   
  [УДАЛИТЬ правило &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
  [sp_unbindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

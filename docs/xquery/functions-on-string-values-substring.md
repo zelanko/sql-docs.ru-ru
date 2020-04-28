@@ -16,10 +16,10 @@ ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004642"
 ---
 # <a name="functions-on-string-values---substring"></a>Функции со строковыми значениями — substring
@@ -69,9 +69,9 @@ fn:substring($sourceString as xs:string?,
  SQL Server позволяет *$startingLoc* и *$length* быть пустой последовательностью, поскольку пустая последовательность является возможным значением в результате возникновения динамических ошибок, сопоставленных с ().  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML **** , [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] хранящимся в различных столбцах типа XML в базе данных.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML **xml** , [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] хранящимся в различных столбцах типа XML в базе данных.  
   
-### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. Использование функции XQuery substring() для получения частичного резюме о модели продукта  
+### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>А) Использование функции XQuery substring() для получения частичного резюме о модели продукта  
  Запрос получает первые 50 символов текста, описывающего модель продукта, элемент <`Summary`> в документе.  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e3f0afcd0007dc0e61424449e87851ca562b0cdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68009203"
 ---
 # <a name="sp_add_maintenance_plan_db-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
@@ -47,10 +47,10 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="arguments"></a>Аргументы  
 `[ @plan_id = ] 'plan_id'`Указывает идентификатор плана плана обслуживания. *plan_id* имеет тип **uniqueidentifier**и должен быть допустимым идентификатором.  
   
-`[ @db_name = ] 'database_name'`Указывает имя базы данных, добавляемой в план обслуживания. База данных должна быть создана или уже существовать до добавления в план. *database_name* имеет тип **sysname**.  
+`[ @db_name = ] 'database_name'`Указывает имя базы данных, добавляемой в план обслуживания. База данных должна быть создана или уже существовать до добавления в план. Аргумент *database_name* имеет тип **sysname**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  **sp_add_maintenance_plan_db** должны запускаться из базы данных **msdb** .  

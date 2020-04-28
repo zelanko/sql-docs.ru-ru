@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b23eea391c7de1f02eacec7f8c8625211dfeea3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004834"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
@@ -43,16 +43,16 @@ ms.locfileid: "68004834"
 
 *database_id* | NULL | **По умолчанию**
 
-Идентификатор базы данных. Параметр `database_id` равен `int`. Допустимые входные данные — это ИДЕНТИФИКАЦИОНный номер `NULL`базы данных `DEFAULT`, или. Значение по умолчанию — `NULL`. `NULL`и `DEFAULT` являются эквивалентными значениями в контексте текущей базы данных.  
+Идентификатор базы данных. Параметр `database_id` равен `int`. Допустимые входные данные — это ИДЕНТИФИКАЦИОНный номер `NULL`базы данных `DEFAULT`, или. Значение по умолчанию — `NULL`. `NULL`и `DEFAULT` являются эквивалентными значениями в контексте текущей базы данных.  
 Может быть указана встроенная функция [DB_ID](../../t-sql/functions/db-id-transact-sql.md). При использовании `DB_ID` без указания имени базы данных уровень совместимости текущей базы данных должен быть 90 или выше.
 
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |database_id    |**int**    |Идентификатор базы данных |  
-|recovery_model |**nvarchar (60)**   |   Модель восстановления базы данных. Ниже перечислены возможные значения. <br /> ПРОСТОЙ<br /> BULK_LOGGED <br /> FULL |  
+|recovery_model |**nvarchar(60)**   |   Модель восстановления базы данных. Ниже перечислены возможные значения. <br /> ПРОСТОЙ<br /> BULK_LOGGED <br /> FULL |  
 |log_min_lsn    |**nvarchar(24)**   |   Текущий начальный [регистрационный номер транзакции в журнале](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) в журнале транзакций.|  
 |log_end_lsn    |**nvarchar(24)**   |   Регистрационный [номер транзакции в журнале (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) последней записи журнала в журнале транзакций.|  
 |current_vlf_sequence_number    |**bigint** |   Текущий порядковый номер [файла виртуального журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) во время выполнения.|  
@@ -61,7 +61,7 @@ ms.locfileid: "68004834"
 |total_log_size_mb  |**float**  |   Общий размер журнала транзакций в МБ. |  
 |active_vlf_count   |**bigint** |   Общее число активных [виртуальных файлов журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) в журнале транзакций.|  
 |active_log_size_mb |**float**  |   Общий размер журнала активных транзакций в МБ.|  
-|log_truncation_holdup_reason   |**nvarchar (60)**   |   Причина усечения журнала задержки. Значение совпадает со `log_reuse_wait_desc` столбцом `sys.databases`.  (Более подробное объяснение этих значений см. [в журнале транзакций](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Ниже перечислены возможные значения. <br />NOTHING;<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />РЕПЛИКАЦИЯ<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />ДРУГИЕ ВРЕМЕННЫЕ |  
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   Причина усечения журнала задержки. Значение совпадает со `log_reuse_wait_desc` столбцом `sys.databases`.  (Более подробное объяснение этих значений см. [в журнале транзакций](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Ниже перечислены возможные значения. <br />NOTHING;<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />РЕПЛИКАЦИЯ<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />ДРУГИЕ ВРЕМЕННЫЕ |  
 |log_backup_time    |**datetime**   |   Время последнего резервного копирования журнала транзакций.|   
 |log_backup_lsn |**nvarchar(24)**   |   [Номер LSN](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)последней резервной копии журнала транзакций.|   
 |log_since_last_log_backup_mb   |**float**  |   Размер журнала в МБ с момента последнего резервного копирования журнала транзакций [(номер LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
@@ -80,7 +80,7 @@ ms.locfileid: "68004834"
   
 ## <a name="examples"></a>Примеры  
 
-### <a name="a-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-high-number-of-vlfs"></a>A. Определение баз данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляре с большим количеством VLF   
+### <a name="a-determining-databases-in-a-ssnoversion-instance-with-high-number-of-vlfs"></a>A. Определение баз данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляре с большим количеством VLF   
 Следующий запрос возвращает базы данных с более чем 100 VLF в файлах журнала. Большое число VLF может повлиять на время запуска, восстановления и восстановления базы данных.
 
 ```sql  
@@ -90,7 +90,7 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id)
 WHERE total_vlf_count  > 100;
 ```   
 
-### <a name="b-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-transaction-log-backups-older-than-4-hours"></a>Б. Определение баз данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляре с резервными копиями журнала транзакций старше 4 часов   
+### <a name="b-determining-databases-in-a-ssnoversion-instance-with-transaction-log-backups-older-than-4-hours"></a>Б) Определение баз данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляре с резервными копиями журнала транзакций старше 4 часов   
 Следующий запрос определяет время последнего резервного копирования журнала для баз данных в экземпляре.
 
 ```sql  
@@ -100,8 +100,8 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id);
 ```
 
 ## <a name="see-also"></a>См. также:  
-[Динамические административные представления и функции (Transact-SQL)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Динамические административные представления и функции &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys. dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[sys. dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
+[sys.dm_db_log_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6739d9bcff2639b4b4f3562624beaf2cb3a76507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032823"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
@@ -65,29 +65,28 @@ sp_sproc_columns [[@procedure_name = ] 'name']
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**PROCEDURE_QUALIFIER**|**имеет sysname**|Имя квалификатора процедуры. Этот столбец может принимать значение NULL.|  
-|**PROCEDURE_OWNER**|**имеет sysname**|Имя владельца процедуры. Этот столбец всегда возвращает значение.|  
+|**PROCEDURE_QUALIFIER**|**sysname**|Имя квалификатора процедуры. Этот столбец может принимать значение NULL.|  
+|**PROCEDURE_OWNER**|**sysname**|Имя владельца процедуры. Этот столбец всегда возвращает значение.|  
 |**PROCEDURE_NAME**|**nvarchar (** 134 **)**|Имя процедуры. Этот столбец всегда возвращает значение.|  
-|**COLUMN_NAME**|**имеет sysname**|Имя столбца для каждого столбца возвращаемого **table_name** . Этот столбец всегда возвращает значение.|  
+|**COLUMN_NAME**|**sysname**|Имя столбца для каждого столбца возвращаемого **table_name** . Этот столбец всегда возвращает значение.|  
 |**COLUMN_TYPE**|**smallint**|Это поле всегда возвращает значение:<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE|  
 |**DATA_TYPE**|**smallint**|Целочисленный код для типа данных ODBC. Если этот тип данных нельзя сопоставить с типом ISO, то значением будет NULL. Имя собственного типа данных возвращается в столбец **TYPE_NAME** .|  
-|**TYPE_NAME**|**имеет sysname**|Строковое представление типа данных. Это имя типа данных, как представлено соответствующей СУБД.|  
+|**TYPE_NAME**|**sysname**|Строковое представление типа данных. Это имя типа данных, как представлено соответствующей СУБД.|  
 |**ОБЕСПЕЧИВАЮТ**|**int**|Количество значащих цифр. Возвращаемое значение для столбца **точности** находится в базовом 10.|  
-|**НЕДОПУСТИМ**|**int**|Размер передаваемых данных.|  
+|**LENGTH**|**int**|Размер передаваемых данных.|  
 |**Измените**|**smallint**|Число цифр справа от десятичной запятой.|  
 |**RADIX**|**smallint**|Основание системы счисления для числовых типов.|  
 |**ОБНУЛЯЕМОГО**|**smallint**|Определяет допустимость значений NULL:<br /><br /> 1 = Может быть создан тип данных, допускающий значения NULL.<br /><br /> 0 = значения NULL недопустимы.|  
-|**Примечания**|**varchar (** 254 **)**|Описание столбца процедуры. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
+|**ЗАМЕЧАНИЯ**|**varchar (** 254 **)**|Описание столбца процедуры. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
 |**COLUMN_DEF**|**nvarchar (** 4000 **)**|Значение столбца по умолчанию.|  
 |**SQL_DATA_TYPE**|**smallint**|Значение типа данных SQL в том виде, в каком оно отображается в поле **Type** дескриптора. Этот столбец аналогичен столбцу **data_type** , за исключением типов данных **даты** **и времени ISO** . Этот столбец всегда возвращает значение.|  
 |**SQL_DATETIME_SUB**|**smallint**|Дополнительный код **datetime** ISO **interval**, если значение **SQL_DATA_TYPE** равно **SQL_DATETIME** или **SQL_INTERVAL**. Для типов данных, отличных от **DateTime** и **интервалов**ISO, это поле имеет значение null.|  
 |**CHAR_OCTET_LENGTH**|**int**|Максимальная длина в байтах для столбца **символьного** или **двоичного** типа данных. Для всех других типов данных этот столбец возвращает значение NULL.|  
 |**ORDINAL_POSITION**|**int**|Порядковый номер столбца в таблице. Первый столбец в таблице имеет порядковый номер 1. Этот столбец всегда возвращает значение.|  
 |**IS_NULLABLE**|**varchar (254)**|Способность столбца таблицы содержать значение NULL. Допустимость значений NULL определяется в соответствии с правилами ISO. СУБД, совместимая с ISO, не может возвращать пустую строку.<br /><br /> Отображает YES, если столбец может включать значения NULL, и NO, если столбец не может содержать значения NULL.<br /><br /> Если допустимость значения NULL неизвестна, то этот столбец возвращает строку нулевой длины.<br /><br /> Значение, возвращаемое в данном столбце, отличается от значения, возвращаемого в столбце NULLABLE.|  
-|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]тип данных, используемый расширенными хранимыми процедурами. Дополнительные сведения см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).|  
+|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных используется для расширенных хранимых процедур. Дополнительные сведения см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).|  
   
 ## <a name="remarks"></a>Remarks  
  **sp_sproc_columns** эквивалентен **SQLProcedureColumns** в ODBC. Возвращаемые результаты упорядочиваются по **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, **procedure_name**и порядку, в котором эти параметры отображаются в определении процедуры.  
@@ -97,6 +96,6 @@ sp_sproc_columns [[@procedure_name = ] 'name']
   
 ## <a name="see-also"></a>См. также:  
  [Хранимые процедуры каталога &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

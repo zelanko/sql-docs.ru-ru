@@ -16,10 +16,10 @@ ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 382bbc9aeedacf37c7fe38abd592bcee7e154f5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038871"
 ---
 # <a name="functions-on-nodes---local-name"></a>Функции с узлами — local-name
@@ -49,7 +49,7 @@ fn:local-name($arg as node()?) as xs:string
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. Получение локального имени конкретного узла  
+### <a name="a-retrieve-local-name-of-a-specific-node"></a>А) Получение локального имени конкретного узла  
  Следующий запрос обращается к нетипизированному экземпляру XML. Выражение запроса `local-name(/ROOT[1])` получает локальную часть имени указанного узла.  
   
 ```  
@@ -70,7 +70,7 @@ WHERE ProductModelID=7
 -- result = Location  
 ```  
   
-### <a name="b-using-local-name-without-argument-in-a-predicate"></a>Б. Использование локального имени без аргумента в предикате  
+### <a name="b-using-local-name-without-argument-in-a-predicate"></a>Б) Использование локального имени без аргумента в предикате  
  Следующий запрос задается для столбца Instructions, типизированного **XML-** столбец таблицы ProductModel. Выражение возвращает все дочерние элементы элемента <`root`>, локальным именем которого является "Location". Функция **local-name ()** указана в предикате и не имеет аргументов. контекстный узел используется функцией.  
   
 ```  

@@ -12,10 +12,10 @@ ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c084db939482fe57e150d4beb22eab4d5e6decb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006544"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Мастер поиска баз данных (выбор файлов) (Акцесстоскл)
@@ -44,10 +44,10 @@ ms.locfileid: "68006544"
 **Размер**  
 Размер базы данных в байтах.  
   
-**Создание**  
+**Создан**  
 Дата и время создания базы данных.  
   
-**Изменено**  
+**Изменен**  
 Дата и время последнего обновления базы данных.  
   
 ## <a name="see-also"></a>См. также:  

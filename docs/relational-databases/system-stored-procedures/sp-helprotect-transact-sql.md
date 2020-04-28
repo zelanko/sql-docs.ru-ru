@@ -18,10 +18,10 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997478"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
@@ -58,19 +58,19 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 `[ @permissionarea = ] 'type'`Символьная строка, указывающая, следует ли отображать разрешения объекта (символьная строка **o**), разрешения инструкции (символьные **строки) или**оба (**ОС**). *Type имеет тип* **varchar (10)** и значение по умолчанию **OS**. *тип* может быть любым сочетанием **o** и **s**, с запятыми или пробелами между **o** и **s**или без них.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**Владелец**|**имеет sysname**|Имя владельца объекта.|  
-|**Объект**|**имеет sysname**|Имя объекта.|  
-|**Участник**|**имеет sysname**|Имя участника, которому были предоставлены разрешения.|  
-|**Grantor**|**имеет sysname**|Имя участника, предоставившего разрешения.|  
+|**Владелец**|**sysname**|Имя владельца объекта.|  
+|**Объектами**|**sysname**|Имя объекта.|  
+|**Участник**|**sysname**|Имя участника, которому были предоставлены разрешения.|  
+|**GRANTOR**|**sysname**|Имя участника, предоставившего разрешения.|  
 |**протекттипе**|**nvarchar (10)**|Имя типа защиты:<br /><br /> GRANT REVOKE|  
-|**Действие**|**nvarchar (60)**|Имя разрешения. Инструкции с допустимыми разрешениями зависят от типа объекта.|  
-|**Столбец**|**имеет sysname**|Тип разрешения:<br /><br /> All = разрешение затрагивает все текущие столбцы объекта.<br /><br /> New = разрешение затрагивает все новые столбцы, которые могут быть изменены для объекта в будущем (с помощью инструкции ALTER).<br /><br /> All+New = сочетание All и New.<br /><br /> Возвращает точку, если тип разрешения не применяется к столбцам.|  
+|**Действие**|**nvarchar(60)**|Имя разрешения. Инструкции с допустимыми разрешениями зависят от типа объекта.|  
+|**Рубрик**|**sysname**|Тип разрешения:<br /><br /> All = разрешение затрагивает все текущие столбцы объекта.<br /><br /> New = разрешение затрагивает все новые столбцы, которые могут быть изменены для объекта в будущем (с помощью инструкции ALTER).<br /><br /> All+New = сочетание All и New.<br /><br /> Возвращает точку, если тип разрешения не применяется к столбцам.|  
   
 ## <a name="remarks"></a>Remarks  
  Все аргументы в следующей процедуре являются необязательными. При выполнении без аргументов процедура `sp_helprotect` отображает все разрешения, которые были предоставлены или запрещены в текущей базе данных.  
@@ -81,7 +81,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 EXEC sp_helprotect NULL, NULL, dbo;  
 ```  
   
- или  
+ либо  
   
 ```  
 EXEC sp_helprotect @grantorname = 'dbo';  
@@ -90,9 +90,9 @@ EXEC sp_helprotect @grantorname = 'dbo';
  Данные в отчете сортируются по категории разрешения, владельцу, объекту, получателю разрешения, участнику, предоставившему разрешение, категории типа защиты, типу защиты, действию и столбцу идентификатора.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в роли **Public** .  
+ Необходимо быть членом роли **public**.  
   
- Полученные данные подлежат ограничениям на доступ к метаданным. Сущности, на которые участник не имеет разрешения, не показаны. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Полученные данные подлежат ограничениям на доступ к метаданным. Сущности, на которые участник не имеет разрешения, не показаны.  Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -103,7 +103,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
 EXEC sp_helprotect 'titles';  
 ```  
   
-### <a name="b-listing-the-permissions-for-a-user"></a>Б. Список разрешений для пользователя  
+### <a name="b-listing-the-permissions-for-a-user"></a>Б) Список разрешений для пользователя  
  В следующем примере выводится список всех разрешений, которые пользователь `Judy` имеет в текущей базе данных.  
   
 ```  
@@ -124,7 +124,7 @@ EXEC sp_helprotect NULL, NULL, 'Judy';
 EXEC sp_helprotect NULL, NULL, NULL, 's';   
 ```  
   
-### <a name="e-listing-the-permissions-for-a-create-statement"></a>д. Список разрешений для инструкции CREATE  
+### <a name="e-listing-the-permissions-for-a-create-statement"></a>д) Список разрешений для инструкции CREATE  
  В следующем примере приведен список всех пользователей, которым предоставлено разрешение CREATE TABLE.  
   
 ```  
@@ -136,6 +136,6 @@ EXEC sp_helprotect @name = 'CREATE TABLE';
  [DENY &#40;&#41;Transact-SQL](../../t-sql/statements/deny-transact-sql.md)   
  [ПРЕДОСТАВЛЕНИЕ &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [ОТОЗВАТЬ &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

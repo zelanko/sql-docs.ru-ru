@@ -18,10 +18,10 @@ ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 279492503ba8ce31e3c5d4027d8fd184c4a81587
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68045960"
 ---
 # <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
@@ -43,7 +43,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ## <a name="arguments"></a>Аргументы  
 `[ @backup_file_name = ] 'backup_file_name'`Имя файла резервной копии. *backup_file_name* имеет тип **nvarchar (128)**.  
   
-`[ @database_name = ] 'database_name'`Имя базы данных. *database_name* имеет тип **sysname**.  
+`[ @database_name = ] 'database_name'`Имя базы данных. Аргумент *database_name* имеет тип **sysname**.  
   
 `[ @result = ] _result_ OUTPUT`Указывает, можно ли применить журнал транзакций к базе данных. *результат* является **битом**.  
   
@@ -52,7 +52,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
  0= Журнал не может быть применен.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_can_tlog_be_applied**.  
@@ -73,6 +73,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

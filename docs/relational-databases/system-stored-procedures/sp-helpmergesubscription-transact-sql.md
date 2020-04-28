@@ -16,10 +16,10 @@ ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0e5f044482d3e46e4e20279a437b8d9459d1d3bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002640"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
@@ -55,7 +55,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 `[ @subscription_type = ] 'subscription_type'`Тип подписки. *subscription_type*имеет тип **nvarchar (15)** и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Push** (по умолчанию)|Принудительная подписка|  
 |**собирает**|Подписка по запросу|  
@@ -65,15 +65,15 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**subscription_name**|**имеет sysname**|Имя подписки.|  
-|**публикации**|**имеет sysname**|Имя публикации.|  
-|**издателя**|**имеет sysname**|Имя издателя.|  
-|**publisher_db**|**имеет sysname**|Имя базы данных издателя.|  
-|**абонент**|**имеет sysname**|Имя подписчика.|  
-|**subscriber_db**|**имеет sysname**|Имя базы данных подписки.|  
-|**состояние**|**int**|Состояние подписки.<br /><br /> **0** = все задания ожидают запуска<br /><br /> **1** = одно или несколько заданий запускаются<br /><br /> **2** = все задания выполнены успешно<br /><br /> **3** = по крайней мере одно задание исполняется<br /><br /> **4** = все задания запланированы и бездействуют<br /><br /> **5** = по крайней мере одно задание пытается выполнить после предыдущего сбоя<br /><br /> **6** = не удалось успешно выполнить по крайней мере одно задание|  
+|**subscription_name**|**sysname**|Имя подписки.|  
+|**публикации**|**sysname**|Имя публикации.|  
+|**издателя**|**sysname**|Имя издателя.|  
+|**publisher_db**|**sysname**|Имя базы данных издателя.|  
+|**абонент**|**sysname**|Имя подписчика.|  
+|**subscriber_db**|**sysname**|Имя базы данных подписки.|  
+|**status**|**int**|Состояние подписки.<br /><br /> **0** = все задания ожидают запуска<br /><br /> **1** = одно или несколько заданий запускаются<br /><br /> **2** = все задания выполнены успешно<br /><br /> **3** = по крайней мере одно задание исполняется<br /><br /> **4** = все задания запланированы и бездействуют<br /><br /> **5** = по крайней мере одно задание пытается выполнить после предыдущего сбоя<br /><br /> **6** = не удалось успешно выполнить по крайней мере одно задание|  
 |**subscriber_type**|**int**|Тип подписчика.|  
 |**subscription_type**|**int**|Тип подписки:<br /><br /> **0** = принудительная отправка<br /><br /> **1** = по запросу<br /><br /> **2** = оба|  
 |**приоритеты**|**float (8)**|Число, показывающее приоритет подписки.|  
@@ -82,12 +82,12 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**merge_jobid**|**двоичный (16)**|Идентификатор задания агента слияния.|  
 |**full_publication**|**tinyint**|Подписка к полной или фильтрованной публикации.|  
 |**offload_enabled**|**bit**|Указывает, установлено ли на запуск выполнение разгрузки агента репликации на подписчике. Если равно NULL, выполняется на издателе.|  
-|**offload_server**|**имеет sysname**|Имя сервера, на который запущен агент.|  
+|**offload_server**|**sysname**|Имя сервера, на который запущен агент.|  
 |**use_interactive_resolver**|**int**|Возвращает сведения о том, был ли использован интерактивный сопоставитель во время взаимодействия. Если значение **равно 0**, то интерактивный сопоставитель не используется.|  
-|**имя узла**|**имеет sysname**|Значение, предоставляемое, если подписка фильтруется по значению функции [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) .|  
-|**subscriber_security_mode**|**smallint**|Режим безопасности на подписчике, где **1** означает проверку подлинности Windows, **** а 0 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — проверку подлинности.|  
-|**subscriber_login**|**имеет sysname**|Имя входа на подписчике.|  
-|**subscriber_password**|**имеет sysname**|Фактический пароль подписчика никогда не возвращается. Результат скрывается**\*\*\*\*\*** строкой "".|  
+|**hostname**|**sysname**|Значение, предоставляемое, если подписка фильтруется по значению функции [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) .|  
+|**subscriber_security_mode**|**smallint**|Режим безопасности на подписчике, где **1** означает проверку подлинности Windows, **0** а 0 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — проверку подлинности.|  
+|**subscriber_login**|**sysname**|Имя входа на подписчике.|  
+|**subscriber_password**|**sysname**|Фактический пароль подписчика никогда не возвращается. Результат скрывается**\*\*\*\*\*** строкой "".|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -104,6 +104,6 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
  [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
  [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ba1cbbfb95dafaa99a33d95b1d92a9e6e5f4e9a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010762"
 ---
 # <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
@@ -43,27 +43,27 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
  *роль* может иметь любое из следующих значений.  
   
-|Предопределенная роль сервера|Description|  
+|Предопределенная роль сервера|Описание|  
 |-----------------------|-----------------|  
 |sysadmin|Системные администраторы|  
 |securityadmin|Администраторы безопасности.|  
-|serveradmin|Администраторы сервера|  
+|serveradmin|Администраторы сервера.|  
 |setupadmin|Администраторы установки.|  
 |processadmin|Администраторы процесса.|  
 |diskadmin|Администраторы диска.|  
-|dbcreator|Создатели баз данных|  
+|dbcreator|Создатели баз данных.|  
 |bulkadmin|Имеющие разрешение на выполнение инструкции BULK INSERT.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|ServerRole|**имеет sysname**|Имя роли сервера|  
-|MemberName|**имеет sysname**|Имя члена роли ServerRole.|  
-|MemberSID|**varbinary (85)**|Идентификатор защиты члена роли MemberName.|  
+|ServerRole|**sysname**|Имя роли сервера|  
+|MemberName|**sysname**|Имя члена роли ServerRole.|  
+|MemberSID|**varbinary(85)**|Идентификатор защиты члена роли MemberName.|  
   
 ## <a name="remarks"></a>Remarks  
  Хранимая процедура sp_helprolemember используется для отображения членов ролей базы данных.  
@@ -89,6 +89,6 @@ EXEC sp_helpsrvrolemember 'sysadmin';
  [sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Функции безопасности &#40;&#41;Transact-SQL](../../t-sql/functions/security-functions-transact-sql.md)  
+ [Функции безопасности &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

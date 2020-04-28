@@ -18,10 +18,10 @@ ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038916"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>Функции с логическими значениями — функция not 
@@ -43,7 +43,7 @@ fn:not($arg as item()*) as xs:boolean
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Использование функции XQuery not () для поиска моделей продуктов, описания каталогов которых не включают элемент \<спецификации>.  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>А) Использование функции XQuery not () для поиска моделей продуктов, описания каталогов которых не включают элемент \<спецификации>.  
  Следующий запрос конструирует XML-код, содержащий идентификаторы модели продукта для моделей продукции, описания каталогов которых не включают элемент `Specifications` <>.  
   
 ```  
@@ -69,7 +69,7 @@ WHERE CatalogDescription.exist('
   
  Этот результирующий набор пуст, так как каждое описание каталога моделей продукции включает \<спецификации> элемент.  
   
-### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>Б. Использование функции XQuery not() для получения информации о расположении цехов, не имеющих атрибута «MachineHours»  
+### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>Б) Использование функции XQuery not() для получения информации о расположении цехов, не имеющих атрибута «MachineHours»  
  Следующий запрос адресован столбцу «Инструкции». В указанном столбце хранятся производственные инструкции для моделей продуктов.  
   
  Для любой модели продукта запрос извлекает информацию о расположении цехов, для которых не задан атрибут "MachineHours". Это значит, что атрибут **«MachineHours»** не указан для элемента \<Location>.  

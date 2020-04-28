@@ -10,10 +10,10 @@ ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 97425a6795889f72b329280ff70f9638378e7799
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006572"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Запуск консоли SSMA (Акцесстоскл)
@@ -50,7 +50,7 @@ Create-New-Project: создает новый проект SSMA.
   
     Значение по умолчанию — "SQL-Server-2008".  
   
-**Пример**.  
+**Пример.**  
   
 ```xml  
 <create-new-project  
@@ -711,7 +711,7 @@ Map-Schema: сопоставление схемы исходной базы да
 </save-as-script>  
 ```  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 Сведения о параметрах командной строки см. [в разделе Параметры командной строки в консоли SSMA &#40;акцесстоскл&#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md) .  
   
 Сведения о примерах файлов сценариев консоли см. в разделе [Работа с примером консольного сценария Филесексекутинг консоли SSMA &#40;акцесстоскл&#41;](../../ssma/access/working-sample-console-script-filesexecuting-ssma-console-accesstosql.md)  

@@ -18,10 +18,10 @@ ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: 36c3aaf72390ac5005ff5577000820f07ac5856d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001031"
 ---
 # <a name="sp_dropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
@@ -45,7 +45,7 @@ sp_dropapprole [@rolename = ] 'role'
 `[ @rolename = ] 'role'`Удаляемая роль приложения. *Role* имеет тип **sysname**и не имеет значения по умолчанию. *роль* должна существовать в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  **sp_dropapprole** можно использовать только для удаления ролей приложения. Если роли принадлежат какие-либо защищаемые объекты, то эту роль удалить нельзя. Перед удалением роли приложения, которой принадлежат защищаемые объекты, следует сначала перенести данные о принадлежности защищаемых объектов или удалить эти объекты.  
@@ -68,6 +68,6 @@ EXEC sp_dropapprole 'SalesApp';
  [УДАЛИТЬ роль приложения &#40;&#41;Transact-SQL](../../t-sql/statements/drop-application-role-transact-sql.md)   
  [sp_changeobjectowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md)   
  [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

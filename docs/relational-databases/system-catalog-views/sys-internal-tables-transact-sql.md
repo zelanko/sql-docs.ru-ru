@@ -21,10 +21,10 @@ ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0b3f262943d41f1cd9592ab805d02bce3ade77a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044537"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
@@ -35,18 +35,18 @@ ms.locfileid: "68044537"
  Данные внутренних таблиц недоступны для пользователей, а их схема является жесткой и неизменной. Невозможно ссылаться на имена внутренних таблиц в инструкциях языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Например, нельзя выполнить инструкцию, такую как SELECT \* из * \<sys. internal_table_name>*. Однако можно обращаться с запросами к представлениям каталогов для просмотра метаданных внутренних таблиц.  
   
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**\<Столбцы, унаследованные из sys. Objects>**||Список столбцов, наследуемых этим представлением, см. в разделе [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**internal_type**|**tinyint**|Тип внутренней таблицы:<br /><br /> 3 = **query_disk_store_query_hints**<br /><br /> 4 = **query_disk_store_query_template_parameterization**<br /><br /> 6 = **query_disk_store_wait_stats**<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** (например, пространственный индекс)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **CHANGE_TRACKING**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 220 = **contained_features**<br /><br /> 225 = **filetable_updates**<br /><br /> 236 = **selective_xml_index_node_table**<br /><br /> 240 = **query_disk_store_query_text**<br /><br /> 241 = **query_disk_store_query**<br /><br /> 242 = **query_disk_store_plan**<br /><br /> 243 = **query_disk_store_runtime_stats**<br /><br /> 244 = **query_disk_store_runtime_stats_interval**<br /><br /> 245 = **query_context_settings**|  
-|**internal_type_desc**|**nvarchar (60)**|Описание типа внутренней таблицы:<br /><br /> QUERY_DISK_STORE_QUERY_HINTS<br /><br /> QUERY_DISK_STORE_QUERY_TEMPLATE_PARAMETERIZATION<br /><br /> QUERY_DISK_STORE_WAIT_STATS<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> CONTAINED_FEATURES<br /><br /> FILETABLE_UPDATES<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE<br /><br /> QUERY_DISK_STORE_QUERY_TEXT<br /><br /> QUERY_DISK_STORE_QUERY<br /><br /> QUERY_DISK_STORE_PLAN<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS_INTERVAL<br /><br /> QUERY_CONTEXT_SETTINGS|  
+|**internal_type_desc**|**nvarchar(60)**|Описание типа внутренней таблицы:<br /><br /> QUERY_DISK_STORE_QUERY_HINTS<br /><br /> QUERY_DISK_STORE_QUERY_TEMPLATE_PARAMETERIZATION<br /><br /> QUERY_DISK_STORE_WAIT_STATS<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> CONTAINED_FEATURES<br /><br /> FILETABLE_UPDATES<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE<br /><br /> QUERY_DISK_STORE_QUERY_TEXT<br /><br /> QUERY_DISK_STORE_QUERY<br /><br /> QUERY_DISK_STORE_PLAN<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS_INTERVAL<br /><br /> QUERY_CONTEXT_SETTINGS|  
 |**parent_id**|**int**|Идентификатор родителя, независимо от того, находится он в пределах области видимости схемы или нет. Принимает значение 0, если родитель отсутствует.<br /><br /> **queue_messages** = **object_id** очереди<br /><br /> **xml_index_nodes** = **object_id** XML-индекса<br /><br /> **fulltext_catalog_freelist** = **fulltext_catalog_id** полнотекстового каталога<br /><br /> **fulltext_index_map** = **object_id** полнотекстового индекса<br /><br /> **query_notification**или **service_broker_map** = 0<br /><br /> **extended_indexes** = **object_id** расширенного индекса, например пространственного индекса.<br /><br /> **object_id** таблицы, для которой включено отслеживание таблиц = **CHANGE_TRACKING**|  
 |**parent_minor_id**|**int**|Вспомогательный идентификатор родителя.<br /><br /> **xml_index_nodes** = **index_id** XML-индекса<br /><br /> **extended_indexes** = **index_id** расширенного индекса, например пространственного индекса.<br /><br /> 0 = **queue_messages**, **fulltext_catalog_freelist**, **fulltext_index_map**, **query_notification**, **service_broker_map**или **CHANGE_TRACKING**|  
 |**lob_data_space_id**|**int**|Ненулевое значение — идентификатор пространства данных (файловая группа или схема секционирования), хранящего данные больших объектов (LOB) для этой таблицы.|  
-|**filestream_data_space_id**|**int**|Зарезервирован для использования в будущем.|  
+|**filestream_data_space_id**|**int**|Зарезервировано для последующего использования.|  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="remarks"></a>Remarks  
  Внутренние таблицы размещаются в той же файловой группе, что и родительская сущность. С помощью запроса к каталогу, проиллюстрированного далее в примере Е, можно узнать количество страниц, занимаемых внутренними таблицами под хранение данных «в строке», «вне строки» и данных больших объектов (LOB).  
@@ -60,13 +60,13 @@ ms.locfileid: "68044537"
 ## <a name="examples"></a>Примеры  
  Следующие примеры демонстрируют, как обратиться с запросом к метаданным внутренней таблицы с помощью представлений каталога.  
   
-### <a name="a-show-internal-tables-that-inherit-columns-from-the-sysobjects-catalog-view"></a>A. Показывает внутренние таблицы, наследующие столбцы от представления каталога sys.objects  
+### <a name="a-show-internal-tables-that-inherit-columns-from-the-sysobjects-catalog-view"></a>А) Показывает внутренние таблицы, наследующие столбцы от представления каталога sys.objects  
   
 ```  
 SELECT * FROM sys.objects WHERE type = 'IT';  
 ```  
   
-### <a name="b-return-all-internal-table-metadata-including-that-which-is-inherited-from-sysobjects"></a>Б. Возвращает все метаданные внутренней таблицы (в том числе те, которые наследуются от представления каталога sys.objects)  
+### <a name="b-return-all-internal-table-metadata-including-that-which-is-inherited-from-sysobjects"></a>Б) Возвращает все метаданные внутренней таблицы (в том числе те, которые наследуются от представления каталога sys.objects)  
   
 ```  
 SELECT * FROM sys.internal_tables;  
@@ -174,7 +174,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+ [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

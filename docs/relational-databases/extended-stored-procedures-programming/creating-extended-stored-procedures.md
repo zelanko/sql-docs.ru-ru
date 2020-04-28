@@ -16,17 +16,17 @@ ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3c22077de3bf41bc09864ac2c7f24dbdd4ecc3e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032038"
 ---
 # <a name="creating-extended-stored-procedures"></a>Создание расширенных хранимых процедур
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Пользуйтесь вместо этого интеграцией со средой CLR.  
   
  Расширенная хранимая процедура является функцией с прототипом:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68032038"
   
  Для создания DLL-библиотеки расширенной хранимой процедуры необходимы следующие файлы.  
   
-|Файл|Description|  
+|Файл|Описание|  
 |----------|-----------------|  
 |Srv.h|Файл заголовка API-интерфейса расширенных хранимых процедур|  
 |Opends60.lib|Библиотека импорта для Opends60.dll|  

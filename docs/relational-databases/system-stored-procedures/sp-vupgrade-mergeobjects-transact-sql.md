@@ -16,10 +16,10 @@ ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ed0992ff1b6b7de6f93213b612ff05ebcbdb3df5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042706"
 ---
 # <a name="sp_vupgrade_mergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
@@ -45,7 +45,7 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @login = ] 'login'`— Это имя входа системного администратора, используемое при создании новых системных объектов в базе данных распространителя. Аргумент *Login* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр не требуется, если *security_mode* имеет значение **1**, которое является проверкой подлинности Windows.  
+`[ @login = ] 'login'`— Это имя входа системного администратора, используемое при создании новых системных объектов в базе данных распространителя. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. Этот параметр не требуется, если *security_mode* имеет значение **1**, которое является проверкой подлинности Windows.  
   
 `[ @password = ] 'password'`Пароль системного администратора, используемый при создании новых системных объектов в базе данных распространителя. Аргумент *Password* имеет тип **sysname**и значение по умолчанию **""** (пустая строка). Этот параметр не требуется, если *security_mode* имеет значение **1**, которое является проверкой подлинности Windows.  
   

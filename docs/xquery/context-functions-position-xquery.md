@@ -16,10 +16,10 @@ ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038978"
 ---
 # <a name="context-functions---position-xquery"></a>Функции контекста — position (XQuery)
@@ -40,7 +40,7 @@ fn:position() as xs:integer
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] типа **XML** в базе данных.  
   
-### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Использование функции position() в запросе XQuery для получения первых двух характеристик продукта  
+### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>А) Использование функции position() в запросе XQuery для получения первых двух характеристик продукта  
  Следующий запрос получает первые две функции — первые два дочерних элемента <`Features`> элемента из описания каталога модели продукта. При наличии дополнительных функций он добавляет к результату элемент `there-is-more/`> <.  
   
 ```  

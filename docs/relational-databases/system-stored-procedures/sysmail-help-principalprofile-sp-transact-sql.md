@@ -18,10 +18,10 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5bc48bb3edbeaad5593f574676e61ab2ca7f727f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044519"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
@@ -57,11 +57,11 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
   
 ||||  
 |-|-|-|  
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |**principal_id**|**int**|Идентификатор пользователя базы данных.|  
-|**principal_name**|**имеет sysname**|Имя пользователя базы данных.|  
+|**principal_name**|**sysname**|Имя пользователя базы данных.|  
 |**profile_id**|**int**|Идентификатор профиля компонента Database Mail.|  
-|**profile_name**|**имеет sysname**|Имя профиля компонента Database Mail.|  
+|**profile_name**|**sysname**|Имя профиля компонента Database Mail.|  
 |**is_default**|**bit**|Флаг, который указывает, является ли профиль профилем по умолчанию для пользователя.|  
   
 ## <a name="remarks"></a>Remarks  
@@ -91,7 +91,7 @@ principal_id principal_name     profile_id  profile_name                   is_de
 5            danw               9           AdventureWorks Administrator   1  
 ```  
   
-### <a name="b-listing-information-for-all-associations"></a>Б. Вывод сведений обо всех ассоциациях  
+### <a name="b-listing-information-for-all-associations"></a>Б) Вывод сведений обо всех ассоциациях  
  В следующем примере выводятся сведения обо всех ассоциациях в экземпляре.  
   
 ```  

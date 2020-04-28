@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 918f545dd0ea0ca30524a307f1ae6d30c3fafb61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68046053"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
@@ -57,7 +57,7 @@ sp_bindefault [ @defname = ] 'default' ,
 `[ @futureonly = ] 'futureonly_flag'`Используется только при привязке значения по умолчанию к псевдониму типа данных. *futureonly_flag* имеет тип **varchar (15)** и значение по умолчанию NULL. Если этот параметр имеет значение **futureonly**, существующие столбцы этого типа данных не могут наследовать новое значение по умолчанию. Этот аргумент никогда не используется при привязке значения по умолчанию к столбцу. Если *futureonly_flag* имеет значение null, новое значение по умолчанию привязывается к любому столбцу псевдонима типа данных, который в настоящее время не имеет значения по умолчанию, или на основе существующего значения по умолчанию псевдонима типа данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  **Sp_bindefault** можно использовать для привязки нового значения по умолчанию к столбцу, хотя рекомендуется использовать ограничение по умолчанию или псевдоним типа данных без отмены привязки к существующему по умолчанию. Старое значение по умолчанию переопределяется. Нельзя привязать значение по умолчанию к системному типу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или определяемого пользователем типу данных среды CLR. Если значение по умолчанию несовместимо со столбцом, к которому оно привязано, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] возвращает сообщение об ошибке при вставке значения по умолчанию, а не при его привязке.  
@@ -80,7 +80,7 @@ GO
 EXEC sp_bindefault 'today', 'HumanResources.Employee.HireDate';  
 ```  
   
-### <a name="b-binding-a-default-to-an-alias-data-type"></a>Б. Привязка значения по умолчанию к псевдониму типа данных  
+### <a name="b-binding-a-default-to-an-alias-data-type"></a>Б) Привязка значения по умолчанию к псевдониму типа данных  
  Значение по умолчанию с именем `def_ssn` и псевдоним типа данных с именем `ssn` уже существуют. В следующем примере значение по умолчанию `def_ssn` привязывается к псевдониму `ssn`. Когда создается таблица, значение по умолчанию наследуется всеми столбцами, которым присвоен псевдоним типа данных `ssn`. Существующие столбцы типа **ssn** также наследуют **def_ssn**по умолчанию, если только для *futureonly_flag* не задано значение **futureonly** , или если только к столбцу не привязывается по умолчанию напрямую. Значения по умолчанию, которые привязаны к столбцам, всегда имеют приоритет над значениями по умолчанию, привязанными к псевдониму типа данных.  
   
 ```  
@@ -114,9 +114,9 @@ EXEC sp_bindefault 'default1', '[t.1].c1' ;
   
 ## <a name="see-also"></a>См. также:  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Создание &#40;по УМОЛЧАНИю для&#41;Transact-SQL](../../t-sql/statements/create-default-transact-sql.md)   
+ [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   
  [DROP &#40;по УМОЛЧАНИю&#41;Transact-SQL](../../t-sql/statements/drop-default-transact-sql.md)   
  [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

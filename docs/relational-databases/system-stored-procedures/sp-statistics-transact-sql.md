@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b4e3e25dbab53f31e354dcff537b6bfb9a6b433d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032740"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
@@ -66,22 +66,21 @@ sp_statistics [ @table_name = ] 'table_name'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**TABLE_QUALIFIER**|**имеет sysname**|Имя квалификатора таблицы. Этот столбец может принимать значение NULL.|  
-|**TABLE_OWNER**|**имеет sysname**|Имя владельца таблицы. Этот столбец всегда возвращает значение.|  
-|**TABLE_NAME**|**имеет sysname**|Имя таблицы. Этот столбец всегда возвращает значение.|  
+|**TABLE_QUALIFIER**|**sysname**|Имя квалификатора таблицы. Этот столбец может принимать значение NULL.|  
+|**TABLE_OWNER**|**sysname**|Имя владельца таблицы. Этот столбец всегда возвращает значение.|  
+|**TABLE_NAME**|**sysname**|Имя таблицы. Этот столбец всегда возвращает значение.|  
 |**NON_UNIQUE**|**smallint**|NOT NULL<br /><br /> 0 = уникальное<br /><br /> 1 = неуникальное|  
-|**INDEX_QUALIFIER**|**имеет sysname**|Имя владельца индекса. В некоторых СУБД пользователям, не являющимся владельцами таблицы, разрешено создавать индексы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот столбец всегда совпадает с **table_name**.|  
-|**INDEX_NAME**|**имеет sysname**|Имя индекса. Этот столбец всегда возвращает значение.|  
-|**TYPE**|**smallint**|Этот столбец всегда возвращает значение:<br /><br /> 0 = статистика по таблице<br /><br /> 1 = кластеризованный<br /><br /> 2 = хэшированный<br /><br /> 3 = некластеризованный|  
+|**INDEX_QUALIFIER**|**sysname**|Имя владельца индекса. В некоторых СУБД пользователям, не являющимся владельцами таблицы, разрешено создавать индексы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот столбец всегда совпадает с **table_name**.|  
+|**INDEX_NAME**|**sysname**|Имя индекса. Этот столбец всегда возвращает значение.|  
+|**ТИП**|**smallint**|Этот столбец всегда возвращает значение:<br /><br /> 0 = статистика по таблице<br /><br /> 1 = кластеризованный<br /><br /> 2 = хэшированный<br /><br /> 3 = некластеризованный|  
 |**SEQ_IN_INDEX**|**smallint**|Позиция столбца в индексе.|  
-|**COLUMN_NAME**|**имеет sysname**|Имя столбца для каждого столбца возвращаемого **table_name** . Этот столбец всегда возвращает значение.|  
+|**COLUMN_NAME**|**sysname**|Имя столбца для каждого столбца возвращаемого **table_name** . Этот столбец всегда возвращает значение.|  
 |**ПАРАМЕТРЫ сортировки**|**char (1)**|Порядок сортировки. Возможны следующие варианты:<br /><br /> A = по возрастанию<br /><br /> D = по убыванию<br /><br /> NULL = неприменимо|  
 |**КОЛИЧЕСТВА элементов**|**int**|Число строк в таблице или уникальных значений в индексе.|  
-|**СМ**|**int**|Число страниц для хранения индекса или таблицы.|  
-|**FILTER_CONDITION**|**varchar (128)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение.|  
+|**PAGES**|**int**|Число страниц для хранения индекса или таблицы.|  
+|**FILTER_CONDITION**|**varchar (128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  None  
@@ -98,7 +97,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  
   
-## <a name="example-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Пример: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="example-sssdwfull-and-sspdw"></a>Пример: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В следующем примере возвращаются сведения о `DimEmployee` таблице.  
   
 ```  
@@ -109,7 +108,7 @@ EXEC sp_statistics DimEmployee;
   
 ## <a name="see-also"></a>См. также:  
  [Хранимые процедуры каталога &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
 

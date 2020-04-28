@@ -13,16 +13,16 @@ ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ece41e157ddad4f62a041d8e06dde073f681d274
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029357"
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>Создание файлов подключения к серверу (SybaseToSQL)
 Сведения о сервере можно указать либо в разделе Servers файла сценария, либо в отдельном файле соединения сервера. Параметр командной строки для файла соединения сервера имеет значение, `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера имеется как в файле скрипта, так и в файле соединения сервера, то будет считаться определение сервера в файле скрипта.  
   
-**Пример**.  
+**Пример.**  
   
 ```  
 1.<!--Sample of server connection file commands -->  
@@ -104,7 +104,7 @@ ms.locfileid: "68029357"
 ## <a name="server-connection-file-validation"></a>Проверка файлов подключения к серверу  
 Пользователь может легко проверить файл подключения своего сервера относительно файла определения схемы **S2SSConsoleScriptServersSchema. xsd** , доступного в папке Schemas.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 Следующий шаг в работе консоли заключается [в выполнении консоли SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
 ## <a name="see-also"></a>См. также:  

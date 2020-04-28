@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 5fa2412e61e30852497ffa00493ea6dbe244989a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001113"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>sys. pdw_nodes_tables (Transact-SQL)
@@ -24,13 +24,13 @@ ms.locfileid: "68001113"
 
   Содержит по одной строке для каждого объекта таблицы, который владеет участником или на который участник предоставил какое-либо разрешение.  
   
-|Имя столбца|Тип данных|Description|Диапазонный индекс|  
+|Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |\<наследуемые столбцы>||Список столбцов, наследуемых этим представлением, см. в разделе [sys. Objects](../system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).||  
 |lob_data_space_id|**int**||Всегда равно 0.|  
 |filestream_data_space_id|**int**|Идентификатор пространства данных для файловой группы FILESTREAM или[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|Максимальный идентификатор столбца, используемый этой таблицей.||  
-|lock_on_bulk_load|**bit**|Таблица заблокирована при массовой загрузке.|ПОДЛЕЖИТ УТОЧНЕНИЮ|  
+|lock_on_bulk_load|**bit**|Таблица заблокирована при массовой загрузке.|TBD|  
 |uses_ansi_nulls|**bit**|Таблица была создана при установленном параметре SET ANSI_NULLS = ON.|1|  
 |is_replicated|**bit**|1 = таблица опубликована с помощью репликации.|0,0 Репликация не поддерживается.|  
 |has_replication_filter|**bit**|1 = для таблицы имеется фильтр репликации.|0|  
@@ -41,10 +41,10 @@ ms.locfileid: "68001113"
 |large_value_types_out_of_row|**bit**|1 = типы больших значений хранятся вне строк.|Всегда равно 0.|  
 |is_tracked_by_cdc|**bit**|1 = таблица включена для отслеживания измененных данных|Всегда равно 0; без поддержки CDC.|  
 |lock_escalation|**tinyint**|Значение параметра LOCK_ESCALATION для таблицы: 2 = AUTO.|Всегда 2.|  
-|lock_escalation_desc|**nvarchar (60)**|Текстовое описание параметра lock_escalation.|Всегда черта AUTO черта.|  
+|lock_escalation_desc|**nvarchar(60)**|Текстовое описание параметра lock_escalation.|Всегда черта AUTO черта.|  
 |pdw_node_id|**int**|Уникальный идентификатор [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] узла.|NOT NULL|  
   
 ## <a name="see-also"></a>См. также:  
- [Хранилища данных SQL и представления каталога параллельных хранилищ данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md) (Представления каталога в службе "Хранилище данных SQL" и Parallel Data Warehouse)  
   
   

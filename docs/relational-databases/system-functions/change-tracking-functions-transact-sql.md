@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8dc2dceec177922369fe2bbef74bafeeef2ca27c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042958"
 ---
 # <a name="change-tracking-functions-transact-sql"></a>Функции отслеживания изменений (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68042958"
 
   Система отслеживания изменений в данных регистрирует действия по вставке, обновлению и удалению, применяемые к отслеживаемым таблицам, сохраняя подробности операций изменения в легкообрабатываемом реляционном формате. Следующими функциями возвращаются сведения об изменениях.  
   
-|Компонент|Description|  
+|Компонент|Описание|  
 |--------------|-----------------|  
 |[CHANGETABLE (ИЗМЕНЕНИЯ)](../../relational-databases/system-functions/changetable-transact-sql.md)|Возвращает данные отслеживания изменений для всех изменений в таблице, произведенных после указанной версии.|  
 |[CHANGETABLE (ВЕРСИЯ)](../../relational-databases/system-functions/changetable-transact-sql.md)|Возвращает информацию о последнем изменении указанной строки.|  

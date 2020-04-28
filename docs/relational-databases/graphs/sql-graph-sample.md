@@ -16,10 +16,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1737ae8427df8d6d9bd6dbb9dea359da09f0c657
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68035872"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Создание базы данных Graph и выполнение некоторых запросов сопоставления шаблонов с помощью T-SQL
@@ -165,7 +165,7 @@ go
 ## <a name="script-explanation"></a>Описание скрипта  
 Этот сценарий использует новый синтаксис T-SQL для создания таблиц node и ребра. Показывает, как вставлять данные в таблицы node и ребра с `INSERT` помощью инструкции, а также показывает, `MATCH` как использовать предложение для сопоставления шаблонов и навигации.
 
-|Get-Help    |Заметки
+|Get-Help    |Примечания
 |---  |---  |
 |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)  |Создание таблицы узла или граничной диаграммы  |
 |[INSERT (Transact-SQL)](../../t-sql/statements/insert-sql-graph.md)  |Вставить в таблицу узла или ребра  |

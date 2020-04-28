@@ -18,10 +18,10 @@ ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd8ee38dc4ac1a8fd3a729d94744d3fd98f78875
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017848"
 ---
 # <a name="syssp_xtp_control_query_exec_stats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
@@ -62,7 +62,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли sysadmin.  
   
-## <a name="code-sample"></a>Пример кода  
+## <a name="code-sample"></a>Образец кода  
  В следующем примере кода показано, как включить сбор статистики для всех скомпилированных в собственном коде хранимых процедур экземпляра, а затем для определенной процедуры.  
   
 ```sql   

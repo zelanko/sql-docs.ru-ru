@@ -10,10 +10,10 @@ ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7d41fc2f01e2cfbc2b20c58ea9be640f2afd8ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006582"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>Изменение сопоставления типов (Акцесстоскл)
@@ -39,7 +39,7 @@ ms.locfileid: "68006582"
 **Кому**  
 Укажите максимальную длину для этого сопоставления. Например, для типа данных **Text** можно ввести значение 20, чтобы указать, что это сопоставление относится к диапазону, завершающему в **тексте (20)**.  
   
-**Тип целевого объекта**  
+**Тип результирующего значения**  
 Выберите тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных, с которым сопоставлен исходный тип данных. Когда SSMA создает таблицу или хранимую процедуру в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], тип данных источника изменится на этот тип данных.  
   
 Если тип данных имеет переменную длину, в разделе **целевой тип**появится следующее поле:  

@@ -18,10 +18,10 @@ ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6613c4e94ce8c802e45fe003ac73e51b3f38072b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032807"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
@@ -44,26 +44,26 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ## <a name="arguments"></a>Аргументы  
 `[ @srvrolename = ] 'role'`Имя предопределенной роли сервера, для которой возвращаются разрешения. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. Если роль не указана, возвращаются разрешения для всех предопределенных ролей сервера. *роль* может иметь одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**sysadmin**|Системные администраторы|  
-|**администратора**|Администраторы безопасности.|  
-|**serveradmin**|Администраторы сервера|  
+|**securityadmin**|Администраторы безопасности.|  
+|**serveradmin**|Администраторы сервера.|  
 |**setupadmin**|Администраторы установки.|  
 |**processadmin**|Администраторы процесса.|  
 |**diskadmin**|Администраторы диска.|  
-|**создателя**|Создатели баз данных|  
+|**dbcreator**|Создатели баз данных.|  
 |**bulkadmin**|Имеющие разрешение на выполнение инструкции BULK INSERT.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**ServerRole**|**имеет sysname**|Имя предопределенной роли сервера|  
-|**Разрешение**|**имеет sysname**|Разрешение, связанное с **serverRole**|  
+|**ServerRole**|**sysname**|Имя предопределенной роли сервера|  
+|**Разрешение**|**sysname**|Разрешение, связанное с **serverRole**|  
   
 ## <a name="remarks"></a>Remarks  
  Перечисляемые разрешения включают допустимые к выполнению инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)], а также другие специальные действия, которые могут выполняться членами предопределенных ролей сервера. Чтобы отобразить список предопределенных ролей сервера, выполните **sp_helpsrvrole**.  
@@ -71,7 +71,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
  Предопределенной роли сервера **sysadmin** предоставлены разрешения всех других предопределенных ролей сервера.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в роли **Public** .  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
  Следующий запрос возвращает разрешения, связанные с предопределенной ролью сервера `sysadmin`.  
@@ -86,6 +86,6 @@ GO
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
  [sp_helpsrvrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c02b9327dbff75e3c0816bb3eec19e3cb3135d50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008919"
 ---
 # <a name="sp_password-transact-sql"></a>sp_password (Transact-SQL)
@@ -49,12 +49,12 @@ sp_password [ [ @old = ] 'old_password' , ]
 `[ @new = ] 'new_password'`Новый пароль. Аргумент *new_password* имеет тип **sysname**и не имеет значения по умолчанию. необходимо указать *old_password* , если именованные параметры не используются.  
   
 > [!IMPORTANT]  
->  Не используйте пароль со значением NULL. Выбирайте надежные пароли. Дополнительные сведения см. в статье [Надежные пароли](../../relational-databases/security/strong-passwords.md).  
+>  Не используйте пароль со значением NULL. Выбирайте надежные пароли. Дополнительные сведения см. в разделе [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
-`[ @loginame = ] 'login'`Имя входа, затронутое изменением пароля. Аргумент *Login* имеет тип **sysname**и значение по умолчанию NULL. *имя входа* должно уже существовать и может быть указано только членами предопределенных ролей сервера **sysadmin** или **администратора** .  
+`[ @loginame = ] 'login'`Имя входа, затронутое изменением пароля. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. *имя входа* должно уже существовать и может быть указано только членами предопределенных ролей сервера **sysadmin** или **администратора** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  **sp_password** вызывает инструкцию ALTER LOGIN. Эта инструкция поддерживает дополнительные параметры. Сведения об изменении паролей см. в разделе [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
@@ -76,7 +76,7 @@ ALTER LOGIN Victoria WITH PASSWORD = 'B3r1000d#2-36';
 GO  
 ```  
   
-### <a name="b-changing-a-password"></a>Б. Изменение пароля  
+### <a name="b-changing-a-password"></a>Б) Изменение пароля  
  Следующий пример показывает, как пользоваться `ALTER LOGIN` для смены пароля пользователя `Victoria` с `B3r1000d#2-36` на `V1cteAmanti55imE`. Это является предпочтительным методом. Пользователь `Victoria` может использовать эту команду безо всяких дополнительных разрешений. Другим пользователям для этого требуется разрешение ALTER ANY LOGIN.  
   
 ```  
@@ -88,12 +88,12 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [ALTER LOGIN (Transact-SQL)](../../t-sql/statements/alter-login-transact-sql.md)   
+ [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [Создание имени входа &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

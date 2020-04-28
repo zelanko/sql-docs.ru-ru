@@ -16,10 +16,10 @@ ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 56f2dde1899340f036024253405379e094de59a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68039042"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>Функции логического конструктора — true (XQuery)
@@ -36,7 +36,7 @@ fn:true() as xs:boolean
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-using-the-true-xquery-boolean-function"></a>A. Применение логической функции XQuery true()  
+### <a name="a-using-the-true-xquery-boolean-function"></a>А) Применение логической функции XQuery true()  
  В следующем примере запрашиваются нетипизированная **XML-** переменная. Выражение в методе **value ()** возвращает логическое **значение true ()** , если "AAA" является значением атрибута. Метод **value ()** типа данных **XML** преобразует логическое значение в бит и возвращает его.  
   
 ```  

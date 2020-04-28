@@ -20,10 +20,10 @@ ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d74fd55d4d2bf230cbb190cad428b371807f32ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022613"
 ---
 # <a name="systrace_event_bindings-transact-sql"></a>sys.trace_event_bindings (Transact-SQL)
@@ -34,16 +34,15 @@ ms.locfileid: "68022613"
  Полный список поддерживаемых событий трассировки см. в разделе [Справочник по классам событий SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте представления каталога расширенных событий.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте представления каталога расширенных событий.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|Идентификатор события трассировки. Этот столбец также находится в представлении каталога **sys. trace_events** .|  
 |**trace_column_id**|**smallint**|Идентификатор столбца трассировки. Этот столбец также находится в представлении каталога **sys. trace_columns** .|  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

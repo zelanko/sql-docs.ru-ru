@@ -20,10 +20,10 @@ ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 13cf57e181c3fbb1371c10b554eb9da344a951d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004734"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
@@ -31,23 +31,23 @@ ms.locfileid: "68004734"
 
   Содержит сведения для каждого этапа задания, исполняемого агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта таблица хранится в базе данных **msdb** .  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**job_id**|**UNIQUEIDENTIFIER**|Идентификатор задания.|  
+|**job_id**|**uniqueidentifier**|Идентификатор задания.|  
 |**step_id**|**int**|Идентификатор этапа в задании.|  
-|**step_name**|**имеет sysname**|Имя шага задания.|  
-|**подсистемы**|**nvarchar (40)**|Имя подсистемы, используемой агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения шага задания.|  
+|**step_name**|**sysname**|Имя шага задания.|  
+|**подсистемы**|**nvarchar(40)**|Имя подсистемы, используемой агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения шага задания.|  
 |**кнопки**|**nvarchar(max)**|Команда, выполняемая **подсистемой**.|  
-|**Метки**|**int**|Зарезервировано.|  
+|**flags**|**int**|Зарезервировано.|  
 |**additional_parameters**|**ntext**|Зарезервировано.|  
 |**cmdexec_success_code**|**int**|Значение уровня ошибки, возвращаемое шагами подсистемы **CmdExec** для обозначения успеха.|  
 |**on_success_action**|**tinyint**|Действие, выполняемое в случае успешного завершения шага.|  
 |**on_success_step_id**|**int**|Идентификатор следующего этапа, выполняемого в случае успешного завершения шага.|  
 |**on_fail_action**|**tinyint**|Действие, выполняемое в случае неуспешного завершения шага.|  
 |**on_fail_step_id**|**int**|Идентификатор следующего этапа, выполняемого в случае неуспешного завершения шага.|  
-|**сервером**|**имеет sysname**|Зарезервировано.|  
-|**database_name**|**имеет sysname**|Имя базы данных, в которой выполняется **команда** , если в качестве **подсистемы** используется TSQL.|  
-|**database_user_name**|**имеет sysname**|Имя пользователя базы данных, чья учетная запись будет использоваться для выполнения шага.|  
+|**сервером**|**sysname**|Зарезервировано.|  
+|**database_name**|**sysname**|Имя базы данных, в которой выполняется **команда** , если в качестве **подсистемы** используется TSQL.|  
+|**database_user_name**|**sysname**|Имя пользователя базы данных, чья учетная запись будет использоваться для выполнения шага.|  
 |**retry_attempts**|**int**|Число попыток повтора при неуспешном завершении шага.|  
 |**retry_interval**|**int**|Время ожидания между попытками повтора.|  
 |**os_run_priority**|**int**|Зарезервировано.|  
@@ -58,7 +58,7 @@ ms.locfileid: "68004734"
 |**last_run_date**|**int**|Дата начала (ггггммдд) последнего выполнения шага.|  
 |**last_run_time**|**int**|Время начала (ччммсс) последнего выполнения шага.|  
 |**proxy_id**|**int**|Учетная запись-посредник для шага задания.|  
-|**step_uid**|**UNIQUEIDENTIFIER**|Идентификатор шага задания.|  
+|**step_uid**|**uniqueidentifier**|Идентификатор шага задания.|  
   
 ## <a name="see-also"></a>См. также:  
  [Агент SQL Serverные таблицы &#40;&#41;Transact-SQL](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  

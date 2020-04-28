@@ -18,10 +18,10 @@ ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6d1231b4411e11de65cfe99d209ed231db79b5db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68030907"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
@@ -50,7 +50,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 `[ @OptionName = ] 'option_name'`Имя параметра индекса. *option_name* имеет тип **varchar (35)** и не имеет значения по умолчанию. *option_name* может иметь одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**AllowRowLocks**|Если TRUE, то допустимы блокировки строк при доступе к индексу. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] определяет, когда используются блокировки строки. Если FALSE, то блокировка строк не используется. Значение по умолчанию — TRUE.|  
 |**AllowPageLocks**|Если TRUE, то допустимы блокировки страниц при доступе к индексу. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] определяет, когда используются блокировки страниц. Если FALSE, то блокировка страниц не используется. Значение по умолчанию — TRUE.|  
@@ -94,7 +94,7 @@ EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',
     N'disallowpagelocks', TRUE;  
 ```  
   
-### <a name="b-setting-an-option-on-all-indexes-on-a-table"></a>Б. Настройка параметра на все индексы таблицы  
+### <a name="b-setting-an-option-on-all-indexes-on-a-table"></a>Б) Настройка параметра на все индексы таблицы  
  Следующий пример демонстрирует блокировки строк на все индексы, связанные с таблицей `Product`. Представление каталога `sys.indexes` запрашивается до и после выполнения процедуры `sp_indexoption` для демонстрации результата выполнения инструкции.  
   
 ```sql  
@@ -141,6 +141,6 @@ GO
 ## <a name="see-also"></a>См. также:  
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys. indexes &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
+ [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

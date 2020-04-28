@@ -18,10 +18,10 @@ ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 244811989bd5ab58a3ab1f6ffdfcf82649af1916
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68045824"
 ---
 # <a name="sp_change_log_shipping_primary_database-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
@@ -93,7 +93,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  2 = использовать параметр [конфигурации сервера «Просмотр» или «Настройка сжатия резервных копий по умолчанию](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)». Это значение по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
@@ -130,6 +130,6 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ## <a name="see-also"></a>См. также:  
  [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
+ [log_shipping_primary_databases (Transact-SQL)](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   
   

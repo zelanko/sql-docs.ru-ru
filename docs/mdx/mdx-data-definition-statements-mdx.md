@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b499fe50854e979b9407487903324b80e16ede77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038123"
 ---
 # <a name="mdx-data-definition-statements-mdx"></a>Инструкции определения данных многомерных выражений
@@ -22,15 +22,15 @@ ms.locfileid: "68038123"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
-|[Инструкция ALTER CUBE &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-alter-cube.md)|Изменяет структуру заданного куба.|  
+|[Инструкция ALTER CUBE (многомерные выражения)](../mdx/mdx-data-definition-alter-cube.md)|Изменяет структуру заданного куба.|  
 |[СОЗДАНИЕ инструкции действия &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-create-action.md)|Создает действие, которое можно связать с кубом, измерением, иерархией или подчиненным объектом.|  
-|[СОЗДАНИЕ инструкции вычисления ЯЧЕЙКИ &#40;многомерных выражениях&#41;](../mdx/mdx-data-definition-create-cell-calculation.md)|Создает алгоритм вычисления многомерного выражения на указанном наборе кортежей в кубе.|  
+|[Инструкция CREATE CELL CALCULATION (многомерные выражения)](../mdx/mdx-data-definition-create-cell-calculation.md)|Создает алгоритм вычисления многомерного выражения на указанном наборе кортежей в кубе.|  
 |[Инструкция CREATE GLOBAL CUBE &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-create-global-cube.md)|Создает и заполняет значениями локально материализованный куб на основе вложенного куба из куба на сервере. Чтобы соединиться с локально материализованным кубом, соединяться с сервером необязательно.|  
-|[Инструкция CREATE MEMBER &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-create-member.md)|Создает вычисляемый элемент.|  
+|[Инструкция CREATE MEMBER (многомерные выражения)](../mdx/mdx-data-definition-create-member.md)|Создает вычисляемый элемент.|  
 |[Инструкция CREATE SESSION CUBE &#40;многомерных выражений&#41;](../mdx/mdx-data-definition-create-session-cube.md)|Создает и заполняет значениями куб, доступный для всех запросов в одном сеансе и созданный на основе кубов сервера.|  
-|[Инструкция CREATE SET &#40;многомерных выражениях&#41;](../mdx/mdx-data-definition-create-set.md)|Создает именованный набор для заданного куба.|  
+|[Инструкция CREATE SET (многомерные выражения)](../mdx/mdx-data-definition-create-set.md)|Создает именованный набор для заданного куба.|  
 |[Инструкция CREATE CUBE &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-create-subcube.md)|Переопределяет пространство заданного куба или вложенного куба на указанный вложенный куб.|  
 |[Инструкция DROP ACTION &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-drop-action.md)|Удаляет указанное действие из указанного куба.|  
 |[Инструкция DROP CELL &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-drop-cell-calculation.md)|Удаляет указанное вычисление ячейки.|  
@@ -42,6 +42,6 @@ ms.locfileid: "68038123"
 ## <a name="see-also"></a>См. также:  
  [Справочник по инструкциям многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-statement-reference-mdx.md)   
  [Инструкции обработки данных многомерных выражений &#40;многомерные выражения&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Инструкции скриптов многомерных выражений &#40;многомерные выражения&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [Инструкции для создания скриптов многомерных выражений (многомерные выражения)](../mdx/mdx-scripting-statements-mdx.md)  
   
   

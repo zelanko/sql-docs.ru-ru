@@ -10,10 +10,10 @@ ms.assetid: 8d5a4ce6-b747-46e3-9184-645d56e8b35c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 91a4dfcf8add3900c51e33a6e40fa874ce9f9798
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028973"
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>Установка SSMA для SAP ASE (SybaseToSQL)
@@ -28,11 +28,11 @@ ms.locfileid: "68028973"
   
 ## <a name="contents"></a>Содержимое  
   
-|Статья|Description|  
+|Статья|Описание|  
 |---------|---------------|  
 |[Установка SSMA для клиента SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)|Содержит сведения и инструкции по установке SSMA для клиента SAP ASE.|  
 |[Установка компонентов SSMA на SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|Содержит сведения и инструкции по установке пакета расширения на экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Удаление SSMA для компонентов SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/removing-ssma-for-sybase-components-sybasetosql.md)|Содержит инструкции по удалению клиентской программы и пакета расширений.|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
 [Миграция баз данных SAP ASE в SQL Server — база данных SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

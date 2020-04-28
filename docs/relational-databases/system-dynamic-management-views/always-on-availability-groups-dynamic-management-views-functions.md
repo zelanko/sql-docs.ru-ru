@@ -14,10 +14,10 @@ ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 732f1f84d7bc336969d2484f18eb2dae8ebfab76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018045"
 ---
 # <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Динамические административные представления групп доступности Always On — функции
@@ -25,7 +25,7 @@ ms.locfileid: "68018045"
 
   В этом разделе описаны динамические административные представления и функции, связанные с [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 |||  
 |-|-|  
@@ -40,6 +40,6 @@ ms.locfileid: "68018045"
 ## <a name="see-also"></a>См. также:  
  [Группы доступности AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Группы доступности AlwaysOn представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Мониторинг групп доступности &#40;&#41;Transact-SQL](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
+ [Отслеживание групп доступности (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4ab1797fabd8fb7d77eab85c97604b77e72f25c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042761"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
@@ -56,16 +56,16 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Таблица*  
+ *table*  
  Имя таблицы, помеченной как допускающая полнотекстовые запросы. *Таблица* или *представление*может быть именем объекта базы данных, сои состоять из одного, двух или трех частей. При выполнении запроса к представлению задействуется только базовая таблица с полнотекстовым индексированием.  
   
  *Таблица* не может указывать имя сервера и не может использоваться в запросах к связанным серверам.  
   
  *column_name*  
- Имя одного или нескольких столбцов с полнотекстовой индексацией в таблице, указанной в предложении FROM. Столбцы должны иметь тип **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** или **varbinary(max)**.  
+ Имя одного или нескольких столбцов с полнотекстовой индексацией в таблице, указанной в предложении FROM. Столбцы должны иметь тип **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** или **varbinary(max)** .  
   
  *column_list*  
- Указывает, что можно задать несколько столбцов, разделенных запятыми. *column_list* должны быть заключены в круглые скобки. Если задан аргумент *language_term*, то у всех столбцов в *column_list* должен быть одинаковый язык.  
+ Указывает, что можно задать несколько столбцов, разделенных запятыми. *column_list* должен быть заключен в скобки. Если задан аргумент *language_term*, то у всех столбцов в *column_list* должен быть одинаковый язык.  
   
  \*  
  Указывает, что все столбцы, которые были зарегистрированы для полнотекстового поиска, должны быть использованы для поиска строки, заданной аргументом *freetext_string*. Если не указано *language_term* , язык всех столбцов в таблице с полнотекстовым индексом должен быть одинаковым.  
@@ -75,16 +75,16 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
  В отличие от условия поиска CONTAINS, где и является ключевым словом, при использовании в *freetext_string* слово "и" считается пропускаемым словом или [стоп-слово](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)и будет отклонено.  
   
- Использование функций WEIGHT, FORMSOF, символов шаблонов, NEAR, а также других синтаксических элементов запрещено. *freetext_string* разбивается процедуру вычленения, корнем и передается через тезаурус.  
+ Использование функций WEIGHT, FORMSOF, символов шаблонов, NEAR, а также других синтаксических элементов запрещено. *freetext_string* разбивается на слова, проходит процедуру вычленения корней и пропускается через тезаурус.  
   
  LANGUAGE *language_term*  
  Язык, ресурсы которого будут использованы для разбиения по словам, выделения корня, проверки по тезаурусу и удаления стоп-слов в составе запроса. Этот аргумент не является обязательным и может быть строкой, целым числом или шестнадцатеричным значением, соответствующим идентификатору локали (LCID). Если аргумент *language_term* задан, то соответствующий язык будет применяться ко всем элементам условия поиска. Если значение не указано, то используется язык полнотекстового поиска, заданный для столбца.  
   
- Если в одном столбце хранятся документы на различных языках в виде больших двоичных объектов, то идентификатор локали заданного документа определяет, какой язык должен использоваться для индексирования его содержимого. Указание аргумента LANGUAGE *language_term* при запросе к такому столбцу может повысить вероятность хорошего соответствия.  
+ Если в одном столбце хранятся документы на различных языках в виде больших двоичных объектов, то идентификатор локали заданного документа определяет, какой язык должен использоваться для индексирования его содержимого. При запросе такого столбца указание *языка language_term* может увеличить вероятность хорошего соответствия.  
   
- Если аргумент *language_term* указан как строка, он соответствует значению столбца **alias** в представлении совместимости [sys.languages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) (Transact-SQ).  Строка должна быть заключена в одинарные кавычки, как в "*language_term*". Если значением аргумента *language_term* является целое число, оно представляет собой действительный код языка. Если значение *language_term* задано в шестнадцатеричной форме, то после символов "0x" должна следовать шестнадцатеричная запись кода языка. Шестнадцатеричное значение не может иметь более восьми знаков, включая начальные нули.  
+ Если аргумент *language_term* указан как строка, он соответствует значению столбца **alias** в представлении совместимости [sys.languages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) (Transact-SQ).  Строка должна быть заключена в одиночные кавычки: '*language_term*'. Если значением аргумента *language_term* является целое число, оно представляет собой действительный код языка. Если значение *language_term* задано в шестнадцатеричной форме, то после символов "0x" должна следовать шестнадцатеричная запись кода языка. Шестнадцатеричное значение не может иметь более восьми знаков, включая начальные нули.  
   
- Если значение указано в двухбайтовой кодировке (DBCS), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразует его в Юникод.  
+ Если значение находится в формате двухбайтовой кодировки (DBCS), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразует его в Юникод.  
   
  Если указанный язык является недопустимым или связанные с ним ресурсы не установлены, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке. Для использования нейтральных языковых ресурсов следует указать 0x0 в качестве значения аргумента *language_term*.  
   
@@ -124,7 +124,7 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Blue');
 SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');  
 ```  
   
-### <a name="b-using-freetext-in-an-inner-join"></a>Б. Использование функции FREETEXT в INNER JOIN  
+### <a name="b-using-freetext-in-an-inner-join"></a>Б) Использование функции FREETEXT в INNER JOIN  
  В следующем примере возвращается описание и ранг всех продуктов с описанием, которое соответствует значению `high level of performance`.  
   
 ```  
@@ -165,19 +165,19 @@ GO
 >  Параметр LANGUAGE *language_term* не обязательно должен использовать параметр *top_n_by_rank* .  
   
 ## <a name="see-also"></a>См. также:  
- [Приступая к работе с полнотекстовым поиском](../../relational-databases/search/get-started-with-full-text-search.md)   
+ [Приступая к работе с компонентом Full-Text Search](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Создание полнотекстовых каталогов и управление ими](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
- [Создание ПОЛНОТЕКСТОВОГО каталога &#40;&#41;Transact-SQL](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [Создание ПОЛНОТЕКСТОВОГО индекса &#40;&#41;Transact-SQL](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
- [Создание полнотекстовых индексов и управление ими](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
+ [CREATE FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
+ [Создание и управление полнотекстовыми индексами](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [Запрос с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md)   
- [Создание запросов полнотекстового поиска &#40;визуальных инструментов для баз данных&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [Создание запросов полнотекстового поиска (визуальные инструменты для баз данных)](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [СОДЕРЖИТ &#40;&#41;Transact-SQL](../../t-sql/queries/contains-transact-sql.md)   
- [Функция CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   
+ [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   
+ [FREETEXT (Transact-SQL)](../../t-sql/queries/freetext-transact-sql.md)   
  [Функции наборов строк &#40;&#41;Transact-SQL](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [ГДЕ &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
  [Параметр конфигурации сервера «precompute rank»](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md)  
   
   

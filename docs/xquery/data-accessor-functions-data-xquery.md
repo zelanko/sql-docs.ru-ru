@@ -16,10 +16,10 @@ ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7376c57f809fa97168b27b158678d931a696b5df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038968"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>Функции метода доступа к данным — data (XQuery)
@@ -78,7 +78,7 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. Использование функции data() XQuery для извлечения типизированного значения узла  
+### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>А) Использование функции data() XQuery для извлечения типизированного значения узла  
  Следующий запрос иллюстрирует использование функции **Data ()** для извлечения значений атрибута, элемента и текстового узла:  
   
 ```  

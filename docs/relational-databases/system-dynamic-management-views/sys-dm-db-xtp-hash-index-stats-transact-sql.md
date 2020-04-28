@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026838"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "68026838"
   
 Дополнительные сведения см. в статье [хэш-индексы для таблиц, оптимизированных для памяти](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
-|Имя столбца|Тип|Description|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|Идентификатор объекта родительской таблицы.|  
 |xtp_object_id|**bigint**|Идентификатор оптимизированной для памяти таблицы.|  
@@ -89,7 +89,7 @@ ms.locfileid: "68026838"
 
 Дополнительные сведения о том, как интерпретировать результаты этого запроса, см. в разделе [Устранение неполадок хэш-индексов для оптимизированных для памяти таблиц](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
-### <a name="b-hash-index-statistics-for-internal-tables"></a>Б. Статистика хэш-индекса для внутренних таблиц
+### <a name="b-hash-index-statistics-for-internal-tables"></a>Б) Статистика хэш-индекса для внутренних таблиц
 
 Некоторые функции используют внутренние таблицы, использующие хэш-индексы, например индексы columnstore в таблицах, оптимизированных для памяти. Следующий запрос возвращает статистику для хэш-индексов во внутренних таблицах, связанных с пользовательскими таблицами.
 
@@ -125,6 +125,6 @@ ms.locfileid: "68026838"
 ```
 
 ## <a name="see-also"></a>См. также:  
- [Динамические административные представления оптимизированной для памяти таблицы &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

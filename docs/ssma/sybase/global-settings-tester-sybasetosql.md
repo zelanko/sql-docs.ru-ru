@@ -10,10 +10,10 @@ ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0070dbed0b683b37c0280b9948ff4b592fea9084
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029001"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>Глобальные параметры (средство тестирования) (SybaseToSQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68029001"
   
 1.  Да  
   
-2.  нет  
+2.  Нет  
   
 **Режим сохранения вспомогательных таблиц**  
 Этот параметр указывает, как сохранять внутренние вспомогательные таблицы, созданные во время выполнения тестового случая. Для этого конкретного параметра можно задать следующие параметры:  
@@ -51,7 +51,7 @@ ms.locfileid: "68029001"
   
 1.  Да  
   
-2.  нет  
+2.  Нет  
   
 **Прерывать выполнение теста после первого сбоя**  
 Этот параметр указывает, следует ли прерывать текущий выполняющийся тестовый случай, если во время выполнения произошла ошибка. Параметр по умолчанию имеет значение **Да**.  
@@ -60,7 +60,7 @@ ms.locfileid: "68029001"
   
 1.  Да  
   
-2.  нет  
+2.  Нет  
   
 ## <a name="see-also"></a>См. также:  
 [Завершение подготовки тестового случая &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  

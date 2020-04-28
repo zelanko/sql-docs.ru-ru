@@ -24,10 +24,10 @@ ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 466dc68da1c5cef56a7debe3953ba38956bb2993
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018033"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>Системные представления совместимости (Transact-SQL)
@@ -45,23 +45,23 @@ ms.locfileid: "68018033"
 |**usertype**|**syscolumns**|**sys.columns**|  
 |**memberuid**|**sysmembers**|**sys.database_role_members**|  
 |**groupuid**|**sysmembers**|**sys.database_role_members**|  
-|**uid**|**sysobjects**|**sys.objects**|  
-|**uid**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
+|**такой**|**sysobjects**|**sys.objects**|  
+|**такой**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**GRANTOR**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**xusertype**|**systypes**|**sys.types**|  
-|**uid**|**systypes**|**sys.types**|  
-|**uid**|**sysusers**|**sys.database_principals**|  
+|**такой**|**systypes**|**sys.types**|  
+|**такой**|**sysusers**|**sys.database_principals**|  
 |**altuid**|**sysusers**|**sys.database_principals**|  
-|**операционной**|**sysusers**|**sys.database_principals**|  
-|**uid**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
-|**uid**|**sysprocesses**|**sys.dm_exec_requests**|  
+|**gid**|**sysusers**|**sys.database_principals**|  
+|**такой**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
+|**такой**|**sysprocesses**|**sys.dm_exec_requests**|  
   
  При указании ссылки в пользовательской базе данных системные таблицы, объявленные как устаревшие в SQL Server 2000 (например, **syslanguages** или **syscacheobjects**), теперь привязаны к представлению с обратной совместимостью в схеме **sys** . С тех пор как системные таблицы SQL Server 2000 устарели для многих версий, данное изменение не считается критическим изменением.  
   
  Пример. Если пользователь создает пользовательскую таблицу с именем **syslanguages** в пользовательской базе данных, в SQL Server 2008 инструкция `SELECT * from dbo.syslanguages;` в этой базе данных будет возвращать значения из пользовательской таблицы. Начиная с SQL Server 2012, эта практика вернет данные из системного представления **sys. syslanguages**.  
   
 ## <a name="see-also"></a>См. также:  
- [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

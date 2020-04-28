@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b8222454d5e016733abef3c086e38add777cd304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004894"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
@@ -53,16 +53,16 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="arguments"></a>Аргументы    
  *database_id* | NULL | 0 | ПАРАМЕТРЫ    
- Идентификатор базы данных. *database_id* имеет **smallint**. Допустимыми входными значениями являются идентификатор базы данных, NULL, 0 или DEFAULT. Значение по умолчанию равно 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.    
+ Идентификатор базы данных. *database_id* имеет **smallint**. Допустимыми входными значениями являются идентификатор базы данных, NULL, 0 или DEFAULT. Значение по умолчанию — 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.    
     
  Укажите значение NULL, чтобы вернуть сведения для всех баз данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если для *database_id*указано значение null, необходимо также указать значение null для *object_id*, *index_id*и *partition_number*.    
     
  Может быть указана встроенная функция [DB_ID](../../t-sql/functions/db-id-transact-sql.md).    
     
  *object_id* | NULL | 0 | ПАРАМЕТРЫ    
- Идентификатор объекта таблицы или представления, которые содержат индекс. *object_id* имеет **тип int**.    
+ Идентификатор объекта таблицы или представления, которые содержат индекс. *object_id* имеет тип **int**.    
     
- Допустимыми входными значениями являются идентификатор таблицы, NULL, 0 или DEFAULT. Значение по умолчанию равно 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.    
+ Допустимыми входными значениями являются идентификатор таблицы, NULL, 0 или DEFAULT. Значение по умолчанию — 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.    
     
  Укажите значение NULL, чтобы вернуть кэшированные данные для всех таблиц и представлений в указанной базе данных. Если для *object_id*указано значение null, необходимо также указать значение null для *index_id* и *partition_number*.    
     
@@ -72,7 +72,7 @@ sys.dm_db_index_operational_stats (
  Укажите значение NULL, чтобы вернуть кэшированные данные для всех индексов базовой таблицы или представления. Если для *index_id*указано значение null, необходимо также указать значение null для *partition_number*.    
     
  *partition_number* | NULL | 0 | ПАРАМЕТРЫ    
- Номер секции в объекте. *partition_number* имеет **тип int**. Допустимыми входными значениями являются *partion_number* индекса, КУЧИ, null, 0 или Default. Значение по умолчанию равно 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.    
+ Номер секции в объекте. *partition_number* имеет **тип int**. Допустимыми входными значениями являются *partion_number* индекса, КУЧИ, null, 0 или Default. Значение по умолчанию — 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.    
     
  Укажите NULL, чтобы возвратить кэшированные данные для всех секций индекса или кучи.    
     
@@ -80,7 +80,7 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="table-returned"></a>Возвращаемая таблица    
     
-|Имя столбца|Тип данных|Description|    
+|Имя столбца|Тип данных|Описание|    
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|Идентификатор базы данных.|    
 |**object_id**|**int**|Идентификатор таблицы или представления.|    
@@ -135,7 +135,7 @@ sys.dm_db_index_operational_stats (
     
  Используйте следующие столбцы для идентификации областей состязаний.    
     
- **Чтобы проанализировать общий шаблон доступа к секции таблицы или индекса**, используйте следующие столбцы:    
+ **Анализ типичного шаблона доступа к секции таблицы или индекса**    
     
 -   **leaf_insert_count**    
     
@@ -226,7 +226,7 @@ GO
     
 ```    
     
-### <a name="b-returning-information-for-all-tables-and-indexes"></a>Б. Возвращение сведений для всех таблиц и индексов    
+### <a name="b-returning-information-for-all-tables-and-indexes"></a>Б) Возвращение сведений для всех таблиц и индексов    
  В следующем примере возвращаются сведения по всем таблицам и индексам в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Выполнение этого запроса требует разрешения VIEW SERVER STATE.    
     
 ```    
@@ -236,15 +236,15 @@ GO
 ```    
     
 ## <a name="see-also"></a>См. также:    
- [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
+ [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
  [Динамические административные представления и функции, связанные с индексами &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
- [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
+ [Мониторинг и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
  [sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
  [sys. dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
  [sys. dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
  [sys. allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
- [sys. indexes &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
+ [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     
   
 

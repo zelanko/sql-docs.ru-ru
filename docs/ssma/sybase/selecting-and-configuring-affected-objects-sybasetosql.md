@@ -12,10 +12,10 @@ ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020988"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Выбор и настройка обрабатываемых объектов (SybaseToSQL)
@@ -33,17 +33,17 @@ ms.locfileid: "68020988"
   
 -   Тип данных  
   
--   Precision  
+-   Точность  
   
 -   Масштабирование  
   
 -   Правило  
   
--   По умолчанию  
+-   Значение по умолчанию  
   
--   Удостоверение  
+-   Идентификация  
   
--   Nullable  
+-   Допускает значения NULL  
   
 ## <a name="sql"></a>SQL  
 Вкладка SQL содержит таблицу SQL "Создание таблицы" для выбранной таблицы.  
@@ -56,7 +56,7 @@ ms.locfileid: "68020988"
   
 -   Дата создания или последнего изменения  
   
--   Имя объекта  
+-   Имени объекта  
   
 ## <a name="table-comparison-settings"></a>Параметры сравнения таблиц  
 Установите правила сравнения для таблицы на странице **сравнения таблиц** . Можно установить следующие параметры.  
@@ -114,7 +114,7 @@ ms.locfileid: "68020988"
   
 Можно изменить эти инструкции SELECT, чтобы обеспечить пользовательскую проверку. Чтобы сохранить изменения в Sybase и в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкциях, используйте кнопки **Применить** в ИСХОДНОМ и целевом SQL, соответственно.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 [Настройка порядка вызовов &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
   
 ## <a name="see-also"></a>См. также:  

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c9579de52a155bd3d5eaa26862f1a7da93d7b19f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026818"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68026818"
   
  Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|Идентификатор (внутренний) потребителя памяти.|  
 |memory_consumer_type|**int**|Тип потребителя памяти:<br /><br /> 0 = агрегатная функция. (Суммирует использование памяти для двух или более потребителей. Не должен отображаться.)<br /><br /> 2 = VARHEAP (Отслеживает потребление памяти для кучи переменной длины.)<br /><br /> 3 = HASH (Отслеживает потребление памяти для индекса.)<br /><br /> 5 = пул страниц БД (Отслеживает потребление памяти для пула страниц базы данных, используемого для операций времени выполнения. Например, переменных таблиц и некоторых сериализуемых сканирований. Для одной базы данных существует только один потребитель памяти этого типа.)|  
@@ -124,6 +124,6 @@ total_allocated_MB   total_used_MB
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Динамические административные представления оптимизированной для памяти таблицы &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 764b6154885dbd361f7d7d4a09d8e340b4a62ef5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044460"
 ---
 # <a name="sysmail_help_status_sp-transact-sql"></a>sysmail_help_status_sp (Transact-SQL)
@@ -43,7 +43,7 @@ sysmail_help_status_sp
   
 ## <a name="result-set"></a>Результирующий набор  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**Состояние**|**nvarchar (7)**|Состояние компонента Database Mail. Возможные значения: **Started** и **Stopped**.|  
   
@@ -69,6 +69,6 @@ STARTED
 ## <a name="see-also"></a>См. также:  
  [Внешняя программа Database Mail](../../relational-databases/database-mail/database-mail-external-program.md)   
  [sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
- [sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)  
+ [sysmail_stop_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)  
   
   

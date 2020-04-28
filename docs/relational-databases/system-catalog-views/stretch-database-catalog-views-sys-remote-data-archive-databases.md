@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 339d960a136e9cf939032068c21ec737f4d37ceb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018206"
 ---
 # <a name="stretch-database-catalog-views---sysremote_data_archive_databases"></a>Stretch Database представлений каталога — sys. remote_data_archive_databases
@@ -30,13 +30,13 @@ ms.locfileid: "68018206"
 
   Содержит по одной строке для каждой удаленной базы данных, в которой хранятся данные из локальной базы данных с поддержкой Stretch.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**remote_database_id**|**int**|Автоматически созданный локальный идентификатор удаленной базы данных.|  
-|**remote_database_name**|**имеет sysname**|Имя удаленной базы данных.|  
+|**remote_database_name**|**sysname**|Имя удаленной базы данных.|  
 |**data_source_id**|**int**|Источник данных, используемый для подключения к удаленному серверу|  
   
 ## <a name="see-also"></a>См. также:  
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
+ [База данных Stretch](../../sql-server/stretch-database/stretch-database.md)  
   
   

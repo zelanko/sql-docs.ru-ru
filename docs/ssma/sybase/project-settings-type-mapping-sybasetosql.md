@@ -10,10 +10,10 @@ ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028659"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Параметры проекта (сопоставление типов) (SybaseToSQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68028659"
 **Удалить**  
 Нажмите, чтобы удалить выбранное сопоставление типа данных из списка сопоставления.  
   
-**Восстановить значения по умолчанию**  
+**По умолчанию**  
 Нажмите, чтобы сбросить список сопоставления типов к значениям по умолчанию SSMA.  
   
 ## <a name="default-type-mapping"></a>Сопоставление типов по умолчанию  
@@ -56,31 +56,31 @@ ms.locfileid: "68028659"
 |**двоичный\*файл [.. 8000]**|**Binary [\*]**|  
 |**двоичный [8001.\*.]**|**varbinary(max)**|  
 |**bit**|**bit**|  
-|**типа**|**типа**|  
-|**различные знаки**|**varchar**|  
+|**char**|**char**|  
+|**char varying**|**varchar**|  
 |**различные знаки [\*.. 8000]**|**varchar [\*]**|  
 |**изменение типа char [8001.\*.]**|**varchar(max)**|  
 |**Char [\*.. 8000]**|**Char [\*]**|  
 |**Char [8001..\*;]**|**varchar(max)**|  
-|**символов**|**типа**|  
-|**разные символы**|**varchar**|  
+|**символов**|**char**|  
+|**character varying**|**varchar**|  
 |**Разное символов\*[.. 8000]**|**varchar [\*]**|  
 |**разное начертание [8001\*..]**|**varchar(max)**|  
 |**символ [\*.. 8000]**|**Char [\*]**|  
 |**символ [8001..\*]**|**varchar(max)**|  
 |**date**|**date**|  
 |**datetime**|**datetime2 [3]**|  
-|**уменьшение**|**Decimal**|  
+|**уменьшение**|**decimal**|  
 |**Dec [\*.. \*]**|**Decimal [\*]**|  
 |**Dec [\*.. \*][\*.. \*]**|**Decimal [\*] [\*]**|  
-|**Decimal**|**Decimal**|  
+|**decimal**|**decimal**|  
 |**Decimal [\*.. \*]**|**Decimal [\*]**|  
 |**Decimal [\*.. \*][\*.. \*]**|**Decimal [\*] [\*]**|  
-|**double precision**|**float [53]**|  
+|**Двойная точность**|**float [53]**|  
 |**float**|**float [53]**|  
 |**float [\*.. 15**|**float [24]**|  
 |**float [16..\*]**|**float [53]**|  
-|**Эскиз**|**Эскиз**|  
+|**image**|**image**|  
 |**int**|**int**|  
 |**integer**|**int**|  
 |**лонгсиснаме**|**nvarchar [255]**|  
@@ -106,21 +106,21 @@ ms.locfileid: "68028659"
 |**изменение типа nchar [4001.\*.]**|**nvarchar(max)**|  
 |**nchar [\*.. 4000]**|**nchar [\*]**|  
 |**nchar [4001..\*]**|**nvarchar(max)**|  
-|**ISNUMERIC**|**ISNUMERIC**|  
+|**numeric**|**numeric**|  
 |**numeric [\*.. \*]**|**numeric [\*]**|  
 |**numeric [\*.. \*][\*.. \*]**|**numeric [\*] [\*]**|  
 |**nvarchar**|**nvarchar**|  
 |**nvarchar [\*.. 4000]**|**nvarchar [\*]**|  
 |**nvarchar [4001..\*]**|**nvarchar(max)**|  
-|**Real**|**float [24]**|  
+|**real**|**float [24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
-|**имеет sysname**|**nvarchar [128]**|  
+|**sysname**|**nvarchar [128]**|  
 |**sysname [\*.. \*]**|**nvarchar [255]**|  
-|**полнотекстовым**|**полнотекстовым**|  
+|**text**|**text**|  
 |**time**|**время [3]**|  
-|**TIMESTAMP**|**rowversion**|  
+|**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**уничар**|**nchar**|  
 |**уничар**|**nvarchar**|  
@@ -133,7 +133,7 @@ ms.locfileid: "68028659"
 |**униварчар [\*.. 4000]**|**nvarchar [\*]**|  
 |**униварчар [4001..\*]**|**nvarchar(max)**|  
 |**bigint без знака**|**числовой [20] [0]**|  
-|**целое число без знака**|**bigint**|  
+|**unsigned int**|**bigint**|  
 |**неподписанный smallint**|**int**|  
 |**неподписанный tinyint**|**tinyint**|  
 |**varbinary**|**varbinary**|  

@@ -19,10 +19,10 @@ ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032638"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
@@ -121,8 +121,7 @@ sp_syscollector_create_collection_set
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-creating-a-collection-set-by-using-default-values"></a>A. Создание набора элементов сбора при помощи значений по умолчанию  
- В следующем примере набор элементов сбора создается путем указания значений только для обязательных параметров. 
-  `@collection_mode` не требуется, но режим сбора (с кэшированием), используемый по умолчанию, требует указания идентификатора или имени расписания.  
+ В следующем примере набор элементов сбора создается путем указания значений только для обязательных параметров. `@collection_mode` не требуется, но режим сбора (с кэшированием), используемый по умолчанию, требует указания идентификатора или имени расписания.  
   
 ```  
 USE msdb;  
@@ -136,7 +135,7 @@ EXECUTE dbo.sp_syscollector_create_collection_set
 GO  
 ```  
   
-### <a name="b-creating-a-collection-set-by-using-specified-values"></a>Б. Создание набора элементов сбора при помощи указанных значений  
+### <a name="b-creating-a-collection-set-by-using-specified-values"></a>Б) Создание набора элементов сбора при помощи указанных значений  
  В следующем примере набор сбора создается путем указания значений для многих параметров.  
   
 ```  
@@ -160,6 +159,6 @@ EXEC dbo.sp_syscollector_create_collection_set
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)   
  [Создание пользовательского набора сбора, использующего тип сборщика «Универсальный запрос T-SQL» &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [Хранимые процедуры сборщика данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
+ [syscollector_collection_sets (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

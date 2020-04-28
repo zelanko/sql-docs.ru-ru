@@ -12,10 +12,10 @@ ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5c39e81f8faffed606e6ca94315c47d383174c91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028869"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Сопоставление схем Sybase ASE со схемами SQL Server (SybaseToSQL)
@@ -60,7 +60,7 @@ ASE и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure у
   
 1.  На вкладке Сопоставление схемы выберите любую строку и нажмите кнопку **восстановить значения по умолчанию** , чтобы вернуться к базе данных и схеме по умолчанию.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
 Если необходимо проанализировать преобразование объектов Sybase ASE в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure объекты, можно [создать отчет о преобразовании](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md). В противном случае [определения объектов базы данных ASE](converting-sybase-ase-database-objects-sybasetosql.md) можно [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразовать в определения объектов или SQL Azure.  
   
 ## <a name="see-also"></a>См. также:  

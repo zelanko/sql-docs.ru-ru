@@ -19,10 +19,10 @@ ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010562"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
@@ -91,7 +91,7 @@ WHERE collection_item_id = <collection_item_id>;
 ## <a name="examples"></a>Примеры  
  Следующие примеры основаны на элементе сбора, созданном в примере, определенном в [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
   
-### <a name="a-changing-the-collection-frequency"></a>A. Изменение частоты сбора  
+### <a name="a-changing-the-collection-frequency"></a>А) Изменение частоты сбора  
  В следующем примере изменяется частота сбора для указанного элемента сбора.  
   
 ```  
@@ -103,7 +103,7 @@ EXEC sp_syscollector_update_collection_item
 GO  
 ```  
   
-### <a name="b-renaming-a-collection-item"></a>Б. Переименование элемента сбора  
+### <a name="b-renaming-a-collection-item"></a>Б) Переименование элемента сбора  
  В следующем примере производится переименование элемента сбора.  
   
 ```  
@@ -141,6 +141,6 @@ GO
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
- [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
+ [syscollector_collection_items (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

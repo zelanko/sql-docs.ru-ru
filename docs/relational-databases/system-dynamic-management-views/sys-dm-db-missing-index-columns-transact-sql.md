@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 38d21e20ec158ea316caf6acd17f7225c8d3a49d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002649"
 ---
 # <a name="sysdm_db_missing_index_columns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
@@ -50,10 +50,10 @@ sys.dm_db_missing_index_columns(index_handle)
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|Идентификатор столбца.|  
-|**column_name**|**имеет sysname**|Имя столбца таблицы.|  
+|**column_name**|**sysname**|Имя столбца таблицы.|  
 |**column_usage**|**varchar (20)**|Способ использования столбца запросом. Возможные значения и их описания:<br /><br /> EQUALITY: столбец участвует в предикате, который выражает равенство в форме: <br />                        *Таблица. столбец* = *constant_value*<br /><br /> Неравенство: столбец участвует в предикате, который выражает неравенство, например предикат вида: *Table. Column* > *constant_value*. Любой оператор сравнения, кроме «=», выражает неравенство.<br /><br /> ВКЛЮЧИТЬ: столбец не используется для вычисления предиката, но используется по другой причине, например, для охвата запроса.|  
   
 ## <a name="remarks"></a>Remarks  

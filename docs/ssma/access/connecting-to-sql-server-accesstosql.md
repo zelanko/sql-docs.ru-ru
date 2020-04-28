@@ -22,10 +22,10 @@ ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4630ae8d92dbf0e9b1c5bf615dd82d436a5751f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006645"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Подключение к SQL Server (Акцесстоскл)
@@ -64,7 +64,7 @@ ms.locfileid: "68006645"
   
     -   При подключении к именованному экземпляру введите имя компьютера, обратную косую черту и имя экземпляра. Например: Мисервер\минстанце.  
   
-    -   Чтобы подключиться к активному пользовательскому экземпляру [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], подключитесь с помощью протокола именованных каналов и укажите имя канала, \\ \\например .\pipe\sql\query.. Дополнительные сведения см. в документации по [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] .  
+    -   Чтобы подключиться к активному пользовательскому экземпляру [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], подключитесь с помощью протокола именованных каналов и укажите имя канала, \\ \\например .\pipe\sql\query.. Дополнительные сведения см. в документации по [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
   
 3.  Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для приема подключений по нестандартному порту, введите номер порта, используемый для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соединений, в поле **порт сервера** . Для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]по умолчанию номер порта по умолчанию — 1433. Для именованных экземпляров SSMA попытается получить номер порта из службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] браузера.  
   
@@ -97,11 +97,11 @@ ms.locfileid: "68006645"
 ||||||||
 |-|-|-|-|-|-|-|
 |**Тип проекта и версия целевого сервера**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 (версия: 9. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008 (версия: 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 (версия: 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 (версия: 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 (версия: 13. x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005|Да|Да|Да|Да|Да||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008||Да|Да|Да|Да||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012|||Да|Да|Да||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Да|Да|Да|Да|Да||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Да|Да|Да|Да||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Да|Да|Да||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||Да|Да||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||Да||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||Да||
 |SQL Azure||||||Да|
   
 > [!IMPORTANT]  
@@ -119,7 +119,7 @@ ms.locfileid: "68006645"
   
 Процедура повторного подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] совпадает с процедурой установки соединения.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
 Если вы хотите настроить сопоставление между исходной и целевой базами данных, см. раздел [сопоставление исходной и целевой баз данных](mapping-source-and-target-databases-accesstosql.md) в противном случае следующим шагом является преобразование объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных в синтаксис с помощью инструкции [Convert Objects](converting-access-database-objects-accesstosql.md) .  
   
 ## <a name="see-also"></a>См. также:  

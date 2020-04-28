@@ -13,10 +13,10 @@ ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2951d4c3bf1eae73ffd066d796b0e3dda4d28cf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020965"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>Выбор и настройка объектов для тестирования (SybaseToSQL)
@@ -79,7 +79,7 @@ ms.locfileid: "68020965"
 ## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>Указание входных значений для процедур и функций (вызов значений)  
 Значения входных параметров можно указать на странице **значения вызова** . Кнопка **Добавить вызов** добавляет новый вызов с пустыми значениями параметров. Кнопка **удалить вызов** удаляет текущий вызов.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 [Выбор и настройка затронутых объектов &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>См. также:  

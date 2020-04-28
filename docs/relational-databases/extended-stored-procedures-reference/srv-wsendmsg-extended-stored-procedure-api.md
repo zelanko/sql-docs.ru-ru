@@ -20,17 +20,17 @@ ms.assetid: f2153076-32c9-4a52-8e1b-fc9618153543
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 301674b9acfd822d0049e548011633b68b249682
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68035988"
 ---
 # <a name="srv_wsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
   
  Отправляет клиенту сообщение в Юникоде.  
   
@@ -58,16 +58,16 @@ msglen
  *Номерсообщения*  
  4-байтовый номер сообщения.  
   
- *Severity*  
+ *Серьезность*  
  Указывает серьезность ошибки. Серьезность, меньше или равная 10, считается информационным сообщением, в противном случае — ошибкой.  
   
- *Сообщение*  
+ *message*  
  Является указателем на строку в Юникоде, которая должна быть отправлена клиенту.  
   
  *msglen*  
  Указывает длину *message*в символах.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  SUCCEED или FAIL.  
   
 ## <a name="remarks"></a>Remarks  
@@ -85,6 +85,6 @@ msglen
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>См. также:  
- [API srv_sendmsg &#40;расширенных хранимых процедур&#41;](../../relational-databases/extended-stored-procedures-reference/srv-sendmsg-extended-stored-procedure-api.md)  
+ [srv_sendmsg (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-sendmsg-extended-stored-procedure-api.md)  
   
   

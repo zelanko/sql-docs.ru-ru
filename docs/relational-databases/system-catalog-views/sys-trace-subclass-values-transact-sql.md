@@ -20,10 +20,10 @@ ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a099d67d337544a33bfc922fe14e07af39bd619d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022619"
 ---
 # <a name="systrace_subclass_values-transact-sql"></a>sys.trace_subclass_values (Transact-SQL)
@@ -34,18 +34,17 @@ ms.locfileid: "68022619"
  Полный список поддерживаемых событий трассировки см. в разделе [Справочник по классам событий SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте представления каталога расширенных событий.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте представления каталога расширенных событий.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|Идентификатор события трассировки. Этот параметр также находится в представлении каталога **sys. trace_events** .|  
 |**trace_column_id**|**smallint**|Идентификатор трассировочного столбца, используемый для перечисления. Этот параметр также находится в представлении каталога **sys. trace_columns** .|  
-|**subclass_name**|**nvarchar(128**|Интерпретация значения столбца.|  
+|**subclass_name**|**nvarchar(128)**|Интерпретация значения столбца.|  
 |**subclass_value**|**smallint**|Значение столбца.|  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

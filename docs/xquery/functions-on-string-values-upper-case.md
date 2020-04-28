@@ -16,10 +16,10 @@ ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004618"
 ---
 # <a name="functions-on-string-values---upper-case"></a>Функции со строковыми значениями — upper-case
@@ -54,7 +54,7 @@ DECLARE @x xml = N'abcDEF!@4';
 SELECT @x.value('fn:upper-case(/text()[1])', 'nvarchar(10)');  
 ```  
   
-### <a name="b-search-for-a-specific-character-string"></a>Б. Поиск конкретной символьной строки  
+### <a name="b-search-for-a-specific-character-string"></a>Б) Поиск конкретной символьной строки  
  В этом примере показано использование функции upper-case для выполнения поиска без учета регистра.  
   
 ```  

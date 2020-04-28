@@ -18,10 +18,10 @@ ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a632e6923ab3127a363650c63533fa548d1acc12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006127"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
@@ -41,26 +41,26 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ## <a name="arguments"></a>Аргументы  
 `[ @srvrolename = ] 'role'`Имя предопределенной роли сервера. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. *роль* может иметь одно из следующих значений.  
   
-|Предопределенная роль сервера|Description|  
+|Предопределенная роль сервера|Описание|  
 |-----------------------|-----------------|  
 |sysadmin|Системные администраторы|  
 |securityadmin|Администраторы безопасности.|  
-|serveradmin|Администраторы сервера|  
+|serveradmin|Администраторы сервера.|  
 |setupadmin|Администраторы установки.|  
 |processadmin|Администраторы процесса.|  
 |diskadmin|Администраторы диска.|  
-|dbcreator|Создатели баз данных|  
+|dbcreator|Создатели баз данных.|  
 |bulkadmin|Имеющие разрешение на выполнение инструкции BULK INSERT.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|ServerRole|**имеет sysname**|Имя роли сервера|  
-|Description|**имеет sysname**|Описание ServerRole|  
+|ServerRole|**sysname**|Имя роли сервера|  
+|Описание|**sysname**|Описание ServerRole|  
   
 ## <a name="remarks"></a>Remarks  
  Предопределенные роли сервера определены на уровне сервера и имеют разрешения на выполнение специальных административных действий на уровне сервера. Предопределенные роли сервера не могут быть добавлены, удалены или изменены.  
@@ -83,7 +83,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 EXEC sp_helpsrvrole ;  
 ```  
   
-### <a name="b-listing-fixed-and-user-defined-server-roles"></a>Б. Перечисление предопределенных и определяемых пользователем ролей сервера  
+### <a name="b-listing-fixed-and-user-defined-server-roles"></a>Б) Перечисление предопределенных и определяемых пользователем ролей сервера  
  Следующий запрос возвращает список и предопределенных, и определяемых пользователем ролей сервера.  
   
 ```  
@@ -103,6 +103,6 @@ sp_helpsrvrole 'diskadmin' ;
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
  [sp_helpsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

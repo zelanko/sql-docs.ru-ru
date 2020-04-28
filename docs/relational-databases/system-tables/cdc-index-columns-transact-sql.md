@@ -18,10 +18,10 @@ ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 69ed86e55cadf6c594ca764874bc1257c6d1a9a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68035339"
 ---
 # <a name="cdcindex_columns-transact-sql"></a>cdc.index_columns (Transact-SQL)
@@ -32,10 +32,10 @@ ms.locfileid: "68035339"
  Не рекомендуется непосредственно запрашивать системные таблицы. Вместо этого выполните хранимую процедуру [sys. sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) .  
 
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Идентификатор таблицы изменений.|  
-|**column_name**|**имеет sysname**|Имя столбца индекса.|  
+|**column_name**|**sysname**|Имя столбца индекса.|  
 |**index_ordinal**|**tinyint**|Порядковый номер (нумерация начинается с 1) столбца внутри индекса.|  
 |**column_id**|**int**|Идентификатор столбца в исходной таблице.|  
   

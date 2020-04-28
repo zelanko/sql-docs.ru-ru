@@ -18,34 +18,33 @@ ms.assetid: 0363296a-3082-48a9-9eb5-a1020b2f541a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a47ae49ab640b18cbcd7286bc5d95bdc74143aac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029970"
 ---
 # <a name="sysdbmaintplans-transact-sql"></a>sysdbmaintplans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Эта таблица включена в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы сохранить существующие сведения по экземплярам, обновленным с предыдущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не изменяет содержимое этой таблицы. Эта таблица хранится в базе данных **msdb** .  
+  Эта таблица включена в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы сохранить существующие сведения по экземплярам, обновленным с предыдущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не изменяет содержимое этой таблицы. Эта таблица хранится в базе данных **msdb** .  
   
  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
 
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**plan_id**|**UNIQUEIDENTIFIER**|Идентификатор плана обслуживания базы данных.|  
-|**plan_name**|**имеет sysname**|Имя плана обслуживания базы данных.|  
+|**plan_id**|**uniqueidentifier**|Идентификатор плана обслуживания базы данных.|  
+|**plan_name**|**sysname**|Имя плана обслуживания базы данных.|  
 |**date_created**|**datetime**|Дата создания плана обслуживания базы данных.|  
-|**владельцев**|**имеет sysname**|Владелец плана обслуживания базы данных.|  
+|**владельцев**|**sysname**|Владелец плана обслуживания базы данных.|  
 |**max_history_rows**|**int**|Максимальное число строк, выделенных для записи журнала плана обслуживания базы данных в системной таблице.|  
-|**remote_history_server**|**имеет sysname**|Имя удаленного сервера, на котором может быть сохранен отчет журнала.|  
+|**remote_history_server**|**sysname**|Имя удаленного сервера, на котором может быть сохранен отчет журнала.|  
 |**max_remote_history_rows**|**int**|Максимальное количество строк, выделенных в системной таблице на удаленном сервере, в которые может быть записан отчет журнала.|  
 |**user_defined_1**|**int**|Значение по умолчанию — NULL.|  
 |**user_defined_2**|**nvarchar (100)**|Значение по умолчанию — NULL.|  
 |**user_defined_3**|**datetime**|Значение по умолчанию — NULL.|  
-|**user_defined_4**|**UNIQUEIDENTIFIER**|Значение по умолчанию — NULL.|  
+|**user_defined_4**|**uniqueidentifier**|Значение по умолчанию — NULL.|  
 |**log_shipping**|**bit**|Статус доставки журналов:<br /><br /> **0** = отключен **1** = включено|  
   
   

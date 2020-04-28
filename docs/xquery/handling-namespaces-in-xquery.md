@@ -17,10 +17,10 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004530"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Поддержка пространств имен в XQuery
@@ -51,7 +51,7 @@ WHERE ProductModelID=7
   
  Обратите внимание, что ключевое слово **Namespace** используется для определения нового префикса пространства имен "AWMI:". Этот префикс затем должен применяться ко всем элементам запроса, которые попадают в область действия этого пространства имен.  
   
-### <a name="b-declaring-a-default-namespace"></a>Б. Объявление пространства имен по умолчанию  
+### <a name="b-declaring-a-default-namespace"></a>Б) Объявление пространства имен по умолчанию  
  В предыдущем запросе был определен префикс нового пространства имен. Этот префикс затем нужно было использовать в запросе для выборки нужных XML-структур. Однако можно объявить пространство имен по умолчанию, как это показано в следующем измененном запросе:  
   
 ```  
@@ -148,6 +148,6 @@ where ProductModelID=19
 ## <a name="see-also"></a>См. также:  
  [Добавление пространств имен в запросы с WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [SQL Server &#40;XML-данных&#41;](../relational-databases/xml/xml-data-sql-server.md)   
- [Справочник по языку XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
+ [Справочник по языку XQuery (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  
   
   

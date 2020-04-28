@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4daa38f185569e1579413870cc929a8b1b3b6570
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038006"
 ---
 # <a name="using-stored-procedures-mdx"></a>Использование хранимых процедур (многомерные выражения)
@@ -35,8 +35,7 @@ WHERE [Measures].[Reseller Freight Cost]
 >  *Хранимая процедура* — это терминология [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , используемая в для этих типов функций. Более ранние [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] версии вызывали эти типы функций в качестве *определяемых пользователем функций*.  
   
 ## <a name="types-of-stored-procedures"></a>Типы хранимых процедур  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает сборки COM и CLR. Рекомендуется использовать сборки CLR, поскольку для них имеются расширенные механизмы защиты. Если на сервере установлена электронная таблица Microsoft Office Excel, можно также использовать функции Excel.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает сборки COM и CLR. Рекомендуется использовать сборки CLR, поскольку для них имеются расширенные механизмы защиты. Если на сервере установлена электронная таблица Microsoft Office Excel, можно также использовать функции Excel.  
   
 > [!NOTE]  
 >  COM-сборки Microsoft Visual Basic for Applications (VBA) регистрируются автоматически.  

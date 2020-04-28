@@ -19,10 +19,10 @@ ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006553"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Экспорт инвентаризации доступа (Акцесстоскл)
@@ -57,7 +57,7 @@ SSMA экспортирует метаданные о базах данных Ac
   
 2.  В меню **Файл** выберите пункт **Создать проект**.  
   
-    Раскроется диалоговое окно **Новый проект**.  
+    Откроется диалоговое окно **Новый проект** .  
   
 3.  В поле **Name** введите имя проекта.  
   
@@ -82,7 +82,7 @@ SSMA экспортирует метаданные о базах данных Ac
     > [!IMPORTANT]  
     > В текстовом поле **все или часть имени файла** не поддерживаются подстановочные знаки.  
   
-5.  Нажмите кнопку **Сканировать**.  
+5.  Нажмите кнопку **Проверить**.  
   
     Откроется страница Scan (сканирование). Отобразятся найденные базы данных и ход выполнения поиска. Чтобы прерывать Поиск, нажмите кнопку " **Закрыть**".  
   
@@ -227,5 +227,5 @@ WHERE ColumnName LIKE '%salary%';
 Если имя столбца неизвестно, можно написать запрос, возвращающий все столбцы. Для этого удалите предложение WHERE из предыдущего запроса.  
   
 ## <a name="see-also"></a>См. также:  
-[Подготовка баз данных Access к миграции](preparing-access-databases-for-migration-accesstosql.md)  
+[Подготовка баз данных Access к миграции](preparing-access-databases-for-migration-accesstosql.md)  
   

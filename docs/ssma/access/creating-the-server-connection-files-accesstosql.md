@@ -10,10 +10,10 @@ ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 03d622c50a8760bbf1767bc8a4f79e215773695f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006607"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>Создание файлов подключения к серверу (Акцесстоскл)
@@ -66,6 +66,6 @@ ms.locfileid: "68006607"
 ## <a name="next-step"></a>Следующий шаг  
 Следующий шаг в работе консоли заключается [в выполнении консоли SSMA &#40;акцесстоскл&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
 [Запуск консоли SSMA (доступ)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

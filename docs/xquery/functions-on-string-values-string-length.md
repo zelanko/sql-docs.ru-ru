@@ -16,10 +16,10 @@ ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 12ae1efbf900a505a5f257f9684842a0ad9ff21f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004650"
 ---
 # <a name="functions-on-string-values---string-length"></a>Функции со строковыми значениями — string-length
@@ -60,7 +60,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. Использование функции string-length() языка XQuery для получения продуктов с длинными сводными описаниями  
+### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>А) Использование функции string-length() языка XQuery для получения продуктов с длинными сводными описаниями  
  Для продуктов, сводное описание которых превышает 50 символов, следующий запрос получает идентификатор продукта, длину сводного описания и саму сводку, элемент> <`Summary` .  
   
 ```  
@@ -98,7 +98,7 @@ Result
 ...  
 ```  
   
-### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>Б. Использование функции string-length() языка XQuery для получения продуктов с короткими описаниями гарантии  
+### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>Б) Использование функции string-length() языка XQuery для получения продуктов с короткими описаниями гарантии  
  Для продуктов, описание гарантии которых содержит менее 20 символов, следующий запрос извлекает XML, содержащий идентификатор продукта, длину, гарантийное описание и сам элемент <`Warranty`>.  
   
  Гарантия — это одна из характеристик продукта. Необязательный `Warranty` <дочерний элемент> следует `Features` за элементом <>.  

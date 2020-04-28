@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1898f3e9807d2ea4f80f99e9a7ef27e672d58a18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017082"
 ---
 # <a name="arithmetic-operators"></a>Арифметические операторы
@@ -22,12 +22,12 @@ ms.locfileid: "68017082"
   
  Многомерные выражения поддерживают арифметические операции, перечисленные в следующей таблице.  
   
-|Оператор|Description|  
+|Оператор|Описание|  
 |--------------|-----------------|  
-|[+ (Добавить)](../mdx/add-mdx.md)|складывает два числа.|  
-|[/(Деление)](../mdx/divide-mdx-operator-reference.md)|Делит одно число на другое.|  
-|[* (Умножение)](../mdx/multiply-mdx.md)|Перемножает два числа.|  
-|[-(Вычитание)](../mdx/subtract-mdx.md)|Выполняет вычитание двух чисел.|  
+|[+ (сложение)](../mdx/add-mdx.md)|складывает два числа.|  
+|[/ (Деление)](../mdx/divide-mdx-operator-reference.md)|Делит одно число на другое.|  
+|[* (умножение)](../mdx/multiply-mdx.md)|Перемножает два числа.|  
+|[- (вычитание)](../mdx/subtract-mdx.md)|Выполняет вычитание двух чисел.|  
 |^ (возведение в степень)|Возводит одно число в степень, указанную другим числом.|  
   
 > [!NOTE]  

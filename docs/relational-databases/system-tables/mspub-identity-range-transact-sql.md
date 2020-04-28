@@ -18,10 +18,10 @@ ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b1b204024d65e72eb65eefc9f63f914eab6ace29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032599"
 ---
 # <a name="mspub_identity_range-transact-sql"></a>MSpub_identity_range (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68032599"
 
   **MSpub_identity_range** таблица обеспечивает поддержку управления диапазонами идентификаторов. Эта таблица хранится в базе данных публикации и базе данных подписки.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**objid**|**int**|Идентификатор таблицы, содержащей столбец идентификаторов, управляемый репликацией.|  
 |**разнообраз**|**bigint**|Управляет размером диапазона последовательных значений идентификаторов, который будет назначен подписке при настройке.|  
@@ -40,6 +40,6 @@ ms.locfileid: "68032599"
   
 ## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

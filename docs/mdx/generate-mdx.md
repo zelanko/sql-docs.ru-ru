@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005905"
 ---
 # <a name="generate-mdx"></a>Generate (многомерные выражения)
@@ -104,7 +104,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>String  
+### <a name="string"></a>Строка  
  В следующем примере показано использование **Generate** для возврата строки:  
   
 ```  
@@ -127,6 +127,6 @@ FROM [Adventure Works]
 >  Эта форма функции **Generate** может быть полезной при отладке вычислений, так как она позволяет возвращать строку, в которой отображаются имена всех элементов в наборе. Это может быть проще для чтения, чем в определенном МНОГОМЕРном представлении набора, возвращаемого функцией [SetToStr &#40;многомерных выражений&#41;](../mdx/settostr-mdx.md) .  
   
 ## <a name="see-also"></a>См. также:  
- [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

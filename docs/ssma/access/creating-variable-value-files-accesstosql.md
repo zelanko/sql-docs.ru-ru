@@ -10,10 +10,10 @@ ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 051ded7d675f81998718b858c71488ba968ec680
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006597"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Создание файлов переменных значений (Акцесстоскл)
@@ -26,7 +26,7 @@ ms.locfileid: "68006597"
   
 **Примеры:**  
   
-**Пример 1:**  
+**Пример 1.**  
   
 ```xml  
 <!--Sample of variable value file commands-->  
@@ -49,7 +49,7 @@ ms.locfileid: "68006597"
   
 </variables>  
 ```  
-**Пример 2.**  
+**Пример 2:**  
   
 ```xml  
 <!--Sample of variable value file commands-->  
@@ -93,6 +93,6 @@ ms.locfileid: "68006597"
 ## <a name="next-step"></a>Следующий шаг  
 Следующий шаг в работе консоли — [Создание файлов подключения к серверу &#40;акцесстоскл&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
 [Создание файлов подключения к серверу (доступ)](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

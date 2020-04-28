@@ -18,10 +18,10 @@ ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c19f9b99173ca04e6ce15862e22a25f8a2bf06e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002507"
 ---
 # <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
@@ -64,10 +64,10 @@ sp_refresh_log_shipping_monitor
  2 = удаление (delete);  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет.  
+ Отсутствует.  
   
 ## <a name="remarks"></a>Remarks  
  **sp_refresh_log_shipping_monitor** обновляет таблицы **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_detail**и **log_shipping_monitor_error_detail** с использованием сведений о сеансе, которые еще не были переданы. Это позволяет синхронизировать сервер мониторинга с сервером-источником или сервером-получателем, если в течение некоторого времени синхронизация не выполнялась. В дополнение к этому в случае необходимости разрешается очистка контрольных данных на сервере мониторинга.  
@@ -79,6 +79,6 @@ sp_refresh_log_shipping_monitor
   
 ## <a name="see-also"></a>См. также:  
  [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

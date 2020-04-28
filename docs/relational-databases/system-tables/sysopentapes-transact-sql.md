@@ -19,10 +19,10 @@ ms.assetid: c066ca9b-9cfd-46b1-90a3-5c8dc9e7b6ae
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 813592ffa5b67a4926dff611c2ba0e0faf36d273
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029806"
 ---
 # <a name="sysopentapes-transact-sql"></a>sysopentapes (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68029806"
 >  Невозможно удалить представление **sysopentapes удалить нельзя** .  
 
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**openTape**|**nvarchar (64)**|Физическое имя файла открытого ленточного устройства. Дополнительные сведения об открытии и освобождении ленточных устройств см. в разделе [BACKUP &#40;Transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md) and [RESTORE &#40;transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).|  
   

@@ -18,10 +18,10 @@ ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d2b8fc2ac96821427aaf0ef2550fb6624a923d7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68000930"
 ---
 # <a name="sp_help_log_shipping_monitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
@@ -39,19 +39,19 @@ sp_help_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- Нет.  
+ Отсутствует.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**состояние**|**bit**|Общее состояние агентов базы данных доставки журналов:<br /><br /> **0** = работоспособное состояние и сбои без агента.<br /><br /> **1** = в противном случае.|  
+|**status**|**bit**|Общее состояние агентов базы данных доставки журналов:<br /><br /> **0** = работоспособное состояние и сбои без агента.<br /><br /> **1** = в противном случае.|  
 |**is_primary**|**bit**|Указывает, относится ли эта строка к базе данных-источнику:<br /><br /> **1** = строка предназначена для базы данных-источника.<br /><br /> **0** = строка предназначена для базы данных-получателя.|  
-|**сервером**|**имеет sysname**|Имя сервера-источника или получателя, где находится эта база данных.|  
-|**database_name**|**имеет sysname**|Имя базы данных.|  
+|**сервером**|**sysname**|Имя сервера-источника или получателя, где находится эта база данных.|  
+|**database_name**|**sysname**|Имя базы данных.|  
 |**time_since_last_backup**|**int**|Время (в минутах), прошедшее с момента создания последней резервной копии журнала.<br /><br /> NULL = данные недоступны или нерелевантны.|  
 |**last_backup_file**|**nvarchar (500)**|Имя последнего файла успешно созданной резервной копии журнала.<br /><br /> NULL = данные недоступны или нерелевантны.|  
 |**backup_threshold**|**int**|Длительность времени в минутах после выполнения последнего резервного копирования перед возникновением ошибки threshold_alert. **backup_threshold** имеет **тип int**и значение по умолчанию **60 минут**.<br /><br /> NULL = данные недоступны или нерелевантны.<br /><br /> Это значение можно изменить с помощью [sp_add_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
@@ -72,6 +72,6 @@ sp_help_log_shipping_monitor
   
 ## <a name="see-also"></a>См. также:  
  [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

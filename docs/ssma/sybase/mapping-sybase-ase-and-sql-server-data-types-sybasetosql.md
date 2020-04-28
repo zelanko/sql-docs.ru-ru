@@ -13,10 +13,10 @@ ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 79313d2344f6feb978a064f3fbd92e1f7bc7dce5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028892"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Сопоставление типов данных Sybase ASE и SQL Server (SybaseToSQL)
@@ -87,7 +87,7 @@ SSMA имеет набор сопоставлений типов данных п
   
         Унаследованные сопоставления удалить нельзя. Однако унаследованные сопоставления переопределяются пользовательскими сопоставлениями для определенного объекта или категории объектов.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
 Следующим шагом процесса миграции является [Создание отчета оценки](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md) или [Преобразование объектов базы данных Sybase ASE в SQL Server или SQL Azure синтаксис](converting-sybase-ase-database-objects-sybasetosql.md). При создании отчета об оценке объекты Sybase ASE автоматически преобразуются во время оценки.  
   
 ## <a name="see-also"></a>См. также:  

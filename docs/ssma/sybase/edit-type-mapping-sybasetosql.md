@@ -10,10 +10,10 @@ ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: cd8dfbd7aa4205424c45861f6ada1113f76d344e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029170"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>Изменение сопоставления типов (SybaseToSQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68029170"
 **Кому**  
 Укажите максимальную длину для этого сопоставления. Например, для типа данных **nchar** можно ввести значение 20, чтобы указать, что это сопоставление относится к диапазону, завершающему значение **nchar (20)**.  
   
-**Тип целевого объекта**  
+**Тип результирующего значения**  
 Выберите тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных, с которым сопоставлен исходный тип данных. Когда SSMA создает таблицу или хранимую процедуру в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], тип данных источника изменится на этот тип данных.  
   
 Если тип данных имеет переменную длину, в разделе **целевой тип**появится следующее поле:  

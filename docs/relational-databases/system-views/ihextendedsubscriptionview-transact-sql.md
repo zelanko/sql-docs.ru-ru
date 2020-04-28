@@ -18,10 +18,10 @@ ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8f080f5defd5143d3822e86eeeb3c7242b51d08d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029580"
 ---
 # <a name="ihextendedsubscriptionview-transact-sql"></a>IHextendedSubscriptionView (Transact-SQL)
@@ -29,17 +29,17 @@ ms.locfileid: "68029580"
 
   Представление **ихекстендедсубскриптионвиев** предоставляет сведения о подписке на публикацию, отличную от SQL Server. Это представление хранится в базе данных **распространителя** .  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|Уникальный идентификатор статьи.|  
-|**dest_db**|**имеет sysname**|Имя целевой базы данных.|  
+|**dest_db**|**sysname**|Имя целевой базы данных.|  
 |**srvid**|**smallint**|Уникальный идентификатор подписчика.|  
-|**login_name**|**имеет sysname**|Имя входа, используемое для подключения к подписчику.|  
+|**login_name**|**sysname**|Имя входа, используемое для подключения к подписчику.|  
 |**distribution_jobid**|**binary**|Идентифицирует задание агента распространителя.|  
 |**publisher_database_id**|**int**|Определяет базу данных публикации.|  
 |**subscription_type**|**int**|Тип подписки.<br /><br /> **0** = Push-агент распространителя запускается на подписчике.<br /><br /> **1** = по запросу — агент распространителя запускается на распространителе.|  
 |**sync_type**|**tinyint**|Тип начальной синхронизации.<br /><br /> **1** = автоматический<br /><br /> **2** = нет|  
-|**состояние**|**tinyint**|Состояние подписки.<br /><br /> **0** = неактивно<br /><br /> **1** = подписано<br /><br /> **2** = активно|  
+|**status**|**tinyint**|Состояние подписки.<br /><br /> **0** = неактивно<br /><br /> **1** = подписано<br /><br /> **2** = активно|  
 |**snapshot_seqno_flag**|**bit**|Указывает, используется ли порядковый номер моментального снимка.|  
 |**independent_agent**|**bit**|Показывает наличие изолированного агента распространителя для этой публикации.<br /><br /> **0** = публикация использует общий агент распространения, а каждая пара базы данных издателя или подписчика имеет один общий агент.<br /><br /> **1** = для этой публикации существует изолированный агент распространения.|  
 |**subscription_time**|**datetime**|Только для внутреннего применения.|  
@@ -52,6 +52,6 @@ ms.locfileid: "68029580"
 ## <a name="see-also"></a>См. также:  
  [Разнородная репликация базы данных](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

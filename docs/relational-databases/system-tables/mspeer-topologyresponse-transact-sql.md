@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4d64e4aa90aadb45e7f3c2aa09d23e06e5bda187
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026643"
 ---
 # <a name="mspeer_topologyresponse-transact-sql"></a>MSpeer_topologyresponse (Transact-SQL)
@@ -30,12 +30,12 @@ ms.locfileid: "68026643"
 
   Используется в одноранговой репликации для сохранения ответа каждого из узлов на запрос состояния топологии. Эта таблица хранится в базе данных публикации.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |request_id|**int**|Определяет запись запроса состояния топологии в таблице [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md) .|  
-|peer|**имеет sysname**|Имя экземпляра сервера, сформировавшего ответ.|  
+|peer|**sysname**|Имя экземпляра сервера, сформировавшего ответ.|  
 |peer_version|**int**|Определяет номер версии издателя.|  
-|peer_db|**имеет sysname**|База данных подписки на одноранговом узле, сформировавшем ответ.|  
+|peer_db|**sysname**|База данных подписки на одноранговом узле, сформировавшем ответ.|  
 |originator_id|**int**|Указывает каждый узел в топологии с целью обнаружения конфликтов. Дополнительные сведения см. в разделе [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |peer_conflict_retention|**int**|Срок (в днях), в течение которого метаданные хранятся в таблицах конфликтов.|  
 |received_date|**datetime**|Время, когда был получен запрос топологии.|  
@@ -43,6 +43,6 @@ ms.locfileid: "68026643"
   
 ## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -15,10 +15,10 @@ ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1e844425f0c512cfe7c15354bf1aeb100d6104e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004522"
 ---
 # <a name="general-xquery-use-cases"></a>Общие способы применения запросов XQuery
@@ -88,7 +88,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight
   
  В предыдущем запросе метод **exist ()** типа данных **XML** в предложении WHERE проверяет, есть ли в элементе <`Weight` `Specifications`> элемент> <.  
   
-### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>Б. Поиск идентификаторов моделей продукции, описания которых в каталоге имеют фронтальные и малоразмерные изображения.  
+### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>Б) Поиск идентификаторов моделей продукции, описания которых в каталоге имеют фронтальные и малоразмерные изображения.  
  Описание каталога продуктов XML включает изображения продуктов, элемент <`Picture`>. Каждый рисунок обладает несколькими свойствами, К ним относятся угол изображения, элемент <`Angle`> и размер, элемент <`Size`>.  
   
  Для тех моделей продукции,описания которых в каталоге содержат фронтальные и малоразмерные изображения, запрос формирует XML со следующей структурой:  
@@ -346,6 +346,6 @@ AND     CatalogDescription.exist('declare namespace p1="https://schemas.microsof
  [Обработка пространств имен в XQuery](../xquery/handling-namespaces-in-xquery.md)   
  [Добавление пространств имен в запросы с WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [SQL Server &#40;XML-данных&#41;](../relational-databases/xml/xml-data-sql-server.md)   
- [Справочник по языку XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
+ [Справочник по языку XQuery (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  
   
   

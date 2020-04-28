@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002460"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
@@ -156,5 +156,5 @@ GO
 ## <a name="see-also"></a>См. также: 
 
 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
-[Мастер Always Encrypted](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
+[Мастер постоянного шифрования](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
 

@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c9e0d3152c6d60faff4c1c42410374287bd7d111
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68030906"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>Хранимая процедура sp_addrolemember (Transact-SQL)
@@ -50,7 +50,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
  Учетная запись безопасности, добавляемая к роли. *security_account* имеет тип **sysname**и не имеет значения по умолчанию. *security_account* может быть пользователь базы данных, роль базы данных, имя входа Windows или группа Windows.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  Член роли, добавляемый с помощью процедуры sp_addrolemember, наследует разрешения этой роли. Если добавляемый член — участник уровня Windows, не имеющий соответствующего пользователя базы данных, этот пользователь будет создан, но может быть не полностью сопоставлен с именем входа. Всегда проверяйте, существует ли имя входа, и предоставлен ли ему доступ к базе данных.  
@@ -87,14 +87,14 @@ CREATE USER Mary5 FOR LOGIN [Contoso\Mary5] ;
 GO  
 ```  
   
-### <a name="b-adding-a-database-user"></a>Б. Добавление пользователя базы данных  
+### <a name="b-adding-a-database-user"></a>Б) Добавление пользователя базы данных  
  В следующем примере пользователь базы данных `Mary5` добавляется к роли базы данных `Production` текущей базы данных.  
   
 ```  
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>Примеры: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>В. Добавление имени входа Windows  
  В следующем примере имя входа `LoginMary` добавляется в `AdventureWorks2008R2` базу данных от `UserMary`имени пользователя. Затем пользователь `UserMary` добавляется к роли `Production`.  

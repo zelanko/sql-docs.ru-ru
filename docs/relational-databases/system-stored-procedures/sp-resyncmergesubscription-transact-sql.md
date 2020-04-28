@@ -16,10 +16,10 @@ ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e77488a379543dd6f2749a07048fa67a92d530ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68041028"
 ---
 # <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
@@ -55,7 +55,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
   
 `[ @resync_type = ] resync_type`Определяет, когда должна начаться повторная синхронизация. *resync_type* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0**|Синхронизация начинается с момента формирования исходного моментального снимка. Этот аргумент является самым ресурсоемким, так как все изменения с момента формирования исходного моментального снимка заново применяются к подписчику.|  
 |**1**|Синхронизация начинается с момента проведения последней успешной проверки. Все новые или неоконченные поколения, созданные со времени проведения последней успешной проверки, заново применяются к подписчику.|  
@@ -75,6 +75,6 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_resyncmergesubscription**.  
   
 ## <a name="see-also"></a>См. также:  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

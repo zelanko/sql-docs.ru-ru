@@ -19,10 +19,10 @@ ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 625c6134c91a9b452b8df2b7e235b78126c1354e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026919"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
@@ -34,9 +34,9 @@ ms.locfileid: "68026919"
   
 ||||  
 |-|-|-|  
-|**Имя столбца**|**Тип**|**Описание**|  
-|*см*|**int**|1 = объект или столбец (включая модули, XP, представления, синонимы и таблицы).<br /><br /> 4 = Участник базы данных<br /><br /> 5 = Сборка<br /><br /> 6 = Тип<br /><br /> 7 = Индекс (полнотекстовый индекс)<br /><br /> 12 = Триггер DDL базы данных<br /><br /> 19 = Маршрут<br /><br /> 30 = Спецификация аудита|  
-|*class_desc*|**nvarchar (120)**|Описание класса сущности. Один из следующих элементов для сопоставления с классом:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
+|**Имя столбца**|**Type**|**Описание**|  
+|*class*|**int**|1 = объект или столбец (включая модули, XP, представления, синонимы и таблицы).<br /><br /> 4 = Участник базы данных<br /><br /> 5 = Сборка<br /><br /> 6 = Тип<br /><br /> 7 = Индекс (полнотекстовый индекс)<br /><br /> 12 = Триггер DDL базы данных<br /><br /> 19 = Маршрут<br /><br /> 30 = Спецификация аудита|  
+|*class_desc*|**nvarchar(120)**|Описание класса сущности. Один из следующих элементов для сопоставления с классом:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **СБОРОК**<br /><br /> **ТИП**<br /><br /> **НОМЕР**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|Идентификатор сущности.<br /><br /> Если *класс* = 1, то object_id<br /><br /> Если *класс* = 4, то sys. database_principals. principal_id.<br /><br /> Если *класс* = 5, то sys. assemblies. assembly_id.<br /><br /> Если *класс* = 6, то sys. types. user_type_id.<br /><br /> Если *Class* = 7, то sys. indexes. index_id.<br /><br /> Если *Class* = 12, то sys. triggers. object_id.<br /><br /> Если *класс* = 19, то sys. routes. route_id.<br /><br /> Если *Class* = 30, то sys. database_audit_specifications. database_specification_id.|  
 |*statement_line_number*|**int**|Если класс является модулем, возвращает номер строки, в которой используется неавтономная инструкция.  В противном случае — значение NULL.|  
 |*statement_ offset_begin*|**int**|Если класс является модулем, он указывает (в байтах, начиная с 0) положение, откуда начинается неавтономная инструкция. В противном случае возвращается значение null.|  
@@ -62,7 +62,7 @@ ms.locfileid: "68026919"
   
 -   Встроенная системная функция  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  sys.dm_db_uncontained_entities возвращает только объекты, для которых у пользователя имеются определенные типы разрешения. Чтобы полностью оценить включение базы данных, эта функция должна использоваться привилегированным пользователем, например членом предопределенной роли сервера **sysadmin** или ролью **db_owner** .  

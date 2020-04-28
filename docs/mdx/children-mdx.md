@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0af4d7b97777002dc5683c075f82531ccc8df86e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016805"
 ---
 # <a name="children-mdx"></a>Children (многомерные выражения)
@@ -35,7 +35,7 @@ Member_Expression.Children
  Функция **Children** Возвращает естественно упорядоченный набор, содержащий дочерние элементы указанного элемента. Если у элемента нет потомков, функция возвращает пустой набор.  
   
 ## <a name="example"></a>Пример  
- В следующем примере возвращаются потомки элемента United States в иерархии Geography измерения Geography.  
+ В следующем примере возвращаются потомки элемента США в иерархии Geography измерения Geography.  
   
 ```  
 SELECT [Geography].[Geography].[Country].&[United States].Children ON 0  
@@ -53,11 +53,11 @@ FROM
   
 ```  
   
-|Release|Журнал|  
+|Выпуск|Журнал|  
 |-------------|-------------|  
 |[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Измененное содержимое**<br /> — Обновлен синтаксис и аргументы для улучшения ясности.<br /><br /> — Добавлены обновленные примеры.|  
   
 ## <a name="see-also"></a>См. также:  
- [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

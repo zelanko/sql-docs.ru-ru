@@ -14,10 +14,10 @@ ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: bad08c06028a64a0423135b15641ebf6fa4e895e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029108"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Начало работы с помощью консоли SSMA для Sybase (SybaseToSQL)
@@ -56,14 +56,14 @@ ms.locfileid: "68029108"
   
 В следующей таблице представлена цветовая интерпретация выходных данных консоли.  
   
-|Color|Description|  
+|Color|Описание|  
 |---------|---------------|  
 |Красный|Неустранимая ошибка во время выполнения|  
 |Серый|Отметка даты и времени, сообщение пользователю|  
-|Белый|Команды файла сценария, тип сообщения|  
+|White|Команды файла сценария, тип сообщения|  
 |Желтый|Предупреждение|  
 |Зеленый|Запрос на ввод данных пользователем|  
 |Цвет|Начало, окончание и результат операции|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
 [Установка SSMA для SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  

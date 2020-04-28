@@ -16,17 +16,17 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 04554c7aa9f891aab414ae5ae77f3c92bb86ac4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036048"
 ---
 # <a name="localdbgetinstances-function"></a>Функция LocalDBGetInstances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Возвращает все экземпляры SQL Server Express LocalDB с данной версией.  
   
- **Заголовочный файл:** sqlncli. h  
+ **Файл заголовка:** sqlncli.h  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,7 +45,7 @@ HRESULT LocalDBGetInstances(
  *лпдвнумберофинстанцес*  
  [Вход/Выход] На входе содержит число ячеек для имен экземпляров в буфере *pInstanceNames* . На выходе содержит количество экземпляров LocalDB, найденных на рабочей станции пользователя.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  S_OK  
  Функция выполнена успешно.  
   
