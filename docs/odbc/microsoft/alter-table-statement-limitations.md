@@ -1,5 +1,5 @@
 ---
-title: ALTER TABLE Заявление Ограничения (ru) Документы Майкрософт
+title: Ограничения инструкции ALTER TABLE | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: f3e88f85-edf4-47cd-a822-292b106ddb34
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 19afa8b07b0051de9ce45ec652ea337c0f689f52
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304703"
 ---
 # <a name="alter-table-statement-limitations"></a>Ограничения инструкции ALTER TABLE
-При использовании драйвера dBASE или Paradox после создания индекса и добавления новой записи структура таблицы не может быть изменена заявлением ALTER TABLE, если индекс не будет удален и содержимое таблицы не удалено.  
+Если используется драйвер dBASE или Paradox, то после создания индекса и добавления новой записи структура таблицы не может быть изменена инструкцией ALTER TABLE, если только индекс не будет удален и не будет удалено содержимое таблицы.  
   
- Заявления ALTER TABLE не поддерживаются для драйверов Microsoft Excel или Text.  
+ Инструкции ALTER TABLE не поддерживаются для Microsoft Excel или текстовых драйверов.  
   
 > [!NOTE]  
->  При использовании драйвера Paradox без реализации двигателя базы данных Borland операторы ALTER TABLE не поддерживаются; разрешены только показания по чтению и приложению.
+>  При использовании драйвера Paradox без реализации ядро СУБД Borland инструкции ALTER TABLE не поддерживаются. допускаются только инструкции Read и Append.

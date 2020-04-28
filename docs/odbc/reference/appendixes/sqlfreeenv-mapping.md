@@ -1,5 +1,5 @@
 ---
-title: Картографирование СЗЛФриЕнв (ru) Документы Майкрософт
+title: Сопоставление SQLFreeEnv | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ ms.assetid: c0f76455-d072-4bae-bee7-452277dfa479
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1f56bfeaee32e83ded6d8269873c9c4c33ed434e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302035"
 ---
 # <a name="sqlfreeenv-mapping"></a>Сопоставление SQLFreeEnv
-Когда приложение вызывает **S'LFreeEnv** через драйвер ODBC *3.x,*  
+Когда приложение вызывает **SQLFreeEnv** через драйвер ODBC *3. x* , вызов метода  
   
 ```  
 SQLFreeEnv(henv)   
 ```  
   
- отображается до  
+ сопоставлен с  
   
 ```  
 SQLFreeHandle(SQL_HANDLE_ENV,Handle)  
 ```  
   
- с *аргументом Ручка* установлен на значение в *henv*.
+ с аргументом *Handle* , имеющим значение в *хенв*.

@@ -1,5 +1,5 @@
 ---
-title: Функция S'LSetConnectInfo (англ.) Документы Майкрософт
+title: Функция Склсетконнектинфо | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b575e0d09f87ad21e1190b8081b6604349a98263
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301855"
 ---
 # <a name="sqlsetconnectinfo-function"></a>Функция SQLSetConnectInfo
 **Соответствия**  
- Версия Введена: СООТВЕТСТВИе стандартам ODBC 3.81: ODBC  
+ Представленная версия: соответствие стандартам ODBC 3,81: ODBC  
   
  **Сводка**  
- **Для** установки источника данных, идентификатора пользователя и пароля в токен информации о подключении для вызова [приложения sLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) используется для установки исходного кода данных, идентификатора пользователя.  
+ **Склсетконнектинфо** используется для задания источника данных, идентификатора пользователя и пароля в токене сведений о соединении для вызова [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) приложения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,43 +41,43 @@ SQLRETURN  SQLSetConnectInfo(
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *ТокенХэндлэнд*  
- (Вход) Ручка маркера.  
+ *токенхандле*  
+ Входной Маркер маркера.  
   
  *ServerName*  
- (Вход) Имя источника данных. Данные могут быть расположены на том же компьютере, что и программа, или на другом компьютере где-то в сети. Для получения информации о том, как приложение выбирает источник данных, [см.](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)  
+ Входной Имя источника данных. Данные могут находиться на том же компьютере, что и программа, или на другом компьютере в сети. Сведения о том, как приложение выбирает источник данных, см. [в разделе Выбор источника данных или драйвера](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md).  
   
  *NameLength1*  
- (Вход) Длина*сервера В* символах.  
+ Входной Длина **ServerName* в символах.  
   
- *Пользователя*  
- (Вход) Идентификатор пользователя.  
+ *Имен*  
+ Входной Идентификатор пользователя.  
   
  *NameLength2*  
- (Вход) Длина*пользователя В* символах.  
+ Входной Длина*имени пользователя* в символах.  
   
- *Проверка подлинности*  
- (Вход) Строка аутентификации (обычно пароль).  
+ *Аутентификация*  
+ Входной Строка проверки подлинности (обычно пароль).  
   
  *NameLength3*  
- (Вход) Длина*аутентификации* в персонажах.  
+ Входной Длина **Проверка подлинности* в символах.  
   
 ## <a name="returns"></a>Результаты  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR или SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Так же, как [и для](../../../odbc/reference/syntax/sqlconnect-function.md) ошибок ввода ввода, за исключением того, что менеджер драйвера будет использовать **HandleType** SQL_HANDLE_DBC_INFO_TOKEN и **ручку** *hDbcInfoToken*.  
+ То же, что и [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) для ошибок проверки ввода, за исключением того, что диспетчер драйверов будет использовать **параметром handletype** SQL_HANDLE_DBC_INFO_TOKEN и **маркер** *хдбЦинфотокен*.  
   
 ## <a name="remarks"></a>Remarks  
- Всякий раз, когда водитель возвращает SQL_ERROR или SQL_INVALID_HANDLE, менеджер драйвера возвращает ошибку в приложение (в [S'LConnect](../../../odbc/reference/syntax/sqlconnect-function.md) или [S'LDriverConnect).](../../../odbc/reference/syntax/sqldriverconnect-function.md)  
+ Всякий раз, когда драйвер возвращает SQL_ERROR или SQL_INVALID_HANDLE, диспетчер драйверов возвращает ошибку приложению (в [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) или [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   
- Всякий раз, когда водитель возвращается SQL_SUCCESS_WITH_INFO, менеджер драйвера получает диагностическую информацию от *hDbcInfoToken,* и возвращает SQL_SUCCESS_WITH_INFO в приложение в [S'LConnect](../../../odbc/reference/syntax/sqlconnect-function.md) и [S'LDriverConnect.](../../../odbc/reference/syntax/sqldriverconnect-function.md)  
+ Всякий раз, когда драйвер возвращает SQL_SUCCESS_WITH_INFO, диспетчер драйверов получает диагностические сведения от *хдбЦинфотокен*и возвращает SQL_SUCCESS_WITH_INFO приложению в [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) и [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
- Приложения не должны вызывать эту функцию напрямую. Драйвер ODBC, поддерживающий объединение соединения с пониманием водителя, должен реализовать эту функцию.  
+ Приложения не должны вызывать эту функцию напрямую. Драйвер ODBC, поддерживающий пулы соединений с учетом драйверов, должен реализовывать эту функцию.  
   
- Включите sqlspi.h для разработки драйверов ODBC.  
+ Включите склспи. h для разработки драйвера ODBC.  
   
 ## <a name="see-also"></a>См. также:  
  [Разработка драйвера ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Пулинг соединения с информацией о драйверах](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
+ [Организация пулов соединений с учетом драйверов](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Разработка драйвера ODBC с поддержкой пула подключений](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

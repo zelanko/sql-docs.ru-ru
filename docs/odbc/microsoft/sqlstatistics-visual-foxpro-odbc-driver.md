@@ -1,5 +1,5 @@
 ---
-title: S'LСтатистика (Визуальный Водитель FoxPro ODBC) Документы Майкрософт
+title: SQLStatistics (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: bb48c22f-1fd5-47b4-8eaa-ff69cd431cf9
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f225e37fd8bace25c90782d6a35b0eab09ea82cb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306113"
 ---
 # <a name="sqlstatistics-visual-foxpro-odbc-driver"></a>SQLStatistics (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Эта тема содержит Visual FoxPro ODBC Драйвер-специфической информации. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полная  
+ Поддержка: полная  
   
- Соответствие API ODBC: Уровень 1  
+ Соответствие API ODBC: уровень 1  
   
- Извлекает список статистических данных об одной таблице и индексах, или именах тегов, связанных с таблицей. Водитель возвращает информацию в результате набора.  
+ Извлекает список статистических данных по одной таблице и индексам или именам тегов, связанным с таблицей. Драйвер возвращает сведения в виде результирующего набора.  
   
- Для получения более подробной информации, *ODBC Programmer's Reference*см. [SQLStatistics](../../odbc/reference/syntax/sqlstatistics-function.md)
+ Дополнительные сведения см. в разделе [SQLStatistics](../../odbc/reference/syntax/sqlstatistics-function.md) в *справочнике программиста по ODBC*.

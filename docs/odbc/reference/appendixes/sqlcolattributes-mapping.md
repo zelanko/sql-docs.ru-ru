@@ -1,5 +1,5 @@
 ---
-title: Картирование саЗЛКолАтрибуты (ru) Документы Майкрософт
+title: Сопоставление SQLColAttributes | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ ms.assetid: 30e25719-176b-4c48-97d4-920766b22412
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 5c2c8386d6771141eaa0145a5d5964d70d6084d2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305420"
 ---
 # <a name="sqlcolattributes-mapping"></a>Сопоставление SQLColAttributes
-Когда приложение вызывает **S'LColAttributes** через драйвер ODBC *3.x,* вызов в **S'LColAttributes** отображается на **s'LColAttributes** следующим образом:  
+Когда приложение вызывает **SQLColAttributes** через драйвер ODBC *3. x* , вызов **SQLColAttributes** сопоставляется с **SQLColAttribute** следующим образом:  
   
 > [!NOTE]
->  Префикс, используемый в значениях *FieldIdentifier* в ODBC *3.x,* был изменен с той, которая используется в ODBC *2.x*. Новая приставка "SQL_DESC"; старая приставка была "SQL_COLUMN".  
+>  Префикс, используемый в значениях *фиелдидентифиер* в ODBC *3. x* , был изменен с помощью ODBC *2. x*. Новый префикс — "SQL_DESC"; Старый префикс — "SQL_COLUMN".  
   
-1.  Если приложение является приложением ODBC *2.x,* *fDescType* SQL_COLUMN_TYPE, а возвращенный тип представляет собой краткий тип DATETIME, менеджер драйвера отображает значения возврата для кода даты, времени и метки времени.  
+1.  Если приложение является приложением ODBC *2. x* , *фдесктипе* имеет SQL_COLUMN_TYPE, а возвращаемый тип является кратким типом DateTime, диспетчер драйверов сопоставляет возвращаемые значения для кодов даты, времени и отметки времени.  
   
-2.  Если *fDescType* является SQL_COLUMN_NAME, SQL_COLUMN_NULLABLE или SQL_COLUMN_COUNT, менеджер драйвера вызывает **s'LColAttribute** в драйвере с аргументом *FieldIdentifier,* отображаемым в SQL_DESC_NAME, SQL_DESC_NULLABLE или SQL_DESC_COUNT, по мере необходимости.*.* Все остальные значения *fDescType* передаются водителю.  
+2.  Если *фдесктипе* имеет значение SQL_COLUMN_NAME, SQL_COLUMN_NULLABLE или SQL_COLUMN_COUNT, диспетчер драйверов вызывает **SQLColAttribute** в драйвере с аргументом *фиелдидентифиер* , сопоставленным с SQL_DESC_NAME, SQL_DESC_NULLABLE или SQL_DESC_COUNT, в зависимости от ситуации *.* Все остальные значения *фдесктипе* передаются в драйвер.  
   
- Водитель ODBC *3.x* должен поддерживать все ODBC *3.x* *FieldIdentifiers,* перечисленные для **S'LColAttribute**.  
+ Драйвер ODBC *3. x* должен поддерживать все *фиелдидентифиерс* ODBC *3. x* , перечисленные для **SQLColAttribute**.  
   
- Водитель ODBC *3.x* должен поддерживать SQL_COLUMN_PRECISION и SQL_DESC_PRECISION, SQL_COLUMN_SCALE и SQL_DESC_SCALE, а также SQL_COLUMN_LENGTH и SQL_DESC_LENGTH. Эти значения отличаются, потому что точность, масштаб и длина определяются по-разному в ODBC *3.x,* чем они были в ODBC *2.x*. Для получения дополнительной информации в приложении D: Типы данных [см.](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)
+ Драйвер ODBC *3. x* должен поддерживать SQL_COLUMN_PRECISION и SQL_DESC_PRECISION, SQL_COLUMN_SCALE и SQL_DESC_SCALE, а SQL_COLUMN_LENGTH и SQL_DESC_LENGTH. Эти значения отличаются, поскольку точность, масштаб и длина определяются по-разному в ODBC *3. x* , чем в ODBC *2. x*. Дополнительные сведения см. в разделе [размер столбца, десятичные цифры, длина октета и размер дисплея](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) в приложении г: типы данных.

@@ -1,5 +1,5 @@
 ---
-title: СЗЛТаблицы (Драйвер доступа) Документы Майкрософт
+title: SQLTables (драйвер для Access) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.assetid: 94423cf9-341a-4db6-bb10-8f5448df7fc3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: df3a23af365efbef6a0f0da2c52568501425ecb3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306095"
 ---
 # <a name="sqltables-access-driver"></a>SQLTables (драйвер для Access)
 > [!NOTE]  
->  Эта тема содержит информацию о драйверах доступа. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
+>  В этом разделе содержатся сведения, относящиеся к драйверу. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |Аргумент|Комментарии|  
 |--------------|--------------|  
-|*szTableВладелец*|Единственным веским аргументом для *szTableOwner* является NULL, потому что ни один из драйверов не поддерживает имена владельцев. С *набором szTableOwner* null все таблицы возвращаются. NULL возвращается в TABLE_OWNER колонке.|  
-|*szTableQualifier*|В TABLE_QUALIFIER столбца **S'LTables** вернет путь в файл базы данных.|  
-|*SzTableType*|При использовании драйвера Microsoft Access "SYSTEM TABLE" поддерживается для *szTableType* для системных таблиц, "SYNONYM" поддерживается для прилагаемых таблиц, а "VIEW" поддерживается для запросов возврата строк.|  
+|*сзтаблеовнер*|Единственным допустимым аргументом для *сзтаблеовнер* является null, так как ни один из драйверов не поддерживает имена владельцев. Если для *сзтаблеовнер* ЗАДАНО значение null, возвращаются все таблицы. Значение NULL возвращается в столбец TABLE_OWNER.|  
+|*сзтаблекуалифиер*|В столбце TABLE_QUALIFIER **SQLTables** вернет путь к файлу базы данных.|  
+|*сзтаблетипе*|При использовании драйвера Microsoft Access "СИСТЕМная таблица" поддерживается для *сзтаблетипе* для системных таблиц, "синоним" поддерживается для присоединенных таблиц, а "View" поддерживается для запросов, возвращающих строки.|  
   
 ## <a name="see-also"></a>См. также:  
  [Функция SQLTables](../../odbc/reference/syntax/sqltables-function.md)

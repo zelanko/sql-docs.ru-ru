@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37dc1e40d9af24fd327ce12711f1006c01020e45
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303882"
 ---
 # <a name="date-and-time-improvements"></a>Улучшения функций даты и времени
@@ -22,7 +22,7 @@ ms.locfileid: "81303882"
 
   В этом разделе описана поддержка в собственном клиенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] новых типов данных даты и времени, которые были введены в [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   
- Для получения дополнительной информации об улучшении даты/времени см [&#41;&#40;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)&#41;[&#40;.](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ Дополнительные сведения об улучшениях даты и времени см. в статьях [улучшения даты и времени &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md) и [улучшения даты и времени &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
  Сведения о примерах приложений, которые демонстрируют эту функцию, см. в разделе [Образцы программирования для SQL Server](https://msftdpprodsamples.codeplex.com/).  
   

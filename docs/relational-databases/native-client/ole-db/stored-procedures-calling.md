@@ -20,16 +20,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ca4a3bb78f1f08ea8bfcdc08d5e8bacac4495087
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305349"
 ---
 # <a name="stored-procedures---calling"></a>Вызов хранимых процедур
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Хранимая процедура может иметь ноль и более параметров. Также она может возвращать значение. При использовании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика Native Client OLE DB параметры сохраненной процедуры могут быть пройдены:  
+  Хранимая процедура может иметь ноль и более параметров. Также она может возвращать значение. При использовании поставщика [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента OLE DB параметры хранимой процедуры могут передаваться следующим образом:  
   
 -   Заданные в коде значения данных.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "81305349"
 5.  Выполните команду с помощью метода **ICommand::Execute**.  
 
 ## <a name="methods-of-calling-a-stored-procedure"></a>Методы вызова хранимых процедур  
- При проведении процедуры хранения [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщике Native Client OLE DB поддерживает:  
+ При выполнении хранимой процедуры в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]службах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента поддерживает:  
   
 -   Escape-последовательность ODBC CALL.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "81305349"
   
  Общий синтаксис для вызова процедуры с помощью escape-последовательности ODBC CALL выглядит следующим образом.  
   
- **,****Позвони****call**_procedure_name_**(***параметр,**параметр...* **)**]}  
+ {[**? =**]**вызовите**_procedure_name_[**(**[*параметр*] [**,**[*параметр*]]... **)**]}  
   
  Пример:  
   
@@ -120,7 +120,7 @@ ms.locfileid: "81305349"
  Пример приложения, которое демонстрирует применение escape-последовательности RPC, см. в статье [Выполнение хранимой процедуры с использованием RPC и обработка выходных данных](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Инструкция Transact-SQL EXECUTE  
- Escape-последовательность ODBC CALL и escape-последовательность RPC — это предпочтительные способы вызова хранимых процедур в отличие от инструкции [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB использует [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] механизм RPC для оптимизации обработки команд. Этот протокол RPC повышает производительность, устраняя большую часть обработки параметров и синтаксической проверки инструкций на сервере.  
+ Escape-последовательность ODBC CALL и escape-последовательность RPC — это предпочтительные способы вызова хранимых процедур в отличие от инструкции [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента использует механизм RPC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для оптимизации обработки команд. Этот протокол RPC повышает производительность, устраняя большую часть обработки параметров и синтаксической проверки инструкций на сервере.  
   
  Вот пример инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**.  
   
@@ -129,6 +129,6 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Сохраненные процедуры](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
+ [Хранимые процедуры](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

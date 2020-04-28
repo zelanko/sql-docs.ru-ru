@@ -1,5 +1,5 @@
 ---
-title: S'LGetCursorName (Визуальный водитель FoxPro ODBC) Документы Майкрософт
+title: SQLGetCursorName (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 8b1c5233-950e-4173-ae15-dfc46be6ed09
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 8d8e7c3d6f8ac1a13e4ea367ca59cffa838aee7a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304135"
 ---
 # <a name="sqlgetcursorname-visual-foxpro-odbc-driver"></a>SQLGetCursorName (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Эта тема содержит Visual FoxPro ODBC Драйвер-специфической информации. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полная  
+ Поддержка: полная  
   
- Соответствие ODBC API: базовый уровень  
+ Соответствие API ODBC: уровень ядра  
   
- Возвращает имя курсора, связанного с данным *hstmt.* **S'LGetCursorName** включен в Visual FoxPro ODBC Driver API, поскольку он является частью функциональности API core Level API; он не может быть использован с другими функциями API, поскольку драйвер не поддерживает позиционированные обновления.  
+ Возвращает имя курсора, связанного с заданным *хстмт*. **SQLGetCursorName** входит в API драйвера ODBC для Visual FoxPro, так как он является частью функциональности API уровня ядра. Он не может использоваться с другими функциями API, так как драйвер не поддерживает позиционированные обновления.  
   
- Для получения более подробной информации, *ODBC Programmer's Reference*см. [SQLGetCursorName](../../odbc/reference/syntax/sqlgetcursorname-function.md)
+ Дополнительные сведения см. в разделе [SQLGetCursorName](../../odbc/reference/syntax/sqlgetcursorname-function.md) в *справочнике программиста по ODBC*.

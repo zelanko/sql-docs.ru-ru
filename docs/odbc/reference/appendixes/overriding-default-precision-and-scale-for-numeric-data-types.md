@@ -1,5 +1,5 @@
 ---
-title: Переопределение точности и масштабирования по умолчанию для типов численных данных (ru) Документы Майкрософт
+title: Переопределение точности и масштаба по умолчанию для числовых типов данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 365c5f69d21dd3a4ad8e89805d81f1b3b0c9dcba
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303595"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Переопределение заданных по умолчанию точности и шкалы для числовых типов данных
-Когда поле SQL_DESC_TYPE в ARD настроено на SQL_C_NUMERIC, позвонив либо по телефону, либо **s'LBindCol,** либо **s'LSetDescField,** поле SQL_DESC_SCALE в ARD настроено на 0, а поле SQL_DESC_PRECISION настроено на точность по умолчанию, определяемую драйвером. Это также верно, когда поле SQL_DESC_TYPE в APD установлен на SQL_C_NUMERIC, позвонив либо **S'LBindParameter** или **S'LSetDescfield**. Это относится к параметрам ввода, ввода/вывода или вывода.  
+Если поле SQL_DESC_TYPE в АРД имеет значение SQL_C_NUMERIC, вызывая либо **SQLBindCol** , либо **SQLSetDescField**, поле SQL_DESC_SCALE в АРД имеет значение 0, а в поле SQL_DESC_PRECISION задана точность по умолчанию, определенная драйвером. Это также справедливо, если поле SQL_DESC_TYPE в APD имеет значение SQL_C_NUMERIC, вызывая либо **SQLBindParameter** , либо **SQLSetDescField**. Это справедливо для входных, входных и выходных параметров.  
   
- Если любой из описанных ранее по умолчанию не приемлем для приложения, приложение должно установить SQL_DESC_SCALE или SQL_DESC_PRECISION поле, позвонив по **s'LSetDescfield** или **S'LSetDescRec.**  
+ Если одно из описанных выше значений по умолчанию неприемлемо для приложения, приложение должно задать SQL_DESC_SCALE или SQL_DESC_PRECISION поле, вызвав **SQLSetDescField** или **SQLSetDescRec**.  
   
- Если приложение вызывает **S'LGetData** для возвращения данных в SQL_C_NUMERIC структуру, используются SQL_DESC_SCALE по умолчанию и SQL_DESC_PRECISION поля. Если по умолчанию они неприемлемы, приложение должно вызвать **S'LSetDesccRec** или **S'LSetDesccField,** чтобы установить поля, а затем вызвать **S'LGetData** с *помощью TargetType* SQL_ARD_TYPE использовать значения в полях дескриптора.  
+ Если приложение вызывает **SQLGetData** для возврата данных в структуру SQL_C_NUMERIC, используются поля SQL_DESC_SCALE и SQL_DESC_PRECISION по умолчанию. Если значения по умолчанию неприемлемы, приложение должно вызвать **SQLSetDescRec** или **SQLSetDescField** , чтобы задать поля, а затем вызвать **SQLGetData** с *TargetType* SQL_ARD_TYPE для использования значений в полях дескриптора.  
   
- При вызове **s'LPutData** в вызове используется SQL_DESC_SCALE и SQL_DESC_PRECISION поля записи дескриптора, которые соответствуют параметру данных по исполнению или столбцу, которые являются полями APD для вызовов в **S'LExecute** или **S'LExecDirect,** или ARD поля для вызовов в **S'LBulkOperations** или **S'LSetPos.**
+ При вызове **SQLPutData** в вызове используются поля SQL_DESC_SCALE и SQL_DESC_PRECISION записи дескриптора, которые соответствуют параметру или столбцу, который используется для данных во время выполнения, которые являются полями APD для вызовов **SQLExecute** или **SQLExecDirect**или поля АРД для вызовов **SQLBulkOperations** или **SQLSetPos**.

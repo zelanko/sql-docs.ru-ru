@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b9c702d8d0508dcb64090f0b753da64019736ceb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303233"
 ---
 # <a name="using-database-mirroring"></a>Использование зеркального отображения базы данных
@@ -32,13 +32,13 @@ ms.locfileid: "81303233"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
- Зеркальное отображение базы данных, впервые представленное в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], — это решение, предназначенное для повышения доступности баз данных и избыточности данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Родной клиент предоставляет неявную поддержку зеркального отражения базы данных, поэтому разработчику не нужно писать какой-либо код или предпринимать какие-либо другие действия после того, как он был настроен для базы данных.  
+ Зеркальное отображение базы данных, впервые представленное в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], — это решение, предназначенное для повышения доступности баз данных и избыточности данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент обеспечивает неявную поддержку зеркального отображения базы данных, поэтому разработчику не нужно писать код или предпринимать другие действия после его настройки для базы данных.  
   
  Зеркальное отображение базы данных, реализованное отдельно для каждой базы данных, хранит копию рабочей базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на резервном сервере. Это или «горячий», или «теплый» резервный сервер, в зависимости от конфигурации и состояния сеанса зеркального отображения базы данных. Сервер горячей замены поддерживает быструю отработку отказа без потери зафиксированных транзакций, а «горячий» резервный сервер поддерживает принудительное обслуживание (с возможной потерей данных).  
   
- Производственная база данных называется *основной базой данных,* а резервной копией — *зеркальной базой данных.* Основная и зеркальная базы данных должны находиться в разных экземплярах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (экземплярах сервера), а по возможности — и на разных компьютерах.  
+ Рабочая база данных называется *основной базой*данных, а резервная копия называется *зеркальной базой данных*. Основная и зеркальная базы данных должны находиться в разных экземплярах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (экземплярах сервера), а по возможности — и на разных компьютерах.  
   
- Рабочий экземпляр сервера называется *основным сервером*. Он соединен с резервным экземпляром сервера, который называется *зеркальным сервером*. Основные и зеркальные серверы выступают в качестве партнеров в *сеансе*зеркального отражения базы данных. Если основной сервер дает сбой, зеркальный сервер делает свою базу данных основной с помощью процесса, который называется *отработкой отказа*. Например, имеется два сервера-участника, Partner_A and Partner_B, при этом основная база данных изначально находится на сервере Partner_A (основной сервер), а зеркальная база данных — на сервере Partner_B (зеркальный сервер). Если сервер Partner_A переходит в режим вне сети, база данных на сервере Partner_B становится текущей основной базой данных. Когда сервер Partner_A возвращается в сеанс зеркального отображения, он становится зеркальным сервером, а его база данных — зеркальной базой данных.  
+ Рабочий экземпляр сервера называется *основным сервером*. Он соединен с резервным экземпляром сервера, который называется *зеркальным сервером*. Основной и зеркальный серверы действуют как партнеры в *сеансе*зеркального отображения базы данных. Если основной сервер дает сбой, зеркальный сервер делает свою базу данных основной с помощью процесса, который называется *отработкой отказа*. Например, имеется два сервера-участника, Partner_A and Partner_B, при этом основная база данных изначально находится на сервере Partner_A (основной сервер), а зеркальная база данных — на сервере Partner_B (зеркальный сервер). Если сервер Partner_A переходит в режим вне сети, база данных на сервере Partner_B становится текущей основной базой данных. Когда сервер Partner_A возвращается в сеанс зеркального отображения, он становится зеркальным сервером, а его база данных — зеркальной базой данных.  
   
  Другие конфигурации зеркального отображения баз данных имеют разные уровни производительности и безопасности данных, а также поддерживают разные формы отработки отказа. Дополнительные сведения см. в разделе [Зеркальное отображение базы данных (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
@@ -60,14 +60,14 @@ ms.locfileid: "81303233"
 >  Кроме того, в именах сервера не учитывается регистр клавиатуры, но имена баз данных зависят от регистра клавиатуры. Поэтому следует убедиться, что в DSN-именах и строках соединения используются символы с одинаковым регистром.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Поставщик OLE DB для собственного клиента SQL Server  
- Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB поддерживает зеркальное отражение базы данных через атрибуты строксоединения и строки соединения. К набору свойств DBPROPSET_SQLSERVERDBINIT было добавлено свойство SSPROP_INIT_FAILOVERPARTNER, а ключевое слово **FailoverPartner** является новым атрибутом строки подключения для DBPROP_INIT_PROVIDERSTRING. Для получения дополнительной информации [см.](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+ Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента OLE DB поддерживает зеркальное отображение базы данных через атрибуты соединения и строки подключения. К набору свойств DBPROPSET_SQLSERVERDBINIT было добавлено свойство SSPROP_INIT_FAILOVERPARTNER, а ключевое слово **FailoverPartner** является новым атрибутом строки подключения для DBPROP_INIT_PROVIDERSTRING. Дополнительные сведения см. в разделе [Использование ключевых слов строки подключения с SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Кэш сбоя сохраняется до тех пор, пока поставщик загружается, т.е. до тех пор, пока [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **coUninitialize** не будет вызываться или пока приложение имеет ссылку на какой-либо объект, управляемый поставщиком Native Client OLE DB, например объект источника данных.  
+ Кэш отработки отказа поддерживается при условии, что поставщик загружен, то есть до вызова **CoUninitialize** или пока приложение имеет ссылку на некоторый объект, управляемый поставщиком OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента, например объект источника данных.  
   
- Подробную информацию о [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддержке поставщика Native Client OLE DB для зеркального отражения базы данных можно узнать о свойствах [инициализации и авторизации.](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)  
+ Дополнительные сведения о [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддержке собственного клиента OLE DB поставщика зеркального отображения базы данных см. в разделе [Свойства инициализации и авторизации](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Драйвер ODBC для собственного клиента SQL Server  
- Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC поддерживает отражение базы данных через атрибуты строксоединения и строки соединения. В частности, атрибут SQL_COPT_SS_FAILOVER_PARTNER был добавлен для использования с функциями [S'LSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) и [S'LGetConnectAttr;](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) и **Failover_Partner** ключевое слово было добавлено в качестве нового атрибута строки соединения.  
+ Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает зеркальное отображение базы данных через соединения и атрибуты строки подключения. В частности, добавлен атрибут SQL_COPT_SS_FAILOVER_PARTNER для использования с функциями [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) и [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) . и ключевое слово **Failover_Partner** было добавлено в качестве нового атрибута строки подключения.  
   
  Кэш отработки отказа хранится, пока в приложении имеется хотя бы один дескриптор среды. Он теряется при освобождении дескриптора среды.  
   
@@ -75,8 +75,8 @@ ms.locfileid: "81303233"
 >  Диспетчер драйвера ODBC улучшен для поддержки спецификации имени сервера отработки отказа.  
   
 ## <a name="see-also"></a>См. также:  
- [Особенности родного клиента сервера S'L](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Подключение клиентов к зеркальной сессии &#40;сервера &#40;&#41;S'L](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
+ [SQL Server Native Client функции](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Подключение клиентов к сеансу зеркального отображения базы данных &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Зеркальное отображение базы данных (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

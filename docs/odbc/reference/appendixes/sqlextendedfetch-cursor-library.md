@@ -1,5 +1,5 @@
 ---
-title: СЗЛРасширенныйЧт (Библиотека Курзора) Документы Майкрософт
+title: SQLExtendedFetch (библиотека курсоров) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 06fbf06f-127b-475c-b636-7b784918475d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: fe39b2d2cbbaf72ce3844c35187040589d1dac58
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302065"
 ---
 # <a name="sqlextendedfetch-cursor-library"></a>SQLExtendedFetch (библиотека курсоров)
 > [!IMPORTANT]  
->  Эта функция будет удалена в будущей версии Windows. Избегайте использования этой функции в новых разработках и планируйте модифицировать приложения, использующие эту функцию в настоящее время. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
+>  Эта функция будет удалена в следующей версии Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые в настоящее время используют эту функцию. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
   
- На этой теме обсуждается использование функции **S'LExtendedFetch** в библиотеке курсоров. Для получения общей информации о **S'LExtendedFetch**, [см.](../../../odbc/reference/syntax/sqlextendedfetch-function.md)  
+ В этом разделе обсуждается использование функции **SQLExtendedFetch** в библиотеке курсоров. Общие сведения о **SQLExtendedFetch**см. в разделе [функция SQLExtendedFetch](../../../odbc/reference/syntax/sqlextendedfetch-function.md).  
   
- Библиотека курсоров, выполняющая программу **S'LExtendedFetch,** по-неоднократно вызывала **s'LFetch** в драйвере.  
+ Библиотека курсоров реализует **SQLExtendedFetch** путем многократного вызова **SQLFetch** в драйвере.  
   
- Библиотека курсоров поддерживает вызов **S'LExtendedFetch** с *Помощью SQL_FETCH_BOOKMARK.*  
+ Библиотека курсоров поддерживает вызов **SQLExtendedFetch** с *фетчориентатион* SQL_FETCH_BOOKMARK.  
   
- При использовании библиотеки курсоров, вызовы на **S'LExtendedFetch** не могут быть смешаны с вызовами либо в **S'LFetchScroll,** либо **на S'LFetchFetchScroll или S'LFetch.**
+ При использовании библиотеки курсоров вызовы **SQLExtendedFetch** не могут смешиваться с вызовами либо **SQLFetchScroll** , либо **SQLFetch**.

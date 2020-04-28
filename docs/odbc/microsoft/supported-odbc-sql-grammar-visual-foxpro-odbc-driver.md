@@ -1,5 +1,5 @@
 ---
-title: Поддерживаемая грамматика ODBC S'L (Визуальный драйвер FoxPro ODBC) Документы Майкрософт
+title: Поддерживаемые грамматики ODBC SQL (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,44 +19,44 @@ ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f72548d0708a63f887f7d6da4d4f5988500f0eef
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304087"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>Поддерживаемая грамматика SQL для ODBC (драйвер ODBC для Visual FoxPro)
-Microsoft Visual FoxPro ODBC Драйвер поддерживает следующее:  
+Драйвер ODBC для Microsoft Visual FoxPro поддерживает следующие действия:  
   
--   Все заявления и положения в грамматике ODBC с минимальным уровнем S'L  
+-   Все инструкции и предложения SQL в грамматике ODBC минимальная SQL  
   
--   Еще одно заявление с s'L из грамматики ODBC core S'L  
+-   Дополнительная инструкция SQL из грамматики ODBC Core SQL  
   
- В следующей таблице перечислены элементы, поддерживаемые драйвером, по уровню грамматики ODBC S'L.  
+ В следующей таблице перечислены элементы, поддерживаемые драйвером, по уровню грамматики ODBC SQL.  
   
-|Level|Элементы|Item|  
+|Level|Элементы|Элемент|  
 |-----------|--------------|----------|  
 |Минимальные|язык описания данных DDL|CREATE TABLE и DROP TABLE|  
-||язык обработки данных DML|СЕЛЕКТ, ВСТАВКА, ОБНОВЛЕНИЕ и DELETE|  
-||Выражения|Просто (например, A>B'C)|  
-||Типы данных|CHAR, VARCHAR, или LONG VARCHAR|  
+||язык обработки данных DML|ВЫБОР, вставка, обновление и удаление|  
+||Выражения|Simple (например,>B + C)|  
+||Типы данных|CHAR, VARCHAR или LONG VARCHAR|  
   
- В дополнение к поддерживаемой грамматике ODBC S'L, Visual FoxPro ODBC Driver поддерживает полный родной визуальный синтаксис языка FoxPro для следующих команд Visual FoxPro:  
+ Помимо поддерживаемой грамматики ODBC SQL, драйвер ODBC для Visual FoxPro поддерживает полный собственный синтаксис языка Visual FoxPro для следующих команд Visual FoxPro:  
   
- [ALTER TABLE](../../odbc/microsoft/alter-table-sql-command.md)  
+ [ИЗМЕНЕНИЕ ТАБЛИЦЫ](../../odbc/microsoft/alter-table-sql-command.md)  
   
- [СОЗДАТЬ ТАБЛИЦУ](../../odbc/microsoft/create-table-sql-command.md)  
+ [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md)  
   
- [Удалить](../../odbc/microsoft/delete-sql-command.md)  
+ [УДАЛЕН](../../odbc/microsoft/delete-sql-command.md)  
   
  [УДАЛИТЬ ТЕГ](../../odbc/microsoft/delete-tag-command.md)  
   
- [ТАБЛИЦА СБРОСА](../../odbc/microsoft/drop-table-command.md)  
+ [DROP TABLE](../../odbc/microsoft/drop-table-command.md)  
   
- [Индекс](../../odbc/microsoft/index-command.md)  
+ [НОМЕР](../../odbc/microsoft/index-command.md)  
   
- [Вставить](../../odbc/microsoft/insert-sql-command.md)  
+ [ВСТАВЛЯЕТ](../../odbc/microsoft/insert-sql-command.md)  
   
- [Выберите](../../odbc/microsoft/select-sql-command.md)  
+ [МЕТЬТЕ](../../odbc/microsoft/select-sql-command.md)  
   
- [Обновление](../../odbc/microsoft/update-sql-command.md)
+ [ОБНОВЛЯЮТ](../../odbc/microsoft/update-sql-command.md)

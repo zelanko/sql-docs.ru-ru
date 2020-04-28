@@ -1,5 +1,5 @@
 ---
-title: Поддержка FILESTREAM (ODBC) Документы Майкрософт
+title: Поддержка FILESTREAM (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,29 +14,29 @@ ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 29a7f6ae6cb26c5ddf27f6e495b5348ddd8fe006
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303757"
 ---
 # <a name="filestream-support-odbc"></a>Поддержка FILESTREAM (ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает улучшенную функциональность FILESTREAM. Для получения дополнительной информации [FILESTREAM Support](../../../relational-databases/native-client/features/filestream-support.md)об этой функции см. Для примера, демонстрирующего поддержку ODB FILESTREAM, см [&#41;&#40;. ](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)  
+  Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает улучшенную функциональность FILESTREAM. Дополнительные сведения об этой функции см. в разделе [Поддержка FILESTREAM](../../../relational-databases/native-client/features/filestream-support.md). Пример, демонстрирующий поддержку ODB для FILESTREAM, см. в разделе [пошаговая отправка и получение данных с помощью FILESTREAM &#40;&#41;ODBC ](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
   
- Для отправки и получения **варбинарных (макс)** значений, превышающего 2 ГБ, приложение должно связать параметры с *StrLen_or_IndPtr* помощью S'LBindParameter с *SQL_SS_LENGTH_UNLIMITED,* и установить содержимое StrLen_or_IndPtr **SQL_DATA_AT_EXEC** до S'LExecDirect или S'LExecute. **SQL_SS_LENGTH_UNLIMITED**  
+ Чтобы отправлять и получать значения типа **varbinary (max)** , превышающие 2 ГБ, приложение должно выполнить привязку параметров с помощью SQLBindParameter с *ColumnSize* , для которого задано значение **SQL_SS_LENGTH_UNLIMITED**, и установить содержимое *StrLen_or_IndPtr* в **SQL_DATA_AT_EXEC** до SQLExecDirect или SQLExecute.  
   
- Как и в случае с любым параметром, касающимся данных, данные будут предоставляться с помощью S'LParamData и S'LPutData.  
+ Как и в случае с любыми параметрами выполнения, данные будут предоставляться с помощью метод SQLParamData и SQLPutData.  
   
- Вы можете вызвать S'LGetData для получения данных в фрагментах для столбца FILESTREAM, если столбец не связан с S'LBindCol.  
+ Можно вызвать SQLGetData для выборки данных в блоках для столбца FILESTREAM, если столбец не привязан к SQLBindCol.  
   
- Вы можете обновить данные FILESTREAM, если они связаны с S'LBindCol.  
+ Вы можете обновить данные FILESTREAM, если они привязаны к SQLBindCol.  
   
- Если вы вызовете S'LFetch на связанном столбце, вы получите предупреждение «усеченные данные», если буфер недостаточно велик, чтобы удерживать все значение. Игнорируйте это предупреждение и обновляйте данные в этом связанном столбце с помощью вызовов S'LParamData и S'LPutData. Вы можете обновить данные FILESTREAM, используя S'LSetPos, если они связаны с S'LBindCol.  
+ При вызове SQLFetch для привязанного столбца вы получите предупреждение "данные усекаются", если буфер недостаточно велик для хранения всего значения. Пропустите это предупреждение и обновите данные в этом связанном столбце с помощью вызовов метод SQLParamData и SQLPutData. Данные FILESTREAM можно обновить с помощью функции SQLSetPos, если они привязаны к SQLBindCol.  
   
 ## <a name="example"></a>Пример  
- Колонки FILESTREAM ведут себя точно так же, как **варбинарные (макс)** столбцы, но без ограничения размера. Они связываются как SQL_VARBINARY. (SQL_LONGVARBINARY используется со столбцами типа image, и на этот тип накладываются определенные ограничения. Например, SQL_LONGVARBINARY connot быть использованным в качестве параметра вывода.) Следующие примеры показывают прямой доступ NTFS для столбцов FILESTREAM. Эти примеры основываются на той посылке, что следующий код [!INCLUDE[tsql](../../../includes/tsql-md.md)] был выполнен в базе данных:  
+ Столбцы FILESTREAM ведут себя точно так же, как столбцы типа **varbinary (max)** , но без ограничения размера. Они связываются как SQL_VARBINARY. (SQL_LONGVARBINARY используется со столбцами типа image, и на этот тип накладываются определенные ограничения. Например, SQL_LONGVARBINARY Коннот использоваться в качестве выходного параметра.) В следующих примерах показан прямой доступ NTFS к столбцам FILESTREAM. Эти примеры основываются на той посылке, что следующий код [!INCLUDE[tsql](../../../includes/tsql-md.md)] был выполнен в базе данных:  
   
 ```  
 CREATE TABLE fileStreamDocs(  

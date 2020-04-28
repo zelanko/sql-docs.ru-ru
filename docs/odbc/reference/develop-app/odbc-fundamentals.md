@@ -1,5 +1,5 @@
 ---
-title: OdBC Основы (ru) Документы Майкрософт
+title: Основы ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: bdaa40d5-1c63-4aee-94fb-7b2edd0bdc47
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1e5a7acafc186653cc3acaca5245a842ec278a54
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302316"
 ---
 # <a name="odbc-fundamentals"></a>Основные принципы ODBC
@@ -22,7 +22,7 @@ ms.locfileid: "81302316"
   
 -   [Маркеры](../../../odbc/reference/develop-app/handles.md)  
   
--   [Буферы](../../../odbc/reference/develop-app/buffers.md)  
+-   [Buffers](../../../odbc/reference/develop-app/buffers.md)  
   
 -   [Типы данных в ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md)  
   

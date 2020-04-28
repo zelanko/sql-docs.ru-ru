@@ -1,5 +1,5 @@
 ---
-title: Основные имена служб (SPNs) в клиенте ODBC
+title: Имена субъектов-служб (SPN) в клиенте ODBC
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,23 +12,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c3f83b227a6f67c5700ff07a0cd9dbc78065adf9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303703"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>Имена участника-службы в клиентских соединениях (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  В данном разделе рассматриваются атрибуты и функции ODBC, поддерживающие имена участника-службы (SPN) в клиентских приложениях. Для получения дополнительной информации о SPNs в клиентских приложениях смотрите [имя службы &#40;&#41; поддержки SPN в клиентских соединениях](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md) и [получить взаимную проверку подлинности Kerberos.](../../../relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md)  
+  В данном разделе рассматриваются атрибуты и функции ODBC, поддерживающие имена участника-службы (SPN) в клиентских приложениях. Дополнительные сведения об именах участников-служб в клиентских приложениях см. в разделе [имя субъекта-службы &#40;SPN&#41; поддержку в клиентских подключениях](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md) и [получение взаимной проверки подлинности Kerberos](../../../relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md).  
   
 ## <a name="connection-string-keywords"></a>Ключевые слова в строке подключения  
  Следующие ключевые слова в строках подключения позволяют задавать имена участника-службы в клиентских приложениях.  
   
 |Ключевое слово|Значение|  
 |-------------|-----------|  
-|**СерверSPN**|Имя участника-службы для сервера. Значением по умолчанию является пустая строка, что вынуждает собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовать сформированное драйвером имя участника-службы по умолчанию.|  
+|**ServerSPN**|Имя участника-службы для сервера. Значением по умолчанию является пустая строка, что вынуждает собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовать сформированное драйвером имя участника-службы по умолчанию.|  
 |**FailoverPartnerSPN**|Имя участника-службы для партнера по обеспечению отработки отказа. Значением по умолчанию является пустая строка, что вынуждает собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовать сформированное драйвером имя участника-службы по умолчанию.|  
   
 ## <a name="connection-attributes"></a>Атрибуты соединения  

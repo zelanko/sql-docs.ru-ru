@@ -1,5 +1,5 @@
 ---
-title: Delete Заявление Ограничения Документы Майкрософт
+title: Ограничения инструкции DELETE | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: 084761fe-e65b-4f38-ba4f-69884b2a7700
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 365b54ab8c0678253e184b397f1f71e39aed3b9b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303535"
 ---
 # <a name="delete-statement-limitations"></a>Ограничения инструкции DELETE
-Заявление DELETE не поддерживается для драйвера Microsoft Excel или Text. Обратите внимание, что заявление INSERT поддерживается для драйвера текста.  
+Инструкция DELETE не поддерживается для Microsoft Excel или текстового драйвера. Обратите внимание, что инструкция INSERT поддерживается для текстового драйвера.  
   
- Драйвер dBASE не поддерживает упаковку таблицы для удаления "удаленных" значений.  
+ Драйвер dBASE не поддерживает упаковку таблиц для удаления "удаленных" значений.  
   
- Для того чтобы драйвер Paradox удалил строку из таблицы, таблица должна иметь уникальный индекс (основной ключ Парадокса).
+ Чтобы драйвер Paradox удалил строку из таблицы, таблица должна иметь уникальный индекс (первичный ключ Paradox).

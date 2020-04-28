@@ -1,5 +1,5 @@
 ---
-title: СЗЛРоутт (англ.) Документы Майкрософт
+title: SQLRowCount | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3cfb76dbd1732e32238c484f589d3b4696ff89d2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302335"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
@@ -30,10 +30,10 @@ ms.locfileid: "81302335"
   
  Кроме этого, приложение может использовать массив значений состояния, привязанный с помощью атрибута инструкции SQL_ATTR_PARAM_STATUS_PTR, для получения массива смещений вызвавших ошибку строк параметров. Чтобы выяснить действительное число обработанных строк, приложение может просмотреть этот массив.  
   
- При [!INCLUDE[tsql](../../includes/tsql-md.md)] выполнении оператора INSERT, UPDATE, DELETE или MERGE с оговоркой OUTPUT S'LRowCount не будет возвращать количество затронутых строк до тех пор, пока не будут уничтожены все строки в наборе результатов, порожденных оговоркой OUTPUT. Чтобы поотвелет эти строки, вы звоните в S'LFetch или S'LFetchScroll. S'LResultCols будет возвращаться -1 до тех пор, пока не будут использованы все строки результата. После того, как s'LFetch или S'LFetchScroll возвращается SQL_NO_DATA, приложение должно позвонить в S'LRowCount, чтобы определить количество затронутых строк, прежде чем вызывать S'LMoreResults, чтобы перейти к следующему результату.  
+ При выполнении [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции INSERT, Update, DELETE или MERGE с предложением OUTPUT SQLRowCount не возвращает количество строк, затронутых до тех пор, пока не будут потреблены все строки результирующего набора, сформированного предложением OUTPUT. Чтобы сконсуме эти строки, вызовите SQLFetch или SQLFetchScroll. Склресултколс возвращает значение-1, пока не будут использованы все строки результатов. После того как SQLFetch или SQLFetchScroll возвращает SQL_NO_DATA, приложение должно вызвать SQLRowCount, чтобы определить число затронутых строк перед вызовом SQLMoreResults для перехода к следующему результату.  
   
 ## <a name="see-also"></a>См. также:  
- [Функция S'LRowCount](https://go.microsoft.com/fwlink/?LinkId=59367)   
+ [Функция SQLRowCount](https://go.microsoft.com/fwlink/?LinkId=59367)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

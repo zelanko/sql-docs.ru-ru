@@ -1,5 +1,5 @@
 ---
-title: СЗЛКонигДатаИсточник (англ.) Документы Майкрософт
+title: SQLConfigDataSource | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 816ce460d140ddbdd1c018092cb0c3b0857355b8
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302570"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]поддерживает различные специфические пары ключевых слов/значений для строк атрибута конфигурации исходного кода данных.  
+  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает различные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]пары "ключевое слово-значение" для строк атрибутов конфигурации источника данных.  
   
- Список ключевых слов, доступных в драйвере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC, см. [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+ Список ключевых слов, доступных в драйвере ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для собственного клиента, см. в разделе [Использование ключевых слов строки подключения с SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Функция S'LConfigDataИсточник](https://go.microsoft.com/fwlink/?LinkId=59337)   
+ [Функция SQLConfigDataSource](https://go.microsoft.com/fwlink/?LinkId=59337)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

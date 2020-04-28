@@ -1,5 +1,5 @@
 ---
-title: СЗЛГетКоннЕкттр Документы Майкрософт
+title: SQLGetConnectAttr | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 590d47d65ab3893dbc9eefc3facd224671668378
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302160"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
@@ -48,7 +48,7 @@ ms.locfileid: "81302160"
   
 -   Диагностические сведения в журналах отслеживания доступа к данным, если они включены.  
   
- Для получения дополнительной информации смотрите [Доступ к диагностической информации в журнале расширенных событий](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ Дополнительные сведения см. [в разделе доступ к диагностическим сведениям в журнале расширенных событий](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -75,20 +75,20 @@ ms.locfileid: "81302160"
 |Любое другое значение|Указатель на данные пользователя.|  
   
 ## <a name="sqlgetconnectattr-support-for-service-principal-names-spns"></a>Поддержка функции SQLGetConnectAttr для имен участников-служб (SPN)  
- Для запроса значения новых атрибутов соединения можно использовать s'LGetConnectAttr SQL_COPT_SS_SERVER_SPN, SQL_COPT_SS_FAILOVER_PARTNER_SPN, SQL_COPT_SS_MUTUALLY_AUTHENTICATED и SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD. (S'LGetConnectOption также может быть использован для запроса этих значений.)  
+ SQLGetConnectAttr можно использовать для запроса значения новых атрибутов соединения SQL_COPT_SS_SERVER_SPN, SQL_COPT_SS_FAILOVER_PARTNER_SPN, SQL_COPT_SS_MUTUALLY_AUTHENTICATED и SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD. (SQLGetConnectOption также можно использовать для запроса этих значений.)  
   
  Атрибут SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD доступен только для открытых соединений, в которых используется проверка подлинности Windows.  
   
  Если атрибут SQL_COPT_SS_SERVER_SPN или SQL_COPT_SS_FAILOVER_PARTNER еще не задан, возвращается значение по умолчанию (пустая строка).  
   
- Для получения дополнительной информации о SPNs см [&#41;&#40;&#41; &#40;. ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
+ Дополнительные сведения о SPN см. [в статье имена субъектов-служб &#40;имен участников-служб&#41; в клиентских подключениях &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Функция S'LGetConnectattr](https://go.microsoft.com/fwlink/?LinkId=59347)   
- [Подробная информация о реализации ODBC API](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SET QUOTED_IDENTIFIER &#40;&#41;"Трансакт-СЗЛ"](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
- [ANSI_NULLS&#41;&#40;&#40;&#41;«Трансакт-СЗЛ»](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
- [&#41;SET ANSI_PADDING &#40;«Трансакт-СЗЛ»](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
+ [Функция SQLGetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59347)   
+ [Сведения о реализации API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
+ [Настройка QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [Настройка ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
+ [Настройка ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS (Transact-SQL)](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
   
   

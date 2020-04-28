@@ -1,5 +1,5 @@
 ---
-title: ConnectionValidSharedMemory dbmslpcn.dll
+title: Коннектионвалидшаредмемори dbmslpcn. dll
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1f3bb097965563afb458b4529676d1e9967e4899
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303898"
 ---
 # <a name="connectionvalidsharedmemory-function-in-dbmslpcndll-shared-memory"></a>Функция ConnectionValidSharedMemory в общей памяти dbmslpcn.dll
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Функция определяет, установлена и активна ли и активна общая память сервера S'L.  
+  Функция определяет, установлена ли и активна SQL Server общая память.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -29,15 +29,15 @@ BOOL ConnectionValidSharedMemory(char * szServerName);
 ```  
   
 ## <a name="parameters"></a>Параметры  
- *szServerName*  
+ *сзсервернаме*  
   
--   Тип: **\* символ**  
+-   Тип: **char\* **  
   
--   Название сервера S'L.  
+-   Имя сервера SQL Server.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Тип: **BOOL**  
+ Тип: **bool** .  
   
- Возвращает 0, если не действителен; еще возвращает сякет.  
+ Возвращает значение 0, если недопустимо; Else возвращает ненулевое значение.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: СЗЛНуМResultКолс (ru) Документы Майкрософт
+title: SQLNumResultCols | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2b56dad6564bad751829497117cc74553806b244
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302435"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
@@ -28,10 +28,10 @@ ms.locfileid: "81302435"
   
  Если инструкция или пакет инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] возвращает несколько результирующих наборов строк, можно изменить число столбцов одного результирующего набора на число столбцов в другом наборе. Функция**SQLNumResultCols** должна вызываться для каждого набора. При изменении числа столбцов приложение должно осуществить повторную привязку значений данных перед выборкой результатов строк. Дополнительные сведения об обработке запросов, возвращающих несколько результирующих наборов, см. в разделе [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md).  
   
- Улучшения в движке [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] базы данных, начиная с позволяют S'LNumResultCols получить более точное описание ожидаемых результатов. Эти более точные результаты могут отличаться от значений, возвращенных S'LNumResultCols в предыдущих версиях. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Дополнительные сведения см. в разделе [Обнаружение метаданных](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Улучшения в ядре СУБД, начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , позволяют SQLNumResultCols получать более точные описания ожидаемых результатов. Эти более точные результаты могут отличаться от значений, возвращаемых функцией SQLNumResultCols в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Обнаружение метаданных](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Функция S'LNumResultCols](https://go.microsoft.com/fwlink/?LinkId=59359)   
+ [Функция SQLNumResultCols](https://go.microsoft.com/fwlink/?LinkId=59359)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

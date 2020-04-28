@@ -1,5 +1,5 @@
 ---
-title: СЗЛСетЕнвАттр Документы Майкрософт
+title: SQLSetEnvAttr | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6d0e93e73de0698e8bce1cb4073458cafe526c41
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301896"
 ---
 # <a name="sqlsetenvattr"></a>SQLSetEnvAttr
@@ -29,7 +29,7 @@ ms.locfileid: "81301896"
  Один из атрибутов, управляемых функцией **SQLSetEnvAttr** , указывает, нужно ли использовать пул соединений. Если пул соединений используется с ODBC-драйвером собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то параметр *DriverCompletion* должен быть установлен в значение SQL_DRIVER_NOPROMPT при подключении к [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) или **SQLConnect**.  
   
 ## <a name="see-also"></a>См. также:  
- [Функция S'LSetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=59369)   
+ [Функция SQLSetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=59369)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

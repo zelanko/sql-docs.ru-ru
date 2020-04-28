@@ -1,5 +1,5 @@
 ---
-title: Функции скаларов Документы Майкрософт
+title: Скалярные функции | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 18e1e0c1-b43f-44d9-b310-7d9e1d499e8b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e9d319b08069fd0ae32af20bf39dbdb7cdfb819c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306015"
 ---
 # <a name="scalar-functions"></a>Скалярные функции
-Драйверы настольной базы данных Microsoft ODBC поддерживают следующие функции масштабирования:  
+Драйверы базы данных Microsoft ODBC для настольных систем поддерживают следующие скалярные функции:  
   
 ||||  
 |-|-|-|  
@@ -35,4 +35,4 @@ ms.locfileid: "81306015"
 |DAYOFMONTH|MOD|YEAR|  
 |DAYOFWEEK|MONTH||  
   
- Подробнее о аргументах и значениях возврата масштабных функций можно узнать в приложении F справочника *программиста ODBC.*
+ Дополнительные сведения о аргументах и возвращаемых значениях скалярных функций см. в приложении F *Справочника программиста по ODBC.*

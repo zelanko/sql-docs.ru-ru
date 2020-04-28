@@ -1,5 +1,5 @@
 ---
-title: Результаты обработки сохраненных процедур Документы Майкрософт
+title: Обработка результатов хранимой процедуры | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d246756161e129f3f1d4c6efe5192ce39ff777d0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304549"
 ---
 # <a name="processing-stored-procedure-results"></a>Обработка результатов хранимой процедуры
@@ -35,7 +35,7 @@ ms.locfileid: "81304549"
   
 -   Процедура может иметь целочисленный код возврата.  
   
- Приложения должны обрабатывать все эти выходы хранимых процедур. Инструкции CALL или EXECUTE должны включать маркеры параметров для кода возврата и выходных параметров. Используйте [S'LBindParameter,](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) чтобы связать их [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] все в качестве выходных параметров, а драйвер Native Client ODBC переведет значения вывода на связанные переменные. Параметры вывода и коды возврата являются последними [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]элементами, возвращенными клиенту; они не возвращаются в приложение до тех пор, пока [s'LMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) не возвращается SQL_NO_DATA.  
+ Приложения должны обрабатывать все эти выходы хранимых процедур. Инструкции CALL или EXECUTE должны включать маркеры параметров для кода возврата и выходных параметров. Используйте [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) , чтобы привязать их все как выходные параметры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а драйвер ODBC для собственного клиента передает выходные значения в привязанные переменные. Выходные параметры и коды возврата — это последние возвращенные клиенту элементы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. они не возвращаются приложению, пока [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) не возвратит SQL_NO_DATA.  
   
  ODBC не поддерживает привязку параметров курсора [!INCLUDE[tsql](../../includes/tsql-md.md)]. Поскольку все выходные параметры должны быть связаны до выполнения процедуры, приложение ODBC не может вызывать хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)], содержащие выходной параметр курсора.  
   

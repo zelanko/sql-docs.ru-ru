@@ -1,5 +1,5 @@
 ---
-title: Картирование S'LFreeConnect (ru) Документы Майкрософт
+title: Сопоставление SQLFreeConnect | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ ms.assetid: 8a844538-93c0-4709-bab6-35c45e771d80
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 20da205d53acbebca1fee12134c04f17fb8b2db3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302045"
 ---
 # <a name="sqlfreeconnect-mapping"></a>Сопоставление SQLFreeConnect
-Когда приложение вызывает **S'LFreeConnect** через драйвер ODBC *3.x,*  
+Когда приложение вызывает **SQLFreeConnect** через драйвер ODBC *3. x* , вызов метода  
   
 ```  
 SQLFreeConnect(hdbc)   
 ```  
   
- отображается до  
+ сопоставлен с  
   
 ```  
 SQLFreeHandle(SQL_HANDLE_DBC,Handle)  
 ```  
   
- с *аргументом Ручка* установлен на значение в *hdbc*.
+ с аргументом *Handle* , имеющим значение в *хдбк*.

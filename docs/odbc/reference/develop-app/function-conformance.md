@@ -1,5 +1,5 @@
 ---
-title: Функциональное соответствие Документы Майкрософт
+title: Соответствие функции | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,78 +16,78 @@ ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 33cd0ad4269ed59e31c8ab343ddbb01806afce04
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305595"
 ---
 # <a name="function-conformance"></a>Соответствие функции
-В следующей таблице указывается уровень соответствия каждой функции ODBC, где это четко определено.  
+В следующей таблице указан уровень соответствия для каждой функции ODBC, где это хорошо определено.  
   
-|Компонент|Уровень согласованности|  
+|Функция|Уровень согласованности|  
 |--------------|-----------------------|  
-|**СЗЛАллокХэндл**|Основные сведения|  
-|**SQLBindCol**|Основные сведения|  
-|**SQLBindParameter**|Ядро|  
+|**Функцию SQLAllocHandle**|Ядро|  
+|**SQLBindCol**|Ядро|  
+|**SQLBindParameter**|Ядро [1]|  
 |**SQLBrowseConnect**|уровне 1|  
-|**СЗЛБалКОперации**|уровне 1|  
-|**SQLCancel**|Ядро|  
-|**SQLCloseCursor**|Основные сведения|  
-|**SQLColAttribute**|Ядро|  
+|**SQLBulkOperations**|уровне 1|  
+|**SQLCancel**|Ядро [1]|  
+|**SQLCloseCursor**|Ядро|  
+|**SQLColAttribute**|Ядро [1]|  
 |**SQLColumnPrivileges**|Уровень 2|  
-|**SQLColumns**|Основные сведения|  
-|**SQLConnect**|Основные сведения|  
-|**СЗЛКопиДеск**|Основные сведения|  
-|**Источники данных S'LData**|Основные сведения|  
-|**SQLDescribeCol**|Ядро|  
+|**SQLColumns**|Ядро|  
+|**SQLConnect**|Ядро|  
+|**склкопидеск**|Ядро|  
+|**SQLDataSources**|Ядро|  
+|**SQLDescribeCol**|Ядро [1]|  
 |**SQLDescribeParam**|Уровень 2|  
-|**СЗЛДИСКоннект**|Основные сведения|  
-|**SQLDriverConnect**|Основные сведения|  
-|**SQLDrivers**|Основные сведения|  
-|**SQLEndTran**|Ядро|  
-|**SQLExecDirect**|Основные сведения|  
-|**SQLExecute**|Основные сведения|  
-|**SQLFetch**|Основные сведения|  
-|**SQLFetchScroll**|Ядро|  
+|**SQLDisconnect**|Ядро|  
+|**SQLDriverConnect**|Ядро|  
+|**SQLDrivers**|Ядро|  
+|**SQLEndTran**|Ядро [1]|  
+|**SQLExecDirect**|Ядро|  
+|**SQLExecute**|Ядро|  
+|**SQLFetch**|Ядро|  
+|**SQLFetchScroll**|Ядро [1]|  
 |**SQLForeignKeys**|Уровень 2|  
-|**SQLFreeHandle**|Основные сведения|  
-|**Функция SQLFreeStmt**|Основные сведения|  
-|**SQLGetConnectAttr**|Основные сведения|  
-|**SQLGetCursorName**|Основные сведения|  
-|**SQLGetData**|Основные сведения|  
-|**SQLGetDescField**|Основные сведения|  
-|**SQLGetDescRec**|Основные сведения|  
-|**SQLGetDiagField**|Основные сведения|  
-|**Функции SQLGetDiagRec**|Основные сведения|  
-|**СЗЛГетЕнвТтр**|Основные сведения|  
-|**SQLGetFunctions**|Основные сведения|  
-|**SQLGetInfo**|Основные сведения|  
-|**SQLGetStmtAttr**|Основные сведения|  
-|**SQLGetTypeInfo**|Основные сведения|  
+|**SQLFreeHandle**|Ядро|  
+|**Функция SQLFreeStmt**|Ядро|  
+|**SQLGetConnectAttr**|Ядро|  
+|**SQLGetCursorName**|Ядро|  
+|**SQLGetData**|Ядро|  
+|**SQLGetDescField**|Ядро|  
+|**SQLGetDescRec**|Ядро|  
+|**SQLGetDiagField**|Ядро|  
+|**Функции SQLGetDiagRec**|Ядро|  
+|**SQLGetEnvAttr**|Ядро|  
+|**SQLGetFunctions**|Ядро|  
+|**SQLGetInfo**|Ядро|  
+|**SQLGetStmtAttr**|Ядро|  
+|**SQLGetTypeInfo**|Ядро|  
 |**SQLMoreResults**|уровне 1|  
-|**SQLNativeSql**|Основные сведения|  
-|**SQLNumParams**|Основные сведения|  
-|**SQLNumResultCols**|Основные сведения|  
-|**SQLParamData**|Основные сведения|  
-|**SQLPrepare**|Основные сведения|  
+|**SQLNativeSql**|Ядро|  
+|**SQLNumParams**|Ядро|  
+|**SQLNumResultCols**|Ядро|  
+|**SQLParamData**|Ядро|  
+|**SQLPrepare**|Ядро|  
 |**SQLPrimaryKeys**|уровне 1|  
 |**SQLProcedureColumns**|уровне 1|  
 |**SQLProcedures**|уровне 1|  
-|**SQLPutData**|Основные сведения|  
-|**SQLRowCount**|Основные сведения|  
-|**SQLSetConnectAttr**|Ядро|  
-|**СЗЛСетКурсОрНамейм**|Основные сведения|  
-|**SQLSetDescField**|Ядро|  
-|**SQLSetDescRec**|Основные сведения|  
-|**SQLSetEnvAttr**|Ядро|  
-|**функция SQLSetPos;**|Уровень 1|  
-|**SQLSetStmtAttr**|Ядро|  
-|**SQLSpecialColumns**|Ядро|  
-|**SQLStatistics**|Основные сведения|  
+|**SQLPutData**|Ядро|  
+|**SQLRowCount**|Ядро|  
+|**SQLSetConnectAttr**|Ядро [2]|  
+|**SQLSetCursorName**|Ядро|  
+|**SQLSetDescField**|Ядро [1]|  
+|**SQLSetDescRec**|Ядро|  
+|**SQLSetEnvAttr**|Ядро [2]|  
+|**функция SQLSetPos;**|Уровень 1 [1]|  
+|**SQLSetStmtAttr**|Ядро [2]|  
+|**SQLSpecialColumns**|Ядро [1]|  
+|**SQLStatistics**|Ядро|  
 |**SQLTablePrivileges**|Уровень 2|  
-|**SQLTables**|Основные сведения|  
+|**SQLTables**|Ядро|  
   
- Значительные функции этой функции доступны только на более высоких уровнях соответствия.  
+ [1] существенные функции этой функции доступны только при более высоком уровне соответствия.  
   
- Установка определенных атрибутов на значения недефолтного значения зависит от уровня соответствия. Для получения дополнительной информации смотрите следующий [раздел, Атрибут соответствия](../../../odbc/reference/develop-app/attribute-conformance.md).
+ [2] Установка некоторых атрибутов в значения, не используемые по умолчанию, зависит от уровня соответствия. Дополнительные сведения см. в следующем разделе — [соответствие атрибутов](../../../odbc/reference/develop-app/attribute-conformance.md).
