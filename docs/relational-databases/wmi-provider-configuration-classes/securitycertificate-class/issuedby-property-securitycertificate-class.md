@@ -18,10 +18,10 @@ ms.assetid: 9fcf9c62-01a8-4be2-9d10-5b1b796b397c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: fef4503345588dcd72132727a4ad632244dccc4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660142"
 ---
 # <a name="issuedby-property-securitycertificate-class"></a>Свойство IssuedBy (класс SecurityCertificate)
@@ -36,7 +36,7 @@ object.IssuedBy [= value]
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объектами*  
+ *object*  
  Объект [класса SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) , представляющий сертификат безопасности.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  

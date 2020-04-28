@@ -18,10 +18,10 @@ ms.assetid: e5d66f7e-9719-436e-b723-12d56f914a05
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ad88dbca2f3e71c6a68398e0f57748b8b517414b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660350"
 ---
 # <a name="ipaddresses-property-servernetworkprotocol-class"></a>Свойство IpAddresses (класс ServerNetworkProtocol)
@@ -36,7 +36,7 @@ object.IpAddresses [= value]
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объектами*  
+ *object*  
  Объект **класс servernetworkprotocol** , представляющий сетевой протокол, используемый экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  

@@ -13,10 +13,10 @@ ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 187c3ee9c649388b784b2a8c5c83b20af9ba3ce1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727895"
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>Конфигурация сервера (диспетчер конфигурации MDS)
@@ -27,9 +27,9 @@ ms.locfileid: "73727895"
   
 ## <a name="server-configuration"></a>Конфигурация сервера  
   
-|Имя элемента управления|Description|  
+|Имя элемента управления|Описание|  
 |------------------|-----------------|  
-|**службы IIS;**|Показывает версию служб IIS, установленных на локальном компьютере. IIS версии 7.0 и выше требует использования диспетчера конфигурации Master Data Services.|  
+|**Internet Information Services (IIS)**|Показывает версию служб IIS, установленных на локальном компьютере. IIS версии 7.0 и выше требует использования диспетчера конфигурации Master Data Services.|  
 |**Версия продукта MDS**|Выводит версию продукта [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].|  
   
   

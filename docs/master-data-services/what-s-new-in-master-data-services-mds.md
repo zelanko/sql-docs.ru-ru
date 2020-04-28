@@ -11,10 +11,10 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727789"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Новые возможности служб Master Data Services (MDS)
@@ -25,15 +25,15 @@ ms.locfileid: "73727789"
   
  Общие сведения об упорядочении данных в [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]см. в статье [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md). 
   
- **Чтобы установить Master Data Services, настроить базу данных и веб-сайт, а также развернуть образцы моделей, см. раздел** [общие сведения о Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).  
+ **Инструкции по установке служб Master Data Services, настройке базы данных и веб-сайта, а также развертыванию примеров моделей см. в статье** [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).  
   
- **Загрузить**  
+ **Скачать**  
   
--   Чтобы скачать [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
+-    Чтобы скачать [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], перейдите в  **[Центр пробного ПО](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
   
--   Есть учетная запись Azure?  Затем перейдите **[сюда](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** , чтобы запустить виртуальную машину с уже установленным [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
+-   Есть учетная запись Azure?  Затем перейдите **[сюда](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** , чтобы запустить виртуальную машину с [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] уже установленным.  
   
-##  <a name="improved-performance"></a>Улучшенная производительность  
+##  <a name="improved-performance"></a>Повышенная производительность  
   
  Улучшенная производительность позволяет создавать модели большего размера, эффективнее загружать данные и повысить общее быстродействие. Улучшение производительности включает уменьшение времени загрузки данных в надстройке для Microsoft Excel и добавление надстройки для обработки больших сущностей.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "73727789"
   
 ##  <a name="improved-security"></a>Улучшенная безопасность  
   
- Новое разрешение Super User предоставляет пользователю или группе те же разрешения, которые были у администратора сервера в предыдущем выпуске [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Разрешение Super User можно назначить нескольким пользователям и группам. В предыдущем выпуске администратором сервера был пользователь, изначально установивший [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , и было трудно передать это разрешение другому пользователю или группе. Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
+ Новое разрешение Super User предоставляет пользователю или группе те же разрешения, которые были у администратора сервера в предыдущем выпуске [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Разрешение Super User можно назначить нескольким пользователям и группам. В предыдущем выпуске администратором сервера был пользователь, изначально установивший [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , и было трудно передать это разрешение другому пользователю или группе. Дополнительные сведения см. в разделе [разрешения функциональной области &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
  Теперь пользователю можно явно назначить разрешение администратора на уровне модели. Это означает, что, если пользователю позже будут назначены разрешения в поддереве модели, например на уровне сущности, он не потеряет это разрешение администратора.  
   
@@ -122,15 +122,15 @@ ms.locfileid: "73727789"
   
 -   Переименование и скрытие атрибутов имени и кода.  
   
- Дополнительные сведения см. в следующих разделах:  
+ Дополнительные сведения см. в следующих статьях.  
   
--   [Модели &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
+-   [Модели (службы Master Data Services)](../master-data-services/models-master-data-services.md)  
   
--   [Сущности &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
+-   [Сущности (службы Master Data Services)](../master-data-services/entities-master-data-services.md)  
   
--   [Master Data Services &#40;транзакций&#41;](../master-data-services/transactions-master-data-services.md)  
+-   [Транзакции (службы Master Data Services)](../master-data-services/transactions-master-data-services.md)  
   
--   [Master Data Services &#40;безопасности&#41;](../master-data-services/security-master-data-services.md)  
+-   [Безопасность (службы Master Data Services)](../master-data-services/security-master-data-services.md)  
 
 ## <a name="business-rule-improvements"></a>Улучшения в бизнес-правилах
  **Управление бизнес-правилами (надстройка MDS для Excel)**  
@@ -141,11 +141,11 @@ ms.locfileid: "73727789"
   
  Вы можете применить пользовательские сценарии SQL в качестве расширения условий и действий для бизнес-правил. В качестве условия можно использовать функции SQL. В качестве действия можно использовать хранимые процедуры SQL. Дополнительные сведения см. в статье [Расширение бизнес-правил (Master Data Services)](../master-data-services/business-rules-extension-master-data-services.md). 
  
- **Переработанный интерфейс управления бизнес-правилами**  
+ **Изменен интерфейс управления бизнес-правилами**  
   
  Интерфейс управления бизнес-правилами в MDS был полностью переработан для повышения удобства. Дополнительные сведения об этой функции см. в статье [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md).  
   
- **Функции управления бизнес-правилами, удаленные из надстройка MDS для Excel**  
+ **Функции управления бизнес-правилами удалены из надстройки MDS для Excel**  
   
  Функции управления бизнес-правилами были удалены из надстройки MDS для Excel из-за переработки интерфейса.    
 
@@ -155,7 +155,7 @@ ms.locfileid: "73727789"
 
 ## <a name="derived-hierarchy-improvements"></a>Улучшения в производной иерархии
 
- **Связи «многие ко многим» в производных иерархиях**  
+ **Связи "многие ко многим" в производных иерархиях**  
   
  Теперь можно создать производную иерархию, в которой отображаются связи "многие-ко-многим". Связь "многие-ко-многим" между двумя сущностями можно смоделировать с помощью третьей сущности, обеспечивающей сопоставление между ними. Сущность сопоставления — это сущность, которая имеет два или более атрибутов на основе домена, ссылающихся на другие сущности.  
   
@@ -163,11 +163,11 @@ ms.locfileid: "73727789"
   
  Дополнительные сведения см. в статье [Отображение связей "многие-ко-многим" в производных иерархиях (Master Data Services)](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md).  
  
- **Изменение связей «многие ко многим» в производных иерархиях**  
+ **Изменение связей "многие ко многим" в производных иерархиях**  
   
- Связь "многие-ко-многим" можно изменить путем изменения элементов сущности сопоставления. Дополнительные сведения см. в статье [Отображение связей "многие-ко-многим" в производных иерархиях (Master Data Services)](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md).  
+ Связь "многие-ко-многим" можно изменить путем изменения элементов сущности сопоставления. Дополнительные сведения см. [в разделе Отображение связей "многие-ко-многим" в производных иерархиях &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md).  
  
- **Улучшенный интерфейс управления производной иерархией**  
+ **Улучшенные возможности управления производной иерархией**  
   
  Возможности управления производной иерархией в MDS были улучшены. Дополнительные сведения об этой функции см. в статье [Создание производной иерархии (службы Master Data Services)](../master-data-services/create-a-derived-hierarchy-master-data-services.md).  
   
@@ -189,7 +189,7 @@ ms.locfileid: "73727789"
   
  Данные сущности можно разделить между различными моделями, создав отношение синхронизации сущностей. Дополнительные сведения см. в статье [Отношение синхронизации сущностей (службы Master Data Services)](../master-data-services/entity-sync-relationship-master-data-services.md).  
   
- **Очистка обратимо удаленных членов**  
+ **Полное удаление обратимо удаленных элементов**  
   
  Теперь можно полностью (навсегда) удалить все обратимо удаленные элементы в версии модели. При удалении элемента он только деактивируется (удаляется обратимо). Дополнительные сведения см. в статье [Очистка элементов версии (службы Master Data Services)](../master-data-services/purge-version-members-master-data-services.md).  
  
@@ -205,25 +205,25 @@ ms.locfileid: "73727789"
   
  **Наборы изменений**  
   
- Наборы изменений можно использовать для сохранения ожидающих изменений сущности. Кроме того, ожидающие изменения можно просматривать и модифицировать. Если сущность требует утверждения для изменения, необходимо сохранить ожидающие изменения в набор изменений и отправить для утверждения администратору. Дополнительные сведения см. в статье [Наборы изменений (службы Master Data Services)](../master-data-services/changesets-master-data-services.md).  
+ Наборы изменений можно использовать для сохранения ожидающих изменений сущности. Кроме того, ожидающие изменения можно просматривать и модифицировать. Если сущность требует утверждения для изменения, необходимо сохранить ожидающие изменения в набор изменений и отправить для утверждения администратору. Дополнительные сведения см. в разделе [наборы изменений &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md).  
   
- **Изменение набора электронной почты и управления**  
+ **Управление набором изменений и оповещение о состоянии набора изменений по электронной почте**  
   
  В этом выпуске теперь можно просматривать все изменения для модели и версии и управлять этими изменениями. Кроме того, можно получать уведомления по электронной почте о том, что состояние набора изменений для сущности изменилось (для сущностей, для которых требуется утверждение набора изменений). Дополнительные сведения см. в разделах [Управление наборами изменений (Master Data Services)](../master-data-services/manage-changesets-master-data-services.md) и [Уведомления (службы Master Data Services)](../master-data-services/notifications-master-data-services.md).  
   
- **Просмотр и управление журналом изменений**  
+ **Просмотр журнала изменений и управление им**  
   
  Вы можете просматривать журнал изменений и управлять им для сущностей и для элементов. При наличии разрешений на обновление можно выполнить откат элемента до предыдущей версии. Дополнительные сведения см. в статье [Журнал изменений элемента (Master Data Services)](../master-data-services/member-revision-history-master-data-services.md).  
  
 ## <a name="tool-and-sample-improvements"></a>Улучшение в инструментах и примерах 
   
- **Сохранение или открытие файлов запросов в надстройка MDS для Excel**  
+ **Сохранение и открытие файлов запросов в надстройке MDS для Excel**  
   
  На странице обозревателя сущности щелкните **Excel** , чтобы сохранить файлы запроса, или откройте файл запроса, хранящийся на вашем компьютере, в надстройке MDS для Excel. Сохраненный файл можно открыть с помощью приложения QueryOpener. Дополнительные сведения см. в статье [Файлы ярлыков запросов (надстройка MDS для Excel)](../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md).  
   
  Файл запроса содержит фильтры и сведения об иерархии со страницы обозревателя.  
    
- **Пакеты развертывания образцов моделей обновлены**  
+ **Пакеты развертывания примеров моделей обновлены**  
   
  Пакеты примеров были обновлены для поддержки новых сценариев. Дополнительные сведения см. в статье [Примеры: пакеты развертывания моделей (службы Master Data Services)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
 
@@ -232,6 +232,6 @@ ms.locfileid: "73727789"
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
 ## <a name="see-also"></a>См. также:  
- [Master Data Services и функции служб Data Quality Services, поддерживаемые различными выпусками SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
+ [Функции, поддерживаемые различными выпусками SQL Server 2016 служб Master Data Services и качества данных](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [Устаревшие функции Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
- [Неподдерживаемые функции Master Data Services](../master-data-services/discontinued-master-data-services-features.md)
+ [Неподдерживаемые функции служб Master Data Services](../master-data-services/discontinued-master-data-services-features.md)

@@ -15,10 +15,10 @@ ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 63cc23d19a6eeb5f3a44cd0bbf62d9bcd87ace0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660517"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Основные сведения о поставщике WMI для событий сервера
@@ -27,7 +27,7 @@ ms.locfileid: "73660517"
   
  Управляющие приложения, такие как агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], могут получать доступ к событиям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью поставщика WMI для событий сервера путем выполнения инструкций WMI Query Language (WQL). WQL является упрощенным подмножеством языка SQL с некоторыми расширениями, специфичными для WMI. При использовании языка WQL приложение получает тип события для определенной базы данных или объекта базы данных. Поставщик WMI для событий сервера преобразовывает запрос в уведомление о событии, создавая уведомление в базе данных-получателе. Дополнительные сведения о работе с уведомлениями о событиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в разделе [Основные понятия поставщика WMI для событий сервера](https://technet.microsoft.com/library/ms180560.aspx). События, которые могут быть запрошены, перечислены в [поставщике WMI для классов и свойств событий сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
- Когда возникает событие, запускающее уведомление о событии для отправки сообщения, оно переходит к предопределенной целевой службе в **базе данных msdb** с именем **SQL/Notifications/ProcessWMIEventProviderNotification/v 1.0**. Служба помещает событие в предопределенную очередь в **базе данных msdb** с именем **WMIEventProviderNotificationQueue**. (Служба и очередь создаются динамически поставщиком при первом соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Затем поставщик считывает данные о событиях из этой очереди и преобразует их в формат управляемых объектов (MOF) перед возвратом в приложение. На следующем рисунке показан этот процесс.  
+ Когда возникает событие, запускающее уведомление о событии для отправки сообщения, оно переходит к предопределенной целевой службе в **базе данных msdb** с именем **SQL/Notifications/ProcessWMIEventProviderNotification/v 1.0**. Служба помещает событие в предопределенную очередь в **базе данных msdb** с именем **WMIEventProviderNotificationQueue**. (Служба и очередь создаются динамически поставщиком при первом соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Затем поставщик считывает данные о событиях из этой очереди и преобразует их в формат управляемых объектов (MOF) перед возвратом в приложение. Данный процесс показан на следующем рисунке.  
   
  ![Блок-схема поставщика WMI для событий сервера](../../relational-databases/wmi-provider-server-events/media/wmi-provider-functional-spec.gif "Блок-схема поставщика WMI для событий сервера")  
   
@@ -53,8 +53,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- В этом примере `SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` представляет собой идентификатор [!INCLUDE[tsql](../../includes/tsql-md.md)], составленный из префикса `SQLWEP_` и GUID. 
-  `SQLWEP` создает новый идентификатор GUID для каждого идентификатора. Значение `A7E5521A-1CA6-4741-865D-826F804E5135` в `TO SERVICE` предложении является идентификатором GUID, идентифицирующим экземпляр брокера в базе данных **msdb** .  
+ В этом примере `SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` представляет собой идентификатор [!INCLUDE[tsql](../../includes/tsql-md.md)], составленный из префикса `SQLWEP_` и GUID. `SQLWEP` создает новый идентификатор GUID для каждого идентификатора. Значение `A7E5521A-1CA6-4741-865D-826F804E5135` в `TO SERVICE` предложении является идентификатором GUID, идентифицирующим экземпляр брокера в базе данных **msdb** .  
   
  Дополнительные сведения о работе с WQL см. в разделе [Использование WQL с поставщиком WMI для событий сервера](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).  
   

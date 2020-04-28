@@ -11,10 +11,10 @@ ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a18de9c33def5b0603f4460f87e7c5589ead4521
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728419"
 ---
 # <a name="create-an-index-master-data-services"></a>Создание индекса (Master Data Services)
@@ -26,9 +26,9 @@ ms.locfileid: "73728419"
 ## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
--   Иметь разрешение на доступ к функциональной области "Администрирование системы". Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Иметь разрешение на доступ к функциональной области "Администрирование системы". Дополнительные сведения см. в разделе [разрешения функциональной области &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
  **Создание индекса**  
   
@@ -48,9 +48,9 @@ ms.locfileid: "73728419"
   
 8.  Выберите команду **Сохранить**.  
   
- Для каждого созданного индекса в сетке создается строка с четырьмя столбцами. В следующей таблице приводится описание этих столбцов.  
+ Для каждого созданного индекса в сетке создается строка с четырьмя столбцами. В следующей таблице приводятся описания этих столбцов.  
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |Состояние|Состояние индекса.<br /><br /> При нажатии кнопки **сохранить**отображается ![значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния") , указывающий, что индекс обновляется.<br /><br /> При возникновении ошибок при создании или изменении индекса отображается изображение ![состояния ошибки значок](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки") .<br /><br /> В противном случае отображается состояние ОК, а ![для значка состояния ОК](../master-data-services/media/mds-statusicon-ok.png "Значок состояния "ОК"") — изображение.|  
 |Имя|Имя индекса.|  
@@ -59,18 +59,18 @@ ms.locfileid: "73728419"
   
  Если щелкнуть индекс, отображается следующая информация.  
   
--   **Кем создано**: имя пользователя, создавшего индекс.  
+-   **Кем создан**— имя пользователя, создавшего индекс.  
   
--   **On**: Дата и время создания индекса.  
+-   **Когда создан**— дата и время создания индекса.  
   
--   **Кем Обновлено**: имя пользователя, который последним обновил индекс.  
+-   **Кем обновлено**— имя пользователя, выполнившего последнее обновление индекса.  
   
--   **On**: Дата и время последнего обновления индекса.  
+-   **Когда обновлено**— дата и время последнего обновления индекса.  
   
-## <a name="next-steps"></a>Next Steps  
- [Изменение и удаление индекса &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
+## <a name="next-steps"></a>Дальнейшие действия  
+ [Изменение и удаление индекса (Master Data Services)](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Master Data Services &#40;настраиваемого индекса&#41;](../master-data-services/custom-index-master-data-services.md)  
+ [Пользовательский индекс (Master Data Services)](../master-data-services/custom-index-master-data-services.md)  
   
   

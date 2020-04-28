@@ -18,10 +18,10 @@ ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: aee1362bdb2f9b8060b6e57b438cf991b854a19a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659982"
 ---
 # <a name="servicename-property-sqlserviceadvancedproperty-class"></a>Свойство ServiceName (класс SqlServiceAdvancedProperty)
@@ -36,7 +36,7 @@ object.ServiceName [= value]
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объектами*  
+ *object*  
  Объект [класса SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) , представляющий дополнительное свойство.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  

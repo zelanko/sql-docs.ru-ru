@@ -14,10 +14,10 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 730e18fca866891d62b68d321ec13e4be5da59bf
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728480"
 ---
 # <a name="create-a-model-master-data-services"></a>Создание модели (службы Master Data Services)
@@ -29,9 +29,9 @@ ms.locfileid: "73728480"
 ## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
--   Вы должны иметь разрешение на доступ к функциональной области **системного администрирования.**  
+-   Необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** .  
   
--   необходимо быть администратором модели. Для получения дополнительной информаци [&#41;&#40;и см. ](../master-data-services/administrators-master-data-services.md)  
+-   необходимо быть администратором модели. Дополнительные сведения см. в разделе [administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-a-model"></a>Создание модели  
   
@@ -47,7 +47,7 @@ ms.locfileid: "73728480"
   
 6.  В поле **Продолжительность хранения журнала** выберите один из вариантов для сохранения данных журнала. Значение по умолчанию — **Системный параметр**, что означает, что значение наследуется от системных параметров в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
   
-     Чтобы переопределить системный параметр и не удалить данные журнала транзакций, выберите **НЕТ**. Чтобы сохранить только сегодняшние данные журнала и усеченные данные журнала за все предыдущие дни, выберите **ДА** и установите поле **Дней** до 0. Чтобы сохранить данные журнала за определенное число дней, выберите **ДА** и в поле **Дни** укажите необходимое число дней.  
+     Чтобы переопределить системный параметр и не удалить данные журнала транзакций, выберите **НЕТ**. Чтобы хранить только сегодняшние данные журнала и усекать данные журнала за все предыдущие дни, выберите **Да** и задайте для поля **дни** значение 0. Чтобы сохранить данные журнала за определенное число дней, выберите **ДА** и в поле **Дни** укажите необходимое число дней.  
   
 7.  По желанию выберите параметр **Создать сущность с именем модели** для создания сущности с тем же именем, что и у модели.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73728480"
   
  Для каждой созданной модели в сетке создается строка с восемью столбцами. Ниже перечислены эти восемь столбцов.  
   
--   **Состояние**: состояние модели. При нажатии кнопки **"Сохранить"** отображается изображение ![обновления,](../master-data-services/media/mds-model-status-updating.png "Updating") что указывает на обновление модели. При возникновении ошибок при создании или редактировании модели отображается изображение ![ошибка.](../master-data-services/media/mds-model-status-error.png "Error") В противном случае отображается состояние "ОК" и появляется изображение ![ОК](../master-data-services/media/mds-model-status-ok.png "OK") .  
+-   **Состояние**: состояние модели. При нажатии кнопки **сохранить модель** отображается изображение ![обновления](../master-data-services/media/mds-model-status-updating.png "Updating") , которое указывает на то, что модель обновляется. При возникновении ошибок при создании или изменении модели отображается изображение ![ошибки](../master-data-services/media/mds-model-status-error.png "Ошибка") . В противном случае отображается состояние "ОК" и появляется изображение ![ОК](../master-data-services/media/mds-model-status-ok.png "OK") .  
   
 -   **Имя**: имя модели.  
   
@@ -71,15 +71,15 @@ ms.locfileid: "73728480"
   
 -   **Дата и время обновления**: дата и время последнего обновления модели.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
   
 -   [Создание сущности (службы Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Модели &#40;&#41;мастер-службы данных](../master-data-services/models-master-data-services.md)   
- [Организации &#40;&#41;мастер-службы данных](../master-data-services/entities-master-data-services.md)   
- [Удалить&#41;&#41;веб-службы мастер-данных модели &#40;](../master-data-services/delete-a-model-master-data-services.md)   
- [Отоденять модель &#40;&#41;мастер-данных](../master-data-services/edit-model-master-data-services.md)   
+ [Модели &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
+ [Сущности &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
+ [Удаление &#40;модели Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
+ [Изменение &#40;модели Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)   
  [Транзакции (службы Master Data Services)](../master-data-services/transactions-master-data-services.md)  
   
   

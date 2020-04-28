@@ -14,10 +14,10 @@ ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6bee1ab1716eac70d51006b8bb4315b204be67ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727946"
 ---
 # <a name="models-master-data-services"></a>Модели (службы основных данных)
@@ -73,20 +73,20 @@ ms.locfileid: "73727946"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание модели для организации основных данных.|[Создание &#40;модели Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
-|Изменение имени существующей модели.|[Изменение &#40;модели Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)|  
-|Удаление существующей модели.|[Удаление &#40;модели Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)|  
+|Создание модели для организации основных данных.|[Создание модели (службы Master Data Services)](../master-data-services/create-a-model-master-data-services.md)|  
+|Изменение имени существующей модели.|[Изменение модели (службы Master Data Services)](../master-data-services/edit-model-master-data-services.md)|  
+|Удаление существующей модели.|[Удаление модели (службы Master Data Services)](../master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Обзор Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
+-   [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
--   [Сущности &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
+-   [Сущности (службы Master Data Services)](../master-data-services/entities-master-data-services.md)  
   
--   [Master Data Services &#40;атрибутов&#41;](../master-data-services/attributes-master-data-services.md)  
+-   [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)  
   
--   [Развертывание моделей &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
+-   [Развертывание моделей (службы Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  
   
--   [Разрешения объекта модели &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
+-   [Разрешения объекта модели (службы Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)  
   
   
