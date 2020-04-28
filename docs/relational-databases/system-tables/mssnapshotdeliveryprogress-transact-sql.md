@@ -18,10 +18,10 @@ ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 638bea3db68712300ad2284e50676bf1df67c9ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139812"
 ---
 # <a name="mssnapshotdeliveryprogress-transact-sql"></a>MSsnapshotdeliveryprogress (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68139812"
 
   Таблица **MSsnapshotdeliveryprogress** используется для трассировки файлов, успешно доставленных подписчику при применении моментального снимка. Эти данные используются для возобновления доставки файлов в случае, если во время сеанса агент слияния не смог успешно доставить все файлы, чтобы те же самые файлы не доставлялись повторно при следующем запуске агента слияния. Эта таблица хранится на подписчике в базе данных подписки.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**session_token**|**nvarchar(260)**|Определяет путь к папке моментального снимка, откуда файл был успешно доставлен. Для публикаций, использующих параметризованные фильтры, строка **динснап** будет добавлена к значению.|  
 |**progress_token_hash**|**int**|Хэш-значение, созданное на основе значения *progress_token* , которое используется для повышения эффективности поиска по заданному *progress_tokenому* значению.|  
@@ -38,6 +38,6 @@ ms.locfileid: "68139812"
   
 ## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

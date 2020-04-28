@@ -18,10 +18,10 @@ ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123824"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
@@ -47,36 +47,36 @@ sp_grant_proxy_to_subsystem
   
 `[ @subsystem_id = ] id`Идентификационный номер подсистемы, к которой предоставляется доступ. *Subsystem_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**2**|Скрипт [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX<br /><br /> ** \* \* Важно \* !** Подсистема сценариев ActiveX будет удалена из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
-|**3-5**|Операционная система (**CmdExec**)|  
+|**3**|Операционная система (**CmdExec**)|  
 |**4**|Агент моментальных снимков репликации|  
-|**5.0**|Агент чтения журнала репликации|  
+|**5**|Агент чтения журнала репликации|  
 |**6**|Агент распространения репликации|  
 |**7**|Replication Merge Agent|  
 |**8**|Агент чтения очереди репликации|  
-|**8**|Запрос служб Analysis Services|  
-|**штук**|Команда служб Analysis Services|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]выполнение пакета|  
-|**12**|Сценарий PowerShell.|  
+|**9**|Запрос служб Analysis Services|  
+|**10**|Команда служб Analysis Services|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] выполнение пакетов служб|  
+|**12**|Скрипт PowerShell|  
 | &nbsp; | &nbsp; |
   
 `[ @subsystem_name = ] 'subsystem_name'`Имя подсистемы, к которой предоставляется доступ. Аргумент **subsystem_name** имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**ActiveScripting**|ActiveX-скрипт|  
 |**CmdExec**|Операционная система (**CmdExec**)|  
 |**Моментальный снимок**|Агент моментальных снимков репликации|  
-|**Модуля**|Агент чтения журнала репликации|  
+|**LogReader**|Агент чтения журнала репликации|  
 |**Distribution**|агент распространения репликации|  
 |**AutoMerge**|Replication Merge Agent|  
 |**QueueReader**|Агент чтения очереди репликации|  
 |**ANALYSISQUERY**|Запрос служб Analysis Services|  
 |**ANALYSISCOMMAND**|Команда служб Analysis Services|  
 |**Через**|Выполнение пакетов служб SSIS|  
-|**PowerShell**|Сценарий PowerShell.|  
+|**PowerShell**|Скрипт PowerShell|  
 | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Remarks  
@@ -100,7 +100,7 @@ EXEC dbo.sp_grant_proxy_to_subsystem
 GO  
 ```  
   
-### <a name="b-granting-access-to-a-subsystem-by-name"></a>Б. Предоставление доступа к подсистеме по имени.  
+### <a name="b-granting-access-to-a-subsystem-by-name"></a>Б) Предоставление доступа к подсистеме по имени.  
  В следующем примере учетной записи-посреднику `Catalog application proxy` предоставляется доступ к подсистеме «Выполнение пакета служб SSIS».  
   
 ```sql

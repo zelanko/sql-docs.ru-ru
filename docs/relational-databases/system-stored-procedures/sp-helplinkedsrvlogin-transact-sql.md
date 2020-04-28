@@ -18,10 +18,10 @@ ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1728b3e5d4cd3189a8d9a01a8b72ecedaf7cb6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122461"
 ---
 # <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
@@ -45,16 +45,16 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 `[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Имя входа на локальном сервере с сопоставлением со связанным сервером *рмтсрвнаме*. *локаллогин* имеет тип **sysname**и значение по умолчанию NULL. Значение NULL указывает, что возвращаются все сопоставления имен входа, определенные в *рмтсрвнаме* . Если значение не равно NULL, сопоставление для *локаллогин* с *рмтсрвнаме* должно уже существовать. *локаллогин* может быть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа или пользователем Windows. В таком случае пользователь Windows должен иметь права на доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], полученные напрямую или через членство в группе Windows, имеющей такие права.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**Связанный сервер**|**имеет sysname**|Имя связанного сервера.|  
-|**Локальное имя входа**|**имеет sysname**|Локальное имя входа, для которого применяется сопоставление.|  
+|**Связанный сервер**|**sysname**|Имя связанного сервера.|  
+|**Локальное имя входа**|**sysname**|Локальное имя входа, для которого применяется сопоставление.|  
 |**Is Self Mapping**|**smallint**|0 = **Локальное имя входа** сопоставлено с **Удаленный вход** при подключении к **связанному серверу**.<br /><br /> 1 = **Локальное имя входа** сопоставлено с тем же именем входа и паролем при подключении к **связанному серверу**.|  
-|**Remote Login**|**имеет sysname**|Имя входа в **LinkedServer** , сопоставленное с **Локаллогин** , если **исселфмаппинг** имеет значение 0. Если значение **исселфмаппинг** равно 1, **RemoteLogin** имеет значение null.|  
+|**Remote Login**|**sysname**|Имя входа в **LinkedServer** , сопоставленное с **Локаллогин** , если **исселфмаппинг** имеет значение 0. Если значение **исселфмаппинг** равно 1, **RemoteLogin** имеет значение null.|  
   
 ## <a name="remarks"></a>Remarks  
  Перед удалением сопоставлений имен входа используйте **sp_helplinkedsrvlogin** , чтобы определить связанные серверы.  
@@ -85,7 +85,7 @@ Marketing        NULL          1               NULL
 (4 row(s) affected)  
 ```  
   
-### <a name="b-displaying-all-login-mappings-for-a-linked-server"></a>Б. Вывод всех сопоставлений имен входа для одного связанного сервера  
+### <a name="b-displaying-all-login-mappings-for-a-linked-server"></a>Б) Вывод всех сопоставлений имен входа для одного связанного сервера  
  В следующем примере выводятся все локально определенные сопоставления имен входа для связанного сервера `Sales`.  
   
 ```  
@@ -127,6 +127,6 @@ Sales            Mary          0               sa
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_droplinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

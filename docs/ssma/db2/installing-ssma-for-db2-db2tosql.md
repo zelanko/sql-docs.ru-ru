@@ -10,10 +10,10 @@ ms.assetid: 79fbe8ea-471b-407a-be2a-4100d9b57c61
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4628f745f17a3a694d20fe27c134753bc108a6b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141046"
 ---
 # <a name="installing-ssma-for-db2-db2tosql"></a>Установка SSMA для DB2 (DB2ToSQL)
@@ -26,7 +26,7 @@ ms.locfileid: "68141046"
   
 ## <a name="contents"></a>Содержимое  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |---------|---------------|  
 |[Установка SSMA для клиента DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)|Содержит сведения и инструкции по установке клиента SSMA.|  
 |[Установка компонентов SSMA на SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)|Содержит сведения и инструкции по установке пакета расширения на экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

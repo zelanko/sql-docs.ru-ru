@@ -18,10 +18,10 @@ ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7abf136187b4f45a03cebc92fd23ee544dddb117
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68116688"
 ---
 # <a name="xp_loginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
@@ -45,7 +45,7 @@ xp_loginconfig ['config_name']
  **"** *config_name* **"**  
  Отображаемое значение конфигурации. Если *config_name* не указан, выводятся все значения конфигурации. Аргумент *config_name* имеет тип **sysname**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**login mode**|Режим безопасности имени входа в систему. Возможные значения: **Mixed** и **Windows Authentication**.<br /><br /> Заменяется на:<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
 |**default login**|Имя идентификатора входа сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию для авторизованных пользователей доверенных подключений (для пользователей без соответствующего имени входа). Имя входа по умолчанию — **Guest**. Данное значение предоставляется для обеспечения обратной совместимости.|  
@@ -57,14 +57,14 @@ xp_loginconfig ['config_name']
 |**Таблица #**|Сообщает, какие специальные символы Windows поставлены в соответствие допустимому символу знака «решетка» (#) сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Возможные значения: **Разделитель домена**, **пробел**, **значение NULL**или любой отдельный символ. Значение по умолчанию — дефис (-). Данное значение предоставляется для обеспечения обратной совместимости.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**name**|**имеет sysname**|Параметр конфигурации|  
-|**config value**|**имеет sysname**|Значение параметра конфигурации|  
+|**name**|**sysname**|Параметр конфигурации|  
+|**config value**|**sysname**|Значение параметра конфигурации|  
   
 ## <a name="remarks"></a>Remarks  
  **xp_loginconfig** нельзя использовать для установки значений конфигурации.  
@@ -84,7 +84,7 @@ EXEC xp_loginconfig;
 GO  
 ```  
   
-### <a name="b-how-to-report-a-specific-configuration-value"></a>Б. Отчет со значением конкретного параметра конфигурации  
+### <a name="b-how-to-report-a-specific-configuration-value"></a>Б) Отчет со значением конкретного параметра конфигурации  
  В следующем примере выводится значение режима входа в систему.  
   
 ```  

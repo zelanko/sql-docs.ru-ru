@@ -16,10 +16,10 @@ ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2d80aedbe2503c4ab11fd894d44e8e37f2167daf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124009"
 ---
 # <a name="sp_getagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
@@ -43,9 +43,9 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 |-----------|-----------|  
 |**1**|Моментальный снимок|  
 |**2**|Чтение журнала|  
-|**3-5**|Distribution|  
+|**3**|Distribution|  
 |**4**|Объединить|  
-|**8**|Чтение очереди|  
+|**9**|Чтение очереди|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -61,6 +61,6 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
  [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
  [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
  [Профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

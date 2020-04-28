@@ -16,10 +16,10 @@ ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b6ecac979077dd83d6549b408c8c9e4d2bd4402f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122438"
 ---
 # <a name="sp_helplogreader_agent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
@@ -41,16 +41,16 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**удостоверения**|**int**|Идентификатор агента.|  
+|**идентификатор**|**int**|Идентификатор агента.|  
 |**name**|**nvarchar (100)**|Имя агента.|  
-|**publisher_security_mode**|**smallint**|Режим безопасности, используемый агентом при соединении с издателем, который может быть одним из следующих:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности<br /><br /> **1** = проверка подлинности Windows.|  
-|**publisher_login**|**имеет sysname**|Имя входа в систему, используемое при соединении с издателем.|  
+|**publisher_security_mode**|**smallint**|Режим безопасности, используемый агентом при соединении с издателем, который может быть одним из следующих:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности<br /><br /> **1** = проверка подлинности Windows.|  
+|**publisher_login**|**sysname**|Имя входа в систему, используемое при соединении с издателем.|  
 |**publisher_password**|**nvarchar (524)**|По соображениям безопасности всегда возвращается значение ** \* \* \* \* \* \* \* . \* \* **|  
-|**job_id**|**UNIQUEIDENTIFIER**|Уникальный идентификатор задания агента.|  
+|**job_id**|**uniqueidentifier**|Уникальный идентификатор задания агента.|  
 |**job_login**|**nvarchar(512)**|Учетная запись Windows, под которой выполняется агент чтения журнала, которая возвращается в формате *домен*\\*имя_пользователя*.|  
-|**job_password**|**имеет sysname**|По соображениям безопасности всегда возвращается значение ** \* \* \* \* \* \* \* . \* \* **|  
+|**job_password**|**sysname**|По соображениям безопасности всегда возвращается значение ** \* \* \* \* \* \* \* . \* \* **|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

@@ -18,10 +18,10 @@ ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 543e8c0b41000ec2afe9ab07aef08aa86967c2ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108559"
 ---
 # <a name="sp_cursorclose-transact-sql"></a>sp_cursorclose (Transact-SQL)
@@ -39,7 +39,7 @@ sp_cursorclose cursor
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *набора*  
+ *курсор*  
  Значение *обработчика* курсора, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] созданное и возвращаемое процедурой sp_cursoropen. *cursor* является обязательным параметром, который вызывает входное значение **int** .  
   
 > [!NOTE]  
@@ -54,6 +54,6 @@ sp_cursorclose cursor
   
 ## <a name="see-also"></a>См. также:  
  [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

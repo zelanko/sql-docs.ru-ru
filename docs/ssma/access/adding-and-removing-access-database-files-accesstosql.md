@@ -29,10 +29,10 @@ ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 39df13a3cab2d842a313ca37fc4a98d0c331ba83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104215"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Добавление и удаление файлов базы данных Access (Акцесстоскл)
@@ -76,7 +76,7 @@ ms.locfileid: "68104215"
     > [!IMPORTANT]  
     > В текстовом поле **все или часть имени файла** не поддерживаются подстановочные знаки.  
   
-5.  Нажмите кнопку **Сканировать**.  
+5.  Нажмите кнопку **Проверить**.  
   
     Откроется страница Scan (сканирование). Отобразятся найденные базы данных и ход выполнения поиска. Чтобы прерывать Поиск, нажмите кнопку " **Закрыть**".  
   
@@ -127,7 +127,7 @@ ms.locfileid: "68104215"
   
 2.  Щелкните правой кнопкой мыши базу данных и выберите пункт **Удалить базу данных**.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 Следующим шагом процесса миграции является [Подключение к SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
   
 ## <a name="see-also"></a>См. также:  

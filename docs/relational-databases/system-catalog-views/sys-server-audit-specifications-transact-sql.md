@@ -20,10 +20,10 @@ ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6a3c6522218702b52c075ef5ce8088057fc7662b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125010"
 ---
 # <a name="sysserver_audit_specifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
@@ -31,19 +31,19 @@ ms.locfileid: "68125010"
 
   Содержит сведения о спецификациях аудита сервера в подсистеме аудита SQL Server на экземпляре сервера. Дополнительные сведения об аудите SQL Server см. в разделе [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**Имеет sysname**|Имя спецификации сервера.|  
 |**server_specification_id**|**Int**|Идентификатор **server_specification**.|  
 |**create_date**|**DateTime**|Дата создания спецификации аудита сервера.|  
 |**modified_date**|**DateTime**|Дата последнего изменения спецификации аудита сервера.|  
 |**is_state_enabled**|**tinyint**|Состояние спецификации аудита:<br /><br /> 0 — ОТКЛЮЧЕНО<br /><br /> 1 — ВКЛЮЧЕНО|  
-|**audit_GUID**|**UNIQUEIDENTIFIER**|Идентификатор GUID аудита, содержащего эту спецификацию. Используется в процессе перечисления спецификаций аудита рядового сервера при запуске сервера.|  
+|**audit_GUID**|**uniqueidentifier**|Идентификатор GUID аудита, содержащего эту спецификацию. Используется в процессе перечисления спецификаций аудита рядового сервера при запуске сервера.|  
   
 ## <a name="permissions"></a>Разрешения  
  Участники с разрешением **ALTER ANY SERVER AUDIT** или **View ANY DEFINITION** имеют доступ к этому представлению каталога. Кроме того, участнику не должно быть запрещено разрешение **View ANY DEFINITION** .  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Создание аудита сервера &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

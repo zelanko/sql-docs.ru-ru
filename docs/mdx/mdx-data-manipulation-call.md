@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: de74590ac4c43a9141c0ab2092babf41ffd23ba5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106304"
 ---
 # <a name="mdx-data-manipulation---call"></a>Операции с данными многомерных выражений — CALL
@@ -51,6 +51,6 @@ CALL SP_Name
   
 ## <a name="see-also"></a>См. также:  
  [Инструкции обработки данных многомерных выражений &#40;многомерные выражения&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Использование хранимых процедур &#40;&#41;многомерных выражений](../mdx/using-stored-procedures-mdx.md)  
+ [Использование хранимых процедур (MDX)](../mdx/using-stored-procedures-mdx.md)  
   
   

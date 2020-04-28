@@ -18,10 +18,10 @@ ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 885e29f8abbeb185017bc2472566e41596a56900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68116773"
 ---
 # <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
@@ -43,14 +43,14 @@ xp_enumgroups [ 'domain_name' ]
  Имя домена Windows, для которого перечисляется список глобальных групп. Аргумент *domain_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**сгруппировать**|**имеет sysname**|Имя группы Windows|  
-|**Метки**|**имеет sysname**|Описание группы Windows, предоставленное Windows|  
+|**group**|**sysname**|Имя группы Windows|  
+|**Метки**|**sysname**|Описание группы Windows, предоставленное Windows|  
   
 ## <a name="remarks"></a>Remarks  
  Если *domain_name* — имя компьютера под управлением Windows, на котором выполняется экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , или не указано имя домена, **xp_enumgroups** перечисляет локальные группы на компьютере, где работает. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  

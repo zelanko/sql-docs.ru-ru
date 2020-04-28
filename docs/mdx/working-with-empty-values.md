@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ae8d6262f6502add09376b76a767a3076c830cb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125850"
 ---
 # <a name="working-with-empty-values"></a>Пустые значения
@@ -122,17 +122,17 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
 |AND|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
-|**УСЛОВИЯ**|TRUE|FALSE|FALSE|  
+|**TRUE**|TRUE|FALSE|FALSE|  
 |**УКАЗАНО**|FALSE|EMPTY|FALSE|  
-|**ISFALSE**|FALSE|FALSE|FALSE|  
+|**FALSE**|FALSE|FALSE|FALSE|  
   
  В следующей таблице показаны результаты выполнения оператора OR над двумя логическими операндами.  
   
-|OR|TRUE|FALSE|  
+|ИЛИ|TRUE|FALSE|  
 |--------|----------|-----------|  
-|**УСЛОВИЯ**|TRUE|TRUE|  
+|**TRUE**|TRUE|TRUE|  
 |**УКАЗАНО**|TRUE|TRUE|  
-|**ISFALSE**|TRUE|FALSE|  
+|**FALSE**|TRUE|FALSE|  
   
  В следующей таблице показаны результаты отрицания (перемены знака) логического операнда оператором NOT.  
   

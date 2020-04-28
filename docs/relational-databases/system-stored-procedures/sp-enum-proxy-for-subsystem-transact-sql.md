@@ -18,10 +18,10 @@ ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: 93a55b28325bd9b04af569120ad34baeb689e8f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124665"
 ---
 # <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
@@ -56,12 +56,12 @@ sp_enum_proxy_for_subsystem
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|Идентификационный номер подсистемы.|  
-|**subsystem_name**|**имеет sysname**|Имя подсистемы.|  
+|**subsystem_name**|**sysname**|Имя подсистемы.|  
 |**proxy_id**|**int**|Идентификационный номер учетной записи-посредника.|  
-|**proxy_name**|**имеет sysname**|Имя учетной записи-посредника.|  
+|**proxy_name**|**sysname**|Имя учетной записи-посредника.|  
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Remarks  
@@ -89,7 +89,7 @@ EXEC dbo.sp_enum_proxy_for_subsystem ;
 GO  
 ```  
   
-### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>Б. Определение наличия доступа к указанной подсистеме у учетной записи-посредника  
+### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>Б) Определение наличия доступа к указанной подсистеме у учетной записи-посредника  
  В следующем примере при наличии у учетной записи-посредника `Catalog application proxy` доступа к подсистеме `ActiveScripting` возвращается строка. В противном случае возвращается пустой результирующий набор.  
   
 ```sql

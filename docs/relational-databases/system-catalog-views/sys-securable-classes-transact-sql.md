@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dffa82d659ab2f36f94d5fecbafeb5c65ba4f05a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135277"
 ---
 # <a name="syssecurable_classes-transact-sql"></a>sys.securable_classes (Transact-SQL)
@@ -32,13 +32,13 @@ ms.locfileid: "68135277"
 
   Возвращает список защищаемых классов  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**class_desc**|**имеет sysname**|Имя класса.|  
-|**см**|**int**|Числовое обозначение класса.|  
+|**class_desc**|**sysname**|Имя класса.|  
+|**class**|**int**|Числовое обозначение класса.|  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращаются защищаемые классы, поддерживаемые данным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

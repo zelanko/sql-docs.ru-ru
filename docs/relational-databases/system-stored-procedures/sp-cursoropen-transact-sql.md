@@ -18,10 +18,10 @@ ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f5127d041817a41dcf2d6fb4ed65070c87d05dd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108485"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
@@ -41,7 +41,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *набора*  
+ *курсор*  
  Идентификатор курсора, созданный на SQL Server. *cursor* — это значение *обработчика* , которое должно быть указано во всех последующих процедурах, включающих курсор, например sp_cursorfetch. *cursor* является обязательным параметром с возвращаемым значением **int** .  
   
  *курсор* позволяет активно использовать несколько курсоров для одного подключения к базе данных.  
@@ -52,7 +52,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  Параметр прокрутки. *scrollopt* — это необязательный параметр, для которого требуется одно из следующих входных значений **int** .  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -74,7 +74,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  Параметр управления параллелизмом. *ccopt* — это необязательный параметр, для которого требуется одно из следующих входных значений **int** .  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (прежнее название — LOCKCC)|  
@@ -88,7 +88,7 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISTIC_ACCEPTABLE|  
   
- Как и ** в случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с scrollopt, может переопределить запрошенные значения *ccopt* .  
+ Как и *scrollopt*в случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с scrollopt, может переопределить запрошенные значения *ccopt* .  
   
  *количества*  
  Количество строк буфера выборки для AUTO_FETCH. Значение по умолчанию составляет 20 строк. При назначении в качестве входного значения и возвращаемого значения *ROWCOUNT* ведет себя иначе.  
@@ -117,7 +117,7 @@ sp_cursoropen cursor OUTPUT, stmt
  0x0002  
  Выполняется операция FETCH.  
   
- A  
+ Объект  
  Курсор освобожден [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и недоступен.  
   
  Если возникла ошибка, то возвращаемые значения могут быть несогласованными и точность не гарантируется.  
@@ -212,6 +212,6 @@ sp_cursoropen cursor OUTPUT, stmt
   
 ## <a name="see-also"></a>См. также:  
  [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

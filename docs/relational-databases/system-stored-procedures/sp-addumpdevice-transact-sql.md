@@ -19,10 +19,10 @@ ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
-ms.sourcegitcommit: a17245869c2d3df97ec8cf083608f754f4b2f40f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68117908"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
@@ -51,8 +51,8 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**свободного**|Файл на жестком диске в качестве устройства резервного копирования.|  
-|**tape**|Любое ленточное устройство, поддерживаемое [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Примечание. Поддержка ленточных устройств резервного копирования будет удалена в одной из будущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
+|**disk**|Файл на жестком диске в качестве устройства резервного копирования.|  
+|**аудиокассет**|Любое ленточное устройство, поддерживаемое [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Примечание. Поддержка ленточных устройств резервного копирования будет удалена в одной из будущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
   
 `[ @logicalname = ] 'logical_name'`Логическое имя устройства резервного копирования, используемое в инструкциях BACKUP и RESTORE. Аргумент *logical_name* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
   
@@ -70,7 +70,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 `[ @devstatus = ] 'device_status'`Устаревшие. Если указан — не обрабатывается. Поддерживается исключительно в целях обратной совместимости. Новые варианты использования **sp_addumpdevice** должны опускать этот параметр.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
@@ -104,7 +104,7 @@ GO
 EXEC sp_addumpdevice 'disk', 'mydiskdump', 'c:\dump\dump1.bak';  
 ```  
   
-### <a name="b-adding-a-network-disk-backup-device"></a>Б. Добавление сетевого дискового устройства резервного копирования  
+### <a name="b-adding-a-network-disk-backup-device"></a>Б) Добавление сетевого дискового устройства резервного копирования  
  Следующий пример иллюстрирует добавление удаленного дискового устройства резервного копирования с именем `networkdevice`. Имя, от которого запущен компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)], должно иметь разрешения на удаленный файл (`\\<servername>\<sharename>\<path>\<filename>.bak`).  
   
 ```  
@@ -146,6 +146,6 @@ GO
  [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
  [sys. backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

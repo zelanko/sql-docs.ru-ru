@@ -16,10 +16,10 @@ ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da2eec998176dfd46ab261fa405ecaa4b6e90044
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126440"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
@@ -44,11 +44,11 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**column_id**|**имеет sysname**|Идентификатор столбца.|  
-|**column_name**|**имеет sysname**|Имя столбца для таблицы или представления.|  
-|**выпущен**|**bit**|Указывает, опубликовано ли имя столбца.<br /><br /> значение **1** указывает, что столбец публикуется.<br /><br /> значение **0** указывает, что она не опубликована.|  
+|**column_id**|**sysname**|Идентификатор столбца.|  
+|**column_name**|**sysname**|Имя столбца для таблицы или представления.|  
+|**published**|**bit**|Указывает, опубликовано ли имя столбца.<br /><br /> значение **1** указывает, что столбец публикуется.<br /><br /> значение **0** указывает, что она не опубликована.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -60,6 +60,6 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
  Только члены предопределенной роли базы данных **replmonitor** в базе данных распространителя или список доступа к публикации для публикации могут выполнять **sp_helpmergearticlecolumn**.  
   
 ## <a name="see-also"></a>См. также:  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

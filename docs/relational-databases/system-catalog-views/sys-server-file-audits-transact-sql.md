@@ -20,10 +20,10 @@ ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7b3ed8e08d333c4aed2576154c645a0050ebf4df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133133"
 ---
 # <a name="sysserver_file_audits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
@@ -31,18 +31,18 @@ ms.locfileid: "68133133"
 
   Содержит расширенные сведения о типе аудита файлов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аудите на экземпляре сервера. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |audit_id|**int**|Идентификатор аудита.|  
-|name|**имеет sysname**|Имя аудита.|  
-|audit_guid|**UNIQUEIDENTIFIER**|Идентификатор GUID аудита.|  
+|name|**sysname**|Имя аудита.|  
+|audit_guid|**uniqueidentifier**|Идентификатор GUID аудита.|  
 |create_date|**datetime**|Дата создания аудита файлов в формате UTC.|  
-|modify_date|**DataTime**|Дата последнего изменения аудита файлов в формате UTC.|  
+|modify_date|**datatime**|Дата последнего изменения аудита файлов в формате UTC.|  
 |principal_id|**int**|Идентификатор владельца аудита, зарегистрированного на сервере.|  
 |type|**char (2)**|Тип аудита:<br /><br /> 0 — журнал событий безопасности NT;<br /><br /> 1 — журнал событий приложений NT;<br /><br /> 2 — файл файловой системы.|  
-|type_desc|**nvarchar (60)**|Описание типа аудита.|  
+|type_desc|**nvarchar(60)**|Описание типа аудита.|  
 |on_failure|**tinyint**|Действие при ошибке:<br /><br /> 0 — продолжить;<br /><br /> 1 — завершить работу экземпляра сервера;<br /><br /> 2 — ошибка операции.|  
-|on_failure_desc|**nvarchar (60)**|В случае ошибки записи данных о действии:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> ОШИБКА ОПЕРАЦИИ|  
+|on_failure_desc|**nvarchar(60)**|В случае ошибки записи данных о действии:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> ОШИБКА ОПЕРАЦИИ|  
 |is_state_enabled|**tinyint**|0 = Отключено<br /><br /> 1 = Включено|  
 |queue_delay|**int**|Предполагаемое максимальное время, в миллисекундах, ожидания перед записью на диск. Если значением является 0, аудит гарантирует выполнение записи, прежде чем событие может быть продолжено.|  
 |predicate|**nvarchar (8000)**|Выражение предиката, применяемое к событию.|  
@@ -56,7 +56,7 @@ ms.locfileid: "68133133"
 ## <a name="permissions"></a>Разрешения  
  Участники с разрешением **ALTER ANY SERVER AUDIT** или **View ANY DEFINITION** имеют доступ к этому представлению каталога. Кроме того, участнику не должно быть запрещено разрешение **View ANY DEFINITION** .  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Создание аудита сервера &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

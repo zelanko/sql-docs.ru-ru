@@ -18,10 +18,10 @@ ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 81598b65daf5fa7370004c890ab775e5b29b518f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68132098"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles (Transact-SQL)
@@ -29,21 +29,21 @@ ms.locfileid: "68132098"
 
   Таблица **мсартиклес** содержит по одной строке для каждой статьи, реплицируемой издателем. Эта таблица хранится в базе данных распространителя.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Идентификатор издателя.|  
-|**publisher_db**|**имеет sysname**|Имя базы данных издателя.|  
+|**publisher_db**|**sysname**|Имя базы данных издателя.|  
 |**publication_id**|**int**|Идентификатор публикации.|  
-|**рассмотрен**|**имеет sysname**|Имя статьи.|  
+|**рассмотрен**|**sysname**|Имя статьи.|  
 |**article_id**|**int**|Идентификатор статьи.|  
-|**destination_object**|**имеет sysname**|Имя таблицы, созданной на стороне подписчика.|  
-|**source_owner**|**имеет sysname**|Имя владельца схемы исходной таблицы на стороне издателя.|  
-|**source_object**|**имеет sysname**|Имя исходного объекта, из которого добавляется статья.|  
+|**destination_object**|**sysname**|Имя таблицы, созданной на стороне подписчика.|  
+|**source_owner**|**sysname**|Имя владельца схемы исходной таблицы на стороне издателя.|  
+|**source_object**|**sysname**|Имя исходного объекта, из которого добавляется статья.|  
 |**nописание**|**nvarchar(255)**|Описание статьи.|  
-|**destination_owner**|**имеет sysname**|Имя владельца схемы таблицы, созданной на стороне подписчика.|  
+|**destination_owner**|**sysname**|Имя владельца схемы таблицы, созданной на стороне подписчика.|  
   
 ## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108572"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
@@ -44,13 +44,13 @@ sp_cursor  cursor, optype, rownum, table
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *набора*  
+ *курсор*  
  Дескриптор курсора. *cursor* является обязательным параметром, который вызывает входное значение **int** . *cursor* — это значение *маркера* , созданное SQL Server и возвращаемое sp_cursoropen процедурой.  
   
  *optype*  
  Обязательный параметр, назначающий операцию, которую будет выполнять курсор. для *optype* требуется одно из следующих входных значений **int** .  
   
-|Значение|Имя|Description|  
+|Значение|Имя|Описание|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Используется для обновления одной или более строк в буфере выборки.  К строкам, указанным в *rownum* , осуществляется повторный доступ и обновление.|  
 |0x0002|DELETE|Используется для удаления одной или более строк в буфере выборки. Строки, указанные в *rownum* , будут доступны и удалены.|  
@@ -86,10 +86,10 @@ sp_cursor  cursor, optype, rownum, table
 > [!NOTE]  
 >  Параметр допустим только для использования с ОБНОВЛЕНИЯми, УДАЛЕНИЕм, ОБНОВЛЕНИЕм или БЛОКИРОВКОЙ *optype* значений.  
   
- *Таблица*  
+ *table*  
  Имя таблицы, определяющее таблицу, к которой применяется *optype* , если определение курсора включает в себя имя столбца JOIN или неоднозначные имена столбцов, возвращаемых параметром *value* . Если таблица не назначена, то по умолчанию берется первая таблица в предложении FROM. *Table* является необязательным параметром, для которого требуется входное строковое значение. Строка может иметь любой символьный тип данных или Юникоде. *Таблица* может быть именем составной таблицы.  
   
- *значений*  
+ *value*  
  Используется для вставки или обновления значений. Параметр строки *значения* используется только с значениями *optype* для Update и INSERT. Строка может иметь любой символьный тип данных или Юникоде.  
   
 > [!NOTE]  
@@ -176,6 +176,6 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="see-also"></a>См. также:  
  [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -23,10 +23,10 @@ ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 51cc9434805fbd14204d74edae1594ae01c06bb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68129570"
 ---
 # <a name="replication-views-transact-sql"></a>Представления репликации (Transact-SQL)
@@ -52,8 +52,8 @@ ms.locfileid: "68129570"
 |-|-|  
 |[IHextendedArticleView &#40;Transact-SQL&#41;](../../relational-databases/system-views/ihextendedarticleview-transact-sql.md)|[sysarticles &#40;системного представления&#41; &#40;&#41;Transact-SQL](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)|  
 |[Ихекстендедсубскриптионвиев &#40;Transact-SQL&#41;](../../relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md)|[сисекстендедартиклесвиев &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysextendedarticlesview-transact-sql.md)|  
-|[Ихсисколумнс &#40;Transact-SQL&#41;](../../relational-databases/system-views/ihsyscolumns-transact-sql.md)|[syspublications &#40;системного представления&#41; &#40;&#41;Transact-SQL](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)|  
-|[MSdistribution_status &#40;Transact-SQL&#41;](../../relational-databases/system-views/msdistribution-status-transact-sql.md)|[syssubscriptions &#40;системного представления&#41; &#40;&#41;Transact-SQL](../../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)|  
+|[Ихсисколумнс &#40;Transact-SQL&#41;](../../relational-databases/system-views/ihsyscolumns-transact-sql.md)|[Системное представление syspublications (Transact-SQL)](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)|  
+|[MSdistribution_status &#40;Transact-SQL&#41;](../../relational-databases/system-views/msdistribution-status-transact-sql.md)|[Системное представление syssubscriptions (Transact-SQL)](../../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)|  
 |[Системное представление sysarticlecolumns &#40;системного представления&#41; &#40;&#41;Transact-SQL](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)||  
   
 ### <a name="replication-views-in-the-publication-database"></a>Представления репликации в базе данных публикации  
@@ -71,6 +71,6 @@ ms.locfileid: "68129570"
 |[systranschemas &#40;Transact-SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)||  
   
 ## <a name="see-also"></a>См. также:  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
+ [Таблицы репликации (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

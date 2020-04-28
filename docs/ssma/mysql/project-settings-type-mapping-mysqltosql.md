@@ -10,10 +10,10 @@ ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138330"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Параметры проекта (сопоставление типов) (MySQLToSQL)
@@ -51,8 +51,8 @@ ms.locfileid: "68138330"
 |||  
 |-|-|  
 |**Тип данных MySQL**|**Тип данных SQL Server**|  
-|bigint|bigint|  
-|bigint [*.. 255]|bigint|  
+|BIGINT|BIGINT|  
+|bigint [*.. 255]|BIGINT|  
 |binary|двоичный файл [1]|  
 |двоичный файл [0.. 1]|двоичный файл [1]|  
 |двоичный [2.. 255]|Binary [*]|  
@@ -65,7 +65,7 @@ ms.locfileid: "68138330"
 |бит [49.. 56]|Binary [7]|  
 |Bit [57.. 64]|Binary [8]|  
 |бит [9.. 16]|двоичный [2]|  
-|blob-объект|varbinary(max)|  
+|большой двоичный объект|varbinary(max)|  
 |большой двоичный объект [0.. 1]|varbinary [1]|  
 |большой двоичный объект [2.. 8000]|varbinary [*]|  
 |BLOB-объект [8001.. *]|varbinary(max)|  
@@ -101,7 +101,7 @@ ms.locfileid: "68138330"
 |float [*.. 53]|float [53]|  
 |INT|INT|  
 |int [*.. 255]|INT|  
-|integer|INT|  
+|Целое число|INT|  
 |Integer [*.. 255]|INT|  
 |longblob|varbinary(max)|  
 |longtext|nvarchar(max)|  
@@ -137,9 +137,9 @@ ms.locfileid: "68138330"
 |nvarchar [0.. 1]|nvarchar [1]|  
 |nvarchar [2.. 4000]|nvarchar [*]|  
 |nvarchar [4001.. *]|nvarchar(max)|  
-|real;|float [53]|  
+|real|float [53]|  
 |Real [*.. 255] [\*.. пределах|numeric [*] [\*]|  
-|serial|bigint|  
+|serial|BIGINT|  
 |smallint|smallint|  
 |smallint [*.. 255]|smallint|  
 |text|nvarchar(max)|  
@@ -149,11 +149,11 @@ ms.locfileid: "68138330"
 |time|time|  
 |TIMESTAMP|DATETIME|  
 |tinyblob|varbinary [255]|  
-|tinyint;|smallint|  
+|tinyint|smallint|  
 |tinyint [*.. 255]|smallint|  
 |tinytext|nvarchar [255]|  
-|bigint без знака|bigint|  
-|bigint без знака [*.. 255]|bigint|  
+|bigint без знака|BIGINT|  
+|bigint без знака [*.. 255]|BIGINT|  
 |неподписанная дек|Decimal|  
 |неподписанный Dec [*.. 65]|Decimal [*] [0]|  
 |неподписанный Dec [*.. 65] [\*.. пределах|Decimal [*] [\*]|  
@@ -169,10 +169,10 @@ ms.locfileid: "68138330"
 |беззнаковое число без знака|float [24]|  
 |float без знака [*.. 255] [\*.. пределах|numeric [*] [\*]|  
 |float без знака [*.. 53]|float [53]|  
-|целое число без знака|bigint|  
-|целое число без знака [*.. 255]|bigint|  
-|целое число без знака|bigint|  
-|целое число без знака [*.. 255]|bigint|  
+|unsigned int|BIGINT|  
+|целое число без знака [*.. 255]|BIGINT|  
+|целое число без знака|BIGINT|  
+|целое число без знака [*.. 255]|BIGINT|  
 |неподписанный медиуминт|INT|  
 |медиуминт без знака [*.. 255]|INT|  
 |число без знака|NUMERIC|  
@@ -182,8 +182,8 @@ ms.locfileid: "68138330"
 |Вещественная сумма без знака [*.. 255 [[\*.. пределах|numeric [*] [\*]|  
 |неподписанный smallint|INT|  
 |неподписанный smallint [*.. 255]|INT|  
-|неподписанный tinyint|tinyint;|  
-|неподписанный tinyint [*.. 255]|tinyint;|  
+|неподписанный tinyint|tinyint|  
+|неподписанный tinyint [*.. 255]|tinyint|  
 |varbinary [0.. 1]|varbinary [1]|  
 |varbinary [2.. 8000]|varbinary [*]|  
 |varbinary [8001.. *]|varbinary(max)|  

@@ -16,10 +16,10 @@ ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5a743b03d379276e6842b72e44d346cc1356cf7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137687"
 ---
 # <a name="sp_helpmergefilter-transact-sql"></a>Хранимая процедура sp_helpmergefilter (Transact-SQL)
@@ -47,18 +47,18 @@ sp_helpmergefilter [ @publication= ] 'publication'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**join_filterid**|**int**|Идентификатор фильтра соединения.|  
-|**filtername**|**имеет sysname**|Имя фильтра.|  
-|**join article name**|**имеет sysname**|Имя статьи соединения.|  
+|**filtername**|**sysname**|Имя фильтра.|  
+|**join article name**|**sysname**|Имя статьи соединения.|  
 |**join_filterclause**|**nvarchar (2000)**|Выражение фильтра для уточнения соединения.|  
 |**join_unique_key**|**int**|Определяет, производится ли соединение по уникальному ключу.|  
-|**base table owner**|**имеет sysname**|Имя владельца базовой таблицы.|  
-|**base table name**|**имеет sysname**|Имя базовой таблицы.|  
-|**join table owner**|**имеет sysname**|Имя владельца таблицы, соединяемой с основной таблицей.|  
-|**join table name**|**имеет sysname**|Имя таблицы, соединяемой с основной таблицей.|  
-|**article name**|**имеет sysname**|Имя статьи таблицы, соединяемой с основной таблицей.|  
+|**base table owner**|**sysname**|Имя владельца базовой таблицы.|  
+|**base table name**|**sysname**|Имя базовой таблицы.|  
+|**join table owner**|**sysname**|Имя владельца таблицы, соединяемой с основной таблицей.|  
+|**join table name**|**sysname**|Имя таблицы, соединяемой с основной таблицей.|  
+|**article name**|**sysname**|Имя статьи таблицы, соединяемой с основной таблицей.|  
 |**filter_type**|**tinyint**|Тип фильтра слияния. Может быть одним из следующих:<br /><br /> **1** = только фильтр объединения<br /><br /> **2** = связь логических записей<br /><br /> **3** = оба|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -74,6 +74,6 @@ sp_helpmergefilter [ @publication= ] 'publication'
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

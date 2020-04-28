@@ -20,17 +20,17 @@ ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3bb52186b88b678f9abe276fb5f18f1dd7505b96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68119689"
 ---
 # <a name="srv_rpcowner-extended-stored-procedure-api"></a>srv_rpcowner (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
   
  Возвращает компонент владельца для текущей удаленной хранимой процедуры.  
   
@@ -54,7 +54,7 @@ len
  *len*  
  Указатель на целочисленную переменную, получающую значение длины имени владельца. Параметр *len* может быть пустым; в этом случае длина компонента владельца не возвращается.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  Указатель DBCHAR на оканчивающийся нулевым байтом компонент владельца для текущей удаленной хранимой процедуры. Если текущей удаленной хранимой процедуры нет, возвращается значение NULL, а переменная *len* принимает значение –1.  
   
 ## <a name="remarks"></a>Remarks  

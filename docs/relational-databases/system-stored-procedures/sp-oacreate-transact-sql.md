@@ -18,10 +18,10 @@ ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107934"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
@@ -46,15 +46,15 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Например, SQLDMO. SQLServer — это идентификатор ProgID объекта **SQLServer** SQL-DMO. SQL-DMO имеет имя компонента SQLDMO, объект **SQLServer** является допустимым, и (как и все объекты SQL-DMO) объект **SQLServer** поддерживает **IDispatch**.  
   
- *clsid*  
+ *этому*  
  Идентификатор класса (CLSID) создаваемого OLE-объекта. Эта символьная строка описывает класс объекта OLE и имеет следующий вид: **"{**_nnnnnnnn-NNNN-NNNN-NNNN-нннннннннннн_**}"**. Указанный объект OLE должен быть допустимым и должен поддерживать интерфейс **IDispatch** .  
   
  Например, {00026BA1-0000-0000-C000-000000000046} является идентификатором CLSID объекта **SQLServer** SQL-DMO.  
   
- __ **выходные данные** обжекттокен  
+ _objecttoken_ **выходные данные** обжекттокен  
  Возвращаемый токен объекта, который должен быть локальной переменной типа данных **int**. Этот маркер объекта определяет созданный OLE-объект и используется в вызовах других хранимых процедур OLE-автоматизации.  
   
- *локального*  
+ *context*  
  Указывает контекст выполнения, в котором запускается созданный OLE-объект. Если аргумент указан, то его значение должно быть одним из следующих:  
   
  **1** = только внутрипроцессный (. dll) OLE-сервер.  
@@ -104,7 +104,7 @@ END;
 GO  
 ```  
   
-### <a name="b-using-clsid"></a>Б. Использование идентификатора CLSID  
+### <a name="b-using-clsid"></a>Б) Использование идентификатора CLSID  
  В следующем примере создается объект SQL-DMO **SQLServer** с помощью его CLSID.  
   
 ```  

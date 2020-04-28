@@ -18,10 +18,10 @@ ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5d0979ba7df97ebc9fc5b79d8fd0cbd34b6a59a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108535"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
@@ -45,7 +45,7 @@ sp_cursorexecute prepared_handle, cursor
  *prepared_handle*  
  Значение *обработчика* подготовленной инструкции, возвращаемое sp_cursorprepare. *prepared_handle* является обязательным параметром, который вызывает входное значение **int** .  
   
- *набора*  
+ *курсор*  
  Идентификатор курсора, созданный SQL Server. *курсор* — это обязательный параметр, который должен быть указан во всех последующих процедурах, действующих для курсора, например sp_cursorfetch  
   
  *scrollopt*  
@@ -79,7 +79,7 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>Значение кодов возврата  
  *ROWCOUNT* может возвращать следующие значения.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |-1|Число строк неизвестно.|  
 |-n|Действует асинхронное заполнение.|  
@@ -100,6 +100,6 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="see-also"></a>См. также:  
  [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

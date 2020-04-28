@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124341"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
@@ -56,9 +56,9 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
 `[ @action = ] 'action'`Действие, которое необходимо выполнить. *Action* имеет тип **varchar (20)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|**включить**|Добавляет *column_name* *qualified_table_name* в неактивный полнотекстовый индекс таблицы. Это действие активирует полнотекстовое индексирование столбца.|  
+|**add**|Добавляет *column_name* *qualified_table_name* в неактивный полнотекстовый индекс таблицы. Это действие активирует полнотекстовое индексирование столбца.|  
 |**тени**|Удаляет *column_name* *qualified_table_name* из неактивного полнотекстового индекса таблицы.|  
   
 `[ @language = ] 'language_term'`Язык данных, хранящихся в столбце. Список языков, входящих в состав, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в разделе [sys. Fulltext_languages &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
@@ -69,7 +69,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 `[ @type_colname = ] 'type_column_name'`Имя столбца в *qualified_table_name* , содержащего тип документа *column_name*. Этот столбец должен иметь **тип char**, **nchar**, **varchar**или **nvarchar**. Он используется только в том случае, если тип данных *column_name* имеет тип **varbinary (max)** или **Image**. Аргумент *type_column_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  

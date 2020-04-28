@@ -16,10 +16,10 @@ ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 85e75e1ce52866eb04b3c410f021db8de392239a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122330"
 ---
 # <a name="sp_helpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
@@ -47,13 +47,13 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**рассмотрен**|**имеет sysname**|Имя статьи.|  
-|**source_owner**|**имеет sysname**|Владелец исходного объекта.|  
+|**рассмотрен**|**sysname**|Имя статьи.|  
+|**source_owner**|**sysname**|Владелец исходного объекта.|  
 |**source_object**|**nvarchar (386)**|Имя исходного объекта.|  
-|**conflict_table**|**nvarchar (258)**|Имя таблицы, хранящей конфликты при операциях вставки или обновления.|  
-|**guidcolname**|**имеет sysname**|Имя RowGuidCol для исходного объекта.|  
+|**conflict_table**|**nvarchar(258)**|Имя таблицы, хранящей конфликты при операциях вставки или обновления.|  
+|**guidcolname**|**sysname**|Имя RowGuidCol для исходного объекта.|  
 |**centralized_conflicts**|**int**|Указывает, хранятся ли конфликтные записи на заданном издателе.|  
   
  Если статья содержит только конфликты удаления и **conflict_table** строк, то имя **conflict_table** в результирующем наборе будет иметь значение null.  
@@ -68,6 +68,6 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
  Только члены предопределенной роли сервера **sysadmin** и **db_owner** предопределенной роли базы данных могут выполнять **sp_helpmergearticleconflicts**.  
   
 ## <a name="see-also"></a>См. также:  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

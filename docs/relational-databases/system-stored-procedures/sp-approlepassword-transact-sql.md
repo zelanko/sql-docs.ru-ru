@@ -18,10 +18,10 @@ ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 201daf29a40d0d7c7a4f49539c75fdc07bad1e31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68117764"
 ---
 # <a name="sp_approlepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
@@ -47,10 +47,10 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 `[ @newpwd = ] 'password'`Новый пароль для роли приложения. Аргумент *Password* имеет тип **sysname**и не имеет значения по умолчанию. *пароль* не может иметь значение null.  
   
 > [!IMPORTANT]  
->  Не используйте пароль со значением NULL. Выбирайте надежные пароли. Дополнительные сведения см. в статье [Надежные пароли](../../relational-databases/security/strong-passwords.md).  
+>  Не используйте пароль со значением NULL. Выбирайте надежные пароли. Дополнительные сведения см. в разделе [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  **sp_approlepassword** не может быть выполнена в пользовательской транзакции.  
@@ -70,6 +70,6 @@ EXEC sp_approlepassword 'PayrollAppRole', '''B3r12-36';
  [Роли приложения](../../relational-databases/security/authentication-access/application-roles.md)   
  [sp_addapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
  [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

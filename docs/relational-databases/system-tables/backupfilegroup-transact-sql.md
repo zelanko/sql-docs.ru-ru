@@ -19,10 +19,10 @@ ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1456ff13c32b8b1f0eb8185693000507ffa401e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122924"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
@@ -33,17 +33,17 @@ ms.locfileid: "68122924"
 > [!NOTE]  
 >  В таблице **backupfilegroup** показана конфигурация файловой группы базы данных, а не резервный набор. Чтобы определить, включен ли файл в резервный набор данных, используйте столбец **is_present** таблицы [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) .  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Резервный набор данных, содержащий эту файловую группу.|  
-|**name**|**имеет sysname**|Имя файловой группы.|  
+|**name**|**sysname**|Имя файловой группы.|  
 |**filegroup_id**|**int**|Идентификатор файловой группы, уникальный в пределах базы данных. Соответствует **data_space_id** в **sys. FILEGROUP**.|  
-|**filegroup_guid**|**UNIQUEIDENTIFIER**|Глобальный уникальный идентификатор файловой группы. Может иметь значение NULL.|  
+|**filegroup_guid**|**uniqueidentifier**|Глобальный уникальный идентификатор файловой группы. Может иметь значение NULL.|  
 |**type**|**char (2)**|Тип содержимого, может принимать одно из двух значений:<br /><br /> FG = файловая группа «Строки»<br /><br /> SL = файловая группа журнала сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**type_desc**|**nvarchar (60)**|Описание типа функции, может принимать одно из двух значений:<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP|  
+|**type_desc**|**nvarchar(60)**|Описание типа функции, может принимать одно из двух значений:<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP|  
 |**is_default**|**bit**|Файловая группа по умолчанию; используется, если в инструкции CREATE TABLE или CREATE INDEX не указана ни одна из файловых групп.|  
 |**is_readonly**|**bit**|1 = Файловая группа доступна только для чтения.|  
-|**log_filegroup_guid**|**UNIQUEIDENTIFIER**|Может иметь значение NULL.|  
+|**log_filegroup_guid**|**uniqueidentifier**|Может иметь значение NULL.|  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -60,6 +60,6 @@ ms.locfileid: "68122924"
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
  [резервный &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [Системные таблицы &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Системные таблицы (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

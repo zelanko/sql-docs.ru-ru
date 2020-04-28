@@ -20,10 +20,10 @@ ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3613c3da1138a6ec17394a5b6615d78d0a941e56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133154"
 ---
 # <a name="sysserver_events-transact-sql"></a>sys.server_events (Transact-SQL)
@@ -32,16 +32,16 @@ ms.locfileid: "68133154"
   Содержит одну строку для каждого события, для которого запускается уведомление о событии или триггер DDL уровня сервера. Столбцы **object_id** и **тип** уникально идентифицируют событие сервера.  
 
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Идентификатор запускаемого уведомления о событии или триггера DDL уровня сервера.|  
 |**type**|**int**|Тип события, которое привело к срабатыванию уведомления о событии или триггера DDL.|  
-|**type_desc**|**nvarchar (60)**|Описание события, которое привело к срабатыванию уведомления о событии или триггера DDL.|  
+|**type_desc**|**nvarchar(60)**|Описание события, которое привело к срабатыванию уведомления о событии или триггера DDL.|  
 |**event_group_type**|**int**|Группа событий, для которой создается уведомление о триггере или событии, или значение NULL, если уведомления для группы событий не создаются.|  
-|**event_group_type_desc**|**nvarchar (60)**|Описание группы событий, на основе которой создается триггер или уведомление о событии, или значение NULL, если триггер или уведомление о событии не были созданы на основе группы событий|  
+|**event_group_type_desc**|**nvarchar(60)**|Описание группы событий, на основе которой создается триггер или уведомление о событии, или значение NULL, если триггер или уведомление о событии не были созданы на основе группы событий|  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

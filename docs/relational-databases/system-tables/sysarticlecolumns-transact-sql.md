@@ -18,10 +18,10 @@ ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 61e1329fe35ae032b5d35f94dd2e1ce5e8d08d38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130518"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68130518"
 
   Таблица **системное представление sysarticlecolumns** содержит по одной строке для каждого столбца таблицы, опубликованного в публикации моментальных снимков или транзакций, и сопоставляет каждый столбец с его статьей. Эта таблица хранится в базе данных публикации.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|Определяет статью.|  
 |**идентификатора столбца**|**smallint**|Идентифицирует столбец в статье.|  
@@ -39,6 +39,6 @@ ms.locfileid: "68130518"
   
 ## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

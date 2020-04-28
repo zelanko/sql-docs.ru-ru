@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11f39b29817716799ec693d6161135010c35a233
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133028"
 ---
 # <a name="sysserver_role_members-transact-sql"></a>sys.server_role_members (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68133028"
 
   Возвращает одну строку для каждого члена каждой предопределенной и заданной пользователем роли сервера.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**role_principal_id**|**int**|Идентификатор участника роли сервера.|  
 |**member_principal_id**|**int**|Идентификатор элемента участника сервера.|  
@@ -42,7 +42,7 @@ ms.locfileid: "68133028"
 ## <a name="permissions"></a>Разрешения  
  Имена входа могут просматривать свое членство в роли сервера и могут просматривать principal_id членов предопределенных ролей сервера. Для просмотра всех членов роли сервера требуется разрешение **View definition на роль сервера** или членство в предопределенной роли сервера **администратора** .  
   
- Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+  Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращается имя и идентификатор ролей и их членов.  
@@ -58,9 +58,9 @@ JOIN sys.server_principals AS member
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога безопасности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md)   
- [Участники &#40;ядро СУБД&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
+ [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

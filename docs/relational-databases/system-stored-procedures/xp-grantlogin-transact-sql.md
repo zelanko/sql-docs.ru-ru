@@ -18,10 +18,10 @@ ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 957bbdc43c0f0adf3a545fee76e9f69df130d8f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68116674"
 ---
 # <a name="xp_grantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
@@ -42,12 +42,12 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @loginame = ] 'login'`Имя добавляемого пользователя или группы Windows. Имя пользователя или группы Windows должно быть дополнено именем домена Windows в форме "пользователь *домена*\\**". Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @loginame = ] 'login'`Имя добавляемого пользователя или группы Windows. Имя пользователя или группы Windows должно быть дополнено именем домена Windows в форме "пользователь *домена*\\*User*". Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 `[ @logintype = ] 'logintype'`Уровень безопасности имени входа, доступ к которому предоставляется. *тип учетных данных* имеет тип **varchar (5)** и значение по умолчанию NULL. Можно указать только **администратора** . Если указано значение **Admin** , то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]для *входа* предоставляется доступ к и добавляется как член предопределенной роли сервера **sysadmin** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  **xp_grantlogin** теперь является системной хранимой процедурой, а не расширенной хранимой процедурой. **xp_grantlogin** вызывает **sp_grantlogin** и **sp_addsrvrolemember**.  
@@ -63,6 +63,6 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
  [xp_enumgroups &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-enumgroups-transact-sql.md)   
  [xp_loginconfig &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   
  [xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)   
- [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)  
+ [Хранимая процедура sp_revokelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)  
   
   

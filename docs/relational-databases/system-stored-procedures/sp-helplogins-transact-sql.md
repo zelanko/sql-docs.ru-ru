@@ -18,10 +18,10 @@ ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122453"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
@@ -39,30 +39,30 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @LoginNamePattern = ] 'login'`Имя входа. Аргумент *Login* имеет тип **sysname**и значение по умолчанию NULL. *имя входа* должно существовать, если оно указано. Если параметр *Login* не указан, возвращаются сведения обо всех именах входа.  
+`[ @LoginNamePattern = ] 'login'`Имя входа. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. *имя входа* должно существовать, если оно указано. Если параметр *Login* не указан, возвращаются сведения обо всех именах входа.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Первый отчет содержит данные о каждой заданной учетной записи, как показано в следующей таблице.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**LoginName**|**имеет sysname**|Имя входа.|  
-|**ТРАНСЛЯЦИЮ**|**varbinary (85)**|Идентификатор защиты имени входа (SID).|  
-|**DefDBName**|**имеет sysname**|База данных по умолчанию, которую использует **LoginName** при соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**DefLangName**|**имеет sysname**|Язык по умолчанию, используемый в **LoginName**.|  
+|**LoginName**|**sysname**|Имя входа.|  
+|**ТРАНСЛЯЦИЮ**|**varbinary(85)**|Идентификатор защиты имени входа (SID).|  
+|**DefDBName**|**sysname**|База данных по умолчанию, которую использует **LoginName** при соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**DefLangName**|**sysname**|Язык по умолчанию, используемый в **LoginName**.|  
 |**Auser**|**char (5)**|Yes = **LoginName** имеет связанное имя пользователя в базе данных.<br /><br /> No = **LoginName** не имеет связанного имени пользователя.|  
 |**ARemote**|**char (7)**|Yes = **LoginName** имеет связанное удаленное имя входа.<br /><br /> No = **LoginName** не имеет связанного имени входа.|  
   
  Второй отчет содержит данные о пользователях, сопоставленных с каждым из имен входа, а также ролях, членом которых является каждое имя входа, как показано в следующей таблице.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**LoginName**|**имеет sysname**|Имя входа.|  
-|**DBName**|**имеет sysname**|База данных по умолчанию, которую использует **LoginName** при соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Имен**|**имеет sysname**|Учетная запись пользователя, сопоставленная с **LoginName** в параметре **dbname**, а роли, в которые находится **LoginName** , являются членами в параметре **dbname**.|  
+|**LoginName**|**sysname**|Имя входа.|  
+|**DBName**|**sysname**|База данных по умолчанию, которую использует **LoginName** при соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Имен**|**sysname**|Учетная запись пользователя, сопоставленная с **LoginName** в параметре **dbname**, а роли, в которые находится **LoginName** , являются членами в параметре **dbname**.|  
 |**UserOrAlias**|**char (8)**|MemberOf = **имя пользователя** является ролью.<br /><br /> Пользователь = **username** является учетной записью пользователя.|  
   
 ## <a name="remarks"></a>Remarks  
@@ -103,6 +103,6 @@ John        pubs     John       User
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

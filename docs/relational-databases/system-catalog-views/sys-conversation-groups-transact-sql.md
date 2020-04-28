@@ -20,10 +20,10 @@ ms.assetid: 3f35815e-2de4-42a2-a972-8f0141dad0b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7c822d5f405b353a9c07902fc1ef8f9272ad4353
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68109495"
 ---
 # <a name="sysconversation_groups-transact-sql"></a>sys.conversation_groups (Transact-SQL)
@@ -31,13 +31,13 @@ ms.locfileid: "68109495"
 
   Это представление каталога содержит по одной строке для каждой группы сообщений.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**conversation_group_id**|**UNIQUEIDENTIFIER**|Идентификатор группы сообщений. Не допускает значения NULL.|  
+|**conversation_group_id**|**uniqueidentifier**|Идентификатор группы сообщений. Не допускает значения NULL.|  
 |**service_id**|**int**|Идентификатор службы для диалогов в этой группе. Не допускает значения NULL.|  
 |**is_system**|**bit**|Указывает на принадлежность или отсутствие принадлежности к системному экземпляру. Допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
   

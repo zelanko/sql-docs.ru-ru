@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a5becd3382f07a9adc89055a253235495a7e50a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125837"
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals (многомерные выражения)
@@ -31,7 +31,7 @@ VisualTotals(Set_Expression[,Pattern])
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
- *Пакет*  
+ *Шаблон*  
  Допустимое строковое выражение для родительского элемента набора, включающее в себя звездочку (*) как подстановочный символ для имени родительского объекта.  
   
 ## <a name="remarks"></a>Remarks  
@@ -67,6 +67,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

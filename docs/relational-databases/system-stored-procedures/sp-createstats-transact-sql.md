@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e0bb7d109323f4eb4a33181ab45b4b17d15faf54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108616"
 ---
 # <a name="sp_createstats-transact-sql"></a>Хранимая процедура sp_createstats (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68108616"
   
  Процедура sp_createstats полезна для таких задач, как тестирование производительности, когда существенно важно время выполнения запросов и недопустимо ожидание построения статистики по отдельным столбцам оптимизатором запросов. В большинстве случаев нет необходимости использовать sp_createstats. Оптимизатор запросов создает статистику по одному столбцу, если это необходимо для улучшения планов запросов, если параметр **AUTO_CREATE_STATISTICS** имеет значение ON.  
   
- Дополнительные сведения о статистике см. в статье [Статистика](../../relational-databases/statistics/statistics.md). Дополнительные сведения о формировании статистики по отдельным столбцам см. в описании параметра **AUTO_CREATE_STATISTICS** в разделе [Параметры инструкции ALTER DATABASE SET &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Дополнительные сведения о статистике см. в разделе [Статистика](../../relational-databases/statistics/statistics.md). Дополнительные сведения о формировании статистики по отдельным столбцам см. в описании параметра **AUTO_CREATE_STATISTICS** в разделе [Параметры инструкции ALTER DATABASE SET &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,7 +57,7 @@ sp_createstats
 `[ @incremental = ] 'incremental'`Использует инструкцию [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) с параметром **инкремент = on** . **Добавочный** — **char (12)**.  Значение по умолчанию — NO.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Каждая новая статистика имеет имя, совпадающее со столбцом, по которому она создается.  
@@ -80,7 +80,7 @@ EXEC sp_createstats;
 GO  
 ```  
   
-### <a name="b-create-single-column-statistics-on-all-eligible-index-columns"></a>Б. Создание статистики по отдельным столбцам для всех подходящих столбцов индекса  
+### <a name="b-create-single-column-statistics-on-all-eligible-index-columns"></a>Б) Создание статистики по отдельным столбцам для всех подходящих столбцов индекса  
  В следующем примере создается статистика по отдельным столбцам для всех подходящих столбцов, которые включены в индекс, но не являются первыми в индексе.  
   
 ```  
@@ -91,11 +91,11 @@ GO
 ## <a name="see-also"></a>См. также:  
  [Статистически](../../relational-databases/statistics/statistics.md)   
  [Создание статистики &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
- [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [Параметры ALTER DATABASE SET &#40;&#41;Transact-SQL](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [Удаление статистики &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [Обновление статистики &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

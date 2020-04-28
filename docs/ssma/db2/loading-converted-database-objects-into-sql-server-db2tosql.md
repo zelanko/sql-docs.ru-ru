@@ -10,10 +10,10 @@ ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7af5566094c9cc4c40ba2aa33f27e79bae1c7445
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141028"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Загрузка преобразованных объектов базы данных в SQL Server (DB2ToSQL)
@@ -102,7 +102,7 @@ ms.locfileid: "68141028"
 ## <a name="securing-objects-in-sql-server"></a>Защита объектов в SQL Server  
 После загрузки преобразованных объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно предоставлять и запрещать разрешения на эти объекты. Рекомендуется сделать это перед переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о защите объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в разделе «вопросы безопасности для баз данных и приложений баз данных» электронной [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] документации по.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 Следующим шагом процесса миграции является [Перенос данных DB2 в SQL Server](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b).  
   
 ## <a name="see-also"></a>См. также:  

@@ -18,10 +18,10 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68117902"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
@@ -51,7 +51,7 @@ sp_adduser [ @loginame = ] 'login'
 `[ @grpname = ] 'role'`Роль базы данных, членом которой становится новый пользователь. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. *роль* должна быть допустимой ролью базы данных в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  **sp_adduser** также создаст схему с именем пользователя.  
@@ -85,7 +85,7 @@ GO
 EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';  
 ```  
   
-### <a name="b-adding-a-database-user-with-the-same-login-id"></a>Б. Добавление пользователя базы данных с таким же идентификатором входа  
+### <a name="b-adding-a-database-user-with-the-same-login-id"></a>Б) Добавление пользователя базы данных с таким же идентификатором входа  
  В приведенном ниже примере пользователь `Arvind` добавляется в текущую базу данных для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Arvind`. Этот пользователь принадлежит к роли **Public** по умолчанию.  
   
 ```  
@@ -93,7 +93,7 @@ EXEC sp_adduser 'Arvind';
 ```  
   
 ### <a name="c-adding-a-database-user-with-a-different-name-than-its-server-level-login"></a>В. Добавление пользователя базы данных с именем, отличным от имени входа уровня сервера  
- В приведенном ниже примере в текущую базу данных, в которой есть пользователь с именем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], добавляется имя входа `BjornR``Bjorn`, а также пользователь `Bjorn` добавляется в роль `Production`.  
+ В приведенном ниже примере в текущую базу данных, в которой есть пользователь с именем `BjornR`, добавляется имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Bjorn`, а также пользователь `Bjorn` добавляется в роль `Production`.  
   
 ```  
 EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';  
@@ -107,6 +107,6 @@ EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';
  [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

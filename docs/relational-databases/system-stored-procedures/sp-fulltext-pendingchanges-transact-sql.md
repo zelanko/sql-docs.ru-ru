@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d4d8cbd7082a3ec8d19ccc6df7212a70b101e6b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124217"
 ---
 # <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
@@ -45,9 +45,9 @@ sp_fulltext_pendingchanges table_id
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**Key**|*|Значение полнотекстового ключа из указанной таблицы.|  
+|**Клавиша**|*|Значение полнотекстового ключа из указанной таблицы.|  
 |**DocId**|**bigint**|Столбец внутреннего идентификатора документа (DocId), который соответствует значению ключа.|  
 |**Состояние**|**int**|0 = строка будет удалена из полнотекстового индекса<br /><br /> 1 = строка будет включена в полнотекстовый индекс<br /><br /> 2 = обновленная строка<br /><br /> -1 = строка в переходном состоянии (включена в пакет изменений, но не зафиксирована) или в состоянии ошибки|  
 |**DocState**|**tinyint**|Необработанный дамп столбца состояния схемы внутренних идентификаторов документа (DOCID).|  

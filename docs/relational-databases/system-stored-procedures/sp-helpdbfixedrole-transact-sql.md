@@ -18,10 +18,10 @@ ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dc461bcd1b5adbbc64b2eadaa4bb55af690ea88a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123827"
 ---
 # <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
@@ -42,27 +42,27 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 `[ @rolename = ] 'role'`Имя предопределенной роли базы данных. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. Если указан параметр *Role* , возвращаются только сведения об этой роли. в противном случае возвращается список и описание всех предопределенных ролей базы данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**DbFixedRole**|**имеет sysname**|Имя предопределенной роли базы данных.|  
+|**DbFixedRole**|**sysname**|Имя предопределенной роли базы данных.|  
 |**Описание**|**nvarchar (70)**|Описание **дбфикседроле.**|  
   
 ## <a name="remarks"></a>Remarks  
  Предопределенные роли базы данных, как показано в таблице, определены на уровне базы данных и обладают специальными разрешениями для выполнения определенных административных функций. Предопределенные роли базы данных не могут быть добавлены или удалены. Нельзя изменить разрешения, предоставленные предопределенной роли базы данных.  
   
-|Предопределенная роль базы данных|Description|  
+|Предопределенная роль базы данных|Описание|  
 |-------------------------|-----------------|  
 |**db_owner**|Владельцы базы данных|  
 |**db_accessadmin**|Администраторы доступа к базе данных|  
 |**db_securityadmin**|Администраторы безопасности базы данных|  
 |**db_ddladmin**|Администраторы DDL базы данных|  
 |**db_backupoperator**|Операторы резервного копирования базы данных|  
-|**db_datareader;**|Модули чтения данных из базы данных|  
-|**db_datawriter.**|Модули записи данных в базу данных|  
+|**db_datareader**|Модули чтения данных из базы данных|  
+|**db_datawriter**|Модули записи данных в базу данных|  
 |**db_denydatareader**|Модули чтения данных из базы данных, которым отказано в доступе|  
 |**db_denydatawriter**|Модули записи данных в базу данных, которым отказано в доступе|  
   
@@ -75,9 +75,9 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |**sp_droprolemember, хранимая процедура**|Удаляет член из предопределенной роли базы данных.|  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в роли **Public** .  
+ Необходимо быть членом роли **public**.  
   
- Полученные данные подлежат ограничениям на доступ к метаданным. Сущности, на которые участник не имеет разрешения, не показаны. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Полученные данные подлежат ограничениям на доступ к метаданным. Сущности, на которые участник не имеет разрешения, не показаны.  Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример иллюстрирует получение списка всех предопределенных ролей базы данных.  
@@ -94,6 +94,6 @@ GO
  [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

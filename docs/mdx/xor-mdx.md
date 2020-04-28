@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1657d9e58a0ae729a67e179602cd9a886ae923b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125793"
 ---
 # <a name="xor-mdx"></a>XOR (многомерные выражения)
@@ -29,7 +29,7 @@ Expression1 XOR Expression2
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Expression1*  
+ *Выражения*  
  Допустимое многомерное выражение, возвращающее числовое значение.  
   
  *Expression2*  
@@ -41,12 +41,12 @@ Expression1 XOR Expression2
 ## <a name="remarks"></a>Remarks  
  Оператор **XOR** обрабатывает оба параметра как логические значения (ноль, 0, как **false**; в противном случае — **значение true**), прежде чем оператор выполняет логическое исключение. В следующей таблице показано, как оператор **XOR** выполняет логическое исключение.  
   
-|*Expression1*|*Expression2*|Возвращаемое значение|  
+|*Выражения*|*Expression2*|Возвращаемое значение|  
 |-------------------|-------------------|------------------|  
-|**условия**|**условия**|**IsFalse**|  
-|**условия**|**IsFalse**|**условия**|  
-|**IsFalse**|**условия**|**условия**|  
-|**IsFalse**|**IsFalse**|**IsFalse**|  
+|**true**|**true**|**false**|  
+|**true**|**false**|**true**|  
+|**false**|**true**|**true**|  
+|**false**|**false**|**false**|  
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-operator-reference-mdx.md)  

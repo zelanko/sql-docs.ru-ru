@@ -12,10 +12,10 @@ ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ae9210444311267569d5f240d40252d4fe024877
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139209"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>Оценка баз данных MySQL для преобразования (MySQLToSQL)
@@ -78,7 +78,7 @@ ms.locfileid: "68139209"
   
 -   Вы можете исключить объект из миграции. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure обозреватель метаданных и обозреватель метаданных MySQL снимите флажок рядом с элементом, прежде чем загружать объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure и переносить данные из MySQL.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 [Преобразование баз данных MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>См. также:  

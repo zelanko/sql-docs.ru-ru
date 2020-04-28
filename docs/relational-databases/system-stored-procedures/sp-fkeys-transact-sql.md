@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb5f684321a11d56a419ae73be0bfb2950fb9939
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124403"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
@@ -71,23 +71,21 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|PKTABLE_QUALIFIER|**имеет sysname**|Имя квалификатора таблицы (с первичным ключом). Это поле может иметь значение NULL.|  
-|PKTABLE_OWNER|**имеет sysname**|Имя владельца таблицы (с первичным ключом). Это поле всегда возвращает значение.|  
-|PKTABLE_NAME|**имеет sysname**|Имя таблицы (с первичным ключом). Это поле всегда возвращает значение.|  
-|PKCOLUMN_NAME|**имеет sysname**|Имя первичных ключевых столбцов для каждого столбца таблицы TABLE_NAME. Это поле всегда возвращает значение.|  
-|FKTABLE_QUALIFIER|**имеет sysname**|Имя квалификатора таблицы (с внешним ключом). Это поле может иметь значение NULL.|  
-|FKTABLE_OWNER|**имеет sysname**|Имя владельца таблицы (с внешним ключом). Это поле всегда возвращает значение.|  
-|FKTABLE_NAME|**имеет sysname**|Имя таблицы (с внешним ключом). Это поле всегда возвращает значение.|  
-|FKCOLUMN_NAME|**имеет sysname**|Имя внешнего ключевого столбца для каждого столбца таблицы TABLE_NAME. Это поле всегда возвращает значение.|  
+|PKTABLE_QUALIFIER|**sysname**|Имя квалификатора таблицы (с первичным ключом). Это поле может иметь значение NULL.|  
+|PKTABLE_OWNER|**sysname**|Имя владельца таблицы (с первичным ключом). Это поле всегда возвращает значение.|  
+|PKTABLE_NAME|**sysname**|Имя таблицы (с первичным ключом). Это поле всегда возвращает значение.|  
+|PKCOLUMN_NAME|**sysname**|Имя первичных ключевых столбцов для каждого столбца таблицы TABLE_NAME. Это поле всегда возвращает значение.|  
+|FKTABLE_QUALIFIER|**sysname**|Имя квалификатора таблицы (с внешним ключом). Это поле может иметь значение NULL.|  
+|FKTABLE_OWNER|**sysname**|Имя владельца таблицы (с внешним ключом). Это поле всегда возвращает значение.|  
+|FKTABLE_NAME|**sysname**|Имя таблицы (с внешним ключом). Это поле всегда возвращает значение.|  
+|FKCOLUMN_NAME|**sysname**|Имя внешнего ключевого столбца для каждого столбца таблицы TABLE_NAME. Это поле всегда возвращает значение.|  
 |KEY_SEQ|**smallint**|Порядковый номер столбца в первичном ключе, состоящем из нескольких столбцов. Это поле всегда возвращает значение.|  
 |UPDATE_RULE|**smallint**|Действие, совершаемое над внешним ключом, когда операция SQL является операцией обновления.  Возможные значения:<br /> 0=CASCADE; каскадное изменение в соответствии с внешним ключом.<br /> 1=NO ACTION; отсутствие изменений при наличии внешнего ключа.<br />   2 = задать значение null <br /> 3 = задать значение по умолчанию |  
 |DELETE_RULE|**smallint**|Действие, совершаемое над внешним ключом, когда операция SQL является операцией удаления. Возможные значения:<br /> 0=CASCADE; каскадное изменение в соответствии с внешним ключом.<br /> 1=NO ACTION; отсутствие изменений при наличии внешнего ключа.<br />   2 = задать значение null <br /> 3 = задать значение по умолчанию |  
-|FK_NAME|**имеет sysname**|Идентификатор внешнего ключа. Возвращает NULL, если не применим к источнику данных. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает имя ограничения FOREIGN KEY.|  
-|PK_NAME|**имеет sysname**|Идентификатор первичного ключа. Возвращает NULL, если не применим к источнику данных. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает имя ограничения PRIMARY KEY.|  
+|FK_NAME|**sysname**|Идентификатор внешнего ключа. Возвращает NULL, если не применим к источнику данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает имя ограничения FOREIGN KEY.|  
+|PK_NAME|**sysname**|Идентификатор первичного ключа. Возвращает NULL, если не применим к источнику данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает имя ограничения PRIMARY KEY.|  
   
  Возвращенные результаты сортируются по столбцам FKTABLE_QUALIFIER, FKTABLE_OWNER, FKTABLE_NAME и KEY_SEQ.  
   
@@ -115,7 +113,7 @@ EXEC sp_fkeys @pktable_name = N'Department'
     ,@pktable_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В приведенном ниже примере выводится список внешних ключей для таблицы `DimDate` базы данных `AdventureWorksPDW2012`. Строки не возвращаются, так [!INCLUDE[ssDW](../../includes/ssdw-md.md)] как не поддерживает внешние ключи.  
   
 ```sql  

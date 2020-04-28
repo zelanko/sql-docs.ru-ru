@@ -18,10 +18,10 @@ ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139918"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
@@ -62,7 +62,7 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @is_unique= ] "*is_unique*"  
  Тип индекса, для которого запрашиваются сведения. *is_unique* является **битным**, имеет значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |1|Возвращает сведения об уникальных индексах.|  
 |0|Возвращает сведения об неуникальных индексах.|  
@@ -70,23 +70,21 @@ sp_indexes [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|TABLE_CAT|**имеет sysname**|Имя базы данных, в которой расположена указанная таблица.|  
-|TABLE_SCHEM|**имеет sysname**|Схема для таблицы.|  
-|TABLE_NAME|**имеет sysname**|Имя удаленной таблицы.|  
+|TABLE_CAT|**sysname**|Имя базы данных, в которой расположена указанная таблица.|  
+|TABLE_SCHEM|**sysname**|Схема для таблицы.|  
+|TABLE_NAME|**sysname**|Имя удаленной таблицы.|  
 |NON_UNIQUE|**smallint**|Является ли индекс уникальным или неуникальным:<br /><br /> 0 = уникальное<br /><br /> 1 = неуникальное|  
-|INDEX_QUALIFER|**имеет sysname**|Имя владельца индекса. В некоторых СУБД пользователям, не являющимся владельцами таблицы, разрешено создавать индексы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот столбец всегда совпадает с **table_name**.|  
-|INDEX_NAME|**имеет sysname**|Имя индекса.|  
+|INDEX_QUALIFER|**sysname**|Имя владельца индекса. В некоторых СУБД пользователям, не являющимся владельцами таблицы, разрешено создавать индексы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот столбец всегда совпадает с **table_name**.|  
+|INDEX_NAME|**sysname**|Имя индекса.|  
 |TYPE|**smallint**|Тип индекса:<br /><br /> 0 = статистика по таблице<br /><br /> 1 = кластеризованный<br /><br /> 2 = хэшированный<br /><br /> 3 = другие|  
 |ORDINAL_POSITION|**int**|Порядковый номер столбца в индексе. Номер первого столбца в таблице равен 1. Этот столбец всегда возвращает значение.|  
-|COLUMN_NAME|**имеет sysname**|Соответствующее имя столбца для каждого столбца возвращенной TABLE_NAME.|  
-|ASC_OR_DESC|**varchar**|Порядок, используемые в параметрах сортировки:<br /><br /> A = по возрастанию<br /><br /> D = по убыванию<br /><br /> NULL = неприменимо<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда возвращает A.|  
+|COLUMN_NAME|**sysname**|Соответствующее имя столбца для каждого столбца возвращенной TABLE_NAME.|  
+|ASC_OR_DESC|**varchar**|Порядок, используемые в параметрах сортировки:<br /><br /> A = по возрастанию<br /><br /> D = по убыванию<br /><br /> NULL = неприменимо<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда возвращает A.|  
 |CARDINALITY|**int**|Число строк в таблице или уникальных значений в индексе.|  
 |PAGES|**int**|Число страниц для хранения индекса или таблицы.|  
-|FILTER_CONDITION|**nvarchar (** 4000 **)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение.|  
+|FILTER_CONDITION|**nvarchar (** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение.|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  
@@ -109,6 +107,6 @@ EXEC sp_indexes @table_server = 'Seattle1',
  [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

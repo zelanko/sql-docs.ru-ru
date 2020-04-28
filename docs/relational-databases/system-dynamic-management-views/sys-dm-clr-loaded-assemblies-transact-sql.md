@@ -19,10 +19,10 @@ ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1cd677e516048aa52badec7fc9875e5a5b13f25a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138659"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68138659"
  Сборки — это файлы динамических библиотек с управляемым кодом, которые используются для определения и развертывания управляемых объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждый раз, когда пользователь запускает один из управляемых объектов базы данных, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и среда CLR загружают сборку (а также другие сборки, на которые она ссылается), в которой определен этот управляемый объект базы данных. Сборка остается загруженной в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для увеличения производительности, чтобы впоследствии управляемые объекты базы данных, содержащиеся в сборке, можно было бы вызывать без повторной загрузки сборки. Сборка не выгружается до тех пор, пока у [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возникнет необходимость в освобождении памяти. Дополнительные сведения о сборках и интеграции со средой CLR см. в разделе Среда [размещения CLR](../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md). Дополнительные сведения об управляемых объектах базы данных см. в разделе [Создание объектов базы данных с помощью среды clr &#40;интеграция&#41; CLR](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md).  
 
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**int**|Идентификатор загруженной сборки. **Assembly_id** можно использовать для поиска дополнительных сведений о сборке в представлении каталога [sys. assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) . Обратите внимание [!INCLUDE[tsql](../../includes/tsql-md.md)] , что в каталоге [sys. assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) сборки отображаются только в текущей базе данных. В представлении **СКС. dm_clr_loaded_assemblies** отображаются все загруженные сборки на сервере.|  
 |**appdomain_address**|**int**|Адрес домена приложения (**AppDomain**), в котором загружается сборка. Все сборки, принадлежащие одному пользователю, всегда загружаются в одном **домене AppDomain**. **Appdomain_address** можно использовать для поиска дополнительных сведений о **домене приложения** в представлении [sys. dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) .|  

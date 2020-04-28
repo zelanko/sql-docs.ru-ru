@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: eee40829c72394bf95a1bc06540a434a1c74e166
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125813"
 ---
 # <a name="wtd-mdx"></a>Wtd (многомерные выражения)
@@ -40,6 +40,6 @@ Wtd( [ Member_Expression ] )
  [Текущему кварталу &#40;&#41;многомерных выражений](../mdx/qtd-mdx.md)   
  [MTD &#40;&#41;многомерных выражений](../mdx/mtd-mdx.md)   
  [&#40;с начала года&#41;многомерных выражений](../mdx/ytd-mdx.md)   
- [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

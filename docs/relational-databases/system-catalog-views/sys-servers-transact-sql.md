@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: b17296d558c078d3f580e63bf662bb975615ad94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68132951"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
@@ -32,16 +32,16 @@ ms.locfileid: "68132951"
 
   Содержит строку для каждого зарегистрированного или удаленного сервера и строку для локального сервера, имеющего **server_id** = 0.  
 
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Локальный идентификатор связанного сервера.|  
-|**name**|**имеет sysname**|Если **server_id** = 0, возвращаемое значение является именем сервера.<br /><br /> Если **server_id** > 0, возвращаемое значение является локальным именем связанного сервера.|  
-|**продукта**|**имеет sysname**|Имя продукта связанного сервера. Значение "SQL Server" указывает на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**поставщики**|**имеет sysname**|Имя поставщика OLE DB для соединения со связанным сервером.|  
-|**data_source**|**nvarchar (4000)**|Свойство соединения источника данных OLE DB.|  
-|**места**|**nvarchar (4000)**|Свойство соединения местоположения OLE DB. NULL — если нет.|  
-|**provider_string**|**nvarchar (4000)**|Свойство соединения строки поставщика OLE DB.<br /><br /> Имеет значение NULL, если только вызывающий не обладает разрешением ALTER ANY LINKED SERVER.|  
-|**каталога**|**имеет sysname**|Свойство соединения каталога OLE DB. NULL — если нет.|  
+|**name**|**sysname**|Если **server_id** = 0, возвращаемое значение является именем сервера.<br /><br /> Если **server_id** > 0, возвращаемое значение является локальным именем связанного сервера.|  
+|**product**|**sysname**|Имя продукта связанного сервера. Значение "SQL Server" указывает на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**поставщики**|**sysname**|Имя поставщика OLE DB для соединения со связанным сервером.|  
+|**data_source**|**nvarchar(4000)**|Свойство соединения источника данных OLE DB.|  
+|**расположение**|**nvarchar(4000)**|Свойство соединения местоположения OLE DB. NULL — если нет.|  
+|**provider_string**|**nvarchar(4000)**|Свойство соединения строки поставщика OLE DB.<br /><br /> Имеет значение NULL, если только вызывающий не обладает разрешением ALTER ANY LINKED SERVER.|  
+|**каталога**|**sysname**|Свойство соединения каталога OLE DB. NULL — если нет.|  
 |**connect_timeout**|**int**|Время ожидания соединения в секундах; 0 — не указано.|  
 |**query_timeout**|**int**|Время ожидания запроса в секундах; 0 — не указано.|  
 |**is_linked**|**bit**|0 = это сервер со старым стилем, добавленный с помощью **sp_addserver**, с различными поведениями RPC и распределенных транзакций.<br /><br /> 1 = стандартный связанный сервер.|  
@@ -50,7 +50,7 @@ ms.locfileid: "68132951"
 |**is_data_access_enabled**|**bit**|Сервер включен для распределенных запросов.|  
 |**is_collation_compatible**|**bit**|Параметры сортировки удаленных данных рассматриваются как совместимые с локальными данными, если нет доступных сведений о параметрах сортировки.|  
 |**uses_remote_collation**|**bit**|При значении 1 используйте параметры сортировки, переданные удаленным сервером; в ином случае используйте параметры сортировки, указанные следующим столбцом.|  
-|**collation_name**|**имеет sysname**|Имя параметров сортировки, которые должны быть использованы, или NULL, если следует использовать локальные параметры сортировки.|  
+|**collation_name**|**sysname**|Имя параметров сортировки, которые должны быть использованы, или NULL, если следует использовать локальные параметры сортировки.|  
 |**lazy_schema_validation**|**bit**|При значении 1 проверка правильности схемы при запуске запроса не производится.|  
 |**is_system**|**bit**|Доступ на этот сервер может получить только внутренняя система.|  
 |**is_publisher**|**bit**|Сервер является издателем репликации.|  
@@ -69,13 +69,13 @@ ms.locfileid: "68132951"
   
  Если сопоставление удалено, только те пользователи, которые добавлены явно со связанным или удаленным именем входа, могут просматривать связанные или удаленные сервера соответственно.  Следующие разрешения необходимы для просмотра всех связанных и удаленных серверов после сопоставления имени входа по умолчанию:  
   
-- `ALTER ANY LINKED SERVER`ни`ALTER ANY LOGIN ON SERVER`  
+- `ALTER ANY LINKED SERVER` или `ALTER ANY LOGIN ON SERVER`  
 - Членство в предопределенных ролях сервера **setupadmin** или **sysadmin**  
   
 ## <a name="see-also"></a>См. также:  
- [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога связанных серверов &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
+ [sp_addremotelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
   

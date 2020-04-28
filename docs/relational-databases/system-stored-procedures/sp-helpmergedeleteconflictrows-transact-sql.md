@@ -16,10 +16,10 @@ ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86e8d3d21246cbb308db5b698a29f2b02ce45ac3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137750"
 ---
 # <a name="sp_helpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
@@ -50,15 +50,15 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar (386)**|Исходный объект для конфликта удаления.|  
-|**rowguid**|**UNIQUEIDENTIFIER**|Идентификатор строки для конфликта удаления.|  
+|**rowguid**|**uniqueidentifier**|Идентификатор строки для конфликта удаления.|  
 |**conflict_type**|**int**|Код, указывающий на тип конфликта.<br /><br /> **1** = Упдатеконфликт: конфликт обнаружен на уровне строк.<br /><br /> **2** = Колумнупдатеконфликт: конфликт обнаружен на уровне столбцов.<br /><br /> **3** = Упдатеделетевинсконфликт: Удаление побеждает в конфликте.<br /><br /> **4** = упдатевинсделетеконфликт: удаленный идентификатор rowguid, который потерял конфликт, записывается в эту таблицу.<br /><br /> **5** = Уплоадинсертфаилед: вставка из подписчика не может быть применена на издателе.<br /><br /> **6** = Довнлоадинсертфаилед: вставка из издателя не может быть применена на подписчике.<br /><br /> **7** = Уплоадделетефаилед: удаление на стороне подписчика не может быть отправлено на издатель.<br /><br /> **8** = Довнлоадделетефаилед: удаление на стороне издателя не может быть загружено на подписчик.<br /><br /> **9** = Уплоадупдатефаилед: обновление на стороне подписчика не может быть применено на издателе.<br /><br /> **10** = Довнлоадупдатефаилед: Update на стороне издателя не удалось применить к подписчику.|  
 |**reason_code**|**Int**|Код ошибки, который может зависеть от контекста.|  
 |**reason_text**|**varchar (720)**|Описание ошибки, которое может зависеть от контекста.|  
 |**origin_datasource**|**varchar (255)**|Источник конфликта.|  
-|**pubid**|**UNIQUEIDENTIFIER**|Идентификатор публикации.|  
+|**pubid**|**uniqueidentifier**|Идентификатор публикации.|  
 |**MSrepl_create_time**|**datetime**|Время, когда были добавлены сведения о конфликте.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -71,6 +71,6 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
  Только члены предопределенной роли сервера **sysadmin** и **db_owner** предопределенной роли базы данных могут выполнять **sp_helpmergedeleteconflictrows**.  
   
 ## <a name="see-also"></a>См. также:  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

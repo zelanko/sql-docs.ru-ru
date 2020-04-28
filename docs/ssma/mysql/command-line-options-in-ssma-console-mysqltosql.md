@@ -20,10 +20,10 @@ ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 017136669bd6478bb4e08ed0ff5c2adc01786d20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103251"
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>Параметры командной строки в консоли SSMA (MySQLToSQL)
@@ -171,7 +171,7 @@ ms.locfileid: "68103251"
   
 Для табличного вывода параметров командной строки консоли SSMA см. [приложение 1 &#40;MySQLToSQL&#41;](../../ssma/mysql/appendix-1-mysqltosql.md)  
   
-### <a name="next-step"></a>Дальнейшее действие  
+### <a name="next-step"></a>Следующий шаг  
 Следующий шаг зависит от требований проекта:  
   
 -   Сведения об указании пароля или экспорте и импорте паролей см. в статье [Управление паролями &#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md).  

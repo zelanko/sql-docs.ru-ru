@@ -18,10 +18,10 @@ ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03282ae181ec9fc032e5f64549840d3d292b385e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104400"
 ---
 # <a name="sp_setnetname-transact-sql"></a>Хранимая процедура sp_setnetname (Transact-SQL)
@@ -41,16 +41,16 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- ** ** @server = '** сервер **'**  
- Имя удаленного сервера в синтаксисе вызова удаленных хранимых процедур, написанных пользователем. Для использования этого *сервера*уже должна существовать ровно одна строка в **sys.** Servers. *Server* имеет тип **sysname**и не имеет значения по умолчанию.  
+ *server* ** @server = '** сервер **'**  
+ Имя удаленного сервера в синтаксисе вызова удаленных хранимых процедур, написанных пользователем. Для использования этого *сервера*уже должна существовать ровно одна строка в **sys.** Servers. Аргумент*server* имеет тип **sysname**и не имеет значения по умолчанию.  
   
- ** ** @netname = '** network_name **'**  
+ *network_name* ** @netname = '** network_name **'**  
  Сетевое имя компьютера, на который направляются вызовы удаленных хранимых процедур. Аргумент *network_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
  Это имя должно совпадать с именем компьютера [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows и может содержать символы, использование которых в качестве идентификаторов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запрещено.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
@@ -91,6 +91,6 @@ EXEC Win_1.master.dbo.sp_who;
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

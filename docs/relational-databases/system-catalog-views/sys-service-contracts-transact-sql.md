@@ -20,10 +20,10 @@ ms.assetid: 787dd47e-4210-439d-9c4a-57a727a0dbd8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28339ce24b1398ce2645e04b8a6352f2b4f598d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68132863"
 ---
 # <a name="sysservice_contracts-transact-sql"></a>sys.service_contracts (Transact-SQL)
@@ -31,13 +31,13 @@ ms.locfileid: "68132863"
 
   Это представление каталога содержит по одной строке для каждого контракта в базе данных.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**name**|**имеет sysname**|Уникальное имя контракта в базе данных. Не допускает значения NULL.|  
+|**name**|**sysname**|Уникальное имя контракта в базе данных. Не допускает значения NULL.|  
 |**service_contract_id**|**int**|Идентификатор контракта. Не допускает значения NULL.|  
 |**principal_id**|**int**|Идентификатор участника базы данных, которому принадлежит этот контракт. Допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
   

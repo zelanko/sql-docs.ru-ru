@@ -18,10 +18,10 @@ ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 675707453fbc79f3f9c578469ed5e78b73d2fbfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139829"
 ---
 # <a name="sp_linkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
@@ -43,15 +43,15 @@ sp_linkedservers
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**SRV_NAME**|**имеет sysname**|Имя связанного сервера.|  
+|**SRV_NAME**|**sysname**|Имя связанного сервера.|  
 |**SRV_PROVIDERNAME**|**nvarchar (** 128 **)**|Сетевое имя поставщика OLE DB, который управляет доступом к указанному связанному серверу.|  
 |**SRV_PRODUCT**|**nvarchar (** 128 **)**|Имя продукта связанного сервера.|  
 |**SRV_DATASOURCE**|**nvarchar (** 4000 **)**|Свойство источника данных OLE DB, соответствующее указанному связанному серверу.|  
 |**SRV_PROVIDERSTRING**|**nvarchar (** 4000 **)**|Свойство строки поставщика OLE DB, соответствующее указанному связанному серверу.|  
 |**SRV_LOCATION**|**nvarchar (** 4000 **)**|Свойство местонахождения OLE DB, соответствующее указанному связанному серверу.|  
-|**SRV_CAT**|**имеет sysname**|Свойство каталога OLE DB, соответствующее указанному связанному серверу.|  
+|**SRV_CAT**|**sysname**|Свойство каталога OLE DB, соответствующее указанному связанному серверу.|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  

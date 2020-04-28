@@ -16,10 +16,10 @@ ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6875e745cc05735b9f116c2d4afa5e5218defb99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122392"
 ---
 # <a name="sp_helpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
@@ -45,12 +45,12 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**alternate_publisher**|**имеет sysname**|Имя альтернативного издателя.|  
-|**alternate_publisher_db**|**имеет sysname**|Имя базы данных публикации.|  
-|**alternate_publication**|**имеет sysname**|Имя публикации.|  
-|**alternate_distributor**|**имеет sysname**|Имя распространителя.|  
+|**alternate_publisher**|**sysname**|Имя альтернативного издателя.|  
+|**alternate_publisher_db**|**sysname**|Имя базы данных публикации.|  
+|**alternate_publication**|**sysname**|Имя публикации.|  
+|**alternate_distributor**|**sysname**|Имя распространителя.|  
 |**friendly_name**|**nvarchar(255)**|Описание альтернативного издателя.|  
 |**доступной**|**bit**|Определяет, является ли сервер альтернативным издателем. значение **1** указывает, что издатель включен в качестве альтернативного издателя. **0** указывает, что он не включен.|  
   
@@ -66,6 +66,6 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
  Только члены списка доступа к публикации могут выполнять **sp_helpmergealternatepublisher**.  
   
 ## <a name="see-also"></a>См. также:  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

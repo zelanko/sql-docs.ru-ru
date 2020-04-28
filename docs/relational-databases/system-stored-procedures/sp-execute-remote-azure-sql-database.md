@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 021a6e689dfc109f8a58ca080956aec7efc49291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124465"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (база данных SQL Azure)
@@ -60,7 +60,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  [ \@Param1 =] "*Значение1*"  
  Значение для первого параметра, определенного в строке параметров. Это значение может быть константой или переменной в Юникоде. Для каждого параметра, входящего в \@stmt, должно быть указано значение параметра. Значения не требуются, если в [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции или пакете в \@stmt нет параметров.  
   
- *\n*  
+ *n*  
  Заполнитель для значений дополнительных параметров. Значения могут быть только константами и переменными. Значения не могут представлять собой сложные выражения, такие как функции или выражения, построенные с помощью операторов.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -103,6 +103,6 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 
 ## <a name="see-also"></a>См. также:
 
-[СОЗДАНИЕ УЧЕТНЫХ ДАННЫХ ДЛЯ БАЗЫ ДАННЫХ](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
+[CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
 [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
     

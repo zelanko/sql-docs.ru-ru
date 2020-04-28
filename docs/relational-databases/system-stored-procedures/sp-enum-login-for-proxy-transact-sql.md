@@ -18,10 +18,10 @@ ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: ee6b6a701d4ff81863973c4c8e098bd9ed49c967
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124683"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
@@ -53,12 +53,12 @@ sp_enum_login_for_proxy
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Идентификационный номер учетной записи-посредника.|  
-|**proxy_name**|**имеет sysname**|Имя учетной записи-посредника.|  
-|**name**|**имеет sysname**|Имя субъекта безопасности для связи.|  
-|**Метки**|**int**|Тип субъекта безопасности.<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа<br /><br /> **1** = предопределенная системная роль<br /><br /> **2** = роль базы данных в **msdb**|  
+|**proxy_name**|**sysname**|Имя учетной записи-посредника.|  
+|**name**|**sysname**|Имя субъекта безопасности для связи.|  
+|**flags**|**int**|Тип субъекта безопасности.<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа<br /><br /> **1** = предопределенная системная роль<br /><br /> **2** = роль базы данных в **msdb**|  
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Remarks  
@@ -86,7 +86,7 @@ EXEC dbo.sp_enum_login_for_proxy ;
 GO  
 ```  
   
-### <a name="b-listing-proxies-for-a-specific-login"></a>Б. Вывод списка учетных записей-посредников для конкретного имени входа  
+### <a name="b-listing-proxies-for-a-specific-login"></a>Б) Вывод списка учетных записей-посредников для конкретного имени входа  
  Следующий пример отображает список учетных записей-посредников, к которым имя входа `terrid` имеет доступ.  
   
 ```sql

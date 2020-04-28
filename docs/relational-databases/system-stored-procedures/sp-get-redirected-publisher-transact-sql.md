@@ -14,10 +14,10 @@ ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a3972d2d92274c3454f8add9fb7b92a001dda359
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124050"
 ---
 # <a name="sp_get_redirected_publisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
@@ -49,12 +49,12 @@ sp_get_redirected_publisher
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**redirected_publisher**|**имеет sysname**|Имя издателя после перенаправления.|  
+|**redirected_publisher**|**sysname**|Имя издателя после перенаправления.|  
 |**error_number**|**int**|Номер ошибки проверки.|  
 |**error_severity**|**int**|Серьезность ошибки проверки.|  
-|**error_message**|**nvarchar (4000)**|Текст сообщения ошибки проверки.|  
+|**error_message**|**nvarchar(4000)**|Текст сообщения ошибки проверки.|  
   
 ## <a name="remarks"></a>Remarks  
  *redirected_publisher* возвращает имя текущего издателя. Возвращает значение null, если издатель и публикация баз данных не были перенаправлены с помощью **sp_redirect_publisher**.  

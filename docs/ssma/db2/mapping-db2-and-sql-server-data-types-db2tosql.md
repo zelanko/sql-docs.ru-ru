@@ -10,10 +10,10 @@ ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1e9baab08f4295b2c51fd942f6153cc9425dd958
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141011"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Сопоставление типов данных DB2 и SQL Server (DB2ToSQL)
@@ -84,7 +84,7 @@ SSMA имеет набор сопоставлений типов данных п
   
         Унаследованные сопоставления удалить нельзя. Однако унаследованные сопоставления переопределяются пользовательскими сопоставлениями для определенного объекта или категории объектов.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
 Следующим шагом процесса миграции является либо [отчет по оценке &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md) , либо [преобразование схем DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md). При создании отчета об оценке объекты DB2 автоматически преобразуются во время оценки.  
   
 ## <a name="see-also"></a>См. также:  

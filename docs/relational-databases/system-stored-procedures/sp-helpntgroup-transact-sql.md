@@ -18,10 +18,10 @@ ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fcc4a42307ccb11923460bb9c01c5cf7bdd8f8df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133680"
 ---
 # <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
@@ -42,22 +42,22 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 `[ @ntname = ] 'name'`— Имя группы Windows. Аргумент *Name* имеет тип **sysname**и значение по умолчанию NULL. *имя* должно быть допустимой группой Windows с доступом к текущей базе данных. Если параметр *Name* не указан, в выходные данные включаются все группы Windows с доступом к текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**NTGroupName**|**имеет sysname**|Имя группы Windows.|  
+|**NTGroupName**|**sysname**|Имя группы Windows.|  
 |**NTGroupId**|**smallint**|Идентификатор группы (ID).|  
-|**ТРАНСЛЯЦИЮ**|**varbinary (85)**|Идентификатор безопасности (SID) **нтграупнаме**.|  
+|**ТРАНСЛЯЦИЮ**|**varbinary(85)**|Идентификатор безопасности (SID) **нтграупнаме**.|  
 |**хасдбакцесс**|**int**|1 = группа Windows имеет разрешение на доступ к базе данных.|  
   
 ## <a name="remarks"></a>Remarks  
  Чтобы просмотреть список [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ролей в текущей базе данных, используйте **sp_helprole**.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в роли **Public** .  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере выводится список групп Windows, имеющих доступ к текущей базе данных.  
@@ -71,6 +71,6 @@ EXEC sp_helpntgroup;
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_revokedbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

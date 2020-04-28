@@ -16,10 +16,10 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139897"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68139897"
   Задает сведения о конфигурации и безопасности, применяемые триггерами синхронизации немедленно обновляемых подписок при подключении к издателю. Эта хранимая процедура выполняется на подписчике в базе данных подписки.  
   
 > [!IMPORTANT]
->  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. [в разделе Enable encrypted connections to the ядро СУБД &#40;диспетчер конфигурации SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
 > 
 > [!IMPORTANT]
 >  При определенных условиях эта хранимая процедура может завершиться ошибкой, если на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] подписчике установлен пакет обновления 1 (SP1) или более поздней версии, а на издателе запущена более ранняя версия. Если в этом случае хранимая процедура завершается ошибкой, обновите издатель до [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 1 (SP1) или более поздней версии.  
@@ -57,13 +57,13 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 `[ @security_mode = ] security_mode`Режим безопасности, используемый подписчиком для подключения к удаленному издателю для немедленного обновления. *security_mode* имеет **тип int**и может принимать одно из следующих значений. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0**|Использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверку подлинности с именем входа, указанным в этой хранимой процедуре, в качестве *имени входа* и *пароля*.<br /><br /> Примечание. в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот параметр использовался для указания динамического удаленного вызова процедур (RPC).|  
 |**1**|Использует контекст безопасности (проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Windows) пользователя, редактирующего подписчика.<br /><br /> Примечание. Эта учетная запись также должна существовать у издателя с достаточными привилегиями. В случае использования проверки подлинности Windows должно поддерживаться делегирование учетной записи безопасности.|  
 |**2**|Использует существующее, определяемое пользователем имя входа для связанного сервера, созданное с помощью **sp_link_publication**.|  
   
-`[ @login = ] 'login'`Имя входа. Аргумент *Login* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр должен быть указан, если *security_mode* равен **0**.  
+`[ @login = ] 'login'`Имя входа. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. Этот параметр должен быть указан, если *security_mode* равен **0**.  
   
 `[ @password = ] 'password'`Пароль. Аргумент *Password* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр должен быть указан, если *security_mode* равен **0**.  
   
@@ -91,6 +91,6 @@ sp_link_publication [ @publisher = ] 'publisher'
  [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
  [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

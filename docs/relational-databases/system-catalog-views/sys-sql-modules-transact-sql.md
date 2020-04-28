@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f3e007a0676afd507af54e3b3406297cf40042e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108992"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
@@ -34,10 +34,10 @@ ms.locfileid: "68108992"
   
  Дополнительные сведения см. в разделе [Скалярные определяемые пользователем функции для выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Идентификатор объекта, содержащего данный объект. Уникален в базе данных.|  
-|**макроопределения**|**nvarchar(max)**|Текст на языке SQL, определяющий этот модуль. Это значение можно также получить с помощью встроенной функции [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) .<br /><br /> NULL = зашифрован.|  
+|**definition**|**nvarchar(max)**|Текст на языке SQL, определяющий этот модуль. Это значение можно также получить с помощью встроенной функции [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) .<br /><br /> NULL = зашифрован.|  
 |**uses_ansi_nulls**|**bit**|Модуль был создан с параметром SET ANSI_NULLS ON.<br /><br /> Всегда будет равен 0 (нулю) для правил и умолчаний.|  
 |**uses_quoted_identifier**|**bit**|Модуль был создан с параметром SET QUOTED_IDENTIFIER ON.|  
 |**is_schema_bound**|**bit**|Модуль был создан с параметром SCHEMABINDING.<br /><br /> Всегда содержит значение 1 для скомпилированных собственными средствами хранимых процедур.|  
@@ -45,7 +45,7 @@ ms.locfileid: "68108992"
 |**is_recompiled**|**bit**|Процедура была создана с параметром WITH RECOMPILE.|  
 |**null_on_null_input**|**bit**|Модуль был объявлен, чтобы обеспечить выходные значения NULL для любых входных значений NULL.|  
 |**execute_as_principal_id**|**Int**|ID-идентификатор участника базы данных, указанного в инструкции EXECUTE AS.<br /><br /> По умолчанию и в случае EXECUTE AS CALLER имеет значение NULL.<br /><br /> ИДЕНТИФИКАТОР указанного участника, если он выполняется как SELF или выполняется как \<основной>.<br /><br /> -2 = EXECUTE AS OWNER.|  
-|**uses_native_compilation**|**bit**|**Применимо к** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]с до.<br /><br /> 0 = не скомпилированы в собственном коде<br /><br /> 1 = скомпилированы в собственном коде<br /><br /> По умолчанию используется значение 0.|  
+|**uses_native_compilation**|**bit**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = не скомпилированы в собственном коде<br /><br /> 1 = скомпилированы в собственном коде<br /><br /> Значение по умолчанию — 0.|  
 |**is_inlineable**|**bit**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] и более поздних версий.<br/><br />Указывает, является ли модуль встроенным. Встраивание зависит от условий, указанных [здесь](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = невстраиваемые<br /><br /> 1 = является встроенным. <br /><br /> Для скалярных пользовательских функций значение будет равно 1, если определяемая пользователем функция является встроенной, и 0 в противном случае. Он всегда содержит значение 1 для встроенного возвращающие табличное, а 0 — для всех других типов модулей.<br />|  
 |**inline_type**|**bit**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] и более поздних версий.<br /><br />Указывает, включено ли встраивание для модуля в настоящее время. <br /><br />0 = встраивание отключено<br /><br /> 1 = Встраивание включено.<br /><br /> Для скалярных пользовательских функций значение будет равно 1, если встраивание включено (явно или неявно). Значение всегда будет равно 1 для встроенных возвращающие табличное и 0 для других типов модулей.<br />|  
 
@@ -56,7 +56,7 @@ ms.locfileid: "68108992"
  Эти сведения также описаны в статье [sys. dm_db_uncontained_entities &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Примеры  
  В ходе выполнения представленного ниже примера выполняется отображение имен, типов и определений всех модулей в текущей базе данных.  
@@ -70,7 +70,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Запросы к системному каталогу SQL Server вопросы и ответы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

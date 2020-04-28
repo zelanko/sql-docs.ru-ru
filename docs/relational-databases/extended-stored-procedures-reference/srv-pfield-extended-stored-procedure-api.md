@@ -20,17 +20,17 @@ ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8cb43ad9128160dfbd8e943ec3db02930eb3ac53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68131582"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
   
  Возвращает сведения о подключении к базе данных.  
   
@@ -57,7 +57,7 @@ len
  *полями*  
  Задает возвращаемые сведения о соединении.  
   
-|Значение|Возвращает|  
+|Значение|Результаты|  
 |-----------|-------------|  
 |SRV_APPLNAME|Имя приложения, задаваемое клиентом при установлении соединения.|  
 |SRV_BCPFLAG|Флаг, имеющий значение TRUE, если клиент готовится к операции массового копирования, и FALSE в противном случае.|  
@@ -82,7 +82,7 @@ len
  *len*  
  Представляет собой указатель на переменную **int**, в которой хранится длина возвращаемого значения *field*. Если значение *len* равно NULL, длина строки не возвращается.  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  Указатель на оканчивающуюся нулевым байтом строку, содержащую текущее значение указанного поля в процедуре SRV_PROC. Если поле пусто, то возвращается допустимый указатель на пустую строку, а *len* содержит 0. Если поле неизвестно, то возвращается значение NULL, а *len* содержит значение –1.  
   
 > [!IMPORTANT]  

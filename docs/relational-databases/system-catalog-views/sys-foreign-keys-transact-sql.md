@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b78466b0c2c20bc3b59fb372870bbad87aef0e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133888"
 ---
 # <a name="sysforeign_keys-transact-sql"></a>sys.foreign_keys (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68133888"
 
   Содержит по одной строке для каждого объекта, который является ограничением внешнего ключа, с **sys. Object. Type** = F.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**\<Столбцы, унаследованные из sys. Objects>**||Список столбцов, наследуемых этим представлением, см. в разделе [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**referenced_object_id**|**int**|Идентификатор упоминаемого объекта.|  
@@ -41,16 +41,16 @@ ms.locfileid: "68133888"
 |**is_not_for_replication**|**bit**|Ограничение внешнего ключа создано с помощью параметра NOT FOR REPLICATION.|  
 |**is_not_trusted**|**bit**|Ограничение внешнего ключа не было проверено системой.|  
 |**delete_referential_action**|**tinyint**|Ссылочное действие, объявленное для данного внешнего ключа на случай удаления.<br /><br /> 0 = нет действий.<br /><br /> 1 = каскад.<br /><br /> 2 = задать NULL.<br /><br /> 3 = задать по умолчанию.|  
-|**delete_referential_action_desc**|**nvarchar (60)**|Описание ссылочного действия, объявленного для данного внешнего ключа на случай удаления.<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
+|**delete_referential_action_desc**|**nvarchar(60)**|Описание ссылочного действия, объявленного для данного внешнего ключа на случай удаления.<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
 |**update_referential_action**|**tinyint**|Ссылочное действие, объявленное для данного внешнего ключа на случай обновления.<br /><br /> 0 = нет действий.<br /><br /> 1 = каскад.<br /><br /> 2 = задать NULL.<br /><br /> 3 = задать по умолчанию.|  
-|**update_referential_action_desc**|**nvarchar (60)**|Описание ссылочного действия, объявленного для данного внешнего ключа на случай обновления.<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
+|**update_referential_action_desc**|**nvarchar(60)**|Описание ссылочного действия, объявленного для данного внешнего ключа на случай обновления.<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
 |**is_system_named**|**bit**|1 = имя создано системой.<br /><br /> 0 = имя предоставлено пользователем.|  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Часто задаваемые вопросы о запросах к системному каталогу сервера SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

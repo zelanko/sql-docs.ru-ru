@@ -18,10 +18,10 @@ ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e49d5ed290d95453c376713cabb914a495dfca8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139724"
 ---
 # <a name="mssubscription_properties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
@@ -29,46 +29,46 @@ ms.locfileid: "68139724"
 
   Таблица **MSsubscription_properties** содержит строки для сведений о параметрах, необходимых для запуска агентов репликации на подписчике. Эта таблица хранится в базе данных подписки на подписчике для подписки по запросу или в базе данных распространителя на распространителе для принудительной подписки.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**издателя**|**имеет sysname**|Имя издателя.|  
-|**publisher_db**|**имеет sysname**|Имя базы данных издателя.|  
-|**публикации**|**имеет sysname**|Имя публикации.|  
+|**издателя**|**sysname**|Имя издателя.|  
+|**publisher_db**|**sysname**|Имя базы данных издателя.|  
+|**публикации**|**sysname**|Имя публикации.|  
 |**publication_type**|**int**|Тип публикации:<br /><br /> **0** = транзакционная.<br /><br /> **2** = слияние.|  
-|**publisher_login**|**имеет sysname**|Идентификатор входа, используемый на издателе для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**publisher_login**|**sysname**|Идентификатор входа, используемый на издателе для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_password**|**nvarchar (524)**|Пароль (зашифрованный), используемый на издателе для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**publisher_security_mode**|**int**|Режим безопасности, реализованный на издателе:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server проверка подлинности.<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] проверка подлинности Windows.<br /><br /> **2** = триггеры синхронизации используют статическую запись **sysservers** для удаленного вызова процедур (RPC), а *Издатель* должен быть определен в таблице **sysservers** как удаленный сервер или связанный сервер.|  
-|**распространение**|**имеет sysname**|Имя распространителя.|  
-|**distributor_login**|**имеет sysname**|Идентификатор (ID) учетной записи, используемый для проверки подлинности SQL Server на распространителе.|  
+|**publisher_security_mode**|**int**|Режим безопасности, реализованный на издателе:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server проверка подлинности.<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] проверка подлинности Windows.<br /><br /> **2** = триггеры синхронизации используют статическую запись **sysservers** для удаленного вызова процедур (RPC), а *Издатель* должен быть определен в таблице **sysservers** как удаленный сервер или связанный сервер.|  
+|**распространение**|**sysname**|Имя распространителя.|  
+|**distributor_login**|**sysname**|Идентификатор (ID) учетной записи, используемый для проверки подлинности SQL Server на распространителе.|  
 |**distributor_password**|**nvarchar (524)**|Пароль (зашифрованный), используемый на распространителе для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**distributor_security_mode**|**int**|Режим безопасности, реализованный на распространителе:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности.<br /><br /> **1** = проверка подлинности Windows.|  
-|**ftp_address**|**имеет sysname**|Сетевой адрес службы FTP для распространителя.|  
+|**distributor_security_mode**|**int**|Режим безопасности, реализованный на распространителе:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности.<br /><br /> **1** = проверка подлинности Windows.|  
+|**ftp_address**|**sysname**|Сетевой адрес службы FTP для распространителя.|  
 |**ftp_port**|**int**|Номер порта службы FTP для распространителя.|  
-|**ftp_login**|**имеет sysname**|Имя пользователя для подключения к службе FTP.|  
+|**ftp_login**|**sysname**|Имя пользователя для подключения к службе FTP.|  
 |**ftp_password**|**nvarchar (524)**|Пароль пользователя для подключения к службе FTP.|  
 |**alt_snapshot_folder**|**nvarchar(255)**|Указывает местоположение альтернативной папки для моментального снимка.|  
 |**working_directory**|**nvarchar(255)**|Имя рабочего каталога, используемого для хранения данных и файлов схем.|  
 |**use_ftp**|**bit**|Указывает использование протокола FTP вместо обычного протокола для получения моментальных снимков. Если значение равно **1**, используется протокол FTP.|  
-|**dts_package_name**|**имеет sysname**|Указывает имя пакета служб DTS.|  
+|**dts_package_name**|**sysname**|Указывает имя пакета служб DTS.|  
 |**dts_package_password**|**nvarchar (524)**|Указывает пароль на пакет.|  
 |**dts_package_location**|**int**|Местоположение, где хранится пакет служб DTS.|  
 |**enabled_for_syncmgr**|**bit**|Устанавливает, может ли быть подписка синхронизирована посредством диспетчера синхронизации [!INCLUDE[msCoName](../../includes/msconame-md.md)].<br /><br /> **0** = подписка не зарегистрирована в диспетчере синхронизации.<br /><br /> **1** = подписка зарегистрирована в диспетчере синхронизации и может быть синхронизирована без [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]запуска.|  
 |**offload_agent**|**bit**|Указывает, может ли агент быть активирован удаленно. Если значение **равно 0**, агент не может быть активирован удаленно.|  
-|**offload_server**|**имеет sysname**|Указывает сетевое имя сервера, используемого для удаленной активации.|  
+|**offload_server**|**sysname**|Указывает сетевое имя сервера, используемого для удаленной активации.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Указывает путь к папке, в которой сохраняются файлы моментальных снимков.|  
 |**use_web_sync**|**bit**|Указывает, может ли подписка быть синхронизирована через протокол HTTP или нет. Значение **1** означает, что эта функция включена.|  
 |**internet_url**|**nvarchar(260)**|URL-адрес, который представляет собой размещение средства прослушивания репликации для веб-синхронизации.|  
-|**internet_login**|**имеет sysname**|Имя входа, используемое агент слияния при соединении с веб-сервером, на котором размещается веб-синхронизация с использованием [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.|  
+|**internet_login**|**sysname**|Имя входа, используемое агент слияния при соединении с веб-сервером, на котором размещается веб-синхронизация с использованием [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.|  
 |**internet_password**|**nvarchar (524)**|Пароль для имени входа, используемого агент слияния при соединении с веб-сервером, на котором размещается веб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -синхронизация с использованием проверки подлинности.|  
 |**internet_security_mode**|**int**|Режим проверки подлинности, используемый при соединении с веб-сервером, на котором размещена веб-синхронизация, где значение **1** означает проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows, а значение **0** означает проверку подлинности.|  
 |**internet_timeout**|**int**|Продолжительность времени в секундах перед отменой запроса на веб-синхронизацию.|  
-|**имя узла**|**имеет sysname**|Задает значение для **HOST_NAME** , когда эта функция используется в предложении **WHERE** фильтра соединений или связи логических записей.|  
+|**hostname**|**sysname**|Задает значение для **HOST_NAME** , когда эта функция используется в предложении **WHERE** фильтра соединений или связи логических записей.|  
   
 ## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_helpsubscription_properties (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

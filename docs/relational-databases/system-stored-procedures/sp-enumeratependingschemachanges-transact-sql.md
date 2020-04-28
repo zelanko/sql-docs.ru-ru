@@ -16,10 +16,10 @@ ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da5579c52d1ffe1400e3b4c8c01210ca5856597b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124582"
 ---
 # <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
@@ -44,14 +44,14 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>Результирующий набор  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**article_name**|**имеет sysname**|Имя статьи, к которой применяется изменение схемы, или **всей публикации** для изменений схемы, применяемых ко всей публикации.|  
+|**article_name**|**sysname**|Имя статьи, к которой применяется изменение схемы, или **всей публикации** для изменений схемы, применяемых ко всей публикации.|  
 |**schemaVersion**|**int**|Количество изменений схемы, ожидающих завершения.|  
-|**schematype**|**имеет sysname**|Текстовое значение, представляющее тип изменения схемы.|  
+|**schematype**|**sysname**|Текстовое значение, представляющее тип изменения схемы.|  
 |**schematext**|**nvarchar(max)**|Код [!INCLUDE[tsql](../../includes/tsql-md.md)], описывающий изменение схемы.|  
 |**schemastatus**|**nvarchar (10)**|Указывает, ожидает ли своего завершения изменение схемы для данной статьи; может иметь следующие значения:<br /><br /> **Active** = ожидается изменение схемы<br /><br /> **Inactive** = изменение схемы неактивно<br /><br /> **пропустить** = изменение схемы не реплицируется|  
-|**schemaguid**|**UNIQUEIDENTIFIER**|Идентифицирует изменение схемы.|  
+|**schemaguid**|**uniqueidentifier**|Идентифицирует изменение схемы.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

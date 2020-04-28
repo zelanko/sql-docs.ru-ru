@@ -18,10 +18,10 @@ ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 493fcac9f5de8ee85a2e3c014763045c697bbe0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68119436"
 ---
 # <a name="sp_upgrade_log_shipping-transact-sql"></a>sp_upgrade_log_shipping (Transact-SQL)
@@ -39,13 +39,13 @@ sp_upgrade_log_shipping
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- Нет.  
+ Отсутствует.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет.  
+ Отсутствует.  
   
 ## <a name="remarks"></a>Remarks  
  Эта хранимая процедура вызывается автоматически во время обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в целях обновления метаданных для доставки журналов. Процедуру следует запустить отдельно явным образом, только если во время обновления возникают проблемы с метаданными.  
@@ -57,6 +57,6 @@ sp_upgrade_log_shipping
   
 ## <a name="see-also"></a>См. также:  
  [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

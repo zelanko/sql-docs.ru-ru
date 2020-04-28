@@ -19,10 +19,10 @@ ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1d232d602f2496fff03ed050a8faf11b53e718b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124924"
 ---
 # <a name="syscollector_collector_types-transact-sql"></a>syscollector_collector_types (Transact-SQL)
@@ -30,18 +30,18 @@ ms.locfileid: "68124924"
 
   Предоставляет сведения о типе сборщика для элемента сбора.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**collector_type_uid**|**uniqueidentifer**|Идентификатор GUID типа сбора. Не допускает значение NULL.|  
-|**name**|**имеет sysname**|Имя данного типа сбора. Не допускает значение NULL.|  
+|**name**|**sysname**|Имя данного типа сбора. Не допускает значение NULL.|  
 |**parameter_schema**|**xml**|Схема XML, описывающая конфигурацию заданного типа сборщика. Данная схема XML используется для проверки действительной XML-конфигурации, связанной с конкретным экземпляром элемента сбора. Допускает значение NULL.|  
 |**parameter_formatter**|**xml**|Определяет шаблон, применяемый для преобразования XML с целью его использования на странице свойств набора сбора. Допускает значение NULL.|  
 |**collection_package_id**|**uniqueidentifer**|Идентификатор GUID пакета сбора. Не допускает значение NULL.|  
-|**collection_package_path**|**nvarchar (4000)**|Предоставляет путь к пакету сбора. Допускает значение NULL.|  
-|**collection_package_name**|**имеет sysname**|Имя пакета сбора. Не допускает значение NULL.|  
+|**collection_package_path**|**nvarchar(4000)**|Предоставляет путь к пакету сбора. Допускает значение NULL.|  
+|**collection_package_name**|**sysname**|Имя пакета сбора. Не допускает значение NULL.|  
 |**upload_package_id**|**uniqueidentifer**|Идентификатор GUID пакета передачи. Не допускает значение NULL.|  
-|**upload_package_path**|**nvarchar (4000)**|Предоставляет путь к пакету передачи. Допускает значение NULL.|  
-|**upload_package_name**|**имеет sysname**|Имя пакета передачи. Не допускает значение NULL.|  
+|**upload_package_path**|**nvarchar(4000)**|Предоставляет путь к пакету передачи. Допускает значение NULL.|  
+|**upload_package_name**|**sysname**|Имя пакета передачи. Не допускает значение NULL.|  
 |**is_system**|**bit**|Включено (1) или OFF (0), чтобы указать, был ли тип сборщика передан сборщиком данных или добавлен позже **dc_admin**. Данный тип сбора может являться пользовательским типом собственной или сторонней разработки. Не допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  

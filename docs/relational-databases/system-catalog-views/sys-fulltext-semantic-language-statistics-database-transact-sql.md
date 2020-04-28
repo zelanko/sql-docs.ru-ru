@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: e1d2e60ce41cd3c57af209123471696cf02a03ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133794"
 ---
 # <a name="sysfulltext_semantic_language_statistics_database-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
@@ -36,11 +36,11 @@ ms.locfileid: "68133794"
   
 ||||  
 |-|-|-|  
-|**Имя столбца**|**Тип**|**Описание**|  
+|**Имя столбца**|**Type**|**Описание**|  
 |**database_id**|**int**|Идентификатор базы данных, уникальный внутри экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**register_date**|**datetime**|Дата регистрации базы данных для семантической обработки.|  
 |**registered_by**|**int**|Идентификатор участника на уровне сервера, зарегистрировавшего базу данных для семантической обработки.|  
-|**Версия**|**nvarchar(128**|Сведения о последней версии, характерные для базы данных статистики семантики языка.|  
+|**version**|**nvarchar(128)**|Сведения о последней версии, характерные для базы данных статистики семантики языка.|  
   
 ## <a name="general-remarks"></a>Общие замечания  
  Дополнительные сведения см. в разделе [Установка и настройка семантического поиска](../../relational-databases/search/install-and-configure-semantic-search.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "68133794"
 ## <a name="metadata"></a>Метаданные  
  Для получения сведений о языках, поддерживаемых для семантического индексирования, запросите представление каталога [sys. fulltext_semantic_languages &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Видимость метаданных в представлениях каталогов ограничивается защищаемыми объектами, которыми пользователь владеет или на которые ему были предоставлены разрешения.  

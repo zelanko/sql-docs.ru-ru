@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d6eec5c523e2bdd321af145f19d0b5e7e7cba39b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135314"
 ---
 # <a name="syssecurity_policies-transact-sql"></a>sys. security_policies (Transact-SQL)
@@ -33,15 +33,15 @@ ms.locfileid: "68135314"
 
   Возвращает строку для каждой политики безопасности в базе данных.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|name|**имеет sysname**|Уникальное имя политики безопасности в базе данных.|  
+|name|**sysname**|Уникальное имя политики безопасности в базе данных.|  
 |object_id|**int**|Идентификатор политики безопасности.|  
 |principal_id|**int**|Идентификатор владельца политики безопасности, зарегистрированный в базе данных. Значение NULL, если владелец определяется посредством схемы.|  
 |schema_id|**int**|Идентификатор схемы, в которой находится объект.|  
 |parent_object_id|**int**|Идентификатор объекта, которому принадлежит данная политика. Должно быть равно 0.|  
 |type|**вачар (2)**|Должно быть **SP**.|  
-|type_desc|**nvarchar (60)**|**SECURITY_POLICY**.|  
+|type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
 |create_date|**datetime**|Дата создания политики безопасности в формате UTC.|  
 |modify_date|**datetime**|Дата последнего изменения политики безопасности в формате UTC.|  
 |is_ms_shipped|**bit**|Всегда значение false.|  
@@ -58,7 +58,7 @@ ms.locfileid: "68135314"
  [sys. security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
  [Создание политики безопасности &#40;&#41;Transact-SQL](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [Представления каталога безопасности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Участники &#40;ядро СУБД&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
+ [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

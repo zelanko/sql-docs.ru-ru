@@ -20,10 +20,10 @@ ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c98acb87e180dce32a00e77ba6c1af9fbd48b6fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68140013"
 ---
 # <a name="syscolumn_store_row_groups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68140013"
 
   Предоставляет сведения о кластеризованных индексах columnstore по отдельным сегментам, что позволяет администратору принимать решения о сопровождении системы. **sys. column_store_row_groups** содержит столбец для общего числа физически хранимых строк (включая те, которые помечены как удаленные) и столбец для числа строк, помеченных как удаленные. Используйте представление **sys. column_store_row_groups** , чтобы определить, какие группы строк имеют высокий процент удаленных строк и должны быть перестроены.  
    
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Идентификатор таблицы, для которой определен индекс.|  
 |**index_id**|**int**|Идентификатор индекса таблицы, в которой содержится этот индекс columnstore.|  
@@ -39,7 +39,7 @@ ms.locfileid: "68140013"
 |**row_group_id**|**int**|Номер группы строк, связанный с этой группой строк. Он уникален внутри секции.<br /><br /> -1 = Заключительный фрагмент таблицы в памяти.|  
 |**delta_store_hobt_id**|**bigint**|Hobt_id для открытой группы строк в разностном хранилище.<br /><br /> Значение NULL, если группа строк не находится в разностном хранилище.<br /><br /> Значение NULL для заключительного фрагмента таблицы в памяти.|  
 |**state**|**tinyint**|Идентификатор, связанный с параметром state_description.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN;<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = ЗАХОРОНЕНИЕ|  
-|**state_description**|**nvarchar (60)**|Описание сохраняемого состояния группы строк:<br /><br /> Невидимый — скрытый сжатый сегмент в процессе построения из данных в разностном хранилище. Операции чтения будут использовать разностное хранилище до момента построения скрытого сжатого сегмента. Когда новый сегмент станет видимым, исходное разностное хранилище будет удалено.<br /><br /> ОТКРЫТЬ — группа строк для чтения и записи, которая принимает новые записи. Открытая группа строк остается в формате rowstore и не сжимается в формат columnstore.<br /><br /> ЗАКРЫТо — группа строк, которая была заполнена, но еще не сжата процессом перемещения кортежей.<br /><br /> СЖАТЫЙ — группа строк, которая была заполнена и сжата.|  
+|**state_description**|**nvarchar(60)**|Описание сохраняемого состояния группы строк:<br /><br /> Невидимый — скрытый сжатый сегмент в процессе построения из данных в разностном хранилище. Операции чтения будут использовать разностное хранилище до момента построения скрытого сжатого сегмента. Когда новый сегмент станет видимым, исходное разностное хранилище будет удалено.<br /><br /> ОТКРЫТЬ — группа строк для чтения и записи, которая принимает новые записи. Открытая группа строк остается в формате rowstore и не сжимается в формат columnstore.<br /><br /> ЗАКРЫТо — группа строк, которая была заполнена, но еще не сжата процессом перемещения кортежей.<br /><br /> СЖАТЫЙ — группа строк, которая была заполнена и сжата.|  
 |**total_rows**|**bigint**|Общее число строк, которые физически хранятся в группе строк. Некоторые из строк могли быть удалены, но хранятся и дальше. Максимальное количество строк в группе — 1 048 576 (FFFFF в шестнадцатеричном формате).|  
 |**deleted_rows**|**bigint**|Общее число строк в группе строк, которые отмечены как удаленные. Это значение всегда равно 0 для групп строк DELTA.|  
 |**size_in_bytes**|**bigint**|Размер в байтах всех данных в этой группе строк (не включая метаданные или общие словари), как для групп строк DELTA и COLUMNSTORE.|  
@@ -58,7 +58,7 @@ ms.locfileid: "68140013"
 ## <a name="permissions"></a>Разрешения  
  Возвращает сведения для таблицы, если пользователь имеет разрешение **View definition** на таблицу.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере таблица **sys. column_store_row_groups** соединяется с другими системными таблицами для получения сведений о конкретных таблицах. Вычисляемый столбец `PercentFull` — это оценка эффективности группы строк. Чтобы найти сведения об одной таблице, удалите дефисы в комментариях перед предложением **WHERE** и укажите имя таблицы.  
@@ -78,14 +78,14 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
   
 ## <a name="see-also"></a>См. также:  
  [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Запросы к системному каталогу SQL Server вопросы и ответы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys. Columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys. all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys. computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [Инструкции по индексам columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)     
  [sys. column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
- [sys. column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
+ [sys.column_store_segments (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
   
   
 

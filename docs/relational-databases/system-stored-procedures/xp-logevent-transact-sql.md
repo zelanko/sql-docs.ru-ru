@@ -18,10 +18,10 @@ ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 77275ee539a6367d7e2e04d03354155a5eff721d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68116643"
 ---
 # <a name="xp_logevent-transact-sql"></a>xp_logevent (Transact-SQL)
@@ -49,7 +49,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  — Одна из трех символьных строк: ИНФОРМАЦИОНное, предупреждение или ошибка. *уровень серьезности* является необязательным и имеет по умолчанию информационный.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Для приведенного примера кода процедура xp_logevent возвращает следующую строку ошибки:  
@@ -77,8 +77,8 @@ EXEC xp_logevent 60000, @@MESSAGE, informational;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Печать &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
- [&#41;инструкции RAISERROR &#40;Transact-SQL](../../t-sql/language-elements/raiserror-transact-sql.md)   
+ [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md)   
+ [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Общие расширенные хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   

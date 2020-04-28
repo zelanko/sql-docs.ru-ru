@@ -19,10 +19,10 @@ ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 49748a98ac221af17f7ce5a197bf24a08d1269a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68121009"
 ---
 # <a name="sysdm_cryptographic_provider_algorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms (Transact-SQL)
@@ -45,11 +45,11 @@ sys.dm_cryptographic_provider_algorithms ( provider_id )
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |algorithm_id|**int**|Идентификатор алгоритма.|  
-|algorithm_tag|**nvarchar (60)**|Тег идентификации алгоритма.|  
-|key_type|**nvarchar(128**|Показывает тип ключа. Может принимать значение ASYMMETRIC KEY либо SYMMETRIC KEY.|  
+|algorithm_tag|**nvarchar(60)**|Тег идентификации алгоритма.|  
+|key_type|**nvarchar(128)**|Показывает тип ключа. Может принимать значение ASYMMETRIC KEY либо SYMMETRIC KEY.|  
 |key_length|**int**|Отображает длину ключа в битах.|  
   
 ## <a name="permissions"></a>Разрешения  
@@ -65,6 +65,6 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Расширенное управление ключами &#40;управления РАСШИРЕНным ключом&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [Динамические административные представления и функции, связанные с безопасностью &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Динамические административные представления и функции, связанные с безопасностью (Transact-SQL)](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

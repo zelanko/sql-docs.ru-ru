@@ -16,10 +16,10 @@ ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 63916a86757877dc6ae601c798ba7a987256580c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124119"
 ---
 # <a name="sp_get_distributor-transact-sql"></a>Хранимая процедура sp_get_distributor (Transact-SQL)
@@ -38,10 +38,10 @@ sp_get_distributor
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**установлено**|**int**|**0** = нет; **1** = да|  
-|**сервер распространения**|**имеет sysname**|Имя сервера распространителя|  
+|**Установка**|**int**|**0** = нет; **1** = да|  
+|**сервер распространения**|**sysname**|Имя сервера распространителя|  
 |**база данных распространителя установлена**|**int**|**0** = нет; **1** = да|  
 |**is distribution publisher**|**int**|**0** = нет; **1** = да|  
 |**есть Удаленный распространяющий издатель**|**int**|**0** = нет; **1** = да|  
@@ -55,6 +55,6 @@ sp_get_distributor
 ## <a name="see-also"></a>См. также:  
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Скрипт сведений о распространителе и издателе](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)   
- [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

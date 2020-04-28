@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: c060f08ff70e04a22af1eb9de09aeb1e3bf4ff71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133776"
 ---
 # <a name="sysfulltext_semantic_languages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68133776"
     
 ||||  
 |-|-|-|  
-|**Имя столбца**|**Тип**|**Описание**|  
+|**Имя столбца**|**Type**|**Описание**|  
 |lcid|INT|Код локали Microsoft Windows (LCID) для языка.|  
 |name|sysname|Либо значение псевдонима в [таблице sys. syslanguages &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) , соответствующее значению **LCID**, либо строковое представление числового идентификатора LCID.|  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68133776"
 ## <a name="metadata"></a>Метаданные  
  Для получения дополнительных сведений о базе данных семантической статистики языка, установленной для поддержки семантического индексирования, запросите представление каталога [sys. fulltext_semantic_language_statistics_database &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Видимость метаданных в представлениях каталогов ограничивается защищаемыми объектами, которыми пользователь владеет или на которые ему были предоставлены разрешения.  

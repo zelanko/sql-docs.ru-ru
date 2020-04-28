@@ -22,10 +22,10 @@ ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44ab2e3106610f7b7130f997e9641e4aba685fd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127930"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>Представления каталога сообщений (для ошибок) — sys.messages
@@ -33,20 +33,20 @@ ms.locfileid: "68127930"
 
   Содержит по одной строке для каждого **message_id** или **language_id** сообщений об ошибках в системе, как для определяемых системой, так и для определяемых пользователем сообщений. Дополнительные сведения см. в разделе [sp_addmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md).  
    
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**message_id**|**int**|Идентификатор сообщения. Уникален в пределах сервера. Сообщения с идентификаторами, меньшими 50000, являются системными.|  
 |**language_id**|**smallint**|Идентификатор языка, для которого используется текст в **тексте** , как определено в таблице **syslanguages**. Это значение уникально для указанного **message_id**.|  
-|**серьезности**|**tinyint**|Степень серьезности сообщения, от 1 до 25. Это одинаково для всех языков сообщений в **message_id**.|  
+|**severity**|**tinyint**|Степень серьезности сообщения, от 1 до 25. Это одинаково для всех языков сообщений в **message_id**.|  
 |**is_event_logged**|**bit**|1 = сообщение заносится в журнал событий при возникновении ошибки. Это одинаково для всех языков сообщений в **message_id**.|  
-|**полнотекстовым**|**nvarchar (2048)**|Текст сообщения, используемого при активном соответствующем **language_id** .|  
+|**text**|**nvarchar (2048)**|Текст сообщения, используемого при активном соответствующем **language_id** .|  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в роли **Public** . Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Необходимо быть членом роли **public**.  Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Вызовите &#40;&#41;Transact-SQL](../../t-sql/language-elements/throw-transact-sql.md)   
- [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [THROW (Transact-SQL)](../../t-sql/language-elements/throw-transact-sql.md)   
+ [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Сообщения &#40;об ошибках&#41; представлениях каталога &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/8ac78c53-7b97-41b3-9cbd-5f97c179f1f2)   
  [Программирование окна сообщений об исключениях](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)   
  [Сообщения об ошибках](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
