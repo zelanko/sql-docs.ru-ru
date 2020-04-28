@@ -1,6 +1,6 @@
 ---
-title: Программирование общего языка (CLR)
-description: В этой статье предоставляются ресурсы для использования интеграции CLR с s'L Server, что позволяет писать модульы на стороне сервера с помощью любого языка .NET Framework.
+title: Программирование среды CLR
+description: В этой статье содержатся ресурсы по интеграции со средой CLR с SQL Server, которая позволяет писать модули на стороне сервера с помощью любого языка .NET Framework.
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c44e777e78e9d2a6ded97e5bff2ec61e4c7f8391
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488150"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Основные понятия о программировании интеграции со средой CLR
@@ -30,20 +30,20 @@ ms.locfileid: "81488150"
  Пространство имен Microsoft.SqlServer.Server содержит основные возможности программирования CLR для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Однако пространство имен Microsoft.SqlServer.Server документировано в пакете .NET Framework SDK. Эта документация не включена в электронную документацию по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  По умолчанию платформа .NET Framework устанавливается вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но пакет .NET Framework SDK в эту установку не включен. Если пакет SDK установлен на рабочем компьютере и не добавлен к коллекции электронной документации, то ссылки на содержимое пакета SDK, имеющиеся в этом разделе, работать не будут. Установите пакет .NET Framework SDK. После установки добавьте SDK в коллекцию Books Online и таблицу содержимого, следуя инструкциям при [установке SDK .NET Framework.](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
+>  По умолчанию платформа .NET Framework устанавливается вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но пакет .NET Framework SDK в эту установку не включен. Если пакет SDK установлен на рабочем компьютере и не добавлен к коллекции электронной документации, то ссылки на содержимое пакета SDK, имеющиеся в этом разделе, работать не будут. Установите пакет .NET Framework SDK. После установки добавьте пакет SDK в коллекцию электронной документации и оглавление, следуя инструкциям в разделе [Установка пакета SDK для .NET Framework](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx).  
   
 > [!NOTE]  
->  Функциональность CLR, например функции пользователей CLR, *не* поддерживается для базы данных Azure S'L.  
+>  Функции CLR, такие как пользовательские функции CLR, *не* поддерживаются для базы данных SQL Azure.  
   
  В следующей таблице приводится список подразделов данного раздела.  
   
- [Общий язык Runtime &#40;CLR&#41; интеграции Обзор](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [Общие сведения об интеграции&#41; среды CLR &#40;](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
  Содержит общие сведения о среде CLR и описывает способы и преимущества использования технологии в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Описывает преимущества использования среды CLR для создания объектов базы данных.  
   
  [Сборки (компонент Database Engine)](../../relational-databases/clr-integration/assemblies-database-engine.md)  
  Описывает использование в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сборок для развертывания функций, хранимых процедур, триггеров, пользовательских статистических функций и определяемых пользователем типов данных, написанных на одном из языков управляемого кода, поддерживаемых средой CLR [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, а не на языке [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- [Создание объектов базы данных с общим языком runtime &#40;интеграции CLR&#41;](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
+ [Создание объектов базы данных с помощью среды CLR &#40;интеграция&#41; CLR](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
  Описывает виды объектов, которые можно строить с использованием среды CLR, и рассматривает требования к построению объектов баз данных CLR.  
   
  [Доступ к данным из объектов среды CLR для работы с базами данных](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
@@ -68,7 +68,7 @@ ms.locfileid: "81488150"
  Описывает сценарии использования и образцы кода, использующие объекты CLR.  
   
 ## <a name="see-also"></a>См. также:  
- [Сборки &#40;&#41;двигателя базы данных](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Сборки &#40;ядро СУБД&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Установка пакета SDK платформы .NET Framework](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

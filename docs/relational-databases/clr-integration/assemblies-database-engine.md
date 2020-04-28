@@ -1,6 +1,6 @@
 ---
-title: Сборки (Движуки баз данных) Документы Майкрософт
-description: Экземпляр S'L Server может размещать сборки, развертывающие функции, процедуры, триггеры и пользовательские агрегаты и типы, написанные на языке CLR.
+title: Сборки (ядро СУБД) | Документация Майкрософт
+description: Экземпляр SQL Server может размещать сборки, которые развертывают функции, процедуры, триггеры и определяемые пользователем агрегаты и типы, написанные на языке CLR.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,27 +15,27 @@ ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 386e1980ae19ba4f98222b51a4955b024f815083
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488085"
 ---
 # <a name="assemblies-database-engine"></a>Сборки (компонент Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе содержатся сведения, которые помогут понять, сконструировать и применить сборки.  
   
- Сборки — это DLL-файлы, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используемые в экземпляре для развертывания функций, сохраненных процедур, триггеров, пользовательских агрегатов и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] пользовательских типов, написанных на [!INCLUDE[tsql](../../includes/tsql-md.md)]одном из управляемых языков кода, размещенных общим временем выполнения языка (CLR), а не в.  
+ Сборки — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это файлы DLL, используемые в экземпляре служб для развертывания функций, хранимых процедур, триггеров, определяемых пользователем агрегатов и определяемых пользователем типов, написанных на одном из языков управляемого кода [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , размещенных в среде CLR, а не в [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Сборка в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представляет собой объект, который ссылается на управляемый модуль приложений (DLL-файл), созданный в среде CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Сборка содержит метаданные класса и управляемый код. Передача сборки на экземпляр SQL Server — это первый шаг к созданию любого из следующих объектов базы данных.  
   
--   Функции среды CLR. Для получения дополнительной информации [см.](../../relational-databases/user-defined-functions/create-clr-functions.md)  
+-   Функции среды CLR. Дополнительные сведения см. в разделе [Создание функций CLR](../../relational-databases/user-defined-functions/create-clr-functions.md).  
   
--   Хранимые процедуры среды CLR. Для получения дополнительной информации [см.](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
+-   Хранимые процедуры среды CLR. Дополнительные сведения см. в разделе [хранимые процедуры CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33).  
   
--   Триггеры среды CLR. Для получения дополнительной [информации см.](../../relational-databases/triggers/create-clr-triggers.md)  
+-   Триггеры среды CLR. Дополнительные сведения см. в разделе [Создание триггеров CLR](../../relational-databases/triggers/create-clr-triggers.md).  
   
--   Определяемые пользователем агрегатные функции. Для получения дополнительной [информации см.](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)  
+-   Определяемые пользователем агрегатные функции. Дополнительные сведения см. в разделе [Создание определяемых пользователем статистических функций](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md).  
   
 -   Определяемые пользователем типы. Дополнительные сведения см. в статье [Использование пользовательских типов](../../relational-databases/native-client/features/using-user-defined-types.md).  
   

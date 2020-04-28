@@ -15,10 +15,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5ce830c3fcd5661a01ecc0ad3ad84bed420be2e0
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82107995"
 ---
 # <a name="automatic-tuning"></a>Автоматическая настройка
@@ -171,7 +171,7 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
 
 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]упрощает этот процесс. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]анализирует рабочую нагрузку, определяет запросы, которые могут выполняться быстрее с новым индексом, и определяет неиспользуемые или дублирующиеся индексы. Дополнительные сведения об идентификации индексов, которые необходимо изменить, см. в статье [Использование помощника по базам данных SQL на портале Azure](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal).
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;&#41;Transact-SQL](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys. database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
  [sys. dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   

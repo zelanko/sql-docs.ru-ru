@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c6d2c689689cde5c6c5ef4ffa8ab5c0e8737078
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82086972"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "82086972"
   
 ## <a name="see-also"></a>См. также:  
  [Решения для интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)   
- [Инструменты проектирования запросов в отчете Дизайнер s'L Сервер ные инструменты &#40;SSRS&#41;](query-design-tools-ssrs.md)   
+ [Средства проектирования запросов в конструктор отчетов SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
  [Подключения данных, Источники данных и Строки подключения в службе Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_external_script_requests Документы Майкрософт
+title: sys. dm_external_script_requests | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/28/2018
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70f1024f73ff955facaa2b6a2af2b9f5f4ccf247
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488205"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
@@ -32,11 +32,11 @@ ms.locfileid: "81488205"
   
 > [!NOTE] 
 >  
-> Это динамическое представление управления (DMV) доступно только в том случае, если вы установили и включили функцию, поддерживающую выполнение внешнего скрипта. Для получения более подробной информации см. [R-сервисы в S'L Server 2016](../../machine-learning/r/sql-server-r-services.md) и [Службы машинного обучения (R, Python) в S'L Server 2017 и позже.](../../machine-learning/sql-server-machine-learning-services.md)  
+> Это динамическое административное представление доступно только в том случае, если вы установили и включили функцию, поддерживающую выполнение внешних скриптов. Дополнительные сведения см. в статье [службы R в SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) и [службы машинного обучения (R, Python) в SQL Server 2017 и более поздних версиях](../../machine-learning/sql-server-machine-learning-services.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**уникальный идентификатор**|Идентификатор процесса, который отправил запрос на внешний скрипт. Это соответствует идентификатору процесса, полученному[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**уникальный идентификатор**|Идентификатор процесса, который отправил запрос на внешний скрипт. Соответствует ИДЕНТИФИКАТОРу процесса, полученному[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |Язык|**nvarchar**|Ключевое слово, которое представляет поддерживаемый язык скриптов. |  
 |degree_of_parallelism|**int**|Число, указывающее количество созданных параллельных процессов. Это значение может отличаться от количества запрошенных параллельных процессов.|  
 |external_user_name|**nvarchar**|Рабочая учетная запись Windows, под которой был выполнен скрипт.|  
@@ -48,11 +48,11 @@ ms.locfileid: "81488205"
 >   
 >  Пользователям, выполняющим внешние скрипты, требуется дополнительное разрешение EXECUTE ANY EXTERNAL SCRIPT, однако администраторы могут использовать это динамическое административное представление без такого разрешения. 
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
 
 Это представление можно отфильтровать с помощью идентификатора языка скриптов.
 
-Кроме того, оно возвращает рабочую учетную запись, под которой выполняется скрипт. Для получения информации об учетных записях работников, используемых внешними скриптами, см. раздел «Идентификаторы», используемые при обработке данных (S'LRUserGroup), в [обзоре безопасности для платформы для расширяемости в службах машинного обучения сервера S'L](../../machine-learning/concepts/security.md#sqlrusergroup)Server.
+Кроме того, оно возвращает рабочую учетную запись, под которой выполняется скрипт. Сведения о рабочих учетных записях, используемых внешними скриптами, см. в разделе удостоверения, используемые при обработке (SQLRUserGroup) в статье [Общие сведения о безопасности для платформы расширяемости в SQL Server службы машинного обучения](../../machine-learning/concepts/security.md#sqlrusergroup).
 
 Идентификатор GUID, который возвращается в поле **external_script_request_id** , также представляет имя файла защищенного каталога, где хранятся временные файлы. Каждая рабочая учетная запись, например MSSQLSERVER01, представляет отдельное имя входа SQL или пользователя Windows, а также может использоваться для выполнения нескольких запросов скриптов. По умолчанию эти временные файлы удаляются после завершения запрошенного скрипта.
  
@@ -81,9 +81,9 @@ external_script_request_id  |Язык  |degree_of_parallelism  |external_user_na
 
   
 ## <a name="see-also"></a>См. также:  
- [Динамические представления и функции управления &#40;&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-[sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
+[sys. dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   
 

@@ -1,6 +1,6 @@
 ---
-title: Свойства собрания (Общая страница) Документы Майкрософт
-description: Можно просматривать или изменять свойства для сборки, размещенной на сервере S'L. К ним относятся имя сборки и владелец, набор разрешений и другие свойства.
+title: Свойства сборки (страница «Общие») | Документация Майкрософт
+description: Можно просмотреть или изменить свойства сборки, размещенной на SQL Server. К ним относятся имя сборки и владелец, набор разрешений и другие свойства.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 64e1847db5477ce556824d1b424649f617a0fa9f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488023"
 ---
 # <a name="assemblies---properties"></a>Свойства сборок
@@ -46,7 +46,7 @@ ms.locfileid: "81488023"
  **Строгое имя**  
  Отображает **True** , если сборка подписана цифровой подписью, и **False** , если она не подписана.  
   
- **Version**  
+ **Версия**  
  Отображает номер версии сборки.  
   
 ## <a name="see-also"></a>См. также:  

@@ -1,6 +1,6 @@
 ---
-title: Включение интеграции CLR (англ.) Документы Майкрософт
-description: Хостинг CLR сервера Microsoft S'L называется интеграцией CLR, которая отключена по умолчанию. Используйте sp_configure сохраненную процедуру для обеспечения интеграции CLR.
+title: Включение интеграции со средой CLR | Документация Майкрософт
+description: Microsoft SQL Server размещения CLR называется интеграцией со средой CLR, которая по умолчанию отключена. Используйте sp_configure хранимую процедуру, чтобы включить интеграцию со средой CLR.
 ms.custom: ''
 ms.date: 09/17/2019
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: eb3e9c64-7486-42e7-baf6-c956fb311a2c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7d161135c8c8b0c7d7932eb08aa98509efc4bc45
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488119"
 ---
 # <a name="clr-integration---enabling"></a>Включение интеграции со средой CLR
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Функция интеграции со средой CLR отключена по умолчанию, поэтому ее нужно включить, чтобы использовать объекты, использующие интеграцию со средой CLR. Для обеспечения интеграции CLR используйте опцию **включенного clr** процедуры **sp_configure** сохранены в: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+  Функция интеграции со средой CLR отключена по умолчанию, поэтому ее нужно включить, чтобы использовать объекты, использующие интеграцию со средой CLR. Чтобы включить интеграцию со средой CLR, используйте параметр **clr enabled** хранимой процедуры **sp_configure** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 ```sql  
 EXEC sp_configure 'clr enabled', 1;  
@@ -30,22 +30,22 @@ RECONFIGURE;
 GO  
 ```  
   
- Вы можете отключить интеграцию CLR, установив опцию **включенного clr** до 0. Когда вы отключите интеграцию CLR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перестанете исполнять все пользовательские процедуры CLR и разгружает все домены приложений. Функции, которые полагаются на CLR, такие как `FORMAT` тип данных **иерархии,** функция, репликация и управление на основе политики, не зависят от этого параметра и будут продолжать функционировать.
+ Вы можете отключить интеграцию со средой CLR, задав для параметра **clr enabled** значение 0. При отключении интеграции со средой CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прекращает выполнение всех определяемых пользователем подпрограмм CLR и выгружает все домены приложений. Этот параметр не влияет на функции, зависящие от **hierarchyid** среды CLR, например тип `FORMAT` данных hierarchyid, функцию, репликацию и управление на основе политик, и будет продолжать функционировать.
   
 > [!NOTE]  
->  Для обеспечения интеграции CLR необходимо иметь разрешение на серверный уровень ALTER SETTINGS, которое неявно удерживается членами **sysadmin** и **sradradmin** фиксированными ролями сервера.  
+>  Чтобы включить интеграцию со средой CLR, необходимо иметь разрешение ALTER SETTINGS на уровне сервера, которое неявно удерживается членами предопределенных ролей сервера **sysadmin** и **serveradmin** .  
   
 > [!NOTE]  
->  Компьютеры, сконфигурированные для работы с большим объемом памяти и большим числом процессоров, при запуске сервера могут отказаться загружать функцию интеграции со средой CLR SQL Server. Чтобы решить эту проблему, запустите сервер с помощью опции запуска **службы -gmemory_to_reserve** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и укажите значение памяти достаточно большим. Дополнительные сведения см. в разделе [Параметры запуска службы Database Engine](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+>  Компьютеры, сконфигурированные для работы с большим объемом памяти и большим числом процессоров, при запуске сервера могут отказаться загружать функцию интеграции со средой CLR SQL Server. Чтобы устранить эту неполадку, запустите сервер с помощью параметра запуска службы **-gmemory_to_reserve** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и укажите достаточно большое значение памяти. Дополнительные сведения см. в разделе [Параметры запуска службы Database Engine](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
 > [!NOTE]  
 >  Выполнение в среде CLR не поддерживается при использовании упрощенных пулов. Перед включением интеграции со средой CLR необходимо отключить функцию использования упрощенных пулов. Дополнительные сведения см. в разделе [Параметр конфигурации сервера «использование упрощенных пулов»](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md).  
   
 ## <a name="see-also"></a>См. также:  
- [sp_configure &#40;&#41;«Трансакт-СЗЛ»](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [clr включен вариант конфигурации сервера](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
- [&#41;RECONFIGURE &#40;"Трансакт-СЗЛ"](../../t-sql/language-elements/reconfigure-transact-sql.md)   
- [&#41;&#40;GRANT](../../t-sql/statements/grant-transact-sql.md)   
+ [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [Параметр конфигурации сервера «CLR Enabled»](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
+ [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+ [ПРЕДОСТАВЛЕНИЕ &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md)  
   
   

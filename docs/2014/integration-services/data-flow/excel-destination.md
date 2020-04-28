@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f736d03a573f61ed31e0cb95c1768907f8a9560
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087164"
 ---
 # <a name="excel-destination"></a>Назначение Excel
@@ -48,7 +48,7 @@ ms.locfileid: "82087164"
   
      Сведения о том, как избежать включения символа одинарной кавычки, см. в записи блога [Single quote is appended to all strings when data is transformed to excel when using Excel destination data flow component in SSIS package](https://go.microsoft.com/fwlink/?LinkId=400876) (При использовании Excel в качестве целевого компонента потока данных в пакете SSIS преобразование данных в Excel добавляет ко всем строкам одинарную кавычку) на веб-сайте msdn.com.  
   
--   **Сохранение данных типа memo (ntext)**. Чтобы успешно сохранять в столбцы Excel строки, имеющие длину более 255 символов, драйвер должен распознать тип данных целевого столбца как **memo** , а не как **string**. Если в целевой таблице уже содержатся строки данных, то в столбце типа memo в первых нескольких строках, которые проверит драйвер, должен содержаться, по крайней мере, один экземпляр значения, имеющего длину более 255 символов. Если таблица назначения создается во время проектирования пакета или во время выполнения, то заявление CREATE TABLE должно использовать LONGTEXT (или один из его синонимов) в качестве типа данных столбца памятки.  
+-   **Сохранение данных типа memo (ntext)**. Чтобы успешно сохранять в столбцы Excel строки, имеющие длину более 255 символов, драйвер должен распознать тип данных целевого столбца как **memo** , а не как **string**. Если в целевой таблице уже содержатся строки данных, то в столбце типа memo в первых нескольких строках, которые проверит драйвер, должен содержаться, по крайней мере, один экземпляр значения, имеющего длину более 255 символов. Если целевая таблица создается во время разработки пакета или во время выполнения, то инструкция CREATE TABLE должна использовать LONGTEXT (или один из его синонимов) в качестве типа данных столбца МЕМО.  
   
 -   **Типы данных**. Драйвер Excel распознает только ограниченный набор типов данных. Например, все числовые столбцы воспринимаются как тип double (DT_R8), а все строковые столбцы (кроме столбцов типа memo) воспринимаются как строки в Юникоде длиной 255 символов (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сопоставляют типы данных Excel следующим образом.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "82087164"
   
     -   Логический — логический (DT_BOOL)  
   
-    -   Дата/время `datetime` (DT_DATE)  
+    -   Дата и время `datetime` (DT_DATE)  
   
     -   Строка — строка в Юникоде длиной 255 символов (DT_WSTR)  
   
@@ -104,8 +104,8 @@ ms.locfileid: "82087164"
 -   [Установление свойств компонента потока данных](set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Excel Источник](excel-source.md)   
- [Интеграционные услуги &#40;переменные SSIS&#41;](../integration-services-ssis-variables.md)   
+ [Источник Excel](excel-source.md)   
+ [Integration Services &#40;переменные&#41; SSIS](../integration-services-ssis-variables.md)   
  [Поток данных](data-flow.md)   
  [Работа с файлами Excel в задаче "Скрипт"](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   

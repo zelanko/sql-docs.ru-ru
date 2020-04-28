@@ -1,5 +1,5 @@
 ---
-title: Табулярное моделирование (Приключенческие работы Учебник) Документы Майкрософт
+title: Табличное моделирование (учебник по Adventure Works) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27ac17469a96213bdd39cbf2bee5a343d117e6f0
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487633"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Табличное моделирование (учебник по Adventure Works)
@@ -58,7 +58,7 @@ ms.locfileid: "81487633"
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   Образец базы данных AdventureWorksDW. Этот образец базы данных включает данные, необходимые для выполнения заданий учебника. Чтобы загрузить образец [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)базы данных, см.  
+-   Образец базы данных AdventureWorksDW. Этот образец базы данных включает данные, необходимые для выполнения заданий учебника. Чтобы скачать образец базы данных, см [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks). раздел.  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 или более поздняя версия (для использования с функцией анализа в Excel в занятии 11)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "81487633"
 |Занятие|Предполагаемое время выполнения|  
 |------------|--------------------------------|  
 |[Реализация динамической безопасности с помощью фильтров строк](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 минут|  
-|[Настройка свойств отчетности для отчетов по представлению мощности](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md) Настройка свойств отчетности для отчетов по представлению мощности|30 минут|  
+|[Настройка свойств отчетов для Power View отчетов](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md) Настройка свойств отчетов для Power View отчетов|30 минут|  
   
 ## <a name="next-step"></a>Следующий шаг  
  Чтобы приступить к изучению этого учебника, перейдите к первому занятию: [Занятие 1. Создание нового проекта табличной модели](lesson-1-create-a-new-tabular-model-project.md).  

@@ -1,5 +1,5 @@
 ---
-title: sp_rxPredict Документы Майкрософт
+title: sp_rxPredict | Документация Майкрософт
 ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,20 +17,20 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 9663b4cd51a7aca9e9e30ccafcdcb0652ec4229a
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488551"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Генерирует прогнозируемое значение для данного ввода, состоящего из модели машинного обучения, хранящейся в двоичном формате в базе данных S'L Server.
+Создает прогнозируемое значение для заданного ввода, состоящего из модели машинного обучения, хранящейся в двоичном формате в базе данных SQL Server.
 
-Обеспечивает скоринг на r и Python моделей машинного обучения в почти в режиме реального времени. `sp_rxPredict`является сохраненной процедурой, предоставляемой `rxPredict` в качестве обертки для функции R в [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) и [MicrosoftML,](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)а также функции [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python в [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) и [microsoftml.](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) Она написана в СЗ и оптимизирована специально для скоринговых операций.
+Обеспечивает оценку моделей машинного обучения R и Python практически в реальном времени. `sp_rxPredict`— это хранимая `rxPredict` процедура, предоставляемая как оболочка для функции R в [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) и [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package), а также функция [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python в [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) и [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Она написана на языке C++ и оптимизирована специально для операций оценки.
 
-Хотя модель должна быть создана с помощью R или Python, как только она сериализуется и хранится в двоичном формате на экземпляре движка целевой базы данных, она может быть использована из этого экземпляра движка базы данных даже тогда, когда интеграция R или Python не установлена. Для получения дополнительной информации, смотрите [в режиме реального времени забил с sp_rxPredict](https://docs.microsoft.com/sql/machine-learning/real-time-scoring).
+Несмотря на то, что модель должна быть создана с помощью R или Python, после ее сериализации и сохранения в двоичном формате в целевом экземпляре ядра СУБД его можно использовать в экземпляре ядра СУБД, даже если интеграция R или Python не установлена. Дополнительные сведения см. [в статье Оценка в реальном времени с помощью sp_rxPredict](https://docs.microsoft.com/sql/machine-learning/real-time-scoring).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,58 +40,58 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="arguments"></a>Аргументы
 
-**Модели**
+**для базы данных модели**
 
-Предподготовленная модель в поддерживаемом формате. 
+Предварительно обученная модель в поддерживаемом формате. 
 
 **input**
 
-Действительный запрос S'L
+Допустимый SQL-запрос
 
 ### <a name="return-values"></a>Возвращаемые значения
 
-Возвращается столбец оценки, а также любые сквозные столбцы из источника входных данных.
-Дополнительные столбцы оценки, такие как доверительный интервал, могут быть возвращены, если алгоритм поддерживает генерацию таких значений.
+Возвращается столбец оценки, а также все передаваемые столбцы из источника входных данных.
+Дополнительные столбцы оценки, например доверительный интервал, могут быть возвращены, если алгоритм поддерживает создание таких значений.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Для обеспечения использования сохраненной процедуры в экземпляре необходимо включить S'LCLR.
+Чтобы включить использование хранимой процедуры, в экземпляре необходимо включить SQLCLR.
 
 > [!NOTE]
-> Есть последствия для безопасности, чтобы enabing этот вариант. Используйте альтернативную реализацию, например функцию [Transact-S'L PREDICT,](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql?view=sql-server-2017) если на вашем сервере не может быть включена функция S'LCLR.
+> Для енабинг этого параметра существуют последствия безопасности. Используйте альтернативную реализацию, например функцию [прогнозирования Transact-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql?view=sql-server-2017) , если на сервере невозможно включить SQLCLR.
 
-Пользователю `EXECUTE` требуется разрешение в базе данных.
+Пользователю требуется `EXECUTE` разрешение на базу данных.
 
 ### <a name="supported-algorithms"></a>Поддерживаемые алгоритмы
 
-Для создания и обучения модели используйте один из поддерживаемых алгоритмов для R или Python, предоставляемый [службами машинного обучения сервера S'L Server (R или Python),](https://docs.microsoft.com/sql/machine-learning/sql-server-machine-learning-services) [S'L Server 2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services), [сервером для машинs S'L (Standalone) ,](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)или [S'L Server 2016 R Server (Standalone).](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)
+Чтобы создать и обучить модель, используйте один из поддерживаемых алгоритмов для R или Python, предоставляемый [SQL Server службы машинного обучения (R или Python)](https://docs.microsoft.com/sql/machine-learning/sql-server-machine-learning-services), [SQL Server 2016 r Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services), [SQL Server Machine Learning Server (автономный) (r или Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)или [SQL Server 2016 R Server (изолированный)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016).
 
-#### <a name="r-revoscaler-models"></a>R: Модели RevoScaleR
+#### <a name="r-revoscaler-models"></a>R: модели RevoScaleR
 
-  + [rxLinmod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)
+  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)
   + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)
-  + [rxBДеревья](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)
+  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)
   + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)
-  + [rxdЛесно](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)
+  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)
 
-#### <a name="r-microsoftml-models"></a>R: Модели MicrosoftML
+#### <a name="r-microsoftml-models"></a>R: модели MicrosoftML
 
   + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
+  + [рксфастфорест](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
   + [rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
   + [rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
   + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
   + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
 
-#### <a name="r-transformations-supplied-by-microsoftml"></a>R: Преобразования, поставляемые MicrosoftML
+#### <a name="r-transformations-supplied-by-microsoftml"></a>R: преобразования, предоставляемые MicrosoftML
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [Concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
+  + [сцеплен](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
   + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
-#### <a name="python-revoscalepy-models"></a>Python: revoscalepy модели
+#### <a name="python-revoscalepy-models"></a>Python: модели revoscalepy
 
   + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
   + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit)
@@ -109,10 +109,10 @@ sp_rxPredict  ( @model, @input )
   + [rx_neural_network](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network)
   + [rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
 
-#### <a name="python-transformations-supplied-by-microsoftml"></a>Python: Преобразования, поставляемые microsoftml
+#### <a name="python-transformations-supplied-by-microsoftml"></a>Python: преобразования, предоставляемые microsoftml
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
-  + [Concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
+  + [сцеплен](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
   + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
   + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
   
@@ -120,9 +120,9 @@ sp_rxPredict  ( @model, @input )
 
 Следующие типы моделей не поддерживаются:
 
-+ Модели с `rxGlm` `rxNaiveBayes` использованием или алгоритмов в RevoScaleR
++ Модели, `rxGlm` использующие алгоритмы или `rxNaiveBayes` в RevoScaleR
 + Модели PMML в R
-+ Модели, созданные с использованием других сторонних библиотек 
++ Модели, созданные с помощью других сторонних библиотек 
 
 ## <a name="examples"></a>Примеры
 
@@ -135,9 +135,9 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-Помимо того, что данные по вхвошне * \@ввхотятывой* информации во вхотульских данных должны включать столбцы, совместимые с столбцоввого доносом в сохраненной модели.
+В дополнение к допустимому SQL-запросу входные данные в * \@inputData* должны включать столбцы, совместимые со столбцами в хранимой модели.
 
-`sp_rxPredict`поддерживает только следующие типы столбцов .NET: двойной, плавающий, короткий, ushort, длинный, ulong и строка. Возможно, вам придется отфильтровать неподдерживаемые типы в входных данных, прежде чем использовать их для подсчета очков в режиме реального времени. 
+`sp_rxPredict`поддерживает только следующие типы столбцов .NET: Double, float, Short, ushort, Long, ulong и String. Может потребоваться отфильтровать неподдерживаемые типы во входных данных, прежде чем использовать их для оценки в реальном времени. 
 
   Сведения о соответствующих типах SQL см. в статье [Сопоставление типов SQL и CLR](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) или [Сопоставление данных о параметрах CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
 
