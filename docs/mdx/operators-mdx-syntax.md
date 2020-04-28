@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892115"
 ---
 # <a name="operators-mdx-syntax"></a>Операторы (синтаксис многомерных выражений)
@@ -63,7 +63,7 @@ ms.locfileid: "68892115"
   
 -   /, *  
   
--   +, -  
+-   +, –  
   
 -   EXISTING  
   
@@ -75,7 +75,7 @@ ms.locfileid: "68892115"
   
 -   XOR  
   
--   OR  
+-   ИЛИ  
   
  Дополнительные сведения об операторах многомерных выражений см. в разделе [Справочник по операторам многомерных выражений &#40;&#41;многомерных ](../mdx/mdx-operator-reference-mdx.md)выражений.  
   
@@ -95,10 +95,10 @@ ms.locfileid: "68892115"
 |Иерархия|Участник|\<Иерархия>. DefaultMember|  
 |Участник|Кортеж|(\<> членов)|  
 |Кортеж|Участник|\<кортеж>. Item (0)|  
-|Кортеж|скалярные;|\<кортеж>. Value|  
+|Кортеж|скалярная|\<кортеж>. Value|  
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-operator-reference-mdx.md)   
- [Элементы синтаксиса многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-syntax-elements-mdx.md)  
+ [Синтаксические элементы в многомерных выражениях (многомерные выражения)](../mdx/mdx-syntax-elements-mdx.md)  
   
   

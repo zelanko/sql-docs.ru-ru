@@ -16,10 +16,10 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771533"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
@@ -43,7 +43,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 `[ @type = ] 'type'`Разрешает результирующий набор содержать только те базы данных, для которых было включено указанное значение *типа* параметра репликации. Аргумент *Type имеет тип* **sysname**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**отменить**|Разрешена репликация транзакций.|  
 |**Публикация слиянием**|Разрешена репликация слиянием.|  
@@ -53,10 +53,10 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**name**|**имеет sysname**|Имя базы данных.|  
-|**удостоверения**|**int**|Идентификатор базы данных.|  
+|**name**|**sysname**|Имя базы данных.|  
+|**идентификатор**|**int**|Идентификатор базы данных.|  
 |**transpublish**|**bit**|Значение, если для базы данных включена публикация моментальных снимков или публикации транзакций; значение **1** означает, что публикация моментального снимка или публикации транзакций включена.|  
 |**mergepublish**|**bit**|Значение, если для базы данных включена публикация слиянием. значение **1** означает, что публикация слиянием включена.|  
 |**dbowner**|**bit**|Если пользователь является членом предопределенной роли базы данных **db_owner** ; значение **1** указывает, что пользователь является членом этой роли.|  
@@ -75,6 +75,6 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 ## <a name="see-also"></a>См. также:  
  [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

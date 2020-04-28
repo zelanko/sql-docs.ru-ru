@@ -16,10 +16,10 @@ ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e87e542395c00797ce50b220ad8a6c981f43605a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771093"
 ---
 # <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
@@ -53,13 +53,13 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**Идентификатор столбца**|**int**|Идентификатор столбца.|  
-|**рубрик**|**имеет sysname**|Имя столбца.|  
-|**выпущен**|**bit**|Опубликован ли столбец:<br /><br /> **0** = нет<br /><br /> **1** = да|  
-|**тип издателя**|**имеет sysname**|Тип данных столбца на издателе.|  
-|**Тип подписчика**|**имеет sysname**|Тип данных столбца на подписчике.|  
+|**рубрик**|**sysname**|Имя столбца.|  
+|**published**|**bit**|Опубликован ли столбец:<br /><br /> **0** = нет<br /><br /> **1** = да|  
+|**тип издателя**|**sysname**|Тип данных столбца на издателе.|  
+|**Тип подписчика**|**sysname**|Тип данных столбца на подписчике.|  
   
 ## <a name="remarks"></a>Remarks  
  **sp_helparticlecolumns** используется в моментальных снимках и репликации транзакций.  
@@ -76,6 +76,6 @@ sp_helparticlecolumns [ @publication = ] 'publication'
  [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

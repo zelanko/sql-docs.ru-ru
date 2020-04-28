@@ -18,10 +18,10 @@ ms.assetid: c9a7309b-eab7-4192-a414-e282581af4e5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 93e65bb7d72b15dcb29763a1c02845b6ff5faa01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68215936"
 ---
 # <a name="sp_remoteoption-transact-sql"></a>Хранимая процедура sp_remoteoption (Transact-SQL)
@@ -51,6 +51,6 @@ sp_remoteoption [ [ @remoteserver = ] 'remoteserver' ]
  `The trusted option in remote login mapping is no longer supported.`  
   
 ## <a name="see-also"></a>См. также:  
- [&#40;ядро СУБД связанных серверов&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
+ [Связанные серверы (компонент Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
   

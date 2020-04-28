@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891869"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Типы данных в выражениях (построитель отчетов и службы SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "68891869"
 |String|По умолчанию: String<br /><br /> Chart, GUID, Timespan|  
 |Логическое|По умолчанию: Boolean|  
 |Целое число|По умолчанию: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|По умолчанию: DateTime<br /><br /> DateTimeOffset|  
+|Дата и время|По умолчанию: DateTime<br /><br /> DateTimeOffset|  
 |Float|По умолчанию: Double<br /><br /> Single, Decimal|  
 |Двоичные данные|По умолчанию: Byte[]|  
 |Variant|Любое из вышеприведенного, кроме Byte[]|  
@@ -65,7 +65,7 @@ ms.locfileid: "68891869"
   
 -   Создание вычисляемого поля на основе существующего поля набора данных отчета с помощью выражения, преобразующего все данные одного столбца результирующего набора в данные нового столбца с другим типом данных. Например, следующее выражение преобразует поле Year из целочисленного значения в строковое: `=CStr(Fields!Year.Value)`. Дополнительные сведения см. в разделе [Добавление, изменение и обновление полей в области данных отчета (построитель отчетов и службы SSRS)](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
--   Проверка наличия метаданных в используемом модуле обработки данных с целью получения предварительно отформатированных данных. Например, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] запрос многомерных выражений включает FORMATTED_VALUE расширенное свойство для значений Куба, которые уже были отформатированы при обработке куба. Дополнительные сведения см. в разделе [Расширенные свойства поля для базы данных служб Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+-   Проверка наличия метаданных в используемом модуле обработки данных с целью получения предварительно отформатированных данных. Например, запрос многомерных выражений служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] включает расширенное свойство FORMATTED_VALUE для значений куба, отформатированных при обработке куба. Дополнительные сведения см. в разделе [Расширенные свойства поля для базы данных служб Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Основные сведения о типах данных параметров  
  Параметры отчета должны иметь один из пяти типов данных: Boolean, DateTime, Integer, Float или Text (также известный как String). Если запрос набора данных включает параметры запроса, автоматически создаются параметры отчета, которые связываются с параметрами запроса. Типом данных по умолчанию для параметра отчета является String. Чтобы изменить тип данных по умолчанию параметра отчета, выберите нужное значение в раскрывающемся списке **Тип данных** на странице **Общие** в диалоговом окне **Свойства параметров отчета** .  

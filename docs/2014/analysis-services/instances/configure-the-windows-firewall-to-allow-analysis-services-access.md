@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b74c767c50e8a62c2d65ad089e386a94b9c8a5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70151860"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services
@@ -44,7 +44,7 @@ ms.locfileid: "70151860"
   
 -   [Проверка параметров порта и брандмауэра для служб Analysis Services](#bkmk_checkport)  
   
--   [Настройка брандмауэра Windows для экземпляра по умолчанию служб Analysis Services](#bkmk_default)  
+-   [Настройка брандмауэра Windows для экземпляра по умолчанию Analysis Services](#bkmk_default)  
   
 -   [Настройка доступа в брандмауэре Windows для именованного экземпляра служб Analysis Services](#bkmk_named)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "70151860"
   
  Дополнительные сведения о настройках брандмауэра Windows по умолчанию и описание портов TCP, влияющих на компонент Database Engine, службы Analysis Services, службы Reporting Services и службы Integration Services, см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-##  <a name="bkmk_checkport"></a>Проверьте параметры порта и брандмауэра для Analysis Services  
+##  <a name="check-port-and-firewall-settings-for-analysis-services"></a><a name="bkmk_checkport"></a>Проверьте параметры порта и брандмауэра для Analysis Services  
  В операционных системах Microsoft Windows, поддерживаемых [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], брандмауэр Windows включен по умолчанию и блокирует удаленные соединения. Чтобы разрешить входящие запросы к службам Analysis Services, необходимо вручную открыть порт в брандмауэре. Программа установки SQL Server не выполняет этот шаг автоматически.  
   
  Параметры порта указываются в файле msmdsrv.ini и на странице свойств «Общие» экземпляра служб Analysis Services в среде SQL Server Management Studio. Если для `Port` установлено положительное целочисленное значение, служба прослушивает фиксированный порт. Если для `Port` установлено значение 0, служба прослушивает порт 2383, если это экземпляр по умолчанию, или динамически назначенный порт, если это именованный экземпляр.  
@@ -75,7 +75,7 @@ ms.locfileid: "70151860"
   
  Обратите внимание, что для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]все правила брандмауэра необходимо задавать вручную. Хотя службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и обозреватель SQL Server резервируют порты 2382 и 2383, ни программа установки SQL Server, ни одно из средств настройки не определяет правила брандмауэра, которые разрешают доступ к портам или исполняемым файлам программы.  
   
-##  <a name="bkmk_default"></a>Настройка брандмауэра Windows для экземпляра по умолчанию Analysis Services  
+##  <a name="configure-windows-firewall-for-a-default-instance-of-analysis-services"></a><a name="bkmk_default"></a> Настройка брандмауэра Windows для экземпляра по умолчанию служб Analysis Services  
  Экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] по умолчанию прослушивает TCP-порт 2383. Если установлен экземпляр по умолчанию и требуется использовать этот порт, то необходимо лишь разблокировать входящий доступ к TCP-порту 2383 в брандмауэре Windows, чтобы разрешить удаленный доступ к экземпляру по умолчанию служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Если установлен экземпляр по умолчанию и необходимо настроить службу для прослушивания фиксированного порта, см. подраздел [Использовать фиксированный порт для именованного экземпляра или экземпляра по умолчанию служб Analysis Services](#bkmk_fixed) в данном разделе.  
   
  Чтобы определить, выполняется ли служба как экземпляр по умолчанию (MSSQLServerOLAPService), проверьте имя службы в диспетчере конфигурации SQL Server. Экземпляр служб Analysis Services по умолчанию всегда указывается как **Службы SQL Server Analysis Services (MSSQLSERVER)**.  
@@ -114,7 +114,7 @@ ms.locfileid: "70151860"
     netsh advfirewall firewall add rule name="SQL Server Analysis Services inbound on TCP 2383" dir=in action=allow protocol=TCP localport=2383 profile=domain  
     ```  
   
-##  <a name="bkmk_named"></a>Настройка доступа к брандмауэру Windows для именованного экземпляра Analysis Services  
+##  <a name="configure-windows-firewall-access-for-a-named-instance-of-analysis-services"></a><a name="bkmk_named"></a>Настройка доступа к брандмауэру Windows для именованного экземпляра Analysis Services  
  Именованные экземпляры служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] могут прослушивать либо указанный фиксированный порт, либо динамически назначаемый порт, при этом служба обозревателя SQL Server предоставляет сведения о соединении, используемом службой на момент соединения.  
   
  Служба обозревателя SQL Server прослушивает TCP-порт 2382. Протокол UDP не используется. TCP — единственный протокол передачи, используемый службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -154,7 +154,7 @@ ms.locfileid: "70151860"
   
 7.  В списке Имя введите описательное имя для этого правила (например, `SQL Server Browser Service (tcp-in) 2382`), а затем нажмите кнопку **Готово**.  
   
-8.  Чтобы убедиться, что удаленные подключения включены, откройте SQL Server Management Studio или Excel на другом компьютере и подключитесь к Analysis Services, указав сетевое имя сервера и имя экземпляра в следующем формате: \<servername>\\<имя_экземпляра.\> Например, на сервере с именем **AW-SRV01** и именованным экземпляром **Finance** именем сервера будет **AW-SRV01\Finance**.  
+8.  Чтобы убедиться, что удаленные подключения включены, откройте SQL Server Management Studio или Excel на другом компьютере и подключитесь к Analysis Services, указав сетевое имя сервера и имя экземпляра в следующем формате: \<servername>\\<имя_экземпляра.\> Например, на сервере с именем **AW-SRV01** и именованным экземпляром **Finance**именем сервера будет **AW-SRV01\Finance**.  
   
  **Вариант 2: используйте фиксированный порт для именованного экземпляра.**  
   
@@ -194,7 +194,7 @@ ms.locfileid: "70151860"
     netsh advfirewall firewall add rule name="SQL Server Browser Services inbound on TCP 2382" dir=in action=allow protocol=TCP localport=2382 profile=domain  
     ```  
   
-##  <a name="bkmk_fixed"></a>Использовать фиксированный порт для именованного экземпляра по умолчанию или Analysis Services  
+##  <a name="use-a-fixed-port-for-a-default-or-named-instance-of-analysis-services"></a><a name="bkmk_fixed"></a>Использовать фиксированный порт для именованного экземпляра по умолчанию или Analysis Services  
  В этом разделе объясняется, как настроить службы Analysis Services для прослушивания фиксированного порта. Фиксированный порт обычно используется, если службы Analysis Services установлены как именованный экземпляр, но к этому методу можно также прибегнуть, если требования бизнеса или безопасности указывают, что не следует использовать порты по умолчанию.  
   
  Обратите внимание, что при использовании фиксированного порта изменяется синтаксис соединения для экземпляра по умолчанию: необходимо добавить номер порта к имени сервера. Например, при подключении к локальному, используемому по умолчанию экземпляру служб Analysis Services, прослушивающему порт 54321 в среде SQL Server Management Studio, потребуется ввести «localhost:54321» в качестве имени сервера в диалоговом окне «Соединение с сервером» в среде Management Studio.  
@@ -213,13 +213,13 @@ ms.locfileid: "70151860"
   
 5.  Выполните проверку, подключившись локально (в среде Management Studio), а затем удаленно из клиентского приложения на другом компьютере. Чтобы использовать Management Studio, подключитесь к экземпляру Analysis Services по умолчанию, указав имя сервера в следующем \<формате: servername\<>: номер_порта>. Для именованного экземпляра укажите имя сервера \<servername>\\<InstanceName.\>  
   
-##  <a name="bkmk_cluster"></a>Настройка порта для кластера Analysis Services  
+##  <a name="port-configuration-for-an-analysis-services-cluster"></a><a name="bkmk_cluster"></a>Настройка порта для кластера Analysis Services  
  Отказоустойчивый кластер служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] всегда прослушивает TCP-порт 2383 независимо от того, установлен ли он как экземпляр по умолчанию или именованный экземпляр. После установки в отказоустойчивый кластер Windows службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не используют динамическое назначение портов. Необходимо открыть TCP-порт 2383 на каждом узле кластера, на котором работают службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Дополнительные сведения о кластеризации служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]см. в разделе [Кластеризация служб SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
-##  <a name="bkmk_powerpivot"></a>Конфигурация порта для PowerPivot для SharePoint  
+##  <a name="port-configuration-for-powerpivot-for-sharepoint"></a><a name="bkmk_powerpivot"></a>Конфигурация порта для PowerPivot для SharePoint  
  Архитектура сервера для [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] существенно различается в зависимости от используемой версии SharePoint.  
   
- **SharePoint 2013**  
+ **SharePoint 2013**  
   
  В SharePoint 2013 службы Excel перенаправляют запросы к модели данных Power Pivot, которые будут загружены в экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] за пределами среды SharePoint. Соединения устанавливаются стандартным образом, когда клиентская библиотека служб Analysis Services на локальном компьютере отправляет запрос удаленному экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в той же сети.  
   
@@ -227,9 +227,9 @@ ms.locfileid: "70151860"
   
  Обратите внимание, что службы Excel в SharePoint 2013 не поддерживают синтаксис соединения с фиксированным портом, поэтому удостоверьтесь в том, что служба обозревателя SQL Server доступна.  
   
- **SharePoint 2010**  
+ **SharePoint 2010**  
   
- При использовании SharePoint 2010 открывать порты в брандмауэре Windows не нужно. SharePoint открывает необходимые порты, а такие надстройки, как PowerPivot для SharePoint, работают в пределах среды SharePoint. В установке PowerPivot для SharePoint 2010 системная служба PowerPivot имеет монопольное право на использование локального экземпляра обозревателя служб SQL Server Analysis Services (PowerPivot), установленного на том же компьютере. Используются локальные, но не сетевые подключения для доступа к локальным службам Analysis Services, которые загружают, выполняют запросы и обрабатывают данные PowerPivot на сервере SharePoint. Для запроса данных PowerPivot от клиентских приложений запросы направляются через порты, открытые программой установки SharePoint (в частности, правила для входящих подключений определяются для разрешения доступа к SharePoint — 80, центру администрирования SharePoint V4, веб-службам SharePoint. и SPUserCodeV4). Веб-службы PowerPivot выполняются в пределах фермы SharePoint, поэтому правил брандмауэра SharePoint достаточно для удаленного доступа к данным PowerPivot в ферме SharePoint.  
+ При использовании SharePoint 2010 открывать порты в брандмауэре Windows не нужно. SharePoint открывает необходимые порты, а такие надстройки, как PowerPivot для SharePoint, работают в пределах среды SharePoint. В установке PowerPivot для SharePoint 2010 системная служба PowerPivot имеет монопольное право на использование локального экземпляра обозревателя служб SQL Server Analysis Services (PowerPivot), установленного на том же компьютере. Используются локальные, но не сетевые подключения для доступа к локальным службам Analysis Services, которые загружают, выполняют запросы и обрабатывают данные PowerPivot на сервере SharePoint. Для запроса данных PowerPivot от клиентских приложений запросы направляются через порты, открытые программой установки SharePoint (в частности, правила для входящих подключений определяются для разрешения доступа к SharePoint — 80, центру администрирования SharePoint V4, веб-службам SharePoint и SPUserCodeV4). Веб-службы PowerPivot выполняются в пределах фермы SharePoint, поэтому правил брандмауэра SharePoint достаточно для удаленного доступа к данным PowerPivot в ферме SharePoint.  
   
 ## <a name="see-also"></a>См. также:  
  [Обозреватель SQL Server службы &#40;ядро СУБД и SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   

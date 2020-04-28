@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8bb3daf170e25abc9b346aeaedb4b835cae2dfdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68809927"
 ---
 # <a name="modify-unique-constraints"></a>Изменение ограничения уникальности
@@ -31,32 +31,32 @@ ms.locfileid: "68809927"
   
      [Безопасность](#Security)  
   
--   **Изменение ограничения UNIQUE с помощью:**  
+-   **Изменение ограничения уникальности с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требуется разрешение ALTER на таблицу.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-modify-a-unique-constraint"></a>Изменение ограничения уникальности  
   
 1.  В **обозревателе объектов**щелкните правой кнопкой мыши таблицу, содержащую ограничение уникальности, и выберите пункт **Конструктор**.  
   
-2.  В меню **Конструктор таблиц** выберите пункт **индексы/ключи...**.  
+2.  В меню **Конструктор таблиц** выберите пункт **Индексы и ключи...** .  
   
 3.  В диалоговом окне **Индексы и Ключи** в списке **Выбранный первичный/уникальный ключ или индекс**выберите ограничение, которое нужно изменить.  
   
 4.  Выполните действие из следующей таблицы.  
   
-    |Кому|Выполните следующие действия:|  
+    |Чтобы|Выполните следующее|  
     |--------|------------------------|  
     |Изменение столбца, с которым связано ограничение|1) В сетке в области **(Общие)** щелкните элемент **Столбцы**, затем нажмите кнопку с многоточием **(...)** справа от свойства.<br /><br /> 2) В диалоговом окне **Столбцы индекса** укажите для индекса новый столбец и (или) порядок сортировки.|  
     |Переименуйте ограничение|В сетке в области **Идентификатор**введите новое имя в поле **Имя** . Убедитесь, что новое имя не совпадает с именами в списке **Выбранный первичный/уникальный ключ или индекс** .|  
@@ -65,7 +65,7 @@ ms.locfileid: "68809927"
   
 5.  В меню **Файл** выберите пункт **Сохранить**_table name_.  
   
-##  <a name="TsqlProcedure"></a>**Изменение ограничения UNIQUE**  
+##  <a name="to-modify-a-unique-constraint"></a><a name="TsqlProcedure"></a> **Изменение ограничения уникальности**  
   
  Чтобы изменить ограничение UNIQUE с помощью Transact-SQL, необходимо сначала удалить существующее ограничение, а затем создать его повторно с помощью нового определения. Дополнительные сведения см. в разделах [Delete Unique Constraints](delete-unique-constraints.md) и [Create Unique Constraints](create-unique-constraints.md).  
   

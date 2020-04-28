@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 331969c2baa8ec67e0cd7c0ebf8cdd894878f397
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266065"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
@@ -34,17 +34,17 @@ ms.locfileid: "68266065"
   
  Представление **sys. dm_clr_properties** содержит столбцы « **имя** » и « **значение** ». Каждая строка в этом представлении содержит подробные сведения о свойстве внутрипроцессной среды CLR. Это представление используется для сбора информации о внутрипроцессной среде CLR, например о каталоге установки, версии и текущем состоянии этой среды. Оно помогает определить, вызвана ли неработоспособность кода интеграции со средой CLR проблемами установки CLR на серверном компьютере.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(128**|Имя свойства.|  
-|**значений**|**nvarchar(128**|Значение свойства.|  
+|**name**|**nvarchar(128)**|Имя свойства.|  
+|**value**|**nvarchar(128)**|Значение свойства.|  
   
 ## <a name="properties"></a>Свойства  
  Свойство **Directory** указывает каталог, на который была установлена .NET Framework на сервере. На серверном компьютере может быть несколько установок платформы .NET Framework, и значение этого свойства определяет установку, которую использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Свойство **Version** указывает версию .NET Framework и РАЗМЕЩЕННУЮ среду CLR на сервере.  
   
- Динамическое управляемое представление **sys. dm_clr_properties** может возвращать шесть разных значений для свойства **State** , которое отражает состояние [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] размещенной среды CLR. К ним относятся:  
+ Динамическое управляемое представление **sys. dm_clr_properties** может возвращать шесть разных значений для свойства **State** , которое отражает состояние [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] размещенной среды CLR. Они приведены ниже.  
   
 -   Mscoree is not loaded;  
   
@@ -85,7 +85,7 @@ FROM sys.dm_clr_properties;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные со средой CLR &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5c7b4d78f73af003e93bc662f10f1f95acda2b6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265714"
 ---
 # <a name="sysdm_os_performance_counters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68265714"
 > [!NOTE]  
 >  Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_os_performance_counters**.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**object_name**|**nchar (128)**|Категория, к которой принадлежит счетчик.|  
 |**counter_name**|**nchar (128)**|Имя счетчика. Для получения дополнительных сведений о счетчике это имя раздела для выбора из списка счетчиков, [используемых SQL Server объектов](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
@@ -69,7 +69,7 @@ FROM sys.dm_os_performance_counters;
   
 ## <a name="see-also"></a>См. также:  
   [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys. sysperfinfo &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)  
+ [sys.sysperfinfo (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)  
   
   
 

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ae6a7bbeb70ae53280877a1f88a006743eea0655
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264374"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>Инициализация тестовых случаев (OracleToSQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68264374"
 **Описание тестового случая**  
 Введите любые дополнительные сведения, чтобы указать назначение тестового случая.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 [Выбор и настройка объектов для тестирования &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
 ## <a name="see-also"></a>См. также:  

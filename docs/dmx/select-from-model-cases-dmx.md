@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5f0334c37eeedafee7066f01d61745fcb82d1629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892845"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>Выберите из &lt;модели&gt;. ВАРИАНТЫ (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ)
@@ -36,7 +36,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *\n*  
+ *n*  
  Необязательный параметр. Целое число, указывающее количество возвращаемых строк.  
   
  *список выражений*  
@@ -44,7 +44,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
   
  Чтобы включить столбец структуры, не включенный в модель интеллектуального анализа данных, используйте функцию `StructureColumn('<structure column name>')`.  
   
- *model*  
+ *для базы данных модели*  
  Идентификатор модели.  
   
  *выражение условия*  
@@ -90,6 +90,6 @@ AND IsInNode('002')
  [ВЫБОР &#40;&#41;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ](../dmx/select-dmx.md)   
  [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41; DDL](../dmx/dmx-statements-data-definition.md)   
  [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41;](../dmx/dmx-statements-data-manipulation.md)   
- [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

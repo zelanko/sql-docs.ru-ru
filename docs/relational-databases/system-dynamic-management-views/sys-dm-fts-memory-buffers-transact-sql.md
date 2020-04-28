@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fed15fbcfa685bde5d408e799bb605a40380ab5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265923"
 ---
 # <a name="sysdm_fts_memory_buffers-transact-sql"></a>sys.dm_fts_memory_buffers (Transact-SQL)
@@ -36,11 +36,11 @@ ms.locfileid: "68265923"
 > Следующий столбец будет удален в следующем выпуске [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **row_count**. Не пользуйтесь ими в новых разработках и запланируйте изменение приложений, которые сейчас их используют.  
 
   
-|Столбец|Тип данных|Description|  
+|Столбец|Тип данных|Описание|  
 |------------|---------------|-----------------|  
 |**pool_id**|**int**|Идентификатор выделенного пула памяти.<br /><br /> 0 = небольшие буферы<br /><br /> 1 = большие буферы|  
 |**memory_address**|**varbinary(8)**|Адрес выделенного буфера памяти.|  
-|**name**|**nvarchar (4000)**|Имя общего буфера памяти, для которого было произведено данное выделение.|  
+|**name**|**nvarchar(4000)**|Имя общего буфера памяти, для которого было произведено данное выделение.|  
 |**is_free**|**bit**|Текущее состояние буфера памяти.<br /><br /> 0 = свободен<br /><br /> 1 = занят|  
 |**row_count**|**int**|Число строк, обрабатываемое в данный момент буфером.|  
 |**bytes_used**|**int**|Объем памяти, используемой данным буфером, в байтах.|  
@@ -56,12 +56,12 @@ ms.locfileid: "68265923"
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|С|Кому|Связь|  
+|Исходный тип|Кому|Связь|  
 |----------|--------|------------------|  
 |dm_fts_memory_buffers.pool_id|dm_fts_memory_pools.pool_id|«многие к одному»|  
   
 ## <a name="see-also"></a>См. также:  
- [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции полнотекстового поиска и семантического поиска &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 12ddbfe11a2b1a29dadaacde845f96e70959bebb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771002"
 ---
 # <a name="sp_replcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
@@ -39,14 +39,14 @@ sp_replcounters
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**База данных**|**имеет sysname**|Имя базы данных.|  
+|**База данных**|**sysname**|Имя базы данных.|  
 |**Replicated transactions**|**int**|Количество транзакций в журнале, ожидающих доставки в базу данных распространителя|  
 |**Replication rate trans/sec**|**float**|Среднее количество транзакций, переданных в базу данных распространителя в секунду.|  
 |**Задержка репликации**|**float**|Среднее время в секундах, в течение которого транзакции находились в журнале и до того момента, как они были отправлены.|  
-|**Replbeginlsn**|**двоичный (10)**|Указывает регистрационный номер транзакции в журнале (LSN) для текущей точки усечения журнала.|  
-|**Replnextlsn**|**двоичный (10)**|Номер LSN следующей записи фиксации, ожидающей доставки в базу данных распространителя.|  
+|**Replbeginlsn**|**binary(10)**|Указывает регистрационный номер транзакции в журнале (LSN) для текущей точки усечения журнала.|  
+|**Replnextlsn**|**binary(10)**|Номер LSN следующей записи фиксации, ожидающей доставки в базу данных распространителя.|  
   
 ## <a name="remarks"></a>Remarks  
  **sp_replcounters** используется в репликации транзакций.  
@@ -58,6 +58,6 @@ sp_replcounters
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

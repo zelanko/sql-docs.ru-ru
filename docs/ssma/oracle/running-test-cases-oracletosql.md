@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266551"
 ---
 # <a name="running-test-cases-oracletosql"></a>Запуск тестовых случаев (OracleToSQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68266551"
   
 ||||  
 |-|-|-|  
-|Имя|Тип|Description|  
+|Имя|Тип|Описание|  
 |USER_TABLE $ TRG|триггер|Активация аудита изменений в проверенной таблице.|  
 |USER_TABLE $ AUD|table|Таблица, в которой сохраняются удаленные и перезаписанные строки.|  
 |USER_TABLE $ АУДИД|table|Таблица, в которой сохраняются новые и измененные строки.|  
@@ -56,14 +56,14 @@ ms.locfileid: "68266551"
   
 ||||  
 |-|-|-|  
-|Имя|Тип|Description|  
+|Имя|Тип|Описание|  
 |USER_TABLE $ TRG|триггер|Активация аудита изменений в проверенной таблице.|  
   
 И в базе данных ссматестердб создаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]следующие объекты.  
   
 ||||  
 |-|-|-|  
-|Имя|Тип|Description|  
+|Имя|Тип|Описание|  
 |USER_TABLE $ AUD|table|Таблица, в которой сохраняются удаленные и перезаписанные строки.|  
 |USER_TABLE $ Аудид|table|Таблица, в которой сохраняются новые и измененные строки.|  
 |USER_TABLE|представление|Упрощенное представление изменений таблицы.|  
@@ -77,7 +77,7 @@ ms.locfileid: "68266551"
 ### <a name="finalization"></a>Завершения  
 Во время завершения SSMA тестер очищает вспомогательные объекты, созданные на этапе **инициализации** .  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 [Просмотр отчетов о тестовых случаях &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
   
 ## <a name="see-also"></a>См. также:  

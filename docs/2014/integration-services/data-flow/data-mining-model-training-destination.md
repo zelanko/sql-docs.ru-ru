@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5dac84fe42185806ae468593876a6bd439c1c689
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890647"
 ---
 # <a name="data-mining-model-training-destination"></a>целевой объект «Обучение модели интеллектуального анализа данных»
@@ -35,15 +35,15 @@ ms.locfileid: "68890647"
   
  Этот целевой объект имеет один вход и ни одного выхода.  
   
- Назначение «обучение модели интеллектуального анализа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] » использует диспетчер соединений для подключения [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] к проекту или к экземпляру [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , содержащему структуру и модели интеллектуального анализа данных, которые обучены в целевом объекте. Дополнительные сведения см. в статье [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md).  
+ Назначение "Обучение модели интеллектуального анализа данных" использует диспетчер соединений служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для подключения к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], содержащему структуру интеллектуального анализа данных и модели интеллектуального анализа, которые обучаются с помощью назначения. Дополнительные сведения см. в статье [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md).  
   
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
  Дополнительные сведения о свойствах, которые могут быть заданы в диалоговом окне **Редактор сценариев обучения моделей интеллектуального анализа данных** , см. в одном из следующих разделов:  
   
--   [Редактор обучения моделей интеллектуального анализа данных &#40;вкладка "подключение"&#41;](../data-mining-model-training-editor-connection-tab.md)  
+-   [Редактор обучения модели интеллектуального анализа данных (вкладка "Соединение")](../data-mining-model-training-editor-connection-tab.md)  
   
--   [Редактор обучения моделей интеллектуального анализа данных &#40;вкладка "столбцы"&#41;](../data-mining-model-training-editor-columns-tab.md)  
+-   [Редактор обучения модели интеллектуального анализа данных (вкладка "Столбцы")](../data-mining-model-training-editor-columns-tab.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   

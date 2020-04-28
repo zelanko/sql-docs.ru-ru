@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890772"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Редактор задачи «Запрос интеллектуального анализа данных» (вкладка «Модель интеллектуального анализа данных»)
@@ -27,7 +27,7 @@ ms.locfileid: "68890772"
  Сведения об интеллектуальном анализе данных в пакетах см. в разделах [Задача "Запрос интеллектуального анализа данных"](control-flow/data-mining-query-task.md) и [Решения для интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ## <a name="general-options"></a>Общие параметры  
- **Название**  
+ **имя**;  
  Задайте уникальное имя для задачи «Запрос интеллектуального анализа данных». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -40,12 +40,12 @@ ms.locfileid: "68890772"
  **Соединен**  
  Выберите из списка диспетчер соединений служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или нажмите кнопку **Создать** для создания нового диспетчера соединений.  
   
- **См. также:**  [Диспетчер соединений Analysis Services](connection-manager/analysis-services-connection-manager.md)  
+ **См. также:**  [Добавление диспетчера соединений служб Analysis Services](connection-manager/analysis-services-connection-manager.md)  
   
  **Создать**  
  Создает новый диспетчер соединений служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
- **См. также:** [диалоговое окно "Добавление Analysis Services диспетчера соединений" Справочник по пользовательскому интерфейсу](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **См. также:** [Добавление диалогового окна "Диспетчер соединений со службами Analysis Services" в справочнике по пользовательскому интерфейсу](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Структура интеллектуального анализа данных**  
  Выберите структуру интеллектуального анализа из данного списка.  

@@ -22,10 +22,10 @@ ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28589be83c62f705457e990b328be98e88905568
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771273"
 ---
 # <a name="sp_check_join_filter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
@@ -53,7 +53,7 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|Имеет значение, если публикация предназначена для предварительно вычисленных секций; значение **1** означает, что прекомуптед секции можно использовать, а **0** означает, что их нельзя использовать.|  
 |**has_dynamic_filters**|**bit**|Имеет значение, если предоставляемое предложение фильтра включает по крайней мере одну функцию параметризованной фильтрации; где **1** означает, что используется параметризованная функция фильтрации, а значение **0** означает, что такая функция не используется.|  
@@ -73,6 +73,6 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_check_join_filter**.  
   
 ## <a name="see-also"></a>См. также:  
- [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

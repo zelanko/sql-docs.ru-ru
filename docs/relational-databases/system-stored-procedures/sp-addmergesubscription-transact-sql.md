@@ -16,10 +16,10 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769126"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
@@ -74,10 +74,10 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_type = ] 'subscriber_type'`Тип подписчика. *subscriber_type*имеет тип **nvarchar (15)** и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Local** (по умолчанию)|Подписчик известен только издателю.|  
-|**глобального**|Подписчик известен всем серверам.|  
+|**global**|Подписчик известен всем серверам.|  
   
  В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях локальные подписки называются клиентскими подписками, а глобальные подписки — серверными подписками.  
   
@@ -90,53 +90,53 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Значение, указывающее, когда будет выполняться агент слияния. *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
 |**4**|Ежедневно|  
-|**8**|Еженедельно|  
-|**штук**|Ежемесячная|  
+|**8**|Weekly (Еженедельно);|  
+|**10**|Ежемесячно|  
 |**20**|Ежемесячно, в соответствии с заданным интервалом|  
 |**40**|При запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |NULL (по умолчанию)||  
   
 `[ @frequency_interval = ] frequency_interval`День или дни выполнения агент слияния. *frequency_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Воскресенье|  
 |**2**|Понедельник|  
-|**3-5**|Вторник|  
+|**3**|Вторник|  
 |**4**|Среда|  
-|**5.0**|Четверг|  
+|**5**|Четверг|  
 |**6**|Пятница|  
 |**7**|Суббота|  
 |**8**|День|  
-|**8**|дни недели;|  
-|**штук**|По выходным дням|  
+|**9**|По рабочим дням|  
+|**10**|По выходным дням|  
 |NULL (по умолчанию)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`— Это запланированное слияние вхождений интервала частоты в каждом месяце. *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Первый|  
 |**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
-|**глубин**|Последний|  
+|**16**|Последний|  
 |NULL (по умолчанию)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor*имеет **тип int**и значение по умолчанию NULL.  
   
 `[ @frequency_subday = ] frequency_subday`Единица измерения для *frequency_subday_interval*. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
 |**2**|Секунда|  
 |**4**|Минута|  
-|**8**|Hour|  
+|**8**|Час|  
 |NULL (по умолчанию)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Частота, с которой *frequency_subday* происходит между каждым слиянием. *frequency_subday_interval* имеет **тип int**и значение по умолчанию NULL.  
@@ -187,9 +187,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>См. также:  
  [Создание принудительной подписки](../../relational-databases/replication/create-a-push-subscription.md)   
- [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Интерактивное разрешение конфликтов](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
- [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  

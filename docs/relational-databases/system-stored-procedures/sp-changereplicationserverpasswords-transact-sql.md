@@ -16,10 +16,10 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9feddab12ea972ea4d7764fccfdd91a7f9b89cec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762251"
 ---
 # <a name="sp_changereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
@@ -44,7 +44,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **1** = встроенная проверка подлинности Windows  
   
- **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности  
+ **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности  
   
 `[ @login = ] 'login'`Имя изменяемой учетной записи Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа. *имя для входа* — **nvarchar (257)**, без значения по умолчанию  
   
@@ -55,7 +55,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
 `[ @server = ] 'server'`Соединение с сервером, для которого изменяется сохраненный пароль. *Server* имеет тип **sysname**и может принимать одно из следующих значений:  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**распространение**|Все соединения агентов с распространителем.|  
 |**издателя**|Все соединения агентов с издателем.|  

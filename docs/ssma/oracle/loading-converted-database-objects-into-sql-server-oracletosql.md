@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 97c34beb0cbe27e8d3c88b922690dc369fb7103b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262991"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Загрузка преобразованных объектов базы данных в SQL Server (OracleToSQL)
@@ -106,7 +106,7 @@ ms.locfileid: "68262991"
 ## <a name="securing-objects-in-sql-server"></a>Защита объектов в SQL Server  
 После загрузки преобразованных объектов базы данных в SQL Server можно предоставлять и запрещать разрешения на эти объекты. Рекомендуется сделать это перед переносом данных в SQL Server. Сведения о защите объектов в SQL Server см. в разделе «вопросы безопасности для баз данных и приложений баз данных» в электронная документация на SQL Server.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 Следующим шагом процесса миграции является [Перенос данных в SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md).  
   
 ## <a name="see-also"></a>См. также:  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: bd8365b2d3aac82c184af549ef21952fd4c8e649
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893906"
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability (расширения интеллектуального анализа данных)
@@ -58,7 +58,7 @@ NATURAL PREDICTION JOIN
   
  Пример результатов:  
   
-|Bike Buyer|Bike Buyer = Yes|Bike Buyer = No|  
+|Покупатель велосипеда|Bike Buyer = Yes|Bike Buyer = No|  
 |----------------|-----------------------|----------------------|  
 |1|0.867074195848097|0.132755556974282|  
   

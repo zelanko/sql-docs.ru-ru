@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a17fb16130aea073c7a878334ac78b0347267b6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262705"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
@@ -58,7 +58,7 @@ sys.dm_tran_active_snapshot_database_transactions
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**transaction_id**|**bigint**|Уникальный идентификатор, присвоенный транзакции. Идентификатор транзакции используется главным образом для определения транзакции при операциях блокировки.|  
 |**transaction_sequence_num**|**bigint**|Порядковый номер транзакции. Порядковый номер транзакции является уникальным и присваивается транзакции в момент ее запуска. Транзакции, которые не создают записи версий и не используют сканирование моментальных снимков, не получат порядковый номер.|  
@@ -67,7 +67,7 @@ sys.dm_tran_active_snapshot_database_transactions
 |**session_id**|**int**|Идентификатор сеанса, в рамках которого была инициирована транзакция.|  
 |**first_snapshot_sequence_num**|**bigint**|Наименьший порядковый номер транзакции, которая была активна при получении моментального снимка. При выполнении транзакции моментального снимка она формирует моментальный снимок активных в этот момент транзакций. Для транзакций, не связанных с моментальными снимками, в этом столбце отображается 0.|  
 |**max_version_chain_traversed**|**int**|Максимальная длина цепочки версий, пройденной в поисках транзакционно согласованной версии.|  
-|**average_version_chain_traversed**|**Real**|Среднее число версий строк по всем пройденным цепочкам версий.|  
+|**average_version_chain_traversed**|**real**|Среднее число версий строк по всем пройденным цепочкам версий.|  
 |**elapsed_time_seconds**|**bigint**|Время, истекшее с момента, когда транзакция получила свой порядковый номер.|  
 |**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
@@ -155,8 +155,8 @@ elapsed_time_seconds
   
 ## <a name="see-also"></a>См. также:  
  [Задание уровня изоляции транзакции &#40;&#41;Transact-SQL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
- [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления и функции, связанные с транзакциями &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции, связанные с транзакциями (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

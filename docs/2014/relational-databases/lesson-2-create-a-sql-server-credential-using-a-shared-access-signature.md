@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 61a25d1f4e86204d05b3be6bf2a5dbc8cd0474b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70153833"
 ---
-# <a name="lesson-3-create-a-sql-server-credential"></a>Занятие 3. Создание учетных данных SQL Server
+# <a name="lesson-3-create-a-sql-server-credential"></a>Урок 3. Создание учетных данных SQL Server
   На этом занятии будут созданы учетные данные для хранения сведений о безопасности, используемых для доступа к учетной записи хранения Azure.  
   
  Учетные данные SQL Server — это объект, который используется для хранения сведений, необходимых для проверки подлинности при подключении к ресурсу вне SQL Server. Учетные данные хранят URI-путь к контейнеру хранилища и значениям ключа подписанного URL-адреса. Для каждого контейнера хранилища, используемого файлом данных или журнала, необходимо создать учетные данные SQL Server, имя которых соответствует пути контейнера.  
@@ -59,6 +59,6 @@ ms.locfileid: "70153833"
   
  **Следующее занятие:**  
   
- [Занятие 4. Создание базы данных в службе хранилища Azure](lesson-3-database-backup-to-url.md)  
+ [Занятие 4: Создание базы данных в службе хранилища Azure](lesson-3-database-backup-to-url.md)  
   
   

@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 78c9080f1ea9ac0d733a45718886e31ab52171c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891624"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>добавить в библиотеку типы содержимого сервера отчетов (службы Reporting Services в режиме интеграции с SharePoint)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]предоставляет стандартные типы содержимого SharePoint, используемые для управления файлами общих источников данных (RSDS), моделей отчетов (SMDL) и построитель отчетов RDL-файлов. После добавления в библиотеку типов содержимого **Отчет построителя отчетов**, **Модель отчета**и **Источник данных отчета** становится доступной команда **Создать** , позволяющая создавать новые документы этих типов.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] обеспечивают стандартные типы содержимого SharePoint, предназначенные для управления файлами общих источников данных (RSDS), моделей отчетов (SMDL) и определений отчетов (RDL) построителя отчетов. После добавления в библиотеку типов содержимого **Отчет построителя отчетов**, **Модель отчета**и **Источник данных отчета** становится доступной команда **Создать** , позволяющая создавать новые документы этих типов.  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Режим интеграции с SharePoint  
   
@@ -31,7 +31,7 @@ ms.locfileid: "68891624"
 > [!TIP]  
 >  Если вы еще **не** настроили типы содержимого для библиотеки, то сначала включите управление типами содержимого, а затем включите типы содержимого [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Процедуры включения управления типами содержимого приведены в библиотеке одного документа.  
   
- **Короткое видео:** [(SSRS) Включение типов содержимого в SharePoint2010. wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
+ **Короткий видеоролик** [(SSRS) включение типов содержимого в SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
  **В этом разделе:**  
   
@@ -39,15 +39,15 @@ ms.locfileid: "68891624"
   
 -   [Активация управления типами содержимого для одной библиотеки документов (SharePoint 2013)](#bkmk_enable_content_management)  
   
--   [Добавление типов содержимого служб Reporting Services (SharePoint 2013)](#bkmk_add_single)  
+-   [Добавление типов содержимого Reporting Services (SharePoint 2013)](#bkmk_add_single)  
   
 -   [Активация управления типами содержимого для одной библиотеки документов (SharePoint 2010)](#bkmk_enable_content_management_2010)  
   
 -   [Добавление типов содержимого сервера отчетов в библиотеку (SharePoint 2010)](#bkmk_add_single_2010)  
   
--   [Активация типов содержимого и управления содержимым для нескольких сайтов бизнес-аналитики](#bkmk_enable_multiple_sites)  
+-   [Включение типов содержимого и управления содержимым для нескольких сайтов бизнес-аналитики](#bkmk_enable_multiple_sites)  
   
-##  <a name="bkmk_enable_all"></a>Включение типов содержимого во всех библиотеках документов в существующем центре бизнес-аналитики  
+##  <a name="enable-content-types-in-all-document-libraries-in-an-existing-bi-center"></a><a name="bkmk_enable_all"></a>Включение типов содержимого во всех библиотеках документов в существующем центре бизнес-аналитики  
   
 1.  Чтобы включить типы содержимого и управление содержимым во всех библиотеках документов в существующем сайте **центра бизнес-аналитики** , можно переключить компонент интеграции служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
@@ -65,9 +65,9 @@ ms.locfileid: "68891624"
   
 5.  Обновите браузер, а затем щелкните **Активировать** для пункта **Компонент интеграции с сервером отчетов**.  
   
-    ![Активизаци](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
+    ![Отключение](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
   
-##  <a name="bkmk_enable_content_management"></a>Включение управления типами содержимого для одной библиотеки документов (SharePoint 2013)  
+##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2013"></a><a name="bkmk_enable_content_management"></a>Включение управления типами содержимого для одной библиотеки документов (SharePoint 2013)  
   
 1.  Откройте библиотеку, для которой нужно активировать несколько типов содержимого.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "68891624"
   
 6.  Нажмите кнопку **ОК**.  
   
-##  <a name="bkmk_add_single"></a>Добавление типов содержимого Reporting Services (SharePoint 2013)  
+##  <a name="to-add-reporting-services-content-types-sharepoint-2013"></a><a name="bkmk_add_single"></a> Добавление типов содержимого служб Reporting Services (SharePoint 2013)  
   
 1.  Откройте библиотеку, для которой нужно добавить типы содержимого служб Reporting Services.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "68891624"
 8.  После завершения добавления типов содержимого нажмите кнопку **ОК**.  
   
 9. > [!NOTE]  
-    >  Если группа типов содержимого [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]**Типы содержимого служб SQL Server Reporting Services** не отображается на странице **Добавление типов содержимого** , одно из нижеследующего будет верно:  
+    >   Если группа типов содержимого [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]**Типы содержимого служб SQL Server Reporting Services** не отображается на странице **Добавление типов содержимого** , одно из нижеследующего будет верно.  
   
     -   Надстройка служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для продуктов SharePoint еще не установлена. Дополнительные сведения см. [в разделе Установка или удаление надстройки Reporting Services для sharepoint &#40;sharepoint 2010 и sharepoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Раздел включает сведения об установке надстройки и пошаговом выполнении установки файлов надстройки для обхода проблем.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "68891624"
   
     -   Все типы содержимого служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] уже добавлены в библиотеку. Если типы содержимого уже есть в библиотеке, группа удаляется со страницы **Добавление типов содержимого** . Если удалить один или несколько типов содержимого служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , группа **Типы содержимого служб SQL Server Reporting Services** снова появится на странице **Добавление типов содержимого** .  
   
-##  <a name="bkmk_enable_content_management_2010"></a>Включение управления типами содержимого для одной библиотеки документов (SharePoint 2010)  
+##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2010"></a><a name="bkmk_enable_content_management_2010"></a>Включение управления типами содержимого для одной библиотеки документов (SharePoint 2010)  
   
 1.  Откройте библиотеку, для которой нужно активировать несколько типов содержимого. На панели меню библиотеки должны быть представлены следующие меню: **Создать**, **Передать**, **Действия**и **Настройки**. Если меню **Параметры**отсутствует, то пользователь не имеет разрешения на добавление типа содержимого.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "68891624"
   
 6.  Нажмите кнопку **ОК**.  
   
-##  <a name="bkmk_add_single_2010"></a>Добавление типов содержимого сервера отчетов (SharePoint 2010)  
+##  <a name="to-add-report-server-content-types-sharepoint-2010"></a><a name="bkmk_add_single_2010"></a>Добавление типов содержимого сервера отчетов (SharePoint 2010)  
   
 1.  Откройте библиотеку, для которой нужно добавить типы содержимого служб Reporting Services.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "68891624"
   
 8.  После завершения добавления типов содержимого нажмите кнопку **ОК**.  
   
-##  <a name="bkmk_enable_multiple_sites"></a>Включение типов содержимого и управления содержимым для нескольких сайтов бизнес-аналитики  
+##  <a name="to-enable-content-types-and-content-management-for-multiple-bi-sites"></a><a name="bkmk_enable_multiple_sites"></a>Включение типов содержимого и управления содержимым для нескольких сайтов бизнес-аналитики  
   
 1.  Для серверов отчетов SQL Server Reporting Services 2008 и 2008 R2 можно включить типы содержимого и управление содержимым для нескольких сайтов центра бизнес-аналитики:  
   
@@ -163,7 +163,7 @@ ms.locfileid: "68891624"
 4.  Нажмите кнопку **ОК**.  
   
 ## <a name="see-also"></a>См. также:  
- [Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
+ [Справочник по разрешениям сайтов и списков SharePoint для элементов сервера отчетов](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [Запуск построитель отчетов &#40;построитель отчетов&#41;](report-builder/start-report-builder.md)  
   
   

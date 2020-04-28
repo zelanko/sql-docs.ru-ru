@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d993cd06d555a9d4136274b35242477df1b304e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262603"
 ---
 # <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
@@ -45,18 +45,18 @@ sys.dm_tran_version_store
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|Порядковый номер транзакции, формирующий номер версии записи.|  
 |**version_sequence_num**|**bigint**|Порядковый номер версии записи. Значение является уникальным в рамках сформировавшей эту версию транзакции.|  
 |**database_id**|**int**|Идентификатор базы данных версии записи.|  
 |**rowset_id**|**bigint**|Идентификатор набора строк записи.|  
-|**состояние**|**tinyint**|Указывает, была ли запись версии разбита на две записи. Если значение равно 0, запись хранится на одной странице. Если оно равно 1, запись разбивается на две записи, которые хранятся на двух различных страницах.|  
+|**status**|**tinyint**|Указывает, была ли запись версии разбита на две записи. Если значение равно 0, запись хранится на одной странице. Если оно равно 1, запись разбивается на две записи, которые хранятся на двух различных страницах.|  
 |**min_length_in_bytes**|**smallint**|Минимальная длина записи в байтах.|  
 |**record_length_first_part_in_bytes**|**smallint**|Длина первой части записи версии в байтах.|  
-|**record_image_first_part**|**varbinary (8000)**|Двоичный образ первой части записи версии.|  
+|**record_image_first_part**|**varbinary(8000)**|Двоичный образ первой части записи версии.|  
 |**record_length_second_part_in_bytes**|**smallint**|Длина второй части записи версии в байтах.|  
-|**record_image_second_part**|**varbinary (8000)**|Двоичный образ второй части записи версии.|  
+|**record_image_second_part**|**varbinary(8000)**|Двоичный образ второй части записи версии.|  
   
 ## <a name="permissions"></a>Разрешения
 
@@ -132,7 +132,7 @@ record_length_second_part_in_bytes record_image_second_part
  Выход показывает, что транзакция XSN-57 создала три версии строк из одной таблицы, а XSN-58 — одну версию строки из другой таблицы.  
   
 ## <a name="see-also"></a>См. также:  
- [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления и функции, связанные с транзакциями &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции, связанные с транзакциями (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 21bedc825f5890e3eb6551818dc5dc10724d2bf8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891439"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>Создание решения и источника данных (учебник по интеллектуальному анализу данных — средний уровень)
@@ -26,7 +26,7 @@ ms.locfileid: "68891439"
   
 ### <a name="to-create-a-new-analysis-services-project-for-this-tutorial"></a>Создание нового проекта служб Analysis Services для данного учебника  
   
-1.  Откройте среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+1.  Откройте [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  В меню **Файл** укажите **Создать**, затем нажмите **Проект**.  
   
@@ -70,9 +70,9 @@ ms.locfileid: "68891439"
 |Сценарий|Данные, включенные в представление источника данных|  
 |--------------|-------------------------------------------|  
 |[Занятие 2. Создание сценария прогнозирования &#40;руководстве по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)|Ежемесячные отчеты по продажам в разрезе моделей велосипедов в различных регионах, собранных в единое представление.|  
-|[Занятие 3. Создание сценария потребительской корзины &#40;учебнике по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|Таблица, содержащая список клиентских заказов, а также вложенная таблица, показывающая конкретные покупки для каждого из клиентов.|  
+|[Урок 3. Построение сценария покупательского поведения (учебник по интеллектуальному анализу данных — средний уровень)](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|Таблица, содержащая список клиентских заказов, а также вложенная таблица, показывающая конкретные покупки для каждого из клиентов.|  
 |[Занятие 4. Создание сценария кластеризации последовательностей &#40;учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)|Для анализа покупательского поведения используются те же данные за добавлением идентификатора, который показывает, в каком порядке производились покупки.|  
-|[Занятие 5. Создание моделей нейронной сети и логистической регрессии &#40;учебнике по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|В одной таблице содержатся некоторые предварительные данные отслеживания производительности, получаемые из центра обработки вызовов.|  
+|[Занятие 5. Построение моделей нейронной сети и логистической регрессии (учебник по интеллектуальному анализу данных — средний уровень)](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|В одной таблице содержатся некоторые предварительные данные отслеживания производительности, получаемые из центра обработки вызовов.|  
   
 ## <a name="next-lesson"></a>Следующее занятие  
  [Занятие 2. Создание сценария прогнозирования &#40;руководстве по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  

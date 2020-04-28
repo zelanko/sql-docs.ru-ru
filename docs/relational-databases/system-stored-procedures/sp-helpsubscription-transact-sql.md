@@ -16,10 +16,10 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771573"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
@@ -63,13 +63,13 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**абонент**|**имеет sysname**|Имя подписчика.|  
-|**публикации**|**имеет sysname**|Имя публикации.|  
-|**рассмотрен**|**имеет sysname**|Имя статьи.|  
-|**Целевая база данных**|**имеет sysname**|Имя целевой базы данных, в которую помещаются реплицируемые данные.|  
-|**Состояние подписки**|**tinyint**|Состояние подписки:<br /><br /> **0** = неактивно<br /><br /> **1** = подписано<br /><br /> **2** = активно|  
+|**абонент**|**sysname**|Имя подписчика.|  
+|**публикации**|**sysname**|Имя публикации.|  
+|**рассмотрен**|**sysname**|Имя статьи.|  
+|**Целевая база данных**|**sysname**|Имя целевой базы данных, в которую помещаются реплицируемые данные.|  
+|**состояние подписки**|**tinyint**|Состояние подписки:<br /><br /> **0** = неактивно<br /><br /> **1** = подписано<br /><br /> **2** = активно|  
 |**synchronization type**|**tinyint**|Тип синхронизации подписки:<br /><br /> **1** = автоматический<br /><br /> **2** = нет|  
 |**Тип подписки**|**int**|Тип подписки:<br /><br /> **0** = принудительная отправка<br /><br /> **1** = по запросу<br /><br /> **2** = анонимный|  
 |**full subscription**|**bit**|На все ли статьи публикации подписана данная подписка:<br /><br /> **0** = нет<br /><br /> **1** = да|  
@@ -78,21 +78,21 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**distribution job id**|**двоичный (16)**|Идентификатор задания агента распространителя.|  
 |**loopback_detection**|**bit**|Механизм распознавания обратной связи определяет, отправляет ли агент распространителя транзакции, созданные в подписчике, обратно подписчику:<br /><br /> **0** = отправляет обратно.<br /><br /> **1** = не отправляет обратно.<br /><br /> Используется с двунаправленной репликацией транзакций. Дополнительные сведения см. в разделе [Двунаправленная репликация транзакций](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |**offload_enabled**|**bit**|Указывает, было ли установлено разгрузочное выполнение агента репликации для запуска на подписчике.<br /><br /> Если значение **равно 0**, агент выполняется на издателе.<br /><br /> Если значение равно **1**, агент выполняется на подписчике.|  
-|**offload_server**|**имеет sysname**|Имя сервера, используемого для удаленной активации агента. Если значение равно NULL, то используется текущая offload_server, указанная в [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) таблице.|  
-|**dts_package_name**|**имеет sysname**|Указывает имя пакета служб DTS.|  
+|**offload_server**|**sysname**|Имя сервера, используемого для удаленной активации агента. Если значение равно NULL, то используется текущая offload_server, указанная в [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) таблице.|  
+|**dts_package_name**|**sysname**|Указывает имя пакета служб DTS.|  
 |**dts_package_location**|**int**|Расположение пакета служб DTS, если он назначен для подписки. Если пакет существует, значение **0** указывает расположение пакета на **распространителе**. Значение **1** указывает **подписчика**.|  
-|**subscriber_security_mode**|**smallint**|Режим безопасности на подписчике, где **1** означает проверку подлинности Windows, **** а 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — проверку подлинности.|  
-|**subscriber_login**|**имеет sysname**|Имя входа на подписчике.|  
+|**subscriber_security_mode**|**smallint**|Режим безопасности на подписчике, где **1** означает проверку подлинности Windows, **0** а 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — проверку подлинности.|  
+|**subscriber_login**|**sysname**|Имя входа на подписчике.|  
 |**subscriber_password**||Фактический пароль подписчика никогда не возвращается. Результат скрывается строкой "**&#42;&#42;&#42;&#42;&#42;&#42;**".|  
-|**job_login**|**имеет sysname**|Имя учетной записи Windows, под которой работает агент распространителя.|  
+|**job_login**|**sysname**|Имя учетной записи Windows, под которой работает агент распространителя.|  
 |**job_password**||Фактический пароль задания никогда не возвращается. Результат скрывается строкой "**&#42;&#42;&#42;&#42;&#42;&#42;**".|  
 |**distrib_agent_name**|**nvarchar (100)**|Имя задания агента, которое синхронизирует подписку.|  
 |**subscriber_type**|**tinyint**|Тип подписчика. Может быть одним из следующих.<br /><br /> **0** = SQL Server подписчика<br /><br /> **1** = сервер источника данных ODBC<br /><br /> **2** = база данных Microsoft Jet (не рекомендуется)<br /><br /> **3** = поставщик OLE DB|  
-|**subscriber_provider**|**имеет sysname**|Уникальный программный идентификатор (PROGID), с которым регистрируется поставщик OLE DB для источника данных, отличного от SQL Server.|  
-|**subscriber_datasource**|**nvarchar (4000)**|Имя источника данных, понятное поставщику OLE DB.|  
-|**subscriber_providerstring**|**nvarchar (4000)**|Идентифицирующая источник данных строка соединения, зависящая от поставщика OLE DB.|  
-|**subscriber_location**|**nvarchar (4000)**|Расположение базы данных, подразумевается поставщик OLE DB.|  
-|**subscriber_catalog**|**имеет sysname**|Каталог, используемый при соединении с поставщиком OLE DB.|  
+|**subscriber_provider**|**sysname**|Уникальный программный идентификатор (PROGID), с которым регистрируется поставщик OLE DB для источника данных, отличного от SQL Server.|  
+|**subscriber_datasource**|**nvarchar(4000)**|Имя источника данных, понятное поставщику OLE DB.|  
+|**subscriber_providerstring**|**nvarchar(4000)**|Идентифицирующая источник данных строка соединения, зависящая от поставщика OLE DB.|  
+|**subscriber_location**|**nvarchar(4000)**|Расположение базы данных, подразумевается поставщик OLE DB.|  
+|**subscriber_catalog**|**sysname**|Каталог, используемый при соединении с поставщиком OLE DB.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -107,6 +107,6 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

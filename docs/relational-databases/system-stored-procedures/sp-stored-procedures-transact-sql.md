@@ -18,10 +18,10 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68702787"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
@@ -68,18 +68,16 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**PROCEDURE_QUALIFIER**|**имеет sysname**|Имя квалификатора процедуры. Этот столбец может принимать значение NULL.|  
-|**PROCEDURE_OWNER**|**имеет sysname**|Имя владельца процедуры. Этот столбец всегда возвращает значение.|  
+|**PROCEDURE_QUALIFIER**|**sysname**|Имя квалификатора процедуры. Этот столбец может принимать значение NULL.|  
+|**PROCEDURE_OWNER**|**sysname**|Имя владельца процедуры. Этот столбец всегда возвращает значение.|  
 |**PROCEDURE_NAME**|**nvarchar (134)**|Имя процедуры. Этот столбец всегда возвращает значение.|  
-|**NUM_INPUT_PARAMS**|**int**|Зарезервирован для использования в будущем.|  
-|**NUM_OUTPUT_PARAMS**|**int**|Зарезервирован для использования в будущем.|  
-|**NUM_RESULT_SETS**|**int**|Зарезервирован для использования в будущем.|  
-|**Примечания**|**varchar (254)**|Описание процедуры. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
-|**PROCEDURE_TYPE**|**smallint**|Тип процедуры. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда возвращает 2.0. Значение может быть одним из следующих.<br /><br /> 0 = SQL_PT_UNKNOWN;<br /><br /> 1 = SQL_PT_PROCEDURE;<br /><br /> 2 = SQL_PT_FUNCTION.|  
+|**NUM_INPUT_PARAMS**|**int**|Зарезервировано для последующего использования.|  
+|**NUM_OUTPUT_PARAMS**|**int**|Зарезервировано для последующего использования.|  
+|**NUM_RESULT_SETS**|**int**|Зарезервировано для последующего использования.|  
+|**ЗАМЕЧАНИЯ**|**varchar (254)**|Описание процедуры. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
+|**PROCEDURE_TYPE**|**smallint**|Тип процедуры. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда возвращает 2.0. Значение может быть одним из следующих.<br /><br /> 0 = SQL_PT_UNKNOWN;<br /><br /> 1 = SQL_PT_PROCEDURE;<br /><br /> 2 = SQL_PT_FUNCTION.|  
   
 ## <a name="remarks"></a>Remarks  
  Для максимальной совместимости клиент шлюза должен принимать только сопоставление шаблонов стандарта SQL (символы-шаблоны «%» и «_»).  
@@ -102,7 +100,7 @@ GO
 EXEC sp_stored_procedures;  
 ```  
   
-### <a name="b-returning-a-single-stored-procedure"></a>Б. Возвращение одной хранимой процедуры  
+### <a name="b-returning-a-single-stored-procedure"></a>Б) Возвращение одной хранимой процедуры  
  В следующем примере возвращается результирующий набор для хранимой процедуры `uspLogError`.  
   
 ```  
@@ -113,6 +111,6 @@ sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;
   
 ## <a name="see-also"></a>См. также:  
  [Хранимые процедуры каталога &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

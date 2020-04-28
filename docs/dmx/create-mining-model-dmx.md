@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e7215f50705b593130a69cfe076f0878b0ac03d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889079"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (расширения интеллектуального анализа данных)
@@ -37,7 +37,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *model*  
+ *для базы данных модели*  
  Уникальное имя модели.  
   
  *Список определений столбцов*  
@@ -52,7 +52,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  *список параметров*  
  Необязательный параметр. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
   
- *XML-строка*  
+ *строка XML*  
  (Только для расширенного использования.) Модель в формате XML (PMML). Строка должна быть заключена в одиночные кавычки (').  
   
  Предложение **Session** позволяет создать модель интеллектуального анализа данных, которая автоматически удаляется с сервера при закрытии соединения или при истечении времени ожидания сеанса. Модели интеллектуального анализа данных **сеанса** полезны, поскольку им не требуется, чтобы пользователь был администратором базы данных и использовал место на диске только в том случае, если соединение открыто.  
@@ -94,13 +94,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Список типов данных, типов содержимого, распределений столбцов и флагов моделирования, используемых при определении столбца, см. в следующих разделах.  
   
--   [Типы данных &#40;&#41;интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Типы данных (интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
--   [Типы содержимого &#40;&#41;интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [Типы содержимого (интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [Распределения столбцов &#40;интеллектуального анализа данных&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Распределения столбцов (интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Флаги моделирования &#40;&#41;интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [Флаги моделирования (интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
  К инструкции можно добавить предложение, описывающее связь между двумя столбцами. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]поддерживает использование следующего \<предложения Column Relationship>.  
   
@@ -109,7 +109,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Для описания использования прогнозируемого столбца используйте прогнозирующее предложение. В следующей таблице приводится описание двух возможных предложений.  
   
-|\<предложение PREDICTION>|Description|  
+|\<предложение PREDICTION>|Описание|  
 |---------------------------|-----------------|  
 |**PREDICT**|Этот столбец может быть спрогнозирован моделью и может включаться во входные варианты для прогноза значений других прогнозируемых столбцов.|  
 |**PREDICT_ONLY**|Данный столбец может быть спрогнозирован с помощью модели, однако его нельзя использовать во входных вариантах для вычисления значений других прогнозируемых столбцов.|  
@@ -189,6 +189,6 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ## <a name="see-also"></a>См. также:  
  [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41; DDL](../dmx/dmx-statements-data-definition.md)   
  [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41;](../dmx/dmx-statements-data-manipulation.md)   
- [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

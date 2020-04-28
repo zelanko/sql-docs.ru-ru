@@ -17,10 +17,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 959af9bcb1879dc19d2bfb99253b4c40d637fd1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68260237"
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-db-accesstosql"></a>Миграция баз данных Access в SQL Server в базе данных SQL Azure (Акцесстоскл)
@@ -58,6 +58,6 @@ ms.locfileid: "68260237"
   
 Вы также можете использовать мастер миграции для пошагового выполнения этого процесса. Дополнительные сведения см. в разделе [Мастер миграции](migration-wizard-accesstosql.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
 [начало работы с Помощник по миграции SQL Server для доступа](getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
-[Подготовка баз данных Access к миграции](preparing-access-databases-for-migration-accesstosql.md)
+[Подготовка баз данных Access к миграции](preparing-access-databases-for-migration-accesstosql.md)

@@ -22,10 +22,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 77bf96ee1cea4356e26d33fab9ab519e99ae0a60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265964"
 ---
 # <a name="sysdm_fts_fdhosts-transact-sql"></a>sys.dm_fts_fdhosts (Transact-SQL)
@@ -34,12 +34,12 @@ ms.locfileid: "68265964"
   Возвращает сведения о текущем действии узла управляющей программы фильтрации или узлов на экземпляре сервера.  
   
  
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**fdhost_id**|**int**|Идентификатор узла управляющей программы фильтрации.|  
-|**fdhost_name**|**nvarchar (120)**|Имя узла управляющей программы фильтрации.|  
+|**fdhost_name**|**nvarchar(120)**|Имя узла управляющей программы фильтрации.|  
 |**fdhost_process_id**|**int**|Идентификатор процесса Windows узла управляющей программы фильтрации.|  
-|**fdhost_type**|**nvarchar (120)**|Тип документа, обрабатываемого узлом управляющей программы фильтрации, — один из следующих.<br /><br /> Одиночный поток.<br /><br /> Многопоточный.<br /><br /> Огромный документ.|  
+|**fdhost_type**|**nvarchar(120)**|Тип документа, обрабатываемого узлом управляющей программы фильтрации, — один из следующих.<br /><br /> Одиночный поток.<br /><br /> Многопоточный.<br /><br /> Огромный документ.|  
 |**max_thread**|**int**|Максимальное количество потоков в узле управляющей программы фильтрации.|  
 |**batch_count**|**int**|Количество пакетов, обрабатываемых в узле управляющей программы фильтрации.|  
   

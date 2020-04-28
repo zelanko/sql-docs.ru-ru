@@ -16,10 +16,10 @@ ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8436616ced84892dc7e484a5d83f3f0c3779f244
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771584"
 ---
 # <a name="sp_scriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
@@ -78,6 +78,6 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
  Разрешение EXECUTE предоставляется **Public**; в этой хранимой процедуре выполняется процедура проверки безопасности для ограничения доступа к членам предопределенной роли сервера **sysadmin** и **db_owner** предопределенной роли базы данных в текущей базе данных.  
   
 ## <a name="see-also"></a>См. также:  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7705aa50b488971b1c5aaf6e043ccf2dfd9103f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148655"
 ---
 # <a name="overview-smo"></a>Общие сведения об SMO
@@ -67,7 +67,7 @@ ms.locfileid: "70148655"
   
 -   Триггеры DDL, обеспечивающие дополнительные функции при возникновении DDL-событий. Дополнительные сведения см. в разделе [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
- Пространство имен объектов SMO — <xref:Microsoft.SqlServer.Management.Smo>. Объекты SMO реализованы в виде сборки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Это означает, что перед использованием объектов SMO нужно установить среду CLR из [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0. Сборки объектов SMO по умолчанию устанавливаются в глобальный кэш сборок с параметром пакета SDK [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сборки находятся в папке C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. Дополнительные сведения см. в документации по [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Пространство имен объектов SMO — <xref:Microsoft.SqlServer.Management.Smo>. Объекты SMO реализованы в виде сборки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Это означает, что перед использованием объектов SMO нужно установить среду CLR из [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0. Сборки объектов SMO по умолчанию устанавливаются в глобальный кэш сборок с параметром пакета SDK [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сборки находятся в папке C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. Дополнительные сведения см. в документации по [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
 ## <a name="smo-classes"></a>Классы модели объектов SMO  
  Классы модели объектов SMO подразделяются на две категории: классы экземпляров и служебные классы.  
@@ -107,7 +107,7 @@ ms.locfileid: "70148655"
   
  Объекты поставщика WMI помещаются в объекты SMO. В результате программист модели SMO получает простую модель объектов, весьма напоминающую классы SMO. Однако в этом случае программист не должен понимать модель программирования, представленную пространством имен, и особенности организации поставщика WMI [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поставщик WMI позволяет конфигурировать службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , псевдонимы, а также сетевые библиотеки клиентов и серверов.  
   
- **Написание сценариев**  
+ **Создание скриптов**  
   
  В модели объектов SMO средства для работы со скриптами были улучшены и переданы в класс **Scripter** . С помощью класса **Scripter** разработчик может находить зависимости, выявлять связи между объектами и осуществлять манипуляции с иерархией зависимостей. Главным объектом, обеспечивающим работу со скриптами, является объект **Scripter** . Существует несколько поддерживающих объектов, которые осуществляют обработку зависимостей, а также реагируют на события состояния и на события ошибок.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "70148655"
   
  В модели объектов SMO реализованы новые объекты, представляющие расширенные возможности полнотекстового поиска.  
   
- **Объект Page Verify**  
+ **Проверка страниц**  
   
  Объект <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A> представляет параметры проверки страниц баз данных.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "70148655"
   
  База данных моментальных снимков — это предназначенная только для чтения копия указанной базы данных, снятая в указанный момент времени. База данных моментальных снимков может быть определена с помощью свойства <xref:Microsoft.SqlServer.Management.Smo.Database.IsDatabaseSnapshot%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
- **Компонент Service Broker**  
+ **Service Broker**  
   
  Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] и его функциональные возможности представлены группой объектов  
   
@@ -173,6 +173,6 @@ ms.locfileid: "70148655"
  Улучшенные возможности индексов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представлены новыми свойствами объекта <xref:Microsoft.SqlServer.Management.Smo.Index>.  
   
 ## <a name="see-also"></a>См. также:  
- [Основные понятия объекты Replication Management Objects](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
+ [Основные понятия объектов RMO](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
   
   

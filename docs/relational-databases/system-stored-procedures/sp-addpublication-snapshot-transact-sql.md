@@ -16,10 +16,10 @@ ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c32ea67eef368a17b129989e3f05c29ab0533d72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769113"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68769113"
   Создает агент моментальных снимков для указанной публикации. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
 > [!IMPORTANT]  
->  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. [в разделе Enable encrypted connections to the ядро СУБД &#40;диспетчер конфигурации SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,12 +61,12 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Частота, с которой выполняется агент моментальных снимков. *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно.|  
 |**4** (по умолчанию)|Ежедневно.|  
 |**8**|Еженедельно.|  
-|**глубин**|Ежемесячно.|  
+|**16**|Ежемесячно.|  
 |**32**|Ежемесячно относительно интервала частоты.|  
 |**64**|При запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**128**|Запускать, когда компьютер простаивает|  
@@ -78,19 +78,19 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**1**|*frequency_interval* не используется.|  
 |**4** (по умолчанию)|Каждые *frequency_interval* дней и по умолчанию ежедневно.|  
 |**8**|*frequency_interval* является одним или несколькими следующими (в сочетании с логическим оператором [&#124; (побитовое или)](../../t-sql/language-elements/bitwise-or-transact-sql.md) ):<br /><br /> **1** = воскресенье &#124;<br /><br /> **2** = понедельник &#124;<br /><br /> **4** = вторник &#124;<br /><br /> **8** = среда &#124;<br /><br /> **16** = четверг &#124;<br /><br /> **32** = Пятница &#124;<br /><br /> **64** = Суббота|  
-|**глубин**|В *frequency_interval* день месяца.|  
+|**16**|В *frequency_interval* день месяца.|  
 |**32**|*frequency_interval* является одним из следующих:<br /><br /> **1** = воскресенье &#124;<br /><br /> **2** = понедельник &#124;<br /><br /> **3** = вторник &#124;<br /><br /> **4** = среда &#124;<br /><br /> **5** = четверг &#124;<br /><br /> **6** = Пятница &#124;<br /><br /> **7** = Суббота &#124;<br /><br /> **8** = день &#124;<br /><br /> **9** = &#124; дня недели<br /><br /> **10** = выходной день|  
 |**64**|*frequency_interval* не используется.|  
 |**128**|*frequency_interval* не используется.|  
   
 `[ @frequency_subday = ] frequency_subday`Единица измерения для *freq_subday_interval*. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
 |**2**|Секунда|  
 |**4** (по умолчанию)|Минута|  
-|**8**|Hour|  
+|**8**|Час|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Интервал для *frequency_subday*. *frequency_subday_interval* имеет **тип int**и значение по умолчанию 5, что означает каждые 5 минут.  
   
@@ -130,7 +130,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 `[ @publisher = ] 'publisher'`Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  ** при создании агент моментальных снимков на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателе не следует использовать издатель.  
+>  *publisher* при создании агент моментальных снимков на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателе не следует использовать издатель.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -150,6 +150,6 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
  [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   
- [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

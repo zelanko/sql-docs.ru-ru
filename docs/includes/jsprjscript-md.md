@@ -1,1 +1,1 @@
- JScript 
+ Язык JScript 

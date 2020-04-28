@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7395d52b7c91678f11a37a4da32877f31e5780bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265857"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
@@ -36,14 +36,14 @@ ms.locfileid: "68265857"
   
 > **Примечание.** Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_os_buffer_descriptors**.  
 
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Идентификатор базы данных, связанный со страницей в буферном пуле. Допускает значение NULL.|  
 |file_id|**int**|Идентификатор файла, хранящего постоянный образ страницы. Допускает значение NULL.|  
 |page_id|**int**|Идентификатор страницы в файле. Допускает значение NULL.|  
 |page_level|**int**|Индексный уровень страницы. Допускает значение NULL.|  
 |allocation_unit_id|**bigint**|Идентификатор единицы распределения страницы. Это значение может быть использовано для соединения sys.allocation_units. Допускает значение NULL.|  
-|page_type|**nvarchar (60)**|Тип страницы, например: страница данных или страница индекса. Допускает значение NULL.|  
+|page_type|**nvarchar(60)**|Тип страницы, например: страница данных или страница индекса. Допускает значение NULL.|  
 |row_count|**int**|Количество строк на странице. Допускает значение NULL.|  
 |free_space_in_bytes|**int**|Объем доступного свободного места, в байтах, на странице. Допускает значение NULL.|  
 |is_modified|**bit**|1 = страница была изменена после того, как она была считана с диска. Допускает значение NULL.|  
@@ -60,7 +60,7 @@ ms.locfileid: "68265857"
 ## <a name="remarks"></a>Remarks  
  sys. dm_os_buffer_descriptors возвращает страницы, используемые базой данных ресурсов. sys. dm_os_buffer_descriptors не возвращает сведения о свободных или украденных страницах или о страницах, на которых произошли ошибки при их чтении.  
   
-|С|Кому|С|Связь|  
+|Исходный тип|Кому|С|Связь|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|«многие к одному»|  
 |sys.dm_os_buffer_descriptors|\<UserDB>. sys. allocation_units|allocation_unit_id|«многие к одному»|  
@@ -83,7 +83,7 @@ GROUP BY DB_NAME(database_id) ,database_id
 ORDER BY cached_pages_count DESC;  
 ```  
   
-### <a name="b-returning-cached-page-count-for-each-object-in-the-current-database"></a>Б. Получение количества страниц в кэше для каждого объекта в текущей базе данных  
+### <a name="b-returning-cached-page-count-for-each-object-in-the-current-database"></a>Б) Получение количества страниц в кэше для каждого объекта в текущей базе данных  
  Следующий пример возвращает количество страниц в кэше, загруженных для каждого объекта в текущей базе данных.  
   
 ```  
@@ -113,11 +113,11 @@ ORDER BY cached_pages_count DESC;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sys. allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units (Transact-SQL)](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
  [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [База данных ресурсов](../../relational-databases/databases/resource-database.md)   
- [sys. dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
+ [sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   
 

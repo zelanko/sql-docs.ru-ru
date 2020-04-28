@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68887435"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Определение данных многомерных выражений — CREATE SUBCUBE
@@ -44,9 +44,9 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
 |-----------------------------|-----------------------|---------------|----------------------------|  
 |Время.Год.Все|Да|{Время.Год.2003}|Без изменения.|  
 |Time. year. [1997]|Да|{Время.Год.2003}|Время.Год.Все|  
-|Time. year. [1997]|нет|{Время.Год.2003}|Time. year. [2003]|  
+|Time. year. [1997]|Нет|{Время.Год.2003}|Time. year. [2003]|  
 |Time. year. [1997]|Да|{Время.Год.2003, Время.Год.2004}|Время.Год.Все|  
-|Time. year. [1997]|нет|{Время.Год.2003, Время.Год.2004}|Или Время.Год.[2003] или<br /><br /> Время.Год.[2004]|  
+|Time. year. [1997]|Нет|{Время.Год.2003, Время.Год.2004}|Или Время.Год.[2003] или<br /><br /> Время.Год.[2004]|  
   
  Во вложенном кубе всегда существуют элементы [Все].  
   
@@ -91,7 +91,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
 |||||  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
+||Все продукты|Accessories|Clothing|  
 |All Resellers|$2 031 079,39|$ 506 172,45|$ 1 524 906,93|  
 |Value Added Reseller|$767 388,52|$ 175 002,81|$ 592 385,71|  
 |Warehouse|$1 263 690,86|$ 331 169,64|$ 932 521,23|  
@@ -120,7 +120,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
 |||||  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
+||Все продукты|Accessories|Clothing|  
 |All Resellers|$ 80 450 596,98|$ 571 297,93|$ 1 777 840,84|  
 |Value Added Reseller|$ 34 967 517,33|$ 175 002,81|$ 592 385,71|  
 |Warehouse|$ 38 726 913,48|$ 331 169,64|$ 932 521,23|  
@@ -131,6 +131,6 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  [Основные понятия в Analysis Services &#40;многомерных выражений&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Инструкции скриптов многомерных выражений &#40;многомерные выражения&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [Инструкция DROP CUBE &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-drop-subcube.md)   
- [Инструкция SELECT &#40;&#41;многомерных выражений](../mdx/mdx-data-manipulation-select.md)  
+ [Инструкция SELECT (многомерные выражения)](../mdx/mdx-data-manipulation-select.md)  
   
   

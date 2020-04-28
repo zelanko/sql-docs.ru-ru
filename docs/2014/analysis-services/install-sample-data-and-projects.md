@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530816"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Установка образцов данных и проектов для учебника по многомерному моделированию в службах Analysis Services
@@ -29,7 +29,7 @@ ms.locfileid: "69530816"
   
      Службы Analysis Services доступны только в следующих выпусках: Evaluation, Enterprise, Business Intelligence, Standard.  
   
-     Обратите внимание, что выпуски SQL Server Express не включают службы Analysis Services. [Загрузите ознакомительную](https://go.microsoft.com/fwlink/?LinkId=392824) версию, если вы хотите испытать программное обеспечение бесплатно.  
+     Обратите внимание, что выпуски SQL Server Express не включают службы Analysis Services. [Скачайте ознакомительный выпуск](https://go.microsoft.com/fwlink/?LinkId=392824) , если хотите опробовать программное обеспечение бесплатно.  
   
      По умолчанию службы Analysis Services устанавливаются как многомерный экземпляр, но это можно переопределить, выбрав табличный режим сервера на странице настройки сервера мастера установки. Если необходимо запускать оба режима сервера, перезапустите программу установки SQL Server на том же компьютере, чтобы установить второй экземпляр служб Analysis Services в другом режиме.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "69530816"
 ## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>Шаг 2. скачивание SQL Server Data Tools — бизнес-аналитика для Visual Studio 2012  
  В этом выпуске средства SQL Server Data Tools загружаются и устанавливаются отдельно от других компонентов SQL Server. Конструкторы и шаблоны проектов, используемых для создания моделей и отчетов бизнес-аналитики, доступны для бесплатной загрузки в сети.  
   
--   [Скачайте версию бизнес-аналитики SQL Server Data Tools](https://go.microsoft.com/fwlink/p/?LinkID=322038). Файл будет сохранен в папке «Загрузки». Запустите программу установки средства.  
+-   [Скачайте версию Business Intelligence средств SQL Server Data Tools](https://go.microsoft.com/fwlink/p/?LinkID=322038). Файл будет сохранен в папке «Загрузки». Запустите программу установки средства.  
   
      Перезагрузите компьютер, чтобы завершить установку.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "69530816"
   
 8.  Запустите среду SQL Server Management Studio. В среде SQL Server Management Studio подключитесь к службам Analysis Services. Убедитесь в том, что на сервере выполняется база данных **Analysis Services Tutorial** (Учебник по службам Analysis Services).  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
  Теперь вы готовы к работе с учебником. Дополнительные сведения о том, как приступить к работе, см. в разделе [Многомерное моделирование (учебник по Adventure Works)](multidimensional-modeling-adventure-works-tutorial.md).  
   
 ## <a name="see-also"></a>См. также:  

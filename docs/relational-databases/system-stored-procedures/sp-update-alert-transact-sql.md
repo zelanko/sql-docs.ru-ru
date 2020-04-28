@@ -18,10 +18,10 @@ ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69890847"
 ---
 # <a name="sp_update_alert-transact-sql"></a>Хранимая процедура sp_update_alert (Transact-SQL)
@@ -64,7 +64,7 @@ sp_update_alert
 ## <a name="arguments"></a>Аргументы  
 `[ @name = ] 'name'`Имя обновляемого оповещения. Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @new_name = ] 'new_name'`Новое имя предупреждения. Оно должно быть уникальным. Аргумент *new_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @new_name = ] 'new_name'`Новое имя предупреждения. Имя должно быть уникальным. Аргумент *new_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 `[ @enabled = ] enabled`Указывает, включено ли оповещение (**1**) или не включено (**0**). *Enabled* имеет тип **tinyint**и значение по умолчанию NULL. Сработать может только активированное предупреждение.  
   
@@ -78,12 +78,12 @@ sp_update_alert
   
 `[ @include_event_description_in = ] include_event_description_in`Указывает, следует ли включать описание [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ошибки из журнала приложений Windows в сообщение уведомления. *include_event_description_in* имеет тип **tinyint**, значение по умолчанию NULL и может принимать одно или несколько из этих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0**|None|  
 |**1**|электронная почта;|  
 |**2**|Пейджер|  
-|**4**|**NET SEND**|  
+|**4**|**команда net send.**|  
 |**7**|All|  
   
 `[ @database_name = ] 'database'`Имя базы данных, в которой должна произойти ошибка для срабатывания предупреждения. *база данных* имеет тип **sysname.** Символы, заключенные в квадратные скобки ([ ]), являются недопустимыми. Значение по умолчанию — NULL.  
@@ -112,11 +112,11 @@ sp_update_alert
   
 `[ @performance_condition = ] 'performance_condition'`Значение, выраженное в формате **"**_итемкомпараторвалуе_**"**. *performance_condition* имеет тип **nvarchar (512)**, значение по умолчанию NULL и состоит из этих элементов.  
   
-|Элемент формата|Description|  
+|Элемент формата|Описание|  
 |--------------------|-----------------|  
 |*Элемент*|Объект производительности, счетчик производительности или именованный экземпляр счетчика.|  
 |*Сравнения*|Один из следующих операторов: **>**, **<**,**=**|  
-|*Value*|Числовое значение счетчика|  
+|*Значение*|Числовое значение счетчика|  
   
 `[ @category_name = ] 'category'`Имя категории оповещений. *Category* имеет тип **sysname** и значение по умолчанию NULL.  
   
@@ -128,7 +128,7 @@ sp_update_alert
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Remarks  
- Предупреждение **** может создаваться только [!INCLUDE[msCoName](../../includes/msconame-md.md)] в таблице sysmessages, записанной в журнал приложений Windows.  
+ Предупреждение **sysmessages** может создаваться только [!INCLUDE[msCoName](../../includes/msconame-md.md)] в таблице sysmessages, записанной в журнал приложений Windows.  
   
  **sp_update_alert** изменяет только те параметры оповещений, для которых указаны значения параметров. Если параметр пропущен, сохраняется текущая настройка.  
   
@@ -151,6 +151,6 @@ GO
 ## <a name="see-also"></a>См. также:  
  [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

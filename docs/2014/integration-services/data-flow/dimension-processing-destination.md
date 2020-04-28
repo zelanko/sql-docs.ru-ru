@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f4aaaef619e0f8ae5810e70e9a6707c6213268d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890567"
 ---
 # <a name="dimension-processing-destination"></a>назначение «Обработка измерений»
-  Назначение «Обработка измерения» загружает и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] обрабатывает измерение. Дополнительные сведения об измерениях см. в разделе [Измерения (службы Analysis Services — многомерные данные)](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data).  
+  Назначение "Обработка измерений" загружает и обрабатывает измерение служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения об измерениях см. в разделе [Измерения (службы Analysis Services — многомерные данные)](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data).  
   
  Назначение «Обработка измерений» включает следующие элементы:  
   
@@ -46,11 +46,11 @@ ms.locfileid: "68890567"
   
  Дополнительные сведения о свойствах, которые можно настроить при помощи диалогового окна **Редактор назначения обработки измерений** , см. в одном из следующих разделов:  
   
--   [Редактор назначения «Обработка измерений» &#40;страница «Диспетчер соединений»&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
+-   [Редактор назначения "Обработка измерения" (страница "Диспетчер соединений")](../dimension-processing-destination-editor-connection-manager-page.md)  
   
--   [Редактор назначения «Обработка измерений» &#40;«сопоставления»&#41;](../dimension-processing-destination-editor-mappings-page.md)  
+-   [Редактор назначения "Обработка измерения" (страница "Сопоставления")](../dimension-processing-destination-editor-mappings-page.md)  
   
--   [Редактор назначения "Обработка измерения" &#40;страница "Дополнительно"&#41;](../dimension-processing-destination-editor-advanced-page.md)  
+-   [Редактор назначения "Обработка измерения" (страница "Дополнительно")](../dimension-processing-destination-editor-advanced-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые можно задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующем разделе:  
   

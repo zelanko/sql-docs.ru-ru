@@ -15,10 +15,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: a4ee7047e2c517f05f311bf4e842f8f4c64ca8fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264241"
 ---
 # <a name="creating-script-files-oracletosql"></a>Создание файлов сценария (OracleToSQL)
@@ -49,7 +49,7 @@ ms.locfileid: "68264241"
   
     -   подавлять сообщения: подавляет сообщения в консоли. По умолчанию это значение равно false.  
   
-    **Пример**.  
+    **Пример.**  
   
     ```xml  
     <output-providers>  
@@ -66,7 +66,7 @@ ms.locfileid: "68264241"
   
     </output-providers>  
     ```  
-    *ни*  
+    *или диспетчер конфигурации служб*  
   
     ```xml  
     <...All commands...>  
@@ -92,7 +92,7 @@ ms.locfileid: "68264241"
   
     -   Target-use-Last-used = "true" (по умолчанию) или Target-Server = "target_servername"  
   
-    **Пример**.  
+    **Пример.**  
   
     ```xml  
     <output-providers>  
@@ -103,7 +103,7 @@ ms.locfileid: "68264241"
   
     </output-providers>  
     ```  
-    *ни*  
+    *или диспетчер конфигурации служб*  
   
     ```xml  
     <migrate-data>  
@@ -127,7 +127,7 @@ ms.locfileid: "68264241"
   
     Режим по умолчанию — **Ошибка**.  
   
-    **Пример**.  
+    **Пример.**  
   
     ```xml  
     <output-providers>  
@@ -136,7 +136,7 @@ ms.locfileid: "68264241"
   
     </output-providers>  
     ```  
-    *ни*  
+    *или диспетчер конфигурации служб*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -158,7 +158,7 @@ ms.locfileid: "68264241"
   
     Режим по умолчанию — **Generate-a-Error**.  
   
-    **Пример**.  
+    **Пример.**  
   
     ```xml  
     <output-providers>  
@@ -169,7 +169,7 @@ ms.locfileid: "68264241"
   
     </output-providers>  
     ```  
-    *ни*  
+    *или диспетчер конфигурации служб*  
   
     ```xml  
     <!--synchronization-->  
@@ -180,7 +180,7 @@ ms.locfileid: "68264241"
   
     </synchronize-target>  
     ```  
-    *ни*  
+    *или диспетчер конфигурации служб*  
   
     ```xml  
     <!--data migration-->  
@@ -206,7 +206,7 @@ ms.locfileid: "68264241"
   
     -   ASK-пользователь: запрашивает у пользователя ввод ("Yes"/"No")  
   
-    **Пример**.  
+    **Пример.**  
   
     ```xml  
     <output-providers>  
@@ -215,7 +215,7 @@ ms.locfileid: "68264241"
   
     </output-providers>  
     ```  
-    *ни*  
+    *или диспетчер конфигурации служб*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -227,7 +227,7 @@ ms.locfileid: "68264241"
   
 6.  **Неудачный поставщик предварительных требований:** Это позволяет пользователю обрабатывать все необходимые компоненты, необходимые для обработки команды. По умолчанию для этого режима используется значение false. Если задано значение "true", создается исключение для обеспечения соответствия предварительным требованиям.  
   
-    **Пример**.  
+    **Пример.**  
   
     ```xml  
     <output-providers>  
@@ -243,7 +243,7 @@ ms.locfileid: "68264241"
   
 8.  **Поставщик хода выполнения:** Информирует о ходе выполнения каждой команды консоли. Эта функция отключена по умолчанию. Атрибуты отчета о ходе выполнения включают:  
   
-    -   Выключить  
+    -   off  
   
     -   каждые-1%  
   
@@ -255,7 +255,7 @@ ms.locfileid: "68264241"
   
     -   каждые 20%  
   
-    **Пример**.  
+    **Пример.**  
   
     ```xml  
     <output-providers>  
@@ -268,7 +268,7 @@ ms.locfileid: "68264241"
   
     </output-providers>  
     ```  
-    *ни*  
+    *или диспетчер конфигурации служб*  
   
     ```xml  
     <...All commands...>  
@@ -301,7 +301,7 @@ ms.locfileid: "68264241"
     > [!NOTE]  
     > Обязательные сообщения записываются на любом уровне.  
   
-    **Пример**.  
+    **Пример.**  
   
     ```xml  
     <output-providers>  
@@ -310,7 +310,7 @@ ms.locfileid: "68264241"
   
     </output-providers>  
     ```  
-    *ни*  
+    *или диспетчер конфигурации служб*  
   
     ```xml  
     <...All commands...>  
@@ -328,7 +328,7 @@ ms.locfileid: "68264241"
   
     2.  Если параметр override имеет **значение true**, то порядок поиска будет выполняться в файле сценария&gt;файл подключения сервера —&gt;запрос пользователя.  
   
-    **Пример**.  
+    **Пример.**  
   
     ```xml  
     <output-providers>  
@@ -352,7 +352,7 @@ ms.locfileid: "68264241"
   
 После успешного выполнения всех команд в файле скрипта консольное приложение SSMA завершает работу и возвращает элемент управления пользователю. Содержимое файла скрипта является более или менее статическим с информацией о переменных, содержащейся в [создании файлов значений переменных &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md) или, в отдельном разделе в файле скрипта для значений переменных.  
   
-**Пример**.  
+**Пример.**  
   
 ```xml  
 <!--Sample of script file commands -->  
@@ -396,7 +396,7 @@ ms.locfileid: "68264241"
 ## <a name="script-file-validation"></a>Проверка файла скрипта  
 Пользователь может легко проверить свой файл сценария в соответствии с файлом определения схемы **"O2SSConsoleScriptSchema. xsd"** , доступным в папке "Schemas".  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 Следующим шагом в работе консоли является [Создание файлов значений переменных &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md).  
   
 ## <a name="see-also"></a>См. также:  

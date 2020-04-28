@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 479c22747f640a9ccfff43534571dabfcd2717a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266960"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Справочник по пользовательскому интерфейсу (Акцесстоскл)
@@ -25,7 +25,7 @@ ms.locfileid: "68266960"
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |---------|---------------|  
 |[Расширенный выбор объектов &#40;Акцесстоскл&#41;](../../ssma/access/advanced-object-selection-accesstosql.md)|Используйте диалоговое окно **Расширенный выбор объектов** для поиска объектов базы данных с помощью условий фильтра, а затем выберите или отмените выбор этих объектов.|  
 |[Отчет об оценке &#40;Акцесстоскл&#41;](../../ssma/access/assessment-report-accesstosql.md)|Используйте диалоговое окно **Оценка отчета** , чтобы проанализировать преобразование объектов базы данных Access и оценить время, в течение которого будет выполняться миграция.|  
@@ -50,8 +50,8 @@ ms.locfileid: "68266960"
 |[Параметры проекта (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|Страница SQL Azure диалогового окна **Параметры проекта** используется для указания суффикса базы данных, а также интервала времени ожидания пульса.|  
 |[Сохранить метаданные &#40;Акцесстоскл&#41;](../../ssma/access/save-metadata-accesstosql.md)|Диалоговое окно **Сохранение метаданных** появляется при сохранении проекта, в котором отсутствуют метаданные.|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
 [Начало работы с Помощник по миграции SQL Server для доступа &#40;Акцесстоскл&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
-[Подготовка баз данных Access к миграции](preparing-access-databases-for-migration-accesstosql.md)  
+[Подготовка баз данных Access к миграции](preparing-access-databases-for-migration-accesstosql.md)  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6ffcdda8e1c6a3c85703ad7f3d6ed94ca0ca91fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148717"
 ---
 # <a name="setting-properties---smo"></a>Установка свойств в SMO
@@ -201,7 +201,7 @@ sp.QuotedIdentifierStatus = false;
 ```  
   
 ## <a name="setting-default-initialization-fields-in-visual-basic"></a>Задание полей инициализации по умолчанию на языке Visual Basic  
- Этот пример кода демонстрирует, как свести к минимуму число свойств объекта, инициализируемых в программе SMO. Чтобы использовать объект `using System.Collections.Specialized`, необходимо включить инструкцию <xref:System.Collections.Specialized.StringCollection>.  
+ Этот пример кода демонстрирует, как свести к минимуму число свойств объекта, инициализируемых в программе SMO. Чтобы использовать объект <xref:System.Collections.Specialized.StringCollection>, необходимо включить инструкцию `using System.Collections.Specialized`.  
   
  При помощи приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] можно сравнивать числовые инструкции, оправляемые экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], с этой оптимизацией.  
   
@@ -233,7 +233,7 @@ srv.SetDefaultInitFields(typ, sc)
 ```
   
 ## <a name="setting-default-initialization-fields-in-visual-c"></a>Задание полей инициализации по умолчанию на языке Visual C#  
- Этот пример кода демонстрирует, как свести к минимуму число свойств объекта, инициализируемых в программе SMO. Чтобы использовать объект `using System.Collections.Specialized`, необходимо включить инструкцию <xref:System.Collections.Specialized.StringCollection>.  
+ Этот пример кода демонстрирует, как свести к минимуму число свойств объекта, инициализируемых в программе SMO. Чтобы использовать объект <xref:System.Collections.Specialized.StringCollection>, необходимо включить инструкцию `using System.Collections.Specialized`.  
   
  При помощи приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] можно сравнивать числовые инструкции, оправляемые экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], с этой оптимизацией.  
   

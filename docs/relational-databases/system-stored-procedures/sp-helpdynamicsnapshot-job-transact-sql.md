@@ -22,10 +22,10 @@ ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 55d7ad0dfd941102cfeb6661e65980f980fa8b2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770978"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
@@ -57,13 +57,13 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**удостоверения**|**int**|Задание моментального снимка фильтрованных данных.|  
-|**job_name**|**имеет sysname**|Имя задания моментального снимка фильтрованных данных.|  
-|**job_id**|**UNIQUEIDENTIFIER**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Идентифицирует задание агента на распространителе.|  
-|**dynamic_filter_login**|**имеет sysname**|Значение, используемое для вычисления функции [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) в параметризованном фильтре строк, определенном для публикации.|  
-|**dynamic_filter_hostname**|**имеет sysname**|Значение, используемое для вычисления функции [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) в параметризованном фильтре строк, определенном для публикации.|  
+|**идентификатор**|**int**|Задание моментального снимка фильтрованных данных.|  
+|**job_name**|**sysname**|Имя задания моментального снимка фильтрованных данных.|  
+|**job_id**|**uniqueidentifier**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Идентифицирует задание агента на распространителе.|  
+|**dynamic_filter_login**|**sysname**|Значение, используемое для вычисления функции [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) в параметризованном фильтре строк, определенном для публикации.|  
+|**dynamic_filter_hostname**|**sysname**|Значение, используемое для вычисления функции [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) в параметризованном фильтре строк, определенном для публикации.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Путь к папке, откуда считываются файлы моментального снимка, если используется параметризованный фильтр строк.|  
 |**frequency_type**|**int**|Частота, с которой агент выполняется по расписанию, может иметь одно из следующих значений.<br /><br /> **1** = один раз<br /><br /> **2** = по запросу<br /><br /> **4** = ежедневно<br /><br /> **8** = еженедельно<br /><br /> **16** = ежемесячно<br /><br /> **32** = ежемесячное относительное<br /><br /> **64** = Автозапуск<br /><br /> **128** = повторяющаяся|  
 |**frequency_interval**|**int**|День, когда агент выполняется, может иметь одно из следующих значений.<br /><br /> **1** = воскресенье<br /><br /> **2** = понедельник<br /><br /> **3** = вторник<br /><br /> **4** = среда<br /><br /> **5** = четверг<br /><br /> **6** = Пятница<br /><br /> **7** = Суббота<br /><br /> **8** = день<br /><br /> **9** = рабочие дни<br /><br /> **10** = выходные дни|  
@@ -88,6 +88,6 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
  Только члены предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** и списка доступа к публикации для публикации могут выполнять **sp_helpdynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>См. также:  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

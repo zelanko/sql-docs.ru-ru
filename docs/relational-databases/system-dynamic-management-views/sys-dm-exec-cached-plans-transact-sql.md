@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fe53a1d912ce03ab2eedb66b72b4de947466b313
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263940"
 ---
 # <a name="sysdm_exec_cached_plans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
@@ -37,14 +37,14 @@ ms.locfileid: "68263940"
 > [!NOTE]  
 >  Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_exec_cached_plans**.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |bucketid|**int**|Идентификатор сегмента хэша, в который кэшируется запись. Значение указывает диапазон от 0 до значения размера хэш-таблицы для типа кэша.<br /><br /> Для кэшей SQL Plans и Object Plans размер хэш-таблицы может достигать 10007 на 32-разрядных версиях систем и 40009 — на 64-разрядных. Для кэша Bound Trees размер хэш-таблицы может достигать 1009 на 32-разрядных версиях систем и 4001 на 64-разрядных. Для кэша расширенных хранимых процедур размер хэш-таблицы может достигать 127 на 32-разрядных и 64-разрядных версиях систем.|  
-|refcounts|**int**|Число объектов кэша, ссылающихся на данный объект кэша. Значение **рефкаунтс** должно быть не меньше 1, чтобы запись была в кэше.|  
+|refcounts|**int**|Число объектов кэша, ссылающихся на данный объект кэша. Значение **refcounts** для записи должно быть не меньше 1, чтобы размещаться в кэше.|  
 |usecounts|**int**|Количество повторений поиска объекта кэша. Остается без увеличения, если параметризованные запросы обнаруживают план в кэше. Может быть увеличен несколько раз при использовании инструкции showplan.|  
 |size_in_bytes|**int**|Число байтов, занимаемых объектом кэша.|  
 |memory_object_address|**varbinary(8)**|Адрес памяти кэшированной записи. Это значение можно использовать с представлением [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md), чтобы проанализировать распределение памяти кэшированного плана, и с представлением [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md) для определения затрат на кэширование записи.|  
-|cacheobjtype|**nvarchar (34)**|Тип объекта в кэше. Принимается одно из следующих значений:<br /><br /> Compiled Plan (скомпилированный план)<br /><br /> Compiled Plan Stub (заглушка скомпилированного плана)<br /><br /> Parse Tree (дерево синтаксического анализа)<br /><br /> Extended Proc (расширенные процедуры)<br /><br /> CLR Compiled Func (скомпилированная функция CLR)<br /><br /> CLR Compiled Proc (скомпилированная процедура CLR)|  
+|cacheobjtype|**nvarchar (34)**|Тип объекта в кэше. Он может иметь одно из следующих значений:<br /><br /> Compiled Plan (скомпилированный план)<br /><br /> Compiled Plan Stub (заглушка скомпилированного плана)<br /><br /> Parse Tree (дерево синтаксического анализа)<br /><br /> Extended Proc (расширенные процедуры)<br /><br /> CLR Compiled Func (скомпилированная функция CLR)<br /><br /> CLR Compiled Proc (скомпилированная процедура CLR)|  
 |objtype|**nvarchar (16)**|Тип объекта. Ниже приведены возможные значения и соответствующие им описания.<br /><br /> Proc: хранимая процедура<br />Подготовлено: подготовленная инструкция<br />Прямое соединение: нерегламентированный запрос. Относится к [!INCLUDE[tsql](../../includes/tsql-md.md)] отправке как события языка с помощью программы **osql** или **sqlcmd** , а не как удаленных вызовов процедур.<br />Реплпрок: процедура-фильтр репликации<br />Триггер: триггер<br />Представление: Просмотр<br />По умолчанию: по умолчанию<br />Усртаб: пользовательская таблица<br />Систаб: системная таблица<br />Проверка: ПРОВЕРОЧное ограничение<br />Правило: правило|  
 |plan_handle|**varbinary (64)**|Идентификатор плана в оперативной памяти. Этот идентификатор является временным и константным, только пока план сохраняется в кэше. Это значение можно использовать со следующими функциями динамического управления:<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|Идентификатор пула ресурсов, для которого подсчитывается использование памяти для плана.|  
@@ -71,7 +71,7 @@ ORDER BY usecounts DESC;
 GO  
 ```  
   
-### <a name="b-returning-query-plans-for-all-cached-triggers"></a>Б. Возвращение планов запросов для всех кэшированных триггеров  
+### <a name="b-returning-query-plans-for-all-cached-triggers"></a>Б) Возвращение планов запросов для всех кэшированных триггеров  
  Следующий пример возвращает планы запросов для кэшированных триггеров.  
   
 ```sql  
@@ -112,14 +112,14 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
  [sys. dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   
  [sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys. dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)   
  [sys. dm_os_memory_cache_entries &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)   
- [ИЗ &#40;&#41;Transact-SQL](../../t-sql/queries/from-transact-sql.md)  
+ [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)  
   
   
 

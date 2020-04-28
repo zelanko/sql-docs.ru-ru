@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b29a31acb4e3dad83c760c27a9591cac026e0ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530904"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Основные сведения об архитектуре Microsoft OLAP
@@ -39,9 +39,9 @@ ms.locfileid: "69530904"
  [Другие...](understanding-microsoft-olap-physical-architecture.md)  
   
  ![Маленький значок папки с файлами](../../../integration-services/media/filefolder-small.gif "Маленький значок папки") **Архитектура программирования**  
- [Разработка с помощью объекты AMO &#40;объектов AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
+ [Разработка объектов управления аналитикой (объекты AMO)](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
- [Разработка с помощью Analysis Services языка сценариев &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Разработка на языке ASSL (язык ASSL)](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
  [Разработка с использованием ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893528"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>Выражения куба и вложенного куба
@@ -73,6 +73,6 @@ ms.locfileid: "68893528"
  [Создание вложенных кубов в многомерных выражениях &#40;многомерных выражениях&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
  [Инструкция CREATE CUBE &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-create-subcube.md)   
  [Выражения &#40;&#41;многомерных выражений](../mdx/expressions-mdx.md)   
- [Инструкция SCOPE &#40;&#41;многомерных выражений](../mdx/mdx-scripting-scope.md)  
+ [Инструкция SCOPE (многомерные выражения)](../mdx/mdx-scripting-scope.md)  
   
   

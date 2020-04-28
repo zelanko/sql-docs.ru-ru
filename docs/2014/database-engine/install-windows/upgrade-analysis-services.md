@@ -21,10 +21,10 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889186"
 ---
 # <a name="upgrade-analysis-services"></a>Обновление служб Analysis Services
@@ -42,7 +42,7 @@ ms.locfileid: "68889186"
   
 -   [Поддерживаемые обновления версий и выпусков](supported-version-and-edition-upgrades.md)  
   
--   [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Требования к аппаратному и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Параметры для средства проверки конфигурации системы](check-parameters-for-the-system-configuration-checker.md)  
   

@@ -16,10 +16,10 @@ ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c57822529290a6ae4c3e1b5c96f712dbd626d04d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769027"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
@@ -90,7 +90,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @sync_type=] "*sync_type*"  
  Тип синхронизации подписки. *sync_type* имеет тип **nvarchar (255)** и может принимать одно из следующих значений:  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |none|Подписчик уже имеет схему и начальные данные для опубликованных таблиц.<br /><br /> Примечание. Этот параметр является устаревшим. Вместо этого используйте значение «replication support only».|  
 |automatic (по умолчанию)|Схема и начальные данные для опубликованных таблиц вначале передаются подписчику.|  
@@ -104,9 +104,9 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @status=] "*состояние*"  
  Состояние подписки. Аргумент *Status* имеет тип **sysname**и значение по умолчанию NULL. Если этот параметр не задан явно, при репликации ему устанавливается одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|активно|Подписка инициализирована и готова к принятию изменений. Этот параметр задается в том случае, если значение *sync_type* равно None, инициализация с помощью резервного копирования или только поддержка репликации.|  
+|active|Подписка инициализирована и готова к принятию изменений. Этот параметр задается в том случае, если значение *sync_type* равно None, инициализация с помощью резервного копирования или только поддержка репликации.|  
 |subscribed|Требуется инициализация подписки. Этот параметр задается, если значение *sync_type* является автоматическим.|  
   
  [ @subscription_type=] "*subscription_type*"  
@@ -118,12 +118,12 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @update_mode=] "*update_mode*"  
  Тип обновления. *update_mode* имеет тип **nvarchar (30)** и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |read only (по умолчанию)|Подписка только для чтения. Изменения у подписчика не отправляются издателю.|  
 |sync tran|Включает поддержку немедленно обновляемых подписок. Не поддерживается для издателей Oracle.|  
 |queued tran|Обеспечивает подписку обновляемую посредством очередей. Изменение данных можно выполнять у подписчика, сохранять в очереди и после этого передавать издателю. Не поддерживается для издателей Oracle.|  
-|Отработка отказа|Включает для подписки немедленное обновление с обновлением по очереди при переходе на другой ресурс в случае отработки отказа. Изменение данных можно выполнять на подписчике и немедленно передавать издателю. Если издатель и подписчик не подключены, режим обновления может быть изменен так, что изменения данных, сделанные у подписчика, будут сохраняться в очереди до тех пор, пока подписчик и издатель не будут повторно подключены. Не поддерживается для издателей Oracle.|  
+|отработка отказа|Включает для подписки немедленное обновление с обновлением по очереди при переходе на другой ресурс в случае отработки отказа. Изменение данных можно выполнять на подписчике и немедленно передавать издателю. Если издатель и подписчик не подключены, режим обновления может быть изменен так, что изменения данных, сделанные у подписчика, будут сохраняться в очереди до тех пор, пока подписчик и издатель не будут повторно подключены. Не поддерживается для издателей Oracle.|  
 |queued failover|Включает подписку с обновлением по очереди в качестве обновляемой посредством очередей подписки, при этом поддерживает возможность переключения в режим немедленного обновления. Изменение данных можно выполнять у подписчика и сохранять в очереди до установления соединения между подписчиком и издателем. При установлении постоянного соединения можно переключиться в режим немедленного обновления. Не поддерживается для издателей Oracle.|  
   
  Обратите внимание, что значения синктран и queued tran не разрешены, если публикация, на которую выполняется подписка, допускает использование служб DTS.  
@@ -131,25 +131,25 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @loopback_detection=] "*loopback_detection*"  
  Определяет, отправляет ли агент распространителя транзакции, изначально созданные на подписчике, обратно подписчику. *loopback_detection* имеет тип **nvarchar (5)** и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|верно|Агент распространителя не отправляет транзакции, изначально созданные у подписчика, обратно. Используется с двунаправленной репликацией транзакций. Дополнительные сведения см. в разделе [Двунаправленная репликация транзакций](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
+|Да|Агент распространителя не отправляет транзакции, изначально созданные у подписчика, обратно. Используется с двунаправленной репликацией транзакций. Дополнительные сведения см. в разделе [Двунаправленная репликация транзакций](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |false|Агент распространителя отправляет транзакции, изначально созданные у подписчика, обратно.|  
 |NULL (по умолчанию)|Автоматически устанавливается значение true для подписчика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и значение false для подписчика, не относящегося к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  [ @frequency_type=] *frequency_type*  
  Частота запуска задачи распространения по расписанию. *frequency_type* имеет тип int и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |1|Один раз.|  
 |2|По запросу|  
 |4|Ежедневно|  
-|8|Еженедельно|  
-|16|Ежемесячная|  
+|8|Weekly (Еженедельно);|  
+|16|Ежемесячно|  
 |32|Ежемесячно с относительной датой|  
 |64 (по умолчанию)|Автозапуск|  
-|128|Повторение|  
+|128|Повторяющееся задание|  
   
  [ @frequency_interval=] *frequency_interval*  
  Значение, применяемое к частоте, установленной *frequency_type*. *frequency_interval* имеет **тип int**и значение по умолчанию NULL.  
@@ -157,7 +157,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_relative_interval=] *frequency_relative_interval*  
  Дата агента распространителя. Этот параметр используется, если *frequency_type* установлен в значение 32 (ежемесячное относительное расписание). *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |1|Первый|  
 |2|Секунда|  
@@ -172,12 +172,12 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_subday=] *frequency_subday*  
  Частота повторного планирования в течение определенного периода, в минутах. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |1|Однократно|  
 |2|Секунда|  
 |4|Минута|  
-|8|Hour|  
+|8|Час|  
 |NULL||  
   
  [ @frequency_subday_interval=] *frequency_subday_interval*  
@@ -232,12 +232,12 @@ sp_addsubscription [ @publication = ] 'publication'
  Указывает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  ** для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя не следует указывать издателя.  
+>  *publisher* для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя не следует указывать издателя.  
   
  [ @backupdevicetype= ] "*backupdevicetype*"  
  Задает тип устройства резервного копирования, используемого при инициализации подписчика из резервной копии. *backupdevicetype* имеет тип **nvarchar (20)** и может принимать одно из следующих значений:  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |logical (по умолчанию)|Устройство резервного копирования является логическим устройством.|  
 |disk|Устройство резервного копирования является жестким диском.|  
@@ -275,7 +275,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber_type=] *subscriber_type*  
  Тип подписчика. *subscriber_type* имеет тип **tinyint**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0 (по умолчанию)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Абонент|  
 |1|Сервер источника данных ODBC|  
@@ -286,7 +286,7 @@ sp_addsubscription [ @publication = ] 'publication'
  Указывает, что подписка поддерживает оптимизированные для памяти таблицы. *memory_optimized* является **битом**, где 1 равно true (подписка поддерживает оптимизированные для памяти таблицы).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  Процедура sp_addsubscription используется в репликации моментальных снимков и репликации транзакций.  
@@ -318,11 +318,11 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="see-also"></a>См. также:  
  [Создание принудительной подписки](../../relational-databases/replication/create-a-push-subscription.md)   
  [Создание подписки для подписчика, не являющегося SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
- [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

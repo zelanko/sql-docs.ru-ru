@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 77586a09172fa0f737c7efb0f54fdc98fcb858da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266101"
 ---
 # <a name="customizing-calls-order-oracletosql"></a>Настройка порядка вызовов (OracleToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "68266101"
 ## <a name="customizing-order"></a>Настройка порядка  
 Используйте кнопки, размещенные в верхней части сетки, со списком объектов для размещения объектов в нужном порядке. Кроме того, можно использовать кнопки, которые появляются справа, когда строка станет выбранной.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 [Завершение подготовки тестового случая &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
 ## <a name="see-also"></a>См. также:  

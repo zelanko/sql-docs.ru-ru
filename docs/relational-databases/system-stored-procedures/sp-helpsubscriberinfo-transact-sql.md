@@ -16,10 +16,10 @@ ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38b653dcb51f428692401fb87609187a82449393
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771491"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
@@ -47,13 +47,13 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**издателя**|**имеет sysname**|Имя издателя.|  
-|**абонент**|**имеет sysname**|Имя подписчика.|  
-|**type**|**tinyint**|Тип подписчика:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] база данных 1 = источник данных ODBC **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**пользователей**|**имеет sysname**|Идентификатор входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**пароль**|**имеет sysname**|Пароль для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**издателя**|**sysname**|Имя издателя.|  
+|**абонент**|**sysname**|Имя подписчика.|  
+|**type**|**tinyint**|Тип подписчика:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] база данных 1 = источник данных ODBC **1** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**login**|**sysname**|Идентификатор входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**password**|**sysname**|Пароль для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**commit_batch_size**|**int**|Не поддерживается.|  
 |**status_batch_size**|**int**|Не поддерживается.|  
 |**flush_frequency**|**int**|Не поддерживается.|  
@@ -70,7 +70,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**retryattempt**|**int**|Не поддерживается.|  
 |**retrydelay**|**int**|Не поддерживается.|  
 |**nописание**|**nvarchar(255)**|Текстовое описание подписчика.|  
-|**security_mode**|**int**|Реализованный режим безопасности:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] проверка подлинности Windows|  
+|**security_mode**|**int**|Реализованный режим безопасности:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] проверка подлинности Windows|  
 |**frequency_type2**|**int**|Частота запуска агента слияния:<br /><br /> **1** = один раз<br /><br /> **2** = по запросу<br /><br /> **4** = ежедневно<br /><br /> **8** = еженедельно<br /><br /> **16** = ежемесячно<br /><br /> **32** = ежемесячное относительное<br /><br /> **64** = Автозапуск<br /><br /> **128** = повторяющаяся|  
 |**frequency_interval2**|**int**|Значение, применяемое к частоте, установленной *frequency_type*.|  
 |**frequency_relative_interval2**|**int**|Дата агент слияния, используемая, когда *frequency_type* имеет значение 32 (ежемесячное относительное):<br /><br /> **1** = сначала<br /><br /> **2** = секунда<br /><br /> **4** = третий<br /><br /> **8** = четвертый<br /><br /> **16** = Последняя|  
@@ -98,6 +98,6 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
  [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

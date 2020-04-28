@@ -16,10 +16,10 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 80eb30fc6b6b2cea9fc058780831af3915fd9007
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771365"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
@@ -53,15 +53,15 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  
  В следующей таблице описаны свойства издателей и значения этих свойств.  
   
-|Свойство|Значения|Description|  
+|Свойство|Значения|Описание|  
 |--------------|------------|-----------------|  
-|**Active**|**условия**|Активирует издатель.|  
-||**IsFalse**|Отключает издатель.|  
+|**active**|**true**|Активирует издатель.|  
+||**false**|Отключает издатель.|  
 |**distribution_db**||Имя базы данных распространителя.|  
-|**пользователей**||Имя входа.|  
-|**пароль**||Надежный пароль для указанного имени входа.|  
+|**login**||Имя входа.|  
+|**password**||Надежный пароль для указанного имени входа.|  
 |**security_mode**|**1**|При подключении к подписчику используется проверка подлинности Windows. *Его нельзя изменить для издателя, отличного от* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
-||**0**|При подключении к издателю используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Его нельзя изменить для издателя, отличного от* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
+||**0**;|При подключении к издателю используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Его нельзя изменить для издателя, отличного от* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
 |**working_directory**||Рабочий каталог, в котором хранятся данные и файлы схемы для публикации.|  
 |NULL (по умолчанию)||Выводятся все доступные параметры *свойств* .| 
 |**storage_connection_string**| Ключ доступа | Ключ доступа для рабочего каталога при Управляемый экземпляр Базы данных SQL Azure базы данных. 
@@ -80,6 +80,6 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

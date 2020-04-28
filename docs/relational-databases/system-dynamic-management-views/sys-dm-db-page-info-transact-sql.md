@@ -21,10 +21,10 @@ ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0802f3013af11814586634f890bb8ddddeadeec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68841604"
 ---
 # <a name="sysdm_db_page_info-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
@@ -57,7 +57,7 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 
 ## <a name="table-returned"></a>Возвращаемая таблица  
 
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |database_id |INT |Идентификатор базы данных |
 |file_id |INT |Идентификатор файла |
@@ -73,8 +73,8 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 |page_level |INT |Уровень страницы в индексе (лист = 0) |
 |object_id |INT |Идентификатор объекта, владеющего страницей |
 |index_id |INT |Идентификатор индекса (0 для страниц данных кучи) |
-|partition_id |bigint |Идентификатор секции |
-|alloc_unit_id |bigint |Идентификатор единицы распределения |
+|partition_id |BIGINT |Идентификатор секции |
+|alloc_unit_id |BIGINT |Идентификатор единицы распределения |
 |is_encrypted |bit |Бит, указывающий, зашифрована ли страница |
 |has_checksum |bit |Бит, указывающий, имеет ли страница значение контрольной суммы |
 |контрольная сумма |INT |Хранит значение контрольной суммы, используемое для обнаружения повреждений данных |
@@ -136,7 +136,7 @@ SELECT *
 FROM sys.dm_db_page_info (5, 1, 15, DEFAULT)
 ```
 
-### <a name="b-using-sysdm_db_page_info-with-other-dmvs"></a>Б. Использование Sys. dm_db_page_info с другими динамическими представлениями DMV 
+### <a name="b-using-sysdm_db_page_info-with-other-dmvs"></a>Б) Использование Sys. dm_db_page_info с другими динамическими представлениями DMV 
 
 Следующий запрос возвращает одну строку для каждого `wait_resource` предоставляемого `sys.dm_exec_requests` , если строка содержит значение, отличное от NULL.`page_resource`
 
@@ -148,7 +148,7 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS pag
 ```
 
 ## <a name="see-also"></a>См. также:  
-[Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
 [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)

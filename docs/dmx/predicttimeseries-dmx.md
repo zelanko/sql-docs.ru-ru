@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 48b656283cbe251b0c8ecb4e7c7b41681cddc7ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893880"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (расширения интеллектуального анализа данных)
@@ -40,7 +40,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  Ссылка на столбец таблицы>, * \< * * \<ссылки на скалярный столбец>*  
  Указывает имя прогнозируемого столбца. Столбец может содержать скалярные или табличные данные.  
   
- *\n*  
+ *n*  
  Указывает число следующих прогнозируемых шагов. Если значение для *n*не указано, по умолчанию используется 1.  
   
  *n* не может быть равно 0. Функция возвращает ошибку, если не сделать хотя бы один прогноз.  
@@ -254,6 +254,6 @@ OR [Model Region] = 'M200 North America'
 ## <a name="see-also"></a>См. также:  
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Примеры запросов модели временных рядов](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
- [Прогнозирование &#40;&#41;расширений интеллектуального анализа данных](../dmx/predict-dmx.md)  
+ [Predict (расширения интеллектуального анализа данных)](../dmx/predict-dmx.md)  
   
   

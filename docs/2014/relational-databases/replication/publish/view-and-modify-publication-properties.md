@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5053cc16734cc18c75e163fec4c06b1768e590cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68941065"
 ---
 # <a name="view-and-modify-publication-properties"></a>Просмотр и изменение свойств публикации
@@ -44,17 +44,17 @@ ms.locfileid: "68941065"
   
      [объекты RMO;](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Некоторые свойства нельзя изменять после создания публикации, другие нельзя изменять при наличии подписок на публикацию. Свойства, которые нельзя изменять, отображаются в режиме только для чтения.  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
 -   После создания публикации для некоторых изменений свойств требуется новый моментальный снимок. Если на публикацию имеются подписки, для некоторых изменений также требуется повторная инициализация всех подписок. Дополнительные сведения см. в статьях [Изменение свойств публикации и статьи](change-publication-and-article-properties.md) и [Добавление и удаление статей в существующих публикациях](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Просмотрите и измените свойства публикации в диалоговом окне **Свойства публикации - \<Публикация>** , доступном в и [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]мониторе репликации. Сведения о запуске монитора репликации см. в [этой статье](../monitor/start-the-replication-monitor.md).  
   
  Диалоговое окно **Свойства публикации - \<Публикация>** содержит следующие страницы:  
@@ -97,7 +97,7 @@ ms.locfileid: "68941065"
   
 3.  Измените свойства, если необходимо, и нажмите кнопку **ОК**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  Публикации могут быть изменены, а их свойства могут быть возвращены программно с помощью хранимых процедур репликации. Используемые хранимые процедуры зависят от типа публикации.  
   
 #### <a name="to-view-the-properties-of-a-snapshot-or-transactional-publication"></a>Просмотр свойств публикации моментальных снимков или публикации транзакций  
@@ -130,7 +130,7 @@ ms.locfileid: "68941065"
   
 1.  Выполните хранимую процедуру [sp_changepublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql), указав одно или несколько новых свойств моментальных снимков в соответствующих параметрах моментальных снимков.  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере репликации транзакций возвращаются свойства публикации.  
   
  [!code-sql[HowTo#sp_helppublication](../../../snippets/tsql/SQL15/replication/howto/tsql/changetranpub.sql#sp_helppublication)]  
@@ -147,7 +147,7 @@ ms.locfileid: "68941065"
   
  [!code-sql[HowTo#sp_changemergepublication](../../../snippets/tsql/SQL15/replication/howto/tsql/changemergepub.sql#sp_changemergepublication)]  
   
-##  <a name="RMOProcedure"></a> При помощи объектов RMO  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
  Публикации можно изменять и получать доступ к их свойствам программно с помощью объектов RMO. Классы RMO, которые используются для просмотра или изменения публикации, зависят от типа публикации.  
   
 #### <a name="to-view-or-modify-properties-of-a-snapshot-or-transactional-publication"></a>Просмотр или изменение свойств публикации моментальных снимков или публикации транзакций  
@@ -158,9 +158,9 @@ ms.locfileid: "68941065"
   
 3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает `false`, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
   
-4.  Чтобы изменить свойства, задайте новые значения для устанавливаемых свойств (необязательно). Чтобы определить, присвоено ли данное значение `&` свойству `And`, используется логический оператор AND (<xref:Microsoft.SqlServer.Replication.PublicationAttributes> в Microsoft Visual C# и <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> в Microsoft Visual Basic). С помощью операторов включающего логического ИЛИ (`|` в Visual C# и `Or` в Visual Basic) и исключающего логического ИЛИ (`^` в Visual C# и `Xor` в Visual Basic) измените значения <xref:Microsoft.SqlServer.Replication.PublicationAttributes> для свойства <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
+4.  Чтобы изменить свойства, задайте новые значения для устанавливаемых свойств (необязательно). Чтобы определить, присвоено ли данное значение <xref:Microsoft.SqlServer.Replication.PublicationAttributes> свойству <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>, используется логический оператор AND (`&` в Microsoft Visual C# и `And` в Microsoft Visual Basic). С помощью операторов включающего логического ИЛИ (`|` в Visual C# и `Or` в Visual Basic) и исключающего логического ИЛИ (`^` в Visual C# и `Xor` в Visual Basic) измените значения <xref:Microsoft.SqlServer.Replication.PublicationAttributes> для свойства <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
   
-5.  Если для свойства `true` указать значение <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства `false` указать значение <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения будут отправлены на сервер немедленно.  
+5.  Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> указать значение `true`, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> указать значение `false` (по умолчанию), изменения будут отправлены на сервер немедленно.  
   
 #### <a name="to-view-or-modify-properties-of-a-merge-publication"></a>Просмотр или изменение свойств публикации слиянием  
   
@@ -170,11 +170,11 @@ ms.locfileid: "68941065"
   
 3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает `false`, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
   
-4.  Чтобы изменить свойства, задайте новые значения для устанавливаемых свойств (необязательно). Чтобы определить, присвоено ли данное значение `&` свойству `And`, используется логический оператор AND (<xref:Microsoft.SqlServer.Replication.PublicationAttributes> в Visual C# и <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> в Visual Basic). С помощью операторов включающего логического ИЛИ (`|` в Visual C# и `Or` в Visual Basic) и исключающего логического ИЛИ (`^` в Visual C# и `Xor` в Visual Basic) измените значения <xref:Microsoft.SqlServer.Replication.PublicationAttributes> для свойства <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
+4.  Чтобы изменить свойства, задайте новые значения для устанавливаемых свойств (необязательно). Чтобы определить, присвоено ли данное значение <xref:Microsoft.SqlServer.Replication.PublicationAttributes> свойству <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>, используется логический оператор AND (`&` в Visual C# и `And` в Visual Basic). С помощью операторов включающего логического ИЛИ (`|` в Visual C# и `Or` в Visual Basic) и исключающего логического ИЛИ (`^` в Visual C# и `Xor` в Visual Basic) измените значения <xref:Microsoft.SqlServer.Replication.PublicationAttributes> для свойства <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
   
-5.  Если для свойства `true` указать значение <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства `false` указать значение <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения будут отправлены на сервер немедленно.  
+5.  Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> указать значение `true`, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> указать значение `false` (по умолчанию), изменения будут отправлены на сервер немедленно.  
   
-###  <a name="PShellExample"></a> Примеры (объекты RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Примеры (объекты RMO)  
  В этом примере устанавливаются атрибуты публикации для публикации транзакций. Изменения кэшируются до тех пор, пока явно не отправляются на сервер.  
   
  [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changetranpub_cached)]  

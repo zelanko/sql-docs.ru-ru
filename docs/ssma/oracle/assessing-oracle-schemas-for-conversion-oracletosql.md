@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0ff56be1b7da0376250c7ed021ae78d7144a7645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264554"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>Оценка схем Oracle для преобразования (OracleToSQL)
@@ -79,7 +79,7 @@ ms.locfileid: "68264554"
   
     -   Вы можете исключить объект из миграции. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозревателе метаданных и обозревателе метаданных Oracle снимите флажок рядом с элементом, прежде чем загружать объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и переносить данные из Oracle.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 [Преобразование схем Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  
   
 ## <a name="see-also"></a>См. также:  

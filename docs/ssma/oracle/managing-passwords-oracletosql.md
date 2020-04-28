@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: d8520224662c02d1ffbe9fd2fd6ef76f8b1e698a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262920"
 ---
 # <a name="managing-passwords-oracletosql"></a>Управление паролями (OracleToSQL)
@@ -74,7 +74,7 @@ SSMA позволяет защитить пароль базы данных.
   
         Выполните команду `SSMAforOracleConsole.exe` с`-securepassword` параметром `-remove` и в командной строке, передав идентификаторы серверов, чтобы удалить зашифрованные пароли из защищенного файла хранилища, присутствующего на локальном компьютере.  
         
-        Пример  
+        Пример.  
         
             C:\SSMA\SSMAforOracleConsole.EXE -securepassword -remove all
             C:\SSMA\SSMAforOracleConsole.EXE -securepassword -remove "source_1,target_1"  
@@ -83,7 +83,7 @@ SSMA позволяет защитить пароль базы данных.
   
         Выполните команду `SSMAforOracleConsole.exe` с `-securepassword` параметром `-list` и в командной строке, чтобы вывести список всех идентификаторов серверов, пароли которых были зашифрованы.  
   
-        Пример  
+        Пример.  
         
             C:\SSMA\SSMAforOracleConsole.EXE -securepassword -list  
   
@@ -94,7 +94,7 @@ SSMA позволяет защитить пароль базы данных.
 ## <a name="exporting-or-importing-encrypted-passwords"></a>Экспорт или Импорт зашифрованных паролей  
 Консольное приложение SSMA позволяет экспортировать зашифрованные пароли баз данных, находящиеся в файле на локальном компьютере, в защищенный файл и наоборот. Это помогает сделать зашифрованные пароли независимыми от компьютера. Функция экспорта считывает идентификатор и пароль сервера из локального защищенного хранилища и сохраняет их в зашифрованном файле. Пользователю предлагается ввести пароль для защищенного файла. Убедитесь, что пароль имеет длину 8 символов или более. Этот защищенный файл переносим на разные компьютеры. Функция импорта считывает идентификатор сервера и сведения о пароле из защищенного файла. Пользователю предлагается ввести пароль для защищенного файла и добавить сведения в локально защищенное хранилище.  
   
-Пример  
+Пример.  
 
     Export password
     
@@ -110,7 +110,7 @@ SSMA позволяет защитить пароль базы данных.
     
     Please confirm password: xxxxxxxx  
   
-Пример  
+Пример.  
 
     Import an encrypted password
     

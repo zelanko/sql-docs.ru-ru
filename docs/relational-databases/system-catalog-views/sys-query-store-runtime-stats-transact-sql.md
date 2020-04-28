@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0bd7f1870a88ae2050445050565e0f268f4d9b0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148285"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-SQL)
@@ -33,13 +33,13 @@ ms.locfileid: "70148285"
 
   Содержит сведения о статистике выполнения запроса в среде выполнения.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**runtime_stats_id**|**bigint**|Идентификатор строки, представляющей статистику выполнения среды выполнения для **plan_id**, **execution_type** и **runtime_stats_interval_id**. Он уникален только за прошлые интервалы статистики времени выполнения. Для текущего активного интервала может существовать несколько строк, представляющих статистику времени выполнения для плана, на который ссылается **plan_id**, с типом выполнения, представленным **execution_type**. Как правило, одна строка представляет статистику времени выполнения, которая записывается на диск, а другие (s) представляют состояние в памяти. Таким образом, чтобы получить фактическое состояние для каждого интервала, необходимо выполнить статистическую обработку метрик, группирование по **plan_id**, **execution_type** и **runtime_stats_interval_id**.<br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать ноль (0).|
 |**plan_id**|**bigint**|Внешний ключ. Присоединяет к [sys. query_store_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
 |**runtime_stats_interval_id**|**bigint**|Внешний ключ. Присоединяет к [sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**execution_type**|**tinyint**|Определяет тип выполнения запроса:<br /><br /> 0 — регулярное выполнение (успешно завершено)<br /><br /> 3. инициированное клиентом прерывание выполнения<br /><br /> 4 — выполнение прерванного исключения|  
-|**execution_type_desc**|**nvarchar(128**|Текстовое описание поля "тип выполнения":<br /><br /> 0 — обычный<br /><br /> 3 — прервано<br /><br /> 4 — исключение|  
+|**execution_type_desc**|**nvarchar(128)**|Текстовое описание поля "тип выполнения":<br /><br /> 0 — обычный<br /><br /> 3 — прервано<br /><br /> 4 — исключение|  
 |**first_execution_time**|**datetimeoffset**|Время первого выполнения для плана запроса в пределах интервала агрегирования. Это относится к времени окончания выполнения запроса.|  
 |**last_execution_time**|**datetimeoffset**|Время последнего выполнения плана запроса в пределах интервала агрегирования. Это относится к времени окончания выполнения запроса.|  
 |**count_executions**|**bigint**|Общее число выполнений для плана запроса в пределах интервала статистической обработки.|  
@@ -113,10 +113,10 @@ ms.locfileid: "70148285"
  [sys. query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
  [sys. query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [sys. query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys. query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
+ [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Мониторинг производительности с помощью хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Хранимые процедуры хранилища запросов &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
  [Рекомендации по хранилищу запросов](../../relational-databases/performance/best-practice-with-the-query-store.md)   
   

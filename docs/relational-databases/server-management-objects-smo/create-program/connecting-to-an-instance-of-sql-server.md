@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 14eff405fd4eb1b96f4f5e5b50624d2c1251d546
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148757"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>Соединение с экземпляром SQL Server
@@ -42,7 +42,7 @@ ms.locfileid: "70148757"
   
  Объявите переменную объекта <xref:Microsoft.SqlServer.Management.Smo.Server> и передайте имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в качестве строкового параметра конструктору объекта. Объект <xref:Microsoft.SqlServer.Management.Smo.Server> установит соединение с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], используя значения настроек по умолчанию.  
   
-## <a name="connection-pooling"></a>Организация пулов соединений  
+## <a name="connection-pooling"></a>Объединение подключений в пул  
  Вызов метода <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection> обычно не требуется. SMO автоматически установит соединение, когда это потребуется, и освободит его, передав в пул соединений, после завершения операций. При вызове метода <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> соединение не передается в пул. Для освобождения соединения и его передачи в пул нужен явный вызов метода <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A>. Кроме этого, можно запросить соединение не из пула, установив свойство <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.NonPooledConnection%2A> объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
 ## <a name="multithreaded-applications"></a>Многопоточные приложения  

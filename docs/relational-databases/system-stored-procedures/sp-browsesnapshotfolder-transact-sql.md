@@ -16,10 +16,10 @@ ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dcc7c4031253f83df49b45feae17449814af3fc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768979"
 ---
 # <a name="sp_browsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (Transact-SQL)
@@ -50,7 +50,7 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**snapshot_folder**|**nvarchar(512)**|Полный путь к каталогу моментальных снимков.|  
   
@@ -65,6 +65,6 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_browsesnapshotfolder**.  
   
 ## <a name="see-also"></a>См. также:  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

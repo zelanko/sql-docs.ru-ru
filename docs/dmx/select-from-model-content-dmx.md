@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892832"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>Выберите из &lt;модели&gt;. СОДЕРЖИМОЕ (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ)
@@ -30,13 +30,13 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *\n*  
+ *n*  
  Необязательный параметр. Целое число, указывающее количество возвращаемых строк.  
   
  *список выражений*  
  Список столбцов с разделителем-запятой, полученных от набора строк схемы Content.  
   
- *model*  
+ *для базы данных модели*  
  Идентификатор модели.  
   
  *выражение условия*  
@@ -53,7 +53,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 > [!NOTE]  
 >  Для правильного представления содержимого алгоритмы могут интерпретировать столбцы по-разному. Описание содержимого модели интеллектуального анализа данных для каждого алгоритма и советы по интерпретации и выполнению запросов к содержимому модели интеллектуального анализа данных для каждого типа модели см. в разделе [модель интеллектуального анализа данных &#40;Analysis Services-&#41;интеллектуального анализа ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
-|столбец набора строк CONTENT|Description|  
+|столбец набора строк CONTENT|Описание|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|Имя каталога. Имеет значение NULL, если поставщик не поддерживает каталоги.|  
 |MODEL_SCHEMA|Свободное имя схемы. Имеет значение NULL, если поставщик не поддерживает схемы.|  
@@ -101,7 +101,7 @@ WHERE ISDESCENDANT('0')
   
  Ожидаемый результат:  
   
- Поскольку эта модель является моделью деревьев принятия решений, в число потомков родительского узла модели входят узел граничной статистики, узел, представляющий прогнозируемый атрибут, а также несколько узлов, содержащих входные атрибуты и значения. Дополнительные сведения см. в разделе [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining).  
+ Поскольку эта модель является моделью деревьев принятия решений, в число потомков родительского узла модели входят узел граничной статистики, узел, представляющий прогнозируемый атрибут, а также несколько узлов, содержащих входные атрибуты и значения. Дополнительные сведения см. в разделе [Содержимое моделей интеллектуального анализа данных для моделей дерева принятия решений (службы Analysis Services — интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining).  
   
 ## <a name="using-the-flattened-keyword"></a>Использование ключевого слова FLATTENED  
  Содержимое модели интеллектуального анализа данных часто включает в себя интересные сведения о модели в столбцах вложенных таблиц. Ключевое слово FLATTENED дает возможность получать данные из столбцов вложенных таблиц, не прибегая к помощи поставщика, который поддерживает иерархические наборы строк.  
@@ -120,9 +120,9 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|NODE_DISTRIBUTION.ATTRIBUTE_NAME|NODE_DISTRIBUTION.ATTRIBUTE_VALUE|NODE_DISTRIBUTION.SUPPORT|NODE_DISTRIBUTION.PROBABILITY|NODE_DISTRIBUTION.VARIANCE|NODE_DISTRIBUTION.VALUETYPE|  
 |-----------------|----------------------------------------|-----------------------------------------|--------------------------------|------------------------------------|---------------------------------|----------------------------------|  
-|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|1|  
-|TM_NaiveBayes|Bike Buyer|0|6556|0.506685215240745|0||  
-|TM_NaiveBayes|Bike Buyer|1|6383|0.493314784759255|0||  
+|TM_NaiveBayes|Покупатель велосипеда|Missing|0|0|0|1|  
+|TM_NaiveBayes|Покупатель велосипеда|0|6556|0.506685215240745|0||  
+|TM_NaiveBayes|Покупатель велосипеда|1|6383|0.493314784759255|0||  
   
  В следующем примере показано, как с помощью инструкции подзапроса выборки возвратить лишь некоторые из столбцов вложенной таблицы. Можно упростить выходные данные, присвоив псевдоним вложенной таблице, как показано ниже.  
   
@@ -138,13 +138,13 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
-|TM_NaiveBayes|Bike Buyer|Missing|0|  
-|TM_NaiveBayes|Bike Buyer|0|6556|  
-|TM_NaiveBayes|Bike Buyer|1|6383|  
+|TM_NaiveBayes|Покупатель велосипеда|Missing|0|  
+|TM_NaiveBayes|Покупатель велосипеда|0|6556|  
+|TM_NaiveBayes|Покупатель велосипеда|1|6383|  
   
 ## <a name="see-also"></a>См. также:  
  [ВЫБОР &#40;&#41;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ](../dmx/select-dmx.md)   
  [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41;](../dmx/dmx-statements-data-manipulation.md)   
- [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

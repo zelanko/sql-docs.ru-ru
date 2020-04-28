@@ -16,10 +16,10 @@ ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0797b8fe4a2ba496b28f0c347eb5349e77e91e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762762"
 ---
 # <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default (Transact-SQL)
@@ -42,13 +42,13 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
   
 `[ @agent_type = ] 'agent_type'`Тип агента. *agent_type* имеет **тип int**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Агент моментальных снимков.|  
 |**2**|Агент чтения журнала.|  
-|**3-5**|Агент распространителя.|  
+|**3**|Агент распространителя.|  
 |**4**|Агент слияния.|  
-|**8**|Агент чтения очереди.|  
+|**9**|Агент чтения очереди.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -60,6 +60,6 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **replmonitor** могут выполнять **sp_help_agent_default**.  
   
 ## <a name="see-also"></a>См. также:  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

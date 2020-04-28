@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d7fe788192aac7f7bd3e4723b615391c5d8c6e86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811517"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
@@ -56,26 +56,26 @@ sys.dm_db_index_physical_stats (
   
 ## <a name="arguments"></a>Аргументы  
  *database_id* | NULL | 0 | ПАРАМЕТРЫ  
- Идентификатор базы данных. *database_id* имеет **smallint**. Допустимыми входными значениями являются идентификатор базы данных, NULL, 0 или DEFAULT. Значение по умолчанию равно 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.  
+ Идентификатор базы данных. *database_id* имеет **smallint**. Допустимыми входными значениями являются идентификатор базы данных, NULL, 0 или DEFAULT. Значение по умолчанию — 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.  
   
  Укажите значение NULL, чтобы вернуть сведения для всех баз данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если для *database_id*указано значение null, необходимо также указать значение null для *object_id*, *index_id*и *partition_number*.  
   
  Может быть указана встроенная функция [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Если функция DB_ID используется без указания имени базы данных, то уровень совместимости текущей базы данных должен быть равен 90 или выше.  
   
  *object_id* | NULL | 0 | ПАРАМЕТРЫ  
- Идентификатор объекта таблицы или представления, имеющего индекс. *object_id* имеет **тип int**.  
+ Идентификатор объекта таблицы или представления, имеющего индекс. *object_id* имеет тип **int**.  
   
- Допустимыми входными значениями являются идентификатор таблицы, NULL, 0 или DEFAULT. Значение по умолчанию равно 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]В допустимые входные данные также включают имя очереди компонента Service Broker или имя внутренней таблицы очереди. Когда применяются параметры по умолчанию (т. е. все объекты, все индексы и т. д.), сведения о фрагментации для всех очередей включаются в результирующий набор.  
+ Допустимыми входными значениями являются идентификатор таблицы, NULL, 0 или DEFAULT. Значение по умолчанию — 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]В допустимые входные данные также включают имя очереди компонента Service Broker или имя внутренней таблицы очереди. Когда применяются параметры по умолчанию (т. е. все объекты, все индексы и т. д.), сведения о фрагментации для всех очередей включаются в результирующий набор.  
   
  Укажите значение NULL, чтобы вернуть данные для всех таблиц и представлений в указанной базе данных. Если для *object_id*указано значение null, необходимо также указать значение null для *index_id* и *partition_number*.  
   
  *index_id* | 0 | NULL | -1 | ПАРАМЕТРЫ  
- Идентификатор индекса. *index_id* имеет **тип int**. Допустимые входные данные — это ИДЕНТИФИКАЦИОНный номер индекса, 0, если *object_id* является КУЧЕЙ, null,-1 или ЗНАЧЕНИЕМ по умолчанию. Значение по умолчанию —-1. Значения NULL,-1 и DEFAULT являются эквивалентными значениями в этом контексте.  
+ Идентификатор индекса. *index_id* имеет **тип int**. Допустимые входные данные — это ИДЕНТИФИКАЦИОНный номер индекса, 0, если *object_id* является КУЧЕЙ, null,-1 или ЗНАЧЕНИЕМ по умолчанию. Значение по умолчанию — -1. Значения NULL,-1 и DEFAULT являются эквивалентными значениями в этом контексте.  
   
  Укажите значение NULL, чтобы вернуть данные для всех индексов базовой таблицы или представления. Если для *index_id*указано значение null, необходимо также указать значение null для *partition_number*.  
   
  *partition_number* | NULL | 0 | ПАРАМЕТРЫ  
- Номер секции в объекте. *partition_number* имеет **тип int**. Допустимыми входными значениями являются *partion_number* индекса, КУЧИ, null, 0 или Default. Значение по умолчанию равно 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.  
+ Номер секции в объекте. *partition_number* имеет **тип int**. Допустимыми входными значениями являются *partion_number* индекса, КУЧИ, null, 0 или Default. Значение по умолчанию — 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.  
   
  Чтобы получить сведения обо всех секциях объекта, укажите значение NULL.  
   
@@ -86,15 +86,15 @@ sys.dm_db_index_physical_stats (
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|Идентификатор базы данных таблицы или представления.|  
 |object_id|**int**|Идентификатор объекта таблицы или представления, для которых создан индекс.|  
 |index_id|**int**|Идентификатор индекса.<br /><br /> 0 = куча.|  
 |partition_number|**int**|	Номер секции объекта, значения начинаются с 1; для таблицы, представления или индекса.<br /><br /> 1 = несекционированный индекс или куча.|  
-|index_type_desc|**nvarchar (60)**|Описание типа индекса:<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> Индекс СОПОСТАВЛЕНИЯ COLUMNSTORE (внутренний)<br /><br /> Индекс COLUMNSTORE ДЕЛЕТЕБУФФЕР (внутренний)<br /><br /> Индекс COLUMNSTORE ДЕЛЕТЕБИТМАП (внутренний)|  
+|index_type_desc|**nvarchar(60)**|Описание типа индекса:<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> Индекс СОПОСТАВЛЕНИЯ COLUMNSTORE (внутренний)<br /><br /> Индекс COLUMNSTORE ДЕЛЕТЕБУФФЕР (внутренний)<br /><br /> Индекс COLUMNSTORE ДЕЛЕТЕБИТМАП (внутренний)|  
 |hobt_id|**bigint**|Идентификатор кучи или сбалансированного дерева индекса или секции.<br /><br /> Помимо возврата hobt_id определяемых пользователем индексов, это также возвращает hobt_id внутренних индексах columnstore.|  
-|alloc_unit_type_desc|**nvarchar (60)**|Описание типа единицы распределения:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> Единица распределения LOB_DATA содержит данные, которые хранятся в столбцах типа **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** и **XML**. Дополнительные сведения см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> Единица распределения ROW_OVERFLOW_DATA содержит данные, которые хранятся в столбцах типа **varchar (n)**, **nvarchar (n)**, **varbinary (n)** и **sql_variant** , которые были переданы вне строки.|  
+|alloc_unit_type_desc|**nvarchar(60)**|Описание типа единицы распределения:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> Единица распределения LOB_DATA содержит данные, которые хранятся в столбцах типа **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** и **XML**. Дополнительные сведения см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> Единица распределения ROW_OVERFLOW_DATA содержит данные, которые хранятся в столбцах типа **varchar (n)**, **nvarchar (n)**, **varbinary (n)** и **sql_variant** , которые были переданы вне строки.|  
 |index_depth|**tinyint**|Количество уровней индекса.<br /><br /> 1 = куча или единица распределения LOB_DATA или ROW_OVERFLOW_DATA.|  
 |index_level|**tinyint**|Текущий уровень индекса.<br /><br /> 0 для конечного уровня индекса, для кучи и единиц распределения LOB_DATA или ROW_OVERFLOW_DATA.<br /><br /> Значения больше 0 соответствуют неконечным уровням индекса. *index_level* будет самым высоким по отношению к корневому уровню индекса.<br /><br /> Неконечные уровни индексов обрабатываются только в том случае, если *mode* = Detailed.|  
 |avg_fragmentation_in_percent|**float**|Логическая фрагментация для индексов или фрагментация экстентов для куч в единице распределения IN_ROW_DATA.<br /><br /> Значение измеряется в процентах и учитывает несколько файлов. Определения логической фрагментации и фрагментации экстентов см. в разделе «Замечания».<br /><br /> 0 для единиц распределения LOB_DATA и ROW_OVERFLOW_DATA.<br /><br /> Значение NULL для куч, если *mode* = SAMPLED.|  
@@ -110,8 +110,8 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Средний размер записи в байтах.<br /><br /> Для индекса средний размер записи применяется к текущему уровню сбалансированного дерева в единице распределения IN_ROW_DATA.<br /><br /> Для кучи — средний размер записи в единице распределения IN_ROW_DATA.<br /><br /> Для единиц распределения LOB_DATA или ROW_OVERFLOW_DATA — средний размер записи во всей единице распределения.<br /><br /> NULL, если *mode* = Limited.|  
 |forwarded_record_count|**bigint**|Количество записей в куче, содержащих указатели на данные в других местах. (Такое состояние возникает во время обновления, когда не хватает места для сохранения новой строки в исходном расположении.)<br /><br /> NULL для любой единицы распределения, отличающейся от единиц распределения IN_ROW_DATA для кучи.<br /><br /> Значение NULL для куч, если *mode* = Limited.|  
 |compressed_page_count|**bigint**|Количество сжатых страниц.<br /><br /> Вновь выделенные для куч страницы не сжаты с использованием сжатия PAGE. Куча — это СТРАНИЦА, сжимаемая при наступлении двух особых условий: при массовом импорте данных или при перестройке кучи. Типичные операции DML, которые вызывают выделение страниц, не связаны со сжатием PAGE. Перестройте кучу, если значение compressed_page_count увеличивается сверх желательного порога.<br /><br /> Для таблиц с кластеризованным индексом значение compressed_page_count указывает эффективность сжатия страниц.|  
-|hobt_id|bigint|**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)],.<br /><br /> Только для индексов columnstore это идентификатор набора строк, который отслеживает внутренние данные columnstore для секции. Наборы строк хранятся в виде куч данных или двоичных деревьев. Они имеют тот же идентификатор индекса, что и родительский индекс columnstore. Дополнительные сведения см. в разделе [sys. internal_partitions &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL, если|  
-|column_store_delete_buffer_state|tinyint;|**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)],.<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN;<br /><br /> 2 = СТОК<br /><br /> 3 = ОЧИСТКА<br /><br /> 4 = СНЯТИЕ С УЧЕТА<br /><br /> 5 = ГОТОВО|  
+|hobt_id|BIGINT|**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)],.<br /><br /> Только для индексов columnstore это идентификатор набора строк, который отслеживает внутренние данные columnstore для секции. Наборы строк хранятся в виде куч данных или двоичных деревьев. Они имеют тот же идентификатор индекса, что и родительский индекс columnstore. Дополнительные сведения см. в разделе [sys. internal_partitions &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL, если|  
+|column_store_delete_buffer_state|tinyint|**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)],.<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN;<br /><br /> 2 = СТОК<br /><br /> 3 = ОЧИСТКА<br /><br /> 4 = СНЯТИЕ С УЧЕТА<br /><br /> 5 = ГОТОВО|  
 |column_store_delete_buff_state_desc||**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)],.<br /><br /> Недопустимый — родительский индекс не является индексом columnstore.<br /><br /> Это используется с помощью открытых и удаляемых сканеров.<br /><br /> Сток — удаляются, но сканеры все еще используют его.<br /><br /> Очистка буфера закрывается, а строки в буфере записываются в точечный рисунок удаления.<br /><br /> Снятие с учета-строки в закрытом буфере удаления записываются в битовую карту удаления, но буфер не был усечен, так как сканеры все еще используют его. Новым сканерам не нужно использовать буфер снятия с учета, поскольку достаточно свободного места в открытом буфере.<br /><br /> Готово — этот буфер удаления готов к использованию.|  
   
 ## <a name="remarks"></a>Remarks  
@@ -194,7 +194,7 @@ GO
   
 -   Использование инструкции ALTER INDEX REORGANIZE, заменившей DBCC INDEXDEFRAG, для переупорядочения страниц индекса конечного уровня в логическом порядке. Так как эта операция выполняется в режиме «в сети», во время выполнения инструкции индекс доступен. Кроме того, операция может быть прервана без потери уже выполненной работы. Недостатком этого метода является то, что он не так хорошо выполняет реорганизацию данных, как операция перестроения индекса, и не обновляет статистику.  
   
--   Использование инструкции ALTER INDEX REBUILD, заменившей DBCC DBREINDEX, для перестроения индекса, как «в сети», так и в режиме «вне сети». Дополнительные сведения см. в разделе [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+-   Использование инструкции ALTER INDEX REBUILD, заменившей DBCC DBREINDEX, для перестроения индекса, как «в сети», так и в режиме «вне сети». Дополнительные сведения см. в разделе [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).  
   
  Фрагментация сама по себе не является достаточной причиной реорганизации или перестроения индекса. Основной эффект фрагментации заключается в том, что она замедляет упреждающее чтение во время просмотра индекса. В результате этого увеличивается время ответа. Если запрос к фрагментированным таблице или индексу не предусматривает просмотра, потому что в основном выполняются единичные уточняющие запросы, устранение фрагментации может не дать никакого эффекта.
   
@@ -264,7 +264,7 @@ GO
   
 ```  
   
-### <a name="b-returning-information-about-a-heap"></a>Б. Возврат сведений о куче  
+### <a name="b-returning-information-about-a-heap"></a>Б) Возврат сведений о куче  
  В следующем примере возвращается вся статистика для кучи `dbo.DatabaseLog` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Так как таблица содержит данные типа LOB, кроме строки, возвращаемой для единицы распределения `LOB_DATA`, хранящей страницы данных кучи, возвращается строка для единицы распределения `IN_ROW_ALLOCATION_UNIT`. Для выполнения этого запроса необходимо по крайней мере разрешение CONTROL на таблицу `dbo.DatabaseLog`.  
   
 ```  
@@ -410,7 +410,7 @@ FROM sys.dm_db_index_physical_stats (db_id(),
   
 ||  
 |-|  
-|**Применимо к** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]с до.|  
+|**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  В следующих примерах показано, как выполнять запросы к очередям брокера сервера для фрагментации.  
   
@@ -424,7 +424,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с индексами &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   

@@ -10,10 +10,10 @@ ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 899070b1405b031e919f50a6d16bc5d6df3adf3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68222219"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Начало работы с SSMA для консоли Access (Акцесстоскл)
@@ -52,11 +52,11 @@ ms.locfileid: "68222219"
   
 Цветовая интерпретация выходных данных консоли в следующей таблице:  
   
-|Color|Description|  
+|Color|Описание|  
 |---------|---------------|  
 |Красный|Неустранимая ошибка во время выполнения|  
 |Серый|Отметка даты и времени, сообщение пользователю|  
-|Белый|Команды файла сценария, тип сообщения|  
+|White|Команды файла сценария, тип сообщения|  
 |Желтый|Предупреждение|  
 |Зеленый|Запрос на ввод данных пользователем|  
 |Цвет|Начало, окончание и результат операции|  

@@ -19,10 +19,10 @@ ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68255602"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
@@ -44,15 +44,15 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |атрибут|**varchar (128)**|Имя атрибута, ассоциированного с этим планом. В таблице ниже приведен список возможных атрибутов, их типов данных и их описания.|  
-|value|**sql_variant**|Значение атрибута, ассоциированного с этим планом.|  
+|значение|**sql_variant**|Значение атрибута, ассоциированного с этим планом.|  
 |is_cache_key|**bit**|Указывает, используется ли атрибут в качестве части ключа уточняющего запроса к кэшу для плана.|  
 
 В приведенной выше таблице **атрибут** может иметь следующие значения:
 
-|attribute|Тип данных|Description|  
+|Атрибут|Тип данных|Описание|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Показывает значения параметров, с использованием которых был скомпилирован план.|  
 |objectid|**int**|Одно из основных ключевых слов, используемое для поиска объекта в кэш-памяти. Это идентификатор объекта, хранящийся в [представлении sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) для объектов базы данных (процедуры, представления, триггеры и т. д.). Для планов типа «Нерегламентированный» или «Подготовленный» — это внутренний хэш текста пакета.|  
@@ -107,7 +107,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |ResyncQuery<br /><br /> Указывает, что запрос был направлен внутренней системной хранимой процедурой.|2048|  
 |ARITH_ABORT|4096|  
 |NUMERIC_ROUNDABORT|8192|  
-|DATEFIRST|16 384|  
+|DATEFIRST|16384|  
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> Указывает, что параметру базы данных PARAMETERIZATION присвоено значение FORCED при компиляции плана.|131072|  
@@ -136,7 +136,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |STATIC|2048|  
 |FAST_FORWARD|4096|  
 |IN PLACE|8192|  
-|FOR *select_statement*|16 384|  
+|FOR *select_statement*|16384|  
   
 ## <a name="examples"></a>Примеры  
   
@@ -152,7 +152,7 @@ FROM sys.dm_exec_plan_attributes(<plan_handle>);
 GO  
 ```  
   
-### <a name="b-returning-the-set-options-for-compiled-plans-and-the-sql-handle-for-cached-plans"></a>Б. Возврат параметров SET для скомпилированных планов и дескриптора SQL для планов в кэш-памяти  
+### <a name="b-returning-the-set-options-for-compiled-plans-and-the-sql-handle-for-cached-plans"></a>Б) Возврат параметров SET для скомпилированных планов и дескриптора SQL для планов в кэш-памяти  
  Следующий пример возвращает значение, представляющее параметры, с использованием которых был скомпилирован план. Кроме того, возвращается дескриптор SQL для всех кэшированных планов.  
   
 ```sql  
@@ -167,11 +167,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
- [sys. databases &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys. Objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

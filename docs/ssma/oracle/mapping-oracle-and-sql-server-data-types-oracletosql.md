@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: e5f14f79c355317f5e5d7a047b2d2c1ca71a4acb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262961"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Сопоставление типов данных Oracle и SQL Server (OracleToSQL)
@@ -87,7 +87,7 @@ SSMA имеет набор сопоставлений типов данных п
   
         Унаследованные сопоставления удалить нельзя. Однако унаследованные сопоставления переопределяются пользовательскими сопоставлениями для определенного объекта или категории объектов.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
 Следующим шагом процесса миграции является [Создание отчета оценки](assessing-oracle-schemas-for-conversion-oracletosql.md) или [Преобразование объектов базы данных Oracle в SQL Server синтаксис](converting-oracle-schemas-oracletosql.md). При создании отчета об оценке объекты Oracle автоматически преобразуются во время оценки.  
   
 ## <a name="see-also"></a>См. также:  

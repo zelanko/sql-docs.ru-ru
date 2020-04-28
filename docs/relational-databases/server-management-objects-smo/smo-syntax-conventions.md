@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6e5c8f9d87fe511964d5657c57c70fe4379225e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148566"
 ---
 # <a name="smo-syntax-conventions"></a>Синтаксические обозначения в SMO
@@ -28,11 +28,11 @@ ms.locfileid: "70148566"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Условные обозначения управляющих объектов (SMO) основаны на тех, [!INCLUDE[msCoName](../../includes/msconame-md.md)] которые используются в справочных материалах по Visual Studio .NET.  
   
-|Соглашение|Область использования|  
+|Обозначение|Используется для|  
 |----------------|--------------|  
 |Прописные буквы|Инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], имена макросов и термины, используемые на уровне операционной системы; имена файлов в тексте.|  
 |`monospace`|Образцы командных строк и программного кода.|  
 |*курсив*|Переменные в тексте, формулы в тексте или термины, определенные в тексте. Буквы, выделенные в синтаксисе курсивом, обозначают заполнители для предоставляемых пользователем сведений.|  
-|**делять**|Объекты SMO, события, методы или свойства; термины программирования в тексте.|  
+|**полужирный**|Объекты SMO, события, методы или свойства; термины программирования в тексте.|  
   
   

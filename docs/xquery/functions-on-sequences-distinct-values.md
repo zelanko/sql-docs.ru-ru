@@ -16,10 +16,10 @@ ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d2f856c9b351c776651f08e66f90c7f567a5dcfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68223737"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>Функции с последовательностями — distinct-values
@@ -48,7 +48,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>A. Использование функции distinct-values() для удаления из последовательности повторяющихся значений  
+### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>А) Использование функции distinct-values() для удаления из последовательности повторяющихся значений  
  В этом примере экземпляр XML, содержащий телефонные номера, назначается переменной типа **XML** . В языке XQuery, указанном для этой переменной, используется функция **distinct-values ()** для компиляции списка телефонных номеров, которые не содержат дубликатов.  
   
 ```  

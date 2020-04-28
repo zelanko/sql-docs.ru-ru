@@ -16,10 +16,10 @@ ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5ca3487a22989261f0d6039f065ae0c102e534a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770868"
 ---
 # <a name="sp_replsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
@@ -52,6 +52,6 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
  Только члены предопределенной роли сервера **sysadmin** на издателе, члены предопределенной роли базы данных **db_owner** в базе данных публикации или пользователи из списка доступа к публикации (PAL) могут выполнять **sp_replsetoriginator**.  
   
 ## <a name="see-also"></a>См. также:  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

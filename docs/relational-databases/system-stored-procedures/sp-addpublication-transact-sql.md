@@ -16,10 +16,10 @@ ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e6e7232d718d5cf6cb1791783f105f31dc2f4ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769102"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
@@ -91,19 +91,19 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@sync_method = ] _'sync_method'`Режим синхронизации. *sync_method* имеет тип **nvarchar (13)** и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|**собственной**|Производит выходные данные программы массового копирования всех таблиц. *Не поддерживается для издателей Oracle*.|  
+|**native**|Производит выходные данные программы массового копирования всех таблиц. *Не поддерживается для издателей Oracle*.|  
 |**символов**|Производит выходные данные программы массового копирования всех таблиц в символьном режиме. _Для издателя Oracle_ **символ** _допустим только для репликации моментальных снимков_.|  
 |**одновременных**|Создает собственный программный вывод массового копирования всех таблиц, но не блокирует таблицы во время формирования моментальных снимков. Поддерживается только для публикаций транзакций. *Не поддерживается для издателей Oracle*.|  
 |**concurrent_c**|Создает символьный программный вывод массового копирования всех таблиц, но не блокирует таблицы во время формирования моментальных снимков. Поддерживается только для публикаций транзакций.|  
-|**моментальный снимок базы данных**|Производит выходные данные программы массового копирования всех таблиц в моментальном снимке базы данных. Моментальные снимки базы данных доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
-|**database snapshot character**|Производит выходные данные программы массового копирования в символьном режиме всех таблиц в моментальном снимке базы данных. Моментальные снимки базы данных доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
-|NULL (по умолчанию)|По умолчанию **** используется Native [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для издателей. Для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от, по умолчанию используется **символьный** , если значение *repl_freq* — **snapshot** , а для **Concurrent_c** во всех остальных случаях.|  
+|**моментальный снимок базы данных**|Производит выходные данные программы массового копирования всех таблиц в моментальном снимке базы данных. Моментальные снимки базы данных доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживаемых различными выпусками, см. [в разделе функции, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
+|**database snapshot character**|Производит выходные данные программы массового копирования в символьном режиме всех таблиц в моментальном снимке базы данных. Моментальные снимки базы данных доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживаемых различными выпусками, см. [в разделе функции, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
+|NULL (по умолчанию)|По умолчанию **native** используется Native [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для издателей. Для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от, по умолчанию используется **символьный** , если значение *repl_freq* — **snapshot** , а для **Concurrent_c** во всех остальных случаях.|  
   
 `[ \@repl_freq = ] 'repl_freq'`Тип частоты репликации, *repl_freq* — **nvarchar (10)** и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Непрерывная** (по умолчанию)|Издатель предоставляет выходные данные всех транзакций, записываемых в журнал. Для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, не относящихся к, это требует, чтобы для *sync_method* было установлено значение **Concurrent_c**.|  
 |**обновляем**|Издатель предоставляет только запланированные события синхронизации. Для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от, это требует, чтобы *sync_method* были установлены в **символьный**.|  
@@ -112,9 +112,9 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@status = ] 'status'`Указывает, доступны ли данные публикации. *Status* имеет значение **nvarchar (8)** и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|**Active**|Публикация доступна подписчикам немедленно.|  
+|**active**|Публикация доступна подписчикам немедленно.|  
 |**неактивен** (по умолчанию)|Публикация не доступна для подписчиков при создании (они могут подписаться, но эти подписки не обрабатываются).|  
   
  *Не поддерживается для издателей Oracle*.  
@@ -135,10 +135,10 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@autogen_sync_procs = ] 'autogen_sync_procs'`Указывает, формируется ли на издателе синхронизированная хранимая процедура для обновляемых подписок. *autogen_sync_procs* имеет тип **nvarchar (5)** и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|**условия**|Устанавливается автоматически, если включена обновляемая подписка.|  
-|**IsFalse**|Устанавливается автоматически для издателей Oracle или если обновляемая подписка выключена.|  
+|**true**|Устанавливается автоматически, если включена обновляемая подписка.|  
+|**false**|Устанавливается автоматически для издателей Oracle или если обновляемая подписка выключена.|  
 |NULL (по умолчанию)|По умолчанию имеет **значение true** , если обновляемые подписки включены, и **значение false** , если обновление подписок не включено.|  
   
 > [!NOTE]  
@@ -176,7 +176,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@conflict_policy = ] 'conflict_policy'`Указывает политику разрешения конфликтов, после чего используется параметр подписчика, обновляемого посредством очередей. *conflict_policy* имеет тип **nvarchar (100)** со ЗНАЧЕНИЕМ по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**pub wins**|Разрешение конфликта в пользу издателя.|  
 |**sub reinit**|Повторная инициализация подписки.|  
@@ -191,9 +191,9 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@queue_type = ] 'queue_type'`Указывает, какой тип очереди используется. *queue_type* имеет тип **nvarchar (10)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|**sql**|Для хранения транзакций используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**SQL**|Для хранения транзакций используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |NULL (по умолчанию)|По умолчанию используется значение **SQL**, которое указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , что следует использовать для хранения транзакций.|  
   
 > [!NOTE]  
@@ -214,10 +214,10 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'`Указывает, могут ли подписчики инициализировать подписку на эту публикацию из резервной копии, а не из исходного моментального снимка. *allow_initialize_from_backup* имеет тип **nvarchar (5)** и может принимать одно из следующих значений:  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|**условия**|Включает инициализацию из резервной копии.|  
-|**IsFalse**|Отключает инициализацию из резервной копии.|  
+|**true**|Включает инициализацию из резервной копии.|  
+|**false**|Отключает инициализацию из резервной копии.|  
 |NULL (по умолчанию)|По умолчанию **имеет значение true** для публикации в одноранговой топологии репликации и **значение false** для всех остальных публикаций.|  
   
  Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
@@ -337,6 +337,6 @@ sp_addpublication [ @publication = ] 'publication'
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [Публикация данных и объектов базы данных](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

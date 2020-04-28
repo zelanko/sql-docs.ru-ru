@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811226"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Репликация на подписчиков оптимизированных для памяти таблиц
@@ -303,7 +303,7 @@ GO
   
 -   Внешний ключ, ограничение уникальности, триггеры, изменения схемы, ROWGUIDCOL, вычисляемые столбцы, сжатие данных, псевдонимы типов данных, управление версиями и блокировки не поддерживаются в оптимизированных для памяти таблицах. Сведения см. в разделе [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) .  
   
-##  <a name="Schema"></a>Изменение файла схемы  
+##  <a name="modifying-a-schema-file"></a><a name="Schema"></a>Изменение файла схемы  
   
 -   Кластеризованные индексы не поддерживаются. Измените любые кластеризованные индексы на некластеризованные индексы.  
   
@@ -313,10 +313,10 @@ GO
   
 -   Параметр ANSI_PADDING должен быть установлен в значение ON.  
   
-##  <a name="PrimaryKey"></a>Репликация изменений в первичный ключ  
+##  <a name="replicating-changes-to-a-primary-key"></a><a name="PrimaryKey"></a>Репликация изменений в первичный ключ  
  Первичный ключ оптимизированной для памяти таблицы нельзя обновить. Для репликации обновлений первичного ключа на подписчике измените хранимую процедуру обновления так, чтобы обновления доставлялись в виде пары удаления и вставки.  
   
 ## <a name="see-also"></a>См. также:  
- [Репликация SQL Server](sql-server-replication.md)  
+ [Репликация SQL Server](sql-server-replication.md)  
   
   

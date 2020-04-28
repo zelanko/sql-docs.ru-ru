@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f373f626d778c4d77ec5843dca5bb11da728451d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68887445"
 ---
 # <a name="value-mdx"></a>Value (многомерные выражения)
@@ -57,6 +57,6 @@ from [Adventure Works]
  [Свойства &#40;&#41;многомерных выражений](../mdx/properties-mdx.md)   
  [Имя &#40;&#41;многомерных выражений](../mdx/name-mdx.md)   
  [Уникальное &#40;&#41;многомерных выражений](../mdx/uniquename-mdx.md)   
- [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

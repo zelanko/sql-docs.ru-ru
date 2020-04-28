@@ -18,10 +18,10 @@ ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 660a75f1e6fea9b5a825372501c2e65f2dd3874b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69652439"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "69652439"
 
   Компилирует план для переданной инструкции или пакета курсора, после чего создает и заполняет курсор. sp_cursorprepexec объединяет функции sp_cursorprepare и sp_cursorexecute. Эта процедура вызывается путем указания ID = 5 в пакете потока табличных данных (TDS).  
   
- ![значок ссылки](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки") [синтаксические обозначения синтаксиса Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,7 +44,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *подготовленный обработчик*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Созданный идентификатор подготовленного *обработчика* . *подготовленный обработчик* является обязательным и возвращает значение **int**.  
   
- *набора*  
+ *курсор*  
  Идентификатор курсора, созданный [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *курсор* — это обязательный параметр, который должен быть указан во всех последующих процедурах, действующих для данного курсора, например sp_cursorfetch.  
   
  *params*  
@@ -59,17 +59,17 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 > [!NOTE]  
 >  Правила указания значения stmt те же, что и для sp_cursoropen, за исключением того, что строкой типа данных *stmt* должен быть **ntext**.  
   
- *Параметры*  
+ *options*  
  Необязательный параметр, возвращающий описание столбцов результирующего набора курсора. * для параметров требуется следующее входное значение **int** .  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  Параметр прокрутки. *scrollopt* — это необязательный параметр, для которого требуется одно из следующих входных значений **int** .  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -91,7 +91,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *ccopt*  
  Параметр управления параллелизмом. *ccopt* — это необязательный параметр, для которого требуется одно из следующих входных значений **int** .  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (прежнее название — LOCKCC)|  
@@ -105,7 +105,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISTIC_ACCEPTABLE|  
   
- Как и ** в случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с скроллпт, может присвоить значение, отличное от запрошенного.  
+ Как и *scrollpt*в случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с скроллпт, может присвоить значение, отличное от запрошенного.  
   
  *количества*  
  Необязательный параметр, который указывает число строк буфера выборки, которые будут использоваться с AUTO_FETCH. Значение по умолчанию составляет 20 строк. При назначении в качестве входного значения и возвращаемого значения *ROWCOUNT* ведет себя иначе.  
@@ -124,4 +124,4 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
  [sp_cursorprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
  [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

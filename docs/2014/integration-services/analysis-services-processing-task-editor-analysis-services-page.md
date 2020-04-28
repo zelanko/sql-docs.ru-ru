@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890369"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Редактор задачи «Обработка средствами Analysis Services» (страница «Средства Analysis Services»)
@@ -43,13 +43,13 @@ ms.locfileid: "68890369"
  **Создать**  
  Создайте новый диспетчер соединений служб Analysis Services.  
   
- **См. также:** [Диспетчер соединений Analysis Services](connection-manager/analysis-services-connection-manager.md), [диалоговое окно "Добавление диспетчера соединений Analysis Services" Справочник по пользовательскому интерфейсу](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **См. также:** [Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md), [Добавление диалогового окна "Диспетчер соединений со службами Analysis Services" в справочник по пользовательскому интерфейсу](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Список объектов**  
- |Свойство|Description|  
+ |Свойство|Описание|  
 |--------------|-----------------|  
 |**Имени объекта**|Позволяет отобразить список имен заданных объектов.|  
-|**Тип**|Позволяет отобразить список типов заданных объектов.|  
+|**Type**|Позволяет отобразить список типов заданных объектов.|  
 |**Параметры обработки**|Выберите из списка параметр обработки.<br /><br /> **См. также**: [Обработка объектов многомерной модели](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Параметры**|Позволяет отобразить список настроек обработки для заданных объектов.|  
   
@@ -62,10 +62,10 @@ ms.locfileid: "68890369"
  **Анализ влияния**  
  Выполните анализ влияния на выбранный объект.  
   
- **См. также:** [диалоговое окно "анализ влияния" &#40;Analysis Services многомерных данных&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **См. также:** [Диалоговое окно "Анализ влияния" (службы Analysis Services — многомерные данные)](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **Сводка о настройках пакета**  
- |Свойство|Description|  
+ |Свойство|Описание|  
 |--------------|-----------------|  
 |**Порядок обработки**|Позволяет задать, будут ли объекты обрабатываться последовательно или в составе пакета. При использовании параллельной обработки задает количество объектов для одновременной обработки.|  
 |**Режим транзакции**|Позволяет задать режим транзакции для последовательной обработки.|  
@@ -76,7 +76,7 @@ ms.locfileid: "68890369"
  **Изменить параметры**  
  Измените параметры обработки и действия при ошибках в ключах измерения.  
   
- **См. также:** [диалоговое окно "изменение параметров" &#40;Analysis Services многомерных данных&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **См. также:** [Диалоговое окно "Изменение настроек" (службы Analysis Services — многомерные данные)](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

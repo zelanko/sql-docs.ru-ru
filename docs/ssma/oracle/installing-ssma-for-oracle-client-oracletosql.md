@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: fc295e108357040617bf6bdaa1af61fada2c97ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259682"
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>Установка клиента SSMA для Oracle (OracleToSQL)
@@ -70,7 +70,7 @@ SSMA можно загрузить из Интернета. Чтобы скач�
   
 4.  На странице Выбор типа установки выберите вариант **Обычная**.  
   
-5.  Нажмите кнопку **Установить**.  
+5.  Щелкните **Install**(Установить).  
   
 > [!IMPORTANT]  
 > 1.  Удалите все предыдущие версии SSMA для Oracle перед установкой новой версии.  

@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: e0a8e7650534d50c5e5d7c3b02f2857764d9c2ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264644"
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>Выбор и настройка объектов для тестирования (OracleToSQL)
@@ -79,7 +79,7 @@ ms.locfileid: "68264644"
 ## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>Указание входных значений для процедур и функций (вызов значений)  
 Значения входных параметров можно указать на странице **значения вызова** . Кнопка **Добавить вызов** добавляет новый вызов с пустыми значениями параметров. Кнопка **Удалить вызовы** удаляет текущий вызов.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 [Выбор и настройка затронутых объектов &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
 ## <a name="see-also"></a>См. также:  

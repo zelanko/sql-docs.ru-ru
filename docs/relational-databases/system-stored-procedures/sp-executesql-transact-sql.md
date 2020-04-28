@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a548597b42bacdf5afaf7a2dc024156bd4ec3ad3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68290355"
 ---
 # <a name="sp_executesql-transact-sql"></a>Хранимая процедура sp_executesql (Transact-SQL)
@@ -66,7 +66,7 @@ sp_executesql [ @stmt = ] statement
  [ OUT | OUTPUT ]  
  Показывает, что параметр процедуры является выходным. параметры **Text**, **ntext**и **Image** можно использовать в качестве выходных параметров, если только процедура не является процедурой среды CLR. Выходным параметром с ключевым словом OUTPUT может быть заполнитель курсора, если процедура не является процедурой CLR.  
   
- *\n*  
+ *n*  
  Заполнитель для значений дополнительных параметров. Значения могут быть только константами и переменными. Значения не могут представлять собой сложные выражения, такие как функции или выражения, построенные с помощью операторов.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -150,7 +150,7 @@ EXECUTE sp_executesql
           @level = 109;  
 ```  
   
-### <a name="b-executing-a-dynamically-built-string"></a>Б. Выполнение динамически построенной строки  
+### <a name="b-executing-a-dynamically-built-string"></a>Б) Выполнение динамически построенной строки  
  В следующем примере показано использование процедуры `sp_executesql` для выполнения динамически построенной строки. В этом примере хранимая процедура вставляет данные в набор таблиц, использующихся для секционирования данных о продажах по одному году. Для каждого месяца года создается одна таблица следующего формата:  
   
 ```  
@@ -234,7 +234,7 @@ FROM Sales.SalesOrderHeader
 WHERE SalesOrderNumber = @SalesOrderNumber;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-executing-a-simple-select-statement"></a>Г. Выполнение простой инструкции SELECT  
  В следующем примере создается и выполняется простая инструкция `SELECT`, содержащая внедренный параметр с именем `@level`.  
@@ -250,7 +250,7 @@ EXECUTE sp_executesql
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [ВЫПОЛНЕНИЕ &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: fc25c36a0d0133975414f4c7270da2974b552f40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266192"
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>Подключение к базе данных Oracle (OracleToSQL)
@@ -121,7 +121,7 @@ ms.locfileid: "68266192"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
   
 -   Следующим шагом процесса миграции является [Подключение к экземпляру SQL Server](connecting-to-sql-server-oracletosql.md).  
   

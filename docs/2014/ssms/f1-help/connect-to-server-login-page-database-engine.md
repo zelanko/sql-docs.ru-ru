@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2fe246a1f8baf1ab9f60ab1fa73e21e81c052aa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70153705"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>Соединение с сервером (страница "Вход") ядра СУБД
-  Эта вкладка используется для просмотра или указания параметров при соединении [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]с.  
+  Используйте эту вкладку для просмотра или задания параметров при подключении к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 > [!NOTE]  
 >  Для подключения с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен быть сконфигурирован в режиме проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows. Дополнительные сведения о том, как определить режим проверки подлинности и изменить режим проверки подлинности, см. в разделе [изменение режима проверки подлинности сервера](../../database-engine/configure-windows/change-server-authentication-mode.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "70153705"
  **Тип сервера**  
  При регистрации сервера из обозревателя объектов выберите тип сервера для подключения: [!INCLUDE[ssDE](../../includes/ssde-md.md)], службы Analysis Services, службы Reporting Services или службы Integration Services. В остальной части диалогового окна показаны параметры, которые применяются только к выбранному типу сервера. При регистрации сервера c панели "Зарегистрированные серверы" поле **Тип сервера** не может быть изменено и совпадает с типом сервера, показанного в компоненте "Зарегистрированные серверы". Чтобы зарегистрировать другой тип сервера, выберите компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)], службы Analysis Services, службы Reporting Services или службы Integration Services на панели инструментов «Зарегистрированные серверы», прежде чем начать регистрацию нового сервера.  
   
- При [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соединении с экземпляром ядро СУБД с помощью [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]необходимо использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверку подлинности и указать базу данных в диалоговом окне **соединение с сервером** на вкладке **Свойства соединения** . Убедитесь, что установлен флажок **Шифровать соединение** .  
+ При соединении с экземпляром ядра СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]необходимо использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указать базу данных в диалоговом окне **Соединение с сервером** на вкладке **Свойства соединения** . Обязательно установите флажок **Шифрование соединения** .  
   
  По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соединяется с базой данных **master**. Если указать пользовательскую базу данных, то в обозревателе объектов будет видна только эта база данных и ее объекты. Если соединиться с базой данных **master**, будут видны все базы данных. Дополнительные сведения см. в статье [Общие сведения о базе данных SQL Azure](/azure/sql-database/sql-database-technical-overview).  
   
@@ -39,13 +39,12 @@ ms.locfileid: "70153705"
  **Аутентификация**  
  При соединении с экземпляром [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]доступны два режима проверки подлинности.  
   
- При [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соединении с экземпляром ядро СУБД с помощью [!INCLUDE[ssSDS](../../includes/sssds-md.md)]необходимо использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверку подлинности и указать базу данных в диалоговом окне **соединение с сервером** на вкладке **Свойства соединения** . Убедитесь, что установлен флажок **Шифровать соединение** .  
+ При соединении с экземпляром ядра СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через [!INCLUDE[ssSDS](../../includes/sssds-md.md)]необходимо использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указать базу данных в диалоговом окне **Соединение с сервером** на вкладке **Свойства соединения** . Обязательно установите флажок **Шифрование соединения** .  
   
  По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соединяется с базой данных **master**. Если указать пользовательскую базу данных, то в обозревателе объектов будет видна только эта база данных и ее объекты. Если соединиться с базой данных **master**, будут видны все базы данных. Дополнительные сведения см. в статье [Общие сведения о базе данных SQL Azure](/azure/sql-database/sql-database-technical-overview).  
   
  **Режим проверки подлинности Windows (проверка подлинности Windows)**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Режим проверки подлинности Windows позволяет подключаться с учетной записью Windows.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Режим проверки подлинности Windows позволяет подключаться с учетной записью Windows.  
   
  **Проверка подлинности SQL Server**  
  При подключении пользователя с указанным именем входа и паролем не через доверенное соединение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет проверку подлинности самостоятельно по наличию учетной записи входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и совпадения указанного пароля с ранее сохраненным. Если в службе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не задана учетная запись входа, проверка подлинности завершается ошибкой, о которой пользователь получит сообщение.  
@@ -65,7 +64,7 @@ ms.locfileid: "70153705"
  **Запоминание пароля**  
  Выберите, чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохранил введенный пароль. Этот параметр отображается только в том случае, если выбрано подключение с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Подключение**  
+ **Подключить**  
  Нажмите, чтобы подключиться к выбранному выше серверу.  
   
  **Параметры**  

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b2b6f88e857ab7fc6300698174914126fb0881f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265726"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68265726"
 > [!NOTE]
 > Чтобы вызвать это динамическое [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] административное представление из или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys. dm_pdw_nodes_os_nodes**.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|Идентификатор узла.|  
 |node_state_desc|**nvarchar(256)**|Описание состояния узла. Сначала отображаются взаимоисключающие значения, затем все их комбинации. Пример:<br /> «В сети», «Недостаток ресурсов потоков», «Отложенный с вытеснением»<br /><br />Существует четыре взаимоисключающих node_state_desc значений. Ниже перечислены их описания.<br /><ul><li>В сети: узел находится в режиме "в сети"<li>ВНЕ сети: узел находится в автономном режиме<li>Бездействие: узел не имеет ожидающих рабочих запросов и перешел в состояние простоя.<li>IDLE_READY: узел не имеет ожидающих рабочих запросов и готов к переходу в состояние простоя.</li></ul><br />Ниже приведены три значения, которые могут быть node_state_desc.<br /><ul><li>DAC: этот узел зарезервирован для [выделенного административного соединения](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: на этом узле невозможно создать новые потоки из-за нехватки памяти.<li>"ГОРЯЧее" Добавление: указывает, что узлы были добавлены в ответ на событие ЦП "горячего" добавления.</li></ul>|  
@@ -68,5 +68,5 @@ ms.locfileid: "68265726"
 
 ## <a name="see-also"></a>См. также:    
  [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [SQL Server &#40;Soft-NUMA&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  
+ [Архитектура Soft-NUMA (SQL Server)](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   

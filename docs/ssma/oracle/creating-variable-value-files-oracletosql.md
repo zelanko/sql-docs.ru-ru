@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 87db0ebd006e2ca87ddc4744a4bbcd396a827712
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266124"
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>Создание файлов переменных значений (OracleToSQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68266124"
   
 **Примеры:**  
   
-**Пример 1:**  
+**Пример 1.**  
   
 ```  
 <!--Sample of variable value file commands-->  
@@ -51,7 +51,7 @@ ms.locfileid: "68266124"
   
 </variables>  
 ```  
-**Пример 2.**  
+**Пример 2:**  
   
 ```  
 <!--Sample of variable value file commands-->  
@@ -87,7 +87,7 @@ ms.locfileid: "68266124"
 </variables>  
 ```  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 Следующий шаг в работе консоли — [Создание файлов подключения к серверу &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
 ## <a name="see-also"></a>См. также:  

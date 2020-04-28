@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
 ms.openlocfilehash: 77aca108aa3acae73dfb3fa226aa0530b6a9b8b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68661284"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Примеры выражений (построитель отчетов и службы SSRS)
@@ -25,13 +25,13 @@ ms.locfileid: "68661284"
 
 В данном разделе приведены примеры выражений, которые можно использовать для решения типичных задач в отчете.  
 
--   [Функции Visual Basic](#VisualBasicFunctions) Примеры для даты, строки, преобразования и условных [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] функций.  
+-   [Функции языка Visual Basic](#VisualBasicFunctions) . Примеры функций дат, строковых функций, функций преобразования и условных функций [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
 
--   [Функции отчетов](#ReportFunctions) Примеры статистических выражений и других встроенных функций отчета.  
+-   [Функции отчета](#ReportFunctions) Примеры статистических функций и других встроенных функций отчета.  
 
 -   [Внешний вид данных отчета](#AppearanceofReportData) Примеры изменения внешнего вида отчета.  
 
--   [Свойства](#Properties) Примеры настройки свойств элементов отчета для управления форматом или видимостью.  
+-   [Свойства](#Properties) Примеры задания свойств элемента отчета, отвечающих за формат и видимость.  
 
 -   [Параметры](#Parameters) Примеры использования параметров в выражении.  
 
@@ -39,9 +39,9 @@ ms.locfileid: "68661284"
 
 Примеры выражений для специальных задач см. в следующих разделах.  
 
--   [Примеры выражений групп &#40;построитель отчетов и службы SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [Примеры выражений групп (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)  
 
--   [Примеры уравнений фильтра &#40;построитель отчетов и SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](filter-equation-examples-report-builder-and-ssrs.md)  
 
 -   [Часто используемые фильтры (построитель отчетов и службы SSRS)](commonly-used-filters-report-builder-and-ssrs.md)  
 
@@ -57,7 +57,7 @@ ms.locfileid: "68661284"
 
 Многие выражения в отчете содержат вызовы функций. Они позволяют форматировать данные, применять логические операции и производить доступ к метаданным отчета. Можно написать выражения, использующие [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] функции из библиотеки времени выполнения, а также из пространств имен <xref:System.Convert> и. <xref:System.Math> Можно добавить ссылки на функции из других сборок или пользовательский код. Можно также использовать классы из [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], включая <xref:System.Text.RegularExpressions>.  
 
-###  <a name="VisualBasicFunctions"></a>Функции Visual Basic  
+###  <a name="visual-basic-functions"></a><a name="VisualBasicFunctions"></a> Функции языка Visual Basic  
 Функции языка [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] позволяют управлять данными, отображаемыми в текстовых полях, или используются в параметрах, свойствах и других областях отчета. В этом разделе приведены примеры, демонстрирующие применение некоторых из этих функций. Дополнительные сведения см. в разделе [Компоненты библиотеки времени выполнения Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) в MSDN.  
 
 Платформа [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предоставляет множество параметров пользовательских форматов, например для конкретных форматов даты. Дополнительные сведения см. в статье [Типы форматирования](https://go.microsoft.com/fwlink/?LinkId=112024) на веб-сайте MSDN.  
@@ -76,7 +76,7 @@ ms.locfileid: "68661284"
 = Round(1.3*5)/5  
 ```  
 
-####  <a name="DateFunctions"></a>Функции даты  
+####  <a name="date-functions"></a><a name="DateFunctions"></a>Функции даты  
 
 -   Функция `Today` возвращает текущую дату. Следующее выражение можно указать в текстовом поле для вывода даты формирования отчета или в качестве параметра фильтрации данных на основе текущей даты.  
 
@@ -90,7 +90,7 @@ ms.locfileid: "68661284"
 =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
 ```  
 
--   Функция `Year` отображает год для конкретной даты. Это можно использовать для группирования по датам или для вывода года в качестве метки для набора дат. Выражение возвращает год для заданной группы дат заказов на продажу. Для работы с датами можно также пользоваться функцией `Month` и другими. Дополнительные сведения см. в документации по [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
+-   Функция `Year` отображает год для конкретной даты. Это можно использовать для группирования по датам или для вывода года в качестве метки для набора дат. Выражение возвращает год для заданной группы дат заказов на продажу. Для работы с датами можно также пользоваться функцией `Month` и другими. Дополнительные сведения см. в документации по [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
 
 ```  
 =Year(Fields!OrderDate.Value)  
@@ -118,8 +118,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 =FORMAT(Fields!SellStartDate.Value, "dd/MM/yyyy")  
 ```  
 
--   Функция `CDate` преобразует это значение в дату. Функция `Now` возвращает значение даты, которое содержит текущую дату и время по часам компьютера. 
-  `DateDiff` возвращает значение типа Long, указывающее число интервалов времени между двумя значениями типа Date.  
+-   Функция `CDate` преобразует это значение в дату. Функция `Now` возвращает значение даты, которое содержит текущую дату и время по часам компьютера. `DateDiff` возвращает значение типа Long, указывающее число интервалов времени между двумя значениями типа Date.  
 
 В следующем примере показана дата начала текущего года  
 
@@ -133,8 +132,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 =DateAdd(DateInterval.Month,DateDiff(DateInterval.Month,CDate("01/01/1900"),Now())-1,CDate("01/01/1900"))  
 ```  
 
--   Следующее выражение создает годы интервала между SellStartDate и LastReceiptDate. Эти поля находятся в разных наборах данных — DataSet1 и DataSet2. 
-  [Функция First (построитель отчетов и службы SSRS)](report-builder-functions-first-function.md), являющаяся агрегатной функцией, возвращает первое значение SellStartDate в DataSet1 и первое значение LastReceiptDate в DataSet2.  
+-   Следующее выражение создает годы интервала между SellStartDate и LastReceiptDate. Эти поля находятся в разных наборах данных — DataSet1 и DataSet2. [Функция First (построитель отчетов и службы SSRS)](report-builder-functions-first-function.md), являющаяся агрегатной функцией, возвращает первое значение SellStartDate в DataSet1 и первое значение LastReceiptDate в DataSet2.  
 
 ```  
 =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -164,7 +162,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 |Год назад|`=DateSerial(Year(Parameters!TodaysDate.Value)-1,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 |Два года назад|`=DateSerial(Year(Parameters!TodaysDate.Value)-2,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 
-####  <a name="StringFunctions"></a>Строковые функции  
+####  <a name="string-functions"></a><a name="StringFunctions"></a>Строковые функции  
 
 -   Объединяют несколько полей с помощью операторов объединения и констант [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Следующее выражение возвращает два поля, каждое на отдельной строке в одном текстовом поле.  
 
@@ -230,7 +228,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
 ```  
 
-####  <a name="ConversionFunctions"></a>Функции преобразования  
+####  <a name="conversion-functions"></a><a name="ConversionFunctions"></a>Функции преобразования  
 Функции [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] можно использовать для преобразования поля из одного типа данных в другой тип данных. Функции преобразования могут использоваться, чтобы преобразовать тип данных по умолчанию для поля в тип данных, необходимый для вычислений или для объединения текста.  
 
 -   Следующее выражение преобразует константу 500 в тип Decimal для сравнения с денежным типом данных [!INCLUDE[tsql](../../includes/tsql-md.md)] в поле Value для выражения фильтра.  
@@ -245,7 +243,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 =CStr(Parameters!MySelection.Count)  
 ```  
 
-####  <a name="DecisionFunctions"></a>Функции принятия решений  
+####  <a name="decision-functions"></a><a name="DecisionFunctions"></a> Функции выбора  
 
 -   Функция `Iif` возвращает одно из двух значений в зависимости от того, истинно ли указанное выражение. В следующем выражении используется функция `Iif`, которая возвращает логическое значение `True`, если значение `LineTotal` превышает 100. В противном случае возвращается значение `False`:  
 
@@ -300,10 +298,10 @@ IIF(Fields!Month.Value=0,"NA",MonthName(IIF(Fields!Month.Value=0,1,Fields!Month.
 
 ```  
 
-###  <a name="ReportFunctions"></a>Функции отчетов  
+###  <a name="report-functions"></a><a name="ReportFunctions"></a> Функции отчета  
 В выражение можно добавить ссылку на дополнительные функции, которые позволяют управлять данными в отчете. В этом разделе приведены примеры использования двух из этих функций. Дополнительные сведения о функциях отчета и примеры см. в разделе [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](report-builder-functions-aggregate-functions-reference.md).  
 
-#####  <a name="Sum"></a>Функции  
+#####  <a name="sum"></a><a name="Sum"></a>Функции  
 
 -   Функция `Sum` суммирует значения в группе или области данных. Она может быть полезна в колонтитулах группы. Следующее выражение отображает сумму данных в группе или области данных Order.  
 
@@ -317,7 +315,7 @@ IIF(Fields!Month.Value=0,"NA",MonthName(IIF(Fields!Month.Value=0,1,Fields!Month.
 =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
 ```  
 
-#####  <a name="RowNumber"></a>RowNumber  
+#####  <a name="rownumber"></a><a name="RowNumber"></a>RowNumber  
 
 -   Если функция `RowNumber` используется в текстовом поле в области данных, то она отображает номер строки для каждого экземпляра текстового поля, в котором содержится это выражение. Эта функция может оказаться полезной для нумерации строк в таблице. Также она может быть полезна для более сложных задач, например для разбивки на страницы по определенному числу строк. Дополнительные сведения см. в подразделе [Разрывы страниц](#PageBreaks) далее в этом разделе.  
 
@@ -327,10 +325,10 @@ IIF(Fields!Month.Value=0,"NA",MonthName(IIF(Fields!Month.Value=0,1,Fields!Month.
 =RowNumber(Nothing)  
 ```  
 
-##  <a name="AppearanceofReportData"></a>Внешний вид данных отчета  
+##  <a name="appearance-of-report-data"></a><a name="AppearanceofReportData"></a> Внешний вид данных отчета  
 Выражения позволяют изменять внешний вид данных, отображаемых в отчете. Например, можно отобразить значения двух полей в одном текстовом поле, вывести сведения об отчете или изменить порядок разбиения на страницы.  
 
-###  <a name="PageHeadersandFooters"></a>Верхние и нижние колонтитулы страницы  
+###  <a name="page-headers-and-footers"></a><a name="PageHeadersandFooters"></a>Верхние и нижние колонтитулы страницы  
 При конструировании отчета может понадобиться вывести в области нижнего колонтитула имя отчета и номер страницы. Для этого воспользуйтесь следующими выражениями.  
 
 -   Следующее выражение выдает имя отчета и время его запуска. Его можно указать в текстовом поле в нижнем колонтитуле или в теле отчета. Время форматируется с помощью строки форматирования [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для короткой даты:  
@@ -370,7 +368,7 @@ IIF(Fields!Month.Value=0,"NA",MonthName(IIF(Fields!Month.Value=0,1,Fields!Month.
 > [!NOTE]  
 >  При ссылке из колонтитула в выражении может быть указан только один элемент отчета. Кроме того, в выражениях верхнего и нижнего колонтитулов можно ссылаться на имя текстового поля, но не использовать выражение фактических данных в текстовом поле.  
 
-###  <a name="PageBreaks"></a>Разрывы страниц  
+###  <a name="page-breaks"></a><a name="PageBreaks"></a> Разрывы страниц  
 В некоторых отчетах может понадобиться возможность вставлять разрывы страниц после вывода указанного количества строк вместо или в дополнение к разрывам, вставляемым по группам или элементам отчета. Для этого создайте группу, содержащую необходимые группы или записи сведений, добавьте к группе разрыв страницы, а затем добавьте выражение группы для группирования по указанному числу строк.  
 
 -   Следующее выражение, будучи указанным в качестве выражения группы, назначает номер каждому набору из 25 строк. Если для этой группы определен разрыв страницы, данное выражение будет выводить его через каждые 25 строк.  
@@ -387,10 +385,10 @@ IIF(Fields!Month.Value=0,"NA",MonthName(IIF(Fields!Month.Value=0,1,Fields!Month.
 
 Дополнительные сведения об установке разрывов страниц см. в разделе [Добавление разрыва страницы (построитель отчетов и службы SSRS)](add-a-page-break-report-builder-and-ssrs.md).  
 
-##  <a name="Properties"></a>Свойства  
+##  <a name="properties"></a>Свойства <a name="Properties"></a>  
 Выражения используются не только для отображения данных в текстовых полях. С их помощью можно также менять свойства элементов отчета. Можно изменить стиль данных или видимость элемента отчета.  
 
-###  <a name="Formatting"></a>Форматирован  
+###  <a name="formatting"></a><a name="Formatting"></a>Форматирован  
 
 -   Следующее выражение при использовании в свойстве Color текстового поля изменяет цвет текста в зависимости от значения поля `Profit` :  
 
@@ -420,7 +418,7 @@ IIF(Fields!Month.Value=0,"NA",MonthName(IIF(Fields!Month.Value=0,1,Fields!Month.
 ### <a name="chart-colors"></a>Цвета диаграммы  
 Чтобы задать цвета в фигурной диаграмме, нужно с помощью пользовательского кода изменить порядок сопоставления цветов со значениями точек данных. Это дает возможность использовать согласованные цвета в нескольких диаграммах, использующих одни и те же группы категорий. Дополнительные сведения см. в разделе [Указание согласованных цветов для нескольких фигурных диаграмм (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md).  
 
-###  <a name="Visibility"></a>Доступности  
+###  <a name="visibility"></a><a name="Visibility"></a>Доступности  
 Изменяя значения свойства видимости, можно скрывать и отображать элементы отчета. В области данных (например, в таблице) можно в зависимости от значения выражения сделать некоторые из строк подробностей изначально невидимыми.  
 
 -   Если указать следующее выражение для определения видимости строк сведений в группе, они отображаются только для продаж со значением более 90% в поле `PctQuota` .  
@@ -441,7 +439,7 @@ IIF(Fields!Month.Value=0,"NA",MonthName(IIF(Fields!Month.Value=0,1,Fields!Month.
 =IIF(Fields!Column_1.IsMissing, true, false)  
 ```  
 
-###  <a name="Hyperlinks"></a>Адрес  
+###  <a name="urls"></a><a name="Hyperlinks"></a>Адрес  
 Можно настраивать URL-адреса с помощью данных отчета, а также управлять добавлением URL-адресов в качестве действий для текстового поля в зависимости от некоторых условий.  
 
 -   Следующее выражение, используемое как действие на текстовом поле, формирует настраиваемый URL-адрес, указывающий поле набора данных `EmployeeID` в качестве параметра URL-адреса.  
@@ -458,10 +456,10 @@ IIF(Fields!Month.Value=0,"NA",MonthName(IIF(Fields!Month.Value=0,1,Fields!Month.
 =IIF(Parameters!IncludeURLs.Value,"http://adventure-works.com/productcatalog",Nothing)  
 ```  
 
-##  <a name="ReportData"></a>Данные отчета  
+##  <a name="report-data"></a><a name="ReportData"></a>Данные отчета  
 С помощью выражений можно управлять данными отчета, например параметрами и другими данными отчета. Можно даже изменить запрос, используемый для получения данных при построении отчета.  
 
-###  <a name="Parameters"></a> Параметры  
+###  <a name="parameters"></a>Параметры <a name="Parameters"></a>  
 В параметрах выражения используются для изменения их значения по умолчанию. Например, можно использовать параметр для фильтрации данных для конкретного пользователя на основе идентификатора пользователя, запускающего отчет.  
 
 -   Следующее выражение, при указании в качестве значения параметра по умолчанию, выбирает идентификатор пользователя, запустившего данный отчет:  
@@ -482,7 +480,7 @@ IIF(Fields!Month.Value=0,"NA",MonthName(IIF(Fields!Month.Value=0,1,Fields!Month.
 =Fields(Parameters!ParameterField.Value).Value  
 ```  
 
-## <a name="CustomCode"></a>Пользовательский код
+## <a name="custom-code"></a><a name="CustomCode"></a> Пользовательский код
 
 В отчете можно использовать пользовательский код. Он либо внедряется в отчет, либо хранится в используемой отчетом пользовательской сборке. Дополнительные сведения о пользовательском коде см. в разделе [Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS)](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
 
@@ -528,8 +526,8 @@ End Function
 
 ## <a name="see-also"></a>См. также:
 
-- [Примеры уравнений фильтра &#40;построитель отчетов и SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)
-- [Примеры выражений групп &#40;построитель отчетов и службы SSRS&#41;](expression-examples-report-builder-and-ssrs.md)
+- [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](filter-equation-examples-report-builder-and-ssrs.md)
+- [Примеры выражений групп (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)
 - [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)
 - [Выражения (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)
 - [Часто используемые фильтры (построитель отчетов и службы SSRS)](commonly-used-filters-report-builder-and-ssrs.md)

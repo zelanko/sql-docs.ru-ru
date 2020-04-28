@@ -15,10 +15,10 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82b906be4568b15a18c55247532bf35b6cd939a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69028898"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Хранимые процедуры пространственного индекса — аргументы и свойства
@@ -321,6 +321,6 @@ ms.locfileid: "69028898"
  [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Основы XQuery](../../xquery/xquery-basics.md)   
- [Справочник по языку XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
+ [Справочник по языку XQuery (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)  
   
   

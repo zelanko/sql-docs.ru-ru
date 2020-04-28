@@ -16,10 +16,10 @@ ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770934"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
@@ -41,15 +41,15 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**name**|**имеет sysname**|Имя базы данных распространителя.|  
+|**name**|**sysname**|Имя базы данных распространителя.|  
 |**min_distretention**|**int**|Минимальный срок хранения транзакций перед удалением (в часах).|  
 |**max_distretention**|**int**|Максимальный срок хранения транзакций перед удалением (в часах).|  
 |**history retention**|**int**|Количество часов, в течение которых будет храниться журнал.|  
-|**history_cleanup_agent**|**имеет sysname**|Имя агента очистки журнала.|  
-|**distribution_cleanup_agent**|**имеет sysname**|Имя агента очистки распространителя.|  
-|**состояние**|**int**|Только для внутреннего применения.|  
+|**history_cleanup_agent**|**sysname**|Имя агента очистки журнала.|  
+|**distribution_cleanup_agent**|**sysname**|Имя агента очистки распространителя.|  
+|**status**|**int**|Только для внутреннего применения.|  
 |**data_folder**|**nvarchar(255)**|Имя каталога, используемого для хранения файлов базы данных.|  
 |**data_file**|**nvarchar(255)**|Имя файла базы данных.|  
 |**data_file_size**|**int**|Исходный размер файла данных в мегабайтах.|  
@@ -71,6 +71,6 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
  [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

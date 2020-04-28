@@ -16,10 +16,10 @@ ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a47a81b2b19ceccf76a031e298ab60cf4a6f8c9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770953"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>Хранимая процедура sp_helpdistpublisher (Transact-SQL)
@@ -44,20 +44,20 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**name**|**имеет sysname**|Имя издателя.|  
-|**distribution_db**|**имеет sysname**|База данных распространителя для указанного издателя.|  
-|**security_mode**|**int**|Режим безопасности, используемый агентами репликации для подключения к издателю обновляемых посредством очередей подписок, или к издателю, не являющемуся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности<br /><br /> **1** = проверка подлинности Windows|  
-|**пользователей**|**имеет sysname**|Имя входа, используемое агентами репликации для подключения к издателю обновляемых посредством очередей подписок, или к издателю, не являющемуся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**пароль**|**nvarchar (524)**|Возвращаемый пароль (в простой зашифрованной форме). Пароль имеет значение NULL для пользователей, отличных от **sysadmin**.|  
-|**Active**|**bit**|Использует ли удаленный издатель локальный сервер в качестве распространителя:<br /><br /> **0** = нет<br /><br /> **1** = да|  
+|**name**|**sysname**|Имя издателя.|  
+|**distribution_db**|**sysname**|База данных распространителя для указанного издателя.|  
+|**security_mode**|**int**|Режим безопасности, используемый агентами репликации для подключения к издателю обновляемых посредством очередей подписок, или к издателю, не являющемуся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности<br /><br /> **1** = проверка подлинности Windows|  
+|**login**|**sysname**|Имя входа, используемое агентами репликации для подключения к издателю обновляемых посредством очередей подписок, или к издателю, не являющемуся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**password**|**nvarchar (524)**|Возвращаемый пароль (в простой зашифрованной форме). Пароль имеет значение NULL для пользователей, отличных от **sysadmin**.|  
+|**active**|**bit**|Использует ли удаленный издатель локальный сервер в качестве распространителя:<br /><br /> **0** = нет<br /><br /> **1** = да|  
 |**working_directory**|**nvarchar(255)**|Имя рабочего каталога.|  
 |**trusted**|**bit**|Требуется ли пароль при подключении издателя к распространителю. Для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий этот параметр всегда должен возвращать значение **0**, означающее, что пароль является обязательным.|  
-|**thirdparty_flag**|**bit**|Будет ли публикация включена [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или приложением стороннего разработчика:<br /><br /> **** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle или издатель шлюза Oracle.<br /><br /> **1** = издатель интегрирован с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приложением стороннего производителя.|  
-|**publisher_type**|**имеет sysname**|Тип издателя; возможны следующие варианты:<br /><br /> **MSSQLSERVER**<br /><br /> **СУБД**<br /><br /> **ORACLE GATEWAY.**|  
-|**publisher_data_source**|**nvarchar (4000)**|Имя источника данных OLE DB на издателе.|  
-|**storage_connection_string**|**nvarchar (4000)**|Ключ доступа к хранилищу для рабочего каталога, когда распространитель или издатель в базе данных SQL Azure.|  
+|**thirdparty_flag**|**bit**|Будет ли публикация включена [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или приложением стороннего разработчика:<br /><br /> **0** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle или издатель шлюза Oracle.<br /><br /> **1** = издатель интегрирован с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приложением стороннего производителя.|  
+|**publisher_type**|**sysname**|Тип издателя; возможны следующие варианты:<br /><br /> **MSSQLSERVER**<br /><br /> **СУБД**<br /><br /> **ORACLE GATEWAY.**|  
+|**publisher_data_source**|**nvarchar(4000)**|Имя источника данных OLE DB на издателе.|  
+|**storage_connection_string**|**nvarchar(4000)**|Ключ доступа к хранилищу для рабочего каталога, когда распространитель или издатель в базе данных SQL Azure.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

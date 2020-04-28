@@ -10,10 +10,10 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
 ms.openlocfilehash: 1926c13b739de8294966fd6ce84df3d1e02a676e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266520"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Перенос схемы Oracle в SQL Server 2017 в Linux с Помощник по миграции SQL Server
@@ -71,7 +71,7 @@ ms.locfileid: "68266520"
 
    ![Соединение с Oracle](./media/sql-server-linux-convert-from-oracle/ConnectToOracle.png)
 
-1. Затем нажмите кнопку **Соединить**. Через несколько секунд SSMA для Oracle подключается к базе данных и считывает ее метаданные.
+1. Щелкните **Подключить**. Через несколько секунд SSMA для Oracle подключается к базе данных и считывает ее метаданные.
 
 ## <a name="create-a-report"></a>Создание отчета
 

@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53ef09d19b62c0e6ce7742c41581d3cdefdfc374
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890552"
 ---
 # <a name="partition-processing-destination"></a>Назначение обработки секции
-  Назначение «Обработка секций» загружает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и обрабатывает секцию. Дополнительные сведения о секциях см. в разделе [Секции (службы Analysis Services — многомерные данные)](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data).  
+  Назначение обработки секции производит загрузку и обработку секции служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения о секциях см. в разделе [Секции (службы Analysis Services — многомерные данные)](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data).  
   
  Назначение обработки секции имеет следующие характеристики:  
   
@@ -48,11 +48,11 @@ ms.locfileid: "68890552"
   
  Дополнительные сведения о свойствах, которые можно установить в диалоговом окне **Редактор назначения обработки секций** , см. в следующих разделах:  
   
--   [Редактор назначения "Обработка секций" &#40;страница "Диспетчер соединений"&#41;](../partition-processing-destination-editor-connection-manager-page.md)  
+-   [Редактор назначения "Обработка секций" (страница "Диспетчер соединений")](../partition-processing-destination-editor-connection-manager-page.md)  
   
--   [Редактор назначения "Обработка секций" &#40;"сопоставления"&#41;](../partition-processing-destination-editor-mappings-page.md)  
+-   [Редактор назначения "Обработка секций" (страница "Сопоставления")](../partition-processing-destination-editor-mappings-page.md)  
   
--   [Редактор назначения обработки секций &#40;страница "Дополнительно"&#41;](../partition-processing-destination-editor-advanced-page.md)  
+-   [Редактор назначения "Обработка секций" (страница "Дополнительно")](../partition-processing-destination-editor-advanced-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   

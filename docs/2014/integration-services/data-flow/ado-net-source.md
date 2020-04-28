@@ -19,16 +19,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 296163b64d565ae3a65a16f1dbbf002bfc464bee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70153960"
 ---
 # <a name="ado-net-source"></a>Источник ADO NET
   Источник ADO NET использует данные поставщика .NET и делает данные доступными для потока данных.  
   
- Для подключения к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]можно использовать источник ADO NET. Соединение с базой данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] с помощью OLE DB не поддерживается. Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)] см. в статье об [общих рекомендациях и ограничениях Базы данных SQL Azure](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ Вы можете использовать источник ADO NET для подключения к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Соединение с базой данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] с помощью OLE DB не поддерживается. Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)] см. в статье об [общих рекомендациях и ограничениях Базы данных SQL Azure](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="data-type-support"></a>Поддержка типов данных  
  Источник преобразует все типы данных, которые не сопоставлены с конкретными типами данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DT_NTEXT. Преобразованию подвергаются даже данные типа `System.Object`.  
@@ -69,7 +69,7 @@ ms.locfileid: "70153960"
 > [!NOTE]  
 >  Если при использовании инструкции SQL для выполнения хранимой процедуры происходит сбой пакета со следующей ошибкой, эту ошибку можно исправить путем добавления инструкции `SET FMTONLY OFF` перед инструкцией EXEC.  
 >   
->  **Не удалось найти <столбца column_name> в источнике данных.**  
+>  **Столбец <имя_столбца> не найден в источнике данных.**  
   
  Источник ADO NET использует диспетчер соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] для подключения к источнику данных, а диспетчер соединений указывает поставщика .NET. Дополнительные сведения см. в статье [ADO.NET Connection Manager](../connection-manager/ado-net-connection-manager.md).  
   

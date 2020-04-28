@@ -22,10 +22,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 58988d31687cacdce2954d8e4098d509a9dcbb2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68260223"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Подготовка баз данных Access для миграции (Акцесстоскл)
@@ -42,7 +42,7 @@ ms.locfileid: "68260223"
    > [!NOTE]
    > Не все функции и параметры доступа поддерживаются или могут быть легко преобразованы в, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Перед началом миграции баз данных см. раздел [несовместимые функции доступа](incompatible-access-features-accesstosql.md).
   
-## <a name="preparing-for-migration"></a>Подготовка к миграции  
+## <a name="preparing-for-migration"></a>Подготовка к переносу  
 Используйте следующие рекомендации, чтобы подготовить базы данных Access к миграции в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="upgrading-older-access-databases"></a>Обновление баз данных Access прежних версий  
@@ -75,6 +75,6 @@ SSMA не может перенести базы данных, использу�
 ### <a name="documenting-databases"></a>Документирование баз данных  
 Кроме того, может потребоваться документировать свойства баз данных Access, например списки объектов, размер файлов и разрешения. Чтобы создать эту документацию в Access, в меню **Сервис** выберите пункт **анализ**, а затем — **Документация**.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Связывание приложений Access с SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)

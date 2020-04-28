@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266496"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Выбор и настройка обрабатываемых объектов (OracleToSQL)
@@ -35,17 +35,17 @@ ms.locfileid: "68266496"
   
 -   Тип данных  
   
--   Precision  
+-   Точность  
   
 -   Масштабирование  
   
 -   Правило  
   
--   По умолчанию  
+-   Значение по умолчанию  
   
--   Удостоверение  
+-   Идентификация  
   
--   Nullable  
+-   Допускает значения NULL  
   
 ## <a name="sql"></a>SQL  
 Вкладка SQL содержит таблицу SQL "Создание таблицы" для выбранной таблицы.  
@@ -58,7 +58,7 @@ ms.locfileid: "68266496"
   
 -   Дата создания или последнего изменения  
   
--   Имя объекта  
+-   Имени объекта  
   
 ## <a name="columns-comparison-settings"></a>Параметры сравнения столбцов  
 Установите правила сравнения для столбцов таблицы на странице **сравнения столбцов** . Можно установить следующие параметры.  
@@ -106,7 +106,7 @@ ms.locfileid: "68266496"
   
 Можно изменить эти инструкции SELECT, чтобы обеспечить пользовательскую проверку. Чтобы сохранить изменения в Oracle и в SQL Server инструкции, используйте кнопки **Применить** в исходном и целевом SQL, соответственно.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 [Настройка порядка вызовов &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
 ## <a name="see-also"></a>См. также:  

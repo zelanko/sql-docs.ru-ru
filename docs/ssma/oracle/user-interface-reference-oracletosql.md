@@ -11,21 +11,21 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 1cd74d2e3c5825618a6c893551cc8ae7298d00d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266397"
 ---
 # <a name="user-interface-reference-oracletosql"></a>Справочник по пользовательскому интерфейсу (OracleToSQL)
 В этом разделе содержатся разделы справки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по помощник по миграции (SSMA) для Oracle.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
 В следующей таблице приводится список диалоговых окон SSMA.  
   
 |||  
 |-|-|  
-|Раздел|Description|  
+|Раздел|Описание|  
 |[Расширенный выбор объектов &#40;OracleToSQL&#41;](../../ssma/oracle/advanced-object-selection-oracletosql.md)|Используйте диалоговое окно **Расширенный выбор объектов** для поиска объектов базы данных с помощью условий фильтра, а затем выберите или отмените выбор этих объектов.|  
 |[Отчет об оценке &#40;OracleToSQL&#41;](../../ssma/oracle/assessment-report-oracletosql.md)|Используйте отчет «Оценка» для просмотра результатов преобразования объектов Oracle в [!INCLUDE[tsql](../../includes/tsql-md.md)] синтаксис, а также для оценки времени и сложности миграции. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |[Подключение к Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)|Используйте диалоговое окно **Подключение к Oracle** для подключения к базе данных Oracle, которую требуется перенести.|  
