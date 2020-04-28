@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: d0fc42e1ce8d15498caf89582b66549f4e083130
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305227"
 ---
 # <a name="syspdw_nodes_partitions-transact-sql"></a>sys. pdw_nodes_partitions (Transact-SQL)
@@ -24,7 +24,7 @@ ms.locfileid: "72305227"
 
   Содержит по одной строке для каждой секции всех таблиц и большинства типов индексов в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] базе данных. Все таблицы и индексы содержат по крайней мере одну секцию, независимо от того, были ли они явно секционированы.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |partition_id|**bigint**|Идентификатор секции. Уникален в базе данных.|  
 |object_id|**int**|Идентификатор объекта, которому принадлежит эта секция. Каждая таблица или представление содержит как минимум одну секцию.|  
@@ -33,13 +33,13 @@ ms.locfileid: "72305227"
 |hobt_id|**bigint**|Идентификатор куча или сбалансированное дерево данных (HoBT), который содержит строки для этой секции.|  
 |rows|**bigint**|Приблизительное количество строк в данной секции. |  
 |data_compression|**int**|Указывает состояние сжатия для каждой секции.<br /><br /> 0 = нет<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
-|data_compression_desc|**nvarchar (60)**|Указывает состояние сжатия для каждой секции. Возможными значениями являются NONE, ROW и PAGE.|  
+|data_compression_desc|**nvarchar(60)**|Указывает состояние сжатия для каждой секции. Возможными значениями являются NONE, ROW и PAGE.|  
 |pdw_node_id|**int**|Уникальный идентификатор [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] узла.|  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение `CONTROL SERVER`.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 ### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Пример а. отображение строк в каждой секции в каждом распределении 
 
@@ -49,7 +49,7 @@ ms.locfileid: "72305227"
 
 ### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Пример б. Использование системных представлений для просмотра строк в каждой секции каждого распределения таблицы
 
-**Применимо к:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+**Относится к** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
 Этот запрос возвращает количество строк в каждой секции каждого распределения таблицы `myTable`.  
  
@@ -70,7 +70,7 @@ ORDER BY o.name, pnp.index_id, pnp.partition_id;
 ```    
   
 ## <a name="see-also"></a>См. также:  
- [Хранилища данных SQL и представления каталога параллельных хранилищ данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md) (Представления каталога в службе "Хранилище данных SQL" и Parallel Data Warehouse)  
   
   
 

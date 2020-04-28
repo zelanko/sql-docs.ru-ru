@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea4432b07007ce1bbc4ec5b944594b204a7ad808
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782909"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Использование поставщика PowerShell для расширенных событий
   Управлять расширенными событиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно с помощью поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Вложенная папка XEvent находится на диске SQLSERVER. Получить доступ к папке можно одним из следующих способов.  
   
--   В командной строке введите команду `sqlps` и нажмите клавишу ВВОД. Введите `cd xevent` и нажмите клавишу ВВОД. В нем можно использовать **компакт-диск** и `dir` команды (или командлеты **Set-Location** и **Get-ChildItem** ) для перехода по имени сервера и имени экземпляра.  
+-   В командной строке введите команду `sqlps` и нажмите клавишу ВВОД. Введите `cd xevent` и нажмите ВВОД. В нем можно использовать **компакт-диск** и `dir` команды (или командлеты **Set-Location** и **Get-ChildItem** ) для перехода по имени сервера и имени экземпляра.  
   
 -   В обозревателе объектов разверните узел имени экземпляра, разверните узел **Управление**, щелкните правой кнопкой мыши **Расширенные события**и выберите команду **Запустить PowerShell**. Оболочка PowerShell будет запущена в следующем пути:  
   
-     PS SQLSERVER:\XEvent\\*ServerName*\\*InstanceName*>  
+     PS SQLServer: \ XEvent\\*ServerName*\\*имя_экземпляра*>  
   
     > [!NOTE]  
     >  Запустить PowerShell можно из любого узла в категории **Расширенные события**. Например, можно щелкнуть правой кнопкой мыши **Сеансы**, а затем выбрать команду **Запустить PowerShell**. При этом оболочка PowerShell будет запущена на один уровень ниже, в папке «Сеансы».  
@@ -106,7 +106,7 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
  Чтобы создать, изменить или удалить сеанс расширенных событий, требуется разрешение ALTER ANY EVENT SESSION.  
   
 ## <a name="see-also"></a>См. также:  

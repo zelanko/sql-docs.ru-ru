@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcc35614e156301efa5892d59a09156c189e0fac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72688883"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>Инструкции по массовому копированию с помощью драйвера ODBC для SQL Server (ODBC)
@@ -25,7 +25,7 @@ ms.locfileid: "72688883"
   
  Дополнительные сведения о критическом изменении [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], начиная с, в разделе [выполнение операций полного копирования &#40;&#41;ODBC ](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Полное копирование без файла форматирования &#40;ODBC&#41;](bulk-copy-without-a-format-file-odbc.md)  
   

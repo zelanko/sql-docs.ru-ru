@@ -19,10 +19,10 @@ ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c30cbd012bb1ccc7d379eadcfd29fee87a96dd85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72313692"
 ---
 # <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
@@ -30,11 +30,11 @@ ms.locfileid: "72313692"
 
   Возвращает строку для каждого аудита сервера, отображая текущее состояние аудита. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|Идентификатор аудита. Сопоставляется с полем **audit_id** в представлении каталога **sys. audits** .|  
-|**name**|**имеет sysname**|Имя аудита. То же, что и поле **Name** в представлении каталога **sys. server_audits** .|  
-|**состояние**|**smallint**|Числовое обозначение состояния аудита сервера:<br /><br /> 0 = не запущено<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      Сбой среды выполнения<br /><br /> 3 = сбой при создании целевого объекта<br /><br /> 4 = Завершение работы|  
+|**name**|**sysname**|Имя аудита. То же, что и поле **Name** в представлении каталога **sys. server_audits** .|  
+|**status**|**smallint**|Числовое обозначение состояния аудита сервера:<br /><br /> 0 = не запущено<br /><br /> 1 =<br />        Запущено<br /><br /> 2 =<br />      Сбой среды выполнения<br /><br /> 3 = сбой при создании целевого объекта<br /><br /> 4 = Завершение работы|  
 |**status_desc**|**nvarchar(256)**|Строка, которая показывает состояние аудита сервера:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Отметка времени в формате UTC последнего изменения состояния аудита.|  
 |**event_session_address**|**varbinary(8)**|Адрес сеанса расширенных событий, связанного с аудитом. Относится к представлению каталога **sys. dm_xe_sessions. Address** .|  
@@ -44,7 +44,7 @@ ms.locfileid: "72313692"
 ## <a name="permissions"></a>Разрешения  
  Субъекты должны иметь **состояние просмотра сервера** и разрешения **SELECT** .  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Создание аудита сервера &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

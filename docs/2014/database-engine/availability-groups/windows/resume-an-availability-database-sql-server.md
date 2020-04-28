@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5e6a5792c7e18013dba5cc4c0963dc6d045410f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782921"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Возобновление базы данных доступности (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "72782921"
   
      [Ограничения](#Restrictions)  
   
-     [Предварительные требования](#Prerequisites)  
+     [Предварительные условия](#Prerequisites)  
   
      [Безопасность](#Security)  
   
@@ -48,12 +48,12 @@ ms.locfileid: "72782921"
   
 -   [Связанные задачи](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
  Команда RESUME возвращается сразу после принятия репликой, в которой размещена целевая база данных, но фактическое возобновление базы данных происходит асинхронно.  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Необходимо подключиться к экземпляру сервера, на котором расположена возобновляемая база данных.  
   
@@ -61,14 +61,14 @@ ms.locfileid: "72782921"
   
 -   База данных-источник должна быть в сети и доступна.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на базу данных.  
   
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  **Возобновление базы данных-получателя**  
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, на котором размещена реплика доступности, для которой нужно возобновить базу данных, и разверните дерево сервера.  
@@ -84,8 +84,8 @@ ms.locfileid: "72782921"
 > [!NOTE]  
 >  Чтобы возобновить дополнительные базы данных данной реплики, повторите шаги 4 и 5 для каждой базы данных.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
- **Возобновление базы данных-получателя, которая была приостановлена локально**  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
+ **Возобновление базы данных-получателя, приостановленной локально**  
   
 1.  Подключитесь к экземпляру сервера, на котором размещена вторичная реплика, базу данных которой нужно возобновить.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "72782921"
   
      ALTER DATABASE *database_name* задать HADR Resume  
   
-##  <a name="PowerShellProcedure"></a>Использование PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Использование PowerShell  
 
 ### <a name="to-resume-a-secondary-database"></a>Возобновление базы данных-получателя
   
@@ -112,11 +112,11 @@ ms.locfileid: "72782921"
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [SQL Server PowerShell, поставщик](../../../powershell/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
--   [Приостановка &#40;базы данных доступности SQL Server&#41;](suspend-an-availability-database-sql-server.md)  
+-   [Приостановка базы данных доступности (SQL Server)](suspend-an-availability-database-sql-server.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  

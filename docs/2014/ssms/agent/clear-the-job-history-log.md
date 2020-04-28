@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d6d4943bf3884933cd60e1c0ef51a54771ee00af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782764"
 ---
 # <a name="clear-the-job-history-log"></a>Clear the Job History Log
@@ -40,16 +40,16 @@ ms.locfileid: "72782764"
   
      [Управляющие объекты SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
  Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-clear-the-job-history-log"></a>Очистка журнала заданий  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]и разверните его.  
+1.  В **обозревателе объектов** подключитесь к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и разверните его.  
   
 2.  Раскройте узел **Агент SQL Server**, а затем узел **Задания**.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72782764"
   
 5.  Щелкните **Удалить**.  
   
-##  <a name="TSQL"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Использование Transact-SQL  
   
 #### <a name="to-clear-the-job-history-log"></a>Очистка журнала заданий  
   
@@ -83,7 +83,7 @@ ms.locfileid: "72782764"
     GO  
     ```  
   
-##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Использование управляющие объекты SQL Server  
  **Очистка журнала заданий**  
   
  Вызовите метод `PurgeJobHistory` класса `JobServer`, используя выбранный язык программирования, например Visual Basic, Visual C# или PowerShell. Дополнительные сведения см. в статье [Управляющие объекты SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

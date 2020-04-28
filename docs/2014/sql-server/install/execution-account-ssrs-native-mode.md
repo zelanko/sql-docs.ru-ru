@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0eff6dca788744b93d2d6d4a0a7175764e263f71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952538"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>Учетная запись выполнения (службы Reporting Services в собственном режиме)
@@ -40,21 +40,21 @@ ms.locfileid: "71952538"
  Чтобы открыть эту страницу, запустите диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и выберите на панели навигации пункт **Учетная запись выполнения** . Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Параметры  
- **Укажите учетную запись выполнения**  
+ **Задание учетной записи выполнения**  
  Выделите учетную запись.  
   
- **Учетной записи**  
+ **Учетная запись**  
  Введите учетную запись пользователя домена Windows Используйте следующий формат: * \<домен>\\<учетной\>записи пользователя*.  
   
  **Пароль**  
- Введите пароль.  
+ Задайте пароль.  
   
  **Подтверждение пароля**  
  Повторите ввод пароля.  
   
 ## <a name="see-also"></a>См. также:  
  [Диспетчер конфигурации служб Reporting Services разделы справки F1 &#40;служб SSRS в собственном режиме&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Хранение зашифрованных данных сервера отчетов &#40;служб SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Хранение зашифрованных данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
   
   

@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0bb88370db889eac44e3ce71ad498779e55e4d7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952055"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>Установка PowerPivot для SharePoint 2010
-  
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] представляет собой набор серверных компонентов, которые обеспечивают обработку запросов и административное управление книгами [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], публикуемыми в SharePoint. Набор содержит ядро служб Analysis Services и системную службу [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 > [!NOTE]  
@@ -32,7 +31,7 @@ ms.locfileid: "71952055"
   
  Инструкции по расширенным сценариям развертывания см. в разделе [Контрольный список развертывания: Reporting Services, Power View и PowerPivot для SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) и [Контрольный список развертывания: развертывание путем добавления серверов PowerPivot в ферму SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Установка PowerPivot для SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  
   
  [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  

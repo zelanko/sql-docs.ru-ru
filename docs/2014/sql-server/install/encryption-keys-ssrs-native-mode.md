@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 540cf25a150349c7b6399975d20d10bc202ed935
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952173"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>Ключи шифрования (службы Reporting Services в собственном режиме)
@@ -45,15 +45,15 @@ ms.locfileid: "71952173"
  Чтобы открыть эту страницу, запустите диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и выберите ссылку на панели навигации. Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Параметры  
- **Копия**  
+ **Резервное копирование**  
  Копирует симметричный ключ в указанный файл. Симметричный ключ никогда не хранится в виде простого текста. Необходимо ввести пароль для защиты файла.  
   
- **Восстановлен**  
+ **Восстановление**  
  Применяет ранее сохраненную копию симметричного ключа к базе данных сервера отчетов. Следует ввести пароль, чтобы разблокировать файл.  
   
  Предыдущая копия симметричного ключа для экземпляра сервера отчетов, с которым в настоящий момент установлено соединение, перезаписывается восстановленной версией. После восстановления симметричного ключа необходимо инициализировать все серверы отчетов, использующие базу данных сервера отчетов. Дополнительные сведения об инициализации серверов отчетов см. [в разделе Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
- **Change**  
+ **Изменение**  
  Воссоздает симметричный ключ и заново зашифровывает все зашифрованные значения в базе данных сервера отчетов. Прежде чем повторно создавать симметричный ключ, убедитесь, что служба сервера отчетов остановлена.  
   
  В конфигурации с масштабным развертыванием все копии симметричного ключа заменяются новейшими версиями. Прежде чем изменить симметричный ключ, заново просмотрите список серверов, присоединенных к конфигурации с масштабным развертыванием, чтобы убедиться в том, что только действительные экземпляры сервера отчетов получают доступ к новому ключу. Серверы, входящие в состав масштабного развертывания, перечислены на странице **Масштабное развертывание** . Прежде чем приступать к повторному созданию ключа, остановите службу на каждом из серверов отчетов, входящих в развертывание.  
@@ -69,9 +69,9 @@ ms.locfileid: "71952173"
   
 ## <a name="see-also"></a>См. также:  
  [Диспетчер конфигурации служб Reporting Services разделы справки F1 &#40;служб SSRS в собственном режиме&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [Удаление и повторное создание ключей шифрования (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Инициализация сервера отчетов &#40;служб SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [Хранение зашифрованных данных сервера отчетов &#40;служб SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Резервное копирование и восстановление ключей шифрования Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Удаление и повторное создание ключей шифрования &#40;служб SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [Инициализация сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Хранение зашифрованных данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

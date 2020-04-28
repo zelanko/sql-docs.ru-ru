@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95f1e2cec530ee65dce60ceea1679281a9d3ba5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782998"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Настройка резервного копирования в репликах доступности (SQL Server)
@@ -35,21 +35,21 @@ ms.locfileid: "72782998"
   
 
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
  Необходимо подключиться к экземпляру сервера, на котором размещена первичная реплика.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
 |Задача|Разрешения|  
 |----------|-----------------|  
 |Настройка резервного копирования во вторичных репликах при создании группы доступности|Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.|  
 |Изменение группы доступности или реплики доступности|Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.|  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  **Настройка резервного копирования во вторичных репликах**  
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, на котором размещена первичная реплика, и щелкните имя сервера, чтобы развернуть его дерево.  
@@ -101,14 +101,14 @@ ms.locfileid: "72782998"
   
 -   [Использование диалогового окна "Создание группы доступности" (среда SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Настройка резервного копирования во вторичных репликах**  
   
 1.  Подключитесь к экземпляру сервера, на котором находится первичная реплика.  
   
 2.  Для новой группы доступности используйте инструкцию [CREATE AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/create-availability-group-transact-sql). При добавлении или изменении существующей группы доступности воспользуйтесь инструкцией [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql).  
   
-##  <a name="PowerShellProcedure"></a> Использование PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Использование PowerShell  
 
 ### <a name="to-configure-backup-on-secondary-replicas"></a>Настройка резервного копирования во вторичных репликах
   
@@ -140,7 +140,7 @@ ms.locfileid: "72782998"
      Указывает, что резервное копирование никогда не выполняется на первичной реплике. Если первичная реплика является единственной репликой, находящейся в режиме «в сети», резервное копирование не будет выполняться.  
   
      `Secondary`  
-     Указывает, что резервное копирование должно выполняться на вторичной реплике, за исключением тех случаев, когда в режиме «в сети» находится только первичная реплика. В этом случае резервное копирование будет выполняться на первичной реплике. Такая реакция на события используется по умолчанию.  
+     Указывает, что резервное копирование должно выполняться на вторичной реплике, за исключением тех случаев, когда в режиме «в сети» находится только первичная реплика. В этом случае резервное копирование будет выполняться на первичной реплике. Это поведение по умолчанию.  
   
      `None`  
      Указывает, что вы предпочитаете, чтобы задания резервного копирования пропускали реплики доступности при выборе реплики для создания резервных копий. Примечание. Задания резервного копирования могут учитывать другие факторы, например приоритет резервного копирования каждой реплики доступности в сочетании с ее состоянием работоспособности и соединения.  
@@ -160,7 +160,7 @@ ms.locfileid: "72782998"
   
 Чтобы настроить и использовать поставщик SQL Server PowerShell, см. статью [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md) и [Получение справки SQL Server PowerShell](../../../powershell/sql-server-powershell.md).
   
-##  <a name="FollowUp"></a>Дальнейшие действия. После настройки резервного копирования во вторичных репликах  
+##  <a name="follow-up-after-configuring-backup-on-secondary-replicas"></a><a name="FollowUp"></a>Дальнейшие действия. После настройки резервного копирования во вторичных репликах  
  Чтобы настройка автоматического резервного копирования учитывалась для данной группы доступности на каждом экземпляре сервера, где размещена реплика доступности, приоритет резервного копирования которой больше нуля (>0), необходимо создать скрипты заданий резервного копирования для баз данных в группе доступности. Чтобы определить, является ли текущая реплика предпочитаемой репликой резервного копирования, выполните функцию [sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) в скрипте резервного копирования. Если реплика доступности, размещенная на текущем экземпляре сервера, является предпочтительной для резервного копирования, эта функция возвращает значение 1. В противном случае функция возвращает значение 0. С помощью простого скрипта для каждой реплики доступности, который запрашивает эту функцию, можно определить, какая реплика должна выполнять данное задание резервного копирования. Например, типичный фрагмент скрипта задания резервного копирования выглядит следующим образом:  
   
 ```  
@@ -178,17 +178,17 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
 > [!TIP]  
 >  Если задание резервного копирования создается в[мастере планов обслуживания](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md), то в это задание автоматически включается логика скрипта, которая вызывает и проверяет функцию **sys.fn_hadr_backup_is_preferred_replica** . Однако задание резервного копирования не будет возвращать сообщение "Это не предпочтительная реплика...". Необходимо создать задания для каждой базы данных доступности на каждом экземпляре сервера, на котором размещена реплика доступности этой группы доступности.  
   
-##  <a name="ForInfoAboutBuPref"></a>Получение сведений о параметрах настройки резервного копирования  
+##  <a name="to-obtain-information-about-backup-preference-settings"></a><a name="ForInfoAboutBuPref"></a>Получение сведений о параметрах настройки резервного копирования  
  Ниже приводятся способы получения информации, имеющей отношение к резервному копированию во вторичных репликах.  
   
 |Представление|Сведения|Соответствующие столбцы|  
 |----------|-----------------|----------------------|  
-|[sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)|Является ли текущая реплика предпочитаемой репликой резервного копирования?|Не применяется|  
+|[sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)|Является ли текущая реплика предпочитаемой репликой резервного копирования?|неприменимо.|  
 |[sys.availability_groups](/sql/relational-databases/system-catalog-views/sys-availability-groups-transact-sql)|параметр автоматического резервного копирования|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  
 |[sys.availability_replicas](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)|Приоритет резервного копирования данной реплики доступности|**backup_priority**|  
-|[sys.dm_hadr_availability_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)|Является реплика локальной по отношению к экземпляру сервера?<br /><br /> Текущая роль.<br /><br /> Рабочее состояние<br /><br /> Состояние подключения<br /><br /> Исправность синхронизации реплики доступности|**is_local**<br /><br /> **роль**, **role_desc**<br /><br /> **operational_state**, **operational_state_desc**<br /><br /> **connected_state**, **connected_state_desc**<br /><br /> **synchronization_health**, **synchronization_health_desc**|  
+|[sys.dm_hadr_availability_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)|Является реплика локальной по отношению к экземпляру сервера?<br /><br /> Текущая роль.<br /><br /> Состояние работы<br /><br /> Состояние подключения<br /><br /> Исправность синхронизации реплики доступности|**is_local**<br /><br /> **role**, **role_desc**<br /><br /> **operational_state**, **operational_state_desc**<br /><br /> **connected_state**, **connected_state_desc**<br /><br /> **synchronization_health**, **synchronization_health_desc**|  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

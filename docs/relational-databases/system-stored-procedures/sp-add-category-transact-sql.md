@@ -18,10 +18,10 @@ ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 076d5ade1f4951183578b1b46761d49dafbce8be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70810551"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "70810551"
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
  > [!IMPORTANT]  
- > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+ > В [управляемый экземпляр базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)в настоящее время поддерживаются не все функции агент SQL Server. Дополнительные сведения см. [в разделе управляемый экземпляр базы данных SQL Azure отличий T-SQL от SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,7 +47,7 @@ sp_add_category
 ## <a name="arguments"></a>Аргументы  
 `[ @class = ] 'class'`Класс добавляемой категории. *класс* имеет тип **varchar (8)** со ЗНАЧЕНИЕМ по умолчанию Job и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |JOB|Добавление категории заданий.|  
 |ALERT|Добавление категории предупреждений.|  
@@ -55,7 +55,7 @@ sp_add_category
   
 `[ @type = ] 'type'`Тип добавляемой категории. *тип* — **varchar (12)**, со значением по умолчанию **Local**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |LOCAL|Локальная категория заданий.|  
 |НЕСКОЛЬКО СЕРВЕРОВ|Многосерверная категория заданий.|  
@@ -95,6 +95,6 @@ GO
  [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [dbo. sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
  [dbo. сисжобсерверс &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

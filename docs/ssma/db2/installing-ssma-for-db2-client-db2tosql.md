@@ -10,10 +10,10 @@ ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1623430eed752db7fa387caf33124082eb318490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70774187"
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>Установка SSMA для клиента DB2 (DB2ToSQL)
@@ -70,14 +70,14 @@ SSMA можно загрузить из Интернета. Чтобы скач�
   
 4. На странице **Выбор типа установки** выберите вариант **Обычная**.  
   
-5. Нажмите кнопку **Установить**.  
+5. Выберите пункт **Установить**.  
   
 > [!IMPORTANT]  
 > Удалите все предыдущие версии SSMA для DB2 перед установкой новой версии.
   
 Расположение установки по умолчанию — C:\Program Files\Microsoft Помощник по миграции SQL Server для DB2.  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Установка компонентов SSMA на SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
 [Перенос баз данных DB2 в SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

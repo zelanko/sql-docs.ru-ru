@@ -14,10 +14,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f0d1e6e4fa9c88fc67b15a076a6c96a742fd7fdc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304819"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>sys. internal_partitions (Transact-SQL)
@@ -25,23 +25,23 @@ ms.locfileid: "72304819"
 
   Возвращает по одной строке для каждого набора строк, который отслеживает внутренние данные для индексов columnstore на дисковых таблицах. Эти наборы строк являются внутренними индексами columnstore и отслеживанием удаленных строк, группы строк сопоставлений и разностного хранилища групп строк. Они отписывают данные для каждой секции таблицы. Каждая таблица имеет по крайней мере одну секцию. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]повторно создает наборы строк каждый раз при пересборке индекса columnstore.   
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |partition_id|**bigint**|Идентификатор секции для этой секции. Является уникальным в пределах базы данных.|  
 |object_id|**int**|Идентификатор объекта для таблицы, содержащей секцию.|  
 |index_id|**int**|Идентификатор индекса для индекса columnstore, определенного для таблицы.<br /><br /> 1 = кластеризованный индекс columnstore<br /><br /> 2 = некластеризованный индекс columnstore|  
 |partition_number|**int**|Номер секции.<br /><br /> 1 = Первая секция секционированной таблицы или единственная секция несекционированной таблицы.<br /><br /> 2 = Вторая секция и т. д.|  
 |internal_object_type|**tinyint**|Объекты наборов строк, которые отписывают внутренние данные для индекса columnstore.<br /><br /> 2 = COLUMN_STORE_DELETE_BITMAP<br /><br /> 3 = COLUMN_STORE_DELTA_STORE<br /><br /> 4 = COLUMN_STORE_DELETE_BUFFER<br /><br /> 5 = COLUMN_STORE_MAPPING_INDEX|  
-|internal_object_type_desc|**nvarchar (60)**|COLUMN_STORE_DELETE_BITMAP — этот индекс точечного рисунка отслеживает строки, помеченные как удаленные из columnstore. Точечный рисунок предназначен для каждого группы строк, так как секции могут содержать строки в нескольких групп строк. Строки являются физически присутствующими и занимают место в columnstore.<br /><br /> COLUMN_STORE_DELTA_STORE — хранит группы строк с именем групп строк, которые не были сжаты в хранилище по столбцам. Каждая секция таблицы может иметь ноль или более deltastore групп строк.<br /><br /> COLUMN_STORE_DELETE_BUFFER — для обслуживания удалений с обновляемыми некластеризованными индексами columnstore. Когда запрос удаляет строку из базовой таблицы rowstore, буфер удаления отслеживает удаление из columnstore. Если число удаленных строк превышает 1048576, они объединяются в цепочку удаления растрового объекта в фоновом режиме или с помощью явной команды реорганизации.  В любой момент времени объединение битовой карты удаления и буфера удаления представляет все удаленные строки.<br /><br /> COLUMN_STORE_MAPPING_INDEX — используется только в том случае, если кластеризованный индекс columnstore имеет вторичный некластеризованный индекс. Он сопоставляет ключи некластеризованного индекса с правильным группы строк и ИДЕНТИФИКАТОРом строки в columnstore. Он хранит только ключи для строк, которые перемещаются в другую группы строк. Это происходит, когда разностный группы строк сжимается в columnstore, и когда операция слияния объединяет строки из двух разных групп строк.|  
+|internal_object_type_desc|**nvarchar(60)**|COLUMN_STORE_DELETE_BITMAP — этот индекс точечного рисунка отслеживает строки, помеченные как удаленные из columnstore. Точечный рисунок предназначен для каждого группы строк, так как секции могут содержать строки в нескольких групп строк. Строки являются физически присутствующими и занимают место в columnstore.<br /><br /> COLUMN_STORE_DELTA_STORE — хранит группы строк с именем групп строк, которые не были сжаты в хранилище по столбцам. Каждая секция таблицы может иметь ноль или более deltastore групп строк.<br /><br /> COLUMN_STORE_DELETE_BUFFER — для обслуживания удалений с обновляемыми некластеризованными индексами columnstore. Когда запрос удаляет строку из базовой таблицы rowstore, буфер удаления отслеживает удаление из columnstore. Если число удаленных строк превышает 1048576, они объединяются в цепочку удаления растрового объекта в фоновом режиме или с помощью явной команды реорганизации.  В любой момент времени объединение битовой карты удаления и буфера удаления представляет все удаленные строки.<br /><br /> COLUMN_STORE_MAPPING_INDEX — используется только в том случае, если кластеризованный индекс columnstore имеет вторичный некластеризованный индекс. Он сопоставляет ключи некластеризованного индекса с правильным группы строк и ИДЕНТИФИКАТОРом строки в columnstore. Он хранит только ключи для строк, которые перемещаются в другую группы строк. Это происходит, когда разностный группы строк сжимается в columnstore, и когда операция слияния объединяет строки из двух разных групп строк.|  
 |Row_group_id|**int**|Идентификатор deltastore группы строк. Каждая секция таблицы может иметь ноль или более deltastore групп строк.|  
 |hobt_id|**bigint**|Идентификатор внутреннего объекта набора строк (HoBT). Это хороший ключ для объединения с другими динамическими представлениями DMV, чтобы получить дополнительные сведения о физических характеристиках внутреннего набора строк.|  
 |rows|**bigint**|Приблизительное количество строк в данной секции.|  
 |data_compression|**tinyint**|Состояние сжатия для набора строк:<br /><br /> 0 = нет<br /><br /> 1 = ROW<br /><br /> 2 = PAGE|  
-|data_compression_desc|**nvarchar (60)**|Состояние сжатия для каждой секции. Возможные значения для таблиц rowstore: NONE, ROW и PAGE. Возможные значения для таблиц columnstore: COLUMNSTORE и COLUMNSTORE_ARCHIVE.|  
+|data_compression_desc|**nvarchar(60)**|Состояние сжатия для каждой секции. Возможные значения для таблиц rowstore: NONE, ROW и PAGE. Возможные значения для таблиц columnstore: COLUMNSTORE и COLUMNSTORE_ARCHIVE.|  
 |optimize_for_sequential_key|**bit**|1 = для секции включена оптимизация вставки последней страницы.<br><br>0 = значение по умолчанию. Для секции включена оптимизация вставки последней страницы.|
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в `public` роли. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Необходимо членство в роли `public`.  Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="general-remarks"></a>Общие замечания  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]повторно создает новые внутренние индексы columnstore каждый раз при создании или пересборке индекса columnstore.  
@@ -61,7 +61,7 @@ WHERE p.object_id = OBJECT_ID ( '<table name' ) ;
   
 ## <a name="see-also"></a>См. также:  
  [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Часто задаваемые вопросы о запросах к системному каталогу сервера SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251953"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
@@ -45,9 +45,9 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  Запрос пути к столбцу любого другого типа данных или для колумнсат **varbinary (max)** не имеет атрибута хранилища FILESTREAM, что вызовет ошибку во время компиляции запроса.  
   
  *\@функцию*  
- Целочисленное [выражение](../../t-sql/language-elements/expressions-transact-sql.md) , определяющее способ форматирования серверного компонента пути. параметр может принимать одно из следующих значений. * \@* Значение по умолчанию равно 0.  
+ Целочисленное [выражение](../../t-sql/language-elements/expressions-transact-sql.md) , определяющее способ форматирования серверного компонента пути. параметр может принимать одно из следующих значений. * \@* Значение по умолчанию — 0.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0|Возвращает имя сервера, преобразованное в формат BIOS, например:`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Возвращает имя сервера без преобразования, например:`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -60,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Если база данных принадлежит к Always On группе доступности, то в выходных данных функции **PathName** значение *use_replica_computer_name* имеет следующий результат:  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |Не указано.|Функция возвращает в пути имя виртуальной сети.|  
 |0|Функция возвращает в пути имя виртуальной сети.|  
@@ -91,7 +91,7 @@ SET @PathName = (
     );  
 ```  
   
-### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>Б. Отображение путей объектов FILESTREAM BLOB в таблице  
+### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>Б) Отображение путей объектов FILESTREAM BLOB в таблице  
  В следующем примере создаются и отображаются пути трех объектов FILESTREAM BLOB.  
   
 ```sql  

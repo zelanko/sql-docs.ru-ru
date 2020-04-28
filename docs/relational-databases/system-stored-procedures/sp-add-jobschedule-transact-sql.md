@@ -18,10 +18,10 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 06dbee74cfb3e2d5e697ea9594d46c98557de8ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70810498"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "70810498"
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+  > В [управляемый экземпляр базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)в настоящее время поддерживаются не все функции агент SQL Server. Дополнительные сведения см. [в разделе управляемый экземпляр базы данных SQL Azure отличий T-SQL от SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -67,19 +67,19 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_type = ] frequency_type`Значение, указывающее, когда должно выполняться задание. *frequency_type* имеет **тип int**, значение по умолчанию **0**и может принимать одно из следующих значений:  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
 |**4**|Ежедневно|  
-|**8**|Еженедельно|  
-|**глубин**|Ежемесячная|  
+|**8**|Weekly (Еженедельно);|  
+|**16**|Ежемесячно|  
 |**32**|Ежемесячно относительно *frequency_interval.*|  
 |**64**|Выполняется при запуске службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**128**|Запускается при простое компьютера.|  
   
 `[ @freq_interval = ] frequency_interval`День выполнения задания. *frequency_interval* имеет **тип int**, значение по умолчанию 0 и зависит от значения *frequency_type* , как указано в следующей таблице.  
   
-|Значение|Результат|  
+|Значение|Действие|  
 |-----------|------------|  
 |**1** (один раз)|*frequency_interval* не используется.|  
 |**4** (ежедневно)|Каждые *frequency_interval* дней.|  
@@ -109,7 +109,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
-|**глубин**|Последний|  
+|**16**|Последний|  
   
  *frequency_relative_interval* указывает на вхождение интервала. Например, если *frequency_relative_interval* имеет значение **2**, *frequency_type* имеет значение **32**, а *frequency_interval* имеет значение **3**, запланированное задание будет выполняться во второй вторник каждого месяца.  
   
@@ -130,7 +130,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 `[ @schedule_uid = ] _schedule_uidOUTPUT`Уникальный идентификатор расписания. *schedule_uid* является переменной типа **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
@@ -139,7 +139,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  Расписанием задач теперь можно управлять независимо от них самих. Чтобы добавить расписание к заданию, используйте **sp_add_schedule** , чтобы создать расписание и **sp_attach_schedule** присоединить расписание к заданию.  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -170,6 +170,6 @@ EXEC msdb.dbo.sp_add_jobschedule
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
+ [sp_attach_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

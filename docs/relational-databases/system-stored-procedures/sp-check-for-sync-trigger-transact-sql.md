@@ -16,10 +16,10 @@ ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fe8cf327ff3db175c57382201ca3918a86770433
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251242"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
@@ -45,7 +45,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
  [**@trigger_op =** ] выходные данные "*trigger_output_parameters*"  
  Указывает, будет ли выходной параметр возвращать тип вызывающего триггера. *trigger_output_parameters* имеет **тип char (10)** и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Подключаем**|триггер INSERT|  
 |**Upd**|триггер UPDATE|  
@@ -89,6 +89,6 @@ RETURN
  **sp_check_for_sync_trigger** хранимая процедура может выполняться любым пользователем с разрешениями SELECT в системном представлении [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) .  
   
 ## <a name="see-also"></a>См. также:  
- [Обновляемые подписки для репликации транзакций](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

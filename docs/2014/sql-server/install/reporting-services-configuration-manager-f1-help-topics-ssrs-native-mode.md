@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952045"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Разделы справки (F1) диспетчера конфигурации служб Reporting Services (службы Reporting Services в собственном режиме)
@@ -24,9 +24,9 @@ ms.locfileid: "71952045"
   
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Собственный режим.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
--   [Соединение с сервером отчетов](../../../2014/sql-server/install/connect-to-a-native-mode-report-server.md)  
+-   [Подключение к серверу отчетов](../../../2014/sql-server/install/connect-to-a-native-mode-report-server.md)  
   
 -   [Состояние сервера отчетов](../../../2014/sql-server/install/report-server-status-ssrs-native-mode.md)  
   

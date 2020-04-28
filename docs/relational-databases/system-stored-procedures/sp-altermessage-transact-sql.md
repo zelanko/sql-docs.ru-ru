@@ -18,10 +18,10 @@ ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4949307cdaf2cc712e56525e872381c2af8256fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304793"
 ---
 # <a name="sp_altermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
@@ -52,7 +52,7 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
 `[ @parameter_value = ]'value_'`Используется с ** \@параметром** , чтобы указать, что ошибка должна быть записана в [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнал приложений Windows. *значение* имеет тип **varchar (5)** и не имеет значения по умолчанию. Если **значение — true**, ошибка всегда записывается в журнал приложений Windows. Если **значение равно false**, то ошибка не всегда записывается в журнал приложений Windows, но может быть записана в зависимости от того, как возникла ошибка. Если указано *значение* , необходимо также указать *write_to_log* для ** \@параметра** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
@@ -74,9 +74,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [&#41;инструкции RAISERROR &#40;Transact-SQL](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
+ [sp_addmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_dropmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

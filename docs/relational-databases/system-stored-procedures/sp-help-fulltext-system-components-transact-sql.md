@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304882"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
@@ -65,18 +65,18 @@ sp_help_fulltext_system_components
 ## <a name="result-sets"></a>Результирующие наборы  
  Следующий результирующий набор возвращается для системных компонентов.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**componenttype**|**имеет sysname**|Тип компонента. Это может быть:<br /><br /> фильтр<br /><br /> обработчик протокола<br /><br /> разделитель слов|  
-|**ComponentName**|**имеет sysname**|Имя компонента.|  
-|**clsid**|**UNIQUEIDENTIFIER**|Идентификатор класса компонента.|  
+|**componenttype**|**sysname**|Тип компонента. Это может быть:<br /><br /> фильтр<br /><br /> обработчик протокола<br /><br /> разделитель слов|  
+|**componentname**|**sysname**|Имя компонента.|  
+|**этому**|**uniqueidentifier**|Идентификатор класса компонента.|  
 |**FullPath**|**nvarchar(256)**|Путь к расположению компонента.<br /><br /> NULL = вызывающая сторона не является членом предопределенной роли сервера **serveradmin** .|  
-|**Версия**|**nvarchar (30)**|Версия компонента.|  
-|**manufacturer**|**имеет sysname**|Имя производителя компонента.|  
+|**version**|**nvarchar(30)**|Версия компонента.|  
+|**manufacturer**|**sysname**|Имя производителя компонента.|  
   
  Следующий результирующий набор возвращается только в том случае, если существует один или несколько полнотекстовых каталогов, использующих *component_type*.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**DBID**|**int**|Идентификатор базы данных.|  
 |**ftcatid**|**int**|Идентификатор полнотекстового каталога.|  
@@ -97,7 +97,7 @@ EXEC sp_help_fulltext_system_components 'all';
 GO  
 ```  
   
-### <a name="b-listing-word-breakers"></a>Б. Перечисление средств разбиения по словам  
+### <a name="b-listing-word-breakers"></a>Б) Перечисление средств разбиения по словам  
  В следующем примере перечислены все средства разбиения по словам, зарегистрированные в экземпляре сервера.  
   
 ```  

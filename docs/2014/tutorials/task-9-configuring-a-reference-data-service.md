@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e4c756463c43ede8c6dae0cda0a184f0ec7f9956
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154930"
 ---
-# <a name="task-9-configuring-a-reference-data-service"></a>Задача 9. Настройка службы ссылочных данных
+# <a name="task-9-configuring-a-reference-data-service"></a>Задача 9. Настройка службы эталонных данных
   В этой задаче вы настраиваете DQS для использования службы ссылочных данных в Azure Marketplace. В следующей задаче будет настроен домен **проверки адресов** для использования этой службы. Во время выполнения операция очистки служб DQS передает значения доменов в домене **проверки адреса** службе для очистки. Дополнительные сведения см. [в статье Настройка служб DQS для использования справочных данных](https://msdn.microsoft.com/library/hh213070.aspx) .  
   
 1.  На главной странице **клиента DQS**в области **Администрирование** щелкните **Конфигурация**.  
@@ -37,6 +37,6 @@ ms.locfileid: "70154930"
 7.  Нажмите кнопку **Закрыть** в нижней части страницы, чтобы перейти на главную страницу клиента DQS.  
   
 ## <a name="next-task"></a>Следующая задача  
- [Задача 10. Настройка составного домена для использования службы ссылочных данных](../../2014/tutorials/task-10-configuring-composite-domain-to-use-reference-data-service.md)  
+ [Задача 10. Настройка составного домена для использования службы эталонных данных](../../2014/tutorials/task-10-configuring-composite-domain-to-use-reference-data-service.md)  
   
   

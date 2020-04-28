@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 15a177080792eb26273399f41aad577962885376
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952461"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>Состояние сервера отчетов (службы Reporting Services в собственном режиме)
@@ -64,15 +64,15 @@ ms.locfileid: "71952461"
  **Состояние сервера**  
  Указывает, запущена ли служба сервера отчетов.  
   
- **Запуск**  
+ **Start**  
  Запускает службу сервера отчетов. Перезапуск службы необходим после некоторых изменений конфигурации (например, при перенастройке сервера отчетов после изменения имени компьютера). При изменении конфигурации резервирования URL-адресов служба перезапустится автоматически. Кроме того, перезапуск необходим для того, чтобы применить изменения.  
   
- **Позиции**  
+ **Остановить**  
  Останавливает службу сервера отчетов. Остановка службы приводит к прекращению работы сервера отчетов. Дополнительные сведения см. в разделе [Запуск и завершение службы сервера отчетов](../../reporting-services/report-server/start-and-stop-the-report-server-service.md) электронной [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] документации по.  
   
 ## <a name="see-also"></a>См. также:  
  [Диспетчер конфигурации служб Reporting Services разделы справки F1 &#40;служб SSRS в собственном режиме&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Диспетчер конфигурации служб Reporting Services &#40;del&#41;](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
- [Инициализация сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Инициализация сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

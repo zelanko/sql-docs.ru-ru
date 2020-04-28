@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ca7d915b940296e6de6689e666401b0c3534c9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782733"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Работа с  путями SQL Server PowerShell
@@ -22,9 +22,9 @@ ms.locfileid: "72782733"
   
 1.  [Перед началом](#BeforeYouBegin)  
   
-2.  **Работа с узлом пути:**  [Вывод списка методов и свойств](#ListPropMeth) [с помощью методов и свойств](#UsePropMeth)  
+2.  **To work on a path node:**  [Listing Methods and Properties](#ListPropMeth), [Using Methods and Properties](#UsePropMeth)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
  После того как выбран узел в пути поставщика компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , можно выполнять действия двух типов.  
   
 -   Можно запускать командлеты Windows PowerShell, работающие с узлами, такие как **Rename-Item**.  
@@ -33,7 +33,7 @@ ms.locfileid: "72782733"
   
  Поставщик [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] используется для управления объектами в экземпляре компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. Он не предназначен для работы с данными в базах данных. Если выбрана таблица или представление, нельзя использовать поставщик для выбора, вставки, обновления или удаления данных. Чтобы запросить или изменить данные в таблицах и представлениях из среды Windows PowerShell, воспользуйтесь командлетом **Invoke-Sqlcmd** . Дополнительные сведения см. в разделе [Invoke-Sqlcmd, командлет](../database-engine/invoke-sqlcmd-cmdlet.md).  
   
-##  <a name="ListPropMeth"></a> список методов и свойств
+##  <a name="listing-methods-and-properties"></a><a name="ListPropMeth"></a>Вывод списка методов и свойств
   
  Командлет **Get-Member** используется для просмотра методов и свойств, доступных для определенных объектов или классов объектов.  
   
@@ -62,7 +62,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012
 Get-Item . | Get-Member -Type Properties  
 ```  
   
-##  <a name="UsePropMeth"></a>Использование методов и свойств объектов SMO  
+##  <a name="using-smo-methods-and-properties"></a><a name="UsePropMeth"></a>Использование методов и свойств объектов SMO  
   
  Для выполнения действий с объектами из пути поставщика компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] можно использовать методы и свойства объектов SMO.  
   
@@ -94,9 +94,9 @@ $MyDBVar.State
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server PowerShell, поставщик](sql-server-powershell-provider.md)   
- [Перемещение путей SQL Server PowerShell](navigate-sql-server-powershell-paths.md)   
- [Преобразование универсальных имен ресурса в пути поставщика SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
+ [Поставщик SQL Server PowerShell](sql-server-powershell-provider.md)   
+ [Навигация по путям SQL Server PowerShell](navigate-sql-server-powershell-paths.md)   
+ [Преобразование URN в пути поставщика SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

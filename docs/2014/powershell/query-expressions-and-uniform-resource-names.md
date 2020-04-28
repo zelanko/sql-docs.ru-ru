@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782755"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Выражения запросов и универсальные имена ресурсов
@@ -41,7 +41,7 @@ ms.locfileid: "72782755"
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Объект*  
+ *Объектами*  
  Указывает тип объекта, который представлен в узле строки выражения. Каждый объект представляет класс коллекции из этих пространств имен объектной модели SMO.  
   
  <xref:Microsoft.SqlServer.Management.Smo>  
@@ -63,12 +63,12 @@ ms.locfileid: "72782755"
  Например, укажите имя Server для класса **ServerCollection** и имя Database для класса **DatabaseCollection** .  
   
  \@*PropertyName*  
- Указывает имя одного из свойств класса, связанного с объектом, который задан в *Object*. Имя свойства должно начинаться с префикса \@. Например, укажите \@IsAnsiNull для свойства **IsAnsiNull** класса **Database**.  
+ Указывает имя одного из свойств класса, связанного с объектом, который задан в *Object*. Имя свойства должно начинаться с префикса \@. Например, укажите \@isansinull класса Database для свойства **Isansinull класса Database**класса **базы данных** .  
   
- \@*BooleanPropertyName*=true()  
+ \@*Булеанпропертинаме*= true ()  
  Перечисляет все объекты, где указанное логическое свойство имеет значение TRUE.  
   
- \@*BooleanPropertyName*=false()  
+ \@*Булеанпропертинаме*= false ()  
  Перечисляет все объекты, где указанное логическое свойство имеет значение FALSE.  
   
  contains(\@*StringPropertyName*, '*PatternString*')  
@@ -103,7 +103,7 @@ ms.locfileid: "72782755"
   
  Выражения запроса должны начинаться с абсолютной ссылки на объект сервера. Относительные выражения, начинающиеся с символа /, не допустимы. Последовательность объектов, указанных в выражении запроса, должна соответствовать иерархии коллекции объектов в связанной модели объекта. Например, выражение запроса, которое ссылается на объекты в пространстве имен Microsoft.SqlServer.Management.Smo, должно начинаться с узла сервера, за которым идет узел базы данных, и так далее.  
   
- Если для объекта не указан критерий *\<FilterExpression>* , перечисляются все объекты в этом узле.  
+ Если для объекта не задан * \<>FilterExpression* , то перечисляются все объекты в этом узле.  
   
 ## <a name="uniform-resource-names-urn"></a>Универсальные имена ресурсов (URN)  
  Имена URN представляют собой подмножество выражений запроса. Каждое имя URN является полной ссылкой на один объект. В обычном имени URN свойство «Имя» используется для определения одного объекта в каждом узле. Например, данное имя URN ссылается на определенный столбец:  
@@ -121,7 +121,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
 Server[@Name='MYCOMPUTER']/Database[@AutoClose=false()]  
 ```  
   
-### <a name="b-enumerating-objects-using-contains"></a>Б. Перечисление объектов при помощи функции contains  
+### <a name="b-enumerating-objects-using-contains"></a>Б) Перечисление объектов при помощи функции contains  
  Следующее выражение запроса перечисляет все базы данных, в которых учитывается регистр и в имени которых имеется символ «m».  
   
 ```  
@@ -157,5 +157,5 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Invoke-PolicyEvaluation, командлет](../database-engine/invoke-policyevaluation-cmdlet.md)   
+ [Командлет Invoke-PolicyEvaluation](../database-engine/invoke-policyevaluation-cmdlet.md)   
  [Подсистема аудита SQL Server (компонент Database Engine)](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

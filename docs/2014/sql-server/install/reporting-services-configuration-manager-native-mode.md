@@ -16,15 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: e7b5e46b90702bf39bf2902eed3e5a6c609757e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952494"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Использование диспетчера конфигурации служб Reporting Services (собственный режим)
-  Используйте диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для настройки установленных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме. Если сервер отчетов был установлен в режиме «только файлы», то перед использованием сервера необходимо воспользоваться диспетчером конфигурации. Если сервер отчетов устанавливался в режиме по умолчанию, используйте диспетчер настройки для проверки или изменения настроек, заданных во время установки. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] может использоваться для настройки экземпляра локального или удаленного сервера отчетов.  
+  Используйте диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для настройки установленных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме. Если сервер отчетов был установлен в режиме «только файлы», то перед использованием сервера необходимо воспользоваться диспетчером конфигурации. Если сервер отчетов устанавливался в режиме по умолчанию, используйте диспетчер настройки для проверки или изменения настроек, заданных во время установки. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] может использоваться для настройки экземпляра локального или удаленного сервера отчетов.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Собственный режим.  
   
@@ -65,13 +64,13 @@ ms.locfileid: "71952494"
   
  **В этом разделе:**  
   
--   [Сценарии использования диспетчера конфигурации служб Reporting Services](#bkmk_scenarios)  
+-   [Сценарии использования диспетчер конфигурации служб Reporting Services](#bkmk_scenarios)  
   
 -   [Требования](#bkmk_requirements)  
   
--   [Запуск диспетчер конфигурации служб Reporting Services](#bkmk_start_configuration_manager)  
+-   [Запуск диспетчера конфигурации служб Reporting Services](#bkmk_start_configuration_manager)  
   
-##  <a name="bkmk_scenarios"></a>Сценарии использования диспетчер конфигурации служб Reporting Services  
+##  <a name="scenarios-to-use-reporting-services-configuration-manager"></a><a name="bkmk_scenarios"></a> Сценарии использования диспетчера конфигурации служб Reporting Services  
  С помощью программы настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно выполнять следующие задачи.  
   
 -   Настройка учетной записи службы сервера отчетов. Учетная запись службы сервера отчетов изначально настраивается в процессе установки, но может быть изменена с помощью программы настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , если требуется обновить пароль или использовать другую учетную запись.  
@@ -80,17 +79,17 @@ ms.locfileid: "71952494"
   
 -   Создание и настройка базы данных сервера отчетов. Сервер отчетов представляет собой сервер без сохранения состояния, которому необходима база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве внутреннего хранилища. Программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать для создания базы данных сервера отчетов и настройки соединения с сервером отчетов. Можно также выбрать существующую базу данных сервера отчетов, содержащую нужные данные.  
   
--   Настройка масштабного развертывания в собственном режиме. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]поддерживает топологию развертывания, которая позволяет нескольким экземплярам сервера отчетов использовать одну общую базу данных сервера отчетов. В случае масштабного развертывания сервера отчетов используйте программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , чтобы подключить каждый сервер отчетов к общей базе данных сервера отчетов.  
+-   Настройка масштабного развертывания в собственном режиме. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживают топологию развертывания, которая позволяет всем экземплярам сервера отчетов использовать одну и ту же общую базу данных сервера отчетов. В случае масштабного развертывания сервера отчетов используйте программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , чтобы подключить каждый сервер отчетов к общей базе данных сервера отчетов.  
   
 -   Резервное копирование, восстановление или замена симметричного ключа, используемого для шифрования хранимых строк соединения и учетных данных. Если изменяется учетная запись службы или база данных сервера отчетов перемещается на другой компьютер, необходимо иметь резервную копию симметричного ключа.  
   
 -   Настройка учетной записи автоматического выполнения. Эта учетная запись используется для удаленных соединений при запланированных операциях или в случае, если недоступны учетные данные пользователя.  
   
--   Настройка электронной почты сервера отчетов. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]включает модуль доставки электронной почты сервера отчетов, который использует протокол SMTP для доставки отчетов или уведомления об обработке отчетов в электронный почтовый ящик. С помощью диспетчера конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно указать SMTP-сервер или сетевой шлюз, который используется для доставки электронной почты.  
+-   Настройка электронной почты сервера отчетов. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль доставки электронной почты сервера отчетов, в котором для доставки отчетов или уведомлений об обработке отчетов по электронной почте используется протокол SMTP. С помощью диспетчера конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно указать SMTP-сервер или сетевой шлюз, который используется для доставки электронной почты.  
   
  Программа настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не предназначена для управления содержимым сервера отчетов, включения дополнительных компонентов или предоставления доступа к серверу. Полное развертывание требует также использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для включения дополнительных компонентов или изменения значений по умолчанию и диспетчер отчетов для предоставления пользователю доступа к серверу.  
   
-##  <a name="bkmk_requirements"></a>Необходимость  
+##  <a name="requirements"></a><a name="bkmk_requirements"></a> Требования  
  Диспетчер конфигурации работает только с конкретной версией служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который устанавливается вместе с этой версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не может применяться для настройки более ранней версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Если на одном компьютере работает нескольких версий служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , для настройки каждого экземпляра должен использоваться диспетчер конфигурации служб Reporting Services, который поставляется с соответствующей версией.  
   
  Для использования диспетчера настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] необходимо иметь следующее.  
@@ -105,7 +104,7 @@ ms.locfileid: "71952494"
   
  URL-адрес [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливается автоматически при установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-##  <a name="bkmk_start_configuration_manager"></a>Запуск диспетчер конфигурации служб Reporting Services  
+##  <a name="to-start-the-reporting-services-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a>Запуск диспетчер конфигурации служб Reporting Services  
   
 #### <a name="to-start-reporting-services-configuration"></a>Запуск программы настройки служб Reporting Services  
   
@@ -125,13 +124,13 @@ ms.locfileid: "71952494"
   
 4.  Если указан удаленный компьютер, для установления соединения нажмите кнопку **Найти** .  
   
-5.  В списке **Report Server В спискеstance**выберите экземпляр служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который необходимо настроить. В списке отображаются только экземпляры сервера отчетов для данной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Более ранние версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]настраивать нельзя.  
+5.  В списке **Экземпляр сервера отчетов** выберите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], который необходимо настроить. В списке отображаются только экземпляры сервера отчетов для данной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Более ранние версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]настраивать нельзя.  
   
 6.  Нажмите кнопку **Соединить**.  
   
 ## <a name="see-also"></a>См. также:  
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
+ [Средства Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Настройка подключения к базе данных сервера отчетов &#40;службы SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [диспетчер конфигурации SQL Server](../../relational-databases/sql-server-configuration-manager.md)   
  [Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  

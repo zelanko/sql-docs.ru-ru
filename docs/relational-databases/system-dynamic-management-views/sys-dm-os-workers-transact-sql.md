@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 87cc5d8dc07c0c4c927b7214bca01bfec09555e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72289358"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "72289358"
 > [!NOTE]  
 >  Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_os_workers**.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |worker_address|**varbinary(8)**|Адрес памяти исполнителя.|  
 |status|**int**|Только для внутреннего применения.|  
@@ -58,11 +58,11 @@ ms.locfileid: "72289358"
 |exception_severity|**int**|Серьезность последнего исключения, возникшего у этого исполнителя.|  
 |exception_address|**varbinary(8)**|Адрес кода, откуда было получено исключение|  
 |affinity|**bigint**|Сходство рабочих потоков. Соответствует сходству потока в [sys. dm_os_threads &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
-|state|**nvarchar (60)**|Состояние исполнителя. Принимается одно из следующих значений:<br /><br /> INIT = исполнитель в настоящий момент инициализируется.<br /><br /> RUNNING = исполнитель в настоящий момент выполняется, в режиме без приоритетного прерывания или с приоритетным прерыванием.<br /><br /> RUNNABLE = исполнитель готов к запуску в соответствии с планировщиком.<br /><br /> SUSPENDED = исполнитель в настоящий момент приостановлен, находится в режиме ожидания сигнала от события.|  
+|state|**nvarchar(60)**|Состояние исполнителя. Может иметь одно из следующих значений:<br /><br /> INIT = исполнитель в настоящий момент инициализируется.<br /><br /> RUNNING = исполнитель в настоящий момент выполняется, в режиме без приоритетного прерывания или с приоритетным прерыванием.<br /><br /> RUNNABLE = исполнитель готов к запуску в соответствии с планировщиком.<br /><br /> SUSPENDED = исполнитель в настоящий момент приостановлен, находится в режиме ожидания сигнала от события.|  
 |start_quantum|**bigint**|Время начала текущего выполнения этого исполнителя (в миллисекундах).|  
 |end_quantum|**bigint**|Время окончания текущего выполнения этого исполнителя (в миллисекундах).|  
-|last_wait_type|**nvarchar (60)**|Тип последнего ожидания. Список типов ожидания см. в разделе [sys. dm_os_wait_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
-|return_code|**int**|Возвращенное значение от последнего ожидания. Принимается одно из следующих значений:<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
+|last_wait_type|**nvarchar(60)**|Тип последнего ожидания. Список типов ожидания см. в разделе [sys. dm_os_wait_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|return_code|**int**|Возвращенное значение от последнего ожидания. Может иметь одно из следующих значений:<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
 |quantum_used|**bigint**|Только для внутреннего применения.|  
 |max_quantum|**bigint**|Только для внутреннего применения.|  
 |boost_count|**int**|Только для внутреннего применения.|  
@@ -79,8 +79,7 @@ ms.locfileid: "72289358"
 ## <a name="remarks"></a>Remarks  
  Если значением состояния исполнителя является RUNNING, и исполнитель выполняется в режиме без приоритетного прерывания, адрес исполнителя совпадает со значением active_worker_address в sys.dm_os_schedulers.  
   
- Когда исполнитель, ожидающий события, получает сигнал, он помещается в начало очереди готовых к работе исполнителей. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешает делать это тысячу раз подряд, после чего исполнитель помещается в конец очереди. Перемещение исполнителя в конец очереди имеет некоторые последствия для производительности.  
+ Когда исполнитель, ожидающий события, получает сигнал, он помещается в начало очереди готовых к работе исполнителей. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешает делать это тысячу раз подряд, после чего исполнитель помещается в конец очереди. Перемещение исполнителя в конец очереди имеет некоторые последствия для производительности.  
   
 ## <a name="permissions"></a>Разрешения
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
@@ -138,5 +137,5 @@ SELECT
   
 ## <a name="see-also"></a>См. также:  
 [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
-[Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[Руководством по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md#DOP)       
 [Инструкции по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)    

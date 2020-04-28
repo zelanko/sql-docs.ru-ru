@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5ed0e086f5743f6759ed8b317750eefcb377180
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782790"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
@@ -41,12 +41,12 @@ ms.locfileid: "72782790"
   
      [Управляющие объекты SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
  Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>Изменение состава категории заданий  
   
@@ -56,15 +56,15 @@ ms.locfileid: "72782790"
   
 3.  Щелкните правой кнопкой мыши папку **Задания** и выберите пункт **Управление категориями заданий**.  
   
-4.  В диалоговом окне **Управление категориями заданий**_server_name_ выберите категорию заданий, которую требуется изменить, а затем щелкните **Просмотр заданий**.  
+4.  В диалоговом окне **Управление категориями заданий**_имя_сервера_ выберите категорию заданий, которую нужно изменить, и нажмите кнопку **Просмотреть задания**.  
   
 5.  Установите флажок **Отображать все задания** .  
   
-6.  Чтобы добавить задание в категорию, в основной сетке установите флажок в столбце **Выбор** , соответствующий заданию. Чтобы удалить задание из категории, снимите флажок. После завершения нажмите кнопку **ОК**.  
+6.  Чтобы добавить задание в категорию, в основной сетке установите флажок в столбце **Выбор** , соответствующий заданию. Чтобы удалить задание из категории, снимите флажок. По окончании нажмите кнопку **ОК**.  
   
-7.  Закройте диалоговое окно **Управление категориями заданий**_server_name_ .  
+7.  Закройте диалоговое окно **Управление категориями заданий**_имя_сервера_ .  
   
-##  <a name="TSQL"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Использование Transact-SQL  
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>Изменение состава категории заданий  
   
@@ -86,7 +86,7 @@ ms.locfileid: "72782790"
   
  Дополнительные сведения см. в разделе [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
   
-##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Использование управляющие объекты SQL Server  
  **Изменение состава категории заданий**  
   
  Воспользуйтесь классом `JobCategory` в любом языке программирования (Visual Basic, Visual C# или PowerShell).  

@@ -23,14 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a94ec756e86cb814d0e3b3f624b4a9b3eb180533
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176022"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Резервное копирование и восстановление баз данных SQL Server
-  В этом разделе описываются преимущества резервного копирования баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], основные условия резервного копирования и восстановления, а также приводятся стратегии резервного копирования и восстановления для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и рассматриваются вопросы безопасности, связанные с резервным копированием и восстановлением в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  В этом разделе описываются преимущества резервного копирования баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , основные условия резервного копирования и восстановления, а также приводятся стратегии резервного копирования и восстановления для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и рассматриваются вопросы безопасности, связанные с резервным копированием и восстановлением в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Компонент резервного копирования и восстановления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает необходимую защиту важных данных, которые хранятся в базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы свести к минимуму риск необратимой потери данных, необходимо создавать резервные копии баз данных для сохранения вносимых изменений на регулярной основе. Хорошо спланированная стратегия резервного копирования и восстановления защищает базы от потери данных, вызванной разными сбоями. Протестируйте стратегию, выполнив восстановление набора резервных копий и вернув в исходное состояние базу данных. Так вы будете готовы эффективно реагировать на проблемы.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "70176022"
   
 
   
-##  <a name="Benefits"></a>Среди  
+##  <a name="benefits"></a><a name="Benefits"></a>Среди  
   
 -   Создание резервных копий баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполнение проверочных процедур восстановления резервных копий и хранение резервных копий в безопасном месте вне рабочей площадки помогают предотвратить возможную необратимую потерю данных.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "70176022"
   
 
   
-##  <a name="TermsAndDefinitions"></a>Компоненты и понятия  
+##  <a name="components-and-concepts"></a><a name="TermsAndDefinitions"></a>Компоненты и понятия  
  создание резервных копий  
  Копирование данных или записей журнала из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или журнала ее транзакций на устройство для резервного копирования, например на диск, на котором создается резервная копия данных или журнала.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "70176022"
   
 
   
-##  <a name="BnrStrategies"></a>Общие сведения о стратегиях резервного копирования и восстановления  
+##  <a name="introduction-to-backup-and-restore-strategies"></a><a name="BnrStrategies"></a>Общие сведения о стратегиях резервного копирования и восстановления  
  Операции резервирования и восстановления данных следует адаптировать под конкретную среду с учетом доступных ресурсов. Таким образом, для надежной работы операций резервирования и восстановления необходима стратегия резервирования и восстановления. Правильно созданная стратегия резервирования и восстановления увеличивает доступность данных и уменьшает их потери, учитывая требования пользователей.  
   
 > [!IMPORTANT]  
@@ -109,7 +109,7 @@ ms.locfileid: "70176022"
   
  Стратегия резервирования и восстановления состоит из части, относящейся к резервированию, и части, относящейся к восстановлению. Часть, относящаяся к резервированию, определяет тип и частоту создания резервных копий, тип и скоростные характеристики оборудования, необходимого для их создания, способ проверки резервных копий, а также местонахождение и тип носителя резервных копий (включая и вопросы безопасности). Часть, относящаяся к восстановлению, определяет ответственного за проведение операций восстановления, а также методы их проведения, позволяющие удовлетворить требования пользователей по доступности данных и минимизации их потерь. Рекомендуется документировать процедуры резервирования и восстановления и хранить копию этой документации в документации по задаче.  
   
- Разработка эффективной стратегии резервирования и восстановления требует тщательного планирования, реализации и тестирования. Необходимо тестирование. До тех пор пока не были успешно восстановлены все резервные копии во всех сочетаниях, вовлеченных в стратегию восстановления, нет и стратегии резервного копирования. Необходимо оценить ряд факторов. К ним относятся:  
+ Разработка эффективной стратегии резервирования и восстановления требует тщательного планирования, реализации и тестирования. Необходимо тестирование. До тех пор пока не были успешно восстановлены все резервные копии во всех сочетаниях, вовлеченных в стратегию восстановления, нет и стратегии резервного копирования. Необходимо оценить ряд факторов. В число этих требований входят следующие:  
   
 -   Производственные задачи организации, относящиеся к базе данных, особенно требования к доступности данных и их защите от потери.  
   
@@ -150,8 +150,8 @@ ms.locfileid: "70176022"
   
      Дополнительные сведения см. в разделе [Оценка размера полной резервной копии базы данных](#EstimateDbBuSize)ниже в этом подразделе.  
   
-####  <a name="EstimateDbBuSize"></a>Оценка размера полной резервной копии базы данных  
- Перед тем как выбрать стратегию резервного копирования и восстановления, необходимо рассчитать, какой объем места на диске необходим для полной резервной копии базы данных. При выполнении операции резервного копирования данные, содержащиеся в базе данных, копируются в файл резервной копии. Резервная копия содержит только фактические данные в базе данных, а не любое неиспользованное пространство. Поэтому резервная копия обычно меньше, чем база данных. Размер полной резервной копии базы данных вы можете вычислить с помощью системной хранимой процедуры **sp_spaceused**. Дополнительные сведения см. в разделе [sp_spaceused (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql).  
+####  <a name="estimate-the-size-of-a-full-database-backup"></a><a name="EstimateDbBuSize"></a>Оценка размера полной резервной копии базы данных  
+ Перед тем как выбрать стратегию резервного копирования и восстановления, необходимо рассчитать, какой объем места на диске необходим для полной резервной копии базы данных. При выполнении операции резервного копирования данные, содержащиеся в базе данных, копируются в файл резервной копии. Резервная копия содержит только фактические данные в базе данных, а не любое неиспользованное пространство. Поэтому резервная копия обычно меньше, чем база данных. Размер полной резервной копии базы данных вы можете вычислить с помощью системной хранимой процедуры **sp_spaceused** . Дополнительные сведения см. в разделе [sp_spaceused (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql).  
   
 ### <a name="schedule-backups"></a>Создание расписания резервного копирования  
  Влияние, оказываемое осуществлением резервного копирования на выполняемые транзакции, минимально, поэтому операции резервного копирования могут выполняться одновременно с выполнением обычных операций. Резервное копирование в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно выполнять с минимальным влиянием на рабочие нагрузки.  
@@ -166,7 +166,7 @@ ms.locfileid: "70176022"
   
  Рекомендуется вести руководство по эксплуатации для каждой базы данных. Такое руководство по эксплуатации должно указывать расположение резервных копий, имена устройств резервного копирования (если есть), время, требуемое для восстановления тестовой резервной копии.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
 ### <a name="scheduling-backup-jobs"></a>Создание расписания заданий резервного копирования  
   
@@ -174,27 +174,27 @@ ms.locfileid: "70176022"
   
 -   [Создание задания](../../ssms/agent/create-a-job.md)  
   
--   [Schedule a Job](../../ssms/agent/schedule-a-job.md)  
+-   [Планирование задания](../../ssms/agent/schedule-a-job.md)  
   
 ### <a name="working-with-backup-devices-and-backup-media"></a>Работа с устройствами резервного копирования и носителями резервных копий  
   
--   [Определение логического устройства резервного копирования для дискового файла &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
+-   [Определение логического устройства резервного копирования для дискового файла (SQL Server)](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
--   [Определение логического устройства резервного копирования для ленточного накопителя &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
+-   [Определение логического устройства резервного копирования для ленточного накопителя (SQL Server)](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
--   [Укажите в качестве места назначения резервного копирования диск или ленту &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [Указание в качестве назначения резервного копирования диска или ленты (SQL Server)](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
--   [Удаление SQL Server &#40;устройства резервного копирования&#41;](delete-a-backup-device-sql-server.md)  
+-   [Удаление устройства резервного копирования (SQL Server)](delete-a-backup-device-sql-server.md)  
   
--   [Задайте дату истечения срока действия резервной копии &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
+-   [Назначение срока хранения резервной копии (SQL Server)](set-the-expiration-date-on-a-backup-sql-server.md)  
   
--   [Просмотр содержимого ленты или &#40;файла резервной копии SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
+-   [Просмотр содержимого ленты или файла резервной копии (SQL Server)](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
--   [Просмотрите данные и файлы журнала в резервном наборе данных &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
+-   [Просмотр файлов данных и журналов в резервном наборе данных (SQL Server)](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
--   [Просмотр свойств и содержимого логического устройства резервного копирования &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+-   [Просмотр свойств и содержимого логического устройства резервного копирования (SQL Server)](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
--   [Восстановление резервной копии с устройства &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
+-   [Восстановление резервной копии с устройства (SQL Server)](restore-a-backup-from-a-device-sql-server.md)  
   
 ### <a name="creating-backups"></a>Создание резервных копий  
   
@@ -203,23 +203,23 @@ ms.locfileid: "70176022"
   
  **Использование SQL Server Management Studio**  
   
--   [Создание полной резервной копии базы данных &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
+-   [Создание полной резервной копии базы данных (SQL Server)](create-a-full-database-backup-sql-server.md)  
   
--   [Создание резервной копии журнала транзакций &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
+-   [Создание резервной копии журнала транзакций (SQL Server)](back-up-a-transaction-log-sql-server.md)  
   
--   [Резервное копирование файлов и файловых групп &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)  
+-   [Резервное копирование файлов и файловых групп (SQL Server)](back-up-files-and-filegroups-sql-server.md)  
   
--   [Создание разностной резервной копии базы данных &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
+-   [Создание разностной резервной копии базы данных (SQL Server)](create-a-differential-database-backup-sql-server.md)  
   
  **Использование Transact-SQL**  
   
--   [Использование Resource Governor для ограничения загрузки ЦП путем сжатия резервных копий &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
+-   [Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (Transact-SQL)](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Создайте резервную копию журнала транзакций, если база данных повреждена &#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
+-   [Создание резервной копии журнала транзакций при повреждении базы данных (SQL Server)](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
--   [Включать или отключать контрольные суммы резервных копий во время резервного копирования или восстановления &#40;SQL Server&#41;](enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
+-   [Включение или отключение вычисления контрольных сумм резервных копий во время резервного копирования или восстановления (SQL Server)](enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
--   [Укажите, будет ли операция резервного копирования или восстановления продолжиться или остановиться после возникновения ошибки &#40;SQL Server&#41;](specify-if-backup-or-restore-continues-or-stops-after-error.md)  
+-   [Определение, продолжает ли операция резервного копирования или восстановления работу после возникновения ошибки (SQL Server)](specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
 
   
@@ -228,60 +228,60 @@ ms.locfileid: "70176022"
   
 -   [Восстановление резервной копии базы данных &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
--   [Восстановление базы данных в новое расположение &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
+-   [Восстановление базы данных в новом расположении (SQL Server)](restore-a-database-to-a-new-location-sql-server.md)  
   
--   [Восстановление разностной резервной копии базы данных &#40;SQL Server&#41;](restore-a-differential-database-backup-sql-server.md)  
+-   [Восстановление разностной резервной копии базы данных (SQL Server)](restore-a-differential-database-backup-sql-server.md)  
   
--   [Восстановление файлов и файловых групп &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
+-   [Восстановление файлов и файловых групп (SQL Server)](restore-files-and-filegroups-sql-server.md)  
   
  **Использование Transact-SQL**  
   
--   [Восстановление резервной копии базы данных в простой модели восстановления &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
+-   [Восстановление резервной копии базы данных в простой модели восстановления (Transact-SQL)](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
--   [Восстановление базы данных до точки сбоя в модели полного восстановления &#40;Transact-SQL&#41;](restore-database-to-point-of-failure-full-recovery.md)  
+-   [Восстановление базы данных до точки сбоя в модели полного восстановления (Transact-SQL)](restore-database-to-point-of-failure-full-recovery.md)  
   
--   [Восстановление файлов и файловых групп поверх существующих файлов &#40;SQL Server&#41;](restore-files-and-filegroups-over-existing-files-sql-server.md)  
+-   [Восстановление файлов и файловых групп поверх существующих файлов (SQL Server)](restore-files-and-filegroups-over-existing-files-sql-server.md)  
   
--   [Восстановление файлов в новое расположение &#40;SQL Server&#41;](restore-files-to-a-new-location-sql-server.md)  
+-   [Восстановление файлов в новое место (SQL Server)](restore-files-to-a-new-location-sql-server.md)  
   
--   [Восстановление базы данных master &#40;Transact-SQL&#41;](restore-the-master-database-transact-sql.md)  
+-   [Восстановление базы данных master (Transact-SQL)](restore-the-master-database-transact-sql.md)  
   
 
   
 ### <a name="restoring-transaction-logs-full-recovery-model"></a>Восстановление журналов транзакций (модель полного восстановления)  
  **Использование SQL Server Management Studio**  
   
--   [Восстановление базы данных до помеченной транзакции &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
+-   [Восстановление базы данных до помеченной транзакции (среда SQL Server Management Studio)](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
--   [Восстановление резервной копии журнала транзакций &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
+-   [Восстановление резервной копии журнала транзакций (SQL Server)](restore-a-transaction-log-backup-sql-server.md)  
   
--   [Восстановление SQL Server базы данных на момент времени &#40;модель полного восстановления&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
  **Использование Transact-SQL**  
   
--   [Восстановление SQL Server базы данных на момент времени &#40;модель полного восстановления&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 
   
 ### <a name="additional-restore-tasks"></a>Дополнительные задачи восстановления  
  **Использование Transact-SQL**  
   
--   [Перезапуск прерванной операции восстановления &#40;Transact-SQL&#41;](restart-an-interrupted-restore-operation-transact-sql.md)  
+-   [Перезапуск прерванной операции восстановления (Transact-SQL)](restart-an-interrupted-restore-operation-transact-sql.md)  
   
--   [Восстановление базы данных без восстановления данных &#40;Transact-SQL&#41;](recover-a-database-without-restoring-data-transact-sql.md)  
+-   [Восстановление базы данных без восстановления данных (Transact-SQL)](recover-a-database-without-restoring-data-transact-sql.md)  
   
 
   
 ## <a name="see-also"></a>См. также:  
- [Общие сведения о резервном копировании &#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [Обзор восстановления и восстановления &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
- [&#41;BACKUP &#40;Transact-SQL](/sql/t-sql/statements/backup-transact-sql)   
- [Восстановление &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Резервное копирование и восстановление баз данных Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
- [Резервное копирование и восстановление полнотекстовых каталогов и индексов](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
- [Резервное копирование и восстановление реплицированных баз данных](../replication/administration/back-up-and-restore-replicated-databases.md)   
- [&#40;SQL Server журнала транзакций&#41;](../logs/the-transaction-log-sql-server.md)   
- [Модели восстановления &#40;SQL Server&#41;](recovery-models-sql-server.md)   
- [Наборы носителей, семейства носителей и резервные наборы данных &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)  
+ [Общие сведения о резервном копировании (SQL Server)](backup-overview-sql-server.md)   
+ [Обзор процессов восстановления (SQL Server)](restore-and-recovery-overview-sql-server.md)   
+ [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
+ [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
+ [Создание и восстановление резервных копий баз данных служб Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
+ [Создание резервных копий и восстановление полнотекстовых каталогов и индексов](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
+ [Создание резервной копии и восстановление из копий реплицируемых баз данных](../replication/administration/back-up-and-restore-replicated-databases.md)   
+ [Журнал транзакций (SQL Server)](../logs/the-transaction-log-sql-server.md)   
+ [Модели восстановления (SQL Server)](recovery-models-sql-server.md)   
+ [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](media-sets-media-families-and-backup-sets-sql-server.md)  
   
   

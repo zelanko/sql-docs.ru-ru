@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 22271c7c7fd5099ae9e65fecfedb820da00c6e30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70911265"
 ---
 # <a name="getting-started-in-smo"></a>Приступая к работе с объектами SMO
@@ -29,7 +29,7 @@ ms.locfileid: "70911265"
 ## <a name="installing-smo"></a>Установка SMO
 При [установке SMO](installing-smo.md) приводятся инструкции по установке и созданию ссылок на сборки SMO.
 
-## <a name="object-model"></a>Объектная модель  
+## <a name="object-model"></a>Модель объектов  
 [Объектная модель](../../relational-databases/server-management-objects-smo/smo-object-model.md) описывает иерархию объектов SMO и взаимосвязь объектов друг с другом.  
   
 ## <a name="programming-languages"></a>Языки программирования  

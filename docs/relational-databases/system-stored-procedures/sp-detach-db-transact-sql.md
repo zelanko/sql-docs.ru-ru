@@ -19,10 +19,10 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72278179"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
@@ -57,7 +57,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 >  Параметр ** \@KeepFulltextIndexFile** будет удален в следующей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не используйте его при работе над новыми приложениями и как можно быстрее измените приложения, в которых он в настоящее время используется.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
@@ -112,7 +112,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Для принудительной установки текущих пользователей из базы данных немедленно или в течение заданного количества секунд также используйте параметр ROLLBACK: ALTER DATABASE *database_name* Set SINGLE_USER WITH ROLLBACK *rollback_option*. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
+>  Для принудительной установки текущих пользователей из базы данных немедленно или в течение заданного количества секунд также используйте параметр ROLLBACK: ALTER DATABASE *database_name* Set SINGLE_USER WITH ROLLBACK *rollback_option*. Дополнительные сведения см. в разделе [ALTER database &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="reattaching-a-database"></a>Повторное присоединение базы данных  
  Отсоединенные файлы останутся на диске и могут быть повторно подсоединены с помощью вызова CREATE DATABASE (с параметрами FOR ATTACH или FOR ATTACH_REBUILD_LOG). Файлы можно также переместить на другой сервер и подсоединить там.  
@@ -135,9 +135,9 @@ exec sp_detach_db @dbname='AdventureWorks2012'
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [&#41;Transact-SQL ALTER DATABASE &#40;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [Отсоединение и присоединение базы данных &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [Создание &#40;базы данных SQL Server&#41;Transact-SQL](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Отсоединение базы данных](../../relational-databases/databases/detach-a-database.md)  
   
   

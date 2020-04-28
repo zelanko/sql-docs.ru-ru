@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154584"
 ---
 # <a name="databases"></a>Базы данных
@@ -36,7 +36,7 @@ ms.locfileid: "70154584"
 ## <a name="working-with-databases"></a>Работа с базами данных  
  Большинство пользователей, работающих с базами данных, используют средство [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Средство [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] предоставляет графический пользовательский интерфейс для создания баз данных и их объектов. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] также содержит редактор запросов, позволяющий взаимодействовать с базами данных при написании инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] можно установить с установочного диска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или загрузить с MSDN.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 |||  
 |-|-|  
@@ -48,17 +48,17 @@ ms.locfileid: "70154584"
 |[Состояния файлов](file-states.md)|[Сжатие базы данных](shrink-a-database.md)|  
 |[Оценка размера базы данных](estimate-the-size-of-a-database.md)|[Сжатие файла](shrink-a-file.md)|  
 |[Копирование баз данных на другие серверы](copy-databases-to-other-servers.md)|[Просмотр или изменение свойств базы данных](view-or-change-the-properties-of-a-database.md)|  
-|[Отсоединение и присоединение базы данных &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)|[Просмотр списка баз данных в экземпляре SQL Server](view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
+|[Присоединение и отсоединение базы данных (SQL Server)](database-detach-and-attach-sql-server.md)|[Просмотр списка баз данных в экземпляре SQL Server](view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
 |[Добавление файлов данных или журналов в базу данных](add-data-or-log-files-to-a-database.md)|[Просмотр или изменение уровня совместимости базы данных](view-or-change-the-compatibility-level-of-a-database.md)|  
 |[Изменение настроек конфигурации базы данных](change-the-configuration-settings-for-a-database.md)|[Использование мастера планов обслуживания](../maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |[Создание базы данных](create-a-database.md)|[Создание псевдонима определяемого пользователем типа данных](create-a-user-defined-data-type-alias.md)|  
-|[Удаление базы данных](delete-a-database.md)|[Моментальные снимки базы данных &#40;SQL Server&#41;](database-snapshots-sql-server.md)|  
+|[Удаление базы данных](delete-a-database.md)|[Моментальные снимки базы данных (SQL Server)](database-snapshots-sql-server.md)|  
   
 ## <a name="related-content"></a>См. также  
  [Индексы](../indexes/indexes.md)  
   
  [Представления](../views/views.md)  
   
- [&#40;ядро СУБД хранимых процедур&#41;](../stored-procedures/stored-procedures-database-engine.md)  
+ [Хранимые процедуры (компонент Database Engine)](../stored-procedures/stored-procedures-database-engine.md)  
   
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8b97b0129a7cc4ffa21b4a82ad0208a2c1890b27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72313645"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Задача 4. Manaing и просмотр результатов
@@ -86,7 +86,7 @@ ms.locfileid: "72313645"
   
 25. Нажмите кнопку **Далее** , чтобы перейти к странице **Экспорт** .  
   
-## <a name="next-step"></a>Дальнейшее действие  
- [Задача 5. Экспорт результатов очистки в файл Excel.](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
+## <a name="next-step"></a>Следующий шаг  
+ [Задача 5. Экспорт результатов очистки в файл Excel](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

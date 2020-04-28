@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c81f5b22aa61dce596896ccd90bfb1d56054742d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782970"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Выполнение запланированного перехода на другой ресурс вручную для группы доступности (SQL Server)
-  В этом разделе описывается, как выполнить отработку отказа вручную без потери данных ( *запланированный переход на другой ресурс вручную*) [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]в [!INCLUDE[tsql](../../../includes/tsql-md.md)]группе доступности AlwaysOn с [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]помощью среды, или PowerShell в. Группа доступности выполняет переход на другой ресурс на уровне реплики доступности. Запланированный переход на другой ресурс вручную, как и любая отработка отказа [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , переводит вторичную реплику в роль первичной и одновременно переводит реплику, бывшую первичной, в роль вторичной.  
+   Этот раздел описывает, как выполнить переход на другой ресурс вручную без потери данных (*запланированный переход на другой ресурс вручную*) в группе доступности AlwaysOn с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Группа доступности выполняет переход на другой ресурс на уровне реплики доступности. Запланированный переход на другой ресурс вручную, как и любая отработка отказа [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , переводит вторичную реплику в роль первичной и одновременно переводит реплику, бывшую первичной, в роль вторичной.  
   
  При запланированном переходе на другой ресурс вручную, который поддерживается, только если первичная и целевая вторичная реплики работают в режиме синхронной фиксации и в данный момент синхронизированы, сохраняются все данные в базах данных-получателях, присоединенных к группе доступности в целевой вторичной реплике. После того как бывшая первичная реплика перейдет в роль вторичной, ее базы данных станут базами данных-получателями и начнут синхронизироваться с новыми базами данных-источниками. После того как они все перейдут в состояние SYNCHRONIZED, новая вторичная реплика может служить целью будущей запланированного перехода на другой ресурс вручную.  
   
@@ -31,9 +31,9 @@ ms.locfileid: "72782970"
 >  Если для первичной и вторичной реплики задан автоматический переход на другой ресурс, то после синхронизации вторичная реплика также может выступать в качестве цели для автоматического перехода на другой ресурс. Дополнительные сведения см. в разделе [Режимы доступности (группы доступности AlwaysOn)](availability-modes-always-on-availability-groups.md).  
   
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Команда отработки отказа завершает работу сразу после того, как целевая вторичная реплика примет команду. Однако восстановление базы данных происходит асинхронно после того, как группа доступности закончит отработку отказа.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "72782970"
     > [!NOTE]  
     >  Транзакции между базами данных и распределенные транзакции не поддерживаются в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Дополнительные сведения см. в разделе [Транзакции между базами данных не поддерживаются при зеркальном отображении баз данных или в группах доступности AlwaysOn (SQL Server)](transactions-always-on-availability-and-database-mirroring.md).  
   
-###  <a name="Prerequisites"></a>Предварительные условия и ограничения  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a>Предварительные условия и ограничения  
   
 -   Целевая вторичная реплика и первичная реплика должны работать в режиме доступности с синхронной фиксацией.  
   
@@ -53,12 +53,12 @@ ms.locfileid: "72782970"
   
 -   Эта задача поддерживается только в целевой вторичной реплике. Необходимо подключиться к экземпляру сервера, на котором размещается целевая вторичная реплика.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  **Переход на другой ресурс группы доступности вручную**  
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, на котором размещена вторичная реплика группы доступности, на которую нужно выполнить отработку отказа, и разверните дерево сервера.  
@@ -69,7 +69,7 @@ ms.locfileid: "72782970"
   
 4.  Будет запущен мастер отработки отказа группой доступности. Дополнительные сведения см. в подразделе [Использование мастера отработки отказа группы доступности (среда SQL Server Management Studio)](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Переход на другой ресурс группы доступности вручную**  
   
 1.  Подключитесь к экземпляру сервера, на котором находится целевая вторичная реплика.  
@@ -80,18 +80,18 @@ ms.locfileid: "72782970"
   
      где *имя_группы* — это имя группы доступности.  
   
-     В следующем примере выполняется ручная отработка отказа группы доступности *MyAg* на подключенную вторичную реплику.  
+     В следующем примере вручную выполняется отработка отказа группы доступности *MyAg»* на подключенную вторичную реплику.  
   
     ```sql
     ALTER AVAILABILITY GROUP MyAg FAILOVER;  
     ```  
   
-##  <a name="PowerShellProcedure"></a>Использование PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Использование PowerShell  
  **Переход на другой ресурс группы доступности вручную**  
   
 1.  Перейдите в каталог (`cd`) экземпляра сервера, на котором размещается целевая вторичная реплика.  
   
-2.  Используйте командлет `Switch-SqlAvailabilityGroup` .  
+2.  Используйте командлет `Switch-SqlAvailabilityGroup`.  
   
     > [!NOTE]  
     >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
@@ -104,12 +104,12 @@ ms.locfileid: "72782970"
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [SQL Server PowerShell, поставщик](../../../powershell/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+-   [Получение справок по SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a>Дальнейшие действия. после ручной отработки отказа группы доступности  
- Если переход был выполнен на ресурс, находящийся за пределами группы доступности [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)], настройте кворум узлов кластера WSFC, чтобы отразить новую конфигурацию группы доступности. Дополнительные сведения см. в разделе [отказоустойчивая кластеризация Windows Server &#40;WSFC&#41; с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
+##  <a name="follow-up-after-manually-failing-over-an-availability-group"></a><a name="FollowUp"></a> Дальнейшие действия. После ручной отработки отказа группы доступности  
+ Если переход был выполнен на ресурс, находящийся за пределами группы доступности [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] , настройте кворум узлов кластера WSFC, чтобы отразить новую конфигурацию группы доступности. Дополнительные сведения см. в разделе [отказоустойчивая кластеризация Windows Server &#40;WSFC&#41; с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

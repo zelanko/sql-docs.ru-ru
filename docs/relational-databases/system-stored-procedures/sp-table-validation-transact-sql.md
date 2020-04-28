@@ -16,10 +16,10 @@ ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 736b4f00e8d33a6bd1e095addc5219fe305ae26a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72173556"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
@@ -63,7 +63,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @full_or_fast = ] full_or_fast`Метод, используемый для вычисления количества строк. *full_or_fast* имеет тип **tinyint**, значение по умолчанию **2**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0**|Выполняет полный подсчет с помощью функции COUNT(*).|  
 |**1**|Выполняет быстрое подсчет из **sysindexes. Rows**. Подсчет строк в **sysindexes** выполняется гораздо быстрее, чем подсчет строк в реальной таблице. Однако, поскольку **sysindexes** отложенно обновляется, количество строк может быть неточным.|  
@@ -94,9 +94,9 @@ sp_table_validation [ @table = ] 'table'
   
 ## <a name="see-also"></a>См. также:  
  [КОНТРОЛЬная сумма &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
- [@ROWCOUNT &#40;TRANSACT-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
+ [@@ROWCOUNT (Transact-SQL)](../../t-sql/functions/rowcount-transact-sql.md)   
  [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
  [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

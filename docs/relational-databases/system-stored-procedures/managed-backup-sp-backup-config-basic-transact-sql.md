@@ -21,10 +21,10 @@ ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e3b3c547453c41dff6d32d1cafcd62746a2f194f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305261"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
@@ -45,7 +45,7 @@ EXEC managed_backup.sp_backup_config_basic
     ,[@retention_days = ] 'retention_period_in_days'    ,[@credential_name = ] 'sql_credential_name'  
 ```  
   
-##  <a name="Arguments"></a>Даваемых  
+##  <a name="arguments"></a><a name="Arguments"></a>Даваемых  
  @enable_backup  
  Включает или выключает [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для указанной базы данных. Бит @enable_backup имеет значение **bit**. Обязательный параметр при [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] настройке для первого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При изменении существующей [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] конфигурации этот параметр является необязательным. В этом случае все значения конфигурации, которые не указаны, сохраняют свои существующие значения.  
   
@@ -68,9 +68,9 @@ EXEC managed_backup.sp_backup_config_basic
 >  В настоящее время параметр ** \@credential_name** не поддерживается. Поддерживается только резервное копирование в блочный BLOB-объект, для которого этот параметр должен иметь значение NULL.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Требуется членство в роли базы данных **db_backupoperator** , с разрешениями **ALTER ANY CREDENTIAL** и **EXECUTE** для хранимой процедуры **sp_delete_backuphistory** .  
@@ -110,6 +110,6 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [managed_backup. sp_backup_config_advanced &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
- [managed_backup. sp_backup_config_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
+ [managed_backup.sp_backup_config_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   
   

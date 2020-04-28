@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: dfa640787f42d06ed65b713c9fea415dc9560a2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252211"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>Помощник по миграции SQL Server для Access (Акцесстоскл)
@@ -25,12 +25,12 @@ ms.locfileid: "72252211"
   
 ## <a name="contents"></a>Содержимое  
   
-|Раздел|Description|
+|Раздел|Описание|
 |-----------|---------------|
 |[Новые возможности в SSMA для Access](https://msdn.microsoft.com/a24d3fc0-6911-4bfa-828a-197abf222e02)|Перечисляет изменения в выпусках SSMA.|  
 |[Установка Помощник по миграции SQL Server для доступа](installing-sql-server-migration-assistant-for-access-accesstosql.md)|Список необходимых компонентов для установки SSMA, процедура установки и лицензирования SSMA и ссылка на последнюю версию.|  
 |[Начало работы с Помощник по миграции SQL Server для доступа &#40;Акцесстоскл&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)|Вводит SSMA и его пользовательский интерфейс.|  
-|[Подготовка баз данных Access к миграции](preparing-access-databases-for-migration-accesstosql.md)|Описывает подготовку баз данных Access для преобразования в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure/SQL.|  
+|[Подготовка баз данных Access к миграции](preparing-access-databases-for-migration-accesstosql.md)|Описывает подготовку баз данных Access для преобразования в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure/SQL.|  
 |[Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)|Содержит общие сведения о процессе преобразования и подробные сведения о каждом шаге процесса.|  
 |[Связывание приложений Access с SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)|Описание использования существующих приложений Access с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Справочник по пользовательскому интерфейсу](user-interface-reference-accesstosql.md)|Содержит документацию для диалоговых окон SSMA.|  

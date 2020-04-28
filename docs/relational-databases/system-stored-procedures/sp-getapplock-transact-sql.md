@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fee963f1b026090a84e58a9b0844fe040f9e9793
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72717253"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
@@ -55,10 +55,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  После того как произойдет блокировка приложения, только первые 32 символа могут быть получены в виде обычного текста; остаток будет хэширован.  
   
  [ @LockMode= ] "*lock_mode*"  
- Надо ли получить режим блокировки для указанного ресурса. *lock_mode* имеет тип **nvarchar (32)** и не имеет значения по умолчанию. Значение может быть любым из следующих: **Shared**, **Update**, **IntentShared**, **IntentExclusive**или **Exclusive**. Дополнительные сведения см. в разделе [режимы блокировки](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
+ Надо ли получить режим блокировки для указанного ресурса. Аргумент *lock_mode* имеет тип **nvarchar(32)** и не имеет значения по умолчанию. Значение может быть любым из следующих: **Shared**, **Update**, **IntentShared**, **IntentExclusive**или **Exclusive**. Дополнительные сведения см. в разделе [режимы блокировки](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
   
  [ @LockOwner= ] "*lock_owner*"  
- Владелец блокировки, которая имеет значение *lock_owner* на момент запроса блокировки. *lock_owner* имеет тип **nvarchar (32)**. Значением может быть **Transaction** (по умолчанию) или **Session**. Если *lock_owner* значение — **Transaction**, по умолчанию или указывается явным образом, sp_getapplock необходимо выполнять в рамках транзакции.  
+ Владелец блокировки, которая имеет значение *lock_owner* на момент запроса блокировки. Аргумент *lock_owner* имеет тип **nvarchar(32)**. Значением может быть **Transaction** (по умолчанию) или **Session**. Если *lock_owner* значение — **Transaction**, по умолчанию или указывается явным образом, sp_getapplock необходимо выполнять в рамках транзакции.  
   
  [ @LockTimeout= ] "*значение*"  
  Значение времени ожидания блокировки (в миллисекундах). Значение по умолчанию совпадает со значением, возвращаемым параметром@LOCK_TIMEOUT@. Чтобы указать, что запрос блокировки должен возвращать код возврата-1, а не ожидать блокировки, когда запрос не может быть предоставлен немедленно, укажите 0.  
@@ -75,7 +75,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |1|Блокировка была предоставлена успешно после снятия других несовместимых блокировок.|  
 |-1|Истекло время ожидания запроса блокировки.|  
 |-2|Запрос блокировки был отменен.|  
-|-3|Запрос блокировки был выбран как жертва взаимоблокировки.|  
+|–3|Запрос блокировки был выбран как жертва взаимоблокировки.|  
 |— 999|Указывает ошибку при проверке параметра или другую ошибку вызова.|  
   
 ## <a name="remarks"></a>Remarks  
@@ -111,7 +111,7 @@ GO
   
  Взаимоблокировка с блокировкой приложения не откатывает транзакцию, запросившую блокировку приложения. Любой откат, который может потребоваться как результат возвращаемого значения, должен быть сделан вручную. Следовательно, рекомендуется включить в код проверку на ошибки с тем, чтобы в случае возврата определенного значения (например -3) могла быть запущена инструкция ROLLBACK TRANSACTION или предпринято другое действие.  
   
- Вот пример:   
+ Например:  
   
 ```  
 USE AdventureWorks2012;  
@@ -132,8 +132,7 @@ END;
 GO  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует идентификатор текущей базы данных для квалификации ресурса. Поэтому, если процедура sp_getapplock выполняется даже с одинаковыми значениями параметров на разных базах данных, в результате разные блокировки появляются на разных ресурсах.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует идентификатор текущей базы данных для квалификации ресурса. Поэтому, если процедура sp_getapplock выполняется даже с одинаковыми значениями параметров на разных базах данных, в результате разные блокировки появляются на разных ресурсах.  
   
  Используйте динамическое административное представление sys.dm_tran_locks или системную хранимую процедуру sp_lock, чтобы получить сведения о блокировке, или используйте приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для отслеживания блокировок.  
   
@@ -167,6 +166,6 @@ GO
 ## <a name="see-also"></a>См. также:  
  [APPLOCK_MODE &#40;Transact-SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
  [APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
+ [sp_releaseapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

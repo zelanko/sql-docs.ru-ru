@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a1d50f31078389cad9fc1e687e67b515c61c89b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783052"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Резервное копирование и восстановление баз данных и журналов транзакций
@@ -445,8 +445,7 @@ del "C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup\Test
 ```  
   
 ## <a name="running-database-integrity-checks-in-visual-basic"></a>Запуск проверок целостности базы данных на языке Visual Basic  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет проверку целостности данных. Данный пример кода запускает проверку согласованности типов базы данных для указанной базы данных. В этом примере используется <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>, но <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> или <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> могут использоваться похожим образом.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет проверку целостности данных. Данный пример кода запускает проверку согласованности типов базы данных для указанной базы данных. В этом примере используется <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>, но <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> или <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> могут использоваться похожим образом.  
   
 > [!NOTE]  
 >  Объект <xref:System.Collections.Specialized.StringCollection> требует ссылки на пространство имен с помощью инструкции `imports System.Collections.Specialized`.  
@@ -476,8 +475,7 @@ End Module
 ```  
   
 ## <a name="running-database-integrity-checks-in-visual-c"></a>Запуск проверок целостности базы данных на языке Visual C#  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет проверку целостности данных. Данный пример кода запускает проверку согласованности типов базы данных для указанной базы данных. В этом примере используется <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>, но <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> или <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> могут использоваться похожим образом.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет проверку целостности данных. Данный пример кода запускает проверку согласованности типов базы данных для указанной базы данных. В этом примере используется <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>, но <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> или <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> могут использоваться похожим образом.  
   
 > [!NOTE]  
 >  Объект <xref:System.Collections.Specialized.StringCollection> требует ссылки на пространство имен с помощью инструкции `imports System.Collections.Specialized`.  
@@ -509,8 +507,7 @@ class A {
 ```  
   
 ## <a name="running-database-integrity-checks-in-powershell"></a>Запуск проверок целостности базы данных в PowerShell  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет проверку целостности данных. Данный пример кода запускает проверку согласованности типов базы данных для указанной базы данных. В этом примере используется <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>, но <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> или <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> могут использоваться похожим образом.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет проверку целостности данных. Данный пример кода запускает проверку согласованности типов базы данных для указанной базы данных. В этом примере используется <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>, но <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> или <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> могут использоваться похожим образом.  
   
 > [!NOTE]  
 >  Объект <xref:System.Collections.Specialized.StringCollection> требует ссылки на пространство имен с помощью инструкции `imports System.Collections.Specialized`.  

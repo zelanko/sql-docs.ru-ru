@@ -10,10 +10,10 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
 ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252125"
 ---
 # <a name="sql-server-migration-assistant"></a>Помощник по миграции SQL Server
@@ -48,13 +48,13 @@ ms.locfileid: "72252125"
 
 * * Этот целевой объект поддерживается только SSMA для Oracle.
 
-## <a name="downloads"></a>Файлы для загрузки
+## <a name="downloads"></a>Загрузки
 
 - [SSMA для Access](https://aka.ms/ssmaforaccess)
 - [SSMA для DB2](https://aka.ms/ssmafordb2)
 - [SSMA для MySql](https://aka.ms/ssmaformysql)
 - [SSMA для Oracle](https://aka.ms/ssmafororacle)
-- [SSMA для SAP ASE](https://aka.ms/ssmaforsybase)
+- [SSMA для SAP ASE](https://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>Получение поддержки SSMA  
 

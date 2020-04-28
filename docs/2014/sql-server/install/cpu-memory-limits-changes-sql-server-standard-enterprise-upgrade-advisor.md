@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 6564a507b01e45e9808f2efbce79c4b3d07b0680
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952576"
 ---
 # <a name="changes-to-cpu-and-memory-limits-for-sql-server-standard-and-enterprise-upgrade-advisor"></a>Изменения ограничений ЦП и памяти для выпусков служб SQL Server Standard и Enterprise (советник по переходу)
@@ -22,12 +22,12 @@ ms.locfileid: "71952576"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]В основном режиме [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; в режиме интеграции с SharePoint.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Собственный режим &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим интеграции с SharePoint.|  
   
 ## <a name="component"></a>Компонент  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Описание  
  Выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard поддерживает 128 ГБ системной памяти, а выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise поддерживает максимальное значение, поддерживаемое операционной системой.  
   
 > [!NOTE]  

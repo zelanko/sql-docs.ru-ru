@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f154e32b5a7782a083db73de1deef327f44e3ee2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175408"
 ---
 # <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>Подключение к базе данных SQL Azure с помощью SQL Server Native Client
@@ -30,6 +30,6 @@ ms.locfileid: "70175408"
     ```  
   
 ## <a name="see-also"></a>См. также:  
- [Построение приложений с использованием SQL Server Native Client](building-applications-with-sql-server-native-client.md)  
+ [Построение приложений с использованием собственного клиента SQL Server](building-applications-with-sql-server-native-client.md)  
   
   

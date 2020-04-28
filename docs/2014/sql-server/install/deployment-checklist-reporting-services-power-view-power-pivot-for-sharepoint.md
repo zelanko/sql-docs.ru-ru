@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f1eb0f6892192e5ed328386e6730ec3b1c41f05b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952555"
 ---
 # <a name="deployment-checklist-reporting-services-power-view-and-powerpivot-for-sharepoint"></a>Контрольный список развертывания: Reporting Services, Power View и PowerPivot для SharePoint
@@ -26,7 +26,7 @@ ms.locfileid: "71952555"
   
 3.  Службы [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services и надстройка служб Reporting Services  
   
-4.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]PowerPivot для SharePoint  
+4.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot для SharePoint  
   
  После установки этих компонентов можно будет выполнять следующие действия.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "71952555"
   
 -   [Указания по использованию функций бизнес-аналитики SQL Server в ферме SharePoint 2010](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)  
   
-## <a name="steps"></a>Действия  
+## <a name="steps"></a>Шаги  
  Следующие шаги предполагают, что установкой и настройкой сервера занимается администратор. Пользователь программы установки в SharePoint также является администратором фермы и нередко также главным администратором сайта в семействе веб-сайтов по умолчанию. Если приведенные ниже обязанности разделены между несколькими людьми, то для выполнения следующих действий могут потребоваться дополнительные разрешения.  
   
 |Шаг|Ссылка|  

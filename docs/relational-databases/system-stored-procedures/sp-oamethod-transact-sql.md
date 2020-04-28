@@ -18,10 +18,10 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252194"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
@@ -47,7 +47,7 @@ sp_OAMethod objecttoken , methodname
  *имя_метода*  
  Имя вызываемого метода OLE-объекта.  
   
- __**выходные данные** ReturnValue    
+ _returnvalue_**выходные данные** ReturnValue    
  Возвращаемое значение метода OLE-объекта. Если значение указано, оно должно быть локальной переменной соответствующего типа данных.  
   
  Если метод возвращает одно значение, укажите локальную переменную для *ReturnValue*, возвращающую возвращаемое значение метода в локальной переменной, или не указывайте *ReturnValue*, которая возвращает возвращаемое значение метода клиенту в виде однострочного результирующего набора с одним столбцом.  
@@ -70,7 +70,7 @@ sp_OAMethod objecttoken , methodname
   
  Если аргумент имеет значение, параметр *ParameterName* должен быть именем [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] именованного параметра. Обратите **@** внимание, что [!INCLUDE[tsql](../../includes/tsql-md.md)] _parametername_is не локальная переменная. Удаляется знак AT**@**(), а параметр *ParameterName*передается в объект OLE в качестве имени параметра. Все именованные параметры должны указываться после указания всех позиционных параметров.  
   
- *\n*  
+ *n*  
  Заполнитель, указывающий на возможность указания нескольких параметров.  
   
 > [!NOTE]
@@ -122,7 +122,7 @@ BEGIN
 END;  
 ```  
   
-### <a name="b-getting-a-property"></a>Б. Получение свойства  
+### <a name="b-getting-a-property"></a>Б) Получение свойства  
  В следующем примере показано получение `HostName` свойства (ранее созданного объекта **SQLServer** ) и его сохранение в локальной переменной.  
   
 ```  

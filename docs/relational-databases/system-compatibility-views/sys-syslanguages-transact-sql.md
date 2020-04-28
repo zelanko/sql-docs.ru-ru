@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
-ms.sourcegitcommit: a17245869c2d3df97ec8cf083608f754f4b2f40f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874871"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
@@ -33,19 +33,19 @@ ms.locfileid: "70874871"
 
   Содержит одну строку для каждого языка, представленного в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|Уникальный идентификатор языка.|  
 |формат даты|**nchar(3)**|Формат представления даты, например DMY.|  
 |datefirst|**tinyint**|Первый день недели: 1 для Понедельник, 2 для вторника и так далее до 7 для воскресенья.|  
-|upgrade|**int**|Зарезервировано для системного использования.|  
+|обновление|**int**|Зарезервировано для системного использования.|  
 |name|**sysname**|Официальное название языка, например Franзais.|  
 |alias|**sysname**|Альтернативное название языка, например French.|  
 |months|**nvarchar (372)**|Список полных названий месяцев через запятую в порядке с января до декабря. Каждое название может содержать не более 20 символов.|  
 |shortmonths|**nvarchar (132)**|Список сокращенных названий месяцев через запятую в порядке с января до декабря. Название может содержать не более 9 символов.|  
 |days|**nvarchar (217)**|Список названий дней недели через запятую в порядке с понедельника до воскресенья. Каждое название может содержать не более 30 символов.|  
 |lcid|**int**|Код локали языка в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
-|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]Идентификатор группы сообщений.|  
+|msglangid|**smallint**|Идентификатор группы сообщений компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
   
  Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] содержит следующие установленные языки.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "70874871"
 |Португальский (Бразилия)|1046|1046|  
 |Китайский (традиционный)|1028|1028|  
 |Корейский|1042|1042|  
-|Китайский (упрощенный)|2052|2052|  
+|Китайский, упрощенное письмо|2052|2052|  
 |Арабский|1025|1025|  
 |Тайский|1054|1054|  
   

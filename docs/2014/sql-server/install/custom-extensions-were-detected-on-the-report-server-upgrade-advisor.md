@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952588"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>На сервере отчетов обнаружены пользовательские расширения (советник по переходу)
@@ -28,12 +28,12 @@ ms.locfileid: "71952588"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]В основном режиме [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; в режиме интеграции с SharePoint.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Собственный режим &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим интеграции с SharePoint.|  
   
 ## <a name="component"></a>Компонент  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет расширяемую архитектуру, позволяющую разработчикам создавать пользовательские расширения для обработки данных, доставки, подготовки к просмотру, безопасности и проверки подлинности.  
   
  Если в установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используются пользовательские модули или сборки, для обновления можно использовать программу установки. В этом случае необходимо переместить модули в новую папку установки после завершения обновления, в обратном случае придется выполнить все шаги до обновления.  
@@ -66,7 +66,7 @@ ms.locfileid: "71952588"
   
  Если принято решение не продолжать обновление, вместо этого можно предпринять миграцию на службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Инструкции по переносу пользовательских расширений см. в разделе [Миграция пользовательских расширений](#migrcustext) этого раздела.  
   
-###  <a name="dataprocdeliver"></a>Пользовательские модули обработки данных или доставки  
+###  <a name="custom-data-processing-or-delivery-extensions"></a><a name="dataprocdeliver"></a>Пользовательские модули обработки данных или доставки  
  Если помощник по обновлению обнаруживает пользовательские модули для обработки данных или доставки, то процесс обновления не блокируется. Однако после завершения обновления, вероятно, придется выполнить дополнительные шаги до того, как пользовательские функции этих модулей начнут работать. Например, дополнительные шаги необходимо выполнить, если файлы пользовательских модулей установлены в папку установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>Шаги для пользовательских модулей обработки данных или доставки, следующие за обновлением  
@@ -75,7 +75,7 @@ ms.locfileid: "71952588"
   
  Дополнительные сведения см. в разделах «Развертывание модуля обработки данных» и «Применение модуля доставки» в электронной документации по SQL Server.  
   
-###  <a name="render"></a>Пользовательские модули подготовки отчетов  
+###  <a name="custom-rendering-extensions"></a><a name="render"></a>Пользовательские модули подготовки отчетов  
  Если помощник по обновлению обнаруживает пользовательские модули подготовки отчетов к просмотру, процесс обновления блокируется. Процесс обновления можно продолжить, удалив записи конфигурации пользовательского модуля из файла конфигурации. Однако это приведет к тому, что после завершения обновления пользовательский модуль станет недоступен для пользователей. Если потребность в пользовательских модулях подготовки отчетов к просмотру остается после обновления, необходимо создать пользовательские модули подготовки отчетов к просмотру или получить обновленные пользовательские модули подготовки отчетов у поставщика этих модулей.  
   
  Для проведения обновления необходимо выполнить определенные шаги либо вместо этого провести миграцию на службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -95,7 +95,7 @@ ms.locfileid: "71952588"
   
  Дополнительные сведения см. в разделе «Применение модуля подготовки отчетов к просмотру» в электронной документации по SQL Server.  
   
-###  <a name="secauth2000"></a>Пользовательские модули безопасности или проверки подлинности на сервере отчетов SQL Server 2000  
+###  <a name="custom-security-or-authentication-extensions-on-a-sql-server-2000-report-server"></a><a name="secauth2000"></a>Пользовательские модули безопасности или проверки подлинности на сервере отчетов SQL Server 2000  
  Если помощник по обновлению обнаруживает пользовательские модули безопасности или проверки подлинности на сервере отчетов [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], процесс обновления блокируется. Для проведения обновления необходимо выполнить определенные шаги либо вместо этого провести миграцию на службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. В противном случае необходимо обновить и перекомпилировать модули с использованием последних версий интерфейсов в файле Microsoft.ReportingServices.Interfaces.dll, т. к. интерфейсы в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] изменились с версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 > [!IMPORTANT]  
@@ -115,7 +115,7 @@ ms.locfileid: "71952588"
   
  Дополнительные сведения см. в разделе «Применение модуля безопасности» в электронной документации по SQL Server.  
   
-###  <a name="secauth2005"></a>Пользовательские модули безопасности или проверки подлинности на сервере отчетов SQL Server 2005  
+###  <a name="custom-security-or-authentication-extensions-on-a-sql-server-2005-report-server"></a><a name="secauth2005"></a>Пользовательские модули безопасности или проверки подлинности на сервере отчетов SQL Server 2005  
  Если помощник по обновлению обнаруживает пользовательские модули безопасности или проверки подлинности на сервере отчетов [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], процесс обновления блокируется. Для проведения обновления необходимо выполнить определенные шаги либо вместо этого провести миграцию на службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##### <a name="to-upgrade-custom-security-or-authentication-extensions-from-a-sql-server-2005-report-server"></a>Обновление пользовательских модулей безопасности или проверки подлинности на сервере отчетов SQL Server 2005  
@@ -130,7 +130,7 @@ ms.locfileid: "71952588"
   
  Дополнительные сведения см. в разделе «Применение модуля безопасности» в электронной документации по SQL Server.  
   
-###  <a name="migrcustext"></a>Миграция пользовательских расширений  
+###  <a name="migrating-custom-extensions"></a><a name="migrcustext"></a>Миграция пользовательских расширений  
  Если принято решение провести миграцию на службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] вместо обновления, выполните определенные шаги, чтобы провести миграцию пользовательских модулей в новый экземпляр служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##### <a name="to-migrate-custom-extensions-to-a-new-reporting-services-instance"></a>Миграция пользовательских модулей в новый экземпляр служб Reporting Services  

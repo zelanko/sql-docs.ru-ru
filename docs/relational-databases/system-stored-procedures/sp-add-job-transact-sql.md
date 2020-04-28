@@ -18,10 +18,10 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7752b8fcb453f545c357c529774d570e41201ed1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72381914"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "72381914"
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
- > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+ > В [управляемый экземпляр базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)в настоящее время поддерживаются не все функции агент SQL Server. Дополнительные сведения см. [в разделе управляемый экземпляр базы данных SQL Azure отличий T-SQL от SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
  
 ## <a name="syntax"></a>Синтаксис  
   
@@ -73,12 +73,12 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @notify_level_eventlog = ] eventlog_level`Значение, указывающее, когда следует поместить запись в журнал приложений Microsoft Windows для этого задания. *eventlog_level*имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0**|Никогда|  
 |**1**|При успешном завершении|  
 |**2** (по умолчанию)|При сбое|  
-|**3-5**|Всегда|  
+|**3**|Всегда|  
   
 `[ @notify_level_email = ] email_level`Значение, указывающее, когда следует отправить сообщение электронной почты после завершения этого задания. *email_level*имеет **тип int**и значение по умолчанию **0**, что означает Never. *email_level*использует те же значения, что и *eventlog_level*.  
   
@@ -112,8 +112,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  Если задание будет выполняться на одном или нескольких целевых серверах в многосерверной среде, используйте **sp_apply_job_to_targets** , чтобы задать целевые серверы или группы целевых серверов для задания. Чтобы удалить задания с целевых серверов или групп целевых серверов, используйте **sp_remove_job_from_targets**.  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
   
 ## <a name="permissions"></a>Разрешения  
  Для выполнения этой хранимой процедуры пользователи должны быть членами предопределенной роли сервера **sysadmin** или иметь одну из следующих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предопределенных ролей базы данных агента, которая находится в базе данных **msdb** :  
@@ -142,7 +141,7 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>Б. Создание задания с уведомлением по пейджеру, электронной почте и по сети  
+### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>Б) Создание задания с уведомлением по пейджеру, электронной почте и по сети  
  Этот пример иллюстрирует создание задания `Ad hoc Sales Data Backup`, в случае сбоя которого пользователь `François Ajenstat` получает уведомление (по пейджеру, электронной почте или с помощью сетевого всплывающего сообщения); в случае успешного завершения задания выполняется его удаление.  
   
 > [!NOTE]  
@@ -179,6 +178,6 @@ GO
  [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1b2f4b080287dd4481a121def388f327112f21ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154614"
 ---
 # <a name="database-engine-tutorials"></a>Учебники по компоненту ядра СУБД
@@ -44,13 +44,13 @@ ms.locfileid: "70154614"
  [Руководство. Администрирование серверов с помощью управления на основе политик](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
  Этот учебник учит создавать политики, которые обеспечивают принудительное выполнение стандартов по администрированию сайта.  
   
- [Учебник. Выполнение политик рекомендаций с помощью управления на основе политик](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
+ [Руководство по Выполнение политик рекомендаций с помощью управления на основе политик](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  В этом учебнике показано, как создавать политики, которые могут использоваться для анализа экземпляров компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] в поисках известных проблем.  
   
- [Руководство по резервному копированию и восстановлению SQL Server с помощью службы хранилища BLOB-объектов Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [Руководство по Резервное копирование и восстановление SQL Server с помощью службы хранилищ BLOB-объектов Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
  В этом руководстве показано, как выполнять резервное копирование и восстановление SQL Server в службу хранилища BLOB-объектов Azure.  
   
- [Учебник. Файлы данных SQL Server в службе хранилища Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [Руководство по Файлы данных SQL Server в службе хранилища Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
  С помощью этого руководства вы научитесь напрямую сохранять файлы данных SQL Server в службе хранилища BLOB-объектов Azure.  
   
 ## <a name="see-also"></a>См. также:  

@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cabd2d1ebbe726971e7837ff3e268ad3c2cee89f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72041257"
 ---
 # <a name="installing-smo"></a>Установка SMO
@@ -41,7 +41,7 @@ ms.locfileid: "72041257"
 
 Инструкции и примеры установки и использования пакета NuGet см. [в разделе NuGet быстрое начало — использование пакета](https://docs.microsoft.com/nuget/quickstart/use-a-package) . 
   
-## <a name="system-requirements"></a>Требования к системе
+## <a name="system-requirements"></a>Системные требования
   
  Для работы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] объектов SMO требуется 4,0 или .net Core 2,0, поэтому все приложения, использующие его, должны обеспечивать установку этой версии или более поздней на клиентских компьютерах. Для некоторых собственных двоичных файлов, установленных с помощью библиотек SMO, также требуется установка среды выполнения VC 2013. Эта среда выполнения не включена в пакет. Вы можете скачать распространяемый файл, соответствующий целевой архитектуре, изhttps://www.microsoft.com/download/details.aspx?id=40784
   

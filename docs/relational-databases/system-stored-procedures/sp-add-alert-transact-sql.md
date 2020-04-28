@@ -18,10 +18,10 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 848f3cffb3c05f16b339233c89892396b5443e4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71174259"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-SQL)
@@ -79,12 +79,12 @@ sp_add_alert [ @name = ] 'name'
 > [!IMPORTANT]
 >  Параметры пейджера и **команды net send** будут удалены из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Старайтесь не использовать эти функции в новых разработках и предусмотрите соответствующие изменения в приложениях, которые используют их в настоящее время.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0**|None|  
 |**1**|электронная почта;|  
 |**2**|Пейджер|  
-|**4**|**NET SEND**|  
+|**4**|**команда net send.**|  
   
 `[ @database_name = ] 'database'`База данных, в которой должна произойти ошибка для срабатывания предупреждения. Если *база данных*не указана, предупреждение срабатывает независимо от того, где произошла ошибка. *база данных* имеет тип **sysname**. Символы, заключенные в квадратные скобки ([ ]), являются недопустимыми. Значение по умолчанию — NULL.  
   
@@ -101,11 +101,11 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @performance_condition = ] 'performance_condition'`— Это значение, выраженное в формате "*итемкомпараторвалуе*". *performance_condition* имеет тип **nvarchar (512)** со ЗНАЧЕНИЕМ по умолчанию NULL и состоит из этих элементов.  
   
-|Элемент формата|Description|  
+|Элемент формата|Описание|  
 |--------------------|-----------------|  
 |*Элемент*|Объект производительности, счетчик производительности или именованный экземпляр счетчика.|  
 |*Сравнения*|Один из следующих операторов: >, < или =|  
-|*Value*|Числовое значение счетчика|  
+|*Значение*|Числовое значение счетчика|  
   
 `[ @category_name = ] 'category'`Имя категории оповещений. *Category* имеет тип **sysname**и значение по умолчанию NULL.  
   
@@ -132,8 +132,7 @@ sp_add_alert [ @name = ] 'name'
   
 -   Любое событие, регистрируемое с помощью **xp_logevent**  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает простой графический способ управления всей системой предупреждений и рекомендуется для настройки инфраструктуры предупреждений.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает простой графический способ управления всей системой предупреждений и рекомендуется для настройки инфраструктуры предупреждений.  
   
  Если предупреждение функционирует неправильно, проверьте:  
   
@@ -174,6 +173,6 @@ GO
  [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [sp_update_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [sys. sysperfinfo &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

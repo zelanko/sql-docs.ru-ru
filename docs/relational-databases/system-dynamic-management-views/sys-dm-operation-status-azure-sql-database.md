@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: c49e4e01dd8ddaf0667546a8cc221a7918f42c81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70911209"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (база данных SQL Azure)
@@ -32,21 +32,21 @@ ms.locfileid: "70911209"
 
   Возвращает сведения об операциях, выполненных в базах данных на сервере [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|session_activity_id|**UNIQUEIDENTIFIER**|Идентификатор операции. Не равно NULL.|  
+|session_activity_id|**uniqueidentifier**|Идентификатор операции. Не равно NULL.|  
 |resource_type|**int**|Обозначает тип ресурса, в котором выполняется операция. Не равно NULL. В текущем выпуске это представление отслеживает операции, выполняемые только в [!INCLUDE[ssSDS](../../includes/sssds-md.md)] и соответствующие целочисленному значению 0.|  
 |resource_type_desc|**nvarchar (2048)**|Описание типа ресурса, в котором выполняется операция. В текущем выпуске это представление отслеживает операции, выполняемые только в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |major_resource_id|**sql_variant**|Имя ресурса [!INCLUDE[ssSDS](../../includes/sssds-md.md)], в котором выполняется операция. Не равно NULL.|  
 |minor_resource_id|**sql_variant**|Только для внутреннего использования. Не равно NULL.|  
-|операция|**nvarchar (60)**|Операции, выполняемые на [!INCLUDE[ssSDS](../../includes/sssds-md.md)], такие как CREATE или ALTER.|  
+|операции|**nvarchar(60)**|Операции, выполняемые на [!INCLUDE[ssSDS](../../includes/sssds-md.md)], такие как CREATE или ALTER.|  
 |state|**tinyint**|Состояние операции.<br /><br /> 0 = Ожидает согласования<br />1 = выполняется<br />2 = завершена<br />3 = ошибка<br />4 = отмена|  
-|state_desc|**nvarchar (120)**|PENDING = операция ожидает доступности ресурсов или квоты.<br /><br /> IN_PROGRESS = операция запущена и выполняется.<br /><br /> COMPLETED = операция успешно завершена.<br /><br /> FAILED = ошибка операции. Дополнительные сведения см. в столбце **error_desc** .<br /><br /> CANCELLED = выполнение операции остановлено по запросу пользователя.|  
+|state_desc|**nvarchar(120)**|PENDING = операция ожидает доступности ресурсов или квоты.<br /><br /> IN_PROGRESS = операция запущена и выполняется.<br /><br /> COMPLETED = операция успешно завершена.<br /><br /> FAILED = ошибка операции. Дополнительные сведения см. в столбце **error_desc** .<br /><br /> CANCELLED = выполнение операции остановлено по запросу пользователя.|  
 |percent_complete|**int**|Процент завершения выполнения операции. Значения не являются непрерывными, а допустимые значения перечислены ниже. Не равно NULL.<br/><br/>0 = операция не запущена<br/>50 = выполняется операция<br/>100 = операция завершена|  
 |error_code|**int**|Код ошибки, возникшей при неудачном выполнении операции. Если значение равно 0, операция завершилась успешно.|  
 |error_desc|**nvarchar (2048)**|Описание ошибки, которая возникла во время неудачного выполнения операции.|  
 |error_severity|**int**|Степень серьезности ошибки, которая возникла во время неудачного выполнения операции. Дополнительные сведения о серьезности ошибок см. в разделе [ядро СУБД серьезности ошибок](https://go.microsoft.com/fwlink/?LinkId=251052).|  
-|error_state|**int**|Зарезервирован для использования в будущем. Совместимость с будущими версиями не гарантируется.|  
+|error_state|**int**|Зарезервировано для последующего использования. Совместимость с будущими версиями не гарантируется.|  
 |start_time|**datetime**|Метка времени начала операции.|  
 |last_modify_time|**datetime**|Метка времени последнего изменения записи для длительных операций. Для успешно выполненных операций в этом поле отображается метка времени завершения операции.|  
   
@@ -87,6 +87,6 @@ SELECT * FROM sys.dm_operation_status
  [Динамические административные представления и функции георепликации &#40;базе данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
  [sys. dm_geo_replication_link_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
  [sys. geo_replication_links &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [ALTER DATABASE &#40;база данных SQL Azure&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
+ [ALTER DATABASE (база данных SQL Azure)](../../t-sql/statements/alter-database-azure-sql-database.md)  
   
   

@@ -11,28 +11,28 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b166930b5d077e7294fcdbc13449d40cab309425
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176113"
 ---
-# <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Руководство по резервному копированию и восстановлению SQL Server с помощью службы хранилища BLOB-объектов Azure
+# <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Руководство по Резервное копирование и восстановление SQL Server с помощью службы хранилищ BLOB-объектов Azure
   Добро пожаловать в начало работы с помощью SQL Server резервного копирования и восстановления с помощью службы хранилища BLOB-объектов Azure. С помощью этого руководства вы научитесь создавать и восстанавливать резервные копии, используя службу хранилища BLOB-объектов Azure.  
   
 ## <a name="what-you-will-learn"></a>Обзор учебника  
  В этом учебнике показано, как создать учетную запись хранения Windows, контейнер больших двоичных объектов, учетные данные для доступа к учетной записи хранения, как записать резервную копию в службу хранилищ больших двоичных объектов и выполнить простое восстановление. Учебник разделен на четыре занятия.  
   
- [Занятие 1. Создание объектов службы хранилища Azure](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
+ [Урок 1. Создание объектов службы хранилища Azure](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
  На этом занятии вы создадите учетную запись хранения Azure и контейнер больших двоичных объектов.  
   
- [Lesson 2: Create a SQL Server Credential](../tutorials/lesson-2-create-a-sql-server-credential.md)  
+ [Урок 2. Создание учетных данных SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  
  На этом занятии вы создадите учетные данные для хранения сведений о безопасности, которые будут использоваться для доступа к учетной записи хранения Azure.  
   
- [Занятие 3. Запись полной резервной копии базы данных в службу хранилища BLOB-объектов Azure](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  
+ [Урок 3. Запись полной резервной копии базы данных в службу хранилища BLOB-объектов Azure](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  
  На этом занятии вам предстоит выполнить инструкцию Т-SQL для записи резервной копии базы данных AdventureWorks2012 в службу хранилища BLOB-объектов Azure.  
   
- [Урок 4. Восстановление базы данных из полной резервной копии](../tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)  
+ [Занятие 4: Восстановление базы данных из полной резервной копии](../tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)  
  На этом занятии также предстоит выполнить инструкцию T-SQL для восстановления из резервной копии базы данных, созданной на предыдущем занятии.  
   
 ### <a name="requirements"></a>Требования  

@@ -20,10 +20,10 @@ ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 96fb5c880346c534c3b956e577f15622e598d48c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305210"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
@@ -41,7 +41,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *намного*  
+ *lcid*  
  Целое число, сопоставляющее идентификатор локали, для которого необходимо загрузить XML-определение тезауруса. Чтобы получить ИДЕНТИФИКАТОРы языков, доступных на экземпляре сервера, используйте представление каталога [&#41;sys. fulltext_languages &#40;Transact-SQL](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) .  
   
  **\@** = *действие* лоадонлифнотлоадед  
@@ -49,7 +49,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
 |Значение|Определение|  
 |-----------|----------------|  
-|**0**|Загружать файл тезауруса независимо от того, загружен ли он. Это поведение по умолчанию для **sp_fulltext_load_thesaurus_file**.|  
+|**0**;|Загружать файл тезауруса независимо от того, загружен ли он. Это поведение по умолчанию для **sp_fulltext_load_thesaurus_file**.|  
 |1|Загружать файл тезауруса только в случае, если он еще не загружен.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -77,7 +77,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 EXEC sys.sp_fulltext_load_thesaurus_file 1033;
 ```  
   
-### <a name="b-load-a-thesaurus-file-only-if-it-is-not-yet-loaded"></a>Б. Загрузка файла тезауруса только в случае, если он еще не загружен  
+### <a name="b-load-a-thesaurus-file-only-if-it-is-not-yet-loaded"></a>Б) Загрузка файла тезауруса только в случае, если он еще не загружен  
  В следующем примере выполняется синтаксический анализ и загрузка файла тезауруса для арабского языка, если он еще не загружен.  
   
 ```sql
@@ -86,6 +86,6 @@ EXEC sys.sp_fulltext_load_thesaurus_file 1025, @loadOnlyIfNotLoaded = 1;
 
 ## <a name="see-also"></a>См. также:
 
-[FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)  
-[Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+[FULLTEXTSERVICEPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)  
+[Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
 [Настройка и управление файлами тезауруса для полнотекстового поиска](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)

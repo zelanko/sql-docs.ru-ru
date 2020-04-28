@@ -18,10 +18,10 @@ ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9c1dfefbc309e9ccc0f170461795c00a117247e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304985"
 ---
 # <a name="log_shipping_primary_databases-transact-sql"></a>log_shipping_primary_databases (Transact-SQL)
@@ -29,15 +29,15 @@ ms.locfileid: "72304985"
 
   Сохраняет одну запись для базы данных-источника в конфигурации доставки журналов. Эта таблица хранится в базе данных **msdb** .  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**primary_id**|**UNIQUEIDENTIFIER**|Идентификатор базы данных-источника в конфигурации доставки журналов.|  
-|**primary_database**|**имеет sysname**|Имя базы данных-источника в конфигурации доставки журналов.|  
-|**backup_directory**|**nvarchar (500)**|Каталог, в котором хранятся файлы резервной копии журнала транзакций с сервера-источника.|  
+|**primary_id**|**uniqueidentifier**|Идентификатор базы данных-источника в конфигурации доставки журналов.|  
+|**primary_database**|**sysname**|Имя базы данных-источника в конфигурации доставки журналов.|  
+|**каталог_резервной_копии**|**nvarchar (500)**|Каталог, в котором хранятся файлы резервной копии журнала транзакций с сервера-источника.|  
 |**backup_share**|**nvarchar (500)**|Сетевой или UNC-путь к каталогу резервных копий.|  
 |**backup_retention_period**|**int**|Время хранения файла резервной копии журнала в каталоге резервных копий (в минутах).|  
-|**backup_job_id**|**UNIQUEIDENTIFIER**|Идентификатор задания агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], связанный с заданием резервного копирования на сервере-источнике.|  
-|**monitor_server**|**имеет sysname**|Имя экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], используемого в качестве сервера мониторинга в конфигурации доставки журналов.|  
+|**backup_job_id**|**uniqueidentifier**|Идентификатор задания агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], связанный с заданием резервного копирования на сервере-источнике.|  
+|**monitor_server**|**sysname**|Имя экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], используемого в качестве сервера мониторинга в конфигурации доставки журналов.|  
 |**monitor_server_security_mode**|**bit**|Режим безопасности, используемый для подключения к серверу мониторинга:<br /><br /> 1 = проверка подлинности Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности.|  
 |**last_backup_file**|**nvarchar (500)**|Абсолютный путь последней резервной копии журнала транзакций.|  
 |**last_backup_date**|**datetime**|Дата и время создания последней резервной копии журнала.|  
@@ -49,6 +49,6 @@ ms.locfileid: "72304985"
  [sp_add_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)   
  [sp_delete_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
  [sp_help_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)   
- [Системные таблицы &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Системные таблицы (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

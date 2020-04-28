@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: e7a66be0d4e002643ffe1c72ce8c44aa50f61c0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952622"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>Контрольный список развертывания: установка служб Reporting Services в существующей ферме SharePoint
@@ -35,7 +35,7 @@ ms.locfileid: "71952622"
   
 |Начальная конфигурация|Рабочий процесс|Конечная конфигурация|Комментарии|  
 |----------------------------|--------------|--------------------------|--------------|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]в локальном режиме|Установка|Подключенный режим [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].||  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] в локальном режиме|Установка|Подключенный режим [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].||  
 |Подключенный режим [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Обновление на месте|Подключенный режим [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].||  
 |Подключенный режим [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Миграция|Подключенный режим [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].||  
   
@@ -51,7 +51,7 @@ ms.locfileid: "71952622"
 |**Дополнительная настройка**||  
 |Добавьте типы содержимого служб SSRS в библиотеку документов.|[Добавление типов содержимого сервера отчетов в библиотеку &#40;Reporting Services в режиме интеграции с SharePoint&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)|  
 |Подготовьте к работе агент SQL Server|[Подготовка подписок и предупреждений для приложений служб SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)|  
-|Настройте параметры электронной почты для приложения службы|[Настройка электронной почты для Reporting Services приложения службы &#40;SharePoint 2010 и SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
+|Настройте параметры электронной почты для приложения службы|[Настройка электронной почты для приложения служб Reporting Services (SharePoint 2010 и SharePoint 2013)](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
 |Настройте службу Claims to Windows Token Service (c2WTS)|[Служба Claims to Windows Token Service &#40;C2WTS&#41; и Reporting Services](../../../2014/sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md)|  
   
 ## <a name="migration-checklist"></a>Контрольный список действий по миграции  
@@ -59,7 +59,7 @@ ms.locfileid: "71952622"
   
 |Шаг|Ссылка|  
 |----------|----------|  
-|Установите и настройте новый сервер. В их состав входят:<br /><br /> Средство подготовки продуктов SharePoint<br /><br /> Продукт SharePoint 2010<br /><br /> SharePoint 2010 с пакетом обновления 1 (SP1)<br /><br /> Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме SharePoint<br /><br /> Надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint 2010|[Установка Reporting Services режима SharePoint для SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
+|Установите и настройте новый сервер. Это включает следующие действия.<br /><br /> Средство подготовки продуктов SharePoint<br /><br /> Продукт SharePoint 2010<br /><br /> SharePoint 2010 с пакетом обновления 1 (SP1)<br /><br /> Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме SharePoint<br /><br /> Надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint 2010|[Установка Reporting Services режима SharePoint для SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |Создайте по крайней мере одно приложение службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |Создайте резервную копию баз данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |Создайте резервную копию ключей шифрования служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
@@ -68,7 +68,7 @@ ms.locfileid: "71952622"
 |Удалите URL-адрес интеграции на старом сервере.|В центре администрирования SharePoint на странице **Общие параметры приложения** выберите **Интеграция служб Reporting Services**.|  
 |При желании удалите службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из старой установки.||  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
   
 ## <a name="see-also"></a>См. также:  
  [Reporting Services установки в режиме интеграции с SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   

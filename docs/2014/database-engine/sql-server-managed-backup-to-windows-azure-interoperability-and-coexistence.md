@@ -11,13 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70d941786fd06e48bf071b8448b84c8f4857f8c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176066"
 ---
-# <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>Управляемое резервное копирование SQL Server в Azure: взаимодействие и сосуществование
+# <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>Управляемое резервное копирование SQL Server в Azure: Возможности взаимодействия и совместной работы
   В этом разделе описываются вопросы взаимодействия и совместной работы [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] с некоторыми функциями в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. К таким функциям относятся следующие: группы доступности AlwaysOn, зеркальное отображение базы данных, планы обслуживания резервного копирования, Доставка журналов, нерегламентированные резервные копии, отсоединение базы данных и удаление базы данных.  
   
 ### <a name="alwayson-availability-groups"></a>Группы доступности AlwaysOn  

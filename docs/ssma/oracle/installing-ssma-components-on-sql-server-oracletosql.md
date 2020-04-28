@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 1f0cea859e9465eebefebc061ee51107dc7844aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71713311"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Установка компонентов SSMA на SQL Server (OracleToSQL)
@@ -68,7 +68,7 @@ ms.locfileid: "71713311"
   
 6. На странице **Выбор типа установки** выберите вариант **Обычная**.  
   
-7. На странице **все готово для установки** нажмите кнопку **установить**.  
+7. На странице **Все готово для установки** нажмите кнопку **Установить**.  
   
 8. На странице **завершено первое действие установки** нажмите кнопку **Далее**.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "71713311"
 
 Каждый раз при миграции данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SSMA создает задание [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента. Эти задания называются **ssma_oracle пакет переноса данных {GUID}** и отображаются в узле [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в папке задания.  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Установка SSMA для клиента Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
 [Перенос баз данных Oracle в SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

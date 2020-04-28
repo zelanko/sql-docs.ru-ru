@@ -18,10 +18,10 @@ ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304808"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
@@ -44,7 +44,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>Аргументы  
 `[ @class = ] 'class'`Класс, для которого запрашиваются сведения. *класс* имеет тип **varchar (8)** и значение по умолчанию **Job**. *класс* может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**ДОЛЖНО**|Выдает сведения о категории заданий.|  
 |**ПОЛУЧАЕТЕ**|Выдает сведения о категории предупреждений.|  
@@ -52,7 +52,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'`Тип категории, для которой запрашиваются сведения. *Type имеет тип* **varchar (12)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Языковые**|Категория локальных заданий.|  
 |**MULTI -SERVER**|Категория многосерверных заданий.|  
@@ -68,19 +68,19 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="result-sets"></a>Результирующие наборы  
  Если ** \@суффикс** равен **0**, **sp_help_category** возвращает следующий результирующий набор:  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Идентификатор категории|  
 |**category_type**|**tinyint**|Тип категории:<br /><br /> **1** = локальный<br /><br /> **2** = многосерверная<br /><br /> **3** = нет|  
-|**name**|**имеет sysname**|Имя категории|  
+|**name**|**sysname**|Имя категории|  
   
  Если ** \@суффикс** равен **1**, **sp_help_category** возвращает следующий результирующий набор:  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Идентификатор категории|  
-|**category_type**|**имеет sysname**|Тип категории. Один из нескольких **локальных**, **многосерверных**или **нет**|  
-|**name**|**имеет sysname**|Имя категории|  
+|**category_type**|**sysname**|Тип категории. Один из нескольких **локальных**, **многосерверных**или **нет**|  
+|**name**|**sysname**|Имя категории|  
   
 ## <a name="remarks"></a>Remarks  
  **sp_help_category** должны запускаться из базы данных **msdb** .  
@@ -88,7 +88,7 @@ sp_help_category [ [ @class = ] 'class' ]
  Если никакие аргументы не указаны, результирующий набор содержит сведения обо всех категориях заданий.  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -112,7 +112,7 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-### <a name="b-returning-alert-information"></a>Б. Возвращение сведений о предупреждениях  
+### <a name="b-returning-alert-information"></a>Б) Возвращение сведений о предупреждениях  
  В следующем примере возвращаются сведения о категории предупреждений Replication.  
   
 ```  
@@ -129,6 +129,6 @@ GO
  [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

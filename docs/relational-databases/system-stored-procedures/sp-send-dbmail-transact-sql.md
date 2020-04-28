@@ -19,10 +19,10 @@ ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42c763b37f5c721a259fbe87eca804e22f5c27b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71974367"
 ---
 # <a name="sp_send_dbmail-transact-sql"></a>Хранимая процедура sp_send_dbmail (Transact-SQL)
@@ -91,7 +91,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 -   Низкий  
   
--   Обычный  
+-   Нормальный  
   
 -   Высокий  
   
@@ -99,13 +99,13 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 `[ @sensitivity = ] 'sensitivity'`Чувствительность сообщения. Параметр имеет тип **varchar (12)**. Аргумент может содержать одно из следующих значений.  
   
--   Обычный  
+-   Нормальный  
   
 -   Personal  
   
 -   Private  
   
--   Конфиденциально  
+-   Конфиденциальный  
   
  По умолчанию имеет значение Normal.  
   
@@ -143,7 +143,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 > [!NOTE]  
 >  При использовании с большими объемами данных \@параметр **query_no_truncate** потребляет дополнительные ресурсы и может снизить производительность сервера.  
   
-`[ @query_result_no_padding ] @query_result_no_padding`Тип — bit. Значение по умолчанию равно 0. Если задано значение 1, результаты запроса не дополняются, что может привести к уменьшению размера файла. Если для параметра \@query_result_no_padding задано значение 1 и задан \@параметр query_result_width, параметр \@query_result_no_padding перезаписывает параметр \@query_result_width.  
+`[ @query_result_no_padding ] @query_result_no_padding`Тип — bit. Значение по умолчанию — 0. Если задано значение 1, результаты запроса не дополняются, что может привести к уменьшению размера файла. Если для параметра \@query_result_no_padding задано значение 1 и задан \@параметр query_result_width, параметр \@query_result_no_padding перезаписывает параметр \@query_result_width.  
   
  Ошибки при этом не возникает.  
  
@@ -196,7 +196,7 @@ EXEC msdb.dbo.sp_send_dbmail
     @subject = 'Automated Success Message' ;  
 ```  
   
-### <a name="b-sending-an-e-mail-message-with-the-results-of-a-query"></a>Б. Отправка сообщения электронной почты с результатами запроса  
+### <a name="b-sending-an-e-mail-message-with-the-results-of-a-query"></a>Б) Отправка сообщения электронной почты с результатами запроса  
  В этом примере для вашего друга отправляется сообщение электронной почты с помощью `yourfriend@Adventure-Works.com`адреса электронной почты. Сообщение имеет тему `Work Order Count` и выполняет запрос, который показывает количество заявок на выполнение работ с меньшим `DueDate`, чем через два дня после 30 апреля 2004 г. Компонент Database Mail прикрепляет результаты в виде текстового файла.  
   
 ```  

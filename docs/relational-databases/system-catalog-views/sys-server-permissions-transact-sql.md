@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cbfa717aa70bb057734a285e2b6d84fdc6f4961a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71163934"
 ---
 # <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
@@ -32,18 +32,18 @@ ms.locfileid: "71163934"
 
   Возвращает по одной строке на каждое разрешение на уровне сервера.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**см**|**tinyint**|Определяет класс субъекта, в котором существует разрешение.<br /><br /> 100 = Сервер<br /><br /> 101 = Сервер-участник<br /><br /> 105 = Конечная точка|  
-|**class_desc**|**nvarchar (60)**|Описание класса, на который существует разрешение. Одно из следующих значений:<br /><br /> **СЕРВЕРОМ**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**class**|**tinyint**|Определяет класс субъекта, в котором существует разрешение.<br /><br /> 100 = Сервер<br /><br /> 101 = Сервер-участник<br /><br /> 105 = Конечная точка|  
+|**class_desc**|**nvarchar(60)**|Описание класса, на который существует разрешение. Принимает одно из следующих значений:<br /><br /> **СЕРВЕРОМ**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
 |**major_id**|**int**|Идентификатор защищаемого объекта, на который существует разрешение, интерпретируемое согласно классу объекта. Как правило, это просто идентификатор, который применяется к тому, что представляет собой этот класс. Интерпретация нестандартных значений следующая:<br /><br /> 100 = всегда 0|  
 |**minor_id**|**int**|Вторичный идентификатор субъекта, в котором существует разрешение, интерпретируемое согласно классу объекта.|  
 |**grantee_principal_id**|**int**|Идентификатор сервера-участника, на который предоставляются разрешения.|  
 |**grantor_principal_id**|**int**|Идентификатор сервера-участника, который предоставляет эти разрешения.|  
 |**type**|**char (4)**|Тип разрешения сервера. Список типов разрешений см. в следующей таблице.|  
-|**permission_name**|**nvarchar(128**|Имя разрешения.|  
+|**permission_name**|**nvarchar(128)**|Имя разрешения.|  
 |**state**|**char (1)**|Состояние разрешения:<br /><br /> D = запретить<br /><br /> R = отменить<br /><br /> G = предоставить<br /><br /> W = Разрешить с аргументом Grant|  
-|**state_desc**|**nvarchar (60)**|Описание состояния разрешения:<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
+|**state_desc**|**nvarchar(60)**|Описание состояния разрешения:<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |Тип разрешения|Имя разрешения|Применяется к защищаемому объекту|  
 |---------------------|---------------------|--------------------------|  
@@ -68,7 +68,7 @@ ms.locfileid: "71163934"
 |CADB|CONNECT ANY DATABASE|SERVER|  
 |CL|CONTROL|ENDPOINT, LOGIN|  
 |CL|CONTROL SERVER|SERVER|  
-|CO|CONNECT.|ENDPOINT|  
+|CO|CONNECT|ENDPOINT|  
 |COSQ|CONNECT SQL|SERVER|
 |CRAC|Создание группы доступности|SERVER|  
 |CRDB|CREATE ANY DATABASE|SERVER|  
@@ -80,7 +80,7 @@ ms.locfileid: "71163934"
 |IM|IMPERSONATE|Имя_для_входа|  
 |SHDN|SHUTDOWN|SERVER|
 |SUS|SELECT ALL USER SECURABLES|SERVER|
-|В|TAKE OWNERSHIP|ENDPOINT|  
+|TO|TAKE OWNERSHIP|ENDPOINT|  
 |VW|VIEW DEFINITION|ENDPOINT, LOGIN|  
 |VWAD|VIEW ANY DEFINITION|SERVER|  
 |VWDB|VIEW ANY DATABASE|SERVER|  
@@ -91,7 +91,7 @@ ms.locfileid: "71163934"
 ## <a name="permissions"></a>Разрешения  
  Любой пользователь может видеть свои собственные разрешения. Для просмотра разрешений, относящихся к другим именам входа, требуется разрешение VIEW DEFINITION или ALTER ANY LOGIN либо любое разрешение на имя входа. Для просмотра определяемых пользователем ролей сервера необходимо иметь разрешение ALTER ANY SERVER ROLE или быть членом роли.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Примеры  
  Следующий запрос перечисляет разрешения, явно предоставленные или отклоненные для участников на уровне сервера.  
@@ -110,6 +110,6 @@ JOIN sys.server_permissions AS pe
 ## <a name="see-also"></a>См. также:  
  [Представления каталога безопасности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Защищаемые объекты](../../relational-databases/security/securables.md)   
- [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Разрешения &#40;ядро СУБД&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Иерархия разрешений &#40;ядро СУБД&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
+ [Иерархия разрешений (компонент Database Engine)](../../relational-databases/security/permissions-hierarchy-database-engine.md)  

@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd59bf315e90bd52ba1388d27c533ab4a3136d3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72381739"
 ---
-# <a name="task-4-setting-domain-rules"></a>Задача 4. Задание правил домена
+# <a name="task-4-setting-domain-rules"></a>Задача 4. Задание правил домена
   В этой задаче вы создадите правило для домена **Contact e-mail** , чтобы проверить, заканчивается ли адрес электронной почты с помощью ** \@Adventure-Works.com**. Дополнительные сведения о странице см. в разделе [Создание правила домена](https://msdn.microsoft.com/library/hh510397.aspx) .  
   
 1.  Щелкните **контактный адрес электронной почты** в **списке доменов**.  
@@ -58,7 +58,7 @@ ms.locfileid: "72381739"
   
 13. Нажмите кнопку **Закрыть** , чтобы закрыть диалоговое окно **Проверка правила домена** .  
   
-## <a name="next-step"></a>Дальнейшее действие  
- [Задача 5. Задание связей на основе параметров](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
+## <a name="next-step"></a>Следующий шаг  
+ [Задача 5. Задание связей на основе термина](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
   
   

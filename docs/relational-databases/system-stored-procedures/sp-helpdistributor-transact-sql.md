@@ -16,10 +16,10 @@ ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8333e805c50f4b8084f8463877c361917097b547
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70745386"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
@@ -77,20 +77,20 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**распространение**|**имеет sysname**|Имя распространителя.|  
-|**база данных распространителя**|**имеет sysname**|Имя базы данных распространителя.|  
+|**распространение**|**sysname**|Имя распространителя.|  
+|**база данных распространителя**|**sysname**|Имя базы данных распространителя.|  
 |**каталоги**|**nvarchar(255)**|Имя рабочего каталога.|  
-|**учетной записи**|**nvarchar(255)**|Имя учетной записи пользователя Windows.|  
+|**организации**|**nvarchar(255)**|Имя учетной записи пользователя Windows.|  
 |**min distrib retention**|**int**|Минимальный срок хранения распространения.|  
 |**max distrib retention**|**int**|Максимальный срок хранения распространения.|  
 |**history retention**|**int**|Срок хранения журнала.|  
 |**history cleanup agent**|**nvarchar (100)**|Имя агента очистки журнала.|  
 |**distribution cleanup agent**|**nvarchar (100)**|Имя агента очистки распространителя.|  
-|**rpc server name**|**имеет sysname**|Имя удаленного или локального распространителя.|  
-|**rpc login name**|**имеет sysname**|Имя входа, используемое при удаленных вызовах процедур удаленного распространителя.|  
-|**тип издателя**|**имеет sysname**|Тип издателя; возможны следующие варианты:<br /><br /> **MSSQLSERVER**<br /><br /> **СУБД**<br /><br /> **ORACLE GATEWAY.**|  
+|**rpc server name**|**sysname**|Имя удаленного или локального распространителя.|  
+|**rpc login name**|**sysname**|Имя входа, используемое при удаленных вызовах процедур удаленного распространителя.|  
+|**тип издателя**|**sysname**|Тип издателя; возможны следующие варианты:<br /><br /> **MSSQLSERVER**<br /><br /> **СУБД**<br /><br /> **ORACLE GATEWAY.**|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -105,7 +105,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |Столбец результирующего набора|Выходной параметр|  
 |-----------------------|----------------------|  
-|учетная запись|**\@учетной записи**|  
+|account|**\@учетной записи**|  
 |min distrib retention|**\@min_distretention**|  
 |max distrib retention|**\@max_distretention**|  
 |history retention|**\@history_retention**|  
@@ -115,7 +115,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
  Пользователям из списка доступа публикации распространителя возвращается следующий столбец результирующего набора:  
   
--   Каталог  
+-   directory.  
   
  Следующие столбцы результирующего набора возвращаются всем пользователям:  
   

@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: 61f1edc662e7b4a510d616dbee47cfaa615b9c0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252150"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>Помощник по миграции SQL Server для MySQL (MySQLToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "72252150"
   
 ## <a name="contents"></a>Содержимое  
   
-|Раздел|Description|
+|Раздел|Описание|
 |-----------|---------------|
 |[Новые возможности в SSMA для MySQL](https://msdn.microsoft.com/1451a0b0-6713-4d0c-954f-ea3d8fce1d31)|Новые возможности в этой версии SSMA для MySQL|  
 |[Установка SSMA для MySQL &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)|Содержит статьи, содержащие необходимые условия и инструкции по установке клиента SSMA для MySQL и необходимых компонентов на компьютере, на котором работает SQL Server.|  

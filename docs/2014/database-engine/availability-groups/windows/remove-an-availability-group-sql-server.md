@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4227b0af8453a40e9dd63b4aef170d52f8115b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782930"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>Удаление группы доступности (SQL Server)
@@ -44,11 +44,11 @@ ms.locfileid: "72782930"
   
      [PowerShell](#PowerShellProcedure)  
   
--   [Связанное содержимое](#RelatedContent)  
+-   [См. также](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a>Ограничения и рекомендации  
+###  <a name="limitations-and-recommendations"></a><a name="Restrictions"></a>Ограничения и рекомендации  
   
 -   При использовании группы доступности в режиме «в сети» удаление этой группы из вторичной реплики приведет к переходу первичной реплики в состояние RESTORING. Если возможно, удаляйте группу доступности только с того экземпляра сервера, где размещена первичная реплика.  
   
@@ -58,12 +58,12 @@ ms.locfileid: "72782930"
   
 -   На вторичной реплике команда DROP AVAILABILITY GROUP должна использоваться только в экстренных случаях. Это связано с тем, что удаление группы доступности переводит группу в режим «вне сети». При удалении группы доступности из вторичной реплики первичная реплика не может определить, возникло состояние OFFLINE из-за потери кворума, принудительного перехода на другой ресурс или команды DROP AVAILABILITY GROUP. Первичная реплика переходит в состояние RESTORING, чтобы избежать возможной ситуации с дроблением. Дополнительные сведения см. в статье [Поведение инструкции DROP AVAILABILITY GROUP](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (блог инженеров CSS SQL Server).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER. Для удаления группы доступности, которая не размещена на экземпляре локального сервера, необходимо разрешение CONTROL SERVER или разрешение CONTROL для этой группы доступности.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  **Удаление группы доступности**  
   
 1.  В обозревателе объектов при наличии соответствующей возможности подключитесь к экземпляру сервера, на котором размещена первичная реплика, или подключитесь к другому экземпляру сервера, включенному для групп доступности AlwaysOn на узле WSFC, на котором имеются правильные учетные данные для безопасного доступа для группы доступности. Разверните дерево сервера.  
@@ -72,7 +72,7 @@ ms.locfileid: "72782930"
   
 3.  Этот шаг зависит от того, требуется ли удалить несколько групп доступности или только одну группу доступности:  
   
-    -   Чтобы удалить несколько групп доступности (первичные реплики которых находятся на подключенном экземпляре сервера), используйте область **Подробности обозревателя объектов** для просмотра и выбора всех групп доступности, которые необходимо удалить. Дополнительные сведения см. в статье [Использование раздела "Подробности обозревателя объектов" для мониторинга групп доступности (среда SQL Server Management Studio)](use-object-explorer-details-to-monitor-availability-groups.md).  
+    -   Чтобы удалить несколько групп доступности (первичные реплики которых находятся на подключенном экземпляре сервера), используйте область **Подробности обозревателя объектов** для просмотра и выбора всех групп доступности, которые необходимо удалить. Дополнительные сведения см. в разделе [Использование раздела "Подробности обозревателя объектов" для мониторинга групп доступности (среда SQL Server Management Studio)](use-object-explorer-details-to-monitor-availability-groups.md).  
   
     -   Чтобы удалить одну группу доступности, выберите ее на панели **обозревателя объектов** или на панели **Подробности обозревателя объектов** .  
   
@@ -80,7 +80,7 @@ ms.locfileid: "72782930"
   
 5.  В диалоговом окне **Удаление группы доступности** для удаления всех указанных групп доступности щелкните **ОК**. Если все перечисленные группы доступности удалять не нужно, щелкните **Отмена**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Удаление группы доступности**  
   
 1.  При наличии соответствующей возможности подключитесь к экземпляру сервера, на котором размещена первичная реплика, или подключитесь к другому экземпляру сервера, включенному для групп доступности AlwaysOn на узле WSFC, на котором имеются правильные учетные данные для безопасного доступа для группы доступности.  
@@ -97,7 +97,7 @@ ms.locfileid: "72782930"
     DROP AVAILABILITY GROUP MyAG;  
     ```  
   
-##  <a name="PowerShellProcedure"></a>Использование PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Использование PowerShell  
  **Удаление группы доступности**  
   
  В поставщике [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell:  
@@ -117,11 +117,11 @@ ms.locfileid: "72782930"
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [SQL Server PowerShell, поставщик](../../../powershell/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
--   Принцип [работы: удаление поведения группы доступности](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (блог SQL Server инженеров CSS)  
+-   [Принцип работы. Поведение инструкции DROP AVAILABILITY GROUP](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (блог инженеров CSS SQL Server)  
   
 ## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

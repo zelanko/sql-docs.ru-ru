@@ -16,10 +16,10 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bfe3cd91150d1990acc410cb4a61af9485c61f4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304949"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
@@ -55,16 +55,16 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  Эта таблица описывает свойства статей и значения этих свойств.  
   
-|Свойство|Значение|Description|  
+|Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|Фильтр соединения.<br /><br /> Этот параметр необходим для поддержки подписчиков [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 ||**2**|Связь логических записей.|  
-||**3-5**|Фильтр соединения также является связью логических записей.|  
+||**3**|Фильтр соединения также является связью логических записей.|  
 |**filtername**||Имя фильтра.|  
 |**join_articlename**||Имя статьи соединения.|  
 |**join_filterclause**||Предложение фильтра.|  
-|**join_unique_key**|**условия**|Соединение находится в уникальном ключе.|  
-||**IsFalse**|Соединение не находится в уникальном ключе.|  
+|**join_unique_key**|**true**|Соединение находится в уникальном ключе.|  
+||**false**|Соединение не находится в уникальном ключе.|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Подтверждает, что действие, выполняемое этой хранимой процедурой, может сделать существующий моментальный снимок недействительным. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **0**.  
   
@@ -96,6 +96,6 @@ sp_changemergefilter [ @publication= ] 'publication'
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

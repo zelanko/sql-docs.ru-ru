@@ -16,10 +16,10 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1f7f75d37762f5e6df971f3139eea118c6a3fdf2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72689050"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
@@ -50,13 +50,13 @@ sp_helppublication [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |pubid|**int**|Идентификатор публикации.|  
-|name|**имеет sysname**|Имя публикации.|  
+|name|**sysname**|Имя публикации.|  
 |restricted|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**tinyint**|Текущее состояние публикации.<br /><br /> **0** = неактивно.<br /><br /> **1** = активно.|  
-|task||Используется для обратной совместимости.|  
+|задача||Используется для обратной совместимости.|  
 |replication frequency|**tinyint**|Тип частоты репликации:<br /><br /> **0** = транзакционное<br /><br /> **1** = моментальный снимок|  
 |synchronization method|**tinyint**|Режим синхронизации:<br /><br /> **0** = собственная программа для выполнения операций копирования (программа**bcp** )<br /><br /> **1** = символьное групповое копирование<br /><br /> **3** = одновременные. Это означает, что используется собственная операция копирования (программа**bcp**), но таблицы не блокируются во время создания моментального снимка.<br /><br /> **4** = Concurrent_c. Это означает, что используется символьное групповое копирование, но таблицы не блокируются во время создания моментального снимка.|  
 |description|**nvarchar(255)**|Дополнительное описание публикации.|  
@@ -78,17 +78,17 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |pre_snapshot_script|**nvarchar(255)**|Задает указатель на расположение файла **SQL** . Если моментальный снимок применяется на подписчике, то агент распространителя запускает предварительный скрипт моментального снимка до выполнения скриптов реплицируемых объектов.|  
 |post_snapshot_script|**nvarchar(255)**|Задает указатель на расположение файла **SQL** . Агент распространителя запускает заключительный скрипт после применения скриптов и данных всех реплицируемых объектов во время первоначальной синхронизации.|  
 |compress_snapshot|**bit**|Указывает, что моментальный снимок, записываемый в *alt_snapshot_folder* расположение, должен быть сжат в [!INCLUDE[msCoName](../../includes/msconame-md.md)] формате CAB. значение **0** указывает, что моментальный снимок не будет сжиматься.|  
-|ftp_address|**имеет sysname**|Сетевой адрес службы FTP для распространителя. Указывает расположение файлов моментальных снимков публикаций для агента распространителя или агента слияния подписчика.|  
+|ftp_address|**sysname**|Сетевой адрес службы FTP для распространителя. Указывает расположение файлов моментальных снимков публикаций для агента распространителя или агента слияния подписчика.|  
 |ftp_port|**int**|Номер порта службы FTP для распространителя.|  
 |ftp_subdirectory|**nvarchar(255)**|Указывает расположение файлов моментальных снимков для агента распространителя или агента слияния данного подписчика, если публикация поддерживает распространение моментальных снимков с помощью FTP.|  
-|ftp_login|**имеет sysname**|Имя пользователя для подключения к службе FTP.|  
+|ftp_login|**sysname**|Имя пользователя для подключения к службе FTP.|  
 |allow_dts|**bit**|Указывает, что в публикации разрешены преобразования данных. **0** указывает, что преобразование DTS не разрешено.|  
 |allow_subscription_copy|**bit**|Указывает, разрешено ли копирование баз данных подписки, подписанных на данную публикацию. **0** означает, что копирование запрещено.|  
 |centralized_conflicts|**bit**|Определяет, хранятся ли на издателе конфликтные записи.<br /><br /> **0** = конфликтные записи хранятся как на издателе, так и на подписчике, вызвавшем конфликт.<br /><br /> **1** = конфликтующие записи хранятся на издателе.|  
 |conflict_retention|**int**|Задает срок хранения конфликтных записей в днях.|  
 |conflict_policy|**int**|Задает политику устранения конфликтов при обновлении подписчика посредством очередей. Может принимать одно из следующих значений:<br /><br /> **1** = побеждает конфликт с издателем.<br /><br /> **2** = конфликт побеждает подписчиком.<br /><br /> **3** = подписка повторно инициализирована.|  
 |queue_type||Задает используемый тип очереди. Может принимать одно из следующих значений:<br /><br /> **MSMQ** = использовать [!INCLUDE[msCoName](../../includes/msconame-md.md)] очередь сообщений для хранения транзакций.<br /><br /> **SQL** = используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения транзакций.<br /><br /> Примечание. Поддержка очереди сообщений была прекращена.|  
-|backward_comp_level||Уровень совместимости базы данных. Может иметь одно из следующих значений:<br /><br /> **** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level||Уровень совместимости базы данных. Может иметь одно из следующих значений:<br /><br /> **90** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|Указывает, опубликована ли публикация в каталоге [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Значение **1** указывает на то, что оно опубликовано, а значение **0** указывает на то, что оно не опубликовано.|  
 |allow_initialize_from_backup|**bit**|Показывает, может ли подписчик инициализировать подписку на эту публикацию из резервной копии, а не из исходного моментального снимка. **1** означает, что подписки можно инициализировать из резервной копии, а **0** — нет. Дополнительные сведения см. в разделе [Инициализация транзакционной подписки без моментального снимка](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) подписчика транзакций без моментального снимка.|  
 |replicate_ddl|**int**|Указывает, поддерживается ли для публикации репликация схемы. **1** указывает, что инструкции языка описания данных DDL, выполняемые на издателе, реплицируются, а **0** означает, что инструкции DDL не реплицируются. Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
@@ -122,6 +122,6 @@ sp_helppublication [ [ @publication = ] 'publication' ]
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
- [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

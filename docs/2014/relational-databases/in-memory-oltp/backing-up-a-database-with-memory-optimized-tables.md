@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62468330"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Резервное копирование базы данных с оптимизированными для памяти таблицами
@@ -67,7 +67,7 @@ ms.locfileid: "62468330"
   
  Для типичных рабочих нагрузок OLTP разностные резервные копии будут намного меньше, чем полные резервные копии баз данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Резервное копирование и восстановление оптимизированных для памяти таблиц](restore-and-recovery-of-memory-optimized-tables.md)  
   
   
