@@ -1,5 +1,5 @@
 ---
-title: СЗЛФреИст (Визуальный драйвер FoxPro ODBC) Документы Майкрософт
+title: SQLFreeStmt (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: a5320226-a6fc-4999-9b3b-2fdee6bdf7eb
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 31276137735c6934ae6940c038e3cdaada3241b0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298644"
 ---
 # <a name="sqlfreestmt-visual-foxpro-odbc-driver"></a>SQLFreeStmt (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Эта тема содержит Visual FoxPro ODBC Драйвер-специфической информации. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полная  
+ Поддержка: полная  
   
- Соответствие ODBC API: базовый уровень  
+ Соответствие API ODBC: уровень ядра  
   
- Остановки обработки, связанные с определенным *hstmt,* закрывает любые открытые курсоры, связанные с *hstmt,* отбрасывает ожидающие результатов, и дополнительно освобождает все ресурсы, связанные с ручкой оператора.  
+ Останавливает обработку, связанную с конкретным *хстмт*, закрывает все открытые курсоры, связанные с *хстмт*, отменяет ожидающие результаты и при необходимости освобождает все ресурсы, связанные с этим маркером инструкции.  
   
- Для получения более подробной информации, *ODBC Programmer's Reference* [см.](../../odbc/reference/syntax/sqlfreestmt-function.md)
+ Дополнительные сведения см. в разделе [SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md) в *справочнике программиста по ODBC*.

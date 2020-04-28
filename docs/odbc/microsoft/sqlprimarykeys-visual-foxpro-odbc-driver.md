@@ -1,5 +1,5 @@
 ---
-title: SLPrimaryKeys (Визуальный водитель FoxPro ODBC) Документы Майкрософт
+title: SQLPrimaryKeys (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ ms.assetid: 8dbe2903-efdc-45e0-a079-9e357c5fd81b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 83631d22bd07017c4eba8f6af171443ab8c76d9c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301549"
 ---
 # <a name="sqlprimarykeys-visual-foxpro-odbc-driver"></a>SQLPrimaryKeys (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Эта тема содержит Visual FoxPro ODBC Драйвер-специфической информации. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полная  
+ Поддержка: полная  
   
- Соответствие ODBC API: Уровень 2  
+ Соответствие API-интерфейса ODBC: уровень 2  
   
- Возвращает имена столбцов, составляющих основной ключ для таблицы. Реализация Visual FoxPro ODBC Driver **s'LPrimaryKeys** ведет себя следующим образом:  
+ Возвращает имена столбцов, которые составляют первичный ключ для таблицы. Реализация **SQLPrimaryKeys** драйвера ODBC для Visual FoxPro ведет себя следующим образом:  
   
--   Игнорирует аргументы *szTableOwner* и *cbTableOwner.*  
+-   Игнорирует аргументы *сзтаблеовнер* и *кбтаблеовнер* .  
   
--   Работает только для источников данных, которые являются [базами данных.](../../odbc/microsoft/visual-foxpro-terminology.md) Водитель возвращает ошибку "Водитель не поддерживает эту функцию", если источник данных является каталогом [свободных таблиц.](../../odbc/microsoft/visual-foxpro-terminology.md)  
+-   Работает только с источниками данных, которые являются [базами](../../odbc/microsoft/visual-foxpro-terminology.md)данных. Драйвер возвращает ошибку "драйвер не поддерживает эту функцию", если источник данных является каталогом [свободных таблиц](../../odbc/microsoft/visual-foxpro-terminology.md).  
   
- Для получения более подробной информации, *ODBC Programmer's Reference*см. [SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md)
+ Дополнительные сведения см. в разделе [SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md) в *справочнике программиста по ODBC*.

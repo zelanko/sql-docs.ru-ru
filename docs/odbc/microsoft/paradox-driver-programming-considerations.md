@@ -1,5 +1,5 @@
 ---
-title: Парадокс Драйвер Программирование Рассмотрение (ru) Документы Майкрософт
+title: Рекомендации по программированию драйвера Paradox | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 327e952b-e7d5-4209-9423-f4b49cea272f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d2c33b52d851facfea5a20b8aac6faf8428758f3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290854"
 ---
 # <a name="paradox-driver-programming-considerations"></a>Замечания по программированию драйверов для Paradox
@@ -34,4 +34,4 @@ ms.locfileid: "81290854"
 -   [Другие сведения о программировании драйверов для Paradox](../../odbc/microsoft/other-paradox-driver-programming-details.md)  
   
 > [!NOTE]  
->  Доступ к файлам Paradox ISAM через драйверы базы данных ODBC Desktop Database требует установки движка базы данных Borland.
+>  Для доступа к файлам Paradox ISAM через драйверы ODBC для настольных систем необходимо установить ядро СУБД Borland.

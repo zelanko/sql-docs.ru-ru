@@ -1,5 +1,5 @@
 ---
-title: СЗЛТрансакт (Водитель Excel) Документы Майкрософт
+title: SQLTransact (драйвер для Excel) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 821b4535-cec3-4e59-b681-87faf9d51575
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d8e78d79f1c96018d90df39e445553e450616957
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299254"
 ---
 # <a name="sqltransact-excel-driver"></a>SQLTransact (драйвер для Excel)
 > [!NOTE]  
->  Эта тема предоставляет информацию о драйверах Excel. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
+>  В этом разделе приводятся сведения, относящиеся к драйверу Excel. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Эта функция поддерживает SQL_COMMIT, но не SQL_ROLLBACK.

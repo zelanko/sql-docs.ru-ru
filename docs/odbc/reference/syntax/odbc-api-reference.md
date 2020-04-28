@@ -1,5 +1,5 @@
 ---
-title: Справка ODBC API (ru) Документы Майкрософт
+title: Справочник по API ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6065db0ea99efaec11190902ec9268db63a6d255
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298938"
 ---
 # <a name="odbc-api-reference"></a>Справочник по API ODBC
-Темы в этом разделе описывают каждую функцию ODBC в алфавитном порядке. Каждая функция определяется как функция языка программирования C. Описания включают в себя следующее:  
+В подразделах этого раздела описывается каждая функция ODBC в алфавитном порядке. Каждая функция определена как функция языка программирования C. К описаниям относятся следующие.  
   
--   Цель  
+-   Назначение  
   
 -   Версия ODBC  
   
@@ -41,14 +41,14 @@ ms.locfileid: "81298938"
   
 -   Ссылки на связанные функции  
   
- Стандартный уровень соответствия CLI может быть одним из следующих: ISO 92, Open Group, ODBC или Deprecated. Функция, помеченная как ISO 92-конформная, также появляется в версии Open Group 1, потому что Open Group является чистым супермножеством ISO 92. Функция, отмеченная как Открытая группа, также отображается в ODBC 3. *x*, потому что ODBC 3. *x* является чистым супермножеством версии Open Group 1. Функция, помеченная как функция, соответствующая ODBC, не отображается ни в одном из стандартов. Функция, помеченная как унипрашенная, была унесена в ODBC 3. *x*.  
+ Стандартный уровень соответствия CLI может быть одним из следующих: ISO 92, Open Group, ODBC или устарел. Функция, помеченная как ISO 92, также отображается в открытой группе версии 1, так как открытая группа является чистым надмножеством ISO 92. Функция, помеченная как открытая группа, также появляется в ODBC 3. *x*, так как ODBC 3. *x* является чистым надмножеством открытой группы версии 1. Функция, помеченная как совместимая с ODBC, отображается в обоих стандартах. Функция, помеченная как устаревшая, является устаревшей в ODBC 3. *x*.  
   
- Обработка диагностической информации описана в описании функции [S'LGetDiagField.](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) Текст, связанный со значениями S'LSTATE, включен для описания состояния, но не предназначен для назначения конкретного текста.  
+ Обработка диагностических сведений описывается в описании функции [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) . Текст, связанный со значениями SQLSTATE, включается в описание условия, но не предназначен для предписывает определенного текста.  
   
 > [!NOTE]  
->  Для получения информации о функциях ODBC для водителя можно ознакомиться с разделом.  
+>  Сведения о драйверах для функций ODBC см. в разделе драйвера.  
   
- Этот раздел содержит темы для следующих функций:  
+ В этом разделе содержатся подразделы для следующих функций.  
   
 -   [Функция SQLAllocConnect](../../../odbc/reference/syntax/sqlallocconnect-function.md)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "81298938"
   
 -   [Функция SQLCompleteAsync](../../../odbc/reference/syntax/sqlcompleteasync-function.md)  
   
--   [Функция S'LConnect](../../../odbc/reference/syntax/sqlconnect-function.md)  
+-   [Функция SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)  
   
 -   [Функция SQLCopyDesc](../../../odbc/reference/syntax/sqlcopydesc-function.md)  
   
@@ -104,11 +104,11 @@ ms.locfileid: "81298938"
   
 -   [Функция SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)  
   
--   [Функция «СЗЛВы»](../../../odbc/reference/syntax/sqlexecute-function.md)  
+-   [Функция SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)  
   
 -   [Функция SQLExtendedFetch](../../../odbc/reference/syntax/sqlextendedfetch-function.md)  
   
--   [Функция S'LFetch](../../../odbc/reference/syntax/sqlfetch-function.md)  
+-   [Функция SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)  
   
 -   [Функция SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: S'LSetPos (Драйверы настольных баз данных) Документы Майкрософт
+title: SQLSetPos (драйверы базы данных для настольных систем) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ ms.assetid: 8ef027ec-8512-48fe-8fe2-2ff7cd81e331
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e151e3abc4032ea3180e46360c501d9fbea9ae30
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301465"
 ---
 # <a name="sqlsetpos-desktop-database-drivers"></a>SQLSetPos (драйверы для баз данных на настольном компьютере)
-Поддержка семантики семантики навалочных моделей для **вызовов S'LSetPos** с аргументом *irow,* равным 0.  
+Поддерживается семантика с массовыми моделями для вызовов **SQLSetPos** с аргументом *IRow* , равным 0.  
   
- SQL_LOCK_NO_CHANGE поддерживается для *fLock*. SQL_LOCK_EXCLUSIVE и SQL_LOCK_UNLOCK не поддерживаются.  
+ SQL_LOCK_NO_CHANGE поддерживается для *флокк*. SQL_LOCK_EXCLUSIVE и SQL_LOCK_UNLOCK не поддерживаются.  
   
- **S'LSetPos** поддерживает updatable соединения. (Для получения дополнительной информации, см *Microsoft Jet базы данных двигателя программиста руководство*.)
+ **SQLSetPos** поддерживает обновляемые объединения. (Дополнительные сведения см. в *справочнике программиста по Microsoft Jet ядро СУБД*.)

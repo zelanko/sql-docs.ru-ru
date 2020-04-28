@@ -1,5 +1,5 @@
 ---
-title: Данные по исполнению и текст, ntext, изображение
+title: Данные на этапе выполнения и Text, ntext, Image
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d95478cd558239030ccfb4091641258548705ba9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297721"
 ---
 # <a name="data-at-execution-and-text-ntext-or-image-columns"></a>Данные времени выполнения и столбцы text, ntext или image
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Данные времени выполнения ODBC позволяют приложениям работать с очень большими объемами данных в связанных столбцах или параметрах. При извлечении очень большого **текста,** **ntext**или столбцов **изображений** приложение может не иметь возможности просто выделить огромный буфер, связать столбец в буфер и принести строку. При обновлении очень большого **текста,** **ntext**или столбцов **изображений** приложение может не суметь просто выделить огромный буфер, привязать его к маркеру параметра в выписке s'L, а затем выполнить выписку. В этих случаях приложение должно использовать [S'LGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) или [S'LPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) с опциями выполнения данных.  
+  Данные времени выполнения ODBC позволяют приложениям работать с очень большими объемами данных в связанных столбцах или параметрах. При получении очень больших столбцов **Text**, **ntext**или **Image** приложение может не позволить просто выделить огромный буфер, привязать столбец к буферу и получить строку. При обновлении очень больших столбцов **Text**, **ntext**или **Image** приложение может не позволить просто выделить огромный буфер, привязать его к маркеру параметра в инструкции SQL, а затем выполнить инструкцию. В таких случаях приложение должно использовать [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) или [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) с параметрами, выполняемыми при выполнении.  
   
 ## <a name="see-also"></a>См. также:  
  [Управление столбцами text и image](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  

@@ -1,5 +1,5 @@
 ---
-title: Настройка переводчика DLLs (ru) Документы Майкрософт
+title: Библиотеки DLL установки переводчиков | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: b3ca79e9-01b9-4541-81de-bbbad24ca736
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 28c354fddb36b9e035361fa4ba03fbde34b7d399
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81296054"
 ---
 # <a name="translator-setup-dlls"></a>Библиотеки DLL программы установки преобразователя
 > [!NOTE]  
->  Начиная с Windows XP и Windows Server 2003, ODBC включен в систему работы Windows. Вы должны только явно установить ODBC на более ранних версиях Windows.  
+>  Начиная с Windows XP и Windows Server 2003, ODBC входит в операционную систему Windows. Следует явно устанавливать ODBC только в более ранних версиях Windows.  
   
- Настройка DLL переводчика содержит функцию **ConfigTranslator,** которая возвращает опцию по умолчанию для переводчика. При необходимости он подсказывает пользователю эту информацию. Для полного описания этой [Setup DLL API Reference](../../../odbc/reference/syntax/setup-dll-api-reference.md)функции см.  
+ Библиотека DLL установки транслятора содержит функцию **конфигтранслатор** , которая возвращает параметр по умолчанию для транслятора. При необходимости он запрашивает у пользователя эти сведения. Полное описание этой функции см. в [справочнике по API DLL установки](../../../odbc/reference/syntax/setup-dll-api-reference.md).  
   
- Настройка переводчика DLL написана разработчиком переводчика. Она может быть частью переводчика DLL или отдельного DLL.
+ Библиотека DLL установки переводчиков записывается разработчиком переводчика. Он может быть частью библиотеки DLL транслятора или отдельной библиотекой DLL.

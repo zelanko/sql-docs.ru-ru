@@ -1,5 +1,5 @@
 ---
-title: SLGetConnectOption (Визуальный драйвер FoxPro ODBC) Документы Майкрософт
+title: SQLGetConnectOption (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,31 +13,31 @@ ms.assetid: 5703eb39-f3b2-4f3a-8676-a5625ae29a41
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 2dd801988343ded46305665ab2a99aa4e7d76cba
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298634"
 ---
 # <a name="sqlgetconnectoption-visual-foxpro-odbc-driver"></a>SQLGetConnectOption (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Эта тема содержит Visual FoxPro ODBC Драйвер-специфической информации. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Частичная  
+ Поддержка: частичная  
   
- Соответствие API ODBC: Уровень 1  
+ Соответствие API ODBC: уровень 1  
   
- Возвращает текущую настройку параметра соединения. Эта функция частично поддерживается: драйвер поддерживает все значения для аргумента *fOption,* но не поддерживает некоторые значения *vParam* для аргумента *fOption* SQL_TXN_ISOLATION.  
+ Возвращает текущее значение параметра соединения. Эта функция поддерживается частично: драйвер поддерживает все значения для аргумента *параметром fOption* , но не поддерживает некоторые значения *впарам* для аргумента *параметром fOption* SQL_TXN_ISOLATION.  
   
- В следующей таблице описаны только те аргументы, связанные с поведением, характерным для реализации Visual FoxPro ODBC Driver **в s'LGetConnectOption.**  
+ В следующей таблице описаны только те аргументы, поведение которых характерно для реализации **SQLGetConnectOption**драйвера ODBC для Visual FoxPro.  
   
-|*fOption*|Remarks|  
+|*Параметром fOption*|Remarks|  
 |---------------|-------------|  
-|SQL_AUTOCOMMIT|Если вы выберете SQL_AUTOCOMMIT_OFF, приложение должно явно совершать или откатывать транзакции с [помощью S'LTransact;](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md) Водитель Visual FoxPro ODBC не совершает автоматически трансформатируемое заявление по завершении. Драйвер начинает транзакцию, если выписка является транзакционной.|  
-|SQL_CURRENT_QUALIFIER|Может быть полностью квалифицированная база данных (.dbc file) имя или полностью квалифицированный путь к каталогу, содержащему ноль или более таблиц (.dbf файлы).|  
-|SQL_LOGINTIMEOUT|Возвращает ошибку "Driver Not Capable".|  
-|SQL_CURSORS|Возвращает ошибку "Driver Not Capable".|  
-|SQL_PACKET_SIZE|Возвращает ошибку "Driver Not Capable".|  
-|SQL_TXN_ISOLATION|Водитель позволяет только SQL_TXN_READ_COMMITTED.<br /><br /> Следующие *vParam*s не поддерживаются:<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
+|SQL_AUTOCOMMIT|При выборе SQL_AUTOCOMMIT_OFF приложение должно явно зафиксировать или откатить транзакции с помощью [SQLTransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md); Драйвер ODBC для Visual FoxPro не фиксирует инструкцию transactа автоматически после завершения. Драйвер начинает транзакцию, если инструкция является инструкцией transactа.|  
+|SQL_CURRENT_QUALIFIER|Может быть полным именем базы данных (DBC-файлом) или полным путем к каталогу, содержащим ноль или более таблиц (DBF-файлов).|  
+|SQL_LOGINTIMEOUT|Возвращает ошибку "драйвер не поддерживается".|  
+|SQL_CURSORS|Возвращает ошибку "драйвер не поддерживается".|  
+|SQL_PACKET_SIZE|Возвращает ошибку "драйвер не поддерживается".|  
+|SQL_TXN_ISOLATION|Драйвер допускает только SQL_TXN_READ_COMMITTED.<br /><br /> Следующие *впарам*s не поддерживаются:<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
   
- Для получения более подробной информации, *ODBC Programmer's Reference* [см.](../../odbc/reference/syntax/sqlgetconnectoption-function.md)
+ Дополнительные сведения см. в разделе [SQLGetConnectOption](../../odbc/reference/syntax/sqlgetconnectoption-function.md) в *справочнике программиста по ODBC*.

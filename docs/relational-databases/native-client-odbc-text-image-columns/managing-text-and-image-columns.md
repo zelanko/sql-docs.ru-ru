@@ -1,5 +1,5 @@
 ---
-title: Управление текстовыми и имиджевыми столбцов (ru) Документы Майкрософт
+title: Управление столбцами Text и Image | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3ac58e59f66dd107a9523a42f5647c90b4fb737
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297724"
 ---
 # <a name="managing-text-and-image-columns"></a>Управление столбцами text и image
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**текст,** **ntext**, и данные **изображений** (также называются длинными данными) являются символ или типы данных бинарной строки, которые могут держать значения данных слишком велики, чтобы вписаться в **символ,** **varchar**, **двоичный**, или **varbinary** столбцы. Карты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типа **текстовых** данных для ODBC SQL_LONGVARCHAR типа данных; **ntext** карты для SQL_WLONGVARCHAR; и **карты изображений** для SQL_LONGVARBINARY. Некоторые объекты данных (например, длинные документы или большие битовые карты) слишком велики для их размещения в памяти. Для получения длинных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных из последовательных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] частей, драйвер Native Client ODBC позволяет приложению вызывать [S'LGetData.](../../relational-databases/native-client-odbc-api/sqlgetdata.md) Для отправки длинных данных в последовательных частях приложение может вызывать [S'LPutData.](../../relational-databases/native-client-odbc-api/sqlputdata.md) Параметры, для которых данные посылаются во время выполнения, называются параметрами c данными времени выполнения.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]данные типа **Text**, **ntext**и **Image** (также называемые длинными данными) представляют собой символьные или двоичные строковые типы данных, которые могут содержать слишком большие значения данных для размещения в столбцах **char**, **varchar**, **binary**или **varbinary** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Тип данных **Text** сопоставляется с типом данных ODBC SQL_LONGVARCHAR. **ntext** сопоставляется с SQL_WLONGVARCHAR; **изображения** и сопоставляются с SQL_LONGVARBINARY. Некоторые объекты данных (например, длинные документы или большие битовые карты) слишком велики для их размещения в памяти. Для получения длинных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из последовательных частей драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента позволяет приложению вызывать [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md). Для отправки длинных данных в последовательных частях приложение может вызвать [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md). Параметры, для которых данные посылаются во время выполнения, называются параметрами c данными времени выполнения.  
   
- Приложение может на самом деле писать или извлекать любые типы данных (а не только длинные данные) с **помощью S'LPutData** или **S'LGetData,** хотя только **символ** и **двоичные** данные могут быть отправлены или извлечены по частям. Однако, если данные достаточно малы, чтобы поместиться в один буфер, как правило, нет никаких оснований для использования **S'LPutData** или **S'LGetData**. Гораздо проще привязать единичный буфер к параметру или столбцу.  
+ Приложение может на самом деле записывать или извлекать данные любого типа (не только длинные данные) с **SQLPutData** или **SQLGetData**, хотя в частях могут быть отправлены и получены только **символьные** и **двоичные** данные. Однако если данные достаточно малы для размещения в одном буфере, обычно нет причин использовать **SQLPutData** или **SQLGetData**. Гораздо проще привязать единичный буфер к параметру или столбцу.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Привязанные и непривязанные столбцы text и image](../../relational-databases/native-client-odbc-text-image-columns/bound-vs-unbound-text-and-image-columns.md)  
   

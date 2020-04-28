@@ -1,5 +1,5 @@
 ---
-title: СЗЛГетТипИнфо (ru) Документы Майкрософт
+title: SQLGetTypeInfo | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,40 +15,40 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 81ba57c6e66f156f13055ff5ec941fa8f0c86381
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298456"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC сообщает о дополнительной колонке USERTYPE в итоговом наборе **S'LGetTypeInfo.** USERTYPE возвращает определение типа данных DB-Library. Этот столбец полезен разработчикам, которые переносят существующие приложения DB-Library в ODBC.  
+  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента сообщает дополнительный столбец USERTYPE в результирующем наборе **SQLGetTypeInfo**. USERTYPE возвращает определение типа данных DB-Library. Этот столбец полезен разработчикам, которые переносят существующие приложения DB-Library в ODBC.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рассматривает идентификатор как атрибут, а в ODBC он считается типом данных. Чтобы устранить это несоответствие, **S'LGetTypeInfo** возвращает типы данных: **intidentity,** **smallintidentity,** **tinyintidentity,** **десятиличность,** и **числовая идентичность.** Столбец набора результатов **s'LGetTypeInfo** AUTO_UNIQUE_VALUE сообщает значение TRUE для этих типов данных.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рассматривает идентификатор как атрибут, а в ODBC он считается типом данных. Чтобы устранить это несоответствие, **SQLGetTypeInfo** возвращает типы данных: **интидентити**, **смаллинтидентити**, **тининтидентити**, **деЦималидентити**и **нумериЦидентити**. AUTO_UNIQUE_VALUE столбца результирующего набора **SQLGetTypeInfo** сообщает значение true для этих типов данных.  
   
- Для **varchar**, **nvarchar** и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **varbinary**, водитель Native Client ODBC продолжает сообщать 8000, 4000 и 8000 соответственно для COLUMN_SIZE значения, даже если это на самом деле неограниченное. Это делается в целях обратной совместимости.  
+ Для типа **varchar**, **nvarchar** и **varbinary**драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента по-своемуу отчету 8000, 4000 и 8000 соответственно для COLUMN_SIZE значения, хотя на самом деле он не ограничен. Это делается в целях обратной совместимости.  
   
- Для типа данных **xml** драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC сообщает, SQL_SS_LENGTH_UNLIMITED для COLUMN_SIZE обозначают неограниченный размер.  
+ Для типа данных **XML** драйвер ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента сообщает SQL_SS_LENGTH_UNLIMITED для COLUMN_SIZE, чтобы обозначить неограниченный размер.  
   
 ## <a name="sqlgettypeinfo-and-table-valued-parameters"></a>SQLGetTypeInfo и параметры, возвращающие табличные значения  
- Тип таблицы для параметров, оцениваемых таблицей, фактически является мета-типом, т.е. типом, используемым для определения других типов. Таким образом, он не должен быть разоблачен через S'LGetTypeInfo. Для извлечения метаданных для типов таблиц, используемых с параметрами, ценных на стол, приложения должны использовать s-LTables, а не S'LGetTypeInfo.  
+ Тип таблицы для возвращающих табличное значение параметров фактически является мета-типом, т. е. типом, используемым для определения других типов. Поэтому он не должен предоставляться через SQLGetTypeInfo. Для получения метаданных для табличных типов, используемых с возвращающими табличное значение параметрами, приложения должны использовать SQLTables, а не SQLGetTypeInfo.  
   
- Для получения дополнительной информации о получении метданных для параметров, ценных на таблицу, см. [Атрибуты оператора, влияющие на параметры, оцениваемые таблицей.](../../relational-databases/native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md)  
+ Дополнительные сведения о получении метдата для возвращающих табличное значение параметров см. в разделе [атрибуты инструкций, влияющие на возвращающие](../../relational-databases/native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md)табличное значение параметры.  
   
- Для получения дополнительной информации о параметрах, ценных на стол, с [&#41;&#40;м. ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlgettypeinfo-support-for-enhanced-date-and-time-features"></a>Поддержка SQLGetTypeInfo для улучшенных функций даты-времени  
  Сведения о значениях, возвращаемых для типов даты-времени, см. в разделе [Catalog Metadata](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md).  
   
- Для получения более подробной информации см [&#41;&#40;. ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ Дополнительные общие сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlgettypeinfo-support-for-large-clr-udts"></a>Поддержка SQLGetTypeInfo для больших определяемых пользователем типов данных среды CLR  
- **SLGetTypeInfo** поддерживает большие типы, определяемые пользователями CLR (UDT). Для получения дополнительной информации смотрите [большие типы, определяемые пользователями CLR, &#40;&#41;ODBC. ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
+ **SQLGetTypeInfo** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Функция S'LGetTypeInfo](https://go.microsoft.com/fwlink/?LinkId=59356)   
+ [Функция SQLGetTypeInfo](https://go.microsoft.com/fwlink/?LinkId=59356)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

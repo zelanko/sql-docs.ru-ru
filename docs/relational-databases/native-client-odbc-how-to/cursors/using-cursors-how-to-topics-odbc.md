@@ -1,5 +1,5 @@
 ---
-title: Использование Курсоры Как-к темы (ODBC) Документы Майкрософт
+title: Инструкции по использованию курсоров (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 959110f3e240553bd94dab6c26e208b40c8d43ef
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81294192"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>Использование инструкций по курсорам (ODBC)
@@ -25,13 +25,13 @@ ms.locfileid: "81294192"
 
   Чтобы использовать курсоры, сначала необходимо задать атрибуты соединения и инструкции, которые управляют режимом работы курсоров ODBC. Курсоры позволяют приложению получать несколько строк для каждой выборки и выполнять инструкции UPDATE, INSERT и DELETE для текущего положения курсора.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
--   [Используйте курсоры &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
+-   [Использование курсоров &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
--   [Используйте привязку Кrowset &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
+-   [Использовать привязку набора строк &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
   
--   [Fetch и обновление Rowsets &#40;odBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
+-   [Получение и обновление наборов строк &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
   
 ## <a name="see-also"></a>См. также:  
  [ODBC How-to Topics](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  

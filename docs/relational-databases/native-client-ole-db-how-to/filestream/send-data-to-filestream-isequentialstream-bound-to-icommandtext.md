@@ -1,5 +1,5 @@
 ---
-title: Данные FILESTREAM, ISequentialStream ICommandText
+title: Data FILESTREAM, ISequentialStream ICommandText
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f27ac32da560316806086f51c69cd2a374eb1a15
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81295863"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Отправка данных в FILESTREAM — ISequentialStream с привязкой к ICommandText
@@ -23,7 +23,7 @@ ms.locfileid: "81295863"
 
   В этом образце используется интерфейс ISequentialStream, связанный с параметром ICommandText, для передачи от 4 МБ до 4 ГБ данных в столбец файлового потока.  
   
- Для получения дополнительной информации о функции файлов, см [FILESTREAM поддержка &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Дополнительные сведения о компоненте FILESTREAM см. в разделе [Поддержка filestream &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Пример  
  Прежде чем переходить к компиляции и запуску этого примера, включите поддержку FILESTREAM ([включение и настройка FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)).  

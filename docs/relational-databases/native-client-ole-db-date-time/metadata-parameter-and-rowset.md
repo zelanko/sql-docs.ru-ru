@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e272f7c545130ac5a0f6d66ec6991037123ed8c2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301031"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Метаданные — параметры и наборы строк
@@ -44,8 +44,8 @@ ms.locfileid: "81301031"
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Присвойте параметру|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|Присвойте параметру|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26,28..34|0..7|Присвойте параметру|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21.27|0..7|Присвойте параметру|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28.34|0..7|Присвойте параметру|  
   
  Обратите внимание, что в некоторых случаях диапазоны значений не являются непрерывными. Это следствие добавления десятичной запятой, когда точность в долях секунды выше нуля.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "81301031"
   
  Параметр *bPrecision* не учитывается.  
   
- Значение «DBPARAMFLAGS_SS_ISVARIABLESCALE» не учитывается при отправке данных на сервер. Приложения могут принудительно использовать унаследованные типы потоков табличных данных за счет применения имен типов "**datetime**" и "**smalldatetime**", характерных для поставщика. При соединении с серверами [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версии) используется формат "**datetime2**", а также при необходимости происходит неявное преобразование сервера, когда тип имеет имя "**datetime2**" или "DBTYPE_DBTIMESTAMP". Параметр *bScale* не учитывается, если используются имена типов "**datetime**" или "**smalldatetime**" для конкретного поставщика. В противном случае, appications должны гарантировать, что *bScale* установлен правильно. Приложения, обновленные из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MDAC [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и Native Client из этого использования "DBTYPE_DBTIMESTAMP", потерпят неудачу, если они не установить *bScale* правильно. При соединении с экземплярами сервера версии ниже [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] значение параметра *bScale*, отличное от 0 или 3 с именем "DBTYPE_DBTIMESTAMP", является ошибкой. В этом случае будет возвращено E_FAIL.  
+ Значение «DBPARAMFLAGS_SS_ISVARIABLESCALE» не учитывается при отправке данных на сервер. Приложения могут принудительно использовать унаследованные типы потоков табличных данных за счет применения имен типов "**datetime**" и "**smalldatetime**", характерных для поставщика. При соединении с серверами [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версии) используется формат "**datetime2**", а также при необходимости происходит неявное преобразование сервера, когда тип имеет имя "**datetime2**" или "DBTYPE_DBTIMESTAMP". Параметр *bScale* не учитывается, если используются имена типов "**datetime**" или "**smalldatetime**" для конкретного поставщика. В противном случае аппикатионс должен убедиться, что *bScale* задан правильно. Приложения, обновленные с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помощью MDAC и [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Native Client с, используют "DBTYPE_DBTIMESTAMP", будут завершаться ошибкой, если они не устанавливают *bScale* правильно. При соединении с экземплярами сервера версии ниже [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] значение параметра *bScale*, отличное от 0 или 3 с именем "DBTYPE_DBTIMESTAMP", является ошибкой. В этом случае будет возвращено E_FAIL.  
   
- Когда ICommandWithParameters::SetParameterInfo не вызывается, поставщик вывихает тип сервера из типа связывания, указанного в IAccessor::CreateAccessor следующим образом:  
+ Если ICommandWithParameters:: SetParameterInfo не вызывается, поставщик имплес тип сервера из типа привязки, как указано в IAccessor:: CreateAccessor следующим образом:  
   
 |Тип привязки|*pwszDataSourceType*<br /><br /> (зависит от поставщика)|  
 |------------------|----------------------------------------------------|  

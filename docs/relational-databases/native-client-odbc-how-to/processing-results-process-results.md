@@ -1,5 +1,5 @@
 ---
-title: Результаты процесса (ODBC) Документы Майкрософт
+title: Обработка результатов (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: de9adbcc2d89895a4162b5c7f7b2921f024d03e7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300409"
 ---
 # <a name="processing-results---process-results"></a>Результаты обработки — обработка результатов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Обработка результатов в приложении ODBC включает в себя сначала определение характеристик набора результатов, а затем извлечение данных в программные переменные с помощью либо [S'LBindCol,](../../relational-databases/native-client-odbc-api/sqlbindcol.md) либо [S'LGetData.](../../relational-databases/native-client-odbc-api/sqlgetdata.md)  
+Обработка результатов в приложении ODBC заключается в том, чтобы сначала определить характеристики результирующего набора, а затем извлечь данные в переменные программы с помощью [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) или [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
   
 ### <a name="to-process-results"></a>Обработка результатов  
   
@@ -62,6 +62,6 @@ ms.locfileid: "81300409"
 >  Чтобы отменить обработку результирующего набора прежде, чем функция [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) вернет значение SQL_NO_DATA, вызовите функцию [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
 ## <a name="see-also"></a>См. также:  
-[Retrieve Данные, установленные &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
+[Получение сведений о результирующем наборе &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

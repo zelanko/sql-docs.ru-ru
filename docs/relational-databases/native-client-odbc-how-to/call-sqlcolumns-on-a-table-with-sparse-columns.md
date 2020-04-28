@@ -1,5 +1,5 @@
 ---
-title: Позвоните в S'LКолонки на столсе с разреженной колоннами Документы Майкрософт
+title: Вызов SQLColumns для таблицы с разреженными столбцами | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 57dc76c3373623ac133b0911e37ac4298682fa92
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298325"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Вызов SQLColumns для таблиц с разреженными столбцами
@@ -35,7 +35,7 @@ ms.locfileid: "81298325"
   
  Скомпилируйте с параметром /EHsc /D, "UNICODE" и odbc32.lib.  
   
- Второй () [!INCLUDE[tsql](../../includes/tsql-md.md)]код-лист удаляет таблицу, созданную этим образцом.  
+ Второй листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)]() удаляет таблицу, созданную в этом примере.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

@@ -1,5 +1,5 @@
 ---
-title: Записи регистрации для компонентов ODBC Документы Майкрософт
+title: Записи реестра для компонентов ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: bead63f11b253342cd444e1d5bd0697ee00cfbc1
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81296184"
 ---
 # <a name="registry-entries-for-odbc-components"></a>Записи реестра для компонентов ODBC
 > [!NOTE]  
->  Начиная с Windows XP и Windows Server 2003, ODBC включен в систему работы Windows. Вы должны только явно установить ODBC на более ранних версиях Windows.  
+>  Начиная с Windows XP и Windows Server 2003, ODBC входит в операционную систему Windows. Следует явно устанавливать ODBC только в более ранних версиях Windows.  
   
- Установщик DLL поддерживает в реестре информацию о каждом установленном компоненте ODBC. На компьютерах под управлением Microsoft Windows NT и Microsoft Windows 95/98 эта информация хранится в подкеях под следующим ключом в реестре:  
+ Библиотека DLL установщика хранит сведения о каждом установленном компоненте ODBC в реестре. На компьютерах под управлением Microsoft Windows NT и Microsoft Windows 95/98 эта информация хранится в подразделах в следующем разделе реестра:  
 
  ```console
  HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\Odbcinst.ini
  ```
 
- Поскольку Odbcinst.ini является подключкой HKEY_LOCAL_MACHINE дерева, информация о компонентах ODBC доступна всем пользователям машины.  
+ Так как Odbcinst. ini является подразделом дерева HKEY_LOCAL_MACHINE, сведения о компонентах ODBC доступны для всех пользователей компьютера.  
   
  Этот раздел содержит следующие подразделы.  
   

@@ -16,16 +16,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 577b609fd2f878e6c97010cac004e0b10b3a4e4e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300984"
 ---
 # <a name="sql-server-message-results"></a>Результаты сообщения SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] операторы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не генерируют строки поставщика Native Client OLE DB или подсчет затронутых строк при выполнении:  
+  Следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции не создают [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственные наборы строк поставщика OLE DB клиента или число затронутых строк при выполнении:  
   
 -   PRINT  
   
@@ -37,11 +37,11 @@ ms.locfileid: "81300984"
   
 -   SET STATISTICS  
   
- Эти инструкции либо возвращают одно или несколько информационных сообщений, либо дают указание [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вернуть информационные сообщения вместо набора строк или результатов вычислений. При успешном [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] исполнении поставщик Native Client OLE DB возвращает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] S_OK, а сообщения доступны потребителю-поставщику NATIVE Client OLE DB.  
+ Эти инструкции либо возвращают одно или несколько информационных сообщений, либо дают указание [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вернуть информационные сообщения вместо набора строк или результатов вычислений. При успешном выполнении поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB возвращает S_OK, и сообщения становятся доступными потребителю поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB.  
   
- Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB возвращает S_OK и имеет одно или [!INCLUDE[tsql](../../includes/tsql-md.md)] несколько информационных сообщений, доступных после выполнения многих инструкций или исполнения потребителями функции поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] услуг Native Client OLE DB.  
+ Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента возвращает S_OK и имеет одно или несколько информационных сообщений, доступных после выполнения множества [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций или выполнения пользовательской функции- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] члена поставщика собственного клиента OLE DB.  
   
- Потребитель-поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB, позволяющий динамическую спецификацию текста запроса, должен проверять интерфейсы ошибок после выполнения каждой функции участника, независимо от значения кода возврата, наличия или отсутствия возвращенной ссылки на интерфейс **IRowset** или **IMultipleResults** или подсчета затронутых строк.  
+ Потребитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB собственного клиента, который разрешает динамической спецификации текста запроса, должен проверять интерфейсы ошибок после каждого выполнения функции-члена независимо от значения кода возврата, наличия или отсутствия возвращенной ссылки на интерфейс **IRowset** или **IMultipleResults** или количества затронутых строк.  
   
 ## <a name="see-also"></a>См. также:  
  [ошибки](../../relational-databases/native-client-ole-db-errors/errors.md)  

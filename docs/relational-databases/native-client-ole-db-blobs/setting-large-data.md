@@ -18,16 +18,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fde7a3fd5dadb59895c2edc643d7d482b89370ab
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297700"
 ---
 # <a name="setting-large-data"></a>Присваивание больших данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  С [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помощью поставщика Native Client OLE DB вы можете настроить данные BLOB, передав указатель на объект хранения потребителей.  
+  С помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB поставщика можно задать данные большого двоичного объекта, передав указатель на объект хранилища объекта-получателя.  
   
  Потребитель создает объект хранилища, содержащий эти данные, и передает поставщику указатель на этот объект. Поставщик считывает данные из объекта в хранилище поставщика и записывает их в столбец BLOB.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "81297700"
 ## <a name="how-to-set-large-data"></a>Как сохранить большой объем данных  
  Для передачи указателя на свой собственный объект хранения потребитель создает метод доступа, который привязывает значение столбца BLOB, а затем вызывает метод **IRowsetChange::SetData** или **IRowsetChange::InsertRow** . Сохранение данных BLOB происходит следующим образом.  
   
-1.  Создайте структуру DBOBJECT, описывающую, каким образом должен производиться доступ к столбцу BLOB. Установите элемент *dwFlag* структуры DBOBJECT, чтобы STGM_READ и установите *элемент iid* для IID_ISequentialStream (интерфейс, который будет выставлен).  
+1.  Создайте структуру DBOBJECT, описывающую, каким образом должен производиться доступ к столбцу BLOB. Задайте для элемента *dwFlag* структуры DBOBJECT значение STGM_READ и задайте для элемента *IID* значение IID_ISequentialStream (предоставляемый интерфейс).  
   
 2.  Установите свойства в группе свойств DBPROPSET_ROWSET, чтобы включить возможность обновления для набора строк.  
   
@@ -721,7 +721,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Объекты BLOBs и OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [Большие двоичные объекты и OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Использование типов больших значений](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

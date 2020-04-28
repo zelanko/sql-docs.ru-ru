@@ -1,5 +1,5 @@
 ---
-title: СЗЛМидДелС Документы Майкрософт
+title: SQLForeignKeys | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b934ec05cf5f7b908efe83eeeb68bb358cd45156
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298494"
 ---
 # <a name="sqlforeignkeys"></a>SQLForeignKeys
@@ -33,7 +33,7 @@ ms.locfileid: "81298494"
  Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает выдачу сведений о таблицах, находящихся на связанных серверах, принимая двухкомпонентное имя в параметрах *FKCatalogName* и *PKCatalogName* : *Имя_Связанного_Сервера.Имя_Каталога*.  
   
 ## <a name="see-also"></a>См. также:  
- [Функция S'LForeignKeys](https://go.microsoft.com/fwlink/?LinkId=59344)   
+ [Функция SQLForeignKeys](https://go.microsoft.com/fwlink/?LinkId=59344)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Картирование депрепроизмированных функций (ru) Документы Майкрософт
+title: Сопоставление устаревших функций | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,42 +18,42 @@ ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a4e89cd9281520e70ec5fb289c6050e77ec6194c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299884"
 ---
 # <a name="mapping-deprecated-functions"></a>Сопоставление нерекомендуемых функций
-В этом разделе описывается, как амортизированные функции отображаются менеджером драйверов ODBC *3.x,* чтобы гарантировать обратную совместимость драйверов ODBC *3.x,* которые используются с приложениями ODBC *2.x.* Менеджер драйвера выполняет это отображение независимо от версии приложения. Поскольку каждая из функций ODBC *2.x* в следующем списке отображается на соответствующую функцию ODBC *3.x* при вызове драйвера ODBC *3.x,* драйвер ODBC *3.x* не должен реализовывать функции ODBC *2.x.*  
+В этом разделе описывается, как устаревшие функции сопоставляются диспетчером драйверов ODBC *3. x* для обеспечения обратной СОВМЕСТИМОСТИ драйверов ODBC *3. x* , используемых с приложениями ODBC *2. x* . Диспетчер драйверов выполняет это сопоставление независимо от версии приложения. Поскольку каждая из функций ODBC *2. x* в следующем списке сопоставляется с соответствующей функцией ODBC *3. x* при вызове в драйвере ODBC *3. x* , драйверу ODBC *3. x* не требуется реализовывать функции ODBC *2. x* .  
   
- Отображение в списке срабатывает, когда драйвер омовающий *3.x* и драйвер не поддерживает функцию, которая отображается.  
+ Сопоставление в списке активируется, если драйвер является драйвером ODBC *3. x* , а драйвер не поддерживает сопоставляемую функцию.  
   
- В следующей таблице перечислены все дублированные функциональные возможности, которые были введены в ODBC *3.x*.  
+ В следующей таблице перечислены все повторные функциональные возможности, появившиеся в ODBC *3. x*.  
   
-|Функция ODBC *2.x*|Функция ODBC *3.x*|  
+|Функция ODBC *2. x*|ODBC *3. x,* функция|  
 |-------------------------|-------------------------|  
-|**СЗЛАллокКоннект**|**СЗЛАллокХэндл**|  
-|**СЗЛАллокЕнв**|**СЗЛАллокХэндл**|  
-|**СЗЛАлокСтмт**|**СЗЛАллокХэндл**|  
-|**СЗЛБиндпарам**|**SQLBindParameter**|  
-|**СЗЛКолАтрибуты**|**SQLColAttribute**|  
-|**Sqlerror**|**Функции SQLGetDiagRec**|  
-|**СЗЛФриКоннект**|**SQLFreeHandle**|  
-|**СЗЛФриЕнв**|**SQLFreeHandle**|  
-|**СЗЛФриСтмт** с *опцией* SQL_DROP|**SQLFreeHandle**|  
-|**СЗЛГетКоннектОпция**|**SQLGetConnectAttr**|  
-|**СЗЛГетСтмтOption**|**SQLGetStmtAttr**|  
-|**СЗЛПарамОпции**|**SQLSetStmtAttr**|  
-|**СЗЛЕтКоннектОпция**|**SQLSetConnectAttr**|  
-|**СЗЛСетПарам**|**SQLBindParameter**|  
-|**СЗЛСетПрокрутОпция**|**SQLSetStmtAttr**|  
-|**СЗЛСетСтмтOption**|**SQLSetStmtAttr**|  
-|**СЗЛТрансакт**|**SQLEndTran**|  
+|**SQLAllocConnect**|**Функцию SQLAllocHandle**|  
+|**SQLAllocEnv**|**Функцию SQLAllocHandle**|  
+|**SQLAllocStmt**|**Функцию SQLAllocHandle**|  
+|**Склбиндпарам**[1]|**SQLBindParameter**|  
+|**SQLColAttributes**|**SQLColAttribute**|  
+|**SQLError**|**Функции SQLGetDiagRec**|  
+|**SQLFreeConnect**|**SQLFreeHandle**|  
+|**SQLFreeEnv**|**SQLFreeHandle**|  
+|**SQLFreeStmt** с *возможностью* SQL_DROP|**SQLFreeHandle**|  
+|**SQLGetConnectOption**|**SQLGetConnectAttr**|  
+|**SQLGetStmtOption**|**SQLGetStmtAttr**|  
+|**SQLParamOptions**|**SQLSetStmtAttr**|  
+|**SQLSetConnectOption**|**SQLSetConnectAttr**|  
+|**SQLSetParam**[2]|**SQLBindParameter**|  
+|**склсетскроллоптион**|**SQLSetStmtAttr**|  
+|**SQLSetStmtOption**|**SQLSetStmtAttr**|  
+|**SQLTransact**|**SQLEndTran**|  
   
- Несмотря на то, что эта функция не существовала в ODBC *2.x,* она находится в стандартах Open Group и ISO.  
+ [1] Несмотря на то, что эта функция не существовала в ODBC *2. x*, она имеет стандарты Open Group и ISO.  
   
- Это функция ODBC 1.0.  
+ [2] это функция ODBC 1,0.  
   
  Этот раздел содержит следующие подразделы.  
   

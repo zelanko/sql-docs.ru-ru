@@ -1,5 +1,5 @@
 ---
-title: Системные требования (Визуальный водитель FoxPro ODBC) Документы Майкрософт
+title: Требования к системе (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,39 +19,39 @@ ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d02681709edb3a22144469df7c9abbda34e6e083
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301445"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Требования к системе (драйвер ODBC для Visual FoxPro)
-Системные требования к установке обеспечивают минимальное операционное и дисковое пространство, необходимое для успешной установки драйвера. После установки драйвера можно выбрать конкретное программное обеспечение, которое вы хотите использовать для доступа к данным Visual FoxPro.  
+Требования к системе для установки включают минимальную операционную систему и дисковое пространство, необходимое для успешной установки драйвера. После установки драйвера можно выбрать конкретное программное обеспечение приложения, которое будет использоваться для доступа к данным Visual FoxPro.  
   
 ## <a name="installation-requirements"></a>Требования установки  
- Для требований к установке и другой информации, [см.](https://go.microsoft.com/fwlink/?LinkId=121318)  
+ Требования к установке и другие сведения см. [на веб-сайте загрузки драйверов ODBC для Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
   
-## <a name="accessing-visual-foxpro-data"></a>Доступ к визуальным данным FoxPro  
- Чтобы получить доступ к Microsoft Visual FoxPro или FoxPro 2. *х* данных, вы должны иметь следующее:  
+## <a name="accessing-visual-foxpro-data"></a>Доступ к данным Visual FoxPro  
+ Для доступа к Microsoft Visual FoxPro или FoxPro 2. необходимо иметь следующие данные *x* :  
   
--   Программное обеспечение для клиентов ODBC (автоматически устанавливается с помощью драйвера)  
+-   Клиентское программное обеспечение ODBC (устанавливается автоматически вместе с драйвером)  
   
--   Microsoft Визуальный FoxPro ДРАЙВЕР ODBC  
+-   Драйвер ODBC для Microsoft Visual FoxPro  
   
--   Любой из следующих типов прикладного программного обеспечения:  
+-   Любой из следующих типов программного обеспечения приложения:  
   
-    -   Приложение Microsoft Office, такое как Microsoft Excel или Microsoft Word  
+    -   Microsoft Office приложение, например Microsoft Excel или Microsoft Word  
   
-    -   Приложение ODBC на языке C или C  
+    -   Приложение ODBC языка C или C++  
   
-    -   Приложение Microsoft Visual ODBC  
+    -   Приложение Microsoft Visual Basic ODBC  
   
--   Любые из следующих типов данных:  
+-   Любой из следующих типов данных:  
   
-    -   Визуальная [база данных](../../odbc/microsoft/visual-foxpro-terminology.md) FoxPro или каталог [бесплатных таблиц](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   [База данных](../../odbc/microsoft/visual-foxpro-terminology.md) Visual FoxPro или каталог [бесплатных таблиц](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
-    -   FoxPro 2.0, 2.5, 2.6 [таблица](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   [Таблица](../../odbc/microsoft/visual-foxpro-terminology.md) FoxPro 2,0, 2,5, 2,6  
   
- Visual FoxPro ODBC Driver поддерживает двойные наборы символов (DBCS). Для получения дополнительной информации [см.](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md)  
+ Драйвер ODBC для Visual FoxPro поддерживает двухбайтовые наборы символов (DBCS). Дополнительные сведения см. в разделе [Международная поддержка](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
   
- Драйвер не поддерживает 16-разрядные приложения Microsoft Windows 3.1.
+ Драйвер не поддерживает 16-разрядные приложения Microsoft Windows 3,1.

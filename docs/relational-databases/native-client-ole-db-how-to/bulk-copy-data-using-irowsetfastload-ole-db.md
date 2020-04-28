@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37be3d529c1d219318af2743d854a6d1b67f0cee
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300986"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Выполнение массового копирования данных с использованием интерфейса IRowsetFastLoad (OLE DB)
@@ -30,7 +30,7 @@ ms.locfileid: "81300986"
   
  Потребитель уведомляет SQLOLEDB о необходимости массового копирования путем установки зависящего от поставщика SQLOLEDB свойства SSPROP_ENABLEFASTLOAD в значение VARIANT_TRUE. Установив на источнике данных это свойство, потребитель создает сеанс SQLOLEDB. Новый сеанс позволяет потребителю получить доступ к интерфейсу **IRowsetFastLoad**.  
   
- Имеется полный образец, иллюстрирующий применение интерфейса **IRowsetFastLoad** для массового копирования записей в таблицу. В этом образце в таблицу **IRFLTable** добавляется 10 записей. Необходимо создать таблицу **IRFLTable** в базе данных.  
+ Имеется полный образец, иллюстрирующий применение интерфейса **IRowsetFastLoad** для массового копирования записей в таблицу. В этом образце в таблицу **IRFLTable** добавляется 10 записей. Необходимо создать таблицу **ирфлтабле** в базе данных.  
   
  Образцу требуется образец базы данных AdventureWorks, который можно загрузить с домашней страницы [Образцы кода и проекты сообщества Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) (возможно, на английском языке).  
   

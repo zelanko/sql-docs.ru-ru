@@ -17,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 69ba76725f5a5d3b21224495554cc2a419265f7e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299924"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Возвращает указатель на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] структуру поставщика SSERRORINFO, содержащую сведения об [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ошибках.  
+  Возвращает указатель на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент OLE DB структуру SSERRORINFO поставщика, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержащую сведения об ошибке.  
   
  Поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет интерфейс для работы с ошибками **ISQLServerErrorInfo** . Этот интерфейс возвращает подробные сведения об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в том числе уровень серьезности и состояние.  
 
@@ -55,10 +55,10 @@ HRESULT GetErrorInfo(
  Один из аргументов *ppSSErrorInfo* или *ppErrorStrings* имел значение NULL.  
   
  E_OUTOFMEMORY  
- Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB не смог выделить достаточную память для выполнения запроса.  
+ Поставщику OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента не удалось выделить достаточно памяти для завершения запроса.  
   
 ## <a name="remarks"></a>Remarks  
- Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB выделяет память для строк SSERRORINFO и OLECHAR, возвращенных через указатели, передаваемые потребителем. Пользователь должен освободить эту память с помощью метода **IMalloc::Free**, когда последнему уже не будет требоваться доступ к данным ошибки.  
+ Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента выделяет память для строк SSERRORINFO и олечар, возвращаемых с помощью указателей, переданных потребителем. Пользователь должен освободить эту память с помощью метода **IMalloc::Free**, когда последнему уже не будет требоваться доступ к данным ошибки.  
   
  Структура SSERRORINFO определена следующим образом.  
   
@@ -89,7 +89,7 @@ SSERRORINFO;
  Указатели в адресах ссылок на структуры в строке, возвращенной в аргументе *ppErrorStrings*.  
   
 ## <a name="see-also"></a>См. также:  
- [IS'LServerErrorInfo &#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+ [ISQLServerErrorInfo &#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

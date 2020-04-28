@@ -15,23 +15,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 15055f582d7add6194753e2743d63b5e082318b5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300238"
 ---
 # <a name="table-valued-parameters-ole-db"></a>Возвращающие табличное значение параметры (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  В этом разделе описывается поддержка возвращающих табличное значение параметров в поставщике OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для получения дополнительной информации о обзоре [&#41;&#40;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)см. Пример использования можно найти в статье [Использование возвращающих табличные значения параметров (OLE DB)](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md).  
+  В этом разделе описывается поддержка возвращающих табличное значение параметров в поставщике OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Параметры, возвращающие ](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)табличное значение, &#40;SQL Server Native Client&#41;. Пример использования можно найти в статье [Использование возвращающих табличные значения параметров (OLE DB)](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md).  
   
 ## <a name="remarks"></a>Remarks  
  В настоящее время многострочные данные можно отправлять на сервер как параметры процедуры с наборами параметров (параметр DBPARAMS метода **ICommand::Execute**). При использовании набора параметров каждый элемент набора должен быть отправлен на сервер в отдельном запросе удаленного вызова процедур (RPC). Возвращающие табличное значение параметры обеспечивают похожую функциональность, но лучше интегрированы с сервером. При этом уменьшается число запросов RPC, а на сервере возможны операции, основанные на наборах.  
   
- Параметры столовой стоимости [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаются в Native Client OLE DB Provider как объекты OLE DB **Rowset.** Любой объект **Rowset** может быть предоставлен потребителем (т.е. клиентским приложением с использованием [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика Native Client OLE DB) в качестве заполнителя параметров параметров, оцениваемых таблицей. Возвращающие табличное значение параметры обрабатываются как параметры других типов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает интерфейсы создания, обнаружения, определения, привязки и схемы.  
+ Параметры "Таблица-значение" поддерживаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщике OLE DB собственного клиента как объекты **набора строк** OLE DB. Любой объект **набора строк** может быть предоставлен потребителем (то есть клиентским приложением, использующим [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент OLE DB поставщика) в качестве заполнителя для параметров возвращающего табличное значение параметра. Возвращающие табличное значение параметры обрабатываются как параметры других типов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает интерфейсы создания, обнаружения, определения, привязки и схемы.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Создание набора строк возвращающего табличное значение параметра](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "81300238"
 -   [Поддержка типов параметров OLE DB, возвращающих табличные значения &#40;свойства&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Родной клиент сервера &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

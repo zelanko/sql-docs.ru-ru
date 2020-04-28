@@ -1,5 +1,5 @@
 ---
-title: Настройка формата даты на подключение (ru) Документы Майкрософт
+title: Задание формата даты для соединения | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: ba0d5123-db52-448b-8e19-b7647ce4b361
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9da75702275959b48d4965189c9ef5cd856491ff
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300744"
 ---
 # <a name="setting-the-date-format-on-connection"></a>Установка формата даты для подключения
 > [!IMPORTANT]  
->  Эта функция будет удалена в будущей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставленный Oracle.  
+>  Эта функция будет удалена в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемый Oracle.  
   
- Новая версия Драйвера Microsoft ODBC для Oracle автоматически не устанавливает формат даты для полей дат Oracle. Ранее при подключении `ALTER SESSION SET NLS_DATE_FORMAT ='YYYY-MM-DD HH:MI:SS'`драйвера он использовался.  
+ Новая версия драйвера Microsoft ODBC для Oracle не устанавливает автоматически формат даты для полей даты Oracle. Ранее при подключении драйвера использовался `ALTER SESSION SET NLS_DATE_FORMAT ='YYYY-MM-DD HH:MI:SS'`.  
   
- Чтобы установить формат даты, позвоните ALTER SESSION SET, а затем выполните вставку. Пример:  
+ Чтобы задать формат даты, вызовите инструкцию ALTER SESSION SET, а затем выполните операцию вставки. Пример:  
   
 ```  
 conn.Execute "ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD HH:MI:SS' "  

@@ -1,5 +1,5 @@
 ---
-title: Данные FILESTREAM, IRowsetFastUpload (OLE DB)
+title: Data FILESTREAM, интерфейса IRowsetFastUpload (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d298d9c4677d6b50ad0234a85e3d51b4bb8478ae
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81295699"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Передача данных в столбец FILESTREAM с использованием интерфейса IRowsetFastUpload (OLE DB)
@@ -23,7 +23,7 @@ ms.locfileid: "81295699"
 
   Этот образец использует интерфейс IRowsetFastUpload, чтобы передать от 4 МБ до 4 ГБ данных в столбец файлового потока.  
   
- Для получения дополнительной информации о функции файлов, см [FILESTREAM поддержка &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Дополнительные сведения о компоненте FILESTREAM см. в разделе [Поддержка filestream &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Пример  
  Прежде чем переходить к компиляции и запуску этого примера, включите поддержку FILESTREAM ([включение и настройка FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)).  

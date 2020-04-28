@@ -1,5 +1,5 @@
 ---
-title: 'Реактивные: Внешние соединения (ru) Документы Майкрософт'
+title: 'Jet: внешние объединения | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ ms.assetid: 02e0394e-ddd7-47ae-9180-b4d8a3b648ef
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 173f785dae601ad733aa73eb536e5f410d9a10d0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299943"
 ---
 # <a name="jet-outer-joins"></a>Jet: внешние соединения
-Заявление SELECT может содержать список положений OUTER JOIN. Nested OUTER JOINS поддерживается. Для получения дополнительной информации о OUTER JOINS, *см.*
+Инструкция SELECT может содержать список предложений внешнего объединения. Поддерживаются вложенные внешние объединения. Дополнительные сведения о внешних ОБЪЕДИНЕНИЯх см. в *статье Microsoft Jet ядро СУБД программиста*.

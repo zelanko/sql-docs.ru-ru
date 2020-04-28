@@ -1,5 +1,5 @@
 ---
-title: СЗЛСетСтмттр (Библиотека Курсора) Документы Майкрософт
+title: SQLSetStmtAttr (библиотека курсоров) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: 6018a733-c2c8-4047-92ec-92cf85031767
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1bdd9b3b559d5cc78a0d44f5280aae347bc8996a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300494"
 ---
 # <a name="sqlsetstmtattr-cursor-library"></a>SQLSetStmtAttr (библиотека курсоров)
 > [!IMPORTANT]  
->  Эта функция будет удалена в будущей версии Windows. Избегайте использования этой функции в новых разработках и планируйте модифицировать приложения, использующие эту функцию в настоящее время. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
+>  Эта функция будет удалена в следующей версии Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые в настоящее время используют эту функцию. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
   
- На этой теме обсуждается использование функции **S'LSetStmtAttr** в библиотеке курсоров. Для получения общей информации о **функции S'LsetStmtattr** [см.](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)  
+ В этом разделе обсуждается использование функции **SQLSetStmtAttr** в библиотеке курсоров. Общие сведения о **SQLSetStmtAttr**см. в разделе [функция SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
- Библиотека курсора поддерживает следующие атрибуты оператора с **помощью S'LSetStmtAttr:**  
+ Библиотека курсоров поддерживает следующие атрибуты инструкции с **SQLSetStmtAttr**:  
   
 |||  
 |-|-|  
@@ -35,16 +35,16 @@ ms.locfileid: "81300494"
 |SQL_ATTR_PARAM_BIND_OFFSET_PTR|SQL_ATTR_SIMULATE_CURSOR|  
 |SQL_ATTR_PARAM_BIND_TYPE|SQL_ATTR_USE_BOOKMARKS|  
   
- Библиотека курсора поддерживает только SQL_CURSOR_FORWARD_ONLY и SQL_CURSOR_STATIC значения атрибута SQL_ATTR_CURSOR_TYPE оператора.  
+ Библиотека курсоров поддерживает только значения SQL_CURSOR_FORWARD_ONLY и SQL_CURSOR_STATIC атрибута инструкции SQL_ATTR_CURSOR_TYPE.  
   
- Для курсоров только для форварда библиотека курсоров поддерживает SQL_CONCUR_READ_ONLY значение атрибута SQL_ATTR_CONCURRENCY оператора. Для статических курсоров библиотека курсора поддерживает SQL_CONCUR_READ_ONLY и SQL_CONCUR_VALUES значения атрибута SQL_ATTR_CONCURRENCY оператора.  
+ Для однонаправленных курсоров библиотека курсоров поддерживает SQL_CONCUR_READ_ONLY значение атрибута инструкции SQL_ATTR_CONCURRENCY. Для статических курсоров библиотека курсоров поддерживает SQL_CONCUR_READ_ONLY и SQL_CONCUR_VALUES значения атрибута SQL_ATTR_CONCURRENCY инструкции.  
   
- Библиотека курсора поддерживает только SQL_SC_NON_UNIQUE значение атрибута SQL_ATTR_SIMULATE_CURSOR оператора.  
+ Библиотека курсоров поддерживает только SQL_SC_NON_UNIQUE значение атрибута инструкции SQL_ATTR_SIMULATE_CURSOR.  
   
- Несмотря на то, что спецификация ODBC поддерживает вызовы на **S'LSetStmtAttr** с SQL_ATTR_PARAM_BIND_TYPE или SQL_ATTR_ROW_BIND_TYPE атрибутами после вызова **S'LFetch** или **S'LFetchScroll,** библиотека курсоров — нет. Прежде чем изменить тип связывания в библиотеке курсора, приложение должно закрыть курсор. Библиотека курсора поддерживает изменение атрибутов SQL_ATTR_ROW_BIND_OFFSET_PTR, SQL_ATTR_PARAM_BIND_OFFSET_PTR, SQL_ATTR_ROWS_FETCHED_PTR и SQL_ATTR_PARAMS_PROCESSED_PTR оператора при открытии курсора.  
+ Хотя Спецификация ODBC поддерживает вызовы **SQLSetStmtAttr** с атрибутами SQL_ATTR_PARAM_BIND_TYPE или SQL_ATTR_ROW_BIND_TYPE после вызова **SQLFetch** или **SQLFetchScroll** , Библиотека курсоров не имеет. Прежде чем он сможет изменить тип привязки в библиотеке курсоров, приложение должно закрыть курсор. Библиотека курсоров поддерживает изменение атрибутов SQL_ATTR_ROW_BIND_OFFSET_PTR, SQL_ATTR_PARAM_BIND_OFFSET_PTR, SQL_ATTR_ROWS_FETCHED_PTR и SQL_ATTR_PARAMS_PROCESSED_PTR, когда курсор открыт.  
   
- Приложение может **вызыватьSLSetStmtAttr** с **атрибутом** SQL_ATTR_ROW_ARRAY_SIZE, чтобы изменить размер рядового набора, пока курсор открыт. Новый размер набора строк вступит в силу при следующем вызове **S'LFetchScroll** или **S'LFetch.**  
+ Приложение может вызвать **SQLSetStmtAttr** с **атрибутом** SQL_ATTR_ROW_ARRAY_SIZE, чтобы изменить размер набора строк, пока курсор открыт. Новый размер набора строк вступит в силу при следующем вызове **SQLFetchScroll** или **SQLFetch** .  
   
- Библиотека курсора поддерживает настройку атрибута SQL_ATTR_PARAM_BIND_OFFSET_PTR или SQL_ATTR_ROW_BIND_OFFSET_PTR оператора для включения обязательных смещений. Привязка смещения не будет использоваться для вызовов в **S'LFetch,** когда библиотека курсора используется с ODBC 2. *x* драйвер.  
+ Библиотека курсоров поддерживает задание SQL_ATTR_PARAM_BIND_OFFSET_PTR или SQL_ATTR_ROW_BIND_OFFSET_PTR атрибута инструкции для включения смещений привязок. Смещение привязки не будет использоваться для вызовов **SQLFetch** , если библиотека курсоров используется с ODBC 2. драйвер *x* .  
   
- Библиотека курсора поддерживает установку атрибута SQL_ATTR_USE_BOOKMARKS оператора на SQL_UB_VARIABLE.
+ Библиотека курсоров поддерживает задание для атрибута SQL_ATTR_USE_BOOKMARKS инструкции значения SQL_UB_VARIABLE.

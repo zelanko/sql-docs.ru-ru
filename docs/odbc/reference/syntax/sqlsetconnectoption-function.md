@@ -1,5 +1,5 @@
 ---
-title: Функция S'LSetConnectOption (англ.) Документы Майкрософт
+title: Функция SQLSetConnectOption | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,28 +20,28 @@ ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 263b15cb75fb5c0c7c1d7aa630a8da171b9765a7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301599"
 ---
 # <a name="sqlsetconnectoption-function"></a>Функция SQLSetConnectOption
 **Соответствия**  
- Версия Введена: Соответствие стандартам ODBC 1.0: Deprecated  
+ Введенная версия: соответствие стандартам ODBC 1,0: не рекомендуется  
   
  **Сводка**  
- В ODBC 3 *.x,* функция ODBC 2.0 **S'LSetConnectOption** была заменена **на S'LSetConnectAttr**. Дополнительные сведения см. в разделе [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  
+ В ODBC 3 *. x*функция ODBC 2,0 **SQLSetConnectOption** была заменена на **SQLSetConnectAttr**. Дополнительные сведения см. в разделе [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  
   
 > [!NOTE]
->  Для получения дополнительной информации о том, что менеджер драйвера драйвера драйвера драйвера ODBC 2 *.x* работает с помощью [драйвера](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)ODBC 3 *.x,* см.  
+>  Дополнительные сведения о том, как диспетчер драйверов сопоставляет эту функцию, когда приложение ODBC 2 *. x* работает с драйвером ODBC 3 *. x* , см. в разделе [сопоставление устаревших функций](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)".  
   
 ## <a name="remarks"></a>Remarks  
- Смотрите [информацию ODBC 64-Bit,](../../../odbc/reference/odbc-64-bit-information.md)если ваше приложение будет работать на 64-битной операционной системе.  
+ Если приложение будет работать в 64-разрядной операционной системе, см. [сведения о ODBC 64-bit](../../../odbc/reference/odbc-64-bit-information.md).  
   
 > [!NOTE]  
->  Атрибут SQL_ASYNC_DBC_FUNCTION_ENABLE, введенный в ODBC 3.8, не поддерживается **S'LSetConnectOption**. Приложения, которые используют асинхронную операцию на ручке соединения, должны использовать **S'LSetConnectAttr.**  
+>  Атрибут SQL_ASYNC_DBC_FUNCTION_ENABLE, введенный в ODBC 3,8, не поддерживается **SQLSetConnectOption**. Приложения, использующие асинхронную операцию с маркером соединения, должны использовать **SQLSetConnectAttr**.  
   
 ## <a name="see-also"></a>См. также:  
- [Справка aPI ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,5 +1,5 @@
 ---
-title: Функция ссылки На адиограф DLL API (ru) Документы Майкрософт
+title: Функция справочника по API DLL установщика | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3502dfe6cdf54214041e3654d20e1b6dd2ff6f21
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298784"
 ---
 # <a name="installer-dll-api-reference-function"></a>Функция справочника по API библиотеки DLL установщика
-В этом разделе описывается синтаксис функций в API установки DLL. Установщик DLL API состоит из 20 функций. Три из этих функций, **S'LGetTranslator**, **S'LRemoveDSNFromIni**, и **S'LWriteDSNToIni**, называются только установки DLLs. Другие функции вызваны программами настройки и администрирования.  
+В этом разделе описывается синтаксис функций в API DLL установщика. API DLL установщика состоит из 20 функций. Три из этих функций, **склжеттранслатор**, **склремоведснфромини**и **Склвритедснтоини**, вызываются только библиотеками DLL установки. Другие функции вызываются программами установки и администрирования.  
   
- Каждая функция помечена версией ODBC, в которой она была введена.  
+ Каждая функция помечена версией ODBC, в которой она была представлена.  
   
  Этот раздел содержит следующие подразделы.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "81298784"
   
 -   [Функция SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)  
   
--   [Функция S'LManageDataИсточники](../../../odbc/reference/syntax/sqlmanagedatasources.md)  
+-   [Функция Склманажедатасаурцес](../../../odbc/reference/syntax/sqlmanagedatasources.md)  
   
 -   [Функция SQLPostInstallerError](../../../odbc/reference/syntax/sqlpostinstallererror-function.md)  
   

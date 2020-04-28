@@ -1,5 +1,5 @@
 ---
-title: S'LGetCursorName (Драйверы базы данных для настольных компьютеров) Документы Майкрософт
+title: SQLGetCursorName (драйверы баз данных для настольных систем) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,11 +13,11 @@ ms.assetid: 76399d74-1121-4c63-92ee-7d2984ac74af
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6c1d0879b84e6d39d8e92c560775f5fef38d4990
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298624"
 ---
 # <a name="sqlgetcursorname-desktop-database-drivers"></a>SQLGetCursorName (драйверы для баз данных на настольном компьютере)
-**S'LGetCursorName** поддерживается, но может использоваться только при использовании библиотеки Cursor, так как позиционированные операции не поддерживаются в драйвере.
+**SQLGetCursorName** поддерживается, но может использоваться только при использовании библиотеки курсоров, поскольку позиционированные операции не поддерживаются в драйвере.

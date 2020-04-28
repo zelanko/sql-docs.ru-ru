@@ -1,5 +1,5 @@
 ---
-title: Коды ошибки ODBC (Визуальный драйвер FoxPro ODBC) Документы Майкрософт
+title: Коды ошибок ODBC (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a2f6da9d4e4799bb9c40ec1c2716b71f70c53695
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298114"
 ---
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>Коды ошибок ODBC (драйвер ODBC для Visual FoxPro)
-В следующей таблице перечислены коды ошибок Visual FoxPro, отображаемые на значениях ODBC Error Code S'Lstate. Отображеные значения S'Lstate приходят от [S'LExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) и [S'LPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md). Никакие другие значения S'LSTATE от других API ODBC не отображаются, потому что **S'LExecDirect** и **S'LPrepare** являются единственными функциями, которые получают доступ к движку Visual FoxPro.  
+В следующей таблице перечислены коды ошибок Visual FoxPro, сопоставленные со значениями SQLSTATE кода ошибки ODBC. Сопоставленные значения SQLSTATE берутся из [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) и [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md). Другие значения SQLSTATE из других API ODBC не сопоставлены, так как **SQLExecDirect** и **SQLPrepare** являются единственными функциями, которые обращаются к подсистеме Visual FoxPro.  
   
- Для получения дополнительной информации о кодах ошибок ODBC [см.](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md) *ODBC Programmer's Reference*  
+ Дополнительные сведения о кодах ошибок ODBC см. в [приложении A: коды ошибок ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)в *справочнике программиста по ODBC*.  
   
-|SQLSTATE|Визуальный код ошибки FoxPro|  
+|SQLSTATE|Код ошибки Visual FoxPro|  
 |--------------|------------------------------|  
 |S1001|149<br /><br /> 150<br /><br /> 182<br /><br /> 202<br /><br /> 308|  
 |1004|159|  

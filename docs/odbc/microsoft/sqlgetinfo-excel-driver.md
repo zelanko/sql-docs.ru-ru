@@ -1,5 +1,5 @@
 ---
-title: СЗЛГетИнфо (Водитель Excel) Документы Майкрософт
+title: SQLGetInfo (драйвер для Excel) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,29 +14,29 @@ ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 0a96b135bbd8d44b82e645fac59ddea795666f3f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298584"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (драйвер для Excel)
 > [!NOTE]  
->  Эта тема предоставляет информацию о драйверах Excel. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
+>  В этом разделе приводятся сведения, относящиеся к драйверу Excel. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **Компания SLGetInfo** поддерживает SQL_FILE_USAGE тип информации. Возвратное значение представляет собой 16-разрядный ряд, который показывает, как драйвер непосредственно относится к файлам в источнике данных:  
+ **SQLGetInfo** поддерживает тип сведений SQL_FILE_USAGE. Возвращаемое значение представляет собой 16-разрядное целое число, которое указывает, как драйвер непосредственно обрабатывает файлы в источнике данных:  
   
--   SQL_FILE_NOT_SUPPORTED - Водитель не является одноуровневым водителем.  
+-   SQL_FILE_NOT_SUPPORTED — драйвер не является одноуровневый драйвером.  
   
--   SQL_FILE_TABLE - одноуровневый драйвер рассматривает файлы в источнике данных как таблицы.  
+-   SQL_FILE_TABLE — одноуровневый драйвер рассматривает файлы в источнике данных как таблицы.  
   
--   SQL_FILE_QUALIFIER - одноуровневый драйвер рассматривает файлы в источнике данных как квалификатор.  
+-   SQL_FILE_QUALIFIER — одноуровневый драйвер рассматривает файлы в источнике данных как квалификатор.  
   
- Водитель ODBC возвращает SQL_FILE_TABLE для Microsoft Exceldriver, потому что каждый файл представляет собой таблицу.  
+ Драйвер ODBC возвращает SQL_FILE_TABLE для Семикрософт Ексцелдривер, так как каждый файл является таблицей.  
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|Isam|Version|Формат номеров версий|  
+|ISAM|Версия|Формат номеров версий|  
 |----------|-------------|-------------------------------|  
 |Microsoft Excel|3.0|03.00.0000|  
 ||4,0|04.00.0000|  
@@ -44,7 +44,7 @@ ms.locfileid: "81298584"
 ||97/2000|08.00.0000|  
   
 ## <a name="sql_file_usage"></a>SQL_FILE_USAGE  
- SQL_FILE_TABLE (Excel 3.0/4.0)  
+ SQL_FILE_TABLE (Excel 3.0 и 4.0)  
   
  SQL_FILE_CATALOG (Excel 5.0/7.0)  
   
@@ -64,14 +64,14 @@ ms.locfileid: "81298584"
  31 (Excel 5.0/7.0/97)  
   
 ## <a name="sql_catalog_name_separator"></a>SQL_CATALOG_NAME_SEPARATOR  
- "\\(Excel 3.0/4.0)  
+ "\\" (Excel 3.0/4.0)  
   
  "." (Excel 5.0/7.0/97)  
   
 ## <a name="sql_catalog_term"></a>SQL_CATALOG_TERM  
- "Директория" (Excel 3.0/4.0)  
+ "Directory" (Excel 3.0/4.0)  
   
- "Рабочая книга" (Excel 5.0/7.0/97)  
+ "Книга" (Excel 5.0/7.0/97)  
   
 ## <a name="sql_catalog_usage"></a>SQL_CATALOG_USAGE  
  SQL_QU_DML_STATEMENTS &#124; SQL_QU_TABLE_DEFINITION  

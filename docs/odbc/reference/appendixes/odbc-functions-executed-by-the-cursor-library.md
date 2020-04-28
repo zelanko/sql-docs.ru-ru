@@ -1,5 +1,5 @@
 ---
-title: Функции ODBC, выполненные Библиотекой Курсора (ru) Документы Майкрософт
+title: Функции ODBC, выполняемые библиотекой курсоров | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,32 +16,32 @@ ms.assetid: 2f1d3386-7e59-4d55-a5b4-3440b61343a3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 70fb48a8764a913ea4c2376c1a44bcd8712e7d29
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298234"
 ---
 # <a name="odbc-functions-executed-by-the-cursor-library"></a>Функции ODBC, выполняемые библиотекой курсоров
 > [!IMPORTANT]  
->  Эта функция будет удалена в будущей версии Windows. Избегайте использования этой функции в новых разработках и планируйте модифицировать приложения, использующие эту функцию в настоящее время. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
+>  Эта функция будет удалена в следующей версии Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые в настоящее время используют эту функцию. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
   
- Библиотека курсора выполняет следующие функции. Когда приложение вызывает функцию в этом списке, менеджер драйвера вызывает библиотеку курсора, а не драйвер. Обратите внимание, что библиотека курсора может вызывать драйвер при выполнения функции.  
+ Библиотека курсоров выполняет следующие функции. Когда приложение вызывает функцию из этого списка, диспетчер драйверов вызывает библиотеку курсоров, а не драйвер. Обратите внимание, что библиотека курсоров может вызывать драйвер при выполнении функции.  
   
 |||  
 |-|-|  
-|**SQLBindCol**|**СЗЛГетСтмтOption**|  
-|**СЗЛБиндпарам**|**SQLNativeSql**|  
+|**SQLBindCol**|**SQLGetStmtOption**|  
+|**склбиндпарам**|**SQLNativeSql**|  
 |**SQLBindParameter**|**SQLNumParams**|  
-|**SQLCloseCursor**|**СЗЛПарамОпции**|  
+|**SQLCloseCursor**|**SQLParamOptions**|  
 |**SQLEndTran**|**SQLRowCount**|  
-|**Sqlextendedfetch**|**SQLSetConnectAttr**|  
-|**SQLFetchScroll**|**СЗЛЕтКоннектОпция**|  
+|**SQLExtendedFetch**|**SQLSetConnectAttr**|  
+|**SQLFetchScroll**|**SQLSetConnectOption**|  
 |**SQLFreeHandle**|**SQLSetDescField**|  
 |**Функция SQLFreeStmt**|**SQLSetDescRec**|  
 |**SQLGetData**|**функция SQLSetPos;**|  
-|**SQLGetDescField**|**СЗЛСЕтПрокрутисОпции**|  
+|**SQLGetDescField**|**SQLSetScrollOptions**|  
 |**SQLGetDescRec**|**SQLSetStmtAttr**|  
-|**SQLGetFunctions**|**СЗЛСетСтмтOption**|  
-|**SQLGetInfo**|**СЗЛТрансакт**|  
+|**SQLGetFunctions**|**SQLSetStmtOption**|  
+|**SQLGetInfo**|**SQLTransact**|  
 |**SQLGetStmtAttr**||

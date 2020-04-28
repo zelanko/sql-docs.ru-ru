@@ -1,5 +1,5 @@
 ---
-title: СЗЛГЕтДиагФилд Документы Майкрософт
+title: SQLGetDiagField | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b0d704d76caa3f2a70744a3f2cb4358251f26e55
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299734"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
@@ -62,7 +62,7 @@ ms.locfileid: "81299734"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|Инструкция DROP TRIGGER|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|Инструкция BACKUP или DUMP DATABASE|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|Инструкция DUMP TABLE|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Инструкция BACKUP или DUMP TRANSACTION. Также возвращается для оператора CHECKPOINT, если **trunc. log on chkpt.** базы данных включен.|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Инструкция BACKUP или DUMP TRANSACTION. Также возвращается для инструкции CHECKPOINT, если **TRUNC. log на chkpt.** базы данных включен.|  
 |SQL_DIAG_DFC_SS_GOTO|Инструкция управления потоком GOTO|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|Инструкция INSERT BULK|  
 |SQL_DIAG_DFC_SS_KILL|Инструкция KILL|  
@@ -97,12 +97,12 @@ ms.locfileid: "81299734"
 |SQL_DIAG_DFC_SS_WRITETEXT|WRITETEXT, инструкция|  
   
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>Функция SQLGetDiagField и возвращающие табличное значение параметры  
- Для получения двух диагностических полей: SQL_DIAG_SS_TABLE_COLUMN_NUMBER и SQL_DIAG_SS_TABLE_ROW_NUMBER можно использовать s'LGetDiagField. Эти поля помогают определить, какое значение вызвало ошибку или предупреждение, связанные с диагностической записью.  
+ SQLGetDiagField можно использовать для получения двух диагностических полей: SQL_DIAG_SS_TABLE_COLUMN_NUMBER и SQL_DIAG_SS_TABLE_ROW_NUMBER. Эти поля помогают определить, какое значение вызвало ошибку или предупреждение, связанные с диагностической записью.  
   
- Для получения дополнительной информации о параметрах, ценных на стол, с [&#41;&#40;м. ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Функция S'LGetDiagField](https://go.microsoft.com/fwlink/?LinkId=59352)   
+ [Функция SQLGetDiagField](https://go.microsoft.com/fwlink/?LinkId=59352)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

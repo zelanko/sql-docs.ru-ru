@@ -1,5 +1,5 @@
 ---
-title: Метаданные для sparse колонн (OLE DB)
+title: Метаданные для разреженных столбцов (OLE DB)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3bad30dbe0257d341ad91e2ed60bf698ca52dc8
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81295866"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Отображение метаданных столбца и каталога для разреженных столбцов (OLE DB)
@@ -23,7 +23,7 @@ ms.locfileid: "81295866"
 
   В этом примере создается таблица, состоящая из трех столбцов: разреженного столбца, столбца, не являющегося разреженным, и столбца, представляющего собой набор столбцов. Затем образец отображает флаги OLE DB, показывающие метаданные столбца и каталога для неразреженного столбца и столбца, представляющего собой набор столбцов.  
   
- Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией. Для получения дополнительной информации о разреженной столбцов, см. [Sparse колонки поддержка в S'L Сервер Родной клиент](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
+ Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией. Дополнительные сведения о разреженных столбцах см. [в разделе Поддержка разреженных столбцов в SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
   
 ## <a name="example"></a>Пример  
  Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  

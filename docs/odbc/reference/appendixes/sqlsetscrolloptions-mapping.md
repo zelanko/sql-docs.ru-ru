@@ -1,5 +1,5 @@
 ---
-title: СЗЛСЕтСвитОпции Отображные Документы Майкрософт
+title: Сопоставление SQLSetScrollOptions | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,89 +14,89 @@ ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 77050df283b10abd17ba62a48bd366d6c1b3f601
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300504"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>Сопоставление SQLSetScrollOptions
-Когда приложение вызывает **S'LSetScrollOptions** через драйвер ODBC *3.x,* а драйвер не поддерживает **S'LSetScrollOptions,** вызов  
+Когда приложение вызывает **SQLSetScrollOptions** через драйвер ODBC *3. x* , а драйвер не поддерживает **SQLSetScrollOptions**, вызов  
   
 ```  
 SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)  
 ```  
   
- приведет следующим образом:  
+ результат будет следующим:  
   
--   Звонок в  
+-   Вызов метода  
   
     ```  
     SQLGetInfo(ConnectionHandle, InfoType, InfoValuePtr, BufferLength, StringLengthPtr)  
     ```  
   
-     с аргументом *InfoType,* установленным на одно из значений в следующей таблице, в зависимости от значения аргумента *KeysetSize* в **S'LSetScrollOptions.**  
+     Если для аргумента *инфотипе* задано одно из значений, приведенных в следующей таблице, в зависимости от значения аргумента *кэйсетсизе* в **SQLSetScrollOptions**.  
   
-    |*Аргумент KeysetSize*|*Аргумент InfoType*|  
+    |*Кэйсетсизе, аргумент*|*Инфотипе, аргумент*|  
     |---------------------------|-------------------------|  
     |SQL_SCROLL_FORWARD_ONLY|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2|  
     |SQL_SCROLL_STATIC|SQL_STATIC_CURSOR_ATTRIBUTES2|  
     |SQL_SCROLL_KEYSET_DRIVEN|SQL_KEYSET_CURSOR_ATTRIBUTES2|  
     |SQL_SCROLL_DYNAMIC|SQL_DYNAMIC_CURSOR_ATTRIBUTES2|  
-    |Значение, превышающее аргумент *RowsetSize*|SQL_KEYSET_CURSOR_ATTRIBUTES2|  
+    |Значение, большее, чем аргумент *ровсетсизе*|SQL_KEYSET_CURSOR_ATTRIBUTES2|  
   
-     Если значение аргумента *KeysetSize* не указано в предыдущей таблице, вызов в **S'LSetScrollOptions** возвращает S'Lstate S1107 (значение строки вне диапазона) и ни один из следующих шагов не выполняется.  
+     Если значение аргумента *кэйсетсизе* не указано в приведенной выше таблице, вызов **SQLSETSCROLLOPTIONS** возвращает значение SQLSTATE S1107 (строка находится за пределами диапазона) и не выполняется ни одно из следующих действий.  
   
-     Затем менеджер драйвера проверяет, устанавливается ли соответствующий бит в значении*InfoValuePtr,* возвращенном по вызову в **S'LGetInfo,** в соответствии со значением аргумента *о параллели* в **S'LSetScrollOptions**.  
+     Затем Диспетчер драйверов проверяет, задан ли соответствующий бит в значении **инфовалуептр* , возвращаемом вызовом **SQLGetInfo**, в соответствии со значением аргумента *Concurrency* в **SQLSetScrollOptions**.  
   
-    |*Аргумент ы на параллелии*|*Настройка InfoType*|  
+    |Аргумент *Concurrency*|Параметр *инфотипе*|  
     |----------------------------|------------------------|  
     |SQL_CONCUR_READ_ONLY|SQL_CA2_READ_ONLY_CONCURRENCY|  
     |SQL_CONCUR_LOCK|SQL_CA2_LOCK_CONCURRENCY|  
     |SQL_CONCUR_ROWVER|SQL_CA2_ROWVER_CONCURRENCY|  
     |SQL_CONCUR_VALUES|SQL_CA2_VALUES_CONCURRENCY|  
   
-     Если аргумент *параллелизма* не является одним из значений в предыдущей таблице, вызов в **S'LSetScrollOptions** возвращает S'LSTATE S1108 (опцион на параллелизм вне диапазона), и ни один из следующих шагов не выполняется. Если подходящий бит (как указано в предыдущей таблице) не установлен в*infoValuePtr* к одному из значений, соответствующих аргументу *о параллели,* вызов в **S'LSetScrollOptions** возвращает S'LSTATE S1C00 (водитель не способен) и ни один из следующих шагов не выполняется.  
+     Если аргумент *параллелизма* не является одним из значений в предыдущей таблице, вызов **SQLSETSCROLLOPTIONS** возвращает значение SQLSTATE S1108 (параметр параллелизма выходит за пределы диапазона) и ни один из следующих действий не выполняется. Если соответствующий бит (как указано в предыдущей таблице) не установлен в **инфовалуептр* в одно из значений, соответствующих аргументу *Concurrency* , вызов **SQLSetScrollOptions** возвращает SQLSTATE S1C00 (драйвер не поддерживается), и ни один из следующих действий не выполняется.  
   
--   Звонок в  
+-   Вызов метода  
   
     ```  
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CURSOR_TYPE, ValuePtr, 0)  
     ```  
   
-     с * \*ValuePtr* установлен на одно из значений в следующей таблице, в соответствии со значением аргумента *KeysetSize* в **S'LSetScrollOptions**.  
+     Если для * \*ValuePtr* задано одно из значений, приведенных в следующей таблице, в соответствии со значением аргумента *кэйсетсизе* в **SQLSetScrollOptions**.  
   
-    |*Аргумент KeysetSize*|*\*ValuePtr*|  
+    |*Кэйсетсизе* , аргумент|*\*ValuePtr*|  
     |---------------------------|------------------|  
     |SQL_SCROLL_FORWARD_ONLY|SQL_CURSOR_FORWARD_ONLY|  
     |SQL_SCROLL_STATIC|SQL_CURSOR_STATIC|  
     |SQL_SCROLL_KEYSET_DRIVEN|SQL_CURSOR_KEYSET_DRIVEN|  
     |SQL_SCROLL_DYNAMIC|SQL_CURSOR_DYNAMIC|  
-    |Значение, превышающее аргумент *RowsetSize*|SQL_CURSOR_KEYSET_DRIVEN|  
+    |Значение, большее, чем аргумент *ровсетсизе*|SQL_CURSOR_KEYSET_DRIVEN|  
   
--   Звонок в  
+-   Вызов метода  
   
     ```  
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CONCURRENCY, ValuePtr, 0)  
     ```  
   
-     с * \*ValuePtr* установлен на *аргумент параллелизма* в **S'LSetScrollOptions**.  
+     Если для * \*ValuePtr* задан аргумент *Concurrency* в **SQLSetScrollOptions**.  
   
--   Если аргумент *KeysetSize* в вызове к **S'LSetScrollOptions** является положительным,  
+-   Если аргумент *кэйсетсизе* в вызове **SQLSetScrollOptions** является положительным, вызывается метод  
   
     ```  
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_KEYSET_SIZE, ValuePtr, 0)  
     ```  
   
-     с * \*ValuePtr* установлен на *KeysetSize* аргумент в **S'LSetScrollOptions**.  
+     Если для * \*ValuePtr* задан аргумент *кэйсетсизе* в **SQLSetScrollOptions**.  
   
--   Звонок в  
+-   Вызов метода  
   
     ```  
     SQLSetStmtAttr(StatementHandle, SQL_ROWSET_SIZE, ValuePtr, 0)  
     ```  
   
-     с * \*ValuePtr* установлен на *аргумент RowsetSize* в **S'LSetScrollOptions**.  
+     Если для * \*ValuePtr* задан аргумент *ровсетсизе* в **SQLSetScrollOptions**.  
   
     > [!NOTE]  
-    >  Когда менеджер драйверов нанесет карты **для** приложения, работающего с драйвером ODBC *3.x,* не поддерживающим **S'LSetScrollOptions,** менеджер-водитель устанавливает опцию SQL_ROWSET_SIZE оператора, а не SQL_ATTR_ROW_ARRAY_SIZE атрибута, *аргументу RowsetSize* в **S'LSetScrollOption.** В результате этого приложение не может использовать сяритогевую опционы **slSetScrollOptions** при получении нескольких строк по вызову в **S'LFetch** или **S'LFetchScroll.** Он может быть использован только при получении нескольких строк по вызову в **S'LExtendedFetch.**
+    >  Когда диспетчер драйверов сопоставляет **SQLSetScrollOptions** для приложения, работающего с драйвером ODBC *3. x* , который не поддерживает **SQLSetScrollOptions**, диспетчер драйверов устанавливает параметр инструкции SQL_ROWSET_SIZE, а не атрибут SQL_ATTR_ROW_ARRAY_SIZE инструкции, в аргумент *ровсетсизе* в **склсетскроллоптион**. В результате **SQLSetScrollOptions** не может использоваться приложением при выборке нескольких строк путем вызова **SQLFetch** или **SQLFetchScroll**. Его можно использовать только при выборке нескольких строк путем вызова **SQLExtendedFetch**.

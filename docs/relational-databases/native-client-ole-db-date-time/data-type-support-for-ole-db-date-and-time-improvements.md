@@ -15,16 +15,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f00744ce2f0363e7fcf38820b20e2b631df7adc6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301084"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Улучшения поддержки типов данных даты и времени OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  В этой теме содержится [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] информация о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типах OLE DB (Родной клиент), которые поддерживают типы данных даты/времени.  
+  В этом разделе содержатся сведения о типах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB (Native Client), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживающих типы данных даты-времени.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Сопоставление типов данных в наборах строк и параметрах  
  OLE DB предоставляет два новых типа данных для поддержки новых типов серверов: DBTYPE_DBTIME2 и DBTYPE_DBTIMESTAMPOFFSET. Следующая таблица отображает полное сопоставление типов серверов.  
@@ -34,11 +34,11 @@ ms.locfileid: "81301084"
 |DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |Дата|DBTYPE_DBDATE|133 (oledb.h)|  
-|time|DBTYPE_DBTIME2|145 (sqlncli.h)|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli.h)|  
+|time|DBTYPE_DBTIME2|145 (sqlncli. h)|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli. h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
-## <a name="data-formats-strings-and-literals"></a>Форматы данных: строки и литературы  
+## <a name="data-formats-strings-and-literals"></a>Форматы данных: строки и литералы  
   
 |Тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Тип данных OLE DB|Формат строки для клиентских преобразований|  
 |-----------------------------------------|----------------------|------------------------------------------|  
@@ -59,7 +59,7 @@ ms.locfileid: "81301084"
   
  Пустая строка не является допустимым литералом даты-времени, она не представляет значение NULL. Попытка преобразовать пустую строку в значение даты-времени приведет к ошибкам со значением SQLState, равным 22018, и сообщением «Недопустимое символьное значение для спецификации приведения».  
   
-## <a name="data-formats-data-structures"></a>Форматы данных: Структуры данных  
+## <a name="data-formats-data-structures"></a>Форматы данных: структуры данных  
  В структурах, зависящих от поставщика OLE DB, на OLE DB налагаются те же ограничения, что и на ODBC. Следующие определения взяты из описания григорианского календаря.  
   
 -   Диапазон месяцев — от 1 до 12 включительно.  
@@ -159,7 +159,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- Приложения, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мигрирующие в Native Client, которые используют **sql_variant** и полагаются на ограниченную точность **времени даты,** должны быть обновлены, если базовая схема обновляется для использования **datetime2,** а не **на время даты.**  
+ Приложения, выполняющие миграцию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на собственный клиент, который использует **sql_variant** и зависят от ограниченной точности даты и **времени** , должны быть обновлены, если базовая схема обновлена для использования **datetime2** , а не **DateTime**.  
   
  Макрос доступа SSVARIANT также расширен с помощью следующего дополнения:  
   
@@ -176,11 +176,11 @@ enum SQLVARENUM {
 |Тип данных OLE DB (*wType*)|Тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Примечания|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|Дата||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB проверяет участника *bScale* DBCOLUMDESC, чтобы определить точность дробных секунд.|  
-|DBTYPE_DBTIME2|**time**(p)|Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB проверяет участника *bScale* DBCOLUMDESC, чтобы определить точность дробных секунд.|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB проверяет участника *bScale* DBCOLUMDESC, чтобы определить точность дробных секунд.|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента проверяет элемент *bScale* дбколумдеск, чтобы определить точность доли секунды.|  
+|DBTYPE_DBTIME2|**time**(p)|Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента проверяет элемент *bScale* дбколумдеск, чтобы определить точность доли секунды.|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента проверяет элемент *bScale* дбколумдеск, чтобы определить точность доли секунды.|  
   
- Если приложение задает DBTYPE_DBTIMESTAMP в *wType*, оно может заменить сопоставление на **datetime2**, предоставив имя типа в *pwszTypeName*. Если указано **datetime**, *bScale* должен быть равен 3. Если указано **smalldatetime**, *bScale* должен быть равен 0. Если *bScale* не соответствует *wType* и *pwszTypeName,DB_E_BADSCALE*возвращается.  
+ Если приложение задает DBTYPE_DBTIMESTAMP в *wType*, оно может заменить сопоставление на **datetime2**, предоставив имя типа в *pwszTypeName*. Если указано **datetime**, *bScale* должен быть равен 3. Если указано **smalldatetime**, *bScale* должен быть равен 0. Если *bScale* не согласуется с *wType* и *pwszTypeName*, возвращается DB_E_BADSCALE.  
   
 ## <a name="see-also"></a>См. также:  
  [Улучшения функций даты и времени &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
