@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3994a9d0bc863367edf5b1844772b94a63f19d4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257252"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>Введение в работу с дельтами в SQLXML 4.0
@@ -61,7 +61,7 @@ ms.locfileid: "75257252"
 ## <a name="diffgram-annotations"></a>Заметки дельт  
  Эти заметки определены в пространстве имен DiffGram **"urn: schemas-microsoft-com: XML-DiffGram-01"**:  
   
- **удостоверения**  
+ **идентификатор**  
  Этот атрибут используется для связывания элементов в ** \<>ах Before** и ** \<instance>** Blocks.  
   
  **hasChanges**  
@@ -73,10 +73,10 @@ ms.locfileid: "75257252"
 ## <a name="understanding-the-diffgram-processing-logic"></a>Основные сведения о средствах обработки дельт  
  В средствах обработки дельт используются определенные правила для определения того, является ли операция вставкой, обновлением или удалением. Описание этих правил приведено в следующей таблице.  
   
-|Операция|Description|  
+|Операция|Описание|  
 |---------------|-----------------|  
 |Вставить|Объект DiffGram указывает операцию вставки, когда элемент появляется ** \<** в блоке>, но не в соответствующем ** \<блоке Before>** , а атрибут **diffgr: hasChanges** указан (**diffgr: hasChanges = inserted**) для элемента. В этом случае DiffGram вставляет в базу данных экземпляр записи, указанный в ** \<** блоке>.<br /><br /> Если атрибут **diffgr: hasChanges** не указан, элемент пропускается логикой обработки и вставка не выполняется. Рабочие образцы см. в разделе [примеры DiffGram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).|  
-|Update|DiffGram указывает операцию обновления, если в \<блоке Before> имеется элемент, для которого имеется соответствующий элемент в ** \<** ** \<блоке>экземпляра** данных (то есть оба элемента имеют атрибут **diffgr: ID** с тем же значением), а атрибут **diffgr: hasChanges** — со значением, **измененным** в элементе в блоке>данных.<br /><br /> Если атрибут **diffgr: hasChanges** не задан для элемента в ** \<блоке>экземпляра** данных, логика обработки возвращает ошибку. Рабочие образцы см. в разделе [примеры DiffGram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> Если **diffgr: ParentID** указан в блоке ** \<Before>** , связь типа «родители-потомки» элементов, заданных **ParentID** , используется для определения порядка, в котором обновляются записи.|  
+|Обновление:|DiffGram указывает операцию обновления, если в \<блоке Before> имеется элемент, для которого имеется соответствующий элемент в ** \<** ** \<блоке>экземпляра** данных (то есть оба элемента имеют атрибут **diffgr: ID** с тем же значением), а атрибут **diffgr: hasChanges** — со значением, **измененным** в элементе в блоке>данных.<br /><br /> Если атрибут **diffgr: hasChanges** не задан для элемента в ** \<блоке>экземпляра** данных, логика обработки возвращает ошибку. Рабочие образцы см. в разделе [примеры DiffGram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> Если **diffgr: ParentID** указан в блоке ** \<Before>** , связь типа «родители-потомки» элементов, заданных **ParentID** , используется для определения порядка, в котором обновляются записи.|  
 |DELETE|DiffGram обозначает операцию удаления, когда элемент появляется в блоке ** \<Before>** , но не в соответствующем ** \<** блоке>. В этом случае DiffGram удаляет экземпляр записи, указанный в блоке ** \<Before>** , из базы данных. Рабочие образцы см. в разделе [примеры DiffGram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> Если **diffgr: ParentID** указан в блоке ** \<Before>** , то связь типа «родители-потомки» элементов, заданных **ParentID** , используется для определения порядка, в котором удаляются записи.|  
   
 > [!NOTE]  

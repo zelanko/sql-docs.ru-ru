@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7b0d6e4d99c08556cefb31c33deb5238f33c636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75225389"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Сценарии глобализации для многомерных служб Analysis Services
@@ -54,9 +54,8 @@ ms.locfileid: "75225389"
   
 -   Среда разработки и рабочая среда географически расположены в разных странах. Все чаще решение разрабатывается в одной стране, а затем разворачивается в другой. Важно уметь задавать свойства языка и параметров сортировки, если вам нужно подготовить решение, разработанное на одном языке, для развертывания на сервере, использующем другой языковой пакет. Настройка этих свойств позволяет переопределить унаследованные значения по умолчанию, получаемые от исходной системы. Дополнительные сведения см. в разделе [Языки и параметры сортировки (службы Analysis Services)](languages-and-collations-analysis-services.md) .  
   
-##  <a name="bkmk_features"></a>Функции для создания глобализованного многомерного решения  
- 
-  [!INCLUDE[applies](../includes/applies-md.md)] только в многомерных моделях данных  
+##  <a name="features-for-building-a-globalized-multidimensional-solution"></a><a name="bkmk_features"></a>Функции для создания глобализованного многомерного решения  
+ [!INCLUDE[applies](../includes/applies-md.md)] только в многомерных моделях данных  
   
  На уровне клиента глобализованные приложения, которые используют многомерные данные [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или работают с ними, могут использовать многоязыковые и интернациональные возможности служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
   
@@ -68,16 +67,16 @@ ms.locfileid: "75225389"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
-|[Языки и параметры сортировки &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|Указание языка и параметров сортировки Windows по умолчанию для экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Выбранные параметры влияют на данные и метаданные, которыми управляют службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|[Языки и параметры сортировки (службы Analysis Services)](languages-and-collations-analysis-services.md)|Указание языка и параметров сортировки Windows по умолчанию для экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Выбранные параметры влияют на данные и метаданные, которыми управляют службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |[Переводы &#40;Analysis Services&#41;](translations-analysis-services.md)|Определение переводов для базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и объектов, содержащихся в этой базе данных. В этом разделе объясняется, как службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] разрешают запросы переведенных данных и метаданных из клиентских приложений.|  
 |[Конвертации валют &#40;Analysis Services&#41;](currency-conversions-analysis-services.md)|Определение преобразования валют с помощью мастера бизнес-аналитики.|  
-|[Советы и рекомендации по глобализации &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|Обзор нескольких рекомендаций по разработке и кодированию, помогающих избежать проблем, связанных с многоязыковыми данными.|  
+|[Советы и рекомендации по глобализации (службы Analysis Services)](globalization-tips-and-best-practices-analysis-services.md)|Обзор нескольких рекомендаций по разработке и кодированию, помогающих избежать проблем, связанных с многоязыковыми данными.|  
   
 ## <a name="see-also"></a>См. также:  
  [Международная связь для приложений Windows](/windows/desktop/Intl/international-support)   
  [Документация по глобализации Майкрософт](/globalization/)   
  [Написание приложений для Магазина Windows с адаптивным проектированием на основе языкового стандарта](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [Разработка универсальных приложений для Windows с помощью C# и XAML](https://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [Разработка универсальных приложений для Windows на C# и XAML](https://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   

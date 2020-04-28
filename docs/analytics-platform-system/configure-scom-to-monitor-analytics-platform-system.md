@@ -10,23 +10,23 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401302"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Настройка System Center Operations Manager (SCOM) для мониторинга системы аналитики платформы
 Выполните следующие действия, чтобы настроить пакеты управления System Center Operations Manager (SCOM) для платформы аналитики. Пакеты управления необходимы для мониторинга системы платформы аналитики из SCOM.  
   
-## <a name="BeforeBegin"></a>Перед началом  
-**Предварительные требования**  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Перед началом  
+**Предварительные условия**  
   
 Необходимо установить и запустить System Center Operations Manager 2007 R2.  
   
 Пакеты управления должны быть установлены и настроены. См. статью [Установка пакетов управления scom &#40;Analytics Platform system&#41;](install-the-scom-management-packs.md) и [Импорт пакета управления scom для PDW &#40;analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md).  
   
-## <a name="ConfigureRunAsProfile"></a>Настройка профиля запуска от имени в System Center  
+## <a name="configure-run-as-profile-in-system-center"></a><a name="ConfigureRunAsProfile"></a>Настройка профиля запуска от имени в System Center  
 Чтобы настроить System Center, необходимо выполнить следующие действия.  
   
 -   Создайте учетную запись запуска от имени для пользователя домена **наблюдателя APS** и сопоставьте ее с **учетной записью наблюдателя Microsoft APS.**  
@@ -111,7 +111,7 @@ ms.locfileid: "74401302"
   
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 Теперь, когда вы настроили пакеты управления, можно приступить к наблюдению за устройством. Дополнительные сведения см. [в статье мониторинг устройства с помощью System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md).  
   
 <!-- MISSING LINKS ## See Also  

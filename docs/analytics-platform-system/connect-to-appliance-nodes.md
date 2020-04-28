@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e1182d174e3281fda944c0b6490b114d4b6f2244
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401246"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Подключение к узлам устройств в системе аналитики платформы
@@ -22,7 +22,7 @@ ms.locfileid: "74401246"
 ## <a name="connecting-with-hadoop"></a>Подключение с помощью Hadoop  
 Перед использованием Hadoop с SQL Server PDW попросите администратора устройства установить среда выполнения Java на SQL Server PDW. Инструкции см. в статье [Настройка подключения polybase к внешним данным &#40;Analytics Platform System&#41;](configure-polybase-connectivity-to-external-data.md) в руководстве по работе с устройством.  
   
-## <a name="ConnectingToIndividualNodes"></a>Подключение к узлам устройств  
+## <a name="connecting-to-appliance-nodes"></a><a name="ConnectingToIndividualNodes"></a>Подключение к узлам устройств  
 Доступ к каждому из узлов устройств осуществляется напрямую только в конкретных сценариях использования и конкретных типах пользователей. В следующей таблице перечислены все узлы устройств и сценарии, в которых пользователи будут подключаться непосредственно к этому узлу.  
   
 <!-- MISSING LINKS For information on the purpose of each node, see [Understanding SQL Server PDW &#40;SQL Server PDW&#41;](../sqlpdw/understanding-sql-server-pdw-sql-server-pdw.md).  -->  

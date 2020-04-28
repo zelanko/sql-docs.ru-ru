@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9f96d953dbd427bfb6cf94470c0ee80ade3aed48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401438"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Установка и настройка устройств для платформы аналитики
@@ -27,7 +27,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
 -   Review [Connecting to SQL Server PDW (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808) to understand how and when appliance administrators will connect to each appliance node.  
 -->
 
-## <a name="InstallHardware"></a>1. Установка оборудования  
+## <a name="1-install-the-hardware"></a><a name="InstallHardware"></a>1. Установка оборудования  
 Новое устройство будет доставлено на палеты на закрепление в центре обработки данных.  
   
 > [!IMPORTANT]  
@@ -41,14 +41,14 @@ Before you begin to install, configure, and use your new appliance, we recommend
 |Подтверждение документации|Убедитесь, что получены все необходимые документы и сведения от независимого поставщика оборудования (IHV). Ознакомьтесь со [сведениями, которые можно получить из&#41;системы &#40;аналитики независимого поставщика оборудования ](information-to-obtain-from-your-ihv.md).|  
 |Установка оборудования|Убедитесь, что центр обработки данных может разместить устройство. Переместите компоненты устройства в центр обработки данных. Стойка сетевых коммутаторов, PDU и кабелей. См. раздел [Установка оборудования &#40;Analytics Platform System&#41;](hardware-installation.md).|  
   
-## <a name="PowerOnAppliance"></a>2. Включение устройства  
+## <a name="2-power-on-the-appliance"></a><a name="PowerOnAppliance"></a>2. Включение устройства  
   
 |||  
 |-|-|  
 |**Задача**|**Описание**|  
 |Включение устройства|Включите питание каждого узла компонента устройства в нужном порядке, дождитесь, если это необходимо, чтобы убедиться в отсутствии ошибок.|  
   
-## <a name="ConfigureAppliance"></a>3. Настройка устройства  
+## <a name="3-configure-the-appliance"></a><a name="ConfigureAppliance"></a>3. Настройка устройства  
   
 |||  
 |-|-|  
@@ -59,7 +59,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
 > [!WARNING]  
 > Изменения конфигурации следует вносить только с помощью**Configuration Manager**SQL Server PDW. Изменения, не представленные в **Configuration Manager** , не поддерживаются. Например, устройство SQL Server PDW поддерживает только параметр английского языка (США).  
   
-## <a name="SoftwareServicing"></a>4. Настройка обслуживания программного обеспечения  
+## <a name="4-set-up-software-servicing"></a><a name="SoftwareServicing"></a>4. Настройка обслуживания программного обеспечения  
   
 |||  
 |-|-|  
@@ -67,7 +67,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
 |Применить обновления SQL Server PDW|Используемых Чтобы обновить программное обеспечение SQL Server PDW до последней версии, может потребоваться применить одно или несколько SQL Server PDW обновлений. См. статью [применение исправлений системы &#40;Analytics platform&#41;](apply-analytics-platform-system-hotfixes.md).|  
 |Настройка служб Windows Server Update Services|Настройте устройство на получение обновлений от Windows Server Update Services для поддержки программного обеспечения. См. статью [Загрузка и применение обновлений майкрософт &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md).|  
   
-## <a name="NextSteps"></a>Дальнейшие действия  
+## <a name="next-steps"></a><a name="NextSteps"></a>Дальнейшие действия  
 После выполнения всех описанных выше действий устройство будет готово к использованию. Вы или другие сотрудники в своем расположении могут продолжить выполнение следующих задач.  
   
 |||  

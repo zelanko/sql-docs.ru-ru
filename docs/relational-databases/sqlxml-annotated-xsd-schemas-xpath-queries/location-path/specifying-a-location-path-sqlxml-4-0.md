@@ -18,10 +18,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5e2668da10e41e997cc4d37760d79e4b66dae215
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245593"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Указание пути доступа (SQLXML 4.0)
@@ -61,7 +61,7 @@ ms.locfileid: "75245593"
   
      Синтаксис шага доступа: имя оси и проверки узла, разделенные двумя двоеточиями, за которыми следует ноль или более выражений — каждое в квадратных скобках. Например, выражение XPath (путь расположения) **дочерний элемент:: Customer@CustomerID[= ' ALFKI ']** выбирает все дочерние элементы ** \<Customer>** элемента контекстного узла. После этого тест в предикате применяется к набору узлов, который возвращает только узлы элементов ** \<Customer>** с атрибутом **CustomerID** со значением «ALFKI».  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Указание оси &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md)  
  Содержит примеры указания оси.  
   

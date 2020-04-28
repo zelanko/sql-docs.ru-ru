@@ -19,17 +19,17 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f355f83be4dc2e77e3cbaceaeebe2a5157324b4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75247051"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>Схемы XSD с заметками в SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   В этом разделе приводятся сведения об использовании аннотированных схем XSD в SQLXML 4.0. В предшествующих версиях SQLXML аналогичные функциональные возможности обеспечивались с помощью схем с сокращенными XML-данными (XDR). Кроме того, в этом разделе приводятся сведения по XDR для прежних версий приложений.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о схемах XSD с заметками &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  
  Содержит общие сведения об аннотированных схемах XSD в SQLXML 4.0.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "75247051"
  [Схемы XDR с заметками &#40;нерекомендуемые в SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
  Предшествующие версии SQLXML поддерживали заметки в схемах XDR. Аннотированные схемы XDR не используются в SQLXML 4.0, и этот раздел приводится в качестве справочника по приложениям устаревших версий.  
   
-## <a name="other-resources"></a>Прочие ресурсы  
+## <a name="other-resources"></a>Другие ресурсы  
  Дополнительные сведения о языке XSD, языке XPath и преобразованиях XSLT находятся на следующих веб-сайтах.  
   
 -   XML-схема, часть 0: учебник, рекомендация консорциума W3C (https://www.w3.org/TR/xmlschema-0/)  

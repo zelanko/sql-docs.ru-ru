@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1a1b713288c49cb922c758fd2b68b9bdc456ae8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75246608"
 ---
 # <a name="sqlxml-40-net-framework-support---using-diffgrams-to-modify-data"></a>Поддержка SQLXML 4.0 на платформе .NET Framework — изменение данных с помощью дельт
@@ -40,7 +40,7 @@ ms.locfileid: "75246608"
 > [!NOTE]  
 >  Этот раздел содержит краткие сведения о дельтах и примеры их использования. Предполагается знакомство с дельтами на платформе .NET Framework. В этой документации основное внимание уделяется проблемам формата дельт, специфичным для SQLXML.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Введение в работу с дельтами в SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/introduction-to-diffgrams-in-sqlxml-4-0.md)  
  Предоставляет основные сведения о дельтах.  
   

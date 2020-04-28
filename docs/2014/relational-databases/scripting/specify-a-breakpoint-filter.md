@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9759134504c7b55f5008783a2e6c3bd9ebf1755
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243223"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Задание фильтра точек останова
   Фильтр для точек останова ограничивает действие точки останова определенными компьютерами, процессами операционной системы и потоками. Фильтры точек останова обычно используются при отладке параллельных приложений.  
   
-##  <a name="BKMK_ActionConsiderations"></a> Вопросы применения фильтров  
+##  <a name="filter-considerations"></a><a name="BKMK_ActionConsiderations"></a> Вопросы применения фильтров  
  Обычно фильтры точек останова используют вместе с отладчиком [!INCLUDE[tsql](../../includes/tsql-md.md)] , потому что скрипты и хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] не являются параллельными приложениями.  
   
 #### <a name="to-specify-a-breakpoint-filter"></a>Задание фильтра точки останова  
@@ -35,14 +35,11 @@ ms.locfileid: "75243223"
   
 2.  В диалоговом окне **Фильтры точки останова** используйте флажок **Фильтр** для указания компьютеров по имени или процессов и потоков операционной системы по имени или идентификационному номеру.  
   
-    -   
-  `MachineName` — это компьютер, на котором запущен экземпляр Database Engine.  
+    -   `MachineName` — это компьютер, на котором запущен экземпляр Database Engine.  
   
-    -   
-  `ProcessID` и `ProcessName` — это процесс операционной системы, в котором исполняется экземпляр компонента Database Engine.  
+    -   `ProcessID` и `ProcessName` — это процесс операционной системы, в котором исполняется экземпляр компонента Database Engine.  
   
-    -   
-  `ThreadID` и `ThreadName` — это поток операционной системы, в котором выполняется пакет, процедура или функция [!INCLUDE[tsql](../../includes/tsql-md.md)] на экземпляре Database Engine.  
+    -   `ThreadID` и `ThreadName` — это поток операционной системы, в котором выполняется пакет, процедура или функция [!INCLUDE[tsql](../../includes/tsql-md.md)] на экземпляре Database Engine.  
   
 3.  Нажмите кнопку **ОК** , чтобы внести изменения, либо кнопку **Отмена** , чтобы выйти без их применения.  
   

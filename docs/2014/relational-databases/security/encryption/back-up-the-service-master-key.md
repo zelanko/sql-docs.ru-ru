@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: c6e67b2eacfd428bc296596699ff65939789d1e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957278"
 ---
 # <a name="back-up-the-service-master-key"></a>Создание резервной копии главного ключа службы
@@ -32,20 +32,20 @@ ms.locfileid: "74957278"
   
 -   [Создание резервной копии главного ключа службы](#Procedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Главный ключ должен быть открыт и, таким образом, расшифрован, прежде чем производится его резервное копирование. Если он зашифрован с помощью главного ключа службы, то главный ключ не нужно открывать явным образом, но если главный ключ зашифрован только с помощью пароля, он должен быть явным образом открыт.  
   
 -   Рекомендуется создать резервную копию главного ключа сразу же после его создания и затем сохранить в надежном месте.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требует разрешения CONTROL для базы данных.  
   
-##  <a name="Procedure"></a> Использование Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="Procedure"></a> Использование Transact-SQL  
   
 #### <a name="to-back-up-the-service-master-key"></a>Создание резервной копии главного ключа службы  
   

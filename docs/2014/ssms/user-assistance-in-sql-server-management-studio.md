@@ -14,19 +14,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74684459"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Справка и поддержка пользователей в среде SQL Server Management Studio
-  Справка и поддержка пользователей в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] доступна через меню «Справка» и в электронной документации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . В меню «Справка» в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] предлагается несколько вариантов доступа к сведениям об [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Оно также предоставляет доступ к сообществу [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и ресурсам интерактивной библиотеки MSDN, ранее недоступным из справочной среды. Справочная среда теперь также может быть настроена как на запуск из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , так и в собственном внешнем окне.  
+  Справка и поддержка пользователей в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] доступна через меню «Справка» и в электронной документации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. В меню «Справка» в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] предлагается несколько вариантов доступа к сведениям об [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Оно также предоставляет доступ к сообществу [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и ресурсам интерактивной библиотеки MSDN, ранее недоступным из справочной среды. Справочная среда теперь также может быть настроена как на запуск из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , так и в собственном внешнем окне.  
   
 ## <a name="the-help-interface"></a>Интерфейс справки  
  Вкладки **Содержимое** и **Индекс** предоставляют функции и интерфейс, уже знакомые пользователям [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Доступны следующие параметры.  
   
--   **Как…**  
+-   **Инструкции**  
   
      Предоставляет иерархический набор связанных страниц с полезными статьями, описывающими типичные задачи при работе с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Содержимое упорядочено по компонентам и задачам, например раздел «Репликации» и т. д.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "74684459"
  Использование справки (справка проводника документов[!INCLUDE[msCoName](../includes/msconame-md.md)] ) предоставляет пользователям сведения о средстве просмотра справки, но эти разделы находятся в наборе разделов, отдельном от электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Дополнительные сведения о средстве просмотра справки см. в пункте **Использование справки** меню "Справка" электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Сведения о добавлении набора разделов «Справка по справке» в коллекцию электронной документации см. в разделе [Добавление или удаление документации по продукту для SQL Server](../2014-toc/index.yml).  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>Интерактивная библиотека MSDN Online и сообщества SQL Server  
- Справка в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] также предоставляет пользователям возможности подключения к MSDN Online и тематическим сообществам по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]в Интернете для получения сведений. Вы можете:  
+ Справка в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] также предоставляет пользователям возможности подключения к MSDN Online и тематическим сообществам по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]в Интернете для получения сведений. Можно выполнить следующие действия.  
   
 -   получить доступ к сообществам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] со страницы «Инструкции»;  
   
@@ -57,7 +57,7 @@ ms.locfileid: "74684459"
   
 1.  В меню [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]Справка **среды** выберите пункт **Инструкции**.  
   
-2.  Откроется страница [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Инструкции** . В боковой панели «Сообщества» щелкните название веб-сайта сообщества, который необходимо просмотреть.  
+2.  Откроется страница  **Инструкции** в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. В боковой панели «Сообщества» щелкните название веб-сайта сообщества, который необходимо просмотреть.  
   
     > [!NOTE]  
     >  Компьютер, на котором выполняется [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , должен иметь прямое соединение с Интернетом.  

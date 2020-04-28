@@ -14,21 +14,21 @@ ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 6edcf577b7783662a02efc3531ac02c2535ef078
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245415"
 ---
 # <a name="manage-dqs-log-files"></a>Управление файлами журнала DQS
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)](DQS) файлы журналов помогают диагностировать и устранять неполадки в [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]и. [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] Отдельные файлы журнала создаются для [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]и [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)].  
+  Файлы журнала[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) полезны при диагностике и устранении проблем в [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]и [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]. Отдельные файлы журнала создаются для [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]и [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)].  
   
  С помощью [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] вы можете настроить параметр серьезности для записи в журнал для функций и модулей [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . Кроме того, вы можете настроить некоторые другие (дополнительные) параметры для файлов журналов DQS, вручную изменив параметры конфигурации для журнала DQS в базе данных DQS_MAIN и XML-файле на компьютере [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
-##  <a name="DQSServer"></a>Файл журнала сервера данных Data Quality  
+##  <a name="data-quality-server-log-file"></a><a name="DQSServer"></a>Файл журнала сервера данных Data Quality  
  Файл журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , DQServerLog.DQS_MAIN.log, содержит журналы видов деятельности, которые запускаются на сервере [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Если был установлен экземпляр SQL Server по умолчанию, файл DQServerLog.DQS_MAIN.log находится в папке C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log. Файл журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] содержит следующие элементы данных, разделенные знаком вертикальной черты (|):  
   
 -   Дата и время  
@@ -60,15 +60,15 @@ ms.locfileid: "75245415"
   
  Файл DQServerLog.DQS_MAIN.log — последовательно обновляемый, и новый файл журнала создается после того, как размер существующего файла превышает предел, указанный в параметрах конфигурации журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . Дополнительные сведения см. в разделе [Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md).  
   
-##  <a name="DQSClient"></a>Файл журнала Data Quality Client  
+##  <a name="data-quality-client-log-file"></a><a name="DQSClient"></a>Файл журнала Data Quality Client  
  Файл журнала [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , DQClientLog.log, включает журналы на клиентской стороне. Файл журнала [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] находится в папке % APPDATA%\SSDQS\Log. Файл журнала [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] содержит такой же набор сведений, как файл журнала сервера, но на клиентской стороне.  
   
  Как и файл журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , файл журнала [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , также последовательно обновляемый, и новый файл журнала создаются после того, как размер существующего файла превышает предел, указанный в параметрах конфигурации журнала [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Дополнительные сведения см. в разделе [Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md).  
   
-##  <a name="DQSCleansing"></a>Файл журнала компонента очистки DQS  
+##  <a name="dqs-cleansing-component-log-file"></a><a name="DQSCleansing"></a>Файл журнала компонента очистки DQS  
  Файл журнала [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] , DQSSSISLog.log, включает журналы действий, выполненных с использованием [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]. Файл журнала компонента [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] находится в папке % APPDATA%\SSDQS\Log. Файл журнала [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] содержит такой же набор сведений, как файл журнала сервера, но для [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)].  
   
-##  <a name="RT"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RT"></a> Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

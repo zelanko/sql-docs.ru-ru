@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fcfafc014fe9a9b494c79c879caa7d272fbc7903
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75247103"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Использование запросов XPath в SQLXML 4.0
@@ -30,7 +30,7 @@ ms.locfileid: "75247103"
 > [!NOTE]  
 >  Чтобы получить представление о запросах XPath в SQLXML 4.0, необходим опыт работы с XML-представлениями и другими связанными основными понятиями — шаблонами и схемами сопоставления. Дополнительные сведения см. [в разделе Введение в схемы XSD с Заметками &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Дополнительные сведения о XPath см. в стандарте XPath, определенном консорциум W3C (W3C) по http://www.w3.org/TR/xpathадресу.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об использовании запросов XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)  
  Содержит вводные сведения о запросах XPath в SQLXML 4.0 (в том числе поддерживаемые и неподдерживаемые возможности из спецификации XPath консорциума W3C).  
   

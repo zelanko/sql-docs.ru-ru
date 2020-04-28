@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3b754fb2de33a230bc7d27f239b2778d2849fd5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401273"
 ---
 # <a name="what-is-polybase"></a>Что такое PolyBase?
 Polybase позволяет системе аналитики (ТД) обрабатывать запросы Transact-SQL, которые могут считывать данные из внешних источников данных и записывать их в них. Те же запросы, которые обращаются к внешним данным, могут также включать таблицы связей в ТД. Это позволяет объединять данные из внешних источников с высокоценными реляционными данными в базах данных APS.
 
-![Логический](media/polybase/polybase-logical.png)
+![Логика PolyBase](media/polybase/polybase-logical.png)
 
 Polybase на ТД поддерживает чтение и запись в файловую систему Hadoop (HDFS) и хранилище BLOB-объектов Azure. Polybase также может отправлять некоторые вычисления в узлы Hadoop в виде заданий MapReduce для оптимизации общей производительности запросов. Polybase на ТД может использоваться с файлами с разделителями (Text, ORC и Parquet). Полное описание и его возможности см. в разделе [что такое polybase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide) .
 
@@ -34,6 +34,6 @@ Polybase на ТД поддерживает чтение и запись в фа
 
 ## <a name="see-also"></a>См. также:
 - [Hadoop](polybase-configure-hadoop.md)
-- [хранилище BLOB-объектов Azure](polybase-configure-azure-blob-storage.md)
+- [Хранилище BLOB-объектов Azure](polybase-configure-azure-blob-storage.md)
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  
   

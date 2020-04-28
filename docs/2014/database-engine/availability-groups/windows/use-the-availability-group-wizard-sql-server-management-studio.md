@@ -18,34 +18,33 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70227f556ae268144549616dab0895e70ff39de8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228743"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Использование мастера групп доступности (SQL Server Management Studio)
-  В этом разделе описывается использование мастера создания групп доступности (в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) для создания и настройки группы доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. 
-  *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  
+  В этом разделе описывается использование мастера создания групп доступности (в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) для создания и настройки группы доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  
   
 > [!NOTE]  
 >  Базовые сведения о группах доступности см. в разделе [Обзор групп доступности AlwaysOn (SQL Server)](overview-of-always-on-availability-groups-sql-server.md).  
   
 -   **Перед началом работы**  
   
-     [Предварительные требования, ограничения и рекомендации](#PrerequisitesRestrictions)  
+     [Предварительные условия, ограничения и рекомендации](#PrerequisitesRestrictions)  
   
      [Безопасность](#Security)  
   
--   **Создание и настройка группы доступности с помощью**  [мастера создания групп доступности (SQL Server Management Studio)](#RunAGwiz)  
+-   **Создание и настройки группы доступности с помощью**  [мастера создания группы доступности (SQL Server Management Studio)](#RunAGwiz)  
   
 > [!NOTE]  
 >  Вместо мастера создания групп доступности можно использовать [!INCLUDE[tsql](../../../includes/tsql-md.md)] или командлеты [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Создание группы доступности (Transact-SQL)](create-an-availability-group-transact-sql.md) или командлеты [Создание группы доступности (SQL Server PowerShell)](../../../powershell/sql-server-powershell.md).  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
  Настоятельно рекомендуется прочитать этот раздел, прежде чем пытаться настроить свою первую группу доступности.  
   
-###  <a name="PrerequisitesRestrictions"></a>Предварительные требования, ограничения и рекомендации  
+###  <a name="prerequisites-restrictions-and-recommendations"></a><a name="PrerequisitesRestrictions"></a>Предварительные требования, ограничения и рекомендации  
  В большинстве случаев можно использовать мастер создания групп доступности для выполнения всех задач по созданию и настройке группы доступности. Однако некоторые задачи может потребоваться выполнить вручную.  
   
 -   Перед созданием группы доступности необходимо, чтобы экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на которых находятся реплики доступности, были расположены на различных узлах одной отказоустойчивой кластеризации Windows Server (WSFC). Кроме того, убедитесь, что каждый из экземпляров сервера соответствует всем другим обязательным условиям [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Для получения дополнительных сведений настоятельно рекомендуется изучить раздел [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](prereqs-restrictions-recommendations-always-on-availability.md).  
@@ -54,9 +53,9 @@ ms.locfileid: "75228743"
   
      `To use certificates for a database mirroring endpoint:`  
   
-     [&#41;создания КОНЕЧНОЙ точки &#40;Transact-SQL](/sql/t-sql/statements/create-endpoint-transact-sql)  
+     [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
-     [Использование сертификатов для конечной точки зеркального отображения базы данных &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+     [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
 -   Экземпляры отказоустойчивого кластера SQL Server не поддерживают автоматический переход на другой ресурс с учетом групп доступности, поэтому любая реплика доступности, размещенная в них, должна быть настроена для перехода на другой ресурс вручную.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "75228743"
   
     5.  Восстановите эту резервную копию журнала в базе данных-получателе.  
   
--   **Необходимые условия для выполнения полной начальной синхронизации данных в мастере**  
+-   **Предварительные условия для выполнения мастером полной первоначальной синхронизации данных**  
   
     -   Все пути к файлам базы данных должны быть одинаковыми на всех экземплярах сервера, на которых размещены реплики группы доступности.  
   
@@ -85,16 +84,16 @@ ms.locfileid: "75228743"
         > [!IMPORTANT]  
         >  Резервные копии журналов будут входить в цепочку резервных копий журналов. Храните файлы резервных копий журналов надлежащим образом.  
   
-     Если нет возможности воспользоваться мастером для выполнения полной первоначальной синхронизации данных, то базы данных-получатели нужно подготовить вручную. Это можно сделать до или после запуска мастера. Дополнительные сведения см. в разделе [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+     Если нет возможности воспользоваться мастером для выполнения полной первоначальной синхронизации данных, то базы данных-получатели нужно подготовить вручную. Это можно сделать до или после запуска мастера. Дополнительные сведения см. в статье [Ручная подготовка базы данных-получателя для присоединения к группе доступности (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.  
   
  Кроме того, требуется разрешение CONTROL ON ENDPOINT, если мастер группы доступности должен иметь возможность управлять конечной точкой зеркального отображения базы данных.  
   
-##  <a name="RunAGwiz"></a>Использование мастера создания групп доступности  
+##  <a name="using-the-new-availability-group-wizard"></a><a name="RunAGwiz"></a> Использование мастера создания группы доступности  
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, на котором размещена первичная реплика доступности.  
   
@@ -114,14 +113,14 @@ ms.locfileid: "75228743"
   
 7.  На странице **Выбор реплик** укажите и настройте одну или несколько реплик для новой группы доступности. Страница содержит четыре вкладки. Эти вкладки представлены в следующей таблице. Дополнительные сведения см. в разделе [Укажите страницу реплик (мастер создания группы доступности: мастер добавления реплики)](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
-    |Tab|Краткое описание|  
+    |Вкладка|Краткое описание|  
     |---------|-----------------------|  
     |**Реплик**|На этой вкладке можно задать каждый экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , где будет размещена вторичная реплика. Обратите внимание, что первичная реплика должна быть размещена на экземпляре сервера, с которым в данный момент установлено соединение.|  
     |**Конечные точки**|Эту вкладку можно использовать для проверки существующих конечных точек зеркального отображения баз данных, а также для их автоматического создания в случае, если они отсутствуют на экземпляре сервера, служба которого использует проверку подлинности Windows. **Примечание.**  Если какой-либо экземпляр сервера выполняется от имени недоменной учетной записи пользователя, необходимо вручную внести изменения в экземпляр сервера, прежде чем можно будет продолжать работу с мастером. Дополнительные сведения см. в подразделе [Предварительные условия](#PrerequisitesRestrictions)ранее в этом разделе.|  
     |**Параметры резервного копирования**|Эту вкладку можно использовать для задания настроек резервного копирования для группы доступности в целом, а также для задания приоритетов резервного копирования для отдельных реплик доступности.|  
-    |**Прослушивателя**|Эта вкладка используется для создания прослушивателя группы доступности. По умолчанию мастер не создает прослушиватель.|  
+    |**Прослушиватель**|Эта вкладка используется для создания прослушивателя группы доступности. По умолчанию мастер не создает прослушиватель.|  
   
-8.  На странице **Выбор начальной синхронизации данных** выберите, как именно необходимо создать новые базы данных-получатели и присоединить их к группе доступности. Выберите один из следующих вариантов:  
+8.  На странице **Выбор начальной синхронизации данных** выберите, как именно необходимо создать новые базы данных-получатели и присоединить их к группе доступности. Выберите один из следующих параметров.  
   
     -   **Полный**  
   
@@ -146,7 +145,7 @@ ms.locfileid: "75228743"
     > [!IMPORTANT]  
     >  Если учетная запись службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для экземпляра сервера, на котором будет размещаться новая реплика доступности, еще не существует в качестве имени входа, то мастер создания группы доступности должен создать имя входа. На странице **Сводка** мастер показывает сведения об имени входа, которое будет создано. Если нажать кнопку **Готово**, мастер создаст это имя входа для учетной записи SQL Server и предоставит ему разрешение CONNECT.  
   
-     Если параметры выбраны правильно, можно нажать кнопку **Скрипт** , чтобы создать скрипт шагов, которые будут выполняться мастером. Теперь нажмите кнопку **Готово**, чтобы создать и настроить новую группу доступности.  
+     Если вы удовлетворены выбранными параметрами, при необходимости нажмите кнопку **Скрипт** , чтобы создать скрипт действий, которые будут выполнены мастером. Теперь нажмите кнопку **Готово**, чтобы создать и настроить новую группу доступности.  
   
 11. На странице **Выполнение установки** отображается ход выполнения этапов создания группы доступности (настройка конечных точек, создание группы доступности и присоединение к группе вторичной реплики).  
   
@@ -154,38 +153,38 @@ ms.locfileid: "75228743"
   
      По завершении работы мастера нажмите кнопку **Закрыть** , чтобы выйти из него.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Завершение настройки группы доступности**  
   
--   [Присоединение вторичной реплики к группе доступности &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [Присоединение вторичной реплики к группе доступности (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [Вручную Подготовьте базу данных-получатель для группы доступности &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   [Присоединение базы данных-получателя к группе доступности &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
+-   [Присоединение базы данных-получателя к группе доступности (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
 -   [Создание или настройка прослушивателя группы доступности (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)  
   
- **Альтернативные способы создания группы доступности**  
+ **Другие способы создания группы доступности**  
   
--   [Используйте диалоговое окно Создание группы доступности &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Использование диалогового окна "Создание группы доступности" (среда SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [Создание группы доступности &#40;&#41;Transact-SQL](create-an-availability-group-transact-sql.md)  
+-   [Создание группы доступности (Transact-SQL)](create-an-availability-group-transact-sql.md)  
   
--   [Создание SQL Server PowerShell &#40;группы доступности&#41;](../../../powershell/sql-server-powershell.md)  
+-   [Создание группы доступности (SQL Server PowerShell)](../../../powershell/sql-server-powershell.md)  
   
  **Включение функции «Группы доступности AlwaysOn»**  
   
--   [Включение и отключение группы доступности AlwaysOn &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
+-   [Включение и отключение групп доступности AlwaysOn (SQL Server)](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
  **Настройка конечной точки зеркального отображения базы данных**  
   
 -   [Создание конечной точки зеркального отображения базы данных для группы доступности AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [Создание конечной точки зеркального отображения базы данных для проверки подлинности Windows &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Использование сертификатов для конечной точки зеркального отображения базы данных &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [Укажите URL-адрес конечной точки при добавлении или изменении &#40;реплики доступности SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Устранение неполадок с конфигурацией групп доступности AlwaysOn**  
   
@@ -193,15 +192,15 @@ ms.locfileid: "75228743"
   
 -   [Устранение неполадок при &#40;операции добавления файла группы доступности AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
--   **Тех**  
+-   **Блоги**  
   
      [Обучающая серия AlwaysON — HADRON. использование пулов рабочих потоков для баз данных с HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [Блоги группы разработчиков SQL Server AlwaysOn: официальный блог группы разработчиков SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
+     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Блоги SQL Server инженеров CSS](https://blogs.msdn.com/b/psssql/)  
+     [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Презентации**  
   
@@ -213,9 +212,9 @@ ms.locfileid: "75228743"
   
      [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Технические документы Майкрософт для SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Технические документы Майкрософт Microsoft по SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [Технические документы группы консультирования клиентов SQL Server](http://sqlcat.com/)  
+     [Технические документы группы консультантов по SQL Server](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>См. также:  
  [SQL Server &#40;конечной точки зеркального отображения базы данных&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   

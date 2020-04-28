@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c56efd6c79b7ce7d74af621963f4b12e734d5f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252172"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Поддержка типов данных xml в SQLXML 4.0
@@ -51,6 +51,6 @@ ms.locfileid: "75252172"
 -   SQLXML 4,0 не сохраняет инструкции по обработке XML-декларации (например,) в зависимости от поведения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Вместо этого XML-декларация рассматривается как директива для средства синтаксического анализа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML, и его атрибуты (версия, кодировка и автономность) теряются после преобразования данных в тип данных **XML** . Все XML-данные хранятся в кодировке UCS-2. Все остальные инструкции по обработке в экземпляре XML сохраняются; они разрешены в **XML-** столбце и могут поддерживаться SQLXML.  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server &#40;XML-данных&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
+ [Данные XML (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8d826201f44bb666050f5229b4824b5c2198dc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228999"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>Администрирование группы доступности (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "75228999"
 -   Миграция между кластерами групп доступности AlwaysOn для обновления ОС  
   
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Настройка существующей группы доступности**  
   
 -   [Добавление вторичной реплики к группе доступности (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
@@ -102,7 +102,7 @@ ms.locfileid: "75228999"
   
 -   [Возобновление базы данных доступности (SQL Server)](resume-an-availability-database-sql-server.md)  
   
- **Мониторинг группы доступности**  
+ **Наблюдение за группой доступности**  
   
 -   [Отслеживание групп доступности (SQL Server)](monitoring-of-availability-groups-sql-server.md)  
   
@@ -113,11 +113,11 @@ ms.locfileid: "75228999"
 -   [Перевод группы доступности в режим "вне сети" (SQL Server)](../../take-an-availability-group-offline-sql-server.md)  
   
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   **Блоги**  
   
-     [Блоги группы разработчиков SQL Server AlwaysOn: официальный блог группы разработчиков SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
+     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
      [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "75228999"
   
 -   **Технические документы**  
   
-     [Технические документы Майкрософт для SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Технические документы Майкрософт Microsoft по SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Технические документы группы консультантов по SQL Server](http://sqlcat.com/)  
   

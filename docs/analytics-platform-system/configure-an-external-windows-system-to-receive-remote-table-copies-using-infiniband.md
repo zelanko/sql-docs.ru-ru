@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 837d41cc929d90b2494682645127f985b5768546
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401317"
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>Настройка внешней системы Windows для получения копий удаленных таблиц с помощью хранилища данных с параллелизмом InfiniBand
@@ -33,7 +33,7 @@ ms.locfileid: "74401317"
   
 3.  Приобретите кабели InfiniBand и сетевой адаптер InfiniBand у поставщика оборудования устройства. Мы рекомендуем приобрести сетевой адаптер с двумя портами для отказоустойчивости при получении экспортированных данных. Рекомендуется использовать два порта сетевого адаптера, но это не обязательно.  
   
-## <a name="HowToWindows"></a>Настройка внешней системы Windows для получения копий удаленных таблиц  
+## <a name="configure-an-external-windows-system-to-receive-remote-table-copies"></a><a name="HowToWindows"></a>Настройка внешней системы Windows для получения копий удаленных таблиц  
 Чтобы настроить внешнюю систему Windows, выполните следующие действия.  
   
 1.  Установите сетевой адаптер InfiniBand в систему Windows.  

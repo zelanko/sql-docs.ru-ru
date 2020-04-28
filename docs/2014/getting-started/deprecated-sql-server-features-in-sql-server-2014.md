@@ -11,16 +11,16 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44fbab98aa017be66cd4dc369a713f44e8d248d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228219"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>Функции SQL Server, устаревшие в SQL Server 2014
   В этом разделе описаны устаревшие функции, которые все еще доступны в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
   
-## <a name="features-not-supported-in-the-next-version-of-includessnoversionincludesssnoversion-mdmd"></a>Функции, неподдерживаемые в следующей версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+## <a name="features-not-supported-in-the-next-version-of-ssnoversion"></a>Функции, неподдерживаемые в следующей версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Следующие функции компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] не будут поддерживаться в следующей версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не используйте их при работе над новыми приложениями и как можно скорее измените приложения, в которых они в настоящее время используются. Название компонента отображается в событиях трассировки в столбце ObjectName, а в счетчиках производительности и в динамическом административном представлении sys.dm_os_performance_counters в столбце instance_name. Идентификатор компонента отображается в событиях трассировки в столбце ObjectId.  
   
 |Категория|Устаревшая функция|Замена|Имя функции|Идентификатор функции|  

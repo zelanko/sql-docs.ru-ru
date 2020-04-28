@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f94f155ee86df6daf0c039a18f27c30e294d57df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75254736"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Задание проверки узла в пути доступа (SQLXML 4.0)
@@ -46,17 +46,14 @@ ms.locfileid: "75254736"
 ## <a name="abbreviated-syntax-for-the-axes"></a>Сокращенный синтаксис осей  
  Поддерживается следующий сокращенный синтаксис пути доступа.  
   
--   
-  `attribute::` можно сократить до `@`.  
+-   `attribute::` можно сократить до `@`.  
   
      Путь доступа `Customer[@CustomerID="ALFKI"]` аналогичен выражению `child::Customer[attribute::CustomerID="ALFKI"]`.  
   
--   
-  `child::` можно исключить из шага определения расположения данных.  
+-   `child::` можно исключить из шага определения расположения данных.  
   
      Таким же значением является **дочерняя** ось по умолчанию. Путь доступа `Customer/Order` аналогичен выражению `child::Customer/child::Order`.  
   
--   
-  `self::node()` можно сократить до одной точки (.), а `parent::node()` можно сократить до двух точек (..).  
+-   `self::node()` можно сократить до одной точки (.), а `parent::node()` можно сократить до двух точек (..).  
   
   

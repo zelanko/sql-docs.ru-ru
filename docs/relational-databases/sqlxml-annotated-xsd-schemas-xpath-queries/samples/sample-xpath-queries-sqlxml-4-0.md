@@ -18,10 +18,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a741c0b2bfe3cc64efd850c4d9a6201e9f9ff501
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252604"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>Образцы запросов XPath (SQLXML 4.0)
@@ -31,7 +31,7 @@ ms.locfileid: "75252604"
 > [!NOTE]  
 >  Образцы запросов в этом разделе сгруппированы по типу операций XPath, выполняемых в запросе.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Пример схемы XSD с заметками для примеров XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)  
  Используйте этот файл с примерами запросов XPath, приведенными в этом разделе.  
   

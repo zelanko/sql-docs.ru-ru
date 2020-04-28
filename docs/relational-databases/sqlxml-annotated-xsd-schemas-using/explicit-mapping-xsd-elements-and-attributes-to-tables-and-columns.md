@@ -30,10 +30,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5fafcd918dda0001c316fd68cae3b19e6cd805a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257433"
 ---
 # <a name="custom-xsd-mappings-to-tablescolumns-sqlxml"></a>Пользовательские сопоставления XSD с таблицами и столбцами (SQLXML)
@@ -59,7 +59,7 @@ ms.locfileid: "75257433"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Задание заметок sql:relation и sql:field  
+### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>А) Задание заметок sql:relation и sql:field  
  В этом примере схема XSD состоит из элемента ** \<Contact>** сложного типа с ** \<fname>** и ** \<LName>** дочерними элементами и атрибутом **ContactID** .  
   
  Аннотация **SQL: relation** сопоставляет элемент ** \<>контакта** с таблицей Person. Contact в базе данных AdventureWorks. Заметка **SQL: field** сопоставляет элемент ** \<fname>** столбцу FirstName и элементу ** \<LName>** столбцу LastName.  

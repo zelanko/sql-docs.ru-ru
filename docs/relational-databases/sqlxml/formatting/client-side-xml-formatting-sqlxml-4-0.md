@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 968af0ed24f14b4766e312a0cec0e9d3e7b5022b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75247024"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>Форматирование XML на стороне клиента (SQLXML 4.0)
@@ -54,7 +54,7 @@ FROM   Person.Contact
   
  В следующей таблице приведены режимы, которые могут быть заданы для FOR XML на стороне клиента.  
   
-|Режим FOR XML на стороне клиента|Комментарий|  
+|Режим FOR XML на стороне клиента|Добавление примечаний|  
 |-------------------------------|-------------|  
 |RAW|Выдает одинаковый результат при указании в FOR XML на стороне клиента или сервера.|  
 |NESTED|Похож на режим FOR XML AUTO на стороне сервера.|  
@@ -132,6 +132,6 @@ AS
  [Управляемые классы SQLXML](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)   
  [Клиентское и серверное форматирование XML &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)   
  [Объект SqlXmlCommand &#40;управляемые классы SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
- [SQL Server &#40;XML-данных&#41;](../../../relational-databases/xml/xml-data-sql-server.md)  
+ [Данные XML (SQL Server)](../../../relational-databases/xml/xml-data-sql-server.md)  
   
   

@@ -15,10 +15,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 79b262bc97cf674c98361d72b0ceedcaef90bb91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244516"
 ---
 # <a name="link-to-programming-samples"></a>Ссылка на образцы программ
@@ -26,7 +26,7 @@ ms.locfileid: "75244516"
   
  Дополнительные сведения об установке образцов см. в разделе [AdventureWorks for SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330).  
   
-|Название|Description|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |BackRest|Демонстрирует, как создавать резервные копии и восстанавливать базу данных.|  
 |ChangeTableOwner|Показывает, как передать все таблицы, владельцем которых является не dbo, пользователю dbo.|  

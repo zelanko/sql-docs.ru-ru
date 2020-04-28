@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6c9a0a29b543eb287c7e233d6b1ea77bb2a0d45c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401266"
 ---
 # <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>Настройка параллельного хранилища данных для удаленных копий таблиц
@@ -28,7 +28,7 @@ ms.locfileid: "74401266"
   
 -   Сведения об имени узла или IP-имени целевого сервера.  
   
-## <a name="HowToPDW"></a>Настройка SQL Server PDW для копирования удаленных таблиц: обновление имен узлов в DNS  
+## <a name="configure-sql-server-pdw-for-remote-table-copy-update-host-names-in-dns"></a><a name="HowToPDW"></a>Настройка SQL Server PDW для копирования удаленных таблиц: обновление имен узлов в DNS  
 Инструкция **CREATE Remote Table** , используемая для копирования удаленных таблиц, указывает целевой сервер, используя IP-адрес или IP-имя системы SMP в системе Windows. Чтобы использовать IP-имя, необходимо добавить записи для успешного разрешения имен на DNS-сервер.  
   
 Ниже описаны действия по обновлению DNS-сервера.  

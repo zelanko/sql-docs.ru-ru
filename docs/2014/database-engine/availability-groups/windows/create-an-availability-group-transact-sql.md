@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7b09bb2f08095af33f80fe4161032036482f835
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228794"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Создание группы доступности (Transact-SQL)
-  В данном разделе описывается использование [!INCLUDE[tsql](../../../includes/tsql-md.md)] для создания и настройки группы доступности на основе экземпляров [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , на которых включена функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . 
-  *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  
+  В данном разделе описывается использование [!INCLUDE[tsql](../../../includes/tsql-md.md)] для создания и настройки группы доступности на основе экземпляров [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , на которых включена функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  
   
 > [!NOTE]  
 >  Базовые сведения о группах доступности см. в разделе [Обзор групп доступности AlwaysOn (SQL Server)](overview-of-always-on-availability-groups-sql-server.md).  
@@ -29,35 +28,35 @@ ms.locfileid: "75228794"
 > [!NOTE]  
 >  Вместо [!INCLUDE[tsql](../../../includes/tsql-md.md)]можно использовать мастер создания групп доступности или командлеты [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Использование мастера групп доступности (среда SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md), [Использование диалогового окна "Создание группы доступности" (среда SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)или [Создание группы доступности (SQL Server PowerShell)](../../../powershell/sql-server-powershell.md).  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
  Настоятельно рекомендуется прочитать этот раздел, прежде чем пытаться настроить свою первую группу доступности.  
   
-###  <a name="PrerequisitesRestrictions"></a>Предварительные требования, ограничения и рекомендации  
+###  <a name="prerequisites-restrictions-and-recommendations"></a><a name="PrerequisitesRestrictions"></a>Предварительные требования, ограничения и рекомендации  
   
 -   Перед созданием группы доступности необходимо, чтобы экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на которых находятся реплики доступности, были расположены на различных узлах одной отказоустойчивой кластеризации Windows Server (WSFC). Кроме того, убедитесь, что каждый из экземпляров сервера соответствует всем другим обязательным условиям [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Для получения дополнительных сведений настоятельно рекомендуется изучить раздел [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.  
   
-###  <a name="SummaryTsqlStatements"></a>Общие сведения о задачах и соответствующих инструкциях Transact-SQL  
+###  <a name="summary-of-tasks-and-corresponding-transact-sql-statements"></a><a name="SummaryTsqlStatements"></a> Сводка задач и соответствующих инструкций Transact-SQL  
  В следующей таблице перечислены основные задачи, связанные с созданием и настройкой группы доступности, а также инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] , используемые при выполнении этих задач. Задачи [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] должны выполняться в той последовательности, в которой они перечислены в таблице.  
   
 |Задача|Инструкции Transact-SQL|Место выполнения задачи**<sup>*</sup>**|  
 |----------|----------------------------------|-------------------------------------------|  
 |Создание конечной точки зеркального отображения базы данных (одна точка на экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|[Создать конечную точку](/sql/t-sql/statements/create-endpoint-transact-sql) *EndpointName* ... ДЛЯ DATABASE_MIRRORING|Выполнить на каждом экземпляре сервера, у которого нет конечной точки зеркального отображения базы данных.|  
 |Создание группы доступности|[СОЗДАНИЕ ГРУППЫ ДОСТУПНОСТИ](/sql/t-sql/statements/create-availability-group-transact-sql)|Выполнить на экземпляре сервера, где будет размещена исходная первичная реплика.|  
-|Присоединить вторичную реплику к группе доступности|[ALTER AVAILABILITY GROUP](join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* Join|Выполнить на каждом экземпляре сервера, размещающем вторичную реплику.|  
+|Присоединить вторичную реплику к группе доступности|[ALTER AVAILABILITY GROUP](join-a-secondary-replica-to-an-availability-group-sql-server.md) *имя_группы* JOIN|Выполнить на каждом экземпляре сервера, размещающем вторичную реплику.|  
 |Подготовьте базу данных-получатель|[Резервное копирование](/sql/t-sql/statements/backup-transact-sql) и [Восстановление](/sql/t-sql/statements/restore-statements-transact-sql).|Создайте резервные копии на экземпляре сервера, размещающем первичную реплику.<br /><br /> Восстановить резервные копии на каждом экземпляре сервера, размещающем вторичную реплику, используя инструкцию RESTORE WITH NORECOVERY.|  
-|Запуск синхронизации данных с помощью присоединения каждой базы данных-получателя к группе доступности|[ALTER database](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) *DATABASE_NAME* Set HADR Availability Group = *group_name*|Выполнить на каждом экземпляре сервера, размещающем вторичную реплику.|  
+|Запуск синхронизации данных с помощью присоединения каждой базы данных-получателя к группе доступности|[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) *имя_базы_данных* SET HADR AVAILABILITY GROUP = *имя_группы*|Выполнить на каждом экземпляре сервера, размещающем вторичную реплику.|  
   
  **<sup>*</sup>** Чтобы выполнить данную задачу, подключитесь к указанному экземпляру сервера или экземпляра.  
   
-##  <a name="TsqlProcedure"></a>Использование Transact-SQL для создания и настройки группы доступности  
+##  <a name="using-transact-sql-to-create-and-configure-an-availability-group"></a><a name="TsqlProcedure"></a> Создание и настройка группы доступности с помощью Transact-SQL  
   
 > [!NOTE]  
->  Пример настройки с образцами кода для каждой из этих инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] см. в статье [Пример. Настройка группы доступности, использующей проверку подлинности Windows](#ExampleConfigAGWinAuth).  
+>   Пример настройки с образцами кода для каждой из этих инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] см. в статье [Пример. Настройка группы доступности, использующей проверку подлинности Windows](#ExampleConfigAGWinAuth).  
   
 1.  Подключитесь к экземпляру сервера, на котором должна быть размещена первичная реплика.  
   
@@ -69,21 +68,21 @@ ms.locfileid: "75228794"
   
 5.  Присоедините каждую новую базу данных-получатель к группе доступности. Дополнительные сведения см. в разделе [Присоединение вторичной реплики к группе доступности (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-##  <a name="ExampleConfigAGWinAuth"></a>Пример. Настройка группы доступности, использующей проверку подлинности Windows  
+##  <a name="example-configuring-an-availability-group-that-uses-windows-authentication"></a><a name="ExampleConfigAGWinAuth"></a> Пример. Настройка группы доступности, использующей проверку подлинности Windows  
  В этом примере создается образец процедуры настройки [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , где [!INCLUDE[tsql](../../../includes/tsql-md.md)] используется для настройки конечных точек зеркального отображения базы данных, использующих проверку подлинности Windows для создания и настройки группы доступности и ее баз данных-получателей.  
   
  Этот пример содержит следующие разделы:  
   
 -   [Предварительные требования для использования процедуры настройки примера](#PrerequisitesForExample)  
   
--   [Пример процедуры настройки](#SampleProcedure)  
+-   [Образец процедуры настройки](#SampleProcedure)  
   
--   [Полный пример кода для процедуры настройки примера](#CompleteCodeExample)  
+-   [Выполните пример кода для процедуры настройки образца](#CompleteCodeExample)  
   
-###  <a name="PrerequisitesForExample"></a>Предварительные требования для использования процедуры настройки примера  
+###  <a name="prerequisites-for-using-the-sample-configuration-procedure"></a><a name="PrerequisitesForExample"></a> Предварительные требования для использования процедуры настройки образца  
  Этот образец процедуры имеет следующие требования.  
   
--   Экземпляры сервера должны поддерживать [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Дополнительные сведения см. в статьях [Предварительные требования, ограничения и рекомендации для группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+-   Экземпляры сервера должны поддерживать [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Дополнительные сведения см. в разделе [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   Оба образца баз данных, *MyDb1* и *MyDb2*, должны существовать на экземпляре сервера, где будет размещаться первичная реплика. В следующем примере кода создаются и настраиваются эти две базы данных и создается полная резервная копия каждой из них. Выполните эти примеры кода на экземпляре сервера, где планируется создавать образец группы доступности. На этом экземпляре сервера будет размещаться первоначальная первичная реплика образца группы доступности.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "75228794"
         GO
         ```  
   
-###  <a name="SampleProcedure"></a> Образец процедуры настройки  
+###  <a name="sample-configuration-procedure"></a><a name="SampleProcedure"></a> Образец процедуры настройки  
  В этом образце настройки реплика доступности будет создана на двух изолированных экземплярах сервера, у которых учетные записи служб выполняются в разных доверенных доменах (`DOMAIN1` и `DOMAIN2`).  
   
  В следующей таблице приведена сводка по значениям, использованным в этом образце конфигурации.  
@@ -283,7 +282,7 @@ ms.locfileid: "75228794"
     GO
     ```  
   
-###  <a name="CompleteCodeExample"></a> Выполните пример кода для процедуры настройки образца  
+###  <a name="complete-code-example-for-sample-configuration-procedure"></a><a name="CompleteCodeExample"></a> Выполните пример кода для процедуры настройки образца  
  Следующий пример кода объединяет в себе примеры кода из всех шагов с образцом процедуры настройки. В следующей таблице приведена сводка значений заполнителей, использованных в этом примере кода. Дополнительные сведения о шагах в этом примере кода см. в подразделах [Предварительные требования для использования процедуры настройки образца](#PrerequisitesForExample) и [Образец процедуры настройки](#SampleProcedure)выше в этом разделе.  
   
 |Заполнитель|Описание|  
@@ -438,7 +437,7 @@ ALTER DATABASE MyDb2 SET HADR AVAILABILITY GROUP = MyAG;
 GO
 ```  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Настройка свойств группы доступности и реплики**  
   
 -   [Смена режима доступности для реплики доступности (SQL Server)](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -479,7 +478,7 @@ GO
   
  **Включение функции «Группы доступности AlwaysOn»**  
   
--   [Включение и отключение группы доступности AlwaysOn &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
+-   [Включение и отключение групп доступности AlwaysOn (SQL Server)](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
  **Настройка конечной точки зеркального отображения базы данных**  
   
@@ -497,13 +496,13 @@ GO
   
 -   [Устранение неполадок при &#40;операции добавления файла группы доступности AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   **Блоги**  
   
      [Обучающая серия AlwaysON — HADRON. использование пулов рабочих потоков для баз данных с HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [Блоги группы разработчиков SQL Server AlwaysOn: официальный блог группы разработчиков SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
+     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
      [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   

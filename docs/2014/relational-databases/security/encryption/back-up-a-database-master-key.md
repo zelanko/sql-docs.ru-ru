@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 5435b9056d98a5b2dc0835bfcd0e60865c1686b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957268"
 ---
 # <a name="back-up-a-database-master-key"></a>Создание резервной копии главного ключа базы данных
@@ -30,22 +30,22 @@ ms.locfileid: "74957268"
   
      [Безопасность](#Security)  
   
--   [Создание резервной копии главного ключа базы данных с помощью Transact-SQL](#Procedure)  
+-   [Создание резервной копии главного ключа с помощью Transact-SQL](#Procedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
 -   Главный ключ должен быть открыт и, таким образом, расшифрован, прежде чем производится его резервное копирование. Если он зашифрован главным ключом службы, то его не нужно открывать явным образом. Но если главный ключ зашифрован только паролем, его явное открытие обязательно.  
   
 -   Рекомендуется создать резервную копию главного ключа сразу же после его создания и затем сохранить в надежном месте.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требует разрешения CONTROL для базы данных.  
   
-##  <a name="Procedure"></a>Использование SQL Server Management Studio с Transact-SQL  
+##  <a name="using-sql-server-management-studio-with-transact-sql"></a><a name="Procedure"></a>Использование SQL Server Management Studio с Transact-SQL  
   
 #### <a name="to-back-up-the-database-master-key"></a>Создание резервной копии главного ключа базы данных  
   

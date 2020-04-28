@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7427de92691a2d5c0a92aac55ac16f47dd2ef6b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232238"
 ---
 # <a name="coding-user-defined-types"></a>Разработка кода для определяемых пользователем типов
@@ -65,7 +65,7 @@ using Microsoft.SqlServer.Server;
 ## <a name="specifying-attributes"></a>Определение атрибутов  
  Атрибуты определяют, каким образом сериализация используется для создания хранимых представлений определяемых пользователем типов, а также для передачи таких типов клиенту по значению.  
   
- Параметр `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` является обязательным. Атрибут `Serializable` является необязательным. Также можно указать атрибут `Microsoft.SqlServer.Server.SqlFacetAttribute` для задания информации о возвращаемом типе, определяемом пользователем. Дополнительные сведения см. в статье [Пользовательские атрибуты процедур CLR](../clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md).  
+ Атрибут `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` является обязательным. Атрибут `Serializable` является необязательным. Также можно указать атрибут `Microsoft.SqlServer.Server.SqlFacetAttribute` для задания информации о возвращаемом типе, определяемом пользователем. Дополнительные сведения см. в статье [Пользовательские атрибуты процедур CLR](../clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md).  
   
 ### <a name="point-udt-attributes"></a>Атрибуты определяемого пользователем типа Point  
  Метод `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` задает для определяемого пользователем типа `Point` формат хранения `Native`. Свойству `IsByteOrdered` присваивается значение `true`, а это гарантирует, что результаты сравнения в SQL Server будут такими же, как если бы сравнение проводилось в управляемом коде. Определяемый пользователем тип реализует интерфейс `System.Data.SqlTypes.INullable`, чтобы определяемый пользователем тип мог работать со значениями NULL.  

@@ -30,10 +30,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 02872a037e60fa3af58a70d3599b03c61d0cfb5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257341"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Указание связей при помощи sql:relationship (SQLXML 4.0)
@@ -52,7 +52,7 @@ ms.locfileid: "75257341"
   
  Чтобы указать имена таблиц и необходимые сведения о соединении, в заметке **SQL: relationship** указаны следующие атрибуты. Эти атрибуты допустимы только с элементом ** \<SQL: relationship>** .  
   
- **Название**  
+ **имя**;  
  Указывает уникальное имя связи.  
   
  **Parent**  
@@ -77,7 +77,7 @@ ms.locfileid: "75257341"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. Определение заметки sql:relationship для элемента  
+### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>А) Определение заметки sql:relationship для элемента  
  Следующая схема XSD с заметками включает в себя ** \<>клиента** и ** \<порядок>** элементов. Элемент ** \<Order>** является дочерним элементом элемента ** \<>Customer** .  
   
  В схеме Аннотация **SQL: relationship** задана для дочернего элемента ** \<Order>** . Сама связь определяется в элементе ** \<XSD: appinfo>** .  
@@ -186,7 +186,7 @@ ms.locfileid: "75257341"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-a-relationship-chain"></a>Б. Указание цепочки связей  
+### <a name="b-specifying-a-relationship-chain"></a>Б) Указание цепочки связей  
  Для данного примера предположим, что в следующем XML-документе нужно использовать данные, полученные из базы данных AdventureWorks:  
   
 ```  

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4dd4fba91b1507f711a66a88f40b2fa2ea35e1ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401361"
 ---
 # <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>Общие сведения о резервном копировании и загрузке оборудования — Параллельное хранилище данных
@@ -25,11 +25,11 @@ ms.locfileid: "74401361"
 Для резервного копирования базы данных PDW необходим один или несколько резервных серверов. Вы можете использовать существующее оборудование или приобрести новое оборудование. Дополнительные сведения см. [в статье получение и Настройка резервного сервера](acquire-and-configure-backup-server.md). Эти инструкции включают в себя [лист планирования емкости резервного сервера](backup-capacity-planning-worksheet.md) , который поможет спланировать подходящее решение для резервного копирования.  
   
 ## <a name="acquire-and-configure-loading-servers"></a>Получение и Настройка серверов загрузки  
-![Загрузка процесса](media/loading-process.png "Загрузка процесса")  
+![Идет загрузка процесса](media/loading-process.png "Загрузка процесса")  
   
 Для загрузки данных требуется один или несколько загрузок серверов. Вы можете использовать собственные или другие серверы, а также приобрести новые серверы. Дополнительные сведения см. [в разделе Получение и настройка сервера загрузки](acquire-and-configure-loading-server.md). Эти инструкции включают в себя [таблицу по планированию загрузки сервера](loading-server-capacity-planning-worksheet.md) , которая поможет спланировать подходящее решение для загрузки.  
   
 ## <a name="see-also"></a>См. также:  
-[Общие сведения о резервном копировании и восстановлении](backup-and-restore-overview.md)  
+[Обзор функций архивации и восстановления](backup-and-restore-overview.md)  
 [Общие сведения о загрузке](load-overview.md)  
   

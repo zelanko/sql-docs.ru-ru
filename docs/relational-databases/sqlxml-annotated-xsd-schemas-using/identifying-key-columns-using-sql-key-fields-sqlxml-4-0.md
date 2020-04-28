@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 71d42f9f3f819dc12964ea0f13de92dfc8db5663
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257389"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Идентификация ключевых столбцов с использованием sql:key-fields (SQLXML 4.0)
@@ -43,7 +43,7 @@ ms.locfileid: "75257389"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Создание подходящего вложения, когда \<sql:> связей не предоставляет достаточно сведений  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>А) Создание подходящего вложения, когда \<sql:> связей не предоставляет достаточно сведений  
  В этом примере показано, где должны быть указаны **поля SQL: Key-Fields** .  
   
  Рассмотрим следующую схему. Схема указывает иерархию между элементами ** \<Order>** и ** \<Customer>** , в которых элемент ** \<Order>** является родительским, а элемент ** \<>Customer** является дочерним.  
@@ -126,7 +126,7 @@ ms.locfileid: "75257389"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>Б. Указание sql:key-fields для получения правильной вложенности в результате  
+### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>Б) Указание sql:key-fields для получения правильной вложенности в результате  
  В следующей схеме иерархия не указана с помощью ** \<SQL: relationship>**. Схема по-прежнему требует указания заметки **SQL: Key-Fields** для уникальной идентификации сотрудников в таблице HumanResources. Employee.  
   
 ```  

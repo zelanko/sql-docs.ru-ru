@@ -10,10 +10,10 @@ ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: f0a79169b3ee192af278aeb4465fb13d7a311783
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251589"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Импорт домена из файла .dqs
@@ -26,17 +26,17 @@ ms.locfileid: "75251589"
   
  При импорте домена его имя остается таким же, как и имя изначально экспортированного домена. Если домен с таким именем уже существует, службы DQS добавляют к имени импортируемого домена "_1". Это же действует и при импорте составного домена, который содержит отдельный домен с таким же именем, что и у существующего домена.  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
  Чтобы импортировать домен из файла .dqs, перед этим необходимо экспортировать один отдельный или составной домен, содержащий несколько одиночных доменов, в файл .dqs. Файл .dqs может содержать только один домен. Также необходимо создать и открыть базу знаний, в которую планируется импортировать домен.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для импорта домена из файла данных .dqs необходимо быть членом роли dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="Import"></a>Импорт домена из файла. DQS  
+##  <a name="import-a-domain-from-a-dqs-file"></a><a name="Import"></a>Импорт домена из файла. DQS  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "75251589"
   
 6.  Убедитесь, что импортированный домен отображается в списке **Домен** . Если был импортирован составной домен, убедитесь, что он и отдельные домены, входящие в его состав, отображаются в списке **Домен** .  
   
-##  <a name="FollowUp"></a>Дальнейшие действия. После импорта домена из файла. DQS  
+##  <a name="follow-up-after-importing-a-domain-from-a-dqs-file"></a><a name="FollowUp"></a> Дальнейшие действия. После импорта домена из файла DQS  
  После импорта домена из файла DQS можно добавить набор знаний в домен или использовать его в проекте очистки данных или сопоставления в зависимости от содержания домена. Дополнительные сведения см. в разделах [Обнаружение знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md), [Управление составным доменом](../data-quality-services/managing-a-composite-domain.md), [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md), [Очистка данных](../data-quality-services/data-cleansing.md) и [Сопоставление данных](../data-quality-services/data-matching.md).  
   
   

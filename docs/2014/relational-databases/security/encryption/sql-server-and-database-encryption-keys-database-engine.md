@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: e9ddec585f530cf57481c56477d5be4aeaedb44a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957128"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Ключи шифрования базы данных и SQL Server (компонент Database Engine)
@@ -60,11 +60,11 @@ ms.locfileid: "74957128"
 > [!CAUTION]  
 >  Если любой доступ к описанным выше ключам потерян, будет потерян доступ к объектам, соединениям и данным, защищенным этими ключами. Можно восстановить главный ключ службы, как описано в приведенных ссылках, или вернуться к первоначальной системе шифрования, чтобы восстановить доступ. Не существует аварийного способа восстановления доступа.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Главный ключ службы](service-master-key.md)  
  Дано краткое объяснение главного ключа службы и рекомендации.  
   
- [Расширенное управление ключами &#40;EKM&#41;](extensible-key-management-ekm.md)  
+ [Расширенное управление ключами (EKM)](extensible-key-management-ekm.md)  
  Объясняется, как использовать сторонние системы управления ключами с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="related-tasks"></a>Связанные задачи  
@@ -74,7 +74,7 @@ ms.locfileid: "74957128"
   
  [Создание главного ключа базы данных](create-a-database-master-key.md)  
   
- [Создание резервной копии главного ключа базы данных](back-up-a-database-master-key.md)  
+ [Резервное копирование главного ключа базы данных](back-up-a-database-master-key.md)  
   
  [Восстановление главного ключа базы данных](restore-a-database-master-key.md)  
   
@@ -92,9 +92,9 @@ ms.locfileid: "74957128"
  [Восстановление главного ключа базы данных](restore-a-database-master-key.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [Удаление и повторное создание ключей шифрования (диспетчер конфигурации служб SSRS)](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Добавление и удаление ключей шифрования для масштабного развертывания (диспетчер конфигурации служб SSRS)](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [Резервное копирование и восстановление ключей шифрования Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Удаление и повторное создание ключей шифрования &#40;служб SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [Добавление и удаление ключей шифрования для масштабного развертывания &#40;службы SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Прозрачное шифрование данных (TDE)](transparent-data-encryption.md)  
   
   

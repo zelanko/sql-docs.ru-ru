@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 436ec564e4cf5de21647eb5cd667741ce246e99d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75254142"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Использование ADO для выполнения запросов SQLXML 4.0
@@ -125,7 +125,7 @@ ms.locfileid: "75254142"
   
 2.  Проверьте, что на клиентском компьютере установлена версия MDAC 2.6 или более поздняя. Если необходимо проверить сведения о версии MDAC, можно использовать средство проверки компонентов MDAC, которое предоставляется бесплатно для загрузки с веб-сайта корпорации Майкрософт [http://www.microsoft.com](https://www.microsoft.com). Чтобы получить дополнительные сведения, выполните поиск с ключевыми словами «MDAC Component Checker» на веб-сайте корпорации Майкрософт.  
   
-3.  Выполните скрипт,  
+3.  Выполните скрипт.  
   
      Файл VBScript можно выполнить из командной строки с использованием Cscript.exe или дважды щелкнув файл Sqlxml4test.vbs, чтобы вызвать сервер скриптов Windows (WScript.exe).  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3e5475e86582ede2e6fa7ca5a302bba7ee74faa3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401325"
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>Настройка внешнего SQL Server SMP для получения копий удаленных таблиц — Параллельное хранилище данных
@@ -30,7 +30,7 @@ ms.locfileid: "74401325"
   
 -   Учетная запись входа SQL Server (если SQL Server уже установлена) с возможностью создания имен входа и предоставления разрешений на целевые базы данных.  
   
-## <a name="HowToSQLServer"></a>Настройка внешнего SQL Server SMP для получения копий удаленных таблиц  
+## <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies"></a><a name="HowToSQLServer"></a>Настройка внешнего SQL Server SMP для получения копий удаленных таблиц  
 Функция копирования удаленных таблиц копирует таблицы из устройства SQL Server PDW во внешнюю базу данных SQL Server SMP, работающую в системе Windows. После настройки внешней системы Windows для получения копий удаленных таблиц следующим шагом является установка и настройка SQL Server в системе Windows.  
   
 Чтобы настроить SQL Server, выполните следующие действия.  
@@ -45,7 +45,7 @@ ms.locfileid: "74401325"
   
 5.  Определите учетную запись SQL Server на SQL Server SMP, которая будет использоваться для проверки подлинности. Предоставьте этой учетной записи права на создание, удаление и вставку данных в таблицы в целевой базе данных для параллельной операции экспорта данных.  
   
-## <a name="BPSQLConfig"></a>Рекомендации по настройке SQL Server SMP для копирования удаленных таблиц  
+## <a name="best-practices-for-smp-sql-server-configuration-for-remote-table-copy"></a><a name="BPSQLConfig"></a>Рекомендации по настройке SQL Server SMP для копирования удаленных таблиц  
 При настройке SQL Server SMP на получение копий удаленных таблиц используйте следующие рекомендации для повышения производительности.  
   
 1.  Следуйте рекомендациям, описанным в документации по продукту SQL Server. Например, Включите шифрование данных. Дополнительные сведения о защите SQL Server см. в статье [защита SQL Server](../relational-databases/security/securing-sql-server.md) на сайте MSDN.  

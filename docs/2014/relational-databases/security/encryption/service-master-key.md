@@ -14,13 +14,13 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 6a802cfadfa48c7dbba7479ca169daedf70fe8b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957139"
 ---
-# <a name="service-master-key"></a>Главный ключ службы
+# <a name="service-master-key"></a>главный ключ службы
   Главный ключ службы является корнем иерархии шифрования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Он создается автоматически, как только он впервые понадобится для шифрования другого ключа. По умолчанию главный ключ службы шифруется с помощью API-интерфейса защиты данных Windows и ключа локального компьютера. Главный ключ службы может быть открыт только учетной записью службы Windows, под которой он был создан, либо участником, имеющим доступ к имени и паролю учетной записи службы.  
   
  Для повторного создания или восстановления из копии главного ключа службы необходимо дешифровать и снова зашифровать всю иерархию шифрования. Если только ключ не был похищен, данную ресурсоемкую операцию следует планировать на то время, когда количество обращений к серверу минимальное.  
@@ -31,13 +31,13 @@ ms.locfileid: "74957139"
  Создайте резервную копию главного ключа службы и храните ее на безопасном автономном компьютере.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Резервное копирование главного ключа службы &#40;&#41;Transact-SQL](/sql/t-sql/statements/backup-service-master-key-transact-sql)  
+ [BACKUP SERVICE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/backup-service-master-key-transact-sql)  
   
- [Восстановление главного ключа службы &#40;&#41;Transact-SQL](/sql/t-sql/statements/restore-service-master-key-transact-sql)  
+ [RESTORE SERVICE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/restore-service-master-key-transact-sql)  
   
  [ALTER SERVICE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/alter-service-master-key-transact-sql)  
   
 ## <a name="see-also"></a>См. также:  
- [Иерархия средств шифрования](encryption-hierarchy.md)  
+ [Иерархия шифрования](encryption-hierarchy.md)  
   
   

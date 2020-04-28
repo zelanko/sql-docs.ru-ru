@@ -12,10 +12,10 @@ ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 34060c3fc5416f7244b400b506faad9097d66880
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75241803"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Импорт значений проекта очистки в домен
@@ -24,20 +24,20 @@ ms.locfileid: "75241803"
 
   В службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) можно импортировать в домен знания о качестве данных, собранные в проекте очистки данных о качестве или в пакете служб Integration Services с компонентом DQS Cleansing. Это позволяет не допустить потери надежных знаний и обеспечить постоянное улучшение базы знаний.  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Чтобы импортировать значения из проекта очистки в домен, этот домен должен использоваться в проекте очистки в клиенте Data Quality Client или в пакете служб Integration Services с компонентом DQS Cleansing.  
   
 -   Необходимо, чтобы проект очистки в клиенте Data Quality Client или пакете служб Integration Services с компонентом очистки DQS успешно завершился.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для импорта знаний служб DQS, собранных в процессе очистки, в домен необходимо быть членом роли dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="Import"></a>Импорт значений проекта очистки  
+##  <a name="import-cleansing-project-values"></a><a name="Import"></a>Импорт значений проекта очистки  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "75241803"
 4.  Перейдите на вкладку **Значения домена** , щелкните значок **Импорт значений** на панели значков, а затем выберите пункт **Импорт значений проекта**. Появляется диалоговое окно **Импорт значений проекта** со списком проектов качества данных и пакетов служб Integration Services, которые были очищены с помощью домена.  
   
     > [!NOTE]  
-    >  Если никакие проекты не создавались с помощью этого домена или связанных с ним доменов или проект не был завершен, пункт **Импорт значений проекта** будет недоступен.  
+    >   Если никакие проекты не создавались с помощью этого домена или связанных с ним доменов или проект не был завершен, пункт **Импорт значений проекта** будет недоступен.  
   
 5.  В диалоговом окне **Импорт значений проекта** :  
   
@@ -71,12 +71,12 @@ ms.locfileid: "75241803"
 10. Нажмите кнопку **Готово**.  
   
     > [!NOTE]  
-    >  Дополнительные сведения о работе со значениями на вкладке **Значения домена** см. в разделе [Change Domain Values](../data-quality-services/change-domain-values.md).  
+    >   Дополнительные сведения о работе со значениями на вкладке **Значения домена** см. в разделе [Change Domain Values](../data-quality-services/change-domain-values.md).  
   
-##  <a name="FollowUp"></a>Дальнейшие действия. После импорта значений проекта в домен  
+##  <a name="follow-up-after-importing-project-values-into-a-domain"></a><a name="FollowUp"></a> Дальнейшие действия. После импорта значений проекта в домен  
  После импорта знаний служб DQS, собранных в процессе очистки, в домен вы можете приступать к другим задачам управления доменами с использованием этого домена и значений. Дополнительные сведения см. в разделе [Управление доменом](../data-quality-services/managing-a-domain.md).  
   
-##  <a name="Values"></a>Значения, которые будут импортированы  
+##  <a name="values-that-will-be-imported"></a><a name="Values"></a> Значения, которые будут импортированы  
  Из проекта в домен будут импортированы следующие значения.  
   
 -   В домен импортируются только строковые значения.  
@@ -95,7 +95,7 @@ ms.locfileid: "75241803"
   
 -   Исправление, выполненное в соответствии со связью на основе термина в домене, импортируется как правильное значение.  
   
-##  <a name="ValuesNot"></a>Значения, которые не будут импортированы  
+##  <a name="values-that-will-not-be-imported"></a><a name="ValuesNot"></a> Значения, которые не будут импортированы  
  Следующие значения не будут импортированы из проекта в домен:  
   
 -   Значения с вкладок **Предлагаемые** и **Недопустимые** на странице **Управление и просмотр результатов** в категории **Очистка** импортированы не будут.  

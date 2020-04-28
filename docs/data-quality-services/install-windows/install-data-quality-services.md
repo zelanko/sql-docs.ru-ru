@@ -10,10 +10,10 @@ ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: b7a9d9ce36a3419883adae9050ffabd0d1f9b012
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252186"
 ---
 # <a name="install-data-quality-services"></a>Установка служб Data Quality Services
@@ -22,12 +22,10 @@ ms.locfileid: "75252186"
 
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)](DQS) содержит два следующих компонента: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** и. **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**  
   
-|Компонент DQS|Description|  
+|Компонент DQS|Описание|  
 |-------------------|-----------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|
-  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] устанавливается поверх компонента [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] Database Engine и включает три базы данных: DQS_MAIN, DQS_PROJECTS и DQS_STAGING_DATA. База данных DQS_MAIN содержит хранимые процедуры DQS, ядро DQS и опубликованные базы знаний. База данных DQS_PROJECTS содержит сведения о проекте служб DQS. DQS_STAGING_DATA представляет собой промежуточную область для копирования источника данных с целью выполнения операций DQS и последующего экспорта обработанных данных.|  
-|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|
-  [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] — это автономное приложение, которое позволяет подключаться к [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]и имеет наглядный графический пользовательский интерфейс, используемый в операциях обеспечения качества данных и выполнения других административных задач служб DQS.|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] устанавливается поверх компонента [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] Database Engine и включает три базы данных: DQS_MAIN, DQS_PROJECTS и DQS_STAGING_DATA. База данных DQS_MAIN содержит хранимые процедуры DQS, ядро DQS и опубликованные базы знаний. База данных DQS_PROJECTS содержит сведения о проекте служб DQS. DQS_STAGING_DATA представляет собой промежуточную область для копирования источника данных с целью выполнения операций DQS и последующего экспорта обработанных данных.|  
+|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] — это автономное приложение, которое позволяет подключаться к [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]и имеет наглядный графический пользовательский интерфейс, используемый в операциях обеспечения качества данных и выполнения других административных задач служб DQS.|  
   
 > [!IMPORTANT]  
 >  Помимо этих двух компонентов DQS 2 также можно:  
@@ -38,26 +36,25 @@ ms.locfileid: "75252186"
   
  Установка DQS представляет собой процесс из трех частей.  
   
--   [Предварительная установка](#PreInstallationTasks). перед установкой служб DQS Проверьте требования к системе.  
+-   [Предварительная подготовка](#PreInstallationTasks). Проверьте системные требования перед установкой DQS.  
   
--   [Задачи установки служб Data Quality Services](#DQSInstallation). Установите DQS с помощью программы установки SQL Server.  
+-   [Задачи по установке служб Data Quality Services](#DQSInstallation): установите службы DQS с помощью программы установки SQL Server.  
   
--   [Задачи, выполняемые после установки](#PostInstallationTasks). Выполните эти задачи после завершения установки SQL Server, чтобы завершить установку DQS.  
+-   [Действия после установки](#PostInstallationTasks): для завершения установки DQS выполните следующие задачи после окончания работы программы установки SQL Server.  
   
 > [!NOTE]  
 >  Этот раздел не содержит инструкций по запуску программы установки из командной строки. Дополнительные сведения о параметрах командной строки для установки [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] и клиента см. в разделе [Параметры компонентов](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature) статьи [Установка SQL Server из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
-##  <a name="PreInstallationTasks"></a>Задачи перед установкой  
+##  <a name="pre-installation-tasks"></a><a name="PreInstallationTasks"></a>Задачи перед установкой  
  Перед установкой DQS убедитесь, что компьютер соответствует минимальным требованиям к системе. В следующей таблице содержатся сведения о минимальных требованиях к системе для компонентов служб DQS.  
   
 |Компонент DQS|Минимальные требования к системе|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Память (ОЗУ): не менее 2 ГБ, рекомендуется 4 ГБ или более.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]ядро СУБД. Дополнительные сведения см. в статье [Установка компонентов SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Память (ОЗУ): не менее 2 ГБ, рекомендуется 4 ГБ или более.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Компонент Database Engine. Дополнительные сведения см. в статье [Установка компонентов SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|Платформа .NET Framework 4.0 (при ее отсутствии устанавливается во время установки клиента [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] )<br /><br /> Internet Explorer 6.0 с пакетом обновления 1 (SP1) или более поздняя версия.|  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] и [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] могут устанавливаться и работать на одном или на разных компьютерах. Оба компонента можно установить независимо друг от друга и в любой последовательности. Тем не менее для использования [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]необходимо установить [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , с которым будет устанавливаться соединение.  
+>  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] и [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] могут устанавливаться и работать на одном или на разных компьютерах. Оба компонента можно установить независимо друг от друга и в любой последовательности. Тем не менее для использования [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]необходимо установить [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , с которым будет устанавливаться соединение.  
 >   
 >  Чтобы подключиться к [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] версии [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] или с помощью текущего или более раннюю версию [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] и преобразование " очистка DQS ". Дополнительные сведения об обновлении существующей версии служб DQS в [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]см. в статье [Обновление служб Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md).  
 >   
@@ -65,15 +62,15 @@ ms.locfileid: "75252186"
   
  Подробные сведения о минимальных требованиях к системе для установки [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] см. в статье [Требования к оборудованию и программному обеспечению для установки SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
-##  <a name="DQSInstallation"></a>Задачи установки служб Data Quality Services  
+##  <a name="data-quality-services-installation-tasks"></a><a name="DQSInstallation"></a>Задачи установки служб Data Quality Services  
  Для установки компонентов служб DQS необходимо использовать программу установки [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] . При запуске программы установки SQL Server необходимо пройти несколько страниц мастера установки, чтобы выбрать соответствующие параметры, исходя из своих требований. В следующей таблице перечислены лишь те страницы мастера установки, выбор параметров в которых повлияет на установку служб DQS.  
   
 |Страница|Действие|  
 |----------|------------|  
-|Выбор компонентов|Выбор:<br /><br /> **Службы Data Quality Services** в **ядро СУБД Services** для установки [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. <br />Если вы установите флажок **Службы Data Quality Services** , программа установки SQL Server скопирует файл установщика DQSInstaller.exe в каталог экземпляра SQL Server на данном компьютере. Его необходимо запустить после окончания работы программы установки SQL Server, чтобы *завершить* установку [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Кроме того, перед использованием [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] необходимо будет выполнить некоторые дополнительные действия по его настройке. Дополнительные сведения см. в разделе [Действия после установки](#PostInstallationTasks).<br /><br /> **Data Quality Client** для установки [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].<br /><br /> (Рекомендовано) **Средства управления — полный набор** на странице **Основные средства управления**, чтобы установить среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Она предоставляет графический пользовательский интерфейс для управления экземпляром SQL Server и позволяет выполнять дополнительные задачи после установки, перечисленные в следующем разделе.|  
-|Конфигурация ядра СУБД|Нажмите кнопку **Добавить текущего пользователя** , чтобы добавить свою учетную запись пользователя в предопределенную роль сервера sysadmin. Это необходимо, чтобы можно было позже запустить файл DQSInstaller.exe и завершить установку [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .|  
+|Выбор компонентов|Выберите<br /><br /> **Службы Data Quality Services** на странице **Службы компонента Database Engine** , чтобы установить сервер служб [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. <br />Если вы установите флажок **Службы Data Quality Services** , программа установки SQL Server скопирует файл установщика DQSInstaller.exe в каталог экземпляра SQL Server на данном компьютере. Его необходимо запустить после окончания работы программы установки SQL Server, чтобы *завершить* установку [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Кроме того, перед использованием [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] необходимо будет выполнить некоторые дополнительные действия по его настройке. Дополнительные сведения см. в разделе [Действия после установки](#PostInstallationTasks).<br /><br /> **Data Quality Client** , чтобы установить клиент [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].<br /><br /> Такую **Средства управления — полностью** в разделе **средства управления — основные** для [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]установки. Она предоставляет графический пользовательский интерфейс для управления экземпляром SQL Server и позволяет выполнять дополнительные задачи после установки, перечисленные в следующем разделе.|  
+|Конфигурация компонента Database Engine|Нажмите кнопку **Добавить текущего пользователя** , чтобы добавить свою учетную запись пользователя в предопределенную роль сервера sysadmin. Это необходимо, чтобы можно было позже запустить файл DQSInstaller.exe и завершить установку [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .|  
   
-##  <a name="PostInstallationTasks"></a>Задачи, выполняемые после установки  
+##  <a name="post-installation-tasks"></a><a name="PostInstallationTasks"></a>Задачи, выполняемые после установки  
  После завершения работы мастера установки SQL Server необходимо выполнить дополнительные шаги, описанные в этом разделе, чтобы завершить установку [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , выполнить его настройку и начать его использование.  
   
 1.  Чтобы завершить установку [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , запустите файл DQSInstaller.exe. После запуска файла DQSInstaller.exe:  
@@ -102,7 +99,7 @@ ms.locfileid: "75252186"
   
     -   **dqs_kb_editor**  
   
-    -   **dqs_kb_operator**  
+    -   **dqs_kb_editor**  
   
      По умолчанию, если учетная запись пользователя является членом предопределенной роли сервера sysadmin, этот пользователь может выполнять вход на [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] с помощью клиента [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] , даже если его учетной записи не назначена ни одна из ролей служб DQS. Дополнительные сведения о трех ролях служб DQS см. в разделе [DQS Security](../../data-quality-services/dqs-security.md).  
   
@@ -113,7 +110,7 @@ ms.locfileid: "75252186"
   
 3.  Сделайте ваши данные доступными для операций DQS. Убедитесь, что исходные данные доступны для операций DQS и возможен экспорт обработанных данных в таблицу в базе данных.  
   
-     Дополнительные сведения см. в следующих статьях:  
+     Дополнительные сведения см. в разделе  
                     [Доступ к данным для операций DQS](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
   
 ## <a name="see-also"></a>См. также:  
@@ -125,6 +122,6 @@ ms.locfileid: "75252186"
  [Установка SQL Server компонентов бизнес-аналитики](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
  [SQL Server удаления](../../sql-server/install/uninstall-sql-server.md)   
  [Службы Data Quality Services](../../data-quality-services/data-quality-services.md)   
- [Устранение неполадок при установке и настройке в DQS](https://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
+ [Устранение неполадок во время установки и настройки DQS](https://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
   

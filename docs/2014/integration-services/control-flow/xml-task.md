@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232729"
 ---
 # <a name="xml-task"></a>Задача «XML»
@@ -119,7 +119,7 @@ ms.locfileid: "75232729"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задачи "XML" &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи "XML" (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
   
 -   [Проверка XML с использованием задачи «XML»](xml-task.md)  
   

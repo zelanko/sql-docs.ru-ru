@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e40a1eead54fe9d00eaf099410260023229796d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228570"
 ---
 # <a name="allow-network-access-to-a-database-mirroring-endpoint-using-windows-authentication-sql-server"></a>Разрешение сетевого доступа к конечной точке зеркального отображения базы данных с использованием проверки подлинности Windows (SQL Server)
@@ -26,10 +26,10 @@ ms.locfileid: "75228570"
   
 -   Если экземпляры [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выполняются как службы под разными учетными записями домена (одного или других доверенных доменов), нужно создать имя входа для каждой учетной записи в базе данных **master** на каждом удаленном экземпляре сервера и предоставить этому имени входа разрешение CONNECT для конечной точки.  
   
--   Если экземпляры [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выполняются как учетные записи сетевой службы, нужно создать в базе данных *master*** на каждом из удаленных экземпляров серверов имя входа для каждой учетной записи главного компьютера (\\имя_домена******имя_компьютера$**) и предоставить этому имени входа разрешение CONNECT для конечной точки. Это обусловлено тем, что экземпляр сервера, выполняемый под учетной записью Network Service, выполняет проверку подлинности с помощью учетной записи домена главного компьютера.  
+-   Если экземпляры [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выполняются как учетные записи сетевой службы, нужно создать в базе данных*master***\\***на каждом из удаленных экземпляров серверов имя входа для каждой учетной записи главного компьютера (* имя_домена **имя_компьютера$** ) и предоставить этому имени входа разрешение CONNECT для конечной точки. Это обусловлено тем, что экземпляр сервера, выполняемый под учетной записью Network Service, выполняет проверку подлинности с помощью учетной записи домена главного компьютера.  
   
 > [!NOTE]  
->  Убедитесь, что конечная точка существует для каждого из экземпляров сервера. Дополнительные сведения см. в разделе [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+>  Убедитесь, что конечная точка существует для каждого из экземпляров сервера. Дополнительные сведения см. в разделе [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
 ### <a name="to-configure-logins-for-windows-authentication"></a>Настройка имен входа для проверки подлинности Windows  
   
@@ -57,6 +57,6 @@ GO
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [SQL Server &#40;зеркального отображения базы данных&#41;](database-mirroring/database-mirroring-sql-server.md)   
  [Безопасность транспорта для зеркального отображения базы данных и группы доступности AlwaysOn &#40;SQL Server&#41;](database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
- [SQL Server &#40;конечной точки зеркального отображения базы данных&#41;](database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
+ [Конечная точка зеркального отображения базы данных (SQL Server)](database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   

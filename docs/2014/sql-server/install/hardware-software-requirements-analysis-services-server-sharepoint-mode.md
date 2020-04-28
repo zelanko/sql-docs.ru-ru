@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 8f645ca9bdb6176505a6277af0f0482be5b62f09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245612"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>Требования к оборудованию и программному обеспечению для сервера служб Analysis Services в режиме интеграции с SharePoint (SQL Server 2014)
@@ -24,35 +24,33 @@ ms.locfileid: "75245612"
   
 - Для SharePoint 2013 установите [или удалите надстройку PowerPivot для SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
 
-##  <a name="bkmk_sqleditions"></a>Требования к выпуску SQL Server  
+##  <a name="sql-server-edition-requirements"></a><a name="bkmk_sqleditions"></a>Требования к выпуску SQL Server  
  Не все функции бизнес-аналитики доступны во всех выпусках [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения см. [в разделе функции, поддерживаемые различными Выпусками SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md) и [выпусками и компонентами SQL Server 2014](../editions-and-components-of-sql-server-2016.md).  
   
  Текущие заметки о выпуске можно найти в [примечаниях к Выпуску Microsoft SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
 
   
-##  <a name="bkmk_sqllicense"></a>Лицензирование SQL Server  
+##  <a name="sql-server-licensing"></a><a name="bkmk_sqllicense"></a>Лицензирование SQL Server  
  Дополнительные сведения о лицензировании SQL Server см. в следующих источниках:  
   
 -   [Таблица лицензирования SQL Server 2014](https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf) (https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf).  
   
 -   [Как купить: SQL Server поддержка моделей лицензирования](https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2) (https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2).  
   
-##  <a name="bkmk_ssas__sharepoint_2013"></a>Analysis Services, установленные на сервере SharePoint 2013  
+##  <a name="analysis-services-installed-on-sharepoint-2013"></a><a name="bkmk_ssas__sharepoint_2013"></a>Analysis Services, установленные на сервере SharePoint 2013  
  Если сервер служб Analysis Services в режиме интеграции SharePoint устанавливается на сервере отдельно, то минимальные требования к системе основываются на требованиях к [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], а не SharePoint Server.  
   
- [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Требования к аппаратному и программному обеспечению для установки SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
- 
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint рекомендуется запускать на бизнес-серверах нового поколения, которые имеют более высокие пороговые значения ОЗУ и обладают большими вычислительными мощностями. Для хранения данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в памяти используются большие объемы ОЗУ. ОЗУ поддерживает возможность адаптироваться к структурным изменениям. Дополнительные процессоры поддерживают выполнение длительных сканирований необработанных и необъединенных данных. Предполагается, что данные формируют свою структуру в динамической среде в ответ на определяемый пользователем анализ данных, который инициируется с помощью клиента или интерфейса Excel для клиентских запросов.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint рекомендуется запускать на бизнес-серверах нового поколения, которые имеют более высокие пороговые значения ОЗУ и обладают большими вычислительными мощностями. Для хранения данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в памяти используются большие объемы ОЗУ. ОЗУ поддерживает возможность адаптироваться к структурным изменениям. Дополнительные процессоры поддерживают выполнение длительных сканирований необработанных и необъединенных данных. Предполагается, что данные формируют свою структуру в динамической среде в ответ на определяемый пользователем анализ данных, который инициируется с помощью клиента или интерфейса Excel для клиентских запросов.  
   
 > [!TIP]  
->  
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint использует кэши L2 и L3. Для повышения производительности рекомендуется использовать процессоры с большими кэшами L2 и L3.  
+>  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint использует кэши L2 и L3. Для повышения производительности рекомендуется использовать процессоры с большими кэшами L2 и L3.  
   
  В следующей таблице приведены минимальная и рекомендуемая конфигурации оборудования для изолированного сервера [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)], не входящего в состав фермы SharePoint.  
   
-|Компонент|Минимальная|Рекомендуется|  
+|Компонент|Минимальные|Рекомендуемая|  
 |---------------|-------------|-----------------|  
 |Процессор|64-разрядный двухъядерный процессор с тактовой частотой 3 ГГц.|16 ядер|  
 |ОЗУ|8 гигабайт ОЗУ|64 гигабайта ОЗУ|  
@@ -60,13 +58,13 @@ ms.locfileid: "75245612"
   
  Если сервер служб Analysis Services в режиме интеграции с SharePoint установлен на сервере фермы SharePoint, то сведения о минимальных требованиях к системе для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и сервера SharePoint см. по следующим ссылкам:  
   
--   [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Требования к аппаратному и программному обеспечению для установки SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Требования к оборудованию и программному обеспечению для SharePoint 2013](https://technet.microsoft.com/library/cc262485\(office.15\).aspx).  
   
  Стандартные рекомендации по оборудованию и программному обеспечению для SharePoint 2013 применимы к решению по управлению документами для рабочей группы или команды, основанному на веб-технологиях. Обработка [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] требует много ресурсов, поэтому рекомендуемых аппаратных средств достаточно, если рабочая нагрузка невелика, например менее 100 пользователей или книг. При более крупномасштабном развертывании [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] требуются большие вычислительные мощности.  
   
-##  <a name="bkmk_ssas__sharepoint_2010"></a>Analysis Services, установленные на сервере SharePoint 2010  
+##  <a name="analysis-services-installed-on-a-sharepoint-2010-server"></a><a name="bkmk_ssas__sharepoint_2010"></a>Analysis Services, установленные на сервере SharePoint 2010  
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2010 работает на серверах приложений в ферме SharePoint 2010 и использует функции и инфраструктуру SharePoint для поддержки операций сервера. В следующей таблице перечислены системные требования, относящиеся к развертываниям SharePoint 2010.  
   
 |Компонент|Требование|  

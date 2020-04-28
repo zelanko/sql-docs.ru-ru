@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86cff99688dda7a953a7da1d4104865beed5a98b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253169"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer-reporting-services-in-sharepoint-mode"></a>Локальный режим и Отчеты, созданные в локальном и подключенном режиме в средстве просмотра отчетов (службы Reporting Services в режиме SharePoint)
@@ -34,15 +34,14 @@ ms.locfileid: "75253169"
   
 -   [Настройка отчетов в локальном режиме с помощью SharePoint 2010](#bkmk_local_mode_sharepoint2010)  
   
-##  <a name="bkmk_local_vs_connected"></a>Локальный режим и подключенный режим и поддерживаемые расширения  
- **Локальный режим:** При наличии модуля обработки данных, поддерживающего локальный режим, средство просмотра отчетов непосредственно отображает отчеты из SharePoint. В *локальном режиме* нет сервера отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Необходимо установить дополнение [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для продуктов SharePoint, сервер отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] не требуется. В локальном режиме пользователи могут просматривать отчеты, но **не** будут иметь доступа к компонентам на стороне сервера, таким как подписки и предупреждения данных.  
+##  <a name="local-mode-vs-connected-mode-and-supported-extensions"></a><a name="bkmk_local_vs_connected"></a>Локальный режим и подключенный режим и поддерживаемые расширения  
+ **Локальный режим.** Если у вас есть расширение данных, которое поддерживает локальный режим, средство просмотра отчетов напрямую создает отчеты в SharePoint. В *локальном режиме* нет сервера отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Необходимо установить дополнение [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для продуктов SharePoint, сервер отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] не требуется. В локальном режиме пользователи могут просматривать отчеты, но **не** будут иметь доступа к компонентам на стороне сервера, таким как подписки и предупреждения данных.  
   
- **Подключенному режиму**, также называемому *удаленным режимом* , требуется сервер [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] отчетов в режиме интеграции с SharePoint, подключенный к ферме SharePoint, чтобы элемент управления "средство просмотра отчетов" мог подготовить отчеты.  
+ В**удаленном режиме**или *режиме соединения* требуется наличие сервера отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме SharePoint, который подключен к ферме SharePoint, чтобы элемент управления просмотром отчетов мог их создавать.  
   
  Ниже приведен список модулей обработки данных, поддерживающих локальный режим составления отчетов.  
   
--   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 2010. Дополнительные сведения о службах доступа см. в статье [Использование служб доступа со службами SQL Reporting Services: установка надстройки SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=192686).  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 2010. Дополнительные сведения о службах доступа см. в статье [Использование служб доступа со службами SQL Reporting Services: установка надстройки SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=192686).  
   
 -   Модуль обработки данных списка служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint. Дополнительные сведения о модуле обработки данных списка SharePoint см. в разделе [Источники данных, поддерживаемые службами Reporting Services (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "75253169"
 > [!NOTE]  
 >  Как и в предыдущих версиях, нельзя внедрять имена пользователей и пароли в RSDS-файл.  
   
-##  <a name="bkmk_local_mode_sharepoint2013"></a>Настройка локального режима и служб доступа с помощью SharePoint 2013  
+##  <a name="configure-local-mode-and-access-services-with-sharepoint-2013"></a><a name="bkmk_local_mode_sharepoint2013"></a>Настройка локального режима и служб доступа с помощью SharePoint 2013  
  Можно настроить ферму SharePoint 2013 для поддержки существующих сетевых баз данных Access 2010 и локального режима [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [Установка и настройка служб Access 2010 для баз данных в сети SharePoint Server 2013](https://technet.microsoft.com/library/ee748653\(office.15\).aspx).  
   
  Нельзя создать новые сетевые базы данных Access для SharePoint 2013. Access 2013 использует базы данных нового типа *Access web app* , создаваемые в Access и затем используемые и публикуемые для общего доступа в виде приложения SharePoint в веб-браузере.  
@@ -64,7 +63,7 @@ ms.locfileid: "75253169"
   
 -   [Основные задачи для приложения Access](https://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500) (https://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500).  
   
-##  <a name="bkmk_local_mode_sharepoint2010"></a>Настройка отчетов в локальном режиме с помощью SharePoint 2010  
+##  <a name="configure-local-mode-reporting-with-sharepoint-2010"></a><a name="bkmk_local_mode_sharepoint2010"></a>Настройка отчетов в локальном режиме с помощью SharePoint 2010  
  Для локального режима требуется состояние сеанса ASP.NET. Установка служб доступа обеспечит предоставление состояний сеансов ASP.Net. Кроме того, можно включить использование PowerShell.  
   
 1.  Откройте консоль управления SharePoint 2010.  
@@ -81,9 +80,9 @@ ms.locfileid: "75253169"
   
  Дополнительные сведения см. в статьях [Использование служб доступа со службами SQL Reporting Services: установка надстройки SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=192686) и [Enable-SPSessionStateService](https://technet.microsoft.com/library/ff607857\(v=office.15\).aspx).  
   
-## <a name="connected-mode"></a>Режим развертывания с подключением  
- Последние сведения об использовании расширения ADS в режиме соединения [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] см. в статье [Отчет служб Access на сайте SharePoint выводит ошибку в расширении данных "ADS"](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
+## <a name="connected-mode"></a>режиме соединения  
+ Последние сведения об использовании расширения ADS в [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] подключенном режиме см. в разделе [отчет служб Access на сайте SharePoint показана ошибка в расширении данных "ADS"](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
   
 ## <a name="see-also"></a>См. также:  
- [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Источники данных, поддерживаемые службами Reporting Services (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

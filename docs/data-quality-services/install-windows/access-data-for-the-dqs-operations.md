@@ -10,10 +10,10 @@ ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 2eae5415e6f6bb93501dfc7989fe180e581ae387
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75254792"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Предоставление доступа к данным для операций со службами DQS
@@ -46,13 +46,13 @@ ms.locfileid: "75254792"
   
     -   **db_datareader**: чтение данных из таблиц и представлений.  
   
-    -   **db_datawriter**: Добавление, удаление или изменение данных в таблицах.  
+    -   **db_datawriter**: добавление, удаление и изменение данных в таблицах.  
   
     -   **db_ddladmin**: создание, изменение или удаление таблиц и представлений.  
   
 6.  В диалоговом окне **Свойства имени входа** нажмите кнопку **ОК** , чтобы применить изменения.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
  Проверьте работоспособность операций служб DQS, использующих эту базу данных в качестве источника данных, а затем экспортирующих в нее обработанные данные.  
   
 ## <a name="see-also"></a>См. также:  

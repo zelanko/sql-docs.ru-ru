@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 17c1e63789e9c2069d8fdecd8bd62b64bf8a886d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244659"
 ---
 # <a name="create-a-central-management-server-and-server-group-sql-server-management-studio"></a>Создание центрального сервера управления и группы сервера (среда SQL Server Management Studio)
@@ -31,20 +31,20 @@ ms.locfileid: "75244659"
   
      [Безопасность](#Security)  
   
--   **Для создания центрального сервера управления и группы серверов используется:**  
+-   **Для создания сервера централизованного управления и группы серверов используется:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  В базе данных msdb доступ к серверам централизованного управления предоставляют две роли базы данных. Сервером централизованного управления могут управлять только члены роли ServerGroupAdministratorRole. Для подключения к серверу централизованного управления требуется членство в роли ServerGroupReaderRole.  
   
  Поскольку соединения, поддерживаемые сервером централизованного управления, выполняются в контексте пользователя с применением проверки подлинности Windows, действующие разрешения на зарегистрированные серверы могут быть различными. Например, пользователь может входить в предопределенную роль сервера sysadmin на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] А, но иметь ограниченные разрешения на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Б.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Ниже описывается, как выполнить следующие шаги.  
   
 1.  Создание сервера централизованного управления.  

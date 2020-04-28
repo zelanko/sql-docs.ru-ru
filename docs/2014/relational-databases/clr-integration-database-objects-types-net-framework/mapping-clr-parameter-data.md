@@ -27,10 +27,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 17eeefbe125722c666f9f56394028da8c66a66b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232281"
 ---
 # <a name="mapping-clr-parameter-data"></a>Сопоставление данных о параметрах CLR
@@ -59,11 +59,9 @@ ms.locfileid: "75232281"
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
 |`ntext`|None|None|  
 |`numeric`|`SqlDecimal`|**Десятичный,\<допускающий значения NULL>**|  
-|`nvarchar`|`SqlChars, SqlString`<br /><br /> 
-  `SQLChars` лучше подходит для передачи данных и доступа, тогда как `SQLString` более подходит для выполнения строковых операций.|`String, Char[]`|  
+|`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` лучше подходит для передачи данных и доступа, тогда как `SQLString` более подходит для выполнения строковых операций.|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, String, char [], Nullable\<char>**|  
-|`real`|
-  `SqlSingle` (но `SqlSingle` поддерживает больший диапазон значений, чем `real`)|**Single, только\<одиночный>, допускающий значение null**|  
+|`real`|`SqlSingle` (но `SqlSingle` поддерживает больший диапазон значений, чем `real`)|**Single, только\<одиночный>, допускающий значение null**|  
 |`rowversion`|None|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16, Nullable\<>обнуляемого типа**|  
 |`smallmoney`|`SqlMoney`|**Десятичный,\<допускающий значения NULL>**|  

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 1a0d50e485f0e8f48de11b2e5a3c27c9f9be047e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401233"
 ---
 # <a name="create-an-aps-domain-administrator"></a>Создание администратора домена APS
@@ -26,7 +26,7 @@ ms.locfileid: "74401233"
   
 1.  Войдите в активный узел AD **(_устройство\_Domain_-AD01** или ** _устройство\_Domain_-AD02**), используя существующую учетную запись администратора домена устройства.  
   
-2.  В меню Пуск выберите команду **Выполнить**. В поле **Открыть** введите **DSA. msc**. Нажмите кнопку **ОК**.  
+2.  В меню Пуск выберите команду **выполнить**. В поле **Открыть** введите **DSA. msc**. Нажмите кнопку **ОК**.  
   
 3.  В программе **Active Directory пользователи и компьютеры** щелкните правой кнопкой мыши элемент **Пользователи**, наведите указатель на пункт **создать**и выберите пункт **пользователь**.  
   

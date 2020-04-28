@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243169"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Использование программы sqlcmd с переменными скрипта
@@ -44,9 +44,9 @@ ms.locfileid: "75243169"
   
 3.  Командная оболочка (**SET X=Y**), заданная в командной строке перед запуском **sqlcmd**  
   
-4.  **sqlcmd-v** X = Y  
+4.  **sqlcmd-v** X=Y  
   
-5.  **: Setvar** X Y  
+5.  **:Setvar** X Y  
   
 > [!NOTE]  
 >  Чтобы просмотреть переменные среды, на **панели управления**откройте компонент **Система**и перейдите на вкладку **Дополнительно** .  
@@ -64,8 +64,7 @@ ms.locfileid: "75243169"
   
  `FROM Person.Person x`  
   
- 
-  `WHERE c.`BusinessEntityID`< 5;`  
+ `WHERE c.`BusinessEntityID`< 5;`  
   
  Кроме того, с помощью параметра `-v` можно указать имя возвращаемого столбца:  
   
@@ -103,7 +102,7 @@ ms.locfileid: "75243169"
 ## <a name="sqlcmd-scripting-variables"></a>Переменные скрипта sqlcmd  
  Переменные, которые определяются программой **sqlcmd** , называются переменными сценария. В следующей таблице приведен список переменных сценария программы **sqlcmd** .  
   
-|Переменная|Связанный параметр|Чтение-запись|По умолчанию|  
+|Переменная|Связанный параметр|Чтение-запись|Значение по умолчанию|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER*|-U|R|""|  
 |SQLCMDPASSWORD*|-P|--|""|  
@@ -111,12 +110,12 @@ ms.locfileid: "75243169"
 |SQLCMDWORKSTATION|-H|R|"ComputerName"|  
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|Чтение-запись|"8" (секунд)|  
-|SQLCMDSTATTIMEOUT|-t|Чтение-запись|"0" = неограниченное время ожидания|  
-|SQLCMDHEADERS|-h|Чтение-запись|0|  
-|SQLCMDCOLSEP|-s|Чтение-запись|" "|  
-|SQLCMDCOLWIDTH|-w|Чтение-запись|0|  
+|SQLCMDSTATTIMEOUT|-T|Чтение-запись|"0" = неограниченное время ожидания|  
+|SQLCMDHEADERS|-H|Чтение-запись|"0"|  
+|SQLCMDCOLSEP|-S|Чтение-запись|" "|  
+|SQLCMDCOLWIDTH|-w|Чтение-запись|"0"|  
 |SQLCMDPACKETSIZE|-a|R|"4096"|  
-|SQLCMDERRORLEVEL|-M|Чтение-запись|0|  
+|SQLCMDERRORLEVEL|-M|Чтение-запись|"0"|  
 |SQLCMDMAXVARTYPEWIDTH|-y|Чтение-запись|«256»|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|Чтение-запись|"0" = неограниченное время ожидания|  
 |SQLCMDEDITOR||Чтение-запись|"edit.com"|  
@@ -344,6 +343,6 @@ ms.locfileid: "75243169"
 ## <a name="see-also"></a>См. также:  
  [Использование программы sqlcmd](sqlcmd-use-the-utility.md)   
  [Программа sqlcmd](../../tools/sqlcmd-utility.md)   
- [Справочник по программе командной строки &#40;ядро СУБД&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Справочник по программе командной строки (компонент Database Engine)](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

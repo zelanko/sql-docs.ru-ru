@@ -28,10 +28,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3526595d169f5283f849017f1fabec24f33d553c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75255992"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Обновление данных при помощи диаграмм обновления XML (SQLXML 4.0)
@@ -93,7 +93,7 @@ ms.locfileid: "75255992"
   
 -   В большинстве примеров задействован образец базы данных AdventureWorks. Все обновления применяются к таблицам в этой базе данных. Базу данных AdventureWorks можно восстановить.  
   
-### <a name="a-updating-a-record"></a>A. Обновление записи  
+### <a name="a-updating-a-record"></a>А) Обновление записи  
  Следующая диаграмма обновления используется для изменения фамилии сотрудника в таблице Person.Contact базы данных AdventureWorks на Fuller. В диаграмме обновления не задана схема сопоставления, поэтому применяется сопоставление по умолчанию.  
   
 ```  
@@ -121,7 +121,7 @@ ms.locfileid: "75255992"
 
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>Б. Обновление нескольких записей с помощью атрибута updg:id  
+### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>Б) Обновление нескольких записей с помощью атрибута updg:id  
  В данном примере диаграмма обновления выполняет два обновления в таблице HumanResources.Shift в базе данных AdventureWorks.  
   
 -   Имя исходной дневной смены, начинающейся в 7:00, меняется с «Day» на «Early Morning».  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683589"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot для SharePoint (SSAS)
@@ -53,7 +53,7 @@ ms.locfileid: "74683589"
   
  Завершает развертывание экземпляр сервера служб Analysis Service в режиме интеграции с SharePoint. Он загружает и выгружает данные и управляет запросами к ним. Он также обрабатывает данные, если для книги настроено обновление данных PowerPivot.  Каждый экземпляр тесно связан с локальной системной службой PowerPivot, которая входит в состав той же установки.  
   
-##  <a name="bkmk_RelatedContent"></a> в этом разделе  
+##  <a name="in-this-section"></a><a name="bkmk_RelatedContent"></a>В этом разделе  
  [Настройка и администрирование сервера PowerPivot в центре администрирования](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [Настройка PowerPivot с помощью Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
@@ -66,7 +66,7 @@ ms.locfileid: "74683589"
   
  [Панель мониторинга управления PowerPivot и данные об использовании](power-pivot-management-dashboard-and-usage-data.md)  
   
- [Галерея PowerPivot](../../2014-toc/index.yml)  
+ [PowerPivot Gallery](../../2014-toc/index.yml)  
   
  [Доступ к данным PowerPivot](power-pivot-data-access.md)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "74683589"
   
  **В других разделах**  
   
-## <a name="additional-topics"></a>Дополнительные разделы  
+## <a name="additional-topics"></a>Дополнительные темы  
  [Обновление PowerPivot для SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
  [Установка PowerPivot для SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  

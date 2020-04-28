@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401377"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Применение исправлений Analytics Platform System
@@ -34,7 +34,7 @@ ms.locfileid: "74401377"
   
 -   Сведения об учетной записи администратора домена структуры для подключения к узлу _<domain_name>_ **-HST01** .  
   
-## <a name="HowToInstallPDW"></a>Применение исправления платформы аналитики к системе  
+## <a name="to-apply-a-analytics-platform-system-hotfix"></a><a name="HowToInstallPDW"></a>Применение исправления платформы аналитики к системе  
 В отличие от обновлений Майкрософт, исправления для программного обеспечения платформы аналитики не обрабатываются с помощью WSUS. Они имеют другой рабочий процесс и устанавливаются путем запуска пакета исправлений.  
   
 1.  **Проверьте индикаторы состояния устройства.**  

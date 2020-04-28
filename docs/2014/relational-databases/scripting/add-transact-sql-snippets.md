@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 27070cc125ca0443ae833854e721c6f72c7ce832
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244823"
 ---
 # <a name="add-transact-sql-snippets"></a>Добавление фрагментов кода Transact-SQL
@@ -36,7 +36,7 @@ ms.locfileid: "75244823"
   
 2.  Выберите меню **Сервис** и нажмите кнопку **Диспетчер фрагментов кода**.  
   
-3.  Нажмите кнопку **Добавить** .  
+3.  Нажмите кнопку **Добавить**.  
   
 4.  Перейдите к папке, содержащей собственные фрагменты кода, и нажмите кнопку **Выбор папки** .  
   

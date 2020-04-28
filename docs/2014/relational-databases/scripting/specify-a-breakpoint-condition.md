@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c27ed8abfd66cb896182cd5a795965163e5c8618
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243234"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Задание условия точки останова
@@ -43,5 +43,5 @@ ms.locfileid: "75243234"
     >  Отладчик не проверяет это логическое выражение, пока не будет достигнута первая точка останова. Если выбрать **Изменилось**, отладчик не будет считать первую проверку изменением и, следовательно, не будет прерывать при ней исполнение.  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка счетчика числа попаданий](specify-a-hit-count.md)   
+ [Укажите число попаданий](specify-a-hit-count.md)   
  [Задание действия в точке останова](specify-a-breakpoint-action.md)  

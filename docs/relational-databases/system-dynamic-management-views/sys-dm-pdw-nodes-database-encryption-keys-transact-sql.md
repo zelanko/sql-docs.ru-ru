@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401640"
 ---
 # <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys. dm_pdw_nodes_database_encryption_keys (Transact-SQL)
@@ -24,7 +24,7 @@ ms.locfileid: "74401640"
 
   Возвращает сведения о состоянии шифрования базы данных и о связанных ключах шифрования базы данных. **sys. dm_pdw_nodes_database_encryption_keys** предоставляет эти сведения для каждого узла. Дополнительные сведения о шифровании базы данных см. в разделе [прозрачное шифрование данных (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md).  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Идентификатор физической базы данных на каждом узле.|  
 |encryption_state|**int**|Указывает, является ли база данных на этом узле зашифрованной или не зашифрованной.<br /><br /> 0 = нет ключа шифрования базы данных, нет шифрования<br /><br /> 1 = не зашифрована<br /><br /> 2 = выполняется шифрование<br /><br /> 3 = зашифрована<br /><br /> 4 = выполняется изменение ключа<br /><br /> 5 = выполняется расшифровка<br /><br /> 6 = выполняется изменение защиты (сертификат, который шифрует ключ шифрования базы данных, изменяется.)|  
@@ -36,13 +36,13 @@ ms.locfileid: "74401640"
 |key_algorithm|**varchar (?)**|Отображает алгоритм, используемый для ключа.|  
 |key_length|**int**|Отображает длину ключа.|  
 |encryptor_thumbprint|**варбин**|Показывает отпечаток шифратора.|  
-|percent_complete|**Real**|Процент выполнения шифрования базы данных. Значение 0, если изменения состояния не было.|  
+|percent_complete|**real**|Процент выполнения шифрования базы данных. Значение 0, если изменения состояния не было.|  
 |node_id|**int**|Уникальный числовой идентификатор, связанный с узлом.|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В следующем примере объединяются `sys.dm_pdw_nodes_database_encryption_keys` с другими системными таблицами для указания состояния шифрования для каждого узла защищенных баз данных TDE.  
   
 ```  
@@ -63,7 +63,7 @@ ORDER BY D.database_id, PD.pdw_node_ID;
  [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
  [Создание ключа шифрования базы данных &#40;&#41;Transact-SQL](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [&#40;&#41;Transact-SQL в инструкции ALTER DATABASE ENCRYPTION KEY](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
- [Удаление ключа шифрования базы данных &#40;&#41;Transact-SQL](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
+ [DROP DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
   
   
 

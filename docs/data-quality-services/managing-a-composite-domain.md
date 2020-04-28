@@ -10,10 +10,10 @@ ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: bbffbbda18da28be0623c31f4608f5b25f21d2ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75258453"
 ---
 # <a name="managing-a-composite-domain"></a>Управление составным доменом
@@ -26,7 +26,7 @@ ms.locfileid: "75258453"
   
  Возможности составных доменов отличаются от возможностей отдельных доменов. Изменить значения в составном домене невозможно. Изменения необходимо вносить в отдельных доменах. Составные домены позволяют использовать междоменные правила для проверки значений в отдельных доменах, входящих в составной домен. Также вы можете просмотреть комбинации значений, которые находятся в составных доменах.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  Составные домены позволяют выполнять следующие действия.  
   
 |||  

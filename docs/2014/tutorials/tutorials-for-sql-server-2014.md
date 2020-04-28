@@ -11,14 +11,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75242057"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Учебные материалы по SQL Server 2014
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]предоставляет множество новых технологий и функций.  
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] добавлено много новых технологий и возможностей.  
   
  В будущем планируется добавить другие учебники. Тем временем можно продолжить обучение с помощью учебников [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] . В некоторых случаях можно выявить незначительные отличия между пользовательским интерфейсом в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , также возможны небольшие отличия в предварительных требованиях для учебников. Если учебник использует одну из баз данных [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , необходимо загрузить и использовать версию [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
@@ -37,15 +37,15 @@ ms.locfileid: "75242057"
   
 -   Чтобы просмотреть список учебников по [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , перейдите по ссылке [Учебники](https://msdn.microsoft.com/library/ms167593.aspx) в библиотеке MSDN.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  Имеются учебники по следующим технологиям [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] .  
   
-|Технология|Description|  
+|Технология|Описание|  
 |----------------|-----------------|  
-|[Учебники по Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Сведения о разработке и развертывании табличных и многомерных моделей служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Также рассказывается об использовании таких средств, как PowerPivot для анализа данных в моделях.|  
+|[Учебники по службам Analysis Services (SSAS)](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Сведения о разработке и развертывании табличных и многомерных моделей служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Также рассказывается об использовании таких средств, как PowerPivot для анализа данных в моделях.|  
 |[Учебники по службам Reporting Services (SSRS)](../reporting-services/reporting-services-tutorials-ssrs.md)|Научитесь создавать основные отчеты и подписки.|  
-|[Учебники по службам Integration Services](../integration-services/integration-services-tutorials.md)|Узнайте, как создавать и развертывать пакеты [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
+|[Учебники по Integration Services](../integration-services/integration-services-tutorials.md)|Узнайте, как создавать и развертывать пакеты [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Учебники по компоненту ядра СУБД](../relational-databases/database-engine-tutorials.md)|Узнайте, как подключаться к экземпляру ядра СУБД, а затем создавать и выполнять инструкции Transact-SQL.|  
-|[Учебники по репликации](../relational-databases/replication/replication-tutorials.md)|Сведения об установке и запуске топологий репликации с помощью [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|[Руководства по репликации](../relational-databases/replication/replication-tutorials.md)|Сведения об установке и запуске топологий репликации с помощью [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Учебники по информационному менеджменту предприятия](../../2014/tutorials/enterprise-information-management-tutorials.md)|Сведения о том, как осуществляется управление данными на предприятии с использованием технологии Microsoft EIM.|  
   

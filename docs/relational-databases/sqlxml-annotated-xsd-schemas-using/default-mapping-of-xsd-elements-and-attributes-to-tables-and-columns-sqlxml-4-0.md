@@ -28,10 +28,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a1c2ec82a539eb509950580ddea0b8164167bb1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257454"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Сопоставление элементов и атрибутов XSD с таблицами и столбцами по умолчанию (SQLXML 4.0)
@@ -41,7 +41,7 @@ ms.locfileid: "75257454"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-default-mapping"></a>A. Указание сопоставления по умолчанию  
+### <a name="a-specifying-default-mapping"></a>А) Указание сопоставления по умолчанию  
  В этом примере в схеме XSD не задано никаких заметок. Элемент ** \<Person. Contact>** имеет сложный тип и, следовательно, по умолчанию сопоставляется с таблицей Person. Contact в базе данных AdventureWorks. Все атрибуты (ContactID, FirstName, LastName) элемента ** \<Person. Contact>** имеют простой тип и сопоставляются по умолчанию со столбцами с теми же именами в таблице Person. Contact.  
   
 ```  
@@ -92,7 +92,7 @@ ms.locfileid: "75257454"
 </ROOT>  
 ```  
   
-### <a name="b-mapping-an-xml-element-to-a-database-column"></a>Б. Сопоставление XML-элемента со столбцом базы данных  
+### <a name="b-mapping-an-xml-element-to-a-database-column"></a>Б) Сопоставление XML-элемента со столбцом базы данных  
  Так как не использовано ни одной заметки, в этом примере также имеет место сопоставление по умолчанию. Элемент ** \<Person. Contact>** имеет сложный тип и сопоставляется с таблицей с тем же именем в базе данных. Элементы ** \<FirstName>** и ** \<LastName>** и атрибут **EmployeeID** имеют простой тип и, следовательно, сопоставляются со столбцами с одинаковыми именами. Единственная разница между этим и предыдущим примером заключается в том, что для сопоставления полей FirstName и LastName используются элементы.  
   
 ```  

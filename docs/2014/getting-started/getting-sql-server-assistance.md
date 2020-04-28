@@ -42,10 +42,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683605"
 ---
 # <a name="getting-sql-server-assistance"></a>Получение помощи по SQL Server
@@ -59,7 +59,7 @@ ms.locfileid: "74683605"
   
  Если вы не нашли нужную информацию в этих источниках, можно отправить вопросы на форумах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] сообщества и в группы новостей или открыть обращение в службу поддержки с помощью. [!INCLUDE[msCoName](../includes/msconame-md.md)]  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>Электронная документация по[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+## <a name="ssnoversion-books-online"></a>Электронная документация по[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  В электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] описаны основные понятия и действия, необходимые для эффективного использования [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Электронная документация также включает в себя справочные материалы по языкам и интерфейсам программирования, обеспечивающим хранение, извлечение и изменение данных, а также создание отчетов при помощи [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Получить доступ к электронной документации можно следующими способами.  
@@ -86,12 +86,12 @@ ms.locfileid: "74683605"
 ## <a name="additional-online-information"></a>Дополнительные источники сведений в Интернете  
  Дополнительные [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] сведения можно найти на этих [!INCLUDE[msCoName](../includes/msconame-md.md)] веб-сайтах.  
   
-|Ресурс|Description|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Предпродажные сведения об оценке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] как средства для хранения данных и бизнес-аналитики.|  
 |[База знаний Майкрософт](https://go.microsoft.com/fwlink/?LinkId=42461)|Предоставляет доступное для поиска репозиторий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] статей, [!INCLUDE[msCoName](../includes/msconame-md.md)] написанных по поддержке.|    
   
- Продукты [!INCLUDE[msCoName](../includes/msconame-md.md)] имеют сроки поддержки, которые определяют, как долго для каждой версии будет доступна поддержка. Служба поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)] ведет страницу, в которой описываются сроки поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)]. Страница содержит ссылки на другие страницы, в которых указана доступность поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)] продуктов. Дополнительные сведения см. в разделе [жизненный цикл служба поддержки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=98306).  
+ Продукты [!INCLUDE[msCoName](../includes/msconame-md.md)] имеют сроки поддержки, которые определяют, как долго для каждой версии будет доступна поддержка. Служба поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)] ведет страницу, в которой описываются сроки поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)]. Страница содержит ссылки на другие страницы, в которых указана доступность поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)] продуктов. Дополнительные сведения см. в разделе [Жизненный цикл службы поддержки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=98306).  
   
 ## <a name="see-also"></a>См. также:  
  [Использование документации по продукту SQL Server](../2014-toc/index.yml)  
