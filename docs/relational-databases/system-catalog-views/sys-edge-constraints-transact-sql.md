@@ -21,10 +21,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5dc2e47c49dc9d639489426fceab0b848c9def3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079319"
 ---
 # <a name="sysedge_constraints-transact-sql"></a>sys. edge_constraints (Transact-SQL)
@@ -32,21 +32,21 @@ ms.locfileid: "68079319"
 
 Содержит по одной строке для каждого объекта, который является ограничением границы. 
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**\<Столбцы, унаследованные из sys. Objects>**||Список столбцов, наследуемых этим представлением, см. в разделе [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**is_disabled**|**bit**|1 = ограничение границы — отключены.<br /><br /> 0 = ограничение границы включено.|  
 |**is_not_trusted**|**bit**|1 = ограничение границы не было проверено системой.<br /><br /> 0 = ограничение ребра проверено системой.|  
 |**delete_referential_action**|**tinyint**|Ссылочное действие, определенное для этого ограничения границы.<br /><br />0 = нет действий.|  
-|**delete_referential_action_desc**|**nvarchar (60)**|Описание ссылочного действия, определенного для этого ограничения границы.<br /><br />NO_ACTION|  
+|**delete_referential_action_desc**|**nvarchar(60)**|Описание ссылочного действия, определенного для этого ограничения границы.<br /><br />NO_ACTION|  
 |**is_system_named**|**bit**|1 = имя ограничения ребра создано системой.<br /><br />0 = имя ограничения границы предоставлено пользователем.|  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Часто задаваемые вопросы о запросах к системному каталогу сервера SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

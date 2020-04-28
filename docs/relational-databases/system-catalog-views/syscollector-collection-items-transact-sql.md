@@ -19,10 +19,10 @@ ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 78e8211c10d019c3b2a8c2435c5ddde8f8182a14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060413"
 ---
 # <a name="syscollector_collection_items-transact-sql"></a>syscollector_collection_items (Transact-SQL)
@@ -30,12 +30,12 @@ ms.locfileid: "68060413"
 
   Возвращает сведения об элементе из набора элементов сбора.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**collection_set_id**|**int**|Определяет набор элементов сбора. Не допускает значение NULL.|  
 |**collection_item_id**|**int**|Определяет элемент в наборе сбора. Не допускает значение NULL.|  
-|**collector_type_uid**|**UNIQUEIDENTIFIER**|Идентификатор GUID, который использовался для определения типа сборщика. Не допускает значение NULL.|  
-|**name**|**nvarchar (4000)**|Имя набора элементов сбора. Допускает значение NULL.|  
+|**collector_type_uid**|**uniqueidentifier**|Идентификатор GUID, который использовался для определения типа сборщика. Не допускает значение NULL.|  
+|**name**|**nvarchar(4000)**|Имя набора элементов сбора. Допускает значение NULL.|  
 |**импульс**|**int**|Частота сбора данных элементом сбора. Не допускает значение NULL.|  
 |**Вход**|**xml**|Описывает параметризацию типа сборщика, связанную с элементом сбора. XML-схема для этого элемента сбора проверяется с помощью XML-схемы (XSD), хранящейся в **parameter_schema** для конкретного типа сборщика. Допускает значение NULL. Дополнительные сведения см. в разделе [syscollector_collector_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md).|  
   

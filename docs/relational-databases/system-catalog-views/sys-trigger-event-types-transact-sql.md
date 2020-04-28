@@ -20,10 +20,10 @@ ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb845732f3766e715df0e92d751a18b1aa8f2969
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091953"
 ---
 # <a name="systrigger_event_types-transact-sql"></a>sys.trigger_event_types (Transact-SQL)
@@ -31,14 +31,14 @@ ms.locfileid: "68091953"
 
   Возвращает по одной строке на каждое событие или группу событий, по которым срабатывает триггер.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**type**|**int**|Тип события или группы событий, который вызывает срабатывание триггера.|  
 |**type_name**|**nvarchar (64)**|Имя события или группы событий. Это можно указать в предложении FOR инструкции [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) .|  
 |**parent_type**|**int**|Тип группы событий, являющейся родителем для события или группы событий.|  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

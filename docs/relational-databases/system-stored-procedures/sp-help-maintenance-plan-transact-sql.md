@@ -18,10 +18,10 @@ ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42a98fe7af16c4e8aab22d6ace02f359dfe02c54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096205"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
@@ -54,29 +54,29 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ### <a name="plan-table"></a>Таблица Plan  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**plan_id**|**UNIQUEIDENTIFIER**|Идентификатор плана обслуживания.|  
-|**plan_name**|**имеет sysname**|Имя плана обслуживания.|  
+|**plan_id**|**uniqueidentifier**|Идентификатор плана обслуживания.|  
+|**plan_name**|**sysname**|Имя плана обслуживания.|  
 |**date_created**|**datetime**|Дата создания плана обслуживания.|  
-|**владельцев**|**имеет sysname**|Владелец плана обслуживания.|  
+|**владельцев**|**sysname**|Владелец плана обслуживания.|  
 |**max_history_rows**|**int**|Максимальное количество строк, выделенное для журнала плана обслуживания в системной таблице.|  
 |**remote_history_server**|**int**|Имя удаленного сервера, на который может быть записан хронологический отчет.|  
 |**max_remote_history_rows**|**int**|Максимальное количество строк, выделенное в системной таблице на удаленном сервере, куда может быть записан хронологический отчет.|  
 |**user_defined_1**|**int**|Значение по умолчанию — NULL.|  
 |**user_defined_2**|**nvarchar (100)**|Значение по умолчанию — NULL.|  
 |**user_defined_3**|**datetime**|Значение по умолчанию — NULL.|  
-|**user_defined_4**|**UNIQUEIDENTIFIER**|Значение по умолчанию — NULL.|  
+|**user_defined_4**|**uniqueidentifier**|Значение по умолчанию — NULL.|  
   
 ### <a name="database-table"></a>Таблица Database  
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
-|**database_name**|Имя всех баз данных, связанных с планом обслуживания. *database_name* имеет тип **sysname**.|  
+|**database_name**|Имя всех баз данных, связанных с планом обслуживания. Аргумент *database_name* имеет тип **sysname**.|  
   
 ### <a name="job-table"></a>Таблица Job  
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |**job_id**|Идентификатор всех заданий, связанных с планом обслуживания. *job_id* имеет тип **uniqueidentifier**.|  
   

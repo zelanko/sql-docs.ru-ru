@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ff4cd58fcd7d11679cf410c9f379b101d42ce4bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095574"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
@@ -33,17 +33,17 @@ ms.locfileid: "68095574"
 
   Содержит по строке для каждого системного и определяемого пользователем типа данных.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**name**|**имеет sysname**|Имя типа данных. Уникально в пределах схемы.|  
+|**name**|**sysname**|Имя типа данных. Уникально в пределах схемы.|  
 |**system_type_id**|**tinyint**|Идентификатор внутреннего системного типа, соответствующего данному типу данных.|  
 |**user_type_id**|**int**|Идентификатор типа данных. Уникален в пределах базы данных. Для системных типов данных **user_type_id** = **system_type_id**.|  
 |**schema_id**|**int**|Идентификатор схемы, к которой принадлежит тип данных.|  
 |**principal_id**|**int**|Идентификатор отдельного владельца, если он отличается от владельца схемы. По умолчанию содержащиеся в схеме объекты принадлежат владельцу схемы. Однако с помощью инструкции ALTER AUTHORIZATION можно изменить право собственности и указать другого владельца.<br /><br /> Имеет значение NULL, если нет другого владельца.|  
 |**max_length**|**smallint**|Максимальная длина типа (в байтах):<br /><br /> -1 = тип данных столбца — **varchar (max)**, **nvarchar (max)**, **varbinary (max)** или **XML**.<br /><br /> Для **текстовых** столбцов значение **max_length** будет равно 16.|  
 |**precision**|**tinyint**|Максимальная точность значений этого типа данных, если он числовой; иначе — значение 0.|  
-|**Измените**|**tinyint**|Максимальный масштаб значений этого типа данных, если он числовой; иначе — значение 0.|  
-|**collation_name**|**имеет sysname**|Имя параметров сортировки значений этого типа данных, если он символьный; иначе — значение NULL.|  
+|**масштаб**|**tinyint**|Максимальный масштаб значений этого типа данных, если он числовой; иначе — значение 0.|  
+|**collation_name**|**sysname**|Имя параметров сортировки значений этого типа данных, если он символьный; иначе — значение NULL.|  
 |**is_nullable**|**bit**|Тип данных допускает значения NULL.|  
 |**is_user_defined**|**bit**|1 = определяемый пользователем тип.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип системных данных.|  
 |**is_assembly_type**|**bit**|1 = реализация этого типа данных определена в сборке среды CLR.<br /><br /> 0 = тип данных основан на системном типе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -52,10 +52,10 @@ ms.locfileid: "68095574"
 |**is_table_type**|**bit**|Указывает, что тип является табличным.|  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога скалярных типов &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   

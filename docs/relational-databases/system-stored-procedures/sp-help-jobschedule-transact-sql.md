@@ -18,10 +18,10 @@ ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 72e321b74f3e949030a6d599c082acf36db12687
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054914"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
@@ -57,14 +57,14 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 `[ @include_description = ] include_description`Указывает, следует ли включать описание расписания в результирующий набор. *include_description* имеет **бит**и значение по умолчанию **0**. Если *include_description* равен **0**, описание расписания не включается в результирующий набор. Если *include_description* равен **1**, описание расписания включается в результирующий набор.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Идентификационный номер расписания.|  
-|**schedule_name**|**имеет sysname**|Имя расписания.|  
+|**schedule_name**|**sysname**|Имя расписания.|  
 |**доступной**|**int**|Включено ли расписание (**1**) или не включено (**0**).|  
 |**freq_type**|**int**|Значение, указывающее, когда должно выполняться задание.<br /><br /> **1** = один раз<br /><br /> **4** = ежедневно<br /><br /> **8** = еженедельно<br /><br /> **16** = ежемесячно<br /><br /> **32** = ежемесячно относительно **freq_interval**<br /><br /> **64** = запуск при запуске службы **SQLServerAgent** .|  
 |**freq_interval**|**int**|Дни, в которые выполняется задание. Значение зависит от значения **freq_type**. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
@@ -77,10 +77,10 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**active_start_time**|**int**|Время суток, когда начинает действовать расписание.|  
 |**active_end_time**|**int**|Время суток, когда прекращает действовать расписание.|  
 |**date_created**|**datetime**|Дата создания расписания.|  
-|**schedule_description**|**nvarchar (4000)**|Описание расписания на английском языке, полученное из значений в **msdb. dbo. sysschedules**. Если значение *include_description* равно **0**, этот столбец содержит текст, указывающий, что описание не было запрошено.|  
+|**schedule_description**|**nvarchar(4000)**|Описание расписания на английском языке, полученное из значений в **msdb. dbo. sysschedules**. Если значение *include_description* равно **0**, этот столбец содержит текст, указывающий, что описание не было запрошено.|  
 |**next_run_date**|**int**|Дата следующего выполнения задания в соответствии с расписанием.|  
 |**next_run_time**|**int**|Время следующего выполнения задания в соответствии с расписанием.|  
-|**schedule_uid**|**UNIQUEIDENTIFIER**|Идентификатор расписания.|  
+|**schedule_uid**|**uniqueidentifier**|Идентификатор расписания.|  
 |**job_count**|**int**|Возвращенное количество заданий.|  
   
 > **Примечание. sp_help_jobschedule** возвращает значения из системных таблиц **dbo. sysjobschedules** и **dbo. sysschedules** в **базе данных msdb**. **sysjobschedules** обновляются каждые 20 минут. Это может повлиять на значения, возвращаемые этой хранимой процедурой.  
@@ -115,7 +115,7 @@ EXEC dbo.sp_help_jobschedule
 GO  
 ```  
   
-### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>Б. Возвращение расписания задания для конкретного расписания  
+### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>Б) Возвращение расписания задания для конкретного расписания  
  Следующий пример возвращает сведения о расписании с названием `NightlyJobs` и задании с названием `RunReports`.  
   
 ```  
@@ -146,4 +146,4 @@ GO
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -10,10 +10,10 @@ ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3fe4b59a5131838357d7f58e5333e0ba6b9c80f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103235"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Подключение к MySQL (MySQLToSQL)
@@ -44,13 +44,13 @@ ms.locfileid: "68103235"
   
 **Пароль**  
   
-Введите пароль для этого имени пользователя,  
+Введите пароль для имени пользователя.  
   
 **SSL**  
   
 Если вы хотите безопасно подключаться к MySQL, используйте протокол SSL, установив флажок **SSL** .  
   
-**Configure**  
+**Настройка**  
   
 Он предоставляет возможность настроить подключение к MySQL через протокол SSL.  
   

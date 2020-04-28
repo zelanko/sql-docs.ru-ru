@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 819b38bce871bd1a43b3d259d23b2c95fb6dfdd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086215"
 ---
 # <a name="sysdm_pdw_os_event_logs-transact-sql"></a>sys. dm_pdw_os_event_logs (Transact-SQL)
@@ -24,14 +24,14 @@ ms.locfileid: "68086215"
 
   Содержит сведения о различных журналах событий Windows на разных узлах.  
   
-|Имя столбца|Тип данных|Description|Диапазонный индекс|  
+|Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|Узел устройства, из которого находится этот журнал.<br /><br /> pdw_node_id и log_name формируют ключ для этого представления.||  
 |log_name|**nvarchar(255)**|Имя журнала событий Windows.<br /><br /> pdw_node_id и log_name формируют ключ для этого представления.||  
 |log_source|**nvarchar(255)**|Имя источника журнала событий Windows.||  
 |event_id|**int**|Идентификатор события. Не является уникальным.||  
 |event_type|**nvarchar(255)**|Тип события, определяющий серьезность.|"Information", "warning", "Error"|  
-|event_message|**nvarchar (4000)**|Сведения о событии.||  
+|event_message|**nvarchar(4000)**|Сведения о событии.||  
 |generate_time|**datetime**|Время создания события.||  
 |write_time|**datetime**|Время фактической записи события в журнал.||  
   

@@ -10,21 +10,21 @@ ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c0332efca72c216ac6ecbb2f5f397fbf57e8b7cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68059961"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Справочник по пользовательскому интерфейсу (DB2ToSQL)
 В этом разделе содержатся разделы справки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для помощник по миграции (SSMA) для DB2.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
 В следующей таблице приводится список диалоговых окон SSMA.  
   
 |||  
 |-|-|  
-|Раздел|Description|  
+|Раздел|Описание|  
 |[Расширенный выбор объектов &#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|Используйте диалоговое окно **Расширенный выбор объектов** для поиска объектов базы данных с помощью условий фильтра, а затем выберите или отмените выбор этих объектов.|  
 |[Отчет об оценке &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|Используйте отчет «Оценка» для просмотра результатов преобразования объектов DB2 в [!INCLUDE[tsql](../../includes/tsql-md.md)] синтаксис, а также для оценки времени и сложности миграции. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |[Подключение к базе данных DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Используйте диалоговое окно **Подключение к DB2** для подключения к базе данных DB2, которую требуется перенести.|  

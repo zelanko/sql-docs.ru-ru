@@ -18,10 +18,10 @@ ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f5a68160c8aee1bcb399513051e1f4cc35cea970
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085216"
 ---
 # <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
@@ -57,11 +57,11 @@ sp_help_schedule
 ## <a name="result-sets"></a>Результирующие наборы  
  Данная процедура возвращает следующий результирующий набор:  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Идентификационный номер расписания.|  
-|**schedule_uid**|**UNIQUEIDENTIFIER**|Идентификатор расписания.|  
-|**schedule_name**|**имеет sysname**|Имя расписания.|  
+|**schedule_uid**|**uniqueidentifier**|Идентификатор расписания.|  
+|**schedule_name**|**sysname**|Имя расписания.|  
 |**доступной**|**int**|Включено ли расписание (**1**) или не включено (**0**).|  
 |**freq_type**|**int**|Значение, указывающее, когда должно выполняться задание.<br /><br /> **1** = один раз<br /><br /> **4** = ежедневно<br /><br /> **8** = еженедельно<br /><br /> **16** = ежемесячно<br /><br /> **32** = ежемесячно относительно **freq_interval**<br /><br /> **64** = запуск при запуске службы SQLServerAgent.|  
 |**freq_interval**|**int**|Дни, в которые выполняется задание. Значение зависит от значения **freq_type**. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
@@ -74,14 +74,14 @@ sp_help_schedule
 |**active_start_time**|**int**|Время суток, когда начинает действовать расписание.|  
 |**active_end_time**|**int**|Время суток, когда прекращает действовать расписание.|  
 |**date_created**|**datetime**|Дата создания расписания.|  
-|**schedule_description**|**nvarchar (4000)**|Описание расписания на английском языке (если запрошено).|  
+|**schedule_description**|**nvarchar(4000)**|Описание расписания на английском языке (если запрошено).|  
 |**job_count**|**int**|Число заданий, ссылающихся на данное расписание.|  
   
 ## <a name="remarks"></a>Remarks  
  Если параметры не указаны, **sp_help_schedule** выводит сведения обо всех расписаниях в экземпляре.  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -106,7 +106,7 @@ EXEC dbo.sp_help_schedule ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-schedule"></a>Б. Вывод сведений о конкретном расписании  
+### <a name="b-listing-information-for-a-specific-schedule"></a>Б) Вывод сведений о конкретном расписании  
  Следующий пример выводит информацию о расписании `NightlyJobs`.  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1eb9a4d1a19f54f9e57e988b350594ce6031b243
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085077"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
@@ -48,15 +48,15 @@ sp_help_targetserver
 ## <a name="result-sets"></a>Результирующие наборы  
  Если *server_name* не указан, **sp_help_targetserver** возвращает этот результирующий набор.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Идентификационный номер сервера.|  
-|**server_name**|**nvarchar (30)**|Имя сервера.|  
-|**места**|**nvarchar(200)**|Расположение указанного сервера.|  
+|**server_name**|**nvarchar(30)**|Имя сервера.|  
+|**расположение**|**nvarchar(200)**|Расположение указанного сервера.|  
 |**time_zone_adjustment**|**int**|Настройка временной зоны в часах, от среднего времени по Гринвичу.|  
 |**enlist_date**|**datetime**|Дата прикрепления указанного сервера.|  
 |**last_poll_date**|**datetime**|Дата последнего опроса сервером заданий.|  
-|**состояние**|**int**|Состояние указанного сервера.|  
+|**status**|**int**|Состояние указанного сервера.|  
 |**unread_instructions**|**int**|Наличие на сервере непрочитанных инструкций. Если все строки скачаны, этот столбец имеет значение **0**.|  
 |**local_time**|**datetime**|Локальная дата и время на целевом сервере, которые основаны на локальном времени целевого сервера после последнего опроса главного сервера.|  
 |**enlisted_by_nt_user**|**nvarchar (100)**|Пользователь Microsoft Windows, который прикрепил целевой сервер.|  
@@ -78,7 +78,7 @@ EXEC dbo.sp_help_targetserver ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-target-server"></a>Б. Вывод сведений об указанном целевом сервере  
+### <a name="b-listing-information-for-a-specific-target-server"></a>Б) Вывод сведений об указанном целевом сервере  
  Следующий пример выводит сведения о целевом сервере `SEATTLE2`.  
   
 ```  
@@ -95,6 +95,6 @@ GO
  [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
  [sp_update_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
  [dbo. sysdownloadlist &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

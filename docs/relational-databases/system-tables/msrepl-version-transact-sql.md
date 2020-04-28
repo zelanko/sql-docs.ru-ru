@@ -18,10 +18,10 @@ ms.assetid: c1330f03-940b-4564-ac42-6030c6e21173
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 45dad1cfaa6057cd50ee4c01b484df8250121a46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079152"
 ---
 # <a name="msrepl_version-transact-sql"></a>MSrepl_version (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68079152"
 
   Таблица **MSrepl_version** содержит одну строку с текущей версией установленной репликации. Эта таблица хранится в базе данных распространителя.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**major_version**|**int**|Номер основной версии базы данных распространителя.|  
 |**minor_version**|**int**|Номер вспомогательной версии базы данных распространителя.|  
@@ -38,6 +38,6 @@ ms.locfileid: "68079152"
   
 ## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

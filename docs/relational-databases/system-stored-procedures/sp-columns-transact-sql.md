@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070354"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
@@ -63,27 +63,27 @@ sp_columns [ @table_name = ] object
 ## <a name="result-sets"></a>Результирующие наборы  
  Хранимая процедура каталога **sp_columns** эквивалентна **SQLColumns** в ODBC. Возвращаемые результаты упорядочиваются по **TABLE_QUALIFIER**, **table_owner**и **table_name**.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**TABLE_QUALIFIER**|**имеет sysname**|Имя квалификатора объекта. Это поле может иметь значение NULL.|  
-|**TABLE_OWNER**|**имеет sysname**|Имя владельца объекта. Это поле всегда возвращает значение.|  
-|**TABLE_NAME**|**имеет sysname**|Имя объекта. Это поле всегда возвращает значение.|  
-|**COLUMN_NAME**|**имеет sysname**|Имя столбца для каждого столбца возвращаемого **table_name** . Это поле всегда возвращает значение.|  
+|**TABLE_QUALIFIER**|**sysname**|Имя квалификатора объекта. Это поле может иметь значение NULL.|  
+|**TABLE_OWNER**|**sysname**|Имя владельца объекта. Это поле всегда возвращает значение.|  
+|**TABLE_NAME**|**sysname**|Имя объекта. Это поле всегда возвращает значение.|  
+|**COLUMN_NAME**|**sysname**|Имя столбца для каждого столбца возвращаемого **table_name** . Это поле всегда возвращает значение.|  
 |**DATA_TYPE**|**smallint**|Целочисленный код типа данных ODBC. Если этот тип данных не может быть сопоставлен с типом данных ODBC, возвращается значение NULL. Имя собственного типа данных возвращается в столбец **TYPE_NAME** .|  
-|**TYPE_NAME**|**имеет sysname**|Тип данных в символьном представлении. Название типа предоставляется базовой СУБД.|  
+|**TYPE_NAME**|**sysname**|Тип данных в символьном представлении. Название типа предоставляется базовой СУБД.|  
 |**ОБЕСПЕЧИВАЮТ**|**int**|Количество значащих цифр. Возвращаемое значение для столбца **точности** находится в базовом 10.|  
-|**НЕДОПУСТИМ**|**int**|Размер передаваемых данных. <sup>1</sup>|  
+|**LENGTH**|**int**|Размер передаваемых данных. <sup>1</sup>|  
 |**Измените**|**smallint**|Число цифр справа от десятичной запятой.|  
 |**RADIX**|**smallint**|Основание системы счисления числовых типов данных.|  
 |**ОБНУЛЯЕМОГО**|**smallint**|Указывает возможность содержать значение NULL.<br /><br /> 1 = значение NULL допустимо.<br /><br /> 0 = значение NULL недопустимо.|  
-|**Примечания**|**varchar (254)**|Это поле всегда возвращает значение NULL.|  
-|**COLUMN_DEF**|**nvarchar (4000)**|Значение столбца по умолчанию.|  
+|**ЗАМЕЧАНИЯ**|**varchar (254)**|Это поле всегда возвращает значение NULL.|  
+|**COLUMN_DEF**|**nvarchar(4000)**|Значение столбца по умолчанию.|  
 |**SQL_DATA_TYPE**|**smallint**|Значение типа данных SQL в том же виде, что и в поле TYPE дескриптора. Этот столбец аналогичен столбцу **data_type** , за исключением типов данных **DateTime** и SQL-92 **Interval** . Этот столбец всегда возвращает значение.|  
 |**SQL_DATETIME_SUB**|**smallint**|Код подтипа для типов данных **DateTime** и SQL-92 **Interval** . Для других типов данных этот столбец возвращает значение NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Максимальная длина столбца символьного или целочисленного типа в байтах. Для всех других типов данных этот столбец возвращает значение NULL.|  
 |**ORDINAL_POSITION**|**int**|Порядковый номер столбца в объекте. Первый столбец в объекте имеет порядковый номер 1. Этот столбец всегда возвращает значение.|  
 |**IS_NULLABLE**|**varchar (254)**|Допустимость значений NULL для столбца объекта. Допустимость значений NULL определяется в соответствии с правилами ISO. СУБД, совместимая с ISO SQL, не может вернуть пустую строку.<br /><br /> YES = Столбец может содержать значение NULL.<br /><br /> NO = Столбец не может содержать значения NULL.<br /><br /> Если допустимость значения NULL неизвестна, то этот столбец возвращает строку нулевой длины.<br /><br /> Значение, возвращаемое для этого столбца, отличается от значения, возвращаемого для столбца, **допускающего значение NULL** .|  
-|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]тип данных, используемый расширенными хранимыми процедурами. Дополнительные сведения см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).|  
+|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных используется для расширенных хранимых процедур. Дополнительные сведения см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).|  
   
  <sup>1</sup> дополнительные сведения см. в документации по Microsoft ODBC.  
   
@@ -103,7 +103,7 @@ EXEC sp_columns @table_name = N'Department',
    @table_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Следующий пример возвращает данные столбца для указанной таблицы.  
   
 ```  
@@ -116,7 +116,7 @@ EXEC sp_columns @table_name = N'DimEmployee',
 ## <a name="see-also"></a>См. также:  
  [sp_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
  [Хранимые процедуры каталога &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
 

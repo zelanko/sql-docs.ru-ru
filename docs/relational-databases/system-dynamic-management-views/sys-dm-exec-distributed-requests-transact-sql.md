@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37fd17f17d8b6aa1a30f48d75258d27f4a45561a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097797"
 ---
 # <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys. dm_exec_distributed_requests (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68097797"
   
  В зависимости от идентификатора сеанса и запроса пользователь может получить фактически распределенные запросы, созданные для выполнения, с помощью sys. dm_exec_distributed_requests. Например, запрос, включающий обычные SQL и внешние таблицы SQL, будет разноситься в различные инструкции и запросы, выполняемые на различных узлах вычислений. Для трассировки распределенных шагов на всех вычислительных узлах мы представляем глобальный идентификатор выполнения, который можно использовать для трассировки всех операций на вычислительных узлах, связанных с одним конкретным запросом и оператором соответственно.  
   
-|Имя столбца|Тип данных|Description|Диапазонный индекс|  
+|Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |sql_handle|**varbinary (64)**|Ключ для этого представления. Уникальный числовой идентификатор, связанный с запросом.|Уникальный для всех запросов в системе.|  
 |execution_id|**nvarchar (32**|Уникальный числовой идентификатор, связанный с сеансом, в котором выполнялся этот запрос.||  
@@ -48,7 +48,7 @@ ms.locfileid: "68097797"
   
 ## <a name="see-also"></a>См. также:  
  [Устранение неполадок в Polybase с помощью динамических административных представлений](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

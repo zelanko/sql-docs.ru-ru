@@ -12,10 +12,10 @@ ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e9b99934a3d931810e29d821ba0124334bac2c12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061898"
 ---
 # <a name="server-related-dynamic-management-views-and-functions-transact-sql"></a>Динамические административные представления и функции, связанные с сервером (Transact-SQL)
@@ -23,7 +23,7 @@ ms.locfileid: "68061898"
 
   Этот раздел содержит динамические административные представления, связанные со службами SQL Server, полнотекстового поиска и агента SQL Server, установленными на данном компьютере. Эти представления могут использоваться для получения информации о свойствах этих служб. Эти представления также содержат сведения о конфигурации, установке и файле дампа памяти.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 |||  
 |-|-|  

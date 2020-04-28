@@ -21,10 +21,10 @@ ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053337"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68053337"
 > [!IMPORTANT]  
 >  Данная функция изменилась по сравнению с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. [в разделе критические изменения функций ядро СУБД в SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**nchar (32)**|Текстовое описание ресурса блокировки. Содержит часть имени ресурса.|  
 |**rsc_bin**|**двоичный (16)**|Ресурс двоичной блокировки. Содержит реальный ресурс блокировки, который хранится в диспетчере блокировок. Этот столбец включен для средств, которые имеют представление о формате ресурсов блокировки для создания собственного отформатированного ресурса блокировки и для выполнения самосоединений в **syslockinfo**.|  
@@ -57,13 +57,13 @@ ms.locfileid: "68053337"
 |**req_ecid**|**int**|Идентификатор контекста выполнения (ECID). Используется для указания того, какой поток в параллельной операции владеет конкретной блокировкой.|  
 |**req_ownertype**|**smallint**|Тип объекта, ассоциированного с блокировкой:<br /><br /> 1 = Транзакция;<br /><br /> 2 = Курсор;<br /><br /> 3 = Сеанс;<br /><br /> 4 = Экс-сеанс.<br /><br /> Обратите внимание, что 3 и 4 представляют собой особые варианты блокировки сеанса, соответственно блокировки трассировки базы данных и файловых групп.|  
 |**req_transactionID**|**bigint**|Уникальный идентификатор транзакции, используемый в **syslockinfo** и в событии профилировщика|  
-|**req_transactionUOW**|**UNIQUEIDENTIFIER**|Определяет идентификатор единицы работы (UOW) транзакции DTC. Для транзакций, отличных от MS DTC, UOW равен 0.|  
+|**req_transactionUOW**|**uniqueidentifier**|Определяет идентификатор единицы работы (UOW) транзакции DTC. Для транзакций, отличных от MS DTC, UOW равен 0.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
 ## <a name="see-also"></a>См. также:  
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Представления совместимости &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

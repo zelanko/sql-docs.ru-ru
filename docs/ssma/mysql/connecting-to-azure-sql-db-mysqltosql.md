@@ -13,10 +13,10 @@ ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7fb6740681c08cb915755b3362352f139e078c4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103192"
 ---
 # <a name="connecting-to-azure-sql-db-mysqltosql"></a>Подключение к базе данных SQL Azure (MySQLToSQL)
@@ -75,7 +75,7 @@ ms.locfileid: "68103192"
   
 3.  Щелкните правой кнопкой мыши базы данных или отдельную базу данных или схему базы данных, а затем выберите **синхронизировать с базой данных**.  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
 Следующий шаг миграции зависит от потребностей проекта:  
   
 -   Сведения о настройке сопоставления между схемами MySQL и SQL Azure базами данных и схемами см. в разделе [Сопоставление баз данных MySQL с SQL Server схемами &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  

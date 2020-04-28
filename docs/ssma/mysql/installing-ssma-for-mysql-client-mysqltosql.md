@@ -12,10 +12,10 @@ ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 9dcdeaff1c4782453a9fd57cc709e17ad3200d28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086818"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>Установка клиента SSMA для MySQL (MySQLToSQL)
@@ -69,7 +69,7 @@ SSMA можно загрузить из Интернета. Чтобы скач�
   
 4.  На странице Выбор типа установки выберите вариант **Обычная**.  
   
-5.  Нажмите кнопку **Установить**.  
+5.  Щелкните **Install**(Установить).  
   
 > [!IMPORTANT]  
 > 1.  Удалите все предыдущие версии SSMA для MySQL перед установкой новой версии.  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1e6244443fc1f6ba7d83376226fedd56563e0d39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68048220"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
@@ -45,28 +45,28 @@ sp_helptrigger [ @tabname = ] 'table'
   
 `[ @triggertype = ] 'type'`Тип триггера DML, о котором возвращаются сведения. *Type имеет тип* **char (6)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|**DELETE**|Возвращает сведения о триггере DELETE.|  
-|**INSERT**|Возвращает сведения о триггере INSERT.|  
-|**UPDATE**|Возвращает сведения о триггере UPDATE.|  
+|**УДАЛЕН**|Возвращает сведения о триггере DELETE.|  
+|**ВСТАВЛЯЕТ**|Возвращает сведения о триггере INSERT.|  
+|**ОБНОВЛЯЮТ**|Возвращает сведения о триггере UPDATE.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Следующая таблица показывает данные в результирующем наборе.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**trigger_name**|**имеет sysname**|Имя триггера.|  
-|**trigger_owner**|**имеет sysname**|Имя владельца таблицы, для которой определен триггер.|  
+|**trigger_name**|**sysname**|Имя триггера.|  
+|**trigger_owner**|**sysname**|Имя владельца таблицы, для которой определен триггер.|  
 |**Обновление**|**int**|1=триггер UPDATE<br /><br /> 0=не триггер UPDATE|  
 |**удалить**|**int**|1=триггер DELETE<br /><br /> 0=не триггер DELETE|  
 |**isinsert**|**int**|1=триггер INSERT<br /><br /> 0=не триггер INSERT|  
 |**isafter**|**int**|1=триггер AFTER<br /><br /> 0=не триггер AFTER|  
 |**isinsteadof**|**int**|1=триггер INSTEAD OF<br /><br /> 0=не триггер INSTEAD OF|  
-|**trigger_schema**|**имеет sysname**|Имя схемы, к которой принадлежит триггер.|  
+|**trigger_schema**|**sysname**|Имя схемы, к которой принадлежит триггер.|  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение на [настройку видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md) для таблицы.  
@@ -84,7 +84,7 @@ EXEC sp_helptrigger 'Person.Person';
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
- [УДАЛИТЬ триггер &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [DROP TRIGGER (Transact-SQL)](../../t-sql/statements/drop-trigger-transact-sql.md)   
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

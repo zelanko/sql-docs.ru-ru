@@ -18,10 +18,10 @@ ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 213cc6ea9be57590d52755fdbba3151882ac0a38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055168"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
@@ -43,19 +43,19 @@ sp_help_fulltext_catalog_components
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**имя полнотекстового каталога**|**int**|Имя полнотекстового каталога.|  
-|**Идентификатор полнотекстового каталога**|**имеет sysname**|Идентификатор полнотекстового каталога.|  
-|**componenttype**|**имеет sysname**|Тип компонента. Это может быть:<br /><br /> Filter<br /><br /> Обработчик протокола<br /><br /> Средство разбиения по словам|  
-|**ComponentName**|**имеет sysname**|Имя компонента.|  
-|**clsid**|**UNIQUEIDENTIFIER**|Идентификатор класса компонента.|  
+|**Идентификатор полнотекстового каталога**|**sysname**|Идентификатор полнотекстового каталога.|  
+|**componenttype**|**sysname**|Тип компонента. Это может быть:<br /><br /> Filter<br /><br /> Обработчик протокола<br /><br /> Средство разбиения по словам|  
+|**componentname**|**sysname**|Имя компонента.|  
+|**этому**|**uniqueidentifier**|Идентификатор класса компонента.|  
 |**FullPath**|**nvarchar(256)**|Путь к расположению компонента.<br /><br /> NULL = вызывающая сторона не является членом предопределенной роли сервера **serveradmin** .|  
-|**Версия**|**nvarchar (30)**|Версия компонента.|  
-|**manufacturer**|**имеет sysname**|Имя производителя компонента.|  
+|**version**|**nvarchar(30)**|Версия компонента.|  
+|**manufacturer**|**sysname**|Имя производителя компонента.|  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в роли **Public** .  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="see-also"></a>См. также:  
  [Хранимые процедуры полнотекстового поиска и семантического поиска &#40;языке Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   

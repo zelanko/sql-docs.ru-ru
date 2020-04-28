@@ -17,10 +17,10 @@ ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066662"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Параметры проекта (сопоставление типов) (Акцесстоскл)
@@ -44,19 +44,19 @@ ms.locfileid: "68066662"
 |Тип данных Access|Тип данных SQL Server|  
 |--------------------|------------------------|  
 |**двоичный\*файл [.. \*]**|**varbinary [\*]**|  
-|**Логическое**|**bit**|  
-|**двухбайтовых**|**tinyint**|  
+|**boolean**|**bit**|  
+|**byte**|**tinyint**|  
 |**режиме**|**money**|  
 |**date**|**datetime**|  
-|**Decimal**|**float**|  
+|**decimal**|**float**|  
 |**double**|**float**|  
-|**guid**|**UNIQUEIDENTIFIER**|  
+|**устройства**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
-|**поддерживаем**|**int**|  
+|**long**|**int**|  
 |**лонгбинари**|**varbinary(max)**|  
 |**memo**|**nvarchar(max)**|  
 |**МЕМО** — для Access 97|**varchar(max)**|  
-|**один**|**Real**|  
+|**single**|**real**|  
 |**Text [\*.. \*]**|**nvarchar [\*]**|  
 |**Text [\*.. ] \*** — для Access 97|**varchar [\*]**|  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68066662"
 **Удалить**  
 Нажмите, чтобы удалить выбранное сопоставление типа данных из списка сопоставления.  
   
-**Восстановить значения по умолчанию**  
+**По умолчанию**  
 Нажмите, чтобы сбросить все сопоставления типов данных на значения SSMA по умолчанию.  
   
 ## <a name="see-also"></a>См. также:  

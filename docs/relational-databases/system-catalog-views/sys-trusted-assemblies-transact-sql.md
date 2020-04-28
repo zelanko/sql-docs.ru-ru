@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9682535c82f8a579259993e82560dfe6bc930f93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061366"
 ---
 # <a name="systrusted_assemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
@@ -33,12 +33,12 @@ ms.locfileid: "68061366"
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 
-|Имя столбца |Тип данных |Description |
+|Имя столбца |Тип данных |Описание |
 |--- |--- |--- |
 |hash |varbinary(8000) |SHA2_512 хэш содержимого сборки. |
 |description |nvarchar(4000) |Необязательное описание сборки, определяемое пользователем. Корпорация Майкрософт рекомендует использовать каноническое имя, которое кодирует простое имя, номер версии, язык и региональные параметры, Открытый ключ и архитектуру сборки для отношения доверия. Это значение однозначно определяет сборку на стороне среды CLR и совпадает со значением clr_name в sys. assemblies. |
 |create_date |datetime2 |Дата добавления сборки в список доверенных сборок. |
-|created_by |nvarchar(128) |Имя входа участника, который добавил сборку в список. |
+|created_by |NVARCHAR(128) |Имя входа участника, который добавил сборку в список. |
 | | | |
 
 

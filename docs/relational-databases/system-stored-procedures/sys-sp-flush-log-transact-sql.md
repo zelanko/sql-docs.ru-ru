@@ -20,10 +20,10 @@ ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 61c4cceab6c816d63226216a54d4f647e92e592d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066678"
 ---
 # <a name="syssp_flush_log-transact-sql"></a>sys.sp_flush_log (Transact-SQL)
@@ -46,15 +46,15 @@ sys.sp_flush_log
 ```  
   
 #### <a name="parameters"></a>Параметры  
- Нет.  
+ Отсутствует.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  Код возврата 1 означает успешное завершение.  Все другие значения означают неуспешное завершение.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет.  
+ Отсутствует.  
   
-## <a name="sample-code"></a>Пример кода  
+## <a name="sample-code"></a>Образец кода  
   
 ```sql  
 .  

@@ -18,10 +18,10 @@ ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096024"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
@@ -53,18 +53,17 @@ sp_trace_generateevent [ @eventid = ] event_id
 ## <a name="return-code-values"></a>Значения кода возврата  
  В следующей таблице описаны значения кодов, которые могут быть возвращены пользователю при завершении хранимой процедуры.  
   
-|Код возврата|Description|  
+|Код возврата|Описание|  
 |-----------------|-----------------|  
 |**0**|Нет ошибки.|  
-|**1**|Произошла неизвестная ошибка.|  
-|**3-5**|Указанное событие недопустимо. Возможно, событие не существует или не соответствует ни одной хранимой процедуре.|  
-|**решением**|недостаточно памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
+|**1**|Неизвестная ошибка.|  
+|**3**|Указанное событие недопустимо. Возможно, событие не существует или не соответствует ни одной хранимой процедуре.|  
+|**13**|Нехватка памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
   
 ## <a name="remarks"></a>Remarks  
  **sp_trace_generateevent** выполняет многие действия, ранее выполненные **xp_trace_\* ** расширенными хранимыми процедурами. Вместо **xp_trace_generate_event**используйте **sp_trace_generateevent** .  
   
- С **sp_trace_generateevent**можно использовать только идентификационные номера пользовательских событий. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] активирует ошибку при использовании идентификационных номеров других событий.  
+ С **sp_trace_generateevent**можно использовать только идентификационные номера пользовательских событий. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] активирует ошибку при использовании идентификационных номеров других событий.  
   
  Параметры всех хранимых процедур трассировки SQL (**sp_trace_xx**) строго типизированы. Если эти аргументы указываются с неправильными типами данных входных параметров, как указано в описании их аргументов, хранимая процедура возвратит ошибку.  
   
@@ -95,7 +94,7 @@ you were capturing the event id=82, you will see it in the Profiler output.
 INSERT INTO user_config_test VALUES(1, 'abc');  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Трассировка SQL](../../relational-databases/sql-trace/sql-trace.md)  

@@ -18,10 +18,10 @@ ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 63a3d9daa48bb98408c3f0d9b8282e8083849cf0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085076"
 ---
 # <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
@@ -47,10 +47,10 @@ sp_help_targetservergroup
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**servergroup_id**|**int**|Идентификационный номер серверной группы|  
-|**name**|**имеет sysname**|Имя группы серверов.|  
+|**name**|**sysname**|Имя группы серверов.|  
   
 ## <a name="permissions"></a>Разрешения  
  Разрешения на выполнение этой процедуры по умолчанию зафиксированы для предопределенной роли сервера **sysadmin** .  
@@ -68,7 +68,7 @@ EXEC dbo.sp_help_targetservergroup ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-target-server-group"></a>Б. Вывод сведений об определенной группе целевых серверов  
+### <a name="b-listing-information-for-a-specific-target-server-group"></a>Б) Вывод сведений об определенной группе целевых серверов  
  В этом примере выводятся сведения о целевой серверной группе `Servers Maintaining Customer Information`.  
   
 ```  
@@ -84,6 +84,6 @@ GO
  [sp_add_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
  [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
  [sp_update_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

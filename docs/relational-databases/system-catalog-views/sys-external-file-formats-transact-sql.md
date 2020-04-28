@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eae119fe16b916f47f1acdcd2ebe15efd96e51e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68048387"
 ---
 # <a name="sysexternal_file_formats-transact-sql"></a>sys. external_file_formats (Transact-SQL)
@@ -27,10 +27,10 @@ ms.locfileid: "68048387"
   
  Содержит по одной строке для каждого формата внешнего файла на сервере для [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-|Имя столбца|Тип данных|Description|Диапазонный индекс|  
+|Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |file_format_id|**int**|Идентификатор объекта для формата внешнего файла.||  
-|name|**имеет sysname**|Имя формата файла. в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]это уникальное значение для базы данных. В [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]это уникальное значение для сервера.||  
+|name|**sysname**|Имя формата файла. в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]это уникальное значение для базы данных. В [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]это уникальное значение для сервера.||  
 |format_type|**tinyint**|Тип формата файла.|DELIMITEDTEXT, RCFILE, ORC, PARQUET|  
 |field_terminator|**nvarchar (10)**|Для format_type = DELIMITEDTEXT это признак конца поля.||  
 |string_delimiter|**nvarchar (10)**|Для format_type = DELIMITEDTEXT это разделитель строк.||  
@@ -38,15 +38,15 @@ ms.locfileid: "68048387"
 |use_type_default|**bit**|Для format_type = текст с РАЗДЕЛИТЕЛями указывает, как следует выполнять обработку отсутствующих значений, когда Polybase импортирует данные из текстовых файлов [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]HDFS в.|0 — сохранить отсутствующие значения как строку "NULL".<br /><br /> 1. Сохранение отсутствующих значений в качестве значения по умолчанию для столбца.|  
 |serde_method|**nvarchar(255)**|Для format_type = RCFILE это метод сериализации и десериализации.||  
 |row_terminator|**nvarchar (10)**|Для format_type = DELIMITEDTEXT это символьная строка, которая завершает каждую строку во внешнем файле Hadoop.|Всегда равно "\n".|  
-|кодировка|**nvarchar (10)**|Для format_type = DELIMITEDTEXT это метод кодирования для внешнего файла Hadoop.|Всегда имеет кодировку "UTF8".|  
+|encoding|**nvarchar (10)**|Для format_type = DELIMITEDTEXT это метод кодирования для внешнего файла Hadoop.|Всегда имеет кодировку "UTF8".|  
 |data_compression|**nvarchar(255)**|Метод сжатия данных для внешних данных.|Для format_type = DELIMITEDTEXT:<br /><br /> -"org. Apache. Hadoop. IO. сжимать. Дефаулткодек"<br />-"org. Apache. Hadoop. IO. сжимать. Гзипкодек"<br /><br /> Для format_type = RCFILE:<br /><br /> -"org. Apache. Hadoop. IO. сжимать. Дефаулткодек"<br /><br /> Для format_type = ORC:<br /><br /> -"org. Apache. Hadoop. IO. сжимать. Дефаулткодек"<br />-"org. Apache. Hadoop. IO. сжимать. SnappyCodec"<br /><br /> Для format_type = PARQUET:<br /><br /> -"org. Apache. Hadoop. IO. сжимать. Гзипкодек"<br />-"org. Apache. Hadoop. IO. сжимать. SnappyCodec"|  
   
 ## <a name="permissions"></a>Разрешения  
- Видимость метаданных в представлениях каталогов ограничивается защищаемыми объектами, которыми пользователь владеет или на которые ему были предоставлены разрешения. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Видимость метаданных в представлениях каталогов ограничивается защищаемыми объектами, которыми пользователь владеет или на которые ему были предоставлены разрешения.  Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также:  
  [sys. external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
  [sys. external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)   
- [Создание формата внешнего файла &#40;&#41;Transact-SQL](../../t-sql/statements/create-external-file-format-transact-sql.md)  
+ [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)  
   
   

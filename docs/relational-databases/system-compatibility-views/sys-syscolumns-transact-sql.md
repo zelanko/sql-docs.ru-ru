@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c158533188db7e3d72235a69bff1b14546a1a1a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68089240"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
@@ -36,10 +36,10 @@ ms.locfileid: "68089240"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**name**|**имеет sysname**|Имя столбца или параметра процедуры.|  
-|**удостоверения**|**int**|Идентификатор объекта таблицы, которому принадлежит столбец, или идентификатор хранимой процедуры, с которой связан данный параметр.|  
+|**name**|**sysname**|Имя столбца или параметра процедуры.|  
+|**идентификатор**|**int**|Идентификатор объекта таблицы, которому принадлежит столбец, или идентификатор хранимой процедуры, с которой связан данный параметр.|  
 |**xtype**|**tinyint**|Тип физического хранилища из **sys. types**.|  
 |**typestat**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|Идентификатор расширенного пользовательского типа. Вызывает переполнение или возвращает значение NULL, если количество типов данных превышает 32 767.|  
@@ -47,30 +47,30 @@ ms.locfileid: "68089240"
 |**xprec**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**идентификатора столбца**|**smallint**|Идентификатор столбца или параметра.|  
-|**ксоффсет**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**xoffset**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**bitpos**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**процессу**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|Идентификатор значения по умолчанию для данного столбца.|  
-|**поддомен**|**int**|Идентификатор правила или ограничения CHECK для данного столбца.|  
+|**домен**|**int**|Идентификатор правила или ограничения CHECK для данного столбца.|  
 |**number**|**smallint**|Номер подпроцедуры, если процедура сгруппирована:<br /><br /> 0 = Непроцедурные элементы.|  
 |**colorder**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**autoval**|**varbinary (8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**собой**|**smallint**|Смещение в строке, по которому находится данный столбец.|  
 |**коллатионид**|**int**|Идентификатор параметров сортировки для столбца. Для несимвольных столбцов содержит значение NULL.|  
-|**состояние**|**tinyint**|Битовая карта, описывающая свойства столбца или параметра:<br /><br /> 0x08 = В столбце допускаются значения NULL;<br /><br /> 0x10 = заполнение ANSI было применено при добавлении столбцов **varchar** или **varbinary** . Замыкающие пробелы сохраняются для **varchar** , а замыкающие нули сохраняются для столбцов типа **varbinary** .<br /><br /> 0x40 = Параметр OUTPUT;<br /><br /> 0x80 = Столбец является столбцом идентификаторов.|  
+|**status**|**tinyint**|Битовая карта, описывающая свойства столбца или параметра:<br /><br /> 0x08 = В столбце допускаются значения NULL;<br /><br /> 0x10 = заполнение ANSI было применено при добавлении столбцов **varchar** или **varbinary** . Замыкающие пробелы сохраняются для **varchar** , а замыкающие нули сохраняются для столбцов типа **varbinary** .<br /><br /> 0x40 = Параметр OUTPUT;<br /><br /> 0x80 = Столбец является столбцом идентификаторов.|  
 |**type**|**tinyint**|Тип физического хранилища из **sys**. **типы**.|  
 |**usertype**|**smallint**|Идентификатор определяемого пользователем типа данных из **sys. types**. Вызывает переполнение или возвращает значение NULL, если количество типов данных превышает 32 767.|  
 |**printfmt**|**varchar (255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**прек**|**smallint**|Уровень точности для данного столбца:<br /><br /> -1 = **XML** или тип больших значений.|  
-|**Измените**|**int**|Масштаб для данного столбца.<br /><br /> NULL = данные не числовые.|  
+|**масштаб**|**int**|Масштаб для данного столбца.<br /><br /> NULL = данные не числовые.|  
 |**вычислено**|**int**|Флаг, обозначающий, является ли столбец вычисляемым:<br /><br /> 0 = невычисляемый;<br /><br /> 1 = вычисляемый.|  
 |**исаутпарам**|**int**|Указывает, относится ли параметр процедуры к выходным параметрам:<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |**IsNullable**|**int**|Указывает, допускает ли столбец значения NULL:<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|**параметры сортировки**|**имеет sysname**|Имя параметров сортировки для данного столбца. Содержит NULL, если столбец не относится к символьному типу.|  
+|**параметры сортировки**|**sysname**|Имя параметров сортировки для данного столбца. Содержит NULL, если столбец не относится к символьному типу.|  
   
 ## <a name="see-also"></a>См. также:  
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Представления совместимости &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

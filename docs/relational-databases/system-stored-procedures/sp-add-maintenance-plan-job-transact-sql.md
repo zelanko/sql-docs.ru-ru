@@ -18,10 +18,10 @@ ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ba27f90c8d2fc4c7e174333080815d56f90e48c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091922"
 ---
 # <a name="sp_add_maintenance_plan_job-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
@@ -49,7 +49,7 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 `[ @job_id = ] 'job_id'`Указывает идентификатор задания, связанного с планом обслуживания. *job_id* имеет тип **uniqueidentifier**и должен быть допустимым идентификатором. Чтобы создать задание или задания, выполните **sp_add_job**или используйте SQL Server Management Studio.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  **sp_add_maintenance_plan_job** должны запускаться из базы данных **msdb** .  

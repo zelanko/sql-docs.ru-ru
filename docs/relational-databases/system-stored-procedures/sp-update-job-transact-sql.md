@@ -18,10 +18,10 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5428ae9130646db662c6c960f777c6a7dfe25000
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084895"
 ---
 # <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
@@ -78,10 +78,10 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 |Значение|Описание (действие)|  
 |-----------|----------------------------|  
-|**0**|Никогда|  
+|**0**;|Никогда|  
 |**1**|При успешном завершении|  
 |**2**|При сбое|  
-|**3-5**|Всегда|  
+|**3**|Всегда|  
   
 `[ @notify_level_email = ] email_level`Указывает, когда следует отправить сообщение по электронной почте после завершения этого задания. *email_level*имеет **тип int**. *email_level*использует те же значения, что и *eventlog_level*.  
   
@@ -108,7 +108,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  **sp_update_job** изменяет только те параметры, для которых указаны значения параметров. Если параметр пропущен, сохраняется текущая настройка.  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -139,6 +139,6 @@ GO
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -21,10 +21,10 @@ ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c785ee1c4d3c5382aa42adf48ad9880f00297137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68089206"
 ---
 # <a name="syssysconfigures-transact-sql"></a>sys.sysconfigures (Transact-SQL)
@@ -35,15 +35,15 @@ ms.locfileid: "68089206"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**значений**|**int**|Значение переменной, доступное для изменения пользователем. Оно используется компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)], только если была выполнена инструкция RECONFIGURE.|  
+|**value**|**int**|Значение переменной, доступное для изменения пользователем. Оно используется компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)], только если была выполнена инструкция RECONFIGURE.|  
 |**файле**|**int**|Номер переменной конфигурации.|  
 |**Метки**|**nvarchar(255)**|Описание параметра конфигурации.|  
-|**состояние**|**smallint**|Битовая карта, указывающая состояние параметра. Возможные значения:<br /><br /> 0 = статический. Настройка вступает в силу после перезапуска сервера.<br /><br /> 1 = динамический. Переменная вступает в силу после выполнения инструкции RECONFIGURE.<br /><br /> 2 = расширенный. Переменная отображается, только если задан параметр **Показать дополнительные параметры** . Настройка вступает в силу после перезапуска сервера.<br /><br /> 3 = расширенный динамический.|  
+|**status**|**smallint**|Битовая карта, указывающая состояние параметра. Возможные значения:<br /><br /> 0 = статический. Настройка вступает в силу после перезапуска сервера.<br /><br /> 1 = динамический. Переменная вступает в силу после выполнения инструкции RECONFIGURE.<br /><br /> 2 = расширенный. Переменная отображается, только если задан параметр **Показать дополнительные параметры** . Настройка вступает в силу после перезапуска сервера.<br /><br /> 3 = расширенный динамический.|  
   
 ## <a name="see-also"></a>См. также:  
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Представления совместимости &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

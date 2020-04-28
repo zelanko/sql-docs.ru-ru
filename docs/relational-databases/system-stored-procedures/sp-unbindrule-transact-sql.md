@@ -18,10 +18,10 @@ ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b409b76d3a7c07ac03173346059f38ac616f5a87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095861"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
@@ -43,8 +43,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @objname = ] 'object_name'`Имя таблицы, столбца или псевдонима типа данных, из которого не связано правило. *object_name* имеет тип **nvarchar (776)** и не имеет значения по умолчанию. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается вычислить по идентификаторам, состоящим из двух частей, сначала имена столбцов, а затем псевдонимы типов данных. При отмене привязки правила к псевдониму типа данных для всех столбцов этого типа данных, имеющих то же самое правило, также отменяется привязка. Столбцы этого типа данных с правилами, которые привязаны непосредственно к ним, не затрагиваются.  
+`[ @objname = ] 'object_name'`Имя таблицы, столбца или псевдонима типа данных, из которого не связано правило. *object_name* имеет тип **nvarchar (776)** и не имеет значения по умолчанию. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается вычислить по идентификаторам, состоящим из двух частей, сначала имена столбцов, а затем псевдонимы типов данных. При отмене привязки правила к псевдониму типа данных для всех столбцов этого типа данных, имеющих то же самое правило, также отменяется привязка. Столбцы этого типа данных с правилами, которые привязаны непосредственно к ним, не затрагиваются.  
   
 > [!NOTE]  
 >  *object_name* могут содержать квадратные скобки **[]** в качестве символов идентификатора с разделителями. Дополнительные сведения см. в разделе [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md).  
@@ -52,7 +51,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 `[ @futureonly = ] 'futureonly_flag'`Используется только при отмене привязки правила к псевдониму типа данных. *futureonly_flag* имеет тип **varchar (15)** и значение по умолчанию NULL. Когда *futureonly_flag* **futureonly**, существующие столбцы этого типа данных не теряют указанное правило.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  Для отображения текста правила выполните процедуру **sp_helptext** с именем правила в качестве аргумента.  
@@ -73,7 +72,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 EXEC sp_unbindrule 'employees.startdate';  
 ```  
   
-### <a name="b-unbinding-a-rule-from-an-alias-data-type"></a>Б. Отмена привязки правила к псевдониму типа данных  
+### <a name="b-unbinding-a-rule-from-an-alias-data-type"></a>Б) Отмена привязки правила к псевдониму типа данных  
  В следующем примере отменяется привязка правила к псевдониму типа данных `ssn`. Отмена производится как для существующих, так и для будущих столбцов этого типа.  
   
 ```  
@@ -106,10 +105,10 @@ EXEC sp_unbindrule '[t.4].c1';
 ## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Создание правила &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
+ [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   
  [УДАЛИТЬ правило &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
  [sp_bindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
- [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [sp_helptext (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

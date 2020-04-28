@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fc0ad8fcdf8c72e1b91df651a75227975d18294e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061814"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
@@ -60,14 +60,14 @@ sp_column_privileges [ @table_name = ] 'table_name'
 ## <a name="result-sets"></a>Результирующие наборы  
  Хранимая процедура sp_column_privileges эквивалентна функции SQLColumnPrivileges в ODBC. Возвращаемые результаты сортируются по столбцам TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME, COLUMN_NAME и PRIVILEGE.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|TABLE_QUALIFIER|**имеет sysname**|Имя квалификатора таблицы. Это поле может иметь значение NULL.|  
-|TABLE_OWNER|**имеет sysname**|Имя владельца таблицы. Это поле всегда возвращает значение.|  
-|TABLE_NAME|**имеет sysname**|Имя таблицы. Это поле всегда возвращает значение.|  
-|COLUMN_NAME|**имеет sysname**|Имя столбца для каждого возвращенного столбца из таблицы TABLE_NAME. Это поле всегда возвращает значение.|  
-|GRANTOR|**имеет sysname**|Имя пользователя базы данных, который предоставил права доступа к столбцу COLUMN_NAME перечисленным пользователям категории GRANTEE. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец всегда совпадает с владельцем TABLE_OWNER. Это поле всегда возвращает значение.<br /><br /> В столбце GRANTOR может быть указан либо владелец базы данных (TABLE_OWNER), либо пользователь, которому владелец базы данных предоставил разрешения с помощью предложения WITH GRANT OPTION в инструкции GRANT.|  
-|GRANTEE|**имеет sysname**|Имя пользователя базы данных, которому предоставил разрешения на доступ к столбцу COLUMN_NAME указанный GRANTOR. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец всегда содержит имя пользователя базы данных из таблицы sysusers. Это поле всегда возвращает значение.|  
+|TABLE_QUALIFIER|**sysname**|Имя квалификатора таблицы. Это поле может иметь значение NULL.|  
+|TABLE_OWNER|**sysname**|Имя владельца таблицы. Это поле всегда возвращает значение.|  
+|TABLE_NAME|**sysname**|Имя таблицы. Это поле всегда возвращает значение.|  
+|COLUMN_NAME|**sysname**|Имя столбца для каждого возвращенного столбца из таблицы TABLE_NAME. Это поле всегда возвращает значение.|  
+|GRANTOR|**sysname**|Имя пользователя базы данных, который предоставил права доступа к столбцу COLUMN_NAME перечисленным пользователям категории GRANTEE. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец всегда совпадает с владельцем TABLE_OWNER. Это поле всегда возвращает значение.<br /><br /> В столбце GRANTOR может быть указан либо владелец базы данных (TABLE_OWNER), либо пользователь, которому владелец базы данных предоставил разрешения с помощью предложения WITH GRANT OPTION в инструкции GRANT.|  
+|GRANTEE|**sysname**|Имя пользователя базы данных, которому предоставил разрешения на доступ к столбцу COLUMN_NAME указанный GRANTOR. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец всегда содержит имя пользователя базы данных из таблицы sysusers. Это поле всегда возвращает значение.|  
 |PRIVILEGE|**varchar (** 32 **)**|Одно из доступных разрешений на доступ к столбцу. Разрешениями для столбца может быть одно из следующих значений (или другие значения, поддерживаемые источником данных для определенных реализаций):<br /><br /> SELECT = пользователь GRANTEE может получать данные для столбцов;<br /><br /> INSERT = пользователь GRANTEE может предоставлять данные для этого столбца, когда новые строки вставляются (этим пользователем) в таблицу;<br /><br /> UPDATE = пользователь GRANTEE может изменять существующие данные в столбце;<br /><br /> REFERENCES = GRANTEE — может ссылаться на столбец во внешней таблице в связи «первичный-внешний ключ». Связи «первичный/внешний ключ» определяются с помощью ограничений таблицы.|  
 |IS_GRANTABLE|**varchar (** 3 **)**|Указывает, разрешено ли пользователю GRANTEE предоставлять разрешения другим пользователям (часто обозначается как разрешение «право передачи»). Может иметь значение YES, NO или NULL. Неизвестное значение или значение NULL, указывает на источник данных, для которого не применимо разрешение «право передачи».|  
   
@@ -92,6 +92,6 @@ EXEC sp_column_privileges @table_name = 'Employee'
 ## <a name="see-also"></a>См. также:  
  [ПРЕДОСТАВЛЕНИЕ &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [ОТОЗВАТЬ &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

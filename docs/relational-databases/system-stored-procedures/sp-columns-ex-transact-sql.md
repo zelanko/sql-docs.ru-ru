@@ -18,10 +18,10 @@ ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 799c45755d9d3866a1cbe3b61b8582787331123c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070341"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
@@ -61,12 +61,12 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**имеет sysname**|Имя квалификатора таблицы или представления. Различные продукты СУБД поддерживают имена таблиц (_Квалификаторы_**,** состоящие из трех частей). _владелец_**.** _имя_). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица. Это поле может иметь значение NULL.|  
-|**TABLE_SCHEM**|**имеет sysname**|Имя владельца таблицы или представления. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя пользователя базы данных, который создал таблицу. Это поле всегда возвращает значение.|  
-|**TABLE_NAME**|**имеет sysname**|Имя таблицы или представления. Это поле всегда возвращает значение.|  
-|**COLUMN_NAME**|**имеет sysname**|Имя столбца для каждого столбца возвращаемого **table_name** . Это поле всегда возвращает значение.|  
+|**TABLE_CAT**|**sysname**|Имя квалификатора таблицы или представления. Различные продукты СУБД поддерживают имена таблиц (_Квалификаторы_**,** состоящие из трех частей). _владелец_**.** _имя_). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица. Это поле может иметь значение NULL.|  
+|**TABLE_SCHEM**|**sysname**|Имя владельца таблицы или представления. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя пользователя базы данных, который создал таблицу. Это поле всегда возвращает значение.|  
+|**TABLE_NAME**|**sysname**|Имя таблицы или представления. Это поле всегда возвращает значение.|  
+|**COLUMN_NAME**|**sysname**|Имя столбца для каждого столбца возвращаемого **table_name** . Это поле всегда возвращает значение.|  
 |**DATA_TYPE**|**smallint**|Целочисленное значение, соответствующий индикатор типа ODBC. Если это тип данных, который не может быть сопоставлен с типом данных ODBC, возвращается значение NULL. Имя собственного типа данных возвращается в столбец **TYPE_NAME** .|  
 |**TYPE_NAME**|**varchar (** 13 **)**|Тип данных в символьном представлении. Название типа предоставляется базовой СУБД.|  
 |**COLUMN_SIZE**|**int**|Количество значащих цифр. Возвращаемое значение для столбца **точности** находится в базовом 10.|  
@@ -74,7 +74,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |**DECIMAL_DIGITS**|**smallint**|Число цифр справа от десятичной запятой.|  
 |**NUM_PREC_RADIX**|**smallint**|Основание системы счисления для числовых типов данных.|  
 |**ОБНУЛЯЕМОГО**|**smallint**|Указывает возможность содержать значение NULL.<br /><br /> 1 = значение NULL допустимо.<br /><br /> 0 = значение NULL недопустимо.|  
-|**Примечания**|**varchar (** 254 **)**|Это поле всегда возвращает значение NULL.|  
+|**ЗАМЕЧАНИЯ**|**varchar (** 254 **)**|Это поле всегда возвращает значение NULL.|  
 |**COLUMN_DEF**|**varchar (** 254 **)**|Значение столбца по умолчанию.|  
 |**SQL_DATA_TYPE**|**smallint**|Значение типа данных SQL в том же виде, что и в поле TYPE дескриптора. Этот столбец аналогичен столбцу **data_type** , за исключением типов данных **DateTime** и SQL-92 **Interval** . Этот столбец всегда возвращает значение.|  
 |**SQL_DATETIME_SUB**|**smallint**|Код подтипа для типов данных **DateTime** и SQL-92 **Interval** . Для других типов данных этот столбец возвращает значение NULL.|  
@@ -115,6 +115,6 @@ EXEC sp_columns_ex 'Seattle1',
  [sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

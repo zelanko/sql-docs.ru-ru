@@ -19,10 +19,10 @@ ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ae1c39d5c3ddc36f4ca3007cf9e17c2543055b85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68099204"
 ---
 # <a name="sysdm_audit_class_type_map-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
@@ -30,11 +30,11 @@ ms.locfileid: "68099204"
 
   Возвращает таблицу, которая сопоставляет поле class_type в журнале аудита с полем class_desc в представлении sys.dm_audit_actions. Дополнительные сведения об [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аудите см. в разделе [SQL Server audit &#40;ядро СУБД&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**class_type**|**char (2)**|Тип класса сущности, для которой был проведен аудит. Сопоставляется с class_type записывается в журнал аудита и возвращается функцией **get_audit_file ()** . Не допускает значение NULL.|  
-|**class_type_desc**|**nvarchar (120)**|Имя сущности, для которой выполняется аудит. Не допускает значение NULL.|  
-|**securable_class_desc**|**nvarchar (120)**|Защищаемый объект, сопоставляемый class_type, для которого выполняется аудит. Принимает значение NULL, если class_type не сопоставляется с защищаемым объектом. Может быть связан с class_desc в sys.dm_audit_actions.|  
+|**class_type_desc**|**nvarchar(120)**|Имя сущности, для которой выполняется аудит. Не допускает значение NULL.|  
+|**securable_class_desc**|**nvarchar(120)**|Защищаемый объект, сопоставляемый class_type, для которого выполняется аудит. Принимает значение NULL, если class_type не сопоставляется с защищаемым объектом. Может быть связан с class_desc в sys.dm_audit_actions.|  
   
 ## <a name="permissions"></a>Разрешения  
  Участник должен иметь разрешение **SELECT** . По умолчанию это разрешение предоставлено роли Public.  

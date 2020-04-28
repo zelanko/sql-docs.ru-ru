@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ec3836db241320beabfbd4672ffad9b22ccaf58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078526"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68078526"
 > [!NOTE]  
 >  Столбец ROUTINE_DEFINITION включает исходные инструкции, создавшие эту функцию или хранимую процедуру. Эти исходные инструкции, вероятно, содержат встроенные символы возврата каретки. Если этот столбец возвращается приложению, которое выводит результаты в текстовом формате, эти встроенные символы в результатах ROUTINE_DEFINITION могут нарушить форматирование общего результирующего набора. Если выбирается столбец ROUTINE_DEFINITION, необходимо учитывать встроенные символы возврата каретки, например возвращая результирующий набор в сетку или выводя результаты ROUTINE_DEFINITION в собственное текстовое поле.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar (** 128 **)**|Определенное имя каталога. Это имя совпадает с ROUTINE_CATALOG.|  
 |SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Определенное имя схемы.<br /><br /> ** \* \* Важно \* !** Не используйте INFORMATION_SCHEMA представления для определения схемы объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
@@ -45,12 +45,12 @@ ms.locfileid: "68078526"
 |ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Имя схемы, содержащей эту функцию.<br /><br /> ** \* \* Важно \* !** Не используйте INFORMATION_SCHEMA представления для определения схемы объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
 |ROUTINE_NAME|**nvarchar (** 128 **)**|Имя функции.|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|Возвращает значение PROCEDURE для хранимой процедуры и FUNCTION для функций.|  
-|MODULE_CATALOG|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
-|MODULE_SCHEMA|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
-|MODULE_NAME|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
-|UDT_CATALOG|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
-|UDT_SCHEMA|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
-|UDT_NAME|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
+|MODULE_CATALOG|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
+|MODULE_SCHEMA|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
+|MODULE_NAME|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
+|UDT_CATALOG|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
+|UDT_SCHEMA|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
+|UDT_NAME|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
 |DATA_TYPE|**nvarchar (** 128 **)**|Тип данных возвращаемого значения функции. Возвращает **таблицу** , если возвращающая табличное значение функция.|  
 |CHARACTER_MAXIMUM_LENGTH|**int**|Максимальная длина в символах, если возвращаемый тип символьный.<br /><br /> -1 для данных типа **XML** и больших значений.|  
 |CHARACTER_OCTET_LENGTH|**int**|Максимальная длина в байтах, если возвращаемый тип символьный.<br /><br /> -1 для данных типа **XML** и больших значений.|  
@@ -64,25 +64,25 @@ ms.locfileid: "68078526"
 |NUMERIC_PRECISION_RADIX|**smallint**|Основание системы счисления для точности возвращаемого значения. Для нецифровых типов возвращает значение NULL.|  
 |NUMERIC_SCALE|**smallint**|Масштаб возвращаемого значения. Для нецифровых типов возвращает значение NULL.|  
 |DATETIME_PRECISION|**smallint**|Точность в долях секунды, если возвращаемое значение имеет тип **DateTime**. В противном случае возвращается значение NULL.|  
-|INTERVAL_TYPE|**nvarchar (** 30 **)**|NULL. Зарезервирован для использования в будущем.|  
-|INTERVAL_PRECISION|**smallint**|NULL. Зарезервирован для использования в будущем.|  
-|TYPE_UDT_CATALOG|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
-|TYPE_UDT_SCHEMA|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
-|TYPE_UDT_NAME|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
-|SCOPE_CATALOG|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
-|SCOPE_SCHEMA|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
-|SCOPE_NAME|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
-|MAXIMUM_CARDINALITY|**bigint**|NULL. Зарезервирован для использования в будущем.|  
-|DTD_IDENTIFIER|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
+|INTERVAL_TYPE|**nvarchar (** 30 **)**|NULL. Зарезервировано для последующего использования.|  
+|INTERVAL_PRECISION|**smallint**|NULL. Зарезервировано для последующего использования.|  
+|TYPE_UDT_CATALOG|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
+|TYPE_UDT_SCHEMA|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
+|TYPE_UDT_NAME|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
+|SCOPE_CATALOG|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
+|SCOPE_SCHEMA|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
+|SCOPE_NAME|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
+|MAXIMUM_CARDINALITY|**bigint**|NULL. Зарезервировано для последующего использования.|  
+|DTD_IDENTIFIER|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
 |ROUTINE_BODY|**nvarchar (** 30 **)**|Возвращает значение SQL для функции [!INCLUDE[tsql](../../includes/tsql-md.md)] и EXTERNAL для функции, написанной внешними средствами.<br /><br /> Функции всегда SQL.|  
 |ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|Возвращает первые 4 000 символов текста определения функции или хранимой процедуры, если они не зашифрованы. В противном случае возвращается значение NULL.<br /><br /> Чтобы убедиться, что получено полное определение, выполните запрос к функции [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) или к столбцу определения в представлении каталога [sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) .|  
-|EXTERNAL_NAME|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
-|EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL. Зарезервирован для использования в будущем.|  
-|PARAMETER_STYLE|**nvarchar (** 30 **)**|NULL. Зарезервирован для использования в будущем.|  
+|EXTERNAL_NAME|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
+|EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL. Зарезервировано для последующего использования.|  
+|PARAMETER_STYLE|**nvarchar (** 30 **)**|NULL. Зарезервировано для последующего использования.|  
 |IS_DETERMINISTIC|**nvarchar (** 10 **)**|Возвращает «YES», если процедура детерминированная.<br /><br /> Возвращает «NO», если процедура недетерминированная.<br /><br /> Всегда возвращает «NO» для хранимых процедур.|  
 |SQL_DATA_ACCESS|**nvarchar (** 30 **)**|Возвращает одно из следующих значений:<br /><br /> NONE = функция не содержит SQL;<br /><br /> CONTAINS = функция может содержать SQL;<br /><br /> READS = функция, возможно, считывает данные SQL;<br /><br /> MODIFIES = функция, возможно, изменяет данные SQL.<br /><br /> Возвращает READS для всех функций и MODIFIES для всех хранимых процедур.|  
 |IS_NULL_CALL|**nvarchar (** 10 **)**|Указывает, будет ли вызываться процедура, если один из ее аргументов равен NULL.|  
-|SQL_PATH|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
+|SQL_PATH|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
 |SCHEMA_LEVEL_ROUTINE|**nvarchar (** 10 **)**|Возвращает «YES», если это функция уровня схемы, или «NO» в противном случае.<br /><br /> Всегда возвращает «YES».|  
 |MAX_DYNAMIC_RESULT_SETS|**smallint**|Максимальное число динамических результирующих наборов, возвращаемых процедурой.<br /><br /> Возвращает 0, если функция.|  
 |IS_USER_DEFINED_CAST|**nvarchar (** 10 **)**|Возвращает «YES», если это пользовательская функция приведения, и «NO» в противном случае.<br /><br /> Всегда возвращает NO.|  
@@ -96,6 +96,6 @@ ms.locfileid: "68078526"
  [sys. Columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys. Objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys. процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
- [sys. sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
+ [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
   
   

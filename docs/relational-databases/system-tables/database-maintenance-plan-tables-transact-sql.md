@@ -17,10 +17,10 @@ ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f6fe1c0734864f8bde8b579ced77dc8106cb80ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084749"
 ---
 # <a name="database-maintenance-plan-tables-transact-sql"></a>Таблицы плана обслуживания базы данных (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68084749"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [sysdbmaintplan_databases](../../relational-databases/system-tables/sysdbmaintplan-databases-transact-sql.md)  
  Содержит по одной строке для каждой базы данных, которая имеет соответствующий обновленный план обслуживания базы данных.  
   

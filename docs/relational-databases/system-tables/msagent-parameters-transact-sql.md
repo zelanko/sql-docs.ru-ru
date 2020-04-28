@@ -18,10 +18,10 @@ ms.assetid: be30abc9-c00d-446f-b1b4-1269772f37e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38c6bb0ae74ffe54e9637610139374e458e3649d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095705"
 ---
 # <a name="msagent_parameters-transact-sql"></a>MSagent_parameters (Transact-SQL)
@@ -29,14 +29,14 @@ ms.locfileid: "68095705"
 
   **MSagent_parameters** таблица содержит параметры, связанные с профилем агента. Параметры имеют те же имена, что и поддерживаемые агентом. Эта таблица хранится в базе данных **msdb** .  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|Идентификатор профиля из таблицы **MSagent_profiles** .|  
-|**parameter_name**|**имеет sysname**|Имя параметра.|  
-|**значений**|**nvarchar(255)**|Значение параметра.|  
+|**parameter_name**|**sysname**|Имя параметра.|  
+|**value**|**nvarchar(255)**|Значение параметра.|  
   
 ## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

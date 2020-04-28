@@ -20,10 +20,10 @@ ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d07ca74ffb2b793038f230d2b3a5b265101a7eb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102338"
 ---
 # <a name="sysnumbered_procedure_parameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
@@ -37,17 +37,17 @@ ms.locfileid: "68102338"
 > [!NOTE]  
 >  Аргументы, связанные с языком XML и средой CLR, для нумерованных процедур не поддерживаются.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Идентификатор объекта, которому принадлежит этот параметр.|  
 |**procedure_number**|**smallint**|Номер этой процедуры в данном объекте (2 или больше).|  
-|**name**|**имеет sysname**|Имя параметра. Уникален в пределах **procedure_number**.|  
+|**name**|**sysname**|Имя параметра. Уникален в пределах **procedure_number**.|  
 |**parameter_id**|**int**|Идентификатор параметра. Уникален в пределах **procedure_number**.|  
 |**system_type_id**|**tinyint**|Идентификатор системного типа аргумента.|  
 |**user_type_id**|**int**|Идентификатор определяемого пользователем типа аргумента.|  
 |**max_length**|**smallint**|Максимальная длина аргумента в байтах.<br /><br /> -1 = тип данных столбца: varchar(max), nvarchar(max) или varbinary(max).|  
 |**precision**|**tinyint**|Для числового аргумента — точность; иначе 0.|  
-|**Измените**|**tinyint**|Масштаб числового аргумента; иначе 0.|  
+|**масштаб**|**tinyint**|Масштаб числового аргумента; иначе 0.|  
 |**is_output**|**bit**|1 = аргумент помечен как OUTPUT или RETURN; иначе 0|  
 |**is_cursor_ref**|**bit**|1 = аргумент представляет собой ссылку на курсор.|  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68102338"
 >  Аргументы, связанные с языком XML и средой CLR, для нумерованных процедур не поддерживаются.  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

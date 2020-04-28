@@ -10,14 +10,14 @@ ms.assetid: cb20a327-e565-49a3-a5d0-4cc79a48c179
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 57d6ed457fe00e7ec78094b44db174e2c0150511
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68059988"
 ---
 # <a name="shortcut-keys-db2tosql"></a>Сочетания клавиш (DB2ToSQL)
-Для навигации по приложению SSMA можно использовать сочетания клавиш. Дополнительные сведения см. в следующих разделах:  
+Для навигации по приложению SSMA можно использовать сочетания клавиш. Дополнительные сведения см. в следующих статьях.  
   
 -   [Команды меню и другие сочетания клавиш &#40;DB2ToSQL&#41;](../../ssma/db2/menu-commands-and-other-shortcut-keys-db2tosql.md)  
   

@@ -10,10 +10,10 @@ ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7c0866a753bb61cb688ffe491e1de77431ddcb22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060163"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Параметры проекта (сопоставление типов) (DB2ToSQL)
@@ -47,7 +47,7 @@ ms.locfileid: "68060163"
 **Удалить**  
 Нажмите, чтобы удалить выбранное сопоставление типа данных из списка сопоставления.  
   
-**Восстановить значения по умолчанию**  
+**По умолчанию**  
 Нажмите, чтобы сбросить список сопоставления типов к значениям по умолчанию SSMA.  
   
 ## <a name="default-type-mappings"></a>Сопоставления типов по умолчанию  
@@ -62,7 +62,7 @@ ms.locfileid: "68060163"
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |binary_integer|INT|  
-|blob-объект|varbinary(max)|  
+|большой двоичный объект|varbinary(max)|  
 |Логическое|bit|  
 |char|varchar(max)|  
 |char varying|varchar(max)|  
@@ -75,7 +75,7 @@ ms.locfileid: "68060163"
 |double precision|float [53]|  
 |FLOAT|float [53]|  
 |INT|INT|  
-|integer|INT|  
+|Целое число|INT|  
 |long|varchar(max)|  
 |Long RAW|varbinary(max)|  
 |Long RAW [\*.. 8000]<sup>\*</sup>|varbinary [\*]|  
@@ -92,7 +92,7 @@ ms.locfileid: "68060163"
 |nvarchar2|nvarchar(max)|  
 |pls_integer|INT|  
 |raw|varbinary(max)|  
-|real;|float [53]|  
+|real|float [53]|  
 |ROWID|UNIQUEIDENTIFIER|  
 |сигнтипе|smallint|  
 |smallint|smallint|  
@@ -117,7 +117,7 @@ ms.locfileid: "68060163"
 |bСведения|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|blob-объект|varbinary(max)|  
+|большой двоичный объект|varbinary(max)|  
 |char|char|  
 |различные знаки [\*.. \*]|varchar [\*]|  
 |Char [\*.. \*]|Char [\*]|  
@@ -137,7 +137,7 @@ ms.locfileid: "68060163"
 |float [\*.. 53]|float [\*]|  
 |float [54..\*]|float [53]|  
 |INT|INT|  
-|integer|INT|  
+|Целое число|INT|  
 |long|varchar(max)|  
 |Long RAW|varbinary(max)|  
 |Long RAW [\*.. 8000]|varbinary [\*]|  
@@ -162,7 +162,7 @@ ms.locfileid: "68060163"
 |numeric [\*.. \*][\*.. \*]|numeric [\*] [\*]|  
 |NVARCHAR2 [\*.. \*]|nvarchar [\*]|  
 |RAW [\*.. \*]|varbinary [\*]|  
-|real;|float [53]|  
+|real|float [53]|  
 |ROWID|UNIQUEIDENTIFIER|  
 |smallint|smallint|  
 |TIMESTAMP|datetime2|  
@@ -187,13 +187,13 @@ ms.locfileid: "68060163"
 |binary_float|float [53]|  
 |binary_interger|INT|  
 |BLOB-объект|varbinary(max)|  
-|Логическое|bit|  
+|логический|bit|  
 |Char|char|  
 |различные знаки [\*.. 8000]|varchar [\*]|  
 |изменение типа char [8001.\*.]|varchar(max)|  
 |Char [\*.. 8000]|Char [\*]|  
 |Char [8001..\*]|varchar(max)|  
-|Character|char|  
+|Символ|char|  
 |Разное символов\*[.. 8000]|varchar [\*]|  
 |разное начертание [8001\*..]|varchar(max)|  
 |символ [\*.. 8000]|Char [\*]|  
@@ -233,7 +233,7 @@ ms.locfileid: "68060163"
 |изменение типа nchar\*[.. 4000]|nvarchar [\*]|  
 |Разное изменение типа nchar [\*4001..]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|Номер|float [53]|  
+|Число|float [53]|  
 |Number [\*.. \*]|numeric [\*]|  
 |Number [\*.. \*][\*.. \*]|numeric [\*] [\*]|  
 |Числовой|numeric [38] [0]|  

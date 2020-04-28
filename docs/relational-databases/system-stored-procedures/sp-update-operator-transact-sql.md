@@ -18,10 +18,10 @@ ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084842"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
@@ -89,13 +89,13 @@ sp_update_operator
  [ @pager_days=] *pager_days*  
  Указывает дни, в которые оператор доступен для приема сообщений на пейджер (с учетом времени начала и конца работы). *pager_days*имеет тип **tinyint**, значение по умолчанию NULL и должно быть значением от **0** до **127**. *pager_days* вычисляется путем добавления отдельных значений для требуемых дней. Например, с понедельника по пятницу будет **2**+**4**+**8**+**16**+**32** = **64**.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Воскресенье|  
 |**2**|Понедельник|  
 |**4**|Вторник|  
 |**8**|Среда|  
-|**глубин**|Четверг|  
+|**16**|Четверг|  
 |**32**|Пятница|  
 |**64**|Суббота|  
   
@@ -136,6 +136,6 @@ GO
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -19,10 +19,10 @@ ms.assetid: 17e6f87f-8f56-489d-9aed-216afc8ef310
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f80ec78e37707058a354a03bb2605a38abdfa803
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68099192"
 ---
 # <a name="sysdm_broker_activated_tasks-transact-sql"></a>sys.dm_broker_activated_tasks (Transact-SQL)
@@ -31,9 +31,9 @@ ms.locfileid: "68099192"
   Возвращает строку для каждой хранимой процедуры, активированной компонентом Service Broker.  
  
 
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**spid**|**int**|Идентификатор сеанса активированной хранимой процедуры. Допускает значение NULL.|  
+|**интерфейс**|**int**|Идентификатор сеанса активированной хранимой процедуры. Допускает значение NULL.|  
 |**database_id**|**smallint**|Идентификатор базы данных, в которой определена очередь. Допускает значение NULL.|  
 |**queue_id**|**int**|Идентификатор объекта очереди, для которого была активирована хранимая процедура. Допускает значение NULL.|  
 |**procedure_name**|**nvarchar (650)**|Имя активированной хранимой процедуры. Допускает значение NULL.|  
@@ -47,13 +47,13 @@ ms.locfileid: "68099192"
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|С|Кому|Связь|  
+|Исходный тип|Кому|Связь|  
 |----------|--------|------------------|  
 |dm_broker_activated_tasks.spid|dm_exec_sessions.session_id|Один к одному|  
   
 ## <a name="see-also"></a>См. также:  
- [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Service Broker связанные динамические административные представления &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления, связанные с компонентом Service Broker (Transact-SQL)](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

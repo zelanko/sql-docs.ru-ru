@@ -18,10 +18,10 @@ ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 77d1512c472005e59909342c94a88c4464c4fe5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096075"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
@@ -54,7 +54,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 `[ @table_type = ] 'table_type'`Тип возвращаемой таблицы. Аргумент *TABLE_TYPE* имеет тип **sysname**, значение по умолчанию NULL и может иметь одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**ПСЕВДОНИМ**|Имя псевдонима.|  
 |**GLOBAL TEMPORARY**|Имя временной таблицы, доступной в пределах системы.|  
@@ -62,24 +62,23 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**SYNONYM**|Имя синонима.|  
 |**СИСТЕМНАЯ ТАБЛИЦА**|Имя системной таблицы.|  
 |**СИСТЕМНОЕ ПРЕДСТАВЛЕНИЕ**|Имя системного представления.|  
-|**TABLE**|Имя пользовательской таблицы.|  
-|**VIEW**|Имя представления.|  
+|**Таблица**|Имя пользовательской таблицы.|  
+|**РЕЖИМЕ**|Имя представления.|  
   
-`[ @fUsePattern = ] 'fUsePattern'`Определяет, будут ли **** символы _ **%**,, **[** и **]** интерпретироваться как подстановочные знаки. Допустимые значения: 0 (сопоставление с шаблоном отключено) и 1 (сопоставление с шаблоном включено). *фусепаттерн* имеет **бит**и значение по умолчанию 1.  
+`[ @fUsePattern = ] 'fUsePattern'`Определяет, будут ли **_** символы _ **%**,, **[** и **]** интерпретироваться как подстановочные знаки. Допустимые значения: 0 (сопоставление с шаблоном отключено) и 1 (сопоставление с шаблоном включено). *фусепаттерн* имеет **бит**и значение по умолчанию 1.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  None  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**имеет sysname**|Имя квалификатора таблицы. Различные продукты СУБД поддерживают имена таблиц (_Квалификаторы_**,** состоящие из трех частей). _владелец_**.** _имя_). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых других СУБД он представляет имя сервера в среде баз данных, где находится таблица. Это поле может иметь значение NULL.|  
-|**TABLE_SCHEM**|**имеет sysname**|Имя владельца таблицы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя пользователя базы данных, создавшего таблицу. Это поле всегда возвращает значение.|  
-|**TABLE_NAME**|**имеет sysname**|Имя таблицы. Это поле всегда возвращает значение.|  
+|**TABLE_CAT**|**sysname**|Имя квалификатора таблицы. Различные продукты СУБД поддерживают имена таблиц (_Квалификаторы_**,** состоящие из трех частей). _владелец_**.** _имя_). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых других СУБД он представляет имя сервера в среде баз данных, где находится таблица. Это поле может иметь значение NULL.|  
+|**TABLE_SCHEM**|**sysname**|Имя владельца таблицы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя пользователя базы данных, создавшего таблицу. Это поле всегда возвращает значение.|  
+|**TABLE_NAME**|**sysname**|Имя таблицы. Это поле всегда возвращает значение.|  
 |**TABLE_TYPE**|**varchar (32)**|Таблица, системная таблица или представление.|  
-|**Примечания**|**varchar (254)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
+|**ЗАМЕЧАНИЯ**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
   
 ## <a name="remarks"></a>Remarks  
  **sp_tables_ex** выполняется путем запроса набора строк TABLES интерфейса **IDBSchemaRowset** поставщика OLE DB, соответствующего *table_server*. Параметры *table_name*, *table_schema*, *table_catalog*и *столбцов* передаются этому интерфейсу для ограничения возвращаемых строк.  
@@ -108,6 +107,6 @@ EXEC sp_tables_ex @table_server = 'LONDON2',
  [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
  [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -21,10 +21,10 @@ ms.assetid: e22a81cd-27de-4690-9443-6aad6393bd3c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e6ce86e7be7d54e95c2336691b53ea12ff0d8575
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68076498"
 ---
 # <a name="syssysperfinfo-transact-sql"></a>sys.sysperfinfo (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68076498"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**object_name**|**nchar (128)**|Имя объекта производительности, например **SQLServer: локкманажер** или **SQLServer: буфферманажер**.|  
 |**counter_name**|**nchar (128)**|Имя счетчика производительности в объекте, например **запрошенных** **запросов страниц** или блокировок.|  
@@ -45,6 +45,6 @@ ms.locfileid: "68076498"
   
 ## <a name="see-also"></a>См. также:  
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Представления совместимости &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

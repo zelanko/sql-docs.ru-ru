@@ -18,10 +18,10 @@ ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1e6d3ed9c31307fb032d4ccc3cc950565c39c52c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095936"
 ---
 # <a name="sp_trace_setstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68095936"
   Изменяет текущее состояние указанной трассировки.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте Расширенные события.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте расширенные события.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
  В следующей таблице приведены состояния, которые могут быть заданы.  
   
-|Состояние|Description|  
+|Состояние|Описание|  
 |------------|-----------------|  
 |**0**|Останавливает указанную трассировку.|  
 |**1**|Начинает указанную трассировку.|  
@@ -60,13 +60,13 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ## <a name="return-code-values"></a>Значения кода возврата  
  В следующей таблице описаны значения кодов, которые могут быть возвращены пользователю при завершении хранимой процедуры.  
   
-|Код возврата|Description|  
+|Код возврата|Описание|  
 |-----------------|-----------------|  
 |**0**|Нет ошибки.|  
-|**1**|Произошла неизвестная ошибка.|  
+|**1**|Неизвестная ошибка.|  
 |**8**|Указано недопустимое состояние.|  
-|**8**|Указан недопустимый дескриптор трассировки.|  
-|**решением**|недостаточно памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
+|**9**|Указан недопустимый дескриптор трассировки.|  
+|**13**|Нехватка памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
   
  Если трассировка уже находится в указанном состоянии, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] то возвращает **0**.  
   

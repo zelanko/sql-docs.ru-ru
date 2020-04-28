@@ -20,10 +20,10 @@ ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 065625fdaca015de9c445e6e6f0e1ad0013f38e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090262"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
@@ -32,14 +32,14 @@ ms.locfileid: "68090262"
   Содержит список всех пакетов, зарегистрированных подсистемой расширенных событий.  
   
  
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|Имя пакета. Это описание берется из самого пакета. Не допускает значение NULL.|  
-|guid|**UNIQUEIDENTIFIER**|Идентификатор GUID пакета. Не допускает значение NULL.|  
+|guid|**uniqueidentifier**|Идентификатор GUID пакета. Не допускает значение NULL.|  
 |description|**nvarchar (3072)**|Описание пакета. Описание задано автором пакета и не допускает значения NULL.|  
 |capabilities|**int**|Битовая карта, описывающая возможности этого пакета. Допускает значение NULL.|  
 |capabilities_desc|**nvarchar(256)**|Список всех возможностей, допустимых для этого пакета. Допускает значение NULL.|  
-|module_guid|**nvarchar (60)**|Идентификатор GUID модуля, содержащегося в пакете. Не допускает значение NULL.|  
+|module_guid|**nvarchar(60)**|Идентификатор GUID модуля, содержащегося в пакете. Не допускает значение NULL.|  
 |module_address|**varbinary(8)**|Базовый адрес, по которому загружается модуль, содержащийся в пакете. Один модуль может занимать несколько пакетов. Не допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
@@ -54,10 +54,10 @@ ms.locfileid: "68090262"
   
 ||||  
 |-|-|-|  
-|С|Кому|Связь|  
+|Исходный тип|Кому|Связь|  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|Многие к одному|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

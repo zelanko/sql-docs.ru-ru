@@ -18,10 +18,10 @@ ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3bdcea5da463e2501954c4bf96ca58bac216eb58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060205"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
@@ -29,15 +29,15 @@ ms.locfileid: "68060205"
 
   Содержит по одной строке для каждого вложения, полученного компонентом Database Mail. Это представление следует использовать в том случае, когда необходима информация о вложениях, принятых компонентом Database Mail. Чтобы проверить все сообщения электронной почты, обработанные Database Mail используйте [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md).  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**attachment_id**|**int**|Идентификатор вложения.|  
 |**mailitem_id**|**int**|Идентификатор письма, содержавшего вложение.|  
 |**файлов**|**nvarchar (520)**|Имя файла вложения. Если **attach_query_result** равен 1, а **query_attachment_filename** имеет значение null, Database Mail создает произвольное имя файла.|  
 |**Размер файла**|**int**|Размер вложения в байтах.|  
-|**attachment**|**varbinary(max)**|Содержимое вложения.|  
+|**содержатся**|**varbinary(max)**|Содержимое вложения.|  
 |**last_mod_date**|**datetime**|Дата и время последнего изменения строки.|  
-|**last_mod_user**|**имеет sysname**|Пользователь, внесший последнее изменение в строку.|  
+|**last_mod_user**|**sysname**|Пользователь, внесший последнее изменение в строку.|  
   
 ## <a name="remarks"></a>Remarks  
  Это представление следует использовать для просмотра свойств вложений при устранении неполадок в работе компонента Database Mail.  
@@ -52,6 +52,6 @@ ms.locfileid: "68060205"
  [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
  [sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)   
  [sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)   
- [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)  
+ [sysmail_event_log (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)  
   
   

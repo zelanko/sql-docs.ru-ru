@@ -18,10 +18,10 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090054"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
@@ -60,21 +60,21 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|Уникальный идентификатор шага.|  
-|**step_name**|**имеет sysname**|Имя шага задания.|  
-|**подсистемы**|**nvarchar (40)**|Подсистема, в которой выполняется команда этапа.|  
+|**step_name**|**sysname**|Имя шага задания.|  
+|**подсистемы**|**nvarchar(40)**|Подсистема, в которой выполняется команда этапа.|  
 |**кнопки**|**nvarchar(max)**|Выполняемая на шаге команда.|  
-|**Метки**|**int**|Битовая маска значений, управляющая режимом шага.|  
+|**flags**|**int**|Битовая маска значений, управляющая режимом шага.|  
 |**cmdexec_success_code**|**int**|Для шага **CmdExec** это код завершения процесса успешной команды.|  
 |**on_success_action**|**tinyint**|Операция, выполняемая в случае успешного завершении шага:<br /><br /> **1** = завершить задание с сообщением об успешном завершении.<br /><br /> **2** = завершить задание отчета о сбое.<br /><br /> **3** = перейти к следующему шагу.<br /><br /> **4** = перейти к шагу.|  
 |**on_success_step_id**|**int**|Если значение **on_success_action** равно 4, это указывает на следующий шаг для выполнения.|  
 |**on_fail_action**|**tinyint**|Операция, совершаемая в случае сбоя при выполнении шага. Значения совпадают с **on_success_action**.|  
 |**on_fail_step_id**|**int**|Если значение **on_fail_action** равно 4, это указывает на следующий шаг для выполнения.|  
-|**сервером**|**имеет sysname**|Зарезервировано.|  
-|**database_name**|**имеет sysname**|Для шага [!INCLUDE[tsql](../../includes/tsql-md.md)] это база данных, в которой выполняется команда.|  
-|**database_user_name**|**имеет sysname**|Для шага [!INCLUDE[tsql](../../includes/tsql-md.md)] это контекст пользователя базы данных, в котором выполняется команда.|  
+|**сервером**|**sysname**|Зарезервировано.|  
+|**database_name**|**sysname**|Для шага [!INCLUDE[tsql](../../includes/tsql-md.md)] это база данных, в которой выполняется команда.|  
+|**database_user_name**|**sysname**|Для шага [!INCLUDE[tsql](../../includes/tsql-md.md)] это контекст пользователя базы данных, в котором выполняется команда.|  
 |**retry_attempts**|**int**|Максимальное количество повторных попыток выполнения команды (в случае сбоев).|  
 |**retry_interval**|**int**|Интервал (в минутах) между повторными попытками.|  
 |**os_run_priority**|**int**|Зарезервировано.|  
@@ -90,7 +90,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  **sp_help_jobstep** находится в базе данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -116,7 +116,7 @@ EXEC dbo.sp_help_jobstep
 GO  
 ```  
   
-### <a name="b-return-information-about-a-specific-job-step"></a>Б. Возврат сведений об указанном шаге задания  
+### <a name="b-return-information-about-a-specific-job-step"></a>Б) Возврат сведений об указанном шаге задания  
  В следующем примере возвращаются сведения о первом шаге задания с именем `Weekly Sales Data Backup`.  
   
 ```  
@@ -134,6 +134,6 @@ GO
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

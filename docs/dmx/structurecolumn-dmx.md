@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7b6b436527aa36fb8f048a3b3c8fc55b970ef284
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68065386"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (расширения интеллектуального анализа данных)
@@ -45,7 +45,7 @@ StructureColumn('structure column name')
   
  Дополнительные сведения о том, как использовать эту функцию в инструкции SELECT расширений интеллектуального анализа данных, см. в разделе [Выбор из &#60;модели&#62;. В случаях &#40;расширений интеллектуального анализа данных&#41;](../dmx/select-from-model-cases-dmx.md) или [выберите &#60;структура&#62;. ВАРИАНТОВ](../dmx/select-from-structure-cases.md).  
   
-## <a name="error-messages"></a>сообщения об ошибках  
+## <a name="error-messages"></a>Сообщения об ошибках  
  Следующая ошибка безопасности возникает в том случае, если пользователь не имеет разрешения на детализацию родительской структуры интеллектуального анализа данных.  
   
  Пользователь "% {User/}" не имеет разрешения на детализацию до родительской структуры интеллектуального анализа данных в модели интеллектуального анализа "% {Model/}".  

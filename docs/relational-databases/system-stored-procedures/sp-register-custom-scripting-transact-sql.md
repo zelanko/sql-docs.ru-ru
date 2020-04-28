@@ -16,10 +16,10 @@ ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075750"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>Процедура sp_register_custom_scripting (Transact-SQL)
@@ -42,11 +42,11 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>Аргументы  
 `[ @type = ] 'type'`Тип регистрируемой пользовательской хранимой процедуры или скрипта. *тип* — **varchar (16)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Вставляет**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции INSERT.|  
 |**обновляют**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции UPDATE.|  
-|**удален**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции DELETE.|  
+|**delete**;|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции DELETE.|  
 |**custom_script**|Скрипт, выполняющийся в конце триггера языка DDL.|  
   
 `[ @value = ] 'value'`Имя хранимой процедуры или имени и полный путь к регистрируемому файлу [!INCLUDE[tsql](../../includes/tsql-md.md)] скрипта. *value* имеет тип **nvarchar (1024)** и не имеет значения по умолчанию.  

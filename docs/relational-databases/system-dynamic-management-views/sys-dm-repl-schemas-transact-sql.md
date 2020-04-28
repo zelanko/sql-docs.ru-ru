@@ -18,10 +18,10 @@ ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 152a8b7f4c933874d8190b95404cbbeb91bb098f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088584"
 ---
 # <a name="sysdm_repl_schemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68088584"
   Возвращает сведения о столбцах таблицы, опубликованных в ходе репликации.  
   
  
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**artcache_schema_address**|**varbinary(8)**|Внутренний адрес кэшированной структуры схемы в памяти для статьи опубликованной таблицы.|  
 |**tabid**|**bigint**|Идентификатор реплицируемой таблицы.|  
@@ -38,7 +38,7 @@ ms.locfileid: "68088584"
 |**idSch**|**bigint**|Идентификатор схемы таблицы.|  
 |**tabschema**|**nvarchar (510)**|Имя схемы таблицы.|  
 |**ccTabschema**|**smallint**|Длина символов в схеме таблицы.|  
-|**tabname**|**nvarchar (510)**|Имя опубликованной таблицы.|  
+|**табнаме**|**nvarchar (510)**|Имя опубликованной таблицы.|  
 |**ccTabname**|**smallint**|Длина символов в имени опубликованной таблицы.|  
 |**rowsetid_delete**|**bigint**|Идентификатор удаленной строки.|  
 |**rowsetid_insert**|**bigint**|Идентификатор вставленной строки.|  
@@ -87,7 +87,7 @@ ms.locfileid: "68088584"
  Возвращаются сведения только по реплицируемым объектам базы данных, которые загружены в кэш статей репликации.  
   
 ## <a name="see-also"></a>См. также:  
- [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с репликацией &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   

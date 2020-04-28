@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fba09255204b796a5134e8b8098e650430b7de63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68048406"
 ---
 # <a name="sp_helpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
@@ -49,12 +49,12 @@ sp_helpstats[ @objname = ] 'object_name'
 `[ @results = ] 'value'`Задает объем предоставляемых данных. Допустимые значения: **ALL** и **stats**. **Все** списки содержит статистику для всех индексов, а также столбцов, для которых создана статистика. **Статистика содержит только статистику** , не связанную с индексом. *value* имеет тип **nvarchar (5)** и значение по умолчанию stats.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  В следующей таблице отображены столбцы результирующего набора.  
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |**statistics_name**|Название статистики. Возвращает значение **sysname** и не может быть null.|  
 |**statistics_keys**|Ключи, на которых основаны статистические сведения. Возвращает значение типа **nvarchar (2078)** и не может быть null.|  
@@ -63,10 +63,10 @@ sp_helpstats[ @objname = ] 'object_name'
  Для отображения подробных статистических сведений об определенном индексе или статистике воспользуйтесь инструкцией DBCC SHOW_STATISTICS. Дополнительные сведения см. в разделе [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) и [sp_helpindex &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в роли **Public** .  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере с помощью процедуры [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] создаются статистики, состоящие из одного столбца, для всех подходящих столбцов всех таблиц пользователя в базе данных `sp_createstats`. Затем, чтобы найти полученные статистики, созданные для таблицы `sp_helpstats`, запускается процедура `Customer`.  
+ В следующем примере с помощью процедуры `sp_createstats` создаются статистики, состоящие из одного столбца, для всех подходящих столбцов всех таблиц пользователя в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Затем, чтобы найти полученные статистики, созданные для таблицы `sp_helpstats`, запускается процедура `Customer`.  
   
 ```  
 USE AdventureWorks2012;  

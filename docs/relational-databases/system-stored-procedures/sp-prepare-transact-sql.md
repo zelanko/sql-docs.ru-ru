@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: acadb311dac786d9f1c5dbcc86fac9b2609fb959
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085798"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact SQL)
@@ -48,10 +48,10 @@ sp_prepare handle OUTPUT, params, stmt, options
  *stmt*  
  Определяет результирующий набор курсора. Параметр *stmt* является обязательным и вызывает для входного значения **ntext**, **nchar**или **nvarchar** .  
   
- *Параметры*  
+ *options*  
  Необязательный параметр, возвращающий описание столбцов результирующего набора курсора. для *параметров* требуется следующее входное значение int:  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
@@ -67,7 +67,7 @@ EXEC sp_execute @P1, N'tempdb', N'ONLINE';
 EXEC sp_unprepare @P1;  
 ```
 
-Б. В следующем примере подготавливается инструкция в базе данных AdventureWorks2016, а позднее она выполняется с помощью маркера.
+Б) В следующем примере подготавливается инструкция в базе данных AdventureWorks2016, а позднее она выполняется с помощью маркера.
 
 ```sql
 -- Prepare query
@@ -107,6 +107,6 @@ GO
 ```
   
 ## <a name="see-also"></a>См. также:  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
 

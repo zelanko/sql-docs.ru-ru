@@ -18,10 +18,10 @@ ms.assetid: b3b3a7d7-0b78-46c0-9755-045f7a5692b9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 304e904ab95e4be58ba2a373bd6ed9c11131049f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094888"
 ---
 # <a name="syspolicy_policy_category_subscriptions-transact-sql"></a>syspolicy_policy_category_subscriptions (Transact-SQL)
@@ -29,11 +29,11 @@ ms.locfileid: "68094888"
 
   Это представление выводит по одной строке для каждой подписки на управление на основе политик в данном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждая строка описывает пару, состоящую из целевого объекта и категории политики. В следующей таблице приведено описание столбцов представления syspolicy_policy_group_subscriptions.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |policy_category_subscription_id|**int**|Идентификатор записи.|  
-|target_type|**имеет sysname**|Тип объекта базы данных, который является целевым для этой подписки.|  
-|target_object|**имеет sysname**|Имя целевого объекта.|  
+|target_type|**sysname**|Тип объекта базы данных, который является целевым для этой подписки.|  
+|target_object|**sysname**|Имя целевого объекта.|  
 |policy_category_id|**int**|Идентификатор категории политики, которая применяется к этому объекту.|  
   
 ## <a name="remarks"></a>Remarks  
@@ -44,6 +44,6 @@ ms.locfileid: "68094888"
   
 ## <a name="see-also"></a>См. также:  
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [Представления управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [Административные представления на основе политик (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

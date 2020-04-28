@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1bbbcf04cdb141cff25565360d82714eed1e98f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079468"
 ---
 # <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68079468"
 
   Возвращает одну строку для каждого члена каждой роли базы данных.  Пользователи базы данных, роли приложений и другие роли базы данных могут быть членами роли базы данных. Чтобы добавить членов в роль, используйте инструкцию [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) с `ADD MEMBER` параметром. Присоединитесь к [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) , чтобы получить имена `principal_id` значений.
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**role_principal_id**|**int**|Идентификатор участника базы данных для роли.|  
 |**member_principal_id**|**int**|Идентификатор участника базы данных элемента.|  
@@ -40,7 +40,7 @@ ms.locfileid: "68079468"
 ## <a name="permissions"></a>Разрешения  
  Любой пользователь может просматривать данные о своем членстве в роли. Для просмотра членства в других ролях требуется членство в `db_securityadmin` предопределенной роли базы `VIEW DEFINITION` данных или в базе данных.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="example"></a>Пример  
  Следующий запрос возвращает элементы ролей базы данных.  
@@ -59,7 +59,7 @@ ORDER BY DP1.name;
   
 ## <a name="see-also"></a>См. также:  
  [Представления каталога безопасности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Участники &#40;ядро СУБД&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
 [ALTER ROLE (Transact-СКЛЛ)](../../t-sql/statements/alter-role-transact-sql.md)      
 [sys.server_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)   

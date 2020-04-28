@@ -18,10 +18,10 @@ ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9948767ca0eca5721207079f978987142653e9c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091911"
 ---
 # <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
@@ -48,7 +48,7 @@ xp_sqlmaint 'switch_string'
  **-?** Недопустимый параметр для **xp_sqlmaint**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Нет. Возвращает ошибку, если программа **sqlmaint** завершается сбоем.  
+ Отсутствует. Возвращает ошибку, если программа **sqlmaint** завершается сбоем.  
   
 ## <a name="remarks"></a>Remarks  
  Если эта процедура вызывается пользователем, вошедшим в систему с проверкой подлинности SQL Server, то перед выполнением параметры **-U "***login_ID***"** и **-P "***password***** " добавляются в начало *switch_string* . Если пользователь вошел в систему с проверкой подлинности Windows, *switch_string* передается без изменений в **sqlmaint**.  
@@ -72,6 +72,6 @@ The command(s) executed successfully.
   
 ## <a name="see-also"></a>См. также:  
  [sqlmaint, программа](../../tools/sqlmaint-utility.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

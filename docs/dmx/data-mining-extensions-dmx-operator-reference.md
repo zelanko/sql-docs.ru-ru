@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4e0dfafb74e6e86185872ea8e736b95dce7d4058
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070909"
 ---
 # <a name="data-mining-extensions-dmx-operator-reference"></a>Ссылка оператора расширений интеллектуального анализа данных
@@ -20,7 +20,7 @@ ms.locfileid: "68070909"
 
   Язык расширений интеллектуального анализа данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает арифметические, операторы присваивания, сравнения, логических и унарных операторов. В следующей таблице перечислены операторы, поддерживаемые расширениями интеллектуального анализа данных.  
   
-|Оператор|Description|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |[+ &#40;Добавление&#41; &#40;расширений интеллектуального анализа данных&#41;](../dmx/add-dmx.md)|Арифметический оператор, складывающий два числа.|  
 |[-&#40;вычитание&#41; &#40;расширений интеллектуального анализа данных&#41;](../dmx/subtract-dmx.md)|Арифметический оператор, вычитающий одно число из другого.|  

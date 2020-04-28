@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2d152b51e0c1c996e0bb3309e554a70683937493
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088356"
 ---
 # <a name="nonemptycrossjoin-mdx"></a>NonEmptyCrossjoin (многомерные выражения)
@@ -34,7 +34,7 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
  *Set_Expression2*  
  Допустимое многомерное выражение, возвращающее набор.  
   
- *Расчета*  
+ *Count*  
  Допустимое числовое выражение, указывающее количество наборов, которые необходимо вернуть.  
   
 ## <a name="remarks"></a>Remarks  
@@ -46,6 +46,6 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
 >  Эта функция устарела, использовать ее не следует. Она сохранена только для поддержки обратной совместимости. Вместо этого следует использовать функцию [Exists (MDX)](../mdx/exists-mdx.md) с аргументом имени группы мер или [непустой функцией (многомерные выражения)](../mdx/nonempty-mdx.md) .  
   
 ## <a name="see-also"></a>См. также:  
- [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

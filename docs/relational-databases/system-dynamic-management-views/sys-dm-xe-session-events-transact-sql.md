@@ -20,10 +20,10 @@ ms.assetid: 4f027b31-4e03-43a6-849d-1ba9d8d34ae8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4d8f796569eb8c4b524c0bc45b37ca8dc676ab45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090237"
 ---
 # <a name="sysdm_xe_session_events-transact-sql"></a>Динамическое административное представление sys.dm_xe_session_events (Transact-SQL)
@@ -31,11 +31,11 @@ ms.locfileid: "68090237"
 
   Возвращает сведения о событиях сеанса. События представляют собой дискретные точки выполнения. Предикаты можно применять к событиям, чтобы остановить их запуск, если событие не содержит необходимых данных.  
    
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|Адрес сеанса событий в памяти. Не допускает значение NULL.|  
 |event_name|**nvarchar(256)**|Имя события, к которому привязано действие. Не допускает значение NULL.|  
-|event_package_guid|**UNIQUEIDENTIFIER**|Идентификатор GUID пакета, в котором содержится событие. Не допускает значение NULL.|  
+|event_package_guid|**uniqueidentifier**|Идентификатор GUID пакета, в котором содержится событие. Не допускает значение NULL.|  
 |event_predicate|**nvarchar (3072)**|XML-представление дерева предиката, применяемого к событию. Допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
@@ -43,7 +43,7 @@ ms.locfileid: "68090237"
   
 ### <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|С|Кому|Связь|  
+|Исходный тип|Кому|Связь|  
 |----------|--------|------------------|  
 |sys.dm_xe_session_events.event_session_address|sys.dm_xe_sessions.address|«многие к одному»|  
 |sys. dm_xe_session_events. event_package_guid,<br /><br /> sys. dm_xe_session_events. event_name|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|«многие к одному»|  

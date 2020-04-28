@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 3743836f9976f52665c0358d1f338528a7593476
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061660"
 ---
 # <a name="drop-mining-model-dmx"></a>DROP MINING MODEL (расширения интеллектуального анализа данных)
@@ -28,7 +28,7 @@ DROP MINING MODEL <model >
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *model*  
+ *для базы данных модели*  
  Идентификатор модели.  
   
 ## <a name="examples"></a>Примеры  
@@ -41,6 +41,6 @@ DROP MINING MODEL [NBSample]
 ## <a name="see-also"></a>См. также:  
  [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41; DDL](../dmx/dmx-statements-data-definition.md)   
  [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41;](../dmx/dmx-statements-data-manipulation.md)   
- [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 34473e6eb173a0aabc5c2067e50aeeec27ce5636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067741"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
@@ -46,8 +46,8 @@ SEMANTICSIMILARITYDETAILSTABLE
     )  
 ```  
   
-##  <a name="Arguments"></a>Даваемых  
- **Таблица**  
+##  <a name="arguments"></a><a name="Arguments"></a>Даваемых  
+ **table**  
  Имя таблицы с включенным полнотекстовым и семантическим индексированием.  
   
  Это имя может содержать от одной до четырех частей, но указать имя удаленного сервера невозможно.  
@@ -71,10 +71,10 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>Возвращаемая таблица  
  В следующей таблице приведены сведения о ключевых фразах, которые возвращает эта функция набора строк.  
   
-|Column_name|Тип|Description|  
+|Column_name|Тип|Описание|  
 |------------------|----------|-----------------|  
 |**кэйфрасе**|**NVARCHAR**|Ключевая фраза, обуславливающая подобие между исходным документом и сопоставляемым документом.|  
-|**понять**|**REAL**|Относительное значение для этой ключевой фразы относительно всех других ключевых фраз, которые обуславливают подобие двух документов между собой.<br /><br /> Это дробное десятичное значение в диапазоне [0.0, 1.0], где более высокие значения соответствуют большему весу, а 1.0 — показатель идеального совпадения.|  
+|**понять**|**real**|Относительное значение для этой ключевой фразы относительно всех других ключевых фраз, которые обуславливают подобие двух документов между собой.<br /><br /> Это дробное десятичное значение в диапазоне [0.0, 1.0], где более высокие значения соответствуют большему весу, а 1.0 — показатель идеального совпадения.|  
   
 ## <a name="general-remarks"></a>Общие замечания  
  Дополнительные сведения см. [в разделе Поиск схожих и связанных документов с помощью семантического поиска](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
@@ -82,11 +82,11 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="metadata"></a>Метаданные  
  Чтобы получить сведения и состояние извлечения и заполнения данных о семантическом подобии, выполните запрос к следующим динамическим административным представлениям:  
   
--   [sys. dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  
+-   [sys.dm_db_fts_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  
   
--   [sys. dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
+-   [sys.dm_fts_semantic_similarity_population (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Требуется разрешение SELECT на базовую таблицу, в которой были созданы индекс полнотекстового поиска и семантический индекс.  

@@ -18,10 +18,10 @@ ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7616401e8dcc9461d5eb3c7d67aedccf3a8c7af9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095885"
 ---
 # <a name="sp_unbindefault-transact-sql"></a>Хранимая процедура sp_unbindefault (Transact-SQL)
@@ -43,8 +43,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @objname = ] 'object_name'`Имя таблицы, столбца или псевдонима типа данных, из которого будет отменена привязка по умолчанию. *object_name* имеет тип **nvarchar (776)** и не имеет значения по умолчанию. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается вычислить по идентификаторам, состоящим из двух частей, сначала имена столбцов, а затем псевдонимы типов данных.  
+`[ @objname = ] 'object_name'`Имя таблицы, столбца или псевдонима типа данных, из которого будет отменена привязка по умолчанию. *object_name* имеет тип **nvarchar (776)** и не имеет значения по умолчанию. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается вычислить по идентификаторам, состоящим из двух частей, сначала имена столбцов, а затем псевдонимы типов данных.  
   
  При отмене привязки для псевдонима типа данных привязка также отменяется для всех столбцов этого типа данных, имеющих такое же значение по умолчанию. Столбцы с этим типом данных, имеющие непосредственную привязку значений по умолчанию, не затрагиваются.  
   
@@ -54,7 +53,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 `[ @futureonly = ] 'futureonly_flag'`Используется только при отмене привязки значения по умолчанию к псевдониму типа данных. *futureonly_flag* имеет тип **varchar (15)** и значение по умолчанию NULL. Если *futureonly_flag* **futureonly**, существующие столбцы типа данных не теряют указанное значение по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Remarks  
  Чтобы отобразить текст значения по умолчанию, выполните **sp_helptext** с именем по умолчанию в качестве параметра.  
@@ -71,7 +70,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 EXEC sp_unbindefault 'employees.hiredate';  
 ```  
   
-### <a name="b-unbinding-a-default-from-an-alias-data-type"></a>Б. Отмена привязки значения по умолчанию для псевдонима типа данных  
+### <a name="b-unbinding-a-default-from-an-alias-data-type"></a>Б) Отмена привязки значения по умолчанию для псевдонима типа данных  
  В следующем примере отменяется привязка значения по умолчанию для псевдонима типа данных `ssn`. Отменяется привязка существующих и будущих столбцов этого типа.  
   
 ```  
@@ -103,10 +102,10 @@ EXEC sp_unbindefault '[t.3].c1';
 ## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Создание &#40;по УМОЛЧАНИю для&#41;Transact-SQL](../../t-sql/statements/create-default-transact-sql.md)   
+ [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   
  [DROP &#40;по УМОЛЧАНИю&#41;Transact-SQL](../../t-sql/statements/drop-default-transact-sql.md)   
  [sp_bindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
- [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [sp_helptext (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

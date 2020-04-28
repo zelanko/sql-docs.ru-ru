@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4031b887eb0a42580d6ae8debf6c9177ff67efc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088228"
 ---
 # <a name="not-mdx"></a>NOT (многомерные выражения)
@@ -28,7 +28,7 @@ NOT Expression1
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Expression1*  
+ *Выражения*  
  Допустимое многомерное выражение, возвращающее числовое значение.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
@@ -37,10 +37,10 @@ NOT Expression1
 ## <a name="remarks"></a>Remarks  
  Оператор **Not** обрабатывает выражение как логическое значение (ноль, 0, как **false**; в противном случае — **значение true**), прежде чем оператор выполняет логическое отрицание. В следующей таблице показано, как оператор **Not** выполняет логическое отрицание.  
   
-|*Expression1*|Возвращаемое значение|  
+|*Выражения*|Возвращаемое значение|  
 |-------------------|------------------|  
-|**условия**|**IsFalse**|  
-|**IsFalse**|**условия**|  
+|**true**|**false**|  
+|**false**|**true**|  
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-operator-reference-mdx.md)  

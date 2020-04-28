@@ -18,10 +18,10 @@ ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7470baabb9a35a923995d8306b314f9272de0b5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070368"
 ---
 # <a name="sp_cleanup_log_shipping_history-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-SQL)
@@ -46,10 +46,10 @@ sp_cleanup_log_shipping_history
 `[ @agent_type = ] 'agent_type'`Тип задания доставки журналов. 0 = резервное копирование, 1 = копирование, 2 = восстановление. *agent_type* имеет тип **tinyint** и не может иметь значение null.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет.  
+ Отсутствует.  
   
 ## <a name="remarks"></a>Remarks  
  **sp_cleanup_log_shipping_history** должны запускаться из базы данных **master** на любом сервере доставки журналов. Эта хранимая процедура очищает локальные и удаленные копии **log_shipping_monitor_history_detail** и **log_shipping_monitor_error_detail** на основе срока хранения журнала.  
@@ -59,6 +59,6 @@ sp_cleanup_log_shipping_history
   
 ## <a name="see-also"></a>См. также:  
  [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

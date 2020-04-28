@@ -18,10 +18,10 @@ ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8cec14e22779391d954b2a666782e8783f50f3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084744"
 ---
 # <a name="data-tier-application-tables---sysdac_instances_internal"></a>Таблицы приложений уровня данных — sysdac_instances_internal
@@ -29,16 +29,16 @@ ms.locfileid: "68084744"
 
   Отображает по одной строке для каждого экземпляра приложения уровня данных (DAC), развернутого на экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Эта таблица хранится в схеме dbo в базе данных msdb.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|instance_id|**UNIQUEIDENTIFIER**|Идентификатор экземпляра DAC.|  
-|имя_экземпляра|**имеет sysname**|Имя экземпляра DAC, указанное при развертывании экземпляра.|  
-|type_name|**имеет sysname**|Имя DAC, указанное при создании пакета DAC.|  
+|instance_id|**uniqueidentifier**|Идентификатор экземпляра DAC.|  
+|имя_экземпляра|**sysname**|Имя экземпляра DAC, указанное при развертывании экземпляра.|  
+|type_name|**sysname**|Имя DAC, указанное при создании пакета DAC.|  
 |type_version|**nvarchar (64)**|Версия DAC, указанная при создании пакета DAC.|  
-|description|**nvarchar (4000)**|Описание DAC, записанное при создании пакета DAC.|  
+|description|**nvarchar(4000)**|Описание DAC, записанное при создании пакета DAC.|  
 |type_stream|**varbinary(max)**|Битовый поток, содержащий закодированное представление логических объектов (например, таблиц и представлений), которые содержатся в DAC.|  
 |date_created|**datetime**|Дата и время создания экземпляра DAC.|  
-|created_by|**имеет sysname**|Имя входа, создавшее экземпляр DAC.|  
+|created_by|**sysname**|Имя входа, создавшее экземпляр DAC.|  
   
 ## <a name="remarks"></a>Remarks  
  Доступ только для чтения к этому представлению доступен всем пользователям с разрешениями на подключение к базе данных master.  

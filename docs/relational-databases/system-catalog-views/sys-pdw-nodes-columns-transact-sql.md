@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 201af9001703bb8f1dfbdaf2c41151697b945df3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68059405"
 ---
 # <a name="syspdw_nodes_columns-transact-sql"></a>sys. pdw_nodes_columns (Transact-SQL)
@@ -24,17 +24,17 @@ ms.locfileid: "68059405"
 
   Показывает столбцы для пользовательских таблиц и представлений, определяемых пользователем.  
   
-|Имя столбца|Тип данных|Description|Диапазонный индекс|  
+|Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|Идентификатор объекта, которому принадлежит этот столбец.||  
-|name|**имеет sysname**|Имя столбца. Уникальный в объекте.||  
+|name|**sysname**|Имя столбца. Уникальный в объекте.||  
 |column_id|**int**|Идентификатор столбца. Уникальный в объекте.||  
 |system_type_id|**tinyint**|Идентификатор системного типа столбца.||  
 |user_type_id|**int**|Идентификатор определенного пользователем типа столбца.||  
 |max_length|**smallint**|Максимальная длина столбца (в байтах).|Включает-1 (недопустимо) для неподдерживаемых типов столбцов.|  
 |precision|**tinyint**|Точность столбца, если он является числовым; в противном случае — 0.||  
 |scale|**tinyint**|Масштаб значений столбца в случае числового выражения; в противном случае — 0.||  
-|collation_name|**имеет sysname**|Имя параметров сортировки столбца, если он символьный; в противном случае — значение NULL.||  
+|collation_name|**sysname**|Имя параметров сортировки столбца, если он символьный; в противном случае — значение NULL.||  
 |is_nullable|**bit**|1 = столбец может принимать значение NULL.||  
 |is_ansi_padded|**bit**|1 = столбец использует поведение ANSI_PADDING ON, если имеет тип данных character, binary или variant.|Всегда равно 0.|  
 |is_rowguidcol|**bit**|1 = столбец объявлен как ROWGUIDCOL.|Всегда равно 0.|  
@@ -57,7 +57,7 @@ ms.locfileid: "68059405"
  Необходимо разрешение CONTROL SERVER.  
   
 ## <a name="see-also"></a>См. также:  
- [Хранилища данных SQL и представления каталога параллельных хранилищ данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  (Представления каталога в службе "Хранилище данных SQL" и Parallel Data Warehouse)  
  [sys. all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)  
   
   

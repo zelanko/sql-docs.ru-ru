@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7b75962019d9b39728ceff0b151e770dd0f51a25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075631"
 ---
 # <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
@@ -47,10 +47,10 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
  Имя ресурса блокировки, указанное клиентским приложением. Приложение должно убедиться в уникальности ресурса. Указанное имя внутренне хэшируется в значение, которое может быть сохранено в диспетчере блокировок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* имеет тип **nvarchar (255)** и не имеет значения по умолчанию. *resource_name* является двоичным по сравнению с учетом регистра, независимо от параметров сортировки текущей базы данных.  
   
  [ @LockOwner= ] "*lock_owner*"  
- Владелец блокировки, которая имеет значение *lock_owner* на момент запроса блокировки. *lock_owner* имеет тип **nvarchar (32)**. Значением может быть **Transaction** (по умолчанию) или **Session**. Если *lock_owner* значение — **Transaction**, по умолчанию или указывается явным образом, sp_getapplock необходимо выполнять в рамках транзакции.  
+ Владелец блокировки, которая имеет значение *lock_owner* на момент запроса блокировки. Аргумент *lock_owner* имеет тип **nvarchar(32)**. Значением может быть **Transaction** (по умолчанию) или **Session**. Если *lock_owner* значение — **Transaction**, по умолчанию или указывается явным образом, sp_getapplock необходимо выполнять в рамках транзакции.  
   
  [ @DbPrincipal= ] "*database_principal*"  
- Пользователь, роль или роль приложения, которые имеют разрешения на объект базы данных. Вызывающий эту функцию участник должен быть членом предопределенной роли базы данных *database_principal*, dbo или db_owner, чтобы успешно выполнить вызов этой функции. Значение по умолчанию: public.  
+ Пользователь, роль или роль приложения, которые имеют разрешения на объект базы данных. Вызывающая функция должна быть членом предопределенной роли базы данных *database_principal*, dbo или db_owner, чтобы успешно вызвать функцию. Значение по умолчанию: public.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  \>= 0 (успешное завершение) или < 0 (сбой)  
@@ -83,6 +83,6 @@ GO
 ## <a name="see-also"></a>См. также:  
  [APPLOCK_MODE &#40;Transact-SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
  [APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+ [sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
   

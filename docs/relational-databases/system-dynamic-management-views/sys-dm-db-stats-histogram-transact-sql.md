@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e5a79a4ab38fd1cb7d118624fd170219aa90a94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096255"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
@@ -43,23 +43,23 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="arguments"></a>Аргументы  
  *object_id*  
- Идентификатор объекта текущей базы данных, для которого запрашиваются статистические свойства. *object_id* имеет **тип int**.  
+ Идентификатор объекта текущей базы данных, для которого запрашиваются статистические свойства. *object_id* имеет тип **int**.  
   
  *stats_id*  
- Идентификатор статистики для указанного аргумента *object_id*. Идентификатор статистики может быть получен из динамического административного представления [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* имеет **тип int**.  
+ Идентификатор статистики для указанного аргумента *object_id*. Идентификатор статистики может быть получен из динамического административного представления [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* имеет тип **int**.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |object_id |**int**|Идентификатор объекта (таблицы или индексированного представления), для которого возвращаются свойства объекта статистики.|  
 |stats_id |**int**|Идентификатор объекта статистики. Является уникальным в пределах таблицы или индексированного представления. Дополнительные сведения см. в статье [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
 |step_number |**int** |Число шагов в гистограмме. |
 |range_high_key |**sql_variant** |Верхнее граничное значение столбца для шага гистограммы. Это значение столбца называется также ключевым значением.|
-|range_rows |**Real** |Предполагаемое количество строк, значение столбцов которых находится в пределах шага гистограммы, исключая верхнюю границу. |
-|equal_rows |**Real** |Предполагаемое количество строк, значение столбцов которых равно верхней границе шага гистограммы. |
+|range_rows |**real** |Предполагаемое количество строк, значение столбцов которых находится в пределах шага гистограммы, исключая верхнюю границу. |
+|equal_rows |**real** |Предполагаемое количество строк, значение столбцов которых равно верхней границе шага гистограммы. |
 |distinct_range_rows |**bigint** |Предполагаемое количество строк с различающимся значением столбца в пределах шага гистограммы, исключая верхнюю границу. |
-|average_range_rows |**Real** |Среднее число строк с повторяющимися значениями столбца в пределах шага гистограммы, за исключением верхней границы`RANGE_ROWS / DISTINCT_RANGE_ROWS` ( `DISTINCT_RANGE_ROWS > 0`для). |
+|average_range_rows |**real** |Среднее число строк с повторяющимися значениями столбца в пределах шага гистограммы, за исключением верхней границы`RANGE_ROWS / DISTINCT_RANGE_ROWS` ( `DISTINCT_RANGE_ROWS > 0`для). |
   
  ## <a name="remarks"></a>Remarks  
  
@@ -110,7 +110,7 @@ CREATE STATISTICS Country_Stats
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
 
-### <a name="b-useful-query"></a>Б. Полезный запрос:   
+### <a name="b-useful-query"></a>Б) Полезный запрос:   
 ```sql  
 SELECT hist.step_number, hist.range_high_key, hist.range_rows, 
     hist.equal_rows, hist.distinct_range_rows, hist.average_range_rows

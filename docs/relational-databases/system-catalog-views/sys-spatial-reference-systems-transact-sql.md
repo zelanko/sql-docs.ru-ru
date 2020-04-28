@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6ffd36516fecba70618c79a7bbd0415f6bb2cb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68073251"
 ---
 # <a name="sysspatial_reference_systems-transact-sql"></a>sys.spatial_reference_systems (Transact-SQL)
@@ -34,13 +34,13 @@ ms.locfileid: "68073251"
   Список систем пространственной ссылки (SRID), поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |spatial_reference_id|**int**|Идентификаторы SRID, поддерживаемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|authority_name|**nvarchar(128**|Центр сертификации SRID.|  
+|authority_name|**nvarchar(128)**|Центр сертификации SRID.|  
 |authorized_spatial_reference_id|**int**|SRID, заданный в центре **authority_name**.|  
-|well_known_text|**nvarchar (4000)**|Представление SRID в формате WKT.|  
-|unit_of_measure|**nvarchar(128**|Имя единицы измерения.|  
+|well_known_text|**nvarchar(4000)**|Представление SRID в формате WKT.|  
+|unit_of_measure|**nvarchar(128)**|Имя единицы измерения.|  
 |unit_conversion_factor|**float**|Длина единицы измерения в метрах.|  
   
 ## <a name="permissions"></a>Разрешения  

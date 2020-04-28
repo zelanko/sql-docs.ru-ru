@@ -18,10 +18,10 @@ ms.assetid: 69723419-4544-49c6-a517-adb30ffa5741
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 687f9f7441b7d77ea191047ef22491728ba81047
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095823"
 ---
 # <a name="log_shipping_secondary-transact-sql"></a>log_shipping_secondary (Transact-SQL)
@@ -29,17 +29,17 @@ ms.locfileid: "68095823"
 
   Хранит одну запись для каждого вторичного идентификатора. Эта таблица хранится в базе данных **msdb** .  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**secondary_id**|**UNIQUEIDENTIFIER**|Идентификатор сервера-получателя в конфигурации доставки журналов.|  
-|**primary_server**|**имеет sysname**|Имя экземпляра компонента SQL Server Database Engine — источника в конфигурации доставки журналов.|  
-|**primary_database**|**имеет sysname**|Имя базы данных-источника в конфигурации доставки журналов.|  
+|**secondary_id**|**uniqueidentifier**|Идентификатор сервера-получателя в конфигурации доставки журналов.|  
+|**primary_server**|**sysname**|Имя экземпляра компонента SQL Server Database Engine — источника в конфигурации доставки журналов.|  
+|**primary_database**|**sysname**|Имя базы данных-источника в конфигурации доставки журналов.|  
 |**backup_source_directory**|**nvarchar (500)**|Каталог, в котором хранятся файлы резервной копии журнала транзакций с сервера-источника.|  
 |**backup_destination_directory**|**nvarchar (500)**|Каталог сервера-получателя, в который копируются файлы резервных копий.|  
 |**file_retention_period**|**int**|Время в минутах, в течение которого файл резервной копии хранится на сервере-получателе.|  
-|**copy_job_id**|**UNIQUEIDENTIFIER**|Идентификатор, назначенный заданию копирования на сервере-получателе.|  
-|**restore_job_id**|**UNIQUEIDENTIFIER**|Идентификатор, назначенный заданию восстановления на сервере-получателе.|  
-|**monitor_server**|**имеет sysname**|Имя экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], используемого в качестве сервера мониторинга в конфигурации доставки журналов.|  
+|**copy_job_id**|**uniqueidentifier**|Идентификатор, назначенный заданию копирования на сервере-получателе.|  
+|**restore_job_id**|**uniqueidentifier**|Идентификатор, назначенный заданию восстановления на сервере-получателе.|  
+|**monitor_server**|**sysname**|Имя экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], используемого в качестве сервера мониторинга в конфигурации доставки журналов.|  
 |**monitor_server_security_mode**|**bit**|Режим безопасности, используемый для подключения к серверу мониторинга:<br /><br /> 1 = проверка подлинности Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности.|  
 |**last_copied_file**|**nvarchar (500)**|Имя последнего файла резервной копии, скопированного на сервер-получатель.|  
 |**last_copied_date**|**datetime**|Дата и время последней операции копирования на сервер-получатель.|  
@@ -53,6 +53,6 @@ ms.locfileid: "68095823"
  [sp_change_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-log-shipping-secondary-database-transact-sql.md)   
  [sp_delete_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
  [sp_help_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
- [Системные таблицы &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Системные таблицы (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

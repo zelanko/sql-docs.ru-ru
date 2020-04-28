@@ -20,10 +20,10 @@ ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fce2816d8cb169c5761f47dd0f9dd0a6ed1959f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078608"
 ---
 # <a name="syssystem_views-transact-sql"></a>Представление sys.system_views (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68078608"
 
   Содержит по одной строке для каждого системного представления, автоматически создаваемого [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Все системные представления содержатся в схемах с именами **sys** или **INFORMATION_SCHEMA**.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |\<наследуемые столбцы>||Список столбцов, наследуемых этим представлением, см. в разделе [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**is_replicated**|**bit**|1 = представление реплицировано.|  
@@ -42,13 +42,13 @@ ms.locfileid: "68078608"
 |**is_date_correlation_view**|**bit**|1 = представление было создано автоматически системой для хранения сведений о корреляции между столбцами **типа DateTime** . Создание данного представления стало возможным вследствие установки значения ON для параметра DATE_CORRELATION_OPTIMIZATION.|  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [DBCC CHECKDB &#40;&#41;Transact-SQL](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
  [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)   
- [ALTER ASSEMBLY &#40;&#41;Transact-SQL](../../t-sql/statements/alter-assembly-transact-sql.md)  
+ [ALTER ASSEMBLY (Transact-SQL)](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
   

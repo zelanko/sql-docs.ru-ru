@@ -19,10 +19,10 @@ ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44ee5c5ff44928c2f2b9e775eae41aea77fed87a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086220"
 ---
 # <a name="sysdm_cryptographic_provider_keys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
@@ -45,11 +45,11 @@ dm_cryptographic_provider_keys ( provider_id )
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**key_id**|**int**|Идентификатор ключа на поставщике.|  
 |**key_name**|**nvarchar(512)**|Имя ключа на поставщике.|  
-|**key_thumbprint**|**varbinary (32)**|Отпечаток с поставщика ключа.|  
+|**key_thumbprint**|**varbinary(32)**|Отпечаток с поставщика ключа.|  
 |**algorithm_id**|**int**|Идентификатор алгоритма на поставщике.|  
 |**algorithm_tag**|**int**|Тег алгоритма на поставщике.|  
 |**key_type**|**nchar (256)**|Тип ключа на поставщике.|  
@@ -69,6 +69,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Расширенное управление ключами &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
+ [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   

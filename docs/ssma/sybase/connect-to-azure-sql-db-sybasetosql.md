@@ -10,10 +10,10 @@ ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 68fbac69959d423477750a69bb6e5b06ab62af2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083474"
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Подключение к базе данных SQL Azure (SybaseToSQL)
@@ -39,9 +39,9 @@ ms.locfileid: "68083474"
   
 **Пароль**  
   
-Введите пароль для этого имени пользователя,  
+Введите пароль для имени пользователя.  
   
-**шифрование;**  
+**Encrypt**  
   
 SSMA рекомендует зашифрованное подключение к базе данных SQL Azure.  
   

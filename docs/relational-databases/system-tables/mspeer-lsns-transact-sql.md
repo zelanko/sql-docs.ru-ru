@@ -18,10 +18,10 @@ ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0d31de11ed7d41ecca409589f3daa25c85f1146
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085775"
 ---
 # <a name="mspeer_lsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
@@ -31,13 +31,13 @@ ms.locfileid: "68085775"
   
 ## <a name="definition"></a>Определение  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**удостоверения**|**int**|Определяет одноранговый номер LSN.|  
+|**идентификатор**|**int**|Определяет одноранговый номер LSN.|  
 |**last_updated**|**datetime**|**Дата и время** , когда было произведено Последнее обновление строки.|  
-|**правителю**|**имеет sysname**|Имя издателя, начавшего транзакцию.|  
-|**originator_db**|**имеет sysname**|Имя базы данных, в которой была начата транзакция.|  
-|**originator_publication**|**имеет sysname**|Имя публикации, в которой была начата транзакция.|  
+|**правителю**|**sysname**|Имя издателя, начавшего транзакцию.|  
+|**originator_db**|**sysname**|Имя базы данных, в которой была начата транзакция.|  
+|**originator_publication**|**sysname**|Имя публикации, в которой была начата транзакция.|  
 |**originator_publication_id**|**int**|Идентификатор публикации, в которой была начата транзакция.|  
 |**originator_db_version**|**int**|Показывает номер версии исходной базы данных.|  
 |**originator_lsn**|**int**|Идентифицирует LSN в исходной публикации.|  
@@ -46,6 +46,6 @@ ms.locfileid: "68085775"
   
 ## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c005ff603f21dca387215cafd9dff572db53960
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053096"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
@@ -71,12 +71,12 @@ sp_describe_cursor_tables
   
  В следующей таблице показан формат курсора, возвращенного процедурой sp_describe_cursor_tables.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|table owner|**имеет sysname**|Идентификатор пользователя владельца таблицы.|  
-|Table_name|**имеет sysname**|Имя объекта или базовой таблицы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] серверные курсоры всегда возвращают объекты, определенные пользователем, а не базовые таблицы.|  
+|table owner|**sysname**|Идентификатор пользователя владельца таблицы.|  
+|Table_name|**sysname**|Имя объекта или базовой таблицы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] серверные курсоры всегда возвращают объекты, определенные пользователем, а не базовые таблицы.|  
 |Optimizer_hints|**smallint**|Битовая карта одного или нескольких следующих значений.<br /><br /> 1 = Блокировка на уровне строк (ROWLOCK).<br /><br /> 4 = Блокировка на уровне страниц (ROWLOCK).<br /><br /> 8 = Блокировка таблицы (TABLOCK).<br /><br /> 16 = Монопольная блокировка таблицы (TABLOCKX).<br /><br /> 32 = Блокировка обновления (UPDLOCK).<br /><br /> 64 = Нет блокировки (NOLOCK).<br /><br /> 128 = Параметр перемотки первой строки (FASTFIRST).<br /><br /> 4096 = Считать повторяемую семантику с помощью DECLARE CURSOR (HOLDLOCK).<br /><br /> При предоставлении нескольких параметров система использует параметр с наибольшими ограничениями. Однако процедура sp_describe_cursor_tables отображает флаги, которые указываются в запросе.|  
-|lock_type|**smallint**|Тип блокировки прокрутки, запрашиваемый явно или неявно для каждой базовой таблицы, на которой основан данный курсор. Принимается одно из следующих значений:<br /><br /> 0 = нет<br /><br /> 1 = общее<br /><br /> 3 = обновление|  
+|lock_type|**smallint**|Тип блокировки прокрутки, запрашиваемый явно или неявно для каждой базовой таблицы, на которой основан данный курсор. Он может иметь одно из следующих значений:<br /><br /> 0 = нет<br /><br /> 1 = общее<br /><br /> 3 = обновление|  
 |server_name|**sysname, Nullable**|Имя связанного сервера, на котором находится таблица. NULL, если используются предложения OPENQUERY или OPENROWSET.|  
 |Objectid|**int**|Идентификатор объекта таблицы. 0, если используются предложения OPENQUERY или OPENROWSET.|  
 |dbid|**int**|Идентификатор базы данных, в которой расположена указанная таблица. 0, если используются предложения OPENQUERY или OPENROWSET.|  
@@ -136,6 +136,6 @@ GO
  [sp_cursor_list &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [sp_describe_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
  [sp_describe_cursor_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

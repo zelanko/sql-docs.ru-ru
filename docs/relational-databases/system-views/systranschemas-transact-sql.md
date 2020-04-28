@@ -18,10 +18,10 @@ ms.assetid: 864c3966-cb61-4f2b-8939-ccda112de853
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e2a80729738986d69f2eb78b16d119072d6e9e11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094754"
 ---
 # <a name="systranschemas-transact-sql"></a>systranschemas (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68094754"
 
   Таблица **systranschemas** используется для контроля изменений схемы в статьях, опубликованных в публикациях транзакций и моментальных снимков. Эта таблица хранится в базах данных публикаций и подписки.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**tabid**|**int**|Указывает статью таблицы, в которой произошло изменение схемы.|  
 |**стартлсн**|**binary**|Регистрационный номер транзакции в начале изменения схемы.|  
@@ -37,6 +37,6 @@ ms.locfileid: "68094754"
 |**типа**|**int**|Тип изменения схемы.|  
   
 ## <a name="see-also"></a>См. также:  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
+ [Таблицы репликации (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

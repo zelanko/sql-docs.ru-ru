@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e2380f72fe8a5faf9dc5504e56941f724b1bd159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098404"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>Определение данных многомерных выражений — CREATE KPI
@@ -29,7 +29,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *KPI_Name*  
+ *Название_КПЭ*  
  Допустимая строка, содержащая имя ключевого показателя эффективности.  
   
  *KPI_Value*  
@@ -89,10 +89,10 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |Состояние|Цилиндр|3|  
 |Состояние|Распознавание лиц|3|  
 |Состояние|Стрелка отклонения|3|  
-|Тенденция|Стандартная стрелка|3|  
-|Тенденция|Стрелка состояния|3|  
-|Тенденция|Обратная стрелка состояния|5|  
-|Тенденция|Распознавание лиц|3|  
+|Тенденции|Стандартная стрелка|3|  
+|Тенденции|Стрелка состояния|3|  
+|Тенденции|Обратная стрелка состояния|5|  
+|Тенденции|Распознавание лиц|3|  
   
 ## <a name="see-also"></a>См. также:  
  [Инструкция DROP KPI &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-drop-kpi.md)   

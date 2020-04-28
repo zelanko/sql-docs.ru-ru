@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 71aaa9e52cfca8435501695a4ebf60b2a6aa6ee4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096049"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
@@ -68,14 +68,13 @@ sp_tables [ [ @table_name = ] 'name' ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**TABLE_QUALIFIER**|**имеет sysname**|Имя квалификатора таблицы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. Это поле может иметь значение NULL.|  
-|**TABLE_OWNER**|**имеет sysname**|Имя владельца таблицы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя пользователя базы данных, создавшего таблицу. Это поле всегда возвращает значение.|  
-|**TABLE_NAME**|**имеет sysname**|Имя таблицы. Это поле всегда возвращает значение.|  
+|**TABLE_QUALIFIER**|**sysname**|Имя квалификатора таблицы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. Это поле может иметь значение NULL.|  
+|**TABLE_OWNER**|**sysname**|Имя владельца таблицы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя пользователя базы данных, создавшего таблицу. Это поле всегда возвращает значение.|  
+|**TABLE_NAME**|**sysname**|Имя таблицы. Это поле всегда возвращает значение.|  
 |**TABLE_TYPE**|**varchar (32)**|Таблица, системная таблица или представление.|  
-|**Примечания**|**varchar (254)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
+|**ЗАМЕЧАНИЯ**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
   
 ## <a name="remarks"></a>Remarks  
  Для максимальной совместимости клиент шлюза должен принимать только сопоставление шаблонов стандарта SQL-92 (символы-шаблоны «%» и «_»).  
@@ -96,7 +95,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 EXEC sp_tables ;  
 ```  
   
-### <a name="b-returning-information-about-the-tables-in-a-specified-schema"></a>Б. Возврат сведений о таблицах в указанной схеме  
+### <a name="b-returning-information-about-the-tables-in-a-specified-schema"></a>Б) Возврат сведений о таблицах в указанной схеме  
  В следующем примере возвращаются сведения о таблицах, принадлежащих схеме `Person` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -108,7 +107,7 @@ EXEC sp_tables
    @table_qualifier = 'AdventureWorks2012';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>В. Возврат списка объектов, к которым можно выполнять запросы в текущем окружении  
  Следующий пример возвращает список объектов, которые могут быть запросами в текущем окружении.  
@@ -131,7 +130,7 @@ EXEC sp_tables
   
 ## <a name="see-also"></a>См. также:  
  [sys. синонимы &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
 

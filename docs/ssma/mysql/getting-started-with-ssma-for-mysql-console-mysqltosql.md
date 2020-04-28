@@ -13,10 +13,10 @@ ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 88cf4716ea02b8c5dbcbd73e9839c6bacfbed10b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075419"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Начало работы с консолью SSMA для MySQL (MySQLToSQL)
@@ -55,11 +55,11 @@ ms.locfileid: "68075419"
   
 Цветовая интерпретация выходных данных консоли в следующей таблице:  
   
-|Color|Description|  
+|Color|Описание|  
 |---------|---------------|  
 |Красный|Неустранимая ошибка во время выполнения|  
 |Серый|Отметка даты и времени, сообщение пользователю|  
-|Белый|Команды файла сценария, тип сообщения|  
+|White|Команды файла сценария, тип сообщения|  
 |Желтый|Предупреждение|  
 |Зеленый|Запрос на ввод данных пользователем|  
 |Цвет|Начало, окончание и результат операции|  

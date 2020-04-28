@@ -10,10 +10,10 @@ ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074151"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Команды меню и другие сочетания клавиш (DB2ToSQL)
@@ -54,7 +54,7 @@ ms.locfileid: "68074151"
 |Найти ранее.|ALT + E + F + P или CTRL + SHIFT + F3|  
 |Найти далее|ALT + E + F + N или CTRL + F3|  
   
-## <a name="view-menu-commands"></a>Команды меню "вид"  
+## <a name="view-menu-commands"></a>Команды меню "Вид"  
 Для доступа к меню «Вид» используется сочетание клавиш ALT + V. В следующей таблице описаны сочетания клавиш, используемые для доступа к пунктам меню в меню Вид.  
   
 |ДЛЯ ЭТОГО|НАЖАТЬ|  

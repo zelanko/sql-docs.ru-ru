@@ -18,10 +18,10 @@ ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8009c9d2aa5f4b8f8be873633420bd1b088ece16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055090"
 ---
 # <a name="sp_help_fulltext_columns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
@@ -52,16 +52,16 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**TABLE_OWNER**|**имеет sysname**|Владелец таблицы. Это имя пользователя базы данных, создавшего таблицу.|  
+|**TABLE_OWNER**|**sysname**|Владелец таблицы. Это имя пользователя базы данных, создавшего таблицу.|  
 |**TABLE_ID**|**int**|Идентификатор таблицы.|  
-|**TABLE_NAME**|**имеет sysname**|Имя таблицы.|  
-|**FULLTEXT_COLUMN_NAME**|**имеет sysname**|Столбец таблицы с полнотекстовым индексом, предназначенной для индексирования.|  
+|**TABLE_NAME**|**sysname**|Имя таблицы.|  
+|**FULLTEXT_COLUMN_NAME**|**sysname**|Столбец таблицы с полнотекстовым индексом, предназначенной для индексирования.|  
 |**FULLTEXT_COLID**|**int**|Идентификатор столбца с полнотекстовым индексом.|  
-|**FULLTEXT_BLOBTP_COLNAME**|**имеет sysname**|Столбец в таблице с полнотекстовым индексом, указывающий тип документа столбца с полнотекстовым индексом. Это значение применимо только в том случае, если столбец с полнотекстовым индексом является столбцом типа **varbinary (max)** или **Image** .|  
+|**FULLTEXT_BLOBTP_COLNAME**|**sysname**|Столбец в таблице с полнотекстовым индексом, указывающий тип документа столбца с полнотекстовым индексом. Это значение применимо только в том случае, если столбец с полнотекстовым индексом является столбцом типа **varbinary (max)** или **Image** .|  
 |**FULLTEXT_BLOBTP_COLID**|**int**|Идентификатор столбца типа документа. Это значение применимо только в том случае, если столбец с полнотекстовым индексом является столбцом типа **varbinary (max)** или **Image** .|  
-|**FULLTEXT_LANGUAGE**|**имеет sysname**|Язык, используемый для полнотекстового поиска в столбце.|  
+|**FULLTEXT_LANGUAGE**|**sysname**|Язык, используемый для полнотекстового поиска в столбце.|  
   
 ## <a name="permissions"></a>Разрешения  
  По умолчанию разрешения на выполнение предоставлены членам роли **public** .  
@@ -80,6 +80,6 @@ GO
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
  [sp_fulltext_column &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-column-transact-sql.md)   
  [sp_help_fulltext_columns_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

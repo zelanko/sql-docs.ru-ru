@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb9ab9e3cbf5948e5e832171c179d6daa2c0bc28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096286"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68096286"
 > [!NOTE]  
 >  Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_db_partition_stats**. Partition_id в sys. dm_pdw_nodes_db_partition_stats отличается от partition_id в представлении каталога sys. partitions для хранилища данных SQL Azure.
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|Идентификатор секции. Является уникальным в пределах базы данных. Это то же значение, что и **partition_id** в представлении каталога **sys. partitions** , за исключением хранилища данных SQL Azure.|  
 |**object_id**|**int**|Идентификатор таблицы или индексированного представления, в которое входит данная секция.|  
@@ -55,7 +55,7 @@ ms.locfileid: "68096286"
 |**distribution_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Уникальный числовой идентификатор, связанный с распределением.|  
   
 ## <a name="remarks"></a>Remarks  
- **sys. dm_db_partition_stats** отображает сведения о пространстве, используемом для хранения и управления данными LOB данных в строке, а также данных, превышающих размер строки, для всех секций в базе данных. Для каждой секции отображается одна строка.  
+ Оператор **sys.dm_db_partition_stats** используется для отображения сведений о месте на диске, используемом для хранения данных и управления данными, находящимися в строках, данными больших двоичных объектов и данными, превышающими размер страницы данных строки, во всех секциях базы данных. Для каждой секции отображается одна строка.  
   
  Результаты подсчетов, на которых основаны выходные данные, хранятся в оперативной памяти или записываются в различные таблицы на жестком диске.  
   
@@ -80,7 +80,7 @@ SELECT * FROM sys.dm_db_partition_stats;
 GO  
 ```  
   
-### <a name="b-returning-all-counts-for-all-partitions-of-a-table-and-its-indexes"></a>Б. Возврат результатов подсчета для всех секций таблицы и ее индексов  
+### <a name="b-returning-all-counts-for-all-partitions-of-a-table-and-its-indexes"></a>Б) Возврат результатов подсчета для всех секций таблицы и ее индексов  
  В следующем примере выводятся результаты подсчета для всех секций таблицы `HumanResources.Employee` и ее индексов.  
   
 ```  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

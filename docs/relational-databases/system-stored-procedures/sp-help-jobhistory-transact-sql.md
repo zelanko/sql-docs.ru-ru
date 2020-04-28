@@ -18,10 +18,10 @@ ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054927"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
@@ -75,14 +75,14 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @run_status = ] run_status`Состояние выполнения задания. *run_status* имеет **тип int**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0**|Failed|  
-|**1**|Succeeded|  
+|**1**|Выполнено|  
 |**2**|Повторить (только для этапа)|  
-|**3-5**|Canceled|  
+|**3**|Отменено|  
 |**4**|Сообщение о проценте выполнения|  
-|**5.0**|Неизвестно|  
+|**5**|Неизвестно|  
   
 `[ @minimum_retries = ] minimum_retries`Минимальное число повторных попыток выполнения задания. *minimum_retries* имеет **тип int**и значение по умолчанию NULL.  
   
@@ -98,16 +98,16 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ## <a name="result-sets"></a>Результирующие наборы  
  Реальный список столбцов зависит от значения *mode*. Наиболее полный набор столбцов показан ниже и возвращается, если *режим* заполнен.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Идентификационный номер записи журнала.|  
-|**job_id**|**UNIQUEIDENTIFIER**|Идентификатор задания.|  
-|**job_name**|**имеет sysname**|Имя задания.|  
+|**job_id**|**uniqueidentifier**|Идентификатор задания.|  
+|**job_name**|**sysname**|Имя задания.|  
 |**step_id**|**int**|Идентификационный номер шага (для журнала заданий будет **равен 0** ).|  
-|**step_name**|**имеет sysname**|Имя этапа (NULL для журнала заданий).|  
+|**step_name**|**sysname**|Имя этапа (NULL для журнала заданий).|  
 |**sql_message_id**|**int**|Для шага [!INCLUDE[tsql](../../includes/tsql-md.md)] — самый последний номер ошибки [!INCLUDE[tsql](../../includes/tsql-md.md)], обнаруженный при выполнении команды.|  
 |**sql_severity**|**int**|Для шага [!INCLUDE[tsql](../../includes/tsql-md.md)] — самая высокая степень серьезности ошибки [!INCLUDE[tsql](../../includes/tsql-md.md)], обнаруженная при выполнении команды.|  
-|**Сообщение**|**nvarchar(1024)**|Сообщение в журнале заданий или шагов.|  
+|**message**|**nvarchar(1024)**|Запись в журнале о задании или этапе.|  
 |**run_status**|**int**|Результат задания или этапа.|  
 |**run_date**|**int**|Дата начала выполнения задания или этапа.|  
 |**run_time**|**int**|Дата начала выполнения задания или этапа.|  
@@ -116,13 +116,13 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**operator_netsent**|**nvarchar (20)**|Оператор, которому было отправлено сетевое сообщение относительно этого задания (NULL для журнала этапов).|  
 |**operator_paged**|**nvarchar (20)**|Оператор, которому было отправлено сообщение на пейджер относительно этого задания (NULL для журнала этапов).|  
 |**retries_attempted**|**int**|Количество повторных попыток запуска этапа (всегда 0 для журнала заданий).|  
-|**сервером**|**nvarchar (30)**|Сервер, на котором выполняется задание или этап. Всегда имеет (**Local**).|  
+|**сервером**|**nvarchar(30)**|Сервер, на котором выполняется задание или этап. Всегда имеет (**Local**).|  
   
 ## <a name="remarks"></a>Remarks  
  **sp_help_jobhistory** возвращает отчет с историей указанных запланированных заданий. Если не указаны параметры, отчет содержит журнал всех заданий в расписании.  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -148,7 +148,7 @@ EXEC dbo.sp_help_jobhistory
 GO  
 ```  
   
-### <a name="b-listing-information-for-jobs-that-match-certain-conditions"></a>Б. Вывод сведений о заданиях, которые соответствуют определенным условиям  
+### <a name="b-listing-information-for-jobs-that-match-certain-conditions"></a>Б) Вывод сведений о заданиях, которые соответствуют определенным условиям  
  Следующий пример иллюстрирует вывод всех сведений о шагах заданий, завершившихся неудачно с кодом ошибки `50100` (пользовательская ошибка) и уровнем серьезности `20`.  
   
 ```  
@@ -165,6 +165,6 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

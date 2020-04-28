@@ -18,10 +18,10 @@ ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ccae0385ef8c9305f4972ff6dcbd7a7960200370
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056315"
 ---
 # <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
@@ -55,14 +55,14 @@ sp_primarykeys [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**имеет sysname**|Каталог таблицы.|  
-|**TABLE_SCHEM**|**имеет sysname**|Схема таблицы.|  
-|**TABLE_NAME**|**имеет sysname**|Имя таблицы.|  
-|**COLUMN_NAME**|**имеет sysname**|Имя столбца.|  
+|**TABLE_CAT**|**sysname**|Каталог таблицы.|  
+|**TABLE_SCHEM**|**sysname**|Схема таблицы.|  
+|**TABLE_NAME**|**sysname**|Имя таблицы.|  
+|**COLUMN_NAME**|**sysname**|Имя столбца.|  
 |**KEY_SEQ**|**int**|Порядковый номер столбца в первичном ключе, состоящем из нескольких столбцов.|  
-|**PK_NAME**|**имеет sysname**|Идентификатор первичного ключа. Возвращает NULL, если не применим к источнику данных.|  
+|**PK_NAME**|**sysname**|Идентификатор первичного ключа. Возвращает NULL, если не применим к источнику данных.|  
   
 ## <a name="remarks"></a>Remarks  
  **sp_primarykeys** выполняется путем запроса набора строк PRIMARY_KEYS интерфейса **IDBSchemaRowset** поставщика OLE DB, соответствующего *table_server*. Параметры *table_name*, *table_schema*, *table_catalog*и *столбцов* передаются этому интерфейсу для ограничения возвращаемых строк.  
@@ -91,6 +91,6 @@ EXEC sp_primarykeys @table_server = N'LONDON1',
  [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

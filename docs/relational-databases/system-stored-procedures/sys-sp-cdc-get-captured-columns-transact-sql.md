@@ -22,16 +22,16 @@ ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: cf7c7ff03ec1318b1fe2fca8454f8ff39cd336a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083741"
 ---
 # <a name="syssp_cdc_get_captured_columns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает сведения о метаданных системы отслеживания измененных данных для исходных столбцов, отслеживаемых указанным экземпляром отслеживания. Система отслеживания измененных данных доступна не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  Возвращает сведения о метаданных системы отслеживания измененных данных для исходных столбцов, отслеживаемых указанным экземпляром отслеживания. Система отслеживания измененных данных доступна не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживаемых различными выпусками, см. [в разделе функции, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,19 +50,19 @@ sys.sp_cdc_get_captured_columns
  Чтобы создать отчет об экземплярах отслеживания для таблицы, выполните хранимую процедуру [sys. sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|source_schema|**имеет sysname**|Имя схемы исходной таблицы.|  
-|source_table|**имеет sysname**|Имя исходной таблицы.|  
-|capture_instance|**имеет sysname**|Имя экземпляра отслеживания.|  
-|column_name|**имеет sysname**|Имя отслеживаемого исходного столбца данных.|  
+|source_schema|**sysname**|Имя схемы исходной таблицы.|  
+|source_table|**sysname**|Имя исходной таблицы.|  
+|capture_instance|**sysname**|Имя экземпляра отслеживания.|  
+|column_name|**sysname**|Имя отслеживаемого исходного столбца данных.|  
 |column_id|**int**|Идентификатор столбца в исходной таблице.|  
 |column_ordinal|**int**|Положение столбца в исходной таблице.|  
-|Тип данных|**имеет sysname**|Тип данных столбца.|  
+|Тип данных|**sysname**|Тип данных столбца.|  
 |character_maximum_length|**int**|Максимальная длина символьного столбца; в противном случае — NULL.|  
 |numeric_precision|**tinyint**|Точность чисел для числового столбца; в противном случае — NULL.|  
 |numeric_precision_radix|**smallint**|Основание определения точности числовых столбцов; в противном случае — NULL.|  

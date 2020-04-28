@@ -18,10 +18,10 @@ ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1dffb53a2b6436725a2b7dc19dfb209a58b1134e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053113"
 ---
 # <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
@@ -72,7 +72,7 @@ sp_describe_cursor_columns
   
  В следующей таблице приводится описание курсора, возвращаемого с помощью процедуры sp_describe_cursor_columns.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |column_name|**sysname** (Nullable)|Имя, назначенное столбцу результирующего набора. Столбец принимает значение NULL, если он был задан без сопутствующего предложения AS.|  
 |ordinal_position|**int**|Позиция столбца относительно крайнего левого столбца в результирующем наборе. Первый столбец находится в позиции 0.|  
@@ -87,7 +87,7 @@ sp_describe_cursor_columns
 |columnid|**int**|Идентификатор базового столбца. Если столбец результирующего набора строится из выражения, значение columnid равно -1.|  
 |objectid|**int**|Идентификатор объекта или базовой таблицы, служащих источником столбца. Если столбец результирующего набора строится из выражения, значение objectid равно -1.|  
 |dbid|**int**|Идентификатор базы данных, в которой находится таблица этого столбца. Если столбец результирующего набора строится из выражения, значение dbid равно -1.|  
-|dbname|**имеет sysname**<br /><br /> (допускает значение NULL)|Имя базы данных, содержащей базовую таблицу, служащую источником столбца. Если столбец результирующего набора строится из выражения, значение dbname равно NULL.|  
+|dbname|**sysname**<br /><br /> (допускает значение NULL)|Имя базы данных, содержащей базовую таблицу, служащую источником столбца. Если столбец результирующего набора строится из выражения, значение dbname равно NULL.|  
   
 ## <a name="remarks"></a>Remarks  
  Процедура sp_describe_cursor_columns описывает атрибуты столбцов в результирующем наборе серверного курсора, такие как имя и тип данных, для каждого курсора. Процедура sp_describe_cursor используется для получения описания глобальных атрибутов серверного курсора. Процедура sp_describe_cursor_tables используется для получения отчета по базовым таблицам, на которые ссылается курсор. Чтобы получить отчет по серверным курсорам [!INCLUDE[tsql](../../includes/tsql-md.md)], видимым в соединении, используется процедура sp_cursor_list.  
@@ -142,6 +142,6 @@ GO
  [sp_describe_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
  [sp_cursor_list &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [sp_describe_cursor_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

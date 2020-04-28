@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8ed0e041a6aa36027613059f16f3902bdb664aeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056422"
 ---
 # <a name="sp_pkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
@@ -58,14 +58,14 @@ sp_pkeys [ @table_name = ] 'name'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|TABLE_QUALIFIER|**имеет sysname**|Имя квалификатора таблицы. Это поле может иметь значение NULL.|  
-|TABLE_OWNER|**имеет sysname**|Имя владельца таблицы. Это поле всегда возвращает значение.|  
-|TABLE_NAME|**имеет sysname**|Имя таблицы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя таблицы, отображаемое в таблице sysobjects. Это поле всегда возвращает значение.|  
-|COLUMN_NAME|**имеет sysname**|Возвращаются имена всех столбцов в таблице TABLE_NAME. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя столбца, отображаемое в таблице sys.columns. Это поле всегда возвращает значение.|  
+|TABLE_QUALIFIER|**sysname**|Имя квалификатора таблицы. Это поле может иметь значение NULL.|  
+|TABLE_OWNER|**sysname**|Имя владельца таблицы. Это поле всегда возвращает значение.|  
+|TABLE_NAME|**sysname**|Имя таблицы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя таблицы, отображаемое в таблице sysobjects. Это поле всегда возвращает значение.|  
+|COLUMN_NAME|**sysname**|Возвращаются имена всех столбцов в таблице TABLE_NAME. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя столбца, отображаемое в таблице sys.columns. Это поле всегда возвращает значение.|  
 |KEY_SEQ|**smallint**|Порядковый номер столбца в первичном ключе, состоящем из нескольких столбцов.|  
-|PK_NAME|**имеет sysname**|Идентификатор первичного ключа. Возвращает NULL, если не применим к источнику данных.|  
+|PK_NAME|**sysname**|Идентификатор первичного ключа. Возвращает NULL, если не применим к источнику данных.|  
   
 ## <a name="remarks"></a>Remarks  
  Процедура sp_pkeys возвращает сведения о столбцах, явно указанных в ограничении ПЕРВИЧНЫЙ КЛЮЧ. Поскольку не все системы поддерживают явно именованные первичные ключи, разработчик шлюза определяет, что представляет собой первичный ключ. Обратите внимание на то, что под первичным ключом понимается логический первичный ключ таблицы. Предполагается, что для каждого логического первичного ключа определен уникальный индекс. Этот уникальный индекс возвращает хранимая процедура sp_statistics.  
@@ -85,7 +85,7 @@ EXEC sp_pkeys @table_name = N'Department'
     ,@table_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В следующем примере возвращается первичный ключ таблицы `DimAccount` в базе данных `AdventureWorksPDW2012`. Он возвращает нулевые строки, указывающие, что таблица не имеет первичного ключа.  
   
 ```  
@@ -96,7 +96,7 @@ EXEC sp_pkeys @table_name = N'DimAccount;
   
 ## <a name="see-also"></a>См. также:  
  [Хранимые процедуры каталога &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
 

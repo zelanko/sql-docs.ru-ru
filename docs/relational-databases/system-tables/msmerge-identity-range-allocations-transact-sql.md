@@ -18,10 +18,10 @@ ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: de0325925bb1ad1626987361435056ff21a26be6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68072649"
 ---
 # <a name="msmerge_identity_range_allocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
@@ -29,14 +29,14 @@ ms.locfileid: "68072649"
 
   Таблица **MSmerge_identity_range_allocations** используется для мониторинга журнала назначений диапазонов идентификаторов как для издателей, так и для подписчиков для опубликованных статей. Эта таблица хранится в базе данных распространителя.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Идентификатор издателя.|  
-|**publisher_db**|**nvarchar(128**|Имя базы данных публикации.|  
-|**публикации**|**nvarchar(128**|Имя публикации.|  
-|**рассмотрен**|**nvarchar(128**|Имя статьи.|  
-|**абонент**|**nvarchar(128**|Имя подписчика.|  
-|**subscriber_db**|**nvarchar(128**|Имя базы данных подписки.|  
+|**publisher_db**|**nvarchar(128)**|Имя базы данных публикации.|  
+|**публикации**|**nvarchar(128)**|Имя публикации.|  
+|**рассмотрен**|**nvarchar(128)**|Имя статьи.|  
+|**абонент**|**nvarchar(128)**|Имя подписчика.|  
+|**subscriber_db**|**nvarchar(128)**|Имя базы данных подписки.|  
 |**is_pub_range**|**bit**|Показывает, назначен ли диапазон идентификаторов издателю.|  
 |**ranges_allocated**|**tinyint**|Число назначенных диапазонов идентификаторов.|  
 |**range_begin**|**numeric (38)**|Начальное значение диапазона.|  
@@ -48,6 +48,6 @@ ms.locfileid: "68072649"
   
 ## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

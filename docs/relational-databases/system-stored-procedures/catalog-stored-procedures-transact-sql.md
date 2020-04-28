@@ -19,16 +19,15 @@ ms.assetid: 6190b070-a3ba-4925-bbe7-79229205dac7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6b9df008c37a6efb645df4ceed46d30e6da452eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078343"
 ---
 # <a name="catalog-stored-procedures-transact-sql"></a>Хранимые процедуры каталога (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает следующие системные хранимые процедуры, реализующие функции словаря данных ODBC и изоляцию приложений ODBC от изменений базовых системных таблиц.  
   
 |||  
@@ -41,6 +40,6 @@ ms.locfileid: "68078343"
 |[sp_server_info](../../relational-databases/system-stored-procedures/sp-server-info-transact-sql.md)|[sp_tables](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)|  
   
 ## <a name="see-also"></a>См. также:  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -21,10 +21,10 @@ author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ea116b0d4a70b647c6c3a719443f8e35f177169b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102384"
 ---
 # <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
@@ -32,16 +32,16 @@ ms.locfileid: "68102384"
 
 Содержит строку для каждой внутренней оптимизированной для памяти таблицы, которая используются для хранения пользовательских таблиц, оптимизированных для памяти. Каждая пользовательская таблица соответствует одной или нескольким внутренним таблицам. Одна таблица используется для хранения основных данных. Дополнительные внутренние таблицы используются для поддержки таких функций, как темпоральные таблицы, индекс columnstore и хранилище (LOB) "вне строки" для таблиц, оптимизированных для памяти.
  
-| Имя столбца  | Тип данных  | Description |
+| Имя столбца  | Тип данных  | Описание |
 | :------ |:----------| :-----|
 |object_id  |**int**|       Идентификатор пользовательской таблицы. Внутренние оптимизированные для памяти таблицы, служащие для поддержки пользовательской таблицы (например, хранилища вне строки или удаленных строк в случае сочетания Hk/Columnstore), имеют то же значение object_id, что и их родительский объект. |
 |xtp_object_id  |**bigint**|    Идентификатор объекта выполняющейся в памяти OLTP, который соответствует внутренней оптимизированной для памяти таблице, используемой для поддержки пользовательской таблицы. Он уникален в пределах базы данных и может изменяться за время существования объекта. 
 |type|  **int** |   Тип внутренней таблицы.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
-|type_desc| **nvarchar (60)**|   Описание типа<br/><br/>DELETED_ROWS_TABLE — внутренняя таблица, отслеживающая удаленные строки для индекса columnstore<br/>USER_TABLE — таблица, содержащая данные пользователя в строке<br/>DICTIONARIES_TABLE — словари для индекса columnstore<br/>SEGMENTS_TABLE — сжатые сегменты для индекса columnstore<br/>ROW_GROUPS_INFO_TABLE — метаданные для групп сжатых строк индекса columnstore<br/>INTERNAL OFF-ROW DATA TABLE — внутренняя таблица, используемая для хранения столбца вне строки. В данном случае minor_id отражает столбец column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE — оперативный заключительный фрагмент таблицы журнала на диске. Вставляемые в журнал строки сначала вставляются во внутреннюю таблицу, оптимизированную для памяти. Существует фоновая задача, которая асинхронно перемещает строки из этой внутренней таблицы в таблицу журнала на диске. |
+|type_desc| **nvarchar(60)**|   Описание типа<br/><br/>DELETED_ROWS_TABLE — внутренняя таблица, отслеживающая удаленные строки для индекса columnstore<br/>USER_TABLE — таблица, содержащая данные пользователя в строке<br/>DICTIONARIES_TABLE — словари для индекса columnstore<br/>SEGMENTS_TABLE — сжатые сегменты для индекса columnstore<br/>ROW_GROUPS_INFO_TABLE — метаданные для групп сжатых строк индекса columnstore<br/>INTERNAL OFF-ROW DATA TABLE — внутренняя таблица, используемая для хранения столбца вне строки. В данном случае minor_id отражает столбец column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE — оперативный заключительный фрагмент таблицы журнала на диске. Вставляемые в журнал строки сначала вставляются во внутреннюю таблицу, оптимизированную для памяти. Существует фоновая задача, которая асинхронно перемещает строки из этой внутренней таблицы в таблицу журнала на диске. |
 |minor_id|  **int**|    Значение 0 указывает на пользователя или внутреннюю таблицу<br/><br/>Ненулевое значение обозначает идентификатор столбца, хранящегося вне строки. Соединяется с column_id в sys.columns.<br/><br/>Каждый столбец, хранящийся вне строки, имеет соответствующую строку в этом системном представлении.|
 
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -75,7 +75,7 @@ FROM sys.memory_optimized_tables_internal_attributes moa
 WHERE moa.type=5;
 ```
 
-### <a name="b-returning-memory-consumption-of-all-columns-that-are-stored-off-row"></a>Б. Возвращение сведений о потреблении памяти для всех столбцов, которые хранятся вне строки
+### <a name="b-returning-memory-consumption-of-all-columns-that-are-stored-off-row"></a>Б) Возвращение сведений о потреблении памяти для всех столбцов, которые хранятся вне строки
 
 Чтобы получить дополнительные сведения о потреблении памяти для столбцов, хранящихся вне строки, можно использовать следующий запрос, который показывает потребление памяти для всех внутренних таблиц и их индексов, используемых для хранения столбцов вне строки:
 

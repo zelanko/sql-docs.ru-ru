@@ -18,10 +18,10 @@ ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e26fa9b22578d91636eb554c75a55f184869d529
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68046212"
 ---
 # <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
@@ -59,7 +59,7 @@ sp_add_log_shipping_secondary_database
   
 `[ @primary_database = ] 'primary_database'`Имя базы данных на сервере-источнике. Аргумент *primary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @restore_delay = ] 'restore_delay'`Время в минутах, в течение которого сервер-получатель ждет перед восстановлением заданного файла резервной копии. *restore_delay* имеет **тип int** и не может иметь значение null. По умолчанию используется значение 0.  
+`[ @restore_delay = ] 'restore_delay'`Время в минутах, в течение которого сервер-получатель ждет перед восстановлением заданного файла резервной копии. *restore_delay* имеет **тип int** и не может иметь значение null. Значение по умолчанию — 0.  
   
 `[ @restore_all = ] 'restore_all'`Если задано значение 1, сервер-получатель восстанавливает все доступные резервные копии журналов транзакций при выполнении задания восстановления. В противном случае он останавливается после восстановления одного файла. *restore_all* имеет **бит** и не может иметь значение null.  
   
@@ -88,7 +88,7 @@ sp_add_log_shipping_secondary_database
 `[ @history_retention_period = ] 'history_retention_period'`Продолжительность времени в минутах, в течение которого сохраняется журнал. *history_retention_period* имеет **тип int**и значение по умолчанию NULL. Если ничего не указано, используется значение 14 420.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
@@ -126,6 +126,6 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

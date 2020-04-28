@@ -18,10 +18,10 @@ ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 058e1948fa79ed2ba250a4f4d504f95201d1e254
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079083"
 ---
 # <a name="msreplication_objects-transact-sql"></a>MSreplication_objects (Transact-SQL)
@@ -29,16 +29,16 @@ ms.locfileid: "68079083"
 
   Таблица **MSreplication_objects** содержит по одной строке для каждого объекта, связанного с репликацией в базе данных подписчика. Эта таблица хранится в базе данных подписки.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**издателя**|**имеет sysname**|Имя издателя.|  
-|**publisher_db**|**имеет sysname**|Имя базы данных издателя.|  
-|**публикации**|**имеет sysname**|Имя публикации.|  
-|**object_name**|**имеет sysname**|Имя объекта.|  
+|**издателя**|**sysname**|Имя издателя.|  
+|**publisher_db**|**sysname**|Имя базы данных издателя.|  
+|**публикации**|**sysname**|Имя публикации.|  
+|**object_name**|**sysname**|Имя объекта.|  
 |**object_type**|**char (2)**|Тип объекта:<br /><br /> **u** = таблица.<br /><br /> **t** = триггер.<br /><br /> **p** = хранимая процедура.|  
-|**рассмотрен**|**имеет sysname**|Имя статьи, с которой связан объект.|  
+|**рассмотрен**|**sysname**|Имя статьи, с которой связан объект.|  
   
 ## <a name="see-also"></a>См. также:  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
+ [Таблицы репликации (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 93e9c574346ad57a6947645552616cd8db46fe85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056368"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
@@ -59,7 +59,7 @@ sp_post_msx_operation
   
 `[ @specific_target_server = ] 'target_server'`Имя целевого сервера, к которому применяется указанная операция. Если указан параметр *job_id* , но *target_server* не указаны, операции публикуются для всех серверов заданий задания. *target_server* имеет тип **nvarchar (30)** и значение по умолчанию NULL.  
   
-`[ @value = ] value`Интервал опроса в секундах. *значение* имеет **тип int**и значение по умолчанию NULL. Этот параметр следует указывать только в том случае, если для параметра *Operation* задано **значение poll**.  
+`[ @value = ] value`Интервал опроса в секундах. Аргумент*value* имеет тип **int**и значение по умолчанию NULL. Этот параметр следует указывать только в том случае, если для параметра *Operation* задано **значение poll**.  
   
 `[ @schedule_uid = ] schedule_uid`Уникальный идентификатор расписания, к которому применяется операция. *schedule_uid* имеет тип **uniqueidentifier**и не имеет значения по умолчанию.  
   
@@ -91,6 +91,6 @@ sp_post_msx_operation
  [sp_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
  [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

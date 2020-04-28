@@ -18,10 +18,10 @@ ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a94163e2fe4a1ed5be77dd4ae99f43d03cc35121
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079169"
 ---
 # <a name="msrepl_queuedtraninfo-transact-sql"></a>MSrepl_queuedtraninfo (Transact-SQL)
@@ -29,17 +29,17 @@ ms.locfileid: "68079169"
 
   Таблица **MSreplication_queuedtraninfo** используется процессом репликации для хранения сведений о командах в очереди, выданных всеми подписками, обновляемыми посредством очередей и использующих обновление посредством очередей на основе SQL. Эта таблица хранится в базе данных подписки.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**издателя**|**имеет sysname**|Имя издателя.|  
-|**publisher_db**|**имеет sysname**|Имя базы данных публикации.|  
-|**публикации**|**имеет sysname**|Имя публикации.|  
-|**транид**|**имеет sysname**|Идентификатор транзакции, в которой была выполнена команда из очереди.|  
+|**издателя**|**sysname**|Имя издателя.|  
+|**publisher_db**|**sysname**|Имя базы данных публикации.|  
+|**публикации**|**sysname**|Имя публикации.|  
+|**транид**|**sysname**|Идентификатор транзакции, в которой была выполнена команда из очереди.|  
 |**maxorderkey**|**bigint**|Только для внутреннего использования.|  
 |**commandcount**|**bigint**|Только для внутреннего использования.|  
   
 ## <a name="see-also"></a>См. также:  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

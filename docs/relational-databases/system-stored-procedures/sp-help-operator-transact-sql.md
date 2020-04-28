@@ -18,10 +18,10 @@ ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e6568b15a12949180ca0e2df41063c100abc3290
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085302"
 ---
 # <a name="sp_help_operator-transact-sql"></a>Хранимая процедура sp_help_operator (Transact-SQL)
@@ -54,10 +54,10 @@ sp_help_operator
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**удостоверения**|**int**|Идентификационный номер оператора.|  
-|**name**|**имеет sysname**|Имя оператора.|  
+|**идентификатор**|**int**|Идентификационный номер оператора.|  
+|**name**|**sysname**|Имя оператора.|  
 |**доступной**|**tinyint**|Доступность оператора для получения уведомлений:<br /><br /> **1** = да<br /><br /> **0** = нет|  
 |**email_address**|**nvarchar (100)**|Адрес электронной почты оператора.|  
 |**last_email_date**|**int**|Дата, когда оператор получил последнее уведомление по электронной почте.|  
@@ -75,13 +75,13 @@ sp_help_operator
 |**netsend_address**|**nvarchar (100)**|Адрес оператора для всплывающих сетевых уведомлений.|  
 |**last_netsend_date**|**int**|Дата, когда оператор получил последнее всплывающее сетевое уведомление.|  
 |**last_netsend_time**|**int**|Время, когда оператор получил последнее всплывающее сетевое уведомление.|  
-|**category_name**|**имеет sysname**|Имя категории операторов, к которой принадлежит этот оператор.|  
+|**category_name**|**sysname**|Имя категории операторов, к которой принадлежит этот оператор.|  
   
 ## <a name="remarks"></a>Remarks  
  **sp_help_operator** должны запускаться из базы данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -103,10 +103,10 @@ EXEC dbo.sp_help_operator
 GO  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

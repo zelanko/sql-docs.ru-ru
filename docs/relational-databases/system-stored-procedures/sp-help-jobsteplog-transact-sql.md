@@ -18,10 +18,10 @@ ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e3af6ff05b971e6b9a0dedc1ec2e14f4ba87e00c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090042"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
@@ -54,17 +54,17 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 `[ @step_name = ] 'step_name'`Имя шага в задании. Аргумент *step_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**job_id**|**UNIQUEIDENTIFIER**|Уникальный идентификатор задания.|  
-|**job_name**|**имеет sysname**|Имя задания.|  
+|**job_id**|**uniqueidentifier**|Уникальный идентификатор задания.|  
+|**job_name**|**sysname**|Имя задания.|  
 |**step_id**|**int**|Идентификатор для этапа задачи. Например, если шаг является первым шагом в задании, его *step_id* имеет значение 1.|  
-|**step_name**|**имеет sysname**|Имя шага задания.|  
-|**step_uid**|**UNIQUEIDENTIFIER**|Уникальный идентификатор этапа (задается системой) задачи.|  
+|**step_name**|**sysname**|Имя шага задания.|  
+|**step_uid**|**uniqueidentifier**|Уникальный идентификатор этапа (задается системой) задачи.|  
 |**date_created**|**datetime**|Дата создания этапа.|  
 |**date_modified**|**datetime**|Дата последнего изменения этапа.|  
 |**log_size**|**float**|Размер журнала шага задания в мегабайтах (МБ).|  
@@ -74,7 +74,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  **sp_help_jobsteplog** находится в базе данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -100,7 +100,7 @@ EXEC dbo.sp_help_jobsteplog
 GO  
 ```  
   
-### <a name="b-return-job-step-log-information-about-a-specific-job-step"></a>Б. Возвращает сведения из журнала шага задания для определенного шага  
+### <a name="b-return-job-step-log-information-about-a-specific-job-step"></a>Б) Возвращает сведения из журнала шага задания для определенного шага  
  В следующем примере выполняется возврат сведений журнала шагов задания для первого этапа задачи с именем `Weekly Sales Data Backup`.  
   
 ```  

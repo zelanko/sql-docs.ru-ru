@@ -18,10 +18,10 @@ ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6a1a2ce1208dcf359bb0586c3de1fe294644e3a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054877"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
@@ -52,20 +52,20 @@ sp_help_jobserver
 `[ @show_last_run_details = ] show_last_run_details`Указывает, является ли информация о выполнении последнего запуска частью результирующего набора. *show_last_run_details* имеет тип **tinyint**и значение по умолчанию **0**. **0** не включает сведения о последнем запуске, а **1** —.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Идентификационный номер целевого сервера.|  
-|**server_name**|**nvarchar (30)**|Имя компьютера целевого сервера.|  
+|**server_name**|**nvarchar(30)**|Имя компьютера целевого сервера.|  
 |**enlist_date**|**datetime**|Дата прикрепления целевого сервера к главному серверу.|  
 |**last_poll_date**|**datetime**|Дата последнего опроса главного сервера целевым сервером.|  
   
  Если **sp_help_jobserver** выполняется с *show_last_run_details* , для которого задано значение **1**, то результирующий набор будет содержать эти дополнительные столбцы.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**last_run_date**|**int**|Дата последнего запуска задания на выполнение на данном целевом сервере.|  
 |**last_run_time**|**int**|Время выполнения последнего запуска задания на данном целевом сервере.|  
@@ -74,7 +74,7 @@ sp_help_jobserver
 |**last_run_outcome**|**int**|Результат последнего выполнения задания на данном сервере:<br /><br /> **0** = сбой<br /><br /> **1** = успех<br /><br /> **3** = отменено<br /><br /> **5** = неизвестно|  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -102,6 +102,6 @@ GO
 ## <a name="see-also"></a>См. также:  
  [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

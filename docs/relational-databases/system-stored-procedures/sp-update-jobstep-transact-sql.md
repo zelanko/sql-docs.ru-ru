@@ -18,10 +18,10 @@ ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084880"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
@@ -83,7 +83,7 @@ sp_update_jobstep
 |-----------|----------------------------|  
 |**1**|Завершить с успешным выполнением.|  
 |**2**|Завершить с ошибкой.|  
-|**3-5**|Перейти к следующему шагу.|  
+|**3**|Перейти к следующему шагу.|  
 |**4**|Перейдите к шагу *success_step_id.*|  
   
 `[ @on_success_step_id = ] success_step_id`Идентификационный номер шага в этом задании, который будет выполнен, если шаг выполнен, а *success_action* — **4**. *success_step_id* имеет **тип int**и значение по умолчанию NULL.  
@@ -94,7 +94,7 @@ sp_update_jobstep
 |-----------|----------------------------|  
 |**1**|Завершить с успешным выполнением.|  
 |**2**|Завершить с ошибкой.|  
-|**3-5**|Перейти к следующему шагу.|  
+|**3**|Перейти к следующему шагу.|  
 |**4**|Перейдите к шагу *fail_step_id * *.*|  
   
 `[ @on_fail_step_id = ] fail_step_id`Идентификационный номер шага в этом задании, которое должно быть выполнено, если шаг завершается ошибкой, а *fail_action* — **4**. *fail_step_id* имеет **тип int**и значение по умолчанию NULL.  
@@ -119,13 +119,13 @@ sp_update_jobstep
   
 `[ @flags = ] flags`Параметр, управляющий поведением. *Флаги* имеют **тип int**и могут принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0** (по умолчанию)|Переписать выходной файл.|  
 |**2**|Добавить к выходному файлу.|  
 |**4**|Записать вывод шага задания Transact-SQL в журнал шагов.|  
 |**8**|Записать журнал в таблицу (переписать существующий журнал).|  
-|**глубин**|Записать журнал в таблицу (добавить к существующему журналу).|  
+|**16**|Записать журнал в таблицу (добавить к существующему журналу).|  
   
 `[ @proxy_id = ] proxy_id`ИДЕНТИФИКАЦИОНный номер учетной записи-посредника, от имени которой выполняется шаг задания. *proxy_id* имеет тип **int**и значение по умолчанию NULL. Если *proxy_id* не указано, *proxy_name* не указана и *user_name* не указана, шаг задания выполняется как учетная запись службы для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента.  
   
@@ -140,7 +140,7 @@ sp_update_jobstep
  Обновление шага задания увеличивает номер версии задания.  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -172,6 +172,6 @@ GO
  [Просмотр или изменение заданий](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

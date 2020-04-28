@@ -16,10 +16,10 @@ ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f36b2f6f52b87fb844bbe9ccb5604f2c4056b15d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095744"
 ---
 # <a name="log-shipping-tables-transact-sql"></a>Таблицы доставки журналов (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "68095744"
 
   В следующих разделах описываются системные таблицы, в которых хранятся сведения, используемые операциями доставки журналов.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)  
  Сохраняет идентификаторы предупреждений заданий для доставки журналов.  
   
