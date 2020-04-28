@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d1ad35a40e4218bfef44daeec01ee03fc0c7c78
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175993"
 ---
 # <a name="data-import-master-data-services"></a>Импорт данных (службы Master Data Services)
@@ -69,11 +69,11 @@ ms.locfileid: "78175993"
 ## <a name="staging-tables-and-stored-procedures"></a>Промежуточные таблицы и хранимые процедуры
  База данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] включает следующие типы промежуточных таблиц, которые можно заполнять данными.
 
--   [&#40;Master Data Services промежуточной таблицы элементов&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)
+-   [Конечный элемент таблицы элементов (службы Master Data Services)](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)
 
--   [Промежуточная таблица консолидированного элемента &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)
+-   [Промежуточная таблица консолидированных элементов (службы Master Data Services)](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)
 
--   [Промежуточная таблица связей &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)
+-   [Промежуточная таблица связей (службы Master Data Services)](../../2014/master-data-services/relationship-staging-table-master-data-services.md)
 
  Для каждой сущности в модели есть промежуточная таблица. Имя таблицы обозначает соответствующую сущность и ее тип, например конечный элемент. На этом изображении показаны промежуточные таблицы для сущностей валюты, клиента и продукта.
 
@@ -81,8 +81,7 @@ ms.locfileid: "78175993"
 
  Имя таблицы указывается при создании сущности и не может быть изменено. Если имя промежуточной таблицы содержит _1 (или другое число), то на момент создания сущности уже существовала другая таблица с тем же именем.
 
- 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] включает следующие типы промежуточных хранимых процедур.
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] включает следующие типы промежуточных хранимых процедур.
 
 -   stg.udp_\<имя>_Leaf
 
@@ -103,8 +102,8 @@ ms.locfileid: "78175993"
 
 ## <a name="related-content"></a>См. также
 
--   [Master Data Services &#40;проверки&#41;](../../2014/master-data-services/validation-master-data-services.md)
+-   [Проверка (службы Master Data Services)](../../2014/master-data-services/validation-master-data-services.md)
 
--   [Бизнес-правила &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)
+-   [Бизнес-правила (службы Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)
 
 

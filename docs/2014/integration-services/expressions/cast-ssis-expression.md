@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b19b2e960aa2383568d3977d19368576f4178949
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176444"
 ---
 # <a name="cast-ssis-expression"></a>Приведение (выражение служб SSIS)
@@ -40,7 +40,7 @@ ms.locfileid: "78176444"
  *выражение* Является допустимым выражением.
 
 ## <a name="result-types"></a>Типы результата
- Тип данных *type_spec*. Дополнительные сведения см. в разделе [Integration Services Data Types](../data-flow/integration-services-data-types.md).
+ Тип данных *type_spec*. Дополнительные сведения см. в разделе [типы данных Integration Services](../data-flow/integration-services-data-types.md).
 
 ## <a name="remarks"></a>Remarks
  На следующей диаграмме перечислены допустимые операторы приведения.
@@ -55,7 +55,7 @@ ms.locfileid: "78176444"
 |DT_WSTR|*Параметра charCount*|Команда (DT_WSTR,20) приводит 20 пар байт (или символов в формате Юникод) к значению типа DT_WSTR.|
 |DT_BYTES|*ByteCount*|(DT_BYTES,50) приводит 50 байт к типу данных DT_BYTES.|
 |DT_DECIMAL|*Масштабирование*|(DT_DECIMAL,2) приводит числовое значение к типу данных DT_DECIMAL, используя масштаб 2.|
-|DT_NUMERIC|*Обеспечивают*<br /><br /> *Масштабирование*|(DT_NUMERIC,10,3) приводит числовое значение к типу данных DT_NUMERIC, используя точность 10 и масштаб 3.|
+|DT_NUMERIC|*Точность*<br /><br /> *Масштабирование*|(DT_NUMERIC,10,3) приводит числовое значение к типу данных DT_NUMERIC, используя точность 10 и масштаб 3.|
 |DT_TEXT|*Страница*|(DT_TEXT,1252) приводит значение к типу данных DT_TEXT, используя кодовую страницу 1252.|
 
  При приведении строки к значению типа DT_DATE (или обратно) используется локаль преобразования. Однако дата задается в формате ISO (ГГГГ-ММ-ДД) вне зависимости от того, используется ли в локали формат ISO.

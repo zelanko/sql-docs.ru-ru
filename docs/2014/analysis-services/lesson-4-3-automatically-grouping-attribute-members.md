@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7fc8bed16488f1688576d6c5b265811cdc9705a1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175343"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Автоматическое группирование элементов атрибута
@@ -22,7 +22,7 @@ ms.locfileid: "78175343"
 
  Свойство **DiscretizationMethod** определяет, создают ли службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] группирования, а также определяет тип выполняемого группирования. По умолчанию в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] группирование не выполняется. При включении автоматического группирования можно настроить параметры служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] таким образом, чтобы выполнялся автоматический выбор оптимального метода группирования, основанного на структуре данного атрибута, либо выбрать один из алгоритмов группирования в следующем списке:
 
- **EqualAreas** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] создает диапазоны групп таким образом, что общее заполнение элементов измерения равномерно распределяется по группам.
+ **EqualAreas** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] диапазоны групп создаются таким образом, что элементы измерения распределяются по группам пропорционально.
 
  **Кластеры** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] создают группы, выполняя одномерный кластеризацию входных значений с помощью метода кластеризации K-средних с распределениями по Гауссу. Эта функция применима только в отношении числовых столбцов.
 
@@ -124,6 +124,6 @@ ms.locfileid: "78175343"
  [Скрытие и отключение иерархий атрибутов](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)
 
 ## <a name="see-also"></a>См. также:
- [Группирование элементов атрибута &#40;&#41;дискретизации](multidimensional-models/attribute-properties-group-attribute-members.md)
+ [Группирование элементов атрибутов (дискретизация)](multidimensional-models/attribute-properties-group-attribute-members.md)
 
 

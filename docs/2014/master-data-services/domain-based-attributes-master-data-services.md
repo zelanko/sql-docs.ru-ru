@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: db0e312fabc039de2554f00b7e9f33a7a76ec584
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176063"
 ---
 # <a name="domain-based-attributes-master-data-services"></a>Атрибуты на основе домена (службы Master Data Services)
@@ -41,15 +41,15 @@ ms.locfileid: "78176063"
 
 |Описание задачи|Раздел|
 |----------------------|-----------|
-|Создание нового атрибута на основе домена, источником для которого является существующая сущность.|[Создание атрибута на основе домена &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|
-|Создание новой сущности.|[Создание сущности &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|
+|Создание нового атрибута на основе домена, источником для которого является существующая сущность.|[Создание атрибута на основе домена (службы Master Data Services)](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|
+|Создание новой сущности.|[Создание сущности (службы Master Data Services)](../../2014/master-data-services/create-an-entity-master-data-services.md)|
 
 ## <a name="related-content"></a>См. также
 
--   [Производные иерархии &#40;Master Data Services&#41;](derived-hierarchies-master-data-services.md)
+-   [Производные иерархии (службы Master Data Services)](derived-hierarchies-master-data-services.md)
 
--   [Master Data Services &#40;атрибутов&#41;](../../2014/master-data-services/attributes-master-data-services.md)
+-   [Атрибуты (службы Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)
 
--   [Сущности &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)
+-   [Сущности (службы Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)
 
 

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0f8ac81762fac418eb1009626038e6b0708476f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175623"
 ---
 # <a name="technical-reference-ssas"></a>Технический справочник (службы SSAS)
@@ -36,7 +36,7 @@ ms.locfileid: "78175623"
 
  [Выражения анализа данных &#40;Справочник по DAX&#41;](/dax/data-analysis-expressions-dax-reference)
 
- [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](/sql/dmx/data-mining-extensions-dmx-reference)
 
  ![Маленький значок папки](../../integration-services/media/filefolder-small.gif "Маленький значок папки") **Пользовательский интерфейс Справочник** по [пользовательскому интерфейсу &#40;Analysis Services&#41;](../user-interface-reference-analysis-services.md)
 

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d11ac65a565df23332f24eef8a3e4ddb4e476a5
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175713"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Обновление схемы в представлении источника данных (службы Analysis Services)
@@ -32,7 +32,7 @@ ms.locfileid: "78175713"
 
  [Обновить представление источника данных в SQL Server Data Tools](#bkmk_DSVrefresh)
 
-##  <a name="bkmk_changlist"></a>Изменения, поддерживаемые при обновлении
+##  <a name="changes-supported-in-refresh"></a><a name="bkmk_changlist"></a>Изменения, поддерживаемые при обновлении
  Обновление представления источников данных может включать любые из следующих действий.
 
 -   Удаление таблиц, столбцов и связей
@@ -41,9 +41,9 @@ ms.locfileid: "78175713"
 
 -   Добавление новых ограничений уникальностей. Если для таблицы в представлении источника данных существует логический первичный ключ и при этом к таблице в источнике данных добавляется физический ключ, то логический ключ удаляется и заменяется физическим ключом.
 
- Обновление никогда не добавляет новые таблицы в представление источника данных. Если нужно добавить новую таблицу, придется добавить ее вручную. Дополнительные сведения см. в разделе [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).
+ Обновление никогда не добавляет новые таблицы в представление источника данных. Если нужно добавить новую таблицу, придется добавить ее вручную. Дополнительные сведения см. в разделе [Добавление или удаление таблиц или представлений в представлении источника данных (службы Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).
 
-##  <a name="bkmk_DSVrefresh"></a>Обновление представления источника данных в SQL Server Data Tools
+##  <a name="refresh-a-dsv-in-sql-server-data-tools"></a><a name="bkmk_DSVrefresh"></a>Обновление представления источника данных в SQL Server Data Tools
  Чтобы обновить представление источника данных (DSV), дважды щелкните его в обозревателе решений в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], затем нажмите кнопку "Обновить представление источника данных" или выберите **Обновить** в меню "Представление источника данных".
 
  При этом службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] запрашивают реляционный источник данных и выявляют изменения в соответствующих таблицах или представлениях. Если не удается установить соединения со всеми базовыми источниками данных, но в них существуют изменения, то они будут отображены в диалоговом окне **Обновление представления источников данных** .

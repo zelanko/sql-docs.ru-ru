@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc23747a13ee2e5b126b7e57ba7121878d05643d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176474"
 ---
 # <a name="precedence-constraints"></a>Управление очередностью
@@ -79,7 +79,7 @@ ms.locfileid: "78176474"
 ## <a name="configuration-of-the-precedence-constraint"></a>Настройка элементов ограничения очередностью
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или программными средствами.
 
- Дополнительные сведения о свойствах, которые можно задавать в конструкторе служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)], см. в разделе [Редактор управления очередностью](../precedence-constraint-editor.md).
+ Дополнительные сведения о свойствах, которые можно задавать в конструкторе служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , см. в разделе [Редактор управления очередностью](../precedence-constraint-editor.md).
 
  Дополнительные сведения о настройке этих свойств программными средствами см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>.
 

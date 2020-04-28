@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c8db9d2dd582651d852f34372d5d2ae74c958f72
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175313"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Определение свойств Unknown Member и Null Processing
@@ -178,6 +178,6 @@ ms.locfileid: "78175313"
      ![Уровень «Название продукта» с компонентами сборки](../../2014/tutorials/media/l4-assemblycomponents-1.gif "Уровень «Название продукта» с компонентами сборки")
 
 ## <a name="next-lesson"></a>Следующее занятие
- [Занятие 5. Определение связей между измерениями и группами мер](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)
+ [Занятие 5.: Определение связей между измерениями и группами мер](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)
 
 

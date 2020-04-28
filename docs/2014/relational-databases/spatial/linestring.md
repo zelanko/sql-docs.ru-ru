@@ -13,14 +13,13 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: e1bdfd447fdf61123615dad329b297490172b191
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176674"
 ---
 # <a name="linestring"></a>LineString
-  
   `LineString` является одномерным объектом, представляющим последовательность точек и соединяющих их линейных сегментов.
 
 ## <a name="linestring-instances"></a>Экземпляры LineString
@@ -47,8 +46,7 @@ DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
 ```
 
- 
-  `@g3` показывает, что, хотя экземпляр `LineString` допустим, он недействителен.
+ `@g3` показывает, что, хотя экземпляр `LineString` допустим, он недействителен.
 
  Следующий экземпляр `LineString` недопустим. Он выдаст исключение `System.FormatException`.
 

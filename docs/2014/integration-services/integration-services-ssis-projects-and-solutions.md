@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1040afed8e9cb63f22bf81a30c426a4bdc8ec22
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176193"
 ---
 # <a name="integration-services-ssis-projects"></a>Проекты служб Integration Services (SSIS)
@@ -48,8 +48,8 @@ ms.locfileid: "78176193"
 
 |Папка|Описание|
 |------------|-----------------|
-|[!INCLUDE[ssIS](../includes/ssis-md.md)]Пакеты|Содержит пакеты. Дополнительные сведения см. в разделе [Пакеты служб Integration Services (SSIS)](../../2014/integration-services/integration-services-ssis-packages.md).|
-|Разное|Содержит файлы, не являющиеся файлами пакетов.|
+|[!INCLUDE[ssIS](../includes/ssis-md.md)] Пакеты|Содержит пакеты. Дополнительные сведения см. в разделе [Пакеты служб Integration Services (SSIS)](../../2014/integration-services/integration-services-ssis-packages.md).|
+|Прочее|Содержит файлы, не являющиеся файлами пакетов.|
 
 ### <a name="files-in-integration-services-projects"></a>Файлы в проектах служб Integration Services
  При добавлении в решение нового или существующего проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] среда [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] создает файлы проекта, имеющие расширения Dtproj, Dtproj.user и Database.

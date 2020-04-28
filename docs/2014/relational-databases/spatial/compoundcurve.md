@@ -11,10 +11,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 22e63496f3b26ac2c56a72f23ec4489e8a9cdbfb
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176684"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
@@ -41,7 +41,7 @@ ms.locfileid: "78176684"
 
 1.  Все экземпляры, содержащиеся в `CompoundCurve`, — это правильные экземпляры сегментов окружности. Дополнительные сведения о допустимых экземплярах сегментов окружности см. в разделах [LineString](linestring.md) и [CircularString](circularstring.md).
 
-2.  Все сегменты окружности в экземпляре `CompoundCurve` соединены. Первая точка для каждого успешности сегмента дуги совпадает с последней точкой в предыдущем сегменте дуги.
+2.  Все сегменты окружности в экземпляре `CompoundCurve` соединены. Первая точка каждого последующего сегмента совпадает с последней точкой предыдущего сегмента.
 
     > [!NOTE]
     >  Это касается и координат Z и M. То есть все четыре координаты (X, Y, Z и M) должны быть одинаковыми.
@@ -90,8 +90,7 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ```
 
- 
-  `@g1` недопустим, поскольку второй экземпляр не является допустимым LineString. Экземпляр `@g2` недопустим, поскольку экземпляр `LineString` является недопустимым. Экземпляр `@g3` недопустим, поскольку экземпляр `CircularString` является недопустимым. Дополнительные сведения о допустимых `CircularString` экземплярах и `LineString` см. в разделе [CircularString](circularstring.md) и [LineString](linestring.md).
+ `@g1` недопустим, поскольку второй экземпляр не является допустимым LineString. Экземпляр `@g2` недопустим, поскольку экземпляр `LineString` является недопустимым. Экземпляр `@g3` недопустим, поскольку экземпляр `CircularString` является недопустимым. Дополнительные сведения о допустимых `CircularString` экземплярах и `LineString` см. в разделе [CircularString](circularstring.md) и [LineString](linestring.md).
 
 ## <a name="examples"></a>Примеры
 
@@ -103,7 +102,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');
 ```
 
-### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>Б. Объявление и создание экземпляра geometry с экземпляром CompoundCurve в одной инструкции
+### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>Б) Объявление и создание экземпляра geometry с экземпляром CompoundCurve в одной инструкции
  В следующем примере показано, как объявить и инициализировать экземпляр `geometry` с `CompoundCurve`в одной инструкции:
 
 ```sql
@@ -177,7 +176,7 @@ SET @g2 = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULAR
 SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amount
 ```
 
- Выходной файл будет выглядеть так:
+ Вывод выглядит следующим образом.
 
 ```
 Circle One11.940039...

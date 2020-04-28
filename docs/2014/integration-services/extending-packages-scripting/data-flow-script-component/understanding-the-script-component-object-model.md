@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e2e5d774abf2a6bee712ec7a1479107d3d1c36
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176203"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Основные сведения о модели объектов компонента скрипта
@@ -158,8 +158,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Содержимое элемента проекта ComponentWrapper
  Элемент проекта ComponentWrapper содержит класс с именем `UserComponent`, производный от класса <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. Класс `ScriptMain`, в котором создается пользовательский код, в свою очередь, является производным от класса `UserComponent`. Класс `UserComponent` содержит следующие методы.
 
--   Переопределенная реализация метода `PrimeOutput`. Подсистема обработки потока данных вызывает этот метод перед методом `ProcessInput` во время выполнения. Он вызывается только один раз. 
-  `PrimeOutput` передает обработку методу `CreateNewOutputRows`. Затем, если компонент является источником (то есть не имеет входов), `PrimeOutput` вызывает переопределяемый метод `FinishOutputs` и частный метод `MarkOutputsAsFinished`. Метод `MarkOutputsAsFinished` вызывает метод `SetEndOfRowset` для последнего выходного буфера.
+-   Переопределенная реализация метода `PrimeOutput`. Подсистема обработки потока данных вызывает этот метод перед методом `ProcessInput` во время выполнения. Он вызывается только один раз. `PrimeOutput` передает обработку методу `CreateNewOutputRows`. Затем, если компонент является источником (то есть не имеет входов), `PrimeOutput` вызывает переопределяемый метод `FinishOutputs` и частный метод `MarkOutputsAsFinished`. Метод `MarkOutputsAsFinished` вызывает метод `SetEndOfRowset` для последнего выходного буфера.
 
 -   Реализация метода `CreateNewOutputRows`, доступная для переопределения. Реализация по умолчанию пуста. Этот метод обычно переопределяется, чтобы написать пользовательский код обработки данных.
 

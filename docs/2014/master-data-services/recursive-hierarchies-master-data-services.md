@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c28242daebfdaf01a457432027e68be59ae26f29
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175960"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>Рекурсивные иерархии (службы Master Data Services)
@@ -54,14 +54,14 @@ ms.locfileid: "78175960"
 
 |Описание задачи|Раздел|
 |----------------------|-----------|
-|Создание производной иерархии.|[Создание производной иерархии &#40;Master Data Services&#41;](create-a-derived-hierarchy-master-data-services.md)|
-|Изменение имени существующей производной иерархии.|[Изменение имени производной иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|
-|Удаление существующей производной иерархии.|[Удаление производной иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|
+|Создание производной иерархии.|[Создание производной иерархии (службы Master Data Services)](create-a-derived-hierarchy-master-data-services.md)|
+|Изменение имени существующей производной иерархии.|[Изменение имени производной иерархии (службы Master Data Services)](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|
+|Удаление существующей производной иерархии.|[Удаление производной иерархии (службы Master Data Services)](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|
 
 ## <a name="related-content"></a>См. также
 
--   [Атрибуты на основе домена &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)
+-   [Атрибуты на основе домена (службы Master Data Services)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)
 
--   [Производные иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)
+-   [Производные иерархии (службы Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)
 
 

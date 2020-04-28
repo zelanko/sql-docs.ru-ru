@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3724210a1c55a1ad584b5b581de72763fdfd1c0e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177304"
 ---
-# <a name="task-1-creating-a-data-quality-project"></a>Задача 1. Создание проекта служб DQS
+# <a name="task-1-creating-a-data-quality-project"></a>Задача 1. Создание проекта качества данных
   В этой задаче будет создан проект служб DQS для очистки данных о поставщиках в файле Excel с использованием базы знаний Suppliers, созданной ранее в этом учебнике.
 
 1.  В области **проект качества данных** на главной странице щелкните **создать проект**служб DQS.
@@ -32,7 +32,7 @@ ms.locfileid: "78177304"
 
      ![Страница «Создать проект служб DQS» — выбрана очистка](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "Страница «Создать проект служб DQS» — выбрана очистка")
 
-## <a name="next-step"></a>Дальнейшее действие
- [Задача 2. Сопоставление столбцов Excel с доменами DQS](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)
+## <a name="next-step"></a>Следующий шаг
+ [Задача 2. Сопоставление столбцов Excel с доменами DQS](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)
 
 

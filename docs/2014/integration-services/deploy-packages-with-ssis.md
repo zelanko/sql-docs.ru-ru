@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e47c9640c314ad28ae64ef105d723b77695e644d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176464"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>Учебник по службам SSIS. Развертывание пакетов
@@ -48,10 +48,9 @@ ms.locfileid: "78176464"
 ## <a name="requirements"></a>Требования
  Этот учебник предназначен для пользователей, уже знакомых с основными операциями файловой системы, но имеющих ограниченный доступ к новым функциям, доступным [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]в. Для лучшего понимания основных [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] концепций, которые будут использоваться в этом учебнике, может оказаться полезным сначала выполнить следующие [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] учебники: [запуск мастера импорта и экспорта SQL Server](import-export-data/start-the-sql-server-import-and-export-wizard.md) и [учебника по службам SSIS. Создание простого пакета ETL](../integration-services/ssis-how-to-create-an-etl-package.md).
 
- **Исходный компьютер.** На компьютере, где создается пакет развертывания, должны быть установлены следующие компоненты:
+ **Компьютер-источник.** На компьютере, где создается пакет развертывания, должны быть установлены следующие компоненты:
 
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с базой данных AdventureWorks. В целях повышения безопасности образцы баз данных по умолчанию не устанавливаются. Образец базы данных можно загрузить с сайта [CodePlex](https://msftdbprodsamples.codeplex.com/releases/view/125550).
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с базой данных AdventureWorks. В целях повышения безопасности образцы баз данных по умолчанию не устанавливаются. Образец базы данных можно загрузить с сайта [CodePlex](https://msftdbprodsamples.codeplex.com/releases/view/125550).
 
 -   Пользователь должен обладать разрешением на создание и удаление таблиц в базе данных AdventureWorks.
 
@@ -59,10 +58,9 @@ ms.locfileid: "78176464"
 
 -   Среда разработки решений в области бизнес-аналитики [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].
 
- **Конечный компьютер.** На компьютере, где будут развернуты пакеты, должны быть установлены следующие компоненты:
+ **Целевой компьютер.** На компьютере, где будут развернуты пакеты, должны быть установлены следующие компоненты:
 
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с базой данных AdventureWorks.
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с базой данных AdventureWorks.
 
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
@@ -74,7 +72,7 @@ ms.locfileid: "78176464"
 
  Если развертывание пакетов предполагается на том же самом компьютере, где создается комплект развертывания, этот компьютер должен удовлетворять требованиям как компьютера-источника, так и целевого компьютера.
 
- **Предполагаемое время выполнения заданий в этом учебнике:** 2 часа
+ **Предполагаемое время для выполнения заданий этого учебника:** 2 часа
 
 ## <a name="lessons-in-this-tutorial"></a>Занятия этого учебника
  [Занятие 1. Подготовка к созданию пакета развертывания](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md) На этом занятии вы будете готовы развернуть решение ETL, создав новый [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] проект и добавив пакеты и другие необходимые файлы в проект.

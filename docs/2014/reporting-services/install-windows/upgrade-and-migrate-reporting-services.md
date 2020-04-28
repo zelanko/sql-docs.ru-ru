@@ -15,31 +15,31 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 42cdcb1245e5280d25a94a81617da92f755ea048
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176944"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
 Этот раздел содержит общие сведения о вариантах обновления и миграции для служб [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Существуют два принципиальных подхода к обновлению развертывания [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
 
--   **Обновление:** Вы обновляете [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] компоненты на серверах и экземплярах, где они установлены. Обычно это называется обновлением на месте. Обновление на месте с одного режима сервера [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на другой режим не поддерживается. Например, невозможно обновить сервер отчетов в собственном режиме до сервера отчетов в режиме интеграции с SharePoint. Элементы отчета можно переносить из одного режима в другой. Дополнительные сведения см. в подразделе «встроенная миграция в SharePoint Migration» далее в этом документе, а также в соответствующем разделе [примера Reporting Services сценария RS. exe для переноса содержимого между серверами отчетов](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).
+-   **Обновление.** Обновляются компоненты [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на тех серверах и экземплярах, где они установлены в данный момент. Обычно это называется обновлением на месте. Обновление на месте с одного режима сервера [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на другой режим не поддерживается. Например, невозможно обновить сервер отчетов в собственном режиме до сервера отчетов в режиме интеграции с SharePoint. Элементы отчета можно переносить из одного режима в другой. Дополнительные сведения см. в подразделе «встроенная миграция в SharePoint Migration» далее в этом документе, а также в соответствующем разделе [примера Reporting Services сценария RS. exe для переноса содержимого между серверами отчетов](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).
 
--   **Миграция**. вы устанавливаете и настраиваете новую среду SharePoint, копируете элементы отчета и ресурсы в новую среду и настраиваете новую среду для использования существующего содержимого. Более низкая форма миграции — копирование баз данных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , файлов конфигурации и при использовании режима интеграции с SharePoint баз данных содержимого SharePoint.
+-   **Миграция.** Устанавливается и настраивается новая среда SharePoint, в нее копируются элементы отчетов и ресурсы, а затем выполняется настройка новой среды для использования существующего содержимого. Более низкая форма миграции — копирование баз данных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , файлов конфигурации и при использовании режима интеграции с SharePoint баз данных содержимого SharePoint.
 
 ||
 |-|
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Собственный режим &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint|
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Собственный режим &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим интеграции с SharePoint.|
 
-##  <a name="bkmk_top"></a>В этом разделе:
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a> В этом разделе:
 
 -   [Известные проблемы и рекомендации по обновлению](#bkmk_known_issues)
 
 -   [Параллельные установки](#bkmk_side_by_side)
 
--   [Обновление «на месте»](#bkmk_inplace_upgrade)
+-   [Обновление на месте](#bkmk_inplace_upgrade)
 
 -   [Контрольный список перед обновлением](#bkmk_upgrade_checklist)
 
@@ -53,29 +53,27 @@ ms.locfileid: "78176944"
 
 -   [Дополнительные ресурсы](#bkmk_additional_resources)
 
-##  <a name="bkmk_known_issues"></a>Известные проблемы и рекомендации по обновлению
+##  <a name="known-upgrade-issues-and-best-practices"></a><a name="bkmk_known_issues"></a> Известные проблемы и рекомендации, связанные с обновлением
  Подробный список поддерживаемых версий и выпусков, которые можно обновить, см. в разделе [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).
 
 > [!TIP]
 >  Последние сведения о проблемах, связанных с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], см. в следующих разделах:
 > 
 >  -   [Заметки о Выпуске SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).
-> -   [SQL Server 2014 Reporting Services советы, приемы и устранение неполадок](https://go.microsoft.com/fwlink/?LinkID=391254).
+> -   [Рекомендации, советы и сведения по устранению неполадок служб SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).
 > -   Используйте советник по переходу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статьях [Reporting Services обновления &#40;советник по переходу&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md) и [инструкции по установке помощника по обновлению](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md).
 
  ![Значок стрелки, используемый в ссылке "назад на начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [" в этом разделе:](#bkmk_top)
 
-##  <a name="bkmk_side_by_side"></a>Параллельные установки
+##  <a name="side-by-side-installations"></a><a name="bkmk_side_by_side"></a> Параллельная установка
  Собственный режим[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] может быть установлен параллельно с развертыванием служб [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] в собственном режиме.
 
  Отсутствует поддержка параллельных развертываний служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] в режиме интеграции с SharePoint и всех предыдущих версий компонентов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint.
 
  ![Значок стрелки, используемый в ссылке "назад на начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [" в этом разделе:](#bkmk_top)
 
-##  <a name="bkmk_inplace_upgrade"></a>Обновление на месте
- Обновление завершается программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать для обновления любого компонента или всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , включая службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Программа установки обнаружит существующие экземпляры и предложит выполнить обновление. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки позволяет использовать параметры обновления, которые можно указывать в качестве параметров командной строки или в мастере установки.
+##  <a name="in-place-upgrade"></a><a name="bkmk_inplace_upgrade"></a>Обновление на месте
+ Обновление завершается программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать для обновления любого компонента или всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , включая службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Программа установки обнаружит существующие экземпляры и предложит выполнить обновление. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки позволяет использовать параметры обновления, которые можно указывать в качестве параметров командной строки или в мастере установки.
 
  После запуска программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно либо обновить одну из следующих версий, либо установить новый экземпляр служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , который будет выполняться параллельно с существующими установками.
 
@@ -97,14 +95,14 @@ ms.locfileid: "78176944"
 
  ![Значок стрелки, используемый в ссылке "назад на начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [" в этом разделе:](#bkmk_top)
 
-##  <a name="bkmk_upgrade_checklist"></a>Контрольный список перед обновлением
+##  <a name="pre-upgrade-checklist"></a><a name="bkmk_upgrade_checklist"></a> Контрольный список действий перед обновлением
  Перед обновлением до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]просмотрите следующие источники:
 
 -   Ознакомьтесь с требованиями, чтобы определить, поддерживает ли оборудование и программное обеспечение службы [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. Дополнительные сведения см. в разделе [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
 -   Средство проверки конфигурации системы (SCC) используется для просмотра на компьютере сервера отчетов условий, которые могут препятствовать успешной установке [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения см. в разделе [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).
 
--   Просмотрите рекомендации и руководство по безопасности для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. [в статье вопросы безопасности при установке SQL Server](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md).
+-   Просмотрите рекомендации и руководство по безопасности для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Security Considerations for a SQL Server Installation](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md).
 
 -   Чтобы определить проблемы, которые могу препятствовать успешному обновлению, запустите советник по переходу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере сервера отчетов. Дополнительные сведения см. в разделе [Use Upgrade Advisor to Prepare for Upgrades](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).
 
@@ -114,7 +112,7 @@ ms.locfileid: "78176944"
 
 -   Создайте резервные копии всех настроек виртуальных каталогов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , существующих в IIS.
 
--   Удалите недопустимые SSL-сертификаты.  К ним относятся сертификаты с истекшим сроком действия, которые не планируется обновлять до обновления служб Reporting Services.  Наличие недопустимых сертификатов приведет к неудаче обновления, а в файл журнала служб Reporting Services будет записано сообщение об ошибке, аналогичное следующему: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: на веб-сайте не настроен SSL-сертификат**.
+-   Удалите недопустимые SSL-сертификаты.  К ним относятся сертификаты с истекшим сроком действия, которые не планируется обновлять до обновления служб Reporting Services.  Наличие недопустимых сертификатов приведет к неудаче обновления, а в файл журнала служб Reporting Services будет записано сообщение об ошибке, аналогичное следующему: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: A Secure Sockets Layer (SSL) certificate is not configured on the Web site.** (На веб-сайте не настроен SSL-сертификат).
 
  Перед обновлением рабочей среды всегда запускайте проверку обновления в предварительной рабочей среде, имеющей аналогичную конфигурацию.
 
@@ -135,8 +133,8 @@ ms.locfileid: "78176944"
 
  ![Значок стрелки, используемый в ссылке "назад на начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [" в этом разделе:](#bkmk_top)
 
-##  <a name="bkmk_native_scenarios"></a>Сценарии обновления и миграции в собственном режиме
- **Обновление:** Обновление на месте для основного режима — это один и тот же процесс для каждой из поддерживаемых версий, перечисленных ранее в этом разделе. Запустите мастер установки SQL Server или процесс установки из командной строки. После установки база данных сервера отчетов автоматически обновляется до новой схемы базы данных сервера отчетов. Дополнительные сведения см. в разделе [обновление на месте](#bkmk_inplace_upgrade) этой статьи.
+##  <a name="native-mode-upgrade-and-migration-scenarios"></a><a name="bkmk_native_scenarios"></a> Обновление в собственном режиме и сценарии миграции
+ **Обновление.** Обновление на месте в собственном режиме выполняется одинаково для каждой из поддерживаемых версий, перечисленных ранее в этом разделе. Запустите мастер установки SQL Server или процесс установки из командной строки. После установки база данных сервера отчетов автоматически обновляется до новой схемы базы данных сервера отчетов. Дополнительные сведения см. в разделе [обновление на месте](#bkmk_inplace_upgrade) этой статьи.
 
  Процесс обновления начинается с выбора существующего экземпляра сервера отчетов, подлежащего обновлению.
 
@@ -154,12 +152,11 @@ ms.locfileid: "78176944"
 
     2.  К средствам настройки сервера отчетов и программам, обновляемым до уровня новой версии, относятся средство настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме, утилиты командной строки, такие как RS.exe, а также построитель отчетов.
 
-    3.  Другие клиентские средства, такие как среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и электронная документация, не обновляются. Получить новые версии этих средств можно путем их добавления при выполнении программы установки. Более ранние версии будут существовать наряду с версиями [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. В случае установки образцов более ранние версии сохраняются. Программа установки не поддерживает обновление образцов SQL Server.
+    3.  Другие клиентские средства, такие как среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и электронная документация, не обновляются. Получить новые версии этих средств можно путем их добавления при выполнении программы установки. Более ранние версии будут существовать наряду с версиями [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . В случае установки образцов более ранние версии сохраняются. Программа установки не поддерживает обновление образцов SQL Server.
 
-    4.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] загружается отдельно. Дополнительные сведения см. в разделе [Средства Microsoft SQL Server Data Tools 2014 — бизнес-аналитика для Microsoft Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843).
+    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] загружается отдельно. Дополнительные сведения см. в разделе [Средства Microsoft SQL Server Data Tools 2014 — бизнес-аналитика для Microsoft Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843).
 
-6.  Программа установки повторно использует запись службы в диспетчере управления службами для службы сервера отчетов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Эта запись службы включает учетную запись службы Windows сервера отчетов.
+6.  Программа установки повторно использует запись службы в диспетчере управления службами для службы сервера отчетов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Эта запись службы включает учетную запись службы Windows сервера отчетов.
 
 7.  Программа установки резервирует новые URL-адреса в соответствии с существующими настройками виртуального каталога в службах IIS. Программа установки может не удалить виртуальные каталоги в IIS, поэтому не забывайте удалять их вручную по завершении процесса обновления.
 
@@ -167,11 +164,11 @@ ms.locfileid: "78176944"
 
 9. Программа установки осуществляет слияние параметров в файлах конфигурации. При использовании в качестве основы файлов конфигурации из текущей установки добавляются новые записи. Устаревшие записи не удаляются, но по завершении процесса обновления они не считываются сервером отчетов. Старые файлы регистрации, устаревший файл RSWebApplication.config и установки виртуального каталога в IIS при обновлении не удаляются. Конструктор отчетов SQL Server 2005, среда Management Studio и другие клиентские средства при обновлении не удаляются. Если они больше не нужны, позаботьтесь об удалении этих файлов и средств по завершении обновления.
 
- **Миграция:** Миграция предыдущей версии установки в собственном режиме в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] — это те же действия для всех поддерживаемых версий s, перечисленных ранее в этом разделе. Дополнительные сведения см. в статье [Перенос установки служб Reporting Services (собственный режим)](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).
+ **Миграция.** Миграция предыдущей версии установки в собственном режиме в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] представляет собой одну последовательность шагов для всех поддерживаемых версий, перечисленных ранее в этом разделе. Дополнительные сведения см. в статье [Перенос установки служб Reporting Services (собственный режим)](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).
 
  ![Значок стрелки, используемый в ссылке "назад на начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [" в этом разделе:](#bkmk_top)
 
-##  <a name="bkmk_native_scaleout"></a>Обновление Reporting Services масштабного развертывания в собственном режиме
+##  <a name="upgrade-a-reporting-services-native-mode-scale-out-deployment"></a><a name="bkmk_native_scaleout"></a> Обновление масштабного развертывания служб Reporting Services, работающих в собственном режиме
  Ниже приводится сводка действий по обновлению развертывания служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме, которое масштабировано на использование более одного сервера отчетов. Этот процесс требует остановки развертывания [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :
 
 1.  Создайте резервные копии ключей шифрования и баз данных сервера отчетов. Дополнительные сведения см. в статьях [Операции резервного копирования и восстановления для служб Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) и [Добавление и удаление ключей шифрования для масштабного развертывания (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).
@@ -184,37 +181,37 @@ ms.locfileid: "78176944"
 
      Для каждого сервера повторите шаги по обновлению и масштабированию.
 
-##  <a name="bkmk_sharePoint_scenarios"></a>Сценарии обновления и миграции в режиме интеграции с SharePoint
+##  <a name="sharepoint-mode-upgrade-and-migration-scenarios"></a><a name="bkmk_sharePoint_scenarios"></a> Обновление в режиме интеграции с SharePoint и сценарии миграции
  В следующих разделах описаны проблемы и основные шаги, необходимые для обновления или перехода с указанных версий режима [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] интеграции с SharePoint [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на режим интеграции с SharePoint.
 
  Есть два компонента установки для обновления развертывания служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint.
 
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Общая служба SharePoint.
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Shared Service.
 
     > [!TIP]
     >  Используйте командлет [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint `Get-SPRSServiceApplicationServers` , чтобы определить серверы в ферме SharePoint, на которых в данный момент выполняется общая служба [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint и которые потому подлежат обновлению.
 
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Надстройка для продуктов SharePoint. Дополнительные сведения см. [в разделе Установка или удаление надстройки Reporting Services для sharepoint &#40;sharepoint 2010 и sharepoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Надстройка для продуктов SharePoint. Дополнительные сведения см. [в разделе Установка или удаление надстройки Reporting Services для sharepoint &#40;sharepoint 2010 и sharepoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).
 
  Подробные инструкции по переносу установки в режиме SharePoint см. в статье [Перенос установки служб Reporting Services (режим интеграции с SharePoint)](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).
 
 > [!IMPORTANT]
 >  При выполнении некоторых из следующих сценариев для среды SharePoint неизбежно время простоя. Это вызвано необходимостью обновления различных технологий. Если простой неприемлем, необходимо вместо обновления на месте выполнить миграцию.
 
-### <a name="sssql11-to-sssql14"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Кому[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]
+### <a name="sssql11-to-sssql14"></a>Запустите командлет [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] для установки по пути [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].
  **Начальная среда:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)], SharePoint 2010.
 
  **Конечная среда:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010 или SharePoint 2013.
 
--   **SharePoint 2010:** Обновление [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на месте поддерживается, но сценарий обновления требует времени простоя среды SharePoint.
+-   **SharePoint 2010.** Поддерживается обновление [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на месте, но скрипт обновления требует остановки среды SharePoint.
 
      Если также требуется, чтобы результирующая среда выполнения выполняла SharePoint 2013, необходимо завершить обновление присоединения базы данных SharePoint 2010 к SharePoint 2013.
 
--   **SharePoint 2013:** SharePoint 2013 не поддерживает обновление на месте с SharePoint 2010. Однако процедура **обновления присоединением базы данных поддерживается**  . Это поведение отличается от обновления до версии SharePoint 2010, при котором клиент может выбрать между двумя базовыми подходами к обновлению: обновление на месте и обновление присоединением базы данных.
+-   **SharePoint 2013.** SharePoint 2013 не поддерживает обновление на месте из SharePoint 2010. Однако процедура **обновления присоединением базы данных поддерживается**  . Это поведение отличается от обновления до версии SharePoint 2010, при котором клиент может выбрать между двумя базовыми подходами к обновлению: обновление на месте и обновление присоединением базы данных.
 
      Если имеется установленная версия [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , интегрированная с SharePoint 2010, нельзя обновить сервер SharePoint на месте. Однако можно выполнить миграцию баз данных содержимого и баз данных приложения службы из фермы SharePoint 2010 в ферму SharePoint 2013.
 
-### <a name="sskilimanjaro-to-sssql14"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]Кому[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]
+### <a name="sskilimanjaro-to-sssql14"></a>Запустите командлет [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] для установки по пути [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].
  **Начальная среда:** SQL Server 2008 R2, SharePoint 2010.
 
  **Конечная среда:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010.
@@ -229,9 +226,8 @@ ms.locfileid: "78176944"
 
  ![Значок стрелки, используемый в ссылке "назад на начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [" в этом разделе:](#bkmk_top)
 
-### <a name="sskatmai-sp2-to-sssql14"></a>
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] с пакетом обновления 2 (SP2) до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]
- **Начальная среда:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] пакет обновления 2 (SP2), SharePoint 2007.
+### <a name="sskatmai-sp2-to-sssql14"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] с пакетом обновления 2 (SP2) до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]
+ **Начальная среда:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2, SharePoint 2007.
 
  **Конечная среда:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010.
 
@@ -241,12 +237,12 @@ ms.locfileid: "78176944"
 
 -   Обновите SharePoint до версии 2010. При запуске установщика необходимых компонентов SharePoint 2010 выполняется обновление надстройки служб Reporting Services для продуктов SharePoint 2010.
 
--   Установите версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для SharePoint на все клиентские веб-интерфейсы в ферме. Установщик необходимых компонентов SharePoint устанавливает версию надстройки SQL Server 2008 R2, но для работы с сервером отчетов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] требуется версия служб [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+-   Установите версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для SharePoint на все клиентские веб-интерфейсы в ферме. Установщик необходимых компонентов SharePoint устанавливает версию надстройки SQL Server 2008 R2, но для работы с сервером отчетов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] требуется версия служб [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .
 
 -   > [!WARNING]
     >  После обновления SharePoint среду служб Reporting Services можно будет использовать только после обновления SQL Server.
 
--   Обновите [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. После запуска мастера установки SQL Server открывается диалоговое окно**Проверка подлинности служб SQL Server Reporting Services в режиме интеграции с SharePoint**. Устанавливается служба [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], а для создания нового пула приложений SharePoint используются учетные данные, указанные на странице проверки подлинности.
+-   Обновите [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. После запуска мастера установки SQL Server открывается диалоговое окно**Проверка подлинности служб SQL Server Reporting Services в режиме интеграции с SharePoint**. Устанавливается служба [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , а для создания нового пула приложений SharePoint используются учетные данные, указанные на странице проверки подлинности.
 
  ![Значок стрелки, используемый в ссылке "назад на начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [" в этом разделе:](#bkmk_top)
 
@@ -264,13 +260,13 @@ ms.locfileid: "78176944"
 -   > [!WARNING]
     >  После обновления SharePoint среду служб Reporting Services можно будет использовать только после обновления SQL Server.
 
--   Установите версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для SharePoint на все клиентские веб-интерфейсы в ферме. Установщик необходимых компонентов SharePoint устанавливает версию надстройки SQL Server 2008 R2, но для работы с сервером отчетов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] требуется версия служб [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+-   Установите версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для SharePoint на все клиентские веб-интерфейсы в ферме. Установщик необходимых компонентов SharePoint устанавливает версию надстройки SQL Server 2008 R2, но для работы с сервером отчетов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] требуется версия служб [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .
 
--   Обновите [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. После запуска мастера установки SQL Server открывается диалоговое окно «Проверка подлинности служб SQL Server Reporting Services в режиме интеграции с SharePoint». Устанавливается служба [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], а для создания нового пула приложений SharePoint используются учетные данные, указанные на странице проверки подлинности.
+-   Обновите [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. После запуска мастера установки SQL Server открывается диалоговое окно «Проверка подлинности служб SQL Server Reporting Services в режиме интеграции с SharePoint». Устанавливается служба [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , а для создания нового пула приложений SharePoint используются учетные данные, указанные на странице проверки подлинности.
 
  ![Значок стрелки, используемый в ссылке "назад на начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [" в этом разделе:](#bkmk_top)
 
-##  <a name="bkmk_migration_considerations"></a>Рекомендации по миграции
+##  <a name="considerations-for-a-migration"></a><a name="bkmk_migration_considerations"></a> Вопросы миграции
  При перемещении данных приложения необходимо помнить о следующих проблемах и ограничениях.
 
 -   Для защиты ключа шифрования применяется хэш, содержащий идентификатор компьютера.
@@ -284,9 +280,9 @@ ms.locfileid: "78176944"
 
  Чтобы восстановить обратимое шифрование на новом компьютере сервера отчетов, необходимо восстановить ключ, резервная копия которого была сделана ранее. Полный набор ключей, хранимых в базе данных сервера отчетов, состоит из значения симметричного ключа и идентификатора службы, используемых для ограничения доступа к ключу, чтобы он мог использоваться только экземпляром сервера отчетов, на котором был сохранен. В процессе восстановления ключа сервер отчетов заменяет существующие копии ключа новыми версиями. Новая версия содержит значения идентификаторов компьютера и службы, как они определены на текущем компьютере. Дополнительные сведения см. в следующих разделах:
 
--   Режим SharePoint: см. раздел "Управление ключами" статьи [Управление служебным приложением SharePoint службы Reporting Services](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)
+-   Режим интеграции с SharePoint: см. раздел "Управление ключами" статьи [Управление служебным приложением SharePoint службы Reporting Services](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).
 
--   Собственный режим: см. статью [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)
+-   Собственный режим: см. статью [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).
 
  ![Значок стрелки, используемый в ссылке "назад на начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [" в этом разделе:](#bkmk_top)
 
@@ -303,7 +299,7 @@ ms.locfileid: "78176944"
 
  ![Значок стрелки, используемый в ссылке "назад на начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [" в этом разделе:](#bkmk_top)
 
-##  <a name="bkmk_additional_resources"></a>Дополнительные ресурсы
+##  <a name="additional-resources"></a><a name="bkmk_additional_resources"></a> Дополнительные ресурсы
 
 > [!NOTE]
 >  Дополнительные сведения об обновлении присоединением базы данных SharePoint см. в разделах:

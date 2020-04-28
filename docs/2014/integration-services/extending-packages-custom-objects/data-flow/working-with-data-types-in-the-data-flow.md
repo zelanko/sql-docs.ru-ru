@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5fe4f8527bf23ac1af36b6661f2d8f98350a96e7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176364"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Работа с типами данных в потоке данных
@@ -101,7 +101,7 @@ ms.locfileid: "78176364"
 > [!CAUTION]
 >  Разработчикам следует соблюдать осторожность при использовании методов класса <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>: может оказаться более удобным написать собственные методы сопоставления типов данных, более подходящие для специальных задач разрабатываемых ими компонентов. В существующих методах не учитывается числовая точность и масштаб, а также другие свойства, тесно связанные с типом данных. В следующей версии служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] корпорация [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] может изменить или удалить эти методы либо изменить выполняемое ими сопоставление.
 
- В следующей таблице представлены сопоставления различных типов данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] с управляемыми типами данных с помощью методов <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> и <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>
+ В следующей таблице представлены сопоставления различных типов данных служб <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> с управляемыми типами данных с помощью методов <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> и [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]
 
 |Тип данных служб Integration Services|Сопоставляется с управляемым типом данных|
 |------------------------------------|------------------------------------|
@@ -135,7 +135,7 @@ ms.locfileid: "78176364"
 > [!CAUTION]
 >  Разработчикам следует соблюдать осторожность при использовании методов класса <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>: может оказаться более удобным написать собственные методы сопоставления типов данных, более подходящие для специальных задач разрабатываемых ими компонентов. В существующих методах не учитывается числовая точность и масштаб, а также другие свойства, тесно связанные с типом данных. В следующей версии служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] корпорация [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] может изменить или удалить эти методы либо изменить выполняемое ими сопоставление.
 
- В следующей таблице представлены сопоставления типов данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] с другими типами данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>.
+ В следующей таблице представлены сопоставления типов данных служб <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> с другими типами данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] с помощью метода [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].
 
 |Исходный тип данных служб Integration Services|Сопоставляется с типом данных служб Integration Services|
 |---------------------------------------------|-------------------------------------------------|

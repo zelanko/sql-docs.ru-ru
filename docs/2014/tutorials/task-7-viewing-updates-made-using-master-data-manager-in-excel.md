@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d705a02df8e133b5deb8242b1120a6ddd9f9cac9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177222"
 ---
-# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>Задача 7. Просмотр изменений, выполненных с помощью диспетчера основных данных в Excel
+# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>Задача 7. Просмотр изменений в диспетчере основных данных из Excel
   В этой задаче вы проверите, что обнаруживаются обновленные данные из MDS в Excel.
 
 1.  Теперь переключитесь в окно Excel, чтобы открыть электронную таблицу Поставщики, которая была **очищена** .
@@ -30,7 +30,7 @@ ms.locfileid: "78177222"
 
      ![Excel — обновленные коды и названия штатов](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-02.jpg "Excel — обновленные коды и названия штатов")
 
-## <a name="next-step"></a>Дальнейшее действие
- [Задача 8. Добавление нового значения для состояния сущности в Excel](../../2014/tutorials/task-8-adding-a-new-value-for-state-entity-in-excel.md)
+## <a name="next-step"></a>Следующий шаг
+ [Задача 8. Добавление нового значения для сущности штата в Excel](../../2014/tutorials/task-8-adding-a-new-value-for-state-entity-in-excel.md)
 
 

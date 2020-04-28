@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eff79fb144c2bbc4d31a21b2dc263c4ccb087104
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177242"
 ---
-# <a name="task-6-adding-excel-source-to-the-data-flow"></a>Задача 6. Добавление источника Excel в поток данных
+# <a name="task-6-adding-excel-source-to-the-data-flow"></a>Задача 6. Добавление в поток данных источника Excel
   В этой задаче источник Excel будет добавлен в поток данных, что позволит считывать данные поставщиков из исходного файла Excel. Источник Excel извлекает данные из листов или диапазонов в книгах Microsoft Excel. Дополнительные сведения см. в разделе [Источник Excel](../integration-services/data-flow/excel-source.md) .
 
 1.  Перетащите **Источник Excel** из области **Другие источники** на **панели элементов служб SSIS** на вкладке **Поток данных** .
@@ -44,9 +44,9 @@ ms.locfileid: "78177242"
 
 10. Перетащите преобразование **Очистка DQS** из области **Другие преобразования** на **панели элементов служб SSIS** на вкладку **Поток данных** в источнике **Считывание данных о поставщиках из файла Excel**. Преобразование «Очистка DQS» использует службы Data Quality Services (DQS) для исправления данных путем применения утвержденных правил в базе знаний. Это преобразование во время выполнения создает проект очистки DQS на сервере служб DQS. Дополнительные сведения см. в разделе [Преобразование «Очистка DQS»](https://msdn.microsoft.com/library/ee677619.aspx) .
 
-## <a name="next-step"></a>Дальнейшее действие
+## <a name="next-step"></a>Следующий шаг
 
-[Задача 7. Добавление преобразования «Очистка DQS» в поток данных](task-7-adding-dqs-cleansing-transform-to-the-data-flow.md)
+[Задача 7. Добавление в поток данных преобразования "Очистка DQS"](task-7-adding-dqs-cleansing-transform-to-the-data-flow.md)
 
 ### <a name="see-also"></a>См. также:
 

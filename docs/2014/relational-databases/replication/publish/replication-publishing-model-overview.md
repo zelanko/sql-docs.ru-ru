@@ -23,10 +23,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c5e1eb0a35081cd9392178412db990308efcd0b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176735"
 ---
 # <a name="replication-publishing-model-overview"></a>Обзор модели публикации репликации
@@ -61,7 +61,7 @@ ms.locfileid: "78176735"
 ## <a name="publication"></a>Публикация
  Публикация — это коллекция из одной или нескольких статей, принадлежащих одной базе данных. Группирование нескольких статей в публикацию упрощает указание логически связанного набора объектов и данных базы данных, реплицируемых в виде единого блока.
 
-## <a name="subscription"></a>Подписка
+## <a name="subscription"></a>Subscription
  Подписка — это запрос на доставку копии публикации подписчику. Подписка определяет, какая публикация будет получена, где и когда. Существует два типа подписок: по запросу и принудительные. Дополнительные сведения о подписках см. в статье [Подписка на публикации](../subscribe-to-publications.md).
 
 ## <a name="see-also"></a>См. также:

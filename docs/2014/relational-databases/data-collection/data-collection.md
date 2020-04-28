@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b83ce9b00ead21d2f067f95ece0234d92682991
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175988"
 ---
 # <a name="data-collection"></a>Сбор данных
@@ -38,7 +38,7 @@ ms.locfileid: "78175988"
 
  Агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется для планирования и запуска заданий сбора. Обратите внимание на следующие основные понятия:
 
--   задание
+-   Задание
 
 -   Шаг задания
 
@@ -50,9 +50,9 @@ ms.locfileid: "78175988"
 
  Дополнительные сведения см. в разделе [Задачи автоматизированного администрирования (SQL Server Agent)](../../ssms/agent/sql-server-agent.md).
 
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]([!INCLUDE[ssIS](../../includes/ssis-md.md)]) используется для выполнения пакетов, собирающих данные от отдельных поставщиков данных. Следует ознакомиться со следующими инструментами и понятиями служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] :
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) используется для выполнения пакетов, которые собирают данные от отдельных поставщиков данных. Следует ознакомиться со следующими инструментами и понятиями служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] :
 
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)]пакеты
+-   Пакет [!INCLUDE[ssIS](../../includes/ssis-md.md)]
 
 -   конфигурация пакета служб [!INCLUDE[ssIS](../../includes/ssis-md.md)]
 
@@ -61,9 +61,7 @@ ms.locfileid: "78175988"
 ## <a name="data-collector-terminology"></a>Терминология сборщика данных
  Нацеливание на экземпляр [!INCLUDE[ssDE](../../includes/ssde-md.md)] класса в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживающем сбор данных. Дополнительные сведения о поддерживаемых выпусках см. в разделе "управляемость" статьи [функции, поддерживаемые различными Выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
 
- 
-  *Целевой корневой элемент* определяет поддерево в иерархии целей. 
-  *Набор целей* — это группа целей, получаемая в результате применения фильтра к поддереву, определенному целевым корневым элементом. Целевой корневой элемент может быть базой данных, экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или экземпляром компьютера.
+ *Целевой корневой элемент* определяет поддерево в иерархии целей. *Набор целей* — это группа целей, получаемая в результате применения фильтра к поддереву, определенному целевым корневым элементом. Целевой корневой элемент может быть базой данных, экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или экземпляром компьютера.
 
  Target введите тип целевого объекта, который имеет определенные характеристики и поведение. Например, цель — экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет характеристики, отличные от характеристик цели — базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 

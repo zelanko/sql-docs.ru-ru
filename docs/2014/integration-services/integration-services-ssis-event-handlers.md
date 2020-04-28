@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41a6ae9c6462beecaa244694bd8679df88aefc47
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176137"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Обработчики событий в службах Integration Services (SSIS)
@@ -43,7 +43,7 @@ ms.locfileid: "78176137"
 
  Следующая диаграмма приводит простой пакет, имеющий контейнер «цикл по элементам», который, в свою очередь, содержит задачу «Выполнение SQL».
 
- ![Пакет, контейнер For Loop, сервер задач, задача "Выполнение SQL"](media/mw-dts-eventhandlerpkg.gif "Пакет, контейнер For Loop, сервер задач, задача «Выполнение SQL»")
+ ![Пакет, контейнер For Loop, сервер задач, задача "Выполнение SQL"](media/mw-dts-eventhandlerpkg.gif "Пакет, контейнер For Loop, сервер задач, задача "Выполнение SQL"")
 
  Только у пакета имеется обработчик для события `OnError`. Когда ошибка происходит во время выполнения задачи «Выполнение SQL», то запускается обработчик события `OnError` данного пакета. Следующая диаграмма показывает последовательность вызовов, вследствие которой выполняется обработчик события `OnError` данного пакета.
 
@@ -69,11 +69,11 @@ ms.locfileid: "78176137"
  Обработчики событий также могут быть созданы программно. Дополнительные сведения см. в статье [Программная обработка событий](building-packages-programmatically/handling-events-programmatically.md).
 
 ## <a name="run-time-events"></a>События времени выполнения
- В следующей таблице перечисляются обработчики событий, предоставляемые службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], и описываются события времени выполнения, в случае которых обработчик запускается.
+ В следующей таблице перечисляются обработчики событий, предоставляемые службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , и описываются события времени выполнения, в случае которых обработчик запускается.
 
-|Обработчик событий|Событие|
+|Обработчик событий|событие|
 |-------------------|-----------|
-|`OnError`|Обработчик событий для `OnError` события. Событие вызывается исполняемым объектом при возникновении ошибки.|
+|`OnError`|Обработчик для события `OnError`. Событие вызывается исполняемым объектом при возникновении ошибки.|
 |**OnExecStatusChanged**|Обработчик события **OnExecStatusChanged** . Событие вызывается исполняемым объектом при изменении его состояния выполнения.|
 |**OnInformation**|Обработчик события **OnInformation** . Это событие вызывается во время проверки и выполнения исполняемого объекта для передачи данных. Событие передает только данные; ошибки и предупреждения не передаются.|
 |**OnPostExecute**|Обработчик события **OnPostExecute** . Событие вызывается исполняемым объектом сразу после выполнения.|
@@ -89,7 +89,7 @@ ms.locfileid: "78176137"
 ## <a name="configuration-of-an-event-handler"></a>Настройка обработчика событий
  Задать свойства можно в окне **Свойства** среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] или программными средствами.
 
- Дополнительные сведения о настройке свойств этих свойств в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] см. в разделе [Задание свойств задач или контейнеров](../../2014/integration-services/set-the-properties-of-a-task-or-container.md).
+ Дополнительные сведения о настройке свойств этих свойств в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]см. в разделе [Задание свойств задач или контейнеров](../../2014/integration-services/set-the-properties-of-a-task-or-container.md).
 
  Дополнительные сведения о настройке этих свойств программными средствами см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.
 

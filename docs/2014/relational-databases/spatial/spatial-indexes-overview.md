@@ -12,10 +12,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 75cf9c751afb03b963eb888a6dbe6ed03ed4003a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176664"
 ---
 # <a name="spatial-indexes-overview"></a>Общие сведения о пространственных индексах
@@ -24,9 +24,9 @@ ms.locfileid: "78176664"
 > [!IMPORTANT]
 >  Подробное описание и примеры использования функций обработки пространственных данных, появившихся в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], включая функции, работающие с пространственными индексами, можно получить, скачав технический документ [Новые функции обработки пространственных данных в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).
 
-##  <a name="about"></a> О пространственных индексах
+##  <a name="about-spatial-indexes"></a><a name="about"></a> О пространственных индексах
 
-###  <a name="decompose"></a> Декомпозиция индексированного пространства в сеточную иерархию
+###  <a name="decomposing-indexed-space-into-a-grid-hierarchy"></a><a name="decompose"></a> Декомпозиция индексированного пространства в сеточную иерархию
  В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]пространственные индексы строятся с помощью сбалансированных деревьев, что означает, что индексы должны представлять двумерные пространственные данные в линейном порядке сбалансированных деревьев. Поэтому перед считыванием данных в пространственный индекс [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проводит иерархическую декомпозицию пространства. В процессе создания индекса происходит *декомпозиция* пространства в четырехуровневую *сеточную иерархию*. Эти уровни называют *Уровень 1* (верхний), *Уровень 2*, *Уровень 3*и *Уровень 4*.
 
  Каждый последующий уровень содержит дальнейшую декомпозицию уровня выше, так что каждая ячейка уровня выше содержит полную сетку следующего уровня. На заданном уровне все сетки имеют одинаковое число ячеек на обеих осях (например, 4x4 или 8x8), и все ячейки имеют одинаковый размер.
@@ -60,7 +60,7 @@ ms.locfileid: "78176664"
 > [!NOTE]
 >  Значения плотности сеток в пространственном индексе можно просмотреть в столбцах level_1_grid, level_2_grid, level_3_grid и level_4_grid представления каталога [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) , если уровень совместимости базы данных имеет значение 100 или ниже. / `GEOGRAPHY_AUTO_GRID` Параметры схемы тесселяции не заполняют `GEOMETRY_AUTO_GRID` эти столбцы. представление каталога sys. spatial_index_tessellations содержит `NULL` значения для этих столбцов, если используются параметры автоматической сетки.
 
-###  <a name="tessellation"></a>Тесселяции
+###  <a name="tessellation"></a><a name="tessellation"></a> Тесселяция
  После декомпозиции индексированного пространства в сеточную иерархию пространственный индекс построчно считывает данные из пространственного столбца. После считывания данных для пространственного объекта (или экземпляра) пространственный индекс выполняет *процесс тесселяции* для этого объекта. Процесс тесселяции помещает объект в cеточную иерархию, устанавливая связь между ним и набором ячеек сетки, с которыми он соприкасается (*контактные ячейки*). Начиная с уровня 1 сеточной иерархии, процесс тесселяции сначала обрабатывает уровень *в ширину* . В принципе процесс может продолжиться для всех четырех уровней, по одному уровню за раз.
 
  Результатом процесса тесселяции является набор контактных ячеек, которые записываются в пространственный индекс объекта. Ссылаясь на эти записанные ячейки, пространственный индекс может найти объект в пространстве по его расположению относительно других объектов в пространственном столбце, которые также хранятся в индексе.
@@ -87,7 +87,7 @@ ms.locfileid: "78176664"
 #### <a name="covering-rule"></a>Правило покрытия
  Если объект полностью покрывает ячейку, говорят, что эта ячейка *накрыта* объектом. Например, на следующем рисунке одна из ячеек второго уровня (15.11) полностью накрыта средней частью восьмиугольника.
 
- ![Оптимизация в охвате](../../database-engine/media/spndx-opt-covering.gif "Оптимизация покрытия")
+ ![Оптимизация покрытия](../../database-engine/media/spndx-opt-covering.gif "Оптимизация покрытия")
 
  Накрытая ячейка считается и записывается в индекс, и дальнейшая тесселяция для ячейки не проводится.
 
@@ -110,7 +110,7 @@ ms.locfileid: "78176664"
 
  ![Оптимизация по правилу самой глубокой ячейки](../../database-engine/media/spndx-opt-deepest-cell.gif "Оптимизация по правилу самой глубокой ячейки")
 
-###  <a name="schemes"></a>Схемы тесселяции
+###  <a name="tessellation-schemes"></a><a name="schemes"></a> Схемы тесселяции
  Поведение пространственного индекса частично зависит от используемой *схемы тесселяции*. Схема тесселяции зависит от типа данных. В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]пространственные индексы поддерживают две схемы тесселяции.
 
 -   *Тесселяция геометрической сетки*, которая является схемой `geometry` для типа данных.
@@ -129,13 +129,13 @@ ms.locfileid: "78176664"
 ##### <a name="the-bounding-box"></a>Ограничивающий прямоугольник
  Геометрические данные занимают плоскость, которая может быть бесконечной. Однако в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]для пространственного индекса требуется конечное пространство. Для определения конечного пространства для декомпозиции схеме тесселяции сетки геометрических объектов требуется *ограничивающий прямоугольник*. Ограничивающий прямоугольник определяется четырьмя `(`координатами: _x-min_**,**_y-min_ `)` и `(` _x-max_**,**_y-max_`)`, которые хранятся в виде свойств пространственного индекса. Эти координаты представляют следующее.
 
--   *x-min* — это координата по оси x левого нижнего угла ограничивающего прямоугольника.
+-   *x-min* — это координата левого нижнего угла ограничивающего прямоугольника по оси X.
 
--   *y-min* — это координата по оси y левого нижнего угла.
+-   *y-min* — это координата левого нижнего угла по оси Y.
 
--   *x-max* — это координата по оси x правого верхнего угла.
+-   *x-max* — это координата верхнего правого угла по оси X.
 
--   *y-max* — это координата по оси y правого верхнего угла.
+-   *y-max* — это координата верхнего правого угла по оси Y.
 
 > [!NOTE]
 >  Эти координаты задаются предложением BOUNDING_BOX инструкции [CREATE пространственного индекса](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] .
@@ -174,11 +174,11 @@ ms.locfileid: "78176664"
 
  После проецирования пространства на плоскость проводится ее декомпозиция в четырехуровневую сеточную иерархию. На разных уровнях могут использоваться разные плотности сетки. На следующем рисунке показана плоскость после ее декомпозиции в сетку 4x4 уровня 1. На данном рисунке нижние уровни сеточной иерархии опущены. На самом деле плоскость подвергается полной декомпозиции в четырехуровневую сеточную иерархию. После окончания декомпозиции географические данные из столбца geography считываются по строкам, и для каждого объекта выполняется процедура тесселяции.
 
- ![Географическая сетка уровня 1](../../database-engine/media/spndx-geodetic-level1grid.gif "Географическая сетка уровня 1")
+ ![Географическая сетка уровня 1](../../database-engine/media/spndx-geodetic-level1grid.gif "Географическая сетка уровня 1")
 
-##  <a name="methods"></a>Методы, поддерживаемые пространственными индексами
+##  <a name="methods-supported-by-spatial-indexes"></a><a name="methods"></a>Методы, поддерживаемые пространственными индексами
 
-###  <a name="geometry"></a>Геометрические методы, поддерживаемые пространственными индексами
+###  <a name="geometry-methods-supported-by-spatial-indexes"></a><a name="geometry"></a>Геометрические методы, поддерживаемые пространственными индексами
  При определенных условиях пространственные индексы поддерживают следующие геометрические методы на основе наборов: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() и STWithin(). Чтобы пространственный индекс поддерживал эти методы, в запросе их необходимо использовать в пределах предложения WHERE или JOIN ON, включив в состав предиката следующего общего вида:
 
  *Geometry1*. *method_name*(*Geometry2*)*comparison_operator * * valid_number*
@@ -187,23 +187,23 @@ ms.locfileid: "78176664"
 
  Пространственные индексы поддерживают предикаты следующих форм:
 
--   *Geometry1*. [STContains](/sql/t-sql/spatial-geometry/stcontains-geometry-data-type)(*Geometry2*) = 1
+-   *geometry1*.[STContains](/sql/t-sql/spatial-geometry/stcontains-geometry-data-type)(*geometry2*) = 1
 
 -   *Geometry1*. [STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*geometry2*) *номер* <
 
--   *Geometry1*. [STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*Geometry2*) <= *число*
+-   *geometry1*.[STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*geometry2*) <= *номер*
 
--   *Geometry1*. [STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)(*Geometry2*) = 1
+-   *geometry1*.[STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)(*geometry2*)= 1
 
--   *Geometry1*. [STIntersects](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)(*Geometry2*) = 1
+-   *geometry1*.[STIntersects](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)(*geometry2*)= 1
 
--   *Geometry1.* [STOverlaps](/sql/t-sql/spatial-geometry/stoverlaps-geometry-data-type) *(Geometry2) = 1*
+-   *geometry1.* [STOverlaps](/sql/t-sql/spatial-geometry/stoverlaps-geometry-data-type) *(geometry2) = 1*
 
--   *Geometry1*. [STTouches](/sql/t-sql/spatial-geometry/sttouches-geometry-data-type)(*Geometry2*) = 1
+-   *geometry1*.[STTouches](/sql/t-sql/spatial-geometry/sttouches-geometry-data-type)(*geometry2*) = 1
 
--   *Geometry1*. [STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*Geometry2*) = 1
+-   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1
 
-###  <a name="geography"></a>Географические методы, поддерживаемые пространственными индексами
+###  <a name="geography-methods-supported-by-spatial-indexes"></a><a name="geography"></a>Географические методы, поддерживаемые пространственными индексами
  При определенных условиях пространственные индексы поддерживают следующие географические методы для работы с наборами: STIntersects(),STEquals(), and STDistance(). Чтобы пространственный индекс поддерживал эти методы, их необходимо использовать в предложении WHERE запроса, включив в состав предиката следующего общего вида:
 
  *geography1*. *method_name*(*geography2*)*comparison_operator * * valid_number*
@@ -212,13 +212,13 @@ ms.locfileid: "78176664"
 
  Пространственные индексы поддерживают предикаты следующих форм:
 
--   *geography1*. [STIntersects](/sql/t-sql/spatial-geography/stintersects-geography-data-type)(*geography2*) = 1
+-   *geography1*.[STIntersects](/sql/t-sql/spatial-geography/stintersects-geography-data-type)(*geography2*)= 1
 
--   *geography1*. [STEquals](/sql/t-sql/spatial-geography/stequals-geography-data-type)(*geography2*) = 1
+-   *geography1*.[STEquals](/sql/t-sql/spatial-geography/stequals-geography-data-type)(*geography2*)= 1
 
 -   *geography1*. [STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) *номер* <
 
--   *geography1*. [STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *число*
+-   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *номер*
 
 ### <a name="queries-that-use-spatial-indexes"></a>Запросы, использующие пространственные индексы
  Пространственные индексы поддерживаются только в запросах, содержащих оператор пространственного индекса в предложении `WHERE`. Пример синтаксиса.

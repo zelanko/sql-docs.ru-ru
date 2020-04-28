@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 793d07bfd7500318a5fe822683e8353b07e541ba
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176434"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Типы данных в выражениях служб Integration Services
@@ -53,17 +53,17 @@ ms.locfileid: "78176434"
 
  Дополнительные сведения см. в следующих разделах:
 
--   [= = &#40;равно&#41; &#40;выражения служб SSIS&#41;](equal-ssis-expression.md)
+-   [= = (равно) (выражение служб SSIS)](equal-ssis-expression.md)
 
 -   [! = &#40;неравенство&#41; &#40;выражения служб SSIS&#41;](unequal-ssis-expression.md)
 
--   [&#62; &#40;больше&#41; &#40;выражения служб SSIS&#41;](greater-than-ssis-expression.md)
+-   [&#62; (больше чем) (выражение служб SSIS)](greater-than-ssis-expression.md)
 
--   [&#60; &#40;меньше&#41; &#40;выражения служб SSIS&#41;](less-than-ssis-expression.md)
+-   [&#60; (меньше чем) (выражение служб SSIS)](less-than-ssis-expression.md)
 
--   [&#62;= &#40;больше или равно&#41; &#40;выражения служб SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)
+-   [&#62;= (больше или равно) (выражение служб SSIS)](greater-than-or-equal-to-ssis-expression.md)
 
--   [&#60;= &#40;меньше или равно&#41; &#40;выражения служб SSIS&#41;](less-than-or-equal-to-ssis-expression.md)
+-   [&#60;= (меньше или равно) (выражение служб SSIS)](less-than-or-equal-to-ssis-expression.md)
 
  Функция, которая использует один аргумент, возвращает результат того же типа данных, что и аргумент, со следующими исключениями.
 

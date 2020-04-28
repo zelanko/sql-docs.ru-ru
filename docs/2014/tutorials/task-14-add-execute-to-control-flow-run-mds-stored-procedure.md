@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8c926f2ea3d9ef9973f75764e254c5e0884836e3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177294"
 ---
-# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Задача 14. Добавление задачи «Выполнение SQL» в поток управления для выполнения хранимых процедур для MDS
+# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Задача 14. Добавление в поток управления задачи "Выполнение SQL" для запуска хранимой процедуры для MDS
   После загрузки данных в промежуточные таблицы служб MDS вы выполняете хранимую процедуру, связанную с этой таблицей, для загрузки данных из промежуточных таблиц в соответствующие таблицы в базе данных MDS. У этой хранимой процедуры два обязательных параметра, которые нужно передать: LogFlag и VersionName. Параметр LogFlag определяет, записываются ли транзакции в журнал в ходе промежуточного процесса, а параметр VersionName представляет версию модели. Дополнительные сведения см. в разделе [Промежуточная хранимая процедура](https://msdn.microsoft.com/library/hh231028.aspx) .
 
  В этой задаче вы добавляете задачу «Выполнение SQL» в поток управления для вызова хранимой процедуры и загрузки промежуточных данных в соответствующие таблицы базы данных MDS.
@@ -70,7 +70,7 @@ ms.locfileid: "78177294"
 
 15. Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно « **выполнение редактора SQL** ».
 
-## <a name="next-step"></a>Дальнейшее действие
- [Задача 15. Построение и запуск проекта служб SSIS](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)
+## <a name="next-step"></a>Следующий шаг
+ [Задача 15. Сборка и запуск проекта SSIS](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)
 
 

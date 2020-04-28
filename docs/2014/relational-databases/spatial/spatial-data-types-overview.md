@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 340e250fde61f8c246099eadafc148278288dee0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176654"
 ---
 # <a name="spatial-data-types-overview"></a>Основные сведения о типах пространственных данных
@@ -29,7 +29,7 @@ ms.locfileid: "78176654"
 > [!IMPORTANT]
 >  Подробное описание и примеры использования функций обработки пространственных данных, реализованные в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], в том числе улучшения пространственных типов данных, можно получить, загрузив технический документ [Новые функции обработки пространственных данных в SQL Server с рабочим названием "Denali"](https://go.microsoft.com/fwlink/?LinkId=226407).
 
-##  <a name="objects"></a>Объекты пространственных данных
+##  <a name="spatial-data-objects"></a><a name="objects"></a> Объекты пространственных данных
  Типы данных `geometry` и `geography` поддерживают шестнадцать объектов пространственных данных или типов экземпляров. Однако только одиннадцать из этих типов экземпляров являются *материализуемыми*. Такие экземпляры можно создавать в базе данных и работать с ними. Эти экземпляры наследуют определенные свойства от родительских типов данных, которые отличают их `Points`как, **LineString, объекта CircularString** `CompoundCurves`, `Polygons`, `CurvePolygons` или как несколько `geometry` экземпляров `geography` или в `GeometryCollection`. Тип `Geography` имеет дополнительный тип экземпляра `FullGlobe`.
 
  На рисунке ниже изображена иерархия `geometry`, на которой основаны типы данных `geometry` и `geography`. Допускающие создание экземпляров `geometry` типы `geography` и обозначены синим цветом.
@@ -65,7 +65,7 @@ ms.locfileid: "78176654"
 -   [GeometryCollection](../spatial/geometrycollection.md)
 
 
-##  <a name="differences"></a>Различия между типами данных geometry и geography
+##  <a name="differences-between-the-geometry-and-geography-data-types"></a><a name="differences"></a> Различия между типами данных geometry и geography
  Два типа пространственных данных часто демонстрируют одинаковое поведение, однако у них имеется ряд ключевых различий в способе хранения и управления данными.
 
 ### <a name="how-connecting-edges-are-defined"></a>Определение границ соединения
@@ -99,12 +99,12 @@ ms.locfileid: "78176654"
 
  Дополнительные сведения о спецификациях OGC см. в одном из следующих источников:
 
--   [Спецификации OGC, простой доступ к функциям, часть 1 — Общая архитектура](https://go.microsoft.com/fwlink/?LinkId=93627)
+-   [Спецификации OGC, простой доступ к функциям, часть 1 — общая архитектура](https://go.microsoft.com/fwlink/?LinkId=93627)
 
--   [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](https://go.microsoft.com/fwlink/?LinkId=93628)
+-   [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](https://go.microsoft.com/fwlink/?LinkId=93628)
 
 
-##  <a name="circular"></a>Сегменты дуги
+##  <a name="circular-arc-segments"></a><a name="circular"></a> Сегменты дуги
  Три типа, допускающих создание экземпляров, могут принимать сегменты дуги: `CircularString`, `CompoundCurve` и `CurvePolygon`.  Сегмент дуги определяется тремя точками на двумерной плоскости, при этом третья точка не может совпадать с первой.
 
  Фигуры A и B являются типичными сегментами дуги. Обратите внимание, что каждая из трех точек лежит на периметре круга.

@@ -14,17 +14,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 77f7fdb2689d910d6fe9534a5f1f65e1c381b351
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175453"
 ---
 # <a name="sql-server-database-engine"></a>Компонент SQL Server Database Engine
-  
   [!INCLUDE[ssDE](../includes/ssde-md.md)] — основная служба для хранения, обработки и защиты данных. Компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] обеспечивает управляемый доступ и быструю обработку транзакций, достаточную даже для самых требовательных к предоставляемым данным приложений.
 
- Компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] используется для создания реляционных баз данных для обработки транзакций в сети или интерактивной аналитической обработки. Сюда входит создание таблиц для хранения данных и объектов баз данных, таких как индексы, представления и хранимые процедуры для просмотра и защиты данных и для управления ими. Для управления объектами баз данных можно использовать среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], для захвата событий сервера — приложение [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].
+ Компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] используется для создания реляционных баз данных для обработки транзакций в сети или интерактивной аналитической обработки. Сюда входит создание таблиц для хранения данных и объектов баз данных, таких как индексы, представления и хранимые процедуры для просмотра и защиты данных и для управления ими. Для управления объектами баз данных можно использовать среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , для захвата событий сервера — приложение [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] .
 
  **Обзор содержимого по области** ![маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") новые возможности [(ядро СУБД)](whats-new-in-sql-server-2016.md)
 

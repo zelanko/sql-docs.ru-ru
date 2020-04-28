@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 450a42a4564d3a59b5b609f2ca8faf6c1f99a128
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175273"
 ---
 # <a name="defining-named-sets"></a>Определение именованных наборов
@@ -132,7 +132,7 @@ ms.locfileid: "78175273"
      ![Панель «Фильтр» с двумя именованными наборами](../../2014/tutorials/media/l6-named-set-05.gif "Панель «Фильтр» с двумя именованными наборами")
 
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия
- [Занятие 7. определение ключевых показателей эффективности &#40;ключевых показателей эффективности&#41;](lesson-7-defining-key-performance-indicators-kpis.md)
+ [Занятие 7. Определение ключевых показателей эффективности](lesson-7-defining-key-performance-indicators-kpis.md)
 
 ## <a name="see-also"></a>См. также:
  [Вычисления](multidimensional-models-olap-logical-cube-objects/calculations.md) [Создание именованных наборов](multidimensional-models/create-named-sets.md)

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bb567bffe0c184907ca61bd583eb5666948a0f03
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176188"
 ---
 # <a name="extending-packages-with-scripting"></a>Расширение пакетов с помощью сценариев
@@ -42,7 +42,7 @@ ms.locfileid: "78176188"
 ## <a name="reference"></a>Справочник
  [Справочник по ошибкам и сообщениям Integration Services](../integration-services-error-and-message-reference.md) Список стандартных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] кодов ошибок со своими символическими именами и описаниями.
 
-## <a name="related-sections"></a>См. также
+## <a name="related-sections"></a>Связанные разделы
  [Расширение пакетов с помощью пользовательских объектов](../extending-packages-custom-objects/extending-packages-with-custom-objects.md) Описывает создание пользовательских задач, компонентов потока данных и других объектов пакета для использования в нескольких пакетах.
 
  [Программное создание пакетов](../building-packages-programmatically/building-packages-programmatically.md) Описывает, как создавать, настраивать, запускать, загружать, сохранять пакеты и управлять [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ими программно.

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: fb0f2dec6ac7ad68a6a1aa1de8d4734f99559b54
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175963"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Устойчивость таблиц, оптимизированных для памяти
@@ -83,9 +83,8 @@ ms.locfileid: "78175963"
 
  Фоновый поток оценивает все закрытые пары файлов с помощью политики слияния и затем запускает один или несколько запросов слияния для выбранных пар файлов. Эти запросы слияния обрабатываются отдельным потоком контрольной точки вне сети. Оценка политики слияния выполняется периодически, а также когда закрывается контрольная точка.
 
-### <a name="sssql14-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Политика слияния
- 
-  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] реализует описанную ниже политику слияния.
+### <a name="sssql14-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Политика слияния
+ [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] реализует описанную ниже политику слияния.
 
 -   Слияние добавляется в план, если две или более последовательные пары файлов могут быть объединены после учета удаленных строк, при этом результирующие строки должны войти в одну пару файлов идеального размера. Идеальный размер CFP определяется следующим образом.
 

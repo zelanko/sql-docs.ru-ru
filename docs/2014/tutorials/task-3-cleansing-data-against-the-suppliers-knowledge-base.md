@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b13e3d30ac0afce5293cc0e104aa2b291112647f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177284"
 ---
-# <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Задача 3. Очистка данных в базе знаний поставщиков
+# <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Задача 3. Очистка данных в базе знаний о поставщиках
   В этой задаче вы выполняете автоматизированную очистку данных. Службы DQS используют мощные алгоритмы и степени достоверности на основе пороговых значений, позволяющие анализировать данные по выбранной базе знаний, затем выполнять очистку. Дополнительные сведения см. в разделе [Очистка данных с использованием набора знаний служб DQS (внутренних)](https://msdn.microsoft.com/library/hh213061.aspx) .
 
 1.  Нажмите кнопку **Запустить** , чтобы начать автоматизированный процесс очистки.
@@ -30,7 +30,7 @@ ms.locfileid: "78177284"
 
 3.  Нажмите кнопку **Далее** , чтобы перейти на страницу **Управление и просмотр результатов** .
 
-## <a name="next-step"></a>Дальнейшее действие
+## <a name="next-step"></a>Следующий шаг
  [Задача 4. Manaing и просмотр результатов](../../2014/tutorials/task-4-manaing-and-viewing-results.md)
 
 

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f4227560fbaf3e618a25e3dd214a214ac68a736e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176559"
 ---
 # <a name="building-packages-programmatically"></a>Программное построение пакетов
@@ -65,7 +65,7 @@ ms.locfileid: "78176559"
 ## <a name="reference"></a>Справочник
  [Справочник по ошибкам и сообщениям Integration Services](../integration-services-error-and-message-reference.md) Список стандартных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] кодов ошибок со своими символическими именами и описаниями.
 
-## <a name="related-sections"></a>См. также
+## <a name="related-sections"></a>Связанные разделы
  [Расширение пакетов с помощью сценариев](../extending-packages-scripting/extending-packages-with-scripting.md) Описывает, как расширить поток управления с помощью задачи «Скрипт» и как расширить поток данных с помощью компонента скрипта.
 
  [Расширение пакетов с помощью пользовательских объектов](../extending-packages-custom-objects/extending-packages-with-custom-objects.md) Описывает создание пользовательских задач, компонентов потока данных и других объектов пакета для использования в нескольких пакетах.

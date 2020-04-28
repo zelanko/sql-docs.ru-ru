@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04cb8ea2505340cb90221b328c04efc390296c19
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175363"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Использование кластеризованных индексов columnstore
@@ -38,7 +38,7 @@ ms.locfileid: "78175363"
 
 -   [Реорганизация кластеризованного индекса columnstore](#reorganize)
 
-##  <a name="create"></a>Создание кластеризованного индекса columnstore
+##  <a name="create-a-clustered-columnstore-index"></a><a name="create"></a>Создание кластеризованного индекса columnstore
  Чтобы создать кластеризованный индекс columnstore, сначала создайте таблицу rowstore в виде кучи или кластеризованного индекса, а затем используйте инструкцию [CREATE Clustered COLUMNSTORE index &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) для преобразования таблицы в кластеризованный индекс columnstore. Если кластеризованный индекс columnstore должен иметь то же имя, что и кластеризованный индекс, используйте параметр DROP_EXISTING.
 
  В этом примере создается таблица как куча, затем преобразуется в кластеризованный индекс с именем columnstore cci_Simple. В результате таблица rowstore становится таблицей columnstore.
@@ -56,10 +56,10 @@ GO
 
  Дополнительные примеры см. в подразделе "примеры" раздела [CREATE Clustered COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).
 
-##  <a name="drop"></a>Удаление кластеризованного индекса columnstore
+##  <a name="drop-a-clustered-columnstore-index"></a><a name="drop"></a>Удаление кластеризованного индекса columnstore
  Используйте инструкцию [&#41;Transact-SQL DROP INDEX &#40;](/sql/t-sql/statements/drop-index-transact-sql) , чтобы удалить кластеризованный индекс columnstore. Эта операция удаляет индекс columnstore и преобразует таблицу columnstore в кучу rowstore.
 
-##  <a name="load"></a>Загрузка данных в кластеризованный индекс columnstore
+##  <a name="load-data-into-a-clustered-columnstore-index"></a><a name="load"></a>Загрузка данных в кластеризованный индекс columnstore
  Можно добавлять данные к существующим кластеризованным индексам columnstore с помощью любого из стандартных методов загрузки.  Например, средство bcp с массовым загрузкой, Integration Services и INSERT... SELECT может загружать данные в кластеризованный индекс columnstore.
 
  Кластеризованные индексы columnstore используют deltastore, чтобы исключить фрагментацию сегментов столбца в columnstore.
@@ -83,9 +83,9 @@ GO
 |Строки для массовой загрузки|Строки, добавленные в Columnstore|Строки, добавленные в Deltastore|
 |-----------------------|-----------------------------------|----------------------------------|
 |102 000|0|102 000|
-|145,000|145,000<br /><br /> Размер группы строк: 145 000.|0|
-|1,048,577|1 048 576<br /><br /> Размер группы строк: 1 048 576.|1|
-|2,252,152|2,252,152<br /><br /> Размер группы строк: 1 048 576, 1 048 576, 155 000.|0|
+|145,000|145,000<br /><br /> Размер группы строк: 145,000|0|
+|1,048,577|1 048 576<br /><br /> Размер группы строк: 1 048 576.|1|
+|2,252,152|2,252,152<br /><br /> Размеры групп строк: 1 048 576, 1 048 576, 155 000.|0|
 
  В следующем примере показаны результаты загрузки 1 048 577 строк в секцию. Результаты показывают наличие одной СЖАТОЙ rowgroup в columnstore (в виде сжатых сегментов столбцов) и 1 строки в deltastore.
 
@@ -97,7 +97,7 @@ SELECT * FROM sys.column_store_row_groups
 
 
 
-##  <a name="change"></a>Изменение данных в кластеризованном индексе columnstore
+##  <a name="change-data-in-a-clustered-columnstore-index"></a><a name="change"></a>Изменение данных в кластеризованном индексе columnstore
  Кластеризованные индексы columnstore поддерживают операции DML вставки, обновления и удаления.
 
  Для вставки строки используйте [инструкцию insert &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql) . Строка будет добавлена в deltastore.
@@ -114,7 +114,7 @@ SELECT * FROM sys.column_store_row_groups
 
 -   Если строка находится в deltastore, компонент [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] обновляет строку в deltastore.
 
-##  <a name="rebuild"></a>Перестроение кластеризованного индекса columnstore
+##  <a name="rebuild-a-clustered-columnstore-index"></a><a name="rebuild"></a>Перестроение кластеризованного индекса columnstore
  Чтобы выполнить полное перестроение существующего кластеризованного индекса columnstore, используйте инструкцию [CREATE Clustered COLUMNSTORE index &#40;Transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) или [ALTER INDEX &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-index-transact-sql) . Кроме того, можно использовать инструкцию ALTER INDEX... REBUILD для перестроения определенной секции.
 
 ### <a name="rebuild-process"></a>Процесс перестроения
@@ -145,7 +145,7 @@ SELECT * FROM sys.column_store_row_groups
 
      Это гарантирует, что все данные будут храниться в columnstore. Если одновременно выполняется несколько загрузок, то в каждой секции может образоваться несколько deltastore. Перестроение переместит все строки из deltastore в columnstore.
 
-##  <a name="reorganize"></a>Реорганизация кластеризованного индекса columnstore
+##  <a name="reorganize-a-clustered-columnstore-index"></a><a name="reorganize"></a>Реорганизация кластеризованного индекса columnstore
  Реорганизация кластеризованный индекса columnstore перемещает все ЗАКРЫТЫЕ rowgroups в columnstore. Чтобы выполнить реорганизацию, используйте [инструкцию ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)с параметром реорганизовать.
 
  Реорганизация не требуется для перемещения ЗАКРЫТЫХ rowgroup в columnstore. Процесс перемещения кортежей в конечном счете находит все группы строк CLOSED и перемещает их. Но процесс перемещения кортежей является однопотоковым и может не перемещать группы строк достаточно быстро применительно к конкретной рабочей нагрузке.

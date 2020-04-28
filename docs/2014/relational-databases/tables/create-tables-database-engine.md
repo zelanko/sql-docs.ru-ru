@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 261aab8b0e8a5d80aed143d6b29e952243742917
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176824"
 ---
 # <a name="create-tables-database-engine"></a>Создание таблиц (компонент Database Engine)
@@ -37,18 +37,18 @@ ms.locfileid: "78176824"
 
      [Transact-SQL](#TsqlProcedure)
 
-##  <a name="BeforeYouBegin"></a> Перед началом
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом
 
-###  <a name="Security"></a> безопасность
+###  <a name="security"></a><a name="Security"></a> безопасность
 
-####  <a name="Permissions"></a> Permissions
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions
  Требует разрешения CREATE TABLE в базе данных и разрешения ALTER на схему, в которой создается таблица.
 
  Если какие-либо столбцы в инструкции CREATE TABLE определены как принадлежащие к определяемому пользователем типу данных CLR, необходимо быть владельцем данного типа либо иметь разрешение REFERENCES на него.
 
  Если какие-либо столбцы в инструкции CREATE TABLE имеют связанную коллекцию схем XML, необходимо быть владельцем этого набора схем или иметь разрешение REFERENCES на него.
 
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio
 
 #### <a name="to-create-a-table-with-table-designer"></a>Создание таблицы в конструкторе таблиц
 
@@ -78,13 +78,13 @@ ms.locfileid: "78176824"
 
      Дополнительные сведения о схемах см. в разделе [Create a Database Schema](../security/authentication-access/create-a-database-schema.md).
 
-9. В меню **файл** выберите команду **сохранить** *имя таблицы*.
+9. В меню **Файл** выберите команду **Сохранить** *имя_таблицы*.
 
 10. В диалоговом окне **Выбор имени** введите имя таблицы и нажмите кнопку **OK**.
 
 11. Чтобы просмотреть новую таблицу, в **обозревателе объектов**разверните узел **Таблицы** , а затем нажмите клавишу **F5** , чтобы обновить список объектов. Новая таблица будет отображена в списке таблиц.
 
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL
 
 #### <a name="to-create-a-table-in-the-query-editor"></a>Создание таблицы в редакторе запросов
 

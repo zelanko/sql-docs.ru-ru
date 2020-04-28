@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: eefa464ae8cb694001d40c5ad9090f7f4efbd8e6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175883"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>создать точку управления служебной программы SQL Server (служебная программа SQL Server)
@@ -121,14 +121,14 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 
 -   [Создание пункта управления программой](#Creating_UCP)
 
-##  <a name="Welcome"></a> Общие сведения о мастере создания UCP
+##  <a name="introduction-to-create-ucp-wizard"></a><a name="Welcome"></a> Общие сведения о мастере создания UCP
  Если при открытии обозревателя программ нет ни одного пункта управления программой, необходимо установить соединение с таким пунктом или создать новый пункт.
 
  **Connect to existing UCP** (Подключиться к существующей UCP). Если в системе уже есть точка управления служебной программой (UCP), можно установить соединение с ней, нажав кнопку ![](../../database-engine/media/connect-to-utility.gif "Connect_to_Utility")**Соединение со служебной программой** в верхней части области проводника служебной программы. Чтобы установить соединение с существующей точкой управления служебной программой, необходимо иметь учетные данные администратора или быть членом роли чтения данных служебной программы. Обратите внимание, что у каждой служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может быть только одна точка управления служебной программой, а с экземпляра SSMS можно подключиться только к одной точке управления служебной программой.
 
  **Create a new UCP** (Создать новую UCP). Чтобы создать новую точку управления служебной программой, нажмите кнопку ![](../../database-engine/media/create-ucp.gif "Create_UCP")**Create UCP** (Создать UCP) вверху панели проводника служебной программы. Чтобы создать новую точку управления служебной программой, в диалоговом окне соединения необходимо указать имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и учетные данные администратора. Обратите внимание, что на дну служебную программу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может приходиться только одна точка управления служебной программой.
 
-##  <a name="Instance_name"></a> Укажите экземпляр
+##  <a name="specify-instance"></a><a name="Instance_name"></a> Укажите экземпляр
  Укажите следующие сведения для создаваемого UCP.
 
 -   **Имя экземпляра**. Чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из диалогового окна соединения, щелкните **Подключить…** . Введите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате "имя_компьютера\имя_экземпляра".
@@ -137,7 +137,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 
  Чтобы продолжить, нажмите кнопку **Далее**.
 
-##  <a name="Connection_dialog"></a> Диалоговое окно подключения
+##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> Диалоговое окно подключения
  Проверьте в диалоговом окне «Соединение с сервером» тип сервера, имя компьютера и сведения обо имени экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](../../ssms/f1-help/connect-to-server-database-engine.md).
 
 > [!NOTE]
@@ -145,7 +145,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 
  Для продолжения нажмите кнопку **Подключить...** .
 
-##  <a name="Agent_configuration"></a> Учетная запись набора элементов сбора служебной программы
+##  <a name="utility-collection-set-account"></a><a name="Agent_configuration"></a> Учетная запись набора элементов сбора служебной программы
  Укажите учетную запись домена Windows для выполнения набора элементов сбора служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эта учетная запись используется как учетная запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для набора элементов сбора служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно также использовать имеющуюся служебную учетную запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы требования проверки были удовлетворены, следуйте приведенным ниже рекомендациям по настройке учетной записи.
 
  Если выбран вариант со служебной учетной записью службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :
@@ -154,7 +154,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 
  Чтобы продолжить, нажмите кнопку **Далее**.
 
-##  <a name="Validation_rules"></a> Правила проверки
+##  <a name="validation-rules"></a><a name="Validation_rules"></a> Правила проверки
  В этой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором будет создана точка управления служебной программой, должны быть истинны следующие условия.
 
 |Правило проверки|Действие по исправлению|
@@ -180,7 +180,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 
  Чтобы продолжить, нажмите кнопку **Далее**.
 
-##  <a name="Summary"></a> Сводка
+##  <a name="summary"></a><a name="Summary"></a> Сводка
  На странице сводных данных отображаются указанные сведения о UCP.
 
 -   Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещена точка управления служебной программой.
@@ -191,7 +191,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 
  Чтобы изменить параметры конфигурации UCP, нажмите кнопку **Назад**. Чтобы продолжить, нажмите кнопку **Далее**.
 
-##  <a name="Creating_UCP"></a> Создание пункта управления программой
+##  <a name="creating-the-utility-control-point"></a><a name="Creating_UCP"></a> Создание пункта управления программой
  Во время операции создания UCP мастер отображает шаги и приводит данные о состоянии.
 
 -   Подготовка экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к созданию точки управления служебной программой.
@@ -216,7 +216,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 
  Дополнительные сведения о регистрации дополнительных экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Регистрация экземпляра SQL Server &#40;служебная программа SQL Server&#41;](enroll-an-instance-of-sql-server-sql-server-utility.md). Чтобы удалить точку управления служебной программой из служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на панели **Обозреватель программы** выберите **Управляемые экземпляры** , чтобы отобразить список управляемых экземпляров, щелкните правой кнопкой мыши имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в представлении списка **Содержимое обозревателя программы** и выберите **Make Instance Unmanaged**(Удалить из списка управляемых экземпляров).
 
-##  <a name="PowerShell_create_UCP"></a> Создание нового пункта управления программой с помощью PowerShell
+##  <a name="create-a-new-utility-control-point-using-powershell"></a><a name="PowerShell_create_UCP"></a> Создание нового пункта управления программой с помощью PowerShell
  Для создания нового пункта управления программой используйте следующий пример:
 
 ```powershell

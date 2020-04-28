@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d4190f096efaf80989d397f26a314454fe2171b7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175867"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Detecting and Resolving Conflicts in Logical Records
@@ -26,8 +26,7 @@ ms.locfileid: "78175867"
  Чтобы указать уровень отслеживания конфликтов и разрешений, см. раздел [Указание уровня отслеживания и разрешения конфликтов для статей публикации слиянием](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).
 
 ## <a name="conflict-detection"></a>Обнаружение конфликтов
- Способ обнаружения конфликтов в логических записях определяется двумя свойствами статьи: **column_tracking** и **logical_record_level_conflict_detection**. 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздние версии также поддерживают обнаружение на уровне логической записи.
+ Способ обнаружения конфликтов в логических записях определяется двумя свойствами статьи: **column_tracking** и **logical_record_level_conflict_detection**. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздние версии также поддерживают обнаружение на уровне логической записи.
 
  Значением свойства статьи **logical_record_level_conflict_detection** может быть TRUE или FALSE. Значение должно быть задано только для родительской статьи верхнего уровня. Кроме того, его должны игнорировать все дочерние статьи. Если значение этого параметра FALSE, репликация слиянием обнаруживает конфликты, как в предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], основываясь исключительно на значениях свойства **column_tracking** для статьи. Если значение этого параметра TRUE, репликация слиянием игнорирует значение свойства **column_tracking** для статьи и определяет конфликт, если где-либо в логической записи были сделаны изменения. В качестве примера рассмотрен сценарий:
 
@@ -54,22 +53,22 @@ ms.locfileid: "78175867"
 ### <a name="row-or-column-level-detection-row-level-resolution"></a>Обнаружение на уровне строк или столбцов, разрешение на уровне строк.
  В этом примере публикация настраивается с помощью:
 
--   **column_tracking** имеет значение true или false
+-   параметр**column_tracking** принимает значения TRUE или FALSE;
 
--   **logical_record_level_conflict_detection** имеет значение false
+-   параметр**logical_record_level_conflict_detection** имеет значение FALSE;
 
--   **logical_record_level_conflict_resolution** имеет значение false
+-   параметр**logical_record_level_conflict_resolution** имеет значение FALSE.
 
  В этом случае обнаружение конфликтов осуществляется на уровне строк или столбцов, а разрешение — на уровне строк. С помощью этих настроек используется преимущество, когда все изменения в логической записи реплицируются как одно целое, но без обнаружения или разрешения конфликта на уровне логических записей.
 
 ### <a name="column-level-detection-logical-record-resolution"></a>Обнаружение на уровне столбцов, разрешение на уровне логических записей.
  В этом примере публикация настраивается с помощью:
 
--   **column_tracking** имеет значение true
+-   параметр**column_tracking** имеет значение TRUE;
 
--   **logical_record_level_conflict_detection** имеет значение false
+-   параметр**logical_record_level_conflict_detection** имеет значение FALSE;
 
--   **logical_record_level_conflict_resolution** имеет значение true
+-   параметр**logical_record_level_conflict_resolution** имеет значение TRUE.
 
  Издатель и подписчик начинают работать с одним и тем же набором данных, логическая запись определяется между таблицами **orders** и **customers** . Издатель изменяет столбец **custcol1** в таблице **customers** , а так же **ordercol1** в таблице **orders** . Подписчик изменяет **custcol1** в той же самой строке таблицы **customers** и столбец **ordercol2** в той же строке таблицы **orders** . Изменения одного и того же столбца в таблице **customer** приводят к конфликту, но изменения таблицы **orders** к конфликту не приводят.
 
@@ -80,11 +79,11 @@ ms.locfileid: "78175867"
 ### <a name="row-level-detection-logical-record-resolution"></a>Обнаружение на уровне строк, разрешение на уровне логических записей.
  В этом примере публикация настраивается с помощью:
 
--   **column_tracking** имеет значение false
+-   параметр**column_tracking** имеет значение FALSE;
 
--   **logical_record_level_conflict_detection** имеет значение false
+-   параметр**logical_record_level_conflict_detection** имеет значение FALSE;
 
--   **logical_record_level_conflict_resolution** имеет значение true
+-   параметр**logical_record_level_conflict_resolution** имеет значение TRUE.
 
  Издатель и подписчик запускаются с одинаковым набором данных. Издатель изменяет столбец **custcol1** в таблице **пользователи** . Подписчик изменяет столбец **custcol2** в таблице **customers** , а так же **ordercol2** в таблице **orders** . Изменения одной и той же строки в таблице **customers** приводят к конфликту, но изменения подписчиком таблицы **orders** к конфликту не приводят.
 
@@ -95,9 +94,9 @@ ms.locfileid: "78175867"
 ### <a name="logical-record-detection-logical-record-resolution"></a>Обнаружение на уровне логических записей, разрешение на уровне логических записей.
  В этом примере публикация настраивается с помощью:
 
--   **logical_record_level_conflict_detection** имеет значение true
+-   параметр**logical_record_level_conflict_detection** имеет значение TRUE;
 
--   **logical_record_level_conflict_resolution** имеет значение true
+-   параметр**logical_record_level_conflict_resolution** имеет значение TRUE.
 
  Издатель и подписчик запускаются с одинаковым набором данных. Издатель изменяет столбец **custcol1** в таблице **пользователи** . Подписчик изменяет столбец **ordercol1** в таблице **orders** . Изменения не относятся к одной и той же строке или одним и тем же столбцам, но поскольку изменения произошли в одной и той же логической записи для **custid**=1, они распознаны как конфликт на уровне логической записи.
 

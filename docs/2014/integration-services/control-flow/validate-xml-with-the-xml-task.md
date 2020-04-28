@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a67ab14cbf756784f9e89112afb2893a157d6abd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176504"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -25,7 +25,7 @@ ms.locfileid: "78176504"
 
  На следующем снимке экрана показано окно **редактора задачи XML** с необходимыми параметрами для проверки XML, позволяющими настроить вывод подробных сведений об ошибках.
 
- ![Свойства задачи "XML" в редакторе задач "XML"](../media/xmltaskproperties.jpg "Свойства задачи «XML» в редакторе задачи «XML»")
+ ![Свойства задачи "XML" в редакторе задач "XML"](../media/xmltaskproperties.jpg "Свойства задачи "XML" в редакторе задач "XML"")
 
  До появления свойства `ValidationDetails` проверка XML в задачах XML возвращала информацию только о том, есть ошибка в документе или нет. Сведения о самих ошибках и их расположении были недоступны. Теперь, если для свойства `ValidationDetails` задать значение True, выходной файл будет содержать подробные сведения обо всех ошибках, включая номера строк и позиции. Эти сведения можно использовать для анализа, поиска и исправления ошибок в XML-документах.
 
@@ -116,9 +116,9 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
 
  Ниже приведен результат запроса к [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] из второго примера, показанного выше.
 
- ![Запрос для группировки ошибок XML в среде Management Studio](../media/queryforxmlerrors.jpg "Запрос на группирование ошибок XML в Management Studio")
+ ![Запрос для группировки ошибок XML в среде Management Studio](../media/queryforxmlerrors.jpg "Запрос для группировки ошибок XML в среде Management Studio")
 
 ## <a name="see-also"></a>См. также:
- [](xml-task.md) [Редактор задачи xml задачи xml &#40;общие&#41;страницы](../xml-task-editor-general-page.md)
+ [XML Task](xml-task.md) [Редактор задачи xml задачи xml &#40;общие&#41;страницы](../xml-task-editor-general-page.md)
 
 

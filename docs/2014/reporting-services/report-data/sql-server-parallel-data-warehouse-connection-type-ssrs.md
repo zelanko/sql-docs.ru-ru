@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4777d3536f739ae1bfb3c79f321a6906c01807fc
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176880"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Тип соединения с параллельным хранилищем данных SQL Server (SSRS)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] является устройством масштабируемого хранилища данных, которое повышает производительность и масштабируемость благодаря широкому применению параллельной обработки. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]использует [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] базы данных для распределенной обработки и хранения данных.
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] является устройством масштабируемого хранилища данных, которое повышает производительность и масштабируемость благодаря широкому применению параллельной обработки. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] использует базы данных [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] для распределенной обработки и хранения данных.
 
  Устройство разбивает на секции большие таблицы базы данных по нескольким физическим узлам, при этом на каждом узле выполняется свой экземпляр [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. При подключении отчета к [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] для извлечения данных он подключается к узлу, управляющему обработкой запросов в устройстве [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . После создания подключения никаких различий между работой с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , который находится либо не находится в среде [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] , не будет.
 
@@ -30,7 +30,7 @@ ms.locfileid: "78176880"
 
  Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в статьях [Добавление и проверка подключения к данным или источника данных &#40;построитель отчетов и служб SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).
 
-##  <a name="Connection"></a> Строка подключения
+##  <a name="connection-string"></a><a name="Connection"></a>Строка подключения
  При соединении со службами [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]устанавливается связь с объектом базы данных в устройстве [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . Необходимо указать объект базы данных для использования в конструкторе запросов. Если в строке соединения не указать базу данных, то будет установлено соединение с базой данных, заданной по умолчанию администратором для данного пользователя. Данные для строки соединения и учетные данные для подключения к источнику данных можно получить у администратора базы данных. Ниже приведен пример строки соединения для образца базы данных **CustomerSales**в устройстве [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] :
 
 ```
@@ -41,7 +41,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
 
  Дополнительные сведения о примерах строки подключения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](../data-connections-data-sources-and-connection-strings-in-report-builder.md).
 
-##  <a name="Credentials"></a> Учетные данные
+##  <a name="credentials"></a><a name="Credentials"></a>Информации
  [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] имеет собственную технологию безопасности для создания и хранения имен и паролей пользователей. Проверку подлинности Windows использовать нельзя. При попытке соединения с [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] при помощи проверки подлинности Windows возникает ошибка.
 
  Учетные данные должны обеспечивать достаточные права для доступа к базе данных. В зависимости от запроса могут потребоваться другие разрешения, например достаточные разрешения для доступа к таблицам и представлениям. Владелец внешнего источника данных должен настроить учетные данные с правами доступа только для чтения нужных объектов базы данных.
@@ -54,7 +54,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
 
  Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки подключения в Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) или [укажите учетные данные в построитель отчетов](../specify-credentials-in-report-builder.md).
 
-##  <a name="Query"></a> Запросы
+##  <a name="queries"></a><a name="Query"></a>Запроса
  Запрос указывает, какие данные для набора данных отчета необходимо получить.
 
  Столбцы результирующего набора запроса заполняют коллекцию полей набора данных. Если запрос возвращает несколько результирующих наборов, то отчет обрабатывает только первый результирующий набор, полученный отчетом. По умолчанию при создании нового запроса или открытии существующего запроса, который может быть представлен в графическом конструкторе запросов, предоставляется доступ к конструктору реляционных запросов. Запрос можно задавать следующими способами.
@@ -71,8 +71,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
 
 -   [Текст](#QueryText)
 
- 
-  [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] используется вместе с [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] , а [!INCLUDE[tsql](../../../includes/tsql-md.md)] — вместе с [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Две эти разновидности языка SQL очень похожи. Запросы, написанные для типа соединения с источником данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , обычно могут быть использованы и для типа соединения с источником данных [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] .
+ [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] используется вместе с [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] , а [!INCLUDE[tsql](../../../includes/tsql-md.md)] — вместе с [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Две эти разновидности языка SQL очень похожи. Запросы, написанные для типа соединения с источником данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , обычно могут быть использованы и для типа соединения с источником данных [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] .
 
  Запрос, извлекающий данные отчета из большой базы данных, включая хранилище данных, например [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], может формировать результирующий набор, который будет иметь очень большое количество строк, если пользователь не упорядочит данные и не уменьшит количество строк, возвращаемых запросом. Запросы, включающие агрегаты и группирование, можно написать при помощи графического или текстового конструктора запросов.
 
@@ -80,9 +79,9 @@ HOST=<IP address>; database= CustomerSales; port=<port>
 
  В графическом конструкторе запросов, используемом [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] , предусмотрена встроенная поддержка группирования и агрегатов, помогающих писать запросы, которые получают только сводные данные. Далее приведены функции языка [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] : предложение GROUP BY, ключевое слово DISTINCT и агрегаты, например SUM и COUNT. В текстовом конструкторе запросов предусмотрена полная поддержка языка [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] , в том числе группирование и агрегаты.
 
- Дополнительные сведения о [!INCLUDE[tsql](../../../includes/tsql-md.md)] см. в разделе [Справочник по Transact-SQL (компонент Database Engine)](/sql/t-sql/language-reference)электронной документации[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [ по ](https://go.microsoft.com/fwlink/?LinkId=141687) на сайте msdn.microsoft.com.
+ Дополнительные сведения о [!INCLUDE[tsql](../../../includes/tsql-md.md)] см. в разделе [Справочник по Transact-SQL (компонент Database Engine)](/sql/t-sql/language-reference)[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [электронной документации](https://go.microsoft.com/fwlink/?LinkId=141687) по  на сайте msdn.microsoft.com.
 
-###  <a name="QueryText"></a> Использование типа запроса Text
+###  <a name="using-query-type-text"></a><a name="QueryText"></a>Использование типа запроса Text
  В текстовом конструкторе запросов вводятся команды на языке [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] , определяющие данные в наборе данных. Запросы, используемые для извлечения данных из [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] , не отличаются от запросов, используемых для извлечения данных из экземпляров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , которые не работают внутри приложения [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . Например, следующий запрос на языке [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] выбирает имена всех сотрудников отдела сбыта.
 
 ```
@@ -98,7 +97,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant' 
 ```
 
- Нажмите кнопку **Выполнить** ( **!** ) на панели инструментов, чтобы выполнить запрос и отобразить результирующий набор.
+ Нажмите кнопку **Выполнить** (**!**) на панели инструментов, чтобы выполнить запрос и отобразить результирующий набор.
 
  Для параметризации этого запроса добавьте в него параметр. Например, измените предложение WHERE следующим образом:
 
@@ -106,7 +105,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
 
  После запуска запроса параметры отчета, соответствующие параметрам запроса, создаются автоматически. Дополнительные сведения см. в подразделе [Параметры запроса](#Parameters) далее в этом разделе.
 
-##  <a name="Parameters"></a> Параметры
+##  <a name="parameters"></a>Параметры <a name="Parameters"></a>
  Если в тексте запроса содержатся переменные запроса или хранимые процедуры с входными параметрами, автоматически создаются соответствующие параметры запроса для набора данных и параметры отчета. Текст запроса не должен включать инструкцию DECLARE для всех переменных запроса.
 
  Например, следующий SQL-запрос создает параметр отчета с именем `EmpID`.
@@ -119,12 +118,12 @@ WHERE EmployeeID = (@EmpID)
 
  По умолчанию каждый параметр отчета имеет тип данных «Текст» и автоматически создает набор данных, обеспечивая раскрывающийся список с доступными значениями. После создания параметров отчета можно изменить значения по умолчанию. Дополнительные сведения см. в разделе [Параметры отчета (построитель отчетов и конструктор отчетов)](../report-design/report-parameters-report-builder-and-report-designer.md).
 
-##  <a name="Remarks"></a> Замечания
+##  <a name="remarks"></a><a name="Remarks"></a>. Замечания
 
 ###### <a name="platform-and-version-information"></a>Сведения о платформе и версии
- Дополнительные сведения о поддержке платформ и версий см. в разделе [Источники данных, поддерживаемые службами Reporting Services (службы SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md) документации к [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в электронной документации[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [ по ](https://go.microsoft.com/fwlink/?linkid=121312).
+ Дополнительные сведения о поддержке платформ и версий см. в разделе [Источники данных, поддерживаемые службами Reporting Services (службы SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md) документации к [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) по .
 
-##  <a name="HowTo"></a> Инструкции
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Разделы руководства
  В этом разделе содержатся пошаговые инструкции по работе с подключениями к данным, источниками данных и наборами данных.
 
  [Добавление и проверка подключения к данным или источника данных &#40;построитель отчетов и служб SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)
@@ -133,7 +132,7 @@ WHERE EmployeeID = (@EmpID)
 
  [Добавление фильтра к набору данных (построитель отчетов и службы SSRS)](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)
 
-##  <a name="Related"></a> См. также
+##  <a name="related-sections"></a><a name="Related"></a> Связанные разделы
  В этих разделах документации содержатся подробные сведения о данных отчетов, а также методические сведения об определении, настройке и использовании элементов отчетов, связанных с данными.
 
  [Добавление данных в построитель отчетов &#40;отчетов и SSRS&#41;](report-datasets-ssrs.md) Содержит общие сведения о доступе к данным для отчета.
@@ -144,7 +143,7 @@ WHERE EmployeeID = (@EmpID)
 
  [&#40;построитель отчетов коллекции полей набора данных и службы SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md) Предоставляет сведения о коллекции полей набора данных, созданной запросом.
 
- [Источники данных, поддерживаемые Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) в [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] документации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312)по.
+ [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md), см. в документации [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312).
 Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.
 
 ## <a name="see-also"></a>См. также:

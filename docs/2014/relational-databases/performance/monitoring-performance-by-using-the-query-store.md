@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 192c38bc189928cf980ab0141e53ab12f37d805c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175873"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
@@ -27,7 +27,7 @@ ms.locfileid: "78175873"
 > [!IMPORTANT]
 >  В настоящий момент это предварительная версия функции. Чтобы использовать хранилище запросов, вы должны подтвердить свое согласие с тем, что реализация хранилища запросов соответствует условиям лицензионного соглашения предварительной версии (например, соглашения Enterprise, соглашения для Microsoft Azure или соглашения Microsoft Online Subscription), а также всем применимым [Дополнительным условиям использования для предварительной версии Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
 
-##  <a name="Enabling"></a>Включение хранилища запросов
+##  <a name="enabling-the-query-store"></a><a name="Enabling"></a> Включение хранилища запросов
  Хранилище запросов неактивно для новых баз данных по умолчанию.
 
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>На странице «Хранилище запросов» в Management Studio
@@ -53,7 +53,7 @@ ms.locfileid: "78175873"
 
 
 
-##  <a name="About"></a> Сведения о хранилище запросов
+##  <a name="information-in-the-query-store"></a><a name="About"></a> Сведения о хранилище запросов
  Планы выполнения для любого специального запроса в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обычно меняются со временем по разным причинам, например из-за изменения статистики, схемы, создания и удаления индексов и т. д. В кэше процедур (где хранятся кэшированные планы запросов) хранится только последний план выполнения. Планы исключаются из кэша планов из-за нехватки памяти. В результате устранение проблем со снижением производительности запросов, вызванным изменениями планов выполнения, может оказаться сложным и требующим много времени.
 
  Так как хранилище запросов сохраняет несколько планов выполнения на запрос, оно может принудительно применить политики, чтобы заставить процессор запросов использовать конкретный план выполнения для запроса. Это называется принудительным выполнением плана. Принудительное выполнение плана в хранилище запросов обеспечивается с использованием механизма, аналогичного указанию запроса [USE PLAN](/sql/t-sql/queries/hints-transact-sql-query) , но не требует изменений в приложениях пользователей. Принудительное выполнение плана может решить проблему со снижением производительности запросов, вызванным изменением плана за очень короткий период времени.
@@ -98,7 +98,7 @@ JOIN sys.query_store_query_text AS Txt
 
 
 
-##  <a name="Options"></a>Параметры конфигурации
+##  <a name="configuration-options"></a><a name="Options"></a> Параметры конфигурации
  OPERATION_MODE может быть READ_WRITE или READ_ONLY.
 
  CLEANUP_POLICY настроить аргумент STALE_QUERY_THRESHOLD_DAYS, чтобы указать число дней хранения данных в хранилище запросов.
@@ -115,51 +115,51 @@ JOIN sys.query_store_query_text AS Txt
 
  
 
-##  <a name="Related"></a>Связанные представления, функции и процедуры
+##  <a name="related-views-functions-and-procedures"></a><a name="Related"></a> Связанные представления, функции и процедуры
  Хранилище запросов можно просмотреть и контролировать в [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] либо с помощью следующих представлений и процедур.
 
--   [sys. fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)
+-   [sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)
 
 ### <a name="query-store-catalog-views"></a>Представления каталога хранилища запросов
  В семи представлениях каталога представлены сведения о хранилище запросов.
 
--   [sys. database_query_store_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql)
+-   [sys.database_query_store_options (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql)
 
--   [sys. query_context_settings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-context-settings-transact-sql)
+-   [sys.query_context_settings (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-query-context-settings-transact-sql)
 
--   [sys. query_store_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-plan-transact-sql)
+-   [sys.query_store_plan (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-query-store-plan-transact-sql)
 
--   [sys. query_store_query &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-transact-sql)
+-   [sys.query_store_query (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-query-store-query-transact-sql)
 
--   [sys. query_store_query_text &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql)
+-   [sys.query_store_query_text (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql)
 
--   [sys. query_store_runtime_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql)
+-   [sys.query_store_runtime_stats (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql)
 
--   [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql)
+-   [sys.query_store_runtime_stats_interval (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql)
 
 ### <a name="query-store-stored-procedures"></a>Хранимые процедуры в хранилище запросов,
  Шесть хранимых процедур настраивают хранилище запросов.
 
 -   [sp_query_store_flush_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql)
 
--   [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql)
+-   [sp_query_store_reset_exec_stats (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql)
 
--   [sp_query_store_force_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql)
+-   [sp_query_store_force_plan (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql)
 
--   [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql)
+-   [sp_query_store_unforce_plan (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql)
 
--   [sp_query_store_remove_plan &#40;Transct-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql)
+-   [sp_query_store_remove_plan (Transct-SQL)](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql)
 
--   [sp_query_store_remove_query &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql)
+-   [sp_query_store_remove_query (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql)
 
 
 
-##  <a name="Scenarios"></a>Сценарии использования ключей
+##  <a name="key-usage-scenarios"></a><a name="Scenarios"></a> Основные сценарии использования
 
-###  <a name="OptionMgmt"></a>Управление вариантами
+###  <a name="option-management"></a><a name="OptionMgmt"></a> Управление параметрами
  В этом разделе представлены некоторые рекомендации по управлению самой функцией хранилища запросов.
 
- **Хранилище запросов сейчас активно?**
+ **Активно ли сейчас хранилище запросов?**
 
  Данные в хранилище запросов содержатся в базе данных пользователя, поэтому их размер ограничен (настраивается с помощью `MAX_STORAGE_SIZE_MB`). Если размер данных в хранилище запросов достигнет предела, хранилище запросов автоматически изменит состояние с read-write на read-only и перестанет собирать новые данные.
 
@@ -179,7 +179,7 @@ ELSE SELECT ''Query Store is NOT active''' ;
 EXEC sp_executesql @query;
 ```
 
- **Получение параметров хранилища запросов**
+ **Получение параметров запросов**
 
  Чтобы найти подробные сведения о состоянии хранилища запросов, выполните следующую команду в базе данных пользователя.
 
@@ -187,7 +187,7 @@ EXEC sp_executesql @query;
 SELECT * FROM sys.database_query_store_options;
 ```
 
- **Задание интервала хранилища запросов**
+ **Задание интервала для хранилища запросов**
 
  Вы можете переопределить интервал для объединения статистики времени выполнения запросов (по умолчанию — 60 минут).
 
@@ -211,7 +211,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);
 ```
 
- **Задать все параметры хранилища запросов**
+ **Задание всех параметров для хранилища запросов**
 
  Вы можете задать несколько параметров хранилища запросов одновременно с помощью одной инструкции ALTER DATABASE.
 
@@ -237,7 +237,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
 
  Кроме того, можно очистить только данные ad-hoc-запросов, так как они менее актуальны для оптимизации запросов и анализа планов, но занимают столько же места.
 
- **Удаление нерегламентированных запросов** Это приведет к удалению запросов, которые выполнялись только один раз и старше 24 часов.
+ **Удаление нерегламентированных запросов** . Эта функция удаляет запросы, которые были выполнены только один раз более 24 часов назад.
 
 ```
 DECLARE @id int
@@ -278,7 +278,7 @@ DEALLOCATE adhoc_queries_cursor;
 
 
 
-###  <a name="Peformance"></a>Аудит производительности и устранение неполадок
+###  <a name="performance-auditing-and-troubleshooting"></a><a name="Peformance"></a> Аудит производительности и устранение проблем
  Так как в хранилище запросов ведется журнал метрик компиляции и времени выполнения при выполнении запросов, возникает множество разных вопросов в отношении рабочей нагрузки, на которые вы легко можете ответить.
 
  **Последние *n* запросов, выполненных в базе данных.**
@@ -493,12 +493,12 @@ OPTION (MERGE JOIN);
 
 
 
-###  <a name="Stability"></a>Поддержание стабильной производительности запросов
+###  <a name="maintaining-query-performance-stability"></a><a name="Stability"></a>Поддержание стабильной производительности запросов
  Вы могли заметить, что для запросов, которые выполняются несколько раз, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовал разные планы, что привело к другому уровню нагрузки и длительности использования ресурсов. В хранилище запросов вы можете легко обнаружить снижение производительности и определить оптимальный план за интересующий вас период. Затем вы можете принудительно применить оптимальный план для выполнения будущих запросов.
 
  Вы можете также определить несоответствующую производительность запросов для запроса с параметрами (заданными автоматически или вручную). Среди разных планов вы можете найти достаточно быстрый и оптимальный план для всех или большинства значений параметров и принудительно применить его, сохранив прогнозируемую производительность для более широкого набора сценариев пользователя.
 
- **Принудительный или план запроса (применение политики принудительного выполнения).** При принудительном применении определенного плана каждый раз, когда запрос выполняется, он будет выполняться в принудительно выбранном плане.
+ **Планирование или принудительное выполнение запроса (применение политики принудительного выполнения).** При принудительном применении определенного плана каждый раз, когда запрос выполняется, он будет выполняться в принудительно выбранном плане.
 
 ```
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
