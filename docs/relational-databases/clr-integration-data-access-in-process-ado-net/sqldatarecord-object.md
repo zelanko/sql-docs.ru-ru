@@ -1,6 +1,6 @@
 ---
-title: Объект SqlDataRecord (англ. Документы Майкрософт
-description: В интеграции S'L Server CLR сохраненные процедуры могут использовать класс SqlDataRecord для отправки пользовательских наборов результатов клиенту.
+title: Объект SqlDataRecord | Документация Майкрософт
+description: В SQL Server интеграции со средой CLR хранимые процедуры могут использовать класс SqlDataRecord для отправки пользовательских результирующих наборов клиенту.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4aa5ea4d06ac5b8da69eec246387007ba5d03606
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487514"
 ---
 # <a name="sqldatarecord-object"></a>Объект SqlDataRecord

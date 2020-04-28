@@ -1,5 +1,5 @@
 ---
-title: программирование
+title: Программирование
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 08232e07550d77f01661eb9bc5b383da3fb23e9c
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388694"
 ---
 # <a name="sql-server-native-client-programming"></a>Программирование собственного клиента SQL Server
@@ -31,15 +31,15 @@ ms.locfileid: "81388694"
   Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это изолированный прикладной программный интерфейс (API) для доступа к данным, используемый в OLE DB и ODBC, который появился в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объединяет поставщика SQL OLE DB и драйвер SQL ODBC в одну собственную DLL-библиотеку. Также он предоставляет новые расширенные функциональные возможности, поставляемые компонентами доступа к данным Windows (выделенное административное соединение Windows, ранее — компоненты доступа к данным компонентов MDAC). Технология собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может применяться для создания новых или усовершенствования существующих приложений, которым требуется доступ к новым функциям [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], таким как режим MARS, определяемые пользователем типы, уведомления о запросах, изоляция моментальных снимков и поддержка типа данных XML.  
   
 > [!NOTE]  
->  Список различий между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client и Windows DAC, а также информация о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проблемах, которые следует рассмотреть перед обновлением приложения Windows DAC для Native Client, [см.](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)  
+>  Список различий между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственным клиентом и приложением Windows DAC, а также сведения о проблемах, которые следует учитывать перед обновлением приложения DAC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows до собственного клиента, см. в разделе [Обновление приложения для SQL Server Native Client из MDAC](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md).  
   
  Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда используется совместно с диспетчером драйверов ODBC, поставляемым с выделенным административным соединением Windows. Поставщик OLE DB собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может использоваться совместно с основными службами OLE DB, поставляемыми с выделенным административным соединением Windows, но это не является обязательным требованием. Выбор того, использовать или нет основные службы, зависит от требований отдельного приложения (например, требуется ли пул соединений).  
   
- Приложения ActiveX Data Object (ADO) могут использовать поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB, но рекомендуется использовать ADO в сочетании с ключевым словом строки подключения **DataTypeCompatibility** (или соответствующим свойством **DataSource).** При использовании поставщика OLE DB собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приложения ADO могут использовать новые функции [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], доступные в собственном клиенте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], через ключевые слова строки соединения, свойства OLE DB или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Для получения более подробной информации об использовании этих функций с [помощью](../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)ADO, см.  
+ Приложения ActiveX Data Object (ADO) могут использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный поставщик OLE DB клиента, но рекомендуется использовать ADO совместно с ключевым словом строки подключения **DataTypeCompatibility диспетчера соединений** (или соответствующим свойством **DataSource** ). При использовании поставщика OLE DB собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приложения ADO могут использовать новые функции [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], доступные в собственном клиенте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], через ключевые слова строки соединения, свойства OLE DB или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Дополнительные сведения об использовании этих функций с ADO см. в разделе [Использование ADO с SQL Server Native Client](../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md).  
   
  Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] призван обеспечить упрощенный собственный доступ к данным SQL Server через OLE DB и ODBC. Упрощение состоит в том, что он сочетает в единой библиотеке технологии OLE DB и ODBC и позволяет внедрять и развивать новые функции доступа к данным без изменения текущих компонентов выделенного административного соединения Windows, которые теперь являются частью платформы Microsoft Windows.  
   
- Хотя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client использует компоненты в Windows DAC, он явно не зависит от конкретной версии Windows DAC. Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать с версией выделенного административного соединения Windows, которая устанавливается с любой операционной системой, поддерживаемой собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Хотя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент использует компоненты приложения Windows DAC, он не зависит явно от конкретной версии приложения уровня данных Windows. Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать с версией выделенного административного соединения Windows, которая устанавливается с любой операционной системой, поддерживаемой собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [собственный клиент SQL Server](../../relational-databases/native-client/sql-server-native-client.md)  
@@ -72,8 +72,8 @@ ms.locfileid: "81388694"
  Содержит разделы об ошибках времени выполнения, связанных с собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также:  
- [Обновление приложения от родного клиента S'L Server 2005](../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)   
- [ODBC Как-к темам](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
- [Инструкции по OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Обновление приложения с SQL Server 2005 Native Client](../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)   
+ [Разделы руководства по ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [OLE DB инструкций](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

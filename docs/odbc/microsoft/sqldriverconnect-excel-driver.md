@@ -1,5 +1,5 @@
 ---
-title: S'LDriverConnect (Водитель Excel) Документы Майкрософт
+title: SQLDriverConnect (драйвер для Excel) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ ms.assetid: 285cb1ea-f461-4596-97f2-fc57af05dede
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1108206bf38183887540b114fda5a1e913aa67d9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307125"
 ---
 # <a name="sqldriverconnect-excel-driver"></a>SQLDriverConnect (драйвер для Excel)
 > [!NOTE]  
->  Эта тема предоставляет информацию о драйверах Excel. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
+>  В этом разделе приводятся сведения, относящиеся к драйверу Excel. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SLDriverConnect** позволяет подключиться к драйверу без создания источника данных (DSN).  
+ **SQLDriverConnect** позволяет подключаться к драйверу без создания источника данных (DSN).  
   
- Следующие ключевые слова поддерживаются в строке соединения для всех драйверов: **DSN,** **DB**и **FIL**.  
+ В строке подключения для всех драйверов поддерживаются следующие ключевые слова: **DSN**, **ДБК** **и.**  
   
- В следующей таблице показаны минимальные ключевые слова, необходимые для подключения к каждому драйверу, и приводится пример пар ключевых слов/значений, используемых в **s'LDriverConnect.** Полный список значений DRIVERID можно найти в [s'LConfigDataSource.](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)  
+ В следующей таблице приведены минимальные ключевые слова, необходимые для подключения к каждому драйверу, а также пример пар «ключевое слово-значение», используемых с **SQLDriverConnect**. Полный список значений ДРИВЕРИД см. в разделе [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).  
   
 > [!NOTE]  
->  Если для драйвера Microsoft Excel 3.0 или 4.0 не указаны DB или DefaultDir, драйвер подключается к текущему каталогу.  
+>  Если ДБК или Дефаултдир не указаны для драйвера Microsoft Excel 3,0 или 4,0, драйвер будет подключаться к текущему каталогу.  
   
-|Драйвер|Обязательные ключевые слова|Примеры|  
+|Драйвер|Требуются ключевые слова|Примеры|  
 |------------|-----------------------|--------------|  
-|Microsoft Excel 3.0 или 4.0|Водитель, ВодительID|Драйвер »Водитель Microsoft Excel (я.xls); ДБЗК:-темп; ВодительID-278|  
-|Microsoft Excel 5.0/7.0|Драйвер, DriverID, DB|Драйвер »Водитель Microsoft Excel (я.xls); ДБЗК:-темп-образец.xls; ВодительID-22|  
-|Microsoft Excel 97 и более поздние|Драйвер, DriverID, DB|Драйвер »Водитель Microsoft Excel (я.xls); ДБЗК:-темп-образец.xls; ВодительID-790|
+|Microsoft Excel 3,0 или 4,0|Драйвер, Дриверид|Драйвер = {Драйвер Microsoft Excel (*. xls)}; ДБК = c:\temp; Дриверид = 278|  
+|Microsoft Excel 5.0/7.0|Driver, Дриверид, ДБК|Драйвер = {Драйвер Microsoft Excel (*. xls)}; ДБК = к:\темп\сампле.кслс; Дриверид = 22|  
+|Microsoft Excel 97 и более поздние версии|Driver, Дриверид, ДБК|Драйвер = {Драйвер Microsoft Excel (*. xls)}; ДБК = к:\темп\сампле.кслс; Дриверид = 790|

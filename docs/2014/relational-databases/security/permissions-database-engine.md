@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c233a5e9755e910a53a53fa1366faef733370474
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487163"
 ---
 # <a name="permissions-database-engine"></a>Разрешения (ядро СУБД)
@@ -32,13 +32,13 @@ ms.locfileid: "81487163"
   
 -   [Разрешения, относящиеся к конкретным защищаемым объектам](#_securables)  
   
--   [Разрешения сервера S'L](#_permissions)  
+-   [SQL Server разрешения](#_permissions)  
   
 -   [Алгоритм проверки разрешений](#_algorithm)  
   
 -   [Примеры](#_examples)  
   
-##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a>Разрешения Именования Конвенций  
+##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a>Соглашения об именовании разрешений  
  Ниже описаны общие соглашения, которые соблюдаются при задании имен разрешениям.  
   
 -   CONTROL  
@@ -49,11 +49,11 @@ ms.locfileid: "81487163"
   
      Предоставляет возможность изменения свойств определенной защищаемой сущности, кроме ее владельца. При предоставлении разрешения ALTER на ту или иную область также предоставляется возможность изменения, создания или удаления любой защищаемой сущности, содержащейся в пределах данной области. Например, разрешение ALTER на схему включает возможность создания, изменения и удаления объектов этой схемы.  
   
--   ALTER \<ANY *Server Securable*>, где *Server Securable* может быть любым сервером, ценным.  
+-   Изменение любого \<защищаемого *сервера*>, где *защищаемым объектом сервера* может быть любой защищаемый сервер.  
   
      Предоставляет возможность создавать, изменять и удалять отдельные экземпляры *Защищаемой сущности сервера*. Например, разрешение ALTER ANY LOGIN предоставляет возможность создания, изменения и удаления любого имени входа в экземпляре.  
   
--   ALTER \<ANY *Database Securable*>, где *база данных Securable* может быть любой безопасности на уровне базы данных.  
+-   Изменение любого \<защищаемого *объекта базы данных*>, где *Защищаемая сущностью базы данных* может быть любой защищаемой сущностью на уровне базы данных.  
   
      Предоставляет возможность СОЗДАВАТЬ, ИЗМЕНЯТЬ и УДАЛЯТЬ отдельные экземпляры *Защищаемой сущности базы данных*. Например, разрешение ALTER ANY SCHEMA предоставляет возможность создания, изменения и удаления любой схемы в базе данных.  
   
@@ -61,23 +61,23 @@ ms.locfileid: "81487163"
   
      Позволяет получать во владение защищаемую сущность, на которую предоставлено разрешение.  
   
--   IMPERSONATE \< *Войти*>  
+-   \<Олицетворять *имя входа*>  
   
      Позволяет олицетворять имя входа.  
   
--   \< *Пользователь* IMPERSONATE>  
+-   \<Олицетворять *пользователя*>  
   
      Позволяет олицетворять пользователя.  
   
--   CREATE \< *Server Securable*>  
+-   Создание \< *защищаемого объекта сервера*>  
   
      Предоставляет возможность создавать *Защищаемую сущность сервера*.  
   
--   CREATE \< *База данных Securable*>  
+-   Создать \< *защищаемую сущность базы данных*>  
   
      Предоставляет возможность создавать *Защищаемую сущность базы данных*.  
   
--   CREATE \< *Схема-содержащихСя Securable*>  
+-   Создание \< *защищаемой сущности, содержащейся в схеме*>  
   
      Предоставляет возможность создавать защищаемую сущность, содержащуюся в схеме. Однако для создания защищаемой сущности в той или иной схеме на эту схему требуется разрешение ALTER.  
   
@@ -92,12 +92,12 @@ ms.locfileid: "81487163"
      Разрешение REFERENCES для объекта необходимо для создания FUNCTION или VIEW с предложением 2 `WITH SCHEMABINDING` , которое ссылается на этот объект.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Диаграмма разрешений SQL Server  
- Для диаграммы размером [!INCLUDE[ssDE](../../includes/ssde-md.md)] с плакат всех [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)разрешений в формате pdf см.  
+ Для получения диаграммы с размером афиши [!INCLUDE[ssDE](../../includes/ssde-md.md)] всех разрешений в формате PDF см [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf). раздел.  
   
-##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>Разрешения, применимые к конкретным ценным бумагам  
+##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>Разрешения, применимые к конкретным защищаемым объектам  
  В следующей таблице перечислены главные классы разрешений и защищаемых объектов, к которым эти разрешения могут применяться.  
   
-|Разрешение|Применение|  
+|Разрешение|Область применения|  
 |----------------|----------------|  
 |SELECT|Синонимы<br /><br /> Таблицы и столбцы<br /><br /> Функции [!INCLUDE[tsql](../../includes/tsql-md.md)] с табличным значением и среды CLR, а также столбцы<br /><br /> Представления и столбцы|  
 |VIEW CHANGE TRACKING|Таблицы<br /><br /> Схемы|  
@@ -109,14 +109,14 @@ ms.locfileid: "81487163"
 |RECEIVE|Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
 |VIEW DEFINITION|Группы доступности<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Имена входа, пользователи и роли<br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
 |ALTER|Группы доступности<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Объекты последовательности<br /><br /> Имена входа, пользователи и роли<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления|  
-|TAKE OWNERSHIP|Группы доступности<br /><br /> Роли<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> роли сервера;<br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
+|TAKE OWNERSHIP|Группы доступности<br /><br /> Роли<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Роли сервера<br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
 |CONTROL|Группы доступности<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Имена входа, пользователи и роли<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
 |IMPERSONATE|Имена входа и пользователи|  
   
 > [!CAUTION]  
 >  Разрешения по умолчанию, которые предоставляются системным объектам во время установки, тщательно оцениваются на предмет возможных угроз, и их не нужно будет изменять для защиты установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Любые изменения разрешений в системных объектах могут ограничить или нарушить функциональность, а также перевести установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в неподдерживаемое состояние.  
   
-##  <a name="sql-server-and-sql-database-permissions"></a><a name="_permissions"></a>Разрешения на использование баз данных и баз данных S'L  
+##  <a name="sql-server-and-sql-database-permissions"></a><a name="_permissions"></a>SQL Server и разрешения базы данных SQL  
  В следующей таблице приведен полный список разрешений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Разрешения[!INCLUDE[ssSDS](../../includes/sssds-md.md)] доступны только для поддерживаемых базовых защищаемых объектов. В [!INCLUDE[ssSDS](../../includes/sssds-md.md)]невозможно предоставлять разрешения на уровне сервера, но в некоторых случаях вместо них доступны разрешения базы данных.  
   
 |Базовая защищаемая сущность|Гранулярные разрешения на базовую защищаемую сущность|Код типа разрешения|Защищаемая сущность, содержащая базовую сущность|Разрешение на защищаемую сущность контейнера, неявно предоставляющее гранулярное разрешение на базовую сущность|  
@@ -157,7 +157,7 @@ ms.locfileid: "81487163"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Примечание: Применяется [!INCLUDE[ssSDS](../../includes/sssds-md.md)]только к .|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Примечание. применяется только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "81487163"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Примечание: Применяется [!INCLUDE[ssSDS](../../includes/sssds-md.md)]только к .|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Примечание. применяется только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,7 +204,7 @@ ms.locfileid: "81487163"
 |DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Примечание: Применяется [!INCLUDE[ssSDS](../../includes/sssds-md.md)]только к . Использование ALTER ANY CONNECTION в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Примечание. применяется только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Использование ALTER ANY CONNECTION в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF;|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -342,7 +342,7 @@ ms.locfileid: "81487163"
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a>Резюме алгоритма проверки разрешения  
+##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a>Сводка по алгоритму проверки разрешений  
  Проверка разрешений может оказаться сложной задачей. Алгоритм проверки разрешений учитывает перекрывающееся членство в группах и цепочки владения, явные и неявные разрешения. На его работу могут влиять разрешения на защищаемые классы, содержащие защищаемые сущности. Общая процедура алгоритма состоит в сборе всех применимых разрешений. Если не обнаружена блокирующая инструкция DENY, алгоритм выполняет поиск инструкции GRANT, которая предоставляет достаточные права доступа. Алгоритм содержит три необходимых элемента: **контекст безопасности**, **область разрешения**и **требуемое разрешение**.  
   
 > [!NOTE]  
@@ -399,7 +399,7 @@ ms.locfileid: "81487163"
 ##  <a name="examples"></a><a name="_examples"></a> Примеры  
  В примерах этого раздела показано, как получить сведения о разрешениях.  
   
-### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Получение полного списка разрешений, которые могут быть предоставлены  
+### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>А) Получение полного списка разрешений, которые могут быть предоставлены  
  Следующая инструкция возвращает все разрешения компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] с помощью функции `fn_builtin_permissions` . Дополнительные сведения см. в разделе [sys.fn_builtin_permissions (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql).  
   
 ```  
@@ -407,7 +407,7 @@ SELECT * FROM fn_builtin_permissions(default);
 GO  
 ```  
   
-### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>Б. Получение разрешений на определенный класс объектов  
+### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>Б) Получение разрешений на определенный класс объектов  
  В следующем примере функция `fn_builtin_permissions` используется для просмотра всех разрешений, доступных для категории защищаемых объектов. В примере возвращаются разрешения на сборки.  
   
 ```  
@@ -433,7 +433,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Разрешения Иерархия &#40;&#41;движки базы данных](permissions-hierarchy-database-engine.md)   
+ [Иерархия разрешений &#40;ядро СУБД&#41;](permissions-hierarchy-database-engine.md)   
  [sys.database_permissions (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
   
   

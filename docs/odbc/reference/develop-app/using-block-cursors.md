@@ -1,5 +1,5 @@
 ---
-title: Использование блок-курсоров (ru) Документы Майкрософт
+title: Использование блочных курсоров | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f5c487bd8b60a83c709399cb9673dc0b015bd79d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306795"
 ---
 # <a name="using-block-cursors"></a>Использование блочных курсоров
-Поддержка курсоров блоков встроена в ODBC 3. *x*. **S'LFetch** может быть использован только для многофункциональных извлечений при вызове в ODBC 3. *x*; если ODBC 2. *x* приложение вызывает **S'LFetch**, он откроет только один ряд, вперед только курсор. Когда ODBC 3. *x* приложение вызывает **S'LFetch** в ODBC 2. *x* драйвер, он возвращает один ряд, если драйвер не поддерживает **S'LExtendedFetch.** Для получения дополнительной информации в приложении G: Driver Guidelines for Backward Comatibility можно ознакомиться с [Block Cursors, Scrollable Cursors и обратной совместимости.](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)  
+Поддержка блочных курсоров встроена в ODBC 3. *x*. **SQLFetch** можно использовать только для выборки многострочные при вызове в ODBC 3. *x*; Если ODBC 2. Приложение *x* вызывает **SQLFetch**, при этом будет открыт только однострочный курсор. При использовании ODBC 3. Приложение *x* вызывает **SQLFetch** в ODBC 2. драйвер *x* , он возвращает одну строку, если драйвер не поддерживает **SQLExtendedFetch**. Дополнительные сведения см. в разделе [блочные курсоры, прокручиваемые курсоры и обратная совместимость](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) в приложении G: рекомендации по драйверам для обеспечения обратной совместимости.  
   
- Для использования курсоров блоков приложение устанавливает размер рядового набора, связывает буферы рядов (как описано в предыдущем разделе), дополнительно устанавливает атрибуты SQL_ATTR_ROWS_FETCHED_PTR и SQL_ATTR_ROW_STATUS_PTR оператора, а также вызывает **S'LFetch** или **S'LFetchScroll,** чтобы получить блок строк. Приложение может изменить размер рядового набора и связать новые буферы строк (позвонив в **S'LBindCol** или указав смещение связывания) даже после того, как строки были извлечены.  
+ Чтобы использовать блочные курсоры, приложение задает размер набора строк, привязывает буферы набора строк (как описано в предыдущем разделе), при необходимости задает атрибуты SQL_ATTR_ROWS_FETCHED_PTR и SQL_ATTR_ROW_STATUS_PTR, а также вызывает **SQLFetch** или **SQLFetchScroll** для выборки блока строк. Приложение может изменить размер набора строк и привязать новые буферы наборов строк (путем вызова **SQLBindCol** или указания смещения привязки) даже после выборки строк.  
   
  Этот раздел содержит следующие подразделы.  
   
@@ -32,4 +32,4 @@ ms.locfileid: "81306795"
   
 -   [Число строк в выборке и состояние](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)  
   
--   [СЗЛГетДата и блок-курсоры; блок курсо](../../../odbc/reference/develop-app/sqlgetdata-and-block-cursors.md)
+-   [SQLGetData и блочные курсоры; блокировать курсо](../../../odbc/reference/develop-app/sqlgetdata-and-block-cursors.md)

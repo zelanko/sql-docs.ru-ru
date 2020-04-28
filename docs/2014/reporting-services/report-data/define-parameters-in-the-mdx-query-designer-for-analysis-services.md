@@ -1,5 +1,5 @@
 ---
-title: Определить параметры в MDX конструктор запросов для анализа услуг (Отчет Builder и SSRS) Документы Майкрософт
+title: Определение параметров в конструкторе запросов многомерных выражений для Analysis Services (построитель отчетов и SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39f94bc7fd247a1608385f009fcb8d117b8c628f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388535"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services (построитель отчетов и службы SSRS)
@@ -82,6 +82,6 @@ ms.locfileid: "81388535"
      Чтобы просмотреть набор данных, который включает доступные значения для параметра отчета, щелкните правой кнопкой мыши в любом пустом месте на панели данных отчета и выберите пункт **Показывать скрытые наборы данных**. В области данных отчета отображаются все наборы данных отчета.
 
 ## <a name="see-also"></a>См. также:
- [Тип подключения служб анализа для MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md) [аналитические службы MDX Дизайнер пользовательский интерфейс](analysis-services-mdx-query-designer-user-interface.md)
+ [Analysis Services тип соединения для многомерных служб sql &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md) [Analysis Services пользовательского интерфейса конструктора запросов многомерных выражений](analysis-services-mdx-query-designer-user-interface.md)
 
 

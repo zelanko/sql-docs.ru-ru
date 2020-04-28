@@ -20,14 +20,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce63eeebcee247f5bccb3c68bce24d325c44fe2d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388549"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Пользовательский интерфейс графического конструктора запросов
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графический и текстовый конструкторы запросов, предназначенных для получения данных из реляционной базы данных в качестве набора данных отчета в конструкторе отчетов. Графический конструктор запросов используется для интерактивного создания запроса и для просмотра результатов при работе с источниками данных следующих типов: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB и ODBC. Текстовый конструктор запросов применяется для задания нескольких инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] , запросов и команд со сложным синтаксисом и запросов на основе выражений. Дополнительные сведения см. в разделе [Пользовательский интерфейс текстового конструктора запросов](../text-based-query-designer-user-interface.md). Для получения дополнительной информации о работе с конкретными типами источников данных см [&#41;&#40;. ](report-datasets-ssrs.md)
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графический и текстовый конструкторы запросов, предназначенных для получения данных из реляционной базы данных в качестве набора данных отчета в конструкторе отчетов. Графический конструктор запросов используется для интерактивного создания запроса и для просмотра результатов при работе с источниками данных следующих типов: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB и ODBC. Текстовый конструктор запросов применяется для задания нескольких инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] , запросов и команд со сложным синтаксисом и запросов на основе выражений. Дополнительные сведения см. в разделе [Пользовательский интерфейс текстового конструктора запросов](../text-based-query-designer-user-interface.md). Дополнительные сведения о работе с конкретными типами источников данных см. в разделе [Добавление данных в отчет &#40;построитель отчетов и SSRS&#41;](report-datasets-ssrs.md).
 
  .
 
@@ -144,6 +144,6 @@ EXEC uspGetEmployeeManagers '1';
  `uspGetEmployeeManagers '1';`
 
 ## <a name="see-also"></a>См. также:
- [Инструменты проектирования запросов в Report Designer S'L Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md) [добавить данные в отчет &#40;Отчет строитель и SSRS&#41;](report-datasets-ssrs.md) [SL Server Connection Type &#40;SSRS&#41;](sql-server-connection-type-ssrs.md) OLE [DB Тип соединения &#40;SSRS&#41;](ole-db-connection-type-ssrs.md) [Добавить данные в отчет &#40;Отчет &#40;Отчет Строитель и SSRS&#41;](report-datasets-ssrs.md) Oracle Connection Type &#40;[SSRS&#41;](oracle-connection-type-ssrs.md) [RSReportDesign Конфигурация](../report-server/rsreportdesigner-configuration-file.md) [&#41;&#40;Дизайн](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)
+ [Средства проектирования запросов в конструктор отчетов SQL Server Data Tools &#40;ssrs&#41;](query-design-tools-ssrs.md) [Добавление данных в отчет &#40;построитель отчетов и SSRS&#41;](report-datasets-ssrs.md) [SQL Server тип соединения &#40;ssrs&#41;](sql-server-connection-type-ssrs.md) [OLE DB тип подключения &#40;ssrs&#41;](ole-db-connection-type-ssrs.md) [Добавление данных в отчет &#40;ПОСТРОИТЕЛЬ отчетов и SSRS&#41;](report-datasets-ssrs.md) [тип подключения Oracle &#40;службы SSRS&#41;](oracle-connection-type-ssrs.md) [RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md) [Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)
 
 

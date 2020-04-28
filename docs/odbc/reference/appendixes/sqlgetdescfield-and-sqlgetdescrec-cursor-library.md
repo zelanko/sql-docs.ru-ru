@@ -1,5 +1,5 @@
 ---
-title: СЗЛГетДескФилд и СЗЛГетДескРес (Библиотека Курзора) Документы Майкрософт
+title: SQLGetDescField и SQLGetDescRec (библиотека курсоров) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ ms.assetid: 1a801f22-6fea-48aa-a723-3187a2ad852b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 49ceea6b6180e1b51f2f103f74412c3e2b4cbe02
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307835"
 ---
 # <a name="sqlgetdescfield-and-sqlgetdescrec-cursor-library"></a>SQLGetDescField и SQLGetDescRec (библиотека курсоров)
 > [!IMPORTANT]  
->  Эта функция будет удалена в будущей версии Windows. Избегайте использования этой функции в новых разработках и планируйте модифицировать приложения, использующие эту функцию в настоящее время. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
+>  Эта функция будет удалена в следующей версии Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые в настоящее время используют эту функцию. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
   
- На этой теме обсуждается вопрос об использовании функций **S'LGetDescfield** и **S'LGetDescRec** в библиотеке курсоров. Для получения общей информации об этих функциях, [SQLGetDescRec Function](../../../odbc/reference/syntax/sqlgetdescrec-function.md) [см.](../../../odbc/reference/syntax/sqlgetdescfield-function.md)  
+ В этом разделе обсуждается использование функций **SQLGetDescField** и **SQLGetDescRec** в библиотеке курсоров. Общие сведения об этих функциях см. в разделе [Функция SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md) и [Функция SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md).  
   
- Библиотека курсора выполняет **S'LGetDescRec,** чтобы вернуть метаданные для столбцов закладок. Библиотека курсоров, выполняющая **s'LGetDescField,** возвращает те же поля, которые возвращаются **S'LGetDescRec**, которые являются SQL_DESC_NAME, SQL_DESC_TYPE, SQL_DESC_DATETIME_INTERVAL_CODE, SQL_DESC_OCTET_LENGTH, SQL_DESC_PRECISION, SQL_DESC_SCALE и SQL_DESC_NULLABLE. Для обеспечения **согласованности, S'LGetDescfield** также возвращает SQL_DESC_UNNAMED.  
+ Библиотека курсоров выполняет **SQLGetDescRec** , чтобы вернуть метаданные для столбцов закладок. Библиотека курсоров выполняет **SQLGetDescField** , чтобы вернуть те же поля, которые возвращаются **SQLGetDescRec**, что SQL_DESC_NAME, SQL_DESC_TYPE, SQL_DESC_DATETIME_INTERVAL_CODE, SQL_DESC_OCTET_LENGTH, SQL_DESC_PRECISION, SQL_DESC_SCALE и SQL_DESC_NULLABLE. Для обеспечения согласованности **SQLGetDescField** также возвращает SQL_DESC_UNNAMED.  
   
- Библиотека курсора выполняет **S'LGetDescField,** когда она призвана вернуть значение следующих полей, которые установлены для обязательных столбцов закладки: SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR и SQL_DESC_LENGTH.  
+ Библиотека курсоров выполняет **SQLGetDescField** при вызове для возвращения значений следующих полей, заданных для привязки столбцов закладки: SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR и SQL_DESC_LENGTH.  
   
- Библиотека курсора выполняет **S'LGetDescField,** когда она призвана вернуть значение поля SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE или SQL_DESC_ROW_STATUS_PTR. Эти поля могут быть возвращены для любой строки, а не только для строки закладок.  
+ Библиотека курсоров выполняет **SQLGetDescField** при вызове для возврата значения поля SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE или SQL_DESC_ROW_STATUS_PTR. Эти поля могут возвращаться для любой строки, а не только для строки закладки.  
   
- Если приложение вызывает **S'LGetDescField,** чтобы вернуть значение любого поля, кроме упомянутых ранее, библиотека курсора передает вызов водителю.
+ Если приложение вызывает **SQLGetDescField** для возвращения значения любого поля, Кроме упомянутых ранее, Библиотека курсоров передает вызов драйвера.

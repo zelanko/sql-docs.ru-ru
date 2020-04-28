@@ -1,6 +1,6 @@
 ---
-title: Поиск строки в X-Квери (ru) Документы Майкрософт
-description: Узнайте, как искать текст в документах XML, просматривая пример поиска строк в X''''ry.
+title: Поиск строки в XQuery | Документация Майкрософт
+description: Узнайте, как искать текст в XML-документах, просмотрев пример поиска строк в XQuery.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 33f68a55cb627099150ec14941fe5de81de53fc8
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388051"
 ---
 # <a name="string-search-in-xquery"></a>Поиск строки в XQuery
@@ -45,7 +45,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- В предыдущем запросе `where` в выражении FLOWR фильтруется `for` результат выражения и возвращается только элементы, удовлетворяющие состоянию **содержится()**  
+ В предыдущем запросе выражение `where` в выражении Flow фильтрует результат `for` выражения и возвращает только те элементы, которые соответствуют условию **Contains ()** .  
   
  Результат:  
   
@@ -59,7 +59,7 @@ WHERE ProductModelID=19
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [XML данные &#40;&#41;сервера S'L](../relational-databases/xml/xml-data-sql-server.md)   
+ [SQL Server &#40;XML-данных&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Справочник по языку XQuery (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  
   
   

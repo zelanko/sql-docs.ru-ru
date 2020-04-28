@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6a4610a5f0963cbe94c82c33a63f08490cec36d9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487016"
 ---
 # <a name="raw-file-destination"></a>назначение «Необработанный файл»
@@ -113,7 +113,7 @@ ms.locfileid: "81487016"
   
 1.  Установите для свойства WriteOption значение **CreateOnce** или **CreateAlways**и запустите одну итерацию цикла. Файл будет создан. Это будет гарантией того, что добавляемые метаданные и файл будут соответствовать друг другу.  
   
-2.  Сбросить свойство WriteOption в **приложение** и установить свойство ValidateExternalMetadata. `False`  
+2.  Сбросьте свойство WriteOption в значение **append** и задайте для `False`свойства ValidateExternalMetadata значение.  
   
  Если используется параметр **TruncateAppend** вместо параметра **Append** , то строки, которые были добавлены в любой предыдущей итерации, будут усечены, и только затем будет добавлена новая строка. Использование параметра **TruncateAppend** также требует, чтобы данные соответствовали формату файла.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "81487016"
  Запись в блоге [Необработанные файлы ― это здорово](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)на сайте sqlservercentral.com.  
   
 ## <a name="see-also"></a>См. также:  
- [Сырье Файл Источник](raw-file-source.md)   
+ [Источник необработанного файла](raw-file-source.md)   
  [Поток данных](data-flow.md)  
   
   

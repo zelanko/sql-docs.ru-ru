@@ -1,6 +1,6 @@
 ---
-title: Ограничения на регулярные и контекстные соединения Документы Майкрософт
-description: В этой статье описаны ограничения, связанные с кодом, работающим в процессе Microsoft S'L Server через контекст и регулярные соединения.
+title: Ограничения для обычных и контекстных подключений | Документация Майкрософт
+description: В этой статье описываются ограничения, связанные с кодом, выполняемым в Microsoft SQL Server процессом через контекст и обычные соединения.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fac92658366cceffc3d4fac5ba650f9a14501185
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81485373"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>Контекстные соединения и обычные соединения — ограничения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Эта тема обсуждает ограничения, связанные с выполнением [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] кода в процессе через контекст и регулярные соединения.  
+  В этом разделе обсуждаются ограничения, связанные с кодом, который [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполняется в процессе через контекст и обычные соединения.  
   
 ## <a name="restrictions-on-context-connections"></a>Ограничения контекстных соединений  
  При проектировании приложения учитывайте следующие ограничения, которые применяются к контекстным соединениям.  

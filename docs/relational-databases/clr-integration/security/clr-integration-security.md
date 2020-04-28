@@ -1,6 +1,6 @@
 ---
-title: Безопасность интеграции CLR (ru) Документы Майкрософт
-description: Интеграция сервера S'L с системой безопасности .NET Framework CLR управляет доступом между объектами. Проверки безопасности, выполняемые на объектах, зависят от соответствующих вызовов.
+title: Безопасность интеграции со средой CLR | Документация Майкрософт
+description: Интеграция SQL Server с .NET Framework безопасностью CLR управляет доступом между объектами. Проверки безопасности, выполняемые с объектами, зависят от задействованных вызовов.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 561ba77b01af31c30341c5af7fa22b68ede413f6
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487131"
 ---
 # <a name="clr-integration-security"></a>Безопасность интеграции со средой CLR

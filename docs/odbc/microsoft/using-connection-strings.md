@@ -1,5 +1,5 @@
 ---
-title: Использование строк соединения Документы Майкрософт
+title: Использование строк подключения | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ ms.assetid: 57634960-47e9-49bf-95c1-6e3702ac8166
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9083414503606720a40d372ed883a140953dc415
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307595"
 ---
 # <a name="using-connection-strings"></a>Изменение строк подключения
-Для подключения к источнику данных Visual FoxPro можно использовать строку подключения к visual FoxPro.  
+Строку подключения можно использовать для подключения к источнику данных Visual FoxPro.  
   
- Например, для подключения к источнику данных TasTrade и переопределения текущего параметра Exclusive, связанного с источником данных, можно использовать строку:  
+ Например, чтобы подключиться к источнику данных Тастраде и переопределить текущее значение Exclusive, связанное с источником данных, используйте строку:  
   
 ```  
 DSN=TasTrade;Exclusive=Yes  
 ```  
   
- Для списка ключевых слов атрибутов и значений, которые [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)можно включить в строку соединения, см.  
+ Список ключевых слов и значений атрибутов, которые можно включить в строку подключения, см. в разделе [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md).  
   
- Полное объяснение синтаксиса строки соединения [можно](../../odbc/reference/syntax/sqlbrowseconnect-function.md) узнать в *справочнике программиста ODBC.*
+ Полное описание синтаксиса строки подключения см. в разделе [SQLBrowseConnect](../../odbc/reference/syntax/sqlbrowseconnect-function.md) в *справочнике программиста по ODBC*.

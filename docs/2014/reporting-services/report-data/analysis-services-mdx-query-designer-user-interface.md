@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a31c451b89ca226d207862c375943f6ffcfbb5e8
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388706"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services
@@ -40,7 +40,7 @@ ms.locfileid: "81388706"
 
  В следующей таблице перечисляются панели, доступные в этом режиме.
 
-|Панель|Компонент|
+|Панель|Функция|
 |----------|--------------|
 |Кнопка "Выбрать куб" (**...**)|Отображает куб, выбранный в настоящий момент.|
 |Панель «Метаданные»|Отображает список мер в иерархическом порядке, ключевые показатели эффективности (KPIs) и измерения, определенные для выбранного куба.|
@@ -69,10 +69,10 @@ ms.locfileid: "81388706"
 |![Переключение в режим языка DMX-запросов](../media/rsqdicon-commandtypedmx.gif "Переключение в режим языка DMX-запросов")|Перейти к расширению интеллектуального анализа данных командного типа.|
 |![Обновление результирующих данных](../../analysis-services/media/rsqdicon-refresh.gif "Обновление результирующих данных")|Обновление метаданных из источника данных.|
 |![Добавление вычисляемого элемента](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Добавить вычисляемый элемент")|Отображение диалогового окна **Построитель вычисляемых элементов** .|
-|![Переключатель для просмотра пустых ячеек](../../analysis-services/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек")|Переключение между отображением и скрытием пустых ячеек на панели «Данные». (Это эквивалентно использованию предложения NON EMPTY в многомерном выражении).|
+|![Переключатель для отображения пустых ячеек](../../analysis-services/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек")|Переключение между отображением и скрытием пустых ячеек на панели «Данные». (Это эквивалентно использованию предложения NON EMPTY в многомерном выражении).|
 |![Автоматическое выполнение запроса](../../analysis-services/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса")|Автоматически выполнять запрос и отображать результат при каждом изменении. Результаты отображаются в панели «Данные».|
 |![Кнопка отображения агрегатов](../../analysis-services/media/rsqdicon-showaggregations.gif "Кнопка "Показать агрегаты"")|Показать статистические выражения на панели «Данные».|
-|![Удалить](../../analysis-services/media/rsqdicon-delete.gif "DELETE")|Удалить выбранный на панель «Данные» столбец из запроса.|
+|![Удаление](../../analysis-services/media/rsqdicon-delete.gif "DELETE")|Удалить выбранный на панель «Данные» столбец из запроса.|
 |![Значок диалогового окна "Параметры запроса"](../../analysis-services/media/iconqueryparameter.gif "Значок диалогового окна "Параметры запроса"")|Отображает диалоговое окно **Параметры запроса** . При указании значений для параметра запроса автоматически создается аналогичный параметр отчета с тем же именем. В качестве значения для параметра запроса устанавливается выражение, ссылающееся на параметр отчета.|
 |![Кнопка "Подготовить запрос"](../../analysis-services/media/rsqdicon-preparequery.gif "Кнопка "Подготовить запрос"")|Подготовить запрос.|
 |![Выполнение запроса](../../analysis-services/media/rsqdicon-run.gif "Выполнение запроса")|Выполнить запрос и показать результаты на панели «Данные».|
@@ -88,7 +88,7 @@ ms.locfileid: "81388706"
 
  В следующей таблице перечисляются панели, доступные в этом режиме.
 
-|Панель|Компонент|
+|Панель|Функция|
 |----------|--------------|
 |Кнопка "Выбрать куб" (**...**)|Отображает куб, выбранный в настоящий момент.|
 |Панель Метаданные/Функции/Шаблоны|Отображает меры в иерархическом списке, ключевые показатели эффективности и измерения, определенные для выбранного куба.|
@@ -115,6 +115,6 @@ ms.locfileid: "81388706"
 -   **Показать агрегаты** (![Кнопка отображения агрегатов](../../analysis-services/media/rsqdicon-showaggregations.gif "Кнопка "Показать агрегаты""))
 
 ## <a name="see-also"></a>См. также:
- [Определите параметры в MDX Запрос Конструктор для анализа услуг &#40;Отчет Builder и SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) [Создать общий набор данных или встроенный набор данных &#40;Отчет Builder и SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) анализ услуг подключения тип для [DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md) [RSReport Configuration ФайловА](../report-server/rsreportdesigner-configuration-file.md) [Анализ Службы&#41;&#40;подключения](analysis-services-connection-type-for-mdx-ssrs.md)
+ [Определите параметры в конструкторе запросов многомерных выражений для Analysis Services &#40;построитель отчетов и служб ssrs&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) [создания общего набора данных или внедренного набора данных &#40;построитель отчетов и служб SSRS](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)&#41;Analysis Services тип подключения [для расширений ИНТЕЛЛЕКТУАЛЬНого анализа данных &#40;SSRS](analysis-services-connection-type-for-dmx-ssrs.md)&#41;[RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md) ANALYSIS Services [тип подключения для многомерных выражений &#40;SSRS](analysis-services-connection-type-for-mdx-ssrs.md)&#41;
 
 

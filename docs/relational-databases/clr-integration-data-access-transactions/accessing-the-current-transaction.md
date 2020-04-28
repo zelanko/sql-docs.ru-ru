@@ -1,6 +1,6 @@
 ---
-title: Доступ к текущей транзакции (ru) Документы Майкрософт
-description: В интеграции S'L Server CLR текущее свойство класса System.Transactions.Transaction позволяет получить доступ к текущей транзакции.
+title: Доступ к текущей транзакции | Документация Майкрософт
+description: В SQL Server интеграции со средой CLR текущее свойство класса System. Transactions. Transaction позволяет получить доступ к текущей транзакции.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ad8c499355ada4ab84c0f7e2016bbb363c71e779
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487497"
 ---
 # <a name="accessing-the-current-transaction"></a>Доступ к текущей транзакции

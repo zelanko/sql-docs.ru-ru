@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f26fb42531635fd6e5791fbad0cba94f980f23e
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388339"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов BI SAP NetWeaver
@@ -104,6 +104,6 @@ ms.locfileid: "81388339"
 -   **Удалить** (![Удаление](../../analysis-services/media/rsqdicon-delete.gif "DELETE"))
 
 ## <a name="see-also"></a>См. также:
- [Создание общего набора данных или встроенного набора данных &#40;builder Report и SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [файле конфигурации RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)
+ [Создание общего набора данных или внедренного набора данных &#40;построитель отчетов и SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [файл конфигурации RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)
 
 

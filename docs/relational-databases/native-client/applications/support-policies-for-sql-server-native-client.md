@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f7b0c4e271d72188d306fa52a1ccb843ddbb4e1b
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388236"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>Политики поддержки собственного клиента SQL Server
@@ -25,20 +25,20 @@ ms.locfileid: "81388236"
 ## <a name="server-support"></a>Поддержка сервера  
  Клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 поддерживает соединение с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] и [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].  
   
-## <a name="supported-operating-system-versions"></a>Поддерживаемые версии операционных систем  
+## <a name="supported-operating-system-versions"></a>Поддерживаемые версии операционной системы  
  В следующей таблице приведен список операционных систем, поддерживающих Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 |Версия собственного клиента SQL Server|Поддерживаемые операционные системы|  
 |--------------------------------------|---------------------------------|  
-|Собственный клиент SQL Server (SQL Server 2005)|Microsoft Windows 2000 с пакетом обновления 4 (SP4) или более поздней версии<br /><br /> Microsoft Windows Server 2003 или более поздней версии<br /><br /> Microsoft Windows XP Service Pack 1 или более поздний<br /><br /> Microsoft Windows Vista (требуется [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с пакетом обновления 2 (SP2) или более поздней версии)<br /><br /> Microsoft Windows Server 2008 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] R2 (требует пакет услуг 2 или позже)|  
-|СЗЛ Сервер Родной Клиент[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]10.0 ( )|Microsoft Windows Server 2003 с пакетом обновления 2 (SP2) или более поздней версии<br /><br /> Microsoft Windows XP с пакетом обновления 2 (SP2) или более поздней версии<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2|  
-|СЗЛ Сервер Родной Клиент[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]10.5 ( )|Microsoft Windows Server 2003 с пакетом обновления 2 (SP2) или более поздней версии<br /><br /> Microsoft Windows XP с пакетом обновления 2 (SP2) или более поздней версии<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2<br /><br /> Microsoft Windows 7|  
+|Собственный клиент SQL Server (SQL Server 2005)|Microsoft Windows 2000 с пакетом обновления 4 (SP4) или более поздней версии<br /><br /> Microsoft Windows Server 2003 или более поздней версии<br /><br /> Пакет обновления 1 (SP1) для Microsoft Windows XP или более поздней версии<br /><br /> Microsoft Windows Vista (требуется [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с пакетом обновления 2 (SP2) или более поздней версии)<br /><br /> Microsoft Windows Server 2008 R2 (требуется [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пакет обновления 2 или более поздняя версия)|  
+|SQL Server Native Client 10,0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])|Microsoft Windows Server 2003 с пакетом обновления 2 (SP2) или более поздней версии<br /><br /> Microsoft Windows XP с пакетом обновления 2 (SP2) или более поздней версии<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2|  
+|SQL Server Native Client 10,5 ([!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)])|Microsoft Windows Server 2003 с пакетом обновления 2 (SP2) или более поздней версии<br /><br /> Microsoft Windows XP с пакетом обновления 2 (SP2) или более поздней версии<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2<br /><br /> Microsoft Windows 7|  
 |Клиент SQL Server Native Client 11.0 ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)])|Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2<br /><br /> Microsoft Windows 7<br /><br /> Microsoft Windows 8<br /><br /> Microsoft Windows Server 2012|  
   
 ## <a name="ado-support-policies"></a>Политика поддержки ADO  
  Приложение ADO может пользоваться поставщиком OLE DB SQLOLEDB, который входит в состав Windows, если ему не требуются функции [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] или более поздней версии.  
   
- Приложения ADO могут использовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версию [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]Native Client, включенную в . Приложения ADO могут также пользоваться собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 11.0 (в составе [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]), но в этом случае необходимо указать `DataTypeCompatibility=80` в строке соединения. Только функции [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] будут доступны, если в строке соединения указано значение `DataTypeCompatibility=80`.  
+ Приложения ADO могут использовать версию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента, входящую в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]состав. Приложения ADO могут также пользоваться собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 11.0 (в составе [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]), но в этом случае необходимо указать `DataTypeCompatibility=80` в строке соединения. Только функции [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] будут доступны, если в строке соединения указано значение `DataTypeCompatibility=80`.  
   
 ## <a name="bcp-support-policies"></a>Политика поддержки BCP  
  Начиная с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], программа bcp.exe поддерживает файлы данных, которые не более чем на три версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] старше версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], с которой поставляется экземпляр bcp.exe.  
@@ -51,7 +51,7 @@ ms.locfileid: "81388236"
   
  Приложение OLE DB, которое не было сертифицированы для использования с собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], может пользоваться собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], если в его строке соединения указано `DataTypeCompatibility=80`.  
   
- Приложение OLE DB, которое пользуется компонентом службы OLE DB, может пользоваться собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], если в строке соединения указано `DataTypeCompatibility=80`. Однако в этом [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] случае не будут доступны функции, добавленные после этого.  
+ Приложение OLE DB, которое пользуется компонентом службы OLE DB, может пользоваться собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], если в строке соединения указано `DataTypeCompatibility=80`. Однако в этом случае компоненты, [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] добавленные после, будут недоступны.  
   
 ## <a name="see-also"></a>См. также:  
  [Построение приложений с использованием собственного клиента SQL Server](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  

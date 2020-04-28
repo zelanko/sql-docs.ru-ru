@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e500d746f3ef0cdfc2d48037467f2ab6ce376d3f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388326"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Пользовательский интерфейс текстового конструктора запросов (построитель отчетов)
@@ -50,13 +50,13 @@ ms.locfileid: "81388326"
 
  В следующей таблице описываются функции каждой панели.
 
-|Панель|Компонент|
+|Панель|Функция|
 |----------|--------------|
-|Запрос|Отображает текст запроса [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Используйте эту панель, чтобы написать или изменить запрос [!INCLUDE[tsql](../../../includes/tsql-md.md)] .|
+|query|Отображает текст запроса [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Используйте эту панель, чтобы написать или изменить запрос [!INCLUDE[tsql](../../../includes/tsql-md.md)] .|
 |Результат|Отображает результаты запроса. Чтобы выполнить запрос, щелкните правой кнопкой мыши любую область и выберите команду **Выполнить**либо нажмите кнопку **Выполнить** на панели инструментов.|
 
 #### <a name="example"></a>Пример
- Следующий запрос возвращает список фамилий [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]из таблицы `ContactType` базы `Person` данных **2008** года для схемы.
+ Следующий запрос возвращает [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]список фамилий из таблицы базы данных **2008** `ContactType` 2008 для `Person` схемы.
 
 ```
 SELECT Name FROM Person.ContactType
@@ -73,13 +73,13 @@ SELECT Name FROM Person.ContactType
 
  В следующей таблице описываются функции каждой панели.
 
-|Панель|Компонент|
+|Панель|Функция|
 |----------|--------------|
-|Запрос|Отображает имя хранимой процедуры и все входные параметры.|
+|query|Отображает имя хранимой процедуры и все входные параметры.|
 |Результат|Отображает результаты запроса. Чтобы выполнить запрос, щелкните правой кнопкой мыши любую область и выберите команду **Выполнить**либо нажмите кнопку **Выполнить** на панели инструментов.|
 
 #### <a name="example"></a>Пример
- Следующий запрос называет [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]процедуру `uspGetWhereUsedProductID` **2008** года. При запуске этого запроса необходимо задать значение параметра с идентификационным номером продукта.
+ Следующий запрос вызывает [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** хранимую процедуру `uspGetWhereUsedProductID`2008. При запуске этого запроса необходимо задать значение параметра с идентификационным номером продукта.
 
 ```
 uspGetWhereUsedProductID
@@ -98,13 +98,13 @@ uspGetWhereUsedProductID
  Если выбран **Тип команды TableDirect**, то текстовый конструктор запросов содержит две панели: панель запросов и область результатов. Если ввести имя таблицы и нажать кнопку **Выполнить** , возвращаются все столбцы этой таблицы.
 
 #### <a name="example"></a>Пример
- Для типа источника данных OLE DB следующий запрос набора данных возвращает [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]набор результатов для всех типов контактов в базе данных **2008** года.
+ Для типа источника данных OLE DB следующий запрос набора данных возвращает результирующий набор для всех типов контактов в [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]базе данных **2008** .
 
  `Person.ContactType`
 
  Ввод имени таблицы Person.ContactType эквивалентен созданию на языке [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкции `SELECT * FROM Person.ContactType`.
 
 ## <a name="see-also"></a>См. также:
- [Реляционный запрос Дизайнер Пользовательский интерфейс &#40;Отчет Строитель&#41;](relational-query-designer-user-interface-report-builder.md) [дизайнеров запросов &#40;Отчет Строитель&#41;](../query-designers-report-builder.md)
+ [Пользовательский интерфейс конструктора реляционных запросов &#40;построитель отчетов&#41;](relational-query-designer-user-interface-report-builder.md) [конструкторы запросов &#40;построитель отчетов&#41;](../query-designers-report-builder.md)
 
 

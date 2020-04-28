@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1c7a12ec8f9e2bd49c9aecc1080fe0b5cff854ce
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81387968"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов Hyperion Essbase
@@ -101,6 +101,6 @@ ms.locfileid: "81387968"
 -   **AutoExecute** (![Автоматическое выполнение запроса](../../analysis-services/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса"))
 
 ## <a name="see-also"></a>См. также:
- [Создание общего набора данных или встроенного набора данных &#40;builder Report и SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [файле конфигурации RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)
+ [Создание общего набора данных или внедренного набора данных &#40;построитель отчетов и SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [файл конфигурации RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)
 
 

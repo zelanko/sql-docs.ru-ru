@@ -1,5 +1,5 @@
 ---
-title: Дополнительная поддерживаемая грамматика ODBC S'L (ru) Документы Майкрософт
+title: Дополнительная поддерживаемая грамматика SQL ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,28 +14,28 @@ ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d6ac9bd3a54e1f06f17bf6b92485ce5b9cc52882
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307135"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Дополнительная поддерживаемая грамматика SQL (ODBC)
-Драйверы ODBC полностью поддерживают минимальную грамматику ODBC 2.5 и следующие положения в грамматике Core и Extended ODBC 2.5. Дополнительная информация может быть отображана, перепрыгивая на [заявление ALTER TABLE,](../../odbc/microsoft/alter-table-statement.md) [имена корреляций](../../odbc/microsoft/correlation-names.md)и темы [вызова процедуры.](../../odbc/microsoft/procedure-invocation.md)  
+Драйверы ODBC полностью поддерживают минимальную грамматику ODBC 2,5 и следующие предложения в основной и расширенной грамматике ODBC 2,5. Дополнительные сведения можно просмотреть, выполнив [инструкции ALTER TABLE](../../odbc/microsoft/alter-table-statement.md), [корреляционные имена](../../odbc/microsoft/correlation-names.md)и [вызов процедур](../../odbc/microsoft/procedure-invocation.md) .  
   
--   Приблизительный цифровой буквальный (Core)  
+-   Приблизительный числовой литерал (Core)  
   
--   [Заявление ALTER TABLE](../../odbc/microsoft/alter-table-statement.md) (основное)  
+-   [Инструкция ALTER TABLE](../../odbc/microsoft/alter-table-statement.md) (ядро)  
   
--   Двоичные буквальные (Расширенные)  
+-   Двоичные литералы (расширенные)  
   
--   [Имена корреляций](../../odbc/microsoft/correlation-names.md) (core)  
+-   [Корреляционные имена](../../odbc/microsoft/correlation-names.md) (Core)  
   
--   [Вызов процедуры](../../odbc/microsoft/procedure-invocation.md) (Расширенный)  
+-   [Вызов процедуры](../../odbc/microsoft/procedure-invocation.md) (расширенный)  
   
--   [ПРЕДикат BETWEEN](../../odbc/microsoft/between-predicate.md) (основной)  
+-   [Предикат between](../../odbc/microsoft/between-predicate.md) (ядро)  
   
--   [Заявление CREATE INDEX](../../odbc/microsoft/create-index-statement.md)  
+-   [CREATE INDEX, инструкция](../../odbc/microsoft/create-index-statement.md)  
   
 -   [Арифметические операции с датами](../../odbc/microsoft/date-arithmetic.md)  
   
@@ -51,16 +51,16 @@ ms.locfileid: "81307135"
   
 -   [Использование ORDER BY с GROUP BY](../../odbc/microsoft/order-by-with-group-by.md)  
   
--   ПРЕДикат EXISTS (Основной)  
+-   Предикат EXISTs (Core)  
   
--   IN *(список ценностей)*(Основной)  
+-   В (*валуелист*) (ядро)  
   
--   [Jet: Внешние соединения](../../odbc/microsoft/jet-outer-joins.md) (Расширенный)  
+-   [Jet: внешние объединения](../../odbc/microsoft/jet-outer-joins.md) (расширенные)  
   
--   Заявление SELECT (Расширенный) (включая положения GROUP BY, HAVING и UNION)  
+-   Инструкция SELECT (расширенная) (включая предложения GROUP BY, HAVING и UNION)  
   
--   Субзапросы (SUBSELECTs) (Core)  
+-   Вложенные запросы (подзапросы ВЫБОРки) (ядро)  
   
--   [Функции scalar](../../odbc/microsoft/scalar-functions.md)  
+-   [Скалярные функции](../../odbc/microsoft/scalar-functions.md)  
   
--   [Названия таблиц](../../odbc/microsoft/table-names.md)
+-   [Имена таблиц](../../odbc/microsoft/table-names.md)

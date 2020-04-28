@@ -1,6 +1,6 @@
 ---
-title: Установка и настройка выборочной базы данных AdventureWorks
-description: Следуйте этим инструкциям для загрузки и установки выборочных баз данных AdventureWorks со студией управления серверами s'L или в базе данных Azure S'L.
+title: Установка и Настройка образца базы данных AdventureWorks
+description: Выполните эти инструкции, чтобы скачать и установить образцы баз данных AdventureWorks с помощью SQL Server Management Studio или в базе данных SQL Azure.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -11,96 +11,96 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7fa3d199450750a444f2b67ae3e4583549d449b9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81484583"
 ---
-# <a name="adventureworks-installation-and-configuration"></a>Установка и конфигурация AdventureWorks
+# <a name="adventureworks-installation-and-configuration"></a>Установка и настройка AdventureWorks
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-AdventureWorks скачать ссылки и инструкции по установке. 
+Ссылки для загрузки AdventureWorks и инструкции по установке. 
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- [База данных Сервера или](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) [Лазурного Сервера](https://azure.microsoft.com/services/sql-database/). Для полной версии образца используйте s'L Server Evaluation/Developer/Enterprise Edition.
-- [Студия управления серверами S'L](../ssms/download-sql-server-management-studio-ssms.md). Для достижения наилучших результатов используйте выпуск в июне 2016 года или позже.
+- [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) или [база данных SQL Azure](https://azure.microsoft.com/services/sql-database/). Для полной версии примера используйте SQL Server Evaluation, Developer или Enterprise Edition.
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Для получения наилучших результатов используйте выпуск Июнь 2016 или более поздней версии.
  
-## <a name="oltp-downloads"></a>ЗАГРУЗКа OLTP
+## <a name="oltp-downloads"></a>Загрузки OLTP
 
 Прямые ссылки на версии OLTP AdventureWorks можно найти ниже:
 
-- [AdventureWorks2017.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2017.bak)
-- [AdventureWorks2016.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016.bak)
-- [AdventureWorks2014.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2014.bak)
-- [AdventureWorks2012.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2012.bak)
-- [AdventureWorks2008R2.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-oltp.bak)
+- [AdventureWorks2017. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2017.bak)
+- [AdventureWorks2016. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016.bak)
+- [AdventureWorks2014. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2014.bak)
+- [AdventureWorks2012. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2012.bak)
+- [AdventureWorks2008R2. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-oltp.bak)
 
 
 ## <a name="data-warehouse-downloads"></a>Загрузка хранилища данных
 
-Прямые ссылки на версии Хранилища данных AdventureWorks можно найти ниже:
+Прямые ссылки на версии AdventureWorks для хранилища данных можно найти ниже:
 
-- [AdventureWorksDW2017.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak)
-- [AdventureWorksDW2016.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016.bak)
-- [AdventureWorksDW2014.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2014.bak)
-- [AdventureWorksDW2012.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2012.bak)
-- [AdventureWorksDW2008R2.bak](https://github.com/microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-dw.bak)
+- [AdventureWorksDW2017. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak)
+- [AdventureWorksDW2016. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016.bak)
+- [AdventureWorksDW2014. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2014.bak)
+- [AdventureWorksDW2012. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2012.bak)
+- [AdventureWorksDW2008R2. bak](https://github.com/microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-dw.bak)
 
-## <a name="creation-scripts"></a>Сценарии создания
-Ниже приведенные сценарии могут быть использованы для создания всей базы данных AdventureWorks, независимо от версии. 
+## <a name="creation-scripts"></a>Скрипты создания
+Приведенные ниже скрипты можно использовать для создания всей базы данных AdventureWorks независимо от версии. 
 
-- [AdventureWorks OLTP Скрипты Цип](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks-oltp-install-script.zip)
-- [AdventureWorks DW Скрипты Цип](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW-data-warehouse-install-script.zip)
+- [ZIP-файл скриптов OLTP](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks-oltp-install-script.zip)
+- [ZIP-скрипты сценариев AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW-data-warehouse-install-script.zip)
 
-## <a name="github-links"></a>GitHub ссылки
+## <a name="github-links"></a>Ссылки GitHub
 
-- [Все файлы AdventureWorks для S'L 2014 - 2016](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
-- [Все файлы AdventureWorks для S'L 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012)
-- [Все файлы AdventureWorks для S'L 2008 и 2008R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2)
+- [Все файлы AdventureWorks для SQL 2014-2016](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
+- [Все файлы AdventureWorks для SQL 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012)
+- [Все файлы AdventureWorks для SQL 2008 и 2008R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2)
 
-## <a name="install-to-sql-server"></a>Установка на сервер S'L
+## <a name="install-to-sql-server"></a>Установка в SQL Server
 
-### <a name="restore-backup"></a>Восстановление резервного копирования
-Следуйте ниже шаги, чтобы восстановить резервную часть базы данных с помощью S'L Server Management Studio. 
+### <a name="restore-backup"></a>Восстановить резервную копию
+Выполните следующие действия, чтобы восстановить резервную копию базы данных с помощью SQL Server Management Studio. 
 
-1. Откройте студию управления серверами и подключитесь к целевому экземпляру S'L Server.
-2. Нажмите на узла **базы данных** и выберите **базу данных восстановления.**
-3. Выберите **устройство** и нажмите эллипсы **(...**)
-4. В диалоге **Выберите резервные устройства,** нажмите **Добавить,** перейти к резервной системе базы данных в файловой системе сервера, и выберите резервную копию. Нажмите кнопку **ОК**.
-5. При необходимости измените целевое местоположение для файлов данных и журналов в панели **файлов файлов.** Обратите внимание, что лучше всего размещать данные и журналировать файлы на разных дисках.
-6. Нажмите кнопку **ОК**. Это инициирует восстановление базы данных. После завершения работы база данных AdventureWorks будет установлена на экземпляре сервера S'L.
+1. Откройте SQL Server Management Studio и подключитесь к целевому экземпляру SQL Server.
+2. Щелкните правой кнопкой мыши узел **базы данных** и выберите команду **восстановить базу данных**.
+3. Выберите **устройство** и нажмите кнопку с многоточием (**...**).
+4. В диалоговом окне **выберите устройства резервного копирования**, нажмите кнопку **Добавить**, перейдите к резервной копии базы данных в файловой системе сервера и выберите резервную копию. Нажмите кнопку **ОК**.
+5. При необходимости измените целевое расположение файлов данных и журналов в области **файлы** . Обратите внимание, что рекомендуется размещать файлы данных и журналов на разных дисках.
+6. Нажмите кнопку **ОК**. Это приведет к запуску восстановления базы данных. После завершения работы на экземпляре SQL Server будет установлена база данных AdventureWorks.
 
-Для получения дополнительной информации о восстановлении базы данных сервера S'L, [см. Восстановление резервной базы данных с помощью SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).
+Дополнительные сведения о восстановлении базы данных SQL Server см. в разделе [Восстановление резервной копии базы данных с помощью SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).
 
 
-### <a name="attach-a-datafile"></a>Прикрепите файл данных
-Следуйте ниже шаги, чтобы прикрепить файл данных для базы данных с помощью S'L Server Management Studio.
+### <a name="attach-a-datafile"></a>Присоединение файла.
+Выполните приведенные ниже действия, чтобы присоединить файл данных для вашей базы для работы с помощью SQL Server Management Studio.
 
-1. Откройте студию управления серверами и подключитесь к целевому экземпляру S'L Server.
-2. Нажмите на узла **базы данных** и выберите **Прикрепить.**
-3. Выберите **Добавить** и перейти к . Файл MDF, который вы хотите прикрепить. 
+1. Откройте SQL Server Management Studio и подключитесь к целевому экземпляру SQL Server.
+2. Щелкните правой кнопкой мыши узел **базы данных** и выберите команду **присоединить**.
+3. Выберите **Добавить** и перейдите к. MDF файл, который нужно присоединить. 
 1. Выберите файл и нажмите кнопку **ОК**. 
-    1. Выбранная база данных должна отображаться в нижнем окне. Если файл указан как "не найден", выберите эллипсы **(...)** рядом с именем файла и обновите путь к правильному пути. 
-    1. Если у вас есть только файл данных (.mdf), а не файл журнала (.ldf), затем выделите .ldf в нижнем окне и выберите **Удалить.** Это позволит создать новый файл журнала. 
-1. Выберите **OK,** чтобы прикрепить файл. После присоединения файла база данных AdventureWorks будет установлена на экземпляре сервера S'L.  
+    1. Выбранная база данных должна отображаться в нижнем окне. Если файл указан как "не найден", нажмите кнопку с многоточием (**...**) рядом с именем файла и измените путь на правильный путь. 
+    1. Если у вас есть только файл данных (MDF), а не файл журнала (LDF), выделите расширение LDF в нижнем окне и выберите **Удалить**. Будет создан новый файл журнала. 
+1. Нажмите кнопку **ОК** , чтобы присоединить файл. После присоединения файла на вашем экземпляре SQL Server будет установлена база данных AdventureWorks.  
 
-Для получения дополнительной информации о присоединении файлов базы данных, [см.](../relational-databases/databases/attach-a-database.md) 
+Дополнительные сведения о присоединении файлов базы данных см. в разделе [Присоединение базы данных](../relational-databases/databases/attach-a-database.md). 
 
-## <a name="install-to-azure-sql-database"></a>Установка в базу данных Azure S'L
+## <a name="install-to-azure-sql-database"></a>Установка в базу данных SQL Azure
 
 
-Если у вас еще нет сервера S'L в Azure, перейдите на [портал Azure](https://portal.azure.com/) и создайте новую базу данных S'L. В процессе создания базы данных вы создадите сервер. Обратите внимание на сервер. Смотрите [этот учебник,](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) чтобы создать базу данных в считанные минуты.
+Если у вас еще нет SQL Server в Azure, перейдите к [портал Azure](https://portal.azure.com/) и создайте новую базу данных SQL. В процессе создания базы данных будет создан сервер. Запишите сервер. Ознакомьтесь с [этим руководством](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) , чтобы создать базу данных за считаные минуты.
 
-1. Подключитесь к порталу Azure.
-1. Выберите **Создать ресурс** в левом верхнем верхнем от навигационном стекол. 
+1. Подключитесь к портал Azure.
+1. Выберите **создать ресурс** в верхнем левом углу панели навигации. 
 1. Выберите **Базы данных** и **База данных SQL**. 
-1. Заполните запрашиваемую информацию.
-1. В поле **Select Source** выберите **образец (AdventureWorksLT)** для восстановления резервного копирования последней резервной копирования AdventureWorksLT.
-1. Выберите **Создать** для создания новой базы данных S'L, которая является восстановленной копией базы данных AdventureWorksLT. 
+1. Введите запрошенные сведения.
+1. В поле **Select Source (Выбор источника** **) выберите Sample (AdventureWorksLT)** , чтобы восстановить резервную копию последней резервной копии AdventureWorksLT.
+1. Выберите **создать** , чтобы создать новую базу данных SQL, которая является восстановленной копией базы данных AdventureWorksLT. 
 
 
 ## <a name="see-also"></a>См. также
-[Учебники для студии управления серверами S'L](../ssms/tutorials/tutorial-sql-server-management-studio.md)   
-[Учебники для движка базы данных S'L Server](../relational-databases/database-engine-tutorials.md)
+[Руководства для SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)   
+[Учебники по SQL Server ядру СУБД](../relational-databases/database-engine-tutorials.md)

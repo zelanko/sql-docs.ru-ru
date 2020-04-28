@@ -1,5 +1,5 @@
 ---
-title: Сделки в ODBC ODBC Документы Майкрософт
+title: Транзакции в ODBC ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 2c8cde03-4bb8-4b35-881b-1ba23da15fbc
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 073546ef578a8efebff33fef96ae4682dd6f53fe
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306450"
 ---
 # <a name="transactions-in-odbc-odbc"></a>Транзакции в ODBC (ODBC)
-Сделки в ODBC завершаются на уровне подключения; то есть, когда приложение завершает транзакцию, оно фиксирует или откатывает всю работу, проделанную через все обработки оператора на этом соединении.  
+Транзакции в ODBC выполняются на уровне соединения. то есть, когда приложение завершает транзакцию, оно фиксирует или откатывает всю работу, выполненную всеми дескрипторами инструкций этого соединения.  
   
  Этот раздел содержит следующие подразделы.  
   

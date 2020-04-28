@@ -1,5 +1,5 @@
 ---
-title: Установка функций сервера BI с помощью SharePoint (PowerPivot и отчетных служб) Документы Майкрософт
+title: Установка SQL Server компонентов бизнес-аналитики с помощью SharePoint (PowerPivot и Reporting Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: cd1dae56cf2ea571ca9ab16de178764b807260db
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388086"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>Установка компонентов бизнес-аналитики SQL Server с SharePoint (PowerPivot и службы Reporting Services)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут интегрироваться с фермой Microsoft SharePoint для поддержки функций бизнес-аналитики (BI) в SharePoint. Эти компоненты включают [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]используется для [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] доступа к данным на ферме SharePoint. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] — это подсистема обработки данных для книг, созданных в [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel, доступ к которым осуществляется из библиотеки SharePoint. После сохранения книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в библиотеке SharePoint ее можно использовать в качестве источника данных для отчетов [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут интегрироваться с фермой Microsoft SharePoint для поддержки функций бизнес-аналитики (BI) в SharePoint. Эти компоненты включают [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]используется для [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] доступа к данным в ферме SharePoint. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] — это подсистема обработки данных для книг, созданных в [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel, доступ к которым осуществляется из библиотеки SharePoint. После сохранения книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в библиотеке SharePoint ее можно использовать в качестве источника данных для отчетов [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .
 
  Некоторые действия по установке и настройке, необходимые для SharePoint 2010, отличаются от действий, необходимых для SharePoint 2013. Некоторые подразделы в этом разделе применимы к обеим версиям SharePoint.
 
@@ -26,9 +26,9 @@ ms.locfileid: "81388086"
 |-|
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|
 
- ![примечание](../../../2014/reporting-services/media/rs-fyinote.png "Примечание") Для текущих примечаний к выпуску [см.](https://go.microsoft.com/fwlink/?LinkID=296445)
+ ![Примечание](../../../2014/reporting-services/media/rs-fyinote.png "Примечание") . Заметки о текущем выпуске см. в разделе [заметки о выпуске SQL server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).
 
-##  <a name="in-this-topic"></a><a name="bkmk_top"></a>В этой теме
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a>В этом разделе
 
 -   [Сценарии бизнес-аналитики SQL Server и SharePoint 2013](#bkmk_bi_scenarios)
 
@@ -43,13 +43,13 @@ ms.locfileid: "81388086"
 
  [Контрольные списки для установки компонентов бизнес-аналитики в SharePoint](../../../2014/sql-server/install/checklists-for-installing-bi-features-with-sharepoint.md)
 
- [Установка режима обмена сообщениями SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)
+ [Reporting Services установки в режиме интеграции с SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)
 
  [Установка PowerPivot для SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)
 
  [Установка PowerPivot для SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)
 
-##  <a name="sql-server-bi-scenarios-and-sharepoint-2013"></a><a name="bkmk_bi_scenarios"></a>Сценарии и SharePoint 2013
+##  <a name="sql-server-bi-scenarios-and-sharepoint-2013"></a><a name="bkmk_bi_scenarios"></a>SQL Server сценариев бизнес-аналитики и SharePoint 2013
  В этом разделе представлены различные уровни бизнес-аналитики, которые можно установить и настроить.
 
  Службы Excel в SharePoint 2013 включают функции модели данных для обеспечения взаимодействия с книгой [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в браузере. Для базовых функций модели данных нет необходимости развертывать в ферму надстройку [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013. Достаточно установить сервер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме SharePoint и зарегистрировать сервер в параметрах **Модель данных** служб Excel.
@@ -60,13 +60,13 @@ ms.locfileid: "81388086"
 |-|-----------|--------------|--------------------------|
 |1|Только SharePoint|Собственные функции служб Excel|Службы Excel и другие службы, поставляемые с SharePoint Server 2013.|
 |**2**|SharePoint со службами Analysis Services в режиме интеграции с SharePoint|Интерактивные книги PowerPivot в браузере|Установите [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint.<br /><br /> Зарегистрируйте сервер служб Analysis Services в службах Excel.|
-|**3**|SharePoint со службами Reporting Services в режиме интеграции с SharePoint|Power View|Установите [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint.<br /><br /> Установите [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройку **(rsSharePoint.msi)** для SharePoint. Для получения дополнительной информации смотрите [установить или удалить дополнения служб отчетности для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)|
-|**4**|Все функции PowerPivot|Доступ к книгам для использования их в качестве источника данных из-за пределов фермы.<br /><br /> Расписание обновления данных.<br /><br /> Коллекция PowerPivot.<br /><br /> Панель мониторинга управления.<br /><br /> Тип содержимого файла связи BISM.|Развертывание PowerPivot для SharePoint 2013 надстройки **(spPowerPivot.msi)**. Дополнительные сведения см. в следующих разделах:<br /><br /> [Установите или удалите PowerPivot для SharePoint Add-in &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)<br /><br /> Дополнительные сведения о том, как загрузить **spPowerPivot.msi**, см. в разделе [Загрузка SQL Server 2014 PowerPivot для SharePoint](https://go.microsoft.com/fwlink/?LinkID=296473).|
+|**3**|SharePoint со службами Reporting Services в режиме интеграции с SharePoint|Power View|Установите [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint.<br /><br /> Установите [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройку **(rsSharepoint. msi)** для SharePoint. Дополнительные сведения см. [в разделе Установка или удаление надстройки Reporting Services для sharepoint &#40;sharepoint 2010 и sharepoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)|
+|**4**|Все функции PowerPivot|Доступ к книгам для использования их в качестве источника данных из-за пределов фермы.<br /><br /> Расписание обновления данных.<br /><br /> Коллекция PowerPivot.<br /><br /> Панель мониторинга управления.<br /><br /> Тип содержимого файла связи BISM.|Развертывание надстройки PowerPivot для SharePoint 2013 (в виде **PowerPivot. msi)**. Дополнительные сведения см. в следующих разделах:<br /><br /> [Установка и удаление надстройки PowerPivot для SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)<br /><br /> Дополнительные сведения о том, как загрузить **spPowerPivot.msi**, см. в разделе [Загрузка SQL Server 2014 PowerPivot для SharePoint](https://go.microsoft.com/fwlink/?LinkID=296473).|
 
- Для получения дополнительной [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] информации о функциях включения, см. [The SQL Server BI Light-Up Story for SharePoint 2013](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx)
+ Дополнительные сведения о включении [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] функций см. [в статье о SQL Server бизнес-аналитики для SharePoint 2013](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) (https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx).
 
-##  <a name="overview-of-installation"></a><a name="bkmk_install_sharepoint2013_overview"></a>Обзор установки
- Если вы желаете использовать и службу [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], запустите мастер установки SQL Server дважды. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] являются отдельными вариантами на странице **роли настройки** мастера настройки сервера S'L Server.
+##  <a name="overview-of-installation"></a><a name="bkmk_install_sharepoint2013_overview"></a>Общие сведения об установке
+ Если вы желаете использовать и службу [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], запустите мастер установки SQL Server дважды. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] являются отдельными вариантами на странице **роль установки** мастера установки SQL Server.
 
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] поддерживает SharePoint 2010 и SharePoint 2013, но в зависимости от версии SharePoint используются различные архитектуры и процесс установки.
 
@@ -94,7 +94,7 @@ ms.locfileid: "81388086"
 
      ![два средства настройки powerpivot](../../analysis-services/media/as-powerpivot-configtools-bothicons.gif "два средства настройки powerpivot")
 
-5.  Настройте службы Excel в SharePoint Server 2013 для использования экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Для получения дополнительной информации смотрите раздел "Налаживание базовых аналитических служб SharePoint Интеграция" в [PowerPivot для SharePoint 2013 Установка](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).и [управление Excel Services настройки модели данных (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) ( .https://technet.microsoft.com/library/jj219780.aspx)
+5.  Настройте службы Excel в SharePoint Server 2013 для использования экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Дополнительные сведения см. в подразделе «Настройка базовой Analysis Services интеграции с SharePoint» раздела [установка PowerPivot для SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)и [Управление параметрами модели данных служб Excel (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx).
 
 6.  Дополнительные сведения см. в разделе [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).
 
@@ -128,17 +128,17 @@ ms.locfileid: "81388086"
 
         -   Версия продукта SharePoint.
 
-         [Поддерживаемые комбинации сервера SharePoint и служб отчетности и надстройки &#40;S'L Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)
+         [Поддерживаемые сочетания SharePoint и Reporting Services Server и надстроек &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)
 
     -   Для [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в SharePoint 2010 требуется SharePoint 2010 с пакетом обновления 2 (SP2).
 
-    1.  Установите [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint. [Отчетность служб SharePoint Мода Установка &#40;SharePoint 2010 и SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md) и [установить отчетные службы SharePoint режим для SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).
+    1.  Установите [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint. [Reporting Services установки в режиме интеграции с sharepoint &#40;sharepoint 2010 и sharepoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md) и [установите Reporting Services режим sharepoint для SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).
 
-    2.  Установите надстройку служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint (rsSharePoint.msi). Смотрите [Установить или удалить дополнения служб отчетности для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). В текущей версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки для SharePoint см. Где найти [надстройку reporting Services для продуктов SharePoint.](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)
+    2.  Установите надстройку служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint (rsSharePoint.msi). См. статью [Установка или удаление надстройки Reporting Services для sharepoint &#40;sharepoint 2010 и sharepoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Текущую версию [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки для SharePoint см. в разделе [где найти надстройку Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).
 
-    3.  Настройте службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint и по крайней мере одно приложение службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Для получения дополнительной информации смотрите раздел "Создание приложения службы отчетности" в [режиме установки отчетных служб SharePoint для SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).
+    3.  Настройте службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint и по крайней мере одно приложение службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в подразделе «Создание приложения службы Reporting Services» раздела [Install Reporting Services SharePoint в режиме интеграции с sharepoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).
 
-##  <a name="overview-of-database-attach-upgrade-and-sharepoint-2013"></a><a name="bkm_database_attach"></a>Обзор обновления базы данных и SharePoint 2013
+##  <a name="overview-of-database-attach-upgrade-and-sharepoint-2013"></a><a name="bkm_database_attach"></a>Обзор обновления присоединения базы данных и SharePoint 2013
  SharePoint 2013 не поддерживает обновление на месте. Однако **обновление присоединением базы данных поддерживается**.
 
  Если имеется экземпляр PowerPivot, интегрированный с SharePoint 2010, невозможно выполнить обновление на месте сервера SharePoint.  Однако можно выполнить следующие действия в процессе обновления присоединением базы данных SharePoint.
@@ -167,6 +167,6 @@ ms.locfileid: "81388086"
 -   [Обновление баз данных с SharePoint 2010 до SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690).
 
 ## <a name="see-also"></a>См. также:
- [Где найти дополнения служб отчетности для SharePoint Продукты](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md) [Поддерживается комбинации SharePoint и отчетности услуг сервера и надстройки &#40;S'L Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md) [Установить или удалить отчетные услуги Надстройки для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
+ [Где найти надстройку Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md) [, поддерживаемые сочетаниями SharePoint и Reporting Services Server и надстройки &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md) [установить или удалить надстройку Reporting Services для SharePoint &#40;sharepoint 2010 и SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
 
 

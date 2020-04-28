@@ -1,6 +1,6 @@
 ---
-title: Запуск файлов шаблонов с свойством CommandStream
-description: Узнайте, как выполнять файлы шаблонов, состоящие из запросов S'L или XPath, используя свойство CommandStream объекта SqlXmlCommand.
+title: Запуск файлов шаблонов с помощью свойства CommandStream
+description: Узнайте, как выполнять файлы шаблонов, состоящие из запросов SQL или XPath, с помощью свойства CommandStream объекта SqlXmlCommand.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,17 +18,17 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a3b7922921c64c9afb7ef37be57db23a32470eaf
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388368"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Выполнение файлов шаблонов через свойство CommandStream
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Этот пример иллюстрирует, как можно указать файлы шаблонов, состоящие из запросов S'L или XPath, с помощью свойства CommandStream объекта SqlXmlCommand. В этом приложении для командного файла открывается файл FileStreamobject, и поток файлов присваивается как выполняемый CommandStream.  
+  В этом примере показано, как можно указать файлы шаблонов, состоящие из запросов SQL или XPath, с помощью свойства CommandStream объекта SqlXmlCommand. В этом приложении открывается Филестреамобжект для командного файла, а файловый поток назначается как выполняемый CommandStream.  
   
- В следующем примере свойство CommandType указывается как SqlXmlCommandType.Template (не как TemplateFile).  
+ В следующем примере свойство CommandType указано как Склксмлкоммандтипе. Template (не AS TemplateFile).  
   
  Образец XML-шаблона:  
   

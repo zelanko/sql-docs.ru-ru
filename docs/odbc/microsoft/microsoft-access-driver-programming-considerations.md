@@ -1,5 +1,5 @@
 ---
-title: Учеты драйверов доступа Майкрософт (ru) Документы Майкрософт
+title: Вопросы программирования драйверов Microsoft Access | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 52c8a169c950de7c1b5f717c2591fff88add42f3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81308055"
 ---
 # <a name="microsoft-access-driver-programming-considerations"></a>Замечания по программированию драйверов для Microsoft Access

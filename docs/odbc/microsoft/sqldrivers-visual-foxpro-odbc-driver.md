@@ -1,5 +1,5 @@
 ---
-title: S'LDrivers (Визуальный водитель FoxPro ODBC) Документы Майкрософт
+title: SQLDrivers (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 179b11e0-665f-45a2-b926-c3d870a0dab8
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1b75d1cc79a5fe2b3113a6d65345956d5ea801f5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307085"
 ---
 # <a name="sqldrivers-visual-foxpro-odbc-driver"></a>SQLDrivers (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Эта тема содержит Visual FoxPro ODBC Драйвер-специфической информации. Для получения общей информации об этой [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)функции, см.  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полная  
+ Поддержка: полная  
   
- Соответствие ODBC API: Уровень 2  
+ Соответствие API-интерфейса ODBC: уровень 2  
   
- Списки описаний драйверов и ключевых слов атрибута драйвера.  
+ Перечисляет описания драйверов и ключевые слова атрибутов драйвера.  
   
- Для получения более *подробной*информации, [см.](../../odbc/reference/syntax/sqldrivers-function.md)
+ Дополнительные сведения см. в разделе [SQLDrivers](../../odbc/reference/syntax/sqldrivers-function.md) в *справочнике программиста по ODBC*.

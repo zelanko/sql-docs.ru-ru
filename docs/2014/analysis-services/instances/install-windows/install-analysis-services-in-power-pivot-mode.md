@@ -1,5 +1,5 @@
 ---
-title: PowerPivot для Установки SharePoint 2013 (ru) Документы Майкрософт
+title: Установка PowerPivot для SharePoint 2013 | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95642654da9492087b3720e1b85c369131b55ed2
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487400"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>Установка PowerPivot для SharePoint 2013
   В данном разделе описываются процедуры установки одиночного сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме развертывания SharePoint. Эти шаги охватывают запуск мастера установки SQL Server, а также выполнение дополнительных задач по настройке с использованием центра администрирования SharePoint 2013.  
   
- **[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2013 SharePoint 201  
+ **[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2013 | SharePoint 201  
   
  **В этом разделе:**  
   
  [Вводная информация](#bkmk_background)  
   
- [Предварительные требования](#bkmk_prereq)  
+ [Предварительные условия](#bkmk_prereq)  
   
  [Шаг 1. Установка PowerPivot для SharePoint](#InstallSQL)  
   
@@ -34,11 +34,11 @@ ms.locfileid: "81487400"
   
  [Этап 3. Проверка интеграции](#bkmk_verify)  
   
- [Configure the Windows Firewall to Allow Analysis Services Access](#bkmk_firewall)  
+ [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](#bkmk_firewall)  
   
  [Обновление книг и создание расписания обновления данных](#bkmk_upgrade_workbook)  
   
- [Помимо установки с одним сервером -PowerPivot для Microsoft SharePoint](#bkmk_multiple_servers)  
+ [Помимо установки одного сервера — PowerPivot для Microsoft SharePoint](#bkmk_multiple_servers)  
   
 ##  <a name="background"></a><a name="bkmk_background"></a> Историческая справка  
  PowerPivot для SharePoint представляет собой набор служб среднего уровня и внутренних служб, обеспечивающих доступ к данным PowerPivot в ферме SharePoint 2013.  
@@ -49,9 +49,9 @@ ms.locfileid: "81487400"
   
 -   **Средний уровень:** дополнительные возможности работы с PowerPivot в SharePoint, включая коллекцию PowerPivot, обновление данных расписания, панель мониторинга управления и поставщиков данных. Дополнительные сведения об установке и настройке среднего уровня см. в следующем документе:  
   
-    -   [Установите или удалите PowerPivot для SharePoint Add-in &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)  
+    -   [Установка и удаление надстройки PowerPivot для SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)  
   
-    -   [Налаживание решений PowerPivot и развертывании &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)  
+    -   [Настройка PowerPivot и развертывание решений &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)  
   
 ##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Предварительные требования  
   
@@ -63,18 +63,18 @@ ms.locfileid: "81487400"
   
 4.  Должно быть доступно имя экземпляра PowerPivot. На компьютере, где устанавливаются службы Analysis Services для SharePoint, не может присутствовать именованный экземпляр PowerPivot.  
   
-5.  Просмотрите [требования к аппаратным и программным требованиям для сервера аналитических служб в режиме SharePoint &#40;s'L Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md).  
+5.  Ознакомьтесь [с требованиями к оборудованию и программному обеспечению для Analysis Services Server в режиме интеграции с SharePoint &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md).  
   
-6.  Просмотрите примечания к выпуску на [S'L Server 2012 Сервисный пакет 1 Примечания к выпуску](https://go.microsoft.com/fwlink/?LinkID=248389) ( .https://go.microsoft.com/fwlink/?LinkID=248389)  
+6.  Заметки о выпуске см. в заметках [о выпуске пакета обновления 1 для SQL Server 2012](https://go.microsoft.com/fwlink/?LinkID=248389) (https://go.microsoft.com/fwlink/?LinkID=248389).  
   
-###  <a name="sql-server-edition-requirements"></a><a name="bkmk_sqleditions"></a>Требования к выпуску сервера  
- Не все функции бизнес-аналитики доступны во всех выпусках [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Для получения подробной информации [см. Особенности, поддерживаемыеhttps://go.microsoft.com/fwlink/?linkid=232473) изданиями сервера S'L 2012 (и](https://go.microsoft.com/fwlink/?linkid=232473) [выпуски и компоненты сервера S'L 2014](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
+###  <a name="sql-server-edition-requirements"></a><a name="bkmk_sqleditions"></a>Требования к выпуску SQL Server  
+ Не все функции бизнес-аналитики доступны во всех выпусках [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Дополнительные сведения см. [в разделе функции, поддерживаемые различными выпускамиhttps://go.microsoft.com/fwlink/?linkid=232473) SQL Server 2012 (](https://go.microsoft.com/fwlink/?linkid=232473) и [выпусками и компонентами SQL Server 2014](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
- Текущие примечания к выпуску можно найти на [s'L Server 2012 SP1 Release Notes](https://go.microsoft.com/fwlink/?LinkID=248389) (https://go.microsoft.com/fwlink/?LinkID=248389).  
+ Текущие заметки о выпуске можно найти в [заметках о Выпуске SQL Server 2012 SP1](https://go.microsoft.com/fwlink/?LinkID=248389) (https://go.microsoft.com/fwlink/?LinkID=248389).  
   
- Заметки о [выпуске Microsofthttps://go.microsoft.com/fwlink/?LinkId=236893)S'L Server 2012 ( .](https://go.microsoft.com/fwlink/?LinkId=236893)  
+ [Заметки о Выпускеhttps://go.microsoft.com/fwlink/?LinkId=236893)Microsoft SQL Server 2012 (](https://go.microsoft.com/fwlink/?LinkId=236893).  
   
-##  <a name="step-1-install-powerpivot-for-sharepoint"></a><a name="InstallSQL"></a>Шаг 1: Установка PowerPivot для SharePoint  
+##  <a name="step-1-install-powerpivot-for-sharepoint"></a><a name="InstallSQL"></a>Шаг 1. Установка PowerPivot для SharePoint  
  На этом шаге запускается программа установки SQL Server Setup, чтобы установить сервер [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. На следующем шаге необходимо настроить службы Excel на использование данного сервера для моделей данных книги.  
   
 1.  Запустите мастер установки SQL Server (Setup.exe).  
@@ -99,7 +99,7 @@ ms.locfileid: "81487400"
   
 10. На странице **Роль установки** выберите **SQL Server PowerPivot для SharePoint**. В таком случае устанавливаются службы Analysis Services в режиме интеграции с SharePoint.  
   
-     В установку при необходимости можно добавить экземпляр компонента Database Engine. При настройке новой фермы можно добавить движок базы данных и потребовать сервер арандионных баз данных для запуска базы данных конфигурации и содержимого фермы. В таком случае также устанавливается компонент [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+     В установку при необходимости можно добавить экземпляр компонента Database Engine. Вы можете добавить ядро СУБД при настройке новой фермы и потребовать сервер базы данных для запуска конфигурации и баз данных содержимого фермы. В таком случае также устанавливается компонент [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
      Если добавлен компонент ядра СУБД, то он устанавливается как именованный экземпляр **PowerPivot** . Указывая подключение к этому экземпляру, каждый раз вводите имя базы данных в следующем формате: [`servername`]\PowerPivot.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "81487400"
   
 3.  Подключитесь к экземпляру служб Analysis Services, например к **[имя сервера]\POWERPIVOT**. Если вы можете подключиться к экземпляру, то служба запущена.  
   
-##  <a name="step-2-configure-basic-analysis-services-sharepoint-integration"></a><a name="bkmk_config"></a>Шаг 2: Настройка базовых аналитических услуг SharePoint Интеграция  
+##  <a name="step-2-configure-basic-analysis-services-sharepoint-integration"></a><a name="bkmk_config"></a>Шаг 2. Настройка базовой Analysis Services интеграции с SharePoint  
  Следующие шаги описывают изменения в конфигурации, необходимые для взаимодействия с расширенными моделями данных Excel в библиотеке документов SharePoint. Выполните эти шаги после того, как установите SharePoint Server 2013 и службы SQL Server Analysis Services.  
   
 ### <a name="grant-excel-services-server-administration-rights-on-analysis-services"></a>Предоставление прав администрирования сервером служб Excel в службах Analysis Services  
@@ -175,7 +175,7 @@ ms.locfileid: "81487400"
   
 ### <a name="configure-excel-services-for-analysis-services-integration"></a>Настройка служб Excel для интеграции со службами Analysis Services  
   
-1.  В Центральном управлении SharePoint, в группе управления приложениями, нажмите **На кнопку «Управление сервисом».**  
+1.  В центре администрирования SharePoint в группе Управление приложениями щелкните **Управление приложениями служб**.  
   
 2.  Щелкните имя приложения службы, по умолчанию это **Приложение служб Excel**.  
   
@@ -202,7 +202,7 @@ ms.locfileid: "81487400"
   
     ```  
   
-##  <a name="step-3-verify-the-integration"></a><a name="bkmk_verify"></a>Шаг 3: Проверить интеграцию  
+##  <a name="step-3-verify-the-integration"></a><a name="bkmk_verify"></a>Шаг 3. Проверка интеграции  
  Следующие шаги содержат пошаговые инструкции для создания и передачи новой книги как способа проверки интеграции служб Analysis Services. Для выполнения этих шагов потребуется база данных SQL Server.  
   
 1.  **Примечание:** если уже имеется книга с такими дополнительными функциями, как срезы и фильтры, то вы можете передать ее в библиотеку документов SharePoint и проверить, есть ли возможность взаимодействия со срезами и фильтрами из представления библиотеки документов.  
@@ -242,34 +242,34 @@ ms.locfileid: "81487400"
   
 18. Щелкните название книги для ее просмотра в SharePoint и выберите срез или измените ранее добавленный фильтр. Если произойдет обновление данных, то это означает, что службы Analysis Services установлены и доступны для служб Excel. При открытии книги в Excel будет использоваться кэшированная копия, а не версия с сервера служб Analysis Services.  
   
-##  <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a><a name="bkmk_firewall"></a>Настройка брандмауэра Windows, чтобы обеспечить доступ к службам анализа  
+##  <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a><a name="bkmk_firewall"></a>Настройка брандмауэра Windows на разрешение доступа к Analysis Services  
  Сведения в разделе [Configure the Windows Firewall to Allow Analysis Services Access](../configure-the-windows-firewall-to-allow-analysis-services-access.md) помогут определить, требуется ли разблокировать порты брандмауэра для доступа к службам Analysis Services или PowerPivot для SharePoint. Выполнив шаги, приведенные в этом разделе, можно настроить параметры порта и брандмауэра. На практике, чтобы разрешить доступ к серверу служб Analysis Services, необходимо выполнять эти шаги вместе.  
   
-##  <a name="upgrade-workbooks-and-scheduled-data-refresh"></a><a name="bkmk_upgrade_workbook"></a>Обновление справочников и обновление запланированных данных  
+##  <a name="upgrade-workbooks-and-scheduled-data-refresh"></a><a name="bkmk_upgrade_workbook"></a>Обновление книг и обновление данных по расписанию  
  Шаги, необходимые для обновления книг, созданных в предыдущих версиях PowerPivot, зависят от того, в какой версии PowerPivot создана книга. Дополнительные сведения см. в статье [Обновление книг и запланированное обновление данных (SharePoint 2013 )](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013).  
   
-##  <a name="beyond-the-single-server-installation--powerpivot-for-microsoft-sharepoint"></a><a name="bkmk_multiple_servers"></a>Помимо установки с одним сервером -PowerPivot для Microsoft SharePoint  
+##  <a name="beyond-the-single-server-installation--powerpivot-for-microsoft-sharepoint"></a><a name="bkmk_multiple_servers"></a>Помимо установки одного сервера — PowerPivot для Microsoft SharePoint  
  **Интерфейсный веб-сервер (WFE)** или **сервер среднего уровня:**: для использования сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint в более крупной ферме SharePoint и установки дополнительных средств PowerPivot в ферме запустите пакет установщика **spPowerPivot.msi** на каждом из серверов SharePoint. Пакет spPowerPivot.msi устанавливает необходимые поставщики данных и средство настройки служб PowerPivot для SharePoint 2013.  
   
  Дополнительные сведения об установке и настройке среднего уровня см. в следующем документе:  
   
--   [Установите или удалите PowerPivot для SharePoint Add-in &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)  
+-   [Установка и удаление надстройки PowerPivot для SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)  
   
 -   Чтобы загрузить файл MSI, обратитесь в раздел [Microsoft SQL Server 2014 PowerPivot для Microsoft SharePoint 2013](https://go.microsoft.com/fwlink/?LinkID=324854)  
   
--   [Налаживание решений PowerPivot и развертывании &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)  
+-   [Настройка PowerPivot и развертывание решений &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)  
   
  **Избыточность и загрузка сервера:** установка двух или более серверов [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме SharePoint обеспечивает избыточность функциональности сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Ввод в действие дополнительных серверов приводит к дальнейшему распределению нагрузки между серверами. Дополнительные сведения см. в следующих разделах:  
   
--   [Настройка аналитических служб для обработки моделей данных в Excel Services](https://technet.microsoft.com/library/jj614437\(v=office.15\)) ( .https://technet.microsoft.com/library/jj614437(v=office.15))  
+-   [Настройка Analysis Services для обработки моделей данных в службах Excel](https://technet.microsoft.com/library/jj614437\(v=office.15\)) (https://technet.microsoft.com/library/jj614437(v=office.15)).  
   
--   [Управление настройками модели данных Excel Services (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\)) ( .https://technet.microsoft.com/library/jj219780(v=office.15))  
+-   [Управление параметрами модели данных служб Excel (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\)) (https://technet.microsoft.com/library/jj219780(v=office.15)).  
   
- ![Настройки SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint") [Отправить обратную связь и контактную информацию через Microsoft S'L Server Connect](https://connect.microsoft.com/SQLServer/Feedback) ( .https://connect.microsoft.com/SQLServer/Feedback)  
+ ![Параметры SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint") [отправляют отзывы и контактные данные через Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
 ## <a name="see-also"></a>См. также:  
- [Мигрировать PowerPivot в SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013)   
- [Установите или удалите PowerPivot для SharePoint Add-in &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
- [Обновление справочников и обновление запланированных данных &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013)  
+ [Перенос PowerPivot в SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013)   
+ [Установка и удаление надстройки PowerPivot для SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
+ [Обновление книг и обновление данных по расписанию &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013)  
   
   

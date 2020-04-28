@@ -1,5 +1,5 @@
 ---
-title: Наконфигурните контейнер для петли (ru) Документы Майкрософт
+title: Настройка контейнера «цикл по каждому элементу» | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 766a82c975b607687f79a696ce587422b93322bf
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487002"
 ---
 # <a name="configure-a-for-loop-container"></a>Настройка контейнера «цикл по элементам»
@@ -43,8 +43,8 @@ ms.locfileid: "81487002"
 7.  Щелкните **ОК** , чтобы закрыть **Редактор циклов For**.  
   
 ## <a name="see-also"></a>См. также:  
- [Для контейнера для петли](control-flow/for-loop-container.md)   
- [Интеграционные услуги &#40;&#41; выражения SSIS](expressions/integration-services-ssis-expressions.md)   
+ [Контейнер «цикл по каждому»](control-flow/for-loop-container.md)   
+ [Выражения&#41; Integration Services &#40;SSIS](expressions/integration-services-ssis-expressions.md)   
  [Использование выражений свойств в пакетах](expressions/use-property-expressions-in-packages.md)  
   
   
