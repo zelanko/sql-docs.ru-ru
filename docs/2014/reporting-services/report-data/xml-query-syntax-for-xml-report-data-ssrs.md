@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5f8840e0204847d447ea794e94312221ec1cc72
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380795"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Синтаксис запроса XML для XML-данных отчета (SSRS)
-  В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]можно создавать наборы данных для источников XML-данных. После определения источника данных можно создать запрос для получения набора данных. В зависимости от типа XML-данных, на которые указывает источник данных, этот запрос создается путем включения либо элемента XML `Query`, либо пути к элементу. XML `Query` начинается с тега ** \<>запроса** и включает в себя области имен и элементы XML, которые варьируются в зависимости от источника данных. Путь к элементу не зависит от пространства имен и указывает необходимые узлы и атрибуты узлов в базовых XML-данных при помощи XPath-подобного синтаксиса. Дополнительные сведения о путях к элементу см. в разделе [Синтаксис пути к элементу для XML-данных отчета (службы SSRS)](report-data-ssrs.md).  
+  В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]можно создавать наборы данных для источников XML-данных. После определения источника данных можно создать запрос для получения набора данных. В зависимости от типа XML-данных, на которые указывает источник данных, этот запрос создается путем включения либо элемента XML `Query`, либо пути к элементу. XML- `Query` код начинается с ** \<запроса>** тега и включает пространства имен и XML-элементы, которые зависят от источника данных. Путь к элементу не зависит от пространства имен и указывает необходимые узлы и атрибуты узлов в базовых XML-данных при помощи XPath-подобного синтаксиса. Дополнительные сведения о путях к элементу см. в разделе [Синтаксис пути к элементу для XML-данных отчета (службы SSRS)](report-data-ssrs.md).  
   
  Источник данных XML можно создать для следующих типов XML-данных:  
   
@@ -87,8 +87,8 @@ ms.locfileid: "80380795"
   
 |Элемент XML-запроса|Полученные в результате поля набора данных|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|Значение A: `https://schemas.microsoft.com/..`.<br /><br /> Значение B: `https://schemas.microsoft.com/..`.<br /><br /> Значение C: `https://schemas.microsoft.com/.`..|  
-|\<xmldp:Запрос xmlns:xmldp"https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns"https://schemas.microsoft.com/..." ><br /><br /> \<xmldp:ElementPath>{}Root /ns:Element2/Node\</xmldp:ElementPath><br /><br /> \</xmldp: Запрос>|Значение D<br /><br /> Значение E<br /><br /> Значение F|  
+|\<Query/>|Значение A: `https://schemas.microsoft.com/..`.<br /><br /> Значение б: `https://schemas.microsoft.com/..`.<br /><br /> Значение C: `https://schemas.microsoft.com/.`..|  
+|\<xmldp: запрос xmlns: xmldp = "https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns: NS = "https://schemas.microsoft.com/..." ><br /><br /> \<xmldp: ElementPath>корневой {}/НС: Element2/\<Node/ксмлдп: ElementPath><br /><br /> \</ксмлдп:> запроса|Значение D<br /><br /> Значение E<br /><br /> Значение F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML-документ: DPNamespace.xml  
  Можно скопировать этот XML-документ и сохранить его по URL-адресу, который конструктор отчетов будет использовать в качестве источника XML-данных, например http://localhost/DPNamespace.xml.  
@@ -108,8 +108,8 @@ ms.locfileid: "80380795"
 </Root>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [XML Тип соединения &#40;sSRS&#41;](xml-connection-type-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Тип подключения XML &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
  [Учебники по службам Reporting Services (SSRS)](../reporting-services-tutorials-ssrs.md)  
   
   

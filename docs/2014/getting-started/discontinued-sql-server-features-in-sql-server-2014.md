@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112223"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Функции SQL Server, больше не поддерживаемые в SQL Server 2014
@@ -48,11 +48,11 @@ ms.locfileid: "79112223"
 ### <a name="surface-area-configuration-tool"></a>Средство настройки контактной зоны  
  Поддержка средства настройки контактной зоны в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] прекращена. В следующей таблице показаны средства, с помощью которых можно настраивать параметры и функции компонентов в этой версии.  
   
-|Параметры замены и компоненты|Процесс настройки|  
+|Параметры замены и компоненты|Порядок настройки|  
 |-------------------------------------------------|----------------------|  
 |Протоколы, соединение и параметры запуска|Используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
-|[!INCLUDE[ssDE](../includes/ssde-md.md)]особенностей|Используйте управление на уровне политик, значения свойств в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] или хранимую процедуру sp_Configure.|  
-|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]особенностей|Используйте значения свойств в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|Функции служб [!INCLUDE[ssDE](../includes/ssde-md.md)]|Используйте управление на уровне политик, значения свойств в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] или хранимую процедуру sp_Configure.|  
+|Функции служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Используйте значения свойств в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Службы  — свойство «Включить встроенную безопасность»|Используйте значения свойств в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Службы  — «Планирование событий и доставка отчетов» и «Доступ к веб-службам и HTTP»|Измените файл конфигурации RSReportServer.config.|  
 |Параметры командной строки|В этой версии не поддерживается.|  

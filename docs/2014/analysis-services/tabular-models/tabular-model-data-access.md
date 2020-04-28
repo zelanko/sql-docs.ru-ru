@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a35afb1c1bd38aa123211ae1801d914494aec91
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525475"
 ---
 # <a name="tabular-model-data-access"></a>Доступ к данным табличной модели
@@ -31,17 +31,16 @@ ms.locfileid: "79525475"
  Excel также является рекомендуемым приложением для просмотра табличных моделей в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Это средство включает команду **Анализ в Excel** , которая запускает новый экземпляр Excel, создает книгу Excel и устанавливает подключение к данным между книгой и базой данных рабочей области модели. При просмотре данных табличной модели в Excel следует учитывать, что Excel направляет запросы к модели через клиент сводных таблиц Excel. Соответственно, операции внутри книги Excel приводят к отправке запросов многомерных выражений к базе данных рабочей области, а не запросов DAX. Если для отслеживания запросов используется приложение SQL Profiler или другое средство наблюдения, в трассировке профайлера могут появляться многомерные выражения (MDX), а не выражения DAX. Дополнительные сведения о функции "Анализ в Excel" см. в разделе [Анализ в Excel (табличные службы SSAS)](analyze-in-excel-ssas-tabular.md).  
   
 ### <a name="power-view"></a>Power View  
- 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] — это клиентское приложение для создания отчетов служб Reporting Services, которое выполняется в среде SharePoint 2010. В нем в интегрированной среде нерегламентированных отчетов сочетаются возможности исследования данных, конструктора запросов и создания презентаций. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]может использовать табличные модели в качестве источников данных независимо от того, размещается ли модель на экземпляре Analysis Services, работающем в табличном режиме, или извлекаются из реляционного хранилища данных с помощью режима DirectQuery. Для подключения к табличной модели в [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]необходимо создать файл соединения, содержащий расположение сервера и имя базы данных. В SharePoint можно создать общий источник данных служб Reporting Services или соединение с семантической моделью бизнес-аналитики. Дополнительные сведения о соединениях семантической модели бизнес-аналитики см. в разделе [соединение семантической модели бизнес-аналитики PowerPivot &#40;. bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md).  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] — это клиентское приложение для создания отчетов служб Reporting Services, которое выполняется в среде SharePoint 2010. В нем в интегрированной среде нерегламентированных отчетов сочетаются возможности исследования данных, конструктора запросов и создания презентаций. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] может использовать в качестве источников данных табличные модели, вне зависимости от того, размещена ли модель на экземпляре служб Analysis Services, работающем в табличном режиме, или же данные модели извлекаются из реляционного хранилища данных с использованием режима DirectQuery. Для подключения к табличной модели в [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]необходимо создать файл соединения, содержащий расположение сервера и имя базы данных. В SharePoint можно создать общий источник данных служб Reporting Services или соединение с семантической моделью бизнес-аналитики. Дополнительные сведения о соединениях семантической модели бизнес-аналитики см. в разделе [соединение семантической модели бизнес-аналитики PowerPivot &#40;. bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md).  
   
  Клиент [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] определяет структуру указанной модели, отправляя запрос к указанному источнику данных, возвращающему схему, которая может использоваться клиентом для создания запросов к модели как к источнику данных и выполнения операций на основе этих данных. Последующими операциями в пользовательском интерфейсе [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] для фильтрации данных, выполнения расчетов или агрегатных функций и отображения связанных данных управляет клиент, и программно манипулировать ими нельзя.  
   
- Запросы, отправляемые клиентом [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] к модели, выдаются в виде инструкций DAX, которые можно отслеживать, установив трассировку для модели.  Клиент также выдает запрос серверу на первоначальное определение схемы, которое представляется согласно языку определения концептуальной схемы (CSDL). Дополнительные сведения см. в разделе [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
+ Запросы, отправляемые клиентом [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] к модели, выдаются в виде инструкций DAX, которые можно отслеживать, установив трассировку для модели.  Клиент также выдает запрос серверу на первоначальное определение схемы, которое представляется согласно языку определения концептуальной схемы (CSDL). Дополнительные сведения см. в разделе [Заметки языка CSDL для бизнес-аналитики (CSDLBI)](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  С помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно управлять экземплярами, в которых размещаются табличные модели, а также запрашивать из них метаданные и данные. Можно обрабатывать модели или объекты в модели, создавать секции и управлять ими, а также устанавливать параметры безопасности для управления доступом к данным. Дополнительные сведения см. в следующих разделах:  
   
--   [Определение режима работы сервера для экземпляра Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+-   [Определение режима работы сервера экземпляра служб Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
 -   [Подключение к службам Analysis Services](../instances/connect-to-analysis-services.md)  
   
@@ -74,7 +73,7 @@ ms.locfileid: "79525475"
 ### <a name="csdl"></a>Язык CSDL  
  Язык определения концептуальной схемы (CSDL) сам по себе не является языком запросов, но может использоваться для извлечения сведений о модели и метаданных модели, на основе которых в дальнейшем можно создавать отчеты или запросы к модели.  
   
- Для получения сведений о том, как CSDL используется в табличных моделях, см. раздел [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi).  
+ Для получения сведений о том, как CSDL используется в табличных моделях, см. раздел [Заметки языка CSDL для бизнес-аналитики (CSDLBI)](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi).  
   
 ## <a name="programmatic-interfaces"></a>Программные интерфейсы  
  Интерфейсами участников, используемыми для взаимодействия с табличными моделями служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , являются наборы строк схемы, XMLA, а также клиенты запросов и средства запросов, предоставляемые средами [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -84,13 +83,13 @@ ms.locfileid: "79525475"
   
 -   Пример объекта AMO табличной модели на сайте Codeplex  
   
--   [Используйте динамические административные представления &#40;&#41; DMV для мониторинга Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [Использование динамических административных представлений для мониторинга служб Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  Для поддержки доступа в OLE DB к табличным моделям в неуправляемых клиентских приложениях можно использовать поставщик OLE DB для служб Analysis Services версии 9.0. Для включения доступа к табличной модели требуется обновленная версия поставщика OLE DB для служб Analysis Services. Дополнительные сведения о поставщиках, используемых с табличными моделями, см. в статье [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) .  
   
- Также можно извлечь данные напрямую из экземпляра служб Analysis Services в формате на основе XML. Можно извлечь схему табличной модели с помощью набора строк DISCOVER_CSDL_METADATA или использовать команду EXECUTE либо DISCOVER с существующими элементами ASSL, объектами или свойствами. Для получения дополнительных сведений см. следующие ресурсы:  
+ Также можно извлечь данные напрямую из экземпляра служб Analysis Services в формате на основе XML. Можно извлечь схему табличной модели с помощью набора строк DISCOVER_CSDL_METADATA или использовать команду EXECUTE либо DISCOVER с существующими элементами ASSL, объектами или свойствами. Дополнительные сведения см. в следующих ресурсах:  
   
--   [Аннотации языка CSDL для бизнес-аналитики &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
+-   [Заметки языка CSDL для бизнес-аналитики (CSDLBI)](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="manipulate-analysis-services-objects"></a>Управление объектами служб Analysis Services  
  Можно создавать, изменять, удалять и обрабатывать табличные модели и объекты в них, в том числе таблицы, столбцы, перспективы, меры и секции, с помощью команд XMLA или с помощью объектов AMO. Как объекты AMO, так и XMLA обновлены для поддержки дополнительных свойств, используемых в табличных моделях для усовершенствованной отчетности и моделирования.  
@@ -106,15 +105,15 @@ ms.locfileid: "79525475"
 ### <a name="schema-rowsets"></a>Наборы строк схемы  
  Клиентские приложения могут использовать наборы строк схемы для изучения метаданных табличных моделей и для извлечения сведений в целях поддержки и мониторинга с сервера служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . В данном выпуске SQL Server добавлены новые наборы строк схемы, а существующие расширены для поддержки функций, связанных с табличными моделями, и для усовершенствования мониторинга и анализа производительности по всем службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
--   [DISCOVER_CALC_DEPENDENCY набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)  
+-   [Набор строк DISCOVER_CALC_DEPENDENCY](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)  
   
      Новый набор строк схемы для отслеживания зависимостей между столбцами и ссылками в табличной модели  
   
--   [DISCOVER_CSDL_METADATA набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)  
+-   [Набор строк DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)  
   
      Новый набор строк схемы для получения представления языка CSDL табличной модели  
   
--   [DISCOVER_XEVENT_TRACE_DEFINITION набор строк](../dev-guide/discover-xevent-trace-definition-rowset.md)  
+-   [Набор строк DISCOVER_XEVENT_TRACE_DEFINITION](../dev-guide/discover-xevent-trace-definition-rowset.md)  
   
      Новый набор строк схемы для мониторинга расширенных событий SQL Server. Дополнительные сведения см. [в разделе использование SQL Server расширенных событий &#40;XEvents&#41; для отслеживания Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
   
@@ -122,7 +121,7 @@ ms.locfileid: "79525475"
   
      Новый столбец `Type` позволяет фильтровать трассировки по категориям. Дополнительные сведения см. в разделе [Создание трассировки приложения Profiler для воспроизведения (службы Analysis Services)](../instances/create-profiler-traces-for-replay-analysis-services.md).  
   
--   [MDSCHEMA_HIERARCHIES набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset)  
+-   [Набор строк MDSCHEMA_HIERARCHIES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset)  
   
      Новое перечисление `STRUCTURE_TYPE` поддерживает идентификацию определяемых пользователем иерархий, создаваемых в табличных моделях. Дополнительные сведения см. в разделе [Иерархии (табличные службы SSAS)](hierarchies-ssas-tabular.md).  
   

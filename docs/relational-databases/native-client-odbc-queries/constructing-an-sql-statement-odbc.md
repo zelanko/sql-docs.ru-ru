@@ -1,5 +1,5 @@
 ---
-title: Создание заявления с СЗЛ (ODBC) Документы Майкрософт
+title: Создание инструкции SQL (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eab0db859bbecea43d19b012a56b2e491b4ecfcf
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291517"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>Конструирование инструкций SQL (ODBC)
@@ -35,7 +35,7 @@ ms.locfileid: "81291517"
   
      Инструкции SQL, сформированные во время выполнения, дают возможность пользователю приспосабливать инструкцию, используя широко распространенные предложения, например SELECT, WHERE и ORDER BY. Это включает нерегламентированные запросы, вводимые пользователем.  
   
- Клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC драйвер аранжирует выписки s только для ODBC и [!INCLUDE[ssDE](../../includes/ssde-md.md)]Синтаксис ISO, не поддерживается непосредственно, который драйвер превращает в [!INCLUDE[tsql](../../includes/tsql-md.md)]. Все остальные синтаксиса S'L передаются [!INCLUDE[ssDE](../../includes/ssde-md.md)] в неизменный, где [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет определять, является ли он действительным. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Такой подход имеет следующие два преимущества.  
+ Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC клиента АНАЛИЗИРУЕТ инструкции SQL только для синтаксиса ODBC и ISO [!INCLUDE[ssDE](../../includes/ssde-md.md)], который не поддерживается напрямую, который преобразует драйвер в. [!INCLUDE[tsql](../../includes/tsql-md.md)] Все остальные синтаксисы SQL передаются [!INCLUDE[ssDE](../../includes/ssde-md.md)] в без изменений, где [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определит, является ли он допустимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Такой подход имеет следующие два преимущества.  
   
 -   Сокращение издержек  
   
@@ -43,11 +43,11 @@ ms.locfileid: "81291517"
   
 -   Гибкость  
   
-     Программисты могут адаптировать переносимость своих приложений. Чтобы расширить переносимость для различных баз данных, используется прежде всего синтаксис ODBC и ISO. Для расширений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется соответствующий синтаксис [!INCLUDE[tsql](../../includes/tsql-md.md)]. Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC [!INCLUDE[tsql](../../includes/tsql-md.md)] поддерживает полный синтаксис, чтобы приложения на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]основе ODBC могли воспользоваться всеми функциями в.  
+     Программисты могут адаптировать переносимость своих приложений. Чтобы расширить переносимость для различных баз данных, используется прежде всего синтаксис ODBC и ISO. Для расширений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется соответствующий синтаксис [!INCLUDE[tsql](../../includes/tsql-md.md)]. Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает полный [!INCLUDE[tsql](../../includes/tsql-md.md)] синтаксис, поэтому приложения на основе ODBC могут воспользоваться всеми функциями в. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  Список столбцов в инструкции SELECT должен содержать только столбцы, необходимые для выполнения текущей задачи. Это не только сокращает объем данных, отправляемых по сети, но и снижает эффект изменений в базе данных на приложение. Если приложение не ссылается на столбец в таблице, то оно не затрагивается никакими изменениями, сделанными в этом столбце.  
   
 ## <a name="see-also"></a>См. также:  
- [Выполнение запросов &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [Выполняя запросы &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

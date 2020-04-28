@@ -1,5 +1,5 @@
 ---
-title: Справка по ODBC Документы Майкрософт
+title: Справочник по ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 1ba0f6cc-dfa7-4fe8-8bc2-f862b386156d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: cb7296920987683c97cdd37bb9cb6742ffec9361
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290534"
 ---
 # <a name="odbc-reference"></a>Справочник по ODBC
-Следующие темы содержат синтаксис и семантическую информацию для всех функций ODBC.  
+В следующих разделах содержатся сведения о синтаксисе и семантической информации для всех функций ODBC.  
   
 -   [Сводка по функциям](../../../odbc/reference/syntax/function-summary.md)  
   
@@ -29,8 +29,8 @@ ms.locfileid: "81290534"
   
 -   [Справочник по API библиотеки DLL установки](../../../odbc/reference/syntax/setup-dll-api-reference.md)  
   
--   [Ссылка на API установки DLL](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)  
+-   [Справочник по API DLL установщика](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)  
   
--   [Справка о функции перевода DLL](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
+-   [Справочник по функциям DLL преобразования](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
   
 -   [Справочник по интерфейсу службы доступа (SPI) ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)

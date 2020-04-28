@@ -11,10 +11,10 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289782"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Установка и настройка Master Data Services
@@ -24,8 +24,7 @@ ms.locfileid: "79289782"
   В этой статье рассматривается установка [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на компьютере под управлением Windows Server 2012 R2, настройка базы данных и веб-сайта MDS, а также развертывание образцов моделей и данных. Службы[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) позволяют организациям управлять надежной версией данных.   
   
 > [!NOTE] 
-> 
-  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] можно установить на компьютере Windows 10 при использовании выпуска Developer, который теперь поддерживает [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. 
+> [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] можно установить на компьютере Windows 10 при использовании выпуска Developer, который теперь поддерживает [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. 
 >>Дополнительные сведения о поддержке операционных систем для различных выпусков [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
 
 Общие сведения об упорядочении данных в [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]см. в разделе [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).     
@@ -34,31 +33,29 @@ ms.locfileid: "79289782"
  
 Ссылки на видео и другие обучающие ресурсы, которые помогут ознакомиться с [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], см. в разделе [Изучение служб Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
-> **Загрузить**  
-> -   Чтобы скачать [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** .  
+> **Скачать**  
+> -    Чтобы скачать [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], перейдите в  **[Центр пробного ПО](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
 > -   Есть учетная запись Azure?  Тогда перейдите **[сюда](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** , чтобы запустить виртуальную машину с уже установленным SQL Server.  
 > 
 > **Не удается создать веб-сайт MDS?**
 > >Инструкции по решению этой проблемы см. в этой статье службы поддержки Майкрософт.
-> [Не удается создать веб-сайт MDS с учетной записью с низким уровнем прав в SQL Server 2016](https://aka.ms/mdssupport) 
+> [Не удается создать веб-сайт MDS с помощью учетной записи с ограниченными правами доступа в SQL Server 2016](https://aka.ms/mdssupport) 
 
 ## <a name="internet-explorer-and-silverlight"></a>Internet Explorer и Silverlight
 - При установке [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на компьютер под управлением ОС Windows Server 2012 может понадобиться настроить улучшенную безопасность в Internet Explorer, чтобы разрешить использование скриптов на сайте веб-приложения. Без этого просмотр сайта на серверном компьютере работать не будет.
 - Для работы в веб-приложении на клиентском компьютере необходимо установить Silverlight 5. Если требуемая версия Silverlight отсутствует, то при переходе к той части веб-приложения, которая использует Silverlight, программа предложит установить Silverlight. Вы можете установить Silverlight 5 **[с этой веб-страницы](https://www.microsoft.com/silverlight/)**.
 
-## <a name="ssmdsshort_md-on-an-azure-virtual-machine"></a>
-  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на виртуальной машине Azure
+## <a name="ssmdsshort_md-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на виртуальной машине Azure
 По умолчанию при запуске [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] уже установленной [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] виртуальной машины Azure также устанавливается. 
 
 Далее следует установить службы IIS. См. раздел [Установка и настройка служб IIS](#InstallIIS). 
 
 Если вы хотите внести изменения в установку [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)], найдите файл setup.exe в папке по умолчанию `<drive>`:\SQLServer_13.0_Full.
   
-## <a name="InstallMDS"></a>Установка Master Data Services  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] можно установить с помощью мастера установки [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]или командной строки.  
+## <a name="installing-master-data-services"></a><a name="InstallMDS"></a> Установка служб Master Data Services  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] можно установить с помощью мастера установки [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]или командной строки.  
   
- **Установка [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] с помощью [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] программы установки на компьютере под Windows Server 2012 R2**  
+ **Установка [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] с помощью программы установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на компьютере под управлением Windows Server 2012 R2**  
   
 1.  Дважды щелкните файл Setup.exe и следуйте инструкциям мастера установки.  
   
@@ -70,7 +67,7 @@ ms.locfileid: "79289782"
   
 3.  Завершите работу мастера установки.  
 
-## <a name="InstallIIS"></a>Установка и Настройка служб IIS
+## <a name="installing-and-configuring-iis"></a><a name="InstallIIS"></a> Установка и настройка служб IIS
   
 1.  В [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)]щелкните значок **Диспетчер серверов** на панели задач **рабочего стола**.  
   
@@ -116,14 +113,14 @@ ms.locfileid: "79289782"
   
  Краткое описание со ссылками на дополнительные сведения о предварительных задачах перед установкой см. в разделе [Установка служб Master Data Services](../master-data-services/install-windows/install-master-data-services.md).  
   
-##  <a name="SetUpWeb"></a>Настройка базы данных и веб-сайта  
+##  <a name="setting-up-the-database-and-website"></a><a name="SetUpWeb"></a> Настройка базы данных и веб-сайта  
  **Настройка базы данных и веб-сайта с помощью[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]**  
 
  
 > [!WARNING]
 >  Необходимо [установить службы IIS](#InstallIIS) перед запуском [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager. В противном случае Configuration Manager выведет ошибку служб IIS и вы не сможете создать веб-приложение [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].  
 > 
-> **Требование к браузеру**
+> **Требование браузера**
 > >Веб-приложение [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] работает только в Internet Explorer (IE) 9 или более поздней версии. Internet Explorer 8 и более ранние версии, а также Microsoft Edge и Chrome не поддерживаются.    
   
 1.  Запустите [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]и щелкните **Настройка базы данных** в области слева.  
@@ -144,7 +141,7 @@ ms.locfileid: "79289782"
     >В управляемом экземпляре базы данных SQL Azure пользователь должен быть членом `sysadmin` предопределенной роли сервера.
 
     > [!NOTE]  
-    >  Если выбран тип проверки подлинности **Текущий пользователь — встроенная безопасность**, поле **Имя пользователя** доступно только для чтения и содержит имя текущей учетной записи пользователя Windows. Если вы используете [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на виртуальной машине Azure, в поле **Имя пользователя** отображается имя виртуальной машины и имя пользователя для учетной записи локального администратора виртуальной машины. 
+    >  При выборе параметра **текущая пользовательская** встроенная безопасность в качестве типа проверки подлинности поле **имя пользователя** доступно только для чтения и отображает имя учетной записи пользователя Windows, выполнившего вход на компьютер. Если вы используете [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на виртуальной машине Azure, в поле **Имя пользователя** отображается имя виртуальной машины и имя пользователя для учетной записи локального администратора виртуальной машины. 
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
@@ -215,8 +212,8 @@ ms.locfileid: "79289782"
   
  Также можно использовать [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] для указания других параметров веб-приложений и служб, связанных с базой данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . К примеру, можно указать, как часто загружаются данные или как часто отправляются сообщения проверки. Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
   
-##  <a name="deploySample"></a>Развертывание образцов моделей и данных  
- В состав  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]входят три перечисленных ниже пакета с образцами моделей.   Эти образцы моделей включают в себя данные. **Расположением по умолчанию для пакетов образцов моделей является%programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages.**
+##  <a name="deploying-sample-models-and-data"></a><a name="deploySample"></a> Развертывание образцов моделей и данных  
+ В состав  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]входят три перечисленных ниже пакета с образцами моделей.   Эти образцы моделей включают в себя данные. **Расположение по умолчанию для пакетов с образцами моделей: %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages.**
   
 -   chartofaccounts_en.pkg  
   
@@ -255,19 +252,19 @@ ms.locfileid: "79289782"
     > Дополнительные сведения о метаданных образцов моделей см. в файле сведений в расположении "c:\Program Files\Microsoft SQL Server\140\Master Data Services\Configuration".
     >
    
-     **Развертывание образца модели chartofaccounts_en. pkg**  
+     **Развертывание образца модели chartofaccounts_en.pkg**  
   
     ```  
     MDSModelDeploy deploynew -package chartofaccounts_en.pkg -model ChartofAccounts -service MDS1  
     ```  
   
-     **Развертывание образца модели customer_en. pkg**  
+     **Развертывание образца модели customer_en.pkg**  
   
     ```  
     MDSModelDeploy deploynew -package customer_en.pkg -model Customer -service MDS1  
     ```  
   
-     **Развертывание образца модели product_en. pkg**  
+     **Развертывание образца модели product_en.pkg**  
   
     ```  
     MDSModelDeploy deploynew -package product_en.pkg -model Product -service MDS1  
@@ -290,7 +287,7 @@ ms.locfileid: "79289782"
   
          ![Веб-сайт MDS, Домашняя страница.](../master-data-services/media/mds-mdswebsite-homepage-selectsamplemodel.png "Веб-сайт MDS, Домашняя страница.")  
   
-## <a name="next-step"></a>Дальнейшее действие  
+## <a name="next-step"></a>Следующий шаг  
  Создайте модель и сущности для данных. См. разделы [Создание модели (службы Master Data Services)](../master-data-services/create-a-model-master-data-services.md) и [Создание сущности (службы Master Data Services)](../master-data-services/create-an-entity-master-data-services.md).  
   
  Общие сведения об использовании модели и сущностей для создания структуры данных в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] см. в разделе [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
@@ -299,6 +296,6 @@ ms.locfileid: "79289782"
  [База данных Master Data Services](../master-data-services/master-data-services-database.md)   
  [Веб-приложение диспетчер основных данных](../master-data-services/master-data-manager-web-application.md)   
  [Страница конфигурации базы данных &#40;диспетчер конфигурации Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [Новые возможности Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
+ [Новые возможности Master Data Services (MDS)](../master-data-services/what-s-new-in-master-data-services-mds.md)  
   
   

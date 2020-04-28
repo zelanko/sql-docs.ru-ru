@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289702"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Предоставление разрешений T-SQL для параллельного хранилища данных
@@ -146,7 +146,7 @@ GRANT CONTROL ON DATABASE:: AdventureWorksPDW2012 TO KimAbercrombie;
 ## <a name="grant-permissions-to-manage-logins-users-and-database-roles"></a>Предоставление разрешений на управление именами входа, пользователями и ролями базы данных
 В этом разделе описано, как предоставить разрешения на управление именами входа, пользователями базы данных и ролями базы данных.  
   
-### <a name="PermsAdminConsole"></a>Предоставление разрешений на управление именами входа  
+### <a name="grant-permissions-to-manage-logins"></a><a name="PermsAdminConsole"></a>Предоставление разрешений на управление именами входа  
 **Добавление имен для входа или управление ими**  
   
 Приведенные ниже инструкции SQL создают имя входа с именем Кимаберкромбие, которое может создавать новые имена входа с помощью инструкции [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) и ALTER existing, используя инструкцию [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md) .  
@@ -220,7 +220,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 ## <a name="grant-permissions-to-monitor-the-appliance"></a>Предоставление разрешений для мониторинга устройства
 Устройство SQL Server PDW можно отслеживать с помощью консоли администрирования или системных представлений SQL Server PDW. Для входа требуется разрешение на **Просмотр состояния сервера** на уровне сервера для мониторинга устройства. Для имен входа требуется разрешение **ALTER ANY Connection** для завершения подключений с помощью консоли администрирования или команды **Kill** . Сведения о разрешениях, необходимых для использования консоли администрирования, см. [в разделе Предоставление разрешений на использование консоли администрирования &#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console).  
   
-### <a name="PermsAdminConsole"></a>Предоставление разрешения на мониторинг устройства с помощью системных представлений  
+### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views"></a><a name="PermsAdminConsole"></a>Предоставление разрешения на мониторинг устройства с помощью системных представлений  
 Следующие инструкции SQL создают имя входа `monitor_login` и предоставляют разрешение **View Server State** для `monitor_login` имени входа.  
   
 ```sql  
@@ -245,8 +245,8 @@ GO
   
 Сведения о создании имен входа администратора см. в разделе Предопределенные [роли сервера](pdw-permissions.md#fixed-server-roles).  
   
-## <a name="see-also"></a>См. также раздел
-[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
+## <a name="see-also"></a>См. также
+[СОЗДАТЬ ИМЯ ДЛЯ ВХОДА](../t-sql/statements/create-login-transact-sql.md)  
 [СОЗДАНИЕ ПОЛЬЗОВАТЕЛЯ](../t-sql/statements/create-user-transact-sql.md)  
 [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
 [Загрузить](load-overview.md)  

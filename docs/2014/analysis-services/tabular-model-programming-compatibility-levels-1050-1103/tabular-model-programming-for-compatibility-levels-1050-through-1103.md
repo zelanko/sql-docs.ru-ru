@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c9b04245e14be67242d5cd1ea6d257ac4fc6038
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525435"
 ---
 # <a name="tabular-model-programming"></a>Программирование табличных моделей
@@ -24,8 +24,8 @@ ms.locfileid: "79525435"
   
  В этом разделе приведены дополнительные сведения о том, как программным образом работать с сущностями табличной модели и их свойствами.  
   
-## <a name="in-this-section"></a>в этом разделе  
- [Аннотации языка CSDL для бизнес-аналитики &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Заметки языка CSDL для бизнес-аналитики (CSDLBI)](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [Основные сведения о табличной объектной модели](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   

@@ -18,10 +18,10 @@ ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b0c847215d31bd2064467c3edbce42ba957c2e78
-ms.sourcegitcommit: f7af758b353b53ac3b596d79fd6e32ad7e1e61cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79448330"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
@@ -60,7 +60,7 @@ sp_change_users_login [ @Action = ] 'action'
  Имя пользователя в текущей базе данных. Аргумент *User* имеет тип **sysname**и значение по умолчанию NULL.  
   
  [ @LoginName= ] "*Login*"  
- Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аргумент *Login* имеет тип **sysname**и значение по умолчанию NULL.  
+ Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL.  
   
  [ @Password= ] "*пароль*"  
  Пароль, назначенный новому [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа, которое создается путем указания **Auto_Fix**. Если совпадающее имя входа уже существует, пользователь и имя входа сопоставляются, а *пароль* игнорируется. Если соответствующее имя входа не существует, sp_change_users_login создает новое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа и присваивает ему пароль *в качестве пароля* для нового имени входа. Аргумент *Password* имеет тип **sysname**и не должен иметь значение null.  
@@ -68,14 +68,14 @@ sp_change_users_login [ @Action = ] 'action'
 > **ВАЖНО!** Всегда используйте [надежный пароль!](../../relational-databases/security/strong-passwords.md)
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |UserName|**sysname**|Имя пользователя базы данных.|  
-|UserSID|**varbinary (85)**|Идентификатор защиты пользователя.|  
+|UserSID|**varbinary(85)**|Идентификатор защиты пользователя.|  
   
 ## <a name="remarks"></a>Remarks  
  Используйте процедуру sp_change_users_login, чтобы связать пользователя базы данных в текущей базе данных с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если имя входа для пользователя изменилось, используйте процедуру sp_change_users_login, чтобы связать пользователя с новым именем входа без потери пользовательских разрешений. Новое *имя входа* не может быть SA, а *пользователь* не может быть dbo, Guest или INFORMATION_SCHEMA пользователем.  
@@ -98,7 +98,7 @@ sp_change_users_login [ @Action = ] 'action'
 EXEC sp_change_users_login 'Report';  
 ```  
   
-### <a name="b-mapping-a-database-user-to-a-new-sql-server-login"></a>Б. Сопоставление пользователя базы данных новому имени входа SQL Server  
+### <a name="b-mapping-a-database-user-to-a-new-sql-server-login"></a>Б) Сопоставление пользователя базы данных новому имени входа SQL Server  
  В следующем примере пользователь базы данных будет связан с новым именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Пользователь базы данных `MB-Sales`, который сначала был сопоставлен с другим именем входа, будет повторно сопоставлен с именем входа `MaryB`.  
   
 ```  
@@ -124,7 +124,7 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)   
+ [Создание имени входа &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

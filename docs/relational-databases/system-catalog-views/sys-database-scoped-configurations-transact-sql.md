@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
 ms.openlocfilehash: a463fea7a70b5e01c26a6ff5e93c1c8c1dab32ea
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78288946"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys. database_scoped_configurations (Transact-SQL)
@@ -31,18 +31,18 @@ ms.locfileid: "78288946"
 
 Содержит по одной строке для каждой конфигурации. 
 
-|Имя столбца|Тип данных|Description|
+|Имя столбца|Тип данных|Описание|
 |-----------------|---------------|-----------------|
 |**configuration_id**|**int**|Идентификатор параметра конфигурации.|
-|**name**|**nvarchar (60)**|Имя параметра конфигурации. Дополнительные сведения о возможных конфигурациях см. в разделе [ALTER DATABASE scoped CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
+|**name**|**nvarchar(60)**|Имя параметра конфигурации. Дополнительные сведения о возможных конфигурациях см. в разделе [ALTER DATABASE scoped CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 |**value**|**SQLVARIANT**|Значение, заданное для параметра конфигурации первичной реплики.|
 |**value_for_secondary**|**SQLVARIANT**|Значение, заданное для параметра конфигурации вторичных реплик.|
 |**is_value_default**|**bit** |Указывает, является ли набор значений значением по умолчанию.|
 |**dw_compatibility_level**|**int**|Уровень совместимости (Предварительная версия) базы данных.  Значение по умолчанию — 0 (авто)|
 
-## <a name="Permissions"></a> Permissions
+## <a name="permissions"></a><a name="Permissions"></a> Permissions
 
-Требуется членство в роли **Public** .
+Необходимо быть членом роли **public**.
 
 ## <a name="remarks"></a>Remarks
 

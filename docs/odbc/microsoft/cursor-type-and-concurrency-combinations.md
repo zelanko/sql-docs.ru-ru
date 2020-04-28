@@ -1,5 +1,5 @@
 ---
-title: Тип курзора и комбинации параллелизмов Документы Майкрософт
+title: Сочетания типа курсора и параллелизма | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,27 +16,27 @@ ms.assetid: db63d610-f86f-4029-9d66-fed616c8a818
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b6397b5d675546bf41102f037b68c0022bec74df
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81280774"
 ---
 # <a name="cursor-type-and-concurrency-combinations"></a>Сочетания типов курсора и параллелизма
 > [!IMPORTANT]  
->  Эта функция будет удалена в будущей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставленный Oracle.  
+>  Эта функция будет удалена в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемый Oracle.  
   
- Типы cursor контролируют функциональность курсора, предоставленного пользователю. Параметры параллелизма контролируют updatability и блокирующее поведение набора результатов.  
+ Типы курсоров управляют функциональными возможностями курсора, предоставленного пользователю. Параметры параллелизма управляют поведением обновления и блокировки результирующего набора.  
   
-|Тип курсора|Параллель (разрешенные значения)|  
+|Тип курсора|Параллелизм (допустимые значения)|  
 |-----------------|------------------------------------|  
 |SQL_CURSOR_FORWARD_ONLY|SQL_CONCUR_READ_ONLY|  
 |SQL_CURSOR_STATIC|SQL_CONCUR_READ_ONLY|  
 |SQL_CURSOR_KEYSET_DRIVEN<sup>[1]</sup>|SQL_CONCUR_READ_ONLY SQL_CONCUR_LOCK<sup>[2]</sup> SQL_CONCUR_VALUES|  
   
- <sup>Смотрите</sup> ограничения [использования Курсоров Ключ-Управляемых.](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)  
+ <sup>[1]</sup> см. [ограничения при использовании курсоров, управляемых набором ключей](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md).  
   
- <sup>SQL_CONCUR_LOCK</sup> поддерживается только тогда, когда опция SQL_AUTOCOMMIT подключения установлена на SQL_AUTOCOMMIT_OFF.  
+ <sup>[2]</sup> SQL_CONCUR_LOCK поддерживается, только если для параметра подключения SQL_AUTOCOMMIT установлено значение SQL_AUTOCOMMIT_OFF.  
   
 ## <a name="see-also"></a>См. также:  
  [Параметры подключения](../../odbc/microsoft/connect-options.md)

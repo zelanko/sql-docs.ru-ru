@@ -1,5 +1,5 @@
 ---
-title: СЗЛСтатистика Документы Майкрософт
+title: SQLStatistics | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2aa220cc17ac3e224037aecfda752f3276830dc2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291895"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
@@ -27,7 +27,7 @@ ms.locfileid: "81291895"
   Функция**SQLStatistics** может быть выполнена для статического курсора. Попытка выполнения функции **SQLStatistics** для обновляемого (управляемого набором ключей или динамического) курсора возвращает SQL_SUCCESS_WITH_INFO, определяющий изменение типа курсора.  
   
 ## <a name="see-also"></a>См. также:  
- [Функция S'LСтатистика](https://go.microsoft.com/fwlink/?LinkId=59372)   
+ [Функция SQLStatistics](https://go.microsoft.com/fwlink/?LinkId=59372)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Распределение и освобождение дескрипторов Документы Майкрософт
+title: Выделение и освобождение дескрипторов | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: c615ab7a-f631-4783-a37f-d429873b6047
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 692c339af26b96aef3ffe4ba20f592c49b05d85e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81288322"
 ---
 # <a name="allocating-and-freeing-descriptors"></a>Выделение и освобождение дескрипторов
-Дескрипторы либо неявно, либо явно распределяются, как описано в следующих разделах.  
+Дескрипторы явно или неявно выделяются, как описано в следующих разделах.  
   
 -   [Неявно выделенные дескрипторы](../../../odbc/reference/develop-app/implicitly-allocated-descriptors.md)  
   

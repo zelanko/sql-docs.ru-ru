@@ -35,10 +35,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 671dc9c8a0091a2fb14a4aa1c42ea8246b376c7a
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112269"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Вставка данных с помощью диаграмм обновления XML (SQLXML 4.0)
@@ -92,7 +92,7 @@ ms.locfileid: "79112269"
   
 -   В большинстве примеров задействован образец базы данных [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]. Все обновления применяются к таблицам в этой базе данных.  
   
-### <a name="a-inserting-a-record-by-using-an-updategram"></a>A. Вставка записи с помощью диаграммы обновления  
+### <a name="a-inserting-a-record-by-using-an-updategram"></a>А) Вставка записи с помощью диаграммы обновления  
  Эта диаграмма обновления с атрибутивной моделью вставляет запись в таблицу HumanResources.Employee в базе данных [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)].  
   
  В этом примере диаграмма обновления не указывает схему сопоставления. Следовательно, диаграмма обновления использует сопоставление по умолчанию, при котором имя элемента сопоставляется с именем таблицы, а атрибуты или дочерние элементы сопоставляются со столбцами таблицы.  
@@ -158,7 +158,7 @@ ms.locfileid: "79112269"
 </ROOT>  
 ```  
   
-### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>Б. Вставка нескольких записей с помощью диаграммы обновления  
+### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>Б) Вставка нескольких записей с помощью диаграммы обновления  
  Данная диаграмма обновления добавляет две новые записи о сменах в таблицу HumanResources.Shift. Диаграмма обновления не указывает дополнительный ** \<блок Before>** .  
   
 ```  

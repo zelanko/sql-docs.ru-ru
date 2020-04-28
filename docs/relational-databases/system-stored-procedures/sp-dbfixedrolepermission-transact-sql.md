@@ -18,10 +18,10 @@ ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2a51fcc7108c7f6af6237d77cbad73c87ed7c6e6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78180119"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
@@ -45,11 +45,11 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 `[ @rolename = ] 'role'`Имя допустимой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предопределенной роли базы данных. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. Если *роль* не указана, отображаются разрешения для всех предопределенных ролей базы данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|Имя предопределенной роли базы данных|  
 |**Разрешение**|**nvarchar (70)**|Разрешения, связанные с **дбфикседроле**|  
@@ -64,8 +64,8 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |**db_securityadmin**|Администраторы безопасности базы данных|  
 |**db_ddladmin**|Администраторы языка определения данных (DDL)|  
 |**db_backupoperator**|Операторы резервного копирования базы данных|  
-|**db_datareader;**|Модули чтения данных из базы данных|  
-|**db_datawriter.**|Модули записи данных в базу данных|  
+|**db_datareader**|Модули чтения данных из базы данных|  
+|**db_datawriter**|Модули записи данных в базу данных|  
 |**db_denydatareader**|Модули чтения данных из базы данных, которым отказано в доступе|  
 |**db_denydatawriter**|Модули записи данных в базу данных, которым отказано в доступе|  
   
@@ -74,7 +74,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
  В результирующий набор входят инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)], которые могут быть выполнены, и другие особые действия, которые могут быть выполнены членами роли базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в роли **Public** .  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
  Следующий запрос возвращает разрешения для всех предопределенных ролей базы данных, так как не указывает предопределенную роль базы данных.  
@@ -90,6 +90,6 @@ GO
  [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helpdbfixedrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
  [sp_srvrolepermission &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

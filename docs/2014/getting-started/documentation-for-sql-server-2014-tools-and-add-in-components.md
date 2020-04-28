@@ -1,5 +1,5 @@
 ---
-title: Документация для инструментов и надсмных компонентов S'L Server 2014 Документы Майкрософт
+title: Документация по средствам SQL Server 2014 и компонентам надстроек | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/27/2020
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b79bc4a06b7a69b4c19946c08de63f1dbfebf72b
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80402568"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>Документация по компонентам средств и надстроек SQL Server 2014
@@ -25,7 +25,7 @@ ms.locfileid: "80402568"
 |||  
 |-|-|  
 |**Инструмент**|**Описание**|  
-|[Диспетчер конфигураций](../relational-databases/sql-server-configuration-manager.md)|Диспетчер конфигураций — это средство, предназначенное для управления службами, связанными с SQL Server, настройки сетевых протоколов, которые используются SQL Server, а также для управления конфигурацией подключений с клиентских компьютеров SQL Server.|  
+|[Configuration Manager](../relational-databases/sql-server-configuration-manager.md)|Диспетчер конфигураций — это средство, предназначенное для управления службами, связанными с SQL Server, настройки сетевых протоколов, которые используются SQL Server, а также для управления конфигурацией подключений с клиентских компьютеров SQL Server.|  
 |[Помощник по обновлению SQL Server 2014](../sql-server/install/sql-server-2014-upgrade-advisor.md)|Помощник по обновлению [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] анализирует конфигурацию установленных компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и создает отчет о проблемах, которые необходимо решить, чтобы обеспечить успешное обновление.|  
 |[Надстройки интеллектуального анализа данных Microsoft SQL Server для Office 2013](https://go.microsoft.com/fwlink/?LinkId=299178)|Надстройки для интеллектуального анализа данных — это упрощенный набор средств для прогнозирующего анализа, позволяющий использовать данные в Excel для построения аналитических моделей для прогнозирования, рекомендации и исследования.|  
 |[Конструктор системы отслеживания измененных данных для Oracle](https://go.microsoft.com/fwlink/?LinkId=299179)|Конструктор системы отслеживания измененных данных для Oracle используется для разработки и обслуживания экземпляров Oracle CDC.|  
@@ -35,5 +35,5 @@ ms.locfileid: "80402568"
 |[Драйвер Microsoft ODBC 11 для SQL Server в Windows](https://go.microsoft.com/fwlink/?LinkId=299183)|Драйвер Microsoft ODBC 11 для Windows — это изолированный драйвер, предоставляющий программный интерфейс (API), который реализует стандартные интерфейсы ODBC для Microsoft Windows.|  
 |[Power Pivot для SharePoint](https://go.microsoft.com/fwlink/?LinkId=299184)|Power Pivot для SharePoint представляет собой сервер служб Analysis Services, запущенный в режиме интеграции с SharePoint.|  
   
-## <a name="see-also"></a>См. также  
- [Документация по серверу 2014](../2014-toc/index.yml)  
+## <a name="see-also"></a>См. также:  
+ [Документация по SQL Server 2014](../2014-toc/index.yml)  

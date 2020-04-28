@@ -1,5 +1,5 @@
 ---
-title: Соображения программирования (ru) Документы Майкрософт
+title: Вопросы программирования | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 22f71822847d72751ba3c2e5bec2f8e7ce776bd0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81282184"
 ---
 # <a name="programming-considerations"></a>Замечания по программированию
-В этом разделе кратко рассматриваются ряд тем, связанных с написанием приложений ODBC и драйверов.  
+В этом разделе кратко рассматриваются некоторые темы, связанные с написанием приложений и драйверов ODBC.  
   
  Этот раздел содержит следующие подразделы.  
   
 -   [Многопоточность](../../../odbc/reference/develop-app/multithreading.md)  
   
--   [Трассы](../../../odbc/reference/develop-app/alignment.md)  
+-   [Выравнивание](../../../odbc/reference/develop-app/alignment.md)  
   
 -   [Юникод](../../../odbc/reference/develop-app/unicode.md)  
   

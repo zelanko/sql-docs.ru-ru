@@ -1,5 +1,5 @@
 ---
-title: ОДБК Побег Последовательности (ru) Документы Майкрософт
+title: Escape-последовательности ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 646d5f0b-df0c-47a6-a630-99cac1026a4c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b32d12cc6be2814198160ce95cb8153227c19aa9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81287574"
 ---
 # <a name="odbc-escape-sequences"></a>Escape-последовательности ODBC
-Следующие последовательности побега используются в ODBC. Грамматика в этом разделе использует некоторые элементы, определенные в [элементах, используемых в заявлениях S'L.](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)  
+В ODBC используются следующие escape-последовательности. В грамматике в этом разделе используются некоторые элементы, определенные в [элементах, используемых в инструкциях SQL](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md).  
   
  Этот раздел содержит следующие подразделы.  
   

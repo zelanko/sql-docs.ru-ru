@@ -1,5 +1,5 @@
 ---
-title: Поддержка больших UdTs (ru) Документы Майкрософт
+title: Поддержка больших определяемых пользователем типов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ebd3d8439b70930039ec6fee37c7195dbb23ca0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81281788"
 ---
 # <a name="support-for-large-udts"></a>Поддержка больших, определяемых пользователем типов
@@ -25,12 +25,12 @@ ms.locfileid: "81281788"
   
  С версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , вышедшими до [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], образец работать не будет.  
   
- Для получения дополнительной информации о поддержке больших UDTs см [&#41;&#40;. ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
+ Дополнительные сведения о поддержке больших определяемых пользователем типов см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="example"></a>Пример  
  Первым листингом кода является исходный код на C#. Вставьте его в файл LargeStringUDT.cs и скомпилируйте его в DLL-библиотеку. Скопируйте файл LargeStringUDT.dll в корневой каталог диска C.  
   
- Второй () [!INCLUDE[tsql](../../includes/tsql-md.md)]код-объявление создает сборку в основной базе данных.  
+ Второй листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)]() создает сборку в базе данных master.  
   
  Скомпилируйте второй листинг кода (C++) с библиотеками odbc32.lib и user32.lib. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81281788"
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
- Четвертый () [!INCLUDE[tsql](../../includes/tsql-md.md)]список кода удаляет сборку из основной базы данных.  
+ Четвертый листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)]() удаляет сборку из базы данных master.  
   
 ```  
 // LargeStringUDT.cs  

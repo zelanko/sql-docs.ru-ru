@@ -1,5 +1,5 @@
 ---
-title: Другие детали программирования драйверов доступа (ru) Документы Майкрософт
+title: Другие сведения о программировании драйверов доступа | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: cbd46df1-cc6d-4fd4-b401-c68ca85e15c6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1cb186d262114e46a98a2ad72f9707e682b7b5bf
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291094"
 ---
 # <a name="other-access-driver-programming-details"></a>Другие сведения о программировании драйверов для Access
 > [!NOTE]  
->  В этом разделе содержится информация о функциях ODBC и других деталях программирования. Для получения общей информации о функции, см. [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)  
+>  В этом разделе содержатся сведения о функциях ODBC и другие сведения о программировании, относящиеся к драйверу. Общие сведения о функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Этот раздел содержит следующие подразделы.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Шаг 2: Инициализация приложения Документы Майкрософт'
+title: Шаг 2. Инициализация приложения | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: 23a7a230-ae2c-4a5e-9760-d2e17f92c389
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 843155ba6b641ea26717e63af55c8774f963a800
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81288270"
 ---
 # <a name="step-2-initialize-the-application"></a>Шаг 2. Инициализация приложения
-Вторым шагом является инициализация приложения, как показано на следующей иллюстрации. Именно то, что делается здесь, зависит от приложения.  
+Второй шаг — инициализация приложения, как показано на следующем рисунке. Именно то, что здесь делается, зависит от приложения.  
   
  ![Инициализация приложения ODBC](../../../odbc/reference/develop-app/media/pr12.gif "pr12")  
   
- На данный момент, как обычно, используется **S'LGetInfo,** чтобы обнаружить возможности драйвера. Для получения дополнительной информации [см.](../../../odbc/reference/develop-app/considering-database-features-to-use.md)  
+ На этом этапе часто используется **SQLGetInfo** для обнаружения возможностей драйвера. Дополнительные сведения см. [в разделе рассмотрение функций базы данных для использования](../../../odbc/reference/develop-app/considering-database-features-to-use.md).  
   
- Все приложения должны выделять ручку оператора с **помощью s'LAllocHandle,** а многие атрибуты оператора, например тип курсора, должны выделять с **помощью S'LSetStmtAttr.** Для получения дополнительной [Allocating a Statement Handle](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md) [информации](../../../odbc/reference/develop-app/statement-attributes.md)см.
+ Все приложения должны выделить маркер инструкции с помощью **функцию SQLAllocHandle**, и многие приложения устанавливают атрибуты инструкций, например тип курсора, с помощью **SQLSetStmtAttr**. Дополнительные сведения см. [в разделе Выделение маркера инструкции](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md) и [атрибутов инструкции](../../../odbc/reference/develop-app/statement-attributes.md).

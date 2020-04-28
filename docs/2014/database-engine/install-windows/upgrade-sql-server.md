@@ -13,16 +13,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eed1d8d35f7b23fd93b7cfb8046e0d6115483ad5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217133"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>Обновление до SQL Server 2014
   Экземпляры [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] можно обновить до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Перед запуском программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]просмотрите [техническое руководство по обновлению SQL Server 2014](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf) (загружается в формате PDF), ознакомьтесь со статьями о процессе обновления в этом разделе и прочитайте [заметки о выпуске SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  В этом разделе рассматриваются следующие вопросы.  
   
 -   [Поддерживаемые обновления версий и выпусков](supported-version-and-edition-upgrades.md)  
@@ -54,7 +54,7 @@ ms.locfileid: "79217133"
 ## <a name="see-also"></a>См. также:  
  [ядро СУБД обновления](upgrade-database-engine.md)   
  [Analysis Services обновления](upgrade-analysis-services.md)   
- [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [Обновление и миграция Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [Integration Services обновления](../../integration-services/install-windows/upgrade-integration-services.md)   
  [Обновление реплицированных баз данных](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Master Data Services обновления](upgrade-master-data-services.md)   

@@ -1,5 +1,5 @@
 ---
-title: sys.database_principals (Трансакт-СЗЛ) Документы Майкрософт
+title: sys. database_principals (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/27/2016
 ms.prod: sql
@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: feed483cf3ee08c0652e55de51b1f73fc087ed39
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80873120"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
@@ -35,31 +35,31 @@ ms.locfileid: "80873120"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Имя участника, уникальное в пределах базы данных.|  
-|**principal_id**|**Int**|Идентификатор участника, уникальный в пределах базы данных.|  
-|**тип**|**символ (1)**|Тип участника:<br /><br /> A = роль приложения<br /><br /> C = пользователь сопоставлен с сертификатом<br /><br /> E - Внешний пользователь из active-каталога Azure<br /><br /> G = группа Windows<br /><br /> K = пользователь сопоставлен с асимметричным ключом<br /><br /> R = роль базы данных<br /><br /> S = пользователь SQL<br /><br /> U = пользователь Windows<br /><br /> X - Внешняя группа из группы или приложений Active Directory Azure|  
+|**principal_id**|**int**|Идентификатор участника, уникальный в пределах базы данных.|  
+|**type**|**char (1)**|Тип участника:<br /><br /> A = роль приложения<br /><br /> C = пользователь сопоставлен с сертификатом<br /><br /> E = внешний пользователь из Azure Active Directory<br /><br /> G = группа Windows<br /><br /> K = пользователь сопоставлен с асимметричным ключом<br /><br /> R = роль базы данных<br /><br /> S = пользователь SQL<br /><br /> U = пользователь Windows<br /><br /> X = Внешняя группа из группы или приложений Azure Active Directory|  
 |**type_desc**|**nvarchar(60)**|Описание типа участника.<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
 |**default_schema_name**|**sysname**|Имя, используемое в случае, когда схема не определяется именем SQL. NULL для участников с типами, отличными от S, U или A.|  
 |**create_date**|**datetime**|Время создания участника.|  
 |**modify_date**|**datetime**|Время последнего изменения участника.|  
-|**owning_principal_id**|**Int**|Идентификатор участника, являющегося владельцем данного участника. Все фиксированные роли базы данных принадлежат **dbo** по умолчанию.|  
-|**Sid**|**varbinary(85)**|SID (идентификатор защиты) участника.  NULL для SYS и INFORMATION SCHEMAS.|  
-|**is_fixed_role**|**bit**|Если 1, эта строка представляет собой запись для одной из ролей фиксированной базы данных: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader db_denydatawriter.|  
-|**authentication_type**|**Int**|**Применяется**к [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] : и позже.<br /><br /> Обозначает тип проверки подлинности. Ниже приведены возможные значения и их описания.<br /><br /> 0 : Нет аутентификации<br />1 : Проверка подлинности экземпляра<br />2 : Проверка подлинности базы данных<br />3 : Проверка подлинности Windows<br />4 : Активная аутентификация каталога Azure|  
-|**authentication_type_desc**|**nvarchar(60)**|**Применяется**к [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] : и позже.<br /><br /> Описание типа проверки подлинности. Ниже приведены возможные значения и их описания.<br /><br /> NONE : Нет аутентификации<br />INSTANCE : Проверка подлинности экземпляров<br />DATABASE : Проверка подлинности базы данных<br />WINDOWS : Проверка подлинности Windows<br />EXTERNAL: Активная аутентификация каталога Azure|  
-|**default_language_name**|**sysname**|**Применяется**к [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] : и позже.<br /><br /> Обозначает язык по умолчанию для участника.|  
-|**default_language_lcid**|**Int**|**Применяется**к [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] : и позже.<br /><br /> Обозначает код языка по умолчанию для участника.|  
-|**allow_encrypted_value_modifications**|**bit**|**Применяется**к [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] : [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]и позже, .<br /><br /> Отключает проверки шифрованных метаданных на сервере в операциях массового копирования. Это позволяет пользователю навалом копировать данные, зашифрованные с помощью Always Encrypted, между таблицами или базами данных, без расшифровки данных. Значение по умолчанию — OFF. |      
+|**owning_principal_id**|**int**|Идентификатор участника, являющегося владельцем данного участника. По умолчанию владельцем всех предопределенных ролей базы данных является **dbo** .|  
+|**трансляцию**|**varbinary(85)**|SID (идентификатор защиты) участника.  NULL для SYS и INFORMATION SCHEMAS.|  
+|**is_fixed_role**|**bit**|Если значение равно 1, эта строка представляет запись для одной из предопределенных ролей базы данных: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
+|**authentication_type**|**int**|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Обозначает тип проверки подлинности. Ниже приведены возможные значения и их описания.<br /><br /> 0 — без проверки подлинности<br />1: проверка подлинности экземпляра<br />2: проверка подлинности базы данных<br />3: проверка подлинности Windows<br />4. Проверка подлинности Azure Active Directory|  
+|**authentication_type_desc**|**nvarchar(60)**|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Описание типа проверки подлинности. Ниже приведены возможные значения и их описания.<br /><br /> Нет: нет проверки подлинности<br />ЭКЗЕМПЛЯР: проверка подлинности экземпляра<br />БАЗА данных: проверка подлинности базы данных<br />WINDOWS: проверка подлинности Windows<br />Внешний: проверка подлинности Azure Active Directory|  
+|**default_language_name**|**sysname**|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Обозначает язык по умолчанию для участника.|  
+|**default_language_lcid**|**int**|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Обозначает код языка по умолчанию для участника.|  
+|**allow_encrypted_value_modifications**|**bit**|**Применимо к**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] и более [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]поздним версиям.<br /><br /> Отключает проверки шифрованных метаданных на сервере в операциях массового копирования. Это позволяет пользователю выполнять полное копирование данных, зашифрованных с помощью Always Encrypted, между таблицами или базами данных без расшифровки данных. Значение по умолчанию — OFF. |      
   
-## <a name="remarks"></a>Примечания  
- Свойства *PasswordLastSetTime* доступны во всех поддерживаемых конфигурациях сервера S'L, но другие свойства доступны только при запуске сервера S'L на Windows Server 2003 или позже, и как CHECK_POLICY, так и CHECK_EXPIRATION включены. Дополнительную информацию можно узнать из [политики паролей.](../../relational-databases/security/password-policy.md)
-Значения principal_id могут быть использованы повторно в том случае, если принципы были сняты и, следовательно, не гарантировано будет постоянно возрастать.
+## <a name="remarks"></a>Remarks  
+ Свойства *passwordlastsettime имеют* доступны во всех поддерживаемых конфигурациях SQL Server, но другие свойства доступны только в том случае, если SQL Server работает на Windows Server 2003 или более поздней версии и включены оба CHECK_POLICY и CHECK_EXPIRATION. Дополнительные сведения см. в разделе [Политика паролей](../../relational-databases/security/password-policy.md) .
+Значения principal_id могут быть повторно использованы в случае, если субъекты были удалены и, следовательно, не всегда растет.
   
 ## <a name="permissions"></a>Разрешения  
  Любой пользователь может видеть собственное имя пользователя, пользователей системы и предопределенные роли базы данных. Для просмотра данных других пользователей требуется разрешение ALTER ANY USER или разрешение на доступ к данным пользователя. Для просмотра определяемых пользователем ролей необходимо иметь разрешение ALTER ANY ROLE или быть членом роли.  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-listing-all-the-permissions-of-database-principals"></a>О: Перечисление всех разрешений директоров баз данных  
+### <a name="a-listing-all-the-permissions-of-database-principals"></a>Ответ. Перечисление всех разрешений участников базы данных  
  Следующий запрос перечисляет разрешения, явно предоставленные или отклоненные для участников базы данных.  
   
 > [!IMPORTANT]  
@@ -73,7 +73,7 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>B: Перечисление разрешений на объекты схемы в базе данных  
+### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>Б. Вывод списка разрешений на объекты схемы в базе данных  
  Следующий запрос объединяет sys.database_principals и sys.database_permissions с sys.objects и sys.schemas, чтобы перечислить разрешения, предоставленные или отклоненные для определенных объектов схемы.  
   
 ```  
@@ -91,11 +91,11 @@ JOIN sys.schemas AS s
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: Перечисление всех разрешений директоров баз данных  
+### <a name="c-listing-all-the-permissions-of-database-principals"></a>В. Перечисление всех разрешений участников базы данных  
  Следующий запрос перечисляет разрешения, явно предоставленные или отклоненные для участников базы данных.  
   
 > [!IMPORTANT]  
->  Разрешения на фиксированные роли базы `sys.database_permissions`данных не отображаются в . Поэтому участники базы данных могут иметь дополнительные разрешения, не перечисленные здесь.  
+>  Разрешения предопределенных ролей базы данных не отображаются в `sys.database_permissions`. Поэтому участники базы данных могут иметь дополнительные разрешения, не перечисленные здесь.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -105,8 +105,8 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D: Перечисление разрешений на объекты схемы в базе данных  
- Следующий запрос `sys.database_principals` присоединяется, `sys.objects` `sys.schemas` `sys.database_permissions` и перечислять разрешения, предоставленные или отклоненные определенным объектам схемы.  
+### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D: вывод списка разрешений на объекты схемы в базе данных  
+ Следующий запрос присоединяется `sys.database_principals` `sys.database_permissions` к `sys.objects` и `sys.schemas` для получения списка разрешений, предоставленных или запрещенных для конкретных объектов схемы.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -122,11 +122,11 @@ JOIN sys.schemas AS s
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [&#40;&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [sys.server_principals&#41;&#40;"Трансакт-СЗЛ"](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [Просмотры каталогов безопасности &#40;&#41;Transact-S'L](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Содержащиеся пользователи баз данных - сделать вашу базу данных портативной](../../relational-databases/security/contained-database-users-making-your-database-portable.md)   
- [Подключение к базе данных СЗЛ с помощью активной аутентификации каталогов Azure](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)  
+ [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [Представления каталога безопасности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Пользователи автономной базы данных — Создание переносимой базы данных](../../relational-databases/security/contained-database-users-making-your-database-portable.md)   
+ [Подключение к базе данных SQL с использованием аутентификации Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)  
   
   
 

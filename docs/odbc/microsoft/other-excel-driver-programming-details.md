@@ -1,5 +1,5 @@
 ---
-title: Другие детали программирования драйверов Excel (ru) Документы Майкрософт
+title: Другие сведения о программировании драйвера Excel | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d7a932d99ba30e84de0ccd4cfbcce1516cd2fad9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291004"
 ---
 # <a name="other-excel-driver-programming-details"></a>Другие сведения о программировании драйверов для Excel
 > [!NOTE]  
->  В этом разделе содержится информация о функциях ODBC и других деталях программирования. Для получения общей информации о функции, см. [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md)  
+>  В этом разделе приводятся сведения о драйверах Excel, касающиеся функций ODBC и других сведений о программировании. Общие сведения о функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Этот раздел содержит следующие подразделы.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "81291004"
   
 -   [SQLColumns (драйвер для Excel)](../../odbc/microsoft/sqlcolumns-excel-driver.md)  
   
--   [СЗЛКонигДатаИсточник (Водитель Excel)](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)  
+-   [SQLConfigDataSource (драйвер для Excel)](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)  
   
 -   [SQLDriverConnect (драйвер для Excel)](../../odbc/microsoft/sqldriverconnect-excel-driver.md)  
   

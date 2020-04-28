@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 50ce060d270cf06a771136c581bf96fe1ec21eee
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112143"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Тип соединения PowerPivot (службы SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "79112143"
   
  Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в статьях [Добавление и проверка подключения к данным или источника данных &#40;построитель отчетов и служб SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Источник данных PowerPivot должен быть опубликован в галерее PowerPivot на сайте SharePoint.  
   
  Для подключения к книге PowerPivot из построителя отчетов необходимо установить на рабочей станции библиотеку SQL Server 2008 R2 ADOMD.NET. Эта клиентская библиотека устанавливается вместе с PowerPivot для Excel, но, если используется компьютер, на котором нет этого приложения, необходимо загрузить и установить ADOMD.NET со страницы [Пакет дополнительных компонентов SQL Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=44272).  

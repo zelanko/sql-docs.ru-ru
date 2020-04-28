@@ -17,26 +17,26 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c3535360e120e0f9c61a8cfb7cb578e531e92572
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81280322"
 ---
 # <a name="isolation-levels-ole-db"></a>Уровни изоляции (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Клиенты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут управлять уровнями изоляции транзакций для соединения. Для контроля уровня изоляции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] транзакций потребитель-поставщик OLE DB использует:  
+  Клиенты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут управлять уровнями изоляции транзакций для соединения. Чтобы управлять уровнем изоляции транзакций, потребитель поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента использует:  
   
--   DBPROPSET_SESSION DBPROP_SESS_AUTOCOMMITISOLEVELS свойств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для поставщика услуг Native Client OLE DB по умолчанию.  
+-   DBPROPSET_SESSION DBPROP_SESS_AUTOCOMMITISOLEVELS свойства для режима [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматической фиксации по умолчанию для поставщика собственного клиента OLE DB.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] По умолчанию поставщика NATIVE Client OLE DB для уровня является DBPROPVAL_TI_READCOMMITTED.  
+     Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента для уровня по умолчанию имеет значение DBPROPVAL_TI_READCOMMITTED.  
   
 -   Параметр *isoLevel* метода **ITransactionLocal::StartTransaction** для локальных транзакций с ручной фиксацией.  
   
 -   Параметр *isoLevel* метода **ITransactionDispenser::BeginTransaction** для распределенных транзакций с координацией MS DTC.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешает доступ только для чтения на уровне изоляции чтения «грязных» данных. Все другие уровни ограничивают параллелизм применением блокировок к объектам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если клиент требует более высоких уровней параллелизма, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применяет более строгие ограничения на параллельные обращения к данным. Для поддержания наивысшего уровня одновременного доступа к данным потребитель-поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB должен разумно контролировать свои запросы на определенные уровни параллелизма.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешает доступ только для чтения на уровне изоляции чтения «грязных» данных. Все другие уровни ограничивают параллелизм применением блокировок к объектам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если клиент требует более высоких уровней параллелизма, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применяет более строгие ограничения на параллельные обращения к данным. Чтобы обеспечить максимальный уровень одновременного доступа к данным, потребитель поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента должен управлять своими запросами для конкретных уровней параллелизма.  
   
 > [!NOTE]  
 >  В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] появился уровень изоляции моментального снимка. Дополнительные сведения см. в разделе [Working with Snapshot Isolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  

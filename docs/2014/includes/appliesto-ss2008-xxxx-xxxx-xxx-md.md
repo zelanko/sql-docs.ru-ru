@@ -1,1 +1,1 @@
-<Token>**ЭТО TOPIC APPLIES TO:**![Да](media/yes-icon.png)S'L Сервер![(начиная с 2008](media/no-icon.png)года) нет Лазурный S'L![База данных](media/no-icon.png)не Azure S'L Хранилище ![данных не](media/no-icon.png)параллельный склад данных</Token>
+<Token>**Область применения этой статьи:**![да](media/yes-icon.png)SQL Server (начиная с 2008)![нет](media/no-icon.png)база данных![SQL Azure](media/no-icon.png)нет хранилище ![данных SQL Azure](media/no-icon.png)нет параллельного хранилища данных</Token>

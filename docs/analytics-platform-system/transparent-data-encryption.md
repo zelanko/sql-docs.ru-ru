@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289752"
 ---
 # <a name="transparent-data-encryption"></a>прозрачное шифрование данных.
@@ -37,7 +37,7 @@ ms.locfileid: "79289752"
   
 ![Отображает иерархию](media/tde-architecture.png "TDE_Architecture")  
   
-## <a name="using-tde"></a>Использование прозрачного шифрования данных  
+## <a name="using-transparent-data-encryption"></a><a name="using-tde"></a>Использование прозрачного шифрования данных  
 Чтобы использовать прозрачное шифрование данных, выполните следующие действия. Первые три шага выполняются только один раз при подготовке SQL Server PDW для поддержки TDE.  
   
 1.  Создайте главный ключ в базе данных master.  
@@ -120,10 +120,10 @@ GO
   
 |Команда или функция|Назначение|  
 |-----------------------|-----------|  
-|[СОЗДАНИЕ КЛЮЧА ШИФРОВАНИЯ БАЗЫ ДАННЫХ](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Создает ключ, используемый для шифрования базы данных.|  
-|[ИЗМЕНЕНИЕ КЛЮЧА ШИФРОВАНИЯ БАЗЫ ДАННЫХ](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Изменяет ключ, используемый для шифрования базы данных.|  
-|[УДАЛИТЬ КЛЮЧ ШИФРОВАНИЯ БАЗЫ ДАННЫХ](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Удаляет ключ, использовавшийся для шифрования базы данных.|  
-|[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Объясняет параметр **ALTER DATABASE** , который используется для включения TDE.|  
+|[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Создает ключ, используемый для шифрования базы данных.|  
+|[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Изменяет ключ, используемый для шифрования базы данных.|  
+|[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Удаляет ключ, использовавшийся для шифрования базы данных.|  
+|[ИЗМЕНЕНИЕ БАЗЫ ДАННЫХ](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Объясняет параметр **ALTER DATABASE** , который используется для включения TDE.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Представления каталога и динамические административные представления  
 В следующей таблице показаны представления каталогов и динамические административные представления TDE.  
@@ -272,15 +272,15 @@ A distributed query failed: Database '<db_name>' cannot be opened due to inacces
   
 -   [Шифрование SQL Server](../relational-databases/security/encryption/sql-server-encryption.md)  
   
--   [Иерархия средств шифрования](../relational-databases/security/encryption/encryption-hierarchy.md)  
+-   [Иерархия шифрования](../relational-databases/security/encryption/encryption-hierarchy.md)  
   
 -   [SQL Server и ключи шифрования базы данных](../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 
   
 ## <a name="see-also"></a>См. также:  
-[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
+[ИЗМЕНЕНИЕ БАЗЫ ДАННЫХ](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
 [СОЗДАТЬ ГЛАВНЫЙ КЛЮЧ](../t-sql/statements/create-master-key-transact-sql.md)  
-[СОЗДАНИЕ КЛЮЧА ШИФРОВАНИЯ БАЗЫ ДАННЫХ](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
+[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [sp_pdw_database_encryption_regenerate_system_keys](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 24a52b9dd190032a55306c1fe738c3c1e1787dad
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112216"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Первоначальная конфигурация (PowerPivot для SharePoint)
@@ -36,7 +36,7 @@ ms.locfileid: "79112216"
   
  Чтобы добавить PowerPivot для SharePoint в ферму, пользователь должен быть администратором фермы. Для добавления в ферму серверов и приложений необходимо знать парольную фразу.  
   
-##  <a name="deploywsp"></a>Шаг 1. Развертывание решений PowerPivot  
+##  <a name="step-1-deploy-powerpivot-solutions"></a><a name="deploywsp"></a>Шаг 1. Развертывание решений PowerPivot  
  Необходимо установить и развернуть два решения: решение фермы и решение веб-приложения.  
   
 ### <a name="install-and-deploy-the-farm-solution"></a>Установка и развертывание решения фермы
@@ -79,7 +79,7 @@ ms.locfileid: "79112216"
   
 7.  Повторите процедуру для других веб-приложений SharePoint, которые тоже будут поддерживать доступ к данным PowerPivot.  
   
-##  <a name="Geneva"></a>Шаг 2. Запуск служб на сервере  
+##  <a name="step-2-start-services-on-the-server"></a><a name="Geneva"></a>Шаг 2. Запуск служб на сервере  
  Для развертывания PowerPivot для SharePoint требуется, чтобы ферма включала следующие службы: службы вычислений Excel, службу безопасного хранилища и службу Claims to Windows Token Service.  
   
  Служба Claims to Windows Token Service требуется для служб Excel и для PowerPivot для SharePoint. Она используется для установления соединений с внешних источниками данных от имени идентификатора Windows текущего пользователя SharePoint. Эта служба должна запускаться на каждом сервере SharePoint, на котором включены службы Excel или PowerPivot для SharePoint. Если служба еще не запущена, необходимо запустить ее, чтобы службы Excel могли пересылать прошедшие проверку подлинности запросы системной службе PowerPivot.  
@@ -94,7 +94,7 @@ ms.locfileid: "79112216"
   
 5.  Убедитесь, что службы SQL Server Analysis Services и системная служба SQL Server PowerPivot запущены.  
   
-##  <a name="createapp"></a>Шаг 3. Создание приложения службы PowerPivot  
+##  <a name="step-3-create-a-powerpivot-service-application"></a><a name="createapp"></a>Шаг 3. Создание приложения службы PowerPivot  
  Далее необходимо создать приложение службы PowerPivot.  
   
 1.  В разделе «Управление приложениями» центра администрирования выберите пункт **Управление приложениями служб**.  
@@ -119,7 +119,7 @@ ms.locfileid: "79112216"
   
 10. Нажмите кнопку **ОК**. Эта служба появится в списке приложений служб фермы рядом с другими управляемыми службами.  
   
-##  <a name="ExcelServ"></a>Шаг 4. Включение служб Excel  
+##  <a name="step-4-enable-excel-services"></a><a name="ExcelServ"></a>Шаг 4. Включение служб Excel  
  Службы Excel требуются для PowerPivot для SharePoint, чтобы обеспечивалась поддержка доступа к данным PowerPivot в ферме. Можно определить, включены ли уже службы Excel, подтвердив присутствие приложения служб Excel в списке приложений служб в центре администрирования. Если служба Excel в списке не представлена, выполните следующие шаги, чтобы включить ее.  
   
 1.  В разделе «Управление приложениями» центра администрирования выберите пункт **Управление приложениями служб**.  
@@ -150,7 +150,7 @@ ms.locfileid: "79112216"
   
 14. Нажмите кнопку **ОК**.  
   
-##  <a name="SSS"></a>Шаг 5. Включение служба Secure Store и Настройка обновления данных  
+##  <a name="step-5-enable-secure-store-service-and-configure-data-refresh"></a><a name="SSS"></a>Шаг 5. Включение служба Secure Store и Настройка обновления данных  
  В PowerPivot для SharePoint служба Secure Store требуется для хранения учетных данных и учетной записи автоматического выполнения для обновления данных. Можно определить, включена ли уже служба безопасного хранилища, подтвердив ее присутствие в списке приложений служб.  
   
 > [!IMPORTANT]  
@@ -197,13 +197,13 @@ ms.locfileid: "79112216"
   
  Инструкции по созданию учетной записи автоматического обновления данных PowerPivot или других сохраненных учетных данных, используемых при обновлении данных, см. в статьях [Настройка учетной записи автоматического обновления данных powerpivot &#40;PowerPivot для SharePoint&#41;](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) и [Настройка сохраненных учетных данных для обновления данных PowerPivot &#40;PowerPivot для SharePoint&#41;](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
-##  <a name="Usage"></a>Шаг 6. Включение сбора данных об использовании  
+##  <a name="step-6-enable-usage-data-collection"></a><a name="Usage"></a>Шаг 6. Включение сбора данных об использовании  
  С помощью инфраструктуры сбора данных об использовании SharePoint средство PowerPivot для SharePoint собирает сведения об использовании PowerPivot во всей ферме. Несмотря на то что данные об использовании являются частью любой установки SharePoint, может понадобиться включить их перед использованием. Инструкции см. в разделе [Настройка сбора данных об использовании для &#40;PowerPivot для SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint).  
   
-##  <a name="Upload"></a>Шаг 7. Увеличение максимального размера отправляемых файлов для веб-приложений SharePoint и служб Excel  
+##  <a name="step-7-increase-maximum-upload-size-for-sharepoint-web-applications-and-excel-services"></a><a name="Upload"></a>Шаг 7. Увеличение максимального размера отправляемых файлов для веб-приложений SharePoint и служб Excel  
  Поскольку книги PowerPivot могут быть большими, может понадобиться увеличить максимальный размер файла. Могут настраиваться два параметра размера файла: «Максимальный размер передаваемого файла» для веб-приложения и «Максимальный размер книги» в службах Excel. Для максимального размера файла должно быть установлено одинаковое значение в обоих приложениях. Инструкции см. в статье [Настройка максимального размера файла для отправки &#40;PowerPivot для SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint).  
   
-##  <a name="activatePP"></a>Шаг 8. Активация интеграции функций PowerPivot для семейств веб-сайтов  
+##  <a name="step-8-activate-powerpivot-feature-integration-for-site-collections"></a><a name="activatePP"></a>Шаг 8. Активация интеграции функций PowerPivot для семейств веб-сайтов  
  Включение функций на уровне семейств веб-сайтов делает страницы и шаблоны приложения доступными для веб-сайтов, в том числе и страницы конфигурации для планового обновления данных, страницы приложений для библиотеки PowerPivot Gallery и библиотеки каналов данных.  
   
 1.  На сайте SharePoint нажмите кнопку **Действия сайта**.  
@@ -216,13 +216,13 @@ ms.locfileid: "79112216"
   
 4.  Прокрутите страницу вниз, пока не найдете **компонент коллекция веб-сайтов интеграции с PowerPivot**.  
   
-5.  Нажмите кнопку **Активировать**.  
+5.  Щелкните **Активировать**.  
   
-6.  Повторите эти действия для дополнительных семейств веб-сайтов, открыв каждый сайт и щелкнув **Site Actions**.  
+6.  Повторите эти действия для дополнительных семейств веб-сайтов, открыв каждый из сайтов и щелкнув **Действия сайта**.  
   
  Дополнительные сведения см. [в разделе Активация интеграции функций PowerPivot для семейств веб-сайтов в центре администрирования](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca).  
   
-##  <a name="bkmk_redist"></a>Шаг 9. Установка версии SQL Server 2008 R2 поставщика OLE DB на экземпляре SQL Server 2012 PowerPivot для SharePoint  
+##  <a name="step-9-install-the-sql-server-2008-r2-version-of-the-ole-db-provider-on-a-sql-server-2012-powerpivot-for-sharepoint-instance"></a><a name="bkmk_redist"></a>Шаг 9. Установка версии SQL Server 2008 R2 поставщика OLE DB на экземпляре SQL Server 2012 PowerPivot для SharePoint  
  Если требуется обеспечить параллельную работу старых и новых версий книг PowerPivot на одном и том же сервере, необходимо установить поставщик OLE DB служб Analysis Services из пакета SQL Server 2008 R2 на сервере PowerPivot для SharePoint версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  Установка поставщика обеспечит работу книг, в которых имеются ссылки на MSOLAP.4 в строке подключения к данным, на сервере [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot в соответствии со спецификациями. Установка поставщика OLE DB SQL Server 2008 R2 является альтернативным способом обновления книг, созданных в более ранних версиях PowerPivot для Excel.  
@@ -231,7 +231,7 @@ ms.locfileid: "79112216"
   
  Дополнительные сведения об установке поставщика, включая шаги проверки, см. [в статье установка поставщик Analysis Services OLE DB на серверах SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
-##  <a name="verifyinstall"></a>Шаг 10. Проверка установки  
+##  <a name="step-10-verify-installation"></a><a name="verifyinstall"></a>Шаг 10. Проверка установки  
  Запросы PowerPivot обрабатываются в ферме при открытии пользователем или приложением книги Excel, содержащей данные PowerPivot. Как минимум можно проверить страницы на веб-сайтах SharePoint, чтобы убедиться в доступности функций PowerPivot. Однако, чтобы полностью проверить установку, необходимо иметь книгу PowerPivot, которую можно опубликовать в SharePoint и открывать из библиотеки. В целях тестирования можно опубликовать образец книги, в котором уже есть данные PowerPivot, и с его помощью удостовериться в правильности настройки интеграции с SharePoint.  
   
  Чтобы проверить интеграцию PowerPivot с сайтом SharePoint, выполните следующие действия.  
@@ -264,7 +264,7 @@ ms.locfileid: "79112216"
   
 9. В файловой системе компьютера откройте следующую папку, чтобы определить, были ли файлы кэшированы на диск. Наличие кэшированных файлов служит еще одним подтверждением работоспособности развертывания. Чтобы открыть кэш файлов, перейдите в папку \Program Files\Microsoft SQL Server\MSAS10_50.POWERPIVOT\OLAP\Backup.  
   
-##  <a name="nextsteps"></a>Действия после установки  
+##  <a name="post-installation-steps"></a><a name="nextsteps"></a>Действия после установки  
  Проверив установку, завершите настройку службы созданием галереи PowerPivot или настройкой отдельных параметров конфигурации. Чтобы полностью использовать компоненты только что установленного сервера, можно загрузить [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], чтобы создать, а затем опубликовать первую книгу PowerPivot.  
   
 ### <a name="install-data-providers-used-for-data-refresh"></a>Установка поставщиков данных, используемых в процессе обновления данных  

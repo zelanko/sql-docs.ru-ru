@@ -1,5 +1,5 @@
 ---
-title: План развертывания отчетов и развертывания отчетов (Отчетные службы 2014 г.) Документы Майкрософт
+title: Планирование разработки отчетов и развертывания отчетов (Reporting Services 2014) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3047dba3e54d384f2f52733e8cf49308b793190
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380825"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Запланируйте создание и развертывание отчетов (службы Reporting Services 2014)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляет несколько подходов к написанию и развертыванию отчетов. Используйте приведенную в этом разделе информацию для планирования среды создания отчетов и сервера отчетов, которые будут работать вместе. В этом разделе приводятся общие сведения о поддержке определения отчетов компонентами служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Определение отчета — это XML-файл, написанный на языке определения отчетов (RDL) или на языке определения отчетов для клиентов (RDLC). Каждое определение отчета соответствует определенной версии схемы, указанной в начале файла.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляет несколько подходов для создания и развертывания отчетов. Используйте приведенную в этом разделе информацию для планирования среды создания отчетов и сервера отчетов, которые будут работать вместе. В этом разделе приводятся общие сведения о поддержке определения отчетов компонентами служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Определение отчета — это XML-файл, написанный на языке определения отчетов (RDL) или на языке определения отчетов для клиентов (RDLC). Каждое определение отчета соответствует определенной версии схемы, указанной в начале файла.  
   
  RDL-файлы разрабатываются в конструкторе отчетов среды [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] и в построителе отчетов 3.0. RDLC-файлы разрабатываются с использованием элементов управления, включенных в среду [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
  В этом разделе:  
   
--   [RDL Схема Версии](#bkmk_rdl_schema_versions)  
+-   [Версии схемы языка определения отчетов](#bkmk_rdl_schema_versions)  
   
--   [Отчет сервера и поддержки схемы RDL](#bkmk_report_server_rdl_schema_support)  
+-   [Сервер отчетов и поддержка RDL-схемы](#bkmk_report_server_rdl_schema_support)  
   
--   [Поддержка авторства и развертывания отчета](#bkmk_report_authoring_and_deployment)  
+-   [Поддержка создания и развертывания отчетов](#bkmk_report_authoring_and_deployment)  
   
--   [Управление ReportViewer](#bkmk_reportviewer)  
+-   [Элементы управления ReportViewer](#bkmk_reportviewer)  
   
 ##  <a name="rdl-schema-versions"></a><a name="bkmk_rdl_schema_versions"></a> Версии RDL-схем  
  В следующей таблице перечисляются все доступные версии схем и сокращения, используемые в остальной части раздела.  
@@ -88,10 +88,10 @@ ms.locfileid: "80380825"
   
 |Среда разработки|RDL-версия разработчика|RDL-версия для развертывания|Развертывается на версиях сервера отчетов|  
 |---------------------------|--------------------------|------------------------|--------------------------------------|  
-|Конструктор отчетов из SQL Server Data Tools 2014 — бизнес-аналитика для Microsoft Visual Studio 2012, в центре загрузки Майкрософт.<br /><br /> либо<br /><br /> Конструктор отчетов из SQL Server Data Tools 2012 — бизнес-аналитика для Microsoft Visual Studio 2012, в центре загрузки Майкрософт.<br /><br /> либо<br /><br /> Конструктор отчетов в среде [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools, включенный в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].|Авторы 2010 RDL. При открытии существующего RDL-файла.<br /><br /> 2000 RDL, обновляется до 2010 RDL<br /><br /> 2005 RDL, обновляется до 2010 RDL<br /><br /> 2008 RDL, обновляется до 2010 RDL|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
-|Конструктор отчетов в среде [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Business Intelligence Development Studio|Авторы 2010 RDL. При открытии существующего RDL-файла.<br /><br /> 2000 RDL, обновляется до 2010 RDL<br /><br /> 2005 RDL, обновляется до 2010 RDL<br /><br /> 2008 RDL, обновляется до 2010 RDL|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
-|Конструктор отчетов в среде [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Business Intelligence Development Studio|Авторы 2008 RDL. При открытии существующего RDL-файла.<br /><br /> 2000 RDL, обновляется до 2008 RDL<br /><br /> 2005 RDL, обновляется до 2008 RDL|2008 RDL|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|  
-|Построитель отчетов [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|Авторы 2010 RDL. При открытии существующего RDL-файла.<br /><br /> 2000 RDL, обновляется до 2010 RDL<br /><br /> 2005 RDL, обновляется до 2010 RDL<br /><br /> 2008 RDL, обновляется до 2010 RDL|2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
+|Конструктор отчетов из SQL Server Data Tools 2014 — бизнес-аналитика для Microsoft Visual Studio 2012, в центре загрузки Майкрософт.<br /><br /> либо<br /><br /> Конструктор отчетов из SQL Server Data Tools 2012 — бизнес-аналитика для Microsoft Visual Studio 2012, в центре загрузки Майкрософт.<br /><br /> либо<br /><br /> Конструктор отчетов в среде [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools, включенный в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].|Авторы, 2010 RDL. При открытии существующего RDL-файла.<br /><br /> 2000 RDL, обновляется до 2010 RDL<br /><br /> 2005 RDL, обновляется до 2010 RDL<br /><br /> 2008 RDL, обновляется до 2010 RDL|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Конструктор отчетов в среде [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Business Intelligence Development Studio|Авторы, 2010 RDL. При открытии существующего RDL-файла.<br /><br /> 2000 RDL, обновляется до 2010 RDL<br /><br /> 2005 RDL, обновляется до 2010 RDL<br /><br /> 2008 RDL, обновляется до 2010 RDL|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Конструктор отчетов в среде [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Business Intelligence Development Studio|Авторы, 2008 RDL. При открытии существующего RDL-файла.<br /><br /> 2000 RDL, обновляется до 2008 RDL<br /><br /> 2005 RDL, обновляется до 2008 RDL|2008 RDL|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|  
+|Построитель отчетов [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|Авторы, 2010 RDL. При открытии существующего RDL-файла.<br /><br /> 2000 RDL, обновляется до 2010 RDL<br /><br /> 2005 RDL, обновляется до 2010 RDL<br /><br /> 2008 RDL, обновляется до 2010 RDL|2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
 |Конструктор отчетов Visual Studio RDLC|2005 RDLC|Недоступно|Недоступно|  
   
  Дополнительные сведения о [!INCLUDE[ss_dtbi_vs2013](../includes/ss-dtbi-vs2013-md.md)]см. в следующих разделах:  
@@ -100,7 +100,7 @@ ms.locfileid: "80380825"
   
 -   [Microsoft SQL Server Data Tools ― Business Intelligence для Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843).  
   
-##  <a name="reportviewer-controls"></a><a name="bkmk_reportviewer"></a>Управление ReportViewer  
+##  <a name="reportviewer-controls"></a><a name="bkmk_reportviewer"></a>Элементы управления ReportViewer  
  Элемент управления ReportViewer [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] может отображать RDLC-отчет в режиме локального предварительного просмотра или в удаленном режиме. Этот элемент управления может отображать RDL-файл, размещенный на сервере отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Следующая таблица содержит список версий языка определения отчетов, поддерживаемых элементами управления ReportViewer для локальной обработки (RDLC). Сводку по поддержке языка определения отчетов на стороне сервера см. в разделе [Сервер отчетов и поддержка RDL-схемы](#bkmk_report_server_rdl_schema_support).  
   
 |Элемент управления ReportViewer в продукте|Версии языка определения отчетов для локального предварительного просмотра|  
@@ -116,9 +116,9 @@ ms.locfileid: "80380825"
   
 -   [Добавление и настройка элементов управления ReportViewer](https://msdn.microsoft.com/library/ms252104.aspx)  
   
-## <a name="see-also"></a>См. также  
- [Отчеты, части отчетов и определения отчетов &#40;Report Builder и SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Инструменты отчетности](tools/reporting-services-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Отчеты, элементы отчетов и определения отчетов &#40;построитель отчетов и SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Средства Reporting Services](tools/reporting-services-tools.md)   
  [Язык определения отчетов (службы SSRS)](reports/report-definition-language-ssrs.md)  
   
   

@@ -15,10 +15,10 @@ ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3fd28f5a3cecb6da28603ae6f8a88d751081e80c
-ms.sourcegitcommit: df21fd156cc833f107d22413c76991b67f3715c8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80216504"
 ---
 # <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group (Transact-SQL)
@@ -39,7 +39,7 @@ sp_polybase_leave_group;
 ```  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успех) или 1 (сбой).  
+ 0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение CONTROL SERVER.  
@@ -58,6 +58,6 @@ EXEC sp_polybase_leave_group ;
   
 ## <a name="see-also"></a>См. также:  
  [Начало работы с Polybase](../../relational-databases/polybase/get-started-with-polybase.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

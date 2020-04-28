@@ -1,5 +1,5 @@
 ---
-title: Аргументы в каталоге Функции (ru) Документы Майкрософт
+title: Аргументы в функциях каталога | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 819c10d0b137d5e0999c1e10bf22810392509f76
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81288170"
 ---
 # <a name="arguments-in-catalog-functions"></a>Аргументы в функциях каталога
-Все функции каталога принимают аргументы, с помощью которых приложение может ограничить область возвращенных данных. Например, первый и второй вызовы на **S'LTables** в следующем коде возвращают набор результатов, содержащий информацию обо всех таблицах, в то время как третий вызов возвращает информацию о таблице заказов:  
+Все функции каталога принимают аргументы, с помощью которых приложение может ограничить область возвращаемых данных. Например, первый и второй вызовы **SQLTables** в следующем коде возвращают результирующий набор, содержащий сведения обо всех таблицах, а третий вызов возвращает сведения о таблице Orders:  
   
 ```  
 SQLTables(hstmt1, NULL, 0, NULL, 0, NULL, 0, NULL, 0);  
@@ -31,20 +31,20 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "%", SQL_NTS, NULL, 0);
 SQLTables(hstmt3, NULL, 0, NULL, 0, "Orders", SQL_NTS, NULL, 0);  
 ```  
   
- Аргументы строки функции каталога делятся на четыре различных типа: обычный аргумент (OA), аргумент значения шаблона (PV), аргумент идентификатора (ID) и аргумент списка значений (VL). Большинство аргументов строки могут быть одного из двух различных типов, в зависимости от значения атрибута SQL_ATTR_METADATA_ID оператора. В следующей таблице перечислены аргументы для каждой функции каталога и описывается тип аргумента для SQL_TRUE или SQL_FALSE значения SQL_ATTR_METADATA_ID.  
+ Строковые аргументы функции каталога делятся на четыре разных типа: обычный аргумент (OA), аргумент значения шаблона (ПС), аргумент идентификатора (идентификатор) и аргумент списка значений (Корпоративная лицензия). Большинство строковых аргументов могут иметь один из двух различных типов, в зависимости от значения атрибута инструкции SQL_ATTR_METADATA_ID. В следующей таблице перечислены аргументы для каждой функции каталога и описан тип аргумента для SQL_TRUE или SQL_FALSE значение SQL_ATTR_METADATA_ID.  
   
-|Компонент|Аргумент|Введите, когда SQL_<br /><br /> ATTR_METADATA_<br /><br /> ID и SQL_FALSE|Введите, когда SQL_<br /><br /> ATTR_METADATA_<br /><br /> ID и SQL_TRUE|  
+|Функция|Аргумент|Введите, когда SQL_<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_FALSE|Введите, когда SQL_<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_TRUE|  
 |--------------|--------------|---------------------------------------------------------------|--------------------------------------------------------------|  
-|**SQLColumnPrivileges**|*КаталогНаимя* *СхемаИмя* *ТаблицаИмя* *ColumnName*|ОА ОА.|ID ID ID ID|  
-|**SQLColumns**|*КаталогНаимя* *СхемаИмя* *ТаблицаИмя* *ColumnName*|ОА.....|ID ID ID ID|  
-|**SQLForeignKeys**|*PKCatalogName* *PKSchemaName* *PKTableName* *FKCatalogName* *FKSchemaName* *FKTableName*|ОА ОА ОА ОА ОА|ID ID ID ID ID ID|  
-|**SQLPrimaryKeys**|*КаталогНаимя* *СхемаНаймЕй* *ТаблицаНай*|ОА ОА|ID ID ID|  
-|**SQLProcedureColumns**|*КаталогНаимя* *СхемаНамиг* *ProcName* *ColumnName*|ОА.....|ID ID ID ID|  
-|**SQLProcedures**|*КаталогНаимя* *СхемаНамик* *ПрокНаме*|ОА...|ID ID ID|  
-|**SQLSpecialColumns**|*КаталогНаимя* *СхемаНаймЕй* *ТаблицаНай*|ОА ОА|ID ID ID|  
-|**SQLStatistics**|*КаталогНаимя* *СхемаНаймЕй* *ТаблицаНай*|ОА ОА|ID ID ID|  
-|**SQLTablePrivileges**|*КаталогНаимя* *СхемаНаймЕй* *ТаблицаНай*|ОА...|ID ID ID|  
-|**SQLTables**|*КаталогИмя* *SchemaName* *ТаблицаНазвание* *ТаблицаТип*|.... VL|ID ID ID VL|  
+|**SQLColumnPrivileges**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA OA OA ПС|ИДЕНТИФИКАТОР ID ID ID|  
+|**SQLColumns**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA PV PV PV|ИДЕНТИФИКАТОР ID ID ID|  
+|**SQLForeignKeys**|*Пккаталогнаме* *пксчеманаме* *PKTableName* *фккаталогнаме* *фксчеманаме* *фктабленаме*|OA OA OA OA OA OA|ИДЕНТИФИКАТОР ID ID ID|  
+|**SQLPrimaryKeys**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ИДЕНТИФИКАТОР ID ID|  
+|**SQLProcedureColumns**|*CatalogName* *SchemaName* для *CNAME* *ColumnName*|OA PV PV PV|ИДЕНТИФИКАТОР ID ID ID|  
+|**SQLProcedures**|*CatalogName* *SchemaName* ( *CNAME* )|OA PV PV|ИДЕНТИФИКАТОР ID ID|  
+|**SQLSpecialColumns**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ИДЕНТИФИКАТОР ID ID|  
+|**SQLStatistics**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ИДЕНТИФИКАТОР ID ID|  
+|**SQLTablePrivileges**|*CatalogName* *SchemaName* *TableName*|OA PV PV|ИДЕНТИФИКАТОР ID ID|  
+|**SQLTables**|*CatalogName* *SchemaName* *TableName* *TableType*|ПС PV PV КОРПОРАТИВНАЯ ЛИЦЕНЗИЯ|ИДЕНТИФИКАТОР ID — КОРПОРАТИВНАЯ ЛИЦЕНЗИЯ|  
   
  Этот раздел содержит следующие подразделы.  
   

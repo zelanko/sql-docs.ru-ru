@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289742"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Контрольные списки настройки устройств для системы аналитики платформы
@@ -22,7 +22,7 @@ ms.locfileid: "79289742"
 > [!WARNING]  
 > Использование аналитики платформы**Configuration Manager** является лучшим способом и единственным поддерживаемым способом выполнения задач, доступных в средстве.  
   
-## <a name="BeforeTasks"></a>Перед началом  
+## <a name="before-you-begin"></a><a name="BeforeTasks"></a>Перед началом  
   
 ### <a name="prerequisites"></a>Предварительные требования  
   
@@ -44,7 +44,7 @@ ms.locfileid: "79289742"
   
     2.  Запустите **Configuration Manager** из меню **Пуск** узла управления PDW. На первом экране Configuration Manager отображается топология устройства, созданная вашим IHV. Это список аппаратных узлов, распознаваемых SQL Server PDWным программным обеспечением как часть устройства. Изменять параметры на экране топологии устройства не требуется.  
   
-## <a name="CMTasks"></a>Выполнение Configuration Manager задач  
+## <a name="perform-configuration-manager-tasks"></a><a name="CMTasks"></a>Выполнение Configuration Manager задач  
 SQL Server PDW**Configuration Manager** (пдвкм) — это средство администрирования устройства, которое SQL Server PDW системных администраторов для выполнения операций на уровне устройства и изменения параметров на уровне устройств. Например, используйте ПДВКМ для сброса паролей, настройки часового пояса, изменения IP-адресов, настройки сертификатов SSL, включения удаленного доступа через брандмауэр, запуска или отключения устройства, а также для установки мгновенных инициализаций файлов.  
   
 Используйте **Configuration Manager** для выполнения следующих задач настройки.  
@@ -64,7 +64,7 @@ SQL Server PDW**Configuration Manager** (пдвкм) — это средство
 |Проверка параметров быстрой инициализации файлов с помощью диалогового окна " **привилегии** "|Мгновенная инициализация файлов — это SQL Server функция, которая позволяет быстрее выполнять операции с файлами данных. Он включен на SQL Server PDW только в том случае, если учетной записи сетевой службы предоставлены права SE_MANAGE_VOLUME_NAME. По умолчанию он отключен.<br /><br />Дополнительные сведения см. в разделе [Быстрая настройка инициализации файлов &#40;Analytics Platform System&#41;](instant-file-initialization-configuration.md).|  
 |Восстановление базы данных master из резервной копии|Удаляет текущую базу данных **master** и заменяет ее резервной копией. Дополнительные сведения см. [в статье восстановление базы данных Master &#40;Analytics Platform System&#41;](restore-the-master-database.md).|  
   
-## <a name="AddTasks"></a>Выполнение дополнительных задач по настройке  
+## <a name="perform-additional-configuration-tasks"></a><a name="AddTasks"></a>Выполнение дополнительных задач по настройке  
 После выполнения задач **Configuration Manager** выполните следующий список дополнительных задач настройки. Некоторые из этих задач являются необязательными.  
   
 |Задача конфигурации|Описание|  

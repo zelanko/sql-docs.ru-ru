@@ -23,10 +23,10 @@ ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: cbbb7ed7a20937d9963af7080fb16be4f6c78da5
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79111910"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>Установка Помощник по миграции SQL Server для Access (Акцесстоскл)
@@ -69,7 +69,7 @@ SSMA можно загрузить из Интернета. Чтобы скач�
   
 4.  На странице Выбор типа установки выберите вариант **Обычная**.  
   
-5.  Нажмите кнопку **Установить**.  
+5.  Щелкните **Install**(Установить).  
   
 Расположение установки по умолчанию — C:\Program Files\Microsoft Помощник по миграции SQL Server для доступа.  
   
@@ -87,8 +87,8 @@ SSMA можно загрузить из Интернета. Чтобы скач�
   
 При открытии проекта, созданного в более ранней версии SSMA для доступа, SSMA спрашивает, нужно ли преобразовать проект в более новую версию. Нажмите кнопку **Да** , чтобы работать с проектом в более новой версии SSMA.  
   
-## <a name="see-also"></a>См. также раздел  
-[Подготовка баз данных Access к миграции](preparing-access-databases-for-migration-accesstosql.md)  
+## <a name="see-also"></a>См. также  
+[Подготовка баз данных Access к миграции](preparing-access-databases-for-migration-accesstosql.md)  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Связывание приложений Access с SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)  
   

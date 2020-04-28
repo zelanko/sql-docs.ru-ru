@@ -34,10 +34,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71aba1741b777a593f951300a975df4736525211
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112194"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Вставка данных с помощью диаграмм обновления XML (SQLXML 4.0)
@@ -90,7 +90,7 @@ ms.locfileid: "79112194"
   
 -   В большинстве примеров задействован образец базы данных [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]. Все обновления применяются к таблицам в этой базе данных.  
   
-### <a name="a-inserting-a-record-by-using-an-updategram"></a>A. Вставка записи с помощью диаграммы обновления  
+### <a name="a-inserting-a-record-by-using-an-updategram"></a>А) Вставка записи с помощью диаграммы обновления  
  Эта диаграмма обновления с атрибутивной моделью вставляет запись в таблицу HumanResources.Employee в базе данных [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)].  
   
  В этом примере диаграмма обновления не указывает схему сопоставления. Следовательно, диаграмма обновления использует сопоставление по умолчанию, при котором имя элемента сопоставляется с именем таблицы, а атрибуты или дочерние элементы сопоставляются со столбцами таблицы.  
@@ -156,7 +156,7 @@ ms.locfileid: "79112194"
 </ROOT>  
 ```  
   
-### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>Б. Вставка нескольких записей с помощью диаграммы обновления  
+### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>Б) Вставка нескольких записей с помощью диаграммы обновления  
  Данная диаграмма обновления добавляет две новые записи о сменах в таблицу HumanResources.Shift. Диаграмма обновления не указывает дополнительный ** \<блок Before>** .  
   
 ```  
@@ -610,7 +610,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="i-inserting-data-into-an-xml-data-type-column"></a>И. Вставка данных в столбец типа данных XML  
- В `xml` появился тип данных [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Диаграммы обновления можно использовать для вставки и обновления данных, хранимых в столбцах типа `xml` при следующих условиях.  
+ В [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] появился тип данных `xml`. Диаграммы обновления можно использовать для вставки и обновления данных, хранимых в столбцах типа `xml` при следующих условиях.  
   
 -   Столбец `xml` нельзя использовать для идентификации существующей строки. Поэтому его невозможно включить в раздел `updg:before` диаграммы обновления.  
   

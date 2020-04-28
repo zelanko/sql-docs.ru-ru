@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 167b9d1d9990c20be8c01a3407a5423644e524f8
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112434"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Каталог базы данных WideWorldImportersDW
@@ -47,12 +47,12 @@ WideWorldImportersDW содержит следующие таблицы изме
 |Таблица|Исходные таблицы|
 |-----------------------------|---------------------|
 |Город|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
-|Клиент|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
+|Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |Дата|Новая таблица со сведениями о датах, включая финансовый год (на основе 1 ноября начала финансового года).|
-|Employee|`Application.People`.|
+|Сотрудник|`Application.People`.|
 |стоккитем|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |Поставщик|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|пайментмесод|`Application.PaymentMethods`.|
+|PaymentMethod|`Application.PaymentMethods`.|
 |TransactionType|`Application.TransactionTypes`.|
 
 ### <a name="fact-tables"></a>Таблицы фактов
@@ -61,11 +61,11 @@ WideWorldImportersDW имеет следующие таблицы фактов. 
 
 |Таблица|Исходные таблицы|Образец аналитики|
 |-----------------------------|---------------------|---------------------|
-|Порядок|`Sales.Orders`перетаскивани`Sales.OrderLines`|Продажи продавцов, средств выбора и упаковки и времени на выбор заказов. Кроме того, в небольших складских ситуациях, ведущих к обратным заказам.|
-|Sale|`Sales.Invoices`перетаскивани`Sales.InvoiceLines`|Даты продаж, даты доставки, рентабельность с течением времени, рентабельность по менеджеру по продажам.|
-|Purchase|`Purchasing.PurchaseOrderLines`|Ожидаемое и фактическое время опережения|
-|транзакция:|`Sales.CustomerTransactions`перетаскивани`Purchasing.SupplierTransactions`|Измерение дат проблем и дат финализации и сумм.|
-|Перемещать|`Warehouse.StockTransactions`|Перемещения с течением времени.|
+|Порядок|`Sales.Orders` и `Sales.OrderLines`|Продажи продавцов, средств выбора и упаковки и времени на выбор заказов. Кроме того, в небольших складских ситуациях, ведущих к обратным заказам.|
+|Sale|`Sales.Invoices` и `Sales.InvoiceLines`|Даты продаж, даты доставки, рентабельность с течением времени, рентабельность по менеджеру по продажам.|
+|Приобретение|`Purchasing.PurchaseOrderLines`|Ожидаемое и фактическое время опережения|
+|Транзакция|`Sales.CustomerTransactions` и `Purchasing.SupplierTransactions`|Измерение дат проблем и дат финализации и сумм.|
+|Перемещение|`Warehouse.StockTransactions`|Перемещения с течением времени.|
 |Удерживаемые акции|`Warehouse.StockItemHoldings`|Уровни и стоимость запасов в наличии.|
 
 ## <a name="stored-procedures"></a>Хранимые процедуры

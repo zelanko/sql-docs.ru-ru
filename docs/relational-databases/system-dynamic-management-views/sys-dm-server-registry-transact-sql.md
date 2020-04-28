@@ -1,5 +1,5 @@
 ---
-title: sys.dm_server_registry (Трансакт-СЗЛ) Документы Майкрософт
+title: sys. dm_server_registry (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8daa2d195ab1f4cf4602b9633394ed1705a3d7d2
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80530826"
 ---
 # <a name="sysdm_server_registry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
@@ -33,8 +33,8 @@ ms.locfileid: "80530826"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|Имя раздела реестра Допускает значение NULL.|  
-|value_name|**nvarchar(256)**|Имя значения ключа Это элемент, показанный в колонке **«Имя»** редактора реестра. Допускает значение NULL.|  
-|value_data|**Sql_variant**|Значение данных ключа. Это значение, отображаемые в колонке **данных** редактора реестра для данной записи. Допускает значение NULL.|  
+|value_name|**nvarchar(256)**|Имя значения ключа Это элемент, отображаемый в столбце **имя** редактора реестра. Допускает значение NULL.|  
+|value_data|**sql_variant**|Значение данных ключа. Это значение, отображаемое в столбце **данных** редактора реестра для заданной записи. Допускает значение NULL.|  
   
 ## <a name="security"></a>Безопасность  
   
@@ -52,7 +52,7 @@ FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%ControlSet%';  
 ```  
   
-### <a name="b-display-the-sql-server-agent-registry-key-values"></a>Б. Отображение значений раздела реестра для агента SQL Server  
+### <a name="b-display-the-sql-server-agent-registry-key-values"></a>Б) Отображение значений раздела реестра для агента SQL Server  
  Следующий пример возвращает значения разделов реестра агента SQL Server для текущего экземпляра SQL Server.  
   
 ```  
@@ -89,6 +89,6 @@ WHERE registry_key LIKE N'%SuperSocketNetLib%';
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sys.dm_server_services &#40;&#41;"Трансакт-СЗЛ"](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
+ [sys. dm_server_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   

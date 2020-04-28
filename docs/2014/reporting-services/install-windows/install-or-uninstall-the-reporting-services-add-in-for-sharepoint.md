@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63f45fa174296e4ce79985236da2d97d3f11e937
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289442"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>Установка и удаление надстройки служб Reporting Services для SharePoint (SharePoint 2010 и SharePoint 2013)
-  Запустите пакет установки надстройки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint (rsSharePoint.msi) на серверах SharePoint, чтобы использовать функции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в развертывании SharePoint. К этим компонентам относится Power View, веб-часть средства просмотра отчетов, конечная точка прокси для URL-адреса, типы содержимого и страницы приложений, которые позволяют создавать и просматривать отчеты, модели отчетов, источники данных и другое содержимое сервера отчетов на сайте SharePoint, а также управлять всем этим. Для сервера отчетов, работающего в режиме интеграции с SharePoint, надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint является обязательным компонентом. Надстройку можно установить с помощью мастера установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] или загрузить файл rsSharePoint.msi из пакета дополнительных компонентов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Список версий надстройки и страницы загрузки приведены в разделе [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).
+  Запустите надстройку пакета [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] установки для продуктов SharePoint (rsSharepoint. msi) на серверах SharePoint, чтобы включить [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] функции в развертывании SharePoint. К этим компонентам относится Power View, веб-часть средства просмотра отчетов, конечная точка прокси для URL-адреса, типы содержимого и страницы приложений, которые позволяют создавать и просматривать отчеты, модели отчетов, источники данных и другое содержимое сервера отчетов на сайте SharePoint, а также управлять всем этим. Для сервера отчетов, работающего в режиме интеграции с SharePoint, надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint является обязательным компонентом. Надстройку можно установить с помощью мастера установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] или загрузить файл rsSharePoint.msi из пакета дополнительных компонентов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Список версий надстройки и страницы загрузки приведены в разделе [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).
 
 ||
 |-|
@@ -26,9 +26,9 @@ ms.locfileid: "79289442"
 
  **В этом разделе:**
 
--   [Предварительные требования](#bkmk_prereq)
+-   [Предварительные условия](#bkmk_prereq)
 
--   [Что устанавливает надстройка?](#bkmk_whatinstalled)
+-   [Что устанавливает эта надстройка?](#bkmk_whatinstalled)
 
 -   [Общие сведения о методах установки](#bkmk_3ways_to_install)
 
@@ -36,17 +36,17 @@ ms.locfileid: "79289442"
 
     -   [Установка только файлов](#bkmk_files_only_installation)
 
--   [Удаление надстройки Reporting Services](#bkmk_remove_addin)
+-   [Удаление надстройки служб Reporting Services](#bkmk_remove_addin)
 
--   [Восстановление rsSharepoint. msi из командной строки](#bkmk_repair)
+-   [Восстановление rssharepoint.msi из командной строки](#bkmk_repair)
 
 -   [Файлы журналов установки](#bkmk_logfiles)
 
--   [Обновление](#bkmk_upgrade)
+-   [Обновление с более ранней версии](#bkmk_upgrade)
 
--   [RsCustomAction. exe](#bkmk_rscustomaction)
+-   [rsCustomAction.exe](#bkmk_rscustomaction)
 
-##  <a name="bkmk_prereq"></a> Предварительные требования
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Предварительные требования
  Установка надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] является одним из обязательных шагов интеграции сервера отчетов с экземпляром продукта SharePoint. Дополнительные сведения о полном наборе предварительных требований для использования режима интеграции с SharePoint см. в разделе [Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md). Дополнительные сведения об установке и настройке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]см. в [статье Установка Reporting Services SharePoint в режиме интеграции с SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).
 
 -   При интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с фермой SharePoint, содержащей несколько приложений клиентского веб-интерфейса, установите надстройку на каждый компьютер фермы с сервером клиентского веб-интерфейса. Это необходимо сделать только для веб-серверов, обслуживающих клиентские запросы, которые будут производить доступ к содержимому сервера отчетов.
@@ -59,7 +59,7 @@ ms.locfileid: "79289442"
 
 -   Схемы примеров развертывания с надстройкой см. в разделе [топологии развертывания для SQL Server функций бизнес-аналитики в SharePoint](../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).
 
-##  <a name="bkmk_whatinstalled"></a> Что устанавливает эта надстройка?
+##  <a name="what-does-the-add-in-install"></a><a name="bkmk_whatinstalled"></a>Что устанавливает надстройка?
  Процесс установки надстройки состоит из двух фаз, при этом обе они выполняются автоматически при стандартной установке.
 
 -   Сначала файлы устанавливаются в нужные папки. Это стандартные папки для развертываний SharePoint. Один из устанавливаемых файлов называется rsCustomAction.exe.
@@ -72,10 +72,9 @@ ms.locfileid: "79289442"
 > [!NOTE]
 >  Преимущество установки надстройки до развертывания продукта SharePoint заключается в том, что по мере добавления новых серверов в ферму надстройка служб Reporting Services будет настраиваться и активироваться фермой SharePoint.
 
- **SharePoint 2010**
+ **SharePoint 2010**
 
--   Средство подготовки продуктов SharePoint 2010 устанавливает версию [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] надстройки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] содержит новую версию надстроек, необходимых для функций [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+-   Средство подготовки продуктов SharePoint 2010 устанавливает версию [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] надстройки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] содержит новую версию надстроек, необходимых для функций [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
      При использовании средства подготовки продуктов SharePoint все равно необходимо установить надстройку служб [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
 
@@ -87,17 +86,17 @@ ms.locfileid: "79289442"
 
  Средство подготовки продуктов SharePoint 20103 **не** устанавливает [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройку для продуктов SharePoint.
 
-##  <a name="bkmk_3ways_to_install"></a> Общие сведения о методах установки
+##  <a name="overview-of-the-installation-methods"></a><a name="bkmk_3ways_to_install"></a> Общие сведения о методах установки
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Надстройку служб для продуктов SharePoint можно установить с помощью одного из следующих двух [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] методов:
 
 -   **Мастер установки.** ![Примечание](../../../2014/reporting-services/media/rs-fyinote.png "Примечание"). новые [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]возможности. надстройка может быть установлена мастером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установки. Выберите **надстройку служб Reporting Services для продуктов SharePoint** на странице мастера **Выбор компонентов** .
 
--   **rsSharepoint.msi**. Эту надстройку можно установить напрямую с установочного носителя или из скачанного отдельно файла. Файл rsSharepoint.msi поддерживает как графический пользовательский интерфейс, так и установку из командной строки. Файл MSI необходимо запустить с правами администратора, сначала открыв окно командной строки с повышенными разрешениями, затем запустить файл rsSharepoint.msi из командной строки. Дополнительные сведения о скачивании надстройки см. в разделе [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).
+-   **rsSharepoint.msi** . Надстройку можно установить напрямую с установочного носителя или скачать и установить. Файл rsSharepoint.msi поддерживает как графический пользовательский интерфейс, так и установку из командной строки. Файл MSI необходимо запустить с правами администратора, сначала открыв окно командной строки с повышенными разрешениями, затем запустить файл rsSharepoint.msi из командной строки. Дополнительные сведения о скачивании надстройки см. в разделе [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).
 
     > [!NOTE]
     >  При использовании параметра **/q** для автоматической установки из командной строки условия лицензионного соглашения не отображаются. Независимо от метода установки, использование программного обеспечения регулируется лицензионным соглашением и пользователь несет ответственность за его соблюдение.
 
-##  <a name="bkmk_install_rssharepoint"></a> Установка надстройки с помощью файла rsSharePoint.msi
+##  <a name="install-the-add-in-using-the-installation-file-rssharepointmsi"></a><a name="bkmk_install_rssharepoint"></a> Установка надстройки с помощью файла rsSharePoint.msi
  В этом разделе рассматривается установка напрямую с помощью файла rssharepoint.msi, либо с помощью мастера установки, либо из командной строки. Если надстройка была установлена с помощью мастера установки SQL Server, выполнять эти действия не нужно.
 
  С помощью следующей команды можно вывести полный список параметров командной строки:
@@ -118,7 +117,7 @@ Rssharepoint.msi /?
 
 3.  Настройте параметры сервера отчетов и включите нужные компоненты в центре администрирования SharePoint. . Дополнительные сведения об установке и настройке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint см. в статье [Установка служб Reporting Services в режиме SharePoint для SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).
 
-###  <a name="bkmk_files_only_installation"></a> Установка только файлов
+###  <a name="files-only-installation"></a><a name="bkmk_files_only_installation"></a>Установка только файлов
  Чтобы установить файлы и пропустить этап пользовательских действий, запустите файл rssharepoint.msi из командной строки с параметром SKIPCA.
 
 1.  Откройте командную строку **с разрешениями администратора**.
@@ -140,7 +139,7 @@ Rssharepoint.msi /?
 
     1.  Перейдите к папке с файлом `rsCustomAction.exe`. Этот файл копируется на компьютер программой установки надстройки, которая устанавливает только файлы. `rsCustomAction.exe`находится в каталоге **% TEMP%** . Для перехода к файлу введите в командной строке следующую команду:
 
-         **CD %temp%** .
+         **CD %temp%**.
 
          Файл должен быть расположен в папке: **\Users\\<ваше имя\>\AppData\Local\Temp**.
 
@@ -153,7 +152,7 @@ Rssharepoint.msi /?
     3.  Время, необходимое для применения изменений, варьируется и зависит от используемой среды сервера. Можно также запустить **iisreset** , чтобы принудительно выполнить более быстрое обновление.
 
 ### <a name="quiet-installation-for-scripting"></a>Автоматическая установка
- Вы можете использовать параметры **/q** или **/quiet** для автоматической установки, в ходе которой не будут выводиться никакие диалоговые окна или сообщения. Автоматическая установка удобна, если установку надстройки нужно выполнить из скрипта.
+ Можно использовать параметры **/q** или **/quiet** для автоматической установки без отображения диалоговых окон и предупреждений. Автоматическая установка удобна, если установку надстройки нужно выполнить из скрипта.
 
 > [!NOTE]
 >  При использовании параметра **/q** для автоматической установки из командной строки условия лицензионного соглашения не отображаются. Независимо от метода установки, использование программного обеспечения регулируется лицензионным соглашением и пользователь несет ответственность за его соблюдение.
@@ -168,7 +167,7 @@ Rssharepoint.msi /?
     Msiexec.exe /i rsSharePoint.msi /q
     ```
 
-##  <a name="bkmk_remove_addin"></a> Удаление надстройки служб Reporting Services
+##  <a name="how-to-remove-the-reporting-services-add-in"></a><a name="bkmk_remove_addin"></a>Удаление надстройки Reporting Services
  Удалить надстройку служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint можно с помощью панели управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows или из командной строки.
 
 1.  При использовании панели управления выполняется полное удаление файлов с данного компьютера **И** удаление объекта и компонентов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из фермы SharePoint. Когда объект и компоненты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] будут удалены, вы больше не сможете просматривать и обновлять отчеты.
@@ -183,7 +182,7 @@ Rssharepoint.msi /?
 
  При удалении надстройки следующие элементы не удаляются:
 
--   Имена входа, созданные для учетной записи службы Report Server для доступа к конфигурации и базам данных содержимого SharePoint. Необходимо удалить их для учетной записи сервера отчетов на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], где расположены базы данных SharePoint.
+-   Имена входа, созданные для учетной записи службы Report Server для доступа к конфигурации и базам данных содержимого SharePoint. Для учетной записи службы сервера отчетов необходимо удалить все имена входа из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] , используемого для размещения баз данных SharePoint.
 
 -   Разрешения или группы, созданные для пользователей отчетов. Если были созданы пользовательские уровни разрешений или группы SharePoint для предоставления доступа к функциям сервера отчетов, можно отменить любые разрешения, необходимость в которых отпала.
 
@@ -238,7 +237,7 @@ Rssharepoint.msi /?
 
  При этом предполагается, что установка MSI-файла была проведена с параметром SkipCA=1 и доступен файл rscusstomaction.exe. Дополнительные сведения см. в разделе с описанием установки только файлов.
 
-##  <a name="bkmk_repair"></a> Восстановление rssharepoint.msi из командной строки
+##  <a name="how-to-repair-rssharepointmsi-from-the-command-line"></a><a name="bkmk_repair"></a>Восстановление rsSharepoint. msi из командной строки
  Чтобы восстановить или удалить надстройку служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с использованием командной строки, выполните следующие действия.
 
 1.  Откройте командную строку **с разрешениями администратора**.
@@ -249,7 +248,7 @@ Rssharepoint.msi /?
     msiexec.exe /f rssharepoint.msi
     ```
 
-##  <a name="bkmk_logfiles"></a> Файлы журналов установки
+##  <a name="setup-log-files"></a><a name="bkmk_logfiles"></a>Файлы журналов установки
  При запуске программы установки она записывает сведения в файл журнала в папке **%temp%** пользователя, который устанавливает надстройку служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Например, **c:\Users\\<имя_пользователя\>\AppData\Local\Temp**. Имя файла имеет вид **RS_SP_\<число>.log**, например **RS_SP_0.log**. Каждая запись об ошибке в журнале начинается со строки «SSRSCustomActionError».
 
 > [!NOTE]
@@ -283,16 +282,16 @@ Rssharepoint.msi /?
 
      `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`.
 
-##  <a name="bkmk_upgrade"></a> Обновление
+##  <a name="upgrade"></a><a name="bkmk_upgrade"></a>Обновления
  Если надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] уже установлена, ее можно обновить до текущей версии. Программа установки надстройки обнаружит существующую версию и предложит подтвердить обновление. Сообщение имеет следующий вид:
 
- **В системе обнаружена более ранняя версия этого продукта. Обновить установленную версию?**
+ **В системе обнаружена более ранняя версия этого продукта. Вы хотите обновить существующую установку?**
 
  При получении подтверждения старая версия надстройки будет удалена, а новая установлена.
 
  Обратите внимание, что надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не привязана к экземпляру. Можно установить только один экземпляр надстройки на компьютер. Более ранние версии нельзя запускать параллельно с текущей версией.
 
-##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe
+##  <a name="rscustomactionexe"></a><a name="bkmk_rscustomaction"></a>RsCustomAction. exe
  В следующей таблице описываются параметры командной строки для программы rscustomaction.exe.
 
 |Параметр|Описание|

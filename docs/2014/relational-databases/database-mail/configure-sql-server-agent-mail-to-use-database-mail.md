@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3c2f5f0be09e9a60997308efd72c360348efc60
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289212"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Настройка почты агента SQL Server на использование компонента Database Mail
@@ -25,33 +25,33 @@ ms.locfileid: "79289212"
   
 -   **Перед началом работы**  
   
--   [Предварительные требования](#Prerequisites)  
+-   [Предварительные условия](#Prerequisites)  
   
 -   [Безопасность](#Security)  
   
--   [Настройка агент SQL Server для использования Database Mail с помощью SQL Server Management Studio](#SSMSProcedure)  
+-   [Настройка агента SQL Server на использование компонента Database Mail с помощью среды SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Задачи дальнейших действий](#Follow_Up)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
   
 -   Включить компонент Database Mail.  
   
 -   Создать учетную запись компонента Database Mail для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Создайте профиль Database Mail для используемой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи службы агента и добавьте пользователя к **роли DatabaseMailUserRole** в базе данных **msdb** .  
+-   Создать профиль компонента Database Mail для учетной записи агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы сделать пользователя членом роли **DatabaseMailUserRole** в базе данных **msdb** .  
   
 -   Сделать профиль используемым по умолчанию в базе данных **msdb** .  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="security"></a><a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Пользователь, создающий учетные записи профилей и выполняющий хранимые процедуры, должен быть членом предопределенной роли сервера sysadmin.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- **Настройка агент SQL Server для использования Database Mail**  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+ **Настройка агента SQL Server на использование компонента Database Mail**  
   
 -   Разверните экземпляр сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в обозревателе объектов.  
   
@@ -67,14 +67,14 @@ ms.locfileid: "79289212"
   
 -   Перезапустите агент SQL Server.  
   
-##  <a name="Follow_Up"></a>Задачи дальнейших действий  
+##  <a name="follow-up-tasks"></a><a name="Follow_Up"></a> Задачи дополнительной работы  
  Следующие задачи необходимо выполнить для завершения конфигурации агента на отправку предупреждений и уведомлений.  
   
--   [видны узлы](../../ssms/agent/alerts.md)  
+-   [Предупреждения](../../ssms/agent/alerts.md)  
   
      Предупреждения могут быть настроены на уведомление оператора о возникновении в базе данных определенного события или о формировании в операционной системе определенных условий.  
   
--   [Операторы](../../ssms/agent/operators.md)  
+-   [Инструкции](../../ssms/agent/operators.md)  
   
      Операторы — это псевдонимы для людей или групп, которые могут получать электронные уведомления.  
   

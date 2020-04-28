@@ -13,10 +13,10 @@ ms.author: jtoland
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: f82aba87632abea4ac5fbc8b54daa6dfd0eb5b4a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289842"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>Создание аналитических отчетов в Database Experimentation Assistant (SQL Server)
@@ -98,6 +98,6 @@ ms.locfileid: "79289842"
 
 Больше вопросов или отзывов? Отправьте отзыв с помощью инструмента Деа, щелкнув значок смайлика в левом нижнем углу.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - Сведения о просмотре отчета об анализе см. в разделе [Просмотр отчетов](database-experimentation-assistant-view-report.md).

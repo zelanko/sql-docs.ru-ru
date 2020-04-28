@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a1c05ed678fd0c23fc00466396f306763dfbc54b
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78280914"
 ---
 # <a name="lesson-1-creating-database-objects"></a>Урок 1. Создание объектов базы данных
@@ -34,17 +34,17 @@ ms.locfileid: "78280914"
   
  Это занятие содержит следующие разделы:  
   
--   [Руководство по созданию &#40;базы данных&#41;](lesson-1-1-creating-a-database.md)  
+-   [Создание базы данных (учебник)](lesson-1-1-creating-a-database.md)  
   
--   [Создание таблицы &#40;учебнике&#41;](lesson-1-2-creating-a-table.md)  
+-   [Создание таблицы (учебник)](lesson-1-2-creating-a-table.md)  
   
--   [Вставка и обновление данных в таблице &#40;учебнике&#41;](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
+-   [Вставка данных в таблицу и их обновление (учебник)](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
--   [Чтение данных в таблице &#40;учебнике&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+-   [Чтение данных из таблицы (учебник)](lesson-1-4-reading-the-data-in-a-table.md)  
   
 -   [Сводка. Создание объектов базы данных](lesson-1-5-summary-creating-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Руководство по созданию &#40;базы данных&#41;](lesson-1-1-creating-a-database.md)  
+ [Создание базы данных (учебник)](lesson-1-1-creating-a-database.md)  
   
   

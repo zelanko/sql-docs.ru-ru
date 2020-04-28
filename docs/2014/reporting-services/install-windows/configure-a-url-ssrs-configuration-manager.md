@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2337434a48e92ddc28af52cc3481951eafe66d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380705"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Настройка URL-адреса (диспетчер конфигурации служб SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "80380705"
   
 -   Указание дополнительных свойств URL-адреса для определения дополнительных URL-адресов.  
   
- Для получения дополнительной информации о том, как URL-адреса хранятся и поддерживаются или проблемы совместимости, см [&#41;](install-reporting-and-internet-information-services-side-by-side.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] &#40;&#41;[&#40;.](about-url-reservations-and-registration-ssrs-configuration-manager.md) Обзор примеров URL-адресов, часто используемых при установке служб Reporting Services, см. в подразделе [Примеры URL-адресов](#URLExamples) данного раздела.  
+ Дополнительные сведения о хранении и обслуживании URL-адресов, а также о проблемах взаимодействия см. в статьях [о резервировании URL-адресов и регистрации &#40;SSRS Configuration Manager&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md) и [установите Reporting Services и службы IIS параллель &#40;служб SSRS в основном режиме ](install-reporting-and-internet-information-services-side-by-side.md)в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Обзор примеров URL-адресов, часто используемых при установке служб Reporting Services, см. в подразделе [Примеры URL-адресов](#URLExamples) данного раздела.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Перед тем как приступать к созданию или изменению URL-адреса, нужно запомнить следующие моменты.  
@@ -71,7 +71,7 @@ ms.locfileid: "80380705"
   
     -   **::1** — это петлевой адрес в формате IPv6.  
   
-    -   Отдельные IP-адреса представлены также в этом списке. IP-адреса могут иметь форматы IPv4 и IPv6. *Nnn.nnn.nnn.nnn* — 32-разрядный адрес IPv4 сетевого адаптера на компьютере. IPv6 адреса 128-битные, с восемью 4-байт \<поля разделены толстой кишки: приставка>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   Отдельные IP-адреса представлены также в этом списке. IP-адреса могут иметь форматы IPv4 и IPv6. *Nnn.nnn.nnn.nnn* — 32-разрядный адрес IPv4 сетевого адаптера на компьютере. Адреса IPv6 имеют 128 разрядов. Каждый из них состоит из восьми полей по 4 байта, разделенных двоеточиями: \<префикс>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
          Если на вашем компьютере установлено несколько плат или ваша сеть поддерживает как адреса IPv4, так и адреса IPv6, вы увидите несколько IP-адресов. Если выбрать только один IP-адрес, доступ приложения будет ограничен этим адресом (а также именем узла, которое сервер доменных имен связывает с этим адресом). Доступ к компьютеру сервера отчетов ни по имени localhost, ни по IP-адресам других установленных на нем плат сетевых адаптеров будет невозможен. Обычно это значение выбирается потому, что пользователь выполняет настройку резервирования нескольких URL-адресов, в которых также явно указываются IP-адреса или имена узлов (например, один для сетевой платы, используемый для соединения с интрасетью сетью, а второй — используемый для соединения с экстрасетью).  
   
@@ -95,7 +95,7 @@ ms.locfileid: "80380705"
   
 10. Проверьте URL-адрес, щелкнув ссылку в разделе **URL-адреса** . Следует отметить, что перед началом тестирования URL-адреса необходимо создать и настроить базу данных сервера отчетов. Инструкции см. в статье [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигураций служб SSRS)](ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
-11. Кроме того, если сервер отчетов настроен для работы в режиме интеграции с SharePoint, настройте URL-адрес веб-службы сервера отчетов в центре администрирования SharePoint. Для получения дополнительной информации о том, как обновить URL веб-службы Отчета сервера в Центральном управлении SharePoint, [см. Конфигурация и администрирование сервера отчетов &#40;службы отчетности SharePoint режим&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md) и [отчетные службы Report Server &#40;режиме SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md).  
+11. Кроме того, если сервер отчетов настроен для работы в режиме интеграции с SharePoint, настройте URL-адрес веб-службы сервера отчетов в центре администрирования SharePoint. Дополнительные сведения о том, как обновить URL-адрес Web Service для сервера отчетов в центре администрирования SharePoint, см. в разделе [Настройка и администрирование сервера отчетов &#40;Reporting Services режиме интеграции с sharepoint&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md) и [Reporting Services сервере отчетов &#40;режиме SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md).  
   
 ### <a name="to-create-a-url-reservation-for-report-manager"></a>Создание резервирования URL-адреса для диспетчера отчетов  
   
@@ -103,7 +103,7 @@ ms.locfileid: "80380705"
   
 2.  Нажмите кнопку **URL-адрес диспетчера отчетов**.  
   
-3.  Укажите виртуальный каталог. Диспетчер отчетов прослушивает те же IP-адрес и порт, что и веб-служба сервера отчетов. Если диспетчер отчетов настроен таким образом, что он указывает на другую веб-службу сервера отчетов, необходимо изменить параметры URL-адреса в файле RSReportServer.config. Для получения инструкций в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] книгах «Онлайн» можно найти менеджера по настройке отчета &#40;&#41;native [Mode.](../report-server/configure-web-portal.md)  
+3.  Укажите виртуальный каталог. Диспетчер отчетов прослушивает те же IP-адрес и порт, что и веб-служба сервера отчетов. Если диспетчер отчетов настроен таким образом, что он указывает на другую веб-службу сервера отчетов, необходимо изменить параметры URL-адреса в файле RSReportServer.config. Инструкции см. в разделе [настройка диспетчер отчетов &#40;собственном режиме&#41;](../report-server/configure-web-portal.md) в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 4.  Если установлен SSL-сертификат, можно выбрать его с тем, чтобы все запросы к диспетчеру отчетов маршрутизировались по протоколу HTTPS.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "80380705"
 ## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>URL-адреса для нескольких экземпляров сервера отчетов на одном компьютере  
  Во избежание конфликта имен при резервировании URL-адресов для нескольких экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]необходимо соблюдать соглашения об именах. Дополнительные сведения см. в статье [Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах (диспетчер конфигурации служб SSRS)](url-reservations-for-multi-instance-report-server-deployments.md).  
   
-##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a>Примеры конфигураций URL-адресов  
+##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a> Примеры конфигурации URL-адресов  
  Приведенный ниже список содержит несколько примеров того, как может выглядеть URL-адрес сервера отчетов.  
   
 -   http://localhost/reportserver  
@@ -168,8 +168,8 @@ ms.locfileid: "80380705"
   
 -   `https://www.adventure-works.com:8080/reports`  
   
-## <a name="see-also"></a>См. также  
- [Менеджер конфигурации служб отчетности &#40;&#41;в режиме Native Mode](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+## <a name="see-also"></a>См. также:  
+ [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

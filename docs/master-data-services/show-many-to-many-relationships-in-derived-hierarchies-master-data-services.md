@@ -11,10 +11,10 @@ ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289892"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Отображение связей "многие-ко-многим" в производных иерархиях (Master Data Services)
@@ -72,11 +72,10 @@ ms.locfileid: "79289892"
   
  Уровни "многие-ко-многим" могут быть скрыты, как и другие уровни производной иерархии.  
    
-### <a name="M2MSample"></a>Отношение M2M в образце модели  
+### <a name="m2m-relationship-in-sample-model"></a><a name="M2MSample"></a> Связь "многие ко многим" в образце модели  
 Для демонстрации связи "многие ко многим" просмотрите производную иерархию "Region Climate" в образце модели Customer, входящем в состав [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].   
   
-Как показано на рисунке ниже, имя уровня, моделирующего эту связь, — ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (сопоставляется через RegionClimate.Region)**. 
-  ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** показывает регионы, сгруппированные по связанному с ними типу климата. Это связь "многие ко многим", так как имеются регионы (дочерние элементы), связанные с несколькими типами климата (родительские элементы). Например, элемент ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** связан с элементами ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** и ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**.  
+Как показано на рисунке ниже, имя уровня, моделирующего эту связь, — ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (сопоставляется через RegionClimate.Region)**. ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** показывает регионы, сгруппированные по связанному с ними типу климата. Это связь "многие ко многим", так как имеются регионы (дочерние элементы), связанные с несколькими типами климата (родительские элементы). Например, элемент ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** связан с элементами ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** и ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**.  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
@@ -91,7 +90,7 @@ ms.locfileid: "79289892"
   
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
-##  <a name="bkmk_member_security"></a>Безопасность элементов  
+##  <a name="member-security"></a><a name="bkmk_member_security"></a> Безопасность элементов  
  Иерархию, допускающую дублирование элементов (элемент может иметь несколько родительских элементов), нельзя использовать для назначения элементам разрешений безопасности. Пример:  
   
 -   Рекурсивная производная иерархия (RDH), которая не привязывает нулевые рекурсии (каждый элемент на рекурсивном уровне располагается под уровнем ROOT и его рекурсивным родительским элементом).  
@@ -104,6 +103,6 @@ ms.locfileid: "79289892"
  Коллекции и явные иерархии устарели. Хранимая процедура преобразования (udpConvertCollectionAndConsolidatedMembersToLeaf) преобразует элементы коллекции в конечные элементы и создает производные иерархии "многие-ко-многим" для записи сведений о принадлежности к коллекции.  
   
 ## <a name="see-also"></a>См. также:  
- [Производные иерархии &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+ [Производные иерархии (службы Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

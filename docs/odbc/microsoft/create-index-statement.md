@@ -1,5 +1,5 @@
 ---
-title: ЗАЯВЛЕНИЕ CREATE INDEX Документы Майкрософт
+title: CREATE INDEX, инструкция | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c6aa512ff789fcbd00f45f84fb194d4ab3f5da07
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81280974"
 ---
 # <a name="create-index-statement"></a>Инструкция CREATE INDEX
-Синтаксис оператора CREATE INDEX:  
+Синтаксис инструкции CREATE INDEX:  
   
- CREATE (УНИКЕ) *ИНДЕКС-имя* ON *таблицы-имя* *(столб-идентификатор* »ASC » (DESC), *столбец-идентификатор* »ASC »DESC »...) Список \< *опционов* индекса WITH>  
+ CREATE [UNIQUE] *индекс index-Name* для *Table-name* (*столбец-Идентификатор* [ASC] [desc] [, *столбец-Идентификатор* [ASC] [desc]...]) С \<помощью *списка параметров индекса*>  
   
- где \< *список опционов индекса*> может быть: PRIMARY &#124; DISALLOW NULL &#124; IGNORE NULL  
+ \<> *списка параметров индекса* может быть: Primary &#124; запретить NULL &#124; пропускать null  
   
- Только драйвер Microsoft Access использует параметры индекса DISALLOW NULL и IGNORE NULL. Драйверы dBASE и Paradox принимают синтаксис, но игнорируют наличие любого варианта.  
+ Только драйвер Microsoft Access использует параметры "запретить NULL" и "игнорировать пустые индексы". Драйверы dBASE и Paradox принимают синтаксис, но игнорируют присутствие любого из этих параметров.  
   
- При использовании драйвера Paradox в отчете CREATE INDEX создается основные ключевые файлы парадокса и вторичные файлы.  
+ При использовании драйвера Paradox инструкция CREATE INDEX создает файлы первичного ключа Paradox и вторичные файлы.  
   
- Это утверждение не поддерживается драйверами Microsoft Excel или Text.
+ Эта инструкция не поддерживается драйверами Microsoft Excel и Text.

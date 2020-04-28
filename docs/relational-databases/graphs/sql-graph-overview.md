@@ -16,10 +16,10 @@ ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
-ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79428155"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Обработка графов в SQL Server и Базы данных SQL Azure
@@ -28,7 +28,7 @@ ms.locfileid: "79428155"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предоставляет возможности баз данных Graph для моделирования связей "многие ко многим". Связи графов интегрированы в [!INCLUDE[tsql-md](../../includes/tsql-md.md)] и получают преимущества использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве базовой системы управления базами данных.
 
 
-## <a name="what-is-a-graph-database"></a>Что такое база данных Graph?  
+## <a name="what-is-a-graph-database"></a>Что такое графовая база данных?  
 База данных графа представляет собой коллекцию узлов (или вершин) и ребер (или связей). Узел представляет сущность (например, пользователя или организацию), а ребро — связь между двумя узлами, которые оно соединяет (например, отметки "Нравится" или друзья). С этими узлами и краями могут быть связаны свойства. Ниже приведены некоторые функции, благодаря которым графовая база данных является уникальной.  
 -    Ребра или связи в графовой базе данных являются сущностями первого класса, с которым могут быть связаны атрибуты или свойства. 
 -    Одно ребро может гибко соединить несколько узлов в графовой базе данных.
@@ -47,7 +47,7 @@ ms.locfileid: "79428155"
 
 
 ### <a name="create-graph-objects"></a>Создание объектов Graph
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]расширения позволяют пользователям создавать таблицы node или ребра. С этими узлами и краями могут быть связаны свойства. Поскольку узлы и грани хранятся в виде таблиц, все операции, поддерживаемые реляционными таблицами, поддерживаются в таблице node или EDGE. Вот пример:   
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)]расширения позволяют пользователям создавать таблицы node или ребра. С этими узлами и краями могут быть связаны свойства. Поскольку узлы и грани хранятся в виде таблиц, все операции, поддерживаемые реляционными таблицами, поддерживаются в таблице node или EDGE. Например:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

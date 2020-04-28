@@ -24,10 +24,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 58abfde651fb59bc69207db810324eb4c74b8c26
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112062"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Связывание приложений Access с SQL Server в базе данных SQL Azure (Акцесстоскл)
@@ -146,13 +146,13 @@ Recordset.LastModified
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>Функция гиперссылки потеряна после переноса данных  
 **Причина:** После переноса данных гиперссылки в столбцах теряют свои функциональные возможности и становятся простыми столбцами типа **nvarchar (max)** .  
   
-**Решение:** None.  
+**Решение.** Отсутствует.  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>Некоторые SQL Server типы данных не поддерживаются в Access  
 **Причина:** Если впоследствии вы обновите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы или SQL Azure, чтобы они содержали типы данных, не поддерживаемые Access, то нельзя будет открыть таблицу в Access.  
   
 **Решение:** Можно определить запрос доступа, возвращающий только строки с поддерживаемыми типами данных.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   
