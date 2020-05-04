@@ -9,16 +9,18 @@ ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: seo-lt-2019
 ms.date: 03/30/2020
-ms.openlocfilehash: 21a64ad49b0a40959b5327b209d088fe31738b7d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 480b5df927adddd38b8f9f2ea13fa25c3f653606
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664391"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178625"
 ---
 # <a name="notebooks-with-sql-server-in-azure-data-studio"></a>Записные книжки с SQL Server в Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+Jupyter Notebook представляет собой веб-приложение с открытым исходным кодом, которое позволяет создавать документы, содержащие код, формулы, визуализации и текстовое описание, и обмениваться этими документами. Использование включает в себя очистку и преобразование данных, числовое моделирование, статистическое моделирование, визуализацию данных и машинное обучение.
 
 В этой статье содержатся сведения о запуске записных книжек в последнем выпуске [**Azure Data Studio**](../azure-data-studio/download.md) и создании собственных записных книжек. Здесь также приводятся инструкции по созданию записных книжек с помощью разных ядер.
 
