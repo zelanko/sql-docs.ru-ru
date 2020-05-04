@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3b45ec31788814df7c472dbb81e3b47e0e42abeb
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75227506"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588098"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Используйте мастер создания внешней таблицы с реляционными источниками данных
 
@@ -64,7 +64,7 @@ ms.locfileid: "75227506"
 
 На следующей странице выберите таблицы, для которых нужно создать внешние представления. При выборе родительских баз данных также включаются дочерние таблицы. После выбора таблиц справа появится таблица сопоставления. Здесь можно вносить изменения в типы. Вы также можете изменить имя выбранной внешней таблицы.
 
-![Учетные данные внешнего источника данных](media/data-virtualization/data-table-mapping.png)
+![Учетные данные внешнего источника данных](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >Чтобы изменить представление сопоставления, дважды щелкните другую выбранную таблицу.

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7da0d231300afd550f7f3e4c4d491a5109c57f00
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8681ab325f5c1583ab62604c0c1416f9c88152b9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636216"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719421"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Предикат, используемый в [!INCLUDE[tsql](../../includes/tsql-md.md)] в [предложении WHERE](../../t-sql/queries/where-transact-sql.md) инструкции SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] для выполнения полнотекстового поиска по столбцам полнотекстового индекса, содержащим символьные типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот предикат выполняет поиск значений, которые соответствуют условию поиска по смыслу, а не написанию. Когда используется предикат FREETEXT, ядро полнотекстовых запросов автоматически выполняет описанные далее действия над строкой *freetext_string*, присваивает вес каждому терму, а затем ищет совпадения.  
   
