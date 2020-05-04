@@ -145,7 +145,7 @@
             - name: Данные HDFS
               items:
                 - name: "Виртуализация данных в формате\_CSV"
-                  href: relational-databases/polybase/data-virtualization-csv.md
+                  href: big-data-cluster/data-virtualization-csv.md
                 - name: Запрос данных HDFS
                   href: big-data-cluster/tutorial-query-hdfs-storage-pool.md
                 - name: Распределение по уровням HDFS
@@ -2618,7 +2618,7 @@
               href: relational-databases/native-client/features/using-multiple-active-result-sets-mars.md
             - name: Определяемые пользователем типы
               href: relational-databases/native-client/features/using-user-defined-types.md
-            - name: Типы данных XML
+            - name: 'Типы данных XML '
               href: relational-databases/native-client/features/using-xml-data-types.md
             - name: Поддержка UTF-16 в собственном клиенте SQL Server версии 11.0
               href: relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md
@@ -6759,7 +6759,7 @@
               href: relational-databases/partitions/modify-a-partition-function.md
             - name: Изменение схемы
               href: relational-databases/partitions/modify-a-partition-scheme.md
-            - name: Справка F1 мастера управления секциями
+            - name: Мастер управления секциями
               href: relational-databases/partitions/manage-partition-wizard-f1-help.md
         - name: Структуры планов
           href: relational-databases/performance/plan-guides.md
@@ -7029,7 +7029,7 @@
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
     - name: "Службы SQL\_Server Analysis\_Services\_(SSAS)\_>"
-      href: 'https://docs.microsoft.com/en-us/analysis-services/analysis-services-overview'
+      href: 'https://docs.microsoft.com/analysis-services/analysis-services-overview'
     - name: "Службы SQL\_Server Reporting\_Services\_(SSRS)\_>"
       href: reporting-services/index.md
     - name: Службы Master Data Services
@@ -7785,6 +7785,55 @@
               href: azure-data-studio/tutorial-build-custom-insight-sql-server.md
             - name: Резервное копирование и восстановление
               href: azure-data-studio/tutorial-backup-restore-sql-server.md
+        - name: Основные понятия
+          items:
+            - name: Модули
+              href: azure-data-studio/extensions.md
+              items:
+                - name: Расширение PostgreSQL
+                  href: azure-data-studio/postgres-extension.md
+                - name: Расширение виртуализации данных
+                  href: azure-data-studio/data-virtualization-extension.md
+                - name: "Агент SQL\_Server"
+                  href: azure-data-studio/sql-server-agent-extension.md
+                - name: Расширение центральных серверов управления SQL Server
+                  href: azure-data-studio/sql-server-cms-extension.md
+                - name: Расширение DACPAC-файлов SQL Server
+                  href: azure-data-studio/sql-server-dacpac-extension.md
+                - name: "Импорт SQL\_Server"
+                  href: azure-data-studio/sql-server-import-extension.md
+                - name: Приложение SQL Server Profiler
+                  href: azure-data-studio/sql-server-profiler-extension.md
+                - name: Расширение сравнения схем
+                  href: azure-data-studio/schema-compare-extension.md
+                - name: Расширение PowerShell
+                  href: azure-data-studio/powershell-extension.md
+                - name: Расширение для Управляемого экземпляра
+                  href: azure-data-studio/azure-sql-managed-instance-extension.md
+                - name: Расширение SandDance
+                  href: azure-data-studio/sanddance-extension.md
+            - name: Разработка расширений
+              items:
+                - name: Обзор расширяемости
+                  href: azure-data-studio/extensibility.md
+                - name: Разработка расширений
+                  href: azure-data-studio/extension-authoring.md
+                - name: Создание расширений
+                  href: azure-data-studio/tutorial-create-extension.md
+                - name: API расширяемости
+                  href: azure-data-studio/extensibility-apis.md
+            - name: Записные книжки
+              items:
+                - name: Общие сведения о записных книжках
+                  href: azure-data-studio/notebooks-guidance.md
+                - name: Использование ядра SQL
+                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
+                - name: Использование ядра Python
+                  href: azure-data-studio/notebooks-tutorial-python-kernel.md
+                - name: Kqlmagic
+                  href: azure-data-studio/notebooks-kql-magic.md
+                - name: Управление записной книжкой
+                  href: azure-data-studio/notebooks-manage-sql-server.md
         - name: Практические руководства
           items:
             - name: Панели мониторинга и мини-приложения аналитических сведений
@@ -7801,55 +7850,14 @@
               href: azure-data-studio/server-groups.md
             - name: Система управления версиями
               href: azure-data-studio/source-control.md
+            - name: Сбор данных об использовании
+              href: azure-data-studio/usage-data-collection.md
             - name: Параметры рабочей области и пользователя
               href: azure-data-studio/settings.md
             - name: Проверка подлинности Windows (Kerberos)
               href: azure-data-studio/enable-kerberos.md
-            - name: Записные книжки
-              items:
-                - name: Общие сведения о записных книжках
-                  href: azure-data-studio/notebooks-guidance.md
-                - name: "Как использовать ядро\_SQL"
-                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
-                - name: Как работать с записной книжкой
-                  href: azure-data-studio/notebooks-manage-sql-server.md
             - name: Сбор данных об использовании
               href: azure-data-studio/usage-data-collection.md
-        - name: Модули
-          href: azure-data-studio/extensions.md
-          items:
-            - name: Расширение PostgreSQL
-              href: azure-data-studio/postgres-extension.md
-            - name: Расширение виртуализации данных
-              href: azure-data-studio/data-virtualization-extension.md
-            - name: "Агент SQL\_Server"
-              href: azure-data-studio/sql-server-agent-extension.md
-            - name: Расширение центральных серверов управления SQL Server
-              href: azure-data-studio/sql-server-cms-extension.md
-            - name: Расширение DACPAC-файлов SQL Server
-              href: azure-data-studio/sql-server-dacpac-extension.md
-            - name: "Импорт SQL\_Server"
-              href: azure-data-studio/sql-server-import-extension.md
-            - name: Приложение SQL Server Profiler
-              href: azure-data-studio/sql-server-profiler-extension.md
-            - name: Расширение сравнения схем
-              href: azure-data-studio/schema-compare-extension.md
-            - name: Расширение PowerShell
-              href: azure-data-studio/powershell-extension.md
-            - name: Расширение для Управляемого экземпляра
-              href: azure-data-studio/azure-sql-managed-instance-extension.md
-            - name: Расширение SandDance
-              href: azure-data-studio/sanddance-extension.md
-        - name: Разработка расширений
-          items:
-            - name: Обзор расширяемости
-              href: azure-data-studio/extensibility.md
-            - name: Разработка расширений
-              href: azure-data-studio/extension-authoring.md
-            - name: Создание расширений
-              href: azure-data-studio/tutorial-create-extension.md
-            - name: API расширяемости
-              href: azure-data-studio/extensibility-apis.md
         - name: Ресурсы
           items:
             - name: ВОПРОСЫ И ОТВЕТЫ
