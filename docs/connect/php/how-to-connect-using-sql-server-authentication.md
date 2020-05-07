@@ -1,5 +1,6 @@
 ---
-title: Практическое руководство. Подключение с использованием проверки подлинности SQL Server | Документация Майкрософт
+title: Руководство. подключиться с использованием проверки подлинности SQL Server
+description: Узнайте об особенностях подключения к базе данных с применением проверки подлинности SQL Server.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10028beb86526f553a959376804d855513f0336c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 55f87063904a0201b9aa1a98cdb296d27c821083
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916450"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728328"
 ---
-# <a name="how-to-connect-using-sql-server-authentication"></a>How to: Connect Using SQL Server Authentication
+# <a name="how-to-connect-using-sql-server-authentication"></a>Руководство. подключиться с использованием проверки подлинности SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] поддерживает проверку подлинности SQL Server при подключении к SQL Server.  
   
-Проверку подлинности SQL Server следует использовать только в том случае, если невозможно реализовать проверку подлинности Windows. Сведения о подключении с использованием проверки подлинности Windows см. в статье [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md).  
+Проверку подлинности SQL Server следует использовать только в том случае, если невозможно реализовать проверку подлинности Windows. Сведения о подключении с использованием проверки подлинности Windows см. в руководстве[ Подключение с помощью проверки подлинности Windows](../../connect/php/how-to-connect-using-windows-authentication.md).  
   
 При использовании проверки подлинности SQL Server для подключения к SQL Server необходимо учитывать следующие аспекты.  
   
@@ -130,7 +131,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>См. также:  
-[Практическое руководство. Подключение с использованием проверки подлинности SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+[Руководство. Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md) (Как установить подключение с использованием проверки подлинности SQL Server)
 
 [Руководство по программированию драйверов Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
@@ -138,9 +139,9 @@ sqlsrv_close( $conn);
 
 [SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
 
-[Практическое руководство. Создание имени входа SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
+[Руководство. Создание имени входа SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[Практическое руководство. Создание пользователя базы данных](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[Руководство. Создание пользователя базы данных](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [Управление пользователями, ролями и именами входа](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 

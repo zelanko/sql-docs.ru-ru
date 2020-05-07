@@ -1,7 +1,7 @@
 ---
 title: Скачивание драйвера ODBC Driver for SQL Server
 description: Скачайте драйвер Microsoft ODBC Driver for SQL Server, чтобы разрабатывать приложения в собственном коде с подключением к SQL Server и базе данных SQL Azure.
-ms.date: 04/01/2020
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ba443225baa1e84a56fd9ce114ec8ff6fa96ebb9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: c9a1b33348729aca9a0f77628e51f1c7d4c0e051
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488599"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153244"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>Скачивание драйвера ODBC Driver for SQL Server
 
@@ -71,7 +71,9 @@ Microsoft ODBC Driver for SQL Server можно скачать и установ
 
 ### <a name="alpine"></a>Alpine
 
-- [Пакет Alpine](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.apk) ([подпись PGP](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.sig))
+- [Пакет Alpine 17.5.2.2](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.2-1_amd64.apk) ([подпись PGP](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.2-1_amd64.sig))
+- [Пакет Alpine 17.5.2.1](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.apk) ([подпись PGP](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.sig))
+- [Пакет Alpine 17.5.1.1](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.apk) ([подпись PGP](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.sig))
 
 ### <a name="debian"></a>Debian
 

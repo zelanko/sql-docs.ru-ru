@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 3667a8bffa62dbb4b297fc73ce2910048110468f
-ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
+ms.openlocfilehash: 482451fbe9a94696f434bd005b95b49e5dd5dd5e
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80464377"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138285"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
@@ -68,7 +68,7 @@ ms.locfileid: "80464377"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 SET
 {
@@ -328,7 +328,7 @@ OFF
 >
 > Зеркальное отображение базы данных требует, чтобы параметр AUTO_CLOSE был установлен в состояние OFF.
 
-Если параметр базы данных AUTOCLOSE установлен в значение ON, то действия, инициирующие автоматическое закрытие базы данных, очищают кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Очистка кэша планов становится причиной перекомпиляции всех последующих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 2 (SP2) и выше для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил %d экземпляров, записанных на диск хранилищ кэша для хранилища кэша "%s" (части кэша планов) в результате операций по обслуживанию или изменению конфигурации базы данных". Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
+Если параметр базы данных AUTOCLOSE установлен в значение ON, то действия, инициирующие автоматическое закрытие базы данных, очищают кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Очистка кэша планов становится причиной перекомпиляции всех последующих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 2 (SP2) и выше для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
 ON     
@@ -1228,7 +1228,7 @@ NO_WAIT
 - Восстановление резервной копии базы данных.
 - Отсоединение базы данных.
 
-Очистка кэша планов становится причиной перекомпиляции всех последующих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. Для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил %d экземпляров, записанных на диск хранилищ кэша для хранилища кэша "%s" (части кэша планов) в результате операций по обслуживанию или изменению конфигурации базы данных". Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
+Очистка кэша планов становится причиной перекомпиляции всех последующих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. Для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
 
 ## <a name="examples"></a>Примеры
 
@@ -1420,7 +1420,7 @@ SET QUERY_STORE = ON
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```syntaxsql
 ALTER DATABASE { database_name | Current }
 SET
 {
@@ -2214,7 +2214,7 @@ SET QUERY_STORE = ON
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```syntaxsql
 ALTER DATABASE { database_name | Current }
 SET
 {
@@ -2909,7 +2909,7 @@ SET QUERY_STORE = ON
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```syntaxsql
 ALTER DATABASE { database_name }
 SET
 {
@@ -3034,10 +3034,10 @@ SELECT name, is_result_set_caching_on FROM sys.databases
 WHERE name = <'Your_Database_Name'>
 ```
 
-Выполните эту команду, чтобы проверить, был ли запрос выполнен с использованием кэшированного результата.  Столбец result_set_cache возвращает 1 для попадания в кэше, 0 для промаха кэша и отрицательные значения для причин, по которым кэширование результирующего набора не использовалось.  Дополнительные сведения см. в описании [sys.dm_pdw_exec_requests](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql?view=aps-pdw-2016-au7).  
+Выполните эту команду, чтобы проверить, был ли запрос выполнен с использованием кэшированного результата.  Столбец result_cache_hit возвращает 1 для попадания в кэше, 0 для промаха кэша и отрицательные значения для причин, по которым кэширование результирующего набора не использовалось.  Дополнительные сведения см. в описании [sys.dm_pdw_exec_requests](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql?view=aps-pdw-2016-au7).  
 
 ```sql
-SELECT request_id, command, result_set_cache FROM sys.dm_pdw_exec_requests
+SELECT request_id, command, result_cache_hit FROM sys.dm_pdw_exec_requests
 WHERE request_id = <'Your_Query_Request_ID'>
 ```
 

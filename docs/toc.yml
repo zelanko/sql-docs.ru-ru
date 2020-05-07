@@ -613,10 +613,11 @@
                     - name: SignalAbort
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-signalabort.md
     - name: Группы доступности AlwaysOn
-      href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
       items:
         - name: Обзор
           items:
+            - name: "Что такое группа доступности Always\_On?"
+              href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
             - name: Режимы доступности
               href: database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md
             - name: Технологии и возможности
@@ -945,10 +946,13 @@
                     - name: журнал ошибок SQL Server
                       href: database-engine/availability-groups/windows/sql-server-error-log-always-on-availability-groups.md
     - name: Экземпляр отказоустойчивого кластера AlwaysOn
-      href: sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
       items:
         - name: Обзор
-          href: sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
+          items:
+            - name: Что такое экземпляр отказоустойчивого кластера?
+              href: sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
+            - name: "Отказоустойчивый кластер Windows\_Server"
+              href: sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
         - name: Практическое руководство
           items:
             - name: Развертывание

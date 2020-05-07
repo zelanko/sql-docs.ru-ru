@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4f3dbfa81e52d050b3e5df46ea2ea5911a8b1254
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 844b0a958b241de985a22067b4e3175137e1c6bb
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903691"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087414"
 ---
 # <a name="install-integration-services-ssis"></a>Установка служб Integration Services (SSIS)
 
@@ -131,7 +131,7 @@ ms.locfileid: "77903691"
 
   - Соединитель с SAP BW (Microsoft®) для Microsoft SQL Server®. Чтобы получить эти компоненты, перейдите на страницу [пакета дополнительных компонентов Microsoft® SQL Server® 2017](https://www.microsoft.com/download/details.aspx?id=55992).
 
-  - Соединитель для Oracle (Microsoft) версии 5.0 от компании Attunity и соединитель для Teradata (Microsoft) версии 5.0 от компании Attunity. Чтобы получить эти компоненты, перейдите на страницу [соединителей для Oracle и Teradata (Microsoft) версии 5.0](https://www.microsoft.com/download/details.aspx?id=55179).
+  - Соединители Microsoft для Oracle и Teradata компании Attunity. Как скачать эти компоненты описано в [этой статье](../attunity-connectors.md).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

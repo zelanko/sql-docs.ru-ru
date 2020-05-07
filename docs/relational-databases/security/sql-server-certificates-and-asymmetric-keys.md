@@ -13,12 +13,12 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99e5f88f730953929115a5b18c00e5d1bb67562e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b330e97aa006b223120d13433bf2c317205b96c
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126827"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153126"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Сертификаты SQL Server и асимметричные ключи
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "68126827"
 ### <a name="using-a-certificate-in-sql-server"></a>Использование сертификата в SQL Server  
  Сертификаты могут использоваться для защиты соединений, при зеркальном отображении баз данных, подписывании пакетов и других объектов, шифровании данных или соединений. В следующей таблице перечислены дополнительные ресурсы для сертификатов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)|Содержит описание команды создания сертификатов.|  
 |[Определение источника пакетов с помощью цифровых подписей](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|Содержит сведения об использовании сертификатов для подписывания программных пакетов.|  
@@ -59,7 +59,7 @@ ms.locfileid: "68126827"
 ### <a name="using-an-asymmetric-key-in-sql-server"></a>Использование асимметричного ключа в SQL Server  
  Асимметричные ключи можно использовать для защиты данных или подписывания незашифрованного текста. В следующей таблице перечислены дополнительные ресурсы для асимметричных ключей в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)|Содержит описание команды создания асимметричных ключей.|  
 |[SIGNBYASYMKEY (Transact-SQL)](../../t-sql/functions/signbyasymkey-transact-sql.md)|Отображает параметры для подписывания объектов.|  
@@ -70,7 +70,8 @@ ms.locfileid: "68126827"
 |||  
 |-|-|  
 |Инструмент|Назначение|  
-|[makecert](/windows/desktop/SecCrypto/makecert)|Создает сертификаты.|  
+|[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|Создает самозаверяющие сертификаты.|  
+|[makecert](/windows/desktop/SecCrypto/makecert)|Создает сертификаты. Вместо него рекомендуется использовать **New-SelfSignedCertificate**.|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|Создает строгие имена для симметричных ключей.|  
   
 ## <a name="related-tasks"></a>Связанные задачи  

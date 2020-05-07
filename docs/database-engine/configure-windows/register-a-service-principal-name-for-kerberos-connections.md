@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0248af282581019ebedc28656852ec5c78fd00b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49d8ec52ae12f40f6adaaf360e2e7a1659bef97d
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257511"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087516"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Регистрация имени участника-службы для соединений Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,9 +142,9 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname
   
 Учетные записи служб могут быть использованы в качестве имен участников-служб. Они указываются с помощью атрибута соединения для проверки подлинности протокола Kerberos и имеют следующие форматы:  
   
--   **username@domain** или **domain\username** для учетной записи пользователя домена  
+-   **имя_пользователя\@домен** или **домен\имя_пользователя** для учетной записи пользователя домена;  
   
--   **machine$@domain** или **host\FQDN** для учетной записи домена, такой как "Local System" или "NETWORK SERVICES".  
+-   **машина$\@домен** или **хост\полное_доменное_имя** для учетной записи домена, такой как Local System или NETWORK SERVICES.  
   
 Чтобы определить метод проверки подлинности соединения, выполните следующий запрос.  
   

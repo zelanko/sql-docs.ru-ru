@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 01/14/2020
+ms.date: 04/20/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: b217787d0cba0a1d62ab8393ef7fac76d7665bb0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c61185c660e650a2052a2e5a6df1ad9ac3ad0af4
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77568067"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087469"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -49,7 +49,7 @@ ms.locfileid: "77568067"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```syntaxsql
 CREATE WORKLOAD GROUP group_name
 [ WITH
     ( [ IMPORTANCE = { LOW | MEDIUM | HIGH } ]
@@ -203,7 +203,7 @@ GO
 
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-```
+```syntaxsql
 CREATE WORKLOAD GROUP group_name
 [ WITH
  (  [ MIN_PERCENTAGE_RESOURCE = value ]
@@ -275,7 +275,7 @@ WITH
 
 Параметры `min_percentage_resource`, `cap_percentage_resource`, `request_min_resource_grant_percent` и `request_max_resource_grant_percent` имеют действующие значения, которые корректируются в контексте текущего уровня обслуживания и конфигурации других групп рабочей нагрузки.
 
-Поддерживаемый уровень параллелизма для каждого уровня обслуживания остается таким же, что и при использовании классов ресурсов для определения выделений ресурсов для каждого запроса, поэтому поддерживаемые значения для request_min_resource_grant_percent зависят от уровня обслуживания, заданного для экземпляра. На самом низком уровне обслуживания DW100c требуется минимум 25 % ресурсов на запрос. На уровне DW100c действительное значение request_min_resource_grant_percent для настроенной группы рабочей нагрузки может составлять 25 % или выше. Дополнительные сведения о том, как извлекаются действующие значения, см. в таблице ниже.
+Параметр `request_min_resource_grant_percent` имеет действующее значение, так как в зависимости от уровня обслуживания каждый запрос требует наличия минимальных ресурсов.  Например, на самом низком уровне обслуживания DW100c требуется минимум 25 % ресурсов на запрос.  Если в группе рабочей нагрузки для `request_min_resource_grant_percent` и `request_max_resource_grant_percent` настроено значение 3 %, действующие значения для обоих параметров корректируются на значение 25 % при запуске экземпляра.  Если экземпляр масштабируется до DW1000c, настроенные и действующие значения обоих параметров будут иметь значение 3 %, так как это минимальное поддерживаемое значение на таком уровне обслуживания.  Если экземпляр масштабируется выше DW1000c, для настроенных и действующих значений обоих параметров сохранится значение 3 %.  Дополнительные сведения о действующих значениях на разных уровнях обслуживания см. в таблице ниже.
 
 |Уровень обслуживания|Наименьшее действительное значение для REQUEST_MIN_RESOURCE_GRANT_PERCENT|Максимальное число одновременных запросов|
 |---|---|---|
@@ -297,9 +297,9 @@ WITH
 |DW30000c|0,75 %|128|
 ||||
 
-Аналогичным образом, значение request_min_resource_grant_percent min_percentage_resource должно быть больше или равно действующему значению request_min_resource_grant_percent. Группа рабочей нагрузки с настроенным значением `min_percentage_resource`, которое меньше действующего значения `min_percentage_resource`, имеет значение, измененное во время выполнения до нуля. В этом случае ресурсы, настроенные для `min_percentage_resource`, будут общими для всех групп рабочей нагрузки. Например, группа рабочей нагрузки `wgAdHoc` со значением `min_percentage_resource`, равным 10 %, выполняемая на уровне обслуживания DW1000c, будет иметь действующее значение `min_percentage_resource`, равное 10 % (3,25 % — это минимальное поддерживаемое значение на уровне DW1000c). `wgAdhoc` на уровне обслуживания DW100c получит действующее значение min_percentage_resource, равное 0 %. Значение 10 %, настроенное для `wgAdhoc`, будет общим для всех групп рабочей нагрузки.
+Значение параметра `min_percentage_resource` должно быть больше действующего значения `request_min_resource_grant_percent` или равно ему. Группа рабочей нагрузки с настроенным значением `min_percentage_resource`, которое меньше действующего значения `min_percentage_resource`, имеет значение, скорректированное во время выполнения до нуля. В этом случае ресурсы, настроенные для `min_percentage_resource`, будут общими для всех групп рабочей нагрузки. Например, группа рабочей нагрузки `wgAdHoc` со значением `min_percentage_resource`, равным 10 %, которая выполняется на уровне обслуживания DW1000c, будет иметь действующее значение `min_percentage_resource`, равное 10 % (3 % — это минимальное поддерживаемое значение на уровне DW1000c). `wgAdhoc` на уровне обслуживания DW100c получит действующее значение min_percentage_resource, равное 0 %. Значение 10 %, настроенное для `wgAdhoc`, будет общим для всех групп рабочей нагрузки.
 
-`cap_percentage_resource` также имеет действующее значение. Если группа рабочей нагрузки `wgAdhoc` настроена со значением `cap_percentage_resource`, равным 100 %, а другая группа рабочей нагрузки, `wgDashboards`, создается с равным 25 % значением `min_percentage_resource`, действующее значение `cap_percentage_resource` для `wgAdhoc` составит 75 %.
+Параметр `cap_percentage_resource` также имеет действующее значение. Если группа рабочей нагрузки `wgAdhoc` настроена со значением `cap_percentage_resource`, равным 100 %, а другая группа рабочей нагрузки, `wgDashboards`, создается с равным 25 % значением `min_percentage_resource`, действующее значение `cap_percentage_resource` для `wgAdhoc` составит 75 %.
 
 Самый простой способ понять значения времени выполнения для групп рабочей нагрузки — выполнить запрос к системному представлению [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md).
 

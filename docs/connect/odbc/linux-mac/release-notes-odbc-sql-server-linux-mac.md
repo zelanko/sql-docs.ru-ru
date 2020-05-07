@@ -1,7 +1,7 @@
 ---
 title: Заметки о выпуске Microsoft ODBC Driver for SQL Server в Linux и macOS
 ms.custom: ''
-ms.date: 03/10/2020
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: b2adbb0fca6c717a5864570cad40c65d7c332f90
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 36d390bc13924bbedb1d423790127a3d24f9b63e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79090496"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153276"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Заметки о выпуске Microsoft ODBC Driver for SQL Server в Linux и macOS
 
@@ -36,6 +36,13 @@ Thank you.
 GeneMi.  2019/04/03.
 -->
 
+## <a name="17522-april-2020-alpine-linux-only"></a>Версия 17.5.2.2, апрель 2020 г. (только для Alpine Linux)
+
+| Добавленная возможность | Сведения |
+| :------------ | :------ |
+| Исправлены ошибки. | См. статью [Исправления ошибок](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## <a name="1752-march-2020"></a>17.5.2, март 2020 г.
 
 | Добавленная возможность | Сведения |
@@ -45,11 +52,11 @@ GeneMi.  2019/04/03.
 | Исправления ошибок. | См. статью [Исправления ошибок](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="175-january-2020"></a>17.5, январь 2020 г.
+## <a name="175-january-2020"></a>17.5, январь 2020 г.
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
-| Атрибут подключения SQL_COPT_SS_SPID для получения SPID без обращения к серверу | Подробнее см. статью [Ключевые слова и атрибуты строки подключения и имени DSN](../dsn-connection-string-attribute.md). |
+| Атрибут подключения SQL_COPT_SS_SPID для получения SPID без обращения к серверу | Подробнее см. статью [DSN and Connection String Keywords and Attributes](../dsn-connection-string-attribute.md) (Ключевые слова и атрибуты строки подключения и имени DSN). |
 | Поддержка указания о принятии условий лицензии через `debconf` в Debian и Ubuntu. | См. [Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS](./installing-the-microsoft-odbc-driver-for-sql-server.md) (Установка Microsoft ODBC Driver for SQL Server на Linux и macOS). |
 | Поддерживаются новые дистрибутивы. | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nbsp; &nbsp; macOS 10.15 |
 | Исправления ошибок. | См. статью [Исправления ошибок](../bug-fixes.md). |
@@ -114,7 +121,7 @@ GeneMi.  2019/04/03.
 
 **Поддерживаются новые дистрибутивы**: macOS High Sierra и Ubuntu 17.10 
 
-**Повышение производительности**: производительность при выполнении драйвером преобразования из UTF-8 в UTF-16 и обратно увеличена более чем в 10 раз.
+**Повышение производительности**. Производительность при выполнении драйвером преобразования из UTF-8 в UTF-16 и обратно увеличена более чем в 10 раз.
 
 **Добавлены возможности**:
 
@@ -142,9 +149,9 @@ GeneMi.  2019/04/03.
 
 **Поддерживаются новые дистрибутивы**: OS X 10.11 и macOS 10.12 поддерживаются в первой версии драйвера ODBC для macOS. Кроме того, теперь поддерживается Ubuntu 16.10 наравне с Red Hat 6 и 7 и SUSE 12. Для каждой платформы есть соответствующий пакет (RPM или DEB), упрощающий установку и настройку. Дополнительные сведения см. в инструкциях по установке драйвера ODBC для [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) и [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
 
-**Изменения в поддержке диспетчера пакетов unixODBC 2.3.1**: драйвер ODBC больше не зависит от пользовательских пакетов для диспетчера драйверов unixODBC (исключением является RedHat 6). Вместо этого используется диспетчер пакетов дистрибутива для разрешения зависимости UnixODBC из репозиториев дистрибутива.
+**Изменения поддержки диспетчера драйверов 2.3.1 unixODBC** Драйвер ODBC больше не зависит от пользовательских пакетов для диспетчера драйверов unixODBC (исключением является RedHat 6). Вместо этого используется диспетчер пакетов дистрибутива для разрешения зависимости UnixODBC из репозиториев дистрибутива.
 
-**Поддержка API BCP**: драйвер ODBC в Linux и macOS теперь поддерживает использование [функций API BCP (**bcp_init** и других)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md).
+**Поддержка API-интерфейса BCP**. Драйвер ODBC в Linux и macOS теперь поддерживает использование [функций API BCP (**bcp_init** и других)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md).
 
 ## <a name="130-for-ssnoversion-on-linux"></a>Версия 13.0, для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux
 
@@ -154,11 +161,11 @@ GeneMi.  2019/04/03.
 
 Теперь Ubuntu поддерживается наравне с Red Hat и SUSE. Для каждой платформы есть соответствующий пакет (RPM или DEB), упрощающий установку и настройку.  Инструкции по установке см. в статье [Установка Microsoft ODBC Driver for SQL Server на Linux и macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
-**Поддержка диспетчера драйверов unixODBC 2.3.1**: помимо обновления диспетчера драйверов, также появился пакет, который упрощает установку и настройку этой зависимости.  
+**Поддержка диспетчера драйверов 2.3.1 unixODBC**. Помимо обновления диспетчера драйверов, также появился пакет, который упрощает установку и настройку этой зависимости.  
 
-**Разрешение IP-адресов прозрачной сети**: это вариант существующей функции отработки отказа в сети с подсетями, который влияет на последовательность подключения драйвера в случае, когда с именем узла связано несколько IP-адресов, но первый разрешенный IP-адрес не отвечает на запросы.
+**Разрешение IP-адресов прозрачной сети**. Это вариант существующей функции отработки отказа в сети с подсетями, который влияет на последовательность подключения драйвера в случае, когда с именем узла связано несколько IP-адресов, но первый разрешенный IP-адрес не отвечает на запросы.
 
-**Поддержка TLS 1.2**: драйвер Microsoft ODBC Driver 13.0 for SQL Server в Linux теперь поддерживает протокол TLS 1.2 при использовании защищенного обмена данными с SQL Server.
+**Поддержка TLS 1.2**. Драйвер Microsoft ODBC Driver 13.0 for SQL Server в Linux теперь поддерживает протокол TLS 1.2 при использовании защищенного обмена данными с SQL Server.
 
 ## <a name="11-for-ssnoversion-on-linux"></a>Версия 11, для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux
 
@@ -166,6 +173,6 @@ GeneMi.  2019/04/03.
 
 Драйвер ODBC для Linux поддерживает [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Дополнительные сведения см. в статье [Поддержка высокой доступности и аварийного восстановления в драйвере ODBC для Linux](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
-Драйвер ODBC для Linux поддерживает подключения к Базе данных SQL Microsoft Azure. Дополнительные сведения см. в статье [Практическое руководство. Подключение к Базе данных Azure SQL с помощью ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
+Драйвер ODBC для Linux поддерживает подключения к Базе данных SQL Microsoft Azure. Дополнительные сведения см. в разделе [Как подключиться к базе данных SQL Azure с использованием ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
 
-В `-l` добавлен параметр `bcp` (время ожидания входа). Дополнительные сведения см. в статье [Подключение с помощью **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).
+В `bcp` добавлен параметр `-l` (время ожидания входа). Дополнительные сведения см. в статье [Подключение с помощью **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

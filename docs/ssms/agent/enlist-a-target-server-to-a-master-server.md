@@ -18,12 +18,12 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 936c40de1bebd463ad0213ebdfc99171a0fd91a2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 53262aac5d8f89929c66272674a6f0104b73efd5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242394"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087549"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Прикрепление целевого сервера к главному
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "75242394"
   
 Дополнительные сведения о влиянии учетной записи Windows для службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на многосерверную среду см. в разделе [Создание многосерверной среды](../../ssms/agent/create-a-multiserver-environment.md).  
   
-По умолчанию полное шифрование SSL и проверка сертификата включены для соединений между главными и целевыми серверами. Дополнительные сведения см. в статье [Установка параметров шифрования на целевых серверах](../../ssms/agent/set-encryption-options-on-target-servers.md).  
+Для соединений между главными и целевыми серверами по умолчанию включено полное шифрование протокола защиты транспортного уровня (TLS), заменившего SSL, и проверка сертификата. Дополнительные сведения см. в статье [Установка параметров шифрования на целевых серверах](../../ssms/agent/set-encryption-options-on-target-servers.md).  
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Использование среды SQL Server Management Studio  
   

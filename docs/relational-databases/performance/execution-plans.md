@@ -16,15 +16,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 81a9f0e52c061ec494143eb4f61158546f5e57f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 241df9557a141eb45933ced261a7b55f98a6ec8e
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78256952"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087355"
 ---
 # <a name="execution-plans"></a>Планы выполнения
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Чтобы иметь возможность выполнять запросы, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] должен анализировать инструкцию и определять наиболее эффективный способ доступа к необходимым данным. Этот анализ обрабатывается компонентом, который называется оптимизатором запросов. Входные данные оптимизатора запросов включают сам запрос, схему базы данных (определения таблиц и индексов) и статистику базы данных. Выходные данные оптимизатора запросов — это план выполнения запроса, который иногда называется планом запроса или выполнения.   
 
@@ -45,9 +45,9 @@ ms.locfileid: "78256952"
 
 > [!NOTE]
 > В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] есть три способа отображения планов выполнения:        
-> -  ***[Предполагаемый план выполнения](../../relational-databases/performance/display-the-estimated-execution-plan.md)***  — это скомпилированный план, созданный оптимизатором запросов на основе оценок.        
-> -  ***[Действительный план выполнения](../../relational-databases/performance/display-an-actual-execution-plan.md)***  — это скомпилированный план с [контекстом выполнения](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Сюда входят актуальные сведения времени выполнения, доступные после завершения выполнения, включая предупреждения времени выполнения, а также в более новых версиях [!INCLUDE[ssde_md](../../includes/ssde_md.md)] — время, затраченное на выполнение, и время ЦП.        
-> -  ***[Статистика активных запросов](../../relational-databases/performance/live-query-statistics.md)***  — это скомпилированный план с контекстом выполнения. Сюда входят сведения о времени выполнения, которые обновляются каждую секунду. Эти сведения включают в себя, например, фактическое количество строк, передаваемых через операторы.       
+> -  ***[Предполагаемый план выполнения](../../relational-databases/performance/display-the-estimated-execution-plan.md)***  — это скомпилированный план, созданный оптимизатором запросов на основе оценок. Это план запроса, который хранится в кэше планов.        
+> -  ***[Действительный план выполнения](../../relational-databases/performance/display-an-actual-execution-plan.md)***  — это скомпилированный план с [контекстом выполнения](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Он станет доступным **после выполнения запроса**. Сюда входят актуальные сведения о среде выполнения, включая предупреждения, касающиеся выполнения, а также в более новых версиях [!INCLUDE[ssde_md](../../includes/ssde_md.md)] — время, затраченное на выполнение, и время ЦП.         
+> -  ***[Статистика активных запросов](../../relational-databases/performance/live-query-statistics.md)***  — это скомпилированный план с контекстом выполнения. Он доступен для **выполнения запросов в реальном времени**и обновляется каждую секунду. Сюда входят такие сведения о среде выполнения, как фактическое число строк, проходящих через [операторы](../../relational-databases/showplan-logical-and-physical-operators-reference.md), затраченное время и предполагаемый ход выполнения запроса.
 
 > [!TIP]
 > См. сведения о планах обработки и выполнения запросов в руководстве по [оптимизации инструкций SELECT](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) и [кэшированию и повторному использованию плана выполнения](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) в документации по архитектуре обработки запросов.

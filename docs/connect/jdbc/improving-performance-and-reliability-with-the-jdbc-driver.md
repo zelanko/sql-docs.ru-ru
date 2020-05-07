@@ -1,5 +1,6 @@
 ---
-title: Повышение надежности и производительности с помощью JDBC Driver | Документация Майкрософт
+title: Повышение производительности и надежности с помощью JDBC Driver
+description: Узнайте о том, как драйвер Microsoft JDBC driver for SQL Server способен повысить производительность и надежность работы приложения.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b82c2758dbc796ec29dd7304ee821a1a018af0a8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4d8dc1105443222ece454b4da5c434f688131d16
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920738"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728477"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>Повышение производительности и надежности с помощью JDBC Driver
 
@@ -27,7 +28,7 @@ ms.locfileid: "80920738"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Закрытие неиспользуемых объектов](../../connect/jdbc/closing-objects-when-not-in-use.md)|Описывается важность закрытия объектов драйвера JDBC, когда в них больше нет необходимости.|  
 |[Управление размером транзакций](../../connect/jdbc/managing-transaction-size.md)|Описываются способы улучшения производительности транзакций.|  

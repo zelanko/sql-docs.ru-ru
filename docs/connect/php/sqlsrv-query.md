@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_query | Документация Майкрософт
+title: sqlsrv_query
+description: Функция sqlsrv_query предоставляет метод для выполнения запроса с минимальным объемом кода и может использоваться для выполнения параметризованных запросов.
 ms.custom: ''
 ms.date: 04/11/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ab8c3912c33280738c8bebc012686490d7c55926
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6f211fffa4d3fd9cbafec9180894c5760f876c98
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928552"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728409"
 ---
 # <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +42,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
   
 *$tsql*: выражение Transact-SQL, соответствующее подготовленной инструкции.  
   
-*$params* (необязательно): **массив** значений, которые соответствуют параметрам в параметризованном запросе. Каждый элемент массива может быть одним из следующих значений:
+*$params* [необязательный параметр]: **массив значений**, которые соответствуют параметрам в параметризованном запросе. Каждый элемент массива может быть одним из следующих значений:
   
 -   Буквенное значение.  
   
@@ -55,14 +56,14 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
   
     Описание для каждого элемента массива приводится в следующей таблице:  
   
-    |Элемент|Description|  
+    |Элемент|Описание|  
     |-----------|---------------|  
     |*$value*|Буквенное значение, переменная PHP или ссылочная переменная PHP.|  
     |*$direction*(необязательно)|Одна из следующих констант **SQLSRV_PARAM_\*** , используемая для указания направления параметра: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Значение по умолчанию — **SQLSRV_PARAM_IN**.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
     |*$phpType*(необязательно)|Константа **SQLSRV_PHPTYPE_\*** , указывающая тип данных PHP для возвращаемого значения.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
     |*$sqlType*(необязательно)|Константа **SQLSRV_SQLTYPE_\*** , указывающая тип данных SQL Server для входного значения.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
   
-*$options* (НЕОБЯЗАТЕЛЬНО): ассоциативный массив, который задает свойства запроса. Это тот же список ключей, который поддерживается [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties).
+*$options* [необязательный параметр]: ассоциативный массив, позволяющий задать свойства запроса. Это тот же список ключей, который поддерживается [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties).
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Ресурс инструкции. Если не удается создать или выполнить инструкцию, возвращается значение **false**.  
@@ -70,7 +71,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 ## <a name="remarks"></a>Remarks  
 Функция **sqlsrv_query** хорошо подходит для одноразовых запросов и должна использоваться по умолчанию для выполнения запросов, если только не действуют особые обстоятельства. Эта функция предоставляет оптимальный метод для выполнения запроса с использованием минимального количества кода. Функция **sqlsrv_query** подготавливает и выполняет инструкцию, а также может применяться для выполнения параметризованных запросов.  
   
-Дополнительные сведения см. в статье [Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
+Дополнительные сведения см. в разделе [Как Извлечение параметров вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Пример  
 В следующем примере отдельная строка вставляется в таблицу *Sales.SalesOrderDetail* базы данных AdventureWorks. В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
@@ -243,11 +244,11 @@ Second field:  test_data
 ## <a name="see-also"></a>См. также:  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
-[Практическое руководство. Выполнение параметризованных запросов](../../connect/php/how-to-perform-parameterized-queries.md)  
+[Руководство. Выполнение параметризованных запросов](../../connect/php/how-to-perform-parameterized-queries.md)  
 
 [Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)  
 
-[Практическое руководство. Отправка данных в виде потока](../../connect/php/how-to-send-data-as-a-stream.md)  
+[Руководство. Отправка данных в виде потока](../../connect/php/how-to-send-data-as-a-stream.md)  
 
 [Использование параметров направления](../../connect/php/using-directional-parameters.md)  
 
