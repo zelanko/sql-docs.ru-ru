@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad10e1d576d1751de10e433420fe3df6106c7ee4
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 82fb30a374ea9ac4cdabf0ab5f7b4d8eefb8f4c4
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138292"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588240"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -257,10 +257,13 @@ PARTITION
  Операция REORGANIZE для индекса **rowstore**  
  Для индексов rowstore REORGANIZE указывает необходимость реорганизации конечного уровня индекса. Операция REORGANIZE:  
   
--   всегда выполняется в сети. Это означает, что долгосрочные блокировки таблицы не удерживаются и запросы или обновления базовой таблицы могут продолжаться во время выполнения транзакции ALTER INDEX REORGANIZE.  
--   не разрешается для отключенного индекса;  
--   не разрешается, если параметру ALLOW_PAGE_LOCKS задано значение OFF;  
--   при выполнении в транзакции не откатывается при откате транзакции.  
+-   всегда выполняется в сети. Это означает, что долгосрочные блокировки таблицы не удерживаются и запросы или обновления базовой таблицы могут продолжаться во время выполнения транзакции ALTER INDEX REORGANIZE.
+-   не разрешается для отключенного индекса;
+-   не разрешается, если параметру ALLOW_PAGE_LOCKS задано значение OFF;
+-   при выполнении в транзакции не откатывается при откате транзакции.
+
+> [!NOTE]
+> Если инструкция ALTER INDEX REORGANIZE использует явные транзакции (например, ALTER INDEX внутри инструкции BEGIN TRAN... COMMIT/ROLLBACK) вместо режима неявных транзакций по умолчанию, поведение блокировки REORGANIZE становится более строгим, что может привести к блокировке. Дополнительные сведения о неявных транзакциях см. в статье [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](../../t-sql/statements/set-implicit-transactions-transact-sql.md).
 
 Дополнительные сведения см. в статье [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
 

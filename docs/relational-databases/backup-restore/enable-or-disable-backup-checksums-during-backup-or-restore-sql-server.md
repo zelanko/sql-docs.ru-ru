@@ -1,5 +1,6 @@
 ---
 title: Включение или отключение контрольных сумм резервных копий
+description: В этой статье показано, как включить или отключить контрольные суммы резервных копий для базы данных в SQL Server с помощью SQL Server Management Studio или Transact-SQL.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.description: Enable or disable backup checksums during backup or restore of SQL Server databases.
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5d77bb53a304c1606a17686dd3d3a8125580ddfd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3552fc8ccc44522d7bd2a520d5b9ad646ee586d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257980"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179218"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>Включение или отключение вычисления контрольных сумм резервных копий во время архивации или восстановления (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

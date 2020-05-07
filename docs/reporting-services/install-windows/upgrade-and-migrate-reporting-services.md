@@ -10,36 +10,39 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
-ms.date: 08/17/2017
-ms.openlocfilehash: 0d0484552bc489231c83062ec00aa4e9f73dcb90
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.date: 05/01/2020
+ms.openlocfilehash: ca9ffd01b7553cb343a83565615a786467371891
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487263"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719522"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  Этот раздел содержит общие сведения о вариантах обновления и миграции для служб SQL Server Reporting Services. Существуют два принципиальных подхода к обновлению развертывания служб SQL Server Reporting Services.  
+  Этот раздел содержит общие сведения о вариантах обновления и миграции для служб SQL Server Reporting Services. Вот основные подходы к обновлению развертывания служб SQL Server Reporting Services:  
  
--   **Обновление.** Обновляются компоненты [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на тех серверах и экземплярах, где они установлены в данный момент. Обычно это называется обновлением на месте. Обновление на месте с одного режима сервера [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на другой режим не поддерживается. Например, невозможно обновить сервер отчетов в собственном режиме до сервера отчетов в режиме интеграции с SharePoint. Элементы отчета можно переносить из одного режима в другой. Дополнительные сведения см. в разделе "Миграция из собственного режима в режим интеграции с SharePoint" далее в этом документе.  
+- **Обновление *до* Reporting Services 2016 и более ранних версий *с* Reporting Services 2016 и более ранних версий:** Обновляются компоненты [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на тех серверах и экземплярах, где они установлены в данный момент. Обычно это называется обновлением на месте. Обновление на месте с одного режима сервера [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на другой режим не поддерживается. Например, невозможно обновить сервер отчетов в собственном режиме до сервера отчетов в режиме интеграции с SharePoint. Элементы отчета можно переносить из одного режима в другой. Дополнительные сведения см. в разделе [Сценарии миграции и обновления в режиме интеграции с SharePoint](#bkmk_sharePoint_scenarios) далее в этом документе.  
+
+- **Обновление *до* Reporting Services 2017 и более поздних версий *с* Reporting Services 2016 и более ранних версий** выполняется не так, как для предыдущих версий. Обновление *до* Reporting Services 2016 и более ранних версий выполняется на месте с помощью установочного носителя SQL Server. При обновлении *до* Reporting Services 2017 и более поздних версий *с* Reporting Services 2016 и более ранних версий вы не сможете выполнить те же действия, так как новая установка Reporting Services является отдельным продуктом. Она больше не входит в установочный носитель SQL Server. 
+
+    Чтобы выполнить обновление с Reporting Services 2016 и более ранних версий до Reporting Services 2017 и более поздних версий, следуйте инструкциям в разделе [Миграция установки Reporting Services (собственный режим)](migrate-a-reporting-services-installation-native-mode.md), выбрав Reporting Services 2017 в качестве целевого экземпляра. 
+
+- **Обновление *с* Reporting Services 2017 до будущих версий** также будет выполняться на месте, так как идентификаторы GUID установки продукта одинаковы. Запустите файл установки SQLServerReportingServices.exe, чтобы начать обновление на месте на сервере, где уже установлен Reporting Services.
   
--   **Миграция.** Устанавливается и настраивается новая среда SharePoint, в нее копируются элементы отчетов и ресурсы, а затем выполняется настройка новой среды для использования существующего содержимого. Более низкая форма миграции — копирование баз данных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , файлов конфигурации и при использовании режима интеграции с SharePoint баз данных содержимого SharePoint.  
-    
-> **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Собственный режим &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим интеграции с SharePoint.
+- **Миграция.** Устанавливается и настраивается новая среда SharePoint, в нее копируются элементы отчетов и ресурсы, а затем выполняется настройка новой среды для использования существующего содержимого. Более низкая форма миграции — копирование баз данных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , файлов конфигурации и при использовании режима интеграции с SharePoint баз данных содержимого SharePoint.  
+
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint недоступна после выхода SQL Server 2016.
    
 ##  <a name="known-upgrade-issues-and-best-practices"></a><a name="bkmk_known_issues"></a> Известные проблемы и рекомендации, связанные с обновлением  
  Подробный список поддерживаемых версий и выпусков, которые можно обновить, см. в разделе [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 > [!TIP]  
->  Последние сведения о проблемах, связанных с SQL Server, см. в следующих разделах:  
->   
->  -   [Заметки о выпуске SQL Server 2016](https://go.microsoft.com/fwlink/?LinkID=398124).  
+>  Последние сведения о проблемах, связанных с SQL Server, см. в [заметах о выпуске SQL Server 2016](https://go.microsoft.com/fwlink/?LinkID=398124).  
   
   
 ##  <a name="side-by-side-installations"></a><a name="bkmk_side_by_side"></a> Параллельная установка  

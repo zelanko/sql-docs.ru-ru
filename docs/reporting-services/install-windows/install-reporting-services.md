@@ -1,18 +1,18 @@
 ---
 title: Установка служб SQL Server Reporting Services | Документы Майкрософт
-ms.date: 10/02/2019
+ms.date: 05/01/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 37ce1267bd4b83943560183e5628839858d9c5de
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 07669b5c0466c725a271f71ed207c332ffdb5a26
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486823"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693801"
 ---
 # <a name="install-sql-server-reporting-services"></a>Установите службы SQL Server Reporting Services
 
@@ -32,6 +32,8 @@ ms.locfileid: "81486823"
 
 > [!NOTE]
 > Ищете сервер отчетов Power BI? См. раздел [Установка сервера отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).
+> 
+> Интересуетесь обновлением или миграцией с SQL Server 2016 или более ранней версии Reporting Services? См. раздел [Обновление и миграция служб Reporting Services](upgrade-and-migrate-reporting-services.md).
 
 ## <a name="before-you-begin"></a>Перед началом
 

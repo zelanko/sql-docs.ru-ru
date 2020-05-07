@@ -1,5 +1,6 @@
 ---
 title: Настройка модели восстановления базы данных
+description: Узнайте, как переключить базу данных SQL Server с одной модели восстановления на другую с помощью SQL Server Management Studio или Transact-SQL.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6a9f1d7c4397a93b6df3b235f715627e7be320e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254051"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179690"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Просмотр или изменение модели восстановления базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +103,7 @@ USE [master] ;
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="recommendations-after-you-change-the-recovery-model"></a><a name="FollowUp"></a> Рекомендуемые действия. После изменения модели восстановления  
+##  <a name="recommendations-after-you-change-the-recovery-model"></a><a name="FollowUp"></a> Рекомендуемые действия после изменения модели восстановления  
   
 -   **После переключения с модели полного восстановления на модель восстановления с неполным протоколированием**  
   

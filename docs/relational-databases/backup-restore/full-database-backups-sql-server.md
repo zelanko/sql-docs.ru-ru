@@ -1,5 +1,6 @@
 ---
 title: Полные резервные копии баз данных (SQL Server) | Документация Майкрософт
+description: В SQL Server при полном резервном копировании создается резервная копия всей базы данных. Полные резервные копии базы данных отображают состояние базы данных на момент завершения резервного копирования.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b447bec3817dbaa173c544dcb31200a702b8661d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ece8a9d031b5b85c7da672a50e56666f3814cd20
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68890068"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179092"
 ---
 # <a name="full-database-backups-sql-server"></a>Полные резервные копии баз данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

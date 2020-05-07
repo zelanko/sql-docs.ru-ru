@@ -1,5 +1,6 @@
 ---
 title: Полные резервные копии файлов (SQL Server) | Документация Майкрософт
+description: В SQL Server можно выполнять резервное копирование и восстановление целой файловой группы без указания каждого файла по отдельности.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1d70bf0d8e99d24ee0d7ea9e046090ba4ed32453
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3495b06e0f5c502fc40c1cf4fade996fa8e05c71
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67939615"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179098"
 ---
 # <a name="full-file-backups-sql-server"></a>полные резервные копии файлов (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +101,7 @@ ms.locfileid: "67939615"
 ## <a name="see-also"></a>См. также:  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [Общие сведения о резервном копировании (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [Резервное копирование и восстановление: взаимодействие и сосуществование (SQL Server)](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Резервное копирование и восстановление: взаимодействие и совместимость &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Разностные резервные копии (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Восстановление файлов (простая модель восстановления)](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [Восстановления файлов (модель полного восстановления)](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   

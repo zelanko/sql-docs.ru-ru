@@ -1,26 +1,28 @@
 ---
-title: Установка служб SQL Server 2016 R Services (в базе данных)
+title: Установка SQL Server 2016 R Services
+titleSuffix: ''
 description: Добавление поддержки языка программирования R в ядро СУБД в службах SQL Server 2016 R Services в Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/06/2019
+ms.date: 04/29/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bef992e06f8f02e5ba7c553c2511eac353fe498a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 92b7a8190bdd221333d49c2113256faab7c9edaf
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118207"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588200"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Установка SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье объясняется, как установить и настроить службы **SQL Server 2016 R Services**. Если у вас SQL Server 2016, установите этот компонент, чтобы включить выполнение кода R в SQL Server.
 
-В SQL Server 2017 интеграция R есть в [Службах машинного обучения](../r/r-server-standalone.md) наряду с Python. Если вам нужна интеграция R и у вас есть установочный носитель SQL Server 2017, см. раздел [Установка Служб машинного обучения SQL Server](sql-machine-learning-services-windows-install.md), чтобы добавить эту функцию. 
+> [!NOTE]
+> В SQL Server 2017 и более поздних версий интеграция R представлена в [службах машинного обучения](../sql-server-machine-learning-services.md) наряду с Python. Если вам нужна интеграция R и у вас есть SQL Server 2017 или более поздней версии, см. раздел [Установка служб машинного обучения SQL Server](sql-machine-learning-services-windows-install.md), чтобы добавить эту функцию. 
 
 <a name="bkmk_prereqs"> </a> 
 
@@ -30,7 +32,7 @@ ms.locfileid: "81118207"
 
 + Для обеспечения непрерывности бизнес-процессов [группы доступности Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) поддерживаются для служб R Services. Необходимо установить службы R Services и настроить пакеты на каждом узле.
 
-+ Не устанавливайте R Services в отказоустойчивом кластере. Механизм безопасности, используемый для изолирования процессов R, несовместим со средой с отказоустойчивым кластером Windows Server.
++ Не устанавливайте службы R на экземпляр отказоустойчивого кластера (FCI) SQL Server Always On. Механизм безопасности, используемый для изолирования процессов R, несовместим со средой с экземпляром отказоустойчивого кластера (FCI) SQL Server Always On.
 
 + Не устанавливайте R Services на контроллер домена. Этап установки служб R Services завершится с ошибкой.
 

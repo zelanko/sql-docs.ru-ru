@@ -1,6 +1,6 @@
 ---
-title: Управление записной книжкой SQL Server
-description: Сведения об управлении записными книжками в Azure Data Studio. Сюда входит открытие записных книжек, их сохранение и изменение подключения к кластеру больших данных.
+title: Как работать с записной книжкой
+description: Сведения об управлении записными книжками в Azure Data Studio. Сюда входит открытие записных книжек, их сохранение и изменение подключения к SQL Server или ядра Python.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: achatter, alayu, mikeray
@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: ''
-ms.date: 03/30/2020
-ms.openlocfilehash: 9b071a9d1b9e770e1443e5df539208baa4399a30
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.date: 04/27/2020
+ms.openlocfilehash: 435290bd45e79c835ba134bb732f1672dc31c2cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531597"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178705"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Управление записными книжками в Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Эта статья описывает, как открывать и сохранять файлы записных книжек в Azure Data Studio с использованием SQL Server. В ней также показано, как изменить подключение к SQL Server.
+Эта статья описывает, как открывать и сохранять файлы записных книжек в Azure Data Studio. В ней также показано, как изменить подключение к SQL Server или ядру Python.
 
 ## <a name="open-a-notebook"></a>Открытие записной книжки
 
@@ -57,9 +57,9 @@ ms.locfileid: "80531597"
 > - команды **Файл > Сохранить**, **Файл > Сохранить как...** и **Файл > Сохранить все** в меню "Файл";
 > - команды **Файл: сохранить**, вводимые в палитре команд.
 
-## <a name="change-the-connection"></a>Изменение подключения
+## <a name="change-the-sql-connection"></a>Изменение подключения SQL Server
 
-Чтобы изменить подключение для записной книжки, сделайте следующее:
+Чтобы изменить подключение к SQL Server для записной книжки, сделайте следующее.
 
 1. Выберите меню **Присоединить к** на панели инструментов записной книжки, а затем выберите **Изменить подключение**.
 
@@ -69,6 +69,31 @@ ms.locfileid: "80531597"
 
    ![Выберите сервер в меню "Присоединить к"](./media/notebooks-manage-sql-server/select-attach-to-2.png)
 
+## <a name="change-the-python-kernel"></a>Изменение ядра Python
+
+При первом открытии Azure Data Studio отображается страница **Настройка Python для записных книжек**. Можно выбрать любой из вариантов:
+
+- **Новая установка Python** — установка новой копии Python для Azure Data Studio.
+- **Использование существующей установки Python** — указание пути к существующей установке Python для использования в Azure Data Studio.
+
+Чтобы просмотреть расположение и версию активного ядра Python, создайте ячейку кода и выполните следующие команды Python:
+
+```python
+import os
+import sys
+print(sys.version_info)
+print(os.path.dirname(sys.executable))
+```
+
+Чтобы перейти к другой установке Python, выполните следующие действия.
+
+1. В меню **Файл** последовательно выберите команды **Настройки** и **Параметры**.
+1. Прокрутите страницу до пункта **Конфигурация записной книжки** в разделе **Расширения**.
+1. В разделе **Использовать существующую установку Python** снимите флажок "Локальный путь к уже существующей установке Python, используемой записными книжками".
+1. Перезапустите Azure Data Studio.
+
+Когда откроется страница **Настройка Python для записных книжек**, можно выбрать создание новой установки Python или указать путь к существующей установке.
+
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о записных книжках в Azure Data Studio см. в статье [Использование записных книжек в SQL Server 2019](notebooks-guidance.md).
+Дополнительные сведения о записных книжках SQL в Azure Data Studio см. в статье [Использование записных книжек в SQL Server 2019](notebooks-guidance.md).

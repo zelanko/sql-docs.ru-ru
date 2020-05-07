@@ -1,7 +1,7 @@
 ---
 title: Остановка системного управления версиями в темпоральной таблице с системным управлением версиями | Документация Майкрософт
 ms.custom: ''
-ms.date: 10/11/2016
+ms.date: 04/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74b222b8014b3a0e41e34d588d5893b7f4aaf9b8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ebeb98accf6f89e094949a7a8e56a86a2dcd6dd
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165453"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220395"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>Остановка системного управления версиями в темпоральной таблице с системным управлением версиями
 
@@ -39,6 +39,7 @@ ms.locfileid: "74165453"
 - Если задать **SYSTEM_VERSIONING = OFF** и не исключить удаление периода **SYSTEM_TIME** , система продолжит обновлять столбцы периода при каждой операции вставки и обновления. Элементы, удаленные из текущей таблицы, не подлежат восстановлению.
 - Удалите период **SYSTEM_TIME** , чтобы полностью удалить столбцы периода.
 - Если задать **SYSTEM_VERSIONING = OFF**, все пользователи с необходимыми разрешениями смогут изменять схему и содержимое прежней таблицы или даже окончательно удалить ее.
+- Нельзя задать **SYSTEM_VERSIONING = OFF** при наличии других объектов, созданных с помощью SCHEMABINDING, с использованием временных расширений запросов, таких как ссылки **SYSTEM_TIME**. Это ограничение предотвращает сбой этих объектов, если задано **SYSTEM_VERSIONING = OFF**.
 
 ### <a name="permanently-remove-system_versioning"></a>Окончательное удаление SYSTEM_VERSIONING
 

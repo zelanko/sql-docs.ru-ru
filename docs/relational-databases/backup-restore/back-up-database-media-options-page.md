@@ -1,5 +1,6 @@
 ---
 title: Архивация базы данных, страница "Параметры носителя" | Документация Майкрософт
+description: В SQL Server используйте параметры носителя в диалоговом окне резервного копирования базы данных для просмотра и изменения параметров мультимедиа, включая перезапись носителей, надежность и журнал транзакций.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: efbd8b811b9dda44a4cc4609704291b9469edec3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eff34ba4721f036aceca6c6617177881017744e1
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155561"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220606"
 ---
 # <a name="back-up-database-media-options-page"></a>Резервное копирование базы данных (страница «Параметры носителя»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

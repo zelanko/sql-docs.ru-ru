@@ -1,5 +1,6 @@
 ---
 title: Восстановление базы данных (страница "Файлы") | Документация Майкрософт
+description: При восстановлении базы данных в SQL Server используйте страницу "Файлы" диалогового окна "Восстановление базы данных" для выбора конкретных файлов, из которых будет восстановлена база данных.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5c99e51dd90f17313d146fce2b6b02802a579eb6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56ce641b774dabf5e35b5804eba150342fae9034
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67944823"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180772"
 ---
 # <a name="restore-database-files-page"></a>Восстановление базы данных (страница «Файлы»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "67944823"
  **Переместить все файлы в папку**  
  Перемещение восстановленных файлов.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**Папка файла данных**|Введите или выполните поиск имени папки файла данных, в которую нужно переместить восстановленный файл или файлы данных.|  
 |**Папка файлов журнала**|Введите или выполните поиск файла журнала или папки файлов, в которую нужно переместить восстановленный файл журнала.|  

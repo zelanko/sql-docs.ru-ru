@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 932995bad218df91e58af7daed01ddf4277a5dc0
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f46b27019d85084b572dced79e786033b30c2aec
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117187"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719288"
 ---
 # <a name="real-time-scoring-with-sp_rxpredict-in-sql-server-machine-learning"></a>Оценка в реальном времени с помощью sp_rxPredict в службе машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "81117187"
 
 ## <a name="how-real-time-scoring-works"></a>Принципы работы оценки в реальном времени
 
-Оценка в реальном времени поддерживается для определенных типов моделей на основе функций RevoScaleR и MicrosoftML, таких как [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Она использует собственные библиотеки C++ для формирования оценок на основе данных, которые пользователь ввел в модель машинного обучения, хранящуюся в специальном двоичном формате.
+Оценка в реальном времени поддерживается для определенных типов моделей на основе функций RevoScaleR и MicrosoftML, таких как [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) и [rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Она использует собственные библиотеки C++ для формирования оценок на основе данных, которые пользователь ввел в модель машинного обучения, хранящуюся в специальном двоичном формате.
 
 Так как обученную модель можно использовать для оценки без вызова внешней среды выполнения языка, накладные расходы на несколько процессов сокращаются. Это обеспечивает гораздо более высокую производительность прогнозирования в рабочих сценариях оценки. Так как данные остаются в SQL Server, полученные результаты можно вставить в новую таблицу без преобразования из R в SQL, и наоборот.
 
@@ -34,7 +34,7 @@ ms.locfileid: "81117187"
 3. В модель вводятся входные данные для оценки. Это могут быть таблицы или отдельные строки.
 4. Для формирования оценок вызывается хранимая процедура [sp_rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 + [Включите интеграцию со средой CLR SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
 

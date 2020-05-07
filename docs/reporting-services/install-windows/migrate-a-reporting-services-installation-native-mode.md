@@ -5,19 +5,19 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/06/2018
-ms.openlocfilehash: 4a5b217ba8733aa92c2255170d2ff1f750d996a7
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.date: 05/01/2020
+ms.openlocfilehash: c4a9ea113597324828574560af03db7caaac7cc9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487063"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719274"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Перенос установки служб Reporting Services (собственный режим)
 
 В этом разделе приводятся пошаговые инструкции, позволяющие выполнить миграцию одной из следующих поддерживаемых версий [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], развернутых в собственном режиме, в новый экземпляр SQL Server Reporting Services.  
   
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 * [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]
 
 * [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
@@ -147,9 +147,11 @@ ms.locfileid: "81487063"
   
  Перейдите по одной из следующих ссылок для просмотра инструкций по установке нового экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-* [Установка SQL Server с помощью мастера установки (программа установки)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
+* [Установка SQL Server Reporting Services 2016 и более ранних версий с помощью мастера установки (программы установки)](install-reporting-services-native-mode-report-server.md) 
   
-* [Установка SQL Server из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+* [Установка SQL Server Reporting Services 2016 и более ранних версий из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+
+* [Установка SQL Server Reporting Services 2017 и более поздних версий](install-reporting-services.md)
 
 ## <a name="move-the-report-server-database"></a><a name="bkmk_move_database"></a> Перемещение базы данных сервера отчетов
 

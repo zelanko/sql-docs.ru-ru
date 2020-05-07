@@ -222,6 +222,8 @@
               href: big-data-cluster/troubleshoot-active-directory.md
             - name: Active Directory DNS
               href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+            - name: Сбои при входе в Active Directory
+              href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
             - name: "Права администратора для\_HDFS"
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: Справочник
@@ -2688,7 +2690,7 @@
               href: relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md
             - name: Свойства
               href: relational-databases/native-client-ole-db-provider/about-ole-db-properties.md
-            - name: Установление подключения
+            - name: Установка подключения
               href: relational-databases/native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md
             - name: Выполнение команды
               href: relational-databases/native-client-ole-db-provider/executing-a-command.md
@@ -10049,6 +10051,8 @@
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: Ресурсы
   items:
+    - name: Автономная документация по SQL Server
+      href: sql-server/sql-server-offline-documentation.md
     - name: Обучение
       items:
         - name: Обучающие ресурсы
@@ -10099,13 +10103,8 @@
           href: sql-server/partner-management-sql-server.md
         - name: Разработка
           href: sql-server/partner-dev-sql-server.md
-    - name: Автономная документация по SQL Server
-      href: sql-server/sql-server-offline-documentation.md
 - name: Справочник
   items:
-    - name: "Архивные материалы (SQL 2005–2012)\_>"
-      displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
-      href: 'https://docs.microsoft.com/previous-versions/sql/'
     - name: Примеры баз данных
       items:
         - name: Обзор примеров

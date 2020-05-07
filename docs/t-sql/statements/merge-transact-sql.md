@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10798009fe69426b0aaa4b035bba0a19eaf36426
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ff70ad2a8aa50c0e4121a6a597b8e150d0f35a54
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634134"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82181102"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -249,7 +249,7 @@ INDEX ( index_val [ ,...n ] )
 Указывает имя или идентификатор одного или нескольких индексов целевой таблицы для выполнения неявного соединения с исходной таблицей. Дополнительные сведения см. в разделе [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md).  
   
 \<output_clause>  
-Возвращает по одной строке для каждой строки в таблице *target_table*, в которой выполнена операция обновления, вставки или удаления, без какого-либо определенного порядка. Параметр **$action** может быть указан в предложении вывода. **$action** — это столбец типа **nvarchar(10)** , который возвращает одно из трех значений для каждой строки: INSERT, UPDATE или DELETE — согласно действию, которое было выполнено с этой строкой. Дополнительные сведения об аргументах этого предложения см. в статье [Предложение OUTPUT (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).  
+Возвращает по одной строке для каждой строки в таблице *target_table*, в которой выполнена операция обновления, вставки или удаления, без какого-либо определенного порядка. Параметр **$action** может быть указан в предложении вывода. **$action** — это столбец типа **nvarchar(10)** , который возвращает одно из трех значений для каждой строки: INSERT, UPDATE или DELETE — согласно действию, которое было выполнено с этой строкой. Дополнительные сведения об аргументах и поведении этого предложения см. в статье [Предложение OUTPUT (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).  
   
 OPTION ( \<query_hint> [ ,...n ] )  
 Указывает, что для настройки способа, которым компонент Database Engine обрабатывает инструкцию, используются подсказки оптимизатора. Дополнительные сведения см. в разделе [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  

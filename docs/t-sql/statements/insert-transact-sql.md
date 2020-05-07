@@ -32,12 +32,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a5b98bf8e99d55217fadfd2c1811cb484c3ee3b
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 0ad386f4137b43746eed82665715e2fef5957a79
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107993"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82181105"
 ---
 # <a name="insert-transact-sql"></a>Инструкция INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -199,7 +199,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 Предложение OUTPUT  
  Возвращает вставленные строки во время операции вставки. Результаты могут возвращаться в обрабатывающее приложение или вставляться в таблицу или табличную переменную для дальнейшей обработки.  
   
- [Предложение OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) не поддерживается инструкциями DML, которые ссылаются на локальные секционированные представления, распределенные секционированные представления или удаленные таблицы, или инструкциями INSERT, содержащими аргумент *execute_statement*. Предложение OUTPUT INTO не поддерживается в инструкциях INSERT, содержащих предложение \<dml_table_source>. 
+ Предложение OUTPUT не поддерживается инструкциями DML, которые ссылаются на локальные секционированные представления, распределенные секционированные представления или удаленные таблицы, или инструкциями INSERT, содержащими аргумент *execute_statement*. Предложение OUTPUT INTO не поддерживается в инструкциях INSERT, содержащих предложение \<dml_table_source>. Дополнительные сведения об аргументах и поведении этого предложения см. в статье [Предложение OUTPUT (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).
   
  VALUES  
  Позволяет использовать один или несколько списков вставляемых значений данных. Для каждого столбца в *column_list*, если этот параметр указан, или в таблице должно быть одно значение. Список значений должен быть заключен в скобки.  

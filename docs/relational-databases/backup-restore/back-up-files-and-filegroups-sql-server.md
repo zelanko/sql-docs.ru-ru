@@ -1,5 +1,6 @@
 ---
 title: Резервное копирование файлов и файловых групп | Документация Майкрософт
+description: В этой статье описано, как создать резервную копию файлов и файловых групп в SQL Server с помощью SQL Server Management Studio, Transact-SQL или PowerShell.
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 48d0581df76c6f6b5c4cd291981cf01e13f5eb79
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71708688"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220609"
 ---
 # <a name="back-up-files-and-filegroups"></a>Создание резервных копий файлов и файловых групп
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +142,7 @@ ms.locfileid: "71708688"
   
   [ WITH *with_options* [ **,** ...*o* ] ] ;  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |*database*|База данных, журнал транзакций и часть данных или все данные, которые подвергаются резервному копированию.|  
 |FILE _=_ *логическое_имя_файла*|Указывает логическое имя файла, который необходимо включить в резервную копию.|  

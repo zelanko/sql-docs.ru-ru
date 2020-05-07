@@ -1,5 +1,6 @@
 ---
 title: Резервное копирование базы данных (страница "Общие") | Документация Майкрософт
+description: В SQL Server страница "Общие" диалогового окна "Резервное копирование базы данных" служит для просмотра и изменения параметров источника и назначения для резервного копирования базы данных.
 ms.custom: ''
 ms.date: 07/01/2016
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e3bbac9bbdc12e5f2c1a0fb318a91860e44131d0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 97521f50bd002cc67a3d73dbfde3999f4ea3dabc
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940924"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220619"
 ---
 # <a name="back-up-database-general-page"></a>Резервное копирование базы данных (страница «Общие»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -25,12 +25,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 348a4984f7616bb58faa1d6182bc27ae974dde82
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1207f4938c1c3b269cd503e1f7f7f7e279207685
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633214"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82169362"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -131,7 +131,7 @@ DELETE
  Задает одно или несколько табличных указаний, разрешенных для целевой таблицы. Ключевое слово WITH и круглые скобки обязательны. Использование ключевых слов NOLOCK и READUNCOMMITTED запрещено. Дополнительные сведения о табличных указаниях см. в разделе [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md).  
   
  \<OUTPUT_Clause>  
- Возвращает удаленные строки или выражения, основанные на них, как часть операции DELETE. Предложение OUTPUT не поддерживается ни в каких инструкциях DML, направленных на представления и удаленные таблицы. Дополнительные сведения см. в статье [Предложение OUTPUT (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).  
+ Возвращает удаленные строки или выражения, основанные на них, как часть операции DELETE. Предложение OUTPUT не поддерживается ни в каких инструкциях DML, направленных на представления и удаленные таблицы. Дополнительные сведения об аргументах и поведении этого предложения см. в статье [Предложение OUTPUT (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).  
   
  FROM *table_source*  
  Задает дополнительное предложение FROM. Это расширение языка [!INCLUDE[tsql](../../includes/tsql-md.md)] для инструкции DELETE позволяет задавать данные из \<table_source> и удалять соответствующие строки из таблицы в первом предложении FROM.  

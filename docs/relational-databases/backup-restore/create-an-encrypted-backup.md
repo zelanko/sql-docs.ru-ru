@@ -1,5 +1,6 @@
 ---
 title: Создание зашифрованной резервной копии | Документация Майкрософт
+description: В этой статье показано, как создать зашифрованную резервную копию в SQL Server с помощью Transact-SQL. Вы можете выполнить резервное копирование на диск или в службу хранилища Azure.
 ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e8f0c38d7dd712c5727fc5e9f7f62a35c1b886e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3a7d08c93b42b8b8cd236dae775b28cc5040751
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70280810"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179275"
 ---
 # <a name="create-an-encrypted-backup"></a>Создание зашифрованной резервной копии
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -9,33 +9,34 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 11bc21819760bebabd12018030c352bd98f79adb
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 0f6600b6578abe0a9b72dff8fee2d815b0771c0c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531089"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178135"
 ---
-# <a name="get-started-with-big-data-clusters-2019"></a>Начало работы с [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="get-started-with-big-data-clusters-2019-deployment"></a>Начало работы по развертыванию [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этой статье содержится обзор развертывания [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
+В этой статье содержится обзор развертывания [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. В этой статье рассказывается об основных понятиях и сценариях развертывания. Конкретные шаги по развертыванию зависят от выбора платформ клиента и сервера. Общие сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] см. в разделе [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)
 
-Дополнительные сведения о других сценариях развертывания см. в следующих источниках:
+Дополнительные сведения о других сценариях развертывания в SQL Server см. в следующих источниках:
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
 - [Linux](../linux/sql-server-linux-setup.md)
 - [Контейнеры Docker](../linux/sql-server-linux-configure-docker.md)
 
-Эта статья призвана дать определения основным понятиям и предоставить базовые знания для понимания других статей по развертыванию в этом разделе. Конкретные шаги по развертыванию зависят от выбора платформ клиента и сервера.
-
-> [!TIP]
-> Чтобы быстро развернуть среду с Kubernetes и кластером больших данных и начать реализовывать ее потенциал, воспользуйтесь одним из примеров сценариев, указанных в [разделе сценариев](#scripts). После развертывания используйте для управления кластером [клиентские средства](#tools), описанные в следующем разделе.
+## <a name="quick-introduction"></a>Краткое введение 
 
 Просмотрите это девятиминутное видео, в котором представлены общие сведения о развертывании кластеров больших данных:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
+
+
+> [!TIP]
+> Чтобы быстро развернуть среду с Kubernetes и кластером больших данных и начать реализовывать ее потенциал, воспользуйтесь одним из примеров сценариев, указанных в [разделе сценариев](#scripts). После развертывания используйте для управления кластером [клиентские средства](#tools), описанные в следующем разделе.
 
 
 ## <a name="client-tools"></a><a id="tools"></a> Клиентские средства

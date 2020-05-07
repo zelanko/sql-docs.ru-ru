@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4c77d87f1ffe0083662f9f4fcfe643de3359ea59
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 84c049f451572cb1119e695182a6c896f013e04b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012972"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087344"
 ---
 # <a name="clr-strict-security"></a>Строгая безопасность среды CLR   
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Управляет интерпретацией разрешения `SAFE`, `EXTERNAL ACCESS`, `UNSAFE` в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
 
-|Значение |Description | 
+|Значение |Описание | 
 |----- |----- | 
 |0 |Disabled: обеспечивает обратную совместимость. Использование значение `Disabled` не рекомендуется. | 
-|1 |Enabled: заставляет [!INCLUDE[ssde-md](../../includes/ssde-md.md)] игнорировать сведения `PERMISSION_SET` о сборках и всегда интерпретировать их как `UNSAFE`.  Значение `Enabled` по умолчанию — [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]. | 
+|1 |Enabled: заставляет [!INCLUDE[ssde-md](../../includes/ssde-md.md)] игнорировать сведения `PERMISSION_SET` о сборках и всегда интерпретировать их как `UNSAFE`.  `Enabled` является значением по умолчанию, начиная с [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]. | 
 
 > [!WARNING]
 >  Среда CLR использует управление доступом для кода (CAS) в .NET Framework, которое больше не поддерживается в качестве границы безопасности. Сборки среды CLR, созданные с помощью `PERMISSION_SET = SAFE`, могут получать доступ к внешним системным ресурсам, вызывать неуправляемый код и получать права системного администратора. Начиная с [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)], появился параметр `sp_configure`, называемый `clr strict security`, для повышения безопасности сборок среды CLR. `clr strict security` включен по умолчанию и рассматривает сборки `SAFE` и `EXTERNAL_ACCESS`, как если бы они были помечены `UNSAFE`. Параметр `clr strict security` можно отключить для обеспечения обратной совместимости, но это делать не рекомендуется. Корпорация Майкрософт рекомендует подписывать все сборки с помощью сертификата или асимметричного ключа с соответствующим именем входа, которому предоставлено разрешение `UNSAFE ASSEMBLY` в базе данных master. Администраторы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также могут добавлять сборки в список сборок, которым должно доверять ядро СУБД. Дополнительные сведения см. в разделе [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md).
@@ -51,7 +51,7 @@ ms.locfileid: "68012972"
 ## <a name="permissions"></a>Разрешения 
 
 ### <a name="to-change-this-option"></a>Изменение параметра  
-Требует разрешения `CONTROL SERVER` или членства в предопределенной роли сервера `sysadmin`.
+Требует разрешения `sysadmin` или членства в предопределенной роли сервера `CONTROL SERVER`.
 
 ### <a name="to-create-an-clr-assembly"></a>Создание сборки среды CLR   
 Для создания сборки среды CLR при включении `CLR strict security` требуются следующие разрешения:

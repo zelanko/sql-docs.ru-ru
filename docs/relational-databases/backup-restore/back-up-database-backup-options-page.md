@@ -1,5 +1,6 @@
 ---
 title: Архивация базы данных (страница "Параметры резервного копирования") | Документация Майкрософт
+description: В SQL Server на странице "Параметры резервного копирования" диалогового окна "Резервное копирование базы данных" можно просмотреть или изменить параметры резервного набора данных, сжатия и шифрования.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f461997fbbbbc7e63256b67b8fecf40381aab788
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2d9b831b3350c6a895c86868180a1134f871c8d5
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940978"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220629"
 ---
 # <a name="back-up-database-backup-options-page"></a>Резервное копирование базы данных (страница «Параметры резервного копирования»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "67940978"
 ### <a name="backup-set"></a>Резервный набор данных  
  Параметры панели **Резервный набор данных** позволяют указать необязательные сведения о резервном наборе данных, созданном операцией резервного копирования.  
   
- **Название**  
+ **имя**;  
  Укажите имя резервного набора данных. Система автоматически предложит имя по умолчанию на основе имени базы данных и типа резервной копии.  
   
  Сведения о наборах резервных копий см. в разделе [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  

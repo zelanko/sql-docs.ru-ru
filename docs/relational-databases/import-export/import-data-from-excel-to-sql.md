@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bbb114a2d3ae3f5655f4d5a60a2842af77170b6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ef9afc7492e371562cbdba8c84af84f5b8bd9f51
+ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980580"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643359"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Импорт данных из Excel в SQL Server или базу данных Azure
 

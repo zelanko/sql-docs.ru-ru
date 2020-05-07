@@ -1,5 +1,6 @@
 ---
 title: Устройства резервного копирования (SQL Server) | Документация Майкрософт
+description: В этой статье описываются устройства резервного копирования для базы данных SQL Server, включая терминологию и работу с устройствами резервного копирования.
 ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b4b67ba15f7660c82da249eadec1f6d0da2f7fb3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e9bd20f7b0176c3d57bdd032f9c7f47d6729ba6
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909175"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220585"
 ---
 # <a name="backup-devices-sql-server"></a>Устройства резервного копирования (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +92,7 @@ RESTORE DATABASE AdventureWorks2012
   
   
 ##  <a name="specify-the-disk-backup-file-path"></a><a name="BackupFileDiskPath"></a> &Указание пути к файлу дисковой резервной копии 
- При указании файла резервного копирования следует ввести полный путь и имя файла. Если введено только имя файла или относительный путь для резервного копирования на диск, то файл резервной копии будет помещен в определенный по умолчанию каталог для резервных копий. Резервным каталогом по умолчанию является C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, где *n* — номер экземпляра сервера. Поэтому для экземпляра сервера по умолчанию каталогом, использующимся по умолчанию для резервного копирования, является C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup.  
+ При указании файла резервного копирования следует ввести полный путь и имя файла. Если введено только имя файла или относительный путь для резервного копирования на диск, то файл резервной копии будет помещен в определенный по умолчанию каталог для резервных копий. Резервным каталогом по умолчанию является C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, где *n* — номер экземпляра сервера. Поэтому для экземпляра сервера по умолчанию каталогом, использующимся по умолчанию, является C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup.  
   
  Чтобы избежать неоднозначности, особенно в скриптах, рекомендуется явно указывать путь каталога резервного копирования в каждом предложении DISK. Однако это менее важно при использовании редактора запросов. В этом случае, если вы уверены, что файл резервного копирования находится в определенном по умолчанию каталоге для резервных копий, можно опустить путь в предложении DISK. В следующем примере с помощью инструкции `BACKUP` создается резервная копия базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] в определенном по умолчанию каталоге резервных копий.  
   
@@ -101,7 +102,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-> **ПРИМЕЧАНИЕ.** Расположение по умолчанию хранится в разделе реестра **BackupDirectory** по пути **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer**.  
+> **ПРИМЕЧАНИЕ.** Расположение по умолчанию находится в разделе реестра **BackupDirectory** в ветке **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer**.  
   
    
 ###  <a name="back-up-to-a-network-share-file"></a><a name="NetworkShare"></a> Резервное копирование в файл, расположенный в общей сетевой папке  
@@ -173,12 +174,12 @@ GO
   
      С помощью этого параметра можно определить — оставит ли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ленту открытой после операции резервного копирования или восстановления или освободит и перемотает после того, как она будет заполнена. Поведение по умолчанию — перемотка ленты (REWIND).  
   
-> **ПРИМЕЧАНИЕ.** Дополнительные сведения о синтаксисе BACKUP и его аргументах см. в разделе [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md). Дополнительные сведения о синтаксисе RESTORE и его аргументах см. в разделах [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md) и [Аргументы RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md) соответственно.  
+> **ПРИМЕЧАНИЕ.** Дополнительные сведения о синтаксисе инструкции BACKUP и ее аргументах см. в разделе [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md). Дополнительные сведения о синтаксисе RESTORE и его аргументах см. в разделах [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md) и [Аргументы RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md) соответственно.  
   
 ###  <a name="managing-open-tapes"></a><a name="OpenTapes"></a> Управление открытыми магнитными лентами  
  Для просмотра списка открытых ленточных устройств и состояния запросов на подключение запросите динамическое представление управления [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) . Данное представление показывает все открытые ленты. Сюда относятся все используемые ленты, которые временно простаивают в ожидании следующей операции BACKUP или RESTORE.  
   
- Если лента была случайно оставлена открытой, то самый быстрый способ освободить ее — использовать следующую команду: RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Дополнительные сведения см. в разделе [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
+ Если лента была неумышленно оставлена открытой, то самый быстрый способ освободить ленту — использовать следующую команду: RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Дополнительные сведения см. в разделе [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
   
   
 ## <a name="using-the-azure-blob-storage-service"></a>Использование службы хранилища BLOB-объектов Azure  
@@ -199,7 +200,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-> **ПРИМЕЧАНИЕ.** В данной инструкции BACKUP или RESTORE имя логического устройства резервного копирования и имя соответствующего физического устройства резервного копирования являются взаимозаменяемыми.  
+> **ПРИМЕЧАНИЕ.** В данных инструкциях BACKUP или RESTORE имя логического устройства резервного копирования и имя соответствующего физического устройства резервного копирования являются взаимозаменяемыми.  
   
  Одним из преимуществ использования логического устройства резервного копирования является удобство по сравнению с использованием длинного полного пути. Использование логического устройства резервного копирования может быть полезным, если планируется запись набора резервных копий по одному и тому же пути или на один накопитель на магнитной ленте. Логические устройства резервного копирования особенно полезны для указания ленточных устройств резервного копирования.  
   

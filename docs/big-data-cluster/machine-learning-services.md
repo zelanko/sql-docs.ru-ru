@@ -4,16 +4,16 @@ titleSuffix: SQL Server Big Data Clusters
 description: Узнайте, как выполнять скрипты Python и R в главном экземпляре кластеров больших данных SQL Server с помощью служб машинного обучения.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 04/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
-ms.openlocfilehash: dd8e1b948d259b4c233aebcb3614dea5b3e72129
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d105db3da8a6732c2884af7e42a71441eef6f077
+ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664129"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643341"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>Выполнение скриптов Python и R с помощью служб машинного обучения в кластерах больших данных SQL Server
 
@@ -36,39 +36,68 @@ RECONFIGURE WITH OVERRIDE
 GO
 ```
 
-## <a name="enable-always-on-availability-groups"></a>Включение групп доступности AlwaysOn
+Теперь все готово для выполнения скриптов Python и R в главном экземпляре кластеров больших данных. Перед тем как запустить первый скрипт, ознакомьтесь с краткими руководствами в разделе [Следующие шаги](#next-steps).
 
-При использовании кластеров больших данных SQL Server с [группами доступности Always On](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) необходимо выполнить несколько дополнительных действий, чтобы включить службы машинного обучения.
+>[!NOTE]
+>Параметр конфигурации не может быть задан для соединения прослушивателя группы доступности. Если кластеры больших данных развертываются с высоким уровнем доступности, установите `external scripts enabled` на каждой реплике. См. раздел [Включение кластера с высоким уровнем доступности](#enable-on-cluster-with-high-availability).
 
-1. Подключитесь к главному экземпляру и выполните следующую инструкцию:
+## <a name="enable-on-cluster-with-high-availability"></a>Включение кластера с высоким уровнем доступности
 
-    ```sql
-    SELECT @@SERVERNAME
-    ```
+При [развертывании кластера больших данных SQL Server с высоким уровнем доступности](deployment-high-availability.md) развертывание создает группу доступности для главного экземпляра. Чтобы включить службы машинного обучения, установите `external scripts enabled` на каждом экземпляре группы доступности. Для кластера больших данных необходимо выполнить `sp_configure` на каждой реплике главного экземпляра SQL Server.
 
-    Запишите имя сервера. В данном примере имя сервера для главного экземпляра — **master-2**.
+В следующем разделе описано, как включить внешние скрипты для каждого экземпляра.
 
-1. В каждой реплике в группе доступности Always On в кластере больших данных выполните следующие команды `kubectl`:
+### <a name="create-an-external-load-balancer-for-each-instance"></a>Создание внешнего балансировщика нагрузки для каждого экземпляра
 
-    ```
-    kubectl -n bdc expose pod master-0 --port=1533 --name=mymaster-0 --type=LoadBalancer
+Для каждой реплики в группе доступности создайте подсистему балансировки нагрузки, которая позволит подключиться к экземпляру. 
 
-    kubectl -n bdc expose pod master-1 --port=1533 --name=mymaster-1 --type=LoadBalancer
+`kubectl expose pod <pod-name> --port=<connection port number> --name=<load-balancer-name> --type=LoadBalancer -n <kubernetes namespace>`
 
-    kubectl -n bdc expose pod master-2 --port=1533 --name=mymaster-2 --type=LoadBalancer
-    ```
+В примерах этой статьи мы используем следующие значения:
 
-    Выходные данные должны иметь следующий вид:
-    
-    ```
-    service/mymaster-0 exposed
+- `<pod-name>`: `master-#`
+- `<connection port number>`: `1533`
+- `<load-balancer-name>`: `mymaster-#`
+- `<kubernetes namespace>`: `mssql-cluster`
 
-    service/mymaster-1 exposed
+Обновите следующий сценарий для своей среды и выполните команды:
 
-    service/mymaster-2 exposed
-    ```
+```bash
+kubectl expose pod master-0 --port=1533 --name=mymaster-0 --type=LoadBalancer -n mssql-cluster 
+kubectl expose pod master-1 --port=1533 --name=mymaster-1 --type=LoadBalancer -n mssql-cluster
+kubectl expose pod master-2 --port=1533 --name=mymaster-2 --type=LoadBalancer -n mssql-cluster 
+```
 
-1. Подключитесь к каждой конечной точке главной реплики и разрешите выполнение скрипта.
+`kubectl` возвращает следующие выходные данные.
+
+```bash
+service/mymaster-0 exposed
+service/mymaster-1 exposed
+service/mymaster-2 exposed
+```
+
+Каждая подсистема балансировки нагрузки является конечной точкой главной реплики.
+
+### <a name="enable-script-execution-on-each-replica"></a>Включение выполнения скрипта на каждой реплике
+
+1. Получите IP-адрес конечной точки главной реплики.
+
+   Следующая команда возвращает внешний IP-адрес конечной точки реплики. 
+
+   `kubectl get services <load-balancer-name> -n <kubernetes namespace>`
+
+   Чтобы получить внешний IP-адрес для каждой реплики в этом сценарии, выполните следующие команды:
+
+   ```bash
+   kubectl get services mymaster-0 -n mssql-cluster
+   kubectl get services mymaster-1 -n mssql-cluster
+   kubectl get services mymaster-2 -n mssql-cluster
+   ```
+
+   >[!NOTE]
+   > Внешний IP-адрес будет доступен через некоторое время. Периодически запускайте предыдущий скрипт, пока каждая конечная точка не вернет внешний IP-адрес.
+
+1. Подключитесь к конечной точке главной реплики и разрешите выполнение скрипта.
 
     Выполните приведенную ниже инструкцию.
 
@@ -78,7 +107,37 @@ GO
     GO
     ```
 
-Теперь все готово для выполнения скриптов Python и R в главном экземпляре кластеров больших данных. Перед тем как запустить первый скрипт, ознакомьтесь с краткими руководствами ниже.
+   Например, можно выполнить предыдущую команду с `sqlcmd`. В следующем примере показано подключение к конечной точке главной реплики и выполнение скрипта. Замените значения в скрипте значениями для своей среды.
+
+   ```bash
+   sqlcmd -S <IP address>,1533 -U <user name> -P <password> -Q "EXEC sp_configure 'external scripts enabled', 1; RECONFIGURE WITH OVERRIDE;"
+   ```
+
+   Повторите этот шаг для каждой реплики.
+
+### <a name="demonstration"></a>Демонстрация
+
+Этот процесс показан на следующем рисунке.
+
+[![](media/machine-learning-services/example-kube-enable-scripts.png "Demonstrate enable feature on Kubernetes")](media/machine-learning-services/example-kube-enable-scripts.png#lightbox)
+
+Теперь все готово для выполнения скриптов Python и R в главном экземпляре кластеров больших данных. Перед тем как запустить первый скрипт, ознакомьтесь с краткими руководствами в разделе [Следующие шаги](#next-steps).
+
+### <a name="delete-the-master-replica-endpoints"></a>Удаление конечных точек главной реплики
+
+В кластере Kubernetes удалите конечную точку для каждой реплики. Конечная точка предоставляется в Kubernetes в качестве службы балансировки нагрузки.
+
+Следующая команда удаляет службу балансировки нагрузки.
+
+`kubectl delete svc <load-balancer-name> -n mssql-cluster`
+
+Для примеров в этой статье выполните следующие команды.
+
+```bash
+kubectl delete svc mymaster-0 -n mssql-cluster
+kubectl delete svc mymaster-1 -n mssql-cluster
+kubectl delete svc mymaster-2 -n mssql-cluster
+```
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

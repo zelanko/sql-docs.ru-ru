@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4c6c89602f55eb72c01d32a2541bcf4c775b9a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da4f6e997d3f99e9c64c7623a616fe5d45c283db
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78176694"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82169372"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -203,7 +203,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  Предложение SET **@** _variable_ = *column* = *expression* присваивает переменной то же значение, что и столбцу. Это отличается от предложения SET **@** _variable_ = _column_, _column_ = _expression_, присваивающего переменной значение столбца до обновления.  
   
  \<OUTPUT_Clause>  
- Возвращает обновленные данные или основанные на них выражения в рамках выполнения операции UPDATE. Предложение OUTPUT не поддерживается ни в одной инструкции DML, целью которой являются удаленные таблицы или представления. Дополнительные сведения см. в статье [Предложение OUTPUT (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).  
+ Возвращает обновленные данные или основанные на них выражения в рамках выполнения операции UPDATE. Предложение OUTPUT не поддерживается ни в одной инструкции DML, целью которой являются удаленные таблицы или представления. Дополнительные сведения об аргументах и поведении этого предложения см. в статье [Предложение OUTPUT (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).  
   
  FROM \<table_source>  
  Определяет, что для определения критериев операции обновления используется таблица, представление или производная таблица. Дополнительные сведения см. в разделе [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).  
@@ -463,7 +463,7 @@ ID     Value
 ## <a name="logging-behavior"></a>Режим ведения журнала  
  Инструкция UPDATE записывается в журнал, однако частичные обновления типов данных с большими значениями с использованием предложения **\.WRITE** регистрируются на минимальном уровне. Дополнительные сведения см. ниже в подразделе "Обновление типов данных большого объема" приведенного ранее раздела "Типы данных".  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Разрешения `UPDATE` необходимы для целевой таблицы. Кроме того, требуются разрешения на выполнение `SELECT` для обновляемой таблицы, если инструкция UPDATE содержит предложение WHERE или если аргумент *expression* в предложении SET использует столбец в этой таблице.  

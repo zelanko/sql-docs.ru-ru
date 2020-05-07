@@ -1,5 +1,6 @@
 ---
 title: Управляемое резервное копирование SQL Server в Microsoft Azure | Документация Майкрософт
+description: Управляемое резервное копирование SQL Server в Microsoft Azure управляет резервным копированием SQL Server в хранилище BLOB-объектов Microsoft Azure и автоматизирует его.
 ms.custom: ''
 ms.date: 10/18/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9038b277c5ef552dcf2bbdc2fdcabef52e269599
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245428"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180453"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Управляемое резервное копирование SQL Server в Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,12 +38,12 @@ ms.locfileid: "75245428"
 ##  <a name="prerequisites"></a><a name="Prereqs"></a> Предварительные требования  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] использует службу хранилища Microsoft Azure для хранения файлов резервных копий. Ниже перечислены необходимые компоненты.  
   
-|Предварительные требования|Description|  
+|Предварительные требования|Описание|  
 |------------------|-----------------|  
 |**Учетная запись Microsoft Azure**|Прежде чем просмотреть [варианты приобретения](https://azure.microsoft.com/pricing/free-trial/) , можно начать работу с Azure, используя [бесплатную пробную версию](https://azure.microsoft.com/pricing/purchase-options/).|  
 |**Учетная запись хранения Azure**|Резервные копии хранятся в хранилище BLOB-объектов Azure, связанном с учетной записью хранения Azure. Чтобы создать учетную запись хранения, воспользуйтесь подробной пошаговой инструкцией в статье [об учетных записях хранения Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
 |**Контейнер больших двоичных объектов**|Для упорядочивания больших двоичных объектов используются контейнеры. Необходимо указать целевой контейнер для файлов резервных копий. Контейнер можно создать на [портале управления Azure](https://manage.windowsazure.com/)или с помощью команды **New-AzureStorageContainer**[Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) .|  
-|**Подписанный URL-адрес**|Доступ к целевому контейнеру зависит от подписанного URL-адреса. Общие сведения о SAS см. в статье [Подписанные URL-адреса. Часть 1: общие сведения о модели SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Маркер SAS можно создать в коде или с помощью команды PowerShell **New-AzureStorageContainerSASToken** . Скрипт PowerShell, упрощающий этот процесс, см. в статье [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Упрощение создания учетных данных SQL с использованием маркера подписанного URL-адреса в службе хранилища Azure с помощью Powershell). Маркер SAS можно хранить в **SQL Credential** и использовать с [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|**Подписанный URL-адрес**|Доступ к целевому контейнеру зависит от подписанного URL-адреса. Общие сведения о SAS см. в статье [Подписанные URL-адреса. Часть 1. подписанных URL-адресов (SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Маркер SAS можно создать в коде или с помощью команды PowerShell **New-AzureStorageContainerSASToken** . Скрипт PowerShell, упрощающий этот процесс, см. в статье [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Упрощение создания учетных данных SQL с использованием маркера подписанного URL-адреса в службе хранилища Azure с помощью Powershell). Маркер SAS можно хранить в **SQL Credential** и использовать с [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |**Агент SQL Server**|Чтобы компонент [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] работал, должен быть запущен агент SQL Server. Рекомендуется установить автоматический запуск.|  
   
 ## <a name="components"></a>Components  
@@ -52,7 +53,7 @@ ms.locfileid: "75245428"
   
 |||  
 |-|-|  
-|Системный объект|Description|  
+|Системный объект|Описание|  
 |**MSDB**|Хранит метаданные, журнал резервного копирования для всех резервных копий, созданных [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|Запускает компонент [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_advanced (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|Настраивает дополнительные параметры для [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], например шифрование.|  
@@ -74,7 +75,7 @@ ms.locfileid: "75245428"
  С помощью системной хранимой процедуры [managed_backup.sp_backup_config_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md). Если не указать пользовательское расписание, тип запланированных резервных копий и частота резервного копирования определяются на основе рабочей нагрузки в базе данных. Настройки срока хранения определяют длительность хранения файлов резервных копий в хранилище и для восстановления базы данных на момент времени в течение срока хранения.  
   
 ### <a name="backup-file-naming-conventions"></a>Соглашения об именовании файлов резервных копий  
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] использует указанный контейнер. Таким образом, вы можете выбрать имя контейнера. Имя файла резервной копии для баз данных, не являющихся базами данных доступности, задается в соответствии со следующим соглашением об именовании. Имя создается с использованием первых 40 символов имени базы данных, GUID базы данных без "-" и метки времени. Между сегментами в качестве разделителей вставляется подчеркивание. Для полной резервной копии используется расширение **BAK** , а для резервной копии журналов — **LOG** . Для баз данных группы доступности в дополнении к схеме именования, описанной выше, после 40 символов имени базы данных добавляется GUID группы доступности. Значение GUID базы данных группы доступности — это значение для group_database_id в sys.databases.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] использует указанный контейнер. Таким образом, вы можете выбрать имя контейнера. Имя файла резервной копии для баз данных, не являющихся базами данных доступности, задается в соответствии со следующим соглашением: Имя создается с помощью первых 40 символов имени базы данных, идентификатора GUID базы данных без "-" и отметки времени. Между сегментами в качестве разделителей вставляется подчеркивание. Для полной резервной копии используется расширение **BAK** , а для резервной копии журналов — **LOG** . Для баз данных группы доступности в дополнении к схеме именования, описанной выше, после 40 символов имени базы данных добавляется GUID группы доступности. Значение GUID базы данных группы доступности — это значение для group_database_id в sys.databases.  
   
 ### <a name="full-database-backup"></a>Полная резервная копия базы данных  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] планирует полную резервную копию базы данных, если выполняется одно из следующих условий.  
@@ -99,7 +100,7 @@ ms.locfileid: "75245428"
 -   Каждый раз, когда резервная копия журнала транзакций отстает от полной резервной копии базы данных, целью является сохранение цепочки журналов до полной резервной копии.  
   
 ## <a name="retention-period-settings"></a>Параметры срока хранения  
- При включении резервного копирования необходимо задать срок хранения в днях. Минимальное значение — 1 день, максимальное — 30 дней.  
+ При включении резервного копирования необходимо задать срок хранения в днях: минимальное значение — 1 день, максимальное — 30 дней.  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] оценивает возможность восстановления базы данных на момент времени в течение заданного периода, чтобы определить, какие файлы резервной копии необходимо сохранить, а какие — удалить. Параметр backup_finish_date резервной копии используется для определения и сопоставления времени, заданного настройками срока хранения.  
   

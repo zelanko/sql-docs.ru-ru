@@ -1,5 +1,6 @@
 ---
 title: Управление таблицей suspect_pages (SQL Server) | Документация Майкрософт
+description: Узнайте, как управлять таблицей suspect_pages в SQL Server с помощью SQL Server Management Studio или Transact-SQL. Страницы, в которых возникают определенные ошибки, считаются подозрительными.
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 97c69fe0a6e1de53840b5f31c16d51d1d6d08263
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5d364f28e1d27d9eeb758c174e7e8062e7540873
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908916"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180212"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>Управление таблицей suspect_pages (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

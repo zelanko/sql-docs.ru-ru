@@ -3,17 +3,17 @@ title: Настройка репозиториев Linux для SQL Server 201
 description: Проверьте и настройте репозитории исходного кода для SQL Server 2019 и SQL Server 2017 в Linux. Репозиторий исходного кода влияет на версию SQL Server, используемую во время установки и обновления.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 7253fb18ea783a1fb7aeec77aa73b9a899ec6ae9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: cea6b49e46b5dc1d386f42808f64743e2c7eed8c
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301705"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262049"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Настройка репозиториев для установки и обновления SQL Server на Linux
 
@@ -181,7 +181,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 >
 > Начиная с SQL Server 2017 с накопительным пакетом обновления 20 (CU20), поддерживается RHEL 8.
 >
-> Если вы используете RHEL 7 или RHEL 8, убедитесь, что пути соответствуют `/rhel/7` или `/rhel/8`.
+> Если вы используете RHEL 7 или RHEL 8, убедитесь, что пути соответствуют `/rhel/7` или `/rhel/8`. Наши пакеты не зависят от дополнительных версий RHEL. Это означает, что, если вы используете RHEL 7.6, для настройки репозитория необходим путь `/rhel/7`.
 
 | Хранилище | Версия | Get-Help |
 |---|---|---|

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f9203423267f68137e11203be60ffa4d0e0c3e41
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 379b9e74388b9cedad55e3263c823c3d9d276286
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296898"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588170"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Службы Integration Services (SSIS) в кластере
 
@@ -128,7 +128,7 @@ ms.locfileid: "71296898"
   
 4.  Измените значение элемента **StorePath** , указав полный путь к папке **Packages** , которую вы создали на общем диске на предыдущем этапе.  
   
-5.  Измените значение **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** в реестре, указав полный путь и имя файла конфигурации службы на общем диске.  
+5.  На каждом узле измените значение **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** в реестре, указав полный путь и имя файла конфигурации службы на общем диске.  
   
 ### <a name="to-bring-the-integration-services-service-online"></a>Приведение службы Integration Services в режим в сети  
   

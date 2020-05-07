@@ -1,5 +1,6 @@
 ---
 title: Восстановление из резервных копий, сохраненных в Microsoft Azure | Документация Майкрософт
+description: Сведения о восстановлении базы данных SQL Server с помощью резервной копии, хранящейся в хранилище BLOB-объектов Azure.
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cda4fd3fa0bbb66e95d61ec87ff66dee809e2962
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a1947ce2821bf02b09ea1a3a49f3d83c2613c357
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155444"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180690"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>Восстановление из резервных копий в Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "70155444"
   
  Для сокращения времени восстановления, рекомендуется использовать сжатые резервные копии.  Для резервных копий, чей размер превышает 25 ГБ, используйте [служебную программу AzCopy](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) для загрузки на локальный привод и для последующего выполнения восстановления. За дополнительными рекомендациями относительно резервных копий, обратитесь к [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
   
- Также при выполнении восстановления можно включить флаг трассировки 3051, что приведет к формированию подробного журнала. Этот файл журнала помещается в каталог журнала и получает имя формата: BackupToUrl-\<имя_экземпляра>-\<имя_БД>-action-\<идентификатор_процесса>.log. В файле журнала сохраняются сведения о каждом круговом пути со службой хранилища Azure, включая время операции, что может быть полезно при диагностике проблемы.  
+ Также при выполнении восстановления можно включить флаг трассировки 3051, что приведет к формированию подробного журнала. Этот файл журнала помещается в каталог журнала и получает имя в следующем формате: BackupToUrl-\<имя_экземпляра>-\<имя_БД>-action-\<идентификатор_процесса>.log. В файле журнала сохраняются сведения о каждом круговом пути со службой хранилища Azure, включая время операции, что может быть полезно при диагностике проблемы.  
   
 ### <a name="topics-on-performing-restore-operations"></a>Разделы об операциях восстановления  
   
