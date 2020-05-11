@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff0ae9555fcd17ccb79fc239f3ef1e125706dc75
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292417"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921930"
 ---
 # <a name="integration-services-data-types"></a>Типы данных служб Integration Services
 
@@ -257,7 +257,7 @@ ms.locfileid: "71292417"
  Сведения о сопоставлении типов данных в потоке данных см. в разделе [Работа с типами данных в потоке данных](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
 ## <a name="related-content"></a>См. также  
- Запись в блоге [Сравнение производительности между способами преобразования типов данных в службах SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823)на сайте blogs.msdn.com.  
+ Запись в блоге [Сравнение производительности между способами преобразования типов данных в службах SSIS 2008](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035)на сайте blogs.msdn.com.  
   
 ## <a name="see-also"></a>См. также:  
  [Данные потоков данных](../../integration-services/data-flow/data-in-data-flows.md)  
