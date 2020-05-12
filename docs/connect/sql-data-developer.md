@@ -2,7 +2,7 @@
 title: Разработчик данных SQL | Документация Майкрософт
 description: Используйте платформу данных SQL от Майкрософт для создания ориентированных на данные решений на мобильных устройствах и рабочих столах для веб-серверов, корпоративных серверов и облака.
 ms.custom: ''
-ms.date: 03/28/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7571287c89589969e3b2d3b8c26677423c1c35b0
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 0b60eb6ca02ef446fe05bb109123e5c48951905a
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528765"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922300"
 ---
 # <a name="sql-data-developer"></a>Разработчик данных SQL
 Используйте платформу данных SQL от Майкрософт для создания ориентированных на данные решений на мобильных устройствах и рабочих столах для веб-серверов, корпоративных серверов и облака.  
@@ -33,20 +33,17 @@ ms.locfileid: "81528765"
 
 ## <a name="sql-data-access"></a>Доступ к данным SQL
 * [Клиентские драйверы SQL](sql-connection-libraries.md).  Используйте драйверы SQL для подключения, запроса, обновления, вставки или удаления данных из базы данных SQL.
-* [Entity Framework](https://msdn.microsoft.com/library/gg696172.aspx). Используйте Entity Framework для простого доступа к базам данных с помощью LINQ, с прямым доступом к SQL Server и возможностью управления сопоставлением между структурой EDM и необработанными реляционными структурами. 
-* [Windows Communication Foundation (WCF)](https://msdn.microsoft.com/library/dd456779.aspx). Используйте службы данных для решения "под ключ", чтобы легко создавать и потреблять службы OData как в сети Интернет, так и в локальной сети.
-* [Sync Framework](https://msdn.microsoft.com/library/jj839436.aspx). Используйте платформу Sync Framework, чтобы включить автономный доступ к любому типу данных, хранилищу данных, любому протоколу обмена и сетевой топологии.
-* [Реактивные расширения](https://msdn.microsoft.com/library/hh242985.aspx). Используйте реактивные расширения (RX) для программирования потока событий и упрощения асинхронного программирования с помощью наблюдаемых последовательностей и операторов запросов в стиле LINQ.  Используйте функции реактивного расширения для JavaScript (RxJS), чтобы упростить асинхронное программирование на основе обратных вызовов и событийного программирования в Интернете с использованием наблюдаемых последовательностей.
+* [Entity Framework](/ef/). Используйте Entity Framework для простого доступа к базам данных с помощью LINQ, с прямым доступом к SQL Server и возможностью управления сопоставлением между структурой EDM и необработанными реляционными структурами. 
+* [Windows Communication Foundation (WCF)](/dotnet/framework/wcf/). Используйте службы данных для решения "под ключ", чтобы легко создавать и потреблять службы OData как в сети Интернет, так и в локальной сети.
+* [Sync Framework](/previous-versions/sql/synchronization/mt490616(v=msdn.10)). Используйте платформу Sync Framework, чтобы включить автономный доступ к любому типу данных, хранилищу данных, любому протоколу обмена и сетевой топологии.
+* [Реактивные расширения](https://github.com/dotnet/reactive). Используйте реактивные расширения (RX) для программирования потока событий и упрощения асинхронного программирования с помощью наблюдаемых последовательностей и операторов запросов в стиле LINQ.  Используйте функции реактивного расширения для JavaScript (RxJS), чтобы упростить асинхронное программирование на основе обратных вызовов и событийного программирования в Интернете с использованием наблюдаемых последовательностей.
 * [Интеграция со средой CLR](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  Используйте интеграцию CLR, чтобы разрабатывать хранимые процедуры, триггеры, определяемые пользователем типы, функции и агрегатные функции, а также потоковые функции с табличным значением, используя любой язык .NET Framework, включая Microsoft Visual Basic .NET и Microsoft Visual C#. 
 * [SQLXML 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md). Используйте SQLXML 4.0 для экспорта реляционных данных в XML.
 
 ## <a name="data-collection-processing-and-visualization"></a>Сбор, обработка и визуализация данных
-* [Службы Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)
+* [Службы Analysis Services](/analysis-services/analysis-services-developer-documentation)
 * [Службы интеграции](../integration-services/integration-services-developer-documentation.md)  
 * [Службы Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)
 * [Службы Replication Services](../relational-databases/replication/concepts/replication-developer-documentation.md)
 * [службы Reporting Services](../reporting-services/reporting-services-developer-documentation.md)
 * [Service Broker](../database-engine/configure-windows/sql-server-service-broker.md)
-
-
- 

@@ -4,20 +4,19 @@ description: В этой статье описывается, как выпол�
 ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
+ms.reviewer: maghan
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 68a24188a307dd84a28342d89559630efa9a9d80
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c2457b1425e8c769439f62ddae3848c82ec1b4aa
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72305071"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763225"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Выполнение пакетов в развертывании SQL Server Integration Services (SSIS) с горизонтальным увеличением масштаба
 

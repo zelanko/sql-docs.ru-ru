@@ -2,7 +2,7 @@
 title: Microsoft ADO.NET
 description: Microsoft ADO.NET для SQL Server — это базовая технология доступа к данным для языков .NET. Используйте пространство имен Microsoft.Data.SqlClient для доступа к SQL Server.
 ms.custom: ''
-ms.date: 09/30/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,12 +11,12 @@ ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: c89c1c5073e86121e4fbadc3a2901057c0a361a4
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 95a53493949b7c024328a7e94870f509f7e7bd99
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529105"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922224"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET для SQL Server
 
@@ -31,7 +31,7 @@ ADO.NET — это базовая технология доступа к дан�
 * [Шаг 4. Выполнение устойчивого подключения к SQL с помощью ADO.NET](step-4-connect-resiliently-sql-ado-net.md).  
   
 ## <a name="documentation"></a>Документация  
-* [Общие сведения об ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)
+* [Общие сведения об ADO.NET](/dotnet/framework/data/adonet/)
 * [Начало работы с драйвером SqlClient](get-started-sqlclient-driver.md)  
 * [Общие сведения о драйвере SqlClient](overview-sqlclient-driver.md)  
 * [SQL Server и ADO.NET](./sql/index.md)
@@ -41,7 +41,7 @@ ADO.NET — это базовая технология доступа к дан�
 * [Форум по наборам данных ADO.NET](https://social.msdn.microsoft.com/Forums/adodotnetdataset/threads)  
   
 ## <a name="more-samples"></a>Другие примеры  
-* [Примеры кода ADO.NET](https://msdn.microsoft.com/library/dw70f090.aspx)  
+* [Примеры кода ADO.NET](/dotnet/framework/data/adonet/ado-net-code-examples)  
 * [Начало работы с .NET Framework в среде Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
 * [Начало работы с .NET Core в среде macOS](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
 * [Начало работы с .NET Core в среде Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)

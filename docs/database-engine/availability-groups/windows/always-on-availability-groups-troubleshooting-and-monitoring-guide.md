@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa4b3ae0ef918b0d7706a7f4e47eceb50d380c0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af11c20870da67f9b6004c4a277c17e277c1ffed
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822044"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922432"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>Мониторинг и устранение неполадок групп доступности
  Это руководство поможет вам приступить к мониторингу групп доступности AlwaysOn и устранению некоторых распространенных проблем с ними. Оно предоставляет исходное содержимое, а также целевую страницу с полезной информацией, опубликованной в другом месте. Хотя это руководство не может полностью охватить все возможные проблемы с группами доступности, оно способно указать вам правильное направление для анализа первопричин и разрешения проблем. 
@@ -64,15 +64,15 @@ ms.locfileid: "74822044"
 |-----------|-----------------|  
 |[Мониторинг производительности для групп доступности AlwaysOn](monitor-performance-for-always-on-availability-groups.md)|Описание процесса синхронизации данных для групп доступности, шлюзы управления потоком и метрики, которые могут пригодиться при мониторинге группы доступности, а также процесса сбора метрик RTO и RPO.|  
 |[Отслеживание групп доступности (SQL Server)](monitoring-of-availability-groups-sql-server.md)|Сведения о средствах наблюдения за группой доступности.|  
-|[Модель работоспособности AlwaysOn, часть 1. Архитектура модели работоспособности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|Общие сведения о модели работоспособности AlwaysOn.|  
-|[Модель работоспособности AlwaysOn, часть 2. Расширение модели работоспособности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|Описание настройки модели работоспособности AlwaysOn и панели мониторинга AlwaysOn для отображения дополнительных сведений.|  
-|[Мониторинг работоспособности AlwaysOn с использованием PowerShell, часть 1. Общий обзор командлетов](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|Общий обзор командлетов AlwaysOn PowerShell, которые можно использовать для наблюдения за работоспособностью группы доступности.|  
-|[Мониторинг работоспособности AlwaysOn с использованием PowerShell, часть 2. Расширенное использование командлетов](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)|Сведения о расширенном использовании командлетов AlwaysOn PowerShell для наблюдения за работоспособностью группы доступности.|  
-|[Мониторинг работоспособности AlwaysOn с использованием PowerShell, часть 3. Простое приложение для мониторинга](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|Описание автоматического мониторинга группы доступности с помощью приложения.|  
-|[Мониторинг работоспособности AlwaysOn с использованием PowerShell, часть 4. Интеграция с агентом SQL Server](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|Сведения об интеграции мониторинга группы доступности с агентом SQL Server и настройке уведомления соответствующих сторон при возникновении проблем.|  
+|[Модель работоспособности AlwaysOn, часть 1. Архитектура модели работоспособности](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)|Общие сведения о модели работоспособности AlwaysOn.|  
+|[Модель работоспособности AlwaysOn, часть 2. Расширение модели работоспособности](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)|Описание настройки модели работоспособности AlwaysOn и панели мониторинга AlwaysOn для отображения дополнительных сведений.|  
+|[Мониторинг работоспособности AlwaysOn с использованием PowerShell, часть 1. Общий обзор командлетов](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)|Общий обзор командлетов AlwaysOn PowerShell, которые можно использовать для наблюдения за работоспособностью группы доступности.|  
+|[Мониторинг работоспособности AlwaysOn с использованием PowerShell, часть 2. Расширенное использование командлетов](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)|Сведения о расширенном использовании командлетов AlwaysOn PowerShell для наблюдения за работоспособностью группы доступности.|  
+|[Мониторинг работоспособности AlwaysOn с использованием PowerShell, часть 3. Простое приложение для мониторинга](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)|Описание автоматического мониторинга группы доступности с помощью приложения.|  
+|[Мониторинг работоспособности AlwaysOn с использованием PowerShell, часть 4. Интеграция с агентом SQL Server](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)|Сведения об интеграции мониторинга группы доступности с агентом SQL Server и настройке уведомления соответствующих сторон при возникновении проблем.|  
 
 ## <a name="next-steps"></a>Дальнейшие действия  
- [Блог группы разработчиков SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)   
+ [Блог группы разработчиков SQL Server AlwaysOn](https://docs.microsoft.com/archive/blogs/sqlalwayson/)   
  [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
   

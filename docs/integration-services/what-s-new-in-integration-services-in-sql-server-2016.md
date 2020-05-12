@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a6bd6207df7d0e93c1b6d360643a9d549e90af9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 37ef5ccd059b956f11b2202e55b2aa4b67832b27
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295036"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922345"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Новые возможности служб Integration Services в SQL Server 2016
 
@@ -187,9 +187,9 @@ ms.locfileid: "71295036"
 ####  <a name="support-for-always-encrypted-in-the-ssis-catalog"></a><a name="encrypted"></a> Поддержка Always Encrypted в каталоге служб SSIS  
  Службы SSIS уже поддерживают функцию постоянного шифрования в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в следующих записях блога:  
   
--   [SSIS with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx) (Службы SSIS с Always Encrypted)  
+-   [SSIS with Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-always-encrypted/ba-p/388272) (Службы SSIS с Always Encrypted)  
   
--   [Lookup transformation with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx) (Преобразование "Уточняющий запрос" с Always Encrypted)  
+-   [Lookup transformation with Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/lookup-transformation-with-always-encrypted/ba-p/388282) (Преобразование "Уточняющий запрос" с Always Encrypted)  
 
 ### <a name="better-debugging"></a>Улучшенная отладка
 
@@ -215,7 +215,7 @@ ms.locfileid: "71295036"
   
 -   В компоненте скрипта или пользовательского потока данных вызовите новый метод <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> интерфейса IDTSComponentMetadata100.  
   
- Дополнительные сведения об этом улучшении см. в следующей записи блога от разработчика служб SSIS Бо Фэна (Bo Fan): [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)(Улучшения столбцов с ошибками для потока данных SSIS).  
+ Дополнительные сведения об этом улучшении см. в следующей записи блога от разработчика служб SSIS Бо Фэна (Bo Fan): [Error Column Improvements for SSIS Data Flow](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)(Улучшения столбцов с ошибками для потока данных SSIS).  
   
 > [!NOTE]  
 >  (Эта поддержка была расширена в последующих выпусках. Дополнительные сведения см. в разделе [Расширенная поддержка для имена столбцов ошибок](#getidstring) и [Новый интерфейс IDTSComponentMetaData130 в API](#CMD130).)  
@@ -225,7 +225,7 @@ ms.locfileid: "71295036"
   
  Метод GetIdentificationStringByLineageID был переименован в <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>. Дополнительные сведения см. в разделе [Имена столбцов для ошибок в потоке данных](#ErrorColumn).  
   
- Дополнительные сведения об этом изменении, а также об усовершенствовании столбца ошибок см. в следующей обновленной записи блога: [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx) (Улучшения для столбцов ошибок в потоке данных SSIS, обновлено для CTP3.3)  
+ Дополнительные сведения об этом изменении, а также об усовершенствовании столбца ошибок см. в следующей обновленной записи блога: [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253) (Улучшения для столбцов ошибок в потоке данных SSIS, обновлено для CTP3.3)  
   
 > [!NOTE]  
 >  (В RC0 этот метод был перемещен в новый интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> . Дополнительные сведения см. в разделе [Новый интерфейс IDTSComponentMetaData130 в API](#CMD130).)  

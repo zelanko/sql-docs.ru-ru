@@ -4,18 +4,17 @@ description: В этой статье описывается, как измен�
 ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 92cf3e13f1e386a77ba4621b817567af95b42884
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: maghan
+ms.openlocfilehash: 81c1770da78d1d469d1b6ad3a01100abaa9ec829
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67896977"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748608"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Изменение учетной записи для ведения журнала развертывания служб SSIS с горизонтальным увеличением масштаба
 

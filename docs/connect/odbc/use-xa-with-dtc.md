@@ -2,7 +2,7 @@
 title: Использование XA с драйвером Microsoft ODBC Driver
 description: Microsoft ODBC Driver for SQL Server обеспечивает поддержку транзакций XA с координатором распределенных транзакций (DTC) в Windows, Linux и macOS.
 ms.custom: ''
-ms.date: 02/04/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: ba11ff1bee512b0e3ea7b2b641ac6dc64f60adc9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3b5b8444058f0078b56ab5e4500b86a4c35a1897
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635553"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886331"
 ---
 # <a name="using-xa-transactions"></a>Использование транзакций XA
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "81635553"
 
 ## <a name="overview"></a>Обзор
 
-Microsoft ODBC Driver for SQL Server, начиная с версии 17.3, обеспечивает поддержку транзакций XA с координатором распределенных транзакций (DTC) в Windows, Linux и macOS. Реализация XA на стороне драйвера позволяет клиентскому приложению отправлять последовательные операции (такие как запуск, фиксация, откат ветви транзакции и т. д.) в диспетчер транзакций (TM). Затем TM будет взаимодействовать с диспетчером ресурсов (RM) в соответствии с этими операциями. Дополнительные сведения о спецификации XA и реализации Microsoft для DTC (MS DTC) см. в пункте [How It Works: SQL Server DTC (MSDTC and XA Transactions)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/) (Принцип работы элемента управления времени разработки SQL Server (транзакции MSDTC и XA)).
+Microsoft ODBC Driver for SQL Server, начиная с версии 17.3, обеспечивает поддержку транзакций XA с координатором распределенных транзакций (DTC) в Windows, Linux и macOS. Реализация XA на стороне драйвера позволяет клиентскому приложению отправлять последовательные операции (такие как запуск, фиксация, откат ветви транзакции и т. д.) в диспетчер транзакций (TM). Затем TM будет взаимодействовать с диспетчером ресурсов (RM) в соответствии с этими операциями. Дополнительные сведения о спецификации XA и реализации Microsoft для DTC (MS DTC) см. в пункте [How It Works: SQL Server DTC (MSDTC and XA Transactions)](/archive/blogs/bobsql/how-it-works-sql-server-dtc-msdtc-and-xa-transactions) (Принцип работы элемента управления времени разработки SQL Server (транзакции MSDTC и XA)).
 
 
 

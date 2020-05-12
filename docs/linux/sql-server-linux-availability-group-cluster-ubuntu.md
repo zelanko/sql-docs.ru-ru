@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 8dd55f8cb9546c7ec91632d40d2eb6b46ffd4d90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a42d031ee66ee455af91dbcce233140a7ab0a171
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558492"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001104"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Настройка кластера Ubuntu для ресурса группы доступности
 
@@ -190,7 +190,7 @@ sudo apt-get install mssql-server-ha
 Чтобы создать ресурс группы доступности, используйте команду `pcs resource create` и задайте свойства ресурса. Приведенная ниже команда `ocf:mssql:ag` создает ресурс типа "основной/подчиненный" для группы доступности `ag1`. 
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s --master meta notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master meta notify=true
 
 ```
 

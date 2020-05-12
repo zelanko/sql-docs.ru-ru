@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bf17a0731b34c382186ec9b4e9bed9bd240df628
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 61d9071b5afa65e65bd05320409ffd0839a07201
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632670"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922228"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -244,7 +244,7 @@ TO \<backup_device> [ **,** ...*n* ] Указывает, что сопутств
 > [!NOTE]
 > Дисковое устройство NUL удалит всю присланную на него информацию, его следует использовать только для тестирования. Оно не предназначено для производственной эксплуатации.
 > [!IMPORTANT]
-> Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) CU2 по [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], при резервном копировании на URL-адрес можно сохранить резервную копию только на одном устройстве. Чтобы выполнить резервное копирование на несколько устройств при резервном копировании на URL-адрес, необходимо использовать версию [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] или выше и токены подписанных URL-адресов (SAS). Примеры создания подписанного URL-адреса см. в разделах [Резервное копирование SQL Server на URL-адрес](../../relational-databases/backup-restore/sql-server-backup-to-url.md) и [Упрощение создания учетных данных SQL с токенами подписанных URL-адресов в хранилище Azure с помощью Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).
+> Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) CU2 по [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], при резервном копировании на URL-адрес можно сохранить резервную копию только на одном устройстве. Чтобы выполнить резервное копирование на несколько устройств при резервном копировании на URL-адрес, необходимо использовать версию [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] или выше и токены подписанных URL-адресов (SAS). Примеры создания подписанного URL-адреса см. в разделах [Резервное копирование SQL Server на URL-адрес](../../relational-databases/backup-restore/sql-server-backup-to-url.md) и [Упрощение создания учетных данных SQL с токенами подписанных URL-адресов в хранилище Azure с помощью Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).
 
 **URL-адрес применим к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 и выше).
 
@@ -992,7 +992,7 @@ TO URL
 Указывает URL-адрес, используемый для операции резервного копирования. Формат URL-адреса используется для создания резервных копий в службе хранилища Microsoft Azure.
 
 > [!IMPORTANT]
-> Для резервного копирования на множество устройств по URL-адресу необходимо использовать токены подписанных URL-адресов (SAS). Примеры создания подписанного URL-адреса см. в разделах [Резервное копирование SQL Server на URL-адрес](../../relational-databases/backup-restore/sql-server-backup-to-url.md) и [Упрощение создания учетных данных SQL с токенами подписанных URL-адресов в хранилище Azure с помощью Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).
+> Для резервного копирования на множество устройств по URL-адресу необходимо использовать токены подписанных URL-адресов (SAS). Примеры создания подписанного URL-адреса см. в разделах [Резервное копирование SQL Server на URL-адрес](../../relational-databases/backup-restore/sql-server-backup-to-url.md) и [Упрощение создания учетных данных SQL с токенами подписанных URL-адресов в хранилище Azure с помощью Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).
 
 *n* — заполнитель, который показывает, что можно указать до 64 устройств резервного копирования через запятую.
 
