@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e1573167bfe50e5dcb63734a90c7b9b5bd00e40a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d52273ac3ea7722abe6e0607c2ab5d0be12e4694
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297971"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922421"
 ---
 # <a name="data-conversion-transformation"></a>преобразование «Конвертация данных»
 
@@ -53,7 +53,7 @@ ms.locfileid: "71297971"
  Свойства могут устанавливаться через конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или с помощью программных средств. Сведения об использовании преобразования "Конвертация данных" в конструкторе SSIS см. в разделе [Преобразование данных в другой тип данных с помощью преобразования "Конвертация данных"](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md). Сведения о настройке свойств этого преобразования программными средствами см. в разделах [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) и [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
 ## <a name="related-content"></a>См. также  
- Запись в блоге [Сравнение производительности между способами преобразования типов данных в службах SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823)на сайте blogs.msdn.com.  
+ Запись в блоге [Сравнение производительности между способами преобразования типов данных в службах SSIS 2008](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035)на сайте blogs.msdn.com.  
   
 ## <a name="data-conversion-transformation-editor"></a>редактор преобразования «Конвертация данных»
   Используйте диалоговое окно **Редактор преобразования «Конвертация данных»** , чтобы выбрать столбцы, подлежащие преобразованию, выбрать тип данных, в который должен быть преобразован столбец, и установить атрибуты преобразования.  

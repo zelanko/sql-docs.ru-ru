@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ae130cf312dae22eebc30e84b950b2dd9a6b3c4
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 8c2bd66eacb5a91def2a9f6c9f7cb2e807e404f1
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487754"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886501"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>Настройка TLS-соединений на сервере отчетов, работающем в собственном режиме
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] В собственном режиме используется HTTP-служба протокола SSL для установления зашифрованного соединения с сервером отчетов. Протокол TLS ранее назывался SSL. Если в локальном хранилище сертификатов на компьютере сервера отчетов установлен CER-файл сертификата, можно связать его с резервированием URL-адресов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для поддержки соединений сервера отчетов через зашифрованный канал.  
   
 > [!TIP]  
->  Если используется режим интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с SharePoint, см. дополнительные сведения в документации по SharePoint. Например, руководство по [включению TLS в веб-приложении SharePoint 2010](https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx).  
+>  Если используется режим интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с SharePoint, см. дополнительные сведения в документации по SharePoint. Например, руководство по [включению TLS в веб-приложении SharePoint 2010](https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application).  
   
  Поскольку службы IIS также используют HTTP-службу SSL, возникает ряд важных проблем взаимодействия, которые необходимо учитывать при запуске служб IIS и служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на одном компьютере. Ознакомьтесь с разделом «Проблемы взаимодействия со службами IIS», где приводятся рекомендации по решению данных проблем.  
   

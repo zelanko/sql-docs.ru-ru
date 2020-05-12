@@ -1,8 +1,8 @@
 ---
-title: Драйвер OLE DB для SQL Server | Документы Майкрософт
+title: Драйвер Microsoft OLE DB для SQL Server
 description: Microsoft OLE DB Driver for SQL Server обеспечивает подключение к SQL Server и Базе данных SQL Azure через стандартные API OLE DB.
 ms.custom: ''
-ms.date: 02/12/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - native data access [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 52877846ab573b146c148dab681cd45aec0a083c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 7f66fc300dce4e3b9fac9a2476c4703fd5be5c88
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488529"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886367"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Драйвер Microsoft OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,15 +51,15 @@ ms.locfileid: "81488529"
 Существует три поколения поставщиков Microsoft OLE DB для SQL Server.
 
 ### <a name="1-microsoft-ole-db-provider-for-sql-server-sqloledb"></a>1. Поставщик Microsoft OLE DB для SQL Server (SQLOLEDB)
-[Поставщик Microsoft OLE DB для SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) по-прежнему поставляется в составе [компонентов доступа к данным Windows](https://msdn.microsoft.com/library/ms692897.aspx). Он больше не поддерживается и мы не рекомендуем использовать этот драйвер для разработки новых приложений.
+[Поставщик Microsoft OLE DB для SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) по-прежнему поставляется в составе [компонентов доступа к данным Windows](/previous-versions/windows/desktop/ms692897(v=vs.85)). Он больше не поддерживается и мы не рекомендуем использовать этот драйвер для разработки новых приложений.
 
 ### <a name="2-sql-server-native-client-snac"></a>2. SQL Server Native Client (SNAC)
 Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [собственный клиент SQL Server (SNAC)](../../relational-databases/native-client/sql-server-native-client.md) включает интерфейс поставщика OLE DB (SQLNCLI) и поставщик OLE DB, который поставляется с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] через [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
 
-[С 2011 года он считается устаревшими](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/) и мы не рекомендуем использовать этот драйвер для разработки новых приложений. Дополнительные сведения о жизненном цикле SNAC и доступных для скачивания файлах см. в [описании жизненного цикла SNAC](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).
+[С 2011 года он считается устаревшими](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access) и мы не рекомендуем использовать этот драйвер для разработки новых приложений. Дополнительные сведения о жизненном цикле SNAC и доступных для скачивания файлах см. в [описании жизненного цикла SNAC](/archive/blogs/sqlreleaseservices/snac-lifecycle-explained).
 
 ### <a name="3-microsoft-ole-db-driver-for-sql-server-msoledbsql"></a>3. Драйвер Microsoft OLE DB для SQL Server (MSOLEDBSQL)
-Поддержка OLE DB [возобновлена](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/) с момента выпуска поставщика в 2018 г.
+Поддержка OLE DB [возобновлена](/archive/blogs/sqlnativeclient/announcing-the-new-release-of-ole-db-driver-for-sql-server) с момента выпуска поставщика в 2018 г.
 
 Новый поставщик OLE DB называется драйвером Microsoft OLE DB для SQL Server (MSOLEDBSQL). Этот новый поставщик будет далее дополняться всеми новыми функциями сервера.
 

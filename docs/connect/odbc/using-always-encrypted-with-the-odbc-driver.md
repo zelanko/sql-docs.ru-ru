@@ -2,19 +2,19 @@
 title: Использование функции Always Encrypted с драйвером ODBC
 description: Узнайте, как разрабатывать приложения ODBC с помощью Always Encrypted и Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
-ms.date: 09/01/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: d47e0d0f874689ca81a5153de08cb3e81fff22fc
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 938dba82797db23a9199c2c03fa8ec3c8bd010da
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635422"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886301"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Использование функции Always Encrypted с драйвером ODBC для SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -115,9 +115,9 @@ CREATE TABLE [dbo].[Patients](
 
 - В образце кода нет ничего, связанного с шифрованием. Драйвер автоматически обнаруживает и шифрует значения параметров SSN и даты, которые предназначены зашифрованных столбцов. В этом случае шифрование является прозрачным для приложения.
 
-- Данные, вставленные в столбцы базы данных (в том числе в зашифрованные) передаются в качестве привязанных параметров (см. [Функция SQLBindParameter](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). Несмотря на то, что при отправке значений в незашифрованные столбцы использовать параметры необязательно (но настоятельно рекомендуется, так как это помогает предотвратить внедрение кода SQL), они требуются для значений, предназначенных для зашифрованных столбцов. Если значения, вставленные в столбцы SSN или BirthDate, были переданы в качестве внедренных в инструкцию запроса литералов, выполнение запроса завершится ошибкой, так как драйвер не пытается шифровать или иным образом обрабатывать литералы в запросах. В результате сервер отклонит их как несовместимые с зашифрованными столбцами.
+- Данные, вставленные в столбцы базы данных (в том числе в зашифрованные) передаются в качестве привязанных параметров (см. [Функция SQLBindParameter](../../odbc/reference/syntax/sqlbindparameter-function.md)). Несмотря на то, что при отправке значений в незашифрованные столбцы использовать параметры необязательно (но настоятельно рекомендуется, так как это помогает предотвратить внедрение кода SQL), они требуются для значений, предназначенных для зашифрованных столбцов. Если значения, вставленные в столбцы SSN или BirthDate, были переданы в качестве внедренных в инструкцию запроса литералов, выполнение запроса завершится ошибкой, так как драйвер не пытается шифровать или иным образом обрабатывать литералы в запросах. В результате сервер отклонит их как несовместимые с зашифрованными столбцами.
 
-- Для параметров, вставляемых в столбец SSN, устанавливается тип SQL SQL_CHAR, который сопоставляется с типом данных SQL Server **char** (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Если для параметра был задан тип SQL_WCHAR, который сопоставляется с типом данных **nchar**, выполнение запроса завершится ошибкой, так как Always Encrypted не поддерживает преобразования на стороне сервера из зашифрованных значений nchar в зашифрованные значения char. Сведения о сопоставлении типов данных см. в [этом приложении справочника по программированию ODBC о типах данных](https://msdn.microsoft.com/library/ms713607.aspx).
+- Для параметров, вставляемых в столбец SSN, устанавливается тип SQL SQL_CHAR, который сопоставляется с типом данных SQL Server **char** (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Если для параметра был задан тип SQL_WCHAR, который сопоставляется с типом данных **nchar**, выполнение запроса завершится ошибкой, так как Always Encrypted не поддерживает преобразования на стороне сервера из зашифрованных значений nchar в зашифрованные значения char. Сведения о сопоставлении типов данных см. в [этом приложении справочника по программированию ODBC о типах данных](../../odbc/reference/appendixes/appendix-d-data-types.md).
 
 ```
     SQL_DATE_STRUCT date;
@@ -289,11 +289,11 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 API `SQLSetPos` позволяет приложению обновлять строки в результирующем наборе с использованием буферов, которые были привязаны с помощью SQLBindCol и в которые были получены данные строк. Из-за асимметричного поведения заполнения для зашифрованных типов фиксированной длины существует риск неожиданно изменить данные в этих столбцах при обновлении других столбцов в той же строке. При использовании Always Encrypted символьные значения фиксированной длины будут заполняться в тех случаях, когда значение меньше размера буфера.
 
-Чтобы устранить это поведение, используйте флаг `SQL_COLUMN_IGNORE` для пропуска тех столбцов, которые не должны обновляться при `SQLBulkOperations` и при использовании `SQLSetPos` для обновлений на основе курсора.  Все столбцы, которые не изменяются приложением напрямую, следует игнорировать по соображениям производительности и для того, чтобы избежать усечения столбцов, привязанных к буферу *меньше* их фактического размера (в базе данных). Дополнительные сведения см. в [справочнике по функции SQLSetPos](https://msdn.microsoft.com/library/ms713507(v=vs.85).aspx).
+Чтобы устранить это поведение, используйте флаг `SQL_COLUMN_IGNORE` для пропуска тех столбцов, которые не должны обновляться при `SQLBulkOperations` и при использовании `SQLSetPos` для обновлений на основе курсора.  Все столбцы, которые не изменяются приложением напрямую, следует игнорировать по соображениям производительности и для того, чтобы избежать усечения столбцов, привязанных к буферу *меньше* их фактического размера (в базе данных). Дополнительные сведения см. в [справочнике по функции SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md).
 
 #### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults и SQLDescribeCol
 
-Приложения могут вызывать [SQLDescribeCol](https://msdn.microsoft.com/library/ms716289(v=vs.85).aspx), чтобы возвращать метаданные о столбцах в подготовленных инструкциях.  Если включена функция Always Encrypted, вызов `SQLMoreResults`*перед* вызовом `SQLDescribeCol` приводит к вызову [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), в результате чего неверно возвращаются метаданные с указанием открытого текста для зашифрованных столбцов. Чтобы избежать этой проблемы, вызывайте `SQLDescribeCol` для подготовленных инструкций *перед* вызовом `SQLMoreResults`.
+Приложения могут вызывать [SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md), чтобы возвращать метаданные о столбцах в подготовленных инструкциях.  Если включена функция Always Encrypted, вызов `SQLMoreResults`*перед* вызовом `SQLDescribeCol` приводит к вызову [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), в результате чего неверно возвращаются метаданные с указанием открытого текста для зашифрованных столбцов. Чтобы избежать этой проблемы, вызывайте `SQLDescribeCol` для подготовленных инструкций *перед* вызовом `SQLMoreResults`.
 
 ## <a name="controlling-the-performance-impact-of-always-encrypted"></a>Управление влиянием Always Encrypted на производительность
 
@@ -379,7 +379,7 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 ### <a name="using-the-azure-key-vault-provider"></a>Использование поставщика Azure Key Vault
 
-Хранилище ключей Azure удобно использовать, чтобы хранить главные ключи столбцов для постоянного шифрования, особенно если приложения размещены в Azure. Драйвер ODBC Driver for SQL Server в Linux, macOS и Windows содержит встроенный поставщик хранилища ключей Azure Key Vault для хранения главного ключа. Дополнительные сведения о настройке Azure Key Vault для Always Encrypted вы найдете в [этом пошаговом руководстве](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) и в статьях [Что такое Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) и [Создание и хранение главных ключей столбцов (постоянное шифрование)](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).
+Хранилище ключей Azure удобно использовать, чтобы хранить главные ключи столбцов для постоянного шифрования, особенно если приложения размещены в Azure. Драйвер ODBC Driver for SQL Server в Linux, macOS и Windows содержит встроенный поставщик хранилища ключей Azure Key Vault для хранения главного ключа. Дополнительные сведения о настройке Azure Key Vault для Always Encrypted вы найдете в [этом пошаговом руководстве](/archive/blogs/kv/azure-key-vault-step-by-step) и в статьях [Что такое Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) и [Создание и хранение главных ключей столбцов (постоянное шифрование)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
 
 > [!NOTE]
 > Драйвер ODBC поддерживает только проверку подлинности AKV непосредственно в Azure Active Directory. Если вы используете проверку подлинности Azure Active Directory для AKV и для конфигурации Active Directory требуется проверка подлинности в конечной точке служб федерации Active Directory, проверка может завершиться ошибкой.
@@ -541,7 +541,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`ValuePtr`|[Input] Указатель на структуру CEKeystoreData. Поле имени структуры идентифицирует поставщик, для которого предназначены данные.|
 |`StringLength`|[Input] Константа SQL_IS_POINTER|
 
-Подробные сведения об ошибке можно получить с помощью [SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx).
+Подробные сведения об ошибке можно получить с помощью [SQLGetDiacRec](../../odbc/reference/syntax/sqlgetdescrec-function.md).
 
 > [!NOTE]
 > Поставщик может использовать дескриптор подключения для связи записываемых данных с конкретным подключением, если потребуется. Это полезно для реализации раздельных конфигураций для подключений. Также он может игнорировать контекст подключения и всегда использовать данные одинаково, независимо от подключения, через которые они отправлены. Дополнительные сведения см. в разделе о [контексте связи](custom-keystore-providers.md#context-association).
@@ -562,7 +562,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`BufferLength`|[Input] Константа SQL_IS_POINTER|
 |`StringLengthPtr`|[Output] Указатель на буфер, в котором возвращается значение BufferLength. Если *ValuePtr является пустым указателем, длина не возвращается.|
 
-Вызывающий объект должен выделить буфер достаточной длины для структуры CEKEYSTOREDATA, чтобы записать данные из поставщика. При завершении операции поле dataSize заполняется фактической длиной данных, считанных из поставщика. Подробные сведения об ошибке можно получить с помощью [SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx).
+Вызывающий объект должен выделить буфер достаточной длины для структуры CEKEYSTOREDATA, чтобы записать данные из поставщика. При завершении операции поле dataSize заполняется фактической длиной данных, считанных из поставщика. Подробные сведения об ошибке можно получить с помощью [SQLGetDiacRec](../../odbc/reference/syntax/sqlgetdescrec-function.md).
 
 Этот интерфейс не накладывает дополнительных требований на формат передачи данных между приложением и поставщиком хранилища ключей. Каждый поставщик может определить свой формат данных и протоколов в зависимости от конкретных потребностей.
 
@@ -659,7 +659,6 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 - `ColumnEncryption` включен в имени DSN, строке подключения или атрибуте подключения, а при использовании безопасного анклава имеет правильный формат.
 
-
 Кроме того, при использовании безопасного анклава ошибки аттестации указывают на шаг в процессе аттестации, в котором произошел сбой (см. следующую таблицу).
 
 |Шаг|Описание|
@@ -669,9 +668,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |200–299| Непредвиденный или недопустимый формат идентификатора анклава. |
 |300–399| Ошибка при установке безопасного канала с анклавом. |
 
-
 ## <a name="see-also"></a>См. также:
 
 - [Always Encrypted (ядро СУБД)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md)
-- [Блог о постоянном шифровании](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
