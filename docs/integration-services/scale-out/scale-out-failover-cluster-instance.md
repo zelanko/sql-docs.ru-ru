@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: ba171a1ec1082bbcedd77bd5c7bb7a666efd3d04
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e46ebc13ddd9368a2234c99979c9036a702e11e
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903801"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924891"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Поддержка горизонтального увеличения масштаба для обеспечения высокой доступности с помощью экземпляра отказоустойчивого кластера SQL Server
 
@@ -26,7 +26,7 @@ ms.locfileid: "77903801"
 Чтобы обеспечить высокий уровень доступности на стороне мастера горизонтального увеличения масштаба с использованием экземпляра отказоустойчивого кластера SQL Server, выполните следующие действия:
 
 ## <a name="1-prerequisites"></a>1. Предварительные требования
-Настроить отказоустойчивый кластер Windows. Инструкции см. в записи блога [Установка компонента и средств отказоустойчивого кластера для Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Установите компоненты и средства на всех узлах кластера.
+Настроить отказоустойчивый кластер Windows. Инструкции см. в записи блога [Установка компонента и средств отказоустойчивого кластера для Windows Server 2012](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733). Установите компоненты и средства на всех узлах кластера.
 
 ## <a name="2-install-sql-server-failover-cluster"></a>2. Установка отказоустойчивого кластера SQL Server
 Установите отказоустойчивый кластер SQL Server. Инструкции см. в разделе [Установка отказоустойчивого кластера SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md). Во время установки на странице "Выбор компонентов" щелкните "Службы ядра СУБД". Запишите сетевое имя SQL Server для последующей настройки.
