@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9038b277c5ef552dcf2bbdc2fdcabef52e269599
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0f256060c923198e2ecb1d3741ebd7276d98b923
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180453"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922274"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Управляемое резервное копирование SQL Server в Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "82180453"
 |**Учетная запись Microsoft Azure**|Прежде чем просмотреть [варианты приобретения](https://azure.microsoft.com/pricing/free-trial/) , можно начать работу с Azure, используя [бесплатную пробную версию](https://azure.microsoft.com/pricing/purchase-options/).|  
 |**Учетная запись хранения Azure**|Резервные копии хранятся в хранилище BLOB-объектов Azure, связанном с учетной записью хранения Azure. Чтобы создать учетную запись хранения, воспользуйтесь подробной пошаговой инструкцией в статье [об учетных записях хранения Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
 |**Контейнер больших двоичных объектов**|Для упорядочивания больших двоичных объектов используются контейнеры. Необходимо указать целевой контейнер для файлов резервных копий. Контейнер можно создать на [портале управления Azure](https://manage.windowsazure.com/)или с помощью команды **New-AzureStorageContainer**[Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) .|  
-|**Подписанный URL-адрес**|Доступ к целевому контейнеру зависит от подписанного URL-адреса. Общие сведения о SAS см. в статье [Подписанные URL-адреса. Часть 1. подписанных URL-адресов (SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Маркер SAS можно создать в коде или с помощью команды PowerShell **New-AzureStorageContainerSASToken** . Скрипт PowerShell, упрощающий этот процесс, см. в статье [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Упрощение создания учетных данных SQL с использованием маркера подписанного URL-адреса в службе хранилища Azure с помощью Powershell). Маркер SAS можно хранить в **SQL Credential** и использовать с [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|**Подписанный URL-адрес**|Доступ к целевому контейнеру зависит от подписанного URL-адреса. Общие сведения о SAS см. в статье [Подписанные URL-адреса. Часть 1. подписанных URL-адресов (SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Маркер SAS можно создать в коде или с помощью команды PowerShell **New-AzureStorageContainerSASToken** . Скрипт PowerShell, упрощающий этот процесс, см. в статье [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)(Упрощение создания учетных данных SQL с использованием маркера подписанного URL-адреса в службе хранилища Azure с помощью Powershell). Маркер SAS можно хранить в **SQL Credential** и использовать с [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |**Агент SQL Server**|Чтобы компонент [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] работал, должен быть запущен агент SQL Server. Рекомендуется установить автоматический запуск.|  
   
 ## <a name="components"></a>Components  

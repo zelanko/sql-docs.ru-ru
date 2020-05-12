@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bef2c016492636e0005701cf07e16d6fb8c338ca
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 3661b840340f4fb14e5dcc52f2ae0aa296b7520e
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262156"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922175"
 ---
 # <a name="restore-statements-transact-sql"></a>Инструкции RESTORE (Transact-SQL)
 
@@ -770,7 +770,7 @@ FROM URL
 Указывает одно устройство резервного копирования или несколько по URL-адресам, которые будут использоваться для операции восстановления. Формат URL-адреса используется для восстановления резервных копий из службы хранилища Microsoft Azure.
 
 > [!IMPORTANT]
-> Чтобы выполнить восстановление с нескольких устройств при помощи URL-адреса, необходимо использовать токены подписанных URL-адресов (SAS). Примеры создания подписанного URL-адреса см. в разделах [Резервное копирование SQL Server на URL-адрес](../../relational-databases/backup-restore/sql-server-backup-to-url.md) и [Упрощение создания учетных данных SQL с токенами подписанных URL-адресов в хранилище Azure с помощью Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).
+> Чтобы выполнить восстановление с нескольких устройств при помощи URL-адреса, необходимо использовать токены подписанных URL-адресов (SAS). Примеры создания подписанного URL-адреса см. в разделах [Резервное копирование SQL Server на URL-адрес](../../relational-databases/backup-restore/sql-server-backup-to-url.md) и [Упрощение создания учетных данных SQL с токенами подписанных URL-адресов в хранилище Azure с помощью Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).
 
 *n* — заполнитель, который показывает, что можно указать до 64 устройств резервного копирования через запятую.
 
