@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cf1372f11b278e555b7f8110e4517fd5fc616683
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4494931e0ee189e785ed057471e5560f4737ecc0
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924002"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922313"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Использование встроенной проверки подлинности Kerberos для подключения к SQL Server
 
@@ -73,7 +73,7 @@ ms.locfileid: "80924002"
 
 - [Как использовать проверку подлинности по протоколу Kerberos в SQL Server](https://support.microsoft.com/kb/319723)
 
-- [Использование протокола Kerberos в SQL Server](https://go.microsoft.com/fwlink/?LinkId=207814)
+- [Использование протокола Kerberos в SQL Server](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 
 > [!NOTE]  
 > До версии драйвера JDBC 6.2 для правильного использования протокола проверки подлинности Kerberos между областями необходимо явно задать параметр **serverSpn**.

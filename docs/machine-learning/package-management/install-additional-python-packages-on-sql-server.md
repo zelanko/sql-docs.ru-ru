@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4e72ded2e2f2a51805403132c662bff3d70c97ce
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 9271d10c83575ba1203c145d217c4b179976eff6
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487122"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886463"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Установка пакетов Python с помощью sqlmlutils
 
@@ -25,7 +25,7 @@ ms.locfileid: "81487122"
 Дополнительные сведения о расположении пакетов и путях установки см. в разделе [Получение сведений о пакете Python](../package-management/python-package-information.md).
 
 > [!NOTE]
-> Для добавления пакетов Python в SQL Server 2019 не рекомендуется выполнять стандартную команду Python `pip install`. Вместо нее используйте **sqlmlutils**, как описано в этой статье.
+> Описанный в этой статье пакет **sqlmlutils** используется для добавления пакетов Python в SQL Server 2019 и более поздние версии. Для SQL Server 2017 и более ранних версий обратитесь к разделу [Установка пакетов с инструментами Python](https://docs.microsoft.com/sql/machine-learning/package-management/install-python-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -63,7 +63,6 @@ ms.locfileid: "81487122"
 1. Откройте **командную строку** и выполните следующие команды для установки пакета **sqlmlutils**. Замените полный путь к скачанному ZIP-файлу **sqlmlutils** (в этом примере предполагается, что загружен файл `c:\temp\sqlmlutils-1.0.0.zip`).
 
    ```console
-   pip install "pymssql<3.0"
    pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-1.0.0.zip
    ```
 
