@@ -4,8 +4,6 @@ description: Вы можете отправлять задания U-SQL в сл
 ms.custom: ''
 ms.date: 06/27/2019
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +11,13 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPADLSTASK.F1
 author: yanancai
 ms.author: yanacai
-ms.openlocfilehash: ab9a357e8215310b21fa2e401067f49176aeefd4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: maghan
+ms.openlocfilehash: 1f4eaadafa422611c3d24cbefee7a7d982dd88d8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947359"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763665"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Задача Azure Data Lake Analytics
 
@@ -53,6 +52,7 @@ ms.locfileid: "67947359"
 |**DirectInput**|Определяет скрипт U-SQL с использованием встроенного редактора. При выборе этого значения отображается динамический параметр **USQLStatement**.|  
 |**FileConnection**|Указывает локальный USQL-файл, содержащий скрипт U-SQL. При выборе этого значения отображается динамический параметр **FileConnection**.|  
 |**Переменная**|Указывает переменную SSI, содержащую скрипт U-SQL. При выборе этого значения отображается динамический параметр **SourceVariable**.|
+| &nbsp; | &nbsp; |
 
 **SourceType Dynamic Options.** Указывает содержимое скрипта для запроса U-SQL. 
 
@@ -61,6 +61,7 @@ ms.locfileid: "67947359"
 |**SourceType = DirectInput**|Введите отправляемый запрос U-SQL непосредственно в окно параметров или нажмите кнопку обзора (...), чтобы ввести запрос U-SQL в диалоговое окно **Ввод запроса U-SQL**.|  
 |**SourceType = FileConnection**|Выберите существующий диспетчер подключений файлов или щелкните <**Новое подключение**>, чтобы создать подключение файла. См. дополнительные сведения о [диспетчере подключения файлов](../../integration-services/connection-manager/file-connection-manager.md) и [редакторе диспетчера подключения файлов](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
 |**SourceType = Variable**|Выберите существующую переменную или щелкните \<**Создать переменную**>, чтобы создать новую. См. дополнительные сведения о [переменных Integration Services](../../integration-services/integration-services-ssis-variables.md) и [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
+| &nbsp; | &nbsp; |
 
 
 ### <a name="job-configuration"></a>Конфигурация задания
@@ -78,6 +79,7 @@ ms.locfileid: "67947359"
   |-----------|-----------------|
   |True|Результат задачи определяется по результату выполнения задания U-SQL. Успешное выполнение задания > успешное выполнение задачи. Сбой задания > сбой задачи. Успешное выполнение или сбой задания > завершение задачи.|
   |False|Результат задачи определяется по результату отправки и подготовки задания U-SQL. Успешная отправка задания и прохождение этапа подготовки > успешное выполнение задачи. Сбой отправки задания или сбой задания на этапе подготовки > сбой задачи. Успешное выполнение или сбой задания > завершение задачи.|
+  | &nbsp; | &nbsp; |
 
 - **TimeOut** — указывает время ожидания для выполнения задания (в секундах). Если время ожидания выполнения задания истекает, оно отменяется и отмечается как неудачное. Это свойство недоступно, если **Synchronous** имеет значение false.
 
@@ -125,6 +127,7 @@ OUTPUT @rs1
 |-------------|--------------|
 |User: Variable1|\@in|
 |User: Variable2|\@out| 
+| &nbsp; | &nbsp; |
 
 ## <a name="expression-page-configuration"></a>Конфигурация страницы "Выражения"
 

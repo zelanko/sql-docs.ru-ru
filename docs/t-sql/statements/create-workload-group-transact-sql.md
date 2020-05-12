@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 04/20/2020
+ms.date: 05/05/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: c61185c660e650a2052a2e5a6df1ad9ac3ad0af4
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 84685f8e9d75d75d65255292b2b45b2b0c990cac
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087469"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886519"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -33,171 +33,43 @@ ms.locfileid: "82087469"
 
 В следующей строке щелкните имя продукта, который вас интересует. На этой веб-странице отобразится другой контент, относящийся к выбранному продукту.
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> |||||
-> |---|---|---|---|
-> |**_\* SQL Server \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+|||||
+|---|---|---|---|
+|**_\* SQL Server \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+||||
 
 &nbsp;
 
 ## <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server и управляемый экземпляр базы данных SQL Azure
 
-Создает группу рабочей нагрузки регулятора ресурсов и связывает ее с пулом ресурсов регулятора ресурсов. Регулятор ресурсов доступен не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).
+[!INCLUDE [CREATE WORKLOAD GROUP](../../includes/create-workload-group.md)]
+  
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+||||
+|---|---|---|
+|[SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)|**_\* Управляемый экземпляр<br />Базы данных SQL \*_** &nbsp;|[Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+||||
 
-## <a name="syntax"></a>Синтаксис
+&nbsp;
 
-```syntaxsql
-CREATE WORKLOAD GROUP group_name
-[ WITH
-    ( [ IMPORTANCE = { LOW | MEDIUM | HIGH } ]
-      [ [ , ] REQUEST_MAX_MEMORY_GRANT_PERCENT = value ]
-      [ [ , ] REQUEST_MAX_CPU_TIME_SEC = value ]
-      [ [ , ] REQUEST_MEMORY_GRANT_TIMEOUT_SEC = value ]
-      [ [ , ] MAX_DOP = value ]
-      [ [ , ] GROUP_MAX_REQUESTS = value ] )
- ]
-[ USING {
-    [ pool_name | "default" ]
-    [ [ , ] EXTERNAL external_pool_name | "default" ] ]
-    } ]
-[ ; ]
-```
+## <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server и управляемый экземпляр базы данных SQL Azure
 
-## <a name="arguments"></a>Аргументы
-
-*group_name*</br>
-Определяемое пользователем имя группы рабочей нагрузки. Аргумент *group_name* является алфавитно-цифровым и может содержать до 128 символов. Данный аргумент должен быть уникальным в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md).
-
-IMPORTANCE = { LOW | **MEDIUM** | HIGH }</br>
-Указывает относительную важность запроса в группе рабочей нагрузки. Важность представлена одним из следующих значений, причем значением по умолчанию является MEDIUM.
-
-- LOW
-- MEDIUM (по умолчанию);
-- HIGH.
-
-> [!NOTE]
-> Внутри системы каждое значение важности хранится в виде числа, используемого для вычислений.
-
-Значение IMPORTANCE локально для пула ресурсов; группы рабочей нагрузки разной важности внутри одного пула ресурсов влияют друг на друга, но не влияют на рабочие группы в других пулов ресурсов.
-
-REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*</br>
-Указывает максимальное количество памяти, которое может понадобиться одному запросу из пула. *value* — это процентное соотношение относительно размера пула ресурсов, указанное в MAX_MEMORY_PERCENT.
-
-*value* является целым числом в версиях до [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и числом с плавающей точкой, начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и в управляемом экземпляре [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Значение по умолчанию равно 25. Диапазон допустимых значений для *value* — от 1 до 100.
-
-> [!IMPORTANT]  
-> Указанное значение ссылается только на доступную для выполнения запроса память.
->
-> Установка параметра *value* в значение 0 блокирует выполнение запросов с операциями SORT и HASH JOIN в определяемых пользователем группах рабочей нагрузки.
->
-> Не рекомендуется устанавливать значение *value* более 70, так как возможно, что серверу не удастся зарезервировать достаточно памяти, если выполняются другие параллельные запросы. Со временем это может привести к ошибке 8645 (истечение времени ожидания запроса).
->
-> Если требования к памяти запроса превышают ограничение, заданное этим параметром, сервер выполняет следующие действия.
->
-> - Для определяемых пользователем групп рабочей нагрузки сервер пытается снизить степень параллелизма для запроса, пока требования к памяти не снизятся до ограничения, либо пока степень параллелизма не станет равной 1. Если в этом случае требования к запросам памяти по-прежнему превышают ограничение, возникает ошибка 8657.
->
-> - Для внутренних групп рабочей нагрузки и группы по умолчанию сервер разрешает запросу получить необходимый объем памяти.
->
-> Учтите, что в обоих случаях может возникнуть ошибка 8645 (истечение времени ожидания), если на сервере недостаточно физической памяти.
-
-REQUEST_MAX_CPU_TIME_SEC = *value*</br>
-Указывает максимальное количество времени ЦП в секундах, которое может использоваться запросом. *value* должно быть 0 или положительным целым числом. Значение *value* по умолчанию равно 0, что означает неограниченное время.
-
-> [!NOTE]
-> По умолчанию по истечении лимита времени Resource Governor не прекращает выполнение запроса. Однако будет сформировано событие. Дополнительные сведения см. в разделе [Класс событий CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).
-> [!IMPORTANT]
-> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 3 и в случае использования [флага трассировки 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) при превышении максимального значения времени Resource Governor прервет запрос.
-
-REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value*</br>
-Задает максимальное время (в секундах), в течение которого запрос может ожидать выделения памяти (памяти рабочего буфера). *value* должно быть 0 или положительным целым числом. Значение *value* по умолчанию равно 0 и использует внутренние вычисления, основанные на затратах запроса, для определения максимального времени.
-
-> [!NOTE]
-> При истечении времени ожидания предоставления памяти запрос не всегда завершается ошибкой. Запрос завершится ошибкой только в случае, если одновременно запущено слишком много запросов. В остальных случаях запрос может получить лишь минимальный объем памяти, что приведет к снижению его производительности.
-
-MAX_DOP = *value*</br>
-Указывает **максимальную степень параллелизма (MAXDOP)** для выполнения параллельных запросов. *value* должно быть 0 или положительным целым числом. Диапазон допустимых значений для *value* — от 0 до 64. Значение *value* по умолчанию, равное 0, использует глобальные настройки. MAX_DOP обрабатывается следующим образом.
-
-> [!NOTE]
-> Группа рабочей нагрузки MAX_DOP переопределяет [конфигурацию сервера для максимальной степени параллелизма](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) и [конфигурацию области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) **MAXDOP**.
-
-> [!TIP]
-> Для выполнения этого на уровне запросов используйте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**. Указание максимальной степени параллелизма в качестве указания запроса эффективно до тех пор, пока его значение не превышает значения MAX_DOP группы рабочей нагрузки. Если значение указания запроса MAXDOP превышает значение, которое настроено с помощью Resource Governor, компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использует значение `MAX_DOP` Resource Governor. [Указание запроса](../../t-sql/queries/hints-transact-sql-query.md) MAXDOP всегда переопределяет [конфигурацию сервера для максимальной степени параллелизма](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
->
-> На уровне базы данных используйте [конфигурацию области баз данных ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)**MAXDOP**.
->
-> На уровне сервера используйте [параметр конфигурации сервера](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) **максимальной степени параллелизма (MAXDOP)** .
-
-GROUP_MAX_REQUESTS = *value*</br>
-Указывает максимальное число одновременных запросов, разрешенных для выполнения в группе рабочей нагрузки. Значение *value* должно быть равно 0 или быть положительным целым числом. Значение *value* по умолчанию равно 0, что разрешает неограниченные запросы. Если достигнуто максимальное количество параллельных запросов, пользователь из этой группы сможет войти в систему, но переводится в состоянии ожидания до тех пор, пока количество параллельных запросов не станет меньше указанного значения.
-
-USING { *pool_name* |  **"default"** }</br>
-Связывает группу рабочей нагрузки с пулом ресурсов, определяемых пользователем, который идентифицируется по значению *pool_name*. При этом группа рабочей нагрузки помещается в пул ресурсов. Если значение *pool_name* не предоставлено либо если не использован аргумент USING, группа рабочей нагрузки помещается в стандартный пул по умолчанию регулятора ресурсов.
-
-Слово «default» является зарезервированным словом и при использовании с аргументом USING должно быть заключено в кавычки ("") либо квадратные скобки ([]).
-
-> [!NOTE]
-> Все стандартные группы рабочей нагрузки и пулы ресурсов используют имена в нижнем регистре, например «default». Это необходимо учитывать при работе с серверами, где параметры сортировки учитывают регистр символов. Серверы, параметры сортировки которых не учитывают регистр (например, SQL_Latin1_General_CP1_CI_AS), будут рассматривать строки «default» и «Default» как одинаковые.
-
-EXTERNAL external_pool_name | "default"</br>
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]).
-
-Группа рабочей нагрузки может указывать внешний пул ресурсов. Можно определить группу рабочей нагрузки и связать ее с двумя пулами:
-
-- пулом ресурсов для рабочих нагрузок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и запросов;
-- внешним пулом ресурсов для внешних процессов. Дополнительные сведения см. в разделе [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
-
-## <a name="remarks"></a>Remarks
-
-При использовании `REQUEST_MEMORY_GRANT_PERCENT` разрешено создание индексов для использования большего объема памяти рабочей области, чем было предоставлено изначально, в целях повышения производительности. Эта специальная обработка поддерживается регулятором ресурсов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Однако изначально предоставленная память и любая дополнительная выделенная память ограничены пулом ресурсов и настройками группы рабочей нагрузки.
-
-Ограничение параметра `MAX_DOP` задается для каждой [задачи](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Оно не задается для каждого [запроса](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). Это означает, что во время параллельного выполнения один запрос может порождать множество задач, назначаемых [планировщику](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Дополнительные сведения см. в статье [Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md).
-
-Если используется `MAX_DOP` и запрос помечен как последовательный на стадии компиляции, изменить его состояние на параллельный во время выполнения невозможно независимо от параметров группы рабочей нагрузки или конфигурации сервера. После того как `MAX_DOP` настроен, он может быть только снижен при нехватке доступной памяти. Перенастройка группы рабочей нагрузки невидима при ожидании в очереди на предоставление памяти.
-
-### <a name="index-creation-on-a-partitioned-table"></a>Создание индексов для секционированной таблицы
-
-Объем памяти, затрачиваемой на создание индекса в невыровненной секционированной таблице, пропорционален количеству секций, охватываемых индексом. Если общий объем необходимой памяти превышает предел на запрос `REQUEST_MAX_MEMORY_GRANT_PERCENT`, устанавливаемый Resource Governor для группы рабочей нагрузки, создание такого индекса может завершиться ошибкой. Настройки группы рабочей нагрузки *"default"* позволяют запросу превосходить установленный для запросов предел памяти, нужной при запуске. Поэтому пользователь может запустить тот же процесс создания индекса в группе рабочей нагрузки *"default"* , если в пуле ресурсов *"default"* настроено достаточно памяти для выполнения такого запроса.
-
-## <a name="permissions"></a>Разрешения
-
-Требуется разрешение `CONTROL SERVER`.
-
-## <a name="example"></a>Пример
-
-Создайте группу рабочей нагрузки с именем `newReports`, для которой используются параметры по умолчанию Resource Governor и которая располагается в пуле по умолчанию Resource Governor. В примере указывается пул `default`, однако это не является обязательным.
-
-```sql
-CREATE WORKLOAD GROUP newReports
-WITH
-    (REQUEST_MAX_MEMORY_GRANT_PERCENT = 2.5
-      , REQUEST_MAX_CPU_TIME_SEC = 100
-      , MAX_DOP = 4)    
-USING "default" ;
-GO
-```
-
-## <a name="see-also"></a>См. также:
-
-- [ALTER WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/alter-workload-group-transact-sql.md)
-- [DROP WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/drop-workload-group-transact-sql.md)
-- [CREATE RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-resource-pool-transact-sql.md)
-- [ALTER RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-resource-pool-transact-sql.md)
-- [DROP RESOURCE POOL (Transact-SQL)](../../t-sql/statements/drop-resource-pool-transact-sql.md)
-- [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)
+[!INCLUDE [CREATE WORKLOAD GROUP](../../includes/create-workload-group.md)]
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
 > ||||
 > |---|---|---|
-> |[SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)||[Управляемый экземпляр Базы данных SQL<br />](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)||**_\* Azure Synapse<br />Analytics \*_** &nbsp;||||
+> |[SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)|[Управляемый экземпляр Базы данных SQL<br />](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;||||
 
 &nbsp;
 
-## <a name="azure-synapse-analytics-preview"></a>Azure Synapse Analytics (предварительная версия)
+## <a name="azure-synapse-analytics"></a>Azure Synapse Analytics
 
 Создает группу рабочей нагрузки. Группы рабочей нагрузки являются контейнерами для набора запросов и служат основой для настройки управления рабочими нагрузками в системе. Группы рабочей нагрузки позволяют резервировать ресурсы для изоляции рабочей нагрузки, сохранять ресурсы, определять ресурсы для каждого запроса и соблюдать правила выполнения. После выполнения инструкции вступают в действие параметры.
 
@@ -205,7 +77,7 @@ GO
 
 ```syntaxsql
 CREATE WORKLOAD GROUP group_name
-[ WITH
+ WITH
  (  [ MIN_PERCENTAGE_RESOURCE = value ]
   [ [ , ] CAP_PERCENTAGE_RESOURCE = value ]
   [ [ , ] REQUEST_MIN_RESOURCE_GRANT_PERCENT = value ]
@@ -213,7 +85,7 @@ CREATE WORKLOAD GROUP group_name
   [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } ]
   [ [ , ] QUERY_EXECUTION_TIMEOUT_SEC = value ] )
   [ ; ]
-]
+
 ```
 
 *group_name*</br>
@@ -312,6 +184,6 @@ WITH
 - [DROP WORKLOAD GROUP (Transact-SQL)](drop-workload-group-transact-sql.md)
 - [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md)
 - [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md)
-- Краткое руководство по созданию и использованию [группы рабочей нагрузки](https://docs.microsoft.com/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)
+- [Краткое руководство. Настройка изоляции рабочих нагрузок с помощью T-SQL](/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)
 
 ::: moniker-end
