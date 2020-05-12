@@ -2,7 +2,7 @@
 title: Указания по программированию (драйвер ODBC)
 description: Функции программирования Microsoft ODBC Driver for SQL Server на платформах macOS и Linux основаны на ODBC в SQL Server Native Client (ODBC).
 ms.custom: ''
-ms.date: 01/12/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,39 +10,39 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: ecaa595fa08a4a37c9a5d3146dd03af440aa4453
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8843bf303f20a7d8aa0baac5be3d9da4e7c54e01
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632794"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886371"
 ---
 # <a name="programming-guidelines"></a>Указания по программированию
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Функции программирования [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на платформах macOS и Linux основаны на ODBC в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client основан на ODBC в компонентах доступа к данным Windows DAC ([Справочник по программированию ODBC](https://go.microsoft.com/fwlink/?LinkID=45250)).  
+Функции программирования [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на платформах macOS и Linux основаны на ODBC в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client основан на ODBC в компонентах доступа к данным Windows DAC ([Справочник по программированию ODBC](../../../odbc/reference/odbc-programmer-s-reference.md)).  
 
 Приложение ODBC может использовать множественные активные результирующие наборы (MARS) и другие функции, характерные для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], путем включения `/usr/local/include/msodbcsql.h` после включения заголовков unixODBC (`sql.h`, `sqlext.h`, `sqltypes.h` и `sqlucode.h`). Затем используйте те же символьные имена для элементов, связанных с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], которые вы бы стали использовать в приложениях ODBC Windows.
 
 ## <a name="available-features"></a>Доступные функции  
-Следующие разделы документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client для ODBC ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) применяются при использовании драйвера ODBC в macOS и Linux:  
+Следующие разделы документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client для ODBC ([SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)) применяются при использовании драйвера ODBC в macOS и Linux:  
 
--   [Взаимодействие с SQL Server (ODBC)](https://msdn.microsoft.com/library/ms131692.aspx)  
+-   [Взаимодействие с SQL Server (ODBC)](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
 -   [Поддержка времени ожидания соединения и запроса](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
 -   [Курсоры](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
--   [Улучшенная обработка даты и времени (ODBC)](https://msdn.microsoft.com/library/bb677319.aspx)  
--   [Выполнение запросов (ODBC)](https://msdn.microsoft.com/library/ms131677.aspx)  
+-   [Улучшенная обработка даты и времени (ODBC)](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+-   [Выполнение запросов (ODBC)](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
 -   [Обработка ошибок и сообщений](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
 -   [Проверка подлинности Kerberos](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
--   [Определяемые пользователем типы данных больших значений CLR (ODBC)](https://msdn.microsoft.com/library/bb677316.aspx)  
--   [Выполнение транзакций (ODBC) (за исключением распределенных транзакций)](https://msdn.microsoft.com/library/ms131706.aspx)  
--   [Обработка результатов (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
+-   [Определяемые пользователем типы данных больших значений CLR (ODBC)](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
+-   [Выполнение транзакций (ODBC) (за исключением распределенных транзакций)](../../../relational-databases/native-client/odbc/performing-transactions-in-odbc.md)  
+-   [Обработка результатов (ODBC)](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
 -   [Выполнение хранимых процедур](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
--   [Поддержка разреженных столбцов (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
+-   [Поддержка разреженных столбцов (ODBC)](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)
 -   [Использование шифрования без проверки](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
--   [Возвращающие табличные значения параметры](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
--   [UTF-8 и UTF-16 для команд и API данных](https://msdn.microsoft.com/library/ff878241.aspx)
+-   [Возвращающие табличные значения параметры](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)
+-   [UTF-8 и UTF-16 для команд и API данных](../../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)
 -   [Использование функций каталога](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
 
 ## <a name="unsupported-features"></a>Неподдерживаемые функции
@@ -51,14 +51,14 @@ ms.locfileid: "81632794"
 
 -   Подключение к отказоустойчивому кластеру
 -   [Разрешение IP-адресов прозрачной сети](../using-transparent-network-ip-resolution.md) (до версии 17 драйвера ODBC)
--   [Расширенная трассировка драйвера](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
+-   [Расширенная трассировка драйвера](/archive/blogs/mattn/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers)
 
 Следующие функции недоступны в этой версии драйвера ODBC на платформах macOS и Linux: 
 
 -   Распределенные транзакции (атрибут SQL_ATTR_ENLIST_IN_DTC не поддерживается)  
 -   Зеркальное отображение базы данных  
 -   FILESTREAM  
--   Профилирование производительности драйвера ODBC, рассматриваемое в статье [SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=234099), и следующие атрибуты соединения, связанные с производительностью:  
+-   Профилирование производительности драйвера ODBC, рассматриваемое в статье [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), и следующие атрибуты соединения, связанные с производительностью:  
     -   SQL_COPT_SS_PERF_DATA  
     -   SQL_COPT_SS_PERF_DATA_LOG  
     -   SQL_COPT_SS_PERF_DATA_LOG_NOW  
@@ -66,7 +66,7 @@ ms.locfileid: "81632794"
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
 -   SQLBrowseConnect (до версии 17.2)
--   Типы интервалов C, такие как SQL_C_INTERVAL_YEAR_TO_MONTH (задокументированы в статье [Идентификаторы и дескрипторы типов данных](https://msdn.microsoft.com/library/ms716351(VS.85).aspx))
+-   Типы интервалов C, такие как SQL_C_INTERVAL_YEAR_TO_MONTH (задокументированы в статье [Идентификаторы и дескрипторы типов данных](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md))
 -   Значение SQL_CUR_USE_ODBC атрибута SQL_ATTR_ODBC_CURSORS функции SQLSetConnectAttr.
 
 ## <a name="character-set-support"></a>Поддержка кодировок
@@ -134,7 +134,7 @@ ms.locfileid: "81632794"
 
 ## <a name="additional-notes"></a>Дополнительные замечания  
 
-1.  Вы можете создать выделенное административное соединение с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и комбинации **узел,порт**. Члену роли Sysadmin сначала нужно сначала обнаружить порт выделенного административного соединения. Инструкции см. в статье [Диагностическое соединение для администраторов баз данных](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port). Например, если бы порт выделенного административного соединения имел значение 33000, вы могли бы подключиться к нему с помощью `sqlcmd` следующим образом:  
+1.  Вы можете создать выделенное административное соединение с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и комбинации **узел,порт**. Члену роли Sysadmin сначала нужно сначала обнаружить порт выделенного административного соединения. Инструкции см. в статье [Диагностическое соединение для администраторов баз данных](../../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md#dac-port). Например, если бы порт выделенного административного соединения имел значение 33000, вы могли бы подключиться к нему с помощью `sqlcmd` следующим образом:  
 
     ```
     sqlcmd -U <user> -P <pwd> -S <host>,33000
