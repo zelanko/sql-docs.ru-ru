@@ -3,7 +3,7 @@
 - name: Советы по работе с документацией
   href: sql-server/sql-docs-navigation-guide.md
 - name: Предыдущие версии (2005–2014)
-  href: toc/previous-versions-sql-server.md
+  href: sql-server/previous-versions-sql-server.md
 - name: Обзор
   items:
     - name: What's New
@@ -2624,7 +2624,7 @@
               href: relational-databases/native-client/features/using-multiple-active-result-sets-mars.md
             - name: Определяемые пользователем типы
               href: relational-databases/native-client/features/using-user-defined-types.md
-            - name: 'Типы данных XML '
+            - name: Типы данных XML
               href: relational-databases/native-client/features/using-xml-data-types.md
             - name: Поддержка UTF-16 в собственном клиенте SQL Server версии 11.0
               href: relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md
