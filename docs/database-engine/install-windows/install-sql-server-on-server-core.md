@@ -10,12 +10,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95b6a5bfd44aafe8b76bf04d42a71808718172ab
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325466"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872789"
 ---
 # <a name="install-sql-server-on-server-core"></a>Установка SQL Server в Server Core
 
@@ -27,7 +27,7 @@ ms.locfileid: "75325466"
   
  Список текущих поддерживаемых операционных систем см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
   
 |Требование|Как установить|  
 |-----------------|--------------------|  
@@ -89,7 +89,7 @@ ms.locfileid: "75325466"
   
 ### <a name="feature-parameters"></a>Параметры компонентов  
   
-|Параметр компонента|Description|  
+|Параметр компонента|Описание|  
 |-----------------------|-----------------|  
 |SQLENGINE|Устанавливает только компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |РЕПЛИКАЦИЯ|Устанавливает компонент репликации вместе с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
@@ -102,7 +102,7 @@ ms.locfileid: "75325466"
 
  В следующих примерах показано использование параметров компонентов.  
   
-|Параметр и значения|Description|  
+|Параметр и значения|Описание|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|Устанавливает только компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |/FEATURES=SQLEngine, FullText|Устанавливает компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] с компонентом Full-Text Search.|  
@@ -287,13 +287,9 @@ ms.locfileid: "75325466"
 ### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>Включите поддержку TCP/IP на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Протокол TCP/IP для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Server Core можно включить через Windows PowerShell. Выполните следующие действия.  
   
-1.  На сервере запустите диспетчер задач.  
+1.  В PowerShell: Import-Module SQLPS.  
   
-2.  На вкладке **Приложения** нажмите **Создать задачу**.  
-  
-3.  В диалоговом окне **Создание новой задачи** введите **sqlps.exe** в поле **Открыть** и нажмите кнопку **ОК**. Откроется окно **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**.  
-  
-4.  В окне **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** выполните следующий скрипт, чтобы включить протокол TCP/IP:  
+2.  В окне **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** выполните следующий скрипт, чтобы включить протокол TCP/IP:  
   
 ```powershell  
 $smo = 'Microsoft.SqlServer.Management.Smo.'  
@@ -324,7 +320,7 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  
 1.  Нажмите CTRL+SHIFT+ESC, чтобы отобразить диспетчер задач.  
 2.  На вкладке **Приложения** нажмите **Создать задачу**.  
-3.  В диалоговом окне **Создание новой задачи** введите **cmd** в поле **Открыть**, а затем[!INCLUDE[clickOK](../../includes/clickok-md.md)].  
+3.  В диалоговом окне **Создание новой задачи** введите **cmd** в поле **Открыть** [!INCLUDE[clickOK](../../includes/clickok-md.md)], а затем.  
   
 ## <a name="see-also"></a>См. также раздел  
  [Установка SQL Server с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
