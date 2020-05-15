@@ -43,14 +43,14 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e19f5ae872c8d37eb639372db54466da7221cc15
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: b172457f50ca3d76c830f6ab2c789d28a3490ec8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873140"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825670"
 ---
-# <a name="generate-and-publish-scripts-wizard"></a>Мастер формирования и публикации скриптов 
+# <a name="generate-and-publish-scripts-wizard"></a>Мастер формирования и публикации скриптов
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -156,6 +156,8 @@ ms.locfileid: "80873140"
 - **Заполнение ANSI** — включает в скрипт параметр **ANSI PADDING ON** . Значение по умолчанию равно **True**.
 
 - **Добавить к файлу** — если выбрано значение **True**, то этот скрипт добавляется в конец существующего скрипта, выбранного на странице **Задание параметров скрипта** . Если значение равно **False**, то новый скрипт перезапишет предыдущий. По умолчанию **False**.
+
+- **Проверка существования объекта** — если установлено значение **true**, добавляет проверку существования перед созданием инструкции CREATE для объектов SQL. Пример: таблицы, представления, функции или хранимые процедуры. Инструкция CREATE упаковывается в оператор IF. Если вы знаете, что целевой объект является чистым, то скрипт намного чище. Если вы НЕ предполагаете, что в целевом объекте существуют другие объекты, появится сообщение об ошибке. По умолчанию **False**.
 
 - **Продолжить выполнение скрипта при ошибке** — значение **False**указывает, что выполнение скрипта останавливается при возникновении ошибки. Если значение равно **True**, то выполнение скрипта продолжается. По умолчанию **False**.
 

@@ -1,6 +1,6 @@
 ---
 title: Совместимость с FILESTREAM | Документация Майкрософт
-description: Совместимость FILESTREAM с другими компонентами SQL Server
+description: FILESTREAM хранит данные в файловой системе. Ознакомьтесь с рекомендациями, ограничениями и советами, которые следует учитывать при использовании FILESTREAM с различными функциями SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c4d32598cfab0cc08ece6721b0ff593c8577394d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c47e7af592383bee13399c2220fee25fa8ed2c2
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245399"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999867"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Совместимость FILESTREAM с другими компонентами SQL Server
 

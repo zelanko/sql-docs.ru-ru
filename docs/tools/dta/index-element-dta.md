@@ -1,5 +1,6 @@
 ---
 title: элемент Index (DTA)
+description: В программе dta элемент Index содержит сведения об индексе, который необходимо создать в пользовательской конфигурации или удалить из нее.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 1d865d3ea2893f255155ee03c229731eed9d48a8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df13c50363723ca9351b6e73cf5db59bc6a183d9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307708"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831576"
 ---
 # <a name="index-element-dta"></a>элемент Index (DTA)
 
@@ -42,7 +43,7 @@ ms.locfileid: "75307708"
   
 ## <a name="element-attributes"></a>Атрибуты элемента  
   
-|Атрибут Index|Тип данных|Description|  
+|Атрибут Index|Тип данных|Описание|  
 |---------------------|---------------|-----------------|  
 |**Кластеризованный**|**boolean**|Необязательный параметр. Определяет индекс как кластеризованный. Может принимать значения «true» или «false», например:<br /><br /> `<Index Clustered="true">`<br /><br /> По умолчанию этот атрибут принимает значение «false».|  
 |**Уникальный**|**boolean**|Необязательный параметр. Определяет индекс как уникальный. Может принимать значения «true» или «false», например:<br /><br /> `<Index Unique="true">`<br /><br /> По умолчанию этот атрибут принимает значение «false».|  
@@ -59,7 +60,7 @@ ms.locfileid: "75307708"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  

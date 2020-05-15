@@ -1,5 +1,6 @@
 ---
 title: Элемент Column описания индекса (DTA)
+description: В программе dta элемент Column для индекса определяет столбцы, по которым будет создан индекс в пользовательской конфигурации.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
-ms.openlocfilehash: 008cba36af33c465c3a126dc3e101b8ebca28e36
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 02900685d93eef62553d830494d25ec83ca83ce1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307879"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831631"
 ---
 # <a name="column-element-for-index-dta"></a>Элемент Column описания индекса (DTA)
 
@@ -42,7 +43,7 @@ ms.locfileid: "75307879"
   
 ## <a name="element-attributes"></a>Атрибуты элемента  
   
- **Type**: необязательно. Указывает тип столбца индекса. Используйте тип данных **string** для указания этого атрибута при помощи следующих допустимых значений:  
+ **Тип**. Необязательный параметр. Указывает тип столбца индекса. Используйте тип данных **string** для указания этого атрибута при помощи следующих допустимых значений:  
   
 -   **KeyColumn**  
   
@@ -64,7 +65,7 @@ ms.locfileid: "75307879"
   
      Дополнительные сведения о включенных столбцах см. в разделе [Создание индексов с включенными столбцами](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
- **SortOrder**: необязательно. Указывает порядок сортировки столбца. Используйте тип данных **string** для указания порядка сортировки **по возрастанию** или **по убыванию** , как показано ниже:  
+ **SortOrder**: Необязательный параметр. Указывает порядок сортировки столбца. Используйте тип данных **string** для указания порядка сортировки **по возрастанию** или **по убыванию** , как показано ниже:  
   
 ```  
 <Column SortOrder="Ascending">  
@@ -72,7 +73,7 @@ ms.locfileid: "75307879"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  

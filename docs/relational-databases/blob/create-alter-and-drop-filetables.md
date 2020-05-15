@@ -1,5 +1,6 @@
 ---
 title: Создание, изменение и удаление таблиц FileTable | Документация Майкрософт
+description: В SQL Server функция FileTable использует структуру каталогов для хранения файлов. Узнайте, как создавать новые таблицы FileTable и изменять или удалять существующие.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5483c2b6d344d72eb161b303abf1bf7e56825987
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb0dd2a0196fbc832b0d0afeb0f02889ac1369a4
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76922892"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000221"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Создание, изменение и удаление таблиц FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "76922892"
   
 -   Можно также указать имена, предназначенные для использования в трех первичных ключах и ограничениях уникальности, создаваемых автоматически.  
   
-###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> Практическое руководство. Создание таблицы FileTable  
+###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> Как создать FileTable  
  **Создание таблицы FileTable с помощью Transact-SQL**  
  Создайте объект FileTable, вызвав инструкцию [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) с параметром **AS FileTable**. Поскольку таблица FileTable имеет фиксированную схему, нет необходимости указывать список столбцов. Можно указать следующие параметры для новой FileTable:  
   
@@ -107,7 +108,7 @@ GO
   
  Сведения об использовании инструкции ALTER TABLE для включения или отключения пространства имен FileTable, включая системные ограничения, см. в разделе [Управление объектами FileTable](../../relational-databases/blob/manage-filetables.md).  
   
-###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> Практическое руководство. Изменение каталога для таблицы FileTable  
+###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> Как изменить каталог для таблицы FileTable  
  **Изменение каталога для таблицы FileTable с помощью Transact-SQL**  
  Вызовите инструкцию ALTER TABLE и задайте новое допустимое значение параметра **FILETABLE_DIRECTORY** SET.  
   

@@ -1,7 +1,8 @@
 ---
-title: Поддержка высокой доступности и аварийного восстановления в драйвере ODBC для Linux и macOS | Документы Майкрософт
+title: Поддержка высокой доступности и аварийного восстановления в драйвере ODBC для Linux и macOS
+description: Узнайте, как Microsoft ODBC Driver для Linux и macOS поддерживает группы доступности Always On.
 ms.custom: ''
-ms.date: 04/05/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,25 +11,25 @@ ms.topic: conceptual
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b738bac760211ff8b24ef1e5fdbc027fd966f166
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 50a72faf7dc517257ee2ce66f0f800c289f4329e
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912440"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922180"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Поддержка высокой доступности и аварийного восстановления в драйвере ODBC для Linux и macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Драйверы ODBC для Linux и macOS поддерживают [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Дополнительные сведения о [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] см. в следующих статьях.  
   
--   [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
+-   [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
--   [Создание и настройка групп доступности (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
+-   [Создание и настройка групп доступности (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
+-   [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Активные вторичные реплики. Доступ только для чтения к вторичным репликам (группы доступности AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx)  
+-   [Активные вторичные реплики: доступ только для чтения к вторичным репликам (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 Прослушиватель для заданной группы доступности можно задать в строке подключения. Если приложение ODBC в Linux или macOS подключено к базе данных в группе доступности, которая выполняет переход на другой ресурс, то исходное соединение разрывается, а приложение должно установить новое соединение, чтобы продолжить работу после отработки отказа.
 
@@ -55,7 +56,7 @@ ms.locfileid: "80912440"
   
 -   Нельзя подключиться к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], для которого настроено более 64 IP-адресов.
 
--   С параметром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]MultiSubnetFailover=Yes**можно использовать как проверку подлинности**, так и проверку подлинности Kerberos — на работу приложения это не повлияет.
+-   С параметром **MultiSubnetFailover=Yes** можно использовать как проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], так и проверку подлинности Kerberos — на работу приложения это не повлияет.
 
 -   Значение **loginTimeout** можно увеличить с учетом времени отработки отказа, это уменьшит количество попыток повторного соединения в приложении.
 
@@ -93,7 +94,7 @@ ms.locfileid: "80912440"
   
 Приложение ODBC, которое использует [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], может использовать одну из двух указанных далее функций для установки соединения.  
   
-|Компонент|Description|  
+|Компонент|Описание|  
 |------------|---------------|  
 |[Функция SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** поддерживает как **ApplicationIntent**, так и **MultiSubnetFailover**, через имя источника данных (DSN) или атрибут соединения.|  
 |[Функция SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** поддерживает **ApplicationIntent** и **MultiSubnetFailover** через ключевое слово строки подключения, атрибут соединения или имя DSN.|

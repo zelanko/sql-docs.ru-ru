@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 65f3000cdc56079d2e55040e4844ce5578998e9e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6446ad935f2388f2fd2d8df898232f897e475cc3
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180458"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849822"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (компонент Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,6 @@ USE AdventureWorks2012;
 CREATE USER [domain_name\MAX_CPU] FOR LOGIN [domain_name\MAX_CPU];  
 EXEC sp_addrolemember 'db_backupoperator', 'domain_name\MAX_CPU';  
 GO  
-  
 ```  
   
  [&#91;В начало&#93;](#Top)  
@@ -137,35 +136,33 @@ GO
   
 1.  Выполните инструкцию [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md) , чтобы создать пул ресурсов. В примере этой процедуры используется следующий синтаксис:  
   
-     *CREATE RESOURCE POOL имя_пула* WITH ( MAX_CPU_PERCENT = *значение* );  
+    ```sql  
+    CREATE RESOURCE POOL <pool_name> WITH ( MAX_CPU_PERCENT = <value> );
+    ```  
   
-     *Value* — целое число от 1 до 100, которое указывает максимальную среднюю пропускную способность ЦП в процентах. Рекомендуемое значение зависит от конкретной среды. Для иллюстрации в примере из этого разделе используется значение 20% (MAX_CPU_PERCENT = 20).  
+    *Value* — целое число от 1 до 100, которое указывает максимальную среднюю пропускную способность ЦП в процентах. Рекомендуемое значение зависит от конкретной среды. Для иллюстрации в примере из этого разделе используется значение 20% (MAX_CPU_PERCENT = 20).  
   
 2.  Выполните инструкцию [CREATE WORKLOAD GROUP](../../t-sql/statements/create-workload-group-transact-sql.md) , чтобы создать группу рабочей нагрузки для низкоприоритетных операций, загрузку ЦП которыми следует регулировать. В примере этой процедуры используется следующий синтаксис:  
   
-     CREATE WORKLOAD GROUP *имя_группы* USING *имя_пула*;  
+    ```sql  
+    CREATE WORKLOAD GROUP <group_name> USING <pool_name>;
+    ```
   
 3.  Выполните инструкцию [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) , чтобы создать функцию-классификатор, сопоставляющую созданную на предыдущем этапе группу рабочей нагрузки с пользователем с низкоприоритетным именем входа. В примере этой процедуры используется следующий синтаксис:  
   
-     CREATE FUNCTION [*имя_схемы*.]*имя_функции*() RETURNS sysname  
+    ```sql 
+    CREATE FUNCTION <schema_name>.<function_name>() RETURNS sysname  
+    WITH SCHEMABINDING  
+    AS  
+    BEGIN  
+        DECLARE @workload_group_name AS <sysname>  
+        IF (SUSER_NAME() = '<user_of_low_priority_login>')  
+        SET @workload_group_name = '<workload_group_name>'  
+        RETURN @workload_group_name  
+    END;
+    ```
   
-     WITH SCHEMABINDING  
-  
-     AS  
-  
-     BEGIN  
-  
-     DECLARE @workload_group_name AS *sysname*  
-  
-     IF (SUSER_NAME() = '*пользователь_с_низкоприоритетным_именем_входа*')  
-  
-     SET @workload_group_name = '*workload_group_name*'  
-  
-     RETURN @workload_group_name  
-  
-     END  
-  
-     Дополнительные сведения о компонентах этой инструкции CREATE FUNCTION см. в разделах:  
+    Дополнительные сведения о компонентах этой инструкции `CREATE FUNCTION` см. в следующих разделах.  
   
     -   [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
   
@@ -175,14 +172,16 @@ GO
         >  SUSER_NAME — лишь одна из нескольких системных функций, которые можно использовать в функции-классификаторе. Дополнительные сведения см. в разделе [Создание и проверка определяемой пользователем функции-классификатора](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md).  
   
     -   [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
-  
+      
 4.  Выполните инструкцию [ALTER RESOURCE GOVERNOR](../../t-sql/statements/alter-resource-governor-transact-sql.md) , чтобы зарегистрировать функцию-классификатор в регуляторе ресурсов. В примере этой процедуры используется следующий синтаксис:  
   
-     ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = *имя_схемы*.*имя_функции*);  
+    ```sql  
+    ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = <schema_name>.<function_name>);
+    ```  
   
 5.  Выполните еще одну инструкцию ALTER RESOURCE GOVERNOR, чтобы применить изменения в хранящейся в памяти конфигурации регулятора ресурсов, как указано ниже:  
   
-    ```  
+    ```sql  
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
@@ -204,17 +203,18 @@ GO
   
 ```sql  
 -- Configure Resource Governor.  
-BEGIN TRAN  
 USE master;  
 -- Create a resource pool that sets the MAX_CPU_PERCENT to 20%.   
 CREATE RESOURCE POOL pMAX_CPU_PERCENT_20  
    WITH  
       (MAX_CPU_PERCENT = 20);  
 GO  
+
 -- Create a workload group to use this pool.   
 CREATE WORKLOAD GROUP gMAX_CPU_PERCENT_20  
 USING pMAX_CPU_PERCENT_20;  
 GO  
+
 -- Create a classification function.  
 -- Note that any request that does not get classified goes into   
 -- the 'Default' group.  
@@ -233,10 +233,10 @@ GO
 ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION= dbo.rgclassifier_MAX_CPU);  
 COMMIT TRAN;  
 GO  
+
 -- Start Resource Governor  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
-GO  
-  
+GO    
 ```  
   
  [&#91;В начало&#93;](#Top)  

@@ -1,7 +1,7 @@
 ---
 title: Известные проблемы с драйвером ODBC в Linux и macOS
 description: Узнайте об известных проблемах с драйвером Microsoft ODBC Driver for SQL Server в Linux и macOS и способах устранения проблем с подключением.
-ms.date: 03/05/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - known issues
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f6e39184b8ba565fed48ba501e2502dad19257ce
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 898df9a68fd0e1fd87cab597502d6e0baa17172b
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728417"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886411"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Известные проблемы с драйвером ODBC в Linux и macOS
 
@@ -25,7 +25,7 @@ ms.locfileid: "81728417"
 
 ## <a name="known-issues"></a>Известные проблемы
 
-Дополнительные проблемы будут публиковаться в [блоге группы разработчиков драйвера Microsoft ODBC](https://blogs.msdn.com/b/sqlnativeclient/).  
+Дополнительные проблемы будут опубликованы в [блоге о драйверах SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/bg-p/SQLServer/label-name/SQLServerDrivers).  
 
 - Из-за ограничений системной библиотеки Alpine Linux поддерживает меньше кодировок символов и языковых стандартов. Например, en_US.UTF-8 недоступен. Дополнительные сведения см. в статье [musl libc - functional differences from glibc](https://wiki.musl-libc.org/functional-differences-from-glibc.html) (Функциональные отличия musl libc от glibc).
 
@@ -82,7 +82,7 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
   
 - [Устранение проблем с подключением в SQL Server 2008 с помощью кольцевого буфера подключения](https://techcommunity.microsoft.com/t5/sql-server/connectivity-troubleshooting-in-sql-server-2008-with-the/ba-p/383393)  
   
-- [Средство устранения неполадок проверки подлинности SQL Server](https://docs.microsoft.com/archive/blogs/sqlsecurity/sql-server-authentication-troubleshooter)  
+- [Средство устранения неполадок проверки подлинности SQL Server](/archive/blogs/sqlsecurity/sql-server-authentication-troubleshooter)  
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

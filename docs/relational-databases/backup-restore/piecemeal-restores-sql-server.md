@@ -1,5 +1,6 @@
 ---
 title: Поэтапное восстановление (SQL Server) | Документация Майкрософт
+description: В SQL Server поэтапное восстановление позволяет поэтапно восстанавливать базы данных, содержащие несколько файловых групп. Поэтапное восстановление работает со всеми моделями восстановления.
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 7d818eb992ae95527281de6f53a2e17007490b3b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fb2e77a9d32e48965e491a2bc0549fb7c9ad400
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72915996"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824105"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Поэтапное восстановление (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,9 +121,9 @@ ms.locfileid: "72915996"
   
 ### <a name="examples"></a>Примеры  
   
--   [Пример. Поэтапное восстановление базы данных (простая модель восстановления)](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Пример. Поэтапное восстановление базы данных &#40;простая модель восстановления&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [Пример. Поэтапное восстановление отдельных файловых групп (простая модель восстановления)](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [Пример. Поэтапное восстановление отдельных файловых групп &#40;простая модель восстановления&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
 ## <a name="piecemeal-restore-under-the-full-recovery-model"></a>Поэтапное восстановление по модели полного восстановления  
  В модели полного восстановления или восстановления с неполным протоколированием поэтапное восстановление доступно для всех баз данных, содержащих по несколько файловых групп, и базу данных можно восстановить до любого момента времени. Последовательности восстановления поэтапного восстановления ведут себя следующим образом.  
@@ -148,9 +149,9 @@ ms.locfileid: "72915996"
   
 ### <a name="examples"></a>Примеры  
   
--   [Пример. Поэтапное восстановление базы данных (модель полного восстановления)](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [Пример. Поэтапное восстановление базы данных &#40;модель полного восстановления&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [Пример. Поэтапное восстановление только некоторых файловых групп (модель полного восстановления)](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [Пример. Поэтапное восстановление только некоторых файловых групп &#40;модель полного восстановления&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 ## <a name="performing-a-piecemeal-restore-of-a-database-whose-recovery-model-has-been-switched-from-simple-to-full"></a>Выполнение поэтапного восстановления базы данных, модель восстановления которой была переключена с простой на полную  
  Можно выполнить поэтапное восстановление базы данных, модель восстановления которой была переключена с простой на полную с момента полного частичного резервного копирования или резервного копирования базы данных. Например, рассмотрим базу данных, для которой можно выполнить следующее:  

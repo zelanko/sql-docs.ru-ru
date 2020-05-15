@@ -1,5 +1,6 @@
 ---
 title: Обзор процессов восстановления (SQL Server) | Документация Майкрософт
+description: В этой статье приводится обзор операций, связанных с восстановлением базы данных SQL Server из-за сбоя, путем последовательного восстановления набора резервных копий SQL Server.
 ms.custom: ''
 ms.date: 04/23/2019
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 9b034e43f918a0f6c198c29cf2f6618ba38638f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 143925d3fa6867d656a4f473194608e77f5a960e
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288578"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924998"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Обзор процессов восстановления (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -175,7 +176,7 @@ ms.locfileid: "79288578"
   
 -   [Помощник по восстановлению: общие сведения](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Помощник по восстановлению: использование среды SSMS для создания и восстановления раздельных резервных копий](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Помощник по восстановлению: использование среды SSMS для создания и восстановления раздельных резервных копий](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> Ускоренное восстановление баз данных.
 [Ускоренное восстановление базы данных](/azure/sql-database/sql-database-accelerated-database-recovery/) доступно в [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Ускоренное восстановление базы данных значительно улучшает доступность базы данных, особенно при наличии продолжительных транзакций, за счет перепроектирования [процесса восстановления](#TlogAndRecovery) [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. База данных, для которой было включено ускоренное восстановление, значительно быстрее восстанавливается после отработки отказа или другого неясного завершения работы. Если включено, ускоренное восстановление базы данных также значительно быстрее завершает откат отмененных продолжительных транзакций.

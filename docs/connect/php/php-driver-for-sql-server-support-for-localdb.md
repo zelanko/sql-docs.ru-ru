@@ -1,7 +1,8 @@
 ---
-title: Поддержка LocalDB | Документация Майкрософт
+title: Поддержка PHP Driver для LocalDB
+description: Узнайте, как драйверы Майкрософт для PHP для SQL Server поддерживают подключения к экземплярам базы данных LocalDB.
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7d31758d437ad8b175fca86bd5e25b0aff2c9989
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d618706cd05796079904c971cdf7b0c32485c1d4
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909210"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886291"
 ---
 # <a name="support-for-localdb"></a>Поддержка LocalDB
 
@@ -59,7 +60,7 @@ LocalDB — это упрощенная версия [!INCLUDE[ssNoVersion](../
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-При необходимости можно создать экземпляр LocalDB с помощью программы sqllocaldb.exe. Для добавления и изменения баз данных в локальном экземпляре LocalDB можно также воспользоваться программой sqlcmd.exe. Например, `sqlcmd -S (localdb)\v11.0`. (При выполнении в службах IIS службы необходимо запустить с правильной учетной записью, чтобы получить те же результаты, что и при запуске из командной строки; см. статью [Archived MSDN and TechNet Blogs ](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx)(Архивированные MSDN и блоги TechNet).
+При необходимости можно создать экземпляр LocalDB с помощью программы sqllocaldb.exe. Для добавления и изменения баз данных в локальном экземпляре LocalDB можно также воспользоваться программой sqlcmd.exe. Например, `sqlcmd -S (localdb)\v11.0`. (При выполнении в службах IIS службы необходимо запустить с правильной учетной записью, чтобы получить те же результаты, что и при запуске из командной строки; см. статью [Archived MSDN and TechNet Blogs ](/archive/blogs/sqlexpress/using-localdb-with-full-iis-part-2-instance-ownership)(Архивированные MSDN и блоги TechNet).
 
 Ниже приведены примеры строк подключения с использованием драйвера SQLSRV, который подключается к базе данных в именованном экземпляре myInstance LocalDB:
 

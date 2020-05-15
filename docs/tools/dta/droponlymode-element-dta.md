@@ -1,5 +1,6 @@
 ---
 title: Элемент DropOnlyMode (DTA)
+description: В программе dta элемент DropOnlyMode указывает, что помощник по настройке ядра СУБД должен учитывать только возможность удаления существующих индексов, индексированных представлений или секций.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a0cd0d9511e3a2791231f1cfa39aa4c8e5999eec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8335b68b684f5ca9688542a30919c05397b6c65
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75305594"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831562"
 ---
 # <a name="droponlymode-element-dta"></a>Элемент DropOnlyMode (DTA)
 
@@ -43,7 +44,7 @@ ms.locfileid: "75305594"
   
  **Значение по умолчанию**  
   
- **Периодичность**: необязательно. Может использоваться только один раз для каждого элемента **TuningOptions** . Не может использоваться, если в элементе **TuningOptions** указаны следующие элементы:  
+ **Периодичность**. Необязательный параметр. Может использоваться только один раз для каждого элемента **TuningOptions** . Не может использоваться, если в элементе **TuningOptions** указаны следующие элементы:  
   
 -   [Элемент FeatureSet (DTA)](../../tools/dta/featureset-element-dta.md)  
   
@@ -52,7 +53,7 @@ ms.locfileid: "75305594"
 -   [Элемент KeepExisting (DTA)](../../tools/dta/keepexisting-element-dta.md) имеет значение **ВСЕ**  
   
 ## <a name="element-relationships"></a>Связи элемента  
- **Родительский элемент**: [элемент TuningOptions (DTA)](../../tools/dta/tuningoptions-element-dta.md)  
+ **Родительский элемент**: [Элемент TuningOptions (DTA)](../../tools/dta/tuningoptions-element-dta.md)  
   
  **Дочерние элементы**  
   

@@ -1,5 +1,6 @@
 ---
 title: Элемент Configuration (DTA)
+description: В программе dta элемент Configuration задает определенную пользователем конфигурацию, состоящую из существующих и гипотетических структур физической конструкции.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 79073bca20afa853c1b6fbf548ed804f71f074fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 265b66ece4d4430f7d26763cbd72f24f528dd959
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307984"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831659"
 ---
 # <a name="configuration-element-dta"></a>Элемент Configuration (DTA)
 
@@ -44,13 +45,13 @@ ms.locfileid: "75307984"
   
 ## <a name="element-attributes"></a>Атрибуты элемента  
   
-|Атрибут конфигурации|Description|  
+|Атрибут конфигурации|Описание|  
 |-----------------------------|-----------------|  
 |**SpecificationMode**|Необязательный параметр. Указывает, должен ли помощник по настройке ядра СУБД анализировать указанную конфигурацию как связь с текущей существующей конфигурацией либо как совершенно новую, отдельную конфигурацию. Используйте тип данных **string** для указания этого атрибута при помощи следующих допустимых значений:<br /><br /> **Relative**:<br />                  Вычисляет указанную конфигурацию как связь с существующей конфигурацией структур физического проектирования (индексы, индексированные представления, секционирование) в настраиваемой базе данных. Пример:<br /><br /> `<Configuration SpecificationMode="Relative">`<br /><br /> **Absolute**:<br />                  Вычисляет указанную конфигурацию как самостоятельную. Если указано «Absolute», помощник по настройке ядра СУБД не учитывает существующую конфигурацию. Пример:<br /><br /> `<Configuration SpecificationMode="Absolute">`|  
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  

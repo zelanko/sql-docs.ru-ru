@@ -1,5 +1,6 @@
 ---
 title: Спецификации максимальной емкости для SQL Server
+description: В данной статье приведены максимальные размеры и количество для различных объектов, определяемых в компонентах SQL Server, а также дополнительные сведения.
 ms.date: 03/05/2020
 ms.prod: sql
 ms.reviewer: ''
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 36f66c64cb3055aad20dee7a87d429065ca54cc6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 03b4da335fad10135ef592913022e705adc0e9a0
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510225"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999459"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Спецификации максимальной емкости для SQL Server
 

@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 619fddade48e56c28995b193776e6d13f31918ac
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: 0b57ac8ea8462a5c79feb1a91c4f9d205927b953
+ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809717"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82987208"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>Средства DevOps для служб SQL Server Integration Services (SSIS) (предварительная версия)
 
@@ -344,6 +344,14 @@ cat log.txt
 |sensitive|Является ли значение переменной среды конфиденциальным.|Допустимые входные значения: <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>Заметки о выпуске
+
+### <a name="version-100"></a>Версия 1.0.0
+
+Дата выпуска: 8 мая 2020 г.
+
+- Выпуск общедоступной версии (GA).
+- Добавлено ограничение минимальной версии .NET Framework для агента. В настоящее время минимальная версия .NET Framework — 4.6.2.
+- Уточнено описание задачи сборки Integration Services и задачи развертывания Integration Services.
 
 ### <a name="version-020-preview"></a>Версия 0.2.0, предварительная версия
 

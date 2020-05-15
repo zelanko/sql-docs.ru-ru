@@ -1,7 +1,8 @@
 ---
-title: Функции Microsoft ODBC Driver for SQL Server в Windows | Документы Майкрософт
+title: Возможности Microsoft ODBC Driver
+description: Узнайте о различных возможностях, поддерживаемых драйвером Microsoft ODBC Driver for SQL Server в Windows.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: 2143be3396e16eb61fd36ac5956c11626363bcf5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4a692483bc07ee6de0aa2a6793790ecf336f1f0a
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928270"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922094"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Функции Microsoft ODBC Driver for SQL Server в Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -41,26 +42,26 @@ ms.locfileid: "80928270"
   
 Функция Always Encrypted позволяет клиентам шифровать конфиденциальные данные в клиентских приложениях, не раскрывая ключи шифрования для SQL Server. Драйвер с поддержкой Always Encrypted, установленный на клиентском компьютере, реализует это за счет автоматического шифрования и расшифровки конфиденциальных данных в клиентском приложении SQL Server. Драйвер шифрует данные из конфиденциальных столбцов перед их передачей в SQL Server и автоматически переписывает запросы, чтобы сохранить семантику приложения. Аналогичным образом драйвер прозрачно расшифровывает данные, хранящиеся в столбцах зашифрованной базы данных, которые содержатся в результатах запроса. Дополнительные сведения см. в статье [Использование функции Always Encrypted с драйвером ODBC](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md).
  
-Azure Active Directory позволяет пользователям, администраторам баз данных и приложениям использовать проверку подлинности Azure Active Directory в качестве механизма подключения к Базе данных SQL Microsoft Azure и Microsoft SQL Server 2016 с помощью удостоверений в Azure Active Directory (Azure AD). Дополнительные сведения см. в статьях [Using Azure Active Directory with the ODBC Driver](../../../connect/odbc/using-azure-active-directory.md) (Использование Azure Active Directory с драйвером ODBC) и [Use Azure Active Directory Authentication for authentication with SQL](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/) (Использование аутентификации Azure Active Directory для аутентификации с помощью SQL).   
+Azure Active Directory позволяет пользователям, администраторам баз данных и приложениям использовать проверку подлинности Azure Active Directory в качестве механизма подключения к Базе данных SQL Microsoft Azure и Microsoft SQL Server 2016 с помощью удостоверений в Azure Active Directory (Azure AD). Дополнительные сведения см. в статьях [Using Azure Active Directory with the ODBC Driver](../using-azure-active-directory.md) (Использование Azure Active Directory с драйвером ODBC) и [Use Azure Active Directory Authentication for authentication with SQL](/azure/sql-database/sql-database-aad-authentication) (Использование аутентификации Azure Active Directory для аутентификации с помощью SQL).   
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Драйвер Microsoft ODBC 11 для SQL Server в Windows  
 
-Драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] содержит все функциональные возможности драйвера ODBC Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], который входит в состав [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Дополнительные сведения см. в статье [Программирование SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md). Драйвер ODBC Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] основан на драйвере ODBC, который входит в состав операционной системы Windows. Дополнительные сведения см. в статье [Пакет SDK компонентов доступа к данным Windows DAC](https://msdn.microsoft.com/library/aa968814(VS.85).aspx).  
+Драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] содержит все функциональные возможности драйвера ODBC Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], который входит в состав [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Дополнительные сведения см. в статье [Программирование SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md). Драйвер ODBC Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] основан на драйвере ODBC, который входит в состав операционной системы Windows. Дополнительные сведения см. в статье [Пакет SDK компонентов доступа к данным Windows DAC](/previous-versions/windows/desktop/legacy/aa968814(v=vs.85)).  
   
 Этот выпуск драйвера ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] содержит следующие новые функции:  
   
 ### <a name="bcpexe--l-option-for-specifying-a-login-timeout"></a>параметр bcp.exe -l для указания времени ожидания входа
  
-Параметр -l задает время ожидания (в секундах) для входа `bcp.exe` в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при попытке соединения с сервером. Значение времени ожидания по умолчанию — 15 секунд. Время ожидания входа должно быть числом в диапазоне от 0 до 65 534. Если указанное значение не является числом или выходит за пределы указанного диапазона, программа `bcp.exe` выдает сообщение об ошибке. Значение 0 обозначает бесконечное время ожидания. Время ожидания входа, которое меньше 10 секунд (приблизительно), не является надежным.  
+Параметр -l задает время ожидания (в секундах) для входа `bcp.exe` в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при попытке соединения с сервером. Значение времени ожидания по умолчанию — 15 секунд. Время ожидания входа должно быть числом в диапазоне от 0 до 65 534. Если указанное значение не является числом или выходит за пределы указанного диапазона, программа `bcp.exe` выдает сообщение об ошибке. Значение 0 указывает на бесконечное время ожидания. Время ожидания входа, которое меньше 10 секунд (приблизительно), не является надежным.  
   
 ### <a name="driver-aware-connection-pooling"></a>Организация пулов соединений с учетом драйвера  
-Драйвер ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает [организацию пулов соединений с учетом драйвера](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). Дополнительные сведения см. в статье [Организация пулов соединений с учетом драйвера в ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
+Драйвер ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает [организацию пулов соединений с учетом драйвера](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md). Дополнительные сведения см. в статье [Организация пулов соединений с учетом драйвера в ODBC Driver for SQL Server](driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
   
 ### <a name="asynchronous-execution-notification-method"></a>Асинхронное выполнение (метод уведомления)  
-Драйвер ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает [асинхронное выполнение (метод уведомления)](https://msdn.microsoft.com/library/hh405038(VS.85).aspx). Пример использования см. в [примере асинхронного выполнения &#40;метод уведомления&#41;](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
+Драйвер ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает [асинхронное выполнение (метод уведомления)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md). Пример использования см. в [примере асинхронного выполнения &#40;метод уведомления&#41;](asynchronous-execution-notification-method-sample.md).  
   
 ### <a name="connection-resiliency"></a>Устойчивость подключений
-Чтобы обеспечить сохранение подключения приложений к Базе данных SQL Microsoft Azure, драйвер ODBC в Windows может восстанавливать неактивные соединения. Дополнительные сведения см. в статье [Устойчивость подключения в драйвере ODBC в Windows](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).  
+Чтобы обеспечить сохранение подключения приложений к Базе данных SQL Microsoft Azure, драйвер ODBC в Windows может восстанавливать неактивные соединения. Дополнительные сведения см. в статье [Устойчивость подключения в драйвере ODBC в Windows](connection-resiliency-in-the-windows-odbc-driver.md).  
   
 ## <a name="behavior-changes"></a>Изменения в работе
 
@@ -73,4 +74,4 @@ Azure Active Directory позволяет пользователям, админ
 Обратите внимание на то, что `-y0` может значительно снизить производительность сервера и сети в зависимости от объема возвращаемых данных.
 
 ## <a name="see-also"></a>См. также:  
-[Драйвер Microsoft ODBC Driver for SQL Server в Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
+[Драйвер Microsoft ODBC Driver for SQL Server в Windows](microsoft-odbc-driver-for-sql-server-on-windows.md)  

@@ -18,12 +18,12 @@ ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5a0385b96c861ae65cae70b332d0117eff97501
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 320dfc27d5582fd46d4ea7d8189e2a6ce4922144
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631846"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925208"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -67,7 +67,7 @@ THROW [ { error_number | @local_variable },
 |-------------------------|---------------------|  
 |Если инструкции RAISERROR передается параметр *msg_id*, то идентификатор должен быть задан в sys.messages.|Параметр *error_number* не требуется определять в sys.messages.|  
 |Параметр *msg_str* может содержать стили форматирования **printf**.|Параметр *message* не принимает форматирование стиля **printf**.|  
-|Параметр *severity* указывает серьезность исключения.|Параметр *severity* отсутствует. Серьезности исключения всегда задается значение 16.|  
+|Параметр *severity* указывает серьезность исключения.|Параметр *severity* отсутствует. Если для создания исключения используется THROW, уровень серьезности всегда равен 16. Однако при использовании THROW для повторного создания существующего исключения для уровня серьезности устанавливается уровень серьезности этого исключения.|  
   
 ## <a name="examples"></a>Примеры  
   

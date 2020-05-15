@@ -1,1 +1,1 @@
-Azure Synapse Analytics (прежнее название — хранилище данных SQL)  
+Microsoft Azure Synapse Analytics (прежнее название — хранилище данных SQL)  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a9949ec67b2e9d3e89af1e50887532ab0726232
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 34a6cdbc0c58692e62ce6279bdff6a56194f0c16
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81298244"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872755"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Установка расширений языка для SQL Server в Linux
 
@@ -200,9 +200,13 @@ sudo zypper install mssql-server-extensibility-java
 
 ```SQL
 CREATE EXTERNAL LANGUAGE Java
-FROM (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so');
-GO
+FROM (CONTENT = N'/opt/mssql-extensibility/lib/java-lang-extension.tar.gz', 
+    FILE_NAME = 'javaextension.so', 
+    ENVIRONMENT_VARIABLES = N'{"JRE_HOME":"/opt/mssql/lib/zulu-jre-11"}')
 ```
+Для расширения Java переменная среды JRE_HOME используется для определения пути поиска и инициализации виртуальной машины Java.
+
+CREATE EXTERNAL LANGUAGE DLL предоставляет параметр (ENVIRONMENT_VARIABLES), чтобы задать переменные среды специально для процесса, в котором размещается расширение. Это рекомендуемый и наиболее эффективный способ установки переменных среды, необходимых внешним расширениям языка.
 
 Дополнительные сведения см. в разделе [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
 

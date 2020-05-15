@@ -1,8 +1,8 @@
 ---
-title: Microsoft ODBC Driver for SQL Server | Документация Майкрософт
+title: Microsoft ODBC Driver for SQL Server
 description: Драйвер Microsoft ODBC Driver for SQL Server обеспечивает подключение к SQL Server и Базе данных SQL Azure через стандартные API ODBC.
 ms.custom: ''
-ms.date: 02/05/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8eb3024d231522ce9c96e9a9cacd48a97c0b5869
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 42fce5ed05099227cf134b7bd244b7c93e98d501
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486779"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886342"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
@@ -76,8 +76,7 @@ ODBC — это основной собственный интерфейс API 
 - [Заметки о выпуске ODBC для SQL Server в Windows](windows/release-notes-odbc-sql-server-windows.md)
 - [Системные требования, установка и файлы драйвера](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 
+## <a name="community"></a>Сообщество
 
-
-## <a name="community"></a>Сообщество  
-- [Блог команды разработчиков Microsoft ODBC Driver For SQL Server](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
+- [Блог о драйверах SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/bg-p/SQLServer/label-name/SQLServerDrivers)  
 - [Форум по доступу к данным SQL Server](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  

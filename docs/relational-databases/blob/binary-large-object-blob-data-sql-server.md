@@ -1,5 +1,6 @@
 ---
 title: Данные большого двоичного объекта (SQL Server) | Документация Майкрософт
+description: С помощью FILESTREAM, таблиц FileTable и удаленного хранилища больших двоичных объектов (RBS) SQL Server может хранить большие двоичные объекты в базе данных или в удаленном хранилище. Сравнение вариантов хранения больших двоичных объектов.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 97509274-c3f8-43e5-a37c-52f1ffe0961a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6b38a13252001f9c50b62510f11e43822cde1666
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 47410378e63141a0fb2df6623e882083e15bbe47
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68018858"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000194"
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>Данные большого двоичного объекта (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

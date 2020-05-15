@@ -1,7 +1,8 @@
 ---
-title: Использование разрешения IP-адресов прозрачной сети | Документация Майкрософт
+title: Использование разрешения IP-адресов прозрачной сети
+description: Узнайте о разрешении IP-адресов прозрачной сети в драйвере ODBC для SQL Server и о том, как это влияет на функцию MultiSubnetFailover.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 68070543e8fee326f0b5a02c73f0c0e4aaef6fbe
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1a003b4817868516c6acfac10df80cafdf044c01
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928282"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922295"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>Использование разрешения IP-адресов прозрачной сети
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -50,8 +51,8 @@ TransparentNetworkIPResolution представляет собой обновл�
 -|-|-|-|-
 `SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER` либо `SQL_IS_UINTEGER`| `SQL_IS_ON`(1), `SQL_IS_OFF`(0)|`SQL_IS_ON`|Разрешает или запрещает TNIR.
 
-<a name="for-more-information-about-multisubnetfailover-see-odbc-driver-on-linux-and-macos---high-availability-and-disaster-recovery"></a>Дополнительные сведения о MultiSubnetFailover см. в [руководстве по обеспечению высокого уровня доступности и аварийному восстановлению для драйвера ODBC для Linux и macOS](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).
+<a name="for-more-information-about-multisubnetfailover-see-odbc-driver-on-linux-and-macos---high-availability-and-disaster-recovery"></a>Дополнительные сведения о MultiSubnetFailover см. в [руководстве по обеспечению высокого уровня доступности и аварийному восстановлению для драйвера ODBC для Linux и macOS](linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).
 --------------------------------------------------
 ## <a name="see-also"></a>См. также:  
-* [Драйвер Microsoft ODBC Driver for SQL Server в Windows](../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
-* [Кластеры SQL Server с несколькими подсетями (SQL Server)](https://msdn.microsoft.com/library/ff878716.aspx#RelatedContent)
+* [Драйвер Microsoft ODBC Driver for SQL Server в Windows](windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
+* [Кластеры SQL Server с несколькими подсетями (SQL Server)](../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 10/19/2016
 ms.prod: sql
 ms.prod_service: security
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 f1_keywords:
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - audit action groups [SQL Server]
 - audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
-author: VanMSFT
-ms.author: vanto
-ms.openlocfilehash: 77f07412551fd94737a3200a103c16904771d962
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: DavidTrigano
+ms.author: datrigan
+ms.openlocfilehash: 43e294d7252afc3297012dbb60b5bcbfb86ba586
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76315594"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872777"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Действия и группы действий подсистемы аудита SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,11 +72,13 @@ ms.locfileid: "76315594"
   
  В следующей таблице приведены группы действий аудита уровня сервера и представлены эквивалентные классы событий SQL Server (если возможно).  
   
-|имя группы действий;|Description|  
+|имя группы действий;|Описание|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Это событие появляется при изменении пароля для роли приложения. Эквивалентно [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Это событие возникает при создании, изменении или удалении любого аудита. Это событие возникает при создании, изменении или удалении спецификации любого аудита. Аудит любых изменений в аудите производится в этом аудите. Эквивалентно [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
 |BACKUP_RESTORE_GROUP|Это событие вызывается командой резервного копирования или восстановления. Эквивалент [класса событий Audit Backup и Restore](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
+|BATCH_COMPLETED_GROUP;|Это событие возникает каждый раз, когда завершается выполнение любой операции текстового пакета, хранимой процедуры или управления транзакциями. Оно возникает после выполнения пакета и проводит аудит всего пакета или текста хранимой процедуры, отправленной клиентом, включая результат.|  
+|BATCH_STARTED_GROUP|Это событие возникает каждый раз, когда начинается выполнение любой операции текстового пакета, хранимой процедуры или управления транзакциями. Оно возникает до выполнения пакета и проводит аудит всего пакета или текста хранимой процедуры, отправленной клиентом.|  
 |BROKER_LOGIN_GROUP|Это событие вызывается для составления отчета о сообщениях аудита, связанных с механизмом обеспечения безопасности транспорта компонента Service Broker. Эквивалентно [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md).|  
 |DATABASE_CHANGE_GROUP|Это событие вызывается при создании, изменении или удалении базы данных. Это событие возникает при создании, изменении или удалении любой базы данных. Эквивалентно [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Это событие возникает при выходе пользователя автономной базы данных из базы данных.|  
@@ -130,11 +132,13 @@ ms.locfileid: "76315594"
   
  В следующей таблице описываются группы действий аудита уровня базы данных и предоставляются эквивалентные классы событий SQL Server (где возможно).  
   
-|имя группы действий;|Description|  
+|имя группы действий;|Описание|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Это событие появляется при изменении пароля для роли приложения. Эквивалентно [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Это событие возникает при создании, изменении или удалении любого аудита. Это событие возникает при создании, изменении или удалении спецификации любого аудита. Аудит любых изменений в аудите производится в этом аудите. Эквивалентно [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
 |BACKUP_RESTORE_GROUP|Это событие вызывается командой резервного копирования или восстановления. Эквивалент [класса событий Audit Backup и Restore](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
+|BATCH_COMPLETED_GROUP;|Это событие возникает каждый раз, когда завершается выполнение любой операции текстового пакета, хранимой процедуры или управления транзакциями. Оно возникает после выполнения пакета и проводит аудит всего пакета или текста хранимой процедуры, отправленной клиентом, включая результат.|  
+|BATCH_STARTED_GROUP|Это событие возникает каждый раз, когда начинается выполнение любой операции текстового пакета, хранимой процедуры или управления транзакциями. Оно возникает до выполнения пакета и проводит аудит всего пакета или текста хранимой процедуры, отправленной клиентом.|  
 |DATABASE_CHANGE_GROUP|Это событие вызывается при создании, изменении или удалении базы данных. Эквивалентно [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Это событие возникает при выходе пользователя автономной базы данных из базы данных. Эквивалент [класса событий Audit Backup и Restore](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
 |DATABASE_OBJECT_ACCESS_GROUP|Это событие вызывается каждый раз, когда производится доступ к сертификатам, асимметричным ключам и другим объектам базы данных. Эквивалентно [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
@@ -160,7 +164,7 @@ ms.locfileid: "76315594"
 ## <a name="database-level-audit-actions"></a>Действия аудита уровня базы данных  
  Действия аудита уровня базы данных поддерживают аудит напрямую в базе данных, схеме или в объектах схемы, например в таблицах, представлениях, хранимых процедурах, функциях, расширенных хранимых процедурах, очередях, синонимах. Не подлежат аудиту типы, коллекции схем XML, база данных и схема. Аудит объектов схемы можно настроить для схемы и базы данных. Это означает, что будет выполнен аудит событий всех объектов схемы, содержащихся в указанной схеме или базе данных. В следующей таблице описываются действия аудита уровня базы данных.  
   
-|Действие|Description|  
+|Действие|Описание|  
 |------------|-----------------|  
 |SELECT|Это событие возникает при вызове инструкции SELECT.|  
 |UPDATE|Это событие возникает при вызове инструкции UPDATE.|  
@@ -180,7 +184,7 @@ ms.locfileid: "76315594"
 ## <a name="audit-level-audit-action-groups"></a>Группы действий аудита уровня аудита  
  Также можно производить аудит действий, происходящих во время аудита. Это можно осуществлять как в области сервера, так и в области базы данных. В области базы данных это справедливо только для спецификаций аудита базы данных. В следующей таблице описываются группы действий аудита уровня аудита.  
   
-|имя группы действий;|Description|  
+|имя группы действий;|Описание|  
 |-----------------------|-----------------|  
 |AUDIT_CHANGE_GROUP|Это событие возникает при вызове одной из следующих команд:<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   

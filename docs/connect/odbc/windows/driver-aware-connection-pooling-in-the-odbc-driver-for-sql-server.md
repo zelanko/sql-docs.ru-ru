@@ -1,7 +1,8 @@
 ---
-title: Организация пулов соединений с учетом драйвера в ODBC Driver for SQL Server | Документы Майкрософт
+title: Организация пулов соединений с учетом драйвера в ODBC Driver
+description: Узнайте об усовершенствованиях, внесенных в пул соединений с учетом драйвера в Microsoft ODBC Driver for SQL Server на платформе Windows.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f93f7f5a000016af3c20af08d9eb318851da8c48
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1e9da7b59f6acccbc95e3d3a797a0a1d507baee4
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928309"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922078"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Организация пулов соединений с учетом драйвера в ODBC Driver для SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  Драйвер ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает [организацию пулов соединений с учетом драйвера](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). В этой статье описываются усовершенствования, внесенные в пул соединений с учетом драйвера в Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на платформе Windows:  
+  Драйвер ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает [организацию пулов соединений с учетом драйвера](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md). В этой статье описываются усовершенствования, внесенные в пул соединений с учетом драйвера в Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на платформе Windows:  
   
 -   Независимо от свойств соединения, использующие `SQLDriverConnect`, помещаются в пул, отличный от пула соединений, использующих `SQLConnect`.
 - При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и организации пулов соединений с учетом драйвера драйвер не использует контекст безопасности пользователя Windows для текущего потока, чтобы разделить соединения в пуле. Таким образом, если по своим параметрам соединения эквивалентны сценариям олицетворения Windows с проверкой подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и используют те же учетные данные проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для подключения к серверной части, другие пользователи Windows потенциально могут использовать тот же пул подключений. При использовании проверки подлинности Windows и организации пулов соединений с учетом драйвера драйвер использует текущий контекст безопасности пользователя Windows, чтобы разделить соединения в пуле. Таким образом, для сценариев олицетворения Windows различные пользователи Windows не используют совместно одни и те же соединения, даже если эти соединения используют одинаковые параметры.

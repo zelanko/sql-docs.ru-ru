@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 32d8a7a590b31d63c256f861338193c234774908
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c11771790e91bb888df7e77749e6dc879081a46e
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165563"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849622"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Создать и проверить определяемую пользователем функцию-классификатор
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "74165563"
   
 1.  Создайте и настройте новые пулы ресурсов и группы рабочей нагрузки. Назначьте каждую группу рабочей нагрузки соответствующему пулу ресурсов.  
   
-    ```  
+    ```sql  
     --- Create a resource pool for production processing  
     --- and set limits.  
     USE master;  
@@ -57,6 +57,7 @@ ms.locfileid: "74165563"
          MIN_CPU_PERCENT = 50  
     );  
     GO  
+    
     --- Create a workload group for production processing  
     --- and configure the relative importance.  
     CREATE WORKLOAD GROUP gProductionProcessing  
@@ -64,13 +65,14 @@ ms.locfileid: "74165563"
     (  
          IMPORTANCE = MEDIUM  
     );  
+    
     --- Assign the workload group to the production processing  
     --- resource pool.  
     USING pProductionProcessing  
     GO  
+    
     --- Create a resource pool for off-hours processing  
     --- and set limits.  
-  
     CREATE RESOURCE POOL pOffHoursProcessing  
     WITH  
     (  
@@ -78,6 +80,7 @@ ms.locfileid: "74165563"
          MIN_CPU_PERCENT = 0  
     );  
     GO  
+    
     --- Create a workload group for off-hours processing  
     --- and configure the relative importance.  
     CREATE WORKLOAD GROUP gOffHoursProcessing  
@@ -93,14 +96,14 @@ ms.locfileid: "74165563"
   
 2.  Обновите конфигурацию, хранимую в памяти.  
   
-    ```  
+    ```sql  
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
     ```  
   
 3.  Создайте таблицу и определите время запуска и остановки диапазона времени рабочей обработки.  
   
-    ```  
+    ```sql  
     USE master;  
     GO  
     CREATE TABLE tblClassificationTimeTable  
@@ -113,7 +116,7 @@ ms.locfileid: "74165563"
     --- Add time values that the classifier will use to  
     --- determine the workload group for a session.  
     INSERT into tblClassificationTimeTable VALUES('gProductionProcessing', '6:35 AM', '6:15 PM');  
-    go  
+    GO  
     ```  
   
 4.  Создайте функцию-классификатор, использующую функции и значения времени, которые можно оценить со временем в таблице подстановки. Дополнительные сведения об использовании таблиц подстановки в функции-классификаторе см. в разделе "Рекомендации по использованию таблиц подстановки в функции-классификаторе" этой статьи.  
@@ -121,7 +124,7 @@ ms.locfileid: "74165563"
     > [!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] представлен расширенный набор типов данных и функций даты и времени. Дополнительные сведения см. в статье [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
-    ```  
+    ```sql  
     CREATE FUNCTION fnTimeClassifier()  
     RETURNS sysname  
     WITH SCHEMABINDING  
@@ -149,7 +152,7 @@ ms.locfileid: "74165563"
   
 5.  Зарегистрируйте функцию-классификатор и обновите конфигурацию, хранимую в памяти.  
   
-    ```  
+    ```sql  
     ALTER RESOURCE GOVERNOR with (CLASSIFIER_FUNCTION = dbo.fnTimeClassifier);  
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
@@ -159,7 +162,7 @@ ms.locfileid: "74165563"
   
 1.  Получите пул ресурсов и настройку группы рабочей нагрузки при помощи следующего запроса.  
   
-    ```  
+    ```sql  
     USE master;  
     SELECT * FROM sys.resource_governor_resource_pools;  
     SELECT * FROM sys.resource_governor_workload_groups;  
@@ -168,7 +171,7 @@ ms.locfileid: "74165563"
   
 2.  С помощью следующих запросов убедитесь в том, что функция-классификатор существует и включена.  
   
-    ```  
+    ```sql  
     --- Get the classifier function Id and state (enabled).  
     SELECT * FROM sys.resource_governor_configuration;  
     GO  
@@ -182,7 +185,7 @@ ms.locfileid: "74165563"
   
 3.  Получите текущие данные среды выполнения пулов ресурсов и групп рабочей нагрузки с помощью следующего запроса.  
   
-    ```  
+    ```sql  
     SELECT * FROM sys.dm_resource_governor_resource_pools;  
     SELECT * FROM sys.dm_resource_governor_workload_groups;  
     GO  
@@ -190,7 +193,7 @@ ms.locfileid: "74165563"
   
 4.  С помощью следующего запроса выясните, какие сеансы существуют в каждой группе.  
   
-    ```  
+    ```sql  
     SELECT s.group_id, CAST(g.name as nvarchar(20)), s.session_id, s.login_time, 
         CAST(s.host_name as nvarchar(20)), CAST(s.program_name AS nvarchar(20))  
     FROM sys.dm_exec_sessions AS s  
@@ -202,7 +205,7 @@ ms.locfileid: "74165563"
   
 5.  С помощью следующего запроса выясните, какие запросы существуют в каждой группе.  
   
-    ```  
+    ```sql  
     SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, 
         r.start_time, r.command, r.sql_handle, t.text   
     FROM sys.dm_exec_requests AS r  
@@ -215,7 +218,7 @@ ms.locfileid: "74165563"
   
 6.  С помощью следующего запроса выясните, какие запросы выполняются в классификаторе.  
   
-    ```  
+    ```sql  
     SELECT s.group_id, g.name, s.session_id, s.login_time, s.host_name, s.program_name   
     FROM sys.dm_exec_sessions AS s  
     INNER JOIN sys.dm_resource_governor_workload_groups AS g  
@@ -241,7 +244,7 @@ ms.locfileid: "74165563"
   
 2.  Ограничьте ввод и вывод данных, выполняемые для таблиц подстановки.  
   
-    1.  Воспользуйтесь инструкцией TOP 1, чтобы вернуть только одну строку.  
+    1.  Воспользуйтесь инструкцией `TOP 1`, чтобы вернуть только одну строку.  
   
     2.  Сведите к минимуму количество строк в таблице.  
   
@@ -253,7 +256,7 @@ ms.locfileid: "74165563"
   
 3.  Запретите блокирование таблицы подстановки.  
   
-    1.  Воспользуйтесь указанием `NOLOCK` для предотвращения блокирования или оператором `SET LOCK_TIMEOUT` в функции с максимальным значением 1000 миллисекунд.  
+    1.  Воспользуйтесь указанием `NOLOCK` для предотвращения блокирования или оператором `SET LOCK_TIMEOUT` в функции с максимальным значением 1000 миллисекунд.  
   
     2.  Таблицы должны существовать в базе данных master. (Когда подключение устанавливают клиентские компьютеры, можно гарантировать восстановление только базы данных master.)  
   
