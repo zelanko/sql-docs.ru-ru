@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9e06886ec3a66e4860927a9f953c0bee9da2b902
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 015ba90a6f2cad79483e52d5caa23ad06784c055
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634631"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68004726"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "81634631"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```syntaxsql
+```  
   
 SET STATISTICS XML { ON | OFF }  
 ```  
@@ -74,7 +74,7 @@ SET STATISTICS XML { ON | OFF }
 ## <a name="examples"></a>Примеры  
  Две следующие инструкции используют параметры инструкции SET STATISTICS XML, чтобы продемонстрировать анализ и оптимизацию использования индексов в запросах в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В первом запросе используется оператор сравнения (=) в предложении WHERE для индексируемого столбца. Во втором запросе в предложении WHERE используется оператор LIKE. При этом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] принудительно использует просмотр кластеризованного индекса, чтобы найти данные, соответствующие условию в предложении WHERE. Значения атрибутов **EstimateRows** и **EstimatedTotalSubtreeCost** меньше у первого, индексируемого запроса, из чего следует, что первый запрос выполнился намного быстрее и потребовал меньше ресурсов, чем неиндексируемый запрос.  
   
-```sql
+```  
 USE AdventureWorks2012;  
 GO  
 SET STATISTICS XML ON;  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7b3fe9adcbbba14f4e23da33911c6dcbeaccf70c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a0902765a96f68acf811bd3583a41a8e8198d5ca
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665322"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "67943151"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Создание встроенных схем XSD
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   В предложении FOR XML можно запросить, чтобы запрос возвращал встроенную схему вместе с результатами запроса. Если нужно получить XDR-схему, то в предложении FOR XML следует использовать ключевое слово XMLDATA. Если нужно получить XSD-схему, то тогда следует использовать ключевое слово XMLSCHEMA.  
   
  В этом разделе описывается ключевое слово XMLSCHEMA и объясняется структура результирующей встроенной XSD-схемы. Далее приведены ограничения, возникающие при запросе встроенных схем.  

@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cdeab9ba00b4c498970ebac378c4abe53f4fbd2c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: fe0605cdfd2d2cf341ff6ab51939fee2c78ae797
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628614"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216283"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL)
 
@@ -72,7 +72,7 @@ ms.locfileid: "81628614"
 
 ## <a name="syntax"></a>Синтаксис
 
-```syntaxsql
+```
 ALTER DATABASE database_name
 {
     <add_or_modify_files>
@@ -692,7 +692,7 @@ GO
 
 ## <a name="syntax-for-databases-in-a-managed-instance"></a>Синтаксис для баз данных в управляемом экземпляре
 
-```syntaxsql
+```
 ALTER DATABASE database_name
 {
     <add_or_modify_files>

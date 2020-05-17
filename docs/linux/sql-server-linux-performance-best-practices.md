@@ -8,12 +8,12 @@ ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 7ffd00cfafe232f73e66a884617e3e07b15e979b
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: 548ab73e97b9bccb6a64a95b7294d3d5ca63493d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550209"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79286848"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Рекомендации по производительности и конфигурации для SQL Server на Linux
 
@@ -162,7 +162,7 @@ vm.transparent_hugepages=madvice
 и активации профиля mssql после изменения параметра
 ```bash
 tuned-adm off
-tuned-adm profile mssql
+tuned-amd profile mssql
 ```
 
 ### <a name="swapfile"></a>Файл подкачки
