@@ -1,5 +1,6 @@
 ---
 title: Программа ssbdiagnose (компонент Service Broker)
+description: Программа ssbdiagnose сообщает о проблемах в диалогах Service Broker или в конфигурации служб Service Broker.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -26,12 +27,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 5775600e5dc6e0bebd74104dcc9bfa350873de3e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9454e30cefa778a45b4fda2a1db7e3ef9c60eb7a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254201"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150559"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Программа ssbdiagnose (компонент Service Broker)
 
@@ -291,7 +292,7 @@ WHERE database_id = DB_ID();
   
  В список не включаются элементы, находящиеся в базах данных, которые не указаны в параметрах соединения. Например, предположим, что в параметре **-ID** указан идентификатор диалога, а предложение **runtimeconnectionoptions** задано для базы данных инициатора и не задано для целевой базы данных. Программа**ssbdiagnose** не включит дескриптор целевого диалога в свой список идентификаторов. В список будет включен только идентификатор диалога и дескриптор инициатора диалога.  
   
- Программа**ssbdiagnose** наблюдает за событиями [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] в базах данных, охватываемых **runtimeconnectionoptions** и **baseconnectionoptions**. Она выполняет поиск событий [!INCLUDE[ssSB](../../includes/sssb-md.md)] , указывающих на ошибку, обнаруженную одним или несколькими идентификаторами [!INCLUDE[ssSB](../../includes/sssb-md.md)] в списке времени выполнения. Программа **ssbdiagnose[!INCLUDE[ssSB](../../includes/sssb-md.md)], кроме того, выполняет поиск событий ошибок**  системного уровня, не связанных ни с одной из групп диалогов.  
+ Программа**ssbdiagnose** наблюдает за событиями [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] в базах данных, охватываемых **runtimeconnectionoptions** и **baseconnectionoptions**. Она выполняет поиск событий [!INCLUDE[ssSB](../../includes/sssb-md.md)] , указывающих на ошибку, обнаруженную одним или несколькими идентификаторами [!INCLUDE[ssSB](../../includes/sssb-md.md)] в списке времени выполнения. Программа **ssbdiagnose**, кроме того, выполняет поиск событий ошибок [!INCLUDE[ssSB](../../includes/sssb-md.md)] системного уровня, не связанных ни с одной из групп диалогов.  
   
  Если программа **ssbdiagnose** обнаружит ошибки диалога, то предпримет попытку выяснить их первопричину, запустив отчет о конфигурации. Программа**ssbdiagnose** на основе метаданных баз данных определяет, какие экземпляры, идентификаторы [!INCLUDE[ssSB](../../includes/sssb-md.md)] , базы данных, службы и контракты используются в диалоге. Затем запускается отчет о конфигурации, учитывающий все доступные сведения.  
   
