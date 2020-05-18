@@ -1,10 +1,10 @@
 ---
 title: OPENXML (SQL Server) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: jroth
 ms.technology: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3719463499049d860d0aab234f7917a1f8bc052d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 770b00c8aa14a09be36dc81ac8f661ec822b243a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665255"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269449"
 ---
 # <a name="openxml-sql-server"></a>Инструкция OPENXML (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,13 +59,13 @@ ms.locfileid: "80665255"
   
  В следующем примере XML-документ разрезается таким образом, что элементы `<Customers>` сохраняются в таблице `Customers` , а элементы `<Orders>` сохраняются в таблице `Orders` с помощью двух инструкций `INSERT` . Этот пример также демонстрирует инструкцию `SELECT` , использующую функцию `OPENXML` , которая получает элементы `CustomerID` и `OrderDate` из XML-документа. Последним шагом обработки является повторный вызов процедуры `sp_xml_removedocument`. Это позволяет освободить память, выделенную для внутреннего древовидного представления XML, создаваемого в фазе синтаксического анализа.  
   
-```  
+```sql
 -- Create tables for later population using OPENXML.  
 CREATE TABLE Customers (CustomerID varchar(20) primary key,  
                 ContactName varchar(20),   
                 CompanyName varchar(20));  
 GO  
-CREATE TABLE Orders( CustomerID varchar(20), OrderDate datetime;)  
+CREATE TABLE Orders( CustomerID varchar(20), OrderDate datetime);
 GO  
 DECLARE @docHandle int;  
 DECLARE @xmlDocument nvarchar(max); -- or xml type  
@@ -90,7 +90,8 @@ SELECT *
 FROM OPENXML(@docHandle, N'//Orders')   
   WITH Orders;  
 -- Using OPENXML in a SELECT statement.  
-SELECT * FROM OPENXML(@docHandle, N'/ROOT/Customers/Orders') WITH (CustomerID nchar(5) '../@CustomerID', OrderDate datetime);  
+SELECT * FROM OPENXML(@docHandle, N'/ROOT/Customers/Orders')
+  WITH (CustomerID nchar(5) '../@CustomerID', OrderDate datetime);
 -- Remove the internal representation of the XML document.  
 EXEC sp_xml_removedocument @docHandle;   
 ```  
@@ -149,7 +150,8 @@ EXEC sp_xml_removedocument @docHandle;
 |**datatype**|**nvarchar(max)**|Действительный тип данных строки элемента или атрибута; в ином случае имеет значение NULL. Тип данных вычисляется на основе встроенного DTD или встроенной схемы|  
 |**prev**|**bigint**|Идентификатор XML предыдущего элемента этого же уровня. Принимает значение NULL, если нет прямого предыдущего одноуровневого элемента.|  
 |**text**|**ntext**|Содержит значение атрибута или содержимое элемента в виде текста. Либо принимает значение NULL, если для записи в краевой таблице не требуется значение.|  
-  
+||||
+
 #### <a name="using-the-with-clause-to-specify-an-existing-table"></a>Использование предложения WITH для указания существующей таблицы  
  Можно использовать предложение WITH, чтобы указать имя существующей таблицы. Чтобы сделать это, просто укажите имя существующей таблицы, схема которой может быть использована OPENXML для создания набора строк.  
   

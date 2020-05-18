@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 610f837c5354a72c665da067fcc8fea582ac6de3
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77903781"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152008"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -117,7 +117,7 @@ Kubernetes — это оркестратор контейнеров с откр
 Пул носителей формируется из pod пула носителей, состоящих из SQL Server на Linux, Spark и HDFS. Все узлы хранилища в кластере больших данных SQL Server входят в кластер HDFS.
 
 > [!TIP]
-> Подробный обзор архитектуры кластера больших данных и установки см. в статье [Семинар. Архитектура [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Майкрософт](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
+> Подробный обзор архитектуры кластера больших данных и установки см. в статье [Семинар. Архитектура [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Майкрософт](https://github.com/microsoft/sqlworkshops-bdc).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
