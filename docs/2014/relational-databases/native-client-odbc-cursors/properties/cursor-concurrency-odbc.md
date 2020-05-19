@@ -11,15 +11,15 @@ helpviewer_keywords:
 - cursors [ODBC], concurrency
 - ODBC cursors, concurrency
 ms.assetid: 68228ece-cbf1-4f19-bfdc-053884c1af48
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3101da05e25cf67fda816bd889393bbebe8be3ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7139ace2498ef2eeddb173950281ac4cf493efad
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711459"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705593"
 ---
 # <a name="cursor-concurrency-odbc"></a>Параллелизм курсоров (ODBC)
   Операции курсора, как и типы курсора, зависят от параметров параллелизма, устанавливаемых приложением. Параметры параллелизма задаются с помощью параметра SQL_ATTR_CONCURRENCY [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md). Существуют следующие типы параллелизма.  

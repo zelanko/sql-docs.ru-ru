@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ODBC applications, cursors
 - ODBC cursors, cursor behaviors
 ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 92ceb297f1004770903f4eadd7323bfef98e7cd1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66a4fe9d231ea4d2a2231bdde65267a9cd47e4af
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711469"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705581"
 ---
 # <a name="cursor-properties"></a>Свойства курсора
   Общие характеристики курсора определяются установкой либо типа курсора в стиле ODBC, либо режима работы курсоров SQL-92/ISO. В следующих разделах описываются дополнительные атрибуты инструкций и соединений, влияющие на поведение курсора.  

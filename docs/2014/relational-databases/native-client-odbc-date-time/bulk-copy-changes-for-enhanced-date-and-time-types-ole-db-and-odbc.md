@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - bulk copy [ODBC], changes for date/time improvements
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 855d0baf0b0b890b9343378f8060919979d5f206
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cf98fadc2f194390f87bca14afcac545ac51df1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207103"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705531"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Изменения в функции массового копирования для работы с улучшенными типами даты и времени (OLE DB и ODBC)
   Описываются новые возможности даты-времени для поддержки операций массового копирования. Приведенные в данном разделе сведения верны как для OLE DB, так и для ODBC в собственном клиенте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -26,12 +26,12 @@ ms.locfileid: "63207103"
 ## <a name="format-files"></a>Файлы форматирования  
  При интерактивном построении файлов форматирования следующая таблица описывает вводные данные для задания типов даты-времени и соответствующих имен типов данных из файлов размещения.  
   
-|Тип файла хранилища|Тип данных файла|Ответ на запрос: "введите тип файлового хранилища поля <field_name> [\<по умолчанию>]:"|  
+|Тип файла хранилища|Тип данных файла|Ответ на запрос: "введите тип файлового хранилища поля <field_name> [ \< по умолчанию>]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
 |Дата|SQLDATE|de|  
-|Время|SQLTIME|te|  
+|Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63207103"
 ## <a name="character-data-files"></a>Файлы символьных данных  
  В файлах символьных данных значения даты и времени представлены, как описано в подразделе "форматы данных: строки и литералы" статьи [Поддержка типов данных для](data-type-support-for-odbc-date-and-time-improvements.md) ODBC, а также улучшения даты и времени для [OLE DB](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) для OLE DB.  
   
- В собственном файлахе данных значения даты и времени для четырех новых типов представлены в виде представлений TDS с масштабом 7 (поскольку это максимальное поддерживаемое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и файлы данных bcp не хранят масштаб этих столбцов). Нет изменений в хранилище существующих `datetime` и типов, а `smalldatetime` также в представлениях потока табличных данных (TDS).  
+ В собственном файлахе данных значения даты и времени для четырех новых типов представлены в виде представлений TDS с масштабом 7 (поскольку это максимальное поддерживаемое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и файлы данных bcp не хранят масштаб этих столбцов). Нет изменений в хранилище существующих `datetime` и типов, а также в `smalldatetime` представлениях потока табличных данных (TDS).  
   
  Размеры типов OLE DB для различных типов хранения следующие:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63207103"
 |-----------------------|---------------------------|  
 |DATETIME|8|  
 |smalldatetime|4|  
-|Дата|3|  
+|дата|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -90,12 +90,12 @@ ms.locfileid: "63207103"
 ## <a name="bcp-types-in-sqlnclih"></a>Типы BCP в sqlncli.h  
  В файле sqlncli.h определены следующие типы, используемые в расширениях API-интерфейсов BCP для ODBC. Эти типы передаются с помощью параметра *eUserDataType* IBCPSession::BCPColFmt в OLE DB.  
   
-|Тип файла хранилища|Тип данных файла|Введите в sqlncli. h для использования с IBCPSession:: BCPColFmt|Применение|  
+|Тип файла хранилища|Тип данных файла|Введите в sqlncli. h для использования с IBCPSession:: BCPColFmt|Значение|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
 |Дата|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|Время|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
   
@@ -107,7 +107,7 @@ ms.locfileid: "63207103"
 |Кому --><br /><br /> Исходный тип|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |Дата|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|Время|Н/Д|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|Time|Н/Д|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  

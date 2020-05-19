@@ -9,18 +9,18 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], C to SQL
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8179b9452852777bb6d2a06018d0bf86598a5bf8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43d16368d1f550ccf534a1a6e9804c7ce18b096c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207017"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705494"
 ---
 # <a name="conversions-from-c-to-sql"></a>Преобразования из C в SQL
-  В этом разделе перечислены проблемы, которые следует учитывать при преобразовании из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов C в типы даты-времени.  
+  В этом разделе перечислены проблемы, которые следует учитывать при преобразовании из типов C в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы даты-времени.  
   
  Преобразования, описанные в следующей таблице, относятся к преобразованиям, совершаемым на клиенте. В случае, когда клиент задает для параметра точность долей секунды, отличную от заданной на сервере, преобразование на клиенте, возможно, завершится успешно, но сервер возвратит ошибку при вызове функций `SQLExecute` или `SQLExecuteDirect`. В частности, ODBC рассматривает любое усечение долей секунды как ошибку, в то время как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] их округляет; например, округление произойдет при переходе от `datetime2(6)` к `datetime2(2)`. Значения столбцов даты-времени округляются до 1/300 секунды, а в значениях типа smalldatetime сервер устанавливает для секунд значение, равное нулю.  
   

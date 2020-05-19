@@ -10,18 +10,18 @@ helpviewer_keywords:
 - date/time [ODBC]
 - ODBC, date/time improvements
 ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d56689bb045a6540bfdfbb9c7147dc34db110bde
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 521017e07cf2304186ee0238e72f3274bb3f95c9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207005"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705507"
 ---
 # <a name="date-and-time-improvements-odbc"></a>Улучшения функций даты и времени (ODBC)
-  В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] добавлены новые типы данных даты и времени. В этом разделе описывается, как эти новые типы предоставляются как расширения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в собственном клиенте. Общие сведения о поддержке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента для новых типов данных даты и времени см. в разделе [улучшения даты и времени](../native-client/features/date-and-time-improvements.md). Пример, демонстрирующий поддержку даты и времени ODBC, см. в разделе [Использование типов даты и времени](../native-client-odbc-how-to/use-date-and-time-types.md).  
+  В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] добавлены новые типы данных даты и времени. В этом разделе описывается, как эти новые типы предоставляются как расширения в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственном клиенте. Общие сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддержке собственного клиента для новых типов данных даты и времени см. в разделе [улучшения даты и времени](../native-client/features/date-and-time-improvements.md). Пример, демонстрирующий поддержку даты и времени ODBC, см. в разделе [Использование типов даты и времени](../native-client-odbc-how-to/use-date-and-time-types.md).  
   
  Общие сведения о типах данных даты и времени вы найдете в разделе документации [datetime (Transact-SQL)](/sql/t-sql/data-types/datetime-transact-sql).  
   

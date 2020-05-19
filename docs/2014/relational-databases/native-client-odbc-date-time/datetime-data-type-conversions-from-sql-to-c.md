@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], SQL to C
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bd19cb92f2d2f333954adeb97229feb718c4b592
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ef4d3f57f70641b738b21f86d55021e14606d57
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207033"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705483"
 ---
 # <a name="conversions-from-sql-to-c"></a>Преобразования из SQL в C
   В следующей таблице приводится список вопросов, которые следует учитывать при преобразовании типов даты-времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в типы языка C.  
@@ -29,16 +29,16 @@ ms.locfileid: "63207033"
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
 |SQL_CHAR|2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
 |SQL_WCHAR|2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
-|SQL_TYPE_DATE|OK|12|13|12|13, 23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|OK|10, 23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7, 8|OK|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18, 22|7, 8, 20|20|7, 20|OK|21|16|16|  
+|SQL_TYPE_DATE|ОК|12|13|12|13, 23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|ОК|10, 23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7, 8|ОК|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18, 22|7, 8, 20|20|7, 20|ОК|21|16|16|  
   
 ## <a name="key-to-symbols"></a>Расшифровка символов  
   
 |Символ|Значение|  
 |------------|-------------|  
-|OK|Проблемы преобразования отсутствуют.|  
+|ОК|Проблемы преобразования отсутствуют.|  
 |1|Применяются правила, использовавшиеся до [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |2|Начальные и конечные пробелы пропускаются.|  
 |3|Выполняется синтаксический анализ строки, при котором из нее извлекается дата, время, часовой пояс или смещение часового пояса, при этом допускается точность задания долей секунды до 9 десятичных знаков. Если при анализе обнаруживается смещение часового пояса, то время преобразуется к часовому поясу клиента. Если во время этого преобразования возникает ошибка, создается диагностическая запись с кодом SQLSTATE 22018 и сообщением «Переполнение поля даты и времени».|  

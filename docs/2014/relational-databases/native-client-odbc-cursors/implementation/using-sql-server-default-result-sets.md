@@ -14,15 +14,15 @@ helpviewer_keywords:
 - result sets [ODBC], default
 - ODBC applications, cursors
 ms.assetid: ee1db3e5-60eb-4425-8a6b-977eeced3f98
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1d7101cf4775e5280c22cc27ecae009410d231d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe9ecf81abe12da2db3e7183fd517e01947c2942
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62511689"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705644"
 ---
 # <a name="using-sql-server-default-result-sets"></a>Использование результирующих наборов по умолчанию в SQL Server
   Атрибутами курсора ODBC по умолчанию являются:  

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 44ac9cecce81f7873ca5ef42ba414bd4528e05b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d400faa496740182a1407f89e095ebaccf884b3a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140630"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705467"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Улучшенная работа типа даты-времени с предыдущими версиями SQL Server (ODBC)
   В этом разделе описывается ожидаемое поведение клиентских приложений, использующих улучшенные функции даты и времени, которые подключаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версий более ранних, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], а также в случаях, когда клиентское приложение использует компоненты доступа к данным MDAC, Windows DAC или собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] для отправки команд на сервер, поддерживающий улучшенные функции даты и времени.  
@@ -29,23 +29,23 @@ ms.locfileid: "63140630"
   
  Метаданные инструкции, возвращаемые SQLDescribeCol, SQLDescribeParam, Скжетдескфиелд и SQLColAttribute, будут возвращать метаданные, которые согласуются с типом нижнего уровня во всех отношениях, включая имя типа. Примером такого типа низкого уровня является `nvarchar`.  
   
- Если клиентское приложение нижнего уровня выполняется на сервере [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версии), на котором изменения схемы производятся в типах даты и времени, то ожидаемое поведение выглядит следующим образом:  
+ Если клиентское приложение нижнего уровня выполняется [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] на сервере (или более поздней версии), на котором изменения схемы производятся в типах даты и времени, то ожидаемое поведение выглядит следующим образом:  
   
 |Тип SQL Server 2005|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Тип  (или более поздних версий)|Клиентский тип ODBC|Преобразование результата (из SQL в C)|Преобразование параметров (из C в SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|Datetime|Дата|SQL_C_TYPE_DATE|OK|ОК (1)|  
+|Datetime|Дата|SQL_C_TYPE_DATE|ОК|ОК (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Поля времени устанавливаются в нули.|OK (2)<br /><br /> Завершается ошибкой, если значение поля времени не равно нулю. Работает с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||Time(0)|SQL_C_TYPE_TIME|OK|ОК (1)|  
+||Time(0)|SQL_C_TYPE_TIME|ОК|ОК (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Поля даты устанавливаются в текущую дату.|OK (2)<br /><br /> Дата пропускается. Ошибка, если доли секунды не равны нулю. Работает с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(7)|SQL_C_TIME|Сбой-недопустимый литерал времени.|ОК (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Сбой-недопустимый литерал времени.|ОК (1)|  
-||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|OK|ОК (1)|  
-||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|OK|Значение округляется до 1/300 секунды при преобразовании на клиенте.|  
-|Smalldatetime|Дата|SQL_C_TYPE_DATE|OK|OK|  
+||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|ОК|ОК (1)|  
+||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|ОК|Значение округляется до 1/300 секунды при преобразовании на клиенте.|  
+|Smalldatetime|Дата|SQL_C_TYPE_DATE|ОК|ОК|  
 |||SQL_C_TYPE_TIMESTAMP|Поля времени устанавливаются в нули.|OK (2)<br /><br /> Завершается ошибкой, если значение поля времени не равно нулю. Работает с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||Time(0)|SQL_C_TYPE_TIME|OK|OK|  
+||Time(0)|SQL_C_TYPE_TIME|ОК|ОК|  
 |||SQL_C_TYPE_TIMESTAMP|Поля даты устанавливаются в текущую дату.|OK (2)<br /><br /> Дата пропускается. Ошибка, если доли секунды не равны нулю.<br /><br /> Работает с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|OK|OK|  
+||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|ОК|ОК|  
   
 ## <a name="key-to-symbols"></a>Расшифровка символов  
   

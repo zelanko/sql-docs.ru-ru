@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fcac538ee01da719d43015408337f63a09f15d18
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032325"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705442"
 ---
 # <a name="parameter-and-result-metadata"></a>Метаданные параметров и результатов
   В этом разделе приведено описание того, какие данные возвращаются в полях дескриптора параметра реализации (IPD) и дескриптора строки реализации (IRD) для типов данных даты и времени.  
@@ -66,7 +66,7 @@ ms.locfileid: "63032325"
   
  Если SQL_CA_SS_SERVER_TYPE задается вызовом SQLSetDescField, его значение должно быть SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME или SQL_SS_TYPE_DATETIME. В противном случае происходит возврат значения SQL_ERROR, и в журнал вносится диагностическая запись с кодом SQLState (равным HY092) и сообщением «Неверный атрибут или идентификатор параметра».  
   
- Атрибут SQL_CA_SS_SERVER_TYPE можно использовать в приложениях, зависящих от функциональных возможностей, поддерживаемых типами данных `datetime` и `smalldatetime`, но не `datetime2`. `datetime2` Например, необходимо использовать функции `dateadd` и **датедииф** , а также `datetime` и `smalldatetime` разрешить арифметические операторы. В большинстве приложений необходимость в этом атрибуте отсутствует, поэтому следует избегать его применения.  
+ Атрибут SQL_CA_SS_SERVER_TYPE можно использовать в приложениях, зависящих от функциональных возможностей, поддерживаемых типами данных `datetime` и `smalldatetime`, но не `datetime2`. Например, `datetime2` необходимо использовать `dateadd` функции и **датедииф** , а `datetime` `smalldatetime` также и разрешить арифметические операторы. В большинстве приложений необходимость в этом атрибуте отсутствует, поэтому следует избегать его применения.  
   
 ## <a name="information-returned-in-ird-fields"></a>Информация, возвращаемая в полях IRD  
  В полях IRD возвращаются следующие сведения:  
