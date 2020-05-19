@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - LevelName property [ADO MD]
 ms.assetid: bf3b4466-9a0b-446e-9e04-fed944e3a493
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e50793691db8a67eb0008dc186945ec82935efec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 65905444e291a602e0ff0d1d76f4208bbe436a79
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949589"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753416"
 ---
 # <a name="levelname-property-ado-md"></a>Свойство LevelName (многомерные объекты ADO)
 Указывает имя уровня [элемента](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
@@ -29,12 +29,12 @@ ms.locfileid: "67949589"
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает **строку** и доступна только для чтения.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Используйте свойство **LevelName** , чтобы получить имя уровня, которому принадлежит элемент. Это соответствует свойству [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) объекта [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) .  
   
 ## <a name="applies-to"></a>Применяется к  
  [Объект Member (многомерные объекты ADO)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Level (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/level-object-ado-md.md)   
  [Свойство Name (многомерные объекты ADO)](../../../ado/reference/ado-md-api/name-property-ado-md.md)

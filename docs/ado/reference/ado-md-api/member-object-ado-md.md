@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Member object [ADO MD], members
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 44d6b5f06bffb1cea786ba34d3d2aa8a3efb45ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d4d512d651c8162124c935ffdb260c4abe4ecb14
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949498"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753210"
 ---
 # <a name="member-object-ado-md"></a>Объект Member (многомерные объекты ADO)
 Представляет элемент уровня в Кубе, дочерние элементы элемента уровня или элемента в положении вдоль оси набора ячеек.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Свойства **элемента** различаются в зависимости от контекста, в котором он используется. **Элемент** [уровня](../../../ado/reference/ado-md-api/level-object-ado-md.md) в [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) имеет [дочернее](../../../ado/reference/ado-md-api/children-property-ado-md.md) свойство, возвращающее **элементы** следующего нижнего уровня иерархии из текущего **элемента**. Для **элемента** в [положении](../../../ado/reference/ado-md-api/position-object-ado-md.md)коллекция **Children** всегда пуста. Кроме того, свойство [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) применяется только к **элементам** **уровня**.  
   
  **Элемент** в **положении** имеет два свойства, которые полезны при отображении набора [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [дрилледдовн](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) и [парентсамеаспрев](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Если доступ к этим свойствам осуществляется на **члене** **уровня**, возникнет ошибка.  
@@ -68,7 +68,7 @@ ms.locfileid: "67949498"
   
  Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|Имя|Описание|  
+|name|Описание|  
 |----------|-----------------|  
 |CatalogName|Имя каталога, которому принадлежит куб.|  
 |чилдренкардиналити|Количество потомков элемента.|  
@@ -93,7 +93,7 @@ ms.locfileid: "67949498"
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/member-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример каталога (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Коллекция Members (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - DataFactory object [ADO]
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97597e15bc5cd8ee8d3008c97f3a4e8b07b2d43d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38b07258488539638729c55cef65770b0788a1c8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964326"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752616"
 ---
 # <a name="datafactory-object-rdsserver"></a>Объект DataFactory (RDSServer)
 > [!IMPORTANT]
@@ -42,7 +42,7 @@ ms.locfileid: "67964326"
   
 -   [Свойства, методы и события объекта DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры объекта DataFactory, а также методов Query и CreateObject (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
 
 

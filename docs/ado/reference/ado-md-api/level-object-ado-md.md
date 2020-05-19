@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Level object [ADO MD]
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4a44060ae4ffd9399c34d4cd8133f5ad7404ed5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e1ee7ad05f05d2eb77d7d705200c52ddf3f01146
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949605"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753848"
 ---
 # <a name="level-object-ado-md"></a>Объект Level (многомерные объекты ADO)
 Содержит набор элементов, каждый из которых имеет одинаковый ранг в иерархии.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  С помощью коллекций и свойств объекта **Level** можно выполнять следующие действия.  
   
 -   Определяет **уровень** с помощью свойств [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) и [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) .  
@@ -42,7 +42,7 @@ ms.locfileid: "67949605"
   
  Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|Имя|Описание|  
+|name|Описание|  
 |----------|-----------------|  
 |CatalogName|Имя каталога, которому принадлежит куб.|  
 |CubeName|Имя куба.|  
@@ -62,7 +62,7 @@ ms.locfileid: "67949605"
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/level-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример CubeDef (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [Объект Hierarchy (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
  [Коллекция Levels (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   

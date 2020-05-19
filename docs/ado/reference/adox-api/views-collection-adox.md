@@ -14,24 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - Views collection [ADOX]
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0cec2462f8726e7c580a7d6755394c6c3f07c85b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 355a18d172939113eb71e58655811a44e89aa7c2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964771"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752986"
 ---
 # <a name="views-collection-adox"></a>Коллекция Views (ADOX)
 Содержит все объекты [представления](../../../ado/reference/adox-api/view-object-adox.md) каталога.  
   
-## <a name="remarks"></a>Remarks  
- Метод [append](../../../ado/reference/adox-api/append-method-adox-views.md) для коллекции **views** уникален для ADOX. Можно выполнить следующие действия.  
+## <a name="remarks"></a>Примечания  
+ Метод [append](../../../ado/reference/adox-api/append-method-adox-views.md) для коллекции **views** уникален для ADOX. Можно сделать следующее:  
   
 -   Добавьте новое представление в коллекцию с помощью метода **append** .  
   
- Остальные свойства и методы являются стандартными для коллекций ADO. Можно выполнить следующие действия.  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Можно сделать следующее:  
   
 -   Доступ к представлению в коллекции со свойством [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67964771"
   
 -   [Свойства, методы и события коллекции Views](../../../ado/reference/adox-api/views-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример представлений и коллекций полей (Visual Basic)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
  [Пример метода Append для представлений (Visual Basic)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Пример коллекции Views, свойство CommandText (Visual Basic)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
