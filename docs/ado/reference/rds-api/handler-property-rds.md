@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Handler property [ADO]
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a7423879b8263d87575d913c4863143faf3573e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 22e054a6f1723f32d81a4f00ec941a10f8212506
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964006"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751948"
 ---
 # <a name="handler-property-rds"></a>Свойство Handler (служба удаленных рабочих столов)
 Указывает имя программы настройки на стороне сервера (обработчик), которая расширяет функциональные возможности [RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)данных и всех параметров, используемых *обработчиком*.  
@@ -40,9 +40,9 @@ DataControl.Handler = String
  Объектная переменная, представляющая [RDS. Объект элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
  *String*  
- **Строковое** значение, содержащее имя обработчика и все параметры, разделенные запятыми (например, `"handlerName,parm1,parm2,...,parm` *N*`"`).  
+ **Строковое** значение, содержащее имя обработчика и все параметры, разделенные запятыми (например, `"handlerName,parm1,parm2,...,parm` *N* `"` ).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Это свойство поддерживает [настройку](../../../ado/guide/remote-data-service/datafactory-customization.md), которая требует установки свойства [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) в значение **адусеклиент**.  
   
  Имя обработчика и его параметров, если таковые имеются, разделяются запятыми (","). Непредсказуемое поведение приведет к тому, что точка с запятой (";") появляется в любом месте *строки*. Вы можете написать собственный обработчик, если он поддерживает интерфейс **идатафакторихандлер** .  
@@ -54,7 +54,7 @@ DataControl.Handler = String
 ## <a name="applies-to"></a>Применяется к  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства Handler (Visual Basic)](../../../ado/reference/rds-api/handler-property-example-vb.md)   
  [Настройка в отношении фактов](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

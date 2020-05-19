@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - InternetTimeout property [ADO], Visual Basic example
 ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1f097d66259e51e2883dd350a33f7d7ff6a6bbba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5ae038b3c4b438dfaed1f627c8f257e61a22f782
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963988"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751957"
 ---
 # <a name="internettimeout-property-example-vb"></a>Пример свойства InternetTimeout (Visual Basic)
 > [!IMPORTANT]
@@ -75,7 +75,7 @@ End Sub
 'EndInternetTimeoutVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Объект Space (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [Свойство InternetTimeout (служба удаленных рабочих столов)](../../../ado/reference/rds-api/internettimeout-property-rds.md)

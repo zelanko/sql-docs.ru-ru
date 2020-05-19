@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Handler property [ADO], Visual Basic example
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1a72e393716d3d24fdb9f0f95be9faae85651696
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 829059639c182fa607ccb9ffe62658705500692d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964103"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751982"
 ---
 # <a name="handler-property-example-vb"></a>Пример свойства Handler (Visual Basic)
 > [!IMPORTANT]
@@ -78,7 +78,7 @@ End Sub
 'EndHandlerVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Свойство Handler (служба удаленных рабочих столов)](../../../ado/reference/rds-api/handler-property-rds.md)
 

@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Query method [ADO]
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f646d5ebee63981c882f5e1ece147be0ff1677e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b3025f37b47cd545e7e7cde127e96740077ab961
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963826"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751499"
 ---
 # <a name="query-method-rds"></a>Метод Query (служба удаленных рабочих столов)
 Использует допустимую строку SQL-запроса для возврата [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -40,19 +40,19 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *DataFactory*  
  Объектная переменная, представляющая объект [RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) DataObject.  
   
- *Соединен*  
+ *Подключение*  
  **Строковое** значение, содержащее сведения о соединении с сервером. Это похоже на свойство [Connect](../../../ado/reference/rds-api/connect-property-rds.md) .  
   
  *Запрос*  
  **Строка** , содержащая SQL-запрос.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  В запросе должен использоваться диалект SQL сервера базы данных. Если с выполненным запросом возникла ошибка, возвращается состояние результата. Метод **Query** не выполняет проверку синтаксиса строки **запроса** .  
   
 ## <a name="applies-to"></a>Применяется к  
  [Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры объекта DataFactory, а также методов Query и CreateObject (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
 
 

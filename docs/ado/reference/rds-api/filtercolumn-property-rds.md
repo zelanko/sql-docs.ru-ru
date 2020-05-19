@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - FilterColumn property [ADO]
 ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3e88cb6f8d563df66a8faaa84d5aeafaa9d359e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 53b53bcadc90c8c27027f593014ffab204dc78fa
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964083"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752118"
 ---
 # <a name="filtercolumn-property-rds"></a>Свойство FilterColumn (служба удаленных рабочих столов)
 Указывает столбец, по которому вычисляется критерий фильтра.  
@@ -40,13 +40,13 @@ DataControl.FilterColumn = String
  *String*  
  **Строковое** значение, указывающее столбец, по которому вычисляется критерий фильтра. Условия фильтра задаются в свойстве [филтеркритерион](../../../ado/reference/rds-api/filtercriterion-property-rds.md) .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Свойства [sortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [филтеркритерион](../../../ado/reference/rds-api/filtercriterion-property-rds.md)и **филтерколумн** предоставляют функции сортировки и фильтрации кэша на стороне клиента. Функция сортировки упорядочивает записи по значениям из одного столбца. Функция фильтрации отображает подмножество записей на основе критериев поиска, а полный [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) сохраняется в кэше. Метод [Reset](../../../ado/reference/rds-api/reset-method-rds.md) выполнит условия и заменит текущий **набор** записей на обновляемый **набор записей**.  
   
 ## <a name="applies-to"></a>Применяется к  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры свойств Филтерколумн, Филтеркритерион, FilterValue, SortColumn и SortDirection и метода Reset (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [Свойство Филтеркритерион (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
  [Свойство FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   

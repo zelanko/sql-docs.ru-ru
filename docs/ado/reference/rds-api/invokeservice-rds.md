@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - InvokeService [RDS]
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 86ebb27ebdc5de5a045304afe45cd8653e491827
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1ead0a42c0c5239a0f3bb4cafecb584788e06832
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963862"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751910"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (служба удаленных рабочих столов)
 Возвращает указатель на запрошенный интерфейс в более совместимой версии объекта.  
@@ -49,13 +49,13 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение HRESULT, указывающее, был ли успешно вызван метод **инвокесервице** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Реализация обработчика курсора RDS **инвокесервице** принимает входной набор строк (или несколько результатов), заполняет обработчик курсора из входного набора строк, а затем возвращает указатель на себя.  
   
 ## <a name="applies-to"></a>Применяется к  
  [Интерфейс IRDSService (служба удаленных рабочих столов)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы службы удаленных рабочих столов](../../../ado/reference/rds-api/rds-methods.md)
 
 
