@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ODBC, large user-defined types
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df59c3a49715791e2f525e4bc5a69ff8991cac44
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144314"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704284"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Определяемые пользователем типы данных больших значений CLR (ODBC)
   В этом разделе обсуждаются изменения ODBC в собственном клиенте SQL Server для поддержки определяемых пользователем типов данных CLR.  
@@ -34,7 +34,7 @@ ms.locfileid: "63144314"
   
  В следующей таблице показано сопоставление типов данных в параметрах и результирующих наборах.  
   
-|Тип данных SQL Server|Тип данных SQL|Применение|  
+|Тип данных SQL Server|Тип данных SQL|Значение|  
 |--------------------------|-------------------|-----------|  
 |определяемый пользователем тип среды CLR|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63144314"
   
 |Тип данных SQL|Организация памяти|Тип данных C|Значение (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * (неподписанный знак \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (неподписанный знак \* )|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>Поля дескрипторов для параметров  
  Сведения, возвращаются в поля дескриптора параметра реализации (IPD) следующим образом.  

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - bulk copy [ODBC]
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dcc35614e156301efa5892d59a09156c189e0fac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 515f84836f55fe1aa97fbb03a22ee6cc2799710c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72688883"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705246"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>Инструкции по массовому копированию с помощью драйвера ODBC для SQL Server (ODBC)
   При использовании с Microsoft SQL Server 2005 драйвер ODBC SQL Server поддерживает те же функции операций с массовым копированием, которые поддерживаются API DB-Library.  
   
- Дополнительные сведения о критическом изменении [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], начиная с, в разделе [выполнение операций полного копирования &#40;&#41;ODBC ](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ Дополнительные сведения о критическом изменении, начиная с, в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] разделе [выполнение операций полного копирования &#40;&#41;ODBC ](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
@@ -37,7 +37,7 @@ ms.locfileid: "72688883"
   
 -   [Групповое Копирование данных из переменных программы &#40;ODBC&#41;](bulk-copy-data-from-program-variables-odbc.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ODBC How-to Topics](../odbc-how-to-topics.md)  
   
   

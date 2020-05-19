@@ -19,15 +19,15 @@ helpviewer_keywords:
 - ODBC applications, header files
 - SQLNCLI, library files
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 800b3e43129bba36db0836f9a58a3ad1e47b40c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a772188438d0dcd29b97e5233eac1152a2998e21
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046294"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704373"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Использование файлов заголовков и библиотек собственного клиента SQL Server
   Файлы заголовка и библиотеки собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливаются с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. При разработке приложения важно скопировать и установить все требуемые файлы для работы среды разработки. Дополнительные сведения об установке и распространении [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента см. в разделе [Установка SQL Server Native Client](installing-sql-server-native-client.md).  
@@ -100,7 +100,7 @@ include "sqlncli.h";
   
  Дополнительные сведения см. в разделе [Performing Bulk Copy Operations](../features/performing-bulk-copy-operations.md) (Выполнение операций массового копирования).  
   
-## <a name="see-also"></a>См. также  
- [Построение приложений с использованием собственного клиента SQL Server](building-applications-with-sql-server-native-client.md)  
+## <a name="see-also"></a>См. также:  
+ [Построение приложений с использованием SQL Server Native Client](building-applications-with-sql-server-native-client.md)  
   
   

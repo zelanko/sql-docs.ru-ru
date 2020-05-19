@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Replace in Files dialog box
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5d2881ed683a067a65b3ccc068223460dd89f3f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd79bd7e486db052391efd631c101321ff9c8157
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243681"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703744"
 ---
 # <a name="replace-in-files"></a>Замена в файлах
   Вкладка **Замена в файлах** окна «Найти и заменить» позволяет осуществлять поиск в коде заданного набора файлов заданной строки или выражения и заменять все или некоторые из найденных совпадений. Обнаруженные совпадения и предпринятые действия перечисляются в окне «Результаты поиска», выбранном в диалоговом окне **Параметры результата**.  

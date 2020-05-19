@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - IRow interface
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a91faaa534c35e7affcdf11cb5174d8cb9e62fc6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468500"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704893"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Выбор столбцов при помощи метода IRow::GetColumns (OLE DB)
   Интерфейс `IRow` обеспечивает прямой доступ к столбцам одной строки в результирующем наборе. Таким образом, `IRow` является эффективным способом получения столбцов из результирующего набора из одной строки.  
@@ -26,7 +26,7 @@ ms.locfileid: "62468500"
   
 -   Как получить группу столбцов (последовательно).  
   
--   Как дважды получить доступ к столбцу. В первый раз узнается фактическая ширина столбца, а затем осуществляется доступ к данным. В структуре DBCOLUMNACCESS, если **pData** имеет значение null, **а кбмакслен** — 0, `IRow` - `>GetColumns()` вызов возвращает только фактическую длину столбца. В этом случае `IRow->GetColumns()` можно вызвать снова для того же столбца, чтобы получить данные.  
+-   Как дважды получить доступ к столбцу. В первый раз узнается фактическая ширина столбца, а затем осуществляется доступ к данным. В структуре DBCOLUMNACCESS, если **pData** имеет значение null, а **кбмакслен** — 0, вызов `IRow` - `>GetColumns()` возвращает только фактическую длину столбца. В этом случае `IRow->GetColumns()` можно вызвать снова для того же столбца, чтобы получить данные.  
   
 > [!IMPORTANT]  
 >  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -517,6 +517,6 @@ go
 ```  
   
 ## <a name="see-also"></a>См. также  
- [OLE DB инструкций](ole-db-how-to-topics.md)  
+ [Инструкции по OLE DB](ole-db-how-to-topics.md)  
   
   

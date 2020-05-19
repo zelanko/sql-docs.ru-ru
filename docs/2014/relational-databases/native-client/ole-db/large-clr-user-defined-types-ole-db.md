@@ -9,27 +9,27 @@ ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1aea946703b9ebe06c32fcc25044a3b68326625e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fb6c943e237e791ff4febed0ab3273eb9324662
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199252"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704258"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Большие определяемые пользователем типы данных CLR (OLE DB)
   В этом разделе описываются изменения OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], связанные с поддержкой больших определяемых пользователем типов данных среды CLR.  
   
- Дополнительные сведения о поддержке больших определяемых пользователем типов CLR [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в собственном клиенте см. в разделе [типы больших пользовательских данных CLR](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md). Пример см. в статье [об использовании больших определяемых пользователем типов CLR в OLE DB](../../native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Дополнительные сведения о поддержке больших определяемых пользователем типов CLR в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственном клиенте см. в разделе [типы больших пользовательских данных CLR](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md). Пример см. в статье [об использовании больших определяемых пользователем типов CLR в OLE DB](../../native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Формат данных  
  Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует значение ~0 для представления значений с неограниченным размером типа больших объектов. Значение ~0 также представляет размер определяемых пользователем типов данных CLR, превышающий 8 000 байт.  
   
  В следующей таблице показано сопоставление типов данных в параметрах и наборах строк.  
   
-|Тип данных SQL Server|Тип данных OLE DB|Организация памяти|Применение|  
+|Тип данных SQL Server|Тип данных OLE DB|Организация памяти|Значение|  
 |--------------------------|----------------------|-------------------|-----------|  
 |определяемый пользователем тип среды CLR|DBTYPE_UDT|BYTE[](массив байтов\)|132 (oledb.h)|  
   

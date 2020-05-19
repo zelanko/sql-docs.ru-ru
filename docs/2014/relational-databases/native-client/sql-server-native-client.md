@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d2a01b9d9d13bf5e9135d287553beb8b87c2dcd5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 003abb67cd66d02294210ddb3f55061abcc804f4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638852"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704146"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>Новые&#39;в SQL Server Native Client
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] устанавливает [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client отсутствует.  
@@ -42,13 +42,13 @@ ms.locfileid: "62638852"
   
 -   Возможность расширения типа данных C. Дополнительные сведения о типах данных см. в разделе [Типы данных C в ODBC](https://go.microsoft.com/fwlink/?LinkID=191495).  
   
-     Для поддержки этой функции в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственном клиенте SQLGetDescField `SQL_C_SS_TIME2` может возвращать ( `time` для типов) `SQL_C_SS_TIMESTAMPOFFSET` или ( `datetimeoffset`для) `SQL_C_BINARY`, а не, если приложение использует ODBC 3,8. Дополнительные сведения см. в разделе [Поддержка типов данных для улучшений даты и времени ODBC](features/date-and-time-improvements.md).  
+     Для поддержки этой функции в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственном клиенте SQLGetDescField может возвращать `SQL_C_SS_TIME2` (для `time` типов) или `SQL_C_SS_TIMESTAMPOFFSET` (для `datetimeoffset` ), а не `SQL_C_BINARY` , если приложение использует ODBC 3,8. Дополнительные сведения см. в разделе [Поддержка типов данных для улучшений даты и времени ODBC](features/date-and-time-improvements.md).  
   
 -   Многократный вызов метода `SQLGetData` с небольшим буфером для получения значения параметра большого объема. Дополнительные сведения см. в разделе [Получение выходных параметров с помощью метода SQLGetData](https://go.microsoft.com/fwlink/?LinkID=191494).  
   
  В следующих разделах описываются изменения поведения собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
--   При вызове `ICommandWithParameters::SetParameterInfo`значение, передаваемое в параметр *pwszName* , должно быть допустимым идентификатором. Дополнительные сведения см. в разделе [ICommandWithParameters](../native-client-ole-db-interfaces/icommandwithparameters.md).  
+-   При вызове `ICommandWithParameters::SetParameterInfo` значение, передаваемое в параметр *pwszName* , должно быть допустимым идентификатором. Дополнительные сведения см. в разделе [ICommandWithParameters](../native-client-ole-db-interfaces/icommandwithparameters.md).  
   
 -   Функция `SQLDescribeParam` теперь постоянно возвращает значение, соответствующее спецификации ODBC. Дополнительные сведения см. в разделе [SQLDescribeParam](../native-client-odbc-api/sqldescribeparam.md).  
   

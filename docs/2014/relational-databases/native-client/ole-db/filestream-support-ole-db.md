@@ -10,15 +10,15 @@ helpviewer_keywords:
 - OLE DB [FILESTREAM support]
 - FILESTREAM [SQL Server], OLE DB
 ms.assetid: c2bd3dfd-6103-43d1-859e-8ed8d19c58d3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ad6aa7b55906e68dba6615140ef2c6afcc3efaa5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f50f002514977f60fb07358293ecbdd524884e58
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62668937"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704253"
 ---
 # <a name="filestream-support-ole-db"></a>Поддержка FILESTREAM (OLE DB)
   Начиная с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента 10,0, OLE DB поддерживает расширенную функцию FILESTREAM. Дополнительные сведения об этой функции см. в разделе [Поддержка FILESTREAM](../features/filestream-support.md). Примеры см. в статье [Filestream and OLE DB](../../native-client-ole-db-how-to/filestream/filestream-and-ole-db.md) (Filestream и OLE DB).  

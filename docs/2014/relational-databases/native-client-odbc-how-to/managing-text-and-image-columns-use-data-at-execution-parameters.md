@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d69ec20d919110ce241aa38bcfb22069a20d53a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44f1c1673e761425969558ecb911f8df92601274
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206803"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705254"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>Использование параметров с данными времени выполнения (ODBC)
     
@@ -25,7 +25,7 @@ ms.locfileid: "68206803"
   
 1.  При вызове метода [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md), чтобы привязать программный буфер к параметру инструкции:  
   
-    -   Для последнего параметра используйте SQL_LEN_DATA_AT_EXEC (*length*), где *length* — Общая длина данных параметра `text`, `ntext`или `image` в байтах.  
+    -   Для последнего параметра используйте SQL_LEN_DATA_AT_EXEC (*length*), где *length* — Общая длина `text` `ntext` данных параметра, или `image` в байтах.  
   
     -   Используйте параметр `rgbValue` (восьмой параметр) определяемого программой идентификатора параметра.  
   

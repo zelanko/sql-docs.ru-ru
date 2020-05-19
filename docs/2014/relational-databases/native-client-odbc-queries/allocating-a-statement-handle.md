@@ -17,15 +17,15 @@ helpviewer_keywords:
 - statement handles [ODBC]
 - SQLAllocHandle function
 ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 68e3d7a53f96216d158ddbdb1d1d0ca59db5f81f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7cce55becbe02982fcf3f7ffaf6f18954735499
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200253"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705204"
 ---
 # <a name="allocating-a-statement-handle"></a>Выделение дескриптора инструкции
   Прежде чем приложение сможет выполнить инструкцию, оно должно выделить дескриптор инструкции. Для этого вызывается **функцию SQLAllocHandle** с параметром *параметром handletype* , для которого задано значение SQL_HANDLE_STMT и *инпусандле* указывает на маркер подключения.  
@@ -36,7 +36,7 @@ ms.locfileid: "63200253"
   
  Вызов **SQLSetStmtAttr** с *параметром fOption* , установленным в значение SQL_ATTR_QUERY_TIMEOUT задает интервал времени ожидания запроса для защиты сервера и пользователя от длительных запросов.  
   
- Вызов **SQLSetStmtAttr** с *параметром fOption* , для которого задано значение SQL_ATTR_MAX_LENGTH ограничивает объем данных **текста** и **изображений** , которые может получить отдельная инструкция. Вызов **SQLSetStmtAttr** с *параметром fOption* , установленным в SQL_ATTR_MAX_ROWS, также ограничивает набор строк первыми *n* строками, если это требуется для всего приложения. Обратите внимание, что по значению SQL_ATTR_MAX_ROWS драйвер выполняет инструкцию SET ROWCOUNT на сервере. Это влияет на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] все инструкции, включая триггеры и обновления.  
+ Вызов **SQLSetStmtAttr** с *параметром fOption* , для которого задано значение SQL_ATTR_MAX_LENGTH ограничивает объем данных **текста** и **изображений** , которые может получить отдельная инструкция. Вызов **SQLSetStmtAttr** с *параметром fOption* , установленным в SQL_ATTR_MAX_ROWS, также ограничивает набор строк первыми *n* строками, если это требуется для всего приложения. Обратите внимание, что по значению SQL_ATTR_MAX_ROWS драйвер выполняет инструкцию SET ROWCOUNT на сервере. Это влияет на все [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкции, включая триггеры и обновления.  
   
  Соблюдайте осторожность при установке этих параметров. Лучше, если все дескрипторы инструкций в дескрипторе соединения будут иметь одинаковые значения SQL_ATTR_MAX_LENGTH и SQL_ATTR_MAX_ROWS. Если драйвер переключается с одного дескриптора инструкции на другой с разными значениями этих параметров, то он должен для изменения значений формировать соответствующие инструкции SET TEXTSIZE и SET ROWCOUNT. Драйвер не может поместить эти инструкции в один пакет как пользовательские инструкции SQL, поскольку пользовательские инструкции SQL могут содержать инструкцию, которая должна быть первой в пакете. Драйвер должен отправлять инструкции SET TEXTSIZE и SET ROWCOUNT в отдельных пакетах, что приводит к появлению дополнительного обращения к серверу.  
   

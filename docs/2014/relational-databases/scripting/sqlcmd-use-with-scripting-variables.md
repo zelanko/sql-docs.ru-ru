@@ -15,15 +15,15 @@ helpviewer_keywords:
 - sqlcmd utility, scripts
 - setvar command
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1255a810c5d41dfe7c69dee781c670965f0756c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243169"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703665"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Использование программы sqlcmd с переменными скрипта
   Переменные, которые используются в скриптах, называются переменными скрипта. Переменные скрипта позволяют использовать один скрипт в различных обстоятельствах. Например, если нужно выполнить один скрипт на нескольких серверах, вместо изменения скрипта для каждого сервера можно указать для имени сервера соответствующую переменную скрипта. Изменяя имя сервера, указываемое в переменной скрипта, можно выполнять один и тот же скрипт на разных серверах.  
@@ -102,7 +102,7 @@ ms.locfileid: "75243169"
 ## <a name="sqlcmd-scripting-variables"></a>Переменные скрипта sqlcmd  
  Переменные, которые определяются программой **sqlcmd** , называются переменными сценария. В следующей таблице приведен список переменных сценария программы **sqlcmd** .  
   
-|Переменная|Связанный параметр|Чтение-запись|Значение по умолчанию|  
+|Переменная|Связанный параметр|Чтение-запись|По умолчанию|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER*|-U|R|""|  
 |SQLCMDPASSWORD*|-P|--|""|  
@@ -340,9 +340,9 @@ ms.locfileid: "75243169"
   
  `>2 GO`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование программы sqlcmd](sqlcmd-use-the-utility.md)   
  [Программа sqlcmd](../../tools/sqlcmd-utility.md)   
- [Справочник по программе командной строки (компонент Database Engine)](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Справочник по программе командной строки (Database Engine)](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - SSVARIANT struct
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ff6e37986378a66d94dc113c4e3fe072fe3c077f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3877e7b8c6ccd0d5364b3aea291facb1799bff7d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062503"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705101"
 ---
 # <a name="ssvariant-structure"></a>Структура SSVARIANT
   Структура `SSVARIANT`, определяемая в файле sqlncli.h, соответствует значению DBTYPE_SQLVARIANT в поставщике OLEDB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -52,7 +52,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
  Следующая таблица описывает элементы структуры `SSVARIANT`.  
   
-|Участник|Индикатор типа OLE DB|Тип данных OLE DB|Значение vt|Комментарии|  
+|Член организации|Индикатор типа OLE DB|Тип данных OLE DB|Значение vt|Комментарии|  
 |------------|---------------------------|------------------------|--------------|--------------|  
 |vt|SSVARTYPE|||Указывает тип значения, которое содержится в структуре `SSVARIANT`.|  
 |bTinyIntVa|DBTYPE_UI1|`BYTE`|`VT_SS_UI1`|Поддерживает тип данных `tinyint`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -61,18 +61,18 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |llBigIntVal|DBTYPE_I8|`LARGE_INTEGER`|`VT_SS_I8`|Поддерживает тип данных `bigint`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |fltRealVal|DBTYPE_R4|`float`|`VT_SS_R4`|Поддерживает тип данных `real`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |dblFloatVal|DBTYPE_R8|`double`|`VT_SS_R8`|Поддерживает тип данных `float`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|cyMoneyVal|DBTYPE_CY|`LARGE_INTEGER`|**VT_SS_MONEY VT_SS_SMALLMONEY**|Поддерживает типы `money` данных и **smallmoney** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|cyMoneyVal|DBTYPE_CY|`LARGE_INTEGER`|**VT_SS_MONEY VT_SS_SMALLMONEY**|Поддерживает `money` типы данных и **smallmoney** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |fBitVal|DBTYPE_BOOL|`VARIANT_BOOL`|`VT_SS_BIT`|Поддерживает тип данных `bit`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |rgbGuidVal|DBTYPE_GUID|`GUID`|`VT_SS_GUID`|Поддерживает тип данных `uniqueidentifier`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |numNumericVal|DBTYPE_NUMERIC|`DB_NUMERIC`|`VT_SS_NUMERIC`|Поддерживает тип данных `numeric`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |dDateVal|DBTYPE_DATE|`DBDATE`|`VT_SS_DATE`|Поддерживает тип данных `date`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |tsDateTimeVal|DBTYPE_DBTIMESTAMP|`DBTIMESTAMP`|`VT_SS_SMALLDATETIME VT_SS_DATETIME VT_SS_DATETIME2`|Поддерживает типы данных `smalldatetime`, `datetime` и `datetime2`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|Time2Val|DBTYPE_DBTIME2|`DBTIME2`|`VT_SS_TIME2`|Поддерживает тип данных `time`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Содержит следующие элементы:<br /><br /> *tTime2Val* (`DBTIME2`)<br /><br /> *bScale* (`BYTE`) задает масштаб для значения *tTime2Val* .|  
-|DateTimeVal|DBTYPE_DBTIMESTAMP|`DBTIMESTAMP`|`VT_SS_DATETIME2`|Поддерживает тип данных `datetime2`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Содержит следующие элементы:<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (`BYTE`) задает масштаб для значения *тсдататимевал* .|  
-|DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|`DBTIMESTAMPOFFSET`|`VT_SS_DATETIMEOFFSET`|Поддерживает тип данных `datetimeoffset`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Содержит следующие элементы:<br /><br /> *тсодатетимеоффсетвал* (`DBTIMESTAMPOFFSET`)<br /><br /> *bScale* (`BYTE`) задает масштаб для значения *тсодатетимеоффсетвал* .|  
-|NCharVal|Отсутствует соответствующий индикатор типа OLE DB.|`struct _NCharVal`|`VT_SS_WVARSTRING,`<br /><br /> `VT_SS_WSTRING`|Поддерживает типы `nchar` данных и **nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Содержит следующие элементы:<br /><br /> *сактуалленгс* (`SHORT`) задает фактическую длину строки, в которую *пвчнчарвал* Points. Не содержит завершающего нуля.<br /><br /> *смаксленгс* (`SHORT`) задает максимальную длину строки, в которую *пвчнчарвал* указывает.<br /><br /> *pwchNCharVal* указатель пвчнчарвал`WCHAR` \*() на строку.<br /><br /> Неиспользуемые элементы: *rgbReserved*, *dwReserved* и *pwchReserved*.|  
-|CharVal|Отсутствует соответствующий индикатор типа OLE DB.|`struct _CharVal`|`VT_SS_STRING,`<br /><br /> `VT_SS_VARSTRING`|Поддерживает типы `char` данных и **varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Содержит следующие элементы:<br /><br /> *сактуалленгс* (`SHORT`) задает фактическую длину строки, в которую *пччарвал* Points. Не содержит завершающего нуля.<br /><br /> *смаксленгс* (`SHORT`) задает максимальную длину строки, в которую *пччарвал* указывает.<br /><br /> *pchCharVal* указатель пччарвал`CHAR` \*() на строку.<br /><br /> Неиспользуемые элементы:<br /><br /> *rgbReserved*, *dwReserved* и *pwchReserved*.|  
-|BinaryVal|Отсутствует соответствующий индикатор типа OLE DB.|`struct _BinaryVal`|`VT_SS_VARBINARY,`<br /><br /> `VT_SS_BINARY`|Поддерживает типы `binary` данных и **varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Содержит следующие элементы:<br /><br /> *сактуалленгс* (`SHORT`) задает фактическую длину данных, на которые указывает *пргббинаривал* .<br /><br /> *смаксленгс* (`SHORT`) задает максимальную длину данных, на которые указывает *пргббинаривал* .<br /><br /> *пргббинаривал* (`BYTE` \*) указатель на двоичные данные.<br /><br /> Неиспользуемый элемент: *dwReserved*.|  
+|Time2Val|DBTYPE_DBTIME2|`DBTIME2`|`VT_SS_TIME2`|Поддерживает тип данных `time`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Содержит следующие элементы:<br /><br /> *tTime2Val* ( `DBTIME2` )<br /><br /> *bScale* ( `BYTE` ) задает масштаб для значения *tTime2Val* .|  
+|DateTimeVal|DBTYPE_DBTIMESTAMP|`DBTIMESTAMP`|`VT_SS_DATETIME2`|Поддерживает тип данных `datetime2`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Содержит следующие элементы:<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* ( `BYTE` ) задает масштаб для значения *тсдататимевал* .|  
+|DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|`DBTIMESTAMPOFFSET`|`VT_SS_DATETIMEOFFSET`|Поддерживает тип данных `datetimeoffset`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Содержит следующие элементы:<br /><br /> *тсодатетимеоффсетвал* ( `DBTIMESTAMPOFFSET` )<br /><br /> *bScale* ( `BYTE` ) задает масштаб для значения *тсодатетимеоффсетвал* .|  
+|NCharVal|Отсутствует соответствующий индикатор типа OLE DB.|`struct _NCharVal`|`VT_SS_WVARSTRING,`<br /><br /> `VT_SS_WSTRING`|Поддерживает `nchar` типы данных и **nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Содержит следующие элементы:<br /><br /> *сактуалленгс* ( `SHORT` ) задает фактическую длину строки, в которую *пвчнчарвал* Points. Не содержит завершающего нуля.<br /><br /> *смаксленгс* ( `SHORT` ) задает максимальную длину строки, в которую *пвчнчарвал* указывает.<br /><br /> Указатель *пвчнчарвал* ( `WCHAR` \* ) на строку.<br /><br /> Неиспользуемые элементы: *rgbReserved*, *dwReserved* и *pwchReserved*.|  
+|CharVal|Отсутствует соответствующий индикатор типа OLE DB.|`struct _CharVal`|`VT_SS_STRING,`<br /><br /> `VT_SS_VARSTRING`|Поддерживает `char` типы данных и **varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Содержит следующие элементы:<br /><br /> *сактуалленгс* ( `SHORT` ) задает фактическую длину строки, в которую *пччарвал* Points. Не содержит завершающего нуля.<br /><br /> *смаксленгс* ( `SHORT` ) задает максимальную длину строки, в которую *пччарвал* указывает.<br /><br /> Указатель *пччарвал* ( `CHAR` \* ) на строку.<br /><br /> Неиспользуемые элементы:<br /><br /> *rgbReserved*, *dwReserved* и *pwchReserved*.|  
+|BinaryVal|Отсутствует соответствующий индикатор типа OLE DB.|`struct _BinaryVal`|`VT_SS_VARBINARY,`<br /><br /> `VT_SS_BINARY`|Поддерживает `binary` типы данных и **varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Содержит следующие элементы:<br /><br /> *сактуалленгс* ( `SHORT` ) задает фактическую длину данных, на которые указывает *пргббинаривал* .<br /><br /> *смаксленгс* ( `SHORT` ) задает максимальную длину данных, на которые указывает *пргббинаривал* .<br /><br /> *пргббинаривал* ( `BYTE` \* ) указатель на двоичные данные.<br /><br /> Неиспользуемый элемент: *dwReserved*.|  
 |UnknownType|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|  
 |BLOBType|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|  
   

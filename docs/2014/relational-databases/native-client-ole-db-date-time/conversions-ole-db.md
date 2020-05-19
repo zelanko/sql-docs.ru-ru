@@ -11,15 +11,15 @@ helpviewer_keywords:
 - bindings [OLE DB]
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d920fef68adaa63059970a49c9473d75eeabfd30
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638211"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705047"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>Привязки и преобразования (OLE DB)
   В этом разделе описано преобразование между типами `datetime` и `datetimeoffset`. Преобразования, описанные в этом разделе, либо уже предоставлены OLE DB, либо являются согласованным расширением OLE DB.  
@@ -28,7 +28,7 @@ ms.locfileid: "62638211"
   
 -   Формат строк `datetime` и `datetimeoffset`:  
   
-     *гггг*-*mm*мм-*дд*[ *чч*:*мм*:*СС*[.* 9999999*] [?? *чч*:*мм*]]  
+     *гггг* - *mm* - *дд*[ *чч*:*мм*:*СС*[.* 9999999*] [?? *чч*:*мм*]]  
   
 -   Формат строк `time`:  
   

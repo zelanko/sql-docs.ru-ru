@@ -10,15 +10,15 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], delimiter highlighting
 - IntelliSense [SQL Server], syntax pair matching
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 49b121f776ec6a9d363236fab03a1da2228311a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4359a546c350c666190331ab6a8484ca9a99a83
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244798"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704094"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Автоматическое сопоставление синтаксических пар
   Автоматическая проверка соответствия синтаксических пар позволяет немедленно убедиться в том, что парные элементы синтаксиса в коде правильно объединены в пары. В редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] такая проверка называется «соответствием разделителей», в редакторе запросов XMLA служб Analysis Services — «соответствием фигурных скобок», а в редакторах многомерных выражений и расширений интеллектуального анализа данных — «соответствием круглых скобок».  

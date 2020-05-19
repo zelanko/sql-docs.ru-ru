@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, query notifications
 - consumer notification for rowset changes [SQL Server Native Client]
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72eb5468976a6a51d8e76a6cfdbca5118ebd1dd2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206599"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704321"
 ---
 # <a name="working-with-query-notifications"></a>Работа с уведомлениями запросов
   Уведомления о запросах появились в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и в собственном клиенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. С помощью уведомлений о запросах, построенных на основе инфраструктуры компонента Service Broker, представленной в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], приложения могут получать извещения об изменениях данных. Эта функция особенно полезна для приложений, которые предоставляют кэш данных из базы данных (например, для веб-приложений), и которым требуются уведомления об изменении исходных данных.  
@@ -65,10 +65,10 @@ CREATE SERVICE myService ON QUEUE myQueue
 >  Служба должна использовать стандартный контракт `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`, показанный выше.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Поставщик OLE DB для собственного клиента SQL Server  
- Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента поддерживает уведомление потребителя об изменении набора строк. Потребитель получает уведомление на каждой стадии изменения набора строк, а также при каждой попытке внести изменение.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента поддерживает уведомление потребителя об изменении набора строк. Потребитель получает уведомление на каждой стадии изменения набора строк, а также при каждой попытке внести изменение.  
   
 > [!NOTE]  
->  Передача запросов уведомлений на сервер с помощью метода **ICommand:: Execute** является единственным допустимым способом подписки на уведомления о запросах с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] помощью собственного клиента OLE DB Provider.  
+>  Передача запросов уведомлений на сервер с помощью метода **ICommand:: Execute** является единственным допустимым способом подписки на уведомления о запросах с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента OLE DB Provider.  
   
 ### <a name="the-dbpropset_sqlserverrowset-property-set"></a>Набор свойств DBPROPSET_SQLSERVERROWSET  
  Для поддержки уведомлений о запросах с помощью OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент добавляет следующие новые свойства в набор свойств DBPROPSET_SQLSERVERROWSET.  
@@ -77,7 +77,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|время в секундах, в течение которого уведомление запроса должно оставаться активным.<br /><br /> Значение по умолчанию — 432000 секунд (5 дней). Минимальное значение — 1 секунда, а максимальное значение — 2^31-1 секунд.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Текст сообщения уведомления. Определяется пользователем и не имеет стандартного формата.<br /><br /> По умолчанию эта строка пуста. В сообщении можно использовать от 1 до 2000 символов.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|параметры уведомлений о запросах. Они указываются в строке с синтаксисом*значения* *Name*=. За создание службы и считывание уведомлений из очереди отвечает пользователь.<br /><br /> Значением по умолчанию является пустая строка.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|параметры уведомлений о запросах. Они указываются в строке с *name* = синтаксисом*значения* Name. За создание службы и считывание уведомлений из очереди отвечает пользователь.<br /><br /> Значением по умолчанию является пустая строка.|  
   
  Подписка на уведомления всегда фиксируется независимо от того, выполнялась ли инструкция в рамках пользовательской транзакции или в режиме AUTO COMMIT, а также была ли транзакция, в рамках которой выполнялась инструкция, зафиксирована либо был выполнен ее откат. Уведомление сервера срабатывает при возникновении любого из следующих недопустимых условий: изменение базовых данных или схемы либо по истечении времени ожидания, в зависимости от того, что произойдет первым. Регистрации уведомлений удаляются сразу же после их срабатывания. Поэтому, если приложению требуется получение уведомлений в дальнейшем, оно должно подписаться на них снова сразу после получения уведомления.  
   
@@ -105,7 +105,7 @@ RECEIVE * FROM MyQueue
  Дополнительные сведения о наборе свойств DBPROPSET_SQLSERVERROWSET см. в разделе [Свойства и поведение набора строк](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Драйвер ODBC для собственного клиента SQL Server  
- Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает уведомления о запросах с помощью добавления трех новых атрибутов к функциям [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) и [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) :  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента поддерживает уведомления о запросах с помощью добавления трех новых атрибутов к функциям [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) и [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) :  
   
 -   Атрибут SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
   

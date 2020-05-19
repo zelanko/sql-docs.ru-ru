@@ -13,15 +13,15 @@ helpviewer_keywords:
 - transacted XML Bulk Load operations
 - streaming XML data
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d257b6eee1fb3adc0ba611f58a1d5eea5adf3f86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 782b352402e9469fbdb0ce06153d2d80eb9dc84e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013392"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703375"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>Введение в массовую загрузку XML (SQLXML 4.0)
   Массовая загрузка XML является изолированным объектом COM, который позволяет загрузить частично структурированные XML-данные в таблицы Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -45,7 +45,7 @@ ms.locfileid: "66013392"
 ## <a name="streaming-of-xml-data"></a>Потоковая передача XML-данных  
  Так как исходный XML-документ может быть большого размера, для обработки массовой загрузки целый документ не читается в память. Вместо этого массовая загрузка XML интерпретирует XML-данные как поток и читает. После того как программа прочитает данные, она идентифицирует таблицу базы данных, создает соответствующую запись из источника XML-данных, а затем отправляет запись [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для вставки.  
   
- Например, следующий исходный XML-документ состоит из ** \<элементов Customer>** и ** \<Order>** дочерних элементов:  
+ Например, следующий исходный XML-документ состоит из элементов ** \< Customer>** и ** \< Order>** дочерних элементов:  
   
 ```  
 <Customer ...>  
@@ -56,7 +56,7 @@ ms.locfileid: "66013392"
 ...  
 ```  
   
- Поскольку при выполнении операции XML-загрузки выполняется считывание элемента ** \<>Customer** , он создает запись для кустомертабле. Когда он считывает тег ** \</Customer>** , при выполнении операции XML-загрузки выполняется вставка этой записи в таблицу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]в. Аналогичным образом, при считывании элемента ** \<Order>** , при выполнении групповой загрузки XML-данных создается запись для ордертабле, а затем эта запись вставляется в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицу при чтении закрывающего тега ** \</Order>** .  
+ Поскольку при выполнении операции XML-загрузки выполняется считывание элемента ** \<>Customer** , он создает запись для кустомертабле. Когда он считывает тег ** \< /Customer>** , при выполнении операции XML-загрузки выполняется вставка этой записи в таблицу в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Аналогичным образом, при считывании элемента ** \< Order>** , при выполнении групповой загрузки XML-данных создается запись для ордертабле, а затем эта запись вставляется в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицу при чтении закрывающего тега ** \< /Order>** .  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>Транзакционные и нетранзакционные операции массовой загрузки XML  
  Массовая загрузка XML может работать в транзакционном и нетранзакционном режимах. Производительность обычно является оптимальной при выполнении многоязыковой загрузки в неусловном режиме: то есть свойство Transaction имеет значение FALSE, и одно из следующих условий имеет значение true.  

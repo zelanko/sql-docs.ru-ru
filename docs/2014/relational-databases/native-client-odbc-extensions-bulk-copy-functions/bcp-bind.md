@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_bind function
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 711c82bb627ca9ad1620cf1e11fdbc9dfa5f4351
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07a7bb9026984ed830d0b146438d958739463109
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140561"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705327"
 ---
 # <a name="bcp_bind"></a>bcp_bind
   Привязывает данные программной переменной к столбцу таблицы для массового копирования в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -65,7 +65,7 @@ idxServerCol
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
  *pData*  
- Указатель на копируемые данные. Если *eDataType* имеет значение SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SqlBinary, SQLNCHAR или SQLIMAGE, *pData* может быть равен null. ЗНАЧЕНИЕ типа *pData* , указывающее, что значения длинных данных будут [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отправляться в блоках с помощью [bcp_moretext](bcp-moretext.md). Пользователь должен задать для *pData* значение null, если столбец, соответствующий привязанному к пользователю полю, является столбцом большого двоичного объекта, иначе **bcp_bind** завершится ошибкой.  
+ Указатель на копируемые данные. Если *eDataType* имеет значение SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SqlBinary, SQLNCHAR или SQLIMAGE, *pData* может быть равен null. ЗНАЧЕНИЕ типа *pData* , указывающее, что значения длинных данных будут отправляться [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в блоках с помощью [bcp_moretext](bcp-moretext.md). Пользователь должен задать для *pData* значение null, если столбец, соответствующий привязанному к пользователю полю, является столбцом большого двоичного объекта, иначе **bcp_bind** завершится ошибкой.  
   
  Если в данных присутствуют признаки, они размещаются в памяти непосредственно перед данными. Параметр *pData* указывает на переменную индикатора в этом случае, а ширина индикатора, параметр *кбиндикатор* , используется массовым копированием для правильного адресации данных пользователя.  
   
@@ -133,22 +133,22 @@ bcp_bind(hdbc, szName, 0,
  *eDataType*  
  Тип данных языка C для программной переменной. Данные в программной переменной преобразуются в тип столбца базы данных. Если этот параметр равен 0, преобразование не выполняется.  
   
- Параметр *eDataType* перечисляется маркерами типа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных в sqlncli. h, а не в перечислителях типа данных ODBC C. Например, можно задать целое двухбайтовое значение ODBC типа SQL_C_SHORT с помощью типа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLINT2.  
+ Параметр *eDataType* перечисляется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] маркерами типа данных в sqlncli. h, а не в перечислителях типа данных ODBC C. Например, можно задать целое двухбайтовое значение ODBC типа SQL_C_SHORT с помощью типа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLINT2.  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Добавлена поддержка токенов типа данных SQLXML и SQLUDT в параметре *`eDataType`* .  
   
  *idxServerCol*  
  Порядковый номер столбца в таблице базы данных, в которую копируются данные. Первый столбец в таблице имеет порядковый номер 1. Порядковый номер столбца возвращается функцией [SQLColumns](../native-client-odbc-api/sqlcolumns.md).  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  SUCCEED или FAIL.  
   
 ## <a name="remarks"></a>Remarks  
- Используйте **bcp_bind** для быстрого и эффективного способа копирования данных из программной переменной в таблицу в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Используйте **bcp_bind** для быстрого и эффективного способа копирования данных из программной переменной в таблицу в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Вызовите [bcp_init](bcp-init.md) перед вызовом этой или любой другой функции небольшого копирования. Вызов **bcp_init** задает целевую таблицу для выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] операции с массовым копированием. При вызове **bcp_init** для использования с **bcp_bind** и [bcp_sendrow](bcp-sendrow.md)параметр **bcp_init** _сздатафиле_ , указывающий файл данных, устанавливается в значение null. параметр **bcp_init**_eDirection_ имеет значение DB_IN.  
+ Вызовите [bcp_init](bcp-init.md) перед вызовом этой или любой другой функции небольшого копирования. Вызов **bcp_init** задает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] целевую таблицу для выполнения операции с массовым копированием. При вызове **bcp_init** для использования с **bcp_bind** и [bcp_sendrow](bcp-sendrow.md)параметр **bcp_init** _сздатафиле_ , указывающий файл данных, устанавливается в значение null. параметр **bcp_init**_eDirection_ имеет значение DB_IN.  
   
- Создайте отдельный **bcp_bind** вызов для каждого столбца в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблице, в которую необходимо выполнить копирование. После выполнения необходимых **bcp_bind** вызовов вызовите **bcp_sendrow** , чтобы отправить строку данных из переменных программы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Повторная привязка столбца не поддерживается.  
+ Создайте отдельный **bcp_bind** вызов для каждого столбца в таблице, в которую необходимо выполнить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] копирование. После выполнения необходимых **bcp_bind** вызовов вызовите **bcp_sendrow** , чтобы отправить строку данных из переменных программы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Повторная привязка столбца не поддерживается.  
   
  Когда нужно [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зафиксировать уже полученные строки, вызовите [bcp_batch](bcp-batch.md). Например, вызовите **bcp_batch** один раз для каждых 1000 строк или в любой другой интервал.  
   
@@ -156,9 +156,9 @@ bcp_bind(hdbc, szName, 0,
   
  Параметры управления, указанные в параметре [bcp_control](bcp-control.md), не влияют на передачу **bcp_bind** строк.  
   
- Если *pData* для столбца имеет значение null, так как оно будет предоставлено вызовами [bcp_moretext](bcp-moretext.md), все последующие столбцы с *eDataType* , для которых заданы значения SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SqlBinary, SQLNCHAR или SQLIMAGE, также должны быть связаны с параметром *pData* , имеющим значение null, и их значения также должны `bcp_moretext`быть предоставлены вызовами.  
+ Если *pData* для столбца имеет значение null, так как оно будет предоставлено вызовами [bcp_moretext](bcp-moretext.md), все последующие столбцы с *eDataType* , для которых заданы значения SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SqlBinary, SQLNCHAR или SQLIMAGE, также должны быть связаны с параметром *pData* , имеющим значение null, и их значения также должны быть предоставлены вызовами `bcp_moretext` .  
   
- Для новых типов больших значений, таких как `varchar(max)`, `varbinary(max)`или `nvarchar(max)`, можно использовать SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SqlBinary и SQLNCHAR в качестве индикаторов типов в параметре *eDataType* .  
+ Для новых типов больших значений, таких как `varchar(max)` , `varbinary(max)` или `nvarchar(max)` , можно использовать SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SqlBinary и SQLNCHAR в качестве индикаторов типов в параметре *eDataType* .  
   
  Если *кбтерм* не равен 0, то любое значение (1, 2, 4 или 8) допустимо для префикса (*кбиндикатор*). В этой ситуации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент выполняет поиск терминатора, вычисляет длину данных относительно терминатора (*i*) и устанавливает для *cbData* меньшее значение i и значение prefix.  
   
@@ -168,7 +168,7 @@ bcp_bind(hdbc, szName, 0,
   
 -   0xFFFFFFFFFFFFFFFE рассматривается как специальное значение префикса, которое используется для эффективной отправки на сервер данных, разбитых на фрагменты. Данные со специальным префиксом имеют следующий формат.  
   
--   <SPECIAL_PREFIX> \<0 или более фрагментов данных> <ZERO_CHUNK>, где:  
+-   <SPECIAL_PREFIX> \< 0 или более фрагментов данных> <ZERO_CHUNK>, где:  
   
 -   СПЕЦИАЛЬНЫЙ_ПРЕФИКС имеет значение 0xFFFFFFFFFFFFFFFE.  
   
@@ -266,7 +266,7 @@ if ((nRowsProcessed = bcp_done(hdbc)) == -1)
 printf_s("%ld rows copied.\n", nRowsProcessed);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

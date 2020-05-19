@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f09cf15479060e455811fa4b3ffe6df4f9bd14cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85d152274847abb46ee14a9a878be8bdef5b80b3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63237969"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705064"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Преобразования, выполняемые при передаче от клиента к серверу
   В этом разделе описываются преобразования даты и времени, которые выполняются между клиентским приложением, написанным с использованием поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версией).  
@@ -25,12 +25,12 @@ ms.locfileid: "63237969"
 ## <a name="conversions"></a>Преобразования  
  В этом разделе описываются преобразования, выполняемые на клиенте. Если клиент задает точность в долях секунд для параметра, отличающуюся от определенной на сервере, клиентское преобразование может вызвать сбой, в то время как сервер завершит операцию успешно. А именно, клиент рассматривает любое усечение долей секунды как ошибку, в то время как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] округляет значения времени до ближайшей целой секунды.  
   
- Если ICommandWithParameters:: SetParameterInfo не вызывается, DBTYPE_DBTIMESTAMP привязки преобразуются, как если бы `datetime2`они были.  
+ Если ICommandWithParameters:: SetParameterInfo не вызывается, DBTYPE_DBTIMESTAMP привязки преобразуются, как если бы они были `datetime2` .  
   
 |Полученное значение -><br /><br /> Исходный тип|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1,2|1,3,4|4,12|1,12|1,12|1,12|1,5, 12|1,12|1,12|1,12<br /><br /> datetime2(0)|  
-|DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> Дата|  
+|DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> дата|  
 |DBTIME|-|1|1|1,7|1,7|1,7|1,5, 7|1,10|1,10|1<br /><br /> Time(0)|  
 |DBTIME2|-|1,3|1|1,7,10,14|1,7,10,15|1,7,10|1,5,7,10|1,10,11|1,10,11|1<br /><br /> Time(7)|  
 |DBTIMESTAMP|1,2|1,3,4|1,4,10|1,10,14|1,10,15|1,10|1,5,10|1,10,11|1,10,11|1,10<br /><br /> datetime2(7)|  

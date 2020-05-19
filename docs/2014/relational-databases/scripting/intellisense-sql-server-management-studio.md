@@ -1,5 +1,5 @@
 ---
-title: IntelliSense
+title: технология IntelliSense
 ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1a3d31af206653ee5dbbaaf1e1b54b8c05d79027
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ddfb8c7f0db110f2129aeb0e216904d1b507eda
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242070"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703863"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (среда SQL Server Management Studio)
   Редакторы в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживают параметры [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense, которые уменьшают объем набора, предоставляют быстрый доступ к сведениям о синтаксисе и облегчают просмотр разделителей сложных выражений.  

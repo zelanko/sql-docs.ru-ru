@@ -12,20 +12,20 @@ helpviewer_keywords:
 - SQLNCLI, OLE DB
 - SQL Server Native Client, OLE DB
 ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 29bd6c25ec826f1c2ce7af1aae6e29462de0b6c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b1da49254d82822ec5ef462d85217744ee40d2f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192421"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704781"
 ---
 # <a name="sql-server-native-client-ole-db-reference"></a>Справочник по собственному клиенту SQL Server (OLE DB)
-  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента предоставляет интерфейсы пользователям, которым нужен доступ к данным на одном или нескольких компьютерах, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]на которых работает. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента — это поставщик, соответствующий OLE DB версии 2,0.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента предоставляет интерфейсы пользователям, которым нужен доступ к данным на одном или нескольких компьютерах, на которых работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента — это поставщик, соответствующий OLE DB версии 2,0.  
   
- Этот [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент OLE DB Справочник по программированию поставщика не содержит все интерфейсы и методы OLE DB, а только те интерфейсы и методы, которые ведут себя при использовании поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB.  
+ Этот [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент OLE DB Справочник по программированию поставщика не содержит все интерфейсы и методы OLE DB, а только те интерфейсы и методы, которые ведут себя при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика собственного клиента OLE DB.  
   
  Полное описание базовых интерфейсов и методов OLE DB можно найти в пособии [Справочник разработчика OLE DB](https://go.microsoft.com/fwlink/?LinkId=45232).  
   

@@ -10,27 +10,27 @@ helpviewer_keywords:
 - date/time [OLE DB]
 - OLE DB, date/time improvements
 ms.assetid: 71614aaf-0fa4-4fe0-b522-68e2e0b66f43
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1dec9e1281d2ff61dcab9312cdf5a7ad1ecb8da3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d206de44f9408e932d91a0097c1228b112b05ba
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62866841"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705044"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Улучшения функций даты и времени (OLE DB)
-  В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] добавлены новые типы данных даты-времени. В этом разделе описывается, как эти новые типы предоставляются как расширения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в собственном клиенте. Общие сведения о поддержке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента для новых типов данных даты и времени см. в разделе [улучшения даты и времени](../native-client/features/date-and-time-improvements.md). Пример их использования см. в статье [Использование улучшенных функций даты и времени (OLE DB)](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
+  В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] добавлены новые типы данных даты-времени. В этом разделе описывается, как эти новые типы предоставляются как расширения в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственном клиенте. Общие сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддержке собственного клиента для новых типов данных даты и времени см. в разделе [улучшения даты и времени](../native-client/features/date-and-time-improvements.md). Пример их использования см. в статье [Использование улучшенных функций даты и времени (OLE DB)](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
   
  Общие сведения о типах данных даты и времени вы найдете в разделе документации [datetime (Transact-SQL)](/sql/t-sql/data-types/datetime-transact-sql).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Улучшения поддержки типов данных даты и времени OLE DB](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
- Предоставляет сведения о типах OLE DB[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Native Client), поддерживающих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных даты и времени.  
+ Предоставляет сведения о типах OLE DB ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client), поддерживающих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных даты и времени.  
   
  [Метаданные (OLE DB)](../../database-engine/dev-guide/metadata-ole-db.md)  
- Содержит сведения о `ICommandWithParameters::GetParameterInfo`структуре DBBINDING, `ICommandWithParameters::SetParameterInfo` `IColumnsRowset::GetColumnsRowset`,, и I.`ColumnsInfo::GetColumnInfo` Также содержит сведения об обновлениях OLE DB наборах строк схемы.  
+ Содержит сведения о структуре DBBINDING,, `ICommandWithParameters::GetParameterInfo` , `ICommandWithParameters::SetParameterInfo` `IColumnsRowset::GetColumnsRowset` и I `ColumnsInfo::GetColumnInfo` . Также содержит сведения об обновлениях OLE DB наборах строк схемы.  
   
  [Привязки и преобразования &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
  Описывает правила преобразования существующих и новых типов данных между сервером и клиентом.  
