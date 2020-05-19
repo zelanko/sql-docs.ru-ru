@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - virtual servers in RDS [ADO]
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5888cb9666488ced6f9e112d21c48d0265f5c25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fded1c66de5cd6c64d8663964de510e9d2f982f9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922838"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749998"
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>Настройка виртуальных серверов в IIS
 При создании виртуальных серверов в службы IIS 4,0 необходимо выполнить следующие два дополнительных действия, чтобы настроить виртуальный сервер для работы с RDS:  
@@ -29,7 +29,7 @@ ms.locfileid: "67922838"
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные принципы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

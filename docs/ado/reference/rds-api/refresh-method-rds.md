@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Refresh method [RDS]
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb7cb94edab6b5422c315b71c2900662f85aa1e2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3e9fa606aab5d42a7b56171ca3720742d4d119a0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963501"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751053"
 ---
 # <a name="refresh-method-rds"></a>Метод Refresh (служба удаленных рабочих столов)
 Повторно запрашивает источник данных, указанный в свойстве [Connect](../../../ado/reference/rds-api/connect-property-rds.md) , и обновляет результаты запроса.  
@@ -49,7 +49,7 @@ DataControl.Refresh
 ## <a name="applies-to"></a>Применяется к  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода Refresh (Visual Basic)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Пример метода Refresh (VBScript)](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)   
  [Кнопки для команд адресной книги](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data updates [ADO]
 - ADO, updating data
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26fabdc205018b8e94575cfb5bd5e945a8fb28ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a77bb6f8f26652a9f435683c56b14d0bc8eb4b65
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923724"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750217"
 ---
 # <a name="updating-and-persisting-data"></a>Обновление и сохранение данных
 В предыдущих главах обсуждалось использование ADO для получения данных в источнике данных, перемещения по данным и даже изменения данных. Конечно, если цель приложения — разрешить пользователям вносить изменения в данные, необходимо понять, как сохранить эти изменения. Можно либо сохранить изменения **набора записей** в файле с помощью метода **Save** , либо отправить изменения обратно в источник данных для хранения с помощью методов **Update** или **UpdateBatch** .  

@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - SortDirection property [RDS]
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 28f0e247c29673fe4dfec507794ad8977b51fcc1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 15c914344e526d24c737a7076929f0610aedb9e8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963419"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750716"
 ---
 # <a name="sortdirection-property-rds"></a>Свойство SortDirection (служба удаленных рабочих столов)
 Указывает, используется ли порядок сортировки по возрастанию или по убыванию.  
@@ -46,7 +46,7 @@ DataControl.SortDirection = value
 ## <a name="applies-to"></a>Применяется к  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры свойств Филтерколумн, Филтеркритерион, FilterValue, SortColumn и SortDirection и метода Reset (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [Sort, свойство](../../../ado/reference/ado-api/sort-property.md)   
  [Свойство SortColumn (служба удаленных рабочих столов)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)

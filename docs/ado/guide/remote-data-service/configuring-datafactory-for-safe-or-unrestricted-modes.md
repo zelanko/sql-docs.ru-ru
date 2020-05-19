@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory configuration in RDS [ADO]
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 92e3b029d2b18065faf50dcd0343f64b7b01654e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cff72ed7c02cb4f0e9dc2a719ee7e82b55e44408
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922945"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750072"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>Настройка безопасного или неограниченного режимов в DataFactory
 > [!IMPORTANT]
@@ -37,7 +37,7 @@ ms.locfileid: "67922945"
   
  После запуска хандсафе. reg необходимо отключить и перезапустить службу веб-публикаций на веб-сервере, введя следующие команды в окне командной строки: "NET ОСТАНАВЛИВАЮТ W3SVC" и "NET START W3SVC".  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка в отношении фактов](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Основные принципы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 

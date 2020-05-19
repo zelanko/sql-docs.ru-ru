@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS configuration [ADO]
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c99b9281071bc608f46edb9ace3c374c1fa60564
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f916a78d9a61bcfa7b0896301a46eb3a52874043
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922845"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750035"
 ---
 # <a name="configuring-rds"></a>Настройка RDS
 > [!IMPORTANT]
@@ -43,7 +43,7 @@ ms.locfileid: "67922845"
   
 -   [Настройка безопасного или неограниченного режимов в DataFactory](../../../ado/guide/remote-data-service/configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование связанных технологий с RDS](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
  [Настройка в отношении фактов](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Устранение неполадок с RDS](../../../ado/guide/remote-data-service/troubleshooting-rds.md)

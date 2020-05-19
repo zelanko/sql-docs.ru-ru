@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 934b982004bf27e28a8daeed09061101886ce444
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922782"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749879"
 ---
 # <a name="customization-file-sql-section"></a>Настройка раздела SQL файла
 Раздел **SQL** может содержать новую строку SQL, которая заменяет командную строку клиента. Если в разделе нет строки SQL, раздел будет проигнорирован.  
@@ -28,7 +28,7 @@ ms.locfileid: "67922782"
   
  Новая строка SQL может быть *параметризована*. Это значит, что параметры в строке SQL **строки SQL (** обозначенной символом "?") могут быть заменены соответствующими аргументами в *идентификаторе* в строке командной строки клиента (обозначенной с помощью списка с разделителями-запятыми в скобках). Идентификатор и список аргументов ведут себя как вызов функции.  
   
- Например, предположим, что Командная строка клиента `"CustomerByID(4)"`—, заголовок раздела SQL — `[SQL CustomerByID]`, а новая строка раздела SQL — `"SELECT * FROM Customers WHERE CustomerID = ?".` обработчик создает `"SELECT * FROM Customers WHERE CustomerID = 4"` и использует эту строку для запроса к источнику данных.  
+ Например, предположим, что Командная строка клиента — `"CustomerByID(4)"` , заголовок раздела SQL — `[SQL CustomerByID]` , а новая строка раздела SQL — `"SELECT * FROM Customers WHERE CustomerID = ?".` обработчик создает `"SELECT * FROM Customers WHERE CustomerID = 4"` и использует эту строку для запроса к источнику данных.  
   
  Если новая инструкция SQL является пустой строкой (""), раздел игнорируется.  
   
@@ -50,7 +50,7 @@ SQL = " "
 |**SQL**|Литеральная строка, указывающая, что это запись раздела SQL.|  
 |***sqlString***|Строка SQL, которая заменяет строку клиента.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Раздел "Подключение файла настройки"](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [Раздел журналов файлов настройки](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [Раздел UserList файла настройки](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

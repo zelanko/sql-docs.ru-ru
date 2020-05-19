@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9dab615fd861252832abe83d4b0ae736e2189180
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922808"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749973"
 ---
 # <a name="customization-file-connect-section"></a>Настройка раздела подключения файла
 Поведение обработчика по умолчанию заключается в запрете всех подключений. В разделе **Connect** указываются исключения из этого поведения. Например, если все разделы **соединения** отсутствовали или пусты, то по умолчанию соединения устанавливаться не могут.  
@@ -51,7 +51,7 @@ connectionString
   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
 |Часть|Описание|  
 |----------|-----------------|  
@@ -60,9 +60,9 @@ connectionString
 |**Доступ**|Литеральная строка, указывающая, что это запись доступа.|  
 |**_акцессригхт_**|Одно из следующих прав доступа:<br /><br /> -   Не **доступ** — пользователь не может получить доступ к источнику данных.<br />-   **Только для** чтения — пользователь может читать источник данных.<br />-   **ReadWrite** — пользователь может выполнять чтение или запись в источник данных.|  
   
- Если вы хотите разрешить любое подключение (в результате отключив поведение обработчика по умолчанию), задайте запись доступа в разделе **Connect Default** `Access=ReadWrite`, а затем удалите или закомментируйте любой другой раздел **Connect** _identifier_ .  
+ Если вы хотите разрешить любое подключение (в результате отключив поведение обработчика по умолчанию), задайте запись доступа в разделе **Connect Default** `Access=ReadWrite` , а затем удалите или закомментируйте любой другой раздел **Connect** _identifier_ .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Раздел журналов файлов настройки](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [Раздел файла настройки SQL](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [Раздел UserList файла настройки](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
