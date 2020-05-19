@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - TempDB space in RDS [ADO]
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fe377cd15f2b95577a561e6784f78113b2843d07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a783c6b6cecbd1fb4139d0ffd3af1a960347f968
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922657"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749577"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Обеспечение достаточного места в TempDB
 Если при обработке объектов [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , требующих обработки памяти, в Microsoft SQL Server 6,5 возникли ошибки, может потребоваться увеличить размер базы данных tempdb. (Для некоторых запросов требуется временное пространство обработки; например, запрос с предложением ORDER BY требует сортировки **набора записей**, для чего требуется некоторое временное пространство.)  
@@ -55,7 +55,7 @@ ms.locfileid: "67922657"
   
  Для получения дополнительных сведений об этом разделе выполните поиск в файле справки по Microsoft SQL Server Enterprise Manager в диалоговом окне "развертывание базы данных".  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные принципы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

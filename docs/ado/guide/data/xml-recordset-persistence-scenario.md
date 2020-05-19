@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XML persistence [ADO], persistence scenario
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 55ea62fac0cb2fe73b368429bb164cd28147fa7d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4a1110db8505a2a721c3503e51276cfb895fb965
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923365"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748307"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Сценарий сохраняемости набора записей XML
 В этом сценарии вы создадите приложение Active Server страниц (ASP), которое сохраняет содержимое объекта набора записей непосредственно в объекте ответа ASP.  
@@ -112,6 +112,6 @@ ms.locfileid: "67923365"
   
  Закройте файл Default. htm и сохраните его в той же папке, где сохранен Ксмлреспонсе. ASP. Используя Internet Explorer 4,0 или более поздней версии, откройте URL-адрес https://*SQLServer*/XMLPersist/Default.htm и просмотрите результаты. Данные отображаются в связанной таблице DHTML. Теперь откройте URL-адрес https:// *SQLServer* /ксмлперсист/ксмлреспонсе.АСП и просмотрите результаты. Отобразится XML.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Save](../../../ado/reference/ado-api/save-method.md)   
  [Сохранение записей в формате XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS programming model [ADO], details
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7d7251e3a403168e8383e636a8e6b5f712b9f7bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6bf59580985a4c46fa163a00423bb7dd90ad9463
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922526"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747759"
 ---
 # <a name="rds-programming-model-in-detail"></a>Подробные сведения о модели программирования RDS
 Ниже приведены ключевые элементы модели программирования RDS.  
@@ -28,7 +28,7 @@ ms.locfileid: "67922526"
   
 -   Клиент. DataControl  
   
--   событие  
+-   Событие  
   
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -70,7 +70,7 @@ ms.locfileid: "67922526"
 > [!NOTE]
 >  Microsoft Internet Explorer предоставляет два дополнительных события для RDS: **ондатасетчанжед**, которые указывают, что **набор записей** является функциональным, но все еще получает строки, и **ондатасеткомплете**, который указывает, что **набор записей** завершил извлечение строк.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Модель программирования RDS с объектами](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
  [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Объект фактического объекта (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   

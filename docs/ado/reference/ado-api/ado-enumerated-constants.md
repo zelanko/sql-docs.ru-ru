@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - enumerated constants [ADO]
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0a2b02498905b73f321d7585b5c91adfbfd1b4b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 00b33a9fa92dd6ec86cbac5a939fe593725bc091
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921021"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749219"
 ---
 # <a name="ado-enumerated-constants"></a>Перечисляемые константы ADO
 Для облегчения отладки в перечислениях ADO перечисляются значения для каждой константы. Однако это значение является исключительно рекомендацией и может изменяться от одного выпуска ADO к другому. Код должен зависеть только от имени, а не от фактического значения каждой перечислимой константы.  
@@ -77,7 +77,7 @@ ms.locfileid: "67921021"
 |[StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md)|Задает формат при извлечении **набора записей** в виде строки. Задает атрибуты транзакции для объекта **соединения** .|  
 |[XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md)|Задает атрибуты транзакции для объекта **соединения** .|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Коллекции ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

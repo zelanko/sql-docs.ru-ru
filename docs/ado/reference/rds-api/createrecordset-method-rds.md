@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ae2d78f4647e2aefa707e97349daa73d08ee492
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964517"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748842"
 ---
 # <a name="createrecordset-method-rds"></a>Метод CreateRecordset (служба удаленных рабочих столов)
 Создает пустой, отключенный [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -48,8 +48,8 @@ object.CreateRecordset(ColumnInfos)
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|Имя|Имя заголовка столбца.|  
-|Тип|Целое число типа данных.|  
+|name|Имя заголовка столбца.|  
+|Type|Целое число типа данных.|  
 |Размер|Целочисленное значение ширины в символах, независимо от типа данных.|  
 |Допускает значения NULL|.|  
 |Масштабирование (необязательно)|Этот необязательный атрибут определяет масштаб для числовых полей. Если это значение не указано, то числовые значения будут обрезаны до шкалы трех. На точность не влияет, но количество цифр после десятичной запятой будет усечено до трех.|  
@@ -67,26 +67,26 @@ object.CreateRecordset(ColumnInfos)
   
 |Длина|Константа|Число|Замена|  
 |------------|--------------|------------|------------------|  
-|исправление|**adTinyInt**|16||  
-|исправление|**adSmallInt**|2||  
-|исправление|**adInteger**|3||  
-|исправление|**adBigInt**|20||  
-|исправление|**adUnsignedTinyInt**|17||  
-|исправление|**adUnsignedSmallInt**|18||  
-|исправление|**adUnsignedInt**|19||  
-|исправление|**adUnsignedBigInt**|21||  
-|исправление|**adSingle**|4||  
-|исправление|**adDouble**|5||  
-|исправление|**adCurrency**|6||  
-|исправление|**adDecimal**|14||  
-|исправление|**adNumeric**|131||  
-|исправление|**adBoolean**|11||  
-|исправление|**adError**|10||  
-|исправление|**адгуид**|72||  
-|исправление|**adDate**|7||  
-|исправление|**adDBDate**|133||  
-|исправление|**adDBTime**|134||  
-|исправление|**аддбтиместамп**|135|7|  
+|Фиксированный|**adTinyInt**|16||  
+|Фиксированный|**adSmallInt**|2||  
+|Фиксированный|**adInteger**|3||  
+|Фиксированный|**adBigInt**|20||  
+|Фиксированный|**adUnsignedTinyInt**|17||  
+|Фиксированный|**adUnsignedSmallInt**|18||  
+|Фиксированный|**adUnsignedInt**|19||  
+|Фиксированный|**adUnsignedBigInt**|21||  
+|Фиксированный|**adSingle**|4||  
+|Фиксированный|**adDouble**|5||  
+|Фиксированный|**adCurrency**|6||  
+|Фиксированный|**adDecimal**|14||  
+|Фиксированный|**adNumeric**|131||  
+|Фиксированный|**adBoolean**|11||  
+|Фиксированный|**adError**|10||  
+|Фиксированный|**адгуид**|72||  
+|Фиксированный|**adDate**|7||  
+|Фиксированный|**adDBDate**|133||  
+|Фиксированный|**adDBTime**|134||  
+|Фиксированный|**аддбтиместамп**|135|7|  
 |Переменная|**adBSTR**|8|130|  
 |Переменная|**adChar**|129|200|  
 |Переменная|**адварчар**|200||  
@@ -104,7 +104,7 @@ object.CreateRecordset(ColumnInfos)
 |-|-|  
 |[Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода CreateRecordset (Visual Basic)](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
  [Пример метода CreateRecordset (VBScript)](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   
  [Метод CreateObject (служба удаленных рабочих столов)](../../../ado/reference/rds-api/createobject-method-rds.md)

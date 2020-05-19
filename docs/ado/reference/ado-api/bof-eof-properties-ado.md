@@ -15,14 +15,14 @@ helpviewer_keywords:
 - EOF property [ADO]
 - BOF property [ADO]
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9496a4e2115cb686764981e8a5fae3ecfe59401e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920387"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748735"
 ---
 # <a name="bof-eof-properties-ado"></a>Свойства BOF и EOF (ADO)
 -   **BOF** Указывает, что текущая запись находится перед первой записью в объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -32,7 +32,7 @@ ms.locfileid: "67920387"
 ## <a name="return-value"></a>Возвращаемое значение  
  Свойства **BOF** и **EOF** возвращают **логические** значения.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Используйте свойства **BOF** и **EOF** , чтобы определить, содержит ли объект **набора** записей записи или выходят за пределы объекта **набора записей** при переходе от записи к записи.  
   
  Свойство **BOF** возвращает **значение true** (-1), если текущая запись находится перед первой записью, и **false** (0), если текущая запись находится в положении или после первой записи.  
@@ -49,8 +49,8 @@ ms.locfileid: "67920387"
   
 ||MoveFirst<br /><br /> MoveLast|MovePrevious<br /><br /> Переместить < 0|Переместить 0|Метод<br /><br /> Переместить > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**true**, **EOF**=**false**|Разрешено|Error|Error|Разрешено|  
-|**BOF**=**false**, **EOF**=(**Истина** )|Разрешено|Разрешено|Error|Error|  
+|**BOF** = **True**, **EOF**— = **false**|Разрешено|Error|Error|Разрешено|  
+|**BOF** = **False**, **EOF**— = **true**|Разрешено|Разрешено|Error|Error|  
 |Оба значения **true**|Error|Error|Error|Error|  
 |Оба значения **false**|Разрешено|Разрешено|Разрешено|Разрешено|  
   
@@ -68,6 +68,6 @@ ms.locfileid: "67920387"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойств BOF, EOF и Bookmark (Visual Basic)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
  [Пример свойств BOF, EOF и Bookmark (Visual c++)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   

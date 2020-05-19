@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Refresh method [ADOX], Visual Basic example
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9b5201be26bfd9df41c9cb1d8908f59499520878
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 162e6739a61b52922998a61c019225ef0f8d5216
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965379"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748593"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>Пример метода Refresh коллекции Procedures (Visual Basic)
 В следующем коде показано, как обновить коллекцию [процедур](../../../ado/reference/adox-api/procedures-collection-adox.md) [каталога](../../../ado/reference/adox-api/catalog-object-adox.md). Это необходимо, прежде чем можно будет получить доступ к объектам [процедуры](../../../ado/reference/adox-api/procedure-object-adox.md) из **каталога** .  
@@ -54,7 +54,7 @@ End Sub
 ' EndProceduresRefreshVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Коллекция процедур (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
  [Метод Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD, fundamentals
 ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 690c7b58c336596485b9ade77f0c02928853cd2d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e19b1e816a75e3e4ccbaef62c4a583e036cda9f9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923202"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748122"
 ---
 # <a name="ado-md-fundamentals"></a>Основные принципы объектов данных ActiveX (MD)
 Microsoft®® ActiveX Data Objects (объекты данных ActiveX (MD)) предоставляет простой доступ к многомерным данным на таких языках, как Microsoft Visual Basic®, Microsoft Visual C++®. Объекты данных ActiveX (MD) расширяет Microsoft ActiveX® объекты данных (ADO) для включения объектов, характерных для многомерных данных, таких как объекты [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) и набор [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) . С помощью объекты данных ActiveX (MD) можно просматривать многомерную схему, выполнять запросы к кубу и получать результаты.  
@@ -36,7 +36,7 @@ Microsoft®® ActiveX Data Objects (объекты данных ActiveX (MD)) п
   
 -   [Программирование с объектами данных ActiveX (MD)](../../../ado/guide/multidimensional/programming-with-ado-md.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объектная модель объекты данных ActiveX (MD)](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [Руководством программиста по ADO](../../../ado/guide/ado-programmer-s-guide.md)   
  [Расширения ADO для языка описания данных и системы безопасности (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - collections [ADO], ADO/WFC syntax
 - ADO/WFC syntax index [ADO]
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b26c78f514ef6786f642c534b2621d0c81c71e51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d5213e1c50f603663bb0405748f5dda882be5cfe
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919908"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748896"
 ---
 # <a name="collections-ado---wfc-syntax"></a>Collections (ADO — синтаксис WFC)
 **упаковать com. MS. WFC. Data**  
@@ -65,7 +65,7 @@ public com.ms.wfc.data.Field getItem(String s)
 public int getCount()  
 ```  
   
-## <a name="errors"></a>ошибки  
+## <a name="errors"></a>Ошибки  
   
 ### <a name="methods"></a>Методы  
   
@@ -82,7 +82,7 @@ public com.ms.wfc.data.Error getItem(String s)
 public int getCount()  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Коллекция Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

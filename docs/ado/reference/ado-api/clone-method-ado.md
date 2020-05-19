@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Clone method [ADO]
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7439f9a4a04582f4cf4c4878892ed0f4f33e228c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c936eb8016be0851fa6d3ecff1f624eab6c895f3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920019"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748679"
 ---
 # <a name="clone-method-ado"></a>Метод Clone (ADO)
 Создает дубликат объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) из существующего объекта **набора записей** . При необходимости указывает, что клон доступен только для чтения.  
@@ -44,9 +44,9 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  Объектная переменная, определяющая объект **набора записей** для дублирования.  
   
  *LockType*  
- Необязательный параметр. Значение [локктипинум](../../../ado/reference/ado-api/locktypeenum.md) , указывающее либо тип блокировки исходного **набора записей**, либо **набор записей**только для чтения. Допустимые значения: **адлоккунспеЦифиед** или **адлоккреадонли**.  
+ Необязательный элемент. Значение [локктипинум](../../../ado/reference/ado-api/locktypeenum.md) , указывающее либо тип блокировки исходного **набора записей**, либо **набор записей**только для чтения. Допустимые значения: **адлоккунспеЦифиед** или **адлоккреадонли**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Используйте метод **clone** для создания нескольких повторяющихся объектов **набора записей** , особенно если требуется поддерживать более одной текущей записи в заданном наборе записей. Использование метода **clone** является более эффективным, чем создание и открытие нового объекта **набора записей** , который использует то же определение, что и исходный.  
   
  Свойство [Filter](../../../ado/reference/ado-api/filter-property.md) исходного **набора записей**, если таковое имеется, не будет применено к клону. Задайте свойство **Filter** для нового **набора записей** , чтобы отфильтровать результаты. Самый простой способ скопировать любое существующее значение **фильтра** — это назначить его напрямую, как показано ниже.  
@@ -67,7 +67,7 @@ rsNew.Filter = rsOriginal.Filter
   
  В следующей таблице приведен полный список всех событий **набора записей** . Указывает, являются ли они допустимыми и запускаются для всех клонов набора записей, созданных с помощью метода **clone** .  
   
-|событие|Активировано в клонах?|  
+|Событие|Активировано в клонах?|  
 |-----------|--------------------------|  
 |[ендофрекордсет](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Нет|  
 |[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Нет|  
@@ -84,7 +84,7 @@ rsNew.Filter = rsOriginal.Filter
 ## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода Clone (Visual Basic)](../../../ado/reference/ado-api/clone-method-example-vb.md)   
  [Пример метода Clone (VBScript)](../../../ado/reference/ado-api/clone-method-example-vbscript.md)   
  [Пример метода Clone (Visual C++)](../../../ado/reference/ado-api/clone-method-example-vc.md)   

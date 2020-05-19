@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional schemas and data
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e4681bb9e1fd1028ee1ddc2bd7f72efc03fb6c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a4a2f6dbd2c5d075bb888e61bb01e1094c8ef5c0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923181"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748090"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Общие сведения о многомерных схемах и данных
 ## <a name="understanding-multidimensional-schemas"></a>Основные сведения о многомерных схемах  
@@ -53,7 +53,7 @@ Hamburg, Munich, Stuttgart}
 ### <a name="hierarchies"></a>Иерархии  
  Иерархии определяют способы, с помощью которых уровни измерения могут быть сведены или сгруппированы. Измерение может иметь более одной иерархии. Естественная иерархия существует в измерении Geography:  
   
-### <a name="levels"></a>Levels  
+### <a name="levels"></a>Уровни  
  В примере измерения Geography, изображенном на предыдущем рисунке, каждое поле представляет уровень в иерархии.  
   
  Каждый уровень имеет набор элементов следующим образом:  
@@ -68,7 +68,7 @@ Hamburg, Munich, Stuttgart}
   
 -   Городов`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
-### <a name="members"></a>Участники  
+### <a name="members"></a>Элементы  
  Элементы на конечном уровне иерархии не имеют дочерних элементов, а элементы на корневом уровне не имеют родителя. Все остальные члены имеют по крайней мере один родительский элемент и хотя бы один дочерний элемент. Например, частичный обход дерева иерархии в измерении Geography дает следующие связи типа «родители-потомки»:  
   
 -   `{All} (parent of) {Europe, North America}`  
@@ -83,7 +83,7 @@ Hamburg, Munich, Stuttgart}
   
  В этом примере также иллюстрируется другая характеристика: некоторые элементы уровня «неделя» в иерархии «год-неделя» не отображаются ни на одном уровне иерархии «год-квартал». Таким же иерархия не должна включать все элементы измерения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объектная модель объекты данных ActiveX (MD)](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (многомерные) (объекты данных ActiveX (MD))](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [Программирование с помощью объекты данных ActiveX (MD)](../../../ado/guide/multidimensional/programming-with-ado-md.md)   

@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f7d2c5bcc1b07107164b8df73c8239ebd66b9fa4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921085"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749228"
 ---
 # <a name="ado-dynamic-property-index"></a>Индекс динамических свойств ADO
 Поставщики данных, поставщики служб и компоненты служб могут добавлять динамические свойства в коллекции **свойств** неоткрытых [соединений](../../../ado/reference/ado-api/connection-object-ado.md) и объектов [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) . Данный поставщик может также вставлять дополнительные свойства при открытии этих объектов. Некоторые из этих свойств перечислены в разделе [динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) . Дополнительные сведения см. в разделе "конкретные поставщики" раздела [приложение A: поставщики](../../../ado/guide/appendixes/appendix-a-providers.md) .  
@@ -38,7 +38,7 @@ ms.locfileid: "67921085"
 |Определение столбца|DBPROP_COLUMNDEFINITION|  
 |Время ожидания соединения|DBPROP_INIT_TIMEOUT|  
 |Текущий каталог|DBPROP_CURRENTCATALOG|  
-|Источник данных|DBPROP_INIT_DATASOURCE|  
+|источника данных|DBPROP_INIT_DATASOURCE|  
 |Имя базы данных-источника|DBPROP_DATASOURCENAME|  
 |Потоковая модель объекта источника данных|DBPROP_DSOTHREADMODEL|  
 |Имя СУБД|DBPROP_DBMSNAME|  

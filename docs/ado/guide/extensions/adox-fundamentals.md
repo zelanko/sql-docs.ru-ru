@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADOX, fundamentals
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 66965b99d0f8bcc87025239f7ffa54814e6d74f4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 131df9d5712bf89c28e1b8e7eae30217b6c16947
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923264"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748176"
 ---
 # <a name="adox-fundamentals"></a>Основные принципы ADOX
 Microsoft® ActiveX® расширения объектов данных для языка описания данных и системы безопасности (ADOX) — это расширение объектов ADO и модели программирования. ADOX включает объекты для создания и изменения схем, а также для обеспечения безопасности. Поскольку это основанный на объектах подход к обработке схем, можно написать код, который будет работать с различными источниками данных независимо от различий в их синтаксисе.  
@@ -42,7 +42,7 @@ Microsoft® ActiveX® расширения объектов данных для 
   
 -   [Примеры ADOX](../../../ado/reference/adox-api/adox-code-examples.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Примеры кода ADOX](../../../ado/reference/adox-api/adox-code-examples.md)   
  [ADOX коллекции](../../../ado/reference/adox-api/adox-collections.md)   

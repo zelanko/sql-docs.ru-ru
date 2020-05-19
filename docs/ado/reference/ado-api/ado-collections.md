@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO collections [ADO]
 - collections [ADO]
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a06e51f5c5077a70f9b5a76ecdf4922d8e006f7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: faad4d819939362f7e3b9c22062768bee71a0cda
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921101"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749359"
 ---
 # <a name="ado-collections"></a>Коллекции ADO
 Связи между этими коллекциями и объектами ADO представлены в [объектной модели ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "67921101"
 |[Параметры](../../../ado/reference/ado-api/parameters-collection-ado.md)|Содержит все объекты **параметров** объекта **Command** .|  
 |[Свойства](../../../ado/reference/ado-api/properties-collection-ado.md)|Содержит все объекты **свойств** для конкретного экземпляра объекта.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Перечислимые константы ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   

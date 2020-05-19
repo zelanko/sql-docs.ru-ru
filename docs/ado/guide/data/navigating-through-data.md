@@ -13,14 +13,14 @@ helpviewer_keywords:
 - searching data [ADO]
 - navigating data [ADO]
 ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a0b58000da5f29824fbfdd134a701088775c90af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 66079842d950e108a3cdc4e6ad52ad1feff6ab2a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924786"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748444"
 ---
 # <a name="navigating-through-data"></a>Переход между записями данных
 **Набор записей** поддерживает различные методы и свойства для навигации по результирующему набору данных. Мы рассмотрим эту функцию, выполнив несколько сценариев с примерами объектов **Recordset** .  

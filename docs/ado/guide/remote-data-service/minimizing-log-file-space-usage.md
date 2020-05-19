@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - log file space in RDS [ADO]
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c8dc0799fbeba24ad4725d25647ef471edad8fb7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1eca3db07301ca45c898f21f558339e5f2ab93e1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922557"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747878"
 ---
 # <a name="minimizing-log-file-space-usage"></a>Минимизация использования места в файле журнала
 Файл журнала может быстро заполняться (таким же прерывает работу сервера), если в SQL Server базе данных имеется большой объем действий. Можно задать усечение файла журнала **на контрольную точку** , чтобы значительно продлить время существования файла журнала для базы данных.  
@@ -45,7 +45,7 @@ ms.locfileid: "67922557"
   
  Дополнительные сведения о функции **Truncate on Checkpoint** см. в документации по Microsoft SQL Server.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные принципы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

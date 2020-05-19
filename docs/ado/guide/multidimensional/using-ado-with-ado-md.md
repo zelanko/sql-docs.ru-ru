@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, using with ADO MD
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3c634ec056d42e97dcbea3422a0e19a33596d54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 591a10e8c91aa22f939ff48f341b376bbd8ebe1b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923149"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748008"
 ---
 # <a name="using-ado-with-ado-md"></a>Использование ADO с объектами данных ActiveX (MD)
 ADO и объекты данных ActiveX (MD) являются взаимосвязанными, но отдельными объектными моделями. ADO предоставляет объекты для подключения к источникам данных, исполнения команд, получения табличных данных и метаданных схемы в табличном формате и просмотра сведений об ошибках поставщика. Объекты данных ActiveX (MD) предоставляет объекты для извлечения многомерных данных и просмотра метаданных многомерной схемы.  
@@ -44,7 +44,7 @@ ADO и объекты данных ActiveX (MD) являются взаимос�
   
  Дополнительные сведения об объектах и методах ADO см. в [справочнике по API ADO](../../../ado/reference/ado-api/ado-api-reference.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объектная модель объекты данных ActiveX (MD)](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (многомерные) (объекты данных ActiveX (MD))](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [Общие сведения о многомерных схемах и данных](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   

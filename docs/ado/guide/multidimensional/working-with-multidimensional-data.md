@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dcd4839fc984dacddc79f54b350a98cdbe53355b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923134"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747994"
 ---
 # <a name="working-with-multidimensional-data"></a>Работа с многомерными данными
 Набор *ячеек* является результатом запроса к многомерным данным. Он состоит из набора осей, обычно не более четырех осей и обычно двух или трех. *Ось* — это коллекция элементов из одного или нескольких измерений, которые используются для нахождение или фильтрации конкретных значений в Кубе.  
@@ -77,7 +77,7 @@ Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec
   
  Наборы ячеек, ячейки, оси и положения представлены в объекты данных ActiveX (MD) соответствующих объектов: набор [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [Ячейка](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [ось](../../../ado/reference/ado-md-api/axis-object-ado-md.md)и [позиция](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объектная модель объекты данных ActiveX (MD)](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (многомерные) (объекты данных ActiveX (MD))](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [Общие сведения о многомерных схемах и данных](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   

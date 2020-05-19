@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - DataControl object [ADO], VBScript example
 ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7eff8a3a016ad7e0cc6b9f928bef4f16891e8375
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bb581ab66f4422b392c0031c1e69faa00e21069f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964417"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748778"
 ---
 # <a name="datacontrol-object-example-vbscript"></a>Пример объекта DataControl (VBScript)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем примере кода показано, как задать [RDS. Параметры элементов управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) данными во время разработки и привязывать их к элементу управления, поддерживающему данные. Вырежьте и вставьте этот код между \<текстом Body> \<и/боди> ТЕГАМИ в обычном HTML-документе и назовите его **датаконтролдесигнвбс. ASP**. Сценарий ASP определит ваш сервер.  
+ В следующем примере кода показано, как задать [RDS. Параметры элементов управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) данными во время разработки и привязывать их к элементу управления, поддерживающему данные. Вырежьте и вставьте этот код между \< текстом Body> и \< /боди> тегами в обычном HTML-документе и назовите его **датаконтролдесигнвбс. ASP**. Сценарий ASP определит ваш сервер.  
   
 ```  
 <!-- BeginDataControlDesignVBS -->  
@@ -92,7 +92,7 @@ BODY {
 <!-- EndDataControlDesignVBS -->  
 ```  
   
- В следующем примере показано, как задать необходимые параметры **RDS. Элемент управления** на этапе выполнения. Чтобы протестировать этот пример, вырежьте и вставьте этот \<код между телом \<> и/боди> ТЕГАМИ в обычном HTML-документе и назовите его **датаконтролрунтимевбс. ASP**. Сценарий ASP определит ваш сервер.  
+ В следующем примере показано, как задать необходимые параметры **RDS. Элемент управления** на этапе выполнения. Чтобы протестировать этот пример, вырежьте и вставьте этот код между \< телом> и \< /боди> тегами в обычном HTML-документе и назовите его **датаконтролрунтимевбс. ASP**. Сценарий ASP определит ваш сервер.  
   
 ```  
 <!-- BeginDataControlRuntimeVBS -->  
@@ -182,7 +182,7 @@ End Sub
 <!-- EndDataControlRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
 
 
