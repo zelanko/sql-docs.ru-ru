@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], engine
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89d92fc60e18926351cc94e6e6c21a32a7371ed5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b51762f8fd25ce6fe83ba3f26c8f0200e6938cf
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62638243"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706627"
 ---
 # <a name="sql-server-extended-events-engine"></a>Подсистема расширенных событий SQL Server
   Подсистема расширенных событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представляет собой набор служб и объектов, которые выполняют следующие действия.  

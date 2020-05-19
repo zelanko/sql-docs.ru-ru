@@ -11,15 +11,15 @@ helpviewer_keywords:
 - handles [ODBC], connection
 - handles [ODBC], about handles
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 322120624c612371b56029c2cf29c9ab457c81b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9237c5a92367769674d585b11f0d930b2d6fbbd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225506"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82715034"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Выделение дескрипторов и соединение с SQL Server (ODBC)
     
@@ -31,7 +31,7 @@ ms.locfileid: "63225506"
   
 3.  Вызовите [функцию SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) с `HandleType` SQL_HANDLE_ENV, чтобы инициализировать ODBC и выделить обработчик среды.  
   
-4.  Вызовите [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) , указав `Attribute` для параметра `ValuePtr` значение SQL_ATTR_ODBC_VERSION и задайте для значение SQL_OV_ODBC3, чтобы указать, что приложение будет использовать вызовы функций формата ODBC 3. x.  
+4.  Вызовите [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) , указав `Attribute` для параметра значение SQL_ATTR_ODBC_VERSION и `ValuePtr` Задайте для значение SQL_OV_ODBC3, чтобы указать, что приложение будет использовать вызовы функций формата ODBC 3. x.  
   
 5.  При необходимости вызовите [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) , чтобы задать другие параметры среды, или вызовите [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403) , чтобы получить параметры среды.  
   
@@ -39,11 +39,11 @@ ms.locfileid: "63225506"
   
 7.  При необходимости вызовите [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) , чтобы задать параметры соединения, или вызовите [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) , чтобы получить параметры соединения.  
   
-8.  Вызовите SQLConnect, чтобы использовать существующий источник данных для подключения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]к.  
+8.  Вызовите SQLConnect, чтобы использовать существующий источник данных для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Или  
   
-     Вызовите [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) , чтобы использовать строку подключения для подключения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]к.  
+     Вызовите [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) , чтобы использовать строку подключения для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Минимальная строка соединения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет одну из двух форм:  
   
@@ -56,13 +56,13 @@ ms.locfileid: "63225506"
   
      \- или -  
   
-     Вызывайте [SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md) несколько раз в итеративном виде для создания строки подключения и подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Вызывайте [SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md) несколько раз в итеративном виде для создания строки подключения и подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 9. При необходимости вызовите [SQLGetInfo](../native-client-odbc-api/sqlgetinfo.md) , чтобы получить атрибуты и поведение драйвера для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источника данных.  
   
 10. Выделите и используйте инструкции.  
   
-11. Вызовите SQLDisconnect, чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отключиться от и сделать маркер соединения доступным для нового соединения.  
+11. Вызовите SQLDisconnect, чтобы отключиться от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и сделать маркер соединения доступным для нового соединения.  
   
 12. Вызовите [SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md) с `HandleType` SQL_HANDLE_DBC, чтобы освободить маркер подключения.  
   

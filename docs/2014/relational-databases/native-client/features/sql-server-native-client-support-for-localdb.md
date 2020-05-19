@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 127569d1-a9f7-49bf-a561-c084986a8871
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3a3f5a8214c2966b1958c3a4ea08edbee5af6a2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 503bae580d2bacffbd143a1b4530f83b7c81a269
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225478"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707227"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>Поддержка SQL Server Native Client для LocalDB
   Начиная с версии [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], будет доступна облегченная версия SQL Server, называемая LocalDB. В этом разделе обсуждается, как можно установить соединение с базой данных на экземпляре LocalDB.  
@@ -31,7 +31,7 @@ ms.locfileid: "63225478"
   
 -   Использовать программу `sqllocaldb.exe i` для поиска имени экземпляра по умолчанию.  
   
--   Использовать ключевое слово строки подключения `AttachDBFilename` для указания файла базы данных, который сервер должен присоединить. Если при `AttachDBFilename`использовании ключевого слова строки подключения к **базе данных** не указано имя базы данных, то при закрытии приложения база данных будет удалена из экземпляра LocalDB.  
+-   Использовать ключевое слово строки подключения `AttachDBFilename` для указания файла базы данных, который сервер должен присоединить. Если при использовании `AttachDBFilename` ключевого слова строки подключения к **базе данных** не указано имя базы данных, то при закрытии приложения база данных будет удалена из экземпляра LocalDB.  
   
 -   Чтобы указать экземпляр LocalDB в строке подключения, выполните следующие действия.  
   

@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLGetDescField function
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b635716617c84185efdef0e2e23d2f3b65bbac91
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657788"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706046"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
-  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента предоставляет только зависящие от драйвера поля дескриптора для дескриптора строки реализации (IRD). В IRD поля [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] дескриптора ссылаются с помощью атрибутов столбцов, специфичных для драйвера. Сведения о полном списке доступных полей дескрипторов для конкретных драйверов см. в разделе [SQLColAttribute](sqlcolattribute.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента предоставляет только зависящие от драйвера поля дескриптора для дескриптора строки реализации (IRD). В IRD [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поля дескриптора ссылаются с помощью атрибутов столбцов, специфичных для драйвера. Сведения о полном списке доступных полей дескрипторов для конкретных драйверов см. в разделе [SQLColAttribute](sqlcolattribute.md).  
   
  Поля дескриптора, содержащие строки идентификатора столбца, часто являются строками нулевой длины. Все специфические для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] значения поля дескриптора доступны только для чтения.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62657788"
   
  Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
- Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] `SQL_C_SS_TIME2` , SQLGetDescField может возвращать ( `time` для типов) `SQL_C_SS_TIMESTAMPOFFSET` или ( `datetimeoffset`для) `SQL_C_BINARY`, а не, если приложение использует ODBC 3,8.  
+ Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , SQLGetDescField может возвращать `SQL_C_SS_TIME2` (для `time` типов) или `SQL_C_SS_TIMESTAMPOFFSET` (для `datetimeoffset` ), а не `SQL_C_BINARY` , если приложение использует ODBC 3,8.  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>Поддержка функции SQLGetDescField для больших определяемых пользователем типов данных CLR  
  Функция `SQLGetDescField` поддерживает определяемые пользователем типы больших данных CLR. Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
@@ -151,7 +151,7 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
     }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLGetDescField](https://go.microsoft.com/fwlink/?LinkId=59351)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

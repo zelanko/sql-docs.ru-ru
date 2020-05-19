@@ -10,18 +10,18 @@ helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a62d8fbafc353e2d71223506b7fb4516d184b494
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637997"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717092"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Создание переменных и столбцов типа данных XML
-  Тип данных `xml` — это встроенный в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных, несколько напоминающий другие встроенные типы данных, такие как `int` и `varchar`. Как и в случае с другими встроенными типами, тип `xml` данных можно использовать в качестве типа столбца при создании таблицы в качестве типа переменной, типа параметра, типа возвращаемого функцией значения, а также в случае [приведения и преобразования](/sql/t-sql/functions/cast-and-convert-transact-sql).  
+  Тип данных `xml` — это встроенный в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных, несколько напоминающий другие встроенные типы данных, такие как `int` и `varchar`. Как и в случае с другими встроенными типами, тип данных можно использовать в `xml` качестве типа столбца при создании таблицы в качестве типа переменной, типа параметра, типа возвращаемого функцией значения, а также в случае [приведения и преобразования](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 ## <a name="creating-columns-and-variables"></a>Создание столбцов и переменных  
  Чтобы создать в таблице столбец типа `xml` , воспользуйтесь инструкцией `CREATE TABLE` , приведенной в следующем примере:  
@@ -127,9 +127,9 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>Та же таблица или другая  
- Столбец `xml` типа данных может быть создан в таблице, содержащей другие реляционные столбцы, или в отдельной таблице с отношением внешнего ключа к главной таблице.  
+ `xml`Столбец типа данных может быть создан в таблице, содержащей другие реляционные столбцы, или в отдельной таблице с отношением внешнего ключа к главной таблице.  
   
- Создайте столбец `xml` типа данных в той же таблице, если выполняется одно из следующих условий.  
+ Создайте `xml` столбец типа данных в той же таблице, если выполняется одно из следующих условий.  
   
 -   Приложение извлекает данные из XML-столбца и не нуждается в том, чтобы для него был создан XML-индекс.  
   

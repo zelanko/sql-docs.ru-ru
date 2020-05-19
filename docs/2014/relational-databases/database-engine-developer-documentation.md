@@ -10,15 +10,15 @@ helpviewer_keywords:
 - developer's guide [SQL Server Database Engine]
 - Database Engine [SQL Server], development
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5751cadb999ee3a2c9d8260bee7a6197047d312
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530947"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706851"
 ---
 # <a name="developer39s-guide-database-engine"></a>Руководством для разработчиков&#39;(ядро СУБД)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержит богатый набор средств разработки, администрирования и управления приложениями баз данных.  
@@ -34,7 +34,7 @@ ms.locfileid: "69530947"
  Содержит описание последней версии SQLXML, обеспечивающей те же возможности, что и SQLXML 3.0, а также дополнительные обновления для поддержки новых возможностей [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], например типа данных XML.  
   
  [Основные понятия о поставщике WMI для управления конфигурацией](wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
- Описывает опубликованный слой, который используется с оснасткой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager для консоли управления (MMC) и [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager. Предоставляет единообразный метод взаимодействия с API-интерфейсом, позволяющий управлять операциями с реестром, запрошенными диспетчером конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], и обеспечивает улучшенное управление выбранным экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Описывает опубликованный слой, который используется с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] оснасткой Configuration Manager для консоли управления (MMC) и [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager. Предоставляет единообразный метод взаимодействия с API-интерфейсом, позволяющий управлять операциями с реестром, запрошенными диспетчером конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], и обеспечивает улучшенное управление выбранным экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  [Основные понятия о поставщике WMI для событий сервера](wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
  Приводит описание использования инструментария управления Windows (WMI) для наблюдения за событиями на экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "69530947"
  [Программирование окон сообщений об исключениях](../database-engine/dev-guide/exception-message-box-programming.md)  
  Объясняет, как использовать программный интерфейс окна сообщений об исключениях, чтобы обеспечить приложениям более полное управление сообщениями и дать пользователям возможность сохранять содержимое сообщения об ошибке для последующего просмотра сообщений и получения помощи при работе с ними.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Программирование интеллектуального анализа данных](../analysis-services/dev-guide/data-mining-programming.md)   
  [&#40;Analysis Services с руководством разработчика&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
  [&#40;Integration Services с руководством разработчика&#41;](../integration-services/integration-services-developer-documentation.md)   

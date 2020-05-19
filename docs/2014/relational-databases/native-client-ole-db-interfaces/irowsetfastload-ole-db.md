@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - IRowsetFastLoad interface
 ms.assetid: d19a7097-48d9-409a-aff9-277891b7aca7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 35cee52e9a85989123bcb10d998d37ce86a28601
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 720ea095343abefb0b56f4f1f47bbd853d72378e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209816"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707340"
 ---
 # <a name="irowsetfastload-ole-db"></a>Метод IRowsetFastLoad (OLE DB)
-  `IRowsetFastLoad` Интерфейс обеспечивает поддержку операций с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] массовым копированием на основе памяти. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Потребители поставщика собственного клиента OLE DB используют интерфейс для быстрого добавления данных в существующую [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицу.  
+  `IRowsetFastLoad`Интерфейс обеспечивает поддержку операций с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] массовым копированием на основе памяти. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Потребители поставщика собственного клиента OLE DB используют интерфейс для быстрого добавления данных в существующую [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицу.  
   
  Если присвоить SSPROP_ENABLEFASTLOAD значение VARIANT_TRUE для сеанса, то будет невозможно считывать данные из наборов строк, возвращаемых впоследствии в этом сеансе. Если присвоить SSPROP_ENABLEFASTLOAD значение VARIANT_TRUE, то все наборы строк, созданные для сеанса, будут иметь тип IRowsetFastLoad. Наборы строк IRowsetFastLoad не поддерживают функциональные возможности получения данных из набора строк, поэтому чтение данных из наборов строк невозможно.  
   

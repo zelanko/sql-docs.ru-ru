@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf9e3f3e7bf2d170faf0eaab2be18098a24b52cc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112223"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706970"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Функции SQL Server, больше не поддерживаемые в SQL Server 2014
   В этом разделе описаны функции, которые становятся недоступными после обновления до [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "79112223"
 ## <a name="discontinued-features-in-sql-server-2008"></a>Функции, неподдерживаемые в SQL Server 2008  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>Неподдерживаемые функции SQL-DMO при установке SQL Server Express  
- Распределенные управляющие объекты SQL (SQL-DMO) для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] были удалены из [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Рекомендуется как можно скорее внести изменения в приложения, которые пользуют эти компоненты. Если требуется поддержка SQL-DMO для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, установите компоненты обратной совместимости из пакета дополнительных [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] компонентов из [центра загрузки Майкрософт](https://www.microsoft.com/download/). В дальнейшем для разработки пользуйтесь объектами SMO ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects).  
+ Распределенные управляющие объекты SQL (SQL-DMO) для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] были удалены из [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Рекомендуется как можно скорее внести изменения в приложения, которые пользуют эти компоненты. Если требуется поддержка SQL-DMO для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, установите компоненты обратной совместимости из [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] пакета дополнительных компонентов из [центра загрузки Майкрософт](https://www.microsoft.com/download/). В дальнейшем для разработки пользуйтесь объектами SMO ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects).  
   
 ### <a name="discontinued-option-for-web-assistant"></a>Неподдерживаемый параметр для помощника Web Assistant  
  Параметр `sp_configure` для включения помощника Web Assistant удален из [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Вместо этого рекомендуется использовать [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -78,7 +78,7 @@ ms.locfileid: "79112223"
   
  <sup>1</sup> Эти параметры допустимы только для установки.  
   
- <sup>2</sup> Начиная [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]с, укажите/Action = EditionUpgrade, чтобы обновить существующий выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] до другого выпуска в любое время без использования исходного установочного носителя. Дополнительные сведения о поддерживаемой версии и обновлении выпуском см. в разделе [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+ <sup>2</sup> Начиная [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] с, укажите/Action = EditionUpgrade, чтобы обновить существующий выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] до другого выпуска в любое время без использования исходного установочного носителя. Дополнительные сведения о поддерживаемой версии и обновлении выпуском см. в разделе [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
  Дополнительные сведения см. в статье [Установка SQL Server 2014 из командной строки](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   

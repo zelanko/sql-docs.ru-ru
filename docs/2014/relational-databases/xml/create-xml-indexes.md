@@ -10,15 +10,15 @@ helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8448e133891d375a97010c15d2079335e473c6f1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637764"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717057"
 ---
 # <a name="create-xml-indexes"></a>Создание XML-индексов
   В данном разделе описано создание первичных и вторичных XML-индексов.  
@@ -44,7 +44,7 @@ ms.locfileid: "62637764"
   
 -   На имена первичных XML-индексов накладываются те же ограничения, что и на имена представлений.  
   
- `xml` Нельзя создать XML-индекс для столбца типа в представлении, на переменную с табличным значением со **table** `xml` столбцами типа или `xml` переменные типа.  
+ Нельзя создать XML-индекс для `xml` столбца типа в представлении, на переменную с **табличным** значением со `xml` столбцами типа или `xml` переменные типа.  
   
 -   Для изменения столбца типа `xml` с помощью параметра ALTER TABLE ALTER COLUMN с нетипизированного на типизированный XML (или наоборот) для этого столбца не должно быть определено никаких XML-индексов. Если такой индекс существует, он должен быть сначала удален.  
   

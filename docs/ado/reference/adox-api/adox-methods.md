@@ -11,14 +11,14 @@ helpviewer_keywords:
 - methods [ADOX]
 - ADOX, methods
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c96f28070fd06b48b4aeac40c3db6b8e7179830a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 59149594d618350c9188d40eb6ade51b3aecde68
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928548"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764125"
 ---
 # <a name="adox-methods"></a>Методы ADOX
 
@@ -34,12 +34,12 @@ ms.locfileid: "67928548"
 |[Append (представления)](../../../ado/reference/adox-api/append-method-adox-views.md)|Добавляет новый объект **представления** в коллекцию **представлений** .|  
 |[ChangePassword;](../../../ado/reference/adox-api/changepassword-method-adox.md)|Изменяет пароль для учетной записи пользователя.|  
 |[Создать](../../../ado/reference/adox-api/create-method-adox.md)|Создает новый каталог.|  
-|[Удаление](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Удаляет объект из коллекции.|  
+|[Удалить](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Удаляет объект из коллекции.|  
 |[Примеры методов getobjectowner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Возвращает владельца объекта в каталоге.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Возвращает разрешения для группы или пользователя на объекте.|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|Указывает владельца объекта в каталоге.|  
 |[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)|Задает разрешения для группы или пользователя на объекте.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Расширения ADO для языка описания данных и безопасности (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

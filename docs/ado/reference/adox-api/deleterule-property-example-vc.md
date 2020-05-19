@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - DeleteRule property [ADOX], VC++ example
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6dc6d3284018aecd247baad6e66aaa332b721459
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb8100365b064ef5403788ec072595f7b3f8e86e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76911098"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763915"
 ---
 # <a name="deleterule-property-example-vc"></a>Пример свойства DeleteRule (Visual C++)
 В этом примере демонстрируется свойство [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) объекта [Key](../../../ado/reference/adox-api/key-object-adox.md) . Код добавляет новую [таблицу](../../../ado/reference/adox-api/table-object-adox.md) , а затем определяет новый первичный ключ, устанавливая для **DeleteRule** значение **адрикаскаде**.  
@@ -107,6 +107,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство DeleteRule (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
  [Объект Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

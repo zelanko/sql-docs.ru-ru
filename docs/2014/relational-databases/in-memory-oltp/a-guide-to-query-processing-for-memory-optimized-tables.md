@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ba02a877d06d6ee3b7f57f6a42c588f4c1019a9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112241"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706578"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Руководство по обработке запросов для таблиц, оптимизированных для памяти
   В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]In-Memory OLTP вводятся оптимизированные для памяти таблицы и скомпилированные в собственном коде хранимые процедуры. В данной статье приводится обзор обработки запросов для таблиц, оптимизированных для памяти, и хранимых процедур, скомпилированных в собственном коде.  
@@ -222,7 +222,7 @@ END
   
  Описание вызова хранимой процедуры, скомпилированной в собственном коде:  
   
-1.  Пользователь выдает `EXEC`инструкцию *usp_myproc* .  
+1.  Пользователь выдает `EXEC` инструкцию *usp_myproc* .  
   
 2.  Средство синтаксического анализа извлекает имя и параметры хранимой процедуры.  
   
@@ -303,6 +303,6 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
  В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ведется статистика для оптимизированных для памяти таблиц на уровне столбца. Кроме того, в нем осуществляется подсчет действительного числа строк таблицы. Однако в отличие от дисковых таблиц статистика для оптимизированных для памяти таблиц не обновляется автоматически. Следовательно, необходимо вручную обновлять статистику после значительных изменений в таблицах. Дополнительные сведения см. в статье [Статистика для таблиц, оптимизированных для памяти](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Оптимизированные для памяти таблицы](memory-optimized-tables.md)  
+ [Таблицы, оптимизированные для памяти](memory-optimized-tables.md)  
   
   

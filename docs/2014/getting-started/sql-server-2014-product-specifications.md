@@ -12,15 +12,15 @@ helpviewer_keywords:
 - product specifications [SQL Server]
 - configuration options [SQL Server], product specifications
 ms.assetid: 6445fd53-6844-4170-a86b-7fe76a9f64cb
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 98d595be891fbae75cfe90d06ceccec232e7e53e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 418827b496cc7e35f11b893ee2c50b96571c419d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62772293"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706874"
 ---
 # <a name="sql-server-2014-product-specifications"></a>SQL Server 2014, спецификация продукта
   В разделах, перечисленных в следующей таблице, изложена подробная спецификация продукта для данного выпуска:  
@@ -42,7 +42,7 @@ ms.technology:
 This HTML comment can be erased, if you like.
 -->
 
- [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
+ [Вычисление ограничения емкости по выпуску SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
  Максимальное количество процессоров, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  [Выпуски и компоненты SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md)  
@@ -51,7 +51,7 @@ This HTML comment can be erased, if you like.
  [Возможности, поддерживаемые различными выпусками SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
  Функции, поддерживаемые различными выпусками [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [Задание максимальной вместимости SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)  
+ [Спецификации максимальной емкости для SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)  
  Максимальные показатели для различных объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
   

@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ac47cb74-5578-417d-bcef-f970d9527705
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dd93707ef139b1751d918af43efed72574d58aa5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58449d2d7d685eaceb3b3015121cb4f59271a46d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088507"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706864"
 ---
 # <a name="sql-server-backward-compatibility"></a>Обратная совместимость SQL Server
-  Разделы в разделе о обратной совместимости описывают изменения [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в поведении между [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]версиями.  
+  Разделы в разделе о обратной совместимости описывают изменения в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поведении между версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  В этой части раздела освещаются такие темы, как программирование данных, средства настройки контактной зоны, программа установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], службы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и другие широкие функциональные изменения.  
   

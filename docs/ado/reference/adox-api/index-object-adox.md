@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Index object [ADOX]
 ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7bff462b7c9ffe115cdfd52d1ec1f0a810a50531
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 840484cbfcb1feeb56022835b6c1b3157101edb8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966080"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763885"
 ---
 # <a name="index-object-adox"></a>Объект Index (ADOX)
 Представляет индекс из таблицы базы данных.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Следующий код создает новый **индекс**:  
   
 ```  
@@ -61,7 +61,7 @@ Dim obj As New Index
   
 -   [Свойства, методы и события объекта Index](../../../ado/reference/adox-api/index-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода Append для индексов (Visual Basic)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Пример свойства IndexNulls (Visual Basic)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)   
  [Пример PrimaryKey и уникальных свойств (Visual Basic)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   

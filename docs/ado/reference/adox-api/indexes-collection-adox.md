@@ -14,24 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - Indexes collection [ADOX]
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e84f49d5ad2d88ebb88417ae01046c0bcfd8006
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: af209229519470b121e3c69ba857b145c0874e73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966047"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763856"
 ---
 # <a name="indexes-collection-adox"></a>Коллекция Indexes (ADOX)
 Содержит все объекты [индекса](../../../ado/reference/adox-api/index-object-adox.md) таблицы.  
   
-## <a name="remarks"></a>Remarks  
- Метод [append](../../../ado/reference/adox-api/append-method-adox-indexes.md) для коллекции **индексов** уникален для ADOX. Можно выполнить следующие действия.  
+## <a name="remarks"></a>Примечания  
+ Метод [append](../../../ado/reference/adox-api/append-method-adox-indexes.md) для коллекции **индексов** уникален для ADOX. Можно сделать следующее:  
   
 -   Добавьте новый индекс в коллекцию с помощью метода **append** .  
   
- Остальные свойства и методы являются стандартными для коллекций ADO. Можно выполнить следующие действия.  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Можно сделать следующее:  
   
 -   Доступ к индексу в коллекции со свойством [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   
@@ -45,6 +45,6 @@ ms.locfileid: "67966047"
   
 -   [Свойства, методы и события коллекции Indexes](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода Append для индексов (Visual Basic)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Объект Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

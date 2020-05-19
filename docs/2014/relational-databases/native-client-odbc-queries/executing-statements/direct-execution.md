@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQLExecDirect function
 - statements [ODBC], direct execution
 ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4e912ac2dd63fa63ce57647f0c4e95e6702a22ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de740430601e3b596a1d4d9717a8e23ef1e528cf
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68207070"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82710385"
 ---
 # <a name="direct-execution"></a>Прямое выполнение
   Прямое выполнение — это наиболее распространенный способ выполнения инструкции. Приложение создает строку символов, содержащую [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкцию, и отправляет ее для выполнения с помощью функции **SQLExecDirect** . Когда инструкция достигает сервера, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] компилирует ее в план выполнения и немедленно запускает план.  
@@ -29,7 +29,7 @@ ms.locfileid: "68207070"
   
  В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] значительно повышена производительность прямого выполнения часто выполняемых инструкций в многопользовательских средах, а использование SQLExecDirect с маркерами параметров для часто используемых инструкций SQL может приблизить их эффективность к эффективности выполнения после подготовки.  
   
- При подключении [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]к экземпляру драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента использует [sp_executesql](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql) для передачи инструкции SQL или пакета, указанного в **SQLExecDirect**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]имеет логику, позволяющую быстро определить, совпадает ли инструкция SQL или пакет, выполненный с **sp_executesql** , с инструкцией или пакетом, создавшим план выполнения, который уже существует в памяти. В случае совпадения [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] повторно использует существующий план, а не компилирует новый. Это означает, что часто выполняемые инструкции SQL, выполняемые с помощью **SQLExecDirect** в системе с большим количеством пользователей, получат преимущество от многих преимуществ повторного использования планов, которые были доступны только [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]для хранимых процедур в предыдущих версиях.  
+ При подключении к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC для собственного клиента использует [sp_executesql](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql) для передачи инструкции SQL или пакета, указанного в **SQLExecDirect**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]имеет логику, позволяющую быстро определить, совпадает ли инструкция SQL или пакет, выполненный с **sp_executesql** , с инструкцией или пакетом, создавшим план выполнения, который уже существует в памяти. В случае совпадения [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] повторно использует существующий план, а не компилирует новый. Это означает, что часто выполняемые инструкции SQL, выполняемые с помощью **SQLExecDirect** в системе с большим количеством пользователей, получат преимущество от многих преимуществ повторного использования планов, которые были доступны только для хранимых процедур в предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Данное преимущество работает только в случае одновременного выполнения одной инструкции или пакета SQL несколькими пользователями. Следуйте этим соглашениям по написанию кода для повышения вероятности того, что инструкции SQL, выполняемые различными клиентами, будут достаточно похожи, чтобы повторно использовать планы выполнения.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68207070"
   
 -   Соединения приложения по возможности должны использовать стандартный набор параметров соединений и инструкций. Планы выполнения, созданные для соединения с одним набором параметров (например ANSI_NULLS), не используются для соединения, имеющего другой набор параметров. Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и поставщик OLE DB собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] имеют одинаковые установки по умолчанию для этих параметров.  
   
- Если все инструкции, выполняемые с **SQLExecDirect** , кодируются с использованием [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] этих соглашений, может повторно использовать планы выполнения при возникновении возможной сделки.  
+ Если все инструкции, выполняемые с **SQLExecDirect** , кодируются с использованием этих соглашений, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может повторно использовать планы выполнения при возникновении возможной сделки.  
   
 ## <a name="see-also"></a>См. также  
  [Исполнение инструкций &#40;ODBC&#41;](executing-statements-odbc.md)  

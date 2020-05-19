@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 9c33bc36-f3af-4df2-8446-09dab2881ea8
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 69918a47cf32a389355d76b7ca3b0f781c2e3536
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 513bbf9228b1cbf68033b4c0ce2c98fab5487565
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089513"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707007"
 ---
 # <a name="behavior-changes-to-sql-server-features-in-sql-server-2014"></a>Изменения в работе функций SQL Server в SQL Server 2014
   В этом разделе описываются возможные изменения поведения при обновлении до [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] с предыдущей версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Изменения в работе затрагивают работу и взаимодействие компонентов в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] по сравнению с предыдущими версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

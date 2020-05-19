@@ -15,21 +15,21 @@ helpviewer_keywords:
 - escape sequences [SQL Server]
 - CALL statement
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 45b3d55774c4a05192f3bec9ef8bd92f89a74aa8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e6b6c48860495603ca73842e5617986d5829966
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68207036"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82709599"
 ---
 # <a name="calling-a-stored-procedure"></a>Вызов хранимой процедуры
-  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает как escape-последовательность ODBC CALL, так [!INCLUDE[tsql](../../includes/tsql-md.md)]и инструкцию [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) для выполнения хранимых процедур; предпочтительным методом является escape-последовательность вызова ODBC. Использование синтаксиса ODBC позволяет приложению получать коды возврата хранимых процедур, а драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оптимизирован в целях использования протокола, первоначально разработанного для отправки вызовов удаленных процедур (RPC) между компьютерами, на которых выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот протокол RPC повышает производительность, устраняя большую часть обработки параметров и синтаксической проверки инструкций на сервере.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента поддерживает как escape-последовательность ODBC CALL, так и [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) для выполнения хранимых процедур; в качестве предпочтительного метода используется escape-последовательность вызова ODBC. Использование синтаксиса ODBC позволяет приложению получать коды возврата хранимых процедур, а драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оптимизирован в целях использования протокола, первоначально разработанного для отправки вызовов удаленных процедур (RPC) между компьютерами, на которых выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот протокол RPC повышает производительность, устраняя большую часть обработки параметров и синтаксической проверки инструкций на сервере.  
   
 > [!NOTE]  
->  При вызове [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимых процедур с использованием именованных параметров с помощью ODBC (Дополнительные сведения см. в разделе [Привязка параметров по имени (именованные параметры)](https://go.microsoft.com/fwlink/?LinkID=209721)). имена\@параметров должны начинаться с символа "". Это ограничение, характерное для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это ограничение контролируется строже, чем в компонентах доступа к данным MDAC.  
+>  При вызове [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимых процедур с использованием именованных параметров с помощью ODBC (Дополнительные сведения см. в разделе [Привязка параметров по имени (именованные параметры)](https://go.microsoft.com/fwlink/?LinkID=209721)). имена параметров должны начинаться с \@ символа "". Это ограничение, характерное для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это ограничение контролируется строже, чем в компонентах доступа к данным MDAC.  
   
  Управляющая последовательность ODBC CALL для вызова процедуры такова:  
   

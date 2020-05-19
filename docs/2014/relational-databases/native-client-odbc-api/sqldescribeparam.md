@@ -11,22 +11,22 @@ topic_type:
 helpviewer_keywords:
 - SQLDescribeParam function
 ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2d52d68cc0cd31e9dbb3da25c46901e126252607
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6aa5dcb3ff23c5a9a57124e59b50b70969fddd68
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067739"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706288"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
-  Чтобы описать параметры любой инструкции SQL, драйвер ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента создает и выполняет инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT при вызове SQLDescribeParam для подготовленного обработчика инструкции ODBC. Метаданные результирующего набора определяют характеристики параметров в подготовленной инструкции. SQLDescribeParam может возвращать любой код ошибки, который может возвращать SQLExecute или SQLExecDirect.  
+  Чтобы описать параметры любой инструкции SQL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC для собственного клиента создает и выполняет [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию SELECT при вызове SQLDescribeParam для подготовленного обработчика инструкции ODBC. Метаданные результирующего набора определяют характеристики параметров в подготовленной инструкции. SQLDescribeParam может возвращать любой код ошибки, который может возвращать SQLExecute или SQLExecDirect.  
   
- Улучшения в ядре СУБД, начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , позволяют SQLDescribeParam получать более точные описания ожидаемых результатов. Эти более точные результаты могут отличаться от значений, возвращаемых функцией SQLDescribeParam в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Обнаружение метаданных](../native-client/features/metadata-discovery.md).  
+ Улучшения в ядре СУБД, начиная с, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] позволяют SQLDescribeParam получать более точные описания ожидаемых результатов. Эти более точные результаты могут отличаться от значений, возвращаемых функцией SQLDescribeParam в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Обнаружение метаданных](../native-client/features/metadata-discovery.md).  
   
- Кроме того, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]в *параметерсизептр* теперь возвращается значение, которое соответствует определению размера (в символах) столбца или выражения соответствующего маркера параметра, как определено в [спецификации ODBC](https://go.microsoft.com/fwlink/?LinkId=207044). В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client *параметерсизептр* может быть соответствующим значением `SQL_DESC_OCTET_LENGTH` для типа или неопределенного значения размера столбца, переданного в SQLBindParameter для типа, значение, которое должно игнорироваться (`SQL_INTEGER`например,).  
+ Кроме того [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , в *параметерсизептр* теперь возвращается значение, которое соответствует определению размера (в символах) столбца или выражения соответствующего маркера параметра, как определено в [спецификации ODBC](https://go.microsoft.com/fwlink/?LinkId=207044). В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client *параметерсизептр* может быть соответствующим значением `SQL_DESC_OCTET_LENGTH` для типа или неопределенного значения размера столбца, переданного в SQLBindParameter для типа, значение, которое должно игнорироваться ( `SQL_INTEGER` например,).  
   
  Драйвер не поддерживает вызов SQLDescribeParam в следующих ситуациях:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63067739"
   
 -   Для любых запросов, в которых один из параметров является параметром функции.  
   
--   При наличии комментариев (/* \*/) в [!INCLUDE[tsql](../../includes/tsql-md.md)] команде.  
+-   При наличии комментариев (/* \* /) в [!INCLUDE[tsql](../../includes/tsql-md.md)] команде.  
   
  При обработке пакета [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций драйвер также не поддерживает вызов SQLDescribeParam для маркеров параметров в инструкциях после первой инструкции в пакете.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "63067739"
 SQLPrepare(hstmt, "{call sp_who(?)}", SQL_NTS);  
 ```  
   
- Выполнение SQLDescribeParam после успешной подготовки возвращает пустой набор строк при соединении с любой базой данных `master`, но. Тот же вызов, подготовленный следующим образом, приводит к тому, что SQLDescribeParam будет выполнен, независимо от текущей пользовательской базы данных:  
+ Выполнение SQLDescribeParam после успешной подготовки возвращает пустой набор строк при соединении с любой базой данных, но `master` . Тот же вызов, подготовленный следующим образом, приводит к тому, что SQLDescribeParam будет выполнен, независимо от текущей пользовательской базы данных:  
   
 ```  
 SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);  
 ```  
   
- Для типов данных больших значений значение, возвращаемое в *дататипептр* , SQL_VARCHAR, SQL_VARBINARY или SQL_NVARCHAR. Чтобы указать, что для параметра типа данных больших значений задано значение "unlimited", драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента устанавливает *параметерсизептр* в значение 0. Значения фактического размера возвращаются для стандартных параметров `varchar`.  
+ Для типов данных больших значений значение, возвращаемое в *дататипептр* , SQL_VARCHAR, SQL_VARBINARY или SQL_NVARCHAR. Чтобы указать, что для параметра типа данных больших значений задано значение "unlimited", [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC для собственного клиента устанавливает *параметерсизептр* в значение 0. Значения фактического размера возвращаются для стандартных параметров `varchar`.  
   
 > [!NOTE]  
 >  Если параметр уже был привязан к максимальному размеру (для параметров типа SQL_VARCHAR, SQL_VARBINARY или SQL_WVARCHAR), возвращается привязанный размер параметра, а не «unlimited».  
@@ -77,7 +77,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 |-|-------------------|------------------------|------------------------|  
 |DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
-|Дата|SQL_TYPE_DATE|10|0|  
+|дата|SQL_TYPE_DATE|10|0|  
 |time|SQL_SS_TIME2|8, 10..16|0..7|  
 |datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  

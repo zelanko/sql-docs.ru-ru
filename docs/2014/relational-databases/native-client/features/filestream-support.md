@@ -10,15 +10,15 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], SQL Server Native Client
 - SQL Server Native Client [FILESTREAM support]
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33e447048f7058ee81b0b144f0aa94a370f6d670
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab8ca7912db7607acbca716f733184ed57dc681e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046270"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707295"
 ---
 # <a name="filestream-support"></a>Поддержка FILESTREAM
   Компонент FILESTREAM предоставляет способ хранения и доступа к большим двоичным значениям либо с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], либо путем непосредственного доступа к файловой системе Windows. Большим двоичным значением считается значение с размером больше 2 гигабайт (ГБ). Дополнительные сведения о поддержке усовершенствованного компонента FILESTREAM см. в статье [FILESTREAM (SQL Server)](../../blob/filestream-sql-server.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "63046270"
   
  Функции каталога, такие как SQLColumns в ODBC, не сообщают о том, является ли столбец столбцом FILESTREAM.  
   
- Чтобы создать столбцы FILESTREAM или определить, какие существующие столбцы являются столбцами FILESTREAM, можно использовать `is_filestream` столбец представления каталога [sys. Columns](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql) .  
+ Чтобы создать столбцы FILESTREAM или определить, какие существующие столбцы являются столбцами FILESTREAM, можно использовать `is_filestream` Столбец представления каталога [sys. Columns](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql) .  
   
  Ниже представлен пример такого кода:  
   
@@ -56,7 +56,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>Совместимость на низком уровне  
- Если клиент был скомпилирован с использованием [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версии собственного клиента, которая была включена в [!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)], `varbinary(max)` поведение будет совместимо с. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Это означает, что максимальный размер возвращаемых данных будет ограничен 2 ГБ. Для результирующих значений больше 2 ГБ произойдет усечение, и будет возвращено сообщение "Усечение строковых данных справа".  
+ Если клиент был скомпилирован с использованием версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента, которая была включена в [!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)] , `varbinary(max)` поведение будет совместимо с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . Это означает, что максимальный размер возвращаемых данных будет ограничен 2 ГБ. Для результирующих значений больше 2 ГБ произойдет усечение, и будет возвращено сообщение "Усечение строковых данных справа".  
   
  Если уровень совместимости типов данных установлен равным «80», то поведение клиента будет согласовано с поведением клиента низкого уровня.  
   

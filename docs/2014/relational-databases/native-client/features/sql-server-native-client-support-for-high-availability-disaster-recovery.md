@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4bd73d32a58e156a3ae8577d41bbdd4725f85656
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7243e28bf17b6c38f7274e221a1b6b5e5cf830f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206644"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707232"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Поддержка высокого уровня доступности и аварийного восстановления собственного клиента SQL Server
   В этом разделе описывается поддержка Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Дополнительные сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделах [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/listeners-client-connectivity-application-failover.md), [Создание и настройка групп доступности (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) и [Активные вторичные реплики. Доступ только для чтения к вторичным репликам (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "68206644"
 ## <a name="connecting-with-multisubnetfailover"></a>Соединение с помощью MultiSubnetFailover  
  При установлении соединения с прослушивателем группы доступности SQL Server 2012 или экземпляром отказоустойчивого кластера SQL Server 2012 всегда необходимо указывать `MultiSubnetFailover=Yes`. `MultiSubnetFailover` дает возможность группам доступности и экземпляру отказоустойчивого кластера в SQL Server 2012 быстрее выполнить отработку отказа, а также значительно сократить время перехода на другой ресурс для топологий AlwaysOn с одной или несколькими подсетями. При отработке отказа с в нескольких подсетях клиент будет выполнять попытки соединения параллельно. Во время отработки отказа в подсети собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет активно выполнять попытки повторного TCP-соединения.  
   
- Свойство соединения `MultiSubnetFailover` указывает, что приложение развертывается в группе доступности или на экземпляре отказоустойчивого кластера, а также что собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client выполнит попытку соединения с базой данных в основном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], попытавшись установить соединение со всеми IP-адресами группы доступности. Если `MultiSubnetFailover=Yes` для соединения задано значение, клиент ПОВТОРЯЕТ попытки TCP-подключения быстрее, чем интервалы повторной передачи TCP по умолчанию для операционной системы. Это позволяет ускорить восстановление соединения после отработки отказа в группе доступности AlwaysOn или в экземпляре отказоустойчивого кластера AlwaysOn; метод может применяться к группам доступности и экземплярам отказоустойчивых кластеров как с одной, так и с несколькими подсетями.  
+ Свойство соединения `MultiSubnetFailover` указывает, что приложение развертывается в группе доступности или на экземпляре отказоустойчивого кластера, а также что собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client выполнит попытку соединения с базой данных в основном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], попытавшись установить соединение со всеми IP-адресами группы доступности. Если `MultiSubnetFailover=Yes` для соединения задано значение, клиент повторяет попытки TCP-подключения быстрее, чем интервалы повторной передачи TCP по умолчанию для операционной системы. Это позволяет ускорить восстановление соединения после отработки отказа в группе доступности AlwaysOn или в экземпляре отказоустойчивого кластера AlwaysOn; метод может применяться к группам доступности и экземплярам отказоустойчивых кластеров как с одной, так и с несколькими подсетями.  
   
  Дополнительные сведения о ключевых словах строки подключения см. в статье [Использование ключевых слов строки подключения с SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68206644"
   
 -   При установлении соединения с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], настроенным на работу с более чем 64 IP-адресами, будет возникать ошибка соединения.  
   
--   Поведение приложения, использующего свойство `MultiSubnetFailover` Connection, не зависит от типа проверки подлинности: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проверка подлинности, проверка подлинности Kerberos или проверка подлинности Windows.  
+-   Поведение приложения, использующего свойство Connection, не зависит от типа проверки подлинности: проверка подлинности, проверка подлинности `MultiSubnetFailover` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Kerberos или проверка подлинности Windows.  
   
 -   Значение `loginTimeout` можно увеличить с учетом времени отработки отказа, это уменьшит количество попыток повторного соединения в приложениях.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "68206644"
   
  Приложение собственного клиента ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для создания соединения может использовать одну из трех функций.  
   
-|Компонент|Описание|  
+|Функция|Описание|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../native-client-odbc-api/sqlbrowseconnect.md)|Список серверов, возвращаемый `SQLBrowseConnect`, не содержит имен виртуальных сетей. Будет отображен только список серверов без указания того, является ли сервер отдельным, сервером-источником или сервером-получателем в отказоустойчивом кластере, в котором содержатся два экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], включенные для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], или более. При возникновении ошибки подключения к серверу причина может заключаться в несоответствии настройки `ApplicationIntent` конфигурации сервера.<br /><br /> Поскольку `SQLBrowseConnect` не распознает серверы в отказоустойчивых кластерах, содержащих два или более экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], которые были включены для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], `SQLBrowseConnect` не учитывает ключевое слово строки подключения `MultiSubnetFailover`.|  
 |[SQLConnect](../../native-client-odbc-api/sqlconnect.md)|`SQLConnect` поддерживает `ApplicationIntent` и `MultiSubnetFailover` с помощью имени DSN или свойств соединения.|  
@@ -150,7 +150,7 @@ ms.locfileid: "68206644"
  После установки неявных соединений эти подключения будут использовать настройку назначения приложения для родительского подключения. Аналогичным образом несколько сеансов, созданных с использованием одного источника данных, будут наследовать настройки назначения приложения от источника данных.  
   
 ## <a name="see-also"></a>См. также  
- [SQL Server Native Client функции](sql-server-native-client-features.md)   
+ [Компоненты собственного клиента SQL Server](sql-server-native-client-features.md)   
  [Использование ключевых слов строки подключения с собственным клиентом SQL Server](../applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

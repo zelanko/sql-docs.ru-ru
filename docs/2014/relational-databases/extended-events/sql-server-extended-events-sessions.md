@@ -11,15 +11,15 @@ helpviewer_keywords:
 - sessions
 - extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83440163bdb1e03690fe4f5dcf93fdfc6779057f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62705743"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706608"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
   Сеанс расширенных событий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] создается в процессе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , в котором выполняется подсистема расширенных событий. Следующие аспекты сеанса расширенных событий предоставляют контекст, необходимый для понимания инфраструктуры и принципов работы расширенных событий.  
@@ -37,7 +37,7 @@ ms.locfileid: "62705743"
   
 |Метка рисунка|Инструкция DDL|Описание|  
 |------------------------|-------------------|-----------------|  
-|Создание|CREATE EVENT SESSION|Процесс создает объект сеанса, содержащий метаданные, предоставленные инструкцией CREATE EVENT SESSION. Процесс проверяет определение сеанса, уровень разрешений пользователя и сохраняет метаданные в базе данных master. В этот момент сеанс неактивен.|  
+|Создать|CREATE EVENT SESSION|Процесс создает объект сеанса, содержащий метаданные, предоставленные инструкцией CREATE EVENT SESSION. Процесс проверяет определение сеанса, уровень разрешений пользователя и сохраняет метаданные в базе данных master. В этот момент сеанс неактивен.|  
 |Alter|ALTER EVENT SESSION, STATE=START|Процесс запускает сеанс. Процесс считывает сохраненные метаданные, проверяет определение сеанса, уровень разрешений пользователя и создает сеанс. Загружаются такие объекты сеанса, как события и цели, и сеанс становится активным.|  
 |Alter|ALTER EVENT SESSION, STATE=STOP|Процесс останавливает активный сеанс, но сохраняет метаданные.|  
 |Drop|DROP EVENT SESSION|Если сеанс активен, инструкция удаляет метаданные и закрывает активный сеанс, в противном случае удаляет метаданные сеанса.|  

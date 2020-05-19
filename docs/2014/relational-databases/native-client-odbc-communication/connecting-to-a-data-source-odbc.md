@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data sources
 - SQL Server Native Client ODBC driver, connections
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e0192e3b4bf295ad0590b26a6f3e77d94d76acd9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe7f86c2ca53ef4534abd1024d317eee0c1b3c99
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63075190"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705793"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Соединение с источником данных (ODBC)
   После определения среды и дескрипторов соединения, а также установки любых атрибутов соединения приложение устанавливает соединение с источником данных или драйвером. Существует три функции, которые можно использовать для установки соединения:  
@@ -78,7 +78,7 @@ ms.locfileid: "63075190"
   
  Когда **SQLBrowseConnect** завершает успешное подключение, он возвращает строку подключения, которую можно использовать при последующих вызовах **SQLDriverConnect**.  
   
- Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента всегда возвращает SQL_SUCCESS_WITH_INFO для успешных **SQLConnect**, **SQLDriverConnect**или **SQLBrowseConnect**. Когда приложение ODBC вызывает **SQLGetDiagRec** после получения SQL_SUCCESS_WITH_INFO, оно может получать следующие сообщения:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента всегда возвращает SQL_SUCCESS_WITH_INFO для успешных **SQLConnect**, **SQLDriverConnect**или **SQLBrowseConnect**. Когда приложение ODBC вызывает **SQLGetDiagRec** после получения SQL_SUCCESS_WITH_INFO, оно может получать следующие сообщения:  
   
  5701  
  Показывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помещает пользовательский контекст в базу данных по умолчанию, которая определена в источнике данных, или в базу данных, определенную для идентификатора входа, который использовался в соединении, если источник данных не имеет базы данных по умолчанию.  

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 537a3aaafcc2a0ad4ba2c59ae8d52f8e5ced5868
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205010"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716484"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Поддержка FOR XML для XML-данных
   Если в предложении SELECT запроса FOR XML указан `xml`-столбец, значения столбца сопоставляются как элементы в возвращенном коде XML, независимо от того, указана ли директива ELEMENTS. XML-декларации в `xml`-столбце не сериализуются.  
   
- Например, следующий запрос получает контактные `BusinessEntityID`данные клиента, такие как столбцы, `FirstName`и `LastName` , а также телефонные номера из `AdditionalContactInfo` столбца `xml` типа.  
+ Например, следующий запрос получает контактные данные клиента, такие как `BusinessEntityID` `FirstName` столбцы, и `LastName` , а также телефонные номера из `AdditionalContactInfo` столбца `xml` типа.  
   
 ```  
 USE AdventureWorks2012;  

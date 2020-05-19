@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8c16ac4d18806b670c8b3e27dc09c9019d7ecdeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 19617c65b350527753895ed613f671c3ac0f88e8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967244"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764015"
 ---
 # <a name="append-method-adox-tables"></a>Метод Append (коллекция Tables ADOX)
 Добавляет новый объект [Table](../../../ado/reference/adox-api/table-object-adox.md) в коллекцию [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) .  
@@ -37,13 +37,13 @@ Tables.Append Table
  *Таблица*  
  Значение **типа Variant** , содержащее ссылку на **таблицу** для добавления или имя таблицы для создания и добавления.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Если поставщик не поддерживает создание таблиц, возникнет ошибка.  
   
 ## <a name="applies-to"></a>Применяется к  
  [Коллекция Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Метод Append (столбцы ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   

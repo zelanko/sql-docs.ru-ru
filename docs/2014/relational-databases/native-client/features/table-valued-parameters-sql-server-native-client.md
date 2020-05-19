@@ -10,15 +10,15 @@ helpviewer_keywords:
 - SQL Server Native Client, table-valued parameters
 - table-valued parameters (SQL Server Native Client)
 ms.assetid: 5ee6bdcd-0309-4a20-b5c2-0e6b6839f34f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6eea28d6bccfa8d0f785f3b27e98141e94dd313c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0bfad3885d6b6842871fddb90f6ce31a71e72f3d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206623"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707189"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>Возвращающие табличное значение параметры (собственный клиент SQL Server)
   Возвращающие табличное значение параметры появились в [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], и обеспечивают эффективный способ передачи нескольких строк данных на сервер. Возвращающие табличное значение параметры предоставляют функциональные возможности, схожие с массивами параметров, но предлагают большую гибкость и более тесную интеграцию с [!INCLUDE[tsql](../../../includes/tsql-md.md)], и могут значительно улучшить производительность. Возвращающие табличное значение параметры также могут участвовать в операциях на основе набора, а массивы параметров не могут.  

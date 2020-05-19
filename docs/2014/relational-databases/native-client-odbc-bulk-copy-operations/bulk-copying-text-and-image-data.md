@@ -12,15 +12,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], image data
 - ODBC, bulk copy operations
 ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c468ec3cf52526192893458055cde857aeaa864d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03d77ce1a4526cee78431def0251329111433aac
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067480"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705827"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>Массовое копирование данных text и image
   Значения типа Large **Text**, **ntext**и **Image** копируются с помощью функции [bcp_moretext](../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) . Код [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) для столбца **Text**, **ntext**или **Image** с указателем *pData* , имеющим значение null, что означает, что данные будут предоставлены в **bcp_moretext**. Важно указать точную длину данных, предоставляемых для каждого столбца типа **Text**, **ntext**или **Image** в каждой строке с массовым копированием. Если длина данных столбца отличается от длины столбца, указанного в [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md), используйте [bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) , чтобы задать для длины правильное значение. [Bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) отправляет все данные, не являющиеся**текстовыми**, не-**ntext**и не являющиеся**изображениями** ; Затем вызывается **bcp_moretext** для отправки данных типа **Text**, **ntext**или **Image** в отдельных единицах. Функции операций с массовым копированием определяют, что все данные были отправлены для текущего столбца **Text**, **ntext**или **Image** , если сумма длин данных, отправленных с помощью **bcp_moretext** , равна длине, указанной в последней **bcp_collen** или **bcp_bind**.  

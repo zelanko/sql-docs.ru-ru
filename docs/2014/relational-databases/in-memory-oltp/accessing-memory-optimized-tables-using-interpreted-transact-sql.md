@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5769a59a8deebfa99a00229f1b1227e427e051a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468611"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706564"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Доступ к таблицам, оптимизированным для памяти, с помощью интерпретируемых инструкций Transact-SQL
   Лишь за некоторыми исключениями, можно получить доступ к оптимизированным для памяти таблицам с помощью любого запроса [!INCLUDE[tsql](../../includes/tsql-md.md)] или операции DML (SELECT, INSERT, UPDATE или DELETE), нерегламентированных пакетов и модулей SQL, таких как хранимые процедуры, функции, возвращающие табличное значение, триггеры и представления.  
@@ -36,7 +36,7 @@ ms.locfileid: "62468611"
   
  Следующие конструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] не поддерживаются в хранимых процедурах интерпретированного [!INCLUDE[tsql](../../includes/tsql-md.md)], которые обращаются к данным из оптимизированных для памяти таблиц.  
   
-|Область|Не поддерживается|  
+|С областями|Не поддерживается|  
 |----------|-----------------|  
 |Доступ к таблицам|TRUNCATE TABLE<br /><br /> MERGE (оптимизированная для памяти таблица в качестве назначения)<br /><br /> Динамический курсор и курсор ключевого набора (они автоматически понижаются в статический).<br /><br /> Доступ из модулей CLR с использованием контекстного соединения.<br /><br /> Ссылка на оптимизированную для памяти таблицу из индексированного представления|  
 |Между базами данных|Межбазовые запросы<br /><br /> Межбазовые транзакции<br /><br /> Связанные серверы|  

@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLTablePrivileges function
 ms.assetid: 8cce22d5-28b1-4b50-a5bc-1de03e0ffd6b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 51492e55fd3c34c099a5f53187d1b2a9875ce7e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03c19fecd314bd67949b133e6c1e0ae9e8292d3d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188640"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705852"
 ---
 # <a name="sqltableprivileges"></a>SQLTablePrivileges
   Функция**SQLTablePrivileges** может быть выполнена для статического курсора. При попытке выполнить метод **SQLTablePrivileges** для обновляемого курсора (динамического или управляемого набором ключей) будет возвращено значение SQL_SUCCESS_WITH_INFO, которое указывает на то, что тип курсора был изменен.  

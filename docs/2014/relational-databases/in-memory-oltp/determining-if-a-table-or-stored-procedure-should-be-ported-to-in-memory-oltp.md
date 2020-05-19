@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Analyze, Migrate, Report
 - AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 358a595ef326f86db9ab81294bc3a9c88fc8ef0d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63072390"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706540"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP
   Сборщик производительности транзакций в [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] позволяет оценить производительность приложения базы данных, выполняющаяся в памяти. В отчете об анализе производительности транзакции также показано, сколько работы необходимо выполнить, чтобы включить In-Memory OLTP в приложении. После определения дисковой таблицы, которая переносится в In-Memory OLTP, можно для упрощения миграции таблицы использовать [советник по оптимизации для выполнения в памяти](memory-optimization-advisor.md). Аналогичным образом [Native Compilation Advisor](native-compilation-advisor.md) позволяет перенести хранимую процедуру в изначально скомпилированную хранимую процедуру.  
@@ -44,9 +44,9 @@ ms.locfileid: "63072390"
     > [!IMPORTANT]  
     >  Производительность системы базы данных зависит от многих факторов, которые не все могут отслеживаться и измеряться сборщиком данных о производительности транзакции. Поэтому отчет анализа производительности транзакции не гарантирует, что фактическое улучшение производительности будет соответствовать прогнозируемому, если были сделаны какие-либо прогнозы.  
   
- Сборщик данных о производительности транзакций и возможность создания отчета об анализе производительности транзакций устанавливаются при выборе **средства управления — основные** **средства или инструменты управления — дополнительно** при установке [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ Сборщик данных о производительности транзакций и возможность создания отчета об анализе производительности транзакций устанавливаются при выборе **средства управления — основные** **средства или инструменты управления — дополнительно** при установке [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
-## <a name="best-practices"></a>Советы и рекомендации  
+## <a name="best-practices"></a>Рекомендации  
  Рекомендуемый рабочий процесс проиллюстрирован на следующей блок-схеме. Желтые узлы представляют необязательные процедуры.  
   
  ![Рабочий процесс AMR](../../database-engine/media/amr-1.gif "Рабочий процесс AMR")  
@@ -102,7 +102,7 @@ ms.locfileid: "63072390"
 ### <a name="configure-data-collection-on-a-local-ssnoversion-instance"></a>Настройка сбора данных на локальном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Для сбора данных необходимо запустить агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Необходимо настроить только один сборщик данных на сервере.  
   
- Сборщик данных можно настроить на SQL Server 2012 или более поздней версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Сборщик данных можно настроить на SQL Server 2012 или более поздней версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Настройка сбора данных для передачи в базу данных хранилища данных управления на том же экземпляре.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "63072390"
 ###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>Настройка сбора данных на удаленном [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляре  
  Для сбора данных требуется запущенный агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на экземпляре, который будет собирать данные.  
   
- Сборщик данных можно настроить на SQL Server 2012 или более поздней версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Сборщик данных можно настроить на SQL Server 2012 или более поздней версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Вам требуется настроить прокси-агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с правильными учетными данными для сборщика данных, чтобы передавать данные в базу данных хранилища данных управления в экземпляре, отличном от экземпляра, в котором будут профилироваться транзакции. Чтобы включить прокси-агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо сначала настроить учетные данные с именем входа в домен. Имя входа в домен должно быть участником группы `mdw_admin` для базы данных хранилища данных управления. Сведения о создании учетных данных см. в разделе [как создать учетные данные (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) .  
   

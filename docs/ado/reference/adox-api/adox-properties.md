@@ -11,14 +11,14 @@ helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32a36388b1be6dc7f5bab6bbb0bd9f97b01aac46
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6aed31fef1f685effc3216d6055de0faf0e22698
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910612"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764105"
 ---
 # <a name="adox-properties"></a>Свойства ADOX
 
@@ -27,7 +27,7 @@ ms.locfileid: "67910612"
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Указывает объект **соединения** ADO, к которому принадлежит каталог.|  
 |[Атрибуты](../../../ado/reference/adox-api/attributes-property-adox.md)|Описывает характеристики столбцов.|  
 |[Кластеризованный](../../../ado/reference/adox-api/clustered-property-adox.md)|Указывает, является ли индекс кластеризованным.|  
-|[Command](../../../ado/reference/adox-api/command-property-adox.md)|Указывает объект **команды** ADO, который может быть использован для создания или выполнения процедуры.|  
+|[Команда](../../../ado/reference/adox-api/command-property-adox.md)|Указывает объект **команды** ADO, который может быть использован для создания или выполнения процедуры.|  
 |[Count](../../../ado/reference/ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Указывает дату создания объекта.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Указывает дату последнего изменения объекта.|  
@@ -35,7 +35,7 @@ ms.locfileid: "67910612"
 |[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|Указывает действие, выполняемое при удалении первичного ключа.|  
 |[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)|Указывает, имеют ли записи индекса элементы, имеющие значения NULL в полях индекса.|  
 |[Элемент](../../../ado/reference/ado-api/item-property-ado.md)|Указывает конкретный элемент коллекции по имени или порядковому номеру.|  
-|[Имя](../../../ado/reference/adox-api/name-property-adox.md)|Указывает имя объекта.|  
+|[Name](../../../ado/reference/adox-api/name-property-adox.md)|Указывает имя объекта.|  
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|Указывает Масштаб числового значения в столбце.|  
 |[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|Указывает родительский каталог таблицы или столбца, чтобы предоставить доступ к свойствам, зависящим от поставщика.|  
 |[Точность](../../../ado/reference/adox-api/precision-property-adox.md)|Указывает максимальную точность значений данных в столбце.|  
@@ -46,7 +46,7 @@ ms.locfileid: "67910612"
 |[Тип (столбец)](../../../ado/reference/adox-api/type-property-column-adox.md)|Указывает тип данных столбца.|  
 |[Тип (ключ)](../../../ado/reference/adox-api/type-property-key-adox.md)|Указывает тип данных ключа.|  
 |[Тип (таблица)](../../../ado/reference/adox-api/type-property-table-adox.md)|Указывает тип таблицы.|  
-|[Однозначно](../../../ado/reference/adox-api/unique-property-adox.md)|Указывает, должны ли ключи индекса быть уникальными.|  
+|[Уникальный](../../../ado/reference/adox-api/unique-property-adox.md)|Указывает, должны ли ключи индекса быть уникальными.|  
 |[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|Указывает действие, выполняемое при обновлении первичного ключа.|  
   
 ## <a name="see-also"></a>См. также  

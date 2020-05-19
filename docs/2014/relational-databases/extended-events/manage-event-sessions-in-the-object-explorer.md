@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a229b02f60c56b9979d2d31788910b3faa63cb2f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62705520"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706651"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Управление сеансами событий в обозревателе объектов
   В этом разделе описываются действия, которые можно выполнять в **обозревателе объектов** и которые отражаются на расширенных событиях.  
@@ -96,7 +96,7 @@ STATE = STOP
   
 4.  Разверните раскрывающееся поле **Шаблон** .  
   
-5.  Щелкните ** \<файл из... >открыть** и выбрать сеанс (XML-файл), который требуется импортировать.  
+5.  Щелкните ** \< файл из... >открыть** и выбрать сеанс (XML-файл), который требуется импортировать.  
   
  Сеанс появится в узле **Сеансы** . По умолчанию этот сеанс не запущен.  
   
@@ -128,7 +128,7 @@ STATE = STOP
  При удалении сеанса событий удаляются все сведения о конфигурации, а определение сеанса больше не отображается в представлении каталога sys.server_event_sessions.  
   
 > [!NOTE]  
->  system_health и AlwaysOn_health включены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]состав; не удаляйте их. Представление system_health по умолчанию включено (дополнительные сведения см. в статье [Использование сеанса system_health](use-the-ssms-xe-profiler.md)). По умолчанию AlwaysOn_health отключен. Эти сеансы собирают данные, которые могут оказаться полезными для диагностики проблем с производительностью.  
+>  system_health и AlwaysOn_health включены в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; не удаляйте их. Представление system_health по умолчанию включено (дополнительные сведения см. в статье [Использование сеанса system_health](use-the-ssms-xe-profiler.md)). По умолчанию AlwaysOn_health отключен. Эти сеансы собирают данные, которые могут оказаться полезными для диагностики проблем с производительностью.  
   
  Для удаления сеанса расширенных событий требуется разрешение ALTER ANY EVENT SESSION.  
   

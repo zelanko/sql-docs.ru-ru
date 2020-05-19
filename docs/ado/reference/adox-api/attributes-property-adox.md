@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Attributes property [ADOX]
 ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fcd0e70dd9c505b9e2b0752c33b9e768b9127472
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ba9b3094b9349288abc7849a38ac5baf0cb6b55c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967145"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763995"
 ---
 # <a name="attributes-property-adox"></a>Свойство Attributes (ADOX)
 Описывает характеристики столбцов.  
@@ -36,5 +36,5 @@ ms.locfileid: "67967145"
   
 - [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства Attributes (Visual Basic)](../../../ado/reference/adox-api/attributes-property-example-vb.md)

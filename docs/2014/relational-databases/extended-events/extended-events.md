@@ -10,15 +10,15 @@ helpviewer_keywords:
 - extended events [SQL Server]
 - xe
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8498937fa1f259b194ea57fc5f5d286adf0db12
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990705"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706653"
 ---
 # <a name="extended-events"></a>Расширенные события
   Расширенная подсистема событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет чрезвычайно масштабируемую и легко настраиваемую архитектуру, которая позволяет пользователям собирать именно такое количество информации, которое необходимо для устранения нарушения в работе или выявления проблемы производительности.  
@@ -93,9 +93,9 @@ ms.locfileid: "62990705"
 |Описывает, как с помощью приведенной ниже процедуры можно просматривать события и действия расширенных событий, аналогичных каждому событию трассировки SQL со связанными столбцами.|[Просмотр эквивалентов расширенных событий для классов событий трассировки SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
 |Описывает, как выяснить, какие параметры можно задать при использовании аргумента ADD TARGET в инструкции CREATE EVENT SESSION или ALTER EVENT SESSION.|[получить настраиваемые параметры для аргумента ADD TARGET](../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md)|  
 |Описано, как преобразовать существующий скрипт приложения трассировки SQL в сеанс расширенных событий.|[Преобразование существующего скрипта трассировки SQL в сеанс расширенных событий](convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
-|Описывает, как определить, какие запросы удерживают данную блокировку и каковы план запроса и стек [!INCLUDE[tsql](../../includes/tsql-md.md)] во время получения блокировки.|[Определение запросов, удерживающих блокировки](determine-which-queries-are-holding-locks.md)|  
-|Описывает, как определить источник блокировок, приводящих к ухудшению производительности базы данных.|[найти объекты, на которые наложено наибольшее число блокировок](find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
-|Описывает, как использовать расширенные события совместно со средством трассировки событий для Windows (ETW) для наблюдения за активностью системы.|[отслеживать активность системы с помощью расширенных событий](monitor-system-activity-using-extended-events.md)|  
+|Описывает, как определить, какие запросы удерживают данную блокировку и каковы план запроса и стек [!INCLUDE[tsql](../../includes/tsql-md.md)] во время получения блокировки.|[Определение запросов, содержащих блокировки](determine-which-queries-are-holding-locks.md)|  
+|Описывает, как определить источник блокировок, приводящих к ухудшению производительности базы данных.|[Поиск объектов, на которые наложено наибольшее число блокировок](find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
+|Описывает, как использовать расширенные события совместно со средством трассировки событий для Windows (ETW) для наблюдения за активностью системы.|[Мониторинг активности системы с помощью расширенных событий](monitor-system-activity-using-extended-events.md)|  
   
 ## <a name="see-also"></a>См. также  
  [Приложения уровня данных](../data-tier-applications/data-tier-applications.md)   

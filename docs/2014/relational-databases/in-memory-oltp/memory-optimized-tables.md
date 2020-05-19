@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9123bf89f75fce68a6edd8ba1becd141821fe326
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77cb4a57afcc40c15341a64dfd841e97b551bc81
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63158755"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706488"
 ---
 # <a name="memory-optimized-tables"></a>Таблицы, оптимизированные для памяти
   Операции OLTP в памяти[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] повышают производительность OLTP-приложений благодаря эффективному, оптимизированному для памяти доступу к данным, собственной компиляции бизнес-логики и алгоритмам без кратковременной блокировки. Функциональность OLTP-операций в памяти обеспечивается оптимизированными для памяти таблицами и табличными типами, а также собственной компиляцией хранимых процедур [!INCLUDE[tsql](../../includes/tsql-md.md)] для эффективного доступа к этим таблицам.  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dd64ba8119db1ecf2d2b621cd202c9f700b53475
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c703843781558839a3f4f275a8427f69770a8690
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967283"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764075"
 ---
 # <a name="append-method-adox-procedures"></a>Метод Append (коллекция Procedures ADOX)
 Добавляет новый объект [процедуры](../../../ado/reference/adox-api/procedure-object-adox.md) в коллекцию [процедур](../../../ado/reference/adox-api/procedures-collection-adox.md) .  
@@ -34,13 +34,13 @@ Procedures.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *имя*;  
+ *Name*  
  **Строковое** значение, указывающее имя создаваемой и добавляемой процедуры.  
   
- *Command*  
+ *Команда*  
  Объект [команды](../../../ado/reference/ado-api/command-object-ado.md) ADO, представляющий процедуру, которую необходимо создать и добавить.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Создает новую процедуру в источнике данных с именем и атрибутами, указанными в объекте **Command** .  
   
  Если текст команды, который указывает пользователь, представляет представление, а не процедуру, то поведение зависит от используемого поставщика. Если поставщик не поддерживает хранимые команды, **Добавление** завершится ошибкой.  
@@ -51,7 +51,7 @@ Procedures.Append Name, Command
 ## <a name="applies-to"></a>Применяется к  
  [Коллекция Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода Append для процедур (Visual Basic)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
  [Метод Append (столбцы ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Метод Append (группы ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   

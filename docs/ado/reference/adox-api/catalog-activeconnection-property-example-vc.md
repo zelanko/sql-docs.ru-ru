@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ActiveConnection property [ADOX], VC++ example
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 976864842781828f3505ed18ab9ff81fda570c86
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8d39b018f74bf4edbc443ac3d49004e03efb007b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76925614"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763955"
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>Пример свойства ActiveConnection объекта Catalog (Visual C++)
 Если задать для свойства [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) допустимое, открытое соединение, каталог будет открыт. Из открытого каталога можно получить доступ к объектам схемы, содержащимся в этом каталоге.  
@@ -111,5 +111,5 @@ void OpenConnectionWithStringX() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)

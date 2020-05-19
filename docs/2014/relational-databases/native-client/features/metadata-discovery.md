@@ -7,24 +7,24 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e808f1fc82dfe0a9fd6fa96999e6e2c5320ee452
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50455f67760c920881f9f8daaf42d7abe4037c45
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162018"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707282"
 ---
 # <a name="metadata-discovery"></a>Обнаружение метаданных
   Улучшение обнаружения метаданных в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственным клиентским приложениям гарантировать, что метаданные столбца или параметра, возвращаемые при выполнении запроса, идентичны или совместимы с форматом метаданных, указанным перед выполнением запроса. Если формат метаданных, возвращенных в результате выполнения запроса, будет несовместим с форматом, указанным до выполнения запроса, возвращается ошибка.  
   
  В функциях bcp и ODBC, а также интерфейсах IBCPSession и IBCPSession2 теперь можно задавать отложенное чтение (отложенное обнаружение метаданных), чтобы избежать обнаружения метаданных для операций с параметром queryout. Это позволяет повысить производительность и устранить ошибки обнаружения метаданных.  
   
- Если приложение разрабатывается с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] помощью собственного клиента [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] в, но соединение с версией сервера, [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]более ранней, чем, функция обнаружения метаданных будет соответствовать версии сервера.  
+ Если приложение разрабатывается с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] , но соединение с версией сервера, более ранней [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] , чем, функция обнаружения метаданных будет соответствовать версии сервера.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  В [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] были изменены следующие функции bcp, которые теперь обеспечивают улучшенное обнаружение метаданных:  
   
 -   [bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)  
@@ -39,7 +39,7 @@ ms.locfileid: "63162018"
   
  При указании формата метаданных с помощью [bcp_setbulkmode](../../native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)также отображается улучшение производительности.  
   
- [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) имеет новый *eOption* для управления поведением bcp_readfmt: `BCPDELAYREADFMT`.  
+ [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) имеет новый *eOption* для управления поведением bcp_readfmt: `BCPDELAYREADFMT` .  
   
  В [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] были изменены следующие функции ODBC, которые теперь обеспечивают улучшенное обнаружение метаданных:  
   

@@ -27,15 +27,15 @@ helpviewer_keywords:
 - XML [SQL Server], SQL Server Native Client
 - COLUMNS rowset
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9e640f495d216495141131519e0b9aa51d48de4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86230cd0de145f7f1ccb9f9b2709a5fd29ae78fa
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136662"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707162"
 ---
 # <a name="using-xml-data-types"></a>Использование типов данных XML
   В версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] был введен тип данных **xml**, позволяющий хранить XML-документы и их фрагменты в базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Тип данных **xml** — это встроенный в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] тип данных, несколько напоминающий другие встроенные типы данных, такие как **int** и **varchar**. Как и другие встроенные типы данных, тип данных **xml** можно использовать как тип столбца при создании таблицы, как тип переменной, параметра, тип возвращаемого функцией значения, а также в инструкциях CAST и CONVERT.  
@@ -61,11 +61,11 @@ ms.locfileid: "63136662"
 -   Интерфейс **ISequentialStream**  
   
 > [!NOTE]  
->  Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента не включает модуль чтения SAX, но **ISequentialStream** можно легко передать в объекты SAX и DOM в MSXML.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента не включает модуль чтения SAX, но **ISequentialStream** можно легко передать в объекты SAX и DOM в MSXML.  
   
  **ISequentialStream** следует использовать для извлечения больших XML-документов. При работе с типами больших значений в XML используются те же технологии, что и для работы с другими типами больших значений. Дополнительные сведения см. ниже в разделе [Using Large Value Types](using-large-value-types.md) (Использование типов большого объема).  
   
- Приложение может также получать, вставлять и изменять данные, хранящиеся в столбцах типа XML в наборе строк, через обычные интерфейсы, такие как **IRow::GetColumns**, **IRowChange::SetColumns** и **ICommand::Execute**. Точно так же, как и в случае с извлечением, программа приложения может передать в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент OLE DB поставщику текстовую строку или **ISequentialStream** .  
+ Приложение может также получать, вставлять и изменять данные, хранящиеся в столбцах типа XML в наборе строк, через обычные интерфейсы, такие как **IRow::GetColumns**, **IRowChange::SetColumns** и **ICommand::Execute**. Точно так же, как и в случае с извлечением, программа приложения может передать в **ISequentialStream** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент OLE DB поставщику текстовую строку или ISequentialStream.  
   
 > [!NOTE]  
 >  Для отправки данных XML в строковом формате через интерфейс **ISequentialStream** нужно получить этот интерфейс **ISequentialStream**, задав DBTYPE_IUNKNOWN и установив в привязке аргумент *pObject*, равный NULL.  
@@ -117,7 +117,7 @@ ms.locfileid: "63136662"
 > [!NOTE]  
 >  Для XML-данных со значением NULL не возвращаются никакие данные.  
   
- Согласно стандарту XML, XML-документы в кодировке UTF-16 должны начинаться с метки порядка следования байтов (BOM); в UTF-16 это код символа 0xFEFF. При работе с привязками ВСТР и BSTR [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client не требует и не добавляет спецификацию, так как кодировка подразумевается привязкой. При работе с привязками типов BYTES, XML и IUNKNOWN целью является предоставить возможности для наиболее простого взаимодействия с другими обработчиками XML и хранилищами данных. В этом случае в XML с кодировкой UTF-16 нужно включить метку порядка байтов, и приложение может не заботиться о том, какова на самом деле кодировка данных, потому что большинство обработчиков XML (в том числе SQL Server) вычислят кодировку по нескольким первым байтам данных. XML-данные, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] полученные от собственного клиента с использованием ПРИвязок bytes, XML или IUnknown, всегда КОДИРУЮТСЯ в кодировке UTF – 16 с BOM и без внедренного объявления кодировки.  
+ Согласно стандарту XML, XML-документы в кодировке UTF-16 должны начинаться с метки порядка следования байтов (BOM); в UTF-16 это код символа 0xFEFF. При работе с привязками ВСТР и BSTR [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client не требует и не добавляет спецификацию, так как кодировка подразумевается привязкой. При работе с привязками типов BYTES, XML и IUNKNOWN целью является предоставить возможности для наиболее простого взаимодействия с другими обработчиками XML и хранилищами данных. В этом случае в XML с кодировкой UTF-16 нужно включить метку порядка байтов, и приложение может не заботиться о том, какова на самом деле кодировка данных, потому что большинство обработчиков XML (в том числе SQL Server) вычислят кодировку по нескольким первым байтам данных. XML-данные, полученные от [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента с использованием привязок bytes, XML или IUnknown, всегда кодируются в кодировке UTF – 16 с BOM и без внедренного объявления кодировки.  
   
  Преобразование данных, выполняемое основными службами OLE DB (**IDataConvert**), неприменимо к типу DBTYPE_XML.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "63136662"
 >  Интерфейс **ISSCommandWithParameters** также задействует возможности новой структуры SSPARAMPROPS.  
   
 #### <a name="the-icolumnsrowset-interface"></a>Интерфейс IColumnsRowset  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент добавляет указанные ниже [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]столбцы к набору строк, возвращаемому методом **Иколумнровсет:: жетколумнсровсет** . Эти столбцы содержат трехчастное имя коллекции схем XML. Для столбцов не в формате XML и нетипизированных столбцов XML все три данных столбца по умолчанию имеют значение NULL.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент добавляет указанные ниже [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] столбцы к набору строк, возвращаемому методом **иколумнровсет:: жетколумнсровсет** . Эти столбцы содержат трехчастное имя коллекции схем XML. Для столбцов не в формате XML и нетипизированных столбцов XML все три данных столбца по умолчанию имеют значение NULL.  
   
 |Имя столбца|Type|Описание|  
 |-----------------|----------|-----------------|  
@@ -225,28 +225,28 @@ ms.locfileid: "63136662"
  Метод **IRowsetFind::FindNextRow** не работает с типом **xml**. При вызове **IRowsetFind::FindNextRow**, если в аргументе *hAccessor* передается столбец типа DBTYPE_XML, будет возвращен результат DB_E_BADBINDINFO. Это происходит независимо от типа столбца, в котором производится поиск данных. Для любого другого типа привязки вызов **FindNextRow** возвращает результат DB_E_BADCOMPAREOP, если столбец, в котором производится поиск данных, имеет тип **xml**.  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Драйвер ODBC для собственного клиента SQL Server  
- В драйвере ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента в различные функции для поддержки типа данных **XML** было внесено несколько изменений.  
+ В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвере ODBC для собственного клиента в различные функции для поддержки типа данных **XML** было внесено несколько изменений.  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
  Функция [SQLColAttribute](../../native-client-odbc-api/sqlcolattribute.md) имеет три новых идентификатора полей, включая SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME, SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME и SQL_CA_SS _XML_SCHEMACOLLECTION_NAME.  
   
- Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для собственного клиента выводит SQL_SS_LENGTH_UNLIMITED для столбцов SQL_DESC_DISPLAY_SIZE и SQL_DESC_LENGTH.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента выводит SQL_SS_LENGTH_UNLIMITED для столбцов SQL_DESC_DISPLAY_SIZE и SQL_DESC_LENGTH.  
   
 ### <a name="sqlcolumns"></a>SQLColumns  
  Функция [SQLColumns](../../native-client-odbc-api/sqlcolumns.md) содержит три новых столбца, включая SS_XML_SCHEMACOLLECTION_CATALOG_NAME, SS_XML_SCHEMACOLLECTION_SCHEMA_NAME и SS_XML_SCHEMACOLLECTION_NAME. Существующий столбец TYPE_NAME используется для обозначения имени типа XML, а значение DATA_TYPE для столбца или параметра типа XML равно SQL_SS_XML.  
   
- Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для собственного клиента выводит SQL_SS_LENGTH_UNLIMITED для значений COLUMN_SIZE и CHAR_OCTET_LENGTH.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента выводит SQL_SS_LENGTH_UNLIMITED для значений COLUMN_SIZE и CHAR_OCTET_LENGTH.  
   
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
- Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для собственного клиента сообщает SQL_SS_LENGTH_UNLIMITED, если размер столбца не может быть определен в функции [SQLDescribeCol](../../native-client-odbc-api/sqldescribecol.md) .  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента сообщает SQL_SS_LENGTH_UNLIMITED, если размер столбца не может быть определен в функции [SQLDescribeCol](../../native-client-odbc-api/sqldescribecol.md) .  
   
 ### <a name="sqlgettypeinfo"></a>SQLGetTypeInfo  
- Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для собственного клиента выводит SQL_SS_LENGTH_UNLIMITED в качестве максимального COLUMN_SIZE для типа данных **XML** в функции [SQLGetTypeInfo](../../native-client-odbc-api/sqlgettypeinfo.md) .  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента выводит SQL_SS_LENGTH_UNLIMITED в качестве максимального COLUMN_SIZE для типа данных **XML** в функции [SQLGetTypeInfo](../../native-client-odbc-api/sqlgettypeinfo.md) .  
   
 ### <a name="sqlprocedurecolumns"></a>SQLProcedureColumns  
  Функция [SQLProcedureColumns](../../native-client-odbc-api/sqlprocedurecolumns.md) имеет те же дополнения к столбцам, что и функция **SQLColumns** .  
   
- Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для собственного клиента выводит SQL_SS_LENGTH_UNLIMITED в качестве максимального COLUMN_SIZE для типа данных **XML** .  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента выводит SQL_SS_LENGTH_UNLIMITED в качестве максимального COLUMN_SIZE для типа данных **XML** .  
   
 ### <a name="supported-conversions"></a>Поддерживаемые преобразования  
  При преобразовании данных из типа SQL в типы языка C типы SQL_C_WCHAR, SQL_C_BINARY и SQL_C_CHAR могут быть преобразованы в SQL_SS_XML, со следующими оговорками.  
@@ -265,10 +265,10 @@ ms.locfileid: "63136662"
   
 -   SQL_C_CHAR: данные преобразуются в UTF-16 на клиенте и отправляются на сервер так же, как SQL_C_WCHAR (включая добавление спецификации). Если кодировка XML не совпадает с клиентской кодовой страницей, это может привести к повреждению данных.  
   
- Согласно стандарту XML, XML-документы в кодировке UTF-16 должны начинаться с метки порядка следования байтов (BOM); в UTF-16 это код символа 0xFEFF. При работе с привязкой SQL_C_BINARY [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client не требует и не добавляет спецификацию, так как кодировка подразумевается привязкой. Целью является предоставить возможности для наиболее простого взаимодействия с другими обработчиками XML и хранилищами данных. В этом случае в XML с кодировкой UTF-16 нужно включить метку порядка байтов, и приложение может не заботиться о том, какова на самом деле кодировка данных, потому что большинство обработчиков XML (в том числе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) выяснят кодировку по нескольким первым байтам данных. XML-данные, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] полученные от собственного клиента с помощью привязок SQL_C_BINARY, всегда КОДИРУЮТСЯ в кодировке UTF – 16 с помощью BOM и без внедренного объявления кодировки.  
+ Согласно стандарту XML, XML-документы в кодировке UTF-16 должны начинаться с метки порядка следования байтов (BOM); в UTF-16 это код символа 0xFEFF. При работе с привязкой SQL_C_BINARY [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client не требует и не добавляет спецификацию, так как кодировка подразумевается привязкой. Целью является предоставить возможности для наиболее простого взаимодействия с другими обработчиками XML и хранилищами данных. В этом случае в XML с кодировкой UTF-16 нужно включить метку порядка байтов, и приложение может не заботиться о том, какова на самом деле кодировка данных, потому что большинство обработчиков XML (в том числе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) выяснят кодировку по нескольким первым байтам данных. XML-данные, полученные от [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента с помощью привязок SQL_C_BINARY, всегда кодируются в кодировке UTF – 16 с помощью BOM и без внедренного объявления кодировки.  
   
 ## <a name="see-also"></a>См. также  
- [SQL Server Native Client функции](sql-server-native-client-features.md)   
+ [Компоненты собственного клиента SQL Server](sql-server-native-client-features.md)   
  [ISSCommandWithParameters (OLE DB)](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

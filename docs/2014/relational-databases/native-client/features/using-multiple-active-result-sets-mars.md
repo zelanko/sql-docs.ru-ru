@@ -15,15 +15,15 @@ helpviewer_keywords:
 - MARS [SQL Server]
 - SQL Server Native Client ODBC driver, MARS
 ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c5cbf5efeb5b5381636b57d50b86a5affa4a2595
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 598442c972f1af0f6c3b498bdd80284efb34be1e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206633"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707183"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Использование режима MARS
   В [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] была предусмотрена возможность работы с несколькими активными результирующими наборами (режим MARS) в приложениях, которые обращаются к компоненту [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. В более ранних версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] приложения баз данных не могли поддерживать несколько активных инструкций во время соединения. При использовании результирующих наборов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], применяемых по умолчанию, приложение должно было обработать или отменить все результирующие наборы из одного пакета и только после этого приступать к обработке любого другого пакета данного соединения. В версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] был реализован новый атрибут соединения, который позволяет приложениям сохранять более одного ожидающего выполнения запроса в расчете на соединение и, в частности, иметь более одного применяемого по умолчанию активного результирующего набора в расчете на одно соединение.  
@@ -75,7 +75,7 @@ ms.locfileid: "68206633"
  Пример использования режима MARS из ADO см. в разделе [Использование ADO с SQL Server Native Client](../applications/using-ado-with-sql-server-native-client.md).  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Поставщик OLE DB для собственного клиента SQL Server  
- Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента поддерживает режим MARS с помощью добавления свойства инициализации источника данных SSPROP_INIT_MARSCONNECTION, реализованного в наборе свойств DBPROPSET_SQLSERVERDBINIT. Кроме того, добавлено новое ключевое слово для строки соединения — `MarsConn`. Оно принимает значения `true` или `false`; по умолчанию применяется значение `false`.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента поддерживает режим MARS с помощью добавления свойства инициализации источника данных SSPROP_INIT_MARSCONNECTION, реализованного в наборе свойств DBPROPSET_SQLSERVERDBINIT. Кроме того, добавлено новое ключевое слово для строки соединения — `MarsConn`. Оно принимает значения `true` или `false`; по умолчанию применяется значение `false`.  
   
  Для свойства источника данных DBPROP_MULTIPLECONNECTIONS по умолчанию применяется значение VARIANT_TRUE. Это значит, что поставщик создаст несколько соединений для поддержки ряда параллельных объектов команд и наборов строк. Если включен режим MARS, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент может поддерживать несколько объектов команд и наборов строк в одном соединении, поэтому MULTIPLE_CONNECTIONS по умолчанию имеет значение VARIANT_FALSE.  
   
@@ -168,7 +168,7 @@ hr = pIOpenRowset->OpenRowset (NULL,
 ```  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Драйвер ODBC для собственного клиента SQL Server  
- Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает режим MARS посредством дополнений к функциям [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) и [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md) . Добавление SQL_COPT_SS_MARS_ENABLED выполнено, чтобы принять значение SQL_MARS_ENABLED_YES или SQL_MARS_ENABLED_NO; по умолчанию принимается значение SQL_MARS_ENABLED_NO. Кроме того, добавлено новое ключевое слово для строки соединения — `Mars_Connection`. Оно принимает значения «да» или «нет»; по умолчанию принимается значение «нет».  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента поддерживает режим MARS посредством дополнений к функциям [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) и [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md) . Добавление SQL_COPT_SS_MARS_ENABLED выполнено, чтобы принять значение SQL_MARS_ENABLED_YES или SQL_MARS_ENABLED_NO; по умолчанию принимается значение SQL_MARS_ENABLED_NO. Кроме того, добавлено новое ключевое слово для строки соединения — `Mars_Connection`. Оно принимает значения «да» или «нет»; по умолчанию принимается значение «нет».  
   
 ### <a name="sql-server-native-client-odbc-driver-example"></a>Пример драйвера ODBC для собственного клиента SQL Server  
  В этом примере функция **SQLSetConnectAttr** используется для включения режима MARS перед вызовом функции **SQLDriverConnect** для подключения базы данных. После установки соединения вызываются две функции **SQLExecDirect** для создания двух отдельных результирующих наборов в одном соединении.  
@@ -196,7 +196,7 @@ SQLFetch(hstmt2);
 ```  
   
 ## <a name="see-also"></a>См. также  
- [SQL Server Native Client функции](sql-server-native-client-features.md)   
+ [Компоненты собственного клиента SQL Server](sql-server-native-client-features.md)   
  [Использование результирующих наборов по умолчанию в SQL Server](../../native-client-odbc-cursors/implementation/using-sql-server-default-result-sets.md)  
   
   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 637932fed7effb87705b3aa195578cfd506e1454
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 540ff52141139f4748cb2cd4c8979f5f8b55b230
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967152"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764005"
 ---
 # <a name="append-method-adox-views"></a>Метод Append (коллекция Views ADOX)
 Создает новый объект [представления](../../../ado/reference/adox-api/view-object-adox.md) и добавляет его в коллекцию [представлений](../../../ado/reference/adox-api/views-collection-adox.md) .  
@@ -34,13 +34,13 @@ Views.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *имя*;  
+ *Name*  
  **Строковое** значение, указывающее имя создаваемого представления.  
   
- *Command*  
+ *Команда*  
  Объект [команды](../../../ado/reference/ado-api/command-object-ado.md) ADO, представляющий создаваемое представление.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Создает новое представление в источнике данных с именем и атрибутами, указанными в объекте **Command** .  
   
  Если текст команды, который указывает пользователь, представляет процедуру, а не представление, то поведение зависит от поставщика. Если поставщик не поддерживает хранимые команды, **Добавление** завершится ошибкой.  
@@ -51,7 +51,7 @@ Views.Append Name, Command
 ## <a name="applies-to"></a>Применяется к  
  [Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода Append для представлений (Visual Basic)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Метод Append (столбцы ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Метод Append (группы ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   

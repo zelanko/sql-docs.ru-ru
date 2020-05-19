@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLPrimaryKeys function
 ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a12392f9e70fec2fae3b7790b43f12779b8868b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf00ecd74b64b3910ba19365920baf914f86939c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046698"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705890"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
   Таблица может содержать столбец или столбцы, которые могут использоваться в качестве уникальных идентификаторов строк, а таблицы, созданные без ограничения ПЕРВИЧного ключа, возвращают пустой результирующий набор для SQLPrimaryKeys. Функция ODBC [SQLSpecialColumns](sqlspecialcolumns.md) сообщает кандидатов идентификаторов строк для таблиц без первичных ключей.  

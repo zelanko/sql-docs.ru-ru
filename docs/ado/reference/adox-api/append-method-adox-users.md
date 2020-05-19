@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 99a21cd5dd32af9e84877865cfe7c0fc92f6c087
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c010b291468432544a037d15fbaa790fc3ee789d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967229"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764025"
 ---
 # <a name="append-method-adox-users"></a>Метод Append (коллекция Users ADOX)
 Добавляет новый объект [User](../../../ado/reference/adox-api/user-object-adox.md) в коллекцию [пользователей](../../../ado/reference/adox-api/users-collection-adox.md) .  
@@ -38,9 +38,9 @@ Users.Append User[,Password]
  Значение **типа Variant** , содержащее добавляемый объект- **пользователь** или имя пользователя для создания и добавления.  
   
  *Пароль*  
- Необязательный параметр. **Строковое** значение, содержащее пароль для пользователя. Параметр *Password* соответствует значению, заданному методом [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) объекта **пользователя** .  
+ Необязательный элемент. **Строковое** значение, содержащее пароль для пользователя. Параметр *Password* соответствует значению, заданному методом [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) объекта **пользователя** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Коллекция **пользователей** [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) представляет всех пользователей каталога. Коллекция **пользователей** для [группы](../../../ado/reference/adox-api/group-object-adox.md) представляет только тех пользователей, которые имеют членство в определенной группе.  
   
  Если поставщик не поддерживает создание пользователей, возникнет ошибка.  
@@ -51,7 +51,7 @@ Users.Append User[,Password]
 ## <a name="applies-to"></a>Применяется к  
  [Коллекция Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример добавления групп и пользователей, методы ChangePassword (Visual Basic)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
  [Метод Append (столбцы ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Метод Append (группы ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   

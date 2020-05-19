@@ -13,22 +13,22 @@ helpviewer_keywords:
 - information properties [OLE DB]
 - OLE DB data source properties [SQL Server Native Client]
 ms.assetid: 7fd80e47-5bd9-41e2-a3d3-091a7c8c5f2b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 946c6d39bd02bbccd898262da6642813fbb3c94f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6defada32a68472e4578cff1622288c973399118
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62679792"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707444"
 ---
 # <a name="data-source-information-properties"></a>Свойства сведений об источнике данных
   В специфичном для каждого поставщика множестве свойств DBPROPSET_SQLSERVERDATASOURCEINFO поставщик OLE DB собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет следующие свойства, хранящие информацию об источнике данных.  
   
 |Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
-|SSPROP_COLUMNLEVELCOLLATION|Тип: VT_BOOL<br /><br /> Чтение и запись.<br /><br /> Значение по умолчанию: VARIANT_TRUE<br /><br /> Описание: указывает, поддерживаются ли параметры сортировки столбцов.<br /><br /> VARIANT_TRUE: параметры сортировки на уровне столбцов поддерживаются.<br /><br /> VARIANT_FALSE: параметры сортировки на уровне столбцов не поддерживаются.|  
+|SSPROP_COLUMNLEVELCOLLATION|Тип: VT_BOOL.<br /><br /> Чтение и запись.<br /><br /> Значение по умолчанию: VARIANT_TRUE<br /><br /> Описание: указывает, поддерживаются ли параметры сортировки столбцов.<br /><br /> VARIANT_TRUE: параметры сортировки на уровне столбцов поддерживаются.<br /><br /> VARIANT_FALSE: параметры сортировки на уровне столбцов не поддерживаются.|  
 |SSPROP_UNICODELCID|Тип: VT_I4 R/W: чтение<br /><br /> Описание: идентификатор языка Юникода.<br /><br /> Это локаль, используемый для сортировки данных в Юникоде.|  
 |SSPROP_UNICODECOMPARISONSTYLE|Тип: VT_I4 R/W: чтение<br /><br /> Описание: стиль сравнения Юникода.<br /><br /> Параметры сортировки, используемые для сортировки данных в Юникоде.|  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Books Online, accessibility features
 - customer service [SQL Server]
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a653c4b5cd8d6e1bb9b5c826039169a7a5b80278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f3786ac7f031510d8985cb97634cbfc92024c4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683597"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707026"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Специальные функции для людей с ограниченными возможностями
   [!INCLUDE[msCoName](../includes/msconame-md.md)] работает над тем, чтобы сделать свои продукты и услуги еще более простыми в использовании. Данный раздел содержит сведения о следующих функциях, продуктах и службах, которые делают продукты семейства [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server более доступными для людей с физическими нарушениями.  
@@ -82,7 +82,7 @@ ms.locfileid: "74683597"
  Получить доступ к документации по [!INCLUDE[msCoName](../includes/msconame-md.md)] продуктам можно на [веб-сайте Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=67164).  
   
 ### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic, Inc.  
- Можно получить дополнительные [!INCLUDE[msCoName](../includes/msconame-md.md)] публикации из записи для слепых & Dyslexic, Inc. Эти документы распространяются на зарегистрированные, доступные члены службы распространения на аудиокассетах или гибких дисках. Коллекция содержит более 80 000 заголовков, включая [!INCLUDE[msCoName](../includes/msconame-md.md)] документацию по продукту [!INCLUDE[msCoName](../includes/msconame-md.md)] и книги, которые вы нажмете. Сведения о допустимости и доступности документации [!INCLUDE[msCoName](../includes/msconame-md.md)] по продукту и книгах по [!INCLUDE[msCoName](../includes/msconame-md.md)] прессам см. по адресу:  
+ Можно получить дополнительные [!INCLUDE[msCoName](../includes/msconame-md.md)] публикации из записи для слепых & Dyslexic, Inc. Эти документы распространяются на зарегистрированные, доступные члены службы распространения на аудиокассетах или гибких дисках. Коллекция содержит более 80 000 заголовков, включая [!INCLUDE[msCoName](../includes/msconame-md.md)] документацию по продукту и книги, которые вы [!INCLUDE[msCoName](../includes/msconame-md.md)] нажмете. Сведения о допустимости и доступности [!INCLUDE[msCoName](../includes/msconame-md.md)] документации по продукту и книгах по [!INCLUDE[msCoName](../includes/msconame-md.md)] прессам см. по адресу:  
   
  Запись для слепых & Dyslexic, Inc. 20 Росзел Road Принцетон, NJ 08540  
   
@@ -97,11 +97,11 @@ ms.locfileid: "74683597"
 ## <a name="customer-service-for-people-who-are-deaf-or-hard-of-hearing"></a>Поддержка пользователей для людей с нарушениями слуха  
  Люди с нарушениями слуха могут получить доступ к поддержке пользователей и продуктов [!INCLUDE[msCoName](../includes/msconame-md.md)] , воспользовавшись службой текстового телефона (TTY/TDD).  
   
-### <a name="customer-service"></a>Служба поддержки пользователей  
+### <a name="customer-service"></a>Customer Service  
  Вы можете обратиться в [!INCLUDE[msCoName](../includes/msconame-md.md)] информационный центр продаж по текстовому телефону (800) 892-5234 в пределах 6:30 утра. до 17:30. (по тихоокеанскому времени) с понедельника по пятницу, за исключением праздничных дней.  
   
 ### <a name="technical-help"></a>Техническая помощь  
- Для получения технической помощи в США можно обратиться [!INCLUDE[msCoName](../includes/msconame-md.md)] в службу технической поддержки по текстовому телефону по адресу (800) 892-5234 в диапазоне от 6:00 утра. до 18:00. (по тихоокеанскому времени) с понедельника по пятницу, за исключением праздничных дней. На территории Канады звоните по телефону (905) 568-9641 с 8:00 до 20:00. (по восточному времени) с понедельника по пятницу, за исключением праздничных дней. Цены, правила и условия пользования службами поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)] зависят от времени использования.  
+ Для получения технической помощи в США можно обратиться в службу [!INCLUDE[msCoName](../includes/msconame-md.md)] технической поддержки по текстовому телефону по адресу (800) 892-5234 в диапазоне от 6:00 утра. до 18:00. (по тихоокеанскому времени) с понедельника по пятницу, за исключением праздничных дней. На территории Канады звоните по телефону (905) 568-9641 с 8:00 до 20:00. (по восточному времени) с понедельника по пятницу, за исключением праздничных дней. Цены, правила и условия пользования службами поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)] зависят от времени использования.  
   
 ## <a name="getting-more-accessibility-information"></a>Получение дополнительных сведений о специальных возможностях  
  Сведения о поддержке специальных возможностей, предназначенных для улучшения жизни людей с физическими нарушениями, доступны на веб-сайте [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=8287).  
@@ -110,7 +110,7 @@ ms.locfileid: "74683597"
   
  Выпускается бесплатный электронный ежемесячный бюллетень со свежими данными по специальным возможностям продуктов [!INCLUDE[msCoName](../includes/msconame-md.md)] . Для подписки обратитесь на веб-сайт [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=8287).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Приступая к работе с документацией по продукту для SQL Server](../2014-toc/index.yml)   
  [Получение помощи по SQL Server](getting-sql-server-assistance.md)  
   
