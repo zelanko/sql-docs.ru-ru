@@ -12,15 +12,15 @@ helpviewer_keywords:
 - nested FOR XML queries in ASP.NET
 - ASP.NET [SQL Server]
 ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c726ca33df6b0cd9f79e336c7b056062a578236d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a762dac6850f6d1c8079a10f60a3138cdcc9be5
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63233662"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702378"
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>Использование вложенных запросов FOR XML в ASP.NET
   В данном примере приложение ASP.NET возвращает браузеру XML-данные, выполняя хранимую процедуру SQL Server. Эта хранимая процедура формирует XML при помощи вложенных запросов. Похожая инструкция SELECT представлена в разделе [Формирование одноуровневых элементов с помощью вложенного запроса в режиме AUTO](generate-siblings-with-a-nested-auto-mode-query.md). Данный пример демонстрирует способ применения вложенных запросов FOR XML для формирования элементного XML в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -90,7 +90,7 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
   
 2.  Сохраните приложение .aspx в каталоге c:\inetpub\wwwroot (GetSalesOrderInfo.aspx).  
   
-3.  Выполните приложение (http://server/GetSalesOrderInfo.aspx).  
+3.  Выполните приложение ( http://server/GetSalesOrderInfo.aspx) .  
   
 ## <a name="see-also"></a>См. также:  
  [Использование вложенных запросов FOR XML](use-nested-for-xml-queries.md)  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - cache [SQLXML]
 - schemas [SQLXML]
 ms.assetid: 7e5fda21-b435-41fd-b637-8b616560a93f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6ca536125be481766e41c3665dd313d483160ae0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6c481dbba3f8e077854b12e755544d97af5f692
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013278"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703312"
 ---
 # <a name="schema-caching-sqlxml-40"></a>Кэширование схем (SQLXML 4.0)
   При параллельной установке XML для Microsoft SQL Server 2000 Web Release 1, Microsoft SQLXML 2.0 и SQLXML 3.0 можно в явном виде контролировать кэширование схем всех версий с помощью следующих разделов реестра.  

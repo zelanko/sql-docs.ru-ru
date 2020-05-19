@@ -28,18 +28,18 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1bf68b7f2c8fd1a2cc8d753ddd6348e8161b55c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9189617e7d572cd46805e34eaa258e81362827d7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013284"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703338"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Объектная модель массовой загрузки XML SQL Server (SQLXML 4.0)
-  Объектная [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] модель Microsoft XML с массовым загрузкой состоит из объекта склксмлбулклоад. Этот объект поддерживает следующие свойства и методы.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Объектная модель Microsoft XML с массовым загрузкой состоит из объекта склксмлбулклоад. Этот объект поддерживает следующие свойства и методы.  
   
 ## <a name="methods"></a>Методы  
  Execute  
@@ -132,7 +132,7 @@ ms.locfileid: "66013284"
  Значение по умолчанию — FALSE.  
   
  сгусеид  
- Указывает, будет ли атрибут, заданный в схеме сопоставления как `id`, использован в создании ограничения типа PRIMARY KEY при создании таблицы. Это свойство используется, если свойство SchemaGen имеет значение TRUE. Если Сгусеид имеет значение TRUE, то служебная программа SchemaGen использует атрибут `dt:type="id"` , который указан в качестве первичного ключевого столбца, и добавляет СООТВЕТСТВУЮЩЕЕ ограничение первичного ключа при создании таблицы.  
+ Указывает, будет ли атрибут, заданный в схеме сопоставления как `id`, использован в создании ограничения типа PRIMARY KEY при создании таблицы. Это свойство используется, если свойство SchemaGen имеет значение TRUE. Если Сгусеид имеет значение TRUE, то служебная программа SchemaGen использует атрибут, который `dt:type="id"` указан в качестве первичного ключевого столбца, и добавляет соответствующее ограничение первичного ключа при создании таблицы.  
   
  Значение по умолчанию — FALSE.  
   

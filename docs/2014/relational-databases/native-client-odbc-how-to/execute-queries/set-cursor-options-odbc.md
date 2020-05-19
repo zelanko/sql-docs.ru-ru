@@ -9,20 +9,20 @@ ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], options
 ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 48389a3b537461a89bcf5c8bcbc646d3417939c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14d1836483373c82c17f1d4db34bb01769f376aa
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200343"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82700917"
 ---
 # <a name="set-cursor-options-odbc"></a>Указание параметров курсора (ODBC)
   Чтобы задать параметры курсора, вызовите [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) , чтобы задать или [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) , чтобы получить параметры инструкции, управляющие поведением курсора.  
   
-|*Версию*|Указывает|  
+|*Attribute (XElement Dynamic Property)* (Attribute (динамическое свойство XElement))|Что определяет|  
 |-----------------|---------------|  
 |SQL_ATTR_CURSOR_TYPE|Однопроходный, статический, динамический или управляемый набором ключей тип курсора|  
 |SQL_ATTR_CONCURRENCY|Параметр управления параллелизмом – только для чтения, блокирующий, оптимистичный с использованием отметок времени или оптимистичный с использованием значений|  

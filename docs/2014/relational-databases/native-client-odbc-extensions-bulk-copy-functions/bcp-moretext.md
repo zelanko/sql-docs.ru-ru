@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_moretext function
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83142e83ba04328ddf025e0a2f16ff18ad947075
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfa6968d4bb4254b52efd3e09d7f04e3c7fa9268
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688845"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701920"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
   Отправляет в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] часть значения длинного типа данных переменной длины.  
@@ -55,13 +55,13 @@ pData
  *pData*  
  Представляет собой указатель на ту часть значения поддерживаемого длинного типа данных переменной длины, которую нужно переслать в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  SUCCEED или FAIL.  
   
 ## <a name="remarks"></a>Remarks  
- Эта функция может использоваться в сочетании с [bcp_bind](bcp-bind.md) и [bcp_sendrow](bcp-sendrow.md) для копирования длинных значений данных переменной длины, которые SQL Serverся в нескольких меньших фрагментах. **bcp_moretext** можно использовать со столбцами, имеющими следующие SQL Server типов данных: `text`, `ntext`, `image`, `varchar(max)` `nvarchar(max)`,, `varbinary(max)`, определяемый пользователем тип (UDT) и XML. **bcp_moretext** не поддерживает преобразования данных, указанные данные должны соответствовать типу данных целевого столбца.  
+ Эта функция может использоваться в сочетании с [bcp_bind](bcp-bind.md) и [bcp_sendrow](bcp-sendrow.md) для копирования длинных значений данных переменной длины, которые SQL Serverся в нескольких меньших фрагментах. **bcp_moretext** можно использовать со столбцами, имеющими следующие SQL Server типов данных: `text` , `ntext` , `image` ,,, `varchar(max)` `nvarchar(max)` `varbinary(max)` , определяемый пользователем тип (UDT) и XML. **bcp_moretext** не поддерживает преобразования данных, указанные данные должны соответствовать типу данных целевого столбца.  
   
- Если **bcp_bind** вызывается с параметром *pData* , не равным null, для типов данных, поддерживаемых `bcp_sendrow` **bcp_moretext**, отправляет все значения данных, независимо от длины. Однако, если **bcp_bind** имеет параметр *pData* NULL для поддерживаемых типов данных, **bcp_moretext** можно использовать для копирования данных сразу после успешного возврата с `bcp_sendrow` того, что все связанные столбцы с данными уже обработаны.  
+ Если **bcp_bind** вызывается с параметром *pData* , не равным null, для типов данных, поддерживаемых **bcp_moretext**, `bcp_sendrow` отправляет все значения данных, независимо от длины. Однако, если **bcp_bind** имеет параметр *pData* NULL для поддерживаемых типов данных, **bcp_moretext** можно использовать для копирования данных сразу после успешного возврата с того, `bcp_sendrow` что все связанные столбцы с данными уже обработаны.  
   
  Если для отправки одного столбца поддерживаемого типа данных в строке используется **bcp_moretext** , необходимо также использовать его для отправки всех остальных поддерживаемых столбцов типа данных в строке. Ни один столбец не может быть пропущен. Поддерживаемыми типами данных являются SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT и SQLXML. То же относится к типам данных SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY и SQLVARBINARY, если столбец имеет тип varchar(max), nvarchar(max) или varbinary(max) соответственно.  
   
@@ -91,7 +91,7 @@ bcp_moretext(hdbc, 0, NULL);
 ```  
   
 ## <a name="example"></a>Пример  
- В этом примере показано, как использовать **bcp_moretext** с **bcp_bind** и `bcp_sendrow`:  
+ В этом примере показано, как использовать **bcp_moretext** с **bcp_bind** и `bcp_sendrow` :  
   
 ```  
 // Variables like henv not specified.  

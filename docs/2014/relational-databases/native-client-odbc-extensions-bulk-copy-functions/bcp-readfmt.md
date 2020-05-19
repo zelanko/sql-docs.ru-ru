@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_readfmt function
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 76ccc4271877b81ae103a89b5df727b74017d9ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ea8094778c8ccb204712536f01b13152c89c7a1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688669"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701897"
 ---
 # <a name="bcp_readfmt"></a>bcp_readfmt
   Считывает определение формата файла данных из указанного файла форматирования.  
@@ -49,7 +49,7 @@ szFormatFile
  *szFormatFile*  
  Путь и имя файла, содержащего значения формата для файла данных.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  SUCCEED или FAIL.  
   
 ## <a name="remarks"></a>Remarks  
@@ -57,9 +57,9 @@ szFormatFile
   
  Чтобы сохранить файл форматирования, вызовите функцию [bcp_writefmt](bcp-writefmt.md). Вызовы метода `bcp_readfmt` могут ссылаться на сохраненные форматы. Дополнительные сведения см. в разделе [bcp_init](bcp-init.md).  
   
- Кроме того, программа полного копирования (**bcp**) может сохранять пользовательские форматы данных в файлах, на которые может ссылаться `bcp_readfmt`. Дополнительные сведения о программе **bcp** и структуре файлов формата данных **bcp** см. в статье инструкции по [импорту и экспорту данных &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
+ Кроме того, программа полного копирования (**bcp**) может сохранять пользовательские форматы данных в файлах, на которые может ссылаться `bcp_readfmt` . Дополнительные сведения о программе **bcp** и структуре файлов формата данных **bcp** см. в статье инструкции по [импорту и экспорту данных &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
   
- `BCPDELAYREADFMT` Значение параметра *eOption* [bcp_control](bcp-control.md) изменяет поведение bcp_readfmt.  
+ `BCPDELAYREADFMT`Значение параметра *eOption* [bcp_control](bcp-control.md) изменяет поведение bcp_readfmt.  
   
 > [!NOTE]  
 >  Файл форматирования должен быть создан с помощью программы **bcp** версии 4.2 или более поздней.  
@@ -109,7 +109,7 @@ if (bcp_exec(hdbc, &nRowsProcessed) == SUCCEED)
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

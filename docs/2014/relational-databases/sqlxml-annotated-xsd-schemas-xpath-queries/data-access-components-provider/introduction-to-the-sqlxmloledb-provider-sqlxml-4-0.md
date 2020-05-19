@@ -11,15 +11,15 @@ helpviewer_keywords:
 - adExecuteStream flag
 - SQLXMLOLEDB Provider, about SQLXMLOLEDB Provider
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9826143c68b8c1bd3edc6472156d140a6141968b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 34f98fabf4bc5fe5fe5a5f465d43576370ecae5b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014386"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703223"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Введение в поставщик SQLXMLOLEDB (SQLXML 4.0)
   Поставщик SQLXMLOLEDB — это поставщик OLE DB, который предоставляет функциональность [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML через объекты ADO. Однако этот поставщик может выполнять команды только в режиме ADO «запись в выходящий поток». Поставщик SQLXMLOLEDB не является поставщиком набора строк. При выполнении команды необходимо указать флаг Адексекутестреам, который направляет ADO использовать указанный выходной поток.  
@@ -37,13 +37,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>Свойства поставщика SQLXMLOLEDB  
  Поставщик SQLXMLOLEDB имеет следующие характерные для него свойства соединения.  
   
-|Соединение<br /><br /> свойство;|Значение по умолчанию<br /><br /> (если есть)|Описание|  
+|Подключение<br /><br /> свойство;|По умолчанию<br /><br /> (если есть)|Описание|  
 |-----------------------------|----------------------------|-----------------|  
 |Поставщик данных||Предоставляет идентификатор PROGID поставщика OLE DB, через который SQLXMLOLEDB выполняет команды. Начиная с SQLXML 4.0 и [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], этот поставщик является частью собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; поэтому значение этого свойства может быть только «SQLNCLI11». Дополнительные сведения см. в статье [Программирование SQL Server Native Client](../../native-client/sql-server-native-client-programming.md).|  
   
  Поставщик SQLXMLOLEDB имеет следующие характерные для него свойства команды.  
   
-|Команда<br /><br /> свойство;|Значение по умолчанию<br /><br /> (если есть)|Описание|  
+|Команда<br /><br /> свойство;|По умолчанию<br /><br /> (если есть)|Описание|  
 |--------------------------|----------------------------|-----------------|  
 |Базовый путь|""|Указывает базовый путь к файлу. Базовый путь к файлу используется для указания местоположения файлов языка XSL или схемы сопоставления. Базовый путь к файлу также используется для разрешения относительных путей к файлам схемы XSL или сопоставления, указанным в свойствах схемы XSL или сопоставления.<br /><br /> Пример использования этого свойства см. в разделе [исполнение запросов XPath &#40;поставщика SQLXMLOLEDB&#41;](executing-xpath-queries-sqlxmloledb-provider.md).|  
 |клиентсидексмл|False|Если требуется, чтобы процесс преобразования набора строк в XML был выполнен на клиенте, а не на сервере, установите этому свойству значение TRUE. Это полезно, когда необходимо переместить нагрузку производительности на средний уровень.<br /><br /> Пример использования этого свойства см. в статьях [исполнение SQL-запросов &#40;поставщика SQLXMLOLEDB&#41;](executing-sql-queries-sqlxmloledb-provider.md) или запуск [шаблонов, содержащих SQL-запросы &#40;&#41;поставщика SQLXMLOLEDB ](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  

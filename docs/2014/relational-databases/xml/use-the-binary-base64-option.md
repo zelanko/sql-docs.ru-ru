@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, BINARY BASE64 option
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1bda0167e1e55c3ded715de96027a153ec5a65de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0ae127bb1be69e2b584e370687a969ecaecfae5
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63231258"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702337"
 ---
 # <a name="use-the-binary-base64-option"></a>Использование параметра BINARY BASE64
   Если в запросе задан аргумент BINARY BASE64, двоичные данные возвращаются в формате кодирования base64. По умолчанию, если аргумент BINARY BASE64 не задан, режим AUTO поддерживает кодирование URL-адресов двоичных данных. Это означает, что вместо двоичных данных возвращается ссылка на относительный URL-адрес виртуального корня базы данных, в которой выполнялся запрос. Эта ссылка может использоваться для доступа к действительным двоичным данным в последующих операциях при помощи запроса объекта базы данных SQLXML ISAPI. Для идентификации изображения запрос должен предоставить достаточно данных, например первичные ключевые столбцы.  

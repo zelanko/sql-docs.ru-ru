@@ -14,22 +14,22 @@ helpviewer_keywords:
 - XPath queries [SQLXML], SQLXMLOLEDB Provider
 - namespaces [SQLXML], XPath queries
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f72c5841989eb12f89eda34fbfb310e125612d1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa708c4b439e3a556ea7dac345cc04f32c59e2d6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013083"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703234"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Выполнение запросов XPath с пространствами имен (поставщик SQLXMLOLEDB)
   В запросы XPath могут быть включены пространства имен. Если для элементов схемы указано пространство имен (то есть в случае включения целевого пространства имен), то запросы XPath к схеме должны указывать данное пространство имен.  
   
  Так как использование символа-шаблона (*) не поддерживается в SQLXML 4.0, необходимо указать запрос XPath с помощью префикса пространства имен. Для разрешения этого префикса используйте свойство namespaces, чтобы указать привязку пространства имен.  
   
- В следующем примере запрос XPath задает пространства имен, используя подстановочный знак (\*) и функции XPath local-name () и Namespace-URI (). Этот запрос XPath возвращает все элементы с локальным именем `Contact` и с URI-кодом пространства имен `urn:myschema:Contacts`.  
+ В следующем примере запрос XPath задает пространства имен, используя подстановочный знак ( \* ) и функции XPath local-name () и Namespace-URI (). Этот запрос XPath возвращает все элементы с локальным именем `Contact` и с URI-кодом пространства имен `urn:myschema:Contacts`.  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  

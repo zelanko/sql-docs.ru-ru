@@ -22,15 +22,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], ADO.NET
 - XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4d9d64edf29d1e494d25474845295c505caedee8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4aed312c01e47245d3b2c3d360652ab2b366cfd9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63232434"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702322"
 ---
 # <a name="use-xml-data-in-applications"></a>Использование XML-данных в приложениях
   В этом подразделе описываются параметры, доступные при работе с типом данных `xml` в приложениях. Он содержит следующие сведения:  
@@ -145,7 +145,7 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>Обработка XML-данных в столбцах типа xml с помощью ADO.NET  
- Для обработки XML `xml` из столбца типа данных с помощью ADO.NET и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно использовать стандартное поведение `SqlCommand` класса. Например, столбец с данными типа `xml` и его значения могут быть запрошены таким же образом, как и любые столбцы SQL, с помощью `SqlDataReader`. Но если необходимо работать со столбцами типа `xml` как с XML-данными, то сначала необходимо связать содержимое с типом `XmlReader`.  
+ Для обработки XML из `xml` столбца типа данных с помощью ADO.NET и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно использовать стандартное поведение `SqlCommand` класса. Например, столбец с данными типа `xml` и его значения могут быть запрошены таким же образом, как и любые столбцы SQL, с помощью `SqlDataReader`. Но если необходимо работать со столбцами типа `xml` как с XML-данными, то сначала необходимо связать содержимое с типом `XmlReader`.  
   
  Дополнительные сведения и примеры кода см. в разделе "Значения XML-столбцов в модуле чтения данных" в документации по пакету [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK.  
   

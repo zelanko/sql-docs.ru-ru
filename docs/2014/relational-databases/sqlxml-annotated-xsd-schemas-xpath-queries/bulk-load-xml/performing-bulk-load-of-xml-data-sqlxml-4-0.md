@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XDR schemas [SQLXML], XML Bulk Load
 - inserting data
 ms.assetid: 3708b493-322e-4f3c-9b27-441d0c0ee346
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 09f8c1cf3b6c9226dc87a0a95c57f4c5719f0d03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b021cbb72405c5bfcabffbd438842de43c0d6689
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013369"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703351"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>Выполнение массовой загрузки XML-данных (SQLXML 4.0)
   Массовая загрузка XML является самостоятельным объектом COM, который позволяет загрузить частично структурированные XML-данные в таблицы Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

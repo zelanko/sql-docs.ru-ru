@@ -11,18 +11,18 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6abc209e200be39fe79209d89cfb6f3a492e0e6a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63232408"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702373"
 ---
 # <a name="use-nested-for-xml-queries"></a>Использование вложенных запросов FOR XML
-  Тип `xml` данных и [директива TYPE в запросах FOR XML](type-directive-in-for-xml-queries.md) позволяют обрабатывать XML-запросы, ВОЗВРАЩАЕМые запросами FOR XML, на сервере, а также на клиенте.  
+  `xml`Тип данных и [директива TYPE в ЗАПРОСАХ for XML](type-directive-in-for-xml-queries.md) позволяют обрабатывать XML-запросы, ВОЗВРАЩАЕМЫЕ запросами FOR XML, на сервере, а также на клиенте.  
   
 ## <a name="processing-with-xml-type-variables"></a>Обработка переменных типа XML  
  Результат запроса FOR XML можно присвоить переменной типа `xml` или воспользоваться языком XQuery, чтобы выполнить к нему запрос, после чего присвоить полученный результат переменной типа `xml` для дополнительной обработки.  
