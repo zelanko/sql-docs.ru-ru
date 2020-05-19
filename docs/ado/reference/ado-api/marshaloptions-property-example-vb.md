@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - MarshalOptions property [ADO], Visual Basic example
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7b760bb8d74664e58552f19e321473bb139c3ad0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cedf7562c1ab0bc5c7582aec7e7409cb18cf256a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918243"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754384"
 ---
 # <a name="marshaloptions-property-example-vb"></a>Пример свойства MarshalOptions (Visual Basic)
 В этом примере свойство [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) используется для указания того, какие строки отправляются обратно на сервер — все строки или только измененные строки.  

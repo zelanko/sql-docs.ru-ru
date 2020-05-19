@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Item property [ADO], VC++ example
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f157532dd1029e2966f0259701c59ffb50928c4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4ef98ecdaf1346aa06a46de88f20ab27e376ab7d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932293"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754886"
 ---
 # <a name="item-property-example-vc"></a>Пример свойства Item (Visual C++)
 В этом примере показано, как свойство [Item](../../../ado/reference/ado-api/item-property-ado.md) получает доступ к членам коллекции. В примере открывается таблица ***authors*** базы данных ***pubs*** с параметризованной командой.  
@@ -231,7 +231,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Свойство Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   

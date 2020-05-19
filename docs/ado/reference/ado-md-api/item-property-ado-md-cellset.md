@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO MD]
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0c7fbce544cac188db7ed3b3d40478aa63809405
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e35cf86a91be42a2a39a38642e34e747d7d13fe7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949627"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753915"
 ---
 # <a name="item-property-ado-md-cellset"></a>Свойство Item (многомерный объект ADO Cellset)
 Извлекает ячейку из набора [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) , используя ее координаты.  
@@ -67,6 +67,6 @@ Cellset.Item ( Positions )Cellset ( Positions )
 ## <a name="applies-to"></a>Применяется к  
  [Объект Cellset (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Cell (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Объект Cellset (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)

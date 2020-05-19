@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - MarshalOptions property [ADO]
 ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0212f3b4cb663bd56adaa1bdbc3ab6675c3ce888
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 182946d30141ecbbcc2cba706338609b431abb97
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932272"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754497"
 ---
 # <a name="marshaloptions-property-ado"></a>Свойство MarshalOptions (ADO)
 Указывает, какие записи [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) необходимо маршалировать обратно на сервер.  
@@ -37,6 +37,6 @@ ms.locfileid: "67932272"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства MarshalOptions (Visual Basic)](../../../ado/reference/ado-api/marshaloptions-property-example-vb.md)   
  [Пример свойства MarshalOptions (Visual C++)](../../../ado/reference/ado-api/marshaloptions-property-example-vc.md)   

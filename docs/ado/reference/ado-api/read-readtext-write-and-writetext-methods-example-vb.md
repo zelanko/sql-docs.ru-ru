@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Read method [ADO], Visual Basic example
 - WriteText method [ADO], Visual Basic example
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f77b2d395b76b537107ad87cf1487bb4d25a430c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a2a35d2f8e584843aa4395e63112de0211a70a7d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931444"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754249"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Примеры методов Read, ReadText, Write и WriteText (Visual Basic)
 В этом примере показано, как считать содержимое текстового поля в текстовый [поток](../../../ado/reference/ado-api/stream-object-ado.md) и в двоичный **поток**. К другим свойствам и методам относятся " [Расположение](../../../ado/reference/ado-api/position-property-ado.md)", " [Размер](../../../ado/reference/ado-api/size-property-ado-parameter.md)", "набор [символов](../../../ado/reference/ado-api/charset-property-ado.md)" и " [сетеос](../../../ado/reference/ado-api/seteos-method.md)".  
@@ -110,7 +110,7 @@ End Sub
 'EndReadVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство Charset (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)   
  [Свойство «позиционирование» (ADO)](../../../ado/reference/ado-api/position-property-ado.md)   
  [Метод Read](../../../ado/reference/ado-api/read-method.md)   

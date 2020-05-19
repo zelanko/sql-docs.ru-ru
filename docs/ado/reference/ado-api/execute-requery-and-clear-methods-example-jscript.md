@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Clear method [ADO], JScript example
 - Execute method [ADO], JScript example
 ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f4ceafffc9d6b87428ae3da58a2f824bb7ed3c34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4c5ca02f8f3ca6b8b525bdc3fb7875c3f1638640
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918824"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754971"
 ---
 # <a name="execute-requery-and-clear-methods-example-jscript"></a>Примеры методов Execute, Requery и Clear (JScript)
 В этом примере демонстрируется метод **EXECUTE** при запуске из объекта [команды](../../../ado/reference/ado-api/command-object-ado.md) и объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) . Он также использует метод [Requery](../../../ado/reference/ado-api/requery-method.md) для получения текущих данных в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md)и метод [clear](../../../ado/reference/ado-api/clear-method-ado.md) для очистки содержимого коллекции [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) . (Доступ к коллекции **Errors** осуществляется через объект **Connection** свойства [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md).) Назовите файл **ексекутежс. ASP**.  

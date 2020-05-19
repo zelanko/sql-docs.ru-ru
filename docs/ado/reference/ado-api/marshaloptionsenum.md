@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - MarshalOptionsEnum enumeration [ADO]
 ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9f356097f1262630d47b4b4b4048c61d42816a4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b1aae84d12c098bdabf68cd014a359be54b0dcba
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918236"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754444"
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 Указывает, какие записи должны возвращаться на сервер.  
   
-|Константа|Применение|Описание|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adMarshalAll**|0|По умолчанию. Возвращает все строки на сервер.|  
 |**адмаршалмодифиедонли**|1|Возвращает на сервер только измененные строки.|  

@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d1a5fa5c9002d4a27490dfc98fb79f482539f042
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b4c44e48c46abab1cc15e3fbf90592414fad7c9c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964316"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752676"
 ---
 # <a name="execute-method-rds"></a>Метод Execute (служба удаленных рабочих столов)
 Выполняет запрос и создает набор записей ADO для использования в ADO 2,5 и более поздних версиях.  
@@ -77,7 +77,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *пинформатион*  
  Указатель на информационную ошибку, возвращенную инструкцией EXECUTE. Если значение равно NULL, сведения об ошибке не возвращаются.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Параметр *хандлерстринг* может иметь значение null. Что происходит в этом случае, зависит от настройки сервера RDS. Строка обработчика "МСДФМАП. Handler" указывает, что следует использовать предоставляемый корпорацией Майкрософт обработчик (Мсдфмап. dll). Строка обработчика "МАСДФМАП. Handler; Sample. ini" указывает, что должен использоваться обработчик Мсдфмап. dll, а аргумент "Sample. ini" должен быть передан обработчику. МСДФМАП. dll интерпретирует аргумент как направление использования файла Sample. ini для проверки соединения и строк запроса.  
   
 ## <a name="applies-to"></a>Применяется к  
