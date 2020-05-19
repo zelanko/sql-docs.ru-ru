@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 41d215d4d6e288b74e69e0ea8266c442a0726220
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2dbf3a215ebdd52172af9b0917f218ab3598b7e8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243070"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718398"
 ---
 # <a name="transact-sql-debugger-information"></a>Сведения отладчика Transact-SQL
   Каждый раз когда отладчик приостанавливает выполнение на определенной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , с текущим состоянием выполнения можно ознакомиться при помощи различных окон отладчика.  

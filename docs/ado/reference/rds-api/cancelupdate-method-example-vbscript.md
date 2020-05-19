@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - CancelUpdate method [ADO], VBScript example
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b92db747267f250501b11200c870526fe79e713b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d560233efc7623a390fbd2fc63e8add5f26cd157
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964604"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746418"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>Пример метода CancelUpdate (VBScript)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Чтобы протестировать этот пример, вырежьте и вставьте этот \<код между телом \<> и/боди> ТЕГАМИ в обычном HTML-документе и назовите его **канцелупдатевбс. ASP**. Сценарий ASP определит ваш Интернет сервер. Необходимо изменить имя сервера, чтобы оно отражало собственную настройку. Просто измените значение в строке подключения с MyServer на имя установки SQL Server.  
+ Чтобы протестировать этот пример, вырежьте и вставьте этот код между \< телом> и \< /боди> тегами в обычном HTML-документе и назовите его **канцелупдатевбс. ASP**. Сценарий ASP определит ваш Интернет сервер. Необходимо изменить имя сервера, чтобы оно отражало собственную настройку. Просто измените значение в строке подключения с MyServer на имя установки SQL Server.  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  
@@ -117,7 +117,7 @@ End Sub
 <!-- EndCancelUpdateVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)
 
 

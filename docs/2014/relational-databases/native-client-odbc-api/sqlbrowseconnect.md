@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLBrowseConnect function
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d9cb9439dd76c636df46b8ac3d737d79415b5ea5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fceed0b4bcfb8d5c41046cd4faf555ca2847899c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067674"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706373"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
   **SQLBrowseConnect** использует ключевые слова, которые можно классифицировать по трем уровням сведений о соединении. Для каждого ключевого слова в следующей таблице указано, возвращается ли список допустимых значений и является ли ключевое слово необязательным.  
@@ -29,7 +29,7 @@ ms.locfileid: "63067674"
 |Ключевое слово|Возвращает список?|Является необязательным?|Описание|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN|Н/Д|Нет|Имя источника данных, возвращаемого функцией **SQLDataSources**. Ключевое слово DSN нельзя использовать, если используется ключевое слово DRIVER.|  
-|DRIVER|Н/Д|Нет|Microsoft?? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Имя драйвера ODBC для собственного клиента:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] {Native Client 11}. Ключевое слово DRIVER нельзя использовать, если используется ключевое слово DSN.|  
+|DRIVER|Н/Д|Нет|Microsoft?? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Имя драйвера ODBC для собственного клиента: { [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Ключевое слово DRIVER нельзя использовать, если используется ключевое слово DSN.|  
   
 ## <a name="level-2"></a>Уровень 2  
   

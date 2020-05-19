@@ -27,15 +27,15 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e7ee45c8d725e233541f4db34796e89327bc11e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010738"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717948"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>Объект SqlXmlCommand (управляемые классы SQLXML)
   Это конструктор для объекта SqlXmlCommand:  
@@ -44,7 +44,7 @@ ms.locfileid: "66010738"
 public SqlXmlCommand(string cnString)  
 ```  
   
- Где `cnString` — строка подключения ADO или OLEDB, идентифицирующая сервер, базу данных и сведения об имени входа, например `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`.  
+ Где `cnString` — строка подключения ADO или OLEDB, идентифицирующая сервер, базу данных и сведения об имени входа, например `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"` .  
   
  В строке соединения параметр `Provider` должен иметь значение SQLOLEDB, а параметр `Data Provider` в строку поставщика не включается).  
   
@@ -106,7 +106,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  Идентифицирует тип команды. Это свойство используется для задания типа команды, которую нужно выполнить. Значения в следующей таблице задают тип команды. Рабочий пример см. в разделе [доступ к функциям SQLXML в среде .NET](accessing-sqlxml-functionality-in-the-net-environment.md).  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |Склксмлкоммандтипе. SQL|Выполняет команду SQL (например, `SELECT * FROM Employees FOR XML AUTO`).|  
 |Склксмлкоммандтипе. XPath|Выполняет команду XPath (например, `Employees[@EmployeeID=1]`).|  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Connect property [ADO], VBScript example
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2412d0e8c01b9c347491c2bd2e89acd81efdbff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cee201d56361d18ded5fbef1c2c36051c34ecdc8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964585"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746264"
 ---
 # <a name="connect-property-example-vbscript"></a>Пример свойства Connect (VBScript)
 > [!IMPORTANT]
@@ -39,7 +39,7 @@ ms.locfileid: "67964585"
   
  В следующем примере показано, как задать свойство **Connect** во время выполнения в коде VBScript.  
   
- Чтобы протестировать этот пример, вырежьте и вставьте код \<между телом> \<и/боди> ТЕГАМИ в обычном HTML-документе и назовите его **коннектвбс. ASP**. Сценарий ASP определит ваш сервер.  
+ Чтобы протестировать этот пример, вырежьте и вставьте код между \< телом> и \< /боди> тегами в обычном HTML-документе и назовите его **коннектвбс. ASP**. Сценарий ASP определит ваш сервер.  
   
 ```  
 <!-- BeginConnectVBS -->  
@@ -125,7 +125,7 @@ BODY {
 <!-- EndConnectVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство Connect (служба удаленных рабочих столов)](../../../ado/reference/rds-api/connect-property-rds.md)
 
 

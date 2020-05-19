@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 711d9d5bf7a3268b400eae4b1b117b4034133f5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a005ab43ff33023827ea57fc6dbd9584c8da1f2d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228074"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706915"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Общие сведения о гибридном облаке SQL Server 2014
  Большинство приложений имеют некоторые основные проблемы, например: высокая производительность, ценность для бизнеса, сложные конфигурации оборудования, значительные пиковые нагрузки по запросу и соответствие отраслевым и корпоративным нормам. Построение технологий корпоративного класса с учетом всех этих факторов может представлять значительные сложности. Стратегия гибридного облаке Майкрософт обеспечивает поддержку сред стандартного, частного облака, общедоступного облака и гибридной облачной среды для преодоления этих ключевых сложностей. 
@@ -109,7 +109,7 @@ ms.locfileid: "75228074"
  
 ## <a name="see-also"></a>См. также 
  [Руководство по продукту SQL Server 2014 CTP2](https://www.microsoft.com/download/details.aspx?id=39269)  
- [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
+ [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
  [Серия записей в блоге о гибридном облаке Microsoft SQL Server](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
  [Перенос приложений, ориентированных на данные, в Azure](https://azure.microsoft.com/blog/cloud-services-series-migrating-data-centric-applications-to-windows-azure/) 
  

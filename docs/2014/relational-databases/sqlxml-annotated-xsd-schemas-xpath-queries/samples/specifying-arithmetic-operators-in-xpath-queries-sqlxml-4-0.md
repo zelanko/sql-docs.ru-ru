@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], arithmetic operators
 - operators [SQLXML]
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2ca89efb197083b095ee7b1db18d3114525084a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d4ffa4b8eed84bd6597552967b3e51b10459749
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012468"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717854"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Задание арифметических операторов в запросах XPath (SQLXML 4.0)
   В следующем примере показано, как в запросах XPath указывать арифметические операторы. В этом примере задается запрос XPath к схеме сопоставления, содержащейся в файле SampleSchema1.xml. Дополнительные сведения об этом образце схемы см. в разделе [Пример схемы XSD с заметками для XPath-примеров &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -28,13 +28,13 @@ ms.locfileid: "66012468"
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. Указание арифметического оператора *  
- Этот запрос XPath возвращает ** \<OrderDetail>** элементов, которые соответствуют заданному предикату:  
+ Этот запрос XPath возвращает ** \< OrderDetail>** элементов, которые соответствуют заданному предикату:  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- В запросе `child` — это ось, а `OrderDetail` — проверка узла (true, если **OrderDetail** является ** \<узлом элемента>**, поскольку ** \<элемент>ным** узлом является основным узлом для `child` оси). Для всех узлов элементов ** \<OrderDetail>** применяется тест в предикате и возвращаются только те узлы, которые соответствуют условию.  
+ В запросе `child` — это ось, а `OrderDetail` — Проверка узла (true, если **OrderDetail** является ** \< узлом элемента>**, поскольку ** \< элемент>ным** узлом является основным узлом для `child` оси). Для всех узлов элементов ** \< OrderDetail>** применяется тест в предикате и возвращаются только те узлы, которые соответствуют условию.  
   
 > [!NOTE]  
 >  Числа в языке XPath являются числами с плавающей запятой двойной точности, и сравнение чисел с плавающей запятой, как указано в примере, приводит к округлению.  

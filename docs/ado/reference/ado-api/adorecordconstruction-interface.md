@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordConstruction interface [ADO]
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 12a9b2cae1c516ed3bf8caef8127034e6ff2a847
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920801"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747176"
 ---
 # <a name="adorecordconstruction-interface"></a>Интерфейс ADORecordConstruction
 Интерфейс **адорекордконструктион**используется для создания объекта **записи** ADO из объекта **строки** OLE DB в приложении C/C++.  
@@ -35,13 +35,13 @@ ms.locfileid: "67920801"
 |[Строки](../../../ado/reference/ado-api/row-property-ado.md)|Чтение и запись.<br />Возвращает или задает OLE DB объект **строки** от или в этом объекте ADO **Record** .|  
   
 ## <a name="methods"></a>Методы  
- Отсутствует.  
+ Нет.  
   
 ## <a name="events"></a>События  
- Отсутствует.  
+ Нет.  
   
-## <a name="remarks"></a>Remarks  
- При наличии объекта **строки** OLE DB (`pRow`) построение объекта **записи** ADO (`adoR`) производится в следующие три основные операции:  
+## <a name="remarks"></a>Примечания  
+ При наличии объекта **строки** OLE DB ( `pRow` ) построение объекта **записи** ADO () производится в `adoR` следующие три основные операции:  
   
 1.  Создайте объект **записи** ADO.  
   

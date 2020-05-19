@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Key object [ADOX]
 ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f7e405cfdde86a4f19590a87035ff574e1d255c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3b1c14c19fe624de5a6b634cd1adebe018896011
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965902"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746649"
 ---
 # <a name="key-object-adox"></a>Объект Key (ADOX)
 Представляет первичное, внешнее или уникальное ключевое поле из таблицы базы данных.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Следующий код создает новый **ключ**:  
   
 ```  
@@ -48,7 +48,7 @@ Dim obj As New Key
   
 -   [Свойства, методы и события объекта Key](../../../ado/reference/adox-api/key-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Коллекция Keys (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)

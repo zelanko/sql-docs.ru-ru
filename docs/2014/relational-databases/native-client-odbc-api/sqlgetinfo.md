@@ -11,20 +11,20 @@ topic_type:
 helpviewer_keywords:
 - SQLGetInfo function
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f4a17b9b6599a57275524308608ac6ef18a8e18e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2788847a52d47596c38a9f63161d122543fe8099
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128656"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706006"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   В таблице показаны значения, возвращаемые функцией **SQLGetInfo**. Эти значения могут меняться в зависимости от номера версии сервера, с которым установлено соединение.  
   
- **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственном клиенте отличается от **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвере ODBC (SQLSRV32. DLL), когда **SQLGetInfo** вызывается с SQL_KEYWORDS и длиной буфера 0.  Драйвер собственного клиента Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает SQL_SUCCESS, но драйвер ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает SQL_SUCCESS_WITH_INFO.  Однако при вызове с ненулевой длиной буфера, которая меньше, чем выходная строка **SQLGetInfo** ключевого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] слова, SQLGetInfo в собственном клиенте возвращает SQL_SUCCESS_WITH_INFO и SQLSTATE 01004.  
+ **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственном клиенте отличается от **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвере ODBC (SQLSRV32. DLL), когда **SQLGetInfo** вызывается с SQL_KEYWORDS и длиной буфера 0.  Драйвер собственного клиента Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает SQL_SUCCESS, но драйвер ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает SQL_SUCCESS_WITH_INFO.  Однако при вызове с ненулевой длиной буфера, которая меньше, чем выходная строка ключевого слова, **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственном клиенте возвращает SQL_SUCCESS_WITH_INFO и SQLSTATE 01004.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
@@ -49,13 +49,13 @@ ms.locfileid: "63128656"
 |SQL_COLLATION_SEQ|Текущая назначенная последовательность параметров сортировки для соединения и сервера.|  
 |SQL_COLUMN_ALIAS|«Y»|  
 |SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NULL|  
-|SQL_CONVERT_BIGINT|Преобразование типа данных ODBC SQL_BIGINT не поддерживается. Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных **Decimal (19, 0)** как тип ODBC SQL_DECIMAL. См. раздел SQL_CONVERT_DECIMAL далее.|  
+|SQL_CONVERT_BIGINT|Преобразование типа данных ODBC SQL_BIGINT не поддерживается. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных **Decimal (19, 0)** как тип ODBC SQL_DECIMAL. См. раздел SQL_CONVERT_DECIMAL далее.|  
 |SQL_CONVERT_BINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_BIT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_CHAR|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_LONGVARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_TIMESTAMP SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WLONGVARCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DATE|Преобразование типа данных ODBC SQL_TYPE_DATE не поддерживается. Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных **DateTime** типа ODBC SQL_TYPE_TIMESTAMP. См. раздел SQL_CONVERT_TIMESTAMP далее.|  
+|SQL_CONVERT_DATE|Преобразование типа данных ODBC SQL_TYPE_DATE не поддерживается. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных **datetime** типа ODBC SQL_TYPE_TIMESTAMP. См. раздел SQL_CONVERT_TIMESTAMP далее.|  
 |SQL_CONVERT_DECIMAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DOUBLE|Преобразование типа данных ODBC SQL_DOUBLE не поддерживается. Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает тип данных odbc SQL_DOUBLE SQL_FLOAT. См. раздел SQL_CONVERT_FLOAT далее.|  
+|SQL_CONVERT_DOUBLE|Преобразование типа данных ODBC SQL_DOUBLE не поддерживается. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента поддерживает тип данных odbc SQL_DOUBLE SQL_FLOAT. См. раздел SQL_CONVERT_FLOAT далее.|  
 |SQL_CONVERT_FLOAT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_FUNCTIONS|SQL_FN_CVT_CONVERT SQL_FN_CVT_CAST|  
 |SQL_CONVERT_INTEGER|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -66,7 +66,7 @@ ms.locfileid: "63128656"
 |SQL_CONVERT_NUMERIC|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_REAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_SMALLINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_TIME|Преобразование типа данных ODBC SQL_TYPE_TIME не поддерживается. Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]тип данных **DateTime** типа ODBC SQL_TYPE_TIMESTAMP. См. раздел SQL_CONVERT_TIMESTAMP далее.|  
+|SQL_CONVERT_TIME|Преобразование типа данных ODBC SQL_TYPE_TIME не поддерживается. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных **datetime** типа ODBC SQL_TYPE_TIMESTAMP. См. раздел SQL_CONVERT_TIMESTAMP далее.|  
 |SQL_CONVERT_TIMESTAMP|SQL_CVT_CHAR SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TIMESTAMP SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_TINYINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_VARBINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  

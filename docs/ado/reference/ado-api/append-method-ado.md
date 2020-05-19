@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 17fa0ff30e8dcdbf7ea67080f17c3e066bba8605
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4d0d94cf40a397ca030a9ea975a02962d6ab9489
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920678"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746911"
 ---
 # <a name="append-method-ado"></a>Метод Append (ADO)
 Добавляет объект в коллекцию. Если коллекция является [полями](../../../ado/reference/ado-api/fields-collection-ado.md), то перед добавлением в коллекцию можно создать новый объект [поля](../../../ado/reference/ado-api/field-object.md) .  
@@ -43,22 +43,22 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *object*  
  Объектная переменная, представляющая объект, который необходимо добавить.  
   
- *имя*;  
+ *Name*  
  **Строковое** значение, содержащее имя нового объекта **field** и не должно совпадать с именем любого другого объекта в *полях*.  
   
  *Type*  
  Значение [дататипинум](../../../ado/reference/ado-api/datatypeenum.md) , значение по умолчанию которого равно **адемпти**, которое указывает тип данных нового поля. Следующие типы данных не поддерживаются ADO и не должны использоваться при добавлении новых полей в [объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md): **адидиспатч**, **адиункновн**, **адвариант**.  
   
  *DefinedSize*  
- Необязательный параметр. Значение **типа Long** , представляющее определенный размер (в символах или байтах) нового поля. Значение по умолчанию для этого параметра является производным от *типа*. Поля с *DefinedSize* размером более 255 байт рассматриваются как столбцы переменной длины. Значение по умолчанию для *DefinedSize* не указано.  
+ Необязательный элемент. Значение **типа Long** , представляющее определенный размер (в символах или байтах) нового поля. Значение по умолчанию для этого параметра является производным от *типа*. Поля с *DefinedSize* размером более 255 байт рассматриваются как столбцы переменной длины. Значение по умолчанию для *DefinedSize* не указано.  
   
  *Атрибуты*  
- Необязательный параметр. Значение [фиелдаттрибутинум](../../../ado/reference/ado-api/fieldattributeenum.md) , для которого значение по умолчанию — **адфлддефаулт**, определяющее атрибуты для нового поля. Если это значение не указано, поле будет содержать атрибуты, производные от *типа*.  
+ Необязательный элемент. Значение [фиелдаттрибутинум](../../../ado/reference/ado-api/fieldattributeenum.md) , для которого значение по умолчанию — **адфлддефаулт**, определяющее атрибуты для нового поля. Если это значение не указано, поле будет содержать атрибуты, производные от *типа*.  
   
  *FieldValue*  
- Необязательный параметр. **Вариант** , представляющий значение для нового поля. Если не указано, то поле добавляется со значением NULL.  
+ Необязательный элемент. **Вариант** , представляющий значение для нового поля. Если не указано, то поле добавляется со значением NULL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="parameters-collection"></a>Коллекция Parameters  
  Необходимо задать свойство [Type](../../../ado/reference/ado-api/type-property-ado.md) объекта [Parameter](../../../ado/reference/ado-api/parameter-object.md) , прежде чем добавлять его в коллекцию [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) . Если выбран тип данных переменной длины, необходимо также задать для свойства [size](../../../ado/reference/ado-api/size-property-ado-parameter.md) значение больше нуля.  
@@ -90,7 +90,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 - [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
 - [Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры методов Append и CreateParameter (Visual Basic)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
  [Пример методов Append и CreateParameter (Visual c++)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
  [Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   

@@ -38,18 +38,18 @@ helpviewer_keywords:
 - SQL Server assistance
 - SQL Server Solution Center
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 22eeb621cb9c4ccdf0d853ff9d6d528c156c15a0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683605"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706937"
 ---
 # <a name="getting-sql-server-assistance"></a>Получение помощи по SQL Server
-  Существует три основных источника сведений [!INCLUDE[msCoName](../includes/msconame-md.md)] о: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+  Существует три основных источника сведений [!INCLUDE[msCoName](../includes/msconame-md.md)] о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
   
 -   Документация, установленная в виде локальной коллекции электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -57,7 +57,7 @@ ms.locfileid: "74683605"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]сведения о дополнительных [!INCLUDE[msCoName](../includes/msconame-md.md)] веб-сайтах.  
   
- Если вы не нашли нужную информацию в этих источниках, можно отправить вопросы на форумах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] сообщества и в группы новостей или открыть обращение в службу поддержки с помощью. [!INCLUDE[msCoName](../includes/msconame-md.md)]  
+ Если вы не нашли нужную информацию в этих источниках, можно отправить вопросы на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] форумах сообщества и в группы новостей или открыть обращение в службу поддержки с помощью [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
 ## <a name="ssnoversion-books-online"></a>Электронная документация по[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  В электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] описаны основные понятия и действия, необходимые для эффективного использования [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Электронная документация также включает в себя справочные материалы по языкам и интерфейсам программирования, обеспечивающим хранение, извлечение и изменение данных, а также создание отчетов при помощи [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -89,11 +89,11 @@ ms.locfileid: "74683605"
 |Ресурс|Описание|  
 |--------------|-----------------|  
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Предпродажные сведения об оценке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] как средства для хранения данных и бизнес-аналитики.|  
-|[База знаний Майкрософт](https://go.microsoft.com/fwlink/?LinkId=42461)|Предоставляет доступное для поиска репозиторий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] статей, [!INCLUDE[msCoName](../includes/msconame-md.md)] написанных по поддержке.|    
+|[База знаний Майкрософт](https://go.microsoft.com/fwlink/?LinkId=42461)|Предоставляет доступное для поиска репозиторий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] статей, написанных по [!INCLUDE[msCoName](../includes/msconame-md.md)] поддержке.|    
   
  Продукты [!INCLUDE[msCoName](../includes/msconame-md.md)] имеют сроки поддержки, которые определяют, как долго для каждой версии будет доступна поддержка. Служба поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)] ведет страницу, в которой описываются сроки поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)]. Страница содержит ссылки на другие страницы, в которых указана доступность поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)] продуктов. Дополнительные сведения см. в разделе [Жизненный цикл службы поддержки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=98306).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование документации по продукту SQL Server](../2014-toc/index.yml)  
   
   

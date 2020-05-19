@@ -9,18 +9,18 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLGetDescRec function
 ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 41bd489752dc1b4084d9c012cad97413c6ff98b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3a2bbebc947d0c245e00c39fca2d4e69fbb5666
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657717"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706034"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
-  В этом разделе обсуждаются функции SQLGetDescRec, характерные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для собственного клиента.  
+  В этом разделе обсуждаются функции SQLGetDescRec, характерные для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента.  
   
 ## <a name="sqlgetdescrec-and-table-valued-parameters"></a>Функция SQLGetDescRec и возвращающие табличные значения параметры  
  SQLGetDescRec можно использовать для получения значений атрибутов возвращающих табличное значение параметров и столбцов возвращающих табличное значение параметров. Параметр *рекнумбер* параметра SQLGetDescRec соответствует параметру *параметернумбер* SQLBindParameter.  
@@ -31,9 +31,9 @@ ms.locfileid: "62657717"
   
 |Параметр|Возвращающий табличное значение параметр|Столбцы возвращающих табличные значения параметров и других параметров|  
 |---------------|-----------------------------|----------------------------------------------------------|  
-|*Имя*|Имя параметра для вызова хранимой процедуры; в противном случае строка длины 0.|Имя столбца возвращающих табличные значения параметров.|  
+|*Name*|Имя параметра для вызова хранимой процедуры; в противном случае строка длины 0.|Имя столбца возвращающих табличные значения параметров.|  
 |*типептр*|SQL_DESC_TYPE. Для возвращающих табличные значения параметров — SQL_SS_TABLE.|SQL_DESC_TYPE|  
-|*субтипептр*|Не определено.|SQL_DESC_DATETIME_INTERVAL_CODE (для записей типа SQL_DATETIME или SQL_INTERVAL).|  
+|*субтипептр*|Не определено|SQL_DESC_DATETIME_INTERVAL_CODE (для записей типа SQL_DATETIME или SQL_INTERVAL).|  
 |*ленгсптр*|0|SQL_DESC_OCTET_LENGTH|  
 |*преЦисионптр*|0|SQL_DESC_PRECISION|  
 |*скалептр*|0|SQL_DESC_SCALE|  
@@ -48,7 +48,7 @@ ms.locfileid: "62657717"
 |-|---------------|------------------|-----------------|--------------------|----------------|  
 |DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
-|Дата|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
+|дата|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |time|SQL_SS_TIME2|0|10|0..7|0..7|  
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  

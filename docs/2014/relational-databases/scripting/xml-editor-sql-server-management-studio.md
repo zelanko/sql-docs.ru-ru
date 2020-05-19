@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c4fc4e1b0f0340d579b1f6ee22db888417089352
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9202a3125b35075e9fe4311a4ebe81103cf6b937
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242944"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718135"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Редактор XML (среда SQL Server Management Studio)
   Предоставляет набор визуальных средств для работы с XML-схемами, наборами данных ADO.NET и XML-документами. Конструктор XML поддерживает язык определения схем XML (XSD), определенный консорциумом World Wide Web (WC3). Этот конструктор не поддерживает определения DTD (определения типов файлов) или другие языки XML-схем, например XDR (XML-Data Reduced).  
@@ -95,7 +95,7 @@ ms.locfileid: "75242944"
 -   формировать XML-схемы из XML-документа.  
   
 ## <a name="xml-view"></a>Представление XML  
- Представление XML — это редактор для работы с кодом XML, обеспечивающий технологию IntelliSense и выделение кода цветом. Завершение операторов доступно при работе с файлами XSD и XML, для которых есть соответствующие схемы. Введите \< , чтобы инициировать тег, и отобразится список элементов, допустимых в этом расположении. После ввода элемента и нажатия клавиши ПРОБЕЛ программа выводит список атрибутов, поддерживаемых данным элементом.  
+ Представление XML — это редактор для работы с кодом XML, обеспечивающий технологию IntelliSense и выделение кода цветом. Завершение операторов доступно при работе с файлами XSD и XML, для которых есть соответствующие схемы. Введите, \< чтобы инициировать тег, и отобразится список элементов, допустимых в этом расположении. После ввода элемента и нажатия клавиши ПРОБЕЛ программа выводит список атрибутов, поддерживаемых данным элементом.  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] недоступны на панели инструментов. Для доступа к этим параметрам в XML-редакторе в меню **Правка** выберите пункт **технология IntelliSense**.  

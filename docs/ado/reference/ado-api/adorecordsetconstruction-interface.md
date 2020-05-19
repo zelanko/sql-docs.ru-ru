@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 770bf86f62f243ea255693c7773e6fae48527cfd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920797"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747086"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Интерфейс ADORecordsetConstruction
 Интерфейс **адорекордсетконструктион** используется для создания объекта **набора записей** ADO из объекта OLE DB **набора строк** в приложении C/C++.  
@@ -36,13 +36,13 @@ ms.locfileid: "67920797"
 |[Набор строк](../../../ado/reference/ado-api/rowset-property-ado.md)|Чтение и запись.<br />Возвращает или задает OLE DB объект **набора строк** из или в этом объекте ADO **Recordset** .|  
   
 ## <a name="methods"></a>Методы  
- Отсутствует.  
+ Нет.  
   
 ## <a name="events"></a>События  
- Отсутствует.  
+ Нет.  
   
-## <a name="remarks"></a>Remarks  
- При наличии объекта **набора строк** OLE DB`pRowset`() построение объекта **набора записей** ADO (`adoRs`) производится в следующие три основные операции:  
+## <a name="remarks"></a>Примечания  
+ При наличии объекта **набора строк** OLE DB ( `pRowset` ) построение объекта **набора записей** ADO () производится `adoRs` в следующие три основные операции:  
   
 1.  Создайте объект **набора записей** ADO.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "67920797"
                          (void**)&adoRsConstruct);  
     ```  
   
-3.  Вызовите `IADORecordsetConstruction::put_Rowset` метод Property, чтобы задать объект `Rowset` OLE DB объекта ADO `Recordset` :  
+3.  Вызовите `IADORecordsetConstruction::put_Rowset` метод Property, чтобы задать `Rowset` объект OLE DB `Recordset` объекта ADO:  
   
     ```  
     IUnknown *pUnk=NULL;  
@@ -78,6 +78,6 @@ ms.locfileid: "67920797"
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство Rowset (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - product feedback [SQL Server]
 - automatic error or usage reporting
 ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15fe0d424ac1f5a83fb842a2b9ab2f9416fedd55
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62772282"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706892"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Отзывы по SQL Server 2014
   Корпорация [!INCLUDE[msCoName](../includes/msconame-md.md)] ценит, что вы уделили часть своего времени, чтобы помочь в улучшении продуктов и документации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Можно предоставлять отчеты об ошибках и выдвигать предложения, касающиеся характеристик продуктов или пользовательского интерфейса, предоставлять отзывы о документации; кроме того, можно разрешить автоматическую отправку отчетов об ошибках и данных об использовании продуктов в [!INCLUDE[msCoName](../includes/msconame-md.md)] для дальнейшего анализа. Каждый из трех методов обратной связи описывается в этом разделе.  

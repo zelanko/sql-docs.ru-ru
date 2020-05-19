@@ -13,14 +13,14 @@ helpviewer_keywords:
 - CreateParameter method [ADO], JScript example
 - Append method [ADO], JScript example
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 71bc18b13061b844b35314239ffe4973155a0c87
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 048a54ab758304bbfef50ffb1eaa98254b4fd496
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920728"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747009"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Пример методов Append и CreateParameter (JScript)
 В этом примере используются методы [append](../../../ado/reference/ado-api/append-method-ado.md) и [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) для выполнения хранимой процедуры с входным параметром. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **аппенджс. ASP**.  
@@ -141,7 +141,7 @@ body {
 <!-- EndAppendJS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Объект Field](../../../ado/reference/ado-api/field-object.md)   

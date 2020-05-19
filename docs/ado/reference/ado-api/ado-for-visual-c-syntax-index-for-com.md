@@ -14,14 +14,14 @@ helpviewer_keywords:
 - ADO for Visual C++ syntax [ADO]
 - syntax indexes [ADO], ADO for Visual C++ syntax
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 74562de6d4bd606e4cb9217cdd119646f51e2e47
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 044dcc2fb10463e592a953725afc2413c3a5880f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920981"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747311"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>Индекс синтаксиса ADO для Visual C++ для модели COM
 Этот индекс является перекрестной ссылкой на справочник по языку ADO на основе Microsoft Visual C++.  
@@ -50,6 +50,6 @@ ms.locfileid: "67920981"
   
 -   [Объект Stream](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ADO для Visual C++ индекса синтаксиса с #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Объекты данных Microsoft ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)

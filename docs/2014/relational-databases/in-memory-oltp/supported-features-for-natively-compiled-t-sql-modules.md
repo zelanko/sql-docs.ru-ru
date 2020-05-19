@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b875808a5a9379f917b246cb871420a339519f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155718"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718806"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Поддерживаемые конструкции для хранимых процедур, скомпилированных в собственном коде
   Этот раздел содержит список поддерживаемых функций для хранимых процедур, скомпилированных в собственном виде ([Создание процедуры &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -66,7 +66,7 @@ ms.locfileid: "63155718"
 ##  <a name="supported-operators"></a><a name="so"></a>Поддерживаемые операторы  
  Поддерживаются следующие операторы.  
   
--   [Операторы сравнения &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (например, >, \<, >= и <=) поддерживаются в условных выражениях (если, while).  
+-   [Операторы сравнения &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (например, >, \< , >= и <=) поддерживаются в условных выражениях (если, while).  
   
 -   Унарные операторы (+, -).  
   
@@ -112,7 +112,7 @@ ms.locfileid: "63155718"
   
 -   Предикат фильтра IS [NOT] NULL  
   
--   ИЗ \<оптимизированной для памяти таблицы>  
+-   ИЗ \< оптимизированной для памяти таблицы>  
   
 -   Поддерживается [группирование &#40;&#41;Transact-SQL](/sql/t-sql/queries/select-group-by-transact-sql) , а также агрегатные функции AVG, COUNT, COUNT_BIG, min, Max и Sum. Функции MIN и MAX не поддерживаются для типов nvarchar, char, varchar, varchar, varbinary и binary. [Предложение order by &#40;&#41;Transact-SQL](/sql/t-sql/queries/select-order-by-clause-transact-sql) поддерживается в инструкции [Group By &#40;transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql) если выражение в списке ORDER BY отображается в списке Group By. Например, GROUP BY a + b ORDER BY a + b поддерживается; GROUP BY a, b ORDER BY a + b не поддерживается.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "63155718"
 ##  <a name="limitations-on-sorting"></a><a name="los"></a>Ограничения на сортировку  
  В запросе с использованием [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) и [предложения ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql) можно сортировать более 8 000 строк. Без [предложения ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql)[TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) позволяет сортировать не более 8 000 строк (меньше, если есть соединения).  
   
- Если в запросе используется как оператор [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql), так и [предложение ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql), для оператора TOP можно указать не более 8192 строк. Если указать более 8192 строк, вы получаете сообщение об ошибке: **MSG 41398, уровень 16, состояние 1, процедура * \<procedureName>*, Line * \<LineNumber>* оператор TOP может возвращать не более 8192 строк. запрошено число>. * \<* **  
+ Если в запросе используется как оператор [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql), так и [предложение ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql), для оператора TOP можно указать не более 8192 строк. Если указать более 8192 строк, вы получаете сообщение об ошибке: **Msg 41398, уровень 16, состояние 1, процедура * \< procedureName>*, Line * \< LineNumber>* оператор TOP может возвращать не более 8192 строк. запрошено * \< число>* .**  
   
  Если отсутствует предложение TOP, то можно отсортировать любое количество строк с помощью предложения ORDER BY.  
   

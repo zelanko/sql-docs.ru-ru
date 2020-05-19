@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fb2078ea3b9515af26df0846ee2f5d92bd9349a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63075202"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706441"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Собственная компиляция таблиц и хранимых процедур
   В In-Memory OLTP введено понятие компиляции в собственном коде. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет возможность компиляции в собственном коде хранимых процедур, которые обращаются к оптимизированным для памяти таблицам. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может также скомпилировать в собственном коде оптимизированные для памяти таблицы. Компиляция в собственном коде обеспечивает повышение скорости доступа к данным и более эффективное выполнение запросов по сравнению с интерпретируемыми (традиционными) командами [!INCLUDE[tsql](../../includes/tsql-md.md)]. Компиляция таблиц и хранимых процедур в собственном коде создает библиотеки DLL.  
@@ -115,12 +115,12 @@ go
  Компиляция в собственном коде таблиц и хранимых процедур использует компилятор In-Memory OLTP. Этот компилятор создает файлы, которые записываются на диск и загружаются в память. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует следующие механизмы для ограничения доступа к ним.  
   
 ### <a name="native-compiler"></a>Собственный компилятор  
- Исполняемый файл компилятора, а также двоичные файлы и файлы заголовков, необходимые для компиляции в собственном коде, устанавливаются как часть экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в папке MSSQL\Binn\Xtp. Таким образом, если экземпляр по умолчанию установлен в папке c:\Program Files, файлы компилятора устанавливаются в\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]папку c:\Program Files \MSSQL12. мссклсервер\мсскл\бинн\кстп.  
+ Исполняемый файл компилятора, а также двоичные файлы и файлы заголовков, необходимые для компиляции в собственном коде, устанавливаются как часть экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в папке MSSQL\Binn\Xtp. Таким образом, если экземпляр по умолчанию установлен в папке c:\Program Files, файлы компилятора устанавливаются в папку c:\Program Files \\ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \MSSQL12. мссклсервер\мсскл\бинн\кстп.  
   
  Чтобы ограничить доступ к компилятору, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует списки управления доступом (ACL), ограничивающие доступ к двоичным файлам. Все двоичные файлы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] защищены от изменения и несанкционированного доступа через списки управления доступом. Списки управления доступом собственного компилятора также ограничивают использование компилятора; только учетная запись службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и администраторы имеют разрешения на чтение и выполнение для файлов собственного компилятора.  
   
 ### <a name="files-generated-by-a-native-compilation"></a>Файлы, созданные компиляцией в собственном коде  
- Файлы, создаваемые при компиляции таблицы хранимой процедуры, включают DLL и промежуточные файлы, в том числе файлы со следующими расширениями: C, OBJ, XML и PDB. Созданные файлы сохраняются во вложенной папке папки данных по умолчанию. Вложенная папка называется Xtp. При установке экземпляра по умолчанию с папкой данных по умолчанию созданные файлы помещаются в папку\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]C:\Program Files \MSSQL12. мссклсервер\мсскл\дата\кстп.  
+ Файлы, создаваемые при компиляции таблицы хранимой процедуры, включают DLL и промежуточные файлы, в том числе файлы со следующими расширениями: C, OBJ, XML и PDB. Созданные файлы сохраняются во вложенной папке папки данных по умолчанию. Вложенная папка называется Xtp. При установке экземпляра по умолчанию с папкой данных по умолчанию созданные файлы помещаются в папку C:\Program Files \\ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \MSSQL12. мссклсервер\мсскл\дата\кстп.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предотвращает изменение создаваемых библиотек DLL тремя способами.  
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d82ab18ebf1a8b7771e6afd37dcd14ed58ed35c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cfb1fd563506c06ede5832a06ba98eaae18e58ed
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243021"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718242"
 ---
 # <a name="transact-sql-debugger"></a>Отладчик Transact-SQL
   Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет находить ошибки в коде [!INCLUDE[tsql](../../includes/tsql-md.md)] путем проверки поведения кода во время его выполнения. После перевода окна редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в режим отладки можно приостанавливать выполнение на определенных строках кода и просматривать сведения и данные, которые используются или возвращаются соответствующими инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -65,7 +65,7 @@ ms.locfileid: "75243021"
 |Описание использования отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] для пошагового выполнения кода.|[Пошаговая отладка кода Transact-SQL](step-through-transact-sql-code.md)|  
 |Описание использования отладчика для просмотра таких данных [!INCLUDE[tsql](../../includes/tsql-md.md)] , как параметры и переменные, а также системные сведения.|[Сведения отладчика Transact-SQL](transact-sql-debugger-information.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редакторы запросов и текста (SQL Server Management Studio)](../scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

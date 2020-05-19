@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1af45d9ac4674af98097083e2da89a217f17a58f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bce894f1e0cce8c8d8800b2633924f9cc5bc6bd9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921018"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747342"
 ---
 # <a name="ado-events-model-example-vc"></a>Пример модели событий ADO (Visual C ++)
 В Visual C++ разделе [Создание экземпляра события ADO по языку](../../../ado/guide/data/ado-event-instantiation-by-language.md) дается общее описание того, как создать экземпляр модели событий ADO. Ниже приведен конкретный пример создания модели событий в среде, созданной директивой **#import** .  
@@ -44,7 +44,7 @@ ms.locfileid: "67921018"
   
 -   Пример написан как консольное приложение.  
   
--   Необходимо вставить собственный код под комментарием "`// Do some work`".  
+-   Необходимо вставить собственный код под комментарием " `// Do some work` ".  
   
 -   Все обработчики событий по умолчанию не выполняют никаких действий и отменяют дальнейшие уведомления. Необходимо вставить соответствующий код для приложения и разрешить уведомления, если это необходимо.  
   

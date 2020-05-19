@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLBindParameter function
 ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cba973be9b4dc2ec0da286b2d01b636f0ca4e2b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4673a38b275e180a51eedddfdee2c8233616fbd3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067832"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706389"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
-  `SQLBindParameter`может устранять нагрузку при преобразовании данных при использовании для предоставления данных драйверу ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента, что приводит к значительному повышению производительности для клиентских и серверных компонентов приложений. Другие преимущества — снижение потери точности при вставке или изменении приблизительных числовых типов данных.  
+  `SQLBindParameter`может устранять нагрузку при преобразовании данных при использовании для предоставления данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйверу ODBC для собственного клиента, что приводит к значительному повышению производительности для клиентских и серверных компонентов приложений. Другие преимущества — снижение потери точности при вставке или изменении приблизительных числовых типов данных.  
   
 > [!NOTE]  
 >  При вставке данных типов `char` и `wchar` в столбец изображения используется размер передаваемых данных, а не размер данных после их преобразования в двоичный формат.  
@@ -31,12 +31,12 @@ ms.locfileid: "63067832"
   
  При использовании ODBC-драйвера для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время привязки входных параметров задавайте значение SQL_PARAM_INPUT. Значения SQL_PARAM_OUTPUT и SQL_PARAM_INPUT_OUTPUT следует задавать только для привязки параметров хранимой процедуры, для которых указано ключевое слово OUTPUT.  
   
- [SQLRowCount](sqlrowcount.md) является ненадежным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с драйвером ODBC для собственного клиента, если элемент массива массива с привязанным параметром вызывает ошибку при выполнении инструкции. Атрибут инструкции ODBC SQL_ATTR_PARAMS_PROCESSED_PTR возвращает число строк, обработанных до возникновения ошибки. Затем при необходимости приложение может просмотреть массив состояний параметров, чтобы выяснить количество успешно выполненных инструкций.  
+ [SQLRowCount](sqlrowcount.md) является ненадежным с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвером ODBC для собственного клиента, если элемент массива массива с привязанным параметром вызывает ошибку при выполнении инструкции. Атрибут инструкции ODBC SQL_ATTR_PARAMS_PROCESSED_PTR возвращает число строк, обработанных до возникновения ошибки. Затем при необходимости приложение может просмотреть массив состояний параметров, чтобы выяснить количество успешно выполненных инструкций.  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>Привязка параметров для символьных типов SQL  
- Если переданный тип данных SQL имеет символьный тип, *ColumnSize* имеет размер в символах (а не байтах). Если длина строки данных в байтах больше 8000, то для *ColumnSize* должно быть установлено значение `SQL_SS_LENGTH_UNLIMITED`, указывающее на отсутствие ограничения на размер типа SQL.  
+ Если переданный тип данных SQL имеет символьный тип, *ColumnSize* имеет размер в символах (а не байтах). Если длина строки данных в байтах больше 8000, то для *ColumnSize* должно быть установлено значение `SQL_SS_LENGTH_UNLIMITED` , указывающее на отсутствие ограничения на размер типа SQL.  
   
- Например, если тип данных SQL — `SQL_WVARCHAR`, *ColumnSize* не должен превышать 4000. Если фактическая длина данных превышает 4000, то для `SQL_SS_LENGTH_UNLIMITED` `nvarchar(max)` *ColumnSize* должно быть установлено значение, которое будет использоваться драйвером.  
+ Например, если тип данных SQL — `SQL_WVARCHAR` , *ColumnSize* не должен превышать 4000. Если фактическая длина данных превышает 4000, то для *ColumnSize* должно быть установлено значение, `SQL_SS_LENGTH_UNLIMITED` которое `nvarchar(max)` будет использоваться драйвером.  
   
 ## <a name="sqlbindparameter-and-table-valued-parameters"></a>Параметр SQLBindParameter и возвращающие табличные значения параметры  
  Как и другие типы параметров, возвращающие табличные значения параметры связаны с помощью SQLBindParameter.  
@@ -48,7 +48,7 @@ ms.locfileid: "63067832"
  Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [возвращающие табличное значение параметры &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlbindparameter-support-for-enhanced-date-and-time-features"></a>Поддержка метода SQLBindParameter для улучшенных функций даты-времени  
- Значения параметров типов даты-времени преобразуются, как описано в статье [преобразования из C в SQL](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Обратите внимание, что `time` параметры `datetimeoffset` типа и *ValueType* должны иметь значение `SQL_C_DEFAULT` ValueType `SQL_C_BINARY` , заданное как,`SQL_SS_TIME2_STRUCT` или `SQL_SS_TIMESTAMPOFFSET_STRUCT`, если используются соответствующие структуры (и).  
+ Значения параметров типов даты-времени преобразуются, как описано в статье [преобразования из C в SQL](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Обратите внимание, что параметры типа `time` и `datetimeoffset` должны иметь значение *ValueType* , заданное как, `SQL_C_DEFAULT` или `SQL_C_BINARY` , если используются соответствующие структуры ( `SQL_SS_TIME2_STRUCT` и `SQL_SS_TIMESTAMPOFFSET_STRUCT` ).  
   
  Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   

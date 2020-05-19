@@ -13,15 +13,15 @@ helpviewer_keywords:
 - mapping schema [SQLXML], queries
 - XPath queries [SQLXML], samples
 ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 71f6cc444bd5a5cee3f3e3399736c2f25e32b8dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 260102f14919708836131e263c7ad687441ed987
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010711"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717877"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>Образцы запросов XPath (SQLXML 4.0)
   В этом разделе содержатся образцы запросов XPath для SQLXML 4.0. Для наглядности эти примеры запросов XPath задаются в шаблоне, выполняемом с помощью ADO. Поэтому необходимо использовать файл схемы сопоставления SampleSchema1.xml, который также содержится в этом разделе. Сохраните этот файл в каталоге, где хранятся шаблоны.  

@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - CancelUpdate method [RDS]
 ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ea3be9a06d41718271fee2480da1bf58081c1f07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 05426b2d4fba81e70a8bae35db215bcd750d3169
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964595"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746350"
 ---
 # <a name="cancelupdate-method-rds"></a>Метод CancelUpdate (служба удаленных рабочих столов)
 Отменяет все изменения, внесенные в текущую или новую строку объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -37,13 +37,13 @@ DataControl.CancelUpdate
  *DataControl*  
  Объектная переменная, представляющая [RDS. Объект элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Служба курсора для OLE DB сохраняет копию исходных значений и кэш изменений. При вызове **CancelUpdate**кэш изменений сбрасывается в пустое состояние, а все привязанные элементы управления обновляются исходными данными.  
   
 ## <a name="applies-to"></a>Применяется к  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода CancelUpdate (VBScript)](../../../ado/reference/rds-api/cancelupdate-method-example-vbscript.md)   
  [Кнопки для команд адресной книги](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [Метод Cancel (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   

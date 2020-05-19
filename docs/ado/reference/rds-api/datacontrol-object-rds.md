@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - DataControl object [ADO]
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a571e93a070c3ce07fbaf40a86b762c749042ec1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7bc9482c6626de36d9e45b2a2968b504b0793746
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964408"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746121"
 ---
 # <a name="datacontrol-object-rds"></a>Объект DataControl (служба удаленных рабочих столов)
 Привязывает [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) запроса данных к одному или нескольким элементам управления (например, текстовому полю, элементу управления сетки или полю со списком) для вывода данных **набора записей** на веб-странице.  
@@ -40,7 +40,7 @@ ms.locfileid: "67964408"
 </OBJECT>  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Идентификатор класса **RDS. Объект элемента управления** BD96C556-65A3-11D0-983A-00C04FC29E33.  
   
 > [!NOTE]
@@ -108,7 +108,7 @@ ms.locfileid: "67964408"
   
 -   [Свойства, методы и события объекта DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример объекта DataControl (VBScript)](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)
 
 

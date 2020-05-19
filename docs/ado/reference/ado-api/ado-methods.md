@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 65145ce8f77c352fb24a2a206d99828298b6a60c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920929"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747259"
 ---
 # <a name="ado-methods"></a>Методы ADO
 
@@ -31,7 +31,7 @@ ms.locfileid: "67920929"
 |[Отмена](../../../ado/reference/ado-api/cancel-method-ado.md)|Отменяет выполнение ожидающего асинхронного вызова метода.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Отменяет ожидающее пакетное обновление.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Отменяет все изменения, внесенные в текущую или новую строку объекта **набора записей** , или коллекцию **полей** объекта **Record** перед вызовом метода **Update** .|  
-|[Открытым](../../../ado/reference/ado-api/clear-method-ado.md)|Удаляет все объекты **Error** из коллекции **ошибок** .|  
+|[Очистить](../../../ado/reference/ado-api/clear-method-ado.md)|Удаляет все объекты **Error** из коллекции **ошибок** .|  
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Клонировать)|Создает дубликат объекта **набора записей** из существующего объекта **набора записей** . При необходимости указывает, что клон доступен только для чтения.|  
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Закрывает открытый объект и все зависимые объекты.|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|Сравнивает две закладки и возвращает значение, указывающее на их относительные значения.|  
@@ -44,7 +44,7 @@ ms.locfileid: "67920929"
 |[делетерекорд](../../../ado/reference/ado-api/deleterecord-method-ado.md)|Удаляет файл или каталог и все его подкаталоги.|  
 |[Execute (команда ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Выполняет запрос, инструкцию SQL или хранимую процедуру, указанную в свойстве **CommandText** .|  
 |[Execute (подключение ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Выполняет указанный запрос, инструкцию SQL, хранимую процедуру или специфический для поставщика текст.|  
-|[Найдено](../../../ado/reference/ado-api/find-method-ado.md)|Выполняет поиск в **наборе записей** для строки, удовлетворяющей заданным критериям.|  
+|[Поиск](../../../ado/reference/ado-api/find-method-ado.md)|Выполняет поиск в **наборе записей** для строки, удовлетворяющей заданным критериям.|  
 |[Идет](../../../ado/reference/ado-api/flush-method-ado.md)|Принудительно применяет содержимое **потока** , остающегося в буфере ADO, к базовому объекту, с которым связан **поток** .|  
 |[Метод get_OLEDBCommand](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Возвращает базовую команду OLEDB, сначала распространяюя все сведения о параметрах, заданные в команде ADO, в команду OLEDB.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Возвращает **набор записей** , строки которого представляют файлы и подкаталоги в каталоге, представленном этой **записью**.|  
@@ -53,7 +53,7 @@ ms.locfileid: "67920929"
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Извлекает несколько записей объекта **набора записей** в массив.|  
 |[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)|Возвращает **набор записей** в виде строки.|  
 |[лоадфромфиле](../../../ado/reference/ado-api/loadfromfile-method-ado.md)|Загружает содержимое существующего файла в **поток**.|  
-|[Переместить](../../../ado/reference/ado-api/move-method-ado.md)|Перемещает текущую запись в объекте **набора записей** .|  
+|[Перемещение](../../../ado/reference/ado-api/move-method-ado.md)|Перемещает текущую запись в объекте **набора записей** .|  
 |[MoveFirst, MoveLast, MoveNext и MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Переходит к первой, последней, следующей или предыдущей записи в указанном объекте **набора записей** и делает запись текущей записью.|  
 |[MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)|Перемещает файл или каталог и его содержимое в другое расположение.|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Очищает текущий объект **набора записей** и возвращает следующий **набор записей** путем перемещения по ряду команд.|  
@@ -77,10 +77,10 @@ ms.locfileid: "67920929"
 |[Поддерживает](../../../ado/reference/ado-api/supports-method.md)|Определяет, поддерживает ли указанный объект **Recordset** определенный тип функциональности.|  
 |[Обновление](../../../ado/reference/ado-api/update-method.md)|Сохраняет любые изменения, внесенные в текущую строку объекта **набора записей** , или коллекцию **Fields** объекта **Record** .|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Записывает все ожидающие пакетные обновления на диск.|  
-|[запись](../../../ado/reference/ado-api/write-method.md)|Записывает двоичные данные в объект **потока** .|  
+|[Запись](../../../ado/reference/ado-api/write-method.md)|Записывает двоичные данные в объект **потока** .|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|Записывает указанную текстовую строку в объект **потока** .|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Коллекции ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

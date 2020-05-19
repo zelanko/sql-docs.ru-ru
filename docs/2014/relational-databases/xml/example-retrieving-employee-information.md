@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3d24f945eeb64975c71e416ed1e53d04fd5ffff9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e4cafd4d9f9ec1579eacc2eca2f1381cec13ae6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287841"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716871"
 ---
 # <a name="example-retrieving-employee-information"></a>Пример. Получение сведений о сотрудниках
   В этом примере извлекаются идентификаторы и имена всех работников. В базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] значение employeeID может быть получено из столбца BusinessEntityID таблицы Employee. Имена работников могут быть получены из таблицы Person. Столбец BusinessEntityID можно использовать для соединения этих таблиц.  

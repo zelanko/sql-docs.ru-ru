@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Output Window [Transact-SQL]
 - Output Window [SQL Server Management Studio]
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8ee3d5bb623de84704de97b798573b769d85ae15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc15a7f6002675c4e81b3ae8169a78648b210f44
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243060"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718376"
 ---
 # <a name="output-window"></a>Окно вывода
   В этом окне отображается сообщение о состоянии для различных функциональных возможностей в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Выходные данные доставляются в специальные панели окна **Вывод** из отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] , компонентов внешних средств или команд, выполняемых в **Окне команд**отладчика. Также доступны выходные данные внешних средств, таких как BAT и COM-файлы, обычно отображаемые в окне командной строки.  

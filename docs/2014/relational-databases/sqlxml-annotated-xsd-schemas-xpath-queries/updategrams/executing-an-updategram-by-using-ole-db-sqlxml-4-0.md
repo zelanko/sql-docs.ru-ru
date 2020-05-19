@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, SQLXML
 - executing updategrams [SQLXML]
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a61c0386d6e5c5e836a60e5175272d4fdaaa6f15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e58db16e14c0e959ca83dcdd687159f80bbeaf77
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014784"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717509"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Выполнение диаграммы обновления с помощью OLE DB (SQLXML 4.0)
   В этом разделе представлен рабочий пример Усинголе DB для выполнения диаграмма обновления.  
@@ -58,7 +58,7 @@ ms.locfileid: "66014784"
 </Schema>  
 ```  
   
- Запрос возвращает все элементы работника. При сопоставлении по умолчанию элемент ** \<Person. Contact>** сопоставляется с таблицей Person. Contact в базе данных AdventureWorks.  
+ Запрос возвращает все элементы работника. При сопоставлении по умолчанию элемент ** \< Person. Contact>** сопоставляется с таблицей Person. Contact в базе данных AdventureWorks.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>Установка XML как команды и получение результата как XML-документа  
   
@@ -513,7 +513,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- Шаблон включает SQL-запрос. Для запроса требуется значение параметра (@Title). Если значение параметра не передано, используется значение по умолчанию («Mr.»).  
+ Шаблон включает SQL-запрос. Для запроса требуется значение параметра ( @Title ). Если значение параметра не передано, используется значение по умолчанию («Mr.»).  
   
  При передаче значений параметра в шаблон должны быть указаны как имя, так и значение параметра.  
   

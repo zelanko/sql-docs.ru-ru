@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 118fe59e76f23089ce56371ea4ba981bb4ab1f7f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289292"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706962"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Возможности, поддерживаемые различными выпусками SQL Server 2014
 
@@ -24,7 +24,7 @@ ms.locfileid: "79289292"
 
  > **Примечание.** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] доступна в ознакомительной версии в течение 180-дневного пробного периода. Дополнительные сведения см. на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [](https://go.microsoft.com/fwlink/?LinkId=190955).  
 > 
-> **Примечание.** Для функций, поддерживаемых выпусками Evaluation и Developer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , см. набор функций предприятия.  
+> **Примечание.** Для функций, поддерживаемых выпусками Evaluation и Developer, см [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . набор функций предприятия.  
   
  Чтобы перейти к таблице, относящейся к технологии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , щелкните ссылку на нее:  
   
@@ -34,11 +34,11 @@ ms.locfileid: "79289292"
   
  [Масштабируемость и производительность](#Scalability)  
   
- [Безопасность](#Enterprise_security)  
+ [Security](#Enterprise_security)  
   
  [Репликация](#Replication)  
   
- [Инструменты управления](#Mgmt_Tools)  
+ [Средства управления](#Mgmt_Tools)  
   
  [Управляемость RDBMS](#RDBMS_mgmt)  
   
@@ -80,12 +80,12 @@ ms.locfileid: "79289292"
   
 |Имя функции|Enterprise|Бизнес-аналитика|Standard|Интернет|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Максимальная вычислительная мощность, используемая одним экземпляром ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ядро СУБД)<sup>1</sup>|Максимальное значение, поддерживаемое операционной системой|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|  
+|Максимальная вычислительная мощность, используемая одним экземпляром ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ядро СУБД)<sup>1</sup>|Максимальное значение, поддерживаемое операционной системой|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|  
 |Максимальная вычислительная мощность, используемая одним экземпляром (Analysis Services, Reporting Services) <sup>1</sup>|Максимальное значение, поддерживаемое операционной системой|Максимальное значение, поддерживаемое операционной системой|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|  
-|Максимальный объем используемой памяти (для каждого экземпляра компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine)|Максимальное значение, поддерживаемое операционной системой|128 ГБ|128 ГБ|64 ГБ|1 ГБ|1 ГБ|1 ГБ|  
-|Максимальный объем используемой памяти (на экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)])|Максимальное значение, поддерживаемое операционной системой|Максимальное значение, поддерживаемое операционной системой|64 ГБ|Недоступно|Недоступно|Недоступно|Недоступно|  
-|Максимальный объем используемой памяти (на экземпляр [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)])|Максимальное значение, поддерживаемое операционной системой|Максимальное значение, поддерживаемое операционной системой|64 ГБ|64 ГБ|4 ГБ|Недоступно|Недоступно|  
-|Максимальный размер реляционной базы данных|524 ПБ|524 ПБ|524 ПБ|524 ПБ|10 ГБ|10 ГБ|10 ГБ|  
+|Максимальный объем используемой памяти (для каждого экземпляра компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine)|Максимальное значение, поддерживаемое операционной системой|128 ГБ|128 ГБ|64 ГБ|1 ГБ|1 ГБ|1 ГБ|  
+|Максимальный объем используемой памяти (на экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)])|Максимальное значение, поддерживаемое операционной системой|Максимальное значение, поддерживаемое операционной системой|64 ГБ|Н/Д|Н/Д|Н/Д|Н/Д|  
+|Максимальный объем используемой памяти (на экземпляр [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)])|Максимальное значение, поддерживаемое операционной системой|Максимальное значение, поддерживаемое операционной системой|64 ГБ|64 ГБ|4 Гб|Н/Д|Н/Д|  
+|Максимальный размер реляционной базы данных|524 ПБ|524 ПБ|524 ПБ|524 ПБ|10 ГБ|10 ГБ|10 ГБ|  
   
  <sup>1</sup> выпуск Enterprise Edition с лицензией Server + Client Access CAL (недоступно для новых соглашений) ограничен максимум 20 ядрами на один [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] экземпляр. В модели лицензирования по числу ядер никаких ограничений нет. Дополнительные сведения см. в разделе [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
@@ -113,7 +113,7 @@ ms.locfileid: "79289292"
   
  <sup>1</sup> Дополнительные сведения об установке [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] на Server Core см. в разделе [Install SQL Server 2014 на Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
- <sup>2</sup> Эта функция доступна только для 64-разрядной [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]версии.  
+ <sup>2</sup> Эта функция доступна только для 64-разрядной версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ##  <a name="scalability-and-performance"></a><a name="Scalability"></a>Масштабируемость и производительность  
   
@@ -131,7 +131,7 @@ ms.locfileid: "79289292"
 |Выполняющаяся в памяти OLTP <sup>1</sup>|Да|||||||  
 |Отложенная устойчивость|Да|Да|Да|Да|Да|Да|Да|  
   
- <sup>1</sup> эта функция доступна только для 64-разрядных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]систем.  
+ <sup>1</sup> эта функция доступна только для 64-разрядных систем [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ##  <a name="security"></a><a name="Enterprise_security"></a> безопасность  
   
@@ -175,7 +175,7 @@ ms.locfileid: "79289292"
 |Мастер развертывания [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] базы данных на виртуальной машине Azure|Да|Да|Да|Да|Да|Да|Да|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Файлы данных в Azure|Да|Да|Да|Да|Да|Да|Да|  
   
- <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web, [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] с инструментами и [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] с дополнительными службами можно профилирование с помощью [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выпусков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard и Enterprise.  
+ <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web, [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] с инструментами и [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] с дополнительными службами можно профилирование с помощью [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выпусков Standard и Enterprise.  
   
  <sup>3</sup> настройка включена только для функций выпуска Standard Edition.  
   
@@ -206,7 +206,7 @@ ms.locfileid: "79289292"
   
  <sup>1</sup> дополнительные сведения см. в разделе [рекомендации по установке SQL Server с помощью Sysprep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
   
- <sup>2</sup> эта функция доступна только для 64-разрядных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]систем.  
+ <sup>2</sup> эта функция доступна только для 64-разрядных систем [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ##  <a name="development-tools"></a><a name="Dev_tools"></a>Средства разработки  
   
@@ -277,7 +277,7 @@ ms.locfileid: "79289292"
 > [!NOTE]  
 >  -   Службы [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] доступны только в 64-разрядных выпусках Business Intelligence и Enterprise.  
   
-|Компонент|Enterprise|Бизнес-аналитика|Standard|Интернет|Express с дополнительными службами|Express с инструментами|Express|  
+|Компонент|Корпорация|Бизнес-аналитика|Standard|Интернет|Express с дополнительными службами|Express с инструментами|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |База данных службы [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Да|Да||||||  
 |Веб-приложение службы [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]|Да|Да||||||  
@@ -415,9 +415,9 @@ ms.locfileid: "79289292"
 |Управляемые данными подписки на отчет|Да|Да||||||  
 |Масштабное развертывание (веб-фермы)|Да|Да||||||  
 |Предупреждения<sup>2</sup>|Да|Да||||||  
-|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]<sup>2</sup>|Да|Да||||||  
+|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|Да|Да||||||  
   
- <sup>1</sup> Дополнительные сведения о поддерживаемых источниках данных в [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]см. в разделе [Data Sources supported by Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ <sup>1</sup> Дополнительные сведения о поддерживаемых источниках данных в см [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] . в разделе [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
  <sup>2</sup> Требуется [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint. Дополнительные сведения см. в разделе [Reporting Services SharePoint Mode установка &#40;sharepoint 2010 и sharepoint 2013&#41;](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
@@ -426,7 +426,7 @@ ms.locfileid: "79289292"
   
 |Для данного выпуска службы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services|Используйте данный выпуск экземпляра компонента Database Engine для хранения базы данных|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
-|Enterprise|Выпуски Standard Edition, Business Intelligence и Enterprise Edition (локальные или удаленные)|  
+|Корпорация|Выпуски Standard Edition, Business Intelligence и Enterprise Edition (локальные или удаленные)|  
 |Бизнес-аналитика|Выпуски Standard Edition, Business Intelligence и Enterprise Edition (локальные или удаленные)|  
 |Standard|Выпуски Standard, Enterprise (локально или удаленно)|  
 |Интернет|Выпуск Web edition (только локально)|  
@@ -444,7 +444,7 @@ ms.locfileid: "79289292"
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|Да|Да||||||  
   
 > [!NOTE]
->  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]является надстройкой Excel и не зависит от [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Однако [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] требуется для обмена данными и совместной работы с книгами [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] в среде SharePoint, и эта возможность доступна в выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition и Business Intelligence.  
+>  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]является надстройкой Excel и не зависит от [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Однако [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] требуется для обмена данными и совместной работы с книгами [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] в среде SharePoint, и эта возможность доступна в выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition и Business Intelligence.  
 > 2.  В таблице выше указаны выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , необходимые для включения этих клиентских средств, но сами компоненты могут обращаться к данным, размещенным в любом выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##  <a name="spatial-and-location-services"></a><a name="Spatial"></a>Службы пространственного и расположения  
@@ -471,7 +471,7 @@ ms.locfileid: "79289292"
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|StreamInsight Standard Edition||||  
 |StreamInsight HA|StreamInsight Premium Edition|||||||  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Спецификации продуктов для SQL Server 2014](../../2014/getting-started/sql-server-2014-product-specifications.md)   
  [Установка для SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
  [Быстрая установка SQL Server 2014](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  

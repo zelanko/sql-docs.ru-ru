@@ -9,18 +9,18 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLCancel function
 ms.assetid: d4c965ae-c1ac-4e9d-b4b9-32b561401106
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8bad2cc35a30f5c6f5855292ff73635cef6072b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54ec9ddb143e97aa61a47ebbf0d2094281e59964
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067850"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706365"
 ---
 # <a name="sqlcancel"></a>SQLCancel
-  В [разделе SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516) говорится о том, что в ODBC 2. x, если `SQLCancel` приложение вызывает, когда в инструкции не выполняется никакой обработки `SQLCancel` , действует `SQLFreeStmt` аналогично `SQL_CLOSE` параметру. Это поведение определено только для полноты, и приложения должны `SQLFreeStmt` вызывать `SQLCloseCursor` или закрывать курсоры. Но даже если приложение собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет версию ODBC API 3.5.x или более позднюю, функция `SQLCancel` будет использовать поведение ODBC 2.x.  
+  В разделе [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516) говорится о том, что в ODBC 2. x, если приложение вызывает, `SQLCancel` когда в инструкции не выполняется обработка, `SQLCancel` имеет тот же результат, что `SQLFreeStmt` `SQL_CLOSE` и параметр. это поведение определено только для полноты, и приложения должны вызывать `SQLFreeStmt` или `SQLCloseCursor` закрывать курсоры. Но даже если приложение собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет версию ODBC API 3.5.x или более позднюю, функция `SQLCancel` будет использовать поведение ODBC 2.x.  
   
 ## <a name="see-also"></a>См. также  
  [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516)   

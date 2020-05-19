@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADOStreamConstruction interface [ADO]
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 70a6dd02722a34159b345a83b32897aa8c38d0ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2c120667a0ce279ea03922adf487f58c1fdc92de
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920785"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747057"
 ---
 # <a name="adostreamconstruction-interface"></a>Интерфейс ADOStreamConstruction
 Интерфейс **адостреамконструктион** используется для создания объекта **потока** ADO из OLE DB объекта **IStream** в приложении C/C++.  
@@ -32,13 +32,13 @@ ms.locfileid: "67920785"
 |[Свойство Stream](../../../ado/reference/ado-api/stream-property.md)|Чтение и запись. Возвращает или задает объект OLE DB **потока** .|  
   
 ## <a name="methods"></a>Методы  
- Отсутствует.  
+ Нет.  
   
 ## <a name="events"></a>События  
- Отсутствует.  
+ Нет.  
   
-## <a name="remarks"></a>Remarks  
- При наличии объекта OLE DB **IStream** (`pStream`) построение объекта **потока** ADO (`adoStr`) производится в следующие три основные операции:  
+## <a name="remarks"></a>Примечания  
+ При наличии объекта OLE DB **IStream** ( `pStream` ) построение объекта **потока** ADO ( `adoStr` ) производится в следующие три основные операции:  
   
 1.  Создайте объект **потока** ADO:  
   
@@ -72,5 +72,5 @@ adoStrConstruct->put_Stream(pUnk);
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)

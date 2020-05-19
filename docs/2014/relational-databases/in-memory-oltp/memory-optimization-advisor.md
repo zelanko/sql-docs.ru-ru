@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.memoryoptimizationwizard.f1
 - swb.memoryoptimizationwizard.f1
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f4dcc5a7658ee3549d774989ae95a027a5787fc2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63158003"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719078"
 ---
 # <a name="memory-optimization-advisor"></a>Помощник по оптимизации памяти
   Средство отчетов о производительности транзакций (см. [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) информирует о том, какие таблицы в базе данных смогут воспользоваться преимуществами перехода на In-Memory OLTP. После определения таблицы, которую планируется перенести для использования In-Memory OLTP, можно воспользоваться помощником по оптимизации памяти для миграции таблицы базы данных на диске в In-Memory OLTP.  
@@ -84,7 +84,7 @@ ms.locfileid: "63158003"
 > [!WARNING]  
 >  Выбирайте этот параметр, только если понимаете риск потери данных, связанный с неустойчивыми таблицами.  
   
- Для продолжения нажмите кнопку **Далее**.  
+ Чтобы продолжить, нажмите кнопку **Далее** .  
   
 ### <a name="review-primary-key-conversion"></a>Просмотр преобразования первичного ключа  
  Следующий экран — **Просмотр преобразования первичного ключа**. Помощник по оптимизации проверяет наличие одного или нескольких первичных ключей в таблице и заполняет список столбцов на основе метаданных первичного ключа. В противном случае, если нужно перенести устойчивую, оптимизированную для памяти таблицу, необходимо создать первичный ключ.  

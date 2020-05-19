@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLGetStmtAttr function
 ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5604aafbbc8a6d77081e829269955c8b7600f4ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11c5048cd197643823bb6b0fc8e8247983666d8c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657813"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705984"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
-  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента расширяет SQLGetStmtAttr для предоставления атрибутов инструкций, относящихся к драйверу.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента расширяет SQLGetStmtAttr для предоставления атрибутов инструкций, относящихся к драйверу.  
   
  Функция[SQLSetStmtAttr](sqlsetstmtattr.md) перечисляет атрибуты инструкции, которые можно как считывать, так и изменять. В данном разделе приводятся атрибуты инструкции только для чтения.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62657813"
 ## <a name="sql_sopt_ss_nocount_status"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  Атрибут SQL_SOPT_SS_NOCOUNT_STATUS указывает текущее значение параметра NOCOUNT, управляющего формированием отчета [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] о числе строк, затронутых инструкцией при вызове метода [SQLRowCount](sqlrowcount.md) . Значение аргумента *ValuePtr* имеет тип SQLLEN.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |SQL_NC_OFF|Значение NOCOUNT — OFF. SQLRowCount возвращает число затронутых строк.|  
 |SQL_NC_ON|Значение NOCOUNT — ON. Число затронутых строк не возвращается функцией SQLRowCount, а возвращаемое значение равно 0.|  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 - customized handler in RDS [ADO]
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98e2ec3538de68bffa5b22acc94dda3d81e5c6f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cd7aec0e98afd09b30c4e4d67102d1333efdcdd6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921886"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747605"
 ---
 # <a name="writing-your-own-customized-handler"></a>Создание собственного настраиваемого обработчика
 Если вы являетесь администратором сервера IIS, которому требуется поддержка RDS по умолчанию, вам может потребоваться написать собственный обработчик, но лучше контролировать запросы пользователей и права доступа.  
@@ -31,7 +31,7 @@ ms.locfileid: "67921886"
 ## <a name="idatafactoryhandler-interface"></a>Интерфейс Идатафакторихандлер  
  Этот интерфейс имеет два **метода: "," и "** **Повторное соединение**". Для обоих методов требуется, чтобы свойство [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) было установлено в значение **адусеклиент**.  
   
- Оба метода принимают аргументы, которые отображаются после первой запятой в ключевом слове**handler =**. Например, `"Handler=progid,arg1,arg2;"` передает строку `"arg1,arg2"`аргумента и `"Handler=progid"` передает аргумент NULL.  
+ Оба метода принимают аргументы, которые отображаются после первой запятой в ключевом слове**handler =**. Например, `"Handler=progid,arg1,arg2;"` передает строку аргумента `"arg1,arg2"` и `"Handler=progid"` передает аргумент NULL.  
   
 ## <a name="getrecordset-method"></a>Метод WebMethod  
  Этот метод запрашивает источник данных и создает новый объект [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) с помощью предоставленных аргументов. **Набор записей** должен быть открыт с помощью **адлоккбатчоптимистик** и не должен быть открыт асинхронно.  
@@ -99,7 +99,7 @@ HRESULT _stdcall GetRecordset(
 };  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Раздел "Подключение файла настройки"](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [Раздел журналов файлов настройки](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [Раздел файла настройки SQL](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   

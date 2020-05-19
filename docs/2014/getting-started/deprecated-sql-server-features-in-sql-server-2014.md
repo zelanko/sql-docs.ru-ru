@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: fdc0c778-cc8d-42ab-8833-4deb4329f37a
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 44fbab98aa017be66cd4dc369a713f44e8d248d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9749c9df163280e52d691fbf6838196b9ae1e4b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228219"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706995"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>Функции SQL Server, устаревшие в SQL Server 2014
   В этом разделе описаны устаревшие функции, которые все еще доступны в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
@@ -31,14 +31,14 @@ ms.locfileid: "75228219"
 ### <a name="slipstream-functionality"></a>Функции интегрированной установки  
  [Функция обновления продукта](/previous-versions/sql/sql-server-2012/hh231670(v=sql.110)?redirectedfrom=MSDN) появилась в SQL Server 2012 в качестве расширения для функций интегрированной интеграции, которые были доступны в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1. В SQL Server 2014 для интеграции SQL Server рекомендуется использовать функцию обновления продукта. Поэтому параметры командной строки,/*PCUSource* и/*CUSource*, связанные с исходными функциями интегрированного использования, больше не должны использоваться. Эти параметры будут продолжать работать, но могут быть удалены в будущих выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] программы установки. Рекомендуемый параметр для использования —/*UpdateSource* , который сочетает в себе функциональные возможности исходных параметров, а также*PCUSource* и/*CUSource*.  
   
- Дополнительные сведения об интегрированных функциях, доступных в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1, см. в разделе об объединении [SQL Server Update](https://go.microsoft.com/fwlink/?LinkId=219945) (https://go.microsoft.com/fwlink/?LinkId=219945).  
+ Дополнительные сведения об интегрированных функциях, доступных в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1, см. в разделе об объединении [SQL Server Update](https://go.microsoft.com/fwlink/?LinkId=219945) ( https://go.microsoft.com/fwlink/?LinkId=219945) .  
  Сведения о том, как использовать или*UpdateSource* для интеграции сборок SQL Server, см. в следующих источниках:
  
  - [Как установить исправление SQL Server 2012 с обновленным пакетом установки (с помощью UpdateSource для получения интеллектуальной установки)](https://blogs.msdn.microsoft.com/jason_howell/2012/08/28/how-to-patch-sql-server-2012-setup-with-an-updated-setup-package-using-updatesource-to-get-a-smart-setup/)
  
  - [SQL Server 2012 программа установки стала более интеллектуальной...](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2012-Setup-just-got-smarter-8230/ba-p/317440)
  
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обратная совместимость](../../2014/getting-started/backward-compatibility.md)  
   
   

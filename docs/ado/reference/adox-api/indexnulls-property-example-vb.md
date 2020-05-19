@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - IndexNulls property [ADOX], Visual Basic example
 ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c5976cf913a98e5fa7db313144463ca12373d6bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2a1141c4ae31faff946f9380da622bfd492dc8f0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965997"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746716"
 ---
 # <a name="indexnulls-property-example-vb"></a>Пример свойства IndexNulls (Visual Basic)
 В этом примере демонстрируется свойство [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) [индекса](../../../ado/reference/adox-api/index-object-adox.md). Код создает новый индекс и задает значение **IndexNulls** на основе введенных пользователем данных (из списка с именем list1). Затем **индекс** добавляется в [таблицу](../../../ado/reference/adox-api/table-object-adox.md) **Employees** в [каталоге](../../../ado/reference/adox-api/catalog-object-adox.md) *Northwind* . Новый **индекс** применяется к [набору записей](../../../ado/reference/ado-api/recordset-object-ado.md) , основанному на таблице **Employees** , и открывается **набор записей** . В таблицу **Employees** добавляется новая запись со значением **null** в индексированном поле. Отображается ли эта новая запись, зависит от значения свойства **IndexNulls** .  
@@ -108,6 +108,6 @@ End Sub
 ' EndIndexNullsVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Свойство IndexNulls (ADOX)](../../../ado/reference/adox-api/indexnulls-property-adox.md)

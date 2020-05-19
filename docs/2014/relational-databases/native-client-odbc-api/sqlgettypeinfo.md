@@ -11,24 +11,24 @@ topic_type:
 helpviewer_keywords:
 - SQLGetTypeInfo function
 ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 60c4c4d364f9c07e9ca241dd357535f7f7acb42d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4237ebcc22318fdd6a93af09a79d7f8e2bea8989
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046702"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705994"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
-  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента сообщает дополнительный столбец USERTYPE в результирующем наборе `SQLGetTypeInfo`. USERTYPE возвращает определение типа данных DB-Library. Этот столбец полезен разработчикам, которые переносят существующие приложения DB-Library в ODBC.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента сообщает дополнительный столбец USERTYPE в результирующем наборе `SQLGetTypeInfo` . USERTYPE возвращает определение типа данных DB-Library. Этот столбец полезен разработчикам, которые переносят существующие приложения DB-Library в ODBC.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рассматривает идентификатор как атрибут, а в ODBC он считается типом данных. Чтобы устранить это несоответствие `SQLGetTypeInfo` , возвращает типы данных: **интидентити**, **смаллинтидентити**, **тининтидентити**, **деЦималидентити**и **нумериЦидентити**. Столбец `SQLGetTypeInfo` результирующего набора AUTO_UNIQUE_VALUE сообщает значение true для этих типов данных.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рассматривает идентификатор как атрибут, а в ODBC он считается типом данных. Чтобы устранить это несоответствие, `SQLGetTypeInfo` возвращает типы данных: **интидентити**, **смаллинтидентити**, **тининтидентити**, **деЦималидентити**и **нумериЦидентити**. `SQLGetTypeInfo`Столбец результирующего набора AUTO_UNIQUE_VALUE сообщает значение true для этих типов данных.  
   
- Для типа **varchar**, **nvarchar** и **varbinary**драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента по-своемуу отчету 8000, 4000 и 8000 соответственно для COLUMN_SIZE значения, хотя на самом деле он не ограничен. Это делается в целях обратной совместимости.  
+ Для типа **varchar**, **nvarchar** и **varbinary**драйвер ODBC для собственного клиента по-своемуу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отчету 8000, 4000 и 8000 соответственно для COLUMN_SIZE значения, хотя на самом деле он не ограничен. Это делается в целях обратной совместимости.  
   
- Для типа данных **XML** драйвер ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента сообщает SQL_SS_LENGTH_UNLIMITED для COLUMN_SIZE, чтобы обозначить неограниченный размер.  
+ Для типа данных **XML** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC для собственного клиента сообщает SQL_SS_LENGTH_UNLIMITED для COLUMN_SIZE, чтобы обозначить неограниченный размер.  
   
 ## <a name="sqlgettypeinfo-and-table-valued-parameters"></a>SQLGetTypeInfo и параметры, возвращающие табличные значения  
  Тип таблицы для возвращающих табличное значение параметров фактически является мета-типом, т. е. типом, используемым для определения других типов. Поэтому он не должен предоставляться через SQLGetTypeInfo. Для получения метаданных для табличных типов, используемых с возвращающими табличное значение параметрами, приложения должны использовать SQLTables, а не SQLGetTypeInfo.  

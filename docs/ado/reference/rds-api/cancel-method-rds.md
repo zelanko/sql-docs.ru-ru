@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Cancel method [RDS]
 ms.assetid: 560b5b3d-fba9-4275-8920-9c3e186134f7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 90d3e60a77df15d1b2db302df8a3c1d4a39de245
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d9d8c0a478fd21c924752e6ebccc72767f8050f8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964618"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746403"
 ---
 # <a name="cancel-method-rds"></a>Метод Cancel (служба удаленных рабочих столов)
 Отменяет выполнение ожидающего асинхронного вызова метода.  
@@ -33,13 +33,13 @@ ms.locfileid: "67964618"
 RDS.DataControl.Cancel  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  При вызове **Cancel**параметр [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) автоматически устанавливается в значение **адкреадистателоадед**, а [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) будет пустым.  
   
 ## <a name="applies-to"></a>Применяется к  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода Cancel (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
  [Метод Cancel (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [Метод CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   

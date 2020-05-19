@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a15c617c2be877c19d447d615261a6d38eae9eb
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155790"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718949"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Статистика для таблиц, оптимизированных для памяти
   Оптимизатор запросов использует статистику о столбцах для создания планов запросов, которые повышают производительность запросов. Статистические данные собираются из таблиц в базе данных и сохраняются в метаданных этой базы.  
@@ -96,7 +96,7 @@ from sys.tables t join sys.stats s on t.object_id=s.object_id cross apply sys.dm
 where t.is_memory_optimized=1  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Оптимизированные для памяти таблицы](memory-optimized-tables.md)  
+## <a name="see-also"></a>См. также:  
+ [Таблицы, оптимизированные для памяти](memory-optimized-tables.md)  
   
   

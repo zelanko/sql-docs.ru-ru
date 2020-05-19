@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLColAttribute function
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: deb9ddbc59e8ff76c8c459022d73cca7e7de81d3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067680"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706349"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
-  Можно использовать `SQLColAttribute` для получения атрибута столбца результирующего набора для подготовленных или выполненных инструкций ODBC. Вызов `SQLColAttribute` в подготовленных инструкциях вызывает обмен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]данными с. Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента получает данные столбца результирующего набора в ходе выполнения инструкции, поэтому вызов `SQLColAttribute` после завершения **SQLExecute** или **SQLExecDirect** не требует обмена данными с сервером.  
+  Можно использовать `SQLColAttribute` для получения атрибута столбца результирующего набора для подготовленных или выполненных инструкций ODBC. Вызов `SQLColAttribute` в подготовленных инструкциях вызывает обмен данными с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента получает данные столбца результирующего набора в ходе выполнения инструкции, поэтому вызов `SQLColAttribute` после завершения **SQLExecute** или **SQLExecDirect** не требует обмена данными с сервером.  
   
 > [!NOTE]  
 >  Атрибуты ODBC идентификаторов столбца доступны не во всех результирующих наборах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -39,9 +39,9 @@ ms.locfileid: "63067680"
 |SQL_DESC_TABLE_NAME|Можно использовать для результирующих наборов, полученных от инструкций, которые формируют серверные курсоры, или для выполненных инструкций SELECT, содержащих предложение FOR BROWSE.|  
 |SQL_DESC_UNNAMED|SQL_NAMED для всех столбцов в результирующем наборе, за исключением случаев, когда столбец является результатом выражения, не содержащего назначения метки в составе выражения. Если SQL_DESC_UNNAMED возвращает SQL_UNNAMED, все атрибуты ODBC идентификаторов столбцов содержат строки нулевой длины для этого столбца.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента использует инструкцию SET FMTONLY, чтобы уменьшить нагрузку `SQLColAttribute` на сервер при вызове для подготовленных, но невыполненных инструкций.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента использует инструкцию SET FMTONLY, чтобы уменьшить нагрузку на сервер при `SQLColAttribute` вызове для подготовленных, но невыполненных инструкций.  
   
- Для больших типов `SQLColAttribute` значений возвратит следующие значения:  
+ Для больших типов значений возвратит `SQLColAttribute` следующие значения:  
   
 |Идентификатор поля|Описание изменения|  
 |----------------------|---------------------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "63067680"
   
  Для всех версий атрибуты столбцов возвращаются только для первого результирующего набора, если несколько результирующих наборов формируются готовым пакетом инструкций SQL.  
   
- Следующие атрибуты столбцов являются расширениями, предоставляемыми [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ДРАЙВЕРом ODBC для собственного клиента. Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента возвращает все значения в параметре *нумерикаттрптр* . Возвращаются значения с типом SDWORD (signed long) за исключением SQL_CA_SS_COMPUTE_BYLIST, которое представляет собой указатель на массив WORD.  
+ Следующие атрибуты столбцов являются расширениями, предоставляемыми [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвером ODBC для собственного клиента. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента возвращает все значения в параметре *нумерикаттрптр* . Возвращаются значения с типом SDWORD (signed long) за исключением SQL_CA_SS_COMPUTE_BYLIST, которое представляет собой указатель на массив WORD.  
   
 |Идентификатор поля|Возвращенное значение|  
 |----------------------|--------------------|  

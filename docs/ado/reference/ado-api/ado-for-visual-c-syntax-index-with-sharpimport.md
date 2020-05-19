@@ -15,19 +15,19 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 626cad2e57a725ac953b678e648e7e3f4ac21cf6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 88be8dbcee4633fc8c0014088c7996f95f3e2f73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920966"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747280"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO для Visual C++ индекса синтаксиса с #import
 Этот индекс является перекрестной ссылкой на справочник по языку ADO на основе Microsoft Visual C++ и директивы **#import** .  
   
- Этот конкретный индекс был получен путем компиляции программы с директивой **#import** для ADO. dll, а затем переформатирования созданного файла \*. tlh. Были сохранены только сведения о методах, свойствах и событиях. Альтернативный синтаксис, объявленный для каждого свойства, перечислен с помощью`__declspec(property...)`соответствующей директивы "".  
+ Этот конкретный индекс был получен путем компиляции программы с директивой **#import** для ADO. dll, а затем переформатирования \* созданного файла. tlh. Были сохранены только сведения о методах, свойствах и событиях. Альтернативный синтаксис, объявленный для каждого свойства, перечислен с помощью соответствующей `__declspec(property...)` директивы "".  
   
  Для получения дополнительных сведений настоятельно рекомендуется прочитать [Visual C++ программирование ADO](../../../ado/guide/appendixes/visual-c-ado-programming.md) .  
   
@@ -57,5 +57,5 @@ ms.locfileid: "67920966"
   
 -   [События набора записей](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Индекс синтаксиса ADO для Visual C++ для модели COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)
