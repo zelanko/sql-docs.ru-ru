@@ -25,15 +25,15 @@ helpviewer_keywords:
 - table mapping [SQLXML], explicit mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 72dfbcbd1ff264e596eecfecb5ebf759c2cbf5e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11144714addb50dc4c481512399228802390f2f3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013844"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703608"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Явное сопоставление элементов и атрибутов XSD с таблицами и столбцами (SQLXML 4.0)
   При использовании схемы XSD для представления реляционных баз данных в виде XML элементы и атрибуты схемы должны быть сопоставлены с таблицами и столбцами базы данных. Строки таблицы или представления базы данных будут сопоставлены с элементами в XML-документе. Значения столбцов базы данных сопоставляются с атрибутами и элементами.  
@@ -45,7 +45,7 @@ ms.locfileid: "66013844"
   
  Если для элемента задана заметка `sql:relation`, ее область действия охватывает все атрибуты и дочерние элементы, описанные в определении сложного типа этого элемента, сокращая, таким образом, усилия по написанию заметок.  
   
- `sql:relation` Аннотация также полезна, если идентификаторы, допустимые в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , недопустимы в XML. Например, «Order Details» — допустимое имя таблицы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но не в XML. В этих случаях заметка `sql:relation` может использоваться для указания сопоставления, например следующим образом.  
+ `sql:relation`Аннотация также полезна, если идентификаторы, допустимые в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , недопустимы в XML. Например, «Order Details» — допустимое имя таблицы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но не в XML. В этих случаях заметка `sql:relation` может использоваться для указания сопоставления, например следующим образом.  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
@@ -57,10 +57,10 @@ ms.locfileid: "66013844"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>А) Задание заметок sql:relation и sql:field  
- В этом примере схема XSD состоит из элемента ** \<Contact>** сложного типа с ** \<fname>** и ** \<LName>** дочерними элементами и атрибутом **ContactID** .  
+### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Задание заметок sql:relation и sql:field  
+ В этом примере схема XSD состоит из элемента ** \< Contact>** сложного типа с ** \< fname>** и ** \< LName>** дочерними элементами и атрибутом **ContactID** .  
   
- `sql:relation` Заметка сопоставляет элемент ** \<>контакта** с таблицей Person. Contact в базе данных AdventureWorks. `sql:field` Заметка сопоставляет элемент ** \<fname>** столбцу FirstName, а элементу ** \<LName>** — столбцу LastName.  
+ `sql:relation`Заметка сопоставляет элемент ** \<>контакта** с таблицей Person. Contact в базе данных AdventureWorks. `sql:field`Заметка сопоставляет элемент ** \< fname>** столбцу FirstName, а элементу ** \< LName>** — столбцу LastName.  
   
  Для атрибута **ContactID** не задана Аннотация. Поэтому атрибут по умолчанию сопоставляется со столбцом с тем же именем.  
   

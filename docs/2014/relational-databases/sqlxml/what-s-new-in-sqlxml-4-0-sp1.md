@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Native Client, SQLXML
 - side-by-side installations [SQLXML]
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2ca2bc726b0bf017ec4b3dd0451313d60ef57696
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76c0b882b6ff198a38c0903a51e15b4664aafc29
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012140"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702824"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>Новые&#39;в SQLXML 4,0 SP1
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 с пакетом обновления 1 (SP1) содержит различные обновления и улучшения. В этом разделе содержится описание всех обновлений и предоставляются ссылки на более подробные сведения (если они доступны). SQLXML 4.0 с пакетом обновления 1 (SP1) предоставляет улучшения для поддержки новых типов данных, появившихся в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. В этом разделе рассматриваются следующие вопросы.  
@@ -82,7 +82,7 @@ ms.locfileid: "66012140"
  Нужно также распространить собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если он используется с приложением как поставщик данных. Дополнительные сведения см. в статье [Установка SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
   
 ## <a name="support-for-sql-server-native-client"></a>Поддержка собственного клиента SQL Server  
- SQLXML 4,0 поддерживает поставщиков SQLOLEDB и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Рекомендуется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использовать одну и ту же версию поставщика собственного клиента, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] так как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент разрабатывается для поддержки новых типов данных, поставляемых на сервере, таких как типы данных `Date, Time`, `DateTime2`и `dateTimeOffset` в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и поддерживаются [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] собственным клиентом.  
+ SQLXML 4,0 поддерживает поставщиков SQLOLEDB и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Рекомендуется использовать одну и ту же версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика собственного клиента, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] так как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент разрабатывается для поддержки новых типов данных, поставляемых на сервере, таких как `Date, Time` `DateTime2` `dateTimeOffset` типы данных, и в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и поддерживаются [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] собственным клиентом.  
   
  Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это технология доступа к данным, которая введена в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Она объединяет поставщика SQLOLEDB и драйвер SQLODBC в одну собственную динамическую библиотеку (DLL), а также предоставляет новую уникальную функциональность, независимую от компонентов доступа к данным MDAC и отличную от них.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66012140"
 >  Между SQLXML 4.0 и SQLXML 3.0 нет полной обратной совместимости. В результате устранения некоторых ошибок и других функциональных изменений, особенно прекращения поддержки SQLXML ISAPI, нельзя использовать виртуальные каталоги IIS с SQLXML 4.0. Большинство приложений будут работать с небольшими изменениями, но их необходимо проверить перед запуском в рабочей среде с SQLXML 4.0.  
   
 ## <a name="support-for-data-types-introduced-in-sql-server-2005-and-sql-server-2008"></a>Поддержка типов данных, появившихся в SQL Server 2005 и SQL Server 2008  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]введен тип `xml` данных, а SQLXML 4,0 поддерживает тип `xml` данных. Дополнительные сведения см. [в разделе Поддержка типов данных XML в SQLXML 4,0](xml-data-type-support-in-sqlxml-4-0.md).  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]введен `xml` тип данных, а SQLXML 4,0 поддерживает `xml` тип данных. Дополнительные сведения см. [в разделе Поддержка типов данных XML в SQLXML 4,0](xml-data-type-support-in-sqlxml-4-0.md).  
   
  Примеры использования типа данных `xml` в SQLXML при сопоставлении XML-представлений, массовой загрузке XML и выполнении диаграмм обновления XML приведены в следующих разделах.  
   
@@ -102,11 +102,11 @@ ms.locfileid: "66012140"
   
 -   [Примеры массовой загрузки XML-документов](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)  
   
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]появились типы `Date, Time`данных `DateTime2` **DateTimeOffset** ,, и. SQLXML 4.0 с пакетом обновления 1 (SP1) позволяет использовать эти четыре новых типа данных в качестве встроенных скалярных типов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client OLE DB Provider (SQLNCLI10), который поставляется вместе с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]появились `Date, Time` `DateTime2` типы данных **DateTimeOffset** ,, и. SQLXML 4.0 с пакетом обновления 1 (SP1) позволяет использовать эти четыре новых типа данных в качестве встроенных скалярных типов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client OLE DB Provider (SQLNCLI10), который поставляется вместе с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="xml-bulk-load-changes-for-sqlxml-40-sp1"></a>Изменения в SQLXML 4.0 с пакетом обновления 1 (SP1), относящиеся к массовой загрузке XML  
   
--   Для SQLXML 4,0 поле переполнения SchemaGen создается с использованием типа `xml` данных. Дополнительные сведения см. в разделе [SQL Serverная объектная модель для групповой загрузки XML](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/sql-server-xml-bulk-load-object-model-sqlxml-4-0.md).  
+-   Для SQLXML 4,0 поле переполнения SchemaGen создается с использованием `xml` типа данных. Дополнительные сведения см. в разделе [SQL Serverная объектная модель для групповой загрузки XML](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/sql-server-xml-bulk-load-object-model-sqlxml-4-0.md).  
   
 -   Если ранее были созданы приложения [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic и нужно использовать SQLXML 4.0, необходимо перекомпилировать приложения со ссылкой на Xblkld4.dll.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "66012140"
  Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="supportability-for-sqlxml-30-isapi-and-data-types-introduced-in-sql-server-2005"></a>Поддержка SQLXML 3.0 ISAPI и новых типов данных в SQL Server 2005  
- Поскольку поддержка ISAPI была удалена из SQLXML 4,0, если для решения требуются расширенные функции [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ввода данных, такие как [тип данных XML](/sql/t-sql/xml/xml-transact-sql) или [определяемые пользователем типы данных](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) и веб-доступ, необходимо использовать другое решение, например [управляемые классы SQLXML](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md) или обработчик HTTP другого типа, например собственные веб-службы с поддержкой XML для SQL Server 2005.  
+ Поскольку поддержка ISAPI была удалена из SQLXML 4,0, если для решения требуются расширенные функции ввода данных, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] такие как [тип данных XML](/sql/t-sql/xml/xml-transact-sql) или [определяемые пользователем типы данных](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) и веб-доступ, необходимо использовать другое решение, например [управляемые классы SQLXML](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md) или обработчик HTTP другого типа, например собственные веб-службы с поддержкой XML для SQL Server 2005.  
   
  Кроме того, если эти расширения типов не требуются, можно продолжать использовать SQLXML 3,0 для подключения [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] установки. Средства поддержки ISAPI, реализованные в SQLXML 3.0, будут работать с более поздними версиями, но не поддерживают и не распознают тип данных `xml` и определяемые пользователем типы данных, поддержка которых появилась в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
@@ -205,7 +205,7 @@ ms.locfileid: "66012140"
  Для SQLXML 4.0 и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешения на файл массовой загрузки XML предоставляются пользователю, выполняющему операцию массовой загрузки. Разрешения на чтение и запись наследуются из файловой системы. В прежних выпусках SQLXML и SQL Server, массовая загрузка XML на основе SQLXML создавала временные файлы, которые не были защищены и могли быть считаны любым пользователем.  
   
 ### <a name="migration-issues-for-client-side-for-xml"></a>Проблемы миграции для FOR XML на клиентской стороне  
- Из-за изменений в подсистеме [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнения может возвращать различные значения в метаданных для базовой таблицы, которые будут возвращаться при выполнении запроса FOR XML [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Если это происходит, форматирование результатов запроса FOR XML на стороне клиента будут иными, в зависимости о версии, на которой работал запрос.  
+ Из-за изменений в подсистеме выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может возвращать различные значения в метаданных для базовой таблицы, которые будут возвращаться при выполнении запроса FOR XML [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . Если это происходит, форматирование результатов запроса FOR XML на стороне клиента будут иными, в зависимости о версии, на которой работал запрос.  
   
  Если запрос FOR XML выполняется на клиентской стороне с помощью SQLXML 3.0 над столбцом данных типа `xml`, данные в результатах будут возвращены как строка с полным преобразованием в сущность. В SQLXML 4.0, если собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLNCLI11) указан как поставщик, данные возвращаются как XML.  
   

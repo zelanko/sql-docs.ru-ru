@@ -13,18 +13,18 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - DB-Library bulk copy
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f9694a5f54d740e298b9c6af4ab3169a3eb8ab14
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75ac184717fbee6cf26c99924fdccb164592fdfa
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067631"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702095"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Перевод массового копирования с DB-Library на ODBC
-  Преобразование программы пакетного копирования DB-Library в ODBC несложно, поскольку функции копирования, поддерживаемые драйвером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента, похожи на функции операций с массовым копированием DB-Library, за исключением следующих.  
+  Преобразование программы пакетного копирования DB-Library в ODBC несложно, поскольку функции копирования, поддерживаемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвером ODBC для собственного клиента, похожи на функции операций с массовым копированием DB-Library, за исключением следующих.  
   
 -   Приложения DB-Library передают указатель на структуру DBPROCESS как первый параметр функций массового копирования. В приложениях ODBC указатель DBPROCESS заменяется дескриптором соединения ODBC.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "63067631"
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента не поддерживает сообщения и обработчики ошибок DB-Library. для получения ошибок и сообщений, вызванных функциями операций с массовым копированием ODBC, необходимо вызвать **SQLGetDiagRec** . Версии ODBC функций массового копирования возвращают стандартные коды возврата массового копирования SUCCEED или FAILED, а не коды возврата ODBC, такие как SQL_SUCCESS или SQL_ERROR.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента не поддерживает сообщения и обработчики ошибок DB-Library. для получения ошибок и сообщений, вызванных функциями выполнения операций с массовым копированием ODBC, необходимо вызвать **SQLGetDiagRec** . Версии ODBC функций массового копирования возвращают стандартные коды возврата массового копирования SUCCEED или FAILED, а не коды возврата ODBC, такие как SQL_SUCCESS или SQL_ERROR.  
   
 -   Значения, указанные для параметра DB-Library [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*Варлен* , обрабатываются иначе, чем параметр ODBC **bcp_bind**_cbData_ .  
   
@@ -43,11 +43,11 @@ ms.locfileid: "63067631"
     |-------------------------|--------------------------------|-------------------------|  
     |Предоставлены значения NULL|0|-1 (SQL_NULL_DATA)|  
     |Предоставлены данные переменной длины|-1|-10 (SQL_VARLEN_DATA)|  
-    |Символьная или двоичная строка нулевой длины|Н/Д|0|  
+    |Символьная или двоичная строка нулевой длины|NA|0|  
   
      В DB-Library значение *Варлен* , равное-1, указывает, что данные переменной длины передаются, что в ODBC *cbData* интерпретируется таким же, что предоставляются только значения NULL. Измените все спецификации *ВАРЛЕН* DB-Library с-1 на SQL_VARLEN_DATA и любые спецификации *Варлен* от 0 до SQL_NULL_DATA.  
   
--   _Файл\__ DB-Library **bcp\_колфмт**, Коллен и ODBC [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* , имеют те же проблемы, что и параметры **bcp_bind**_Варлен_ и *cbData* , указанные выше. Измените все спецификации *FILE_COLLEN* DB-Library, равные-1, на SQL_VARLEN_DATA и любые *file_collen* спецификации от 0 до SQL_NULL_DATA.  
+-   Файл DB-Library **bcp \_ колфмт**,_ \_ Коллен_ и ODBC [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* , имеют те же проблемы, что и параметры **bcp_bind**_Варлен_ и *cbData* , указанные выше. Измените все спецификации *FILE_COLLEN* DB-Library, равные-1, на SQL_VARLEN_DATA и любые *file_collen* спецификации от 0 до SQL_NULL_DATA.  
   
 -   Параметр *iValue* функции ODBC [bcp_control](../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) является указателем void. В DB-Library *iValue* был целым числом. Приведите значения для *IVALUE* ODBC к void *.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "63067631"
   
     -   строки символов **DateTime** и **smalldatetime** в любом формате, поддерживаемом функцией DB-Library **дбконверт** .  
   
-    -   Если флажок **использовать международные параметры** установлен на вкладке **Параметры** DB-Library служебной программы " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентская сеть", функции операций с массовым копированием DB-Library также принимают даты в региональном формате, определенном для параметра языкового стандарта реестра клиентского компьютера.  
+    -   Если флажок **использовать международные параметры** установлен на вкладке **Параметры** DB-Library [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] служебной программы "клиентская сеть", функции операций с массовым копированием DB-Library также принимают даты в региональном формате, определенном для параметра языкового стандарта реестра клиентского компьютера.  
   
      Функции операций с массовым копированием DB-Library не принимают форматы **DateTime** и **smalldatetime** ODBC.  
   

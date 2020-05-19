@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Managed Classes [SQLXML], DiffGrams
 - SQLXML, Managed Classes
 ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3d8756bb3dc7b030541159c2aa127162907aa4b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0f84dae66bee63d1e7646a6b4e7018d4f071390
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013049"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703182"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>Выполнение дельты с использованием управляемых классов SQLXML
-  В этом примере показано, как выполнить файл DiffGram в среде [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, чтобы применить обновления данных к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицам с помощью управляемых классов SQLXML (Microsoft. Data. SQLXML).  
+  В этом примере показано, как выполнить файл DiffGram в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] среде .NET Framework, чтобы применить обновления данных к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицам с помощью УПРАВЛЯЕМЫХ классов SQLXML (Microsoft. Data. SQLXML).  
   
  В этом примере дельта обновляет CompanyName и ContactName для клиента ALFKI.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66013049"
 </ROOT>  
 ```  
   
- Блок ** \<Before>** включает элемент ** \<>Customer** (**diffgr: ID = "Customer1"**). Блок>instance содержит соответствующий ** \<элемент>Customer** с тем же **идентификатором**. ** \<** Элемент ** \<Customer>** в ** \<невдатасет>** также указывает **diffgr: hasChanges = "Modified"**. Это указывает на операцию по обновлению, и запись о заказчике в таблице Cust соответствующим образом обновляется. Обратите внимание, что если атрибут **diffgr: hasChanges** не указан, логика обработки DiffGram игнорирует этот элемент и обновления не выполняются.  
+ Блок ** \< Before>** включает элемент ** \<>Customer** (**diffgr: ID = "Customer1"**). Блок ** \<>instance** содержит соответствующий элемент ** \<>Customer** с тем же **идентификатором**. Элемент ** \< Customer>** в ** \< невдатасет>** также указывает **diffgr: hasChanges = "Modified"**. Это указывает на операцию по обновлению, и запись о заказчике в таблице Cust соответствующим образом обновляется. Обратите внимание, что если атрибут **diffgr: hasChanges** не указан, логика обработки DiffGram игнорирует этот элемент и обновления не выполняются.  
   
  Ниже приведен код для учебного приложения C#, в котором показано, как использовать управляемые классы SQLXML для выполнения приведенного выше DiffGram и обновления двух таблиц (Cust, пособий), которые также будут созданы в базе данных **tempdb** .  
   

@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_getcolfmt function
 ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: db8b433652829b16890552a70bd1e0d08d1c1bc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 793543cce582bd4e17cbf8d06f096056a2ecb89b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689089"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701976"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
   Используется для нахождения значения свойства формата столбца.  
@@ -57,7 +57,7 @@ pcbLen
  *hdbc*  
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
- *поле*  
+ *полями*  
  Номер столбца, для которого получается свойство.  
   
  *property*  
@@ -72,7 +72,7 @@ pcbLen
  *pcbLen*  
  Указатель длины данных, возвращаемых в буфер свойства.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  SUCCEED или FAIL.  
   
 ## <a name="remarks"></a>Remarks  

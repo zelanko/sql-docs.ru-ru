@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ODBC applications, parameters
 - bound parameter markers [SQL Server Native Client]
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89b124ea6c73b9ebb80ab5a047b6d7e4cafe2e81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b7865b3b928c6c6291fdd7cb419b76cae8f1e8b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175861"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699900"
 ---
 # <a name="binding-parameters"></a>Привязка параметров
   Каждый маркер параметра в инструкции SQL должен быть сопоставлен переменной в приложении (привязан к ней), прежде чем можно выполнить инструкцию. Это делается путем вызова функции [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) . **SQLBindParameter** описывает переменную программы (адрес, тип данных C и т. д.) для драйвера. Она также определяет маркер параметра, указывая его порядковое значение, а затем описывая характеристики представляемого им объекта SQL (тип данных SQL, точность и т. д.).
@@ -46,7 +46,7 @@ ms.locfileid: "78175861"
 
      Привязка на уровне строки задается путем вызова **SQLSetStmtAttr** с *атрибутом* , для которого задано значение SQL_ATTR_PARAM_BIND_TYPE, а *ValuePtr* задает размер структуры, содержащей переменные программы.
 
- Когда драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента отправляет на сервер символьные или двоичные строковые параметры, он дополняет значения длиной, указанной в параметре *ColumnSize* **SQLBindParameter** . Если приложение ODBC 2. x указывает 0 для *ColumnSize*, драйвер устанавливает значение параметра в точность типа данных. Точность равна 8000 при соединении с сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и 255 при соединении с предыдущими версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ColumnSize* находится в байтах для столбцов типа Variant.
+ Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC для собственного клиента отправляет на сервер символьные или двоичные строковые параметры, он дополняет значения длиной, указанной в параметре *ColumnSize* **SQLBindParameter** . Если приложение ODBC 2. x указывает 0 для *ColumnSize*, драйвер устанавливает значение параметра в точность типа данных. Точность равна 8000 при соединении с сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и 255 при соединении с предыдущими версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ColumnSize* находится в байтах для столбцов типа Variant.
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает определение имен для параметров хранимых процедур. В ODBC 3.5 также появилась поддержка именованных параметров, используемых при вызове хранимых процедур [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта поддержка может использоваться для следующих действий.
 
@@ -56,9 +56,9 @@ ms.locfileid: "78175861"
 
  Именованные параметры поддерживаются только при использовании [!INCLUDE[tsql](../../includes/tsql-md.md)] `EXECUTE` инструкции или escape-последовательности ODBC CALL для выполнения хранимой процедуры.
 
- Если значение `SQL_DESC_NAME` задано для параметра хранимой процедуры, остальные параметры хранимой процедуры также должны иметь значение `SQL_DESC_NAME`.  `SQL_DESC_NAME` Если литералы используются в вызовах хранимых процедур, где заданы параметры, литералы должны использовать формат *"имя*=*значение*", где *Name* — имя параметра хранимой процедуры (например, @p1). Дополнительные сведения см. в разделе [Привязка параметров по имени (именованные параметры)](https://go.microsoft.com/fwlink/?LinkId=167215).
+ Если значение `SQL_DESC_NAME` задано для параметра хранимой процедуры, остальные параметры хранимой процедуры также должны иметь значение `SQL_DESC_NAME`.  Если литералы используются в вызовах хранимых процедур, где `SQL_DESC_NAME` заданы параметры, литералы должны использовать формат *"имя* = *значение*", где *Name* — имя параметра хранимой процедуры (например, @p1 ). Дополнительные сведения см. в разделе [Привязка параметров по имени (именованные параметры)](https://go.microsoft.com/fwlink/?LinkId=167215).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Использование параметров инструкции](using-statement-parameters.md)
 
 

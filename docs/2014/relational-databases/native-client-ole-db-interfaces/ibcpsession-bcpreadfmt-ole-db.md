@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPReadFmt method
 ms.assetid: e2a12050-94e4-48a3-8a48-b780d646f116
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5a82cd2b9261b8f8c26e4e37636423cc27603fcc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54cfcdb87e8292f4588360e5a6b8c77f410a1fc9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192410"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82695405"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>Метод IBCPSession::BCPReadFmt (OLE DB)
   Считывает сведения о формате для каждого столбца из файла форматирования.  
@@ -41,7 +41,7 @@ const wchar_t *pwszFormatFile);
   
  Чтобы сохранить файл форматирования, вызовите метод [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md). Вызовы метода **BCPReadFmt** могут ссылаться на сохраненные форматы. Кроме того, программа массового копирования (**bcp**) может сохранять определяемые пользователем форматы данных в файлах, на которые может ссылаться метод **BCPReadFmt** .  
   
- `BCP_OPTION_DELAYREADFMT` Значение параметра *eOption* [IBCPSession:: BCPControl](ibcpsession-bcpcontrol-ole-db.md) изменяет поведение IBCPSession:: BCPReadFmt.  
+ `BCP_OPTION_DELAYREADFMT`Значение параметра *eOption* [IBCPSession:: BCPControl](ibcpsession-bcpcontrol-ole-db.md) изменяет поведение IBCPSession:: BCPReadFmt.  
   
 ## <a name="arguments"></a>Аргументы  
  *pwszFormatFile*[in]  

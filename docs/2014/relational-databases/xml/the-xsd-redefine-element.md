@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xsd:redefine element
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7e9fa3dedafc05406dcc521429130f98a215d294
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59eafff14c6a0cc7752817a31648b64bd5edc907
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62679974"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702450"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>Элемент &lt;xsd:redefine&gt;
-  Элемент W3C XSD **redefine** обеспечивает поддержку переопределения компонентов схемы. Однако поддержка этой директивы является потенциально дорогостоящей для производительности, а также требует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] повторной проверки всех экземпляров типа `xml` данных, связанных с переопределенной схемой. Поэтому [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает этот элемент. XML-схемы, которые включают элемент **\<xsd:redefine>** , будут отклонены сервером.  
+  Элемент W3C XSD **redefine** обеспечивает поддержку переопределения компонентов схемы. Однако поддержка этой директивы является потенциально дорогостоящей для производительности, а также требует повторной [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки всех экземпляров `xml` типа данных, связанных с переопределенной схемой. Поэтому [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает этот элемент. XML-схемы, которые включают элемент **\<xsd:redefine>** , будут отклонены сервером.  
   
  Чтобы обновить схему или ее компоненты, вместо этого можно сделать следующее.  
   

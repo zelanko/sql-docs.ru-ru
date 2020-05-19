@@ -10,15 +10,15 @@ helpviewer_keywords:
 - SQLXML, about SQLXML
 - SQLXML
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 03d6069358c1591233aa892a723b7367a21be569
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea7fe33f087fd814d44592677cc70b9ba1e7e244
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012224"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702830"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Основные понятия о программировании для SQLXML 4.0
   Компонент SQLXML 3.0 стал доступен в виде веб-версии. Он обеспечивает дополнительную XML-функциональность на стороне клиента и расширение существующих функций: схемы XSD, пакетную загрузку XML, поддержку веб-служб (SOAP), диаграммы обновления и т. д.  

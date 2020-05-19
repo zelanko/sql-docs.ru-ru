@@ -1,20 +1,20 @@
 ---
 title: Перемещение документов SQL Server 2014 | Документация Майкрософт
 description: Документация Майкрософт для SQL Server 2014 будет перенесена до 2018 июля с сайта MSDN на эту документацию.
-author: mightypen
+author: rothja
 manager: craigg
 ms.prod: sql-server-2014
 ms.custom: ''
 ms.topic: article
 ms.date: 04/26/2018
-ms.author: genemi
+ms.author: jroth
 ms.reviewer: sudeepk
-ms.openlocfilehash: 205e0a1ee6f93a11c471154534f460d9fa379d33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fe626ad99e4e0c5842d3551c8864116ee7b8634
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62473643"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693716"
 ---
 # <a name="documentation-for-sql-server-2014-is-moving-to-docs"></a>Перенос документации по SQL Server 2014 на портал Docs
 
@@ -24,7 +24,7 @@ ms.locfileid: "62473643"
 
 Ниже приведены ссылки на документацию по SQL Server 2014, которую корпорация Майкрософт сохранила на веб-сайте *MSDN* . До 2018 июля корпорация Майкрософт переместит эти статьи документации на новый веб-сайт *документов* :
 
-- *SQL Server 2014*
+- *SQL Server 2014*
     - [https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx](https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx)
 
 - *Электронная документация по SQL Server 2014*

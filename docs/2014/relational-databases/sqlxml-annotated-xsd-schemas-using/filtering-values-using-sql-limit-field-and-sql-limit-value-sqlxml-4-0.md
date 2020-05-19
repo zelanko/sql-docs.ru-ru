@@ -15,15 +15,15 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd38d26195d10c097ad090ed756a7f5d62508456
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013810"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703583"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Фильтрация значений при помощи sql:limit-field и sql:limit-value (SQLXML 4.0)
   Количество строк, возвращаемых запросом к базе данных, можно ограничить на основе какого-либо значения. Для указания столбца базы данных, содержащего ограничивающие значения, и задания конкретного ограничивающего значения, которое будет использовано для фильтрации возвращенных данных, используются заметки `sql:limit-field` и `sql:limit-value`.  
@@ -44,7 +44,7 @@ ms.locfileid: "66013810"
   
  В этих примерах для задания запросов XPath к схеме сопоставления XSD используются шаблоны.  
   
-### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>А) Ограничение адресов заказчиков определенным типом адреса  
+### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>A. Ограничение адресов заказчиков определенным типом адреса  
  В этом примере база данных содержит две таблицы  
   
 -   Customer (CustomerID, CompanyName)  
@@ -163,14 +163,14 @@ ms.locfileid: "66013810"
 </ROOT>  
 ```  
   
-### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>Б) Ограничение результатов на основе значения скидки, имеющего тип данных real  
+### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>Б. Ограничение результатов на основе значения скидки, имеющего тип данных real  
  В этом примере база данных содержит две таблицы  
   
 -   Orders (OrderID)  
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Это схема сопоставления, в которой атрибут **OrderID** в сведениях о заказе сопоставляется со столбцом OrderID в связи Orders. Значения, возвращаемые для этого атрибута, ограничиваются только теми, которые имеют значение 2.0000000 e-001 (0,2), как указано для атрибута **скидки** с помощью заметок `sql:limit-field` и. `sql:limit-value`  
+ Это схема сопоставления, в которой атрибут **OrderID** в сведениях о заказе сопоставляется со столбцом OrderID в связи Orders. Значения, возвращаемые для этого атрибута, ограничиваются только теми, которые имеют значение 2.0000000 e-001 (0,2), как указано для атрибута **скидки** с помощью `sql:limit-field` `sql:limit-value` заметок и.  
   
  Схема:  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: befd4ba78a3d147acd8dd2adbd8fcb81500ec4b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a030bbcd292ade6e52f71f523d60dfccbdf6c79
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68811412"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262120"
 ---
 # <a name="sysfn_hadr_is_primary_replica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
  "*dbname*"  
  Имя базы данных. Аргумент *dbname* имеет тип sysname.  
   
-## <a name="returns"></a>Результаты  
- Возвращаемое значение равно 1, если база данных в текущем экземпляре является первичной. В противном случае возвращается 0.  
+## <a name="returns"></a>Возвращаемое значение  
+ Возвращает тип данных **bool**: 1, если база данных в текущем экземпляре является первичной репликой, в противном случае — 0.  
   
 ## <a name="remarks"></a>Remarks  
  Используйте эту функцию, чтобы определить, размещается ли первичная реплика указанной базы данных доступности в локальном экземпляре. Образец кода должен быть аналогичен следующему.  

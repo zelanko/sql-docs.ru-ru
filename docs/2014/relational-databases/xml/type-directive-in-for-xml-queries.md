@@ -10,18 +10,18 @@ helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecb9f384634d1c2f3991ad0c07a9b98217314499
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193283"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702438"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Директива TYPE в запросах FOR XML
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]поддержка [&#40;xml&#41;Transact-SQL](/sql/t-sql/xml/xml-transact-sql) позволяет при необходимости вернуть результат запроса FOR XML в качестве `xml` типа данных, указав директиву Type. Это позволяет обрабатывать результат запроса FOR XML на сервере. Например, можно указать для него запрос XQuery, присвоить результат переменной `xml` типа или написать [вложенные запросы FOR XML](use-nested-for-xml-queries.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]поддержка [&#40;xml&#41;Transact-SQL](/sql/t-sql/xml/xml-transact-sql) позволяет при необходимости вернуть результат запроса FOR XML в качестве `xml` типа данных, УКАЗАВ директиву Type. Это позволяет обрабатывать результат запроса FOR XML на сервере. Например, можно указать для него запрос XQuery, присвоить результат `xml` переменной типа или написать [вложенные запросы FOR XML](use-nested-for-xml-queries.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает клиенту тип данных XML экземпляра, представляющий собой результат различных серверных конструкций, таких как запросы FOR XML, использующие директиву TYPE или тип данных `xml` для получения значений XML-данных экземпляра из столбцов таблицы и выходных параметров SQL. В коде клиентского приложения поставщик ADO.NET запрашивает эти XML-данные для отправки с сервера в двоичной кодировке. Однако при использовании предложения FOR XML без директивы TYPE XML-данные возвращаются как данные строкового типа. В любом случае поставщик клиента всегда будет иметь возможность обрабатывать XML-данные в любом из форматов. Обратите внимание на то, что предложение FOR XML верхнего уровня без директивы TYPE не может быть использовано с курсорами.  
@@ -50,7 +50,7 @@ FOR XML AUTO, TYPE;
  `...`  
   
 ### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>Назначение результатов запроса FOR XML переменной типа xml  
- В следующем примере результат инструкции FOR XML присваивается переменной `@x` типа `xml`. Запрос получает контактные данные, `BusinessEntityID`например `FirstName` `LastName`,, и дополнительные телефонные номера, из `AdditionalContactInfo` столбца. `xml``TYPE` Поскольку в предложении `FOR XML` указана директива `TYPE`, результат возвращается в виде типа `xml` и присваивается переменной.  
+ В следующем примере результат инструкции FOR XML присваивается переменной `@x` типа `xml`. Запрос получает контактные данные, например,, `BusinessEntityID` `FirstName` `LastName` и дополнительные телефонные номера, из `AdditionalContactInfo` столбца `xml``TYPE` . Поскольку в предложении `FOR XML` указана директива `TYPE`, результат возвращается в виде типа `xml` и присваивается переменной.  
   
 ```  
 USE AdventureWorks2012;  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1db4c6895fb499458c198008319302a25b8cd34b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8042534c8b22863c5a00abf4969bdb9754cef892
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156226"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702214"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>Поддержка Transact-SQL для In-Memory OLTP
   Доступ к оптимизированным для памяти таблицам можно получить с помощью любого запроса Transact-SQL или операции DML (SELECT, INSERT, UPDATE или DELETE), нерегламентированных пакетов и модулей SQL, таких как хранимые процедуры, функции, возвращающие табличное значение, триггеры и представления. Дополнительные сведения см. в разделе [доступ к оптимизированным для памяти таблицам с использованием интерпретированного языка Transact-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
@@ -24,17 +24,17 @@ ms.locfileid: "63156226"
   
  При создании и изменении объектов базы данных (инструкций DDL) были изменены следующие инструкции.  
   
--   [Параметры Alter Database File и Filegroup &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) (см `MEMORY_OPTIMIZED_DATA`.)  
+-   [Параметры Alter Database File и Filegroup &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) (см. `MEMORY_OPTIMIZED_DATA` )  
   
--   [Создание &#40;базы данных SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql) ( `MEMORY_OPTIMIZED_DATA`см.)  
+-   [Создание &#40;базы данных SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql) (см. `MEMORY_OPTIMIZED_DATA` )  
   
--   [CREATE PROCEDURE &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-procedure-transact-sql) (см `NATIVE_COMPILATION`. `SCHEMABINDING`, `EXECUTE AS`, и `BEGIN ATOMIC`).  
+-   [CREATE PROCEDURE &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-procedure-transact-sql) (см. `NATIVE_COMPILATION` ,, `SCHEMABINDING` `EXECUTE AS` и `BEGIN ATOMIC` ).  
   
--   [CREATE TABLE &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-table-transact-sql) (см `MEMORY_OPTIMIZED`. `DURABILITY`, `BUCKET_COUNT` `INDEX`,, и `HASH`).  
+-   [CREATE TABLE &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-table-transact-sql) (см.,,, `MEMORY_OPTIMIZED` `DURABILITY` `BUCKET_COUNT` `INDEX` и `HASH` ).  
   
--   [CREATE TYPE &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-type-transact-sql) (см `MEMORY_OPTIMIZED`. `BUCKET_COUNT`, `INDEX`, и `HASH`).  
+-   [CREATE TYPE &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-type-transact-sql) (см. `MEMORY_OPTIMIZED` ,, `BUCKET_COUNT` `INDEX` и `HASH` ).  
   
--   [DECLARE @local_variable &#40;&#41;TRANSACT-SQL](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (см `NULL`  |  `NOT NULL`.)  
+-   [DECLARE @local_variable &#40;&#41;TRANSACT-SQL](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (см. `NULL`  |  `NOT NULL` )  
   
  Таблицы, оптимизированные для памяти, поддерживают ограничения `PRIMARY KEY` и `NOT NULL`. Дополнительные сведения о реализации неподдерживаемых ограничений см. в разделе [Миграция ограничений проверки и внешнего ключа](../../database-engine/migrating-check-and-foreign-key-constraints.md).  
   

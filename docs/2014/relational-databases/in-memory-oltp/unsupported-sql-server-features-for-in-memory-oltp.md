@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a5ec9cefd0106a8e6eb4d796921efe147bea446
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157244"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702222"
 ---
 # <a name="supported-sql-server-features"></a>Поддерживаемые возможности SQL Server
   В этом разделе описаны возможности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые поддерживаются и не поддерживаются для использования с оптимизированными для памяти объектами.  
@@ -59,7 +59,7 @@ ms.locfileid: "63157244"
   
 -   Компонент Service Broker с ограничениями. Нет доступа к очереди из скомпилированной в собственном коде хранимой процедуры. Нет доступа к очереди в удаленной базе данных в транзакции, получающей доступ к оптимизированным для памяти таблицам.  
   
--   Отказоустойчивая кластеризация. в рамках предложения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn экземпляры отказоустойчивого кластера AlwaysOn используют функции отказоустойчивой кластеризации Windows Server (WSFC), чтобы обеспечить локальную высокую доступность посредством избыточности на уровне экземпляра сервера — экземпляра отказоустойчивого кластера (FCI). Дополнительные сведения см. в статье [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   Отказоустойчивая кластеризация. в рамках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предложения AlwaysOn экземпляры отказоустойчивого кластера AlwaysOn используют функции отказоустойчивой кластеризации Windows Server (WSFC), чтобы обеспечить локальную высокую доступность посредством избыточности на уровне экземпляра сервера — экземпляра отказоустойчивого кластера (FCI). Дополнительные сведения см. в статье [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   Интеграция с AlwaysOn. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет несколько вариантов обеспечения высокого уровня доступности сервера или базы данных, включая AlwaysOn. Дополнительные сведения см. в разделе [Решения высокого уровня доступности (SQL Server)](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).  
   

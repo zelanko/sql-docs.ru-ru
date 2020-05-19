@@ -11,15 +11,15 @@ helpviewer_keywords:
 - W3C XPath specification
 - XPath queries [SQLXML], functionality
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4ada9351eca0b068838b38e59c8e0833d5a9af61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69fe9c7decd7521ca752b0b5092748c907036f40
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012711"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703121"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Основные сведения об использовании запросов XPath (SQLXML 4.0)
   Запрос на языке XPath может быть указан как часть URL-адреса или внутри шаблона. Схема сопоставления определяет структуру этого результирующего фрагмента, а значения извлекаются из базы данных. Этот процесс имеет сходные концепции с созданием представлений при помощи инструкции CREATE VIEW и написания SQL-запросов к ним.  
@@ -47,9 +47,9 @@ ms.locfileid: "66012711"
   
  В этом документе ** \<>клиента** является узлом элемента, **CID** — узлом атрибута, а **"важно"** — текстовым узлом.  
   
- XPath — это язык навигации графа, используемый для выбора набора узлов из XML-документа. Каждый оператор XPath выбирает набор узлов на основе набора узлов, выбранных предыдущим оператором XPath. Например, при наличии набора узлов ** \<Customer>** в XPath можно выбрать все ** \<заказы>** узлов со значением атрибута **Date** , равным **"7/14/1999"**. Результирующий набор узлов содержит все заказы с датой заказа 7/14/1999.  
+ XPath — это язык навигации графа, используемый для выбора набора узлов из XML-документа. Каждый оператор XPath выбирает набор узлов на основе набора узлов, выбранных предыдущим оператором XPath. Например, при наличии набора узлов ** \< Customer>** в XPath можно выбрать все ** \< заказы>** узлов со значением атрибута **Date** , равным **"7/14/1999"**. Результирующий набор узлов содержит все заказы с датой заказа 7/14/1999.  
   
- Язык XPath определен консорциумом W3C (World Wide Web Consortium) как стандартный язык навигации. SQLXML 4,0 реализует подмножество спецификации W3C XPath, расположенное по адресу http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ Язык XPath определен консорциумом W3C (World Wide Web Consortium) как стандартный язык навигации. SQLXML 4,0 реализует подмножество спецификации W3C XPath, расположенное по адресу http://www.w3.org/TR/1999/PR-xpath-19991008.html .  
   
  Далее приведены ключевые отличия реализации XPath консорциума W3C и реализации SQLXML 4.0.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "66012711"
 ## <a name="supported-functionality"></a>Поддерживаемые функции  
  В следующей таблице приведены возможности языка XPath, реализованные в SQLXML 4.0.  
   
-|Функция|Элемент|Ссылка на образцы запросов|  
+|Признак|Элемент|Ссылка на образцы запросов|  
 |-------------|----------|----------------------------|  
 |Оси|оси `attribute`, `child`, `parent` и `self`|[Указание осей в запросах XPath &#40;SQLXML 4,0&#41;](samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Предикаты с логическими значениями, включая последовательные и вложенные предикаты.||[Указание арифметических операторов в запросах XPath &#40;SQLXML 4,0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Все реляционные операторы|=,! =, <, \<=, >, >=|[Указание реляционных операторов в запросах XPath &#40;SQLXML 4,0&#41;](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|Все реляционные операторы|=,! =, <, \< =, >, >=|[Указание реляционных операторов в запросах XPath &#40;SQLXML 4,0&#41;](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Арифметические операторы|+, -, *, div|[Указание арифметических операторов в запросах XPath &#40;SQLXML 4,0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Явные функции преобразования|`number()`, `string()`, `Boolean()`|[Указание явных функций преобразования в запросах XPath &#40;SQLXML 4,0&#41;](samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |логические операторы|AND, OR|[Указание логических операторов в запросах XPath &#40;SQLXML 4,0&#41;](samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -103,7 +103,7 @@ ms.locfileid: "66012711"
 ## <a name="unsupported-functionality"></a>Неподдерживаемые функциональные возможности  
  В следующей таблице приведены функции языка XPath, не реализованные в SQLXML 4.0.  
   
-|Функция|Элемент|  
+|Признак|Элемент|  
 |-------------|----------|  
 |Оси|`ancestor`, `ancestor-or-self`, `descendant`, `descendant-or-self (//)`, `following`, `following-sibling`, `namespace`, `preceding`, `preceding-sibling`|  
 |Предикаты с числовыми значениями||  

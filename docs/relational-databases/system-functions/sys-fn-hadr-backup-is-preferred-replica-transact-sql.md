@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4e343e7e9657b69ebd06a147cb99fa19e3c36aab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 287acb7986b3e518260f82278f8079391932ab6f
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68120247"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262141"
 ---
 # <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys. fn_hadr_backup_is_preferred_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
  "*dbname*"  
  Имя базы данных, резервная копия которой создается. Аргумент *dbname* имеет тип sysname.  
   
-## <a name="returns"></a>Результаты  
- Возвращает 1, если база данных в текущем экземпляре находится в предпочитаемой реплике. В противном случае возвращается 0.  
+## <a name="returns"></a>Возвращаемое значение  
+ Возвращает тип данных **bool**: 1, если база данных в текущем экземпляре находится на предпочтительной реплике; в противном случае — значение 0.  
   
 ## <a name="remarks"></a>Remarks  
  Используйте данную функцию в скрипте резервного копирования для определения, доступна ли текущая база данных на реплике, которая является предпочитаемой для резервного копирования. Вы можете запустить скрипт на любой доступной реплике. Каждая из данных задач обращается к одним и тем же данным для определения того, какую задачу следует выполнить, поэтому для создания резервной копии фактически обрабатывается только одна запланированная задача. Образец кода должен быть аналогичен следующему.  

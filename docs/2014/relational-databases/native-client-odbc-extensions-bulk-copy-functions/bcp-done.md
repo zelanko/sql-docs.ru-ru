@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_done function
 ms.assetid: e59b3f16-5b59-40da-880f-f3edf657d1ee
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b0326330e3d2052e8e997a293f666a8fc725391b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca26e8e8f3bdb17afe9908b99bfe5cf09ff3b563
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689080"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701983"
 ---
 # <a name="bcp_done"></a>bcp_done
   Завершает массовое копирование переменных программы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполненное с помощью функции [bcp_sendrow](bcp-sendrow.md).  
@@ -43,7 +43,7 @@ hdbc
  *hdbc*  
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  Число строк окончательно сохраняется после последнего вызова функции [bcp_batch](bcp-batch.md) или -1 в случае ошибки.  
   
 ## <a name="remarks"></a>Remarks  

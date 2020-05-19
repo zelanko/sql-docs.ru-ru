@@ -16,15 +16,15 @@ helpviewer_keywords:
 - preprocessor tool [XML schemas]
 - XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f878c64620ab0cd3f0bc439164ef86b54ab3b78e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b788c94a1f27cced3e57b8f7941eb92edd61a2f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63241231"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702563"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Предпроцессор схемы для слияния включаемых схем
   Элемент W3C XSD **include** обеспечивает поддержку модульного принципа, при котором схема XML может быть разделена на несколько физических файлов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает этот элемент. XML-схемы, содержащие данный элемент, будут отклонены сервером.  

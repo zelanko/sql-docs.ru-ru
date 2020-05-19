@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 459cd091043d567b4c93555c271213d066f3989e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a676688176e164736552460667432919250f8e99
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487144"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82261847"
 ---
 # <a name="supported-net-framework-libraries"></a>Поддерживаемые библиотеки платформы .NET Framework
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,43 +33,33 @@ ms.locfileid: "81487144"
  Библиотеки и пространства имен, поддерживаемые интеграцией со средой CLR в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   CustomMarshalers  
-  
 -   Microsoft.VisualBasic  
-  
 -   Microsoft.VisualC  
-  
 -   mscorlib  
-  
 -   Система  
-  
 -   System.Configuration  
-  
+-   System.Core  
 -   System.Data  
-  
 -   System.Data.OracleClient  
-  
 -   System.Data.SqlXml  
-  
 -   System.Deployment  
-  
 -   System.Security  
-  
 -   System.Transactions  
-  
 -   System.Web.Services  
-  
 -   System.Xml  
-  
--   System.Core.dll  
-  
--   System.Xml.Linq.dll  
-  
+-   System.Xml.Linq  
+
+<!--
+Any modifications to the list above should be duplicated on the following page:
+https://docs.microsoft.com/sql/relational-databases/clr-integration/assemblies-designing#supported-net-framework-assemblies
+-->
+
 ## <a name="unsupported-libraries"></a>Неподдерживаемые библиотеки  
  Неподдерживаемые библиотеки могут быть вызваны из управляемых хранимых процедур, триггеров, определяемых пользователем функций, определяемых пользователем типов и определяемых пользователем статистических функций. Неподдерживаемая библиотека должна быть сначала зарегистрирована в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базе данных с помощью инструкции **CREATE ASSEMBLY** , прежде чем ее можно будет использовать в коде. Любая неподдерживаемая библиотека, зарегистрированная и работающая на сервере, должна быть просмотрена и проверена в отношении безопасности и надежности.  
   
  Например, пространство имен **System. DirectoryServices** не поддерживается. Необходимо зарегистрировать сборку System. DirectoryServices. dll с **НЕнадежными** разрешениями, прежде чем можно будет вызывать ее из кода. **НЕнадежное** разрешение необходимо, так как классы в пространстве имен **System. DirectoryServices** не соответствуют требованиям для **безопасного** или **EXTERNAL_ACCESS**. Дополнительные сведения см. в разделе [ограничения модели программирования интеграции со средой CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) и [Безопасность доступа к коду интеграции CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание сборки](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
  [Безопасность доступа к коду при интеграции со средой CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Ограничения модели программирования на основе интеграции со средой CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)  

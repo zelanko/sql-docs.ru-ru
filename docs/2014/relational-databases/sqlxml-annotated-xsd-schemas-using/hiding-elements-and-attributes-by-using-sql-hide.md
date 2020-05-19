@@ -21,15 +21,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], hiding attributes and elements
 - attribute hiding [SQLXML]
 ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6ce8daf2badb855cbf855031d93e38fb689eab54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85d057af7202a5076f299371fb2b0b2ec170087f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013829"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703576"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Скрытие элементов и атрибутов при помощи sql:hide
   При выполнении запроса XPath к схеме XSD результирующий XML-документ содержит элементы и атрибуты, указанные в схеме. Заметка `sql:hide` позволяет указать, что некоторые элементы и атрибуты скрыты в схеме. Это может оказаться полезным в тех случаях, когда критерий выбора запроса требует определенных элементов или атрибутов в схеме, но они не должны возвращаться в формируемом XML-документе.  
@@ -39,10 +39,10 @@ ms.locfileid: "66013829"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlhide-on-an-attribute"></a>А) Указание sql:hide для атрибута  
- Схема XSD в этом примере состоит из элемента ** \<Person. Contact>** с атрибутами **ContactID**, **FirstName**и **LastName** .  
+### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Указание sql:hide для атрибута  
+ Схема XSD в этом примере состоит из элемента ** \< Person. Contact>** с атрибутами **ContactID**, **FirstName**и **LastName** .  
   
- Элемент ** \<Person. Contact>** имеет сложный тип и, следовательно, сопоставляется с таблицей с тем же именем (сопоставление по умолчанию). Все атрибуты элемента ** \<Person. Contact>** имеют простой тип и сопоставляются со столбцами с теми же именами в поле Person. контакттабле в базе данных AdventureWorks. В схеме `sql:hide` заметка задается в атрибуте **ContactID** . Если для этой схемы задан запрос XPath, то объект **ContactID** не возвращается в XML-документе.  
+ Элемент ** \< Person. Contact>** имеет сложный тип и, следовательно, сопоставляется с таблицей с тем же именем (сопоставление по умолчанию). Все атрибуты элемента ** \< Person. Contact>** имеют простой тип и сопоставляются со столбцами с теми же именами в поле Person. контакттабле в базе данных AdventureWorks. В схеме `sql:hide` заметка задается в атрибуте **ContactID** . Если для этой схемы задан запрос XPath, то объект **ContactID** не возвращается в XML-документе.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -89,7 +89,7 @@ ms.locfileid: "66013829"
 </ROOT>  
 ```  
   
- Если для элемента была указана заметка `sql:hide`, то элемент и его атрибуты или дочерние элементы не будут отображены в созданном XML-документе. Ниже приведена другая схема XSD, `sql:hide` в которой для элемента ** \<>OD** задано значение:  
+ Если для элемента была указана заметка `sql:hide`, то элемент и его атрибуты или дочерние элементы не будут отображены в созданном XML-документе. Ниже приведена другая схема XSD, в которой `sql:hide` для элемента ** \<>OD** задано значение:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -144,7 +144,7 @@ ms.locfileid: "66013829"
 </xsd:schema>  
 ```  
   
- Если для этой схемы указан запрос XPath `/Customers[@CID="1"]`(например,), создаваемый XML-документ не включает элемент ** \<>OD** и его дочерние элементы, как показано в этом частичном результате:  
+ Если для этой схемы указан запрос XPath (например `/Customers[@CID="1"]` ,), создаваемый XML-документ не включает элемент ** \<>OD** и его дочерние элементы, как показано в этом частичном результате:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

@@ -14,18 +14,18 @@ helpviewer_keywords:
 - overflow data [SQLXML]
 - sql:overflow-field
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 18651b91ee2a47819360eae4c57c18ac3eae672b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d663cf6a4a2c7edfc7ae206f5a703b10db63106
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013777"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703531"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Получение невостребованных данных с помощью sql:overflow-field (SQLXML 4.0)
-  Когда в базу данных с помощью функции OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)] вставляются записи из XML-документа, все невостребованные данные из исходного XML-документа могут быть сохранены в столбце. При считывании данных из базы данных с помощью схем с заметками можно указывать атрибут `sql:overflow-field` для идентификации столбца таблицы, в котором хранятся перегруженные данные. `sql:overflow-field` Атрибут можно указать в ** \<элементе>**.  
+  Когда в базу данных с помощью функции OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)] вставляются записи из XML-документа, все невостребованные данные из исходного XML-документа могут быть сохранены в столбце. При считывании данных из базы данных с помощью схем с заметками можно указывать атрибут `sql:overflow-field` для идентификации столбца таблицы, в котором хранятся перегруженные данные. `sql:overflow-field`Атрибут можно указать в ** \< элементе>**.  
   
  Затем эти данные можно получить одним из трех способов.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66013777"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqloverflow-field-for-an-element"></a>А) Указание sql:overflow-field для элемента  
+### <a name="a-specifying-sqloverflow-field-for-an-element"></a>A. Указание sql:overflow-field для элемента  
  В данном примере предполагается, что был выполнен следующий скрипт, а значит, в базе данных tempdb имеется таблица Customers2:  
   
 ```  

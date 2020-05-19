@@ -11,32 +11,32 @@ topic_type:
 helpviewer_keywords:
 - SQLPutData function
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 410aa819e2d4af056c53fc30a971625001b1186e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046629"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702203"
 ---
 # <a name="sqlputdata"></a>SQLPutData
-  Следующие ограничения применяются при использовании SQLPutData для отправки более чем 65 535 байт [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных (для версии 4.21 a) или 400 КБ данных (для SQL Server версии 6,0 и более поздних) для столбца SQL_LONGVARCHAR (`text`), SQL_WLONGVARCHAR (`ntext`) или SQL_LONGVARBINARY (`image`):  
+  Следующие ограничения применяются при использовании SQLPutData для отправки более чем 65 535 байт данных (для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 4.21 a) или 400 КБ данных (для SQL Server версии 6,0 и более поздних) для столбца SQL_LONGVARCHAR ( `text` ), SQL_WLONGVARCHAR ( `ntext` ) или SQL_LONGVARBINARY ( `image` ):  
   
 -   Параметр, на который указывает ссылка, может быть *insert_value* в инструкции INSERT.  
   
 -   Параметр, на который указывает ссылка, может быть *выражением* в предложении SET инструкции UPDATE.  
   
- Отмена последовательности вызовов SQLPutData, предоставляющих данные в блоках на сервере, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется, приводит к частичному обновлению значения столбца при использовании версии 6,5 или более ранней. Столбец `text`, `ntext`или `image` , на который было дана ссылка при вызове SQLCancel, имеет значение промежуточного значения заполнителя.  
+ Отмена последовательности вызовов SQLPutData, предоставляющих данные в блоках на сервере, на котором выполняется, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приводит к частичному обновлению значения столбца при использовании версии 6,5 или более ранней. `text`Столбец, `ntext` или `image` , на который было дана ссылка при вызове SQLCancel, имеет значение промежуточного значения заполнителя.  
   
 > [!NOTE]  
 >  Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает соединение с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 и более ранней.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Для SQLPutData существует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] один собственный клиент с конкретным кодом SQLSTATE:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Для SQLPutData существует один собственный клиент с конкретным кодом SQLSTATE:  
   
-|SQLSTATE|Error|Описание|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |22026|Строковые данные, несовпадение длины|Если длина данных в байтах для отправки была задана приложением, например с SQL_LEN_DATA_AT_EXEC (*n*), где *n* больше 0, общее число байтов, заданное приложением через SQLPutData, должно соответствовать указанной длине.|  
   

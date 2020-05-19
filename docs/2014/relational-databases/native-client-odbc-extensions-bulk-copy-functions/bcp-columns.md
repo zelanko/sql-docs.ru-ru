@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_columns function
 ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fcfbbdb1881662401e791ea197115120444cf855
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0c48fa00e8bf3eadfa955876840bebf5b6816f5
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225532"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701994"
 ---
 # <a name="bcp_columns"></a>bcp_columns
   Задает общее количество столбцов в файле пользователя, используемых для массового копирования на сервер или с сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [bcp_setbulkmode](bcp-setbulkmode.md) можно использовать вместо bcp_columns и [bcp_colfmt](bcp-colfmt.md).  
@@ -49,7 +49,7 @@ nColumns
  *nColumns*  
  Общее количество столбцов в файле пользователя. Даже если вы готовитесь к копированию данных из файла пользователя в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицу и не собираетесь копировать все столбцы в файл пользователя, необходимо установить *нколумнс* в общее число столбцов User-Files.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  SUCCEED или FAIL.  
   
 ## <a name="remarks"></a>Remarks  
@@ -57,7 +57,7 @@ nColumns
   
  Эту функцию следует вызывать только в том случае, если планируется использовать формат файла пользователя, отличный от формата по умолчанию. Дополнительные сведения об описании формата пользовательских файлов по умолчанию см. в разделе **bcp_init**.  
   
- После вызова `bcp_columns`необходимо вызвать [bcp_colfmt](bcp-colfmt.md)для каждого столбца в файле пользователя, чтобы полностью определить пользовательский формат файла.  
+ После вызова `bcp_columns` необходимо вызвать [bcp_colfmt](bcp-colfmt.md)для каждого столбца в файле пользователя, чтобы полностью определить пользовательский формат файла.  
   
 ## <a name="see-also"></a>См. также  
  [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  

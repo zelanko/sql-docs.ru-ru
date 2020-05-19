@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - large data
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9789ddf12272dd6c33c8cfbbb8677ecc3bb4b191
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63218661"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82696202"
 ---
 # <a name="set-large-data-ole-db"></a>Задание данных больших объектов (OLE DB)
   В этом образце показывается, как задать данные типа BLOB, создать таблицу, добавить образец записи, выбрать эту запись в набор строк, а затем задать значение поля типа BLOB. Этот образец не поддерживается на архитектуре IA64.  
@@ -33,7 +33,7 @@ ms.locfileid: "63218661"
   
 #### <a name="to-set-blob-data"></a>Для задания данных BLOB  
   
-1.  Создайте структуру DBOBJECT, описывающую, каким образом должен производиться доступ к столбцу BLOB. Задайте для элемента **dwFlag** структуры DBOBJECT значение STGM_READ и задайте для `IID_ISequentialStream` элемента IID значение (интерфейс, который должен быть предоставлен).  
+1.  Создайте структуру DBOBJECT, описывающую, каким образом должен производиться доступ к столбцу BLOB. Задайте для элемента **dwFlag** структуры DBOBJECT значение STGM_READ и задайте для элемента IID значение `IID_ISequentialStream` (интерфейс, который должен быть предоставлен).  
   
 2.  Установите свойства в группе свойств DBPROPSET_ROWSET, чтобы включить возможность обновления для набора строк.  
   

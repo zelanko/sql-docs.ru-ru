@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52ab4d4b3cbb0e4418886517c9ffd9c70315851a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689031"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701940"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
   Возвращает имя типа SQL для указанного токена типа BCP.  
@@ -46,10 +46,10 @@ fIsMaxType
  *token*  
  Значение, указывающее токен типа BCP.  
   
- *поле*  
+ *полями*  
  Указывает, запрашивает ли токен тип max.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  Строка, содержащая имя типа SQL, соответствующего типу BCP. Если указывается недопустимый тип BCP, возвращается пустая строка.  
   
 ## <a name="remarks"></a>Remarks  
@@ -78,7 +78,7 @@ fIsMaxType
 |`SQLBINARY`|Нет|**Двоичный**|  
 |`SQLBIGVARBINARY`|Нет|**Varbinary**|  
 |`SQLVARBINARY`|Нет|**Varbinary**|  
-|`SQLIMAGE`|Можно использовать|**ОС контейнера**|  
+|`SQLIMAGE`|Можно использовать|**Изображение**|  
 |`SQLINTN`|Можно использовать|**int-null**|  
 |`SQLDATETIMN`|Можно использовать|**datetime-null**|  
 |`SQLMONEYN`|Можно использовать|**money-null**|  

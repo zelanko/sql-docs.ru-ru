@@ -30,15 +30,15 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14c10afd53e219b847625e50f8fc88714cad1111
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62631361"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702277"
 ---
 # <a name="xml-indexes-sql-server"></a>XML-индексы (SQL Server)
   Для столбцов типа `xml` можно создавать XML-индексы. При этом индексируются все теги, значения и пути хранимых в столбце экземпляров XML и повышается эффективность обработки запросов. Применение XML-индекса может дать преимущества в следующих ситуациях.  
@@ -103,7 +103,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  Обработчик запросов использует первичный XML-индекс для запросов, задействующих [xml Data Type Methods](/sql/t-sql/xml/xml-data-type-methods) , и возвращает либо скалярные значения, либо XML-поддеревья из самого первичного индекса. (В этом индексе хранятся все необходимые данные для реконструкции экземпляра XML.)  
   
- Например, следующий запрос возвращает сводные данные, хранящиеся в столбце `CatalogDescription``xml` тип в `ProductModel` таблице. Запрос возвращает данные <`Summary`> только для тех изделий, описания каталога которых содержат также описание <`Features`>.  
+ Например, следующий запрос возвращает сводные данные, хранящиеся в `CatalogDescription``xml` столбце Тип в `ProductModel` таблице. Запрос возвращает данные <`Summary`> только для тех изделий, описания каталога которых содержат также описание <`Features`>.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
@@ -168,7 +168,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `/book[@* = "someValue"]`, где запрос выполняет поиск элемента <`book`> с каким-либо атрибутом, имеющим значение `"someValue"`.  
   
- Следующий запрос возвращает столбец `ContactID` из таблицы `Contact` . `WHERE` Предложение задает фильтр, который ищет значения в столбце `AdditionalContactInfo``xml` типа. Идентификаторы контактов возвращаются только тогда, когда соответствующий большой двоичный объект XML, содержащий дополнительные контактные данные, включает в себя определенный номер телефона. Поскольку элемент <`telephoneNumber`> может находиться в любом месте XML-документа, выражение пути задает ось descendent-or-self.  
+ Следующий запрос возвращает столбец `ContactID` из таблицы `Contact` . `WHERE`Предложение задает фильтр, который ищет значения в `AdditionalContactInfo``xml` столбце типа. Идентификаторы контактов возвращаются только тогда, когда соответствующий большой двоичный объект XML, содержащий дополнительные контактные данные, включает в себя определенный номер телефона. Поскольку элемент <`telephoneNumber`> может находиться в любом месте XML-документа, выражение пути задает ось descendent-or-self.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -198,7 +198,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- За исключением различий, описанных далее в этом разделе, создание XML-`xml` индекса для столбца типа похоже на создание индекса для столбца, не`xml` являющегося типом. Для создания XML-индексов и управления ими могут использоваться следующие DDL-инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
+ За исключением различий, описанных далее в этом разделе, создание XML-индекса для `xml` столбца типа похоже на создание индекса для столбца, не являющегося `xml` типом. Для создания XML-индексов и управления ими могут использоваться следующие DDL-инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   

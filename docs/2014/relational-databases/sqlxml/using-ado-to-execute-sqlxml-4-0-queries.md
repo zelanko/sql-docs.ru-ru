@@ -13,15 +13,15 @@ helpviewer_keywords:
 - queries [SQLXML], ADO
 - SQLXML, ADO
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 02dfe2bfe1a5893a2ef121f279648c5962d6cce9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c513c643ebae58c0670abd18e3da1736eabfdd3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251418"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702854"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Использование ADO для выполнения запросов SQLXML 4.0
   В предыдущих версиях SQLXML выполнение запросов по HTTP поддерживалось с помощью виртуальных каталогов SQLXML в IIS и ISAPI-фильтра SQLXML. В SQLXML 4.0 эти компоненты были удалены, так как похожая и перекрывающаяся функциональность предоставляется собственными веб-службами с поддержкой XML, начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
@@ -121,7 +121,7 @@ ms.locfileid: "75251418"
         > [!NOTE]  
         >  Если необходимо установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент, см. статью [Установка SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
   
-2.  Проверьте, что на клиентском компьютере установлена версия MDAC 2.6 или более поздняя. Если необходимо проверить сведения о версии MDAC, можно использовать средство проверки компонентов MDAC, которое предоставляется бесплатно для загрузки с веб-сайта [https://www.microsoft.com/](https://www.microsoft.com/)корпорации Майкрософт. Для получения дополнительных сведений выполните поиск по фразе "средство проверки компонентов MDAC" на веб-сайте Майкрософт.  
+2.  Проверьте, что на клиентском компьютере установлена версия MDAC 2.6 или более поздняя. Если необходимо проверить сведения о версии MDAC, можно использовать средство проверки компонентов MDAC, которое предоставляется бесплатно для загрузки с веб-сайта корпорации Майкрософт [https://www.microsoft.com/](https://www.microsoft.com/) . Для получения дополнительных сведений выполните поиск по фразе "средство проверки компонентов MDAC" на веб-сайте Майкрософт.  
   
 3.  Выполните скрипт.  
   

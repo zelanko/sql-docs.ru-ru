@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor fields for constituent columns
 ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a31491b56e5b5cd700e744be2b7a84f10f1e0121
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ddbc29c1895ad57ad191604fec228109c8c7c55e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199935"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698801"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>Поля дескриптора для столбцов, содержащих параметры, возвращающие табличные значения
   Поля дескриптора возвращающего табличное значение параметра, описанные в этом разделе, управляются с помощью [SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md) и [SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md) с дескриптором для дескриптора параметра реализации (IPD).  
@@ -41,7 +41,7 @@ ms.locfileid: "63199935"
   
  Эти атрибуты доступны только для столбцов возвращающих табличные значения параметров. Для других параметров они не учитываются.  
   
- Если для столбца, возвращающего табличное значение параметра, установлен атрибут SQL_CA_SS_COL_HAS_DEFAULT_VALUE, то SQL_DESC_DATA_PTR для этого столбца должен быть равен null. В противном случае SQLExecute или SQLExecDirect возвратит SQL_ERROR. Будет создана диагностическая запись с параметром SQLSTATE = 07S01 и сообщением "Недопустимое использование параметра по \<умолчанию для параметра p \<>, столбец c> \<", где p> — это \<порядковый номер параметра, а в> — порядковый номер столбца.  
+ Если для столбца, возвращающего табличное значение параметра, установлен атрибут SQL_CA_SS_COL_HAS_DEFAULT_VALUE, то SQL_DESC_DATA_PTR для этого столбца должен быть равен null. В противном случае SQLExecute или SQLExecDirect возвратит SQL_ERROR. Будет создана диагностическая запись с параметром SQLSTATE = 07S01 и сообщением "Недопустимое использование параметра по умолчанию для параметра \< p>, столбец \< c>", где \< p> — это порядковый номер параметра, а \< в> — порядковый номер столбца.  
   
 ## <a name="see-also"></a>См. также  
  [Возвращающие табличное значение параметры &#40;ODBC&#41;](table-valued-parameters-odbc.md)  

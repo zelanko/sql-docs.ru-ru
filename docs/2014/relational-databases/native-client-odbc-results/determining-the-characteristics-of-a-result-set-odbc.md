@@ -15,20 +15,20 @@ helpviewer_keywords:
 - SQLColAttribute function
 - SQLNumResultCols function
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ba96d6312710f16f70b296dcb17bc3d5f226ff19
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b93a0386c921a863e310e99164d654c7d84e357b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200203"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699343"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>Определение характеристик результирующего набора (ODBC)
   Метаданные — это данные, описывающие другие данные. Например, метаданные результирующего набора описывают такие характеристики результирующего набора, как количество столбцов, типы данных в этих столбцах, их имена, точность и допустимость значений NULL.  
   
- ODBC сообщает метаданные приложениям с помощью функций каталога API-интерфейса. Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента реализует многие функции каталога API ODBC в качестве вызовов к соответствующей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] процедуре каталога.  
+ ODBC сообщает метаданные приложениям с помощью функций каталога API-интерфейса. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента реализует многие функции каталога API ODBC в качестве вызовов к соответствующей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] процедуре каталога.  
   
  Метаданные требуются приложениям для большинства операций с результирующими наборами. Например, приложение использует тип данных столбца, чтобы определить, какую переменную привязывать к этому столбцу. Оно использует длину в байтах столбцов с символьными значениями, чтоб определить, сколько места потребуется для отображения данных из этого столбца. Способ определения метаданных для столбца зависит от типа приложения.  
   

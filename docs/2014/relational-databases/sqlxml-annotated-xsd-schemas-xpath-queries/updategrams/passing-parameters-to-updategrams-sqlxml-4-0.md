@@ -13,15 +13,15 @@ helpviewer_keywords:
 - updategrams [SQLXML], passing parameters
 - null values [SQLXML]
 ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 92238e27c364c8f09721a55d00c750022b53a18f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea22b1c0bc435006e05fde02043ca9f44a8ca681
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014724"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703024"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Передача параметров для диаграмм обновления (SQLXML 4.0)
   Диаграммы обновления представляют собой шаблоны; следовательно, им можно передавать параметры. Дополнительные сведения о передаче параметров в шаблоны см. в разделе [Диаграмма обновления Security соображения &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "66014724"
   
 -   В примерах используется сопоставление по умолчанию (т. е. в диаграмме обновления не задана схема сопоставления). Дополнительные примеры диаграмм обновления, в которых используются схемы сопоставления, см. [в разделе Указание схемы сопоставления с заметками в диаграмма обновления &#40;SQLXML 4,0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
-### <a name="a-passing-parameters-to-an-updategram"></a>А) Передача параметров диаграмме обновления  
+### <a name="a-passing-parameters-to-an-updategram"></a>A. Передача параметров диаграмме обновления  
  В данном примере диаграмма обновления применяется для изменения фамилии сотрудника в таблице HumanResources.Shift. Диаграмма обновления передается два параметра: Шифтид, который используется для уникальной идентификации сдвига и имени.  
   
 ```  
@@ -62,7 +62,7 @@ ms.locfileid: "66014724"
   
 1.  Скопируйте приведенную выше диаграмму обновления в блокнот и сохраните как файл с именем UpdategramWithParameters.xml.  
   
-2.  Подготовка тестового скрипта SQLXML 4,0 (Sqlxml4test. vbs) в [с помощью ADO для выполнения запросов SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) для выполнения диаграмма обновления путем добавления следующих строк после `cmd.Properties("Output Stream").Value = outStream`:  
+2.  Подготовка тестового скрипта SQLXML 4,0 (Sqlxml4test. vbs) в [с помощью ADO для выполнения запросов SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) для выполнения диаграмма обновления путем добавления следующих строк после `cmd.Properties("Output Stream").Value = outStream` :  
   
     ```  
     cmd.NamedParameters = True  
@@ -71,7 +71,7 @@ ms.locfileid: "66014724"
     cmd.Parameters.Append cmd.CreateParameter("@Name",   200, 1, 50, "New Name")  
     ```  
   
-### <a name="b-passing-null-as-a-parameter-value-to-an-updategram"></a>Б) Передача NULL в качестве значения параметра для диаграммы обновления  
+### <a name="b-passing-null-as-a-parameter-value-to-an-updategram"></a>Б. Передача NULL в качестве значения параметра для диаграммы обновления  
  При выполнении диаграммы обновления тому параметру, для которого нужно задать значение NULL, присваивается значение «isnull». Диаграмма обновления преобразовывает значение параметра «isnull» в NULL и обрабатывает соответствующим образом.  
   
  Следующая диаграмма обновления устанавливает значение NULL для названия должности сотрудника.  
@@ -97,7 +97,7 @@ ms.locfileid: "66014724"
   
 1.  Скопируйте приведенную выше диаграмму обновления в блокнот и сохраните как файл с именем UpdategramPassingNullvalues.xml.  
   
-2.  Подготовка тестового скрипта SQLXML 4,0 (Sqlxml4test. vbs) в [с помощью ADO для выполнения запросов SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) для выполнения диаграмма обновления путем добавления следующих строк после `cmd.Properties("Output Stream").Value = outStream`:  
+2.  Подготовка тестового скрипта SQLXML 4,0 (Sqlxml4test. vbs) в [с помощью ADO для выполнения запросов SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) для выполнения диаграмма обновления путем добавления следующих строк после `cmd.Properties("Output Stream").Value = outStream` :  
   
     ```  
     cmd.NamedParameters = True  

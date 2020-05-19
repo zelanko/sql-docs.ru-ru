@@ -15,15 +15,15 @@ helpviewer_keywords:
 - inline XSD schema generation [SQL Server]
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9b6c8233b95f3f95235bb4f618358d4680d3088f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c390e7878e6f7d5d883c1188f87b6c66f915a26
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287480"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702688"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Создание встроенных схем XSD
   В предложении FOR XML можно запросить, чтобы запрос возвращал встроенную схему вместе с результатами запроса. Если нужно получить XDR-схему, то в предложении FOR XML следует использовать ключевое слово XMLDATA. Если нужно получить XSD-схему, то тогда следует использовать ключевое слово XMLSCHEMA.  

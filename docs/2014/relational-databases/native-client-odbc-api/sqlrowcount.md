@@ -11,24 +11,24 @@ topic_type:
 helpviewer_keywords:
 - SQLRowCount function
 ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4ff2a744f68cf6152330179eb8dcab1f33911914
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: adc8dbc8083ec1de98951db618dabad8a145d7d6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046609"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702186"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
-  Если массивы значений параметров привязаны к выполнению инструкции `SQLRowCount` , функция возвращает SQL_ERROR, если любая строка значений параметра создает условие ошибки при выполнении инструкции. Через аргумент *RowCountPtr* функции значение возвращено не будет.  
+  Если массивы значений параметров привязаны к выполнению инструкции, функция `SQLRowCount` возвращает SQL_ERROR, если любая строка значений параметра создает условие ошибки при выполнении инструкции. Через аргумент *RowCountPtr* функции значение возвращено не будет.  
   
  Приложение может воспользоваться атрибутом инструкции SQL_ATTR_PARAMS_PROCESSED_PTR для получения количества параметров, обработанных до возникновения ошибки.  
   
  Кроме этого, приложение может использовать массив значений состояния, привязанный с помощью атрибута инструкции SQL_ATTR_PARAM_STATUS_PTR, для получения массива смещений вызвавших ошибку строк параметров. Чтобы выяснить действительное число обработанных строк, приложение может просмотреть этот массив.  
   
- При выполнении [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции INSERT, Update, DELETE или MERGE с предложением OUTPUT SQLRowCount не возвращает количество строк, затронутых до тех пор, пока не будут потреблены все строки результирующего набора, сформированного предложением OUTPUT. Чтобы сконсуме эти строки, вызовите SQLFetch или SQLFetchScroll. Склресултколс возвращает значение-1, пока не будут использованы все строки результатов. После того как SQLFetch или SQLFetchScroll возвращает SQL_NO_DATA, приложение должно вызвать SQLRowCount, чтобы определить число затронутых строк перед вызовом SQLMoreResults для перехода к следующему результату.  
+ При [!INCLUDE[tsql](../../includes/tsql-md.md)] выполнении инструкции INSERT, Update, DELETE или MERGE с предложением OUTPUT SQLRowCount не возвращает количество строк, затронутых до тех пор, пока не будут потреблены все строки результирующего набора, сформированного предложением OUTPUT. Чтобы сконсуме эти строки, вызовите SQLFetch или SQLFetchScroll. Склресултколс возвращает значение-1, пока не будут использованы все строки результатов. После того как SQLFetch или SQLFetchScroll возвращает SQL_NO_DATA, приложение должно вызвать SQLRowCount, чтобы определить число затронутых строк перед вызовом SQLMoreResults для перехода к следующему результату.  
   
 ## <a name="see-also"></a>См. также  
  [Функция SQLRowCount](https://go.microsoft.com/fwlink/?LinkId=59367)   

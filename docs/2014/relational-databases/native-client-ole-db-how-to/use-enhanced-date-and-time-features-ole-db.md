@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b614db01d4128ec30d6d52260a781fffd69e8c8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70477e5fc741949a42aa5eebfd7a1d0a2b3568b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68207021"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82696227"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Использование улучшенных функций даты и времени (OLE DB)
-  В этом образце показывается, как использовать функции даты-времени, представленные в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. В образце используются четыре новых типа даты и времени (`date`, **время**, `datetime2`и `datetimeoffset`) для выполнения команд с параметрами и получения результатов набора строк.  
+  В этом образце показывается, как использовать функции даты-времени, представленные в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. В образце используются четыре новых типа даты и времени ( `date` , **время**, `datetime2` и `datetimeoffset` ) для выполнения команд с параметрами и получения результатов набора строк.  
   
  Образцу требуется образец базы данных AdventureWorks, который можно загрузить с домашней страницы [Образцы кода и проекты сообщества Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) (возможно, на английском языке).  
   
