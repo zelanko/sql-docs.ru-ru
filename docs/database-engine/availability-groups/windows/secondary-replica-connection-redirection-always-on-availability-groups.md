@@ -52,7 +52,7 @@ ms.locfileid: "77256667"
 
 Чтобы настроить перенаправление подключения с правами на чтение и запись, задайте `READ_WRITE_ROUTING_URL` для первичной реплики при создании группы доступности. 
 
-В [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] в спецификацию `READ_WRITE_ROUTING_URL` был добавлен параметр `<add_replica_option>`. См. следующие статьи: 
+В [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] в спецификацию `<add_replica_option>` был добавлен параметр `READ_WRITE_ROUTING_URL`. См. следующие статьи: 
 
 * [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
