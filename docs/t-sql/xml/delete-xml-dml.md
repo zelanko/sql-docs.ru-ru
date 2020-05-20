@@ -111,7 +111,7 @@ FROM T
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   Чтобы указать ключевое слово [delete](../../t-sql/xml/modify-method-xml-data-type.md) языка XML DML, используется **метод modify() (тип данных xml)** .  
+-   Чтобы указать ключевое слово **delete** языка XML DML, используется [метод modify() (тип данных xml)](../../t-sql/xml/modify-method-xml-data-type.md).  
   
 -   Для запроса документа используется [метод query() (тип данных xml)](../../t-sql/xml/query-method-xml-data-type.md).  
   
