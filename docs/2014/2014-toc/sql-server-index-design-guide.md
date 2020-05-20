@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe493927d269c092e775970b3089550203271f0e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68475976"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000514"
 ---
 # <a name="sql-server-index-design-guide"></a>Руководство по проектированию индексов SQL Server
 
   Плохо спроектированные индексы и их недостаточное количество — основной источник узких мест в приложениях баз данных. Проектирование эффективных индексов имеет первостепенную важность для достижения высокой производительности баз данных и приложений. Это руководство по проектированию индексов SQL Server содержит сведения и рекомендации, руководствуясь которыми вы сможете создавать эффективные индексы, удовлетворяющие потребностям ваших приложений.  
   
-**Применимо к** [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] : [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , если не указано иное.  
+**Применимо к:,** [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] если не указано иное.  
   
  Предполагается, что читатель обладает общими знаниями типов индексов, которые есть в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Общее описание типов индексов приведено в разделе [Типы индексов](../relational-databases/indexes/indexes.md).  
   
@@ -267,7 +267,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   столбцов, которые подвергаются частым изменениям;  
   
-     Изменения вызывают перемещение целых строк, потому что компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] должен сохранять значения данных строки в физическом порядке. Это важно при работе в крупномасштабных системах обработки транзакций, в которых данные обычно быстро меняются.  
+     Это приводит к тому, что вся строка перемещается, поскольку параметр [!INCLUDE[ssDE](../includes/ssde-md.md)] должен удержать значения данных строки в физическом порядке. Это важно при работе в крупномасштабных системах обработки транзакций, в которых данные обычно быстро меняются.  
   
 -   широких ключей.  
   
@@ -471,7 +471,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Создание ограничений PRIMARY KEY или UNIQUE автоматически создает уникальный индекс для заданных столбцов. Между созданием ограничения UNIQUE и созданием уникального индекса независимо от ограничения больших различий нет. Проверка данных происходит подобным же образом, и оптимизатор запросов не делает различия между уникальным индексом, который создан ограничением, и индексом, созданным вручную. Однако на столбцы, для которых важна целостность данных, следует накладывать ограничение UNIQUE или PRIMARY KEY. Тогда цель создания индекса будет ясна.  
   
-### <a name="considerations"></a>Рекомендации  
+### <a name="considerations"></a>Особенности  
   
 -   Уникальный индекс и ограничения UNIQUE и PRIMARY KEY не могут быть созданы, если дублирующиеся значения уже существуют.  
   
@@ -628,10 +628,10 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  ![Значок стрелки, используемый в ссылке "назад на начало](media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") " [в этом пошаговом окне](#Top)  
   
-##  <a name="additional-reading"></a><a name="Additional_Reading"></a>Дополнительные материалы  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Дополнительные материалы  
 
  [Повышение производительности с помощью индексированных представлений SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
- [Секционированные таблицы и индексы](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+ [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

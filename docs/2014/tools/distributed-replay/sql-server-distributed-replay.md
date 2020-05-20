@@ -13,12 +13,12 @@ ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 583af6e77d699c88e7712ac03053467138bd5a5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 021e37ee7efb8d525cdbc16d2f7b1111045ea7a6
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177354"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925048"
 ---
 # <a name="sql-server-distributed-replay"></a>Распределенное воспроизведение SQL Server
   Функция распределенного воспроизведения [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет оценить влияние будущих обновлений [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ее также можно использовать для оценки влияния обновления аппаратной части и операционной системы, а также для настройки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
@@ -47,7 +47,7 @@ ms.locfileid: "78177354"
 ## <a name="distributed-replay-concepts"></a>Основные понятия распределенного воспроизведения
  Среда распределенного воспроизведения включает следующие компоненты.
 
--   **Средство администрирования распределенное воспроизведение**: консольное приложение `DReplay.exe`, используемое для взаимодействия с контроллером распределенного воспроизведения. Используйте средство администрирования для управления распределенным воспроизведением.
+-   **Средство администрирования распределенное воспроизведение**: консольное приложение, `DReplay.exe` используемое для взаимодействия с контроллером распределенного воспроизведения. Используйте средство администрирования для управления распределенным воспроизведением.
 
 -   **Контроллер распределенного воспроизведения**. Компьютер, на котором выполняется служба Windows контроллера распределенного воспроизведения [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Контроллер распределенного воспроизведения управляет согласованными действиями клиентов распределенного воспроизведения. В каждой среде распределенного воспроизведения можно установить только один экземпляр контроллера.
 
@@ -72,6 +72,6 @@ ms.locfileid: "78177354"
 |Описывает, как при помощи средства администрирования можно инициировать операции на контроллере, наблюдать за ними и отменять их.|[Параметры командной строки средства администрирования (программа распределенного воспроизведения)](administration-tool-command-line-options-distributed-replay-utility.md)|
 
 ## <a name="see-also"></a>См. также:
- [SQL Server распределенное воспроизведение форуме](https://social.technet.microsoft.com/Forums/sl/sqldru/) [Использование распределенное воспроизведение для нагрузочного тестирования SQL Server. часть 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx) . [Использование распределенное воспроизведение для нагрузочного тестирования SQL Server. часть 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)
+ [SQL Server распределенное воспроизведение форуме](https://social.technet.microsoft.com/Forums/sl/sqldru/) [Использование распределенное воспроизведение для нагрузочного тестирования SQL Server. часть 2](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2) . [Использование распределенное воспроизведение для нагрузочного тестирования SQL Server. часть 1](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)
 
 

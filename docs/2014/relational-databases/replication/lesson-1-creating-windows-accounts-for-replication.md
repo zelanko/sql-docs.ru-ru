@@ -10,23 +10,23 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 - replication [SQL Server], administering
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f11321b20c4238fdf9b3376d79edcb12c0e9204b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721158"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000474"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Занятие 1. Создание учетных записей Windows для репликации
   На этом занятии будут созданы учетные записи Windows для запуска агентов репликации. На локальном сервере будут созданы отдельные учетные записи Windows для следующих агентов:  
   
 |Агент|Расположение|Имя учетной записи|  
 |-----------|--------------|------------------|  
-|агент моментальных снимков|Издатель|\<*machine_name*> \ repl_snapshot|  
-|Агент чтения журнала.|Издатель|\<*machine_name*> \ repl_logreader|  
+|агент моментальных снимков|Publisher|\<*machine_name*> \ repl_snapshot|  
+|Агент чтения журнала.|Publisher|\<*machine_name*> \ repl_logreader|  
 |Агент распространителя|Издатель и подписчик|\<*machine_name*> \ repl_distribution|  
 |Агент слияния.|Издатель и подписчик|\<*machine_name*> \ repl_merge|  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62721158"
   
 6.  Нажмите кнопку **Закрыть**.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Создание учетных записей Windows для агентов репликации успешно выполнено. Далее предстоит настроить папку моментальных снимков. См. раздел [Занятие 2. Подготовка папки моментальных снимков](lesson-2-preparing-the-snapshot-folder.md).  
   
 ## <a name="see-also"></a>См. также  

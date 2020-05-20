@@ -14,12 +14,12 @@ ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6cd3384f94139698fd04f4d5dcefdeab763c872b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5041882c3eadb4e7f6f28a118e45c6e42f13cea6
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175446"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924919"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>Поиск и устранение неисправностей конфигурации групп доступности AlwaysOn (SQL Server)
   Этот раздел содержит сведения об устранении типичных проблем, возникающих при настройке экземпляров сервера для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Примеры типичных проблем настройки: [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] отключен, учетные записи настроены неправильно, конечная точка зеркального отображения баз данных не существует, конечная точка недоступна (ошибка SQL Server 1418), отсутствует сетевой доступ, команда присоединения базы данных завершается с ошибкой (ошибка SQL Server 35250).
@@ -29,7 +29,7 @@ ms.locfileid: "78175446"
 
  **В этом разделе:**
 
-|Раздел|Описание|
+|Section|Описание|
 |-------------|-----------------|
 |[Функция групп доступности AlwaysOn не включена](#IsHadrEnabled)|Если экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не включен для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], то экземпляр не поддерживает создание групп доступности и на нем не могут размещаться реплики доступности.|
 |[Учетные записи](#Accounts)|Обсуждаются требования к правильной настройке учетных записей, под которыми работает [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|
@@ -56,7 +56,7 @@ ms.locfileid: "78175446"
 
 2.  Если [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполняется как встроенная учетная запись, например как учетная запись локальной системы, локальной службы, сетевой службы или как недоменная учетная запись, для проверки подлинности конечных точек следует использовать сертификаты. Если учетные записи служб используют учетные записи доменов в одном домене, вы можете предоставить доступ CONNECT для каждой учетной записи службы на всех расположениях реплики либо воспользоваться сертификатами. Дополнительные сведения см. в разделе [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).
 
-##  <a name="endpoints"></a><a name="Endpoints"></a>Конеч
+##  <a name="endpoints"></a><a name="Endpoints"></a> Конечные точки
  Конечные точки должны быть правильно настроены.
 
 1.  Убедитесь, что каждый экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором планируется размещать реплику доступности (каждое *расположение реплики*), имеет конечную точку зеркального отображения баз данных. Чтобы определить, существует ли конечная точка зеркального отображения баз данных на данном экземпляре сервера, воспользуйтесь представлением каталога [sys.database_mirroring_endpoints](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql). Дополнительные сведения см. в статье [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) или [Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).
@@ -121,7 +121,7 @@ ms.locfileid: "78175446"
 ##  <a name="join-database-fails-sql-server-error-35250"></a><a name="JoinDbFails"></a> Ошибка присоединения базы данных (ошибка SQL Server 35250)
  В этом разделе обсуждаются возможные причины и способы устранения проблемы с присоединением баз данных-получателей к группе доступности, вызванные тем, что соединение с первичной репликой неактивно.
 
- **Решение.**
+ **Решение:**
 
 1.  Проверьте настройку брандмауэра: разрешена ли связь для портов конечных точек между экземплярами серверов, на которых размещаются первичная и вторичная реплика (по умолчанию порт 5022).
 
@@ -136,7 +136,7 @@ ms.locfileid: "78175446"
 |![Установка](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Текущая первичная реплика|Убедитесь, что параметр READ_ONLY_ROUTING_LIST содержит только экземпляры сервера, где размещена вторичная реплика.|**Определение доступных для чтения вторичных реплик:** sys.availability_replicas (столбец**secondary_role_allow_connections_desc** )<br /><br /> **Просмотр списка маршрутизации только для чтения:** sys.availability_read_only_routing_lists<br /><br /> **Изменение списка маршрутизации только для чтения:** ALTER AVAILABILITY GROUP|[sys.availability_replicas (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [sys.availability_read_only_routing_lists (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)|
 |![Установка](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Каждая реплика в списке read_only_routing_list|Убедитесь, что брандмауэр Windows не блокирует порт READ_ONLY_ROUTING_URL.|-|[Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|
 |![Установка](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Каждая реплика в списке read_only_routing_list|В диспетчере конфигурации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] убедитесь в следующем.<br /><br /> Удаленное соединение с SQL Server включено.<br /><br /> TCP/IP включен.<br /><br /> IP-адреса настроены правильно.|-|[Просмотр или изменение свойств сервера (SQL Server)](../../configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Настройка сервера для прослушивания указанного TCP-порта (диспетчер конфигурации SQL Server)](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|
-|![Установка](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Каждая реплика в списке read_only_routing_list|Убедитесь, что READ_ONLY_ROUTING_URL (TCP<strong>://*`system-address`*:</strong>*порт*) содержит правильное полное доменное имя (FQDN) и номер порта.|-|[Вычисление для AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)|
+|![Установка](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Каждая реплика в списке read_only_routing_list|Убедитесь, что READ_ONLY_ROUTING_URL (TCP<strong>:// *`system-address`* :</strong>*порт*) содержит правильное полное доменное имя (FQDN) и номер порта.|-|[Вычисление для AlwaysOn](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)<br /><br /> [sys.availability_replicas (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)|
 |![Установка](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Система клиента|Убедитесь, что драйвер клиента поддерживает маршрутизацию только для чтения.|-|[Подключение клиента AlwaysOn (SQL Server)](always-on-client-connectivity-sql-server.md)|
 
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи
@@ -163,7 +163,7 @@ ms.locfileid: "78175446"
 
 -   [Блог группы разработчиков SQL Server AlwaysOn: официальный блог группы разработчиков SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Безопасность транспорта для зеркального отображения базы данных и группы доступности AlwaysOn &#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md) требования к [конфигурации сети клиента](../../configure-windows/client-network-configuration.md) [, ограничения и рекомендации для группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)
 
 

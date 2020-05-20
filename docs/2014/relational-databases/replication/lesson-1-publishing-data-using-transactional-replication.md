@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18236ec3ca5a62cd45a2cf7cdd3d56b5cea79063
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721091"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000461"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Урок 1. Публикация данных с помощью репликации транзакций
    На этом занятии с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] создается публикация транзакций с целью публикации фильтрованного подмножества таблицы **Product** из образца базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Также в список доступа к публикации (PAL) добавляется имя входа SQL Server, используемое агентом распространителя. Перед началом работы с этим учебником необходимо завершить работу с предыдущим учебником, [Подготовка сервера к репликации](tutorial-preparing-the-server-for-replication.md).  
@@ -78,7 +78,7 @@ ms.locfileid: "62721091"
   
 4.  В диалоговом окне **Добавление доступа к публикации** выберите _<Имя_компьютера>_**\repl_distribution** и нажмите кнопку **ОК**. Нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Публикация транзакций успешно создана. Далее будет создана подписка на эту публикацию. См. [Занятие 2. Создание подписки на публикацию транзакций](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
 ## <a name="see-also"></a>См. также  

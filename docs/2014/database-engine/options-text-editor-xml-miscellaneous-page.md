@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51ad78c95881daacebcb3f2b7999a299cd4ebd7d
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089208"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000594"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Параметры ("Текстовый редактор" — "XML" — страница "Разное")
 
@@ -25,7 +25,7 @@ ms.locfileid: "66089208"
  **Закрывать теги**  
  Текстовый редактор добавляет завершающие теги при составлении элементов XML. Когда выбран начальный тег, редактор вставляет соответствующий завершающий тег, включая соответствующий префикс пространства имен. Этот флажок выбран по умолчанию.  
   
- **Кавычки атрибутов**  
+ **Кавычки для атрибутов**  
  При составлении XML-атрибутов редактор вставляет символы `="``"` и устанавливает курсор (**^)** внутри них. Этот флажок выбран по умолчанию.  
   
  **Объявления пространств имен**  
@@ -44,4 +44,4 @@ ms.locfileid: "66089208"
   
 ## <a name="caching"></a>Caching  
  **Схемы**  
- Определяет местоположение кэша схемы. Кнопка обзора (...) открывает текущее расположение кэша схемы в новом окне. Расположение по умолчанию — * \<Management Studio каталог установки>* \Xml\Schemas.  
+ Определяет местоположение кэша схемы. Кнопка обзора (...) открывает текущее расположение кэша схемы в новом окне. Расположение по умолчанию — * \< Management Studio каталог установки>* \Xml\Schemas.  

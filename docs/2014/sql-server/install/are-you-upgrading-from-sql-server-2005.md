@@ -10,12 +10,12 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2db6a47de02b49397847dc9d713277ffcb152156
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: feed59c01a9fe77c226164c6b5b5df5caf0c77c1
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656581"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922162"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>Вы выполняете обновление с версии SQL Server 2005?
   Окончание расширенной поддержки для SQL Server 2005 — еще одна причина выполнить обновление до более новой версии SQL Server и базы данных SQL Azure. Обновление позволяет обеспечить безопасность и соответствие требованиям, достичь высокой производительности и оптимизировать инфраструктуру платформы данных.  
@@ -57,11 +57,11 @@ ms.locfileid: "75656581"
   
 -   Ознакомьтесь с рядом сообщений о планировании обновления в блоге группы разработчиков SQL Server.  
   
-    -   [Планирование эффективного обновления SQL Server 2005: шаг 1 из 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
+    -   [Планирование эффективного обновления SQL Server 2005: шаг 1 из 3](https://cloudblogs.microsoft.com/sqlserver/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3/)  
   
-    -   [Планирование эффективного обновления SQL Server 2005: шаг 2 из 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
+    -   [Планирование эффективного обновления SQL Server 2005: шаг 2 из 3](https://cloudblogs.microsoft.com/sqlserver/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3/)  
   
-    -   [Планирование эффективного обновления SQL Server 2005: шаг 3 из 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
+    -   [Планирование эффективного обновления SQL Server 2005: шаг 3 из 3](https://cloudblogs.microsoft.com/sqlserver/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3/)  
   
 -   Ознакомьтесь с требованиями и замечаниями в разделе [Планирование установки SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md), включая [требования к оборудованию и программному обеспечению для установки SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
   
@@ -79,7 +79,7 @@ ms.locfileid: "75656581"
 ## <a name="get-sql-server-2014"></a>Получить SQL Server 2014  
  Чтобы скачать ознакомительную копию SQL Server 2014, [щелкните здесь](https://www.microsoft.com/evalcenter/evaluate-sql-server-2014).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server 2014](https://docs.microsoft.com/sql/getting-started/getting-started-sql-server-2014)   
  [SQL Server 2005. Окончание поддержки](https://www.microsoft.com/sql-server/sql-server-2005)   
  [Обновление с SQL Server 2005 до SQL Server 2016](https://msdn.microsoft.com/library/mt168847.aspx)  

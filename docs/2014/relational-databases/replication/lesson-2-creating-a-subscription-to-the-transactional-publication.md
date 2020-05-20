@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9dc9824efb3f962d97f786835fa2367be18b55f7
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721085"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000418"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Занятие 2. Создание подписки на публикацию транзакций
   На этом занятии с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]будет создана подписка. Приступать к этому занятию нужно только по завершении предыдущего: [Занятие 1. Публикация данных с помощью репликации транзакций](lesson-1-publishing-data-using-transactional-replication.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "62721085"
   
 5.  Если имя экземпляра подписчика не отображается, на странице «Подписчики» нажмите кнопку **Добавить подписчик**, выберите **Добавить подписчик SQL Server**, в диалоговом окне **Соединение с сервером** введите имя экземпляра подписчика, затем нажмите кнопку **Соединить**.  
   
-6.  На странице Подписчики выберите имя экземпляра сервера подписчика и выберите ** \<создать базу данных>** в разделе **база данных подписки**.  
+6.  На странице Подписчики выберите имя экземпляра сервера подписчика и выберите ** \< создать базу данных>** в разделе **база данных подписки**.  
   
 7.  В диалоговом окне **Создание базы данных** в поле **Имя базы данных** введите **ProductReplica** , нажмите кнопку **ОК**, затем **Далее**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62721085"
   
 3.  Если подписка не отображается под публикацией **AdvWorksProductTrans**, нажмите клавишу F5 для обновления списка.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Создание подписки на публикацию транзакций успешно завершено. Ввиду того, что агент распространителя для этой подписки постоянно запущен, подписка инициализируется при создании. Далее необходимо использовать трассировочные токены, чтобы проверить выполнение репликации изменений и определить задержку. См. раздел [Lesson 3: Validating the Subscription and Measuring Latency](lesson-3-validating-the-subscription-and-measuring-latency.md).  
   
 ## <a name="see-also"></a>См. также  

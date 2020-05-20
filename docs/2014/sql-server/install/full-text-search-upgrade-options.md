@@ -10,15 +10,15 @@ f1_keywords:
 - Full-Text Search
 - Upgrade options, Full-Text Search
 ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 575105d61446f2fd272e4087457e7762c1abb2e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce419321dc3201c4db8d103e1d256e14168c6ec8
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095087"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000219"
 ---
 # <a name="full-text-search-upgrade-options"></a>Режимы обновления полнотекстового поиска
   Используйте страницу «Режимы обновления полнотекстового поиска» мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выбора параметра обновления полнотекстового поиска, который будет использоваться в базах данных, которые обновляются в данный момент.  
@@ -38,7 +38,7 @@ ms.locfileid: "66095087"
   
  Дополнительные сведения о влиянии импорта полнотекстового индекса см. в подразделе «Замечания по выбору режима полнотекстового обновления» далее в этом разделе.  
   
- **Создать**  
+ **Перестроение**  
  Полнотекстовые каталоги перестраиваются с помощью новых и улучшенных средств разбиения по словам. Перестроение индексов может занять длительное время, а после обновления может потребоваться значительный объем ресурсов ЦП и памяти.  
   
  **Сбросить**  

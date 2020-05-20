@@ -12,18 +12,18 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Command Line
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62626e8a9f3cfe5bf9272378b26e3bb0ab2f6b1a
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056617"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925358"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Запуск Помощник по миграции данных из командной строки
 
-В версии 2,1 и выше при установке Помощник по миграции данных также будет установлен дмакмд. exe в *% ProgramFiles%\\\\помощник по миграции данных (Майкрософт)*. Используйте дмакмд. exe для оценки баз данных в автоматическом режиме и вывода результата в JSON-или CSV-файл. Этот метод особенно полезен при оценке нескольких баз данных или огромных баз данных. 
+В версии 2,1 и выше при установке Помощник по миграции данных также будет установлен дмакмд. exe в *% ProgramFiles% \\ Помощник по миграции данных (Майкрософт) \\ *. Используйте дмакмд. exe для оценки баз данных в автоматическом режиме и вывода результата в JSON-или CSV-файл. Этот метод особенно полезен при оценке нескольких баз данных или огромных баз данных. 
 
 > [!NOTE]
 > Дмакмд. exe поддерживает только выполнение оценок. В настоящее время миграция не поддерживается.
@@ -42,22 +42,31 @@ DmaCmd.exe /AssessmentName="string"
 
 |Аргумент  |Описание  | Обязательный (Y/N)
 |---------|---------|---------------|
-| `/help or /?`     | Использование текста справки дмакмд. exe        | Нет
+| `/help or /?`     | Использование текста справки дмакмд. exe        | N
 |`/AssessmentName`     |   Имя проекта оценки   | Да
 |`/AssessmentDatabases`     | Разделенный пробелами список строк подключения. Имя базы данных (начальный каталог) учитывает регистр. | Да
-|`/AssessmentSourcePlatform`     | Исходная платформа для оценки: <br>Поддерживаемые значения для оценки: Склонпрем, Рдссклсервер (по умолчанию) <br>Поддерживаемые значения для оценки готовности к оценке: Склонпрем, Рдссклсервер (по умолчанию), Cassandra (Предварительная версия)   | Нет
-|`/AssessmentTargetPlatform`     | Целевая платформа для оценки:  <br> Поддерживаемые значения для оценки: AzureSqlDatabase, Манажедсклсервер, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 и SqlServerWindows2017 (по умолчанию)  <br> Поддерживаемые значения для оценки готовности к оценке: Манажедсклсервер (по умолчанию), CosmosDB (Предварительная версия)   | Нет
-|`/AssessmentEvaluateFeatureParity`  | Выполнение правил четности для компонентов. Если исходная платформа — Рдссклсервер, оценка четности для компонентов не поддерживается для целевой платформы AzureSqlDatabase  | Нет
+|`/AssessmentSourcePlatform`     | Исходная платформа для оценки: <br>Поддерживаемые значения для оценки: Склонпрем, Рдссклсервер (по умолчанию) <br>Поддерживаемые значения для оценки готовности к оценке: Склонпрем, Рдссклсервер (по умолчанию), Cassandra (Предварительная версия)   | N
+|`/AssessmentTargetPlatform`     | Целевая платформа для оценки:  <br> Поддерживаемые значения для оценки: AzureSqlDatabase, Манажедсклсервер, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 и SqlServerWindows2017 (по умолчанию)  <br> Поддерживаемые значения для оценки готовности к оценке: Манажедсклсервер (по умолчанию), CosmosDB (Предварительная версия)   | N
+|`/AssessmentEvaluateFeatureParity`  | Выполнение правил четности для компонентов. Если исходная платформа — Рдссклсервер, оценка четности для компонентов не поддерживается для целевой платформы AzureSqlDatabase  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | Запуск правил совместимости  | Да <br> (Требуется либо Ассессментевалуатекомпатибилитиссуес, либо Ассессментевалуатерекоммендатионс.)
 |`/AssessmentEvaluateRecommendations`     | Запуск рекомендаций по функциям        | Да <br> (Требуется либо Ассессментевалуатекомпатибилитиссуес, либо Ассессментевалуатерекоммендатионс)
-|`/AssessmentOverwriteResult`     | Перезаписать файл результатов    | Нет
+|`/AssessmentOverwriteResult`     | Перезаписать файл результатов    | N
 |`/AssessmentResultJson`     | Полный путь к файлу результатов JSON     | Да <br> (Требуется либо Ассессментресултжсон, либо Ассессментресултксв)
 |`/AssessmentResultCsv`    | Полный путь к файлу результатов CSV   | Да <br> (Требуется либо Ассессментресултжсон, либо Ассессментресултксв)
-|`/Action`    | Используйте Скурекоммендатион для получения рекомендаций по SKU, используйте Ассесстаржетреадинесс для оценки готовности к целевой службе.   | Нет
+|`/AssessmentResultDma`    | Полный путь к файлу результатов DMA   | N
+|`/Action`    | Используйте Скурекоммендатион для получения рекомендаций по SKU. <br> Используйте Ассесстаржетреадинесс для оценки готовности к целевой службе. <br> Используйте Азуремигратеуплоад для отправки всех файлов оценки DMA в Аззессментресултинпутфолдер для выполнения групповой отправки в службу "миграция Azure". тип действия "использование"/Action = Азуремигратеуплоад   | N
 |`/SourceConnections`    | Список строк подключения, разделенных пробелами. Имя базы данных (начальный каталог) является необязательным. Если имя базы данных не указано, оцениваются все базы данных в источнике.   | Да <br> (Обязательно, если Action-"Ассесстаржетреадинесс")
 |`/TargetReadinessConfiguration`    | Полный путь к XML-файлу, описывающему значения имени, исходных соединений и файла результатов.   | Да <br> (Требуется либо Таржетреадинессконфигуратион, либо Саурцеконнектионс)
-|`/FeatureDiscoveryReportJson`    | Путь к отчету JSON обнаружения компонентов. Если этот файл создан, его можно использовать для повторного выполнения целевой оценки готовности без подключения к источнику. | Нет
-|`/ImportFeatureDiscoveryReportJson`    | Путь к созданному ранее отчету JSON обнаружения компонентов. Этот файл будет использоваться вместо исходных соединений.   | Нет
+|`/FeatureDiscoveryReportJson`    | Путь к отчету JSON обнаружения компонентов. Если этот файл создан, его можно использовать для повторного выполнения целевой оценки готовности без подключения к источнику. | N
+|`/ImportFeatureDiscoveryReportJson`    | Путь к созданному ранее отчету JSON обнаружения компонентов. Этот файл будет использоваться вместо исходных соединений.   | N
+|`/EnableAssessmentUploadToAzureMigrate`    | Позволяет отправлять и публиковать результаты оценки в службе "миграция Azure"   | N
+|`/AzureCloudEnvironment`    |Выбирает облачную среду Azure для подключения. значение по умолчанию — общедоступное облако Azure. Поддерживаемые значения: Azure (по умолчанию), AzureChina, Азурежермани, AzureUSGovernment.   | N 
+|`/SubscriptionId`    |Идентификатор подписки Azure.   | Да <br> (Требуется, если указан аргумент Енаблеассессментуплоадтоазуремиграте)
+|`/AzureMigrateProjectName`    |Имя проекта службы "миграция Azure" для отправки результатов оценки.   | Да <br> (Требуется, если указан аргумент Енаблеассессментуплоадтоазуремиграте)
+|`/ResourceGroupName`    |Имя группы ресурсов для миграции Azure.   | Да <br> (Требуется, если указан аргумент Енаблеассессментуплоадтоазуремиграте)
+|`/AssessmentResultInputFolder`    |Путь к входной папке, содержащей. Файлы оценки DMA для отправки в службу "миграция Azure".   | Да <br> (Требуется, если действие — Азуремигратеуплоад)
+
+
 
 ## <a name="examples-of-assessments-using-the-cli"></a>Примеры оценок с помощью интерфейса командной строки
 
@@ -208,7 +217,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
-<TargetReadinessConfiguration xmlns="https://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
+<TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
   <AssessmentName>name</AssessmentName>
   <SourcePlatform>Source Platform</SourcePlatform> <!-- Optional. The default is SqlOnPrem -->
   <TargetPlatform>TargetPlatform</TargetPlatform> <!-- Optional. The default is ManagedSqlServer -->
@@ -234,7 +243,40 @@ DmaCmd.exe /Action=AssessTargetReadiness
   <OverwriteResult>true</OverwriteResult><!-- or false -->
 </TargetReadinessConfiguration>
 ```
+**Оценка и передача в службу "миграция Azure" в общедоступном облаке Azure (по умолчанию)**
+```
+DmaCmd.exe
+/Action="Assess" 
+/AssessmentSourcePlatform=SqlOnPrem 
+/AssessmentTargetPlatform=ManagedSqlServer
+/AssessmentEvaluateCompatibilityIssues 
+/AssessmentEvaluateRecommendations 
+/AssessmentEvaluateFeatureParity 
+/AssessmentOverwriteResult 
+/AssessmentName="assess-myDatabase"
+/AssessmentDatabases="Server=myServer;Initial Catalog=myDatabase;Integrated Security=true" 
+/AssessmentResultDma="C:\assessments\results\assess-1.dma"
+/SubscriptionId="Subscription Id" 
+/AzureMigrateProjectName="Azure Migrate project ame" 
+/ResourceGroupName="Resource Group name" 
+/AzureAuthenticationInteractiveAuthentication
+/AzureAuthenticationTenantId="Azure Tenant Id"
+/EnableAssessmentUploadToAzureMigrate
 
+```
+**Пакетная передача файлов оценки DMA в службу "миграция Azure" в общедоступном облаке Azure (по умолчанию)**
+```
+DmaCmd.exe 
+/Action="AzureMigrateUpload" 
+/AssessmentResultInputFolder="C:\assessments\results" 
+/SubscriptionId="subscription Id" 
+/AzureMigrateProjectName="Azure Migrate project name" 
+/ResourceGroupName="Resource Group name" 
+/AzureAuthenticationInteractiveAuthentication
+/AzureAuthenticationTenantId="Azure Tenant Id"
+/EnableAssessmentUploadToAzureMigrate
+
+```
 ## <a name="azure-sql-databasemanaged-instance-sku-recommendations-using-the-cli"></a>Рекомендации по использованию базы данных SQL Azure/SKU управляемого экземпляра с помощью интерфейса командной строки
 
 Эти команды поддерживают рекомендации для развертывания одиночной базы данных SQL Azure и управляемого экземпляра.
@@ -260,7 +302,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 |`/SkuRecommendationOfferName` | Имя предложения (например, MS-AZR-0003P). Дополнительные сведения см. на странице [сведений о предложении Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) . | Да <br> (Для последних цен)
 |`/SkuRecommendationRegionName` | Имя региона (например, "WestUS") | Да <br> (Для последних цен)
 |`/SkuRecommendationSubscriptionId` | Идентификатор подписки. | Да <br> (Для последних цен)
-|`/SkuRecommendationDatabasesToRecommend` | Список баз данных с разделителями-пробелами (например, "Database1" "Database2" "Database3"). В именах учитывается регистр, и их необходимо заключить в двойные кавычки. Если этот параметр опущен, для всех баз данных предоставляются рекомендации. | Нет
+|`/SkuRecommendationDatabasesToRecommend` | Список баз данных с разделителями-пробелами (например, "Database1" "Database2" "Database3"). В именах учитывается регистр, и их необходимо заключить в двойные кавычки. Если этот параметр опущен, для всех баз данных предоставляются рекомендации. | N
 |`/AzureAuthenticationTenantId` | Клиент проверки подлинности. | Да <br> (Для последних цен)
 |`/AzureAuthenticationClientId` | Идентификатор клиента приложения AAD, используемого для проверки подлинности. | Да <br> (Для последних цен)
 |`/AzureAuthenticationInteractiveAuthentication` | Задайте значение true для всплывающего окна. | Да <br> (Для последних цен) <br>(Выберите один из трех параметров проверки подлинности — вариант 1)
@@ -337,6 +379,6 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /SkuRecommendationPreventPriceRefresh=true  
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 - [Помощник по миграции данных](https://aka.ms/get-dma) загрузить.
 - В этой статье [указывается правильный номер SKU базы данных SQL Azure для локальной базы данных](https://aka.ms/dma-sku-recommend-sqldb).

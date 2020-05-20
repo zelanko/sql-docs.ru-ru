@@ -10,15 +10,15 @@ ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ffe6a854e24240c6298dfbf7b4c195d787e07c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5f25a42b54e0ae310c7033a81f75cad75582416
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172093"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925068"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Параметр воспроизведения (средство администрирования распределенного воспроизведения)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Средство `DReplay.exe`администрирования распределенное воспроизведение — это средство командной строки, которое можно использовать для взаимодействия с контроллером распределенного воспроизведения. В этом разделе описываются параметр командной строки **replay** и соответствующий синтаксис.
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Средство администрирования распределенное воспроизведение `DReplay.exe` — это средство командной строки, которое можно использовать для взаимодействия с контроллером распределенного воспроизведения. В этом разделе описываются параметр командной строки **replay** и соответствующий синтаксис.
 
  Параметр **replay** инициирует стадию воспроизведения события, на которой контроллер отправляет данные воспроизведения указанным клиентам, запускает распределенное воспроизведение и синхронизирует клиенты. При необходимости каждый клиент, участвующий в воспроизведении, может записывать последовательность воспроизведения и сохранять получившиеся файлы трассировки в локальном кэше.
 
@@ -50,7 +50,7 @@ ms.locfileid: "78172093"
 
 -   Пути в формате UNC не поддерживаются.
 
- **-o** Захватывает действие воспроизведения клиентов и сохраняет его в результирующий файл трассировки по пути, `<ResultDirectory>` `DReplayClient.xml`указанному в элементе в файле конфигурации клиента.
+ **-o** Захватывает действие воспроизведения клиентов и сохраняет его в результирующий файл трассировки по пути, указанному `<ResultDirectory>` в элементе в файле конфигурации клиента `DReplayClient.xml` .
 
  Если параметр **-o** не указан, результирующий файл трассировки не создается. В конце воспроизведения консоль возвращает сводные данные, но остальная статистика воспроизведения недоступна.
 
@@ -147,7 +147,7 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
 
  Дополнительные сведения см. в статье [Distributed Replay Security](distributed-replay-security.md).
 
-## <a name="see-also"></a>См. также:
- [Воспроизведение данных трассировки](replay-trace-data.md) [проверьте результаты воспроизведения](review-the-replay-results.md) [SQL Server распределенное воспроизведение](sql-server-distributed-replay.md) [настроить](configure-distributed-replay.md) [форум распределенное воспроизведение SQL Server распределенное воспроизведение](https://social.technet.microsoft.com/Forums/sl/sqldru/) [, используя распределенное воспроизведение для нагрузочного тестирования SQL Server. часть 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx) [с помощью распределенное воспроизведение для нагрузочного тестирования SQL Server. часть 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)
+## <a name="see-also"></a>См. также
+ [Воспроизведение данных трассировки](replay-trace-data.md) [проверьте результаты воспроизведения](review-the-replay-results.md) [SQL Server распределенное воспроизведение](sql-server-distributed-replay.md) [настроить](configure-distributed-replay.md) [форум распределенное воспроизведение SQL Server распределенное воспроизведение](https://social.technet.microsoft.com/Forums/sl/sqldru/) [, используя распределенное воспроизведение для нагрузочного тестирования SQL Server. часть 2](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2) [с помощью распределенное воспроизведение для нагрузочного тестирования SQL Server. часть 1](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)
 
 
