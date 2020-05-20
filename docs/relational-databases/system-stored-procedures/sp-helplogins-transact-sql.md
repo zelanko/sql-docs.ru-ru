@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c26bf0ff225a593a6427402fc15543edbfc15637
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122453"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818294"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Имя входа.|  
 |**ТРАНСЛЯЦИЮ**|**varbinary(85)**|Идентификатор защиты имени входа (SID).|  
-|**DefDBName**|**sysname**|База данных по умолчанию, которую использует **LoginName** при соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**DefDBName**|**sysname**|База данных по умолчанию, которую использует **LoginName** при соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**DefLangName**|**sysname**|Язык по умолчанию, используемый в **LoginName**.|  
 |**Auser**|**char (5)**|Yes = **LoginName** имеет связанное имя пользователя в базе данных.<br /><br /> No = **LoginName** не имеет связанного имени пользователя.|  
 |**ARemote**|**char (7)**|Yes = **LoginName** имеет связанное удаленное имя входа.<br /><br /> No = **LoginName** не имеет связанного имени входа.|  
@@ -61,11 +61,11 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Имя входа.|  
-|**DBName**|**sysname**|База данных по умолчанию, которую использует **LoginName** при соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**DBName**|**sysname**|База данных по умолчанию, которую использует **LoginName** при соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Имен**|**sysname**|Учетная запись пользователя, сопоставленная с **LoginName** в параметре **dbname**, а роли, в которые находится **LoginName** , являются членами в параметре **dbname**.|  
 |**UserOrAlias**|**char (8)**|MemberOf = **имя пользователя** является ролью.<br /><br /> Пользователь = **username** является учетной записью пользователя.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Перед удалением имени входа используйте **sp_helplogins** , чтобы указать учетные записи пользователей, сопоставленные с именем входа.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -99,7 +99,7 @@ John        pubs     John       User
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   

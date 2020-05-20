@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0a351eaa746654d26d7f51536a41fc2677a2f67e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cb261fdfb745e935b94fc5c2944640c507674ece
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010563"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816547"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_syscollector_update_collection_set
   
 `[ @days_until_expiration = ] days_until_expiration`Число дней, в течение которых собранные данные сохраняются в хранилище данных управления. *days_until_expiration* имеет **smallint**. *days_until_expiration* должно быть равно 0 или быть положительным целым числом.  
   
-`[ @proxy_id = ] proxy_id`Уникальный идентификатор учетной записи- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] посредника агента. *proxy_id* имеет **тип int**.  
+`[ @proxy_id = ] proxy_id`Уникальный идентификатор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи-посредника агента. *proxy_id* имеет **тип int**.  
   
 `[ @proxy_name = ] 'proxy_name'`Имя прокси-сервера. *proxy_name* имеет тип **sysname** и допускает значение null.  
   
@@ -112,7 +112,7 @@ sp_syscollector_update_collection_set
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Функция sp_syscollector_update_collection_set должна выполняться в контексте системной базы данных msdb.  
   
  Либо *collection_set_id* , либо *имя* должны иметь значение, которое не может быть null. Чтобы получить эти значения, выполните запрос системного представления syscollector_collection_sets.  
@@ -148,7 +148,7 @@ EXECUTE dbo.sp_syscollector_update_collection_set
 GO  
 ```  
   
-### <a name="b-changing-the-collection-mode-from-non-cached-to-cached"></a>Б) Изменение режима сбора с некэшированного на кэшированный  
+### <a name="b-changing-the-collection-mode-from-non-cached-to-cached"></a>Б. Изменение режима сбора с некэшированного на кэшированный  
  В следующем примере режим сбора изменяется с некэшированного на кэшированный. Для этого изменения требуется указать идентификатор или имя расписания.  
   
 ```  
@@ -178,7 +178,7 @@ EXEC dbo.sp_syscollector_update_collection_set
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   

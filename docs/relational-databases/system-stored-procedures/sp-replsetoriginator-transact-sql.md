@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replsetoriginator
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5ca3487a22989261f0d6039f065ae0c102e534a1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5e1f29f06d7a840ed6628ecd4dc193a4f1c54b82
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770868"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82817094"
 ---
 # <a name="sp_replsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** на издателе, члены предопределенной роли базы данных **db_owner** в базе данных публикации или пользователи из списка доступа к публикации (PAL) могут выполнять **sp_replsetoriginator**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

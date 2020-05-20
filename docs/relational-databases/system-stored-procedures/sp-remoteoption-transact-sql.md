@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_remoteoption
 ms.assetid: c9a7309b-eab7-4192-a414-e282581af4e5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 93e65bb7d72b15dcb29763a1c02845b6ff5faa01
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2bbdd0932b38efdb305a592f1e18174e1c39f554
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68215936"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82817494"
 ---
 # <a name="sp_remoteoption-transact-sql"></a>Хранимая процедура sp_remoteoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,12 +45,12 @@ sp_remoteoption [ [ @remoteserver = ] 'remoteserver' ]
      [ , [ @optvalue = ] 'optvalue' ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Эта хранимая процедура возвращает следующее сообщение об ошибке:  
   
  `The trusted option in remote login mapping is no longer supported.`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Связанные серверы (компонент Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
   

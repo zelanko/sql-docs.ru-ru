@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sp_helplanguage
 - default languages
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d46e178fc1872a84bb573f16629803c59f2fb6c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4097629a1642c952384ed96ac8349f241237332b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122514"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818526"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,14 +74,14 @@ sp_helplanguage [ [ @language = ] 'language' ]
 sp_helplanguage French;  
 ```  
   
-### <a name="b-returning-information-about-all-languages"></a>Б) Возвращение сведений обо всех языках  
+### <a name="b-returning-information-about-all-languages"></a>Б. Возвращение сведений обо всех языках  
  В следующем примере отображаются сведения обо всех установленных альтернативных языках.  
   
 ```  
 sp_helplanguage;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE (Transact-SQL)](../../t-sql/functions/language-transact-sql.md)   
  [ЗАДАТЬ язык &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
