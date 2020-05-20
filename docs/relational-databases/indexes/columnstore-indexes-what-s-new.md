@@ -1,7 +1,7 @@
 ---
 title: Новые возможности индексов columnstore | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/20/2018
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 690455f8dba76b45643ac4971c988059c56e33f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0728c62f3c866a75a88702b7fdd2f7e8cea557dc
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70009422"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269453"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Новые возможности индексов columnstore
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,6 +49,12 @@ ms.locfileid: "70009422"
 |Индекс columnstore может содержать нематериализованный вычисляемый столбец||||да|||   
   
  <sup>1</sup> Чтобы создать некластеризованный индекс columnstore, доступный только для чтения, сохраните индекс в файловой группе только для чтения.  
+
+## [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+ [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] добавляет указанные новые возможности.
+
+### <a name="functional"></a>Функциональные
+- Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], задача переноса кортежей выполняется вместе с задачей фонового объединения. Последняя автоматически сжимает небольшие разностные группы строк с состоянием OPEN, которые существовали некоторое время в соответствии с внутренним пороговым значением, или объединяет группы строк с состоянием COMPRESSED, из которых было удалено большое количество строк. Ранее операция реорганизации индекса требовалась для объединения групп строк с частично удаленными данными. Это со временем повышает качество индекса columnstore. 
 
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] добавляет указанные новые возможности.

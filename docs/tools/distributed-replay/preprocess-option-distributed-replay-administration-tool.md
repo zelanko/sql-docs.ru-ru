@@ -1,6 +1,7 @@
 ---
 title: Параметр предварительной обработки
 titleSuffix: SQL Server Distributed Replay
+description: Средство распределенного воспроизведения Microsoft SQL Server (DReplay.exe) — это программа командной строки для взаимодействия с контроллером распределенного воспроизведения.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,20 +12,20 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 1b003bf2441e3cffc2e21557497695f92df50135
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7baf79900fb89903c9d398dfb1e7b72c3600f1e0
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307023"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152192"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Параметр предварительной обработки (средство администрирования распределенного воспроизведения)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Средство администрирования распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (**DReplay.exe**) представляет собой программу командной строки, которая служит для взаимодействия с контроллером распределенного воспроизведения. В этом разделе описан параметр командной строки **preprocess** и соответствующий синтаксис.  
+  Средство администрирования распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (**DReplay.exe**) представляет собой программу командной строки, которая используется для взаимодействия с контроллером распределенного воспроизведения. В этом разделе описан параметр командной строки **preprocess** и соответствующий синтаксис.  
   
  Параметр **preprocess** запускает предварительную обработку. На этом этапе контроллер подготавливает для воспроизведения на целевом сервере входные данные трассировки.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") Дополнительные сведения о синтаксических обозначениях, используемых в синтаксисе средства администрирования, см. в разделе [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") Дополнительные сведения о синтаксических обозначениях, используемых в синтаксисе средства администрирования, см. в статье [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,7 +36,7 @@ dreplay preprocess [-m controller] -i input_trace_file
 ```  
   
 #### <a name="parameters"></a>Параметры  
- **-m** _controller_  
+ **-m** _контроллер_  
  Задает имя компьютера для контроллера. Локальный компьютер можно указать как «`localhost`» или «`.`».  
   
  Если параметр **-m** не задан, то используется локальный компьютер.  

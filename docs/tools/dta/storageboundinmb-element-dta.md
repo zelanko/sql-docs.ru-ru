@@ -1,5 +1,6 @@
 ---
 title: Элемент StorageBoundInMB (DTA)
+description: В служебной программе dta элемент StorageBoundInMB определяет максимальный объем пространства, которое может использоваться рекомендациями по настройке помощника по настройке ядра СУБД.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: f6d83065a572e2d125b43830653fde5a2298eb2b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c300ee1935b408078d5e7eeb0c0f25ea8ec03f80
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306625"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150526"
 ---
 # <a name="storageboundinmb-element-dta"></a>Элемент StorageBoundInMB (DTA)
 
@@ -40,7 +41,7 @@ ms.locfileid: "75306625"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|**unsignedInt**, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  
@@ -66,7 +67,7 @@ ms.locfileid: "75306625"
   
 ## <a name="example"></a>Пример  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  В следующем примере кода показано, как установить предел в 1 500 мегабайт в качестве максимального места на диске, которое может быть занято согласно рекомендациям.  
   
 ## <a name="code"></a>Код  

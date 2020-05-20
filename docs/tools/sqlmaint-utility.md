@@ -1,5 +1,6 @@
 ---
 title: sqlmaint, программа
+description: В SQL Server программа sqlmaint используется для выполнения проверок DBCC, создания резервных копий базы данных и ее журнала транзакций, обновления статистики и перестроения индексов.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c0f87bca3404505e82c903bd868e9b5c2da00bed
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ff9734eea7e81d9c5e2ad8acbecf1fc9a60f09de
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306963"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151586"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint, программа
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,13 +90,13 @@ number[minutes | hours | days | weeks | months]
 > [!IMPORTANT]  
 >  По возможности используйте аутентификацию Windows.  
   
- **-P** _password_  
+ **-P** _пароль_  
  Указывает пароль для идентификатора имени входа. Используется только вместе с параметром **-U** . Если аргумент *password* содержит специальные символы, он должен быть заключен в двойные кавычки. В противном случае использование двойных кавычек необязательно.  
   
 > [!IMPORTANT]  
 >  Маскировка пароля не производится. По возможности используйте аутентификацию Windows.  
   
- **-D** _database_name_  
+ **-D** _имя_базы_данных_  
  Указывает имя базы данных, с которой будут производиться операции обслуживания. Если аргумент *database_name* содержит специальные символы, он должен быть заключен в двойные кавычки. В противном случае использование двойных кавычек необязательно.  
   
  **-PlanName** _имя_  

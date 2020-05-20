@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: a96eb5b8d50102c09ed6343c0f067db5a5bdb6e2
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: 1b4de199e96497f32039614a39aabb4b1e8fe5d0
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588238"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151900"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Установка служб машинного обучения SQL Server (Python и R) в Windows
 
@@ -212,7 +212,7 @@ ms.locfileid: "82588238"
 
 ## <a name="restart-the-service"></a>Перезапустите службу.
 
-После завершения установки перезапустите ядро СУБД, прежде чем перейти к следующему шагу — включению выполнения скриптов.
+После завершения установки перезапустите ядро СУБД.
 
 При перезапуске службы автоматически перезапускается соответствующая служба [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)].
 

@@ -2,7 +2,7 @@
 title: Подключение с использованием ODBC
 description: Узнайте, как создать подключение к базе данных из Linux или macOS с помощью Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b99479883fd1cc74008d62a9c322226ed587244
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2a17f9a69adae4bc785560ac3e06b8025a34089a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632815"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152046"
 ---
 # <a name="connecting-to-sql-server"></a>Подключение к SQL Server
+
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 В этой статье описывается, как можно создать подключение к базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -36,22 +37,27 @@ ms.locfileid: "81632815"
   
 Значение, передаваемое в ключевое слово **Driver**, может быть одним из следующих:  
   
--   именем, использованным при установке драйвера;
+- именем, использованным при установке драйвера;
 
--   путем к библиотеке драйвера, которая была указана в INI-файле шаблона, используемого для установки драйвера.  
+- путем к библиотеке драйвера, которая была указана в INI-файле шаблона, используемого для установки драйвера.  
 
-Чтобы создать имя DSN, создайте (при необходимости) и измените файл **~/.odbc.ini** (`.odbc.ini` в домашнем каталоге) для имени DSN пользователя, доступного только для текущего пользователя, или `/etc/odbc.ini` для системного имени DSN (требуются права администратора). Ниже приведен пример файла, который показывает минимальное количество необходимых записей для имени DSN:  
+Использовать имена DSN не обязательно. Вы можете использовать имя DSN для определения ключевых слов строки подключения с именем `DSN` с последующим созданием соответствующей ссылки в строке подключения. Чтобы создать имя DSN, создайте (при необходимости) и измените файл **~/.odbc.ini** (`.odbc.ini` в домашнем каталоге) для имени DSN пользователя, доступного только для текущего пользователя, или `/etc/odbc.ini` для системного имени DSN (требуются права администратора). Ниже приведен пример файла, который показывает минимальное количество необходимых записей для имени DSN:  
 
-```  
+```ini
+# [DSN name]
 [MSSQLTest]  
-Driver = ODBC Driver 13 for SQL Server  
-Server = [protocol:]server[,port]  
-#   
+Driver = ODBC Driver 17 for SQL Server  
+# Server = [protocol:]server[,port]  
+Server = tcp:localhost,1433
+#
 # Note:  
 # Port is not a valid keyword in the odbc.ini file  
 # for the Microsoft ODBC driver on Linux or macOS
 #  
 ```  
+
+Чтобы подключиться с помощью приведенного выше имени DSN в строке подключения, следует указать ключевое слово `DSN` следующим образом: `DSN=MSSQLTest;UID=my_username;PWD=my_password`.  
+Строка подключения выше будет эквивалентна строке подключения, определенной без ключевого слова `DSN`, например: `Driver=ODBC Driver 17 for SQL Server;Server=tcp:localhost,1433;UID=my_username;PWD=my_password`.
 
 При необходимости можно указать протокол и порт для подключения к серверу. Например, **Server = tcp:** _имя_сервера_ **,12345**. Обратите внимание, что единственным протоколом, поддерживаемым драйверами Linux и macOS, является `tcp`.
 
@@ -59,11 +65,12 @@ Server = [protocol:]server[,port]
 
 Кроме того, можно добавить сведения о DSN в файл шаблона и выполнить следующую команду, чтобы добавить его в `~/.odbc.ini`:
  - **odbcinst -i -s -f** _файл_шаблона_  
- 
+
 Можно проверить, что драйвер работает, используя `isql` для проверки подключения или следующую команду:
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
 ## <a name="using-tlsssl"></a>Использование TLS/SSL  
+
 Для шифрования подключений к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно использовать протокол TLS, ранее называемый SSL. TLS защищает имена пользователей и пароли [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по сети. Кроме того, TLS проверяет идентификатор сервера для защиты от атак "злоумышленник в середине".  
 
 Включение шифрования повышает безопасность за счет снижения производительности.
@@ -79,7 +86,7 @@ Server = [protocol:]server[,port]
 
 По умолчанию зашифрованные соединения всегда проверяют сертификат сервера. Однако при подключении к серверу с самозаверяющим сертификатом также добавьте параметр `TrustServerCertificate`, чтобы обойти проверку сертификата по списку доверенных центров сертификации:  
 
-```  
+```
 Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```  
   

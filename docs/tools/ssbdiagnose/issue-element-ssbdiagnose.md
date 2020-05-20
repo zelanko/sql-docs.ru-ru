@@ -1,5 +1,6 @@
 ---
 title: Элемент Issue
+description: В SQL Server элемент Issue сообщает о проблеме, обнаруженной служебной программой ssbdiagnose. В выходном файле XML для каждой из обнаруженных проблем есть один элемент Issue.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 3a91cf0575cb84a744925b7b60be0146a4d9ec5f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0f0d339322dea349f7769ae32d7380f70c922539
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254193"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150579"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Элемент Issue (программа ssbdiagnose)
 
@@ -44,7 +45,7 @@ ms.locfileid: "75254193"
   
 ## <a name="element-attributes"></a>Атрибуты элемента  
   
-|attribute|Description|  
+|attribute|Описание|  
 |---------------|-----------------|  
 |**type**|Определяет категорию проблемы, о которой сообщает элемент Issue:<br /><br /> **"Diagnosis"** . Сообщает о проблеме, обнаруженной во время анализа конфигурации компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] .<br /><br /> **Problem** . Сообщает о проблеме, в результате которой программе **ssbdiagnose** не удалось завершить анализ. Устраните проблему и снова запустите программу **ssbdiagnose**.<br /><br /> **Event** . Сообщает о событии приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , обнаруженном во время выполнения проверки **-RUNTIME** . События включаются в отчет, только если указан параметр **-SHOWEVENTS** .|  
 |**code**|Определяет номер ошибки для сообщения.|  
@@ -54,10 +55,10 @@ ms.locfileid: "75254193"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|**string**, неограниченная длина|  
-|**Value**|Возвращает текст сообщения об ошибке.|  
+|**Значение**|Возвращает текст сообщения об ошибке.|  
 |**Наличие**|Один раз для каждой ошибки.|  
   
 ## <a name="element-relationships"></a>Связи элемента  

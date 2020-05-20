@@ -1,5 +1,6 @@
 ---
 title: Элемент Name описания схемы (DTA)
+description: В служебной программе dta элемент Name для элемента Schema содержит имя схемы. В этой статье описывается этот элемент.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 436d994836697c683df677816113ce5205490921
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a0430897aa54a57637cac6eb7c3b99246b0cedfe
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306356"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151946"
 ---
 # <a name="name-element-for-schema-dta"></a>Элемент Name описания схемы (DTA)
 
@@ -40,7 +41,7 @@ ms.locfileid: "75306356"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|**string**от 1 до 255 символов|  
 |**Значение по умолчанию**|Нет.|  

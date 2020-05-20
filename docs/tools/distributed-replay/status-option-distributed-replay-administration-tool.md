@@ -1,6 +1,7 @@
 ---
 title: Параметр состояния в средстве администрирования
 titleSuffix: SQL Server Distributed Replay
+description: В этой статье описывается параметр status командной строки и синтаксис средства администрирования распределенного воспроизведения SQL Server для отображения текущего состояния.
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: tools-other
@@ -10,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 35851ce2f16ba5cb0e96ba24e9e67c887efd4aaf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 658b32d8c66d07505cfc8a95e143decfa26f8013
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74992185"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152073"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>Параметр состояния (средство администрирования распределенного воспроизведения)
 
@@ -35,7 +36,7 @@ dreplay status [-m controller] [-f status_interval]
 ```  
   
 #### <a name="parameters"></a>Параметры  
- **-m** _controller_  
+ **-m** _контроллер_  
  Задает имя компьютера для контроллера. Локальный компьютер можно указать как «`localhost`» или «`.`».  
   
  Если параметр **-m** не задан, то используется локальный компьютер.  

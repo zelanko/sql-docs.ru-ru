@@ -1,5 +1,6 @@
 ---
 title: Служебная программа sqlcmd
+description: Служебная программа sqlcmd позволяет выполнять инструкции Transact-SQL, системные процедуры и файлы скриптов в разных режимах. Она использует ODBC для выполнения пакетов Transact-SQL.
 ms.custom: seo-lt-2019
 ms.date: 11/27/2018
 ms.prod: sql
@@ -27,12 +28,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 413d8fffc505c8b2cfb5404e70cdd9f64cd150de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0b4274b0c724ca86608bf35c9398b3edd199d55a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77544938"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151615"
 ---
 # <a name="sqlcmd-utility"></a>Служебная программа sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -413,7 +414,7 @@ sqlcmd
 >  Фактическое время ожидания может отличаться от указанного значения *время_ожидания* на несколько секунд.  
   
  **-vvar =** _значение_[ **var =** _значение_...]  
- Создает переменную скрипта **sqlcmd**, которая может быть использована в скрипте **sqlcmd** . Если значение содержит пробелы, заключите его в кавычки. Можно определить несколько значений _**var**_ = **"** _значения_ **"** . Если в каком-либо из указанных значений обнаружена ошибка, программа **sqlcmd** выдает сообщение и завершает работу.  
+ Создает переменную скрипта **sqlcmd**, которая может быть использована в скрипте **sqlcmd** . Если значение содержит пробелы, заключите его в кавычки. Можно определить несколько значений _**var**_= **"** _значения_ **"** . Если в каком-либо из указанных значений обнаружена ошибка, программа **sqlcmd** выдает сообщение и завершает работу.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -677,7 +678,7 @@ sqlcmd
   
  **Команды вывода**  
   **:Error**   
- _**\<**_ _имя_файла_ **_>|_ STDERR|STDOUT**  
+ _**\<**_ _имя_файла_**_>|_ STDERR|STDOUT**  
  Перенаправляет вывод всех сообщений об ошибках в файл, указываемый параметром *имя_файла*, в поток **stderr** или **stdout**. Команда **Error** может встречаться в скрипте несколько раз. По умолчанию вывод об ошибках направляется в **STDERR**.  
   
  *имя_файла*  

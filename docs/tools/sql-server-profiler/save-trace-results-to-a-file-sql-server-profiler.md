@@ -1,6 +1,7 @@
 ---
 title: Сохранение результатов трассировки в файл
 titleSuffix: SQL Server Profiler
+description: Узнайте, как сохранить записанные данные событий в файле трассировки и указать его максимальный размер, а также включить возможность переключения на файл продолжения в SQL Server Profiler.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: dc77ef698496e79e56d818ab00a63f38e0ad7c38
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f792be448dc9e11ce4245e7dd5cda08d9d750c2b
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307450"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151708"
 ---
 # <a name="save-trace-results-to-a-file-sql-server-profiler"></a>сохранить результаты трассировки в файл (приложение SQL Server Profiler)
 

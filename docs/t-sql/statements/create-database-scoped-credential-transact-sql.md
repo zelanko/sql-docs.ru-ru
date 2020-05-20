@@ -22,12 +22,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fe7a6cd5d42c73307462df8c711fdac57e7febb
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9579c639e1c731c30a145a856a889796795c90b8
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633239"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151527"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -50,7 +50,10 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* Указывает имя создаваемых учетных данных для базы данных. Аргумент *credential_name* не может начинаться с символа номера (#). Системные учетные данные начинаются с символов ##.
 
-IDENTITY **='** _identity\_name_ **'** . Указывает имя учетной записи для использования при подключении за пределами сервера. Чтобы импортировать файл из хранилища BLOB-объектов Azure с использованием общего ключа, необходимо имя удостоверения `SHARED ACCESS SIGNATURE`. Для загрузки данных в хранилище данных SQL в качестве удостоверения можно использовать любое допустимое значение. Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+IDENTITY **='** _identity\_name_ **'** . Указывает имя учетной записи для использования при подключении за пределами сервера. Чтобы импортировать файл из хранилища BLOB-объектов Azure с использованием общего ключа, имя удостоверения должно быть `SHARED ACCESS SIGNATURE`. Для загрузки данных в хранилище данных SQL в качестве удостоверения можно использовать любое допустимое значение. Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+
+> [!NOTE]
+Инструкция WITH IDENTITY не требуется, если для контейнера в хранилище BLOB-объектов Azure включен анонимный доступ. См. пример запроса к хранилищу BLOB-объектов Azure в разделе [Импорт данных в таблицу из файла, который находится в хранилище BLOB-объектов Azure](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage).
 
 SECRET **='** _secret_ **'** . Указывает секретный код, необходимый для исходящей проверки подлинности. `SECRET` требуется для импорта файла из хранилища больших двоичных объектов Azure. Для загрузки из хранилища BLOB-объектов Azure в хранилище данных SQL или Parallel Data Warehouse в качестве секретного ключа необходимо использовать ключ хранилища Azure.
 > [!WARNING]

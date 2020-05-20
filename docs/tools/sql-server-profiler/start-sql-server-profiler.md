@@ -1,6 +1,7 @@
 ---
 title: Выполнение приложения SQL Server Profiler
 titleSuffix: SQL Server Profiler
+description: Узнайте, из каких программ и меню можно запускать SQL Server Profiler и какие фильтры, шаблоны и контексты подключения используются с выходными данными трассировки.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
-ms.openlocfilehash: 89089c07a3b13ee7764770df3d582ba449b65f53
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7bfe84350449d1de600699c7bb73348bf5a1b069
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307797"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151663"
 ---
 # <a name="run-sql-server-profiler"></a>Выполнение приложения SQL Server Profiler
 

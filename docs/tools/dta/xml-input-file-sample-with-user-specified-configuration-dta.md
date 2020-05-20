@@ -1,5 +1,6 @@
 ---
 title: Образец входного файла XML с пользовательской конфигурацией
+description: В этой статье показан пример входного файла XML с определяемой пользователем конфигурацией для настройки рабочих нагрузок с использованием помощника по настройке ядра СУБД.
 titleSuffix: DTA
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +13,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: ac32f47bc81e2abb2865a01b17070a9f72f7b4dc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 187d1b8492719a35f470d718cd9d5727628f76e1
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257085"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151763"
 ---
 # <a name="xml-input-file-sample-with-user-specified-configuration-dta"></a>Образец входного XML-файла с пользовательской конфигурацией (DTA)
 

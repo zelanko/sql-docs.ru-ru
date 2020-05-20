@@ -16,12 +16,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 58ff313686f1f37643068a28d4e30ac93eddd2ce
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 9f459e71ebeb95de2b1d80f1281881df1c0474a0
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528228"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151869"
 ---
 # <a name="replication-log-reader-agent"></a>Агент чтения журнала репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,8 @@ logread [-?]
 [-LoginTimeOut login_time_out_seconds]  
 [-LogScanThreshold scan_threshold]  
 [-MaxCmdsInTran number_of_commands]  
-[-MessageInterval message_interval]  
+[-MessageInterval message_interval]
+[-MultiSubnetFailover [0|1]]
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2|3|4]]  
 [-PacketSize packet_size]  
@@ -139,6 +140,8 @@ logread [-?]
  Интервал времени, использующийся для ведения журнала. Событие регистрируется в журнале, когда после регистрации последнего события достигнуто значение **MessageInterval** .  
   
  При отсутствии реплицируемой транзакции на источнике агент передает распространителю сообщение об отсутствии транзакции. Данный параметр определяет период ожидания агента до передачи следующего сообщения об отсутствии транзакции. Агенты всегда передают сообщение об отсутствии транзакции, если на источнике после ранее обработанных реплицируемых транзакций не обнаруживается доступных транзакций. Значение по умолчанию — 60 секунд.  
+ 
+ **-MultiSubnetFailover** [**0**|**1**] Определяет, включено ли свойство MultiSubnetFailover. Если приложение подключается к группе доступности Always On в разных подсетях и вы задали параметру MultiSubnetFailover значение 1 (true), операции определения активного сервера и подключения к нему ускорятся.
   
  **-Output** _путь_и_имя_выходного_файла_  
  Путь к выходному файлу агента. Если имя файла не указано, данные выводятся на консоль. Если указанный файл существует, то выходные данные добавляются в конец файла.  
@@ -201,6 +204,7 @@ logread [-?]
 |Обновленное содержимое|  
 |---------------------|  
 |Добавлен параметр **-ExtendedEventConfigFile** .|  
+|Добавлен параметр **-MultiSubnetFailover**.|
   
 ## <a name="see-also"></a>См. также:  
  [Администрирование агента репликации](../../../relational-databases/replication/agents/replication-agent-administration.md)  

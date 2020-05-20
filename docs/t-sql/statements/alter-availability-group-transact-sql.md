@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ff2094e1452c17fa33d2d909f9b4796b4eddc706
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 13f5c8c892729abe0ba0e0a79185b360f0098d07
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925381"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150595"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -197,7 +197,7 @@ ALTER AVAILABILITY GROUP group_name
   
 |Level|Условия сбоя|  
 |-----------|-----------------------|  
-|1|Указывает, что следует запустить автоматический переход на другой ресурс при возникновении любой из следующих ситуаций.<br /><br /> Служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] остановлена.<br /><br /> Аренда группы доступности для подключения к кластеру WSFC истекла, поскольку от экземпляра сервера не было получено сообщение ACK. Дополнительные сведения см. в разделе [Принцип работы. Время ожидания аренды AlwaysOn в SQL Server](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268).|  
+|1|Указывает, что следует запустить автоматический переход на другой ресурс при возникновении любой из следующих ситуаций.<br /><br /> Служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] остановлена.<br /><br /> Аренда группы доступности для подключения к кластеру WSFC истекла, поскольку от экземпляра сервера не было получено сообщение ACK. Дополнительные сведения см. в разделе [Как это работает: время ожидания аренды Always On в SQL Server](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268).|  
 |2|Указывает, что следует запустить автоматический переход на другой ресурс при возникновении любой из следующих ситуаций.<br /><br /> Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не подключается к кластеру, а определяемый пользователем порог HEALTH_CHECK_TIMEOUT группы доступности превышен.<br /><br /> Реплика доступности находится в неисправном состоянии.|  
 |3|Указывает, что следует запустить автоматический переход на другой ресурс в случае появления критических внутренних ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], таких как потерянные спин-блокировки, серьезные нарушения доступа для записи или формирование слишком больших дампов.<br /><br /> Это поведение по умолчанию.|  
 |4|Указывает, что следует запустить автоматический переход на другой ресурс в случае появления не столь серьезных внутренних ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например устойчивое состояние нехватки памяти в пуле внутренних ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -343,7 +343,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
 -   Значение 0 указывает, что эта реплика доступности никогда не будет использоваться для создания резервных копий. Этот параметр может быть полезным, например, для исключения удаленной реплики доступности, создание резервных копий на которой нежелательно.  
   
- Дополнительные сведения см. в статье [Активные вторичные реплики, резервное копирование во вторичных репликах (группы доступности Always On)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+ Дополнительные сведения см. в статье [Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности Always On)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  SECONDARY_ROLE **(** ... **)**  
  Задает параметры роли, которые будут действовать, если эта реплика доступности в данный момент имеет вторичную роль (то есть когда реплика является вторичной). В скобках укажите один или два параметра вторичной роли. Если указываются оба параметра, используйте список с разделителями-запятыми.  
@@ -362,7 +362,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  ALL  
  К базам данных во вторичной реплике разрешаются все соединения на доступ только для чтения.  
   
- Дополнительные сведения см. в разделе [Активные вторичные реплики: доступные только для чтения вторичные реплики (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Дополнительные сведения см. в статье [Активные вторичные реплики: вторичные реплики для чтения (группы доступности Always On)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Указывает URL-адрес, используемый для маршрутизации запросов на соединение с намерением чтения к этой реплике доступности. Этот URL-адрес прослушивается компонентом ядра СУБД SQL Server. Обычно экземпляр по умолчанию компонента ядра СУБД SQL Server прослушивает TCP-порт 1433.  
@@ -406,7 +406,16 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  None  
  Указывает, что, когда эта реплика доступности является первичной, маршрутизация только для чтения не поддерживается. Это поведение по умолчанию. При использовании с параметром MODIFY REPLICA ON это значение отключает существующий список (если он есть).  
-  
+
+ READ_WRITE_ROUTING_URL **=** { **('** \<экемпляр_сервера> **')** }  
+ Область применения: SQL Server (начиная с версии SQL Server 2019 (15.x)) 
+
+ Определяет экземпляры сервера, на которых размещаются реплики доступности для этой группы доступности в соответствии со следующими требованиями при выполнении в первичной роли.
+-   Спецификация реплики PRIMARY_ROLE содержит READ_WRITE_ROUTING_URL.
+-   Строке подключения задается значение ReadWrite. Для этого параметру ApplicationIntent задается значение ReadWrite или не задается ничего, чтобы использовалось значение по умолчанию (ReadWrite).
+
+Дополнительные сведения см. в статье [Перенаправление подключения с правами на чтение и запись с вторичной на первичную реплику (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).
+
  SESSION_TIMEOUT **=** _seconds_  
  Указывает интервал времени ожидания сеанса в секундах. Если этот параметр не определить, интервал времени по умолчанию — 10 секунд. Минимальное значение составляет 5 секунд.  
   
@@ -605,7 +614,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  Сведения об ограничениях на инструкции AVAILABILITY GROUP языка Transact-SQL см. в разделе [Общие сведения об инструкциях Transact-SQL для групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md).  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  Кроме того, требуется разрешение ALTER ANY DATABASE.   

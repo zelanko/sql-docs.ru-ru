@@ -1,6 +1,7 @@
 ---
 title: Очистка окна трассировки
 titleSuffix: SQL Server Profiler
+description: Узнайте, как очистить окно трассировки, которое записывает данные событий в SQL Server Profiler, не удаляя таблицы или файлы трассировки.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 1158a2409c078c58a8d48cb4d5780b6d08643aea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 451e678c2e8a7f0d238e46b99370b7002dd14abc
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307355"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151932"
 ---
 # <a name="clear-a-trace-window-sql-server-profiler"></a>очистить окно трассировки (приложение SQL Server Profiler)
 

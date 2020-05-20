@@ -1,0 +1,2 @@
+> [!Note]
+> Ссылки на описание синтаксиса Transact-SQL для SQL Server 2014 и более ранних версий, см. в статье [Документация по предыдущим версиям SQL Server](../sql-server/previous-versions-sql-server.md?view=sql-server-2016).

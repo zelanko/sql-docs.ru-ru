@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 92aaf7c04d7a5e176fce4448b9d4f6172b541647
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce461246f0afef31ab4b60b772f92aeeb479a4cb
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75755838"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606896"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Соединитель с Oracle (Microsoft)
 
@@ -26,7 +26,7 @@ ms.locfileid: "75755838"
 
 Соединитель с Oracle (Microsoft) поддерживает следующие продукты Microsoft SQL Server:
 
-- все версии SQL Server, начиная с SQL Server 2019;
+- Версии начиная с Накопительного обновления 1 (CU1) для SQL Server 2019.
 - SQL Server Data Tools (SSDT), начиная с версии 15.9.3.
 
 Поддерживаются следующие версии Oracle Database и источника данных Oracle:

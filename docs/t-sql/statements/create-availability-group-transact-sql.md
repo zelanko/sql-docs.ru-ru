@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fc168c53b91a2b66c039265abd95ea0d16147e23
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 5260ccc53fbdba1e0773dc43c021f0ec4f21e255
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925238"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151560"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -355,7 +355,16 @@ CREATE AVAILABILITY GROUP group_name
   
  None  
  Указывает, что, когда эта реплика доступности является первичной, маршрутизация только для чтения не поддерживается. Это поведение по умолчанию.  
-  
+
+ READ_WRITE_ROUTING_URL **=** { **('** \<экемпляр_сервера> **')** }  
+ Область применения: SQL Server (начиная с версии SQL Server 2019 (15.x)) 
+
+ Определяет экземпляры сервера, на которых размещаются реплики доступности для этой группы доступности в соответствии со следующими требованиями при выполнении в первичной роли.
+-   Спецификация реплики PRIMARY_ROLE содержит READ_WRITE_ROUTING_URL.
+-   Строке подключения задается значение ReadWrite. Для этого параметру ApplicationIntent задается значение ReadWrite или не задается ничего, чтобы использовалось значение по умолчанию (ReadWrite).
+
+Дополнительные сведения см. в статье [Перенаправление подключения с правами на чтение и запись с вторичной на первичную реплику (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).
+
  SESSION_TIMEOUT **=** *integer*  
  Указывает интервал времени ожидания сеанса в секундах. Если этот параметр не определить, интервал времени по умолчанию — 10 секунд. Минимальное значение составляет 5 секунд.  
   

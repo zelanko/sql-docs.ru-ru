@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: af057cffd0382364488076086f77af03376d64fd
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: c323fc0e0535b941b1349c3ceae2331aa55d7bb7
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528781"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151881"
 ---
 # <a name="replication-distribution-agent"></a>Агент распространения репликации
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,6 +64,7 @@ distrib [-?]
 [-MaxBcpThreads]  
 [-MaxDeliveredTransactions number_of_transactions]  
 [-MessageInterval message_interval]  
+[-MultiSubnetFailover [0|1]]
 [-OledbStreamThreshold oledb_stream_threshold]  
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2]]  
@@ -205,6 +206,8 @@ distrib [-?]
 -   Значение **MessageInterval** достигается после записи последнего события в журнал.  
   
  При отсутствии реплицируемой транзакции на источнике агент передает распространителю сообщение об отсутствии транзакции. Данный параметр определяет период ожидания агента до передачи следующего сообщения об отсутствии транзакции. Агенты всегда передают сообщение об отсутствии транзакции, если на источнике после ранее обработанных реплицируемых транзакций не обнаруживается доступных транзакций. Значение по умолчанию — 60 секунд.  
+
+**-MultiSubnetFailover** Определяет, включено ли свойство MultiSubnetFailover. Если приложение подключается к группе доступности Always On в разных подсетях и вы задали параметру MultiSubnetFailover значение true, операции определения активного сервера и подключения к нему ускорятся.
   
  **-OledbStreamThreshold** _порог_потока_oledb_  
  Указывает минимальный размер (в байтах) данных больших двоичных объектов, ниже которого их привязка будет выполняться в виде потока. Для использования этого параметра необходимо указать значение **-UseOledbStreaming**. Значение может находиться в диапазоне от 400 до 1048576, значение по умолчанию — 16384.  
@@ -299,6 +302,7 @@ distrib [-?]
 |Обновленное содержимое|  
 |---------------------|  
 |Добавлен параметр **-ExtendedEventConfigFile** .|  
+|Добавлен параметр **-MultiSubnetFailover**.|  
   
 ## <a name="see-also"></a>См. также:  
  [Администрирование агента репликации](../../../relational-databases/replication/agents/replication-agent-administration.md)  
