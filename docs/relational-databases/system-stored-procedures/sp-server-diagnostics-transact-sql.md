@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8d6d418bcdefbb3977a98f04743b7e1b2a58bf54
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982110"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810621"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |Столбец|Тип данных|Описание|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Указывает отметку времени создания строки. Все строки в одном наборе данных имеют одинаковые отметки времени.|  
-|**component_type**|**sysname**|Указывает, содержит ли строка сведения для компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уровня экземпляра или для Always on группы доступности:<br /><br /> экземпляр<br /><br /> Always On: AvailabilityGroup|  
+|**component_type**|**sysname**|Указывает, содержит ли строка сведения для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонента уровня экземпляра или для Always on группы доступности:<br /><br /> экземпляр<br /><br /> Always On: AvailabilityGroup|  
 |**component_name**|**sysname**|Указывает имя компонента или имя группы доступности:<br /><br /> система<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> события<br /><br /> *\<имя группы доступности>*|  
 |**state**|**int**|Указывает состояние работоспособности компонента:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Описывает столбец state. Далее представлены описания, соответствующие значениям в столбце state:<br /><br /> 0. Неизвестно<br /><br /> 1: чистая очистка<br /><br /> 2: предупреждение<br /><br /> 3: ошибка|  
@@ -77,9 +77,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **события**: собирает данные и поверхности с помощью хранимой процедуры в отношении ошибок и событий, которые записываются сервером, включая сведения об исключениях кольцевого буфера, событиях кольцевого буфера о брокере памяти, нехватке памяти, мониторе планировщиков, буферном пуле, спин-блокировки, безопасности и подключении. В качестве состояния событий всегда указывается 0.  
   
--   имя группы доступности>: собирает данные для указанной группы доступности (если component_type = "Always On: AvailabilityGroup"). ** \< **  
+-   ** \< имя группы доступности>**: собирает данные для указанной группы доступности (если component_type = "Always On: AvailabilityGroup").  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
 Компоненты system, resource и query_processing используются для обнаружения ошибок, а компоненты io_subsystem и events используются только для диагностики.  
   
 В следующей таблице представлены компоненты и связанные с ними состояния работоспособности.  
@@ -240,7 +240,7 @@ where component_name like 'events'
 go  
 ``` 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Политика отработки отказа для экземпляров отказоустойчивого кластера](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

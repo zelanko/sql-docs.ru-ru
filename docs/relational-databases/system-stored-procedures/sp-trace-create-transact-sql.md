@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_create
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7d698932bb7ef7e0fd37a0ced8ab536eeb0d5d68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bc81a19350c3ba95b99c821d972c02dd112c18e7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096033"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809858"
 ---
 # <a name="sp_trace_create-transact-sql"></a>Хранимая процедура sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,9 +59,9 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |SHUTDOWN_ON_ERROR|**4**|Указывает, что если трассировка не может быть записана в файл по какой-либо причине, SQL Server останавливается. Этот параметр полезен в случае проведения трассировок по проверке безопасности.|  
 |TRACE_PRODUCE_BLACKBOX|**8**|Указывает, что запись последних 5 МБ трассировочных сведений, формируемых сервером, будет сохранена на сервере. Значение параметра TRACE_PRODUCE_BLACKBOX несовместимо со всеми другими.|  
   
-`[ @tracefile = ] 'trace_file'`Указывает расположение и имя файла, в который будет записана трассировка. *trace_file* имеет тип **nvarchar (245)** и не имеет значения по умолчанию. *trace_file* может быть локальным каталогом (например, N ' C:\MSSQL\Trace\trace.trc ') или UNC-именем к общей папке или пути (N\\\\'*имя_сервера*\\*имя_общего_ресурса*\\*Directory*\trace.trc ').  
+`[ @tracefile = ] 'trace_file'`Указывает расположение и имя файла, в который будет записана трассировка. *trace_file* имеет тип **nvarchar (245)** и не имеет значения по умолчанию. *trace_file* может быть локальным каталогом (например, N ' C:\MSSQL\Trace\trace.trc ') или UNC-именем к общей папке или пути (N ' \\ \\ *имя_сервера* \\ *имя_общего_ресурса* \\ *Directory*\trace.trc ').  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]добавит расширение **TRC** ко всем именам файлов трассировки. Если указаны параметр TRACE_FILE_ROLLOVER и *max_file_size* , создает новый файл [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] трассировки, когда размер исходного файла трассировки увеличивается до максимального размера. Новый файл имеет то же имя, что и исходный файл, но добавляется _*n* для обозначения последовательности, начиная с **1**. Например, если первый файл трассировки имеет имя **filename. trc**, второй файл трассировки называется **filename_1. trc**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]добавит расширение **TRC** ко всем именам файлов трассировки. Если указаны параметр TRACE_FILE_ROLLOVER и *max_file_size* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает новый файл трассировки, когда размер исходного файла трассировки увеличивается до максимального размера. Новый файл имеет то же имя, что и исходный файл, но добавляется _*n* для обозначения последовательности, начиная с **1**. Например, если первый файл трассировки имеет имя **filename. trc**, второй файл трассировки называется **filename_1. trc**.  
   
  Если используется параметр TRACE_FILE_ROLLOVER, рекомендуется не использовать в имени исходного файла трассировки символы подчеркивания. Если используются символы подчеркивания, выполняются следующие действия.  
   
@@ -70,7 +70,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 -   Функция fn_trace_gettable не загружает файлы продолжения (при указании с помощью аргумента *number_files* ), где исходное имя файла заканчивается символом подчеркивания и числовым значением. (Это не относится к подчеркиваниям и числам, которые автоматически добавляются, когда выполняется переключение на файл продолжения.)  
   
 > [!NOTE]  
->  В качестве временного решения в обоих случаях можно переименовать файлы трассировки, исключив подчеркивания из имени исходного файла. Например, если исходный файл называется **my_trace. trc**, а файл продолжения имеет имя **my_trace_1. trc**, можно переименовать файлы в **митраце. trc** и **mytrace_1. trc** перед открытием файлов в [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+>  В качестве временного решения в обоих случаях можно переименовать файлы трассировки, исключив подчеркивания из имени исходного файла. Например, если исходный файл называется **my_trace. trc**, а файл продолжения имеет имя **my_trace_1. trc**, можно переименовать файлы в **митраце. trc** и **mytrace_1. trc** перед открытием файлов в [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
   
  невозможно указать *trace_file* , если используется параметр TRACE_PRODUCE_BLACKBOX.  
   
@@ -101,8 +101,8 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |14|Недопустимое время останова. Возвращается, если указанное время останова уже прошло.|  
 |15|Недопустимые аргументы. Возвращается, если пользователь ввел несовместимые аргументы.|  
   
-## <a name="remarks"></a>Remarks  
- **sp_trace_create** — это [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимая процедура, которая выполняет многие действия, ранее выполненные **xp_trace_\* ** расширенными хранимыми процедурами, доступными в более ранних версиях SQL Server. Используйте **sp_trace_create** вместо:  
+## <a name="remarks"></a>Примечания  
+ **sp_trace_create** — это [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимая процедура, которая выполняет многие действия, ранее выполненные **xp_trace_ \* ** расширенными хранимыми процедурами, доступными в более ранних версиях SQL Server. Используйте **sp_trace_create** вместо:  
   
 -   **xp_trace_addnewqueue**  
   
@@ -114,7 +114,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  Параметры всех хранимых процедур трассировки SQL (**sp_trace_xx**) строго типизированы. Если эти аргументы указываются с неправильными типами данных входных параметров, как указано в описании их аргументов, хранимая процедура возвратит ошибку.  
   
- Для **sp_trace_create**учетная [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запись службы должна иметь разрешение на запись в папку файла трассировки. Если учетная запись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы не является администратором на компьютере, где находится файл трассировки, необходимо явным образом предоставить учетной записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы разрешение на запись.  
+ Для **sp_trace_create** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетная запись службы должна иметь разрешение на запись в папку файла трассировки. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетная запись службы не является администратором на компьютере, где находится файл трассировки, необходимо явным образом предоставить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи службы разрешение на запись.  
   
 > [!NOTE]  
 >  Файл трассировки, созданный с помощью **sp_trace_create** , можно автоматически загрузить в таблицу с помощью системной функции **fn_trace_gettable** . Сведения об использовании этой системной функции см. в разделе [sys. fn_trace_gettable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md).  
@@ -146,7 +146,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ## <a name="permissions"></a>Разрешения  
  Пользователь должен иметь разрешение ALTER TRACE.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   

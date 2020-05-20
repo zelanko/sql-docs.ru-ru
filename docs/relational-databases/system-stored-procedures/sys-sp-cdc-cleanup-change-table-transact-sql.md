@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.sp_cdc_cleanup_change_tables
 - sp_cdc_cleanup_change_tables
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 51c0af34fb3158cc5032ee9ef53abce22d8ecc3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ae48ceffec12ce840ab436cc80a46c036da329b6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909331"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808329"
 ---
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,19 +45,19 @@ sys.sp_cdc_cleanup_change_table
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @capture_instance = ] "*capture_instance*"  
+ [ @capture_instance =] "*capture_instance*"  
  Имя экземпляра системы отслеживания, связанного с таблицей изменений. Аргумент *capture_instance* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
   
  *capture_instance* должен присвоить имя экземпляру отслеживания, который существует в текущей базе данных.  
   
- [ @low_water_mark = ] *low_water_mark*  
+ [ @low_water_mark =] *low_water_mark*  
  Регистрационный номер транзакции в журнале (LSN), который будет использоваться в качестве нового нижнего предела для *экземпляра отслеживания*. *low_water_mark* является **двоичным (10)** и не имеет значения по умолчанию.  
   
  Если значение не равно null, оно должно быть start_lsn значением текущей записи в таблице [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Если в таблице cdc.lsn_time_mapping есть несколько записей, соответствующих одному моменту времени, на который ссылается указатель новой нижней конечной точки, то данному указателю присваивается наименьшее значение номера LSN данной группы записей.  
   
  Если значение явно задано как NULL, то текущая *Нижняя* граница для *экземпляра отслеживания* используется для определения верхней границы операции очистки.  
   
- [ @threshold= ] "*удалить порог*"  
+ [ @threshold =] "*Удаление порогового значения*"  
  Максимальное число записей, подлежащих удалению, которые могут быть удалены с помощью одной инструкции при очистке. *delete_threshold* имеет тип **bigint**и значение по умолчанию 5000.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -69,7 +69,7 @@ sys.sp_cdc_cleanup_change_table
 ## <a name="remarks"></a>Remarks  
  Процедура sys.sp_cdc_cleanup_change_table производит следующие операции.  
   
-1.  Если @low_water_mark параметр не равен null, он задает для *экземпляра системы отслеживания* значение start_lsn, равное новому *нижнему пределу*.  
+1.  Если @low_water_mark параметр не РАВЕН null, он задает для *экземпляра системы отслеживания* значение start_lsn, равное новому *нижнему пределу*.  
   
     > [!NOTE]  
     >  Новая нижняя конечная точка может не являться точкой, указанной в вызове хранимой процедуры. Если в таблице cdc.lsn_time_mapping есть несколько записей, соответствующих одному моменту времени, то в качестве нижней конечной точки выбирается наименьшее значение start_lsn в группе записей. Если @low_water_mark параметр имеет значение null или текущий нижний предел больше, чем новый ловватермарк, то значение start_lsn для экземпляра отслеживания остается неизменным.  
@@ -80,7 +80,7 @@ sys.sp_cdc_cleanup_change_table
   
 -   Задание агента очистки сообщает о неудачном удалении.  
   
-     Администратор может запустить данную хранимую процедуру явным образом, чтобы повторно выполнить эту операцию. Чтобы повторить очистку для данного экземпляра отслеживания, выполните хранимую процедуру sys. sp_cdc_cleanup_change_table и укажите для @low_water_mark параметра значение null.  
+     Администратор может запустить данную хранимую процедуру явным образом, чтобы повторно выполнить эту операцию. Чтобы повторить очистку для данного экземпляра отслеживания, выполните хранимую процедуру sys. sp_cdc_cleanup_change_table и укажите для параметра значение NULL @low_water_mark .  
   
 -   Простая политика на основе срока хранения, используемая заданием агента очистки, не является оптимальной.  
   
@@ -89,7 +89,7 @@ sys.sp_cdc_cleanup_change_table
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли базы данных db_owner.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
  [sys. fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
  [sys. fn_cdc_increment_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  

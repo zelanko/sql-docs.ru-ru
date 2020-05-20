@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_unbindefault
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7616401e8dcc9461d5eb3c7d67aedccf3a8c7af9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7fdce8d2fad56d56e13343bc3397353e72d3be1b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095885"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809697"
 ---
 # <a name="sp_unbindefault-transact-sql"></a>Хранимая процедура sp_unbindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Чтобы отобразить текст значения по умолчанию, выполните **sp_helptext** с именем по умолчанию в качестве параметра.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -70,7 +70,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 EXEC sp_unbindefault 'employees.hiredate';  
 ```  
   
-### <a name="b-unbinding-a-default-from-an-alias-data-type"></a>Б) Отмена привязки значения по умолчанию для псевдонима типа данных  
+### <a name="b-unbinding-a-default-from-an-alias-data-type"></a>Б. Отмена привязки значения по умолчанию для псевдонима типа данных  
  В следующем примере отменяется привязка значения по умолчанию для псевдонима типа данных `ssn`. Отменяется привязка существующих и будущих столбцов этого типа.  
   
 ```  
@@ -99,7 +99,7 @@ EXEC sp_bindefault 'default2', '[t.3].c1' ;
 EXEC sp_unbindefault '[t.3].c1';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   

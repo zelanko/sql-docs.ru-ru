@@ -39,7 +39,7 @@ ms.locfileid: "76288365"
   
 -   **sp_addpublication_snapshot**:  
   
-     Теперь при вызове хранимой процедуры `@job_login`sp_addpublication_snapshot (Transact-SQL)`@job_password` для формирования задания пользователь должен в параметрах [ и ](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) передать учетные данные Windows, с которыми будет запускаться агент моментальных снимков на распространителе.  
+     Теперь при вызове хранимой процедуры [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) для формирования задания пользователь должен в параметрах `@job_login` и `@job_password` передать учетные данные Windows, с которыми будет запускаться агент моментальных снимков на распространителе.  
   
 -   **sp_addpushsubscription_agent**:  
   
@@ -51,11 +51,11 @@ ms.locfileid: "76288365"
   
 -   **sp_addpullsubscription_agent**:  
   
-     Теперь при вызове хранимой процедуры `@job_login`sp_addpullsubscription_agent (Transact-SQL)`@job_password` для формирования задания пользователь должен в параметрах [ и ](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) передать учетные данные Windows, с которыми будет запускаться агент распространителя на подписчике.  
+     Теперь при вызове хранимой процедуры [sp_addpullsubscription_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) для формирования задания пользователь должен в параметрах `@job_login` и `@job_password` передать учетные данные Windows, с которыми будет запускаться агент распространителя на подписчике.  
   
 -   **sp_addmergepullsubscription_agent**:  
   
-     Теперь при вызове хранимой процедуры `@job_login`sp_addmergepullsubscription_agent (Transact-SQL)`@job_password` для формирования задания пользователь должен в параметрах [ и ](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) передать учетные данные Windows, с которыми будет запускаться агент слияния на подписчике.  
+     Теперь при вызове хранимой процедуры [sp_addmergepullsubscription_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) для формирования задания пользователь должен в параметрах `@job_login` и `@job_password` передать учетные данные Windows, с которыми будет запускаться агент слияния на подписчике.  
   
 -   **sp_addlogreader_agent**:  
   

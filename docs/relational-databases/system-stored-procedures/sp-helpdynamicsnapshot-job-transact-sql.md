@@ -19,14 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdynamicsnapshot_job
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 55d7ad0dfd941102cfeb6661e65980f980fa8b2d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 866f05904cfa1b6c7b3ce6b20a59a5be3096be2b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770978"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810768"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по **%** умолчанию, которое возвращает сведения обо всех заданиях моментальных снимков отфильтрованных данных, соответствующих указанному *dynamic_snapshot_jobid*и *dynamic_snapshot_jobname*для всех публикаций.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех заданиях моментальных снимков отфильтрованных данных, соответствующих указанному *dynamic_snapshot_jobid*и *dynamic_snapshot_jobname*для всех публикаций.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Имя задания моментального снимка отфильтрованных данных. Аргумент *dynamic_snapshot_jobname*имеет тип **sysname**и значение **%** по умолчанию ", возвращающее все динамические задания для публикации с указанным *dynamic_snapshot_jobid*. Если имя задания было задано явно во время создания задания, оно будет в следующем формате:  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Имя задания моментального снимка отфильтрованных данных. Аргумент *dynamic_snapshot_jobname*имеет тип **sysname**и значение по умолчанию **%** ", возвращающее все динамические задания для публикации с указанным *dynamic_snapshot_jobid*. Если имя задания было задано явно во время создания задания, оно будет в следующем формате:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
@@ -61,7 +61,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Задание моментального снимка фильтрованных данных.|  
 |**job_name**|**sysname**|Имя задания моментального снимка фильтрованных данных.|  
-|**job_id**|**uniqueidentifier**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Идентифицирует задание агента на распространителе.|  
+|**job_id**|**uniqueidentifier**|Идентифицирует [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Задание агента на распространителе.|  
 |**dynamic_filter_login**|**sysname**|Значение, используемое для вычисления функции [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) в параметризованном фильтре строк, определенном для публикации.|  
 |**dynamic_filter_hostname**|**sysname**|Значение, используемое для вычисления функции [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) в параметризованном фильтре строк, определенном для публикации.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Путь к папке, откуда считываются файлы моментального снимка, если используется параметризованный фильтр строк.|  
@@ -79,7 +79,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_helpdynamicsnapshot_job** используется в репликации слиянием.  
   
  Если для всех аргументов используются значения по умолчанию, возвращаются сведения по всем заданиям моментального снимка секционных данных для всей базы данных публикации.  
@@ -87,7 +87,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** и списка доступа к публикации для публикации могут выполнять **sp_helpdynamicsnapshot_job**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
