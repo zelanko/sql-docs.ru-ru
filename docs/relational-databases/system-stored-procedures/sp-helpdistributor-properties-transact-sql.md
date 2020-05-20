@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistributor_properties
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e4cacb78e797583dbd45954f09c89a774c381966
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c3c044f9cd63f5942fdc212b2321628ac1b2c21
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770918"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828946"
 ---
 # <a name="sp_helpdistributor_properties-transact-sql"></a>Хранимая процедура sp_helpdistributor_properties (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sp_helpdistributor_properties
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_helpdistributor_properties** используется со всеми типами репликации.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** , члены предопределенной роли базы данных **db_owner** или **replmonitor** в базе данных распространителя и пользователи из списка доступа к публикации (PAL) для публикации, использующей этот распространитель, могут выполнять **sp_helpdistributor_properties**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
   
   

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_add_job
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 7dd10d28855cc4c10f5496c74f1f39a91826052f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 65f75b5f9830a19a973db0fffa06b7baf2bbdbae
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68106537"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825968"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Так как задания очистки и отслеживания создаются по умолчанию, данная хранимая процедура используется только в тех случаях, когда задание необходимо повторно создать после выполнения явного удаления.  
   
- Имя задания — **CDC.** Очистка имени _\>базы данных\_ \<_ **CDC.** **\_** запись имени _\>базы данных, где<database_name>— имя текущей базы данных.\_ \<_**\_** *<database_name>* Если задание с таким именем уже существует, к имени добавляется точка (**.**), за которой следует уникальный идентификатор, например: **CDC. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ Имя задания — **CDC.** ** \_ Очистка** _ \< \_ имени \> базы данных_или **CDC.** ** \_ запись** _ \< \_ имени \> базы данных_, где *<database_name>* — имя текущей базы данных. Если задание с таким именем уже существует, к имени добавляется точка (**.**), за которой следует уникальный идентификатор, например: **CDC. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Чтобы просмотреть текущую конфигурацию задания очистки или записи, используйте [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Чтобы изменить конфигурацию задания, используйте [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   
@@ -108,7 +108,7 @@ EXEC sys.sp_cdc_add_job @job_type = N'capture';
 GO  
 ```  
   
-### <a name="b-creating-a-cleanup-job"></a>Б) Создание задания очистки  
+### <a name="b-creating-a-cleanup-job"></a>Б. Создание задания очистки  
  В следующем примере создается задание очистки в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Параметр `@start_job` имеет значение 0, а аргумент `@retention` — 5 760 минут (96 часов). В этом примере предполагается, что существующее задание очистки было явным образом удалено и его необходимо создать повторно.  
   
 ```  
@@ -120,7 +120,7 @@ EXEC sys.sp_cdc_add_job
     ,@retention = 5760;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [dbo. cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [Об отслеживании измененных данных (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalog_components
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 213cc6ea9be57590d52755fdbba3151882ac0a38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 687a624eea351433407ee88298a6520ceb213841
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055168"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827715"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +47,17 @@ sp_help_fulltext_catalog_components
 |-----------------|---------------|-----------------|  
 |**имя полнотекстового каталога**|**int**|Имя полнотекстового каталога.|  
 |**Идентификатор полнотекстового каталога**|**sysname**|Идентификатор полнотекстового каталога.|  
-|**componenttype**|**sysname**|Тип компонента. Это может быть:<br /><br /> Filter<br /><br /> Обработчик протокола<br /><br /> Средство разбиения по словам|  
+|**componenttype**|**sysname**|Тип компонента. Это может быть:<br /><br /> Фильтр<br /><br /> Обработчик протокола<br /><br /> Средство разбиения по словам|  
 |**componentname**|**sysname**|Имя компонента.|  
 |**этому**|**uniqueidentifier**|Идентификатор класса компонента.|  
 |**FullPath**|**nvarchar(256)**|Путь к расположению компонента.<br /><br /> NULL = вызывающая сторона не является членом предопределенной роли сервера **serveradmin** .|  
 |**version**|**nvarchar(30)**|Версия компонента.|  
-|**manufacturer**|**sysname**|Имя производителя компонента.|  
+|**производителя**|**sysname**|Имя производителя компонента.|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры полнотекстового поиска и семантического поиска &#40;языке Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [sys. fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   

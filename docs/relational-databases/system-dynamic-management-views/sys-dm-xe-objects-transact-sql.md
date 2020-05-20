@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 023ee54178c5f303797c6db83cc646353304b051
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 80170f22636b9542524f8ce97b6fe8a5e595953c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090275"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827858"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>Динамическое административное представление sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "68090275"
  |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|Имя объекта. имя уникально в пределах пакета для конкретного типа объекта. Не допускает значение NULL.|  
-|object_type|**nvarchar(60)**|Тип объекта. object_type является одним из следующих:<br /><br /> event<br /><br /> action<br /><br /> target<br /><br /> pred_source;<br /><br /> pred_compare;<br /><br /> type<br /><br /> Не допускает значение NULL.|  
+|object_type|**nvarchar(60)**|Тип объекта. object_type является одним из следующих:<br /><br /> event<br /><br /> action<br /><br /> target<br /><br /> pred_source;<br /><br /> pred_compare;<br /><br /> тип<br /><br /> Не допускает значение NULL.|  
 |package_guid|**uniqueidentifier**|Идентификатор GUID пакета, который представляет это действие. Обеспечивает связь «многие к одному» со столбцом sys.dm_xe_packages.package_id. Не допускает значение NULL.|  
-|description|**nvarchar(256)**|Описание действия. Описание задается автором пакета. Не допускает значение NULL.|  
+|description;|**nvarchar(256)**|Описание действия. Описание задается автором пакета. Не допускает значение NULL.|  
 |capabilities|**int**|Битовая карта, описывающая возможности объекта. Допускает значение NULL.|  
 |capabilities_desc|**nvarchar(256)**|Перечисляет все возможности объекта. Допускает значение NULL.<br /><br /> **Возможности, которые применяются для всех типов объектов**<br /><br /> -<br />                                **Частный**. Объект, предназначенный исключительно для внутреннего использования, к которому нельзя получить доступ через CREATE/ALTER EVENT SESSION DDL. В данную категорию входят события аудита и целевые объекты, а также незначительное количество объектов, предназначенных для внутреннего применения.<br /><br /> ===============<br /><br /> **Возможности события**<br /><br /> -<br />                                **No_block**. Это событие находится в критическом пути кода, который не может выполнять блокировку по любой причине. События с этой возможностью не могут добавляться к какому-либо сеансу события, который указывает NO_EVENT_LOSS.<br /><br /> ===============<br /><br /> **Возможности, которые применяются для всех типов объектов**<br /><br /> -<br />                                **Process_whole_buffers**. Целевой объект использует буферы событий одновременно, а не последовательно, событие за событием.<br /><br /> -<br />                        **Singleton**. В процессе может существовать только один экземпляр целевого объекта. Хотя сеансы нескольких событий могут ссылаться на один целевой объект, реально существует всего один экземпляр, который обращается к каждому уникальному событию всего один раз. Это важно, если целевой объект добавляется к нескольким сеансам, каждый из которых собирает одно и то же событие.<br /><br /> -<br />                                **Синхронный**. Целевой объект выполняется на потоке, которым было создано данное событие до возвращения элемента управления в строку вызывающего кода.|  
 |type_name|**nvarchar(60)**|Имя для объектов pred_source и pred_compare. Допускает значение NULL.|  
@@ -62,7 +62,7 @@ ms.locfileid: "68090275"
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|«многие к одному»|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

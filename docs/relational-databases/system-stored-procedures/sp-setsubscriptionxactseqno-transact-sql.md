@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setsubscriptionxactseqno
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 27a7f35a915e2bff62932124aef64984a63cbd0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60d27260378a8f0d6706b85ea02232ffca6a05c8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021081"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827506"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_setsubscriptionxactseqno** используется в репликации транзакций.  
   
  **sp_setsubscriptionxactseqno** нельзя использовать в одноранговой топологии репликации транзакций.  
@@ -78,6 +78,6 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_setsubscriptionxactseqno**.  
   
-## <a name="see-more"></a>Подробнее
+## <a name="see-more"></a>Еще
 
 [Блог: как пропустить транзакцию](https://repltalk.com/2019/05/28/how-to-skip-a-transaction/)  

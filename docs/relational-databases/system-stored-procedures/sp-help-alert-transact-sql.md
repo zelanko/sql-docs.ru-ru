@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_alert
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a4b430884a497d9a8926f16f387b3608300f037c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 08569c2313bfb7c9d992c510ef4c9c7548f51e64
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304834"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827762"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Если ** \@legacy_format** равен **0**, **sp_help_alert** создает следующий результирующий набор.  
+ Если ** \@ legacy_format** равен **0**, **sp_help_alert** создает следующий результирующий набор.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -89,9 +89,9 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0 всегда будет иметь значение «[Без категорий]».|  
 |**wmi_namespace**|**sysname**|Если **тип** имеет значение **3**, в этом столбце отображается пространство имен для события WMI.|  
 |**wmi_query**|**nvarchar(512)**|Если **тип** — **3**, в этом столбце отображается запрос для события WMI.|  
-|**type**|**int**|Тип события:<br /><br /> **1** =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оповещение о событии 1<br /><br /> **2** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждение о производительности<br /><br /> **3** = предупреждение о событии WMI|  
+|**type**|**int**|Тип события:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оповещение о событии 1<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждение о производительности<br /><br /> **3** = предупреждение о событии WMI|  
   
- Если ** \@legacy_format** равен **1**, **sp_help_alert** создает следующий результирующий набор.  
+ Если ** \@ legacy_format** равен **1**, **sp_help_alert** создает следующий результирующий набор.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -120,10 +120,10 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**has_notification**|**int**|Ненулевое значение, если один или более операторов уведомлены данным предупреждением. Значение является результатом логической операции OR над одним или несколькими следующими значениями:<br /><br /> **1**= имеется уведомление по электронной почте<br /><br /> **2**= имеется уведомление на пейджер<br /><br /> **4**= содержит уведомление **net send** .|  
 |**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
 |**performance_condition**|**nvarchar(512)**|Если **тип** имеет значение **2**, в этом столбце отображается определение условия производительности. Если **тип** — **3**, в этом столбце отображается запрос для события WMI. В противном случае столбец содержит значение NULL.|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Всегда будет иметь "**[без категории]**" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для 7,0.|  
-|**type**|**int**|Тип предупреждения:<br /><br /> **1** =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оповещение о событии 1<br /><br /> **2** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждение о производительности<br /><br /> **3** = предупреждение о событии WMI|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Всегда будет иметь "**[без категории]**" для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.|  
+|**type**|**int**|Тип предупреждения:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оповещение о событии 1<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждение о производительности<br /><br /> **3** = предупреждение о событии WMI|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_help_alert** должны запускаться из базы данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  
@@ -142,7 +142,7 @@ EXEC sp_help_alert @alert_name = 'Demo: Sev. 25 Errors';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_update_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

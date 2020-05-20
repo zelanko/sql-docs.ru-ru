@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobschedule
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 72e321b74f3e949030a6d599c082acf36db12687
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 30ffe0203b3f9aacf23d811e48e6e6d8094a4ee2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054914"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827615"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 > **Примечание. sp_help_jobschedule** возвращает значения из системных таблиц **dbo. sysjobschedules** и **dbo. sysschedules** в **базе данных msdb**. **sysjobschedules** обновляются каждые 20 минут. Это может повлиять на значения, возвращаемые этой хранимой процедурой.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Параметры **sp_help_jobschedule** могут использоваться только в определенных сочетаниях. Если указан *schedule_id* , нельзя указать ни *job_id* , ни *job_name* . В противном случае можно использовать параметры *job_id* или *job_name* с *schedule_name*.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -115,7 +115,7 @@ EXEC dbo.sp_help_jobschedule
 GO  
 ```  
   
-### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>Б) Возвращение расписания задания для конкретного расписания  
+### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>Б. Возвращение расписания задания для конкретного расписания  
  Следующий пример возвращает сведения о расписании с названием `NightlyJobs` и задании с названием `RunReports`.  
   
 ```  
@@ -142,7 +142,7 @@ EXEC dbo.sp_help_jobschedule
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   

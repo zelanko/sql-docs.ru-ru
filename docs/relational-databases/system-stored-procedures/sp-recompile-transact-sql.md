@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_recompile
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f9b72c1a97c17f975144ad0fd364260afab1fb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 241a0594f3487d47c49a96fb2539b660b294b8a4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002563"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827519"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ sp_recompile [ @objname = ] 'object'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @objname= ] "*Object*"  
+ [ @objname =] "*объект*"  
  Уточненное или не уточненное имя хранимой процедуры, триггера, таблица, представления или определяемой пользователем функции в текущей базе данных. *Object* имеет тип **nvarchar (776)** и не имеет значения по умолчанию. Если *объект* является именем хранимой процедуры, триггера или определяемой пользователем функции, хранимая процедура, триггер или функция будет перекомпилироваться при следующем запуске. Если *объект* является именем таблицы или представления, то все хранимые процедуры, триггеры или определяемые пользователем функции, которые ссылаются на таблицу или представление, будут перекомпилированы при следующем запуске.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое значение (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Процедура sp_recompile ищет объект только в текущей базе данных.  
   
  Запросы, используемые хранимыми процедурами или триггерами и определяемые пользователем функции оптимизируются только после их компиляции. Как только индексы или другие изменения, которые влияют на статистику, внесены в базу данных, компилированные хранимые процедуры, триггеры и определяемые пользователем функции могут утратить эффективность. Путем перекомпиляции хранимых процедур и триггеров, влияющих на таблицу, можно повторно оптимизировать запросы.  
@@ -67,7 +67,7 @@ EXEC sp_recompile N'Sales.Customer';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

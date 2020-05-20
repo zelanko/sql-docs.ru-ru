@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_targetservergroup
 ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c268c356e41c957349f452d2f83fc4b807042d9e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 17cb918665c7f09ee3a65d4fd45822eb28a28e82
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67990497"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826315"
 ---
 # <a name="sp_add_targetservergroup-transact-sql"></a>sp_add_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_add_targetservergroup [ @name = ] 'name'
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Отсутствуют  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  Группы целевых серверов обеспечивают простой способ поиска задания в коллекции целевых серверов. Дополнительные сведения см. в разделе [sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md).  

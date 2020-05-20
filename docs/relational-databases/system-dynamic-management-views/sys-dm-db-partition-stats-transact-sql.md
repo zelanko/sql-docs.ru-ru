@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_partition_stats dynamic management view
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb9ab9e3cbf5948e5e832171c179d6daa2c0bc28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eff14464f5913508d8d95fec8a11a70438f95880
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096286"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828039"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68096286"
   Возвращает страницу и сведения о количестве строк для всех секций текущей базы данных.  
   
 > [!NOTE]  
->  Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_db_partition_stats**. Partition_id в sys. dm_pdw_nodes_db_partition_stats отличается от partition_id в представлении каталога sys. partitions для хранилища данных SQL Azure.
+>  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_db_partition_stats**. Partition_id в sys. dm_pdw_nodes_db_partition_stats отличается от partition_id в представлении каталога sys. partitions для хранилища данных SQL Azure.
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -48,13 +48,13 @@ ms.locfileid: "68096286"
 |**lob_reserved_page_count**|**bigint**|Общее количество страниц, зарезервированных для хранения и управления данными типа **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** и **xml**, хранящимися вне строк секции (учитываются как используемые, так и не используемые страницы). IAM-страницы учитываются.<br /><br /> Общее количество больших объектов (LOB), зарезервированных для хранения и управления индексом columnstore в секции.|  
 |**row_overflow_used_page_count**|**bigint**|Количество страниц, используемых для хранения и управления данными типа **varchar**, **nvarchar**, **varbinary** и **sql_variant**, хранящимися вне строк секции. IAM-страницы учитываются.<br /><br /> Всегда равно 0 для индекса columnstore.|  
 |**row_overflow_reserved_page_count**|**bigint**|Общее количество страниц, зарезервированных для хранения и управления данными типа **varchar**, **nvarchar**, **varbinary** и **sql_variant**, хранящимися вне строк секции (учитываются как используемые, так и не используемые страницы). IAM-страницы учитываются.<br /><br /> Всегда равно 0 для индекса columnstore.|  
-|**used_page_count**|**bigint**|Общее число страниц, используемых в секции. Вычисляются как **in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**.|  
-|**reserved_page_count**|**bigint**|Общее число страниц, зарезервированных в секции. Вычисляются как **in_row_reserved_page_count** + **lob_reserved_page_count** + **row_overflow_reserved_page_count**.|  
+|**used_page_count**|**bigint**|Общее число страниц, используемых в секции. Вычисляются как **in_row_used_page_count**  +  **lob_used_page_count**  +  **row_overflow_used_page_count**.|  
+|**reserved_page_count**|**bigint**|Общее число страниц, зарезервированных в секции. Вычисляются как **in_row_reserved_page_count**  +  **lob_reserved_page_count**  +  **row_overflow_reserved_page_count**.|  
 |**row_count**|**bigint**|Приблизительное количество строк в секции.|  
-|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
-|**distribution_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Уникальный числовой идентификатор, связанный с распределением.|  
+|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|**distribution_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Уникальный числовой идентификатор, связанный с распределением.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Оператор **sys.dm_db_partition_stats** используется для отображения сведений о месте на диске, используемом для хранения данных и управления данными, находящимися в строках, данными больших двоичных объектов и данными, превышающими размер страницы данных строки, во всех секциях базы данных. Для каждой секции отображается одна строка.  
   
  Результаты подсчетов, на которых основаны выходные данные, хранятся в оперативной памяти или записываются в различные таблицы на жестком диске.  
@@ -80,7 +80,7 @@ SELECT * FROM sys.dm_db_partition_stats;
 GO  
 ```  
   
-### <a name="b-returning-all-counts-for-all-partitions-of-a-table-and-its-indexes"></a>Б) Возврат результатов подсчета для всех секций таблицы и ее индексов  
+### <a name="b-returning-all-counts-for-all-partitions-of-a-table-and-its-indexes"></a>Б. Возврат результатов подсчета для всех секций таблицы и ее индексов  
  В следующем примере выводятся результаты подсчета для всех секций таблицы `HumanResources.Employee` и ее индексов.  
   
 ```  
@@ -104,7 +104,7 @@ WHERE object_id=OBJECT_ID('HumanResources.Employee')    AND (index_id=0 or index
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

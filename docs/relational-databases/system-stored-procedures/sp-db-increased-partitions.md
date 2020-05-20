@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_db_increased_partitions
 ms.assetid: a8c043ec-b504-4929-ac0e-8babaa99d989
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 83a40c9070db1c997f30db71a6cff226cd0430d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8efcbb99bfbb7d1b4492c7945304de65192804e6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108258"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826204"
 ---
 # <a name="sp_db_increased_partitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_dp_increased_partitions
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @dbname= ] "*database_name*"  
+ [ @dbname =] "*database_name*"  
  Имя базы данных. Аргумент *dbname* имеет тип **sysname** и значение по умолчанию NULL. Если параметр *dbname* не указан, используется текущая база данных.  
   
- [ @increased_partitions= ] "*increased_partitions*"  
+ [ @increased_partitions =] "*increased_partitions*"  
  Включает или выключает поддержку 15 000 секций для указанной базы данных. *increased_partitions* имеет тип **varchar (6)** и значение по умолчанию NULL. Для включения поддержки используются значения ON или TRUE, а для выключения — OFF или FALSE. Если *increased_partitions* не указан, процедура возвращает 1, чтобы указать, что поддержка включена для указанной базы данных, или значение 0, чтобы указать, что поддержка отключена.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

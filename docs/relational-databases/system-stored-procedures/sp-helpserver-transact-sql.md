@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpserver
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e965a11708b2d4bbb72903a05846cb14300a5c6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997442"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826105"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**pub**|Издатель.|  
 |**удаленного**|Включает RPC с определенного сервера.|  
 |**RPC out**|Включает RPC на определенный сервер.|  
-|**Директор**|Подписчик.|  
+|**sub**|Подписчик.|  
 |**система**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**использовать удаленные параметры сортировки**|Применение параметров сортировки удаленного столбца вместо параметров сортировки локального сервера.|  
   
@@ -76,7 +76,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**connect_timeout**|**int**|Значение времени ожидания для подключения к связанному серверу.|  
 |**query_timeout**|**int**|Значение времени ожидания для запросов к связанному серверу.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  У сервера может быть несколько состояний.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -93,7 +93,7 @@ GO
 EXEC sp_helpserver;  
 ```  
   
-### <a name="b-displaying-information-about-a-specific-server"></a>Б) Вывод сведений об определенном сервере  
+### <a name="b-displaying-information-about-a-specific-server"></a>Б. Вывод сведений об определенном сервере  
  В следующем примере отображаются все сведения о сервере `SEATTLE2`.  
   
 ```  
@@ -102,7 +102,7 @@ GO
 EXEC sp_helpserver 'SEATTLE2';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   

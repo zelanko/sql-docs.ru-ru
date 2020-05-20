@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8d3284d8231b01b58cc807aeb70c55f5fe18c2b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73536218"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828428"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -80,11 +80,11 @@ RECONFIGURE
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|Имя параметра конфигурации.|  
 |**минимальное**|**int**|Минимальное значение параметра конфигурации.|  
-|**maximum**|**int**|Максимальное значение параметра конфигурации.|  
+|**выше**|**int**|Максимальное значение параметра конфигурации.|  
 |**config_value**|**int**|Значение, для которого параметр конфигурации был задан с помощью **sp_configure** (значение в **sys. Configurations. Value**). Дополнительные сведения об этих параметрах см. в разделе [Параметры конфигурации сервера &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) и [sys. Configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
 |**run_value**|**int**|Текущее значение параметра конфигурации (значение в **sys. Configurations. value_in_use**).<br /><br /> Дополнительные сведения см. в разделе [sys. configurations &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Используйте **sp_configure** для просмотра или изменения параметров серверного уровня. Для изменения параметров уровня базы данных используйте инструкцию ALTER DATABASE. Для изменения параметров, влияющих только на сеанс текущего пользователя, используйте инструкцию SET.  
   
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
@@ -99,14 +99,14 @@ RECONFIGURE
 > [!CAUTION]  
 > Недопустимое значение параметра может отрицательно сказаться на конфигурации экземпляра сервера. Поэтому использовать инструкцию RECONFIGURE WITH OVERRIDE следует с осторожностью.  
   
- Инструкция RECONFIGURE выполняет динамическое обновление некоторых параметров; для обновления других параметров необходимо остановить и перезапустить сервер. Например, параметры **min server memory** и **max server memory** Server динамически обновляются в [!INCLUDE[ssDE](../../includes/ssde-md.md)]; Поэтому их можно изменить без перезапуска сервера. В отличие от этого, для повторной настройки значения, выполняемого для параметра **Коэффициент заполнения** , [!INCLUDE[ssDE](../../includes/ssde-md.md)]необходимо перезапустить.  
+ Инструкция RECONFIGURE выполняет динамическое обновление некоторых параметров; для обновления других параметров необходимо остановить и перезапустить сервер. Например, параметры **min server memory** и **max server memory** Server динамически обновляются в, [!INCLUDE[ssDE](../../includes/ssde-md.md)] поэтому их можно изменить без перезапуска сервера. В отличие от этого, для повторной настройки значения, выполняемого для параметра **Коэффициент заполнения** , необходимо перезапустить [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
  После выполнения команды "изменить конфигурацию" в конфигурации можно увидеть, что параметр был динамически обновлен путем выполнения **sp_configure "***option_name***"**. Значения в столбцах **run_value** и **config_value** должны соответствовать динамически обновляемым параметрам. Можно также проверить, какие параметры являются динамическими, просмотрев столбец **is_dynamic** представления каталога **sys. Configurations** .  
  
  Это изменение также записывается в SQL Server журнал ошибок.
   
 > [!NOTE]  
->  Если указанное *значение* слишком велико для параметра, то столбец **run_value** отражает тот факт, что по умолчанию [!INCLUDE[ssDE](../../includes/ssde-md.md)] использует динамическую память, а не недопустимый параметр.  
+>  Если указанное *значение* слишком велико для параметра, то столбец **run_value** отражает тот факт, что [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию использует динамическую память, а не недопустимый параметр.  
   
  Дополнительные сведения см. в статье [перенастройка &#40;&#41;Transact-SQL ](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   
@@ -138,7 +138,7 @@ RECONFIGURE;
 EXEC sp_configure;  
 ```  
   
-### <a name="b-changing-a-configuration-option"></a>Б) Изменение параметра конфигурации  
+### <a name="b-changing-a-configuration-option"></a>Б. Изменение параметра конфигурации  
  В следующем примере системный параметр `recovery interval` устанавливается в `3` минуты.  
   
 ```sql  

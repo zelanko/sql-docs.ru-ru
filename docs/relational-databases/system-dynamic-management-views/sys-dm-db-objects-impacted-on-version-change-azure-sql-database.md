@@ -16,16 +16,16 @@ helpviewer_keywords:
 - dm_db_objects_impacted_on_version_change
 - sys.dm_db_objects_impacted_on_version_change
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0255f7260044ee5c09d020f3ba6310d24bc8cb74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 482f64eff3c37aad08319e6ea8af348b014bd784
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73843863"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828065"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,8 +34,8 @@ ms.locfileid: "73843863"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|class|**тип int** НЕ NULL|Класс объекта, который будет затронут:<br /><br /> **1** = ограничение<br /><br /> **7** = кучи и индексы|  
-|class_desc|**nvarchar (60)** НЕ NULL|Описание класса:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **НОМЕР**|  
+|класс|**тип int** НЕ NULL|Класс объекта, который будет затронут:<br /><br /> **1** = ограничение<br /><br /> **7** = кучи и индексы|  
+|class_desc|**nvarchar (60)** НЕ NULL|Описание класса:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**тип int** НЕ NULL|Код объекта ограничения или код объекта таблицы, содержащей индекс или кучу.|  
 |minor_id|**тип int** ЗАКАНЧИВАЮЩ|значение **NULL** для ограничений<br /><br /> Index_id для индексов и куч|  
 |dependency|**nvarchar (60)** НЕ NULL|Описание зависимости, которая вызывает применение затрагиваемого ограничения или индекса. Такое же значение используется для предупреждений, созданных во время обновления.<br /><br /> Примеры<br /><br /> Значение **space** (для встроенной функции)<br /><br /> **geometry** (для системного, определяемого пользователем типа)<br /><br /> **geography::Parse** (для системного, определяемого пользователем метода)|  
@@ -65,9 +65,9 @@ class  class_desc        major_id    minor_id    dependency
 ### <a name="how-to-update-impacted-objects"></a>Обновление затрагиваемых объектов  
  Далее описывается порядок действий по исправлению после обновления набора исправлений, которое будет доступно в июне.  
   
-|Порядок|Затрагиваемый объект|Действие по исправлению|  
+|Номер|Затрагиваемый объект|Действие по исправлению|  
 |-----------|---------------------|-----------------------|  
-|1|**Индексы**|Перестройте любой индекс, идентифицируемый **sys. dm_db_objects_impacted_on_version_change** например:`ALTER INDEX ALL ON <table> REBUILD`<br />или диспетчер конфигурации служб<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Объектами**|Все ограничения, обозначенные как **sys.dm_db_objects_impacted_on_version_change**, должны быть еще раз проверены после повторного вычисления данных типа Geometry и Geography в базовой таблице. Для ограничений выполните проверку с помощью инструкции ALTER TABLE. <br />Пример: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />или диспетчер конфигурации служб<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|1|**Индексы**|Перестройте любой индекс, идентифицируемый **sys. dm_db_objects_impacted_on_version_change** например:`ALTER INDEX ALL ON <table> REBUILD`<br />or<br />`ALTER TABLE <table> REBUILD`|  
+|2|**Объектами**|Все ограничения, обозначенные как **sys.dm_db_objects_impacted_on_version_change**, должны быть еще раз проверены после повторного вычисления данных типа Geometry и Geography в базовой таблице. Для ограничений выполните проверку с помощью инструкции ALTER TABLE. <br />Пример: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />or<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

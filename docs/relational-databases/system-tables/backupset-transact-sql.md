@@ -17,15 +17,15 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0eb367dd29a96f5819563f0b10e036b7274c4303
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68119330"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827384"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68119330"
 |**name**|**nvarchar(128)**|Имя резервного набора. Может иметь значение NULL.|  
 |**nописание**|**nvarchar(255)**|Описание резервного набора данных. Может иметь значение NULL.|  
 |**user_name**|**nvarchar(128)**|Имя пользователя, выполняющего операцию резервного копирования. Может иметь значение NULL.|  
-|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] основной номер версии. Может иметь значение NULL.|  
+|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]основной номер версии. Может иметь значение NULL.|  
 |**software_minor_version**|**tinyint**|Дополнительный номер версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Может иметь значение NULL.|  
 |**software_build_version**|**smallint**|Номер сборки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Может иметь значение NULL.|  
 |**time_zone**|**smallint**|Разница между местным временем (в месте осуществления операции резервного копирования) и временем в формате UTC в 15-минутных интервалах. Может принимать значения от -48 до +48 включительно. Значение 127 соответствует неизвестному значению. Например, -20 — время на восточном побережье США (Eastern Standard Time, EST), отстоящее на пять часов вперед от UTC. Может иметь значение NULL.|  
@@ -73,7 +73,7 @@ ms.locfileid: "68119330"
 |**database_name**|**nvarchar(128)**|Имя базы данных, участвовавшей в операции резервного копирования. Может иметь значение NULL.|  
 |**server_name**|**nvarchar(128)**|Имя сервера, выполняющего операцию резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Может иметь значение NULL.|  
 |**machine_name**|**nvarchar(128)**|Имя компьютера, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Может иметь значение NULL.|  
-|**flags**|**int**|В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]столбец **flags** является устаревшим и заменяется следующими битовыми столбцами:<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> Может иметь значение NULL.<br /><br /> В резервных наборах данных, созданных в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], биты-флаги означают:<br />1 = резервная копия содержит минимум записанных в журнал данных; <br />2 = использовано предложение WITH SNAPSHOT; <br />4 = база данных во время резервного копирования была доступна только для чтения.<br />8 = база данных во время резервного копирования находилась в однопользовательском режиме.|  
+|**flags**|**int**|В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбец **flags** является устаревшим и заменяется следующими битовыми столбцами:<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> Может иметь значение NULL.<br /><br /> В резервных наборах данных, созданных в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], биты-флаги означают:<br />1 = резервная копия содержит минимум записанных в журнал данных; <br />2 = использовано предложение WITH SNAPSHOT; <br />4 = база данных во время резервного копирования была доступна только для чтения.<br />8 = база данных во время резервного копирования находилась в однопользовательском режиме.|  
 |**unicode_locale**|**int**|Локаль Юникод. Может иметь значение NULL.|  
 |**unicode_compare_style**|**int**|Стиль сравнения Юникод. Может иметь значение NULL.|  
 |**collation_name**|**nvarchar(128)**|Имя параметров сортировки. Может иметь значение NULL.|  
@@ -101,21 +101,21 @@ ms.locfileid: "68119330"
 |**encryptor_thumbprint**|**varbinary(20)**|Отпечаток шифратора, который будет использоваться для поиска сертификата или асимметричного ключа в базе данных. Если резервная копия не была зашифрована, это значение равно NULL.|  
 |**encryptor_type**|**nvarchar(32)**|Тип используемого шифратора: сертификат или асимметричный ключ. . Если резервная копия не была зашифрована, это значение равно NULL.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Инструкция RESTORE VERIFYONLY из *backup_device* with LOADHISTORY заполняет столбец таблицы **backupmediaset** соответствующими значениями из заголовка набора носителей.  
   
  Чтобы уменьшить количество строк в этой таблице и в других таблицах резервного копирования и журнала, выполните хранимую процедуру [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Резервное копирование и восстановление таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [Возможные ошибки мультимедиа во время резервного копирования и восстановления &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
- [Наборы носителей, семейства носителей и резервные наборы данных &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
+ [backupfile (Transact-SQL)](../../relational-databases/system-tables/backupfile-transact-sql.md)   
+ [backupfilegroup (Transact-SQL)](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
+ [backupmediafamily (Transact-SQL)](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [backupmediaset (Transact-SQL)](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
+ [Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server)](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
+ [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
- [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
+ [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
  [Резервное копирование и восстановление таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
   
   

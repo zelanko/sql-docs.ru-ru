@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobstep
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 55fcc73b489a781601a2a6c5bbe139ee449cd60d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090054"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827571"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_attempts**|**int**|Максимальное количество повторных попыток выполнения команды (в случае сбоев).|  
 |**retry_interval**|**int**|Интервал (в минутах) между повторными попытками.|  
 |**os_run_priority**|**int**|Зарезервировано.|  
-|**output_file_name**|**nvarchar(200)**|Файл, в который должны быть записаны выходные[!INCLUDE[tsql](../../includes/tsql-md.md)]данные команды (только шаги **CmdExec**и **PowerShell** ).|  
+|**output_file_name**|**nvarchar(200)**|Файл, в который должны быть записаны выходные данные команды ( [!INCLUDE[tsql](../../includes/tsql-md.md)] только шаги **CmdExec**и **PowerShell** ).|  
 |**last_run_outcome**|**int**|Результат последнего запуска этапа:<br /><br /> **0** = сбой<br /><br /> **1** = успех<br /><br /> **2** = повторная попытка<br /><br /> **3** = отменено<br /><br /> **5** = неизвестно|  
 |**last_run_duration**|**int**|Продолжительность (ччммсс) шага в секундах при последнем запуске.|  
 |**last_run_retries**|**int**|Число повторов команды при последнем запуске этапа.|  
@@ -86,7 +86,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**last_run_time**|**int**|Время начала последнего выполнения этапа.|  
 |**proxy_id**|**int**|Учетная запись-посредник для шага задания.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_help_jobstep** находится в базе данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  
@@ -116,7 +116,7 @@ EXEC dbo.sp_help_jobstep
 GO  
 ```  
   
-### <a name="b-return-information-about-a-specific-job-step"></a>Б) Возврат сведений об указанном шаге задания  
+### <a name="b-return-information-about-a-specific-job-step"></a>Б. Возврат сведений об указанном шаге задания  
  В следующем примере возвращаются сведения о первом шаге задания с именем `Weekly Sales Data Backup`.  
   
 ```  
@@ -129,7 +129,7 @@ EXEC dbo.sp_help_jobstep
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   

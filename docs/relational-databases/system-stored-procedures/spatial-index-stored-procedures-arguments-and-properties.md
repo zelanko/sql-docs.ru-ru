@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - spatial indexes [SQL Server], stored procedures
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 82b906be4568b15a18c55247532bf35b6cd939a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: be45e7dd794ab7e03ffc70eb9b73109411fd3a02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028898"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827459"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Хранимые процедуры пространственного индекса — аргументы и свойства
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "69028898"
 `[ @xml_output = ] 'xml_output'`Выходной параметр, возвращающий результирующий набор в XML-фрагменте. *xml_output* имеет **Формат XML** и не имеет значения по умолчанию.  
   
 ## <a name="properties"></a>Свойства  
- Задайте ** \@verboseoutput** = 0, чтобы возвращать основные свойства, как показано в таблице ниже. verboseoutput > 0, чтобы получить все свойства пространственного индекса. ** \@**  
+ Задайте ** \@ verboseoutput** = 0, чтобы возвращать основные свойства, как показано в таблице ниже. ** \@ verboseoutput** > 0, чтобы получить все свойства пространственного индекса.  
   
  **Base_Table_Rows**  
  Количество строк в базовой таблице. Значение равно **bigint**.  
@@ -300,7 +300,7 @@ ms.locfileid: "69028898"
 ## <a name="permissions"></a>Разрешения  
  Пользователь должен быть членом роли **Public** . Необходимо разрешение READ ACCESS на сервере и объекте. Это относится ко всем хранимым процедурам пространственного индекса.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Свойства, которые содержат значения NULL, не включаются в набор возвращаемых значений.  
   
 ## <a name="examples"></a>Примеры  
@@ -316,7 +316,7 @@ ms.locfileid: "69028898"
   
 ## <a name="requirements"></a>Требования  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры пространственного индекса &#40;языке Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)   

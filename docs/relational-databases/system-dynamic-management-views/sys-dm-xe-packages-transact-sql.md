@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sys.dm_xe_packages dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 065625fdaca015de9c445e6e6f0e1ad0013f38e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 15a7b6a0fd05821e652160606002c1cef8edc717
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090262"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829078"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68090262"
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|Имя пакета. Это описание берется из самого пакета. Не допускает значение NULL.|  
 |guid|**uniqueidentifier**|Идентификатор GUID пакета. Не допускает значение NULL.|  
-|description|**nvarchar (3072)**|Описание пакета. Описание задано автором пакета и не допускает значения NULL.|  
+|description;|**nvarchar (3072)**|Описание пакета. Описание задано автором пакета и не допускает значения NULL.|  
 |capabilities|**int**|Битовая карта, описывающая возможности этого пакета. Допускает значение NULL.|  
 |capabilities_desc|**nvarchar(256)**|Список всех возможностей, допустимых для этого пакета. Допускает значение NULL.|  
 |module_guid|**nvarchar(60)**|Идентификатор GUID модуля, содержащегося в пакете. Не допускает значение NULL.|  
@@ -45,7 +45,7 @@ ms.locfileid: "68090262"
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Пакеты, зарегистрированные подсистемой расширенных событий, содержат события; действия, которые могут быть выполнены в ответ на событие; цели как для синхронной, так и асинхронной обработки данных события.  
   
  Эти пакеты могут быть динамически загружены в адресное пространство процесса. Во время загрузки пакета он регистрирует все объекты, предоставляемые подсистеме расширенных событий.  

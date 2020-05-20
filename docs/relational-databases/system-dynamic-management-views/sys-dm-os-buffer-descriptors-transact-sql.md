@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_buffer_descriptors dynamic management view
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7395d52b7c91678f11a37a4da32877f31e5780bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2b1ed24045f609b2feff1bfef6f288cd97047cf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265857"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827902"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68265857"
   
  При считывании страницы данных с диска она копируется в буферный пул [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и кэшируется для повторного использования. Каждая страница данных в кэше имеет один дескриптор буфера. Дескрипторы буфера уникально идентифицируют каждую страницу данных, кэшируемую в данный момент в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys. dm_os_buffer_descriptors возвращает кэшированные страницы для всех пользовательских и системных баз данных. В их число входят страницы, связанные с базой данных Resource.  
   
-> **Примечание.** Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_os_buffer_descriptors**.  
+> **Примечание.** Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_os_buffer_descriptors**.  
 
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -50,17 +50,17 @@ ms.locfileid: "68265857"
 |numa_node|**int**|Узел с неоднородным доступом к памяти для буфера. Допускает значение NULL.|  
 |read_microsec|**bigint**|Фактическое время (в миллисекундах), необходимое для считывания страницы в буфер. Счетчик сбрасывается, если буфер используется повторно. Допускает значение NULL.|  
 |is_in_bpool_extension|**bit**|1 = страница находится в расширении буферного пула. Допускает значение NULL.|  
-|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
 ## <a name="permissions"></a>Разрешения  
 
-В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
+В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
    
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  sys. dm_os_buffer_descriptors возвращает страницы, используемые базой данных ресурсов. sys. dm_os_buffer_descriptors не возвращает сведения о свободных или украденных страницах или о страницах, на которых произошли ошибки при их чтении.  
   
-|Исходный тип|Кому|С|Связь|  
+|Исходный тип|Кому|Включено|Связь|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|«многие к одному»|  
 |sys.dm_os_buffer_descriptors|\<UserDB>. sys. allocation_units|allocation_unit_id|«многие к одному»|  
@@ -83,7 +83,7 @@ GROUP BY DB_NAME(database_id) ,database_id
 ORDER BY cached_pages_count DESC;  
 ```  
   
-### <a name="b-returning-cached-page-count-for-each-object-in-the-current-database"></a>Б) Получение количества страниц в кэше для каждого объекта в текущей базе данных  
+### <a name="b-returning-cached-page-count-for-each-object-in-the-current-database"></a>Б. Получение количества страниц в кэше для каждого объекта в текущей базе данных  
  Следующий пример возвращает количество страниц в кэше, загруженных для каждого объекта в текущей базе данных.  
   
 ```  
@@ -112,11 +112,11 @@ GROUP BY name, index_id
 ORDER BY cached_pages_count DESC;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys.allocation_units (Transact-SQL)](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
  [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [База данных ресурсов](../../relational-databases/databases/resource-database.md)   
+ [База данных Resource](../../relational-databases/databases/resource-database.md)   
  [sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobhistory
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c9ad27602bbaa537fd74b1c6c730675c904f0b7e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054927"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827622"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,8 +77,8 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**0**|Failed|  
-|**1**|Выполнено|  
+|**0**|Ошибка|  
+|**1**|Успешно|  
 |**2**|Повторить (только для этапа)|  
 |**3**|Отменено|  
 |**4**|Сообщение о проценте выполнения|  
@@ -118,7 +118,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**retries_attempted**|**int**|Количество повторных попыток запуска этапа (всегда 0 для журнала заданий).|  
 |**сервером**|**nvarchar(30)**|Сервер, на котором выполняется задание или этап. Всегда имеет (**Local**).|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_help_jobhistory** возвращает отчет с историей указанных запланированных заданий. Если не указаны параметры, отчет содержит журнал всех заданий в расписании.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -148,7 +148,7 @@ EXEC dbo.sp_help_jobhistory
 GO  
 ```  
   
-### <a name="b-listing-information-for-jobs-that-match-certain-conditions"></a>Б) Вывод сведений о заданиях, которые соответствуют определенным условиям  
+### <a name="b-listing-information-for-jobs-that-match-certain-conditions"></a>Б. Вывод сведений о заданиях, которые соответствуют определенным условиям  
  Следующий пример иллюстрирует вывод всех сведений о шагах заданий, завершившихся неудачно с кодом ошибки `50100` (пользовательская ошибка) и уровнем серьезности `20`.  
   
 ```  
@@ -163,7 +163,7 @@ EXEC dbo.sp_help_jobhistory
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

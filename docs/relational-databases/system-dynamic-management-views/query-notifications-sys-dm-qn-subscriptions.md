@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 57087264554d228ec02ed22baa2afb932e646b10
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061924"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826394"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>Уведомления о запросах — sys. dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "68061924"
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|Исходный тип|Кому|С|Тип|  
+|Исходный тип|Кому|Включено|Type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|«многие к одному»|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|«многие к одному»|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Код состояния 0 обозначает неопределенное состояние.  
   
  Следующие коды состояний обозначают, что подписка сработала из-за изменения.  
@@ -55,8 +55,8 @@ ms.locfileid: "68061924"
 |Код|Дополнительное состояние|Сведения|  
 |----------|------------------|----------|  
 |65798|Подписка сработала из-за изменения данных|Подписка сработала из-за операции вставки|  
-|65799|Подписка сработала из-за изменения данных|DELETE|  
-|65800|Подписка сработала из-за изменения данных|Обновление:|  
+|65799|Подписка сработала из-за изменения данных|Удалить|  
+|65800|Подписка сработала из-за изменения данных|Update|  
 |65801|Подписка сработала из-за изменения данных|Объединить|  
 |65802|Подписка сработала из-за изменения данных|Усечение таблицы|  
 |66048|Подписка сработала из-за изменения времени ожидания|Неопределенный режим INFO|  
@@ -107,7 +107,7 @@ FROM sys.dm_qn_subscriptions;
 GO  
 ```  
   
-### <a name="b-returning-active-query-notification-subscriptions-for-a-specified-user"></a>Б) Возврат активных подписок на уведомления о запросах для указанного пользователя  
+### <a name="b-returning-active-query-notification-subscriptions-for-a-specified-user"></a>Б. Возврат активных подписок на уведомления о запросах для указанного пользователя  
  Следующий пример возвращает активные подписки на уведомления о запросах для подписчика с именем входа `Ruth0`.  
   
 ```  
@@ -130,7 +130,7 @@ WHERE it.internal_type_desc = 'QUERY_NOTIFICATION';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с уведомлениями о запросах &#40;языке Transact-SQL&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  

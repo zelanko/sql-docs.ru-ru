@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns_ex
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 799c45755d9d3866a1cbe3b61b8582787331123c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f7b64251d139b34f0a23cec49ffbb4dcbf0384a0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070341"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826694"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 `[ @ODBCVer = ] 'ODBCVer'`Используемая версия ODBC. *Одбквер* имеет **тип int**и значение по умолчанию 2. Это значение соответствует ODBC версии 2. Допустимы значения 2 или 3. Сведения о различиях между версиями 2 и 3 см. в спецификации ODBC SQLColumns.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -85,7 +85,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
  Дополнительные сведения см. в документации по Microsoft ODBC.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_columns_ex** выполняется путем запроса набора строк COLUMNS интерфейса **IDBSchemaRowset** поставщика OLE DB, соответствующего *table_server*. Параметры *table_name*, *table_schema*, *table_catalog*и *столбцов* передаются этому интерфейсу для ограничения возвращаемых строк.  
   
  **sp_columns_ex** возвращает пустой результирующий набор, если поставщик OLE DB указанного связанного сервера не поддерживает набор строк COLUMNS интерфейса **IDBSchemaRowset** .  
@@ -93,7 +93,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_columns_ex** соответствует требованиям для идентификаторов с разделителями. Дополнительные сведения см. в разделе [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="examples"></a>Примеры  
@@ -107,7 +107,7 @@ EXEC sp_columns_ex 'Seattle1',
    'JobTitle';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
  [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   

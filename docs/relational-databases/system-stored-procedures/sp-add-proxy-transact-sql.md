@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CREATE PROXY statement
 - sp_add_proxy
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4aa4120db7b45cb0b3a7d7a10bb53931b8300d9d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 316d0a8bb70c104649e1dbc88be7e9b0931504ab
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68088478"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826338"
 ---
 # <a name="sp_add_proxy-transact-sql"></a>Хранимая процедура sp_add_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_add_proxy
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Отсутствуют  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  Эта хранимая процедура должна выполняться в базе данных **msdb** .  

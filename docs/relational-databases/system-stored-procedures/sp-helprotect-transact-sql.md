@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8ff791855f7e65652f64d18f3128831172da9229
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997478"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828888"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67997478"
   Возвращает отчет со сведениями о разрешениях пользователя на объект или инструкцию в текущей базе данных.  
   
 > [!IMPORTANT]  
->  **sp_helprotect** не возвращает сведения о защищаемых объектах, которые появились в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Вместо этого используйте представление [sys. database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) и [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) .  
+>  **sp_helprotect** не возвращает сведения о защищаемых объектах, которые появились в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Вместо этого используйте представление [sys. database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) и [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) .  
   
  Не включает разрешения, которые всегда присваиваются предопределенным ролям сервера или базы данных. Не включает имена входа и пользователей, которые получают разрешения на основе своего членства в роли.  
   
@@ -70,9 +70,9 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |**GRANTOR**|**sysname**|Имя участника, предоставившего разрешения.|  
 |**протекттипе**|**nvarchar (10)**|Имя типа защиты:<br /><br /> GRANT REVOKE|  
 |**Действие**|**nvarchar(60)**|Имя разрешения. Инструкции с допустимыми разрешениями зависят от типа объекта.|  
-|**Рубрик**|**sysname**|Тип разрешения:<br /><br /> All = разрешение затрагивает все текущие столбцы объекта.<br /><br /> New = разрешение затрагивает все новые столбцы, которые могут быть изменены для объекта в будущем (с помощью инструкции ALTER).<br /><br /> All+New = сочетание All и New.<br /><br /> Возвращает точку, если тип разрешения не применяется к столбцам.|  
+|**Столбец**|**sysname**|Тип разрешения:<br /><br /> All = разрешение затрагивает все текущие столбцы объекта.<br /><br /> New = разрешение затрагивает все новые столбцы, которые могут быть изменены для объекта в будущем (с помощью инструкции ALTER).<br /><br /> All+New = сочетание All и New.<br /><br /> Возвращает точку, если тип разрешения не применяется к столбцам.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Все аргументы в следующей процедуре являются необязательными. При выполнении без аргументов процедура `sp_helprotect` отображает все разрешения, которые были предоставлены или запрещены в текущей базе данных.  
   
  При указании некоторых, но не всех аргументов используйте именованные аргументы либо указывайте `NULL` в качестве заполнителя опущенных аргументов. Например, для получения отчета обо всех разрешениях, которые может предоставить участник, владеющий базой данных (`dbo`), выполните следующее:  
@@ -81,7 +81,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 EXEC sp_helprotect NULL, NULL, dbo;  
 ```  
   
- либо  
+ Или  
   
 ```  
 EXEC sp_helprotect @grantorname = 'dbo';  
@@ -103,7 +103,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
 EXEC sp_helprotect 'titles';  
 ```  
   
-### <a name="b-listing-the-permissions-for-a-user"></a>Б) Список разрешений для пользователя  
+### <a name="b-listing-the-permissions-for-a-user"></a>Б. Список разрешений для пользователя  
  В следующем примере выводится список всех разрешений, которые пользователь `Judy` имеет в текущей базе данных.  
   
 ```  
@@ -124,14 +124,14 @@ EXEC sp_helprotect NULL, NULL, 'Judy';
 EXEC sp_helprotect NULL, NULL, NULL, 's';   
 ```  
   
-### <a name="e-listing-the-permissions-for-a-create-statement"></a>д) Список разрешений для инструкции CREATE  
+### <a name="e-listing-the-permissions-for-a-create-statement"></a>Д. Список разрешений для инструкции CREATE  
  В следующем примере приведен список всех пользователей, которым предоставлено разрешение CREATE TABLE.  
   
 ```  
 EXEC sp_helprotect @name = 'CREATE TABLE';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DENY &#40;&#41;Transact-SQL](../../t-sql/statements/deny-transact-sql.md)   
  [ПРЕДОСТАВЛЕНИЕ &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_set_cache_window stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 80462381e058c4cb9107aa4ac07138e42d27e677
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6f8ad01c5a287166e4196b78489d34f3fbbe31ce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010629"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828768"
 ---
 # <a name="sp_syscollector_set_cache_window-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @cache_window = ] *cache_window*  
+ [ @cache_window =] *cache_window*  
  Количество повторных передач данных в хранилище данных управления без потери данных в случае ошибки. *cache_window* имеет **тип int** и значение по умолчанию 1. *cache_window* может иметь одно из следующих значений:  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |-1|Кэширует все данные из предыдущих неудавшихся передач.|  
 |0|Не кэширует данные из неудавшейся передачи.|  
@@ -53,7 +53,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Необходимо отключить сборщик данных перед изменением конфигурации окна кэша. Если включен сборщик данных, эта хранимая процедура завершится с ошибкой. Дополнительные сведения см. в разделе [Включение или отключение сбора данных](../../relational-databases/data-collection/enable-or-disable-data-collection.md)и [Управление сбором данных](../../relational-databases/data-collection/manage-data-collection.md).  
   
 ## <a name="permissions"></a>Разрешения  
@@ -72,7 +72,7 @@ GO
 EXECUTE dbo.sp_syscollector_enable_collector;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_syscollector_set_cache_directory (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)  
   

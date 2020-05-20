@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 331969c2baa8ec67e0cd7c0ebf8cdd894878f397
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8cb9cfc6e645e9777a697e62183db874c47cfeb4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266065"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824734"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68266065"
   
  Свойство **Version** указывает версию .NET Framework и РАЗМЕЩЕННУЮ среду CLR на сервере.  
   
- Динамическое управляемое представление **sys. dm_clr_properties** может возвращать шесть разных значений для свойства **State** , которое отражает состояние [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] размещенной среды CLR. Они приведены ниже.  
+ Динамическое управляемое представление **sys. dm_clr_properties** может возвращать шесть разных значений для свойства **State** , которое отражает состояние [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] размещенной среды CLR. К ним относятся:  
   
 -   Mscoree is not loaded;  
   
@@ -68,12 +68,12 @@ ms.locfileid: "68266065"
   
  **Состояние CLR остановлено** , только если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] находится в процессе завершения работы.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Свойства и значения этого представления могут измениться в будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из-за улучшений функций интеграции со средой CLR.  
   
 ## <a name="permissions"></a>Разрешения  
   
-В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
+В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
 ## <a name="examples"></a>Примеры  
@@ -84,7 +84,7 @@ SELECT name, value
 FROM sys.dm_clr_properties;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные со средой CLR &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   

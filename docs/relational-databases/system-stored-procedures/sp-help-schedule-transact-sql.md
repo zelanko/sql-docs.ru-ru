@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_schedule
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f5a68160c8aee1bcb399513051e1f4cc35cea970
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ce8c1514a0c62eeb11743d86dd6922cf4995c63c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085216"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828413"
 ---
 # <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sp_help_schedule
 |**schedule_description**|**nvarchar(4000)**|Описание расписания на английском языке (если запрошено).|  
 |**job_count**|**int**|Число заданий, ссылающихся на данное расписание.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Если параметры не указаны, **sp_help_schedule** выводит сведения обо всех расписаниях в экземпляре.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -106,7 +106,7 @@ EXEC dbo.sp_help_schedule ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-schedule"></a>Б) Вывод сведений о конкретном расписании  
+### <a name="b-listing-information-for-a-specific-schedule"></a>Б. Вывод сведений о конкретном расписании  
  Следующий пример выводит информацию о расписании `NightlyJobs`.  
   
 ```  
@@ -118,7 +118,7 @@ EXEC dbo.sp_help_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

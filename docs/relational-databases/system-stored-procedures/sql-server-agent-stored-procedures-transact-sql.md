@@ -13,14 +13,14 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], SQL Server Agent
 - SQL Server Agent, stored procedures
 ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0396823be5a733acc551dc52a96ff642b67076c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8c393ccfc3225136996be33efe31a3d1d6bdbfd9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67950374"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827452"
 ---
 # <a name="sql-server-agent-stored-procedures-transact-sql"></a>Хранимые процедуры агента SQL Server (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "67950374"
 |[sp_help_downloadlist](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)|[sp_update_targetservergroup](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)|  
 |[sp_help_job](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)||  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

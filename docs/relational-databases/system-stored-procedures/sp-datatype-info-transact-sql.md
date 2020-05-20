@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_datatype_info
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 39e8f688c23cffb1512be1cd1142d38c010668a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e88bc45995574dcde29427773e3e8d9bec62ed96
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108303"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826218"
 ---
 # <a name="sp_datatype_info-transact-sql"></a>Хранимая процедура sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 `[ @ODBCVer = ] odbc_version`Используемая версия ODBC. *odbc_version* имеет тип **tinyint**и значение по умолчанию 2.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -72,14 +72,14 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |INTERVAL_PRECISION|**smallint**|Значение для начальной точности интервала, если *data_type* — **интервал**; в противном случае — NULL.|  
 |USERTYPE|**smallint**|значение **usertype** из таблицы systypes.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  sp_datatype_info эквивалентен SQLGetTypeInfo в ODBC. Возвращаемые этой процедурой результаты упорядочиваются по значению DATA_TYPE, а затем по степени соответствия типа данных аналогичному типу данных ODBC SQL.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере извлекаются сведения для типов данных **sysname** и **nvarchar** путем указания *data_type* значения `-9`.  
+ В следующем примере извлекаются сведения для типов данных **sysname** и **nvarchar** путем указания *data_type* значения `-9` .  
   
 ```  
 USE master;  
@@ -88,7 +88,7 @@ EXEC sp_datatype_info -9;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

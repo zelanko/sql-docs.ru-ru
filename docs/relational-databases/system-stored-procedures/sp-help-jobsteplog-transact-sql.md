@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobsteplog
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e3af6ff05b971e6b9a0dedc1ec2e14f4ba87e00c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 522672192ab955ced5987184ed2f6ea2812a431a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090042"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827560"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**log_size**|**float**|Размер журнала шага задания в мегабайтах (МБ).|  
 |**Журналь**|**nvarchar(max)**|Вывод журнала шага задания.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_help_jobsteplog** находится в базе данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  
@@ -100,7 +100,7 @@ EXEC dbo.sp_help_jobsteplog
 GO  
 ```  
   
-### <a name="b-return-job-step-log-information-about-a-specific-job-step"></a>Б) Возвращает сведения из журнала шага задания для определенного шага  
+### <a name="b-return-job-step-log-information-about-a-specific-job-step"></a>Б. Возвращает сведения из журнала шага задания для определенного шага  
  В следующем примере выполняется возврат сведений журнала шагов задания для первого этапа задачи с именем `Weekly Sales Data Backup`.  
   
 ```  
@@ -113,7 +113,7 @@ EXEC dbo.sp_help_jobsteplog
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   

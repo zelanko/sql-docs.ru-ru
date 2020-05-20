@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_agent_parameter
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd737be5a1e71e46750f6c80fd68ad254cb6436f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f22b2446713274503071e615690aaf7a03fc33d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768941"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824841"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>Хранимая процедура sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 > [!NOTE]  
 >  Если параметр поддерживается для данного *agent_type*, но он не был определен в профиле агента, возвращается ошибка. Чтобы добавить параметр в профиль агента, необходимо выполнить [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
- Для агент моментальных снимков (*agent_type*=**1**), если он определен в профиле, можно изменить следующие свойства:  
+ Для агент моментальных снимков (*agent_type* = **1**), если он определен в профиле, можно изменить следующие свойства:  
   
 -   **70Subscribers**  
   
@@ -70,7 +70,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UsePerArticleContentsView**  
   
- Для агент чтения журнала (*agent_type*=**2**), если он определен в профиле, можно изменить следующие свойства:  
+ Для агент чтения журнала (*agent_type* = **2**), если он определен в профиле, можно изменить следующие свойства:  
   
 -   **HistoryVerboseLevel**  
   
@@ -92,7 +92,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **реадбатчсрешолд**  
   
- Для агент распространения (*agent_type*=**3**), если он определен в профиле, можно изменить следующие свойства:  
+ Для агент распространения (*agent_type* = **3**), если он определен в профиле, можно изменить следующие свойства:  
   
 -   **BcpBatchSize**  
   
@@ -130,7 +130,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **TransactionsPerHistory**  
   
- Для агент слияния (*agent_type*=**4**), если он определен в профиле, можно изменить следующие свойства:  
+ Для агент слияния (*agent_type* = **4**), если он определен в профиле, можно изменить следующие свойства:  
   
 -   **AltSnapshotFolder**  
   
@@ -216,11 +216,11 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UseInprocLoader**  
   
--   **Проверить**  
+-   **Проверка**  
   
 -   **валидатеинтервал**  
   
- Для агент чтения очереди (*agent_type*=**9**), если он определен в профиле, можно изменить следующие свойства:  
+ Для агент чтения очереди (*agent_type* = **9**), если он определен в профиле, можно изменить следующие свойства:  
   
 -   **HistoryVerboseLevel**  
   
@@ -245,13 +245,13 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_change_agent_parameter** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_change_agent_parameter**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [агент распространения репликации](../../relational-databases/replication/agents/replication-distribution-agent.md)   
  [агент чтения журнала репликации](../../relational-databases/replication/agents/replication-log-reader-agent.md)   

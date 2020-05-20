@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_dbmmonitorupdate
 - database mirroring [SQL Server], monitoring
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 190b4f0598afa6d434b5dada8c8464cb8209dac7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8f847881fa57735a09945d47d446949db3443b3e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061263"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826193"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_dbmmonitorupdate [ database_name ]
  Имя базы данных, для которой обновляется состояние зеркального отображения. Если *database_name* не указан, процедура обновляет таблицу состояния для каждой зеркально отображаемой базы данных на экземпляре сервера.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
@@ -72,7 +72,7 @@ USE msdb;
 EXEC sp_dbmmonitorupdate AdventureWorks2012 ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Мониторинг &#40;SQL Server зеркального отображения базы данных&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
  [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_removedocument
 ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6219f18bee08d5c20431cb87a2cb30795c515d7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6083a796b2ffcc3ef949ffc3c40d4aa4185e224a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67950470"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827502"
 ---
 # <a name="sp_xml_removedocument-transact-sql"></a>sp_xml_removedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_xml_removedocument hdoc
 EXEC sp_xml_removedocument @hdoc;  
 ```  
   
-## <a name="see-also"></a>См. также:      
+## <a name="see-also"></a>См. также      
  <br>[Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[Хранимые процедуры XML (Transact-SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
  <br>[sys. dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)

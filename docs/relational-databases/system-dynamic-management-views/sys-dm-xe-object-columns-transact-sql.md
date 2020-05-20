@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sys.dm_xe_object_columns dynamic management view
 - extended events [SQL Server], views
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8b44824310637b279388ea367cd4ab1d07401d1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3cdd234d99a02e4b7ecb72a7b0de6f47a268780c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090278"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826655"
 ---
 # <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68090278"
 |column_value|**nvarchar(256)**|Отображает статические значения, связанные со столбцом объекта. Допускает значение NULL.|  
 |capabilities|**int**|Битовая карта, описывающая возможности столбца. Допускает значение NULL.|  
 |capabilities_desc|**nvarchar(256)**|Описание возможностей этого столбца объекта. Значение может быть одним из следующих.<br /><br /> Mandatory. Значение должно быть задано при привязывании родительского объекта к сеансу событий.<br /><br /> Допускает значение NULL.|  
-|description|**nvarchar (3072)**|Описание этого столбца объекта. Допускает значение NULL.|  
+|description;|**nvarchar (3072)**|Описание этого столбца объекта. Допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
@@ -58,7 +58,7 @@ ms.locfileid: "68090278"
 |sys.dm_xe_object_columns.object_name, sys.dm_xe_object_columns.object_package_guid|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|«многие к одному»|  
 |sys.dm_xe_object_columns.type_name<br /><br /> sys.dm_xe_object_columns.type_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|«многие к одному»|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

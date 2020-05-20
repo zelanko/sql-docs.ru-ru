@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_redirect_publisher
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6062522ca6c5c3a311ba2f2c796f791c47e874ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60cd08c7ddf8ab520b6ff5e8ffb588b1a8f118c9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252114"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828259"
 ---
 # <a name="sp_redirect_publisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,12 +55,12 @@ sp_redirect_publisher
 ## <a name="remarks"></a>Remarks  
  **sp_redirect_publisher** используется, чтобы разрешить перенаправление издателя репликации на текущий первичный ресурс группы доступности Always on, связав пару издателя и базы данных с прослушивателем группы доступности. Выполните **sp_redirect_publisher** после настройки прослушивателя AG для группы доступности, содержащей опубликованную базу данных.  
   
- Если база данных публикации на исходном издателе удаляется из группы доступности на первичной реплике, выполните **sp_redirect_publisher** без указания значения параметра * \@redirected_publisher* , чтобы удалить перенаправление для пары "издатель — база данных". Дополнительные сведения о перенаправлении издателя в см. в разделе [обслуживание базы данных публикации AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
+ Если база данных публикации на исходном издателе удаляется из группы доступности на первичной реплике, выполните **sp_redirect_publisher** без указания значения параметра * \@ redirected_publisher* , чтобы удалить перенаправление для пары "издатель — база данных". Дополнительные сведения о перенаправлении издателя в см. в разделе [обслуживание базы данных публикации AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Участник должен быть членом предопределенной роли сервера **sysadmin** , **db_owner** предопределенной роли базы данных для базы данных распространителя или членом списка доступа к публикации для определенной публикации, связанной с базой данных издателя.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_validate_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
  [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   

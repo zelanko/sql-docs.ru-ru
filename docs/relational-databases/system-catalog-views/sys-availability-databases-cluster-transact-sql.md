@@ -20,19 +20,19 @@ helpviewer_keywords:
 - sys.availability_databases_cluster catalog view
 - Availability Groups [SQL Server], databases
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 206c9b1c250cb95a6ad49ccf20f8badf11f870ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c36c1574ae1ad289c9980e1df9bfbe3b241e164
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046529"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829178"
 ---
 # <a name="sysavailability_databases_cluster-transact-sql"></a>sys.availability_databases_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Содержит по одной строке для каждой базы данных доступности на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещена реплика доступности для любой Always on группы доступности в отказоустойчивом кластере Windows Server (WSFC), независимо от того, присоединена ли локальная база данных копии к группе доступности.  
+  Содержит по одной строке для каждой базы данных доступности на экземпляре, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] размещена реплика доступности для любой Always on группы доступности в отказоустойчивом кластере Windows Server (WSFC), независимо от того, присоединена ли локальная база данных копии к группе доступности.  
   
 > [!NOTE]  
 >  При добавлении базы данных в группу доступности база данных-источник автоматически присоединяется к группе. Базы данных-получатели необходимо подготовить на каждой из вторичных реплик до того, как их можно будет присоединить к группе доступности.   
@@ -46,7 +46,7 @@ ms.locfileid: "68046529"
 ## <a name="permissions"></a>Разрешения  
  Если вызывающий объект **sys. availability_databases_cluster** не является владельцем базы данных, то минимальным разрешениями, необходимыми для просмотра соответствующей строки, являются разрешения на уровне сервера ALTER ANY DATABASE или View любое базу данных или разрешение CREATE DATABASE в базе данных **master** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys. dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)   

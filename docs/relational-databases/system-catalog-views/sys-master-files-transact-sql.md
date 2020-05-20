@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_files catalog view
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2aa7c30f132f0c0e8774dcb39f31e1a254e8689c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2baa122d56582cfdf0bef780434f9f5ba98711ca
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313721"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825153"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "72313721"
 |database_id|**int**|Идентификатор базы данных, которому принадлежит данный файл. Masterdatabase_id всегда имеет значение 1.|  
 |file_id|**int**|Идентификатор файла в базе данных. Параметр file_id первичного файла всегда имеет значение 1.|  
 |file_guid|**uniqueidentifier**|Уникальный идентификатор файла.<br /><br /> NULL = база данных была обновлена с более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (допустима для SQL Server 2005 и более ранних версий).|  
-|type|**tinyint**|Тип файла:<br /><br /> 0 = строки.<br /><br /> 1 = журнал.<br /><br /> 2 = FILESTREAM.<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = полнотекстовый каталог (полнотекстовые каталоги в версии, предшествующей [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; полнотекстовые каталоги, которые обновлены до версии или созданы в версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и последующих, сообщают о типе файла 0).|  
+|тип|**tinyint**|Тип файла:<br /><br /> 0 = строки.<br /><br /> 1 = журнал.<br /><br /> 2 = FILESTREAM.<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = полнотекстовый каталог (полнотекстовые каталоги в версии, предшествующей [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; полнотекстовые каталоги, которые обновлены до версии или созданы в версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и последующих, сообщают о типе файла 0).|  
 |type_desc|**nvarchar(60)**|Описание типа файла:<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (полнотекстовые каталоги в версии, предшествующей [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]).|  
 |data_space_id|**int**|Идентификатор пространства данных, которому принадлежит этот файл. Пространство данных является файловой группой.<br /><br /> 0 = файлы журнала|  
 |name|**sysname**|Логическое имя файла в базе данных.|  
 |physical_name|**nvarchar(260)**|Имя файла в операционной системе.|  
 |state|**tinyint**|Состояние файла:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |state_desc|**nvarchar(60)**|Описание состояния файла:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Дополнительные сведения см. в разделе [Состояния файлов](../../relational-databases/databases/file-states.md).|  
-|size|**int**|Текущий размер файла, в 8 КБ страницах. Для моментального снимка базы данных аргумент size отражает максимальное пространство, которое моментальный снимок может использовать только для файла.<br /><br /> Примечание. это поле заполняется нулевым числом контейнеров FILESTREAM. Запросите представление каталога *sys. database_files* , чтобы получить фактический размер контейнеров FILESTREAM.|  
+|размер;|**int**|Текущий размер файла, в 8 КБ страницах. Для моментального снимка базы данных аргумент size отражает максимальное пространство, которое моментальный снимок может использовать только для файла.<br /><br /> Примечание. это поле заполняется нулевым числом контейнеров FILESTREAM. Запросите представление каталога *sys. database_files* , чтобы получить фактический размер контейнеров FILESTREAM.|  
 |max_size|**int**|Максимальный размер файла в страницах по 8 КБ:<br /><br /> 0 = Увеличение размера запрещено.<br /><br /> -1 = размер файла может увеличиваться до полного заполнения диска.<br /><br /> 268435456 = файл журнала может увеличиваться до 2 ТБ.<br /><br /> Примечание. базы данных, которые были обновлены с неограниченным размером файла журнала, будут сообщать-1 о максимальном размере файла журнала.|  
 |growth|**int**|0 = Файл имеет фиксированный размер и не будет увеличиваться.<br /><br /> >0 = файл будет автоматически расти.<br /><br /> Если аргумент is_percent_growth имеет значение 0, шаг роста измеряется в страницах по 8 КБ, округленных до ближайших 64 КБ.<br /><br /> Если значение аргумента is_percent_growth = 1, шаг увеличения размера выражается в процентах от общего размера.|  
 |is_media_read_onlyF|**bit**|1 = файл находится на носителе только для чтения.<br /><br /> 0 = Файл размещен на носителе, доступно для чтения и записи.|  
@@ -64,7 +64,7 @@ ms.locfileid: "72313721"
 |redo_target_lsn|**numeric(25,0)**|Номер LSN, на котором накат в режиме «в сети» по данному файлу может остановиться.<br /><br /> Равно NULL за исключением случаев, когда значение аргумента state = RESTORING или значение аргумента state = RECOVERY_PENDING.|  
 |redo_target_fork_guid|**uniqueidentifier**|Вилка восстановления, на которой может быть восстановлен контейнер. Используется в паре с redo_target_lsn.|  
 |backup_lsn|**numeric(25,0)**|Номер LSN самых новых данных или разностная резервная копия файла.|  
-|credential_id|**int**|Объект `credential_id` , `sys.credentials` используемый для хранения файла. Например, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется на виртуальной машине Azure, а файлы базы данных хранятся в хранилище BLOB-объектов Azure, учетные данные настраиваются с учетными данными доступа к месту хранения.|  
+|credential_id|**int**|Объект `credential_id` , `sys.credentials` используемый для хранения файла. Например, если выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на виртуальной машине Azure, а файлы базы данных хранятся в хранилище BLOB-объектов Azure, учетные данные настраиваются с учетными данными доступа к месту хранения.|  
   
 > [!NOTE]  
 >  При удалении или перестройке больших индексов либо удалении или усечении больших таблиц компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] откладывает фактическое освобождение страниц и связанных блокировок до момента фиксации транзакции. Отложенные операции удаления не освобождают выделенное место немедленно. Поэтому значения, возвращаемые sys.master_files сразу после удаления или обрезания большого объекта, могут не отражать доступное пространство на диске.  
@@ -72,7 +72,7 @@ ms.locfileid: "72313721"
 ## <a name="permissions"></a>Разрешения  
  Минимальные разрешения, необходимые для просмотра соответствующих строк — CREATE DATABASE, ALTER ANY DATABASE или VIEW ANY DEFINITION.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога баз данных и файлов &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [Состояния файлов](../../relational-databases/databases/file-states.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

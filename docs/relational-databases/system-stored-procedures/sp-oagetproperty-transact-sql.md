@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetProperty
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fc92c675902309179865593b03f51a385f61621e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107878"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828852"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  Если все значения данных в столбце имеют один и тот же тип данных, этот тип используется для всего столбца. Если значения данных в столбце имеют различные типы данных, тип данных всего столбца определяется по следующей схеме.  
   
-||INT|FLOAT|money|DATETIME|varchar|nvarchar|  
+||INT|плавающее|money|DATETIME|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -91,7 +91,7 @@ sp_OAGetProperty objecttoken , propertyname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Для получения значения свойства также можно использовать **sp_OAMethod** .  
   
 ## <a name="permissions"></a>Разрешения  
@@ -100,7 +100,7 @@ sp_OAGetProperty objecttoken , propertyname
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-a-local-variable"></a>A. Использование локальной переменной  
- В следующем примере показано получение `HostName` свойства (ранее созданного объекта **SQLServer** ) и его сохранение в локальной переменной.  
+ В следующем примере показано получение `HostName` Свойства (ранее созданного объекта **SQLServer** ) и его сохранение в локальной переменной.  
   
 ```  
 DECLARE @property varchar(255);  
@@ -113,8 +113,8 @@ END
 PRINT @property;  
 ```  
   
-### <a name="b-using-a-result-set"></a>Б) Использование результирующего набора  
- В следующем примере показано получение `HostName` свойства (ранее созданного объекта **SQLServer** ) и его возврат клиенту в качестве результирующего набора.  
+### <a name="b-using-a-result-set"></a>Б. Использование результирующего набора  
+ В следующем примере показано получение `HostName` Свойства (ранее созданного объекта **SQLServer** ) и его возврат клиенту в качестве результирующего набора.  
   
 ```  
 EXEC @hr = sp_OAGetProperty @object, 'HostName';  
@@ -125,7 +125,7 @@ BEGIN
 END;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры OLE-автоматизации &#40;&#41;Transact — SQL](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Пример скрипта OLE-автоматизации](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   

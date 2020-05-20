@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_peerconflictdetection
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b08e3312f34fcc26d6effff92e09b3739508171e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d5c593127a16a5a1045b8b44f943079cd3335f3a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085295"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828390"
 ---
 # <a name="sp_help_peerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @publication= ] "*Публикация*"  
+ [ @publication =] "*Публикация*"  
  Имя публикации, для которой возвращаются данные. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
- [ @timeout= ] *время ожидания*  
+ [ @timeout =] *время ожидания*  
  Указывает время (в секундах), в течение которого процедура ожидает ответа от каждого из узлов топологии. Если в топологии имеется подписчик, доступный только для чтения, указание значения времени ожидания недопустимо. Подписчик, доступный только для чтения, никогда не ответит на вызов из этой процедуры. *timeout* имеет **тип int**и значение по умолчанию 60.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
@@ -56,13 +56,13 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Процедура sp_help_peerconflictdetection применяется в одноранговой репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера sysadmin или предопределенной роли базы данных db_owner.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обнаружение конфликтов в одноранговой репликации](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
  [Одноранговая репликация транзакций](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

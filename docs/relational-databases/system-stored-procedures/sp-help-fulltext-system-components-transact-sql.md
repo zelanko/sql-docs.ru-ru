@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6239ac1bb413d2291b94e7ac05b445c770e5f13
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304882"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827658"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_help_fulltext_system_components
 |**этому**|**uniqueidentifier**|Идентификатор класса компонента.|  
 |**FullPath**|**nvarchar(256)**|Путь к расположению компонента.<br /><br /> NULL = вызывающая сторона не является членом предопределенной роли сервера **serveradmin** .|  
 |**version**|**nvarchar(30)**|Версия компонента.|  
-|**manufacturer**|**sysname**|Имя производителя компонента.|  
+|**производителя**|**sysname**|Имя производителя компонента.|  
   
  Следующий результирующий набор возвращается только в том случае, если существует один или несколько полнотекстовых каталогов, использующих *component_type*.  
   
@@ -84,7 +84,7 @@ sp_help_fulltext_system_components
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли **Public** ; Тем не менее пользователи могут видеть только сведения о полнотекстовых каталогах, для которых у них есть разрешение VIEW DEFINITION. Значения столбца **fullpath** могут просматривать только члены предопределенной роли сервера **serveradmin** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Этот метод очень важен при подготовке к обновлению. Запустите хранимую процедуру в определенной базе данных и используйте результаты, чтобы определить, будет ли определенный каталог затронут обновлением.  
   
 ## <a name="examples"></a>Примеры  
@@ -97,7 +97,7 @@ EXEC sp_help_fulltext_system_components 'all';
 GO  
 ```  
   
-### <a name="b-listing-word-breakers"></a>Б) Перечисление средств разбиения по словам  
+### <a name="b-listing-word-breakers"></a>Б. Перечисление средств разбиения по словам  
  В следующем примере перечислены все средства разбиения по словам, зарегистрированные в экземпляре сервера.  
   
 ```  
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>В. Определение того, зарегистрировано ли средство разбиения по словам  
- В следующем примере будет выведено средство разбиения по словам для турецкого языка (LCID = 1055), если оно установлено в системе и зарегистрировано в экземпляре сервера. В этом примере указываются имена параметров, ** \@component_type** и ** \@param**.  
+ В следующем примере будет выведено средство разбиения по словам для турецкого языка (LCID = 1055), если оно установлено в системе и зарегистрировано в экземпляре сервера. В этом примере указываются имена параметров, ** \@ component_type** и ** \@ param**.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -135,7 +135,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр или изменение зарегистрированных фильтров и разделителей слов](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [Настройка средств разбиения по словам и парадигматические модули для поиска и управление ими](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Настройка и управление фильтрами для поиска](../../relational-databases/search/configure-and-manage-filters-for-search.md)   

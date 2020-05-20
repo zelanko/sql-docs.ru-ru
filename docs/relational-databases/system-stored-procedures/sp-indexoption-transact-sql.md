@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexoption
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6d1231b4411e11de65cfe99d209ed231db79b5db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 17189e3acebd81e977b02b1b1b235f8e300e5e9c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030907"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826038"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или больше чем 0 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  XML-индексы не поддерживаются. Если указаны XML-индексы, или имя таблицы указано без имени индекса, и таблица содержит XML-индекс, то инструкция завершается ошибкой. Чтобы задать эти параметры, используйте [инструкцию ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) .  
   
  Чтобы отобразить текущие свойства блокировки строк и страниц, используйте [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) или представление каталога [sys. indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) .  
@@ -94,7 +94,7 @@ EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',
     N'disallowpagelocks', TRUE;  
 ```  
   
-### <a name="b-setting-an-option-on-all-indexes-on-a-table"></a>Б) Настройка параметра на все индексы таблицы  
+### <a name="b-setting-an-option-on-all-indexes-on-a-table"></a>Б. Настройка параметра на все индексы таблицы  
  Следующий пример демонстрирует блокировки строк на все индексы, связанные с таблицей `Product`. Представление каталога `sys.indexes` запрашивается до и после выполнения процедуры `sp_indexoption` для демонстрации результата выполнения инструкции.  
   
 ```sql  
@@ -117,7 +117,7 @@ GO
 ```  
   
 ### <a name="c-setting-an-option-on-a-table-with-no-clustered-index"></a>В. Настройка параметра на таблицу, не имеющую кластеризованного индекса  
- Следующий пример запрещает блокировки страниц на таблицу, не имеющую кластеризованного индекса (куча). Представление `sys.indexes` каталога запрашивается до и после выполнения `sp_indexoption` процедуры для отображения результатов выполнения инструкции.  
+ Следующий пример запрещает блокировки страниц на таблицу, не имеющую кластеризованного индекса (куча). `sys.indexes`Представление каталога запрашивается до и после `sp_indexoption` выполнения процедуры для отображения результатов выполнения инструкции.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -138,7 +138,7 @@ WHERE OBJECT_NAME (object_id) = N'DatabaseLog';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

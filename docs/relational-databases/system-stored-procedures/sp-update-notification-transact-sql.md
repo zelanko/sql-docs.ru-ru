@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 35cfa3aeda8e296cd1a85a0e8a098aaddac90954
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7282472dcb916d7122625534cb64f80ce9f4ea6a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084863"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827493"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_update_notification
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_update_notification** должны запускаться из базы данных **msdb** .  
   
  Вы можете обновить уведомление для оператора, который не имеет необходимых сведений об адресе, используя указанный *notification_method*. Если при отправке сообщения по электронной почте или пейджеру происходит ошибка, она заносится в журнал ошибок агента Microsoft SQL Server.  
@@ -68,7 +68,7 @@ sp_update_notification
  Для выполнения этой хранимой процедуры пользователям должна быть предоставлена предопределенная роль сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере изменяется метод уведомления для уведомлений, отправляемых в `François Ajenstat`оповещение `Test Alert`.  
+ В следующем примере изменяется метод уведомления для уведомлений, отправляемых в `François Ajenstat` оповещение `Test Alert` .  
   
 ```  
 USE msdb ;  
@@ -81,7 +81,7 @@ EXEC dbo.sp_update_notification
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   

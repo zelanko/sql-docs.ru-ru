@@ -15,15 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - sys.masked_columns catalog view
 ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e059265dc5f5e0d2e4bc4a3b1396d2401386d7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d05172c71a2e6a14a92d474a1a92c348e237286f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68102373"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825128"
 ---
 # <a name="sysmasked_columns-transact-sql"></a>sys. masked_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68102373"
 |is_masked|**bit**|Указывает, является ли столбец маскированным. 1 означает маскирование.|  
 |masking_function|**nvarchar(4000)**|Функция маскирования для столбца.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="permissions"></a>Разрешения  
  Это представление возвращает сведения о таблицах, в которых пользователь имеет определенное разрешение для таблицы или пользователь имеет разрешение VIEW ANY DEFINITION.  
@@ -55,7 +55,7 @@ JOIN sys.tables AS tbl
 WHERE is_masked = 1;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [динамическое маскирование данных](../../relational-databases/security/dynamic-data-masking.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   

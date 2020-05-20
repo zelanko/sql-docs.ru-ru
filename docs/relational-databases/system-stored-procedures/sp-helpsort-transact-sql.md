@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsort
 ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 511b5b8f01a96f860d9f0c4266f92b323e6f1240
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a9eeca46571b2e61e73f9f5670bfeba0fd5f908
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997354"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826088"
 ---
 # <a name="sp_helpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ sp_helpsort
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает параметры сортировки по умолчанию для сервера.  
   
-## <a name="remarks"></a>Remarks  
- Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен с параметрами сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], совместимыми с более ранней установкой, **sp_helpsort** возвращает пустые результаты. При возникновении этого поведения можно определить параметры сортировки, запросив объект SERVERPROPERTY, например: `SELECT SERVERPROPERTY ('Collation');`.  
+## <a name="remarks"></a>Примечания  
+ Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен с параметрами сортировки, совместимыми с более ранней установкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **sp_helpsort** возвращает пустые результаты. При возникновении этого поведения можно определить параметры сортировки, запросив объект SERVERPROPERTY, например: `SELECT SERVERPROPERTY ('Collation');` .  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**.  
@@ -66,7 +66,7 @@ sp_helpsort;
   
  `Latin1-General, case-sensitive, accent-sensitive, kanatype-insensitive, width-insensitive for Unicode Data, SQL Server Sort Order 51 on Code Page 1252 for non-Unicode Data.`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md)   

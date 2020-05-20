@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_config_store view
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 174fa1af651c2e713bdb91ba217e896b833467b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 17271cf5e5f7f3bfafe8b0fbf52ddb77a2746e3f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060376"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824952"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "68060376"
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для представления или членства в предопределенных ролях базы данных dc_operator, dc_proxy или dc_admin.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Список доступных свойств фиксирован, а их значения могут быть изменены только с помощью соответствующей хранимой процедуры. В этой таблице описываются свойства, которые доступны через данное представление.  
   
-|Имя свойства.|Описание|  
+|Имя свойства|Описание|  
 |-------------------|-----------------|  
 |CacheDirectory|Имя каталога в файловой системе, в которой сборщик данных хранит временную информацию.<br /><br /> Если указано значение NULL, то используется временный каталог [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |CacheWindow|Указывает политику хранения данных для каталога кэша для передач данных с ошибками.<br /><br /> -1 = сохранять данные после всех передач с ошибками.<br /><br /> 0 = не сохранять данные из передач данных с ошибками.<br /><br /> *n* = хранить данные из *n* предыдущих сбоев передачи, где *n* >= 1.<br /><br /> Воспользуйтесь хранимой процедурой sp_syscollector_set_cache_window для изменения этого значения.|  
@@ -57,7 +57,7 @@ SELECT parameter_name, parameter_value
 FROM msdb.dbo.syscollector_config_store;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры сборщика данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Представления сборщика данных &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)   

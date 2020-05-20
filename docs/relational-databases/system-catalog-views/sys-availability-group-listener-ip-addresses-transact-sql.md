@@ -19,21 +19,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - sys.availability_group_listener_ip_addresses catalog view
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a9c66e12ec326ba5021de0829b0d7cc479f858c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 49f7322dc32634631a991d76bab58394a26c491e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997586"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829130"
 ---
 # <a name="sysavailability_group_listener_ip_addresses-transact-sql"></a>sys.availability_group_listener_ip_addresses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Возвращает по строке для каждого IP-адреса, связанного с прослушивателем группы доступности AlwaysOn в кластере WSFC.  
   
- Первичный ключ: **listener_id** + **ip_address** + **ip_sub_mask**  
+ Первичный ключ: **listener_id**  +  **ip_address**  +  **ip_sub_mask**  
   
   
 |Имя столбца|Тип данных|Описание|  
@@ -44,7 +44,7 @@ ms.locfileid: "67997586"
 |**is_dhcp**|**bit**|Указывает, настраивается ли IP-адрес по DHCP, одно из следующих значений:<br /><br /> 0 = IP-адрес не настраивается по DHCP.<br /><br /> 1 = IP-адрес настраивается по DHCP.|  
 |**network_subnet_ip**|**nvarchar (48)**|IP-адрес подсети, задающий подсеть, к которой принадлежит IP-адрес.|  
 |**network_subnet_prefix_length**|**int**|Длина префикса подсети, к которой принадлежит IP-адрес.|  
-|**network_subnet_ipv4_mask**|**nvarchar (45)**|Маска подсети, к которой принадлежит IP-адрес. **network_subnet_ipv4_mask** , чтобы указать параметры DHCP-<network_subnet_option> в предложении WITH DHCP инструкции [CREATE Availability Group](../../t-sql/statements/create-availability-group-transact-sql.md) или [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .<br /><br /> NULL = подсеть IPv6|  
+|**network_subnet_ipv4_mask**|**nvarchar (45)**|Маска подсети, к которой принадлежит IP-адрес. **network_subnet_ipv4_mask** , чтобы указать параметры dhcp-<network_subnet_option> в предложении WITH DHCP инструкции [CREATE Availability Group](../../t-sql/statements/create-availability-group-transact-sql.md) или [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .<br /><br /> NULL = подсеть IPv6|  
 |**state**|**tinyint**|Состояние ONLINE/OFFLINE IP-ресурса в кластере WSFC, одно из следующих значений:<br /><br /> 1 = в сети. IP-ресурс находится в режиме «в сети».<br /><br /> 0 = вне сети. IP-ресурс находится вне сети.<br /><br /> 2 = ожидание перехода в режиме «в сети» IP-ресурс находится вне сети, но производится его перевод в режим «в сети».<br /><br /> 3 = ошибка. В процессе перевода IP-ресурса в режим «в сети» произошла ошибка.|  
 |**state_desc**|**nvarchar(60)**|Описание **состояния**, одно из следующих:<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> ONLINE_PENDING<br /><br /> FAILED|  
   
@@ -53,7 +53,7 @@ ms.locfileid: "67997586"
 ### <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запросы к системному каталогу SQL Server вопросы и ответы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

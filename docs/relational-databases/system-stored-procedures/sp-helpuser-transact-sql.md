@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpuser
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a170c5e43329d90a4977db12a98bd9d2e556e91d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e186b87680ec0592f5c69ee5659c3b9c74f680b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68048159"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826056"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68048159"
   Возвращает сведения об основных участниках уровня базы данных.  
   
 > [!IMPORTANT]  
->  **sp_helpuser** не возвращает сведения о защищаемых объектах, которые появились в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Вместо этого используйте представление [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) .  
+>  **sp_helpuser** не возвращает сведения о защищаемых объектах, которые появились в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Вместо этого используйте представление [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- В следующей таблице показан результирующий набор, если для *security_account*не указаны ни [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетная запись пользователя, ни пользователь Windows.  
+ В следующей таблице показан результирующий набор, если для security_account не указаны ни учетная запись пользователя, ни [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователь Windows. *security_account*  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -76,7 +76,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**Users_in_role**|**sysname**|Член роли в текущей базе данных.|  
 |**UserID**|**smallint**|Идентификатор пользователя для члена роли.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Чтобы просмотреть сведения о членстве в ролях базы данных, используйте представление [sys. database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Чтобы просмотреть сведения о членах роли сервера, используйте представление [sys. server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md), а чтобы просмотреть сведения об участниках уровня сервера, используйте представление [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
@@ -93,7 +93,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 EXEC sp_helpuser;  
 ```  
   
-### <a name="b-listing-information-for-a-single-user"></a>Б) Перечисление сведений об одном пользователе  
+### <a name="b-listing-information-for-a-single-user"></a>Б. Перечисление сведений об одном пользователе  
  В следующем примере отображается информация о владельце базы данных пользователей (`dbo`).  
   
 ```  
@@ -107,7 +107,7 @@ EXEC sp_helpuser 'dbo';
 EXEC sp_helpuser 'db_securityadmin';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   

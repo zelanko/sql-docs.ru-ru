@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.dm_db_missing_index_group_stats dynamic management view
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_group_stats dynamic management view
 ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa4da39290590591af30e259db910fdc9e5600ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e91971d13b26d6a156307b2a0288de236456c880
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68051559"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828105"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68051559"
 |**avg_total_system_cost**|**float**|Средняя стоимость системных запросов, которая могла быть уменьшена с помощью индекса в группе.|  
 |**avg_system_impact**|**float**|Средний процент выигрыша, который могли получить запросы системы, если создать эту группу отсутствующих индексов. Значение показывает, что стоимость запроса в среднем уменьшится на этот процент, если создать эту группу отсутствующих индексов.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Сведения, возвращаемые представлением **sys.dm_db_missing_index_group_stats**, обновляются при каждом выполнении запроса, а не при каждой компиляции или повторной компиляции запроса. Статистика использования не сохраняется и хранится только до перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Администраторы базы данных должны периодически делать резервные копии сведений об отсутствующих индексах, если необходимо сохранить статистику использования после перезагрузки сервера.  
 
   >[!NOTE]
@@ -64,7 +64,7 @@ ms.locfileid: "68051559"
 ## <a name="examples"></a>Примеры  
  В следующих примерах показано использование динамического административного представления **sys.dm_db_missing_index_group_stats**.  
   
-### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>А) Поиск 10 отсутствующих индексов с самым высоким ожидаемым улучшением производительности пользовательских запросов  
+### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. Поиск 10 отсутствующих индексов с самым высоким ожидаемым улучшением производительности пользовательских запросов  
  Следующий запрос определяет, какие 10 отсутствующих индексов окажут самое высокое ожидаемое совокупное улучшение производительности запросов пользователя в порядке убывания.  
   
 ```  
@@ -73,7 +73,7 @@ FROM sys.dm_db_missing_index_group_stats
 ORDER BY avg_total_user_cost * avg_user_impact * (user_seeks + user_scans)DESC;  
 ```  
   
-### <a name="b-find-the-individual-missing-indexes-and-their-column-details-for-a-particular-missing-index-group"></a>Б) Поиск отдельных отсутствующих индексов и подробных сведений об их столбцах для определенной группы отсутствующих индексов  
+### <a name="b-find-the-individual-missing-indexes-and-their-column-details-for-a-particular-missing-index-group"></a>Б. Поиск отдельных отсутствующих индексов и подробных сведений об их столбцах для определенной группы отсутствующих индексов  
  Следующий запрос определяет, какие отсутствующие индексы составляют отдельную группу отсутствующих индексов, и отображает подробные сведения об их столбцах. Для данного примера дескриптор группы отсутствующих индексов равен 24.  
   
 ```  
@@ -86,12 +86,12 @@ INNER JOIN sys.dm_db_missing_index_details AS mid
 WHERE migs.group_handle = 24;  
 ```  
   
- Этот запрос предоставляет имя базы данных, схемы и таблицы, в которой отсутствует индекс. Он также предоставляет имена столбцов, которые должны использоваться для ключа индекса. При написании инструкции CREATE INDEX DDL для реализации отсутствующих индексов сначала перечислите столбцы равенства, а затем столбцы неравенства \<в предложении ON *table_name*> инструкции CREATE INDEX. Включенные столбцы должны быть перечислены в предложении INCLUDE инструкции CREATE INDEX. Чтобы определить эффективный порядок столбцов равенства, расположите их на основе их выборности, перечисляя наиболее выбираемые столбцы первыми (крайние левые в списке столбцов).  
+ Этот запрос предоставляет имя базы данных, схемы и таблицы, в которой отсутствует индекс. Он также предоставляет имена столбцов, которые должны использоваться для ключа индекса. При написании инструкции CREATE INDEX DDL для реализации отсутствующих индексов сначала перечислите столбцы равенства, а затем столбцы неравенства в \< предложении ON *table_name*> инструкции CREATE INDEX. Включенные столбцы должны быть перечислены в предложении INCLUDE инструкции CREATE INDEX. Чтобы определить эффективный порядок столбцов равенства, расположите их на основе их выборности, перечисляя наиболее выбираемые столбцы первыми (крайние левые в списке столбцов).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
  [sys. dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sys. dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
- [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
+ [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_resource_pools dynamic management view
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c39c32a907cecd8f670875fffba9f21995f2ccee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae7fd97640b048d504dd03599bf991e9ae91929d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982301"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827855"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "73982301"
   Возвращает информацию о текущем состоянии пула ресурсов, текущую конфигурацию пула ресурсов и статистику пула ресурсов.  
   
 > [!NOTE]  
->  Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_resource_governor_resource_pools**.  
+>  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_resource_governor_resource_pools**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -76,9 +76,9 @@ ms.locfileid: "73982301"
 |write_io_stall_queued_ms|**bigint**|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Общее время (в миллисекундах) между получением ввода-вывода при записи и проблемой. Допускает значение NULL. NULL, если пул ресурсов не управляется в аспекте операций ввода-вывода. Иными словами, параметры MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME пула ресурсов имеют значение 0.<br /><br /> Это задержка, вызванная регулированием ресурсов ввода-вывода.|  
 |io_issue_violations_total|**int**|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Общее количество проблем с вводом-выводом. Иными словами, количество раз, когда скорость ввода-вывода при проблеме была ниже, чем резервная. Допускает значение NULL. NULL, если пул ресурсов не управляется в аспекте операций ввода-вывода. Иными словами, параметры MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME пула ресурсов имеют значение 0.|  
 |io_issue_delay_total_ms|**bigint**|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Общее время (в миллисекундах) между запланированной проблемой и фактической проблемой ввода-вывода. Допускает значение NULL. NULL, если пул ресурсов не управляется в аспекте операций ввода-вывода. Иными словами, параметры MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME пула ресурсов имеют значение 0.|  
-|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Между группами рабочей нагрузки регулятора ресурсов и пулами ресурсов регулятора ресурсов существует связь «многие к одному». В результате многие статистики пула ресурсов являются производными от статистик группы рабочей нагрузки.  
   
  Данное динамическое административное представление отображает конфигурацию, хранимую в памяти. Чтобы просмотреть метаданные сохраненной конфигурации, используйте представление каталога sys. resource_governor_resource_pools.  
@@ -86,7 +86,7 @@ ms.locfileid: "73982301"
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW SERVER STATE.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys. dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [sys. resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   

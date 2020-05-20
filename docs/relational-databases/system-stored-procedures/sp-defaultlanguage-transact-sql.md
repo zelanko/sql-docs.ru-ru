@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_defaultlanguage
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: af2402ce4f1e49ee572a9d271497c2798d679070
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7c06f03af5ab9cc8d06b8d7d0f87208895c1fc33
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68120093"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826164"
 ---
 # <a name="sp_defaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_defaultlanguage** вызывает инструкцию ALTER LOGIN, которая поддерживает дополнительные параметры. Дополнительные сведения об изменении других значений по умолчанию для входа см. в разделе [ALTER login &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
- Для изменения языка текущего сеанса воспользуйтесь инструкцией SET LANGUAGE. Используйте функцию @@LANGUAGE для отображения текущего языкового параметра.  
+ Для изменения языка текущего сеанса воспользуйтесь инструкцией SET LANGUAGE. Используйте функцию @ @LANGUAGE для отображения текущего языкового параметра.  
   
  Если язык по умолчанию для имени входа удаляется с сервера, то имя входа приобретает текущий язык по умолчанию сервера. **sp_defaultlanguage** не может быть выполнена в пользовательской транзакции.  
   
@@ -70,7 +70,7 @@ ALTER LOGIN Fathima WITH DEFAULT_LANGUAGE = Arabic;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [@@LANGUAGE (Transact-SQL)](../../t-sql/functions/language-transact-sql.md)   

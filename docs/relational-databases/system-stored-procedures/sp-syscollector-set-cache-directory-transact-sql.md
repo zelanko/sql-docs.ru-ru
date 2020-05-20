@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_cache_directory stored procedure
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 03236c2882cad61e42ffa0fcdeb322d4ada53c2a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 46193a7fa201dedc9f3936c727ac45d221cdd9da
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76910047"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828788"
 ---
 # <a name="sp_syscollector_set_cache_directory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Необходимо отключить сборщик данных перед изменением конфигурации каталога кэша. Если включен сборщик данных, эта хранимая процедура завершится с ошибкой. Дополнительные сведения см. в разделе [Включение или отключение сбора данных](../../relational-databases/data-collection/enable-or-disable-data-collection.md)и [Управление сбором данных](../../relational-databases/data-collection/manage-data-collection.md).  
   
  Указанный каталог не обязательно должен существовать во время выполнения sp_syscollector_set_cache_directory; Однако данные не могут быть успешно кэшированы и отправлены, пока каталог не будет создан. Рекомендуется создать каталог до выполнения этой хранимой процедуры.  
@@ -54,7 +54,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
  Для выполнения этой процедуры требуется членство в предопределенной роли базы данных dc_admin (с разрешением EXECUTE).  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере отключается сборщик данных, устанавливается каталог кэша для сборщика данных `D:\tempdata`, а затем включается сборщик данных.  
+ В следующем примере отключается сборщик данных, устанавливается каталог кэша для сборщика данных `D:\tempdata` , а затем включается сборщик данных.  
   
 ```sql  
 USE msdb;  
@@ -67,7 +67,7 @@ EXECUTE dbo.sp_syscollector_enable_collector;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры сборщика данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [sp_syscollector_set_cache_window (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
   

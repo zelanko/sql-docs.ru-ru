@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindefault
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 918f545dd0ea0ca30524a307f1ae6d30c3fafb61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1552f566852f90b3526645313a160f2446b868e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046053"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828508"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_bindefault [ @defname = ] 'default' ,
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **Sp_bindefault** можно использовать для привязки нового значения по умолчанию к столбцу, хотя рекомендуется использовать ограничение по умолчанию или псевдоним типа данных без отмены привязки к существующему по умолчанию. Старое значение по умолчанию переопределяется. Нельзя привязать значение по умолчанию к системному типу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или определяемого пользователем типу данных среды CLR. Если значение по умолчанию несовместимо со столбцом, к которому оно привязано, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] возвращает сообщение об ошибке при вставке значения по умолчанию, а не при его привязке.  
   
  Существующие столбцы типа данных псевдонима наследуют новое значение по умолчанию, если только к ним не привязано значение по умолчанию или *futureonly_flag* указан как **futureonly**. Новые столбцы с псевдонимом типа данных всегда наследуют значение по умолчанию.  
@@ -80,7 +80,7 @@ GO
 EXEC sp_bindefault 'today', 'HumanResources.Employee.HireDate';  
 ```  
   
-### <a name="b-binding-a-default-to-an-alias-data-type"></a>Б) Привязка значения по умолчанию к псевдониму типа данных  
+### <a name="b-binding-a-default-to-an-alias-data-type"></a>Б. Привязка значения по умолчанию к псевдониму типа данных  
  Значение по умолчанию с именем `def_ssn` и псевдоним типа данных с именем `ssn` уже существуют. В следующем примере значение по умолчанию `def_ssn` привязывается к псевдониму `ssn`. Когда создается таблица, значение по умолчанию наследуется всеми столбцами, которым присвоен псевдоним типа данных `ssn`. Существующие столбцы типа **ssn** также наследуют **def_ssn**по умолчанию, если только для *futureonly_flag* не задано значение **futureonly** , или если только к столбцу не привязывается по умолчанию напрямую. Значения по умолчанию, которые привязаны к столбцам, всегда имеют приоритет над значениями по умолчанию, привязанными к псевдониму типа данных.  
   
 ```  
@@ -90,7 +90,7 @@ EXEC sp_bindefault 'def_ssn', 'ssn';
 ```  
   
 ### <a name="c-using-the-futureonly_flag"></a>В. Использование аргумента futureonly_flag  
- В следующем примере значение по умолчанию `def_ssn` привязывается к псевдониму типа данных `ssn`. Так как указан **futureonly** , существующие столбцы типа `ssn` не затрагиваются.  
+ В следующем примере значение по умолчанию `def_ssn` привязывается к псевдониму типа данных `ssn`. Так как указан **futureonly** , существующие столбцы типа не `ssn` затрагиваются.  
   
 ```  
 USE master;  
@@ -99,7 +99,7 @@ EXEC sp_bindefault 'def_ssn', 'ssn', 'futureonly';
 ```  
   
 ### <a name="d-using-delimited-identifiers"></a>Г. Использование идентификаторов с разделителями  
- В следующем примере показано использование идентификаторов с разделителями `[t.1]`, в *object_name*.  
+ В следующем примере показано использование идентификаторов с разделителями, `[t.1]` в *object_name*.  
   
 ```  
 USE master;  
@@ -112,7 +112,7 @@ EXEC sp_bindefault 'default1', '[t.1].c1' ;
 -- and the second distinguishes the table name from the column name.  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   
  [DROP &#40;по УМОЛЧАНИю&#41;Transact-SQL](../../t-sql/statements/drop-default-transact-sql.md)   

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - filegroups [SQL Server], restorefilegroup system table
 - restorefilegroup system table
 ms.assetid: 3aa15c55-6b72-4f76-97d7-bd88391d105c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 77d47f620fe7b426f8193138fb3abdf1c403ec87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b8dbdc6cb36ccfca3abb3966fc6e192200b6b72c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910165"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827173"
 ---
 # <a name="restorefilegroup-transact-sql"></a>restorefilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67910165"
 |**restore_history_id**|**int**|Уникальный идентификационный номер, который определяет соответствующую операцию восстановления. Ссылается на **restorehistory (restore_history_id)**.|  
 |**filegroup_name**|**nvarchar(128)**|Имя восстанавливаемой файловой группы. Может иметь значение NULL.<br /><br /> Когда база данных возвращается в моментальный снимок базы данных, это значение заполняется так же, как и в случае полного восстановления.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Чтобы уменьшить количество строк в этой таблице и в других таблицах резервного копирования и журнала, выполните хранимую процедуру [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  
   
 ## <a name="see-also"></a>См. также  

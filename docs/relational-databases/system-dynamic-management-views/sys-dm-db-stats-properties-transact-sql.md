@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_properties
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 274e801bfb8e627564f5586574c16ecd916e9859
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21007e66d8f193ce8e2a166e1615619be409cb9d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910714"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828026"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |rows_sampled|**bigint**|Общее количество строк, выбранных для статистических вычислений.|  
 |steps|**int**|Число шагов в гистограмме. Дополнительные сведения см. в статье [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
 |unfiltered_rows|**bigint**|Общее количество строк в таблице до применения критерия фильтра (для отфильтрованной статистики). Если статистика не отфильтрована, то unfiltered_rows равно значению, которое возвращается в столбце rows.|  
-|modification_counter|**bigint**|Общее количество изменений в начальном столбце статистики (на основе которого строится гистограмма) с момента последнего обновления статистики.<br /><br /> Оптимизированные для памяти таблицы: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] начиная с [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и в этом столбце содержатся: общее число изменений таблицы с момента последнего обновления статистики или перезапуска базы данных.|  
+|modification_counter|**bigint**|Общее количество изменений в начальном столбце статистики (на основе которого строится гистограмма) с момента последнего обновления статистики.<br /><br /> Оптимизированные для памяти таблицы: начиная [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] этом столбце содержатся: общее число изменений таблицы с момента последнего обновления статистики или перезапуска базы данных.|  
 |persisted_sample_percent|**float**|Процент материализованной выборки используется для обновлений статистики, где явно не указан процент выборки. Если значение равно нулю, процент материализованной выборки не устанавливается для этой статистики.<br /><br /> **Применимо к:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
 ## <a name="remarks"></a><a name="Remarks"></a>. Замечания  
@@ -83,7 +83,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
 SELECT * FROM sys.dm_db_stats_properties (object_id('Person.Person'), 1);
 ``` 
   
-### <a name="b-returning-all-statistics-properties-for-a-table"></a>Б) Получение всех статистических свойств таблицы  
+### <a name="b-returning-all-statistics-properties-for-a-table"></a>Б. Получение всех статистических свойств таблицы  
  В следующем примере показано получение всех статистических свойств, имеющихся для таблицы TEST.  
   
 ```sql  

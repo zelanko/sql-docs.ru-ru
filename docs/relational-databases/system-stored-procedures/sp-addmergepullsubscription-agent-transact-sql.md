@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription_agent
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 07cc514d615c86a90dcf37fbd4748c3ab1776f06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 69b751dc93ad4512498530ddd99cf4fc8edee62a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "81528988"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826308"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -133,7 +133,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @distributor = ] 'distributor'`Имя распространителя. Аргумент *распространитель* имеет тип **sysname**и значение по умолчанию *издателя*. то есть издатель также является распространителем.  
   
-`[ @distributor_security_mode = ] distributor_security_mode`Режим безопасности, используемый при соединении с распространителем при синхронизации. *distributor_security_mode* имеет **тип int**и значение по умолчанию 0. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности. **1** указывает проверку подлинности Windows.  
+`[ @distributor_security_mode = ] distributor_security_mode`Режим безопасности, используемый при соединении с распространителем при синхронизации. *distributor_security_mode* имеет **тип int**и значение по умолчанию 0. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности. **1** указывает проверку подлинности Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -149,13 +149,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_type = ] frequency_type`Частота, с которой следует запланировать агент слияния. *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Один раз.|  
 |**2**|По запросу|  
 |**4**|Ежедневно|  
-|**8**|Weekly (Еженедельно);|  
-|**16**|Ежемесячно|  
+|**8**|Еженедельно|  
+|**глубин**|Ежемесячно|  
 |**32**|Ежемесячно с относительной датой|  
 |**64**|Автозапуск|  
 |**128**|Повторяющееся задание|  
@@ -166,7 +166,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_interval = ] frequency_interval`День или дни выполнения агент слияния. *frequency_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Воскресенье|  
 |**2**|Понедельник|  
@@ -182,20 +182,20 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Дата агент слияния. Этот параметр используется, если *frequency_type* установлен в значение **32** (ежемесячное относительное расписание). *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Первый|  
 |**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
-|**16**|Последний|  
+|**глубин**|Последний|  
 |NULL (по умолчанию)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию NULL.  
   
 `[ @frequency_subday = ] frequency_subday`Частота повторного планирования в течение заданного периода. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
 |**2**|Секунда|  
@@ -221,7 +221,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @merge_jobid = ] merge_jobid`Выходной параметр для идентификатора задания. *merge_jobid* является **двоичным (16)** и ЗНАЧЕНИЕМ по умолчанию NULL.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Указывает, можно ли синхронизировать подписку с помощью диспетчера синхронизации Windows. *enabled_for_syncmgr* имеет тип **nvarchar (5)** и значение по умолчанию false. Если **значение равно false**, подписка не зарегистрирована в диспетчере синхронизации. Если **значение — true**, подписка регистрируется в диспетчере синхронизации и может быть синхронизирована [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]без запуска.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Указывает, можно ли синхронизировать подписку с помощью диспетчера синхронизации Windows. *enabled_for_syncmgr* имеет тип **nvarchar (5)** и значение по умолчанию false. Если **значение равно false**, подписка не зарегистрирована в диспетчере синхронизации. Если **значение — true**, подписка регистрируется в диспетчере синхронизации и может быть синхронизирована без запуска [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @ftp_address = ] 'ftp_address'`Только для обратной совместимости.  
   
@@ -255,7 +255,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @use_web_sync = ] use_web_sync`Указывает, что веб-синхронизация включена. *use_web_sync* имеет **бит**и значение по умолчанию 0. **1** указывает, что подписка по запросу может быть синхронизирована через Интернет по протоколу HTTP.  
   
-`[ @internet_url = ] 'internet_url'`— Это расположение прослушивателя репликации (REPLISAPI. DLL) для веб-синхронизации. *internet_url* имеет тип **nvarchar (260)** и значение по умолчанию NULL. *internet_url* является полным URL-адресом в формате `http://server.domain.com/directory/replisapi.dll`. Если сервер настроен для прослушивания порта, отличного от 80-го, необходимо также задать номер порта в формате `http://server.domain.com:portnumber/directory/replisapi.dll`, где `portnumber` указывает номер порта.  
+`[ @internet_url = ] 'internet_url'`— Это расположение прослушивателя репликации (REPLISAPI. DLL) для веб-синхронизации. *internet_url* имеет тип **nvarchar (260)** и значение по умолчанию NULL. *internet_url* является полным URL-адресом в формате `http://server.domain.com/directory/replisapi.dll` . Если сервер настроен для прослушивания порта, отличного от 80-го, необходимо также задать номер порта в формате `http://server.domain.com:portnumber/directory/replisapi.dll`, где `portnumber` указывает номер порта.  
   
 `[ @internet_login = ] 'internet_login'`Имя входа, используемое агент слияния при соединении с веб-сервером, на котором размещается веб-синхронизация, с использованием обычной проверки подлинности HTTP. Аргумент *internet_login* имеет тип **sysname**и значение по умолчанию NULL.  
   
@@ -266,7 +266,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @internet_security_mode = ] internet_security_mode`Метод проверки подлинности, используемый агент слияния при подключении к веб-серверу во время веб-синхронизации по протоколу HTTPS. *internet_security_mode* имеет **тип int** и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0**|Используется обычная проверка подлинности (проверка пароля и имени входа, входящая в протокол HTTP).|  
 |**1** (по умолчанию)|Используется встроенная проверка подлинности Windows.|  
@@ -288,7 +288,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_addmergepullsubscription_agent** используется в репликации слиянием и использует функции, аналогичные [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
  Пример правильного указания параметров безопасности при выполнении **sp_addmergepullsubscription_agent**см. в разделе [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md).  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_control_plan_guide
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 808d6e9482d293e957a0dc483df128d08b74133c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 137189bf0c49667b238c09ba2291463e3922cfde
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108764"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824846"
 ---
 # <a name="sp_control_plan_guide-transact-sql"></a>Хранимая процедура sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,12 +71,12 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  ENABLE ALL  
  Включает все структуры планов в текущей базе данных. Невозможно указать **N "**_plan_guide_name_**"**, если задан параметр "включить все".  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Попытка удаления или изменения функции, хранимой процедуры или триггера DML, на которые имеется ссылка в структуре плана (как включенных, так и отключенных), приводит к ошибке.  
   
  Отключение уже отключенной структуры плана или включение включенной не имеет силы и не вызывает ошибки.  
   
- Руководства планов доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Однако можно выполнить **sp_control_plan_guide** с параметром DROP или Drop ALL в любом выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Руководства планов доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Однако можно выполнить **sp_control_plan_guide** с параметром DROP или Drop ALL в любом выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="permissions"></a>Разрешения  
  Для выполнения **sp_control_plan_guide** в структуре плана типа Object (созданная с указанием ** @type "** Object **"** ) требуется разрешение ALTER на объект, на который ссылается структура плана. Все остальные структуры планов требуют разрешения ALTER DATABASE.  
@@ -124,7 +124,7 @@ GO
 EXEC sp_control_plan_guide N'DROP', N'Guide3';  
 ```  
   
-### <a name="b-disabling-all-plan-guides-in-the-current-database"></a>Б) Отключение всех структур планов в текущей базе данных  
+### <a name="b-disabling-all-plan-guides-in-the-current-database"></a>Б. Отключение всех структур планов в текущей базе данных  
  В следующем примере отключаются все структуры планов в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
@@ -133,11 +133,11 @@ GO
 EXEC sp_control_plan_guide N'DISABLE ALL';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sys. plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
- [Структуры планов](../../relational-databases/performance/plan-guides.md)  
+ [Руководства планов](../../relational-databases/performance/plan-guides.md)  
   
   

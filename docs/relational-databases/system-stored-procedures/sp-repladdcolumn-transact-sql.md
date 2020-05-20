@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repladdcolumn
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 75c66d1077b111837197957cc845b690b794ea24
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 08f459761c6e72063979bef6f7d9067611f2dd78
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771050"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826588"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  [ @source_object =] "*source_object*"  
  Имя табличной статьи, в которую будет добавлен столбец. *source_object* имеет тип **nvarchar (358**) и не имеет значения по умолчанию.  
   
- [ @column =] "*Column*"  
+ [ @column =] "*столбец*"  
  Имя столбца таблицы, добавляемого для репликации. *столбец* имеет тип **sysname**и не имеет значения по умолчанию.  
   
- [ @typetext =] "*TypeText*"  
+ [ @typetext =] '*TypeText*'  
  Определение добавляемого столбца. *TypeText* имеет тип **nvarchar (3000)** и не имеет значения по умолчанию. Например, если добавляется столбец order_filled и это поле с одним символом, а не NULL, и имеет значение по умолчанию **N**, order_filled будет параметром *столбца* , а определение столбца, **char (1) NOT NULL constraint_name значением по умолчанию "N"** будет значение параметра *TypeText* .  
   
  [ @publication_to_add =] "*publication_to_add*"  
  Имя публикации, к которой добавляется новый столбец. *publication_to_add* имеет тип **nvarchar (4000)** и значение по умолчанию **ALL**. Если **все**, то затрагиваются все публикации, содержащие эту таблицу. Если указан *publication_to_add* , то только эта публикация добавляет новый столбец.  
   
- [ @from_agent = ] *from_agent*  
+ [ @from_agent =] *from_agent*  
  Выполняется ли хранимая процедура агентом репликации. *from_agent* является **типом int**и значением по умолчанию **0**, где значение **1** используется, если хранимая процедура выполняется агентом репликации, а во всех остальных случаях используется значение по умолчанию **0**.  
   
  [ @schema_change_script =] "*schema_change_script*"  
@@ -68,14 +68,14 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
   
 -   Если пользовательские хранимые процедуры не формируются автоматически, *schema_change_script*можно использовать для повторного создания этих хранимых процедур или для создания пользовательских хранимых процедур, определяемых пользователем.  
   
- [ @force_invalidate_snapshot = ] *force_invalidate_snapshot*  
+ [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
  Определяет возможность недействительности моментального снимка. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **1**.  
   
  **1** указывает, что изменения в статье могут привести к недействительности моментального снимка, и, если это так, значение **1** дает разрешение на создание нового моментального снимка.  
   
  **0** указывает, что изменения в статье не приводят к недействительности моментального снимка.  
   
- [ @force_reinit_subscription = ] *force_reinit_subscription*  
+ [ @force_reinit_subscription =] *force_reinit_subscription*  
  Включает или отключает возможность повторной инициализации подписки. *force_reinit_subscription* является **битом** со значением по умолчанию **0**.  
   
  **0** указывает, что изменения в статье не приводят к повторной инициализации подписки.  
@@ -88,7 +88,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера sysadmin и предопределенной роли базы данных db_owner могут выполнять процедуру sp_repladdcolumn.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Устаревшие функции в Репликация SQL Server](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

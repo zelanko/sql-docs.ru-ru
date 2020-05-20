@@ -17,14 +17,14 @@ helpviewer_keywords:
 - editions [SQL Server]
 - sys.dm_db_persisted_sku_features dynamic management view
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f689541d455f4f7e6da4cc68742519a74f671506
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c92a9271575a725aef6981b97cb9b35c81829044
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981835"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828071"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "73981835"
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DATABASE STATE на базу данных.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Если в базе данных не используются функции, которые могут быть ограничены конкретным выпуском, представление не возвращает никаких строк.  
   
  sys. dm_db_persisted_sku_features может содержать следующие функции изменения базы данных, ограниченные конкретными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выпусками:  
@@ -65,7 +65,7 @@ ms.locfileid: "73981835"
 -   **TransparentDataEncryption.** Указывает, что база данных зашифрована с помощью прозрачного шифрования данных. Чтобы удалить прозрачное шифрование данных, используйте инструкцию ALTER DATABASE. Дополнительные сведения см. в статье [Прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).  
 
 > [!NOTE]
-> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1), эти функции, кроме **транспарентдатаенкриптион.** доступны в нескольких [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выпусках и не ограничиваются только выпусками Enterprise или Developer.
+> Начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 1 (SP1), эти функции, кроме **транспарентдатаенкриптион.** доступны в нескольких [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выпусках и не ограничиваются только выпусками Enterprise или Developer.
 
  Чтобы определить, используются ли в базе данных функции, ограниченные конкретными выпусками, выполните следующую инструкцию:  
   
@@ -74,7 +74,7 @@ SELECT feature_name FROM sys.dm_db_persisted_sku_features;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [Выпуски и поддерживаемые функции SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)   

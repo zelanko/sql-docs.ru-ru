@@ -1,5 +1,5 @@
 ---
-title: conflict_&lt;Schema&gt;_&lt;Table&gt; (Transact-SQL) | Документация Майкрософт
+title: conflict_ &lt; Schema &gt; _ &lt; Table &gt; (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/15/2016
 ms.prod: sql
@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - conflict_<schema>_<table>
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4725da28e9cd83df4979d1cc476cd60a488c0aa4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7986df966f25644a05d63165cc3d87f4be752ec9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084771"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825959"
 ---
-# <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>conflict_&lt;Schema&gt;_&lt;Table&gt; (Transact-SQL)
+# <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>conflict_ &lt; Schema &gt; _ &lt; Table &gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Таблица conflict_\<схемы>_\<таблице> содержит сведения о конфликтующих строках в одноранговой репликации. Для каждой реплицируемой таблицы в публикации существует таблица конфликтов, при этом к имени таблицы конфликтов добавляются имя схемы и имя статьи. Такие таблицы конфликтов существуют во всех базах данных публикаций для каждой из статей.  
+  Таблица conflict_ \< схемы>_ \< таблице> содержит сведения о конфликтующих строках в одноранговой репликации. Для каждой реплицируемой таблицы в публикации существует таблица конфликтов, при этом к имени таблицы конфликтов добавляются имя схемы и имя статьи. Такие таблицы конфликтов существуют во всех базах данных публикаций для каждой из статей.  
   
  При одноранговой репликации агент распространителя при обнаружении конфликта завершается ошибкой. Эта ошибка заносится в журнал, но данные конфликта не записываются в таблицу конфликтов и поэтому недоступны для просмотра. Если агенту распространителя разрешено продолжение работы, то конфликт заносится в локальный журнал на каждом из узлов, где он обнаружен. Дополнительные сведения см. в подразделе «Обработка конфликтов» раздела [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68084771"
 |__$change_id|**Binary (8)**|Для локальной строки это значение равно __$row_id входящей строки, вызвавшей конфликт с локальной строкой. Для входящей строки это значение равно NULL.|  
 |\<имена столбцов базовой таблицы>|\<типы столбцов базовой таблицы>|Конфликтующая строка содержит один столбец для каждого из столбцов базовой таблицы.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

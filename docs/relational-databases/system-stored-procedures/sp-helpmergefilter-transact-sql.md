@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5a743b03d379276e6842b72e44d346cc1356cf7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 709472c434d2ddb80d33832e7c466abdb5a7d0fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137687"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828900"
 ---
 # <a name="sp_helpmergefilter-transact-sql"></a>Хранимая процедура sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="arguments"></a>Аргументы  
 `[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'`Имя статьи. Аргумент *article* имеет тип **sysname**и значение по **%** умолчанию, которое возвращает имена всех статей.  
+`[ @article = ] 'article'`Имя статьи. Аргумент *article* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает имена всех статей.  
   
-`[ @filtername = ] 'filtername'`Имя фильтра, сведения о котором возвращаются. *filtername* имеет тип **sysname**и значение по умолчанию **%**, которое возвращает сведения обо всех фильтрах, определенных для статьи или публикации.  
+`[ @filtername = ] 'filtername'`Имя фильтра, сведения о котором возвращаются. *filtername* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех фильтрах, определенных для статьи или публикации.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -64,13 +64,13 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_helpmergefilter** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** и **db_owner** предопределенной роли базы данных могут выполнять **sp_helpmergefilter**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   

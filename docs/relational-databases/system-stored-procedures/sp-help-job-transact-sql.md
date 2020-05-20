@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 29870a0ffb3d2c3b1872acbb40266aef0d16b62c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1972670a39dbd0fdb3f12b58df5116a83bf0a58d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75546567"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827654"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Приостановленные.|  
 |**7**|Выполняющие завершающие действия.|  
   
-`[ @date_comparator = ] 'date_comparison'`Оператор сравнения, используемый в сравнениях *date_created* и *date_modified*. *date_comparison* имеет **тип char (1)** и может иметь значение = \<, или >.  
+`[ @date_comparator = ] 'date_comparison'`Оператор сравнения, используемый в сравнениях *date_created* и *date_modified*. *date_comparison* имеет **тип char (1)** и может иметь значение =, \< или >.  
   
 `[ @date_created = ] date_created`Дата создания задания. *date_created*имеет тип **DateTime**и значение по умолчанию NULL.  
   
@@ -162,7 +162,7 @@ sp_help_job { [ @job_id = ] job_id
 |**retry_attempts**|**int**|Максимальное число попыток повтора команды (в случае неудачи) перед тем, как этап будет учтен как ошибочный.|  
 |**retry_interval**|**int**|Интервал в минутах между попытками повтора.|  
 |**os_run_priority**|**varchar (4000)**|Зарезервировано.|  
-|**output_file_name**|**varchar (200)**|Файл, в который должны быть записаны выходные[!INCLUDE[tsql](../../includes/tsql-md.md)] данные команды (только шаги **CmdExec** ).|  
+|**output_file_name**|**varchar (200)**|Файл, в который должны быть записаны выходные данные команды ( [!INCLUDE[tsql](../../includes/tsql-md.md)] только шаги **CmdExec** ).|  
 |**last_run_outcome**|**int**|Результат последнего запуска этапа:<br /><br /> **0** = сбой<br /><br /> **1** = успех<br /><br /> **3** = отменено<br /><br /> **5** = неизвестно|  
 |**last_run_duration**|**int**|Продолжительность этапа в секундах при последнем запуске.|  
 |**last_run_retries**|**int**|Число повторов команды при последнем запуске этапа.|  
@@ -234,7 +234,7 @@ EXEC dbo.sp_help_job ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-jobs-matching-a-specific-criteria"></a>Б) Вывод сведений о заданиях, совпадающих с определенным критерием  
+### <a name="b-listing-information-for-jobs-matching-a-specific-criteria"></a>Б. Вывод сведений о заданиях, совпадающих с определенным критерием  
  В следующем примере показано, как выводятся сведения о многосерверных заданиях, владельцем которых является `françoisa`, которые включены и выполняются.  
   
 ```  
@@ -262,7 +262,7 @@ EXEC dbo.sp_help_job
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   

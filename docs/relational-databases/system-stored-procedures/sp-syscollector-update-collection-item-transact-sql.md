@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_update_collection_item
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e14f60cb3e1a4493e58968913a3ae840625e190f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010562"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828223"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,27 +46,27 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  Уникальный идентификатор, определяющий элемент коллекции. *collection_item_id* имеет **тип int** и значение по умолчанию NULL. *collection_item_id* должны иметь значение, если *Name* имеет значение null.  
   
- [ @name = ] "*имя*"  
+ [ @name =] "*имя*"  
  Имя элемента сбора. Аргумент *Name* имеет тип **sysname** и значение по умолчанию NULL. *имя* должно иметь значение, если *collection_item_id* имеет значение null.  
   
- [ @new_name = ] "*new_name*"  
+ [ @new_name =] "*new_name*"  
  Новое имя для элемента сбора. Аргумент *new_name* имеет тип **sysname**и, если он используется, не может быть пустой строкой.  
   
  *new_name* должны быть уникальными. Чтобы получить список имен элементов текущего сбора, выполните запрос системного представления syscollector_collection_items.  
   
- [ @frequency = ] *Частота*  
+ [ @frequency =] *Частота*  
  Частота в секундах, с которой данные собираются этим элементом сбора. параметр *Frequency* имеет **тип int**и значение по умолчанию 5, которое может быть указано.  
   
- [ @parameters = ] "*Parameters*"  
+ [ @parameters =] "*Parameters*"  
  Входные параметры для элемента сбора. *Параметры* имеют **Формат XML** и значение по умолчанию NULL. Схема *параметров* должна соответствовать схеме параметров типа сборщика.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или 1 (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Если набор сбора настроен на режим без кэширования, изменение частоты не учитывается, поскольку этот режим предусматривает выполнение сбора данных и передачу по расписанию, указанному для набора сбора. Чтобы просмотреть состояние набора сбора, выполните следующий запрос. Замените `<collection_item_id>` идентификатором обновляемого элемента сбора.  
   
 ```  
@@ -91,7 +91,7 @@ WHERE collection_item_id = <collection_item_id>;
 ## <a name="examples"></a>Примеры  
  Следующие примеры основаны на элементе сбора, созданном в примере, определенном в [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
   
-### <a name="a-changing-the-collection-frequency"></a>А) Изменение частоты сбора  
+### <a name="a-changing-the-collection-frequency"></a>A. Изменение частоты сбора  
  В следующем примере изменяется частота сбора для указанного элемента сбора.  
   
 ```  
@@ -103,7 +103,7 @@ EXEC sp_syscollector_update_collection_item
 GO  
 ```  
   
-### <a name="b-renaming-a-collection-item"></a>Б) Переименование элемента сбора  
+### <a name="b-renaming-a-collection-item"></a>Б. Переименование элемента сбора  
  В следующем примере производится переименование элемента сбора.  
   
 ```  
@@ -137,7 +137,7 @@ EXEC sp_syscollector_update_collection_item
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   

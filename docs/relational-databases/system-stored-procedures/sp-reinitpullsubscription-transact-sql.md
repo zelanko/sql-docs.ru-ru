@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitpullsubscription
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6f9021ec9b71694fc6567db5edf79965e09fd3c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 46abcc422058503a0c1911d69ec36b1539957753
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304912"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826591"
 ---
 # <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_reinitpullsubscription** используется в репликации транзакций.  
   
  **sp_reinitpullsubscription** не поддерживается для одноранговой репликации транзакций.  
   
  **sp_reinitpullsubscription** можно вызвать с подписчика для повторной инициализации подписки во время следующего запуска агент распространения.  
   
- Подписки на публикации, созданные со значением **false** для ** \@immediate_sync** , не могут быть повторно инициализированы с подписчика.  
+ Подписки на публикации, созданные со значением **false** для ** \@ immediate_sync** , не могут быть повторно инициализированы с подписчика.  
   
  Можно повторно инициализировать подписку по запросу, выполнив **sp_reinitpullsubscription** на подписчике или **sp_reinitsubscription** на издателе.  
   
@@ -65,7 +65,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_reinitpullsubscription**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Повторная инициализация подписки](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [Повторная инициализация подписок](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

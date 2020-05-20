@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_job
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7752b8fcb453f545c357c529774d570e41201ed1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c78536fbf8e9bb00133d7724f218c60c3d005fb2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72381914"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826360"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "72381914"
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
- > В [управляемый экземпляр базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)в настоящее время поддерживаются не все функции агент SQL Server. Дополнительные сведения см. [в разделе управляемый экземпляр базы данных SQL Azure отличий T-SQL от SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
+ > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
  
 ## <a name="syntax"></a>Синтаксис  
   
@@ -57,7 +57,7 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_name = ] 'job_name'`Имя задания. Имя должно быть уникальным и не может содержать символ процента (**%**). *job_name*имеет тип **nvarchar (128)** и не имеет значения по умолчанию.  
+`[ @job_name = ] 'job_name'`Имя задания. Имя должно быть уникальным и не может содержать символ процента ( **%** ). *job_name*имеет тип **nvarchar (128)** и не имеет значения по умолчанию.  
   
 `[ @enabled = ] enabled`Указывает состояние добавленного задания. *Enabled*имеет тип **tinyint**и значение по умолчанию 1 (включено). Если значение **равно 0**, задание не включено и не выполняется в соответствии с расписанием. Однако его можно запустить вручную.  
   
@@ -69,7 +69,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @category_id = ] category_id`Независимый от языка механизм для указания категории заданий. *category_id*имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @owner_login_name = ] 'login'`Имя входа, владеющего заданием. Аргумент *Login*имеет тип **sysname**и значение по умолчанию NULL, которое интерпретируется как текущее имя входа. Только члены предопределенной роли сервера **sysadmin** могут устанавливать или изменять значение для ** \@owner_login_name**. Если пользователи, не являющиеся участниками роли **sysadmin** , или изменяют значение ** \@owner_login_name**, выполнение этой хранимой процедуры завершается неудачей и возвращается ошибка.  
+`[ @owner_login_name = ] 'login'`Имя входа, владеющего заданием. Аргумент *Login*имеет тип **sysname**и значение по умолчанию NULL, которое интерпретируется как текущее имя входа. Только члены предопределенной роли сервера **sysadmin** могут устанавливать или изменять значение для ** \@ owner_login_name**. Если пользователи, не являющиеся участниками роли **sysadmin** , или изменяют значение ** \@ owner_login_name**, выполнение этой хранимой процедуры завершается неудачей и возвращается ошибка.  
   
 `[ @notify_level_eventlog = ] eventlog_level`Значение, указывающее, когда следует поместить запись в журнал приложений Microsoft Windows для этого задания. *eventlog_level*имеет **тип int**и может принимать одно из следующих значений.  
   
@@ -106,9 +106,9 @@ sp_add_job [ @job_name = ] 'job_name'
  None  
   
 ## <a name="remarks"></a>Remarks  
- originating_server существует в **sp_add_job,** но не указана в списке arguments. ** \@** originating_server зарезервировано для внутреннего использования. ** \@**  
+ ** \@ originating_server** существует в **sp_add_job,** но не указана в списке arguments. ** \@ originating_server** зарезервировано для внутреннего использования.  
   
- После выполнения **sp_add_job** для добавления задания **sp_add_jobstep** можно использовать для добавления действий, выполняющих действия для задания. **sp_add_jobschedule** можно использовать для создания расписания, используемого службой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента для выполнения задания. Используйте **sp_add_jobserver** , чтобы задать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр, в котором выполняется задание, и **sp_delete_jobserver** , чтобы удалить задание из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра.  
+ После выполнения **sp_add_job** для добавления задания **sp_add_jobstep** можно использовать для добавления действий, выполняющих действия для задания. **sp_add_jobschedule** можно использовать для создания расписания, используемого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службой агента для выполнения задания. Используйте **sp_add_jobserver** , чтобы задать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр, в котором выполняется задание, и **sp_delete_jobserver** , чтобы удалить задание из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра.  
   
  Если задание будет выполняться на одном или нескольких целевых серверах в многосерверной среде, используйте **sp_apply_job_to_targets** , чтобы задать целевые серверы или группы целевых серверов для задания. Чтобы удалить задания с целевых серверов или групп целевых серверов, используйте **sp_remove_job_from_targets**.  
   
@@ -125,7 +125,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  Сведения о конкретных разрешениях, связанных с каждой из этих предопределенных ролей базы данных, см. в разделе агент SQL Server предопределенных [ролей базы данных](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Только члены предопределенной роли сервера **sysadmin** могут устанавливать или изменять значение для ** \@owner_login_name**. Если пользователи, не являющиеся участниками роли **sysadmin** , или изменяют значение ** \@owner_login_name**, выполнение этой хранимой процедуры завершается неудачей и возвращается ошибка.  
+ Только члены предопределенной роли сервера **sysadmin** могут устанавливать или изменять значение для ** \@ owner_login_name**. Если пользователи, не являющиеся участниками роли **sysadmin** , или изменяют значение ** \@ owner_login_name**, выполнение этой хранимой процедуры завершается неудачей и возвращается ошибка.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -141,7 +141,7 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>Б) Создание задания с уведомлением по пейджеру, электронной почте и по сети  
+### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>Б. Создание задания с уведомлением по пейджеру, электронной почте и по сети  
  Этот пример иллюстрирует создание задания `Ad hoc Sales Data Backup`, в случае сбоя которого пользователь `François Ajenstat` получает уведомление (по пейджеру, электронной почте или с помощью сетевого всплывающего сообщения); в случае успешного завершения задания выполняется его удаление.  
   
 > [!NOTE]  
@@ -167,7 +167,7 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sp_xp_cmdshell_proxy_account
 - xp_cmdshell
 ms.assetid: f807c373-7fbc-4108-a2bd-73b48a236003
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 59ea64e16f1469c12461a559c3f102094615fa12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e908d0bfb70e60330ce47377a8537ebe25f80f09
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67950463"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827468"
 ---
 # <a name="sp_xp_cmdshell_proxy_account-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Учетные данные прокси-сервера будут называться **# #xp_cmdshell_proxy_account # #**.  
   
  При выполнении с параметром NULL **sp_xp_cmdshell_proxy_account** удаляет учетные данные прокси-сервера.  
@@ -74,7 +74,7 @@ EXEC sp_xp_cmdshell_proxy_account 'ADVWKS\Max04', 'ds35efg##65';
 GO  
 ```  
   
-### <a name="b-dropping-the-proxy-credential"></a>Б) Удаление учетных данных для учетной записи-посредника  
+### <a name="b-dropping-the-proxy-credential"></a>Б. Удаление учетных данных для учетной записи-посредника  
  Следующий пример удаляет учетные данные учетной записи-посредника из хранилища учетных данных.  
   
 ```  
@@ -82,7 +82,7 @@ EXEC sp_xp_cmdshell_proxy_account NULL;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [xp_cmdshell &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
  [Создание УЧЕТных данных &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys. Credentials &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   

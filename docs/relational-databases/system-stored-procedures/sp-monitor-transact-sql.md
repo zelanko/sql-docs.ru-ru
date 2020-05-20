@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_monitor
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d91f774973588096ea73675d9b0e9ebf6368f1ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 55386d32348257db3f89feb81d6a6b0ff7292499
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022325"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828325"
 ---
 # <a name="sp_monitor-transact-sql"></a>Хранимая процедура sp_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Отображает статистику о [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Отображает статистику о [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +59,7 @@ sp_monitor
 |**total_errors**|Количество ошибок, с которыми столкнулся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время чтения и записи.|  
 |**соединение**|Количество входов или попыток входа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью набора функций отслеживает объем проделанной работы. При выполнении **sp_monitor** отображаются текущие значения, возвращаемые этими функциями, и показывается, насколько они изменились с момента последнего выполнения процедуры.  
   
  Для каждого столбца Статистика распечатывается в форме *номер*(*номер*) —*номер*% или *номер*(*число*). Первое *число* обозначает количество секунд (для **CPU_BUSY**, **io_busy**и **бездействие**) или общее число (для других переменных) с момента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перезапуска. *Число* в круглых скобках обозначает количество секунд или общее число с момента последнего выполнения **sp_monitor** . Процентное значение — это процент времени, прошедших с момента последнего запуска **sp_monitor** . Например, если в отчете отображается **CPU_BUSY** как 4250 (215) — 68%, цп занят 4250 секунд с момента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] последнего запуска, 215 секунды с момента последнего запуска **sp_monitor** и 68 процента от общего времени с момента **sp_monitor** последнего запуска.  
@@ -97,7 +97,7 @@ EXEC sp_monitor
 |**total_read**|**total_write**|**total_errors**|**соединение**|  
 |141 (0)|54920 (127)|0 (0)|4 (0)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

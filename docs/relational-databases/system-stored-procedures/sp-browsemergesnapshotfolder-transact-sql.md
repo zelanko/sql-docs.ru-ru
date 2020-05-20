@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsemergesnapshotfolder
 ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 92df93d1c14b10aa6587d0eaf13f4de81bc4d7f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a89cf408bd1acdd19ae982dfc0afa92c3c6cbe02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046011"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828451"
 ---
 # <a name="sp_browsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
 |-----------------|---------------|-----------------|  
 |**snapshot_folder**|**nvarchar (2000)**|Полный путь к каталогу моментальных снимков.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_browsemergesnapshotfolder** используется в репликации слиянием.  
   
  Если публикация настроена на формирование файлов моментального снимка в рабочем каталоге издателя и папке моментальных снимков издателя, то результирующий набор будет состоять из двух строк: первая строка будет содержать папку моментальных снимков публикации, а вторая — рабочий каталог издателя.  
@@ -58,7 +58,7 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_browsemergesnapshotfolder**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

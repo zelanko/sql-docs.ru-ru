@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticle
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e1e71d3795b233ec335cf01848fa3b226a6ebde0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f840af0170278692de43b7933965500b304669b1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771099"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828356"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,11 +43,11 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="arguments"></a>Аргументы  
 `[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'`Имя статьи в публикации. Аргумент *article* имеет тип **sysname**и значение по **%** умолчанию. Если *статья* не указана, возвращаются сведения обо всех статьях для указанной публикации.  
+`[ @article = ] 'article'`Имя статьи в публикации. Аргумент *article* имеет тип **sysname**и значение по умолчанию **%** . Если *статья* не указана, возвращаются сведения обо всех статьях для указанной публикации.  
   
 `[ @returnfilter = ] returnfilter`Указывает, должно ли возвращаться предложение фильтра. *ретурнфилтер* имеет **бит**и значение по умолчанию **1**, которое возвращает предложение фильтра.  
   
-`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  не следует указывать *Издатель* при запросе сведений о статье, опубликованной [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателем.  
@@ -92,7 +92,7 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_helparticle** используется в репликации моментальных снимков и репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  

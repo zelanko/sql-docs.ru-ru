@@ -11,14 +11,14 @@ dev_langs:
 helpviewer_keywords:
 - dynamic management views [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 732f1f84d7bc336969d2484f18eb2dae8ebfab76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d5b8b0e237b25b36a48eea1fc168e52eeb3444e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018045"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826477"
 ---
 # <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Динамические административные представления групп доступности Always On — функции
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68018045"
 |[sys.dm_hadr_cluster](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)|[sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)|  
 |[sys.dm_hadr_cluster_members](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)||  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Группы доступности AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Группы доступности AlwaysOn представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Отслеживание групп доступности (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  

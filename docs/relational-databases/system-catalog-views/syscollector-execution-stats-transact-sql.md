@@ -16,14 +16,14 @@ helpviewer_keywords:
 - syscollector_execution_stats view
 - data collector view
 ms.assetid: 23e35ac5-fbbf-4922-970c-f4fac44c1263
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bca1d879c0988ffb48eb5ae2fd080b1133e24339
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d4ab4827ab9d9a86936a8562b0e4765b492acd15
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060332"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824914"
 ---
 # <a name="syscollector_execution_stats-transact-sql"></a>syscollector_execution_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68060332"
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение SELECT для **dc_operator**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры сборщика данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Представления сборщика данных &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)  

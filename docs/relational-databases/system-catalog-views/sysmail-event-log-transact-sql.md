@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_event_log database mail view
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4241ac9a457aa51f32ec12e9b1d8b83aa534995e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cfca5caa10e36196f38817c828cbd4d062763107
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060219"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824924"
 ---
 # <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68060219"
 |**last_mod_date**|**datetime**|Дата и время последнего изменения строки.|  
 |**last_mod_user**|**sysname**|Пользователь, внесший последнее изменение в строку. Для электронных сообщений это пользователь, отправивший письмо. Для сообщений, сформированных внешней программой Database Mail, это пользовательский контекст соответствующей программы.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  При устранении неполадок Database Mail ищите в **sysmail_event_log** представлении события, связанные с ошибками электронной почты. Некоторые сообщения, например информирующие о сбоях внешней программы Database Mail, не связаны с конкретными электронными сообщениями. Чтобы найти ошибки, связанные с конкретными сообщениями электронной почты, найдите **mailitem_id** неудачно отправленного сообщения в **sysmail_faileditems** представлении, а затем найдите в **sysmail_event_log** сообщения, связанные с этим **mailitem_idом**. При возвращении ошибки из **sp_send_dbmail**сообщение электронной почты не отправляется в систему Database Mail, и эта ошибка не отображается в этом представлении.  
   
  Если происходит ошибка доставки для определенной учетной записи, при выполнении повторных попыток компонент Database Mail задерживает сообщения об ошибках до тех пор, пока доставка почтового элемента не завершится либо успехом, либо неудачей. В случае окончательного успеха все накопленные ошибки регистрируются как отдельные предупреждения, включая **account_id**. Это может привести к появлению предупреждений, несмотря на то, что электронное письмо было отправлено. В случае окончательной доставки все предыдущие предупреждения записываются в журнал как одно сообщение об ошибке без **account_id**, так как все учетные записи завершились с ошибкой.  
@@ -49,7 +49,7 @@ ms.locfileid: "68060219"
 ## <a name="permissions"></a>Разрешения  
  Для доступа к этому представлению необходимо быть членом предопределенной роли сервера **sysadmin** или роли базы данных **DatabaseMailUserRole** . Члены роли **DatabaseMailUserRole** , которые не являются членами ролей **sysadmin** , могут просматривать события только для отправленных ими сообщений электронной почты.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
  [Внешняя программа компонента Database Mail](../../relational-databases/database-mail/database-mail-external-program.md)  
   

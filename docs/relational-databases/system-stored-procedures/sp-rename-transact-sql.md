@@ -18,20 +18,20 @@ helpviewer_keywords:
 - sp_rename
 - renaming tables
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ef8c4583db152b2f81a574010a12030680704f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac92f07acb7e7322adcf00e09774f72e93e39963
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983071"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826579"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Изменяет имя пользовательского объекта в текущей базе данных. Этот объект может быть таблицей, индексом, столбцом, псевдонимом типа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] данных или определяемым пользователем типом среды CLR.  
+  Изменяет имя пользовательского объекта в текущей базе данных. Этот объект может быть таблицей, индексом, столбцом, псевдонимом типа данных или [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] определяемым пользователем типом среды CLR.  
   
 > [!CAUTION]  
 >  Изменение любой части имени объекта может разрушить скрипты и хранимые процедуры. Не рекомендуется использовать эту инструкцию для переименования хранимых процедур, триггеров, определяемых пользователем функций или представлений; следует удалить объект и создать его повторно с новым именем.  
@@ -47,18 +47,18 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @objname = ] "*object_name*"  
+ [ @objname =] "*object_name*"  
  Текущее полное или неполное имя пользовательского объекта или типа данных. Если переименованный объект является столбцом в таблице, *object_name* должен быть в формате *Table. Column* или *Schema. Table. Column*. Если объект для переименования является индексом, *object_name* должен быть указан в форме *Table. index* или *Schema. Table. index*. Если переименованный объект является ограничением, *object_name* должен иметь форму *Schema. Constraint*.  
   
  Кавычки необходимы, только если указан объект с полным именем. Если предоставлено полное имя таблицы, включая имя базы данных, в качестве последнего должно использоваться имя текущей базы данных. *object_name* имеет тип **nvarchar (776)** и не имеет значения по умолчанию.  
   
- [ @newname = ] "*new_name*"  
+ [ @newname =] "*new_name*"  
  Новое имя для указанного объекта. *new_name* должно быть именем из одной части и должно соответствовать правилам для идентификаторов. Аргумент *newname* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 > [!NOTE]  
 >  Имена триггеров не могут начинаться с символов # или ##.  
   
- [ @objtype = ] "*object_type*"  
+ [ @objtype =] "*object_type*"  
  Тип переименовываемого объекта. *object_type* имеет тип **varchar (13)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -73,7 +73,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое значение (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Изменить имя объекта или типа данных можно только в текущей базе данных. Имена большинства системных типов данных и системных объектов изменить нельзя.  
   
  Процедура sp_rename автоматически переименовывает ассоциированный индекс каждый раз при переименовании ограничения PRIMARY KEY или UNIQUE. Если переименованный индекс привязан к ограничению PRIMARY KEY, то ограничение PRIMARY KEY также автоматически переименовывается хранимой процедурой sp_rename.  
@@ -99,8 +99,8 @@ EXEC sp_rename 'Sales.SalesTerritory', 'SalesTerr';
 GO  
 ```  
   
-### <a name="b-renaming-a-column"></a>Б) Переименование столбца  
- В следующем примере `TerritoryID` столбец в `SalesTerritory` таблице переименовывается в. `TerrID`  
+### <a name="b-renaming-a-column"></a>Б. Переименование столбца  
+ В следующем примере `TerritoryID` столбец в таблице переименовывается в `SalesTerritory` `TerrID` .  
   
 ```  
 USE AdventureWorks2012;  
@@ -203,7 +203,7 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

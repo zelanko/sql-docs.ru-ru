@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetErrorInfo
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c8108896e5ef7599c3441e922c54ba606d65d5fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107911"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828864"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,13 +71,13 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 |Имена столбцов|Тип данных|Описание|  
 |------------------|---------------|-----------------|  
-|**Error**|**двоичный (4)**|Двоичное представление номера ошибки.|  
+|**Ошибка**|**двоичный (4)**|Двоичное представление номера ошибки.|  
 |**Источник**|**nvarchar (NN)**|Источник ошибки.|  
 |**Описание**|**nvarchar (NN)**|Описание ошибки.|  
 |**HelpFile**|**nvarchar (NN)**|Файл справки для источника.|  
 |**Идентификатор справки**|**int**|Идентификатор контекста справки в исходном файле справки.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Каждый вызов хранимой процедуры OLE-автоматизации (кроме **sp_OAGetErrorInfo**) сбрасывает сведения об ошибке; Таким образом, **sp_OAGetErrorInfo** получает сведения об ошибке только для последнего вызова хранимой процедуры OLE Automation. Обратите внимание, что поскольку **sp_OAGetErrorInfo** не сбрасывает сведения об ошибке, ее можно вызывать несколько раз, чтобы получить те же сведения об ошибке.  
   
  В следующей таблице перечисляются ошибки OLE-автоматизации и их наиболее частые причины.  
@@ -121,7 +121,7 @@ BEGIN
 END;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры OLE-автоматизации &#40;&#41;Transact — SQL](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Пример скрипта OLE-автоматизации](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   

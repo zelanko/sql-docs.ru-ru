@@ -23,15 +23,15 @@ helpviewer_keywords:
 - stored procedures [SQL Server], refreshing metadata
 - user-defined functions [SQL Server], refreshing metadata
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2de8653c0a18cc6fabaf2570a10c73184e5c9706
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982773"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825992"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="arguments"></a>Аргументы  
 `[ @name = ] 'module\_name'`Имя хранимой процедуры, определяемой пользователем функции, представления, триггера DML, триггера DDL уровня базы данных или триггера DDL уровня сервера. *module_name* не может быть хранимой процедурой среды CLR или функцией CLR. *module_name* не могут быть привязаны к схеме. *module_name* имеет тип **nvarchar**и не имеет значения по умолчанию. *module_name* может быть составным идентификатором, но может ссылаться только на объекты в текущей базе данных.  
   
-`[ , @namespace = ] ' \<class> '`Класс указанного модуля. Если *module_name* является триггером DDL, \<требуется класс>. класс>имеет тип **nvarchar**(20). * \<* Допустимые входные значения:  
+`[ , @namespace = ] ' \<class> '`Класс указанного модуля. Если *module_name* является триггером DDL, \< требуется класс>. * \< класс>* имеет тип **nvarchar**(20). Допустимые входные значения:  
   
 |||  
 |-|-|  
@@ -68,7 +68,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое значение (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_refreshsqlmodule** должны выполняться при внесении изменений в объекты, лежащие в основе модуля, который влияет на его определение. В противном случае при обращении к модулю или при его вызове могут быть получены непредвиденные результаты. Чтобы обновить представление, можно использовать либо **sp_refreshsqlmodule** , либо **sp_refreshview** с теми же результатами.  
   
  **sp_refreshsqlmodule** не влияет на разрешения, расширенные свойства или параметры SET, связанные с объектом.  
@@ -143,7 +143,7 @@ SELECT dbo.to_upper('abcdefgh');
 GO  
 ```  
   
-### <a name="b-refreshing-a-database-level-ddl-trigger"></a>Б) Обновление триггера DDL уровня базы данных  
+### <a name="b-refreshing-a-database-level-ddl-trigger"></a>Б. Обновление триггера DDL уровня базы данных  
  В представленном ниже примере обновляется триггер DDL уровня базы данных.  
   
 ```  
@@ -168,7 +168,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   

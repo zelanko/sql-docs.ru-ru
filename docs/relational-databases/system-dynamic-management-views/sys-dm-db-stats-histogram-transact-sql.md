@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_histogram dynamic management function
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e5a79a4ab38fd1cb7d118624fd170219aa90a94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06a8b8e36123f34b42b890c8315b8847a3c0e0bb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096255"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828058"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -59,13 +59,13 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |range_rows |**real** |Предполагаемое количество строк, значение столбцов которых находится в пределах шага гистограммы, исключая верхнюю границу. |
 |equal_rows |**real** |Предполагаемое количество строк, значение столбцов которых равно верхней границе шага гистограммы. |
 |distinct_range_rows |**bigint** |Предполагаемое количество строк с различающимся значением столбца в пределах шага гистограммы, исключая верхнюю границу. |
-|average_range_rows |**real** |Среднее число строк с повторяющимися значениями столбца в пределах шага гистограммы, за исключением верхней границы`RANGE_ROWS / DISTINCT_RANGE_ROWS` ( `DISTINCT_RANGE_ROWS > 0`для). |
+|average_range_rows |**real** |Среднее число строк с повторяющимися значениями столбца в пределах шага гистограммы, за исключением верхней границы ( `RANGE_ROWS / DISTINCT_RANGE_ROWS` для `DISTINCT_RANGE_ROWS > 0` ). |
   
- ## <a name="remarks"></a>Remarks  
+ ## <a name="remarks"></a>Примечания  
  
- ResultSet `sys.dm_db_stats_histogram` для возвращает сведения, `DBCC SHOW_STATISTICS WITH HISTOGRAM` аналогичные и, а также включает `object_id`, `stats_id`и. `step_number`
+ ResultSet для `sys.dm_db_stats_histogram` возвращает сведения, аналогичные `DBCC SHOW_STATISTICS WITH HISTOGRAM` и, а также включает `object_id` , `stats_id` и `step_number` .
 
- Поскольку столбец `range_high_key` имеет тип данных sql_variant, может потребоваться использовать `CAST` оператор или `CONVERT` , если предикат выполняет сравнение с нестроковой константой.
+ Поскольку столбец `range_high_key` имеет тип данных sql_variant, может потребоваться использовать `CAST` оператор или, `CONVERT` Если предикат выполняет сравнение с нестроковой константой.
 
 ### <a name="histogram"></a>Гистограмма
   
@@ -105,12 +105,12 @@ INSERT Country (Country_Name) VALUES ('Canada'), ('Denmark'), ('Iceland'), ('Per
 CREATE STATISTICS Country_Stats  
     ON Country (Country_Name) ;  
 ```   
-Первичный ключ занимает `stat_id` число 1, поэтому `sys.dm_db_stats_histogram` вызовите `stat_id` номер 2, чтобы получить гистограмму статистики для `Country` таблицы.    
+Первичный ключ занимает `stat_id` число 1, поэтому вызовите `sys.dm_db_stats_histogram` `stat_id` номер 2, чтобы получить гистограмму статистики для `Country` таблицы.    
 ```sql     
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
 
-### <a name="b-useful-query"></a>Б) Полезный запрос:   
+### <a name="b-useful-query"></a>Б. Полезный запрос:   
 ```sql  
 SELECT hist.step_number, hist.range_high_key, hist.range_rows, 
     hist.equal_rows, hist.distinct_range_rows, hist.average_range_rows
@@ -120,7 +120,7 @@ WHERE s.[name] = N'<statistic_name>';
 ```
 
 ### <a name="c-useful-query"></a>В. Полезный запрос:
-В следующем примере выбирается из `Country` таблицы с предикатом в `Country_Name`столбце.
+В следующем примере выбирается из таблицы `Country` с предикатом в столбце `Country_Name` .
 
 ```sql  
 SELECT * FROM Country 
@@ -144,7 +144,7 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
     AND sh.range_high_key = CAST('Canada' AS CHAR(8));
 ```
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [Динамические административные представления и функции, связанные с объектом (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
