@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_text_query_plan dynamic management function
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d23813078c2a90b18af0a1df48079b571e77a13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 082de052d40cc41a81ea7a0963b2e3174338b8a5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983142"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824589"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73983142"
 -   Размер вывода плана запроса не ограничен.  
 -   Можно указать отдельные инструкции в пакете.  
   
-**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (и более поздней версии), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздней версии), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -93,7 +93,7 @@ sys.dm_exec_text_query_plan
 |**Шифрование**|**bit**|Указывает, зашифрована ли соответствующая хранимая процедура.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована<br /><br /> Столбец не может содержать значение NULL.|  
 |**query_plan**|**nvarchar(max)**|Содержит представление Showplan времени компиляции для плана выполнения запроса, указанного в *plan_handle*. Инструкция Showplan имеет текстовый формат. Для каждого пакета, содержащего, например нерегламентированные инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)], вызовы хранимых процедур и вызовы определяемых пользователем функций, формируется один план.<br /><br /> Столбец может содержать значение NULL.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  При следующих условиях вывод инструкции Showplan не возвращается в столбец **plan** возвращаемой таблицы для функции **sys.dm_exec_text_query_plan**.  
   
 -   Если план запроса, указанный с помощью *plan_handle* , был исключен из кэша планов, то **query_plan** столбец возвращаемой таблицы имеет значение null. Например, такое условие может возникнуть при наличии задержки между принятием и использованием дескриптора плана функции **sys.dm_exec_text_query_plan**.  
@@ -144,8 +144,8 @@ FROM sys.dm_exec_text_query_plan (0x06000100A27E7C1FA821B10600,0,-1);
 GO  
 ```  
   
-### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>Б) Получение плана каждого запроса из кэша планов  
- Чтобы получить моментальный снимок всех планов запроса, хранимых в кэше планов, необходимо получить дескрипторы планов для всех запросов, хранящихся в кэше, запросив динамическое административное представление `sys.dm_exec_cached_plans`. Дескрипторы планов хранятся в столбце `plan_handle` представления `sys.dm_exec_cached_plans`. Затем воспользуйтесь оператором CROSS APPLY для передачи дескрипторов плана в функцию `sys.dm_exec_text_query_plan`, как показано ниже. Выходные данные инструкции Showplan для каждого плана, находящегося в кэше планов `query_plan` , находятся в столбце возвращаемой таблицы.  
+### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>Б. Получение плана каждого запроса из кэша планов  
+ Чтобы получить моментальный снимок всех планов запроса, хранимых в кэше планов, необходимо получить дескрипторы планов для всех запросов, хранящихся в кэше, запросив динамическое административное представление `sys.dm_exec_cached_plans`. Дескрипторы планов хранятся в столбце `plan_handle` представления `sys.dm_exec_cached_plans`. Затем воспользуйтесь оператором CROSS APPLY для передачи дескрипторов плана в функцию `sys.dm_exec_text_query_plan`, как показано ниже. Выходные данные инструкции Showplan для каждого плана, находящегося в кэше планов, находятся в `query_plan` столбце возвращаемой таблицы.  
   
 ```sql  
 USE master;  
@@ -179,5 +179,5 @@ ORDER BY total_worker_time/execution_count DESC;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  

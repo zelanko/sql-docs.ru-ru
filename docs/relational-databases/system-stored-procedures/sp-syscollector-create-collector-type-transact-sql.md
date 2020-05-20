@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bd8c82a401f78f4907bb891ede845017c00ac5ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4290d2ecff4b76675f464c5e2a396703e7fc370c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032633"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824289"
 ---
 # <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,22 +46,22 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @collector_type_uid = ] "*collector_type_uid*"  
+ [ @collector_type_uid =] "*collector_type_uid*"  
  Идентификатор GUID типа сборщика. *collector_type_uid* имеет тип **uniqueidentifier** , и, если он равен null, он будет автоматически создан и возвращен в качестве выходных данных.  
   
- [ @name = ] "*имя*"  
+ [ @name =] "*имя*"  
  Имя типа сборщика. Аргумент *Name* имеет тип **sysname** и должен быть указан.  
   
- [ @parameter_schema = ] "*parameter_schema*"  
+ [ @parameter_schema =] "*parameter_schema*"  
  Схема XML для этого типа сборщика. *parameter_schema* имеет **Формат XML** и значение по умолчанию NULL.  
   
- [ @parameter_formatter = ] "*parameter_formatter*"  
+ [ @parameter_formatter =] "*parameter_formatter*"  
  Шаблон, применяемый для преобразования XML с целью его использования на странице свойств набора элементов сбора. *parameter_formatter* имеет **Формат XML** и значение по умолчанию NULL.  
   
- [@collection_package_id = ] *collection_package_id*  
+ [ @collection_package_id =] *collection_package_id*  
  Локальный уникальный идентификатор, указывающий на пакет сбора [!INCLUDE[ssIS](../../includes/ssis-md.md)], используемый в данном наборе элементов сбора. *collection_package_id* является **уникуеидентифер** и является обязательным.  
   
- [@upload_package_id = ] *upload_package_id*  
+ [ @upload_package_id =] *upload_package_id*  
  Локальный уникальный идентификатор, указывающий на пакет передачи [!INCLUDE[ssIS](../../includes/ssis-md.md)], используемый в данном наборе элементов сбора. *upload_package_id* имеет тип **uniqueidentifier** и является обязательным.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -108,7 +108,7 @@ EXEC sp_syscollector_create_collector_type
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)  
   

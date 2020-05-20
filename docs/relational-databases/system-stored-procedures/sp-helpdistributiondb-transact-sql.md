@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistributiondb
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e0efc86400b0858e387a83e8ea765f0058e30459
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770934"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824502"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @database = ] 'database_name'`Имя базы данных, для которой возвращаются свойства. Аргумент *database_name* имеет тип **sysname**и значение по **%** умолчанию для всех баз данных, связанных с распространителем, и у пользователя есть разрешения.  
+`[ @database = ] 'database_name'`Имя базы данных, для которой возвращаются свойства. Аргумент *database_name* имеет тип **sysname**и значение по умолчанию **%** для всех баз данных, связанных с распространителем, и у пользователя есть разрешения.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -49,7 +49,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**history retention**|**int**|Количество часов, в течение которых будет храниться журнал.|  
 |**history_cleanup_agent**|**sysname**|Имя агента очистки журнала.|  
 |**distribution_cleanup_agent**|**sysname**|Имя агента очистки распространителя.|  
-|**status**|**int**|Только для внутреннего применения.|  
+|**status**|**int**|Только для внутреннего использования.|  
 |**data_folder**|**nvarchar(255)**|Имя каталога, используемого для хранения файлов базы данных.|  
 |**data_file**|**nvarchar(255)**|Имя файла базы данных.|  
 |**data_file_size**|**int**|Исходный размер файла данных в мегабайтах.|  
@@ -60,13 +60,13 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_helpdistributiondb** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
  Члены предопределенной роли базы данных **db_owner** или роли **replmonitor** в базе данных распространителя и пользователи из списка доступа к публикации публикации с помощью базы данных распространителя могут выполнять **sp_helpdistributiondb** для возврата сведений, относящихся к файлу. Члены роли **Public** могут выполнять **sp_helpdistributiondb** для возврата сведений, не относящихся к файлам, для баз данных распространителя, к которым у них есть доступ.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств распространителя и издателя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   

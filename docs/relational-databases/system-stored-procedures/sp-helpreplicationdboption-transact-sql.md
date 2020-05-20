@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplicationdboption
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 84f009a2f2184ce2974f837006471d2b9bb97346
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771533"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824456"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] 'dbname'`Имя базы данных. Аргумент *dbname* имеет тип **sysname**и значение по **%** умолчанию. Если **%** значение равно, результирующий набор будет содержать все базы данных на издателе; в противном случае возвращается информация только о указанной базе данных. Данные не возвращаются для тех баз данных, где у пользователя нет соответствующих описанных ниже разрешений.  
+`[ @dbname = ] 'dbname'`Имя базы данных. Аргумент *dbname* имеет тип **sysname**и значение по умолчанию **%** . Если **%** значение равно, результирующий набор будет содержать все базы данных на издателе; в противном случае возвращается информация только о указанной базе данных. Данные не возвращаются для тех баз данных, где у пользователя нет соответствующих описанных ниже разрешений.  
   
 `[ @type = ] 'type'`Разрешает результирующий набор содержать только те базы данных, для которых было включено указанное значение *типа* параметра репликации. Аргумент *Type имеет тип* **sysname**и может принимать одно из следующих значений.  
   
@@ -67,13 +67,13 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_helpreplicationdboption** используется в репликации моментальных снимков, транзакций и репликация слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
  Члены предопределенной роли сервера **sysadmin** могут выполнять **sp_helpreplicationdboption** для любой базы данных. Члены предопределенной роли базы данных **db_owner** могут выполнять **sp_helpreplicationdboption** для этой базы данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

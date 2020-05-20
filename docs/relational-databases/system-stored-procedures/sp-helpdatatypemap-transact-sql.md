@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdatatypemap
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0b9666c13a2e4d8183d19fade64bf49b13377b9a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fcf2bbd2d6c1ab7c9b73c1e122c746e56814c4fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771064"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824539"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Возвращает сведения об определенных сопоставлениях типов данных между [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и системами управления, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не являющимися базами данных (СУБД). Эта хранимая процедура выполняется на распространителе в любой базе данных.  
+  Возвращает сведения об определенных сопоставлениях типов данных между [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и системами управления, не являющимися [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] БАЗАМИ данных (СУБД). Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +45,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>Аргументы  
 `[ @source_dbms = ] 'source_dbms'`Имя СУБД, с которой сопоставляются типы данных. Аргумент *source_dbms* имеет тип **sysname**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Источником является база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**СУБД**|Источником является база данных Oracle.|  
@@ -56,7 +56,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'`Имя целевой СУБД. Аргумент *destination_dbms* имеет тип **sysname**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Целевая база данных — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**СУБД**|Целевой является база данных Oracle.|  
@@ -83,15 +83,15 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
- **sp_helpdatatypemap** определяет сопоставления типов данных как от издателей, отличных от SQL Server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей до подписчиков, отличных от.  
+## <a name="remarks"></a>Примечания  
+ **sp_helpdatatypemap** определяет сопоставления типов данных как от издателей, отличных от SQL Server, так и от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей до подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Если указанное сочетание исходной и целевой СУБД не поддерживается, **sp_helpdatatypemap** возвращает пустой результирующий набор.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** на распространителе или члены предопределенной роли базы данных **db_owner** в базе данных распространителя могут выполнять **sp_helpdatatypemap**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
  [sp_setdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
   

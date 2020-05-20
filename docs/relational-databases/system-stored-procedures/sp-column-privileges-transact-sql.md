@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_column_privileges
 ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc0ad8fcdf8c72e1b91df651a75227975d18294e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a2535aff30c0a3071b641889f5e4a3f1433f88b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061814"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823981"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,18 +43,18 @@ sp_column_privileges [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @table_name= ] "*table_name*"  
+ [ @table_name =] "*table_name*"  
  Таблица, используемая для возврата сведений о каталоге. Аргумент *table_name* имеет тип **sysname**и не имеет значения по умолчанию. Сопоставление по шаблону не поддерживается.  
   
- [ @table_owner= ] "*table_owner*"  
+ [ @table_owner =] "*table_owner*"  
  Владелец таблицы, используемой для возврата сведений о каталоге. Аргумент *table_owner* имеет тип **sysname**и значение по умолчанию NULL. Сопоставление по шаблону не поддерживается. Если параметр *table_owner* не указан, применяются правила видимости таблиц по умолчанию базовой системы управления базами данных (СУБД).  
   
  Если текущему пользователю принадлежит таблица с указанным именем, возвращаются столбцы этой таблицы. Если параметр *table_owner* не указан и текущий пользователь не владеет таблицей с указанным *table_name*, sp_column привилегий ищет таблицу с указанным *table_name* владельцем базы данных. Если такая таблица существует, возвращаются ее столбцы.  
   
- [ @table_qualifier= ] "*table_qualifier*"  
+ [ @table_qualifier =] "*table_qualifier*"  
  Имя квалификатора таблицы. Аргумент *table_qualifier* имеет тип *sysname*и значение по умолчанию NULL. Различные продукты СУБД поддерживают имена таблиц (_Квалификаторы_**,** состоящие из трех частей). _владелец_**.** _имя_). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
   
- [ @column_name= ] "*Column*"  
+ [ @column_name =] "*столбец*"  
  Единственный столбец, который используется при получении только одного столбца сведений о каталоге. *столбец* имеет тип **nvarchar (** 384 **)** и значение по умолчанию NULL. Если *столбец* не указан, возвращаются все столбцы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *столбце столбец* представляет имя столбца, указанное в таблице sys. Columns. *столбец* может содержать подстановочные знаки, используя шаблоны сопоставления с подстановочными знаками базовой СУБД. Для максимальной совместимости клиент шлюза должен использовать только согласование установленного образца ISO (символы-шаблоны % и _).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
@@ -71,7 +71,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**varchar (** 32 **)**|Одно из доступных разрешений на доступ к столбцу. Разрешениями для столбца может быть одно из следующих значений (или другие значения, поддерживаемые источником данных для определенных реализаций):<br /><br /> SELECT = пользователь GRANTEE может получать данные для столбцов;<br /><br /> INSERT = пользователь GRANTEE может предоставлять данные для этого столбца, когда новые строки вставляются (этим пользователем) в таблицу;<br /><br /> UPDATE = пользователь GRANTEE может изменять существующие данные в столбце;<br /><br /> REFERENCES = GRANTEE — может ссылаться на столбец во внешней таблице в связи «первичный-внешний ключ». Связи «первичный/внешний ключ» определяются с помощью ограничений таблицы.|  
 |IS_GRANTABLE|**varchar (** 3 **)**|Указывает, разрешено ли пользователю GRANTEE предоставлять разрешения другим пользователям (часто обозначается как разрешение «право передачи»). Может иметь значение YES, NO или NULL. Неизвестное значение или значение NULL, указывает на источник данных, для которого не применимо разрешение «право передачи».|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешения предоставляются инструкцией GRANT и отзываются инструкцией REVOKE.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -89,7 +89,7 @@ EXEC sp_column_privileges @table_name = 'Employee'
     ,@column_name = 'SalariedFlag';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ПРЕДОСТАВЛЕНИЕ &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [ОТОЗВАТЬ &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

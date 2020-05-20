@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_settriggerorder
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e258badbcf304fddbaf7575269194bd409ec8645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad5239e2761ed1cc788f7826a054ac0e038d9e79
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982234"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824299"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,15 +53,15 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |Значение|Описание|  
 |-----------|-----------------|  
 |**Началь**|Триггер срабатывает первым.|  
-|**Последняя**|Триггер срабатывает последним.|  
+|**Последний**|Триггер срабатывает последним.|  
 |**Нет**|Порядок срабатывания триггера не определен.|  
   
-`[ @stmttype = ] 'statement_type'`Указывает инструкцию SQL, которая запускает триггер. *statement_type* имеет тип **varchar (50)** и может использоваться для вставки, обновления, удаления, входа в [!INCLUDE[tsql](../../includes/tsql-md.md)] систему или любого события инструкции, указанного в [DDL-событиях](../../relational-databases/triggers/ddl-events.md). Группы событий задавать нельзя.  
+`[ @stmttype = ] 'statement_type'`Указывает инструкцию SQL, которая запускает триггер. *statement_type* имеет тип **varchar (50)** и может использоваться для вставки, обновления, удаления, входа в систему или любого [!INCLUDE[tsql](../../includes/tsql-md.md)] события инструкции, указанного в [DDL-событиях](../../relational-databases/triggers/ddl-events.md). Группы событий задавать нельзя.  
   
- Триггер можно назначить **первым** или **последним** триггером для типа инструкции только после того, как триггер был определен как триггер для этого типа инструкции. Например, триггер **TR1** может быть назначен **первым** для инструкции INSERT в таблице **T1** , если **TR1** определен как триггер INSERT. Функция [!INCLUDE[ssDE](../../includes/ssde-md.md)] возвращает ошибку, если **TR1**, который был ОПРЕДЕЛЕН только как триггер INSERT, устанавливается в качестве **первого**или **последнего**триггера для инструкции UPDATE. Дополнительные сведения см. в разделе «Примечания».  
+ Триггер можно назначить **первым** или **последним** триггером для типа инструкции только после того, как триггер был определен как триггер для этого типа инструкции. Например, триггер **TR1** может быть назначен **первым** для инструкции INSERT в таблице **T1** , если **TR1** определен как триггер INSERT. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Функция возвращает ошибку, если **TR1**, который был определен только как триггер INSERT, устанавливается в качестве **первого**или **последнего**триггера для инструкции UPDATE. Дополнительные сведения см. в разделе «Примечания».  
   
- Namespace = { **' база данных** | '**' сервер '** | ** \@** ЗАКАНЧИВАЮЩ  
- Если *triggername* является триггером DDL, ** \@пространство имен** указывает, была ли *triggername* создана с областью базы данных или областью сервера. Если *triggername* является триггером входа, необходимо указать Server. Дополнительные сведения об области триггера DDL см. в разделе [триггеры DDL](../../relational-databases/triggers/ddl-triggers.md). Если не указано или указано значение NULL, *triggername* является триггером DML.  
+ ** \@ Namespace =** { **' база данных**'  |  **' сервер '** | ЗАКАНЧИВАЮЩ  
+ Если *triggername* является триггером DDL, ** \@ пространство имен** указывает, была ли *triggername* создана с областью базы данных или областью сервера. Если *triggername* является триггером входа, необходимо указать Server. Дополнительные сведения об области триггера DDL см. в разделе [триггеры DDL](../../relational-databases/triggers/ddl-triggers.md). Если не указано или указано значение NULL, *triggername* является триггером DML.  
   
 ||  
 |-|  
@@ -70,7 +70,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) и 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="dml-triggers"></a>Триггеры DML  
  Для каждой инструкции в одной таблице может быть только один **первый** и один **последний** триггер.  
@@ -117,7 +117,7 @@ GO
 sp_settriggerorder @triggername= 'Sales.uSalesOrderHeader', @order='First', @stmttype = 'UPDATE';  
 ```  
   
-### <a name="b-setting-the-firing-order-for-a-ddl-trigger"></a>Б) Установка порядка срабатывания триггера DDL  
+### <a name="b-setting-the-firing-order-for-a-ddl-trigger"></a>Б. Установка порядка срабатывания триггера DDL  
  На этом пример показано, как указывается, что триггер `ddlDatabaseTriggerLog` должен срабатывать первым после события `ALTER_TABLE` в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
@@ -126,7 +126,7 @@ GO
 sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmttype = 'ALTER_TABLE', @namespace = 'DATABASE';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)  

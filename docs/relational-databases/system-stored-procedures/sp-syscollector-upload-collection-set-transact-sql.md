@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_upload_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: eb5b4b9dce229a028be45565203bce90883e21f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9302728bf93a53ce333dce5a38bfa7e046d38fe0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010528"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824243"
 ---
 # <a name="sp_syscollector_upload_collection_set-transact-sql"></a>sp_syscollector_upload_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_syscollector_upload_collection_set [[ @collection_set_id = ] collection_set_i
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Либо *collection_set_id* , либо *имя* должны иметь значение. Оба значения не могут иметь значение NULL.  
   
  Данная процедура может использоваться для начала передачи работающего набора сбора по требованию. Она может использоваться только для наборов сбора, настроенных для сбора и передачи данных в режиме с кэшированием. Это позволяет пользователю получить данные для анализа, не ожидая запланированной передачи.  
@@ -68,7 +68,7 @@ GO
 EXEC sp_syscollector_upload_collection_set @name = 'Simple Collection Set' ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)  
   

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setdefaultdatatypemapping
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9f0dfadc3b2b990d999df1d66069c4b68df9e6cf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d1acd5a12274c00bf2829b2219055d5a1ecf9eff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104414"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824321"
 ---
 # <a name="sp_setdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Помечает существующее сопоставление типа данных между [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и системой управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базами данных (СУБД) по умолчанию. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
+  Помечает существующее сопоставление типа данных между [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] системой управления БАЗАМИ данных (СУБД) по умолчанию. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -109,7 +109,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_setdefaultdatatypemapping** используется во всех типах репликации между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и не [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] СУБД.  
   
  Сопоставления типов данных по умолчанию применяются ко всем топологиям репликации, включенным в указанную СУБД.  
@@ -117,7 +117,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_setdefaultdatatypemapping**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Указание сопоставлений типов данных для издателя Oracle](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
  [sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
  [sp_helpdatatypemap &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)  

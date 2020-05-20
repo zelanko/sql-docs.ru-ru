@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repltrans
 ms.assetid: 738e2322-335b-44fa-820e-f31c02743978
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 40477973efebac9a484e89e7627f0996285b430b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9338d427a3a957a531456d9ea29448a2148b56e9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770865"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824411"
 ---
 # <a name="sp_repltrans-transact-sql"></a>sp_repltrans (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_repltrans
 ## <a name="result-sets"></a>Результирующие наборы  
  **sp_repltrans** возвращает сведения о базе данных публикации, из которой она выполняется, позволяя просматривать нераспределенные транзакции (транзакции, оставшиеся в журнале транзакций, которые не были отправлены распространителю). Результирующий набор отображает регистрационный номер транзакций в журнале для первой и последней записи по каждой транзакции. **sp_repltrans** похож на [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) , но не возвращает команды для транзакций.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_repltrans** используется в репликации транзакций.  
   
  **sp_repltrans** не поддерживается для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от.  
@@ -47,7 +47,7 @@ sp_repltrans
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_repltrans**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.database_mirroring_witnesses catalog view
 - witness [SQL Server], sys.database_mirroring_witnesses catalog view
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 10fbd3ac410ee5b6944ffe7b32285008f8b11776
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b84e1002f84cbcd0117ed79253b611f3e6ca4da3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68033077"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823623"
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>Представления каталога следящего сервера зеркального отображения базы данных — sys. database_mirroring_witnesses
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "68033077"
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Следящий сервер зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [sys. database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [sys. database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprolemember
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2ac7ec92a47f56982300e81395d24fc5b197ed64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 65a1f4d2098e55c7007bd04e2fef00bcbac30ffc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997488"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824432"
 ---
 # <a name="sp_helprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 |**MemberName**|**sysname**|Имя члена **дброле.**|  
 |**MemberSID**|**varbinary(85)**|Идентификатор безопасности **MemberName.**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Если база данных содержит вложенные роли, то параметр **MemberName** может быть именем роли. **sp_helprolemember** не показывает членство, полученное с помощью вложенных ролей. Например, если пользователь User1 является членом роли Role1, а роль Role1 — членом роли Role2, `EXEC sp_helprolemember 'Role2'`, происходит возврат роли Role1, но не членов роли Role1 (в этом примере — пользователя User1). Чтобы вернуть вложенные членства, необходимо многократно выполнить **sp_helprolemember** для каждой вложенной роли.  
   
  Используйте **sp_helpsrvrolemember** для вывода членов предопределенной роли сервера.  
@@ -69,7 +69,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 EXEC sp_helprolemember 'Sales';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   

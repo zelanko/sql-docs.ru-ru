@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_registercustomresolver
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0d003cccfa6fdedd0610ea34f15acb6ee1833e5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cfced9a7fa554149b491f8ff350ca81723c81d20
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075728"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824364"
 ---
 # <a name="sp_registercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +54,13 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_registercustomresolver** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_registercustomresolver**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Реализация обработчика бизнес-логики для статьи публикации слиянием](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [Реализация пользовательского сопоставителя конфликтов для статьи публикации слиянием](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [sp_lookupcustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   

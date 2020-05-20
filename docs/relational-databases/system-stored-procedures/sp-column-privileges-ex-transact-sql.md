@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_column_privileges_ex
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd4251c4b47f67d348b6978c05c07d0ae64d16c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 46abd2a21441cdf911cecb9b21f02451400258f3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070362"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823995"
 ---
 # <a name="sp_column_privileges_ex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 |**TABLE_SCHEM**|**sysname**|Имя владельца таблицы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя пользователя базы данных, создавшего таблицу. Это поле всегда возвращает значение.|  
 |**TABLE_NAME**|**sysname**|Имя таблицы. Это поле всегда возвращает значение.|  
 |**COLUMN_NAME**|**sysname**|Имя столбца для каждого столбца возвращаемого **table_name** . Это поле всегда возвращает значение.|  
-|**GRANTOR**|**sysname**|Имя пользователя базы данных, которому предоставлены разрешения на эту **column_name** в указанный **участник**. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот столбец всегда совпадает с **table_owner**. Это поле всегда возвращает значение.<br /><br /> **Столбцом** -исполнителем может быть либо владелец базы данных (**table_owner**), либо пользователь, которому владелец базы данных предоставил разрешения с помощью предложения WITH GRANT OPTION в инструкции GRANT.|  
+|**GRANTOR**|**sysname**|Имя пользователя базы данных, которому предоставлены разрешения на эту **column_name** в указанный **участник**. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец всегда совпадает с **table_owner**. Это поле всегда возвращает значение.<br /><br /> **Столбцом** -исполнителем может быть либо владелец базы данных (**table_owner**), либо пользователь, которому владелец базы данных предоставил разрешения с помощью предложения WITH GRANT OPTION в инструкции GRANT.|  
 |**GRANTEE**|**sysname**|Имя пользователя базы данных, которому были предоставлены разрешения на этот **column_name** указанным объектом **Grant**. Это поле всегда возвращает значение.|  
 |**PRIVILEGE**|**varchar (** 32 **)**|Одно из доступных разрешений на доступ к столбцу. Разрешениями для столбца может быть одно из следующих значений (или другие значения, поддерживаемые источником данных для определенных реализаций):<br /><br /> SELECT = **получатель** прав может получать данные для столбцов.<br /><br /> INSERT = **GRANTEE** может предоставлять данные для этого столбца при вставке новых строк ( **участником**) в таблицу.<br /><br /> UPDATE = **участник** может изменять существующие данные в столбце.<br /><br /> REFERENCEs = **участник** может ссылаться на столбец во внешней таблице в связи "первичный ключ — внешний ключ". Связи первичного ключа и внешнего ключа определяются с ограничениями таблицы.|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Указывает, разрешено ли **участнику** предоставлять разрешения другим пользователям (часто это называется разрешением "предоставление с предоставлением"). Может иметь значение YES, NO или NULL. Неизвестные значения или значения NULL относятся к источникам данных, где неприменимо использование разрешения «право передачи».|  
@@ -80,7 +80,7 @@ EXEC sp_column_privileges_ex @table_server = 'Seattle1',
    @table_catalog ='AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_table_privileges_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-ex-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

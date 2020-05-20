@@ -24,14 +24,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_dynamic_filters
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 82b333095adfaf50220e5d2392114e3ab74bf822
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 80cb0fbbd3c6052ebe2d129a31f582c4aa1ee1ef
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771290"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824049"
 ---
 # <a name="sp_check_dynamic_filters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_check_dynamic_filters** используется в репликации слиянием.  
   
  Если публикация была определена для использования предварительно вычисленных секций, **sp_check_dynamic_filters** проверяет наличие нарушений ограничений предварительно вычисленных секций. При обнаружении нарушений возвращается ошибка. Дополнительные сведения см. в статье [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
@@ -74,7 +74,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_check_dynamic_filters**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление секциями для публикации слиянием с параметризованными фильтрами](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
  [sp_check_join_filter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
  [sp_check_subset_filter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-subset-filter-transact-sql.md)  

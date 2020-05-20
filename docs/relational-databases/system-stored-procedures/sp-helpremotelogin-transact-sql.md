@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpremotelogin
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 11d71139786ac1442588f016bf8c576b92853cf3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d37cae4776a5a5fe67ed7e2265d9a23a28a725e8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997577"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824479"
 ---
 # <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,9 +59,9 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 |server|**sysname**|Имя удаленного сервера, определенного на локальном сервере.|  
 |local_user_name|**sysname**|Имя входа на локальном сервере, с которым сопоставлены удаленные имена входа.|  
 |remote_user_name|**sysname**|Имя входа на удаленном сервере, сопоставленное с local_user_name.|  
-|параметры|**sysname**|Доверенное = Удаленное имя входа не нуждается в подтверждении паролем при установке соединения с локальным сервером из удаленного сервера.<br /><br /> Не доверенное (или пустое) = Для подтверждения удаленного имени входа запрашивается пароль при установке соединения с локальным сервером из удаленного сервера.|  
+|options|**sysname**|Доверенное = Удаленное имя входа не нуждается в подтверждении паролем при установке соединения с локальным сервером из удаленного сервера.<br /><br /> Не доверенное (или пустое) = Для подтверждения удаленного имени входа запрашивается пароль при установке соединения с локальным сервером из удаленного сервера.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Используйте sp_helpserver, чтобы получить список имен удаленных серверов, определенных на локальном сервере.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -76,14 +76,14 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 EXEC sp_helpremotelogin 'Accounts';  
 ```  
   
-### <a name="b-reporting-help-on-all-remote-users"></a>Б) Получение справки по всем удаленным пользователям  
+### <a name="b-reporting-help-on-all-remote-users"></a>Б. Получение справки по всем удаленным пользователям  
  В следующем примере отображаются сведения обо всех удаленных пользователях на всех удаленных серверах, известных локальному серверу.  
   
 ```  
 EXEC sp_helpremotelogin;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
  [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   

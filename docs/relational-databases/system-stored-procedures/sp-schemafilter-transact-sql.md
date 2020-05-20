@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_schemafilter
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 231796d1678a19106eb89f3039cd755e8385082c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3e9873045fd7e4fb11ad19bbbce953a086512df9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73633019"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824377"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'`Имя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, не являющегося издателем. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'`Имя издателя, не являющегося [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателем. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 `[ @schema = ] 'schema'`Имя схемы. *Schema* имеет тип **sysname**и значение по умолчанию NULL.  
   
@@ -47,7 +47,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**add**|Добавляет указанную схему в список схем, не подходящих для публикации.|  
+|**добавление**|Добавляет указанную схему в список схем, не подходящих для публикации.|  
 |**тени**|Удаляет указанную схему из списка схем, не подходящих для публикации.|  
 |**help**|Возвращает список схем, которые не подходят для публикации.|  
   
@@ -60,13 +60,13 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_schemafilter** следует использовать только для разнородных издателей.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** на распространителе могут выполнять **sp_schemafilter**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   
