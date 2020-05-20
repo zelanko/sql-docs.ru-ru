@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobserver
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bc4d3bca563079c7e1dd7f3ee93e5947f65700b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 046a5b9c4c162dd29c812d326f6d8a448e860604
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305238"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819077"
 ---
 # <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  None  
   
 ## <a name="remarks"></a>Remarks  
- automatic_post существует в **sp_add_jobserver**, но не указана в списке arguments. ** \@** automatic_post зарезервировано для внутреннего использования. ** \@**  
+ ** \@ automatic_post** существует в **sp_add_jobserver**, но не указана в списке arguments. ** \@ automatic_post** зарезервировано для внутреннего использования.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
   
@@ -90,7 +90,7 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>Б) Назначение выполнения заданий на другом сервере  
+### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>Б. Назначение выполнения заданий на другом сервере  
  В следующем примере назначается выполнение многосерверного задания `Weekly Sales Backups` на сервере `SEATTLE2`.  
   
 > [!NOTE]  
@@ -106,7 +106,7 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_apply_job_to_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
