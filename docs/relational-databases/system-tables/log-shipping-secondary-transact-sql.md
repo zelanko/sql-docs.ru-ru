@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_secondary system table
 ms.assetid: 69723419-4544-49c6-a517-adb30ffa5741
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 687f9f7441b7d77ea191047ef22491728ba81047
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5debab1572bc2f788c0dc13773d0dc140c693108
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095823"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82805997"
 ---
 # <a name="log_shipping_secondary-transact-sql"></a>log_shipping_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,14 @@ ms.locfileid: "68095823"
 |**copy_job_id**|**uniqueidentifier**|Идентификатор, назначенный заданию копирования на сервере-получателе.|  
 |**restore_job_id**|**uniqueidentifier**|Идентификатор, назначенный заданию восстановления на сервере-получателе.|  
 |**monitor_server**|**sysname**|Имя экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], используемого в качестве сервера мониторинга в конфигурации доставки журналов.|  
-|**monitor_server_security_mode**|**bit**|Режим безопасности, используемый для подключения к серверу мониторинга:<br /><br /> 1 = проверка подлинности Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности.|  
+|**monitor_server_security_mode**|**bit**|Режим безопасности, используемый для подключения к серверу мониторинга:<br /><br /> 1 = проверка подлинности Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности.|  
 |**last_copied_file**|**nvarchar (500)**|Имя последнего файла резервной копии, скопированного на сервер-получатель.|  
 |**last_copied_date**|**datetime**|Дата и время последней операции копирования на сервер-получатель.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Несколько баз данных-получателей на одном вторичном сервере для данной основной базы данных имеют некоторые параметры в таблице **log_shipping_secondary** . Если общий параметр изменяется для одной из них, он изменяется и для всех остальных таких же баз данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_add_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
  [sp_change_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-log-shipping-secondary-database-transact-sql.md)   
