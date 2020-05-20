@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - enumerated constants [ADOX]
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ff18386cb9da4edbeaa8930d138ba9951965ee0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 84a03af49152bc305f62aceb149d904ef0acf9a0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928554"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764145"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX Enumerated Constants
 Для помощи в отладке перечисляемые константы ADOX список значений для каждой константы. Однако это значение является исключительно рекомендацией и может изменяться от одного выпуска ADOX к другому. Код должен зависеть только от имени перечисленных констант, а не от фактического значения.  
@@ -37,6 +37,6 @@ ms.locfileid: "67928554"
 |[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|Указывает правило, которое следует выполнить при удалении **ключа** .|  
 |[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)|Задает последовательность сортировки для индексированного столбца.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Расширения ADO для языка описания данных и безопасности (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

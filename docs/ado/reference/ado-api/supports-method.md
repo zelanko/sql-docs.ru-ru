@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Supports method [ADO]
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cce5ab3b735d3c641da4a6234e860d0528f107c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3fbfbf28c430fb698f5e024fe3359027c84512c0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936706"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765365"
 ---
 # <a name="supports-method"></a>Метод Supports
 Определяет, поддерживает ли указанный объект [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) определенный тип функциональности.  
@@ -40,7 +40,7 @@ boolean = recordset.Supports(CursorOptions )
  *курсороптионс*  
  **Длинное** выражение, состоящее из одного или нескольких значений [курсороптионенум](../../../ado/reference/ado-api/cursoroptionenum.md) .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Используйте метод **поддерживает** , чтобы определить, какие типы функций поддерживает объект **Recordset** . Если объект **набора записей** поддерживает функции, соответствующие константы которых находятся в *Курсороптионс*, метод **поддерживает** возврат значения **true**. В противном случае возвращается **значение false**.  
   
 > [!NOTE]
@@ -49,7 +49,7 @@ boolean = recordset.Supports(CursorOptions )
 ## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода поддержки (Visual Basic)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
  [Пример метода поддержки (Visual c++)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
  [Свойство CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)

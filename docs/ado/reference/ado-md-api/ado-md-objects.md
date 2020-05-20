@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO MD, objects
 - objects [ADO MD]
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d568ca20cca6c12a04c0f3d54a2c134d59a0d7fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 01a35a38812d105a1e26454022321e57448efadd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930574"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765255"
 ---
 # <a name="ado-md-objects"></a>Многомерные объекты ADO
 
@@ -31,9 +31,9 @@ ms.locfileid: "67930574"
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Представляет куб из многомерной схемы, содержащий набор связанных измерений.|  
 |[Измерение](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Представляет одно из измерений многомерного куба, содержащего одну или несколько иерархий элементов.|  
 |[Иерархия](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Представляет один из способов, с помощью которых элементы измерения могут быть объединены или сведены. Измерение можно объединить по одной или нескольким иерархиям.|  
-|[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Содержит набор элементов, каждый из которых имеет одинаковый ранг в иерархии.|  
-|[Член](../../../ado/reference/ado-md-api/member-object-ado-md.md)|Представляет элемент уровня в Кубе, дочерние элементы элемента уровня или элемента в положении вдоль оси набора ячеек.|  
-|[Разместить](../../../ado/reference/ado-md-api/position-object-ado-md.md)|Представляет набор из одного или нескольких элементов различных измерений, определяющих точку вдоль оси.|  
+|[Уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Содержит набор элементов, каждый из которых имеет одинаковый ранг в иерархии.|  
+|[Member](../../../ado/reference/ado-md-api/member-object-ado-md.md)|Представляет элемент уровня в Кубе, дочерние элементы элемента уровня или элемента в положении вдоль оси набора ячеек.|  
+|[Положение](../../../ado/reference/ado-md-api/position-object-ado-md.md)|Представляет набор из одного или нескольких элементов различных измерений, определяющих точку вдоль оси.|  
   
  Кроме того, объект **каталога** подключается к объекту **соединения** ADO, который входит в стандартную библиотеку ADO:  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67930574"
   
  Многие объекты объекты данных ActiveX (MD) могут содержаться в соответствующей коллекции. Например, объект [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) может содержаться в коллекции [кубедефс](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) **каталога**. Дополнительные сведения см. в разделе [объекты данных ActiveX (MD) Collections](../../../ado/reference/ado-md-api/ado-md-collections.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по объекты данных ActiveX (MD) API](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [Примеры кода объекты данных ActiveX (MD)](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [объекты данных ActiveX (MD) коллекции](../../../ado/reference/ado-md-api/ado-md-collections.md)   

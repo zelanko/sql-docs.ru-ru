@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connection pooling in RDS [ADO]
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2ffcc64cb9d0e45d371e927cd1c15be51cd917c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0e94670162c1d9c120786bfc08ed8d5f8cf59972
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921935"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764605"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Использование RDS с регулированием количества запросов подключений ODBC
 Если вы используете источник данных ODBC, можно использовать параметр пула соединений в службы IIS (IIS) для достижения высокой производительности при нагрузке на клиент. Пул подключений — это диспетчер ресурсов для подключений, который сохраняет открытое состояние на часто используемых соединениях.  
@@ -123,7 +123,7 @@ ms.locfileid: "67921935"
   
 5.  Нажмите кнопку ОК, а затем ОК еще раз, чтобы выйти из программы.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные принципы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

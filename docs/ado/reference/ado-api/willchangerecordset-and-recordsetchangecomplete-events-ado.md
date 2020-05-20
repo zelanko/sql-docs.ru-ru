@@ -17,14 +17,14 @@ helpviewer_keywords:
 - RecordsetChangeComplete event [ADO]
 - WillChangeRecordset event [ADO]
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dd4e2f1485c18ce1fecc76d4eb23aa4132d85329
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 90bfb1c947c02540d07c3cbc11e45436f8bd4a58
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938689"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764475"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>События WillChangeRecordset и RecordsetChangeComplete (ADO)
 Событие **виллчанжерекордсет** вызывается до того, как ожидающая операция изменяет [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md). Событие **рекордсетчанжекомплете** вызывается после изменения **набора записей** .  
@@ -58,13 +58,13 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
  *предшнур*  
  Объект **Recordset** . **Набор записей** , для которого произошло это событие.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Событие **виллчанжерекордсет** или **рекордсетчанжекомплете** может возникать из-за методов [Requery](../../../ado/reference/ado-api/requery-method.md) или [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) **набора записей** .  
   
  Если поставщик не поддерживает закладки, уведомление о событии **рекордсетчанже** возникает каждый раз при получении новых строк от поставщика. Частота этого события зависит от свойства **рекордсеткачесизе** .  
   
  Необходимо присвоить параметру **адстатус** значение **адстатусунвантедевент** для каждого возможного значения **адреасон** , чтобы полностью отключить уведомление о событии для любого события, включающего параметр **адреасон** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример модели событий ADO (Visual c++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Общие сведения об обработчике событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)

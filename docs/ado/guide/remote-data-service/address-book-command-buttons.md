@@ -11,14 +11,14 @@ helpviewer_keywords:
 - address book application scenario [ADO], command buttons
 - RDS scenarios [ADO], command buttons
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d1aa5b628bec9399374b94a2cd78090207bf09b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 04f896b4a799e527e2442ef17e69a33f576950dd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922986"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764745"
 ---
 # <a name="address-book-command-buttons"></a>Кнопки команд адресной книги
 Приложение адресной книги содержит следующие командные кнопки:  
@@ -42,7 +42,7 @@ ms.locfileid: "67922986"
   
  Поскольку программа использует слово `like` при построении инструкций SQL, запросы представляют собой поиск по подстрокам, а не точные совпадения.  
   
- Например, если в поле **Last Name (фамилия** `myQuery`) содержится запись «Берже», а в поле « **Title** » содержится запись «руководитель программы», то инструкция SQL (значение) будет считать следующее:  
+ Например, если в поле **Last Name (фамилия** ) содержится запись «Берже», а в поле « **Title** » содержится запись «руководитель программы», то инструкция SQL (значение `myQuery` ) будет считать следующее:  
   
 ```sql
 Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee where lastname like 'Berge%' and title like 'Program Manager%'  
@@ -51,7 +51,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
  Если запрос выполнен успешно, все лица с фамилией, содержащими текст «Берже» (например, «Берже» и «Бергер») и с заголовком, содержащим слова «руководитель программы» (например, «руководитель программы», «дополнительные технологии»), отображаются в сетке данных HTML.  
   
 ## <a name="preparing-and-sending-the-query"></a>Подготовка и отправка запроса  
- Последняя часть процедуры Find_OnClick состоит из двух операторов. Первая инструкция присваивает свойство [SQL](../../../ado/reference/rds-api/sql-property.md) [RDS. Объект элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) , равный динамически созданному SQL Query. Вторая инструкция вызывает **RDS. Объект элемента управления** (`DC1`) для запроса к базе данных, а затем отображение новых результатов запроса в сетке.  
+ Последняя часть процедуры Find_OnClick состоит из двух операторов. Первая инструкция присваивает свойство [SQL](../../../ado/reference/rds-api/sql-property.md) [RDS. Объект элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) , равный динамически созданному SQL Query. Вторая инструкция вызывает **RDS. Объект элемента управления** ( `DC1` ) для запроса к базе данных, а затем отображение новых результатов запроса в сетке.  
   
 ```vb
 Sub Find_OnClick  
@@ -62,7 +62,7 @@ End Sub
 ```  
   
 ## <a name="update-profile-button"></a>Кнопка обновления профиля  
- Нажатие кнопки **Обновить профиль** активирует процедуру VBScript Update_OnClick, которая выполняет [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Методы [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) и [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) объекта`DC1`элемента управления DataObject.  
+ Нажатие кнопки **Обновить профиль** активирует процедуру VBScript Update_OnClick, которая выполняет [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) `DC1` Методы [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) и [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) объекта элемента управления DataObject.  
   
 ```vb
 Sub Update_OnClick  
@@ -84,7 +84,7 @@ End Sub
   
  При `DC1.CancelUpdate` выполнении он отменяет любые изменения, внесенные пользователем в запись сотрудника в сетке данных с момента последнего запроса или обновления. Он восстанавливает исходные значения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Кнопки навигации адресной книги](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
 

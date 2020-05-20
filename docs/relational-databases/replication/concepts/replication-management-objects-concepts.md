@@ -87,7 +87,7 @@ ms.locfileid: "76286114"
     > [!NOTE]  
     >  Чтобы выбрать несколько файлов, удерживайте клавишу CTRL.  
   
-8.  (Необязательно) Повторите шаг 6. Щелкните вкладку **Обзор**, перейдите в каталог [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM, выберите файл Microsoft.SqlServer.Replication.BusinessLogicSupport.dll и нажмите кнопку **ОК**.  
+8.  (Необязательно) Повторите шаг 6. Щелкните вкладку **Обзор[!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)], перейдите в каталог **COM, выберите файл Microsoft.SqlServer.Replication.BusinessLogicSupport.dll и нажмите кнопку **ОК**.  
   
 9. В меню **Вид** выберите пункт **Код**.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "76286114"
     > [!NOTE]  
     >  Чтобы выбрать несколько файлов, удерживайте клавишу CTRL.  
   
-8.  (Необязательно) Повторите шаг 6. Щелкните вкладку **Обзор**, перейдите в каталог [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM, выберите файл Microsoft.SqlServer.Replication.BusinessLogicSupport.dll и нажмите кнопку **ОК**.  
+8.  (Необязательно) Повторите шаг 6. Щелкните вкладку **Обзор[!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)], перейдите в каталог **COM, выберите файл Microsoft.SqlServer.Replication.BusinessLogicSupport.dll и нажмите кнопку **ОК**.  
   
 9. В меню **Вид** выберите пункт **Код**.  
   

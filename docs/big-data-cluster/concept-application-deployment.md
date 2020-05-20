@@ -49,7 +49,7 @@ output: #output parameter the app expects and the type
 
 ![Poolsize и replicas](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
-После создания объекта ReplicaSet и запуска пулов создается задание cron, если в файле `schedule` был задан параметр `spec.yaml`. Наконец, создается служба Kubernetes, которую можно использовать для управления приложением и его запуска (см. ниже).
+После создания объекта ReplicaSet и запуска пулов создается задание cron, если в файле `spec.yaml` был задан параметр `schedule`. Наконец, создается служба Kubernetes, которую можно использовать для управления приложением и его запуска (см. ниже).
 
 При выполнении приложения служба Kubernetes передает запросы в реплику и возвращает результаты.
 

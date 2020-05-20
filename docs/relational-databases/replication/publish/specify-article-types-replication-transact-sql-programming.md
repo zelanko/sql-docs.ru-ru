@@ -46,9 +46,9 @@ ms.locfileid: "75321208"
   
      Таким образом определяется новая статья для публикации. Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
   
-2.  Выполните процедуру `logbased manualboth`sp_articlefilter`logbased manualfilter` для статей [ и ](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md), чтобы создать хранимую процедуру фильтрации для статьи с горизонтальной фильтрацией. Дополнительные сведения см. в разделе [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
+2.  Выполните процедуру [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) для статей `logbased manualboth` и `logbased manualfilter`, чтобы создать хранимую процедуру фильтрации для статьи с горизонтальной фильтрацией. Дополнительные сведения см. в разделе [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
-3.  Выполните процедуру `logbased manualboth`sp_articleview`logbased manualview` для статей `logbased manualfilter`, [ и ](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md), чтобы создать представление, определяющее статью с вертикальной фильтрацией. Дополнительные сведения см. в разделе [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+3.  Выполните процедуру [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) для статей `logbased manualboth`, `logbased manualview` и `logbased manualfilter`, чтобы создать представление, определяющее статью с вертикальной фильтрацией. Дополнительные сведения см. в разделе [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
 
 ### <a name="to-publish-a-view-or-indexed-view-article-in-a-transactional-or-snapshot-publication"></a>Публикация статьи представления или индексированного представления в публикации моментальных снимков или транзакций  
   

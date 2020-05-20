@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - ChildCount property [ADO MD]
 ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a8e6f6a7cb749ff2b22a1f7563b43ce07e060aab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 858bed2c2fe04a1fbf0486b0e0bfc9a26447e4ef
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911556"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764405"
 ---
 # <a name="childcount-property-ado-md"></a>Свойство ChildCount (многомерные объекты ADO)
 Указывает количество элементов, для которых текущий объект- [элемент](../../../ado/reference/ado-md-api/member-object-ado-md.md) является родительским в иерархии.  
@@ -29,7 +29,7 @@ ms.locfileid: "67911556"
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает **длинное** целое число и доступно только для чтения.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Используйте свойство **ChildCount** , чтобы получить оценку количества дочерних элементов, которые имеет **элемент** . Фактические дочерние **элементы элемента могут возвращаться** свойством [Children](../../../ado/reference/ado-md-api/children-property-ado-md.md) .  
   
  Для объектов- **членов** из объекта [расположения](../../../ado/reference/ado-md-api/position-object-ado-md.md) максимальное число, возвращаемое, равно 65536. Если фактическое число дочерних элементов превышает 65536, возвращаемое значение по-прежнему будет равно 65536. Таким образом, приложение должно интерпретировать **ChildCount** , равный 65536, как или больше, чем 65536 потомков.  

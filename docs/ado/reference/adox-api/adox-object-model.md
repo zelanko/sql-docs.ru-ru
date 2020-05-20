@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADOX, object model
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ad9942121c6b6173e773cc601f33b572a58512d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c521a1db30a35e43e5e0a7dbb118320769d4756
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928531"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764135"
 ---
 # <a name="adox-object-model"></a>Объектная модель ADOX
 На следующей схеме показано, как объекты представлены и связаны в ADOX. Дополнительные сведения об определенном объекте или коллекции см. в разделе, посвященном заданному справочному разделу, или [ADOX Objects](../../../ado/reference/adox-api/adox-objects.md) and [ADOX Collections](../../../ado/reference/adox-api/adox-collections.md).  
@@ -26,7 +26,7 @@ ms.locfileid: "67928531"
   
  Каждый объект [таблицы](../../../ado/reference/adox-api/table-object-adox.md), [индекса](../../../ado/reference/adox-api/index-object-adox.md)и [столбца](../../../ado/reference/adox-api/column-object-adox.md) также имеет стандартную коллекцию [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) ADO.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Примеры кода ADOX](../../../ado/reference/adox-api/adox-code-examples.md)   
  [ADOX коллекции](../../../ado/reference/adox-api/adox-collections.md)   

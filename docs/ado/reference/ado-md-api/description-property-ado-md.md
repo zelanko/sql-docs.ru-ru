@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - Description property [ADO MD]
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5636b5f4e49ff9a5bbe46937a8d7b972e61b4502
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 05efe4c1e31f1ee9c7b7abd130a9d9c810ab12f4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938576"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764315"
 ---
 # <a name="description-property-ado-md"></a>Свойство Description (многомерные объекты ADO)
 Возвращает текстовое описание текущего объекта.  
@@ -33,7 +33,7 @@ ms.locfileid: "67938576"
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает **строку** и доступна только для чтения.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Для объектов [member](../../../ado/reference/ado-md-api/member-object-ado-md.md) **Описание** применяется только к элементам Measure и формуле. **Описание** возвращает пустую строку ("") для всех других типов элементов. Дополнительные сведения о различных типах членов см. в описании свойства [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) .  
   
  Это свойство поддерживается только для объектов- **членов** , принадлежащих объекту [уровня](../../../ado/reference/ado-md-api/level-object-ado-md.md) . Ошибка возникает, когда на это свойство ссылаются объекты- **члены** , принадлежащие объекту- [положению](../../../ado/reference/ado-md-api/position-object-ado-md.md) .  

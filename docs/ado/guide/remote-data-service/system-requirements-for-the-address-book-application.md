@@ -11,14 +11,14 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2450cc97229a6629d4c2895f3960e3033d129789
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8aec1ebbb5d83829431e1045e746c99f1569dc48
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922038"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764635"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>Требования к системе для приложения адресной книги
 Чтобы настроить пример приложения адресной книги, необходимо обеспечить соответствие следующим требованиям к программному обеспечению и базе данных:  
@@ -50,7 +50,7 @@ ms.locfileid: "67922038"
   
  Если у вас нет прав, администратору базы данных может потребоваться настроить систему и предоставить вам разрешение на доступ к базе данных или настроить базу данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполнение скрипта SQL адресной книги](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)   
  [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Выполнение примера приложения адресной книги](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)

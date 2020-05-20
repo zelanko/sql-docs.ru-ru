@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO MD]
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ae0b32385b98ac1b48688a7f89bbd7c91842a106
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 13a24320f7b49d8d2a0e1341bff2d9a4cca575dd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911595"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765325"
 ---
 # <a name="activeconnection-property-ado-md"></a>Свойство ActiveConnection (многомерные объекты ADO)
 Указывает объект [подключения](../../../ado/reference/ado-api/connection-object-ado.md) ADO, к которому в настоящий момент принадлежит текущий набор ячеек или каталог.  
@@ -30,7 +30,7 @@ ms.locfileid: "67911595"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **значение типа Variant** , содержащее строку, определяющую соединение или объект **соединения** . Значение по умолчанию — Empty.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Этому свойству можно присвоить допустимый объект **соединения** ADO или допустимую строку подключения. Если для этого свойства задана строка подключения, поставщик создает новый объект **соединения** , используя это определение, и открывает соединение.  
   
  При использовании аргумента *ActiveConnection* метода [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) для открытия объекта набора [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) свойство **ActiveConnection** будет наследовать значение аргумента.  

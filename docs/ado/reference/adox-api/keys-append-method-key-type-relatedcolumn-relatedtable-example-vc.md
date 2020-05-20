@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Keys Append method [ADOX], VC++ example
 - RelatedColumn property [ADOX], VC++ example
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c812f0503b8801e861364a04e5621cb975adb009
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 260c29c18f6d8c95cbca6e06c25ebf05fceeec64
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76918070"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763865"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Примеры метода Append коллекции Keys, свойства Type объекта Key, а также примеры свойств RelatedColumn, RelatedTable и UpdateRule (Visual C++)
 В следующем коде показано, как создать новый внешний ключ. Предполагается, что существует две таблицы (Customers и Orders).  

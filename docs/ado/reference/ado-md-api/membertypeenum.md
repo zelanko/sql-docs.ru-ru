@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - MemberTypeEnum enumeration [ADO MD]
 ms.assetid: 5d8132c0-7ca2-4f86-8336-1b34213869ad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da396bd71e64925bcd8fb74f71f8e334bf7f1d7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7e05d8307f4dca4479b407db7364ab4d893d684e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949403"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765145"
 ---
 # <a name="membertypeenum"></a>MemberTypeEnum
 Задает параметр для свойства [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) объекта- [члена](../../../ado/reference/ado-md-api/member-object-ado-md.md) .  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e7d4399a8cf279ed2283061fff9064ffcc1adfba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 17d2d282eddcd358d8b3efe90ffda2d40e9e1574
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924738"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764805"
 ---
 # <a name="operation-of-parameterized-commands"></a>Использование параметризованных команд
 При работе с большим дочерним **набором записей**, особенно по сравнению с размером родительского **набора записей**, но при этом требуется доступ только к нескольким дочерним главам, может оказаться более эффективным использование параметризованной команды.  
@@ -86,9 +86,9 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
  В этом примере для получения необходимого результата применяется более гибкое предложение SQL WHERE.  
   
 > [!NOTE]
->  При использовании предложений WHERE параметры не могут использовать типы данных SQL для Text, ntext и Image, что приведет к ошибке, которая содержит следующее описание: `Invalid operator for data type`.  
+>  При использовании предложений WHERE параметры не могут использовать типы данных SQL для Text, ntext и Image, что приведет к ошибке, которая содержит следующее описание: `Invalid operator for data type` .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример формирования данных](../../../ado/guide/data/data-shaping-example.md)   
  [Грамматика формальной фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
  [Общие сведения о командах формирования данных](../../../ado/guide/data/shape-commands-in-general.md)

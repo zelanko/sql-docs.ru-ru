@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CubeDef object [ADO MD]
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61795a8cb10fb0b469f89012d52dfb4723aa0a89
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 25dd4d6a9c8a5518c8c2b637af63b39e7b992557
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949789"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764355"
 ---
 # <a name="cubedef-object-ado-md"></a>Объект CubeDef (многомерные объекты ADO)
 Представляет куб из многомерной схемы, содержащий набор связанных измерений.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  С помощью коллекций и свойств объекта **CubeDef** можно выполнять следующие действия.  
   
 -   Найдите **CubeDef** с помощью свойства [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) .  
@@ -38,7 +38,7 @@ ms.locfileid: "67949789"
   
  Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|Имя|Описание|  
+|name|Описание|  
 |----------|-----------------|  
 |CatalogName|Имя каталога, которому принадлежит куб.|  
 |CreatedOn|Дата и время создания куба.|  
@@ -55,7 +55,7 @@ ms.locfileid: "67949789"
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/cubedef-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример CubeDef (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [Объект каталога (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
  [Коллекция Кубедефс (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   

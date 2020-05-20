@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - DrilledDown property [ADO MD]
 ms.assetid: bf39dd36-fc7a-4f6e-86c0-fa71430c0d86
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f1175d2a70c376e3da1e079e4a3eb93a39235758
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c5819609f06b37ffad08918968530b66df169c64
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938462"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764265"
 ---
 # <a name="drilleddown-property-ado-md"></a>Свойство DrilledDown (многомерные объекты ADO)
 Указывает, следуют ли потомки непосредственно за [элементом](../../../ado/reference/ado-md-api/member-object-ado-md.md) на оси.  
@@ -29,7 +29,7 @@ ms.locfileid: "67938462"
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает **логическое** значение и доступно только для чтения. **Дрилледдовн** возвращает **значение true** , если на оси отсутствуют дочерние элементы текущего элемента. **Дрилледдовн** возвращает **значение false** , если текущий элемент содержит один или несколько дочерних элементов на оси.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Используйте свойство **дрилледдовн** , чтобы определить, существует ли по меньшей мере один дочерний элемент этого элемента на оси, следующей за данным элементом. Эти сведения полезны при отображении элемента.  
   
  Это свойство поддерживается только для объектов- [членов](../../../ado/reference/ado-md-api/member-object-ado-md.md) , принадлежащих объекту- [положению](../../../ado/reference/ado-md-api/position-object-ado-md.md) . Ошибка возникает, когда на это свойство ссылаются объекты- **члены** , принадлежащие объекту [уровня](../../../ado/reference/ado-md-api/level-object-ado-md.md) .  
@@ -37,5 +37,5 @@ ms.locfileid: "67938462"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Member (многомерные объекты ADO)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство ParentSameAsPrev (многомерные объекты ADO)](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)

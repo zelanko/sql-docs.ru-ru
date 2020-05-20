@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS [ADO]
 - remote data service [ADO]
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26d3a5d785db3ae138e26225ea5b37b182f6b076
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 601dce83ad5dc71a015c2fa8a66c85f975521d96
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922406"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764705"
 ---
 # <a name="rds-usage-and-security"></a>Использование RDS и безопасность
 Используйте сведения в этом разделе, чтобы настроить сервер и быстро использовать RDS. В этом разделе приводятся конкретные действия по настройке, которые могут потребоваться при реализации RDS, описаны некоторые ключевые связи между RDS и другими технологиями, а также приведены решения проблем, которые могут возникнуть при настройке решения RDS.  
@@ -36,7 +36,7 @@ ms.locfileid: "67922406"
   
 -   [Устранение неполадок с RDS](../../../ado/guide/remote-data-service/troubleshooting-rds.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [Сценарий RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Учебник по RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)

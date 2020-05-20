@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Type property [field] [ADO], Visual Basic example
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ab43149a0e938be4359203b0da750b04a82b545
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1d3f13b0f76884f4b5e0077bdebef0c009d7b546
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936684"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765355"
 ---
 # <a name="type-property-example-field-vb"></a>Пример свойства Type (объект Field) (Visual Basic)
 В этом примере показано свойство [Type](../../../ado/reference/ado-api/type-property-ado.md) , в котором отображается имя константы, соответствующее значению свойства [Type](../../../ado/reference/ado-api/type-property-ado.md) всех объектов [field](../../../ado/reference/ado-api/field-object.md) в таблице ***Employees*** . Для выполнения этой процедуры требуется функция FieldType.  
@@ -105,6 +105,6 @@ End Sub
 Attribute VB_Name = "TypeField"  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)   
  [Свойство Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

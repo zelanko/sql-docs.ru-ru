@@ -36,7 +36,7 @@ ms.locfileid: "75320481"
   
     -   Если оно равно **1**, то публикация поддерживает данную функцию.  
   
-    -   Если значение равно **0**, выполните хранимую процедуру [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) на издателе в базе данных публикации. В параметре **allow_initialize_from_backup** укажите значение `@property`, а в параметре **— значение**true`@value`.  
+    -   Если значение равно **0**, выполните хранимую процедуру [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) на издателе в базе данных публикации. В параметре **allow_initialize_from_backup** укажите значение `@property`, а в параметре `@value` — значение **true**.  
   
 2.  В новой публикации выполните хранимую процедуру [sp_addpublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) на издателе в базе данных публикации. Задайте значение **true** для параметра **allow_initialize_from_backup**. Дополнительные сведения см. в разделе [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   

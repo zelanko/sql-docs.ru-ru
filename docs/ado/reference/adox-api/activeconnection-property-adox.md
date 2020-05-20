@@ -19,14 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADOX]
 ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4ddd18225f8497294f1f44fa134a2d02040c8ada
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0318fbdafea09e3728699f448c1483ac53e5e80a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67952175"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764205"
 ---
 # <a name="activeconnection-property-adox"></a>Свойство ActiveConnection (ADOX)
 Указывает объект [соединения](../../../ado/reference/ado-api/connection-object-ado.md) ADO, к которому принадлежит [Каталог](../../../ado/reference/adox-api/catalog-object-adox.md) .  
@@ -34,13 +34,13 @@ ms.locfileid: "67952175"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает объект **соединения** или **строку** , содержащую определение для соединения. Возвращает активный объект **соединения** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Значением по умолчанию является пустая ссылка на объект.  
   
 ## <a name="applies-to"></a>Применяется к  
  [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства ActiveConnection каталога (Visual Basic)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Пример свойств Command и CommandText (Visual Basic)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Пример метода Close соединения, свойство типа таблицы (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e413913d3064b4302d4673098b82d220acc23aa1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920899"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764565"
 ---
 # <a name="ado-properties"></a>Свойства ADO
 
@@ -55,7 +55,7 @@ ms.locfileid: "67920899"
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|Указывает, находится ли текущая координата в конце потока.|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Указывает фильтр для данных в **наборе записей**.|  
 |[HelpContext и HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|Указывает файл справки и раздел, связанный с объектом **Error** .<br /><br /> **Хелпконтекстид** возвращает идентификатор контекста в виде **длинного** значения для раздела в файле справки.<br /><br /> **HelpFile** возвращает **строковое** значение, результатом которого является полностью разрешенный путь к файлу справки.|  
-|[Индекс](../../../ado/reference/ado-api/index-property.md)|Указывает имя индекса, действующего в настоящий момент для объекта **Recordset** .|  
+|[Номер](../../../ado/reference/ado-api/index-property.md)|Указывает имя индекса, действующего в настоящий момент для объекта **Recordset** .|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|Указывает уровень изоляции для объекта **соединения** .|  
 |[Элемент](../../../ado/reference/ado-api/item-property-ado.md)|Указывает конкретный элемент коллекции по имени или порядковому номеру.|  
 |[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|Указывает двоичный символ, используемый в качестве разделителя строк в объектах текстового **потока** .|  
@@ -63,16 +63,16 @@ ms.locfileid: "67920899"
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|Указывает, какие записи должны быть упакованы обратно на сервер.|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|Указывает максимальное число записей, возвращаемых в **набор записей** из запроса.|  
 |[Режим](../../../ado/reference/ado-api/mode-property-ado.md)|Указывает доступные разрешения для изменения данных в **соединении**, **записи**или объекте **потока** .|  
-|[имя](../../../ado/reference/ado-api/name-property-ado.md);|Указывает имя объекта.|  
+|[Name](../../../ado/reference/ado-api/name-property-ado.md)|Указывает имя объекта.|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|Указывает код ошибки конкретного поставщика для конкретного объекта **ошибки** .|  
-|[Число](../../../ado/reference/ado-api/number-property-ado.md)|Указывает число, которое однозначно определяет объект **ошибки** .|  
+|[Нумерация](../../../ado/reference/ado-api/number-property-ado.md)|Указывает число, которое однозначно определяет объект **ошибки** .|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|Указывает масштаб числовых значений в объекте **параметра** или **поля** .|  
 |[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|Указывает значение **поля** , которое существовало в записи до внесения каких-либо изменений.|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Указывает, сколько страниц данных содержит объект **Recordset** .|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|Указывает, сколько записей представляют одну страницу в **наборе записей**.|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Задает контейнер объекта OLE DB **строки** для объекта **адорекордконструктион** , чтобы родительский элемент строки был включен в объект **записи** ADO.|  
 |[парентурл](../../../ado/reference/ado-api/parenturl-property-ado.md)|Указывает абсолютную строку URL-адреса, указывающую на родительскую **запись** текущего объекта **Record** .|  
-|[Разместить](../../../ado/reference/ado-api/position-property-ado.md)|Указывает текущую точку в объекте **потока** .|  
+|[Положение](../../../ado/reference/ado-api/position-property-ado.md)|Указывает текущую точку в объекте **потока** .|  
 |[Точность](../../../ado/reference/ado-api/precision-property-ado.md)|Указывает степень точности для числовых значений в объекте **параметра** или для числовых объектов **полей** .|  
 |[Prepared](../../../ado/reference/ado-api/prepared-property-ado.md)|Указывает, следует ли сохранять скомпилированную версию команды перед выполнением.|  
 |[Поставщик](../../../ado/reference/ado-api/provider-property-ado.md)|Указывает имя поставщика для объекта **соединения** .|  
@@ -96,7 +96,7 @@ ms.locfileid: "67920899"
 |[Значение](../../../ado/reference/ado-api/value-property-ado.md)|Указывает значение, присваиваемое **полю**, **параметру**или объекту **Свойства** .|  
 |[Версия](../../../ado/reference/ado-api/version-property-ado.md)|Указывает номер версии ADO.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Коллекции ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADOX, collections
 - collections [ADOX]
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 453836f30e74dd604efe28d309ca69ea2ca26684
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f5c2792f9a5ef413f09793df8ff320d3826773f4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928607"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764155"
 ---
 # <a name="adox-collections"></a>Коллекции ADOX
 
@@ -33,7 +33,7 @@ ms.locfileid: "67928607"
 |[Пользователи](../../../ado/reference/adox-api/users-collection-adox.md)|Содержит все сохраненные **пользовательские** объекты каталога или группы.|  
 |[Представления](../../../ado/reference/adox-api/views-collection-adox.md)|Содержит все объекты **представления** каталога.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Объектная модель ADOX](../../../ado/reference/adox-api/adox-object-model.md)   
  [Объекты ADOX](../../../ado/reference/adox-api/adox-objects.md)   

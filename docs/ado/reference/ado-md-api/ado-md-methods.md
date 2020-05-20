@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO MD, methods
 - methods [ADO MD]
 ms.assetid: 78bfa2f0-358b-40bb-be2e-16262752d676
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9aa722813994ec950516c513c7e0e673b83b0c73
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 44cdaf1ea526a85816ddee18157a4a11052fa040
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67939990"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765225"
 ---
 # <a name="ado-md-methods"></a>Методы многомерных объектов ADO
 
@@ -28,7 +28,7 @@ ms.locfileid: "67939990"
 |[GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)|Извлекает объект схемы объекты данных ActiveX (MD) (измерение, иерархию, уровень или элемент) по уникальному имени.|  
 |[Открыть](../../../ado/reference/ado-md-api/open-method-ado-md.md)|Извлекает результаты многомерного запроса и возвращает результаты в набор ячеек.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по объекты данных ActiveX (MD) API](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [Примеры кода объекты данных ActiveX (MD)](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [объекты данных ActiveX (MD) коллекции](../../../ado/reference/ado-md-api/ado-md-collections.md)   

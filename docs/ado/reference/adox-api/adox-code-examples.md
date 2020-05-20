@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADOX code examples
 ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ac4e07dd4721cf2ae38f480563350fa0fbbaf51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8de0ecf246e05a6cdbb65df1f0e457ad7b65086c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67952073"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764165"
 ---
 # <a name="adox-code-examples"></a>Примеры кода ADOX
 Используйте приведенные ниже примеры кода, чтобы узнать, как использовать объекты, методы, свойства и события ADOX.  
@@ -29,7 +29,7 @@ ms.locfileid: "67952073"
   
 -   [Примеры кода ADOX в Microsoft Visual C++](../../../ado/reference/adox-api/adox-code-examples-in-microsoft-visual-c.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства ActiveConnection каталога (Visual Basic)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Пример свойств Command и CommandText (Visual Basic)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   

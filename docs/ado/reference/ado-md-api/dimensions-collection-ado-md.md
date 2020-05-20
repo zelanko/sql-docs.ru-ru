@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - Dimensions collection [ADO MD]
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e864d225ade97737ab0471a5b6a19fb66d875857
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 91d535097ce43b910aac24afc841d2a061d29956
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949778"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764275"
 ---
 # <a name="dimensions-collection-ado-md"></a>Коллекция Dimensions (многомерные объекты ADO)
 Содержит объекты [измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) , составляющие куб.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **Измерения** — это стандартная коллекция ADO. С помощью свойств и методов коллекции можно выполнять следующие действия.  
   
 -   Получите количество объектов в коллекции со свойством [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
@@ -39,7 +39,7 @@ ms.locfileid: "67949778"
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/dimensions-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример каталога (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Объект CubeDef (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
  [Объект Dimension (многомерные объекты ADO)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)

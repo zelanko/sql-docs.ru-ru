@@ -11,14 +11,14 @@ helpviewer_keywords:
 - objects [ADO], RDS
 - RDS objects [ADO]
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a3885b805f32661f328552674bf9a9d1e98e6fb7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 45f4851acf2d3c92807a571f6c8c6b436b86936b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963678"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764835"
 ---
 # <a name="rds-objects"></a>Объекты службы удаленных рабочих столов
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "67963678"
 |[Пространство (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|Создает прокси на стороне клиента для пользовательских бизнес-объектов, расположенных на среднем уровне.<br /><br /> Объект **Space** является надежным для скриптов.|  
 |[Интерфейс IRDSService (служба удаленных рабочих столов)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|Предоставляет метод [инвокесервице (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) , который используется для возвращения указателя на запрошенный интерфейс в более поддерживающей версии объекта.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADO](../../../ado/reference/rds-api/rds-api-reference.md)
 
 
