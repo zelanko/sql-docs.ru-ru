@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_start_job
 ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 5f38224cdd1f2ade609d5b10ba2a6b46f913639d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c475a13a64defecbd420d297fb5cd513178b47f4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066716"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834241"
 ---
 # <a name="syssp_cdc_start_job-transact-sql"></a>sys.sp_cdc_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ EXEC sys.sp_cdc_start_job;
 GO  
 ```  
   
-### <a name="b-starting-a-cleanup-job"></a>Б) Запуск задания очистки  
+### <a name="b-starting-a-cleanup-job"></a>Б. Запуск задания очистки  
  В следующем примере запускается задание очистки для базы данных `AdventureWorks2012`.  
   
 ```  
@@ -76,7 +76,7 @@ GO
 EXEC sys.sp_cdc_start_job @job_type = N'cleanup';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [dbo. cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys. sp_cdc_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md)  
   

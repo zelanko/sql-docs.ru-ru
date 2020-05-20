@@ -18,12 +18,12 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c03333e715483f8da32703636373ef0115c3a1c0
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62902452"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921599"
 ---
 # <a name="integration-services-data-types"></a>Типы данных служб Integration Services
   Когда данные входят в поток данных в пакете, источник, извлекающий данные, преобразовывает их в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Числовым данным назначается числовой тип данных, строковым — символьный тип данных, а датам — тип даты. Другим данным, таким как идентификатор GUID и BLOB (Binary Large Object Blocks), также назначаются соответствующие типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Если данные имеют тип, не преобразуемый в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , возникает ошибка.  
@@ -62,7 +62,7 @@ ms.locfileid: "62902452"
 |DT_WSTR|Строка в Юникоде заканчивающаяся символом конца строки с максимальной длиной 4000 символов. (Если значение столбца содержит дополнительные символы конца строки, строка усекается в месте вхождения первого такого символа).|  
 |DT_IMAGE|Двоичное значение с максимальным размером 2<sup>31</sup>-1 (2 147 483 647) байт. .|  
 |DT_NTEXT|Строка символов в Юникоде с максимальной длиной 2<sup>30</sup> – 1 (1 073 741 823) символов.|  
-|DT_TEXT|Строка [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]символов/мбкс с максимальной длиной 2<sup>31</sup>-1 (2 147 483 647) символов.|  
+|DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]Строка символов/мбкс с максимальной длиной 2<sup>31</sup>-1 (2 147 483 647) символов.|  
   
 ## <a name="conversion-of-data-types"></a>Преобразование типов данных  
  Если тип источника данных не требует распределения данных по всей ширине столбца, можно изменить тип данных столбца. Максимально короткие строки данных помогают оптимизировать производительность при передаче данных, так как чем короче каждая строка, тем быстрее данные перемещаются от источника к целевому объекту.  
@@ -253,7 +253,7 @@ ms.locfileid: "62902452"
  Сведения о сопоставлении типов данных в потоке данных см. в разделе [Работа с типами данных в потоке данных](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
 ## <a name="related-content"></a>См. также  
- Запись в блоге [Сравнение производительности между способами преобразования типов данных в службах SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823)на сайте blogs.msdn.com.  
+ Запись в блоге [Сравнение производительности между способами преобразования типов данных в службах SSIS 2008](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035)на сайте blogs.msdn.com.  
   
 ## <a name="see-also"></a>См. также:  
  [Данные потоков данных](data-in-data-flows.md)  

@@ -12,16 +12,16 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30f840c9fe558382c5a0549f09657c917c69c3d4
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253515"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886191"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Оценка готовности SQL Serverного пространства данных для переноса в базу данных SQL Azure с помощью Помощник по миграции данных
 
@@ -62,7 +62,7 @@ ms.locfileid: "75253515"
     | ------------- | ------------- |
     | Азия | Юго-Восточная Азия или Азиатско-Тихоокеанский регион |
     | Европа | Южная Европа или Западная Европа |
-    | United Kingdom | Южная часть Соединенного Королевства или западная часть Соединенного Королевства |
+    | Соединенное Королевство | Южная часть Соединенного Королевства или западная часть Соединенного Королевства |
     | США | Центральная часть США или Западная часть США 2 |
 
     Метаданные, собранные с локальных виртуальных машин, хранятся только в регионе, который задан для проекта. При выполнении миграции можно выбрать любой целевой регион.
@@ -102,7 +102,7 @@ ms.locfileid: "75253515"
 
     Если вы обновляете локальный экземпляр SQL Server до более поздней версии SQL Server или для SQL Server, размещенного на виртуальной машине Azure, задайте для параметра Тип исходного и целевого сервера значение **SQL Server**. Задайте тип целевого сервера **управляемый экземпляр базы данных SQL Azure** для оценки готовности целевой базы данных SQL Azure (PaaS).
 
-3. Нажмите кнопку **создания**.
+3. Щелкните **Создать**.
 
    ![Интерфейс Помощник по миграции данных службы "миграция Azure"](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-interface.png)
 
@@ -127,7 +127,7 @@ ms.locfileid: "75253515"
    > [!NOTE]
    > Можно удалить несколько баз данных, выбрав их, удерживая клавишу Shift или CTRL, а затем выбрав Удалить источники. Можно также добавлять базы данных из нескольких экземпляров SQL Server с помощью кнопки Добавить источники.
 
-4. Нажмите кнопку **Далее** , чтобы начать оценку.
+4. Щелкните **Далее**, чтобы запустить оценку.
 
    ![Служба "миграция Azure" — Помощник по миграции данных "Выбор источников"](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-select-sources-screen.png)
 
@@ -179,7 +179,7 @@ ms.locfileid: "75253515"
 
    ![Миграция Azure — проверка блокирования миграции](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-migration-blockers.png)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 * [Помощник по миграции данных (DMA)](../dma/dma-overview.md)
 * [Помощник по миграции данных: параметры конфигурации](../dma/dma-configurationsettings.md)

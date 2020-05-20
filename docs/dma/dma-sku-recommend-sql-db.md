@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 7fa2b8361f9a09dbab28689e31d77a3152ff83dd
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72586740"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885832"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Указание подходящего номера SKU базы данных SQL Azure или Управляемый экземпляр для локальной базы данных
 
@@ -41,7 +41,7 @@ ms.locfileid: "72586740"
 ## <a name="prerequisites"></a>Предварительные требования
 
 - Скачайте и установите последнюю версию [DMA](https://aka.ms/get-dma). Если вы уже используете более раннюю версию средства, откройте его, и вам будет предложено обновить DMA.
-- Убедитесь, что на компьютере установлен [PowerShell версии 5,1](https://www.microsoft.com/download/details.aspx?id=54616) или более поздней, который необходим для выполнения всех сценариев. Сведения о том, как финдауг, какая версия PowerShell установлена на компьютере, см. в статье [скачивание и установка Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
+- Убедитесь, что на компьютере установлен [PowerShell версии 5,1](https://www.microsoft.com/download/details.aspx?id=54616) или более поздней, который необходим для выполнения всех сценариев. Сведения о том, как узнать, какая версия PowerShell установлена на компьютере, см. в статье [Загрузка и установка Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
 - Убедитесь, что на компьютере установлен модуль Azure PowerShell. Дополнительные сведения см. в статье [Установка модуля Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
 - Убедитесь, что файл PowerShell **скурекоммендатиондатаколлектионскрипт. ps1**, необходимый для получения счетчиков производительности, установлен в папку DMA.
 - Убедитесь, что компьютер, на котором вы будете выполнять этот процесс, имеет разрешения администратора на компьютере, на котором размещаются базы данных.

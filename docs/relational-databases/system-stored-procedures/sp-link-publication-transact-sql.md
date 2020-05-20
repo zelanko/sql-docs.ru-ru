@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_link_publication
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0948b01e404b5eca475b344390ff105d4e094cce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139897"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834408"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68139897"
 >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
 > 
 > [!IMPORTANT]
->  При определенных условиях эта хранимая процедура может завершиться ошибкой, если на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] подписчике установлен пакет обновления 1 (SP1) или более поздней версии, а на издателе запущена более ранняя версия. Если в этом случае хранимая процедура завершается ошибкой, обновите издатель до [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 1 (SP1) или более поздней версии.  
+>  При определенных условиях эта хранимая процедура может завершиться ошибкой, если на подписчике установлен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] пакет обновления 1 (SP1) или более поздней версии, а на издателе запущена более ранняя версия. Если в этом случае хранимая процедура завершается ошибкой, обновите издатель до [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 1 (SP1) или более поздней версии.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +59,7 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**0**|Использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверку подлинности с именем входа, указанным в этой хранимой процедуре, в качестве *имени входа* и *пароля*.<br /><br /> Примечание. в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот параметр использовался для указания динамического удаленного вызова процедур (RPC).|  
+|**0**|Использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверку подлинности с именем входа, указанным в этой хранимой процедуре, в качестве *имени входа* и *пароля*.<br /><br /> Примечание. в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот параметр использовался для указания динамического удаленного вызова процедур (RPC).|  
 |**1**|Использует контекст безопасности (проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Windows) пользователя, редактирующего подписчика.<br /><br /> Примечание. Эта учетная запись также должна существовать у издателя с достаточными привилегиями. В случае использования проверки подлинности Windows должно поддерживаться делегирование учетной записи безопасности.|  
 |**2**|Использует существующее, определяемое пользователем имя входа для связанного сервера, созданное с помощью **sp_link_publication**.|  
   
@@ -79,7 +79,7 @@ sp_link_publication [ @publisher = ] 'publisher'
   
  Для принудительных подписок запись может быть очищена с помощью [sp_subscription_cleanup &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Для подписок по запросу запись может быть очищена с помощью [sp_droppullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) или [sp_subscription_cleanup &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Можно также вызвать **sp_link_publication** с ПАРОЛем null, чтобы очистить запись в [MSsubscription_properties &#40;системной таблице&#41;Transact-SQL](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) для обеспечения безопасности.  
   
- Режим по умолчанию, применяемый для немедленного обновления подписчика при соединении с издателем, не позволяет устанавливать соединение с проверкой подлинности Windows. Для подключения в режиме с проверкой подлинности Windows на издателе должен быть настроен связанный сервер, и это соединение должно применяться для немедленного обновления подписчика. Для этого необходимо, чтобы **sp_link_publication** был запущен с *security_mode* = **2**. В случае использования проверки подлинности Windows должно поддерживаться делегирование учетной записи безопасности.  
+ Режим по умолчанию, применяемый для немедленного обновления подписчика при соединении с издателем, не позволяет устанавливать соединение с проверкой подлинности Windows. Для подключения в режиме с проверкой подлинности Windows на издателе должен быть настроен связанный сервер, и это соединение должно применяться для немедленного обновления подписчика. Для этого необходимо, чтобы **sp_link_publication** был запущен с *security_mode*  =  **2**. В случае использования проверки подлинности Windows должно поддерживаться делегирование учетной записи безопасности.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent_failover](../../relational-databases/replication/codesnippet/tsql/sp-link-publication-tran_1.sql)]  
@@ -87,7 +87,7 @@ sp_link_publication [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_link_publication**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
  [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   

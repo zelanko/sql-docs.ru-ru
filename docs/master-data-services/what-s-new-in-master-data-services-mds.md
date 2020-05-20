@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80ffd207d44f8c53bed0fe7fb5f7efb4ed54ebc8
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727789"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886231"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Новые возможности служб Master Data Services (MDS)
 
@@ -27,11 +27,11 @@ ms.locfileid: "73727789"
   
  **Инструкции по установке служб Master Data Services, настройке базы данных и веб-сайта, а также развертыванию примеров моделей см. в статье** [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).  
   
- **Скачать**  
+ **Загрузить**  
   
--    Чтобы скачать [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], перейдите в  **[Центр пробного ПО](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
+-   Чтобы скачать [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
   
--   Есть учетная запись Azure?  Затем перейдите **[сюда](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** , чтобы запустить виртуальную машину с [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] уже установленным.  
+-   Есть учетная запись Azure?  Тогда перейдите **[сюда](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** , чтобы запустить виртуальную машину с уже установленным [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
 ##  <a name="improved-performance"></a>Повышенная производительность  
   
@@ -231,7 +231,7 @@ ms.locfileid: "73727789"
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции, поддерживаемые различными выпусками SQL Server 2016 служб Master Data Services и качества данных](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [Устаревшие функции Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
  [Неподдерживаемые функции служб Master Data Services](../master-data-services/discontinued-master-data-services-features.md)

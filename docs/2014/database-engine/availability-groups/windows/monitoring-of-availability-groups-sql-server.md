@@ -13,12 +13,12 @@ ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1793032a72ae1dd150caa5ddd1739f7f5620bce1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f1da20eb1c23176036dad0847d5b420a498e83e
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62790200"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922001"
 ---
 # <a name="monitoring-of-availability-groups-sql-server"></a>Отслеживание групп доступности (SQL Server)
   Для отслеживания свойств и состояния группы доступности AlwaysOn можно пользоваться следующими средствами.  
@@ -36,19 +36,19 @@ ms.locfileid: "62790200"
   
 -   **Блоги**  
   
-     [The AlwaysOn Health Model Part 1 -- Health Model Architecture](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)  
+     [The AlwaysOn Health Model Part 1 -- Health Model Architecture](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)  
   
-     [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+     [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
   
-     [Отслеживание работоспособности AlwaysOn с помощью PowerShell, часть 1. Общие сведения о командлетах](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
+     [Отслеживание работоспособности AlwaysOn с помощью PowerShell, часть 1. Общие сведения о командлетах](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)  
   
-     [Отслеживание работоспособности AlwaysOn с помощью PowerShell, часть 2. Расширенное использование командлетов](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
+     [Отслеживание работоспособности AlwaysOn с помощью PowerShell, часть 2. Расширенное использование командлетов](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)  
   
-     [Отслеживание работоспособности AlwaysOn с помощью PowerShell, часть 3. Простая программа для мониторинга](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
+     [Отслеживание работоспособности AlwaysOn с помощью PowerShell, часть 3. Простая программа для мониторинга](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)  
   
-     [Отслеживание работоспособности AlwaysOn с помощью PowerShell, часть 4. Интеграция с агентом SQL Server](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
+     [Отслеживание работоспособности AlwaysOn с помощью PowerShell, часть 4. Интеграция с агентом SQL Server](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)  
   
-     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
+     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://docs.microsoft.com/archive/blogs/sqlalwayson/)  
   
      [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   

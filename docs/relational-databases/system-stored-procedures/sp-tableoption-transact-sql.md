@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_tableoption
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c72d07873e2e07ee7f6f095f677625a18cdb5a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2e822d1ca6aff1e91a848f839b824bb4476fc5a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982266"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834223"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,17 +46,17 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @TableNamePattern =] "*Таблица*"  
+ [ @TableNamePattern =] '*Таблица*'  
  Уточненное или неуточненное имя пользовательской таблицы базы данных. Если указано полное имя таблицы, включая имя базы данных, в качестве последнего должно использоваться имя текущей базы данных. Параметры таблицы нельзя установить одновременно для нескольких таблиц. *Table* имеет тип **nvarchar (776)** и не имеет значения по умолчанию.  
   
- [ @OptionName = ] "*option_name*"  
+ [ @OptionName =] "*option_name*"  
  Название параметра таблицы. *option_name* имеет тип **varchar (35)** и не имеет значения по умолчанию NULL. *option_name* может иметь одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |table lock on bulk load|Если отключено (по умолчанию), то процесс массовой загрузки в пользовательских таблицах получает блокировку строк. Если включено, то процесс массовой загрузки в пользовательских таблицах получает блокировку массовых обновлений.|  
 |блокировка вставки строк|Больше не поддерживается.<br /><br /> Этот параметр не влияет на свойства блокировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и включается только для совместимости существующих скриптов и процедур.|  
-|text in row|При значении OFF или 0 (отключено по умолчанию) текущее поведение не меняется и в строке отсутствует блок больших двоичных объектов (BLOB).<br /><br /> Если указан параметр @OptionValue и имеет значение On (включено) или целое число от 24 до 7000, новые строки типа **Text**, **ntext**и **Image** хранятся непосредственно в строке данных. Все существующие большие двоичные объекты (большой двоичный объект: данные типа **Text**, **ntext**или **Image** ) будут преобразованы в текст в формате строки при обновлении значения большого двоичного объекта. Дополнительные сведения см. в подразделе "Примечания".|  
+|text in row|При значении OFF или 0 (отключено по умолчанию) текущее поведение не меняется и в строке отсутствует блок больших двоичных объектов (BLOB).<br /><br /> Если указан параметр и @OptionValue имеет значение On (включено) или целое число от 24 до 7000, новые строки типа **Text**, **ntext**и **Image** хранятся непосредственно в строке данных. Все существующие большие двоичные объекты (большой двоичный объект: данные типа **Text**, **ntext**или **Image** ) будут преобразованы в текст в формате строки при обновлении значения большого двоичного объекта. Дополнительные сведения см. в подразделе "Примечания".|  
 |large value types out of row|1 = столбцы **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** и больших определяемых пользователем типов (UDT) в таблице хранятся вне строки с 16-байтовым указателем на корень.<br /><br /> 0 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** и крупные значения UDT хранятся непосредственно в строке данных, до ограничения в 8000 байт и до тех пор, пока значение может уместиться в записи. Если значение не умещается в записи, то указатель хранится в строке, а все остальное хранится вне строки в области хранения объектов LOB. Значение по умолчанию — 0.<br /><br /> Большой определяемый пользователем тип (UDT) применяется к: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздним версиям. <br /><br /> Используйте параметр TEXTIMAGE_ON [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) , чтобы указать расположение для хранения больших типов данных. |  
 |формат хранения vardecimal|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> Значения TRUE, ON или 1 означают, что для указанной таблицы включен формат хранения vardecimal. Значения FALSE, OFF или 0 означают, что для таблицы не включен формат хранения vardecimal. Формат хранения vardecimal можно включить, только если для базы данных включен формат хранения vardecimal с помощью [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md). В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях формат хранения **vardecimal** устарел. Вместо этого используйте сжатие ROW. Дополнительные сведения см. в разделе [Data Compression](../../relational-databases/data-compression/data-compression.md). Значение по умолчанию — 0.|  
   
@@ -117,8 +117,8 @@ GO
 EXEC sp_tableoption 'HumanResources.JobCandidate', 'large value types out of row', 1;  
 ```  
   
-### <a name="b-enabling-vardecimal-storage-format-on-a-table"></a>Б) Включение формата хранения vardecimal для таблицы  
- В следующем примере изменяется `Production.WorkOrderRouting` таблица для хранения типа `decimal` данных в формате `vardecimal` хранения.  
+### <a name="b-enabling-vardecimal-storage-format-on-a-table"></a>Б. Включение формата хранения vardecimal для таблицы  
+ В следующем примере изменяется `Production.WorkOrderRouting` Таблица для хранения `decimal` типа данных в `vardecimal` формате хранения.  
 
 ```sql  
 USE master;  
@@ -133,7 +133,7 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
    'vardecimal storage format', 'ON';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. Tables &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

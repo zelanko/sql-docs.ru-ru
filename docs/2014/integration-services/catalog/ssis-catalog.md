@@ -10,27 +10,27 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4657bf58a7160f075759a265fef883c92fee0c9
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771580"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921708"
 ---
 # <a name="ssis-catalog"></a>Каталог служб SSIS
-  `SSISDB` Каталог является центральной точкой для работы с [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проектами служб (SSIS), развернутыми на [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сервере. Например, можно задавать параметры проектов и пакетов, настраивать среды для указания значений времени выполнения для пакетов, выполнять пакеты и проводить устранение неполадок, а также управлять операциями на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  `SSISDB`Каталог является центральной точкой для работы с [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проектами служб (SSIS), развернутыми на [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сервере. Например, можно задавать параметры проектов и пакетов, настраивать среды для указания значений времени выполнения для пакетов, выполнять пакеты и проводить устранение неполадок, а также управлять операциями на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Объекты, хранящиеся в `SSISDB` каталоге, включают в себя проекты, пакеты, параметры, среды и журнал операций.  
+ Объекты, хранящиеся в каталоге, `SSISDB` включают в себя проекты, пакеты, параметры, среды и журнал операций.  
   
  Проверяются объекты, параметры и операционные данные, хранящиеся в `SSISDB` каталоге, путем запроса представлений в `SSISDB` базе данных. Управление объектами осуществляется путем вызова хранимых процедур в `SSISDB` базе данных или с помощью пользовательского интерфейса `SSISDB` каталога. Во многих случаях одну и ту же задачу можно выполнить и в пользовательском интерфейсе, и путем вызова хранимой процедуры.  
   
  Чтобы обеспечить поддержку базы данных `SSISDB`, рекомендуется применять предопределенные политики предприятия для управления пользовательскими базами данных. Дополнительные сведения о создании планов обслуживания см. в разделе [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- `SSISDB` Каталог и `SSISDB` база данных поддерживают Windows PowerShell. Дополнительные сведения об использовании SQL Server с Windows PowerShell см. в разделе [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Примеры использования Windows PowerShell для выполнения задач, например таких как развертывание проекта, см. в записи блога [SSIS и Powershell в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)на сайте blogs.msdn.com.  
+ `SSISDB`Каталог и `SSISDB` база данных поддерживают Windows PowerShell. Дополнительные сведения об использовании SQL Server с Windows PowerShell см. в разделе [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Примеры использования Windows PowerShell для выполнения задач, например таких как развертывание проекта, см. в записи блога [SSIS и Powershell в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)на сайте blogs.msdn.com.  
   
  Дополнительные сведения о просмотре данных операций см. в разделе [мониторинг выполнения пакетов и других операций](../performance/monitor-running-packages-and-other-operations.md).  
   
- Чтобы получить доступ `SSISDB` к каталогу [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , подключитесь [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к ядро СУБД, а затем разверните узел **каталоги Integration Services** в обозревателе объектов. Доступ к `SSISDB` базе данных можно [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] получить, развернув узел базы данных в обозревателе объектов.  
+ Чтобы получить доступ к `SSISDB` каталогу [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ядро СУБД, а затем разверните узел **каталоги Integration Services** в обозревателе объектов. Доступ к `SSISDB` базе данных можно получить [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , развернув узел базы данных в обозревателе объектов.  
   
 > [!NOTE]  
 >  Переименовать `SSISDB` базу данных нельзя.  
@@ -45,7 +45,7 @@ ms.locfileid: "62771580"
   
 -   Папка  
   
--   Проект  
+-   Project  
   
 -   Среда  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62771580"
 ### <a name="operations-and-project-version-cleanup"></a>Очистка версий операций и проектов  
  Данные о состоянии для многих из этих операций в каталоге хранятся во внутренних таблицах базы данных. Например, каталог отслеживает состояние выполнения пакета и развертывания проекта. Чтобы поддерживался размер данных операций, для удаления старых данных используется **задание по обслуживанию служб SSIS** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Это задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается при установке служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Вы можете обновить или повторно развернуть проект [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с тем же именем в той же папке в каталоге. По умолчанию каждый раз при повторном развертывании проекта `SSISDB` каталог содержит предыдущую версию проекта. Чтобы поддерживался размер данных операций, для удаления старых версий проектов используется **задание обслуживания сервера служб SSIS** .  
+ Вы можете обновить или повторно развернуть проект [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с тем же именем в той же папке в каталоге. По умолчанию каждый раз при повторном развертывании проекта `SSISDB` Каталог содержит предыдущую версию проекта. Чтобы поддерживался размер данных операций, для удаления старых версий проектов используется **задание обслуживания сервера служб SSIS** .  
   
  Следующие `SSISDB` свойства каталога определяют работу этого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента. Просмотреть и изменить свойства вы можете в диалоговом окне **Свойства каталога** или с помощью процедур [catalog.catalog_properties (база данных SSISDB)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) и [catalog.configure_catalog (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
@@ -131,7 +131,7 @@ ms.locfileid: "62771580"
   
  Изменение алгоритма шифрования занимает длительное время. Сначала сервер использует указанный ранее алгоритм для расшифровки всех значений конфигурации. Затем сервер использует новый алгоритм для повторного шифрования значений. При выполнении этого процесса на сервере не могут выполняться другие операции служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Таким образом, чтобы обеспечить непрерывное выполнение операций служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , для алгоритма шифрования задается значение только для чтения в диалоговом окне в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- Чтобы изменить значение свойства **алгоритма шифрования** , задайте для `SSISDB` базы данных однопользовательский режим, а затем вызовите хранимую процедуру catalog. configure_catalog. Используйте ENCRYPTION_ALGORITHM для аргумента *property_name*. Список поддерживаемых значений свойств см. в разделе [catalog.catalog_properties (база данных SSISDB)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Дополнительные сведения о хранимой процедуре см. в разделе [catalog.configure_catalog (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
+ Чтобы изменить значение свойства **алгоритма шифрования** , задайте `SSISDB` для базы данных однопользовательский режим, а затем вызовите хранимую процедуру catalog. configure_catalog. Используйте ENCRYPTION_ALGORITHM для аргумента *property_name*. Список поддерживаемых значений свойств см. в разделе [catalog.catalog_properties (база данных SSISDB)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Дополнительные сведения о хранимой процедуре см. в разделе [catalog.configure_catalog (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  Дополнительные сведения об однопользовательском режиме см. в разделе [Установка однопользовательского режима базы данных](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Дополнительные сведения о шифровании и алгоритмах шифрования в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в подразделах раздела [Шифрование SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
@@ -149,7 +149,7 @@ ms.locfileid: "62771580"
 |Серверное значение уровня ведения журнала по умолчанию|SERVER_LOGGING_LEVEL|  
   
 ## <a name="permissions"></a>Разрешения  
- Проекты, среды и пакеты содержатся в папках, которые являются защищаемыми объектами. Вы можете предоставить разрешения для папки, включая разрешение MANAGE_OBJECT_PERMISSIONS. Разрешение MANAGE_OBJECT_PERMISSIONS позволяет делегировать пользователю разрешения на администрирование содержимого папки, не предоставляя ему членства в роли ssis_admin. Вы можете также предоставлять разрешения проектам, средам и операциям. К операциям [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]относятся инициализация, развертывание проектов, создание и запуск выполнения, проверка проектов и пакетов, а `SSISDB` также Настройка каталога.  
+ Проекты, среды и пакеты содержатся в папках, которые являются защищаемыми объектами. Вы можете предоставить разрешения для папки, включая разрешение MANAGE_OBJECT_PERMISSIONS. Разрешение MANAGE_OBJECT_PERMISSIONS позволяет делегировать пользователю разрешения на администрирование содержимого папки, не предоставляя ему членства в роли ssis_admin. Вы можете также предоставлять разрешения проектам, средам и операциям. К операциям относятся инициализация [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , развертывание проектов, создание и запуск выполнения, проверка проектов и пакетов, а также настройка `SSISDB` каталога.  
   
  Дополнительные сведения о ролях баз данных см. в разделе [Роли уровня базы данных](../../relational-databases/security/authentication-access/database-level-roles.md).  
   
@@ -287,6 +287,6 @@ ms.locfileid: "62771580"
   
 -   Запись в блоге [Советы по управлению доступом к каталогу служб SSIS](https://go.microsoft.com/fwlink/?LinkId=246669)на сайте blogs.msdn.com.  
   
--   Запись [Обзор модели управляемых объектов каталога служб SSIS](https://go.microsoft.com/fwlink/?LinkId=254267)в блоге blogs.msdn.com.  
+-   Запись [Обзор модели управляемых объектов каталога служб SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)в блоге blogs.msdn.com.  
   
   

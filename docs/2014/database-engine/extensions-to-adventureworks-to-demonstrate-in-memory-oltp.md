@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f1b28766eab6ecd5035dd8a58e88abaccc97c5
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228465"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921733"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Расширения AdventureWorks для демонстрации In-Memory OLTP
     
@@ -45,14 +45,14 @@ ms.locfileid: "75228465"
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM — ознакомительная версия, Developer или Enterprise Edition  
   
--   Для тестирования производительности требуется сервер, имеющий те же характеристики, что и в рабочей среде. Для этого конкретного примера должно быть доступно по меньшей мере 16 ГБ памяти в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Общие рекомендации по оборудованию для [!INCLUDE[hek_2](../includes/hek-2-md.md)]см. в следующей записи блога:[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   Для тестирования производительности требуется сервер, имеющий те же характеристики, что и в рабочей среде. Для этого конкретного примера должно быть доступно по меньшей мере 16 ГБ памяти в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Общие рекомендации по оборудованию для [!INCLUDE[hek_2](../includes/hek-2-md.md)] см. в следующей записи блога:[https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/](https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/)  
   
 ##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>Установка [!INCLUDE[hek_2](../includes/hek-2-md.md)] образца на основе AdventureWorks  
  Чтобы установить образец, выполните следующие действия.  
   
 1.  Скачайте архив с полной резервной копией базы данных AdventureWorks2014:  
   
-    1.  Откройте следующее: [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661).  
+    1.  Откройте следующее: [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661) .  
   
     2.  При запросе сохраните файл в локальную папку.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "75228465"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Скачайте пример скрипта[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. sql из [примера SQL Server 2014 RTM в памяти для OLTP в](https://go.microsoft.com/fwlink/?LinkID=396372) локальную папку.  
+5.  Скачайте пример скрипта [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL из [примера SQL Server 2014 RTM в памяти для OLTP в](https://go.microsoft.com/fwlink/?LinkID=396372) локальную папку.  
   
-6.  Обновите значение переменной "checkpoint_files_location" в скрипте "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL", чтобы указать целевое расположение для файлов [!INCLUDE[hek_2](../includes/hek-2-md.md)] контрольных точек. Файлы контрольных точек следует разместить на диске с высокой производительностью последовательного ввода-вывода.  
+6.  Обновите значение переменной "checkpoint_files_location" в скрипте " [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL", чтобы указать целевое расположение для [!INCLUDE[hek_2](../includes/hek-2-md.md)] файлов контрольных точек. Файлы контрольных точек следует разместить на диске с высокой производительностью последовательного ввода-вывода.  
   
      Обновите значение переменной "database_name", чтобы указать на базу данных AdventureWorks2014.  
   
-    1.  Не забудьте добавить обратную косую черту\' как часть имени пути  
+    1.  Не забудьте добавить обратную косую черту \' как часть имени пути  
   
     2.  Пример.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "75228465"
   
     2.  В среде Management Studio:  
   
-        1.  Откройте скрипт "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL" в окне запроса  
+        1.  Откройте скрипт " [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL" в окне запроса  
   
         2.  Подключитесь к целевому серверу, на котором находится база данных AdventureWorks2014  
   
@@ -223,7 +223,7 @@ ms.locfileid: "75228465"
   
 -   *Псевдонимы UDT*. В исходной таблице используется определяемый пользователем тип данных dbo.Flag, который эквивалентен системному типу данных bit. В перенесенной таблице вместо него используется тип данных bit.  
   
--   *Параметры сортировки BIN2* — столбцы name и ProductNumber включены в ключи индекса и поэтому должны иметь параметры сортировки BIN2 в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Здесь же предполагается, что приложение не опирается на особенности параметров сортировки, например чувствительность к регистру.  
+-   *Параметры сортировки BIN2* — столбцы name и ProductNumber включены в ключи индекса и поэтому должны иметь параметры сортировки BIN2 в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] . Здесь же предполагается, что приложение не опирается на особенности параметров сортировки, например чувствительность к регистру.  
   
 -   *Rowguid* . Столбец rowguid опускается. Дополнительные сведения см. в описании таблицы SalesOrderHeader.  
   
@@ -462,7 +462,7 @@ END
  Мы воспользуемся средством ostress для выполнения скриптов с использованием нескольких параллельных соединений. Чтобы определить количество соединений, укажем параметр -n, а параметр -r — для определения числа выполнений скрипта в каждом соединении.  
   
 #### <a name="functional-validation-of-the-workload"></a>Функциональная проверка рабочей нагрузки  
- Чтобы убедиться в том, что все работает, мы начнем с примера теста, используя 10 одновременных подключений и 5 итераций, вставляя всего 10 * \* 5 20 = 1000 заказа на продажу.  
+ Чтобы убедиться в том, что все работает, мы начнем с примера теста, используя 10 одновременных подключений и 5 итераций, вставляя всего 10 * 5 \* 20 = 1000 заказа на продажу.  
   
  В приведенной ниже команде предполагается использование экземпляра по умолчанию на локальном компьютере. Если используется именованный экземпляр или удаленный сервер, то измените имя сервера с помощью параметра -S.  
   
@@ -569,10 +569,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Значение по умолчанию|94|  
+|MEMORYCLERK_XTP|По умолчанию|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|Значение по умолчанию|0|  
-|MEMORYCLERK_XTP|Значение по умолчанию|0|  
+|MEMORYCLERK_XTP|По умолчанию|0|  
+|MEMORYCLERK_XTP|По умолчанию|0|  
   
  Клерки памяти по умолчанию содержат структуры памяти во всей системе и являются относительно небольшими. Клерк памяти, предназначенный для пользовательской базы данных (в данном случае это база данных с идентификатором 5), составляет примерно 900 МБ.  
   
@@ -618,10 +618,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Значение по умолчанию|146|  
+|MEMORYCLERK_XTP|По умолчанию|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|Значение по умолчанию|0|  
-|MEMORYCLERK_XTP|Значение по умолчанию|0|  
+|MEMORYCLERK_XTP|По умолчанию|0|  
+|MEMORYCLERK_XTP|По умолчанию|0|  
   
  Как видите, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует чуть меньше 8 ГБ под оптимизированные для памяти таблицы и индексы из образца базы данных.  
   
@@ -664,10 +664,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Значение по умолчанию|2261|  
+|MEMORYCLERK_XTP|По умолчанию|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|Значение по умолчанию|0|  
-|MEMORYCLERK_XTP|Значение по умолчанию|0|  
+|MEMORYCLERK_XTP|По умолчанию|0|  
+|MEMORYCLERK_XTP|По умолчанию|0|  
   
  Это ожидаемо: память будет освобождаться при выполнении транзакционной рабочей нагрузки.  
   
@@ -683,10 +683,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Значение по умолчанию|1863|  
+|MEMORYCLERK_XTP|По умолчанию|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|Значение по умолчанию|0|  
-|MEMORYCLERK_XTP|Значение по умолчанию|0|  
+|MEMORYCLERK_XTP|По умолчанию|0|  
+|MEMORYCLERK_XTP|По умолчанию|0|  
   
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>Использование диска оптимизированными для памяти таблицами  
  Общий размер на диске файлов контрольных точек базы данных в данное время можно узнать, выполнив следующий запрос:  
@@ -874,6 +874,6 @@ ORDER BY state, file_type
   
  В этом случае будет две пары файлов контрольных точек в состоянии "в разработке", а это означает, что несколько пар файлов были перемещены в состояние "в разработке", вероятнее всего, из-за высокого уровня параллелизма в рабочей нагрузке. Нескольким параллельным потокам одновременно потребовалась новая пара файлов, из-за чего пара была переведена из состояния "создана заранее" в состояние "в разработке".  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

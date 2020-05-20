@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesessiondetail
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b5e29916d4dc8419311c9639cc5321b1cf391940
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d275b0666ae80ff933d7d236d0d04f2648b744fd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75321628"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834294"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**артикленаме**|**sysname**|Название синхронизируемой статьи. **Артикленаме** также содержит сводные данные для строк в результирующем наборе, которые не представляют сведения о статье.|  
 |**PercentComplete**|**decimal**|Отображает процент общих изменений, сделанных в заданной строке детализации статьи, для выполняемого в данный момент или неудачного сеанса.|  
 |**RelativeCost**|**decimal**|Отображает время, потраченное на синхронизацию статьи, в виде процента от общего времени синхронизации для сеанса.|  
-|**Duration**|**int**|Продолжительность сеанса агента.|  
+|**Длительность**|**int**|Продолжительность сеанса агента.|  
 |**Вставки**|**int**|Число вставок за сеанс.|  
 |**Обновления**|**int**|Число обновлений за сеанс.|  
 |**Deletes**|**int**|Число удалений за сеанс.|  
@@ -69,7 +69,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли базы данных **db_owner** или **replmonitor** в базе данных распространителя на распространителе или в базе данных подписки на подписчике могут выполнять **sp_replmonitorhelpmergesessiondetail**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Программный мониторинг репликации](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 736b4f00e8d33a6bd1e095addc5219fe305ae26a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c63e6e535aed72684e56d5f578e52e065f8190d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72173556"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834234"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @shutdown_agent = ] shutdown_agent`Если агент распространения выполняется **sp_table_validation**, указывает, должно ли агент распространения немедленно завершить работу после завершения проверки. *shutdown_agent* имеет **бит**и значение по умолчанию **0**. Если значение **равно 0**, агент репликации не завершает работу. Если значение равно **1**, возникает ошибка 20578, и агенту репликации сообщается о завершении работы. Этот параметр игнорируется, если **sp_table_validation** выполняется непосредственно пользователем.  
   
-`[ @table_name = ] table_name`Имя таблицы представления, используемой для выходных сообщений. Аргумент *table_name* имеет тип **sysname**и значение по умолчанию ** \@Table**.  
+`[ @table_name = ] table_name`Имя таблицы представления, используемой для выходных сообщений. Аргумент *table_name* имеет тип **sysname**и значение по умолчанию ** \@ Table**.  
   
 `[ @column_list = ] 'column_list'`Список столбцов, которые должны использоваться в функции CHECKSUM. *column_list* имеет тип **nvarchar (4000)** и значение по умолчанию NULL. Включает проверку статей слияния для указания списка столбцов, в который не входят вычисляемые столбцы или столбцы с отметками времени.  
   
@@ -87,12 +87,12 @@ sp_table_validation [ @table = ] 'table'
   
  При проверке контрольной суммы структура таблицы должна быть идентичной на двух серверах; таким образом, таблицы должны иметь одинаковые столбцы, расположенные в одинаковом порядке, один и тот же тип данных и длину и одинаковые условия NULL/NOT NULL. Например, если издатель создает таблицу инструкцией CREATE TABLE, а затем добавляет столбцы инструкцией ALTER TABLE, а выполняемый на подписчике скрипт выполняет только инструкцию CREATE (создает таблицу), то структуры НЕ БУДУТ одинаковыми. Если вы не уверены, что структура двух таблиц идентична, Взгляните на [syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) и убедитесь, что смещение в каждой таблице одинаковое.  
   
- Значения с плавающей запятой, скорее всего, будут формировать разницу в контрольной сумме, если используется символьный режим **bcp** . это происходит [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если публикация имеет подписчиков, отличных от. Это связано с минимальными и неизбежными различиями в точности при преобразовании в символьный режим и из символьного режима.  
+ Значения с плавающей запятой, скорее всего, будут формировать разницу в контрольной сумме, если используется символьный режим **bcp** . это происходит, если публикация имеет подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это связано с минимальными и неизбежными различиями в точности при преобразовании в символьный режим и из символьного режима.  
   
 ## <a name="permissions"></a>Разрешения  
  Для выполнения **sp_table_validation**необходимо иметь разрешения SELECT на проверяемую таблицу.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [КОНТРОЛЬная сумма &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT (Transact-SQL)](../../t-sql/functions/rowcount-transact-sql.md)   
  [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   

@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc6805426251e87a8db3dcf4ad9da6343ac0ea12
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056543"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886001"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Настройка параметров для Помощник по миграции данных
 
@@ -29,11 +29,11 @@ ms.locfileid: "74056543"
 
 - Классическое приложение
 
-  % ProgramFiles%\\помощник по миграции данных (Майкрософт)\\DMA. exe. config
+  % ProgramFiles% \\ Помощник по миграции данных (Майкрософт) \\ DMA. exe. config
 
 - Служебная программа командной строки
 
-  % ProgramFiles%\\помощник по миграции данных (Майкрософт)\\дмакмд. exe. config 
+  % ProgramFiles% \\ Помощник по миграции данных (Майкрософт) \\ дмакмд. exe. config 
 
 Обязательно сохраните копию исходного файла конфигурации перед внесением каких-либо изменений. После внесения изменений перезапустите Помощник по миграции данных, чтобы новые значения конфигурации вступили в силу.
 
@@ -82,7 +82,7 @@ ms.locfileid: "74056543"
 Во время оценки Помощник по миграции данных извлекает приложение уровня данных (DACPAC) для понимания схемы базы данных. Эта операция может завершиться ошибкой с превышением времени ожидания для очень больших баз данных или в случае, если сервер находится под нагрузкой. Начиная с переноса данных версии 1.0, можно изменить следующие значения конфигурации, чтобы избежать ошибок. 
 
 > [!NOTE]
-> По умолчанию комментарием является вся &lt;запись DACFx&gt; . Удалите комментарии и при необходимости измените значение.
+> По &lt; &gt; умолчанию комментарием является вся запись DACFx. Удалите комментарии и при необходимости измените значение.
 
 - commandTimeout
 
@@ -90,7 +90,7 @@ ms.locfileid: "74056543"
 
 - датабаселокктимеаут
 
-   Этот параметр эквивалентен [\_периоду времени\_ожидания установки блокировки](../t-sql/statements/set-lock-timeout-transact-sql.md) в *миллисекундах*.(По умолчанию = 5000)
+   Этот параметр эквивалентен [ \_ \_ периоду времени ожидания установки блокировки](../t-sql/statements/set-lock-timeout-transact-sql.md) в *миллисекундах*.(По умолчанию = 5000)
 
 - максдатареадердегриофпараллелисм
 
@@ -152,6 +152,6 @@ maxDataReaderDegreeOfParallelism="8"/>
 </workflowSettings>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Загрузка Помощник по миграции данных](https://www.microsoft.com/download/details.aspx?id=53595)

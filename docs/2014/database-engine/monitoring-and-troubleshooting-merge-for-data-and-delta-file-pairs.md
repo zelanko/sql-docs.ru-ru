@@ -10,12 +10,12 @@ ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7a13345da45d7e6c31a53bc51371306da444a96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3498032da616658785d2ff33262ed57fa5736f1
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228182"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921832"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>Мониторинг и устранение неполадок со слиянием для пар файлов данных и разностных файлов
   In-Memory OLTP использует политику слияния для автоматического объединения пар смежных файлов данных и разностных файлов. Действия слияния отключить нельзя.  
@@ -47,8 +47,8 @@ exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890
   
  Предположим, что три пары файлов данных и разностных файлов имеют каждая по 15 836 строк и 5279 удаленных строк. После слияния новый файл данных содержит 31 872 строки и 0 удаленных строк. Размер нового файла данных может быть значительно больше, чем выбранный исходный размер 128 МБ. Это происходит потому, что слияние вручную переопределяет политику слияния и принудительно выполняет слияние запрошенных файлов.  
   
- [Переход состояния блога файлов контрольных точек в базах данных с таблицами, оптимизированными для памяти](https://blogs.technet.com/b/dataplatforminsider/archive/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables.aspx) , описывает смену состояния пар данных и разностных файлов с момента создания на сборку мусора.  
+ [Переход состояния блога файлов контрольных точек в базах данных с таблицами, оптимизированными для памяти](https://cloudblogs.microsoft.com/sqlserver/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables/) , описывает смену состояния пар данных и разностных файлов с момента создания на сборку мусора.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание и управление хранилищем для оптимизированных для памяти объектов](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   

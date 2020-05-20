@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_register_custom_scripting
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d57f3098a69e499392af502d2d3a6d94840bde21
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075750"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834365"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>Процедура sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +45,16 @@ sp_register_custom_scripting [ @type  = ] 'type'
 |Значение|Описание|  
 |-----------|-----------------|  
 |**Вставляет**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции INSERT.|  
-|**обновляют**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции UPDATE.|  
-|**delete**;|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции DELETE.|  
+|**обновить**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции UPDATE.|  
+|**delete**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции DELETE.|  
 |**custom_script**|Скрипт, выполняющийся в конце триггера языка DDL.|  
   
-`[ @value = ] 'value'`Имя хранимой процедуры или имени и полный путь к регистрируемому файлу [!INCLUDE[tsql](../../includes/tsql-md.md)] скрипта. *value* имеет тип **nvarchar (1024)** и не имеет значения по умолчанию.  
+`[ @value = ] 'value'`Имя хранимой процедуры или имени и полный путь к [!INCLUDE[tsql](../../includes/tsql-md.md)] регистрируемому файлу скрипта. *value* имеет тип **nvarchar (1024)** и не имеет значения по умолчанию.  
   
 > [!NOTE]  
 >  При указании значения NULL для параметра *value*будет отменена регистрация ранее зарегистрированного скрипта, который совпадает с запуском [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  
   
- Если значение *типа* — **custom_script**, ожидается имя и полный путь к файлу [!INCLUDE[tsql](../../includes/tsql-md.md)] скрипта. В противном случае *значение* должно быть именем зарегистрированной хранимой процедуры.  
+ Если значение *типа* — **custom_script**, ожидается имя и полный путь к [!INCLUDE[tsql](../../includes/tsql-md.md)] файлу скрипта. В противном случае *значение* должно быть именем зарегистрированной хранимой процедуры.  
   
 `[ @publication = ] 'publication'`Имя публикации, для которой регистрируется пользовательская хранимая процедура или скрипт. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **null**.  
   
@@ -71,7 +71,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** или предопределенной роли базы данных **db_ddladmin** могут выполнять **sp_register_custom_scripting**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_unregister_custom_scripting &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
   
   

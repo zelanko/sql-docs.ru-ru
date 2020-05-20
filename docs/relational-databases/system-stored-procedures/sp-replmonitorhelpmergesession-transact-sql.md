@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesession
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1781e22e97870e7b9c26e7de397d77600ecbe1ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e31f785d1b1fa205a9498889f814a0a0bc32e9a8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771241"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834348"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**Состояние**|**int**|Состояние запуска агента:<br /><br /> **1** = запуск<br /><br /> **2** = выполнена<br /><br /> **3** = выполняется<br /><br /> **4** = бездействие<br /><br /> **5** = повторная попытка<br /><br /> **6** = сбой|  
 |**StartTime**|**datetime**|Время начала сеанса для задания агента.|  
 |**Завершения**|**datetime**|Время завершения сеанса для задания агента.|  
-|**Duration**|**int**|Совокупная продолжительность сеанса выполнения задания, в секундах.|  
+|**Длительность**|**int**|Совокупная продолжительность сеанса выполнения задания, в секундах.|  
 |**UploadedCommands**|**int**|Количество команд, переданных за время сеанса работы агента.|  
 |**DownloadedCommands**|**int**|Количество команд, принятых за время сеанса работы агента.|  
 |**ErrorMessages**|**int**|Количество сообщений об ошибках, которые были сформированы во время сеанса работы агента.|  
@@ -94,7 +94,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли базы данных **db_owner** или **replmonitor** в базе данных распространителя на распространителе или в базе данных подписки на подписчике могут выполнять **sp_replmonitorhelpmergesession**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Программный мониторинг репликации](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

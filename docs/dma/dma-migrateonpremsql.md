@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 00d27decc533d33056a7cc0cb19c2584fea564fb
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056536"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885872"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Обновление SQL Server с помощью Помощник по миграции данных
 
@@ -33,7 +33,7 @@ ms.locfileid: "74056536"
 
 2. Задайте тип исходного и целевого серверов, чтобы **SQL Server** , если выполняется обновление локальной SQL Server до более поздней версии локального SQL Server.
 
-3. Нажмите кнопку **создания**.
+3. Щелкните **Создать**.
 
    ![Создание проекта миграции](../dma/media/NewCreate.png)
 
@@ -49,7 +49,7 @@ ms.locfileid: "74056536"
 
 5. Рекомендуется зашифровать подключение, выбрав **шифрование соединения** в разделе **Свойства соединения** .
 
-6. Щелкните **Далее**.
+6. Нажмите кнопку **Далее**.
 
    ![Укажите исходную и целевую страницы](../dma/media/SourceTarget.png)
 
@@ -66,7 +66,7 @@ ms.locfileid: "74056536"
 
     а. Укажите **общее расположение, доступное на исходном и целевом серверах SQL Server для операции резервного копирования**. Убедитесь, что учетная запись службы, в которой работает исходный экземпляр SQL Server, имеет права записи в общем расположении, а учетная запись целевой службы имеет права на чтение в общем расположении.
 
-    b. Укажите расположение для восстановления данных и файлов журнала транзакций на целевом сервере.
+    б. Укажите расположение для восстановления данных и файлов журнала транзакций на целевом сервере.
 
     ![Страница «Добавление баз данных»](../dma/media/AddDatabases.png)
 
@@ -107,7 +107,7 @@ ms.locfileid: "74056536"
 
 2. Просмотрите сохраненный файл, чтобы получить сведения о миграции имени входа, а затем проверьте изменения.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Помощник по миграции данных (DMA)](../dma/dma-overview.md)
 - [Помощник по миграции данных: параметры конфигурации](../dma/dma-configurationsettings.md)

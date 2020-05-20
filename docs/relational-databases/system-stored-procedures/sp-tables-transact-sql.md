@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71aaa9e52cfca8435501695a4ebf60b2a6aa6ee4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14c618ef31562f6e6af70a569e21fdd4105d663e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096049"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834243"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 `[ @fUsePattern = ] 'fUsePattern'`Определяет, будут ли символы подчеркивания (_), процента (%) и квадратных скобок ([или]) интерпретироваться как подстановочные знаки. Допустимые значения: 0 (сопоставление с шаблоном отключено) и 1 (сопоставление с шаблоном включено). *фусепаттерн* имеет **бит**и значение по умолчанию 1.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -95,7 +95,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 EXEC sp_tables ;  
 ```  
   
-### <a name="b-returning-information-about-the-tables-in-a-specified-schema"></a>Б) Возврат сведений о таблицах в указанной схеме  
+### <a name="b-returning-information-about-the-tables-in-a-specified-schema"></a>Б. Возврат сведений о таблицах в указанной схеме  
  В следующем примере возвращаются сведения о таблицах, принадлежащих схеме `Person` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -128,7 +128,7 @@ EXEC sp_tables
    @table_qualifier = 'AdventureWorksPDW2012';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. синонимы &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

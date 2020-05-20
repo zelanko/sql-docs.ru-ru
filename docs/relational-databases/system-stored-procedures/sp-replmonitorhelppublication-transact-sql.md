@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelppublication
 ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8dc952f03ea2538412c864e1a9e9b228bf3ca877
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8651f7ff86a8e8fdeed07358d0b97be8b01be145
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771214"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834313"
 ---
 # <a name="sp_replmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**best_runspeedPerf**|**int**|Наименьшее время синхронизации для публикации слиянием.|  
 |**average_runspeedPerf**|**int**|Среднее время синхронизации для публикации слиянием.|  
 |**retention_period_unit**|**int**|Единица, используемая для выражения периода *удержания*.|  
-|**издателя**|**sysname**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполняющего публикацию.|  
+|**publisher**|**sysname**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполняющего публикацию.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -95,7 +95,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли базы данных **db_owner** или **replmonitor** в базе данных распространителя могут выполнять **sp_replmonitorhelppublication**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Программный мониторинг репликации](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

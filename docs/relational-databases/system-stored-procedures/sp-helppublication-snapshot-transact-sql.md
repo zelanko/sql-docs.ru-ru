@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppublication_snapshot
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d8909396e7a7da39ed2ae27c475a154c58bad090
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bf93b6f3045a9eb48c64e50c789e0ce79dec7f4c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771500"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834418"
 ---
 # <a name="sp_helppublication_snapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ## <a name="arguments"></a>Аргументы  
 `[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *Издатель* не следует использовать при добавлении статьи к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателю.  
@@ -51,12 +51,12 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Идентификатор агента моментальных снимков.|  
 |**name**|**nvarchar (100)**|Имя агента моментальных снимков.|  
-|**publisher_security_mode**|**smallint**|Режим безопасности, используемый агентом при соединении с издателем, который может быть одним из следующих:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности<br /><br /> **1** = проверка подлинности Windows.|  
+|**publisher_security_mode**|**smallint**|Режим безопасности, используемый агентом при соединении с издателем, который может быть одним из следующих:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности<br /><br /> **1** = проверка подлинности Windows.|  
 |**publisher_login**|**sysname**|Имя входа в систему, используемое при соединении с издателем.|  
-|**publisher_password**|**nvarchar (524)**|По соображениям безопасности всегда возвращается значение ** \* \* \* \* \* \* \* . \* \* **|  
+|**publisher_password**|**nvarchar (524)**|По соображениям безопасности **\*\*\*\*\*\*\*\*\*\*** всегда возвращается значение.|  
 |**job_id**|**uniqueidentifier**|Уникальный идентификатор задания агента.|  
-|**job_login**|**nvarchar(512)**|Учетная запись Windows, под которой выполняется агент моментальных снимков, которая возвращается в формате *домен*\\*имя_пользователя*.|  
-|**job_password**|**sysname**|По соображениям безопасности всегда возвращается значение ** \* \* \* \* \* \* \* . \* \* **|  
+|**job_login**|**nvarchar(512)**|Учетная запись Windows, под которой выполняется агент моментальных снимков, которая возвращается в формате *домен* \\ *имя_пользователя*.|  
+|**job_password**|**sysname**|По соображениям безопасности **\*\*\*\*\*\*\*\*\*\*** всегда возвращается значение.|  
 |**schedule_name**|**sysname**|Имя расписания, которое используется для этого задания агента.|  
 |**frequency_type**|**int**|Частота, с которой агент выполняется по расписанию, может иметь одно из следующих значений.<br /><br /> **1** = один раз<br /><br /> **2** = по запросу<br /><br /> **4** = ежедневно<br /><br /> **8** = еженедельно<br /><br /> **16** = ежемесячно<br /><br /> **32** = ежемесячное относительное<br /><br /> **64** = Автозапуск<br /><br /> **128** = повторяющаяся|  
 |**frequency_interval**|**int**|День, когда агент выполняется, может иметь одно из следующих значений.<br /><br /> **1** = воскресенье<br /><br /> **2** = понедельник<br /><br /> **3** = вторник<br /><br /> **4** = среда<br /><br /> **5** = четверг<br /><br /> **6** = Пятница<br /><br /> **7** = Суббота<br /><br /> **8** = день<br /><br /> **9** = рабочие дни<br /><br /> **10** = выходные дни|  
@@ -78,7 +78,7 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** на издателе или члены предопределенной роли базы данных **db_owner** в базе данных публикации могут выполнять **sp_help_publication_snapshot**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
  [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   

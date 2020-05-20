@@ -13,19 +13,19 @@ ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0beb45070e9f6c0294dc18d966f3100263f7d852
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ac1acb47c6345bb2b746b2e3a3e1817b63a3e75
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176033"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886381"
 ---
 # <a name="master-data-services-overview"></a>Общие сведения о службах Master Data Services
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]модель является наивысшим уровнем контейнера в структуре основных данных. Можно создать модель для управления группами сходных данных, например для управления данными продуктов в сети. В модели содержится одна или несколько сущностей, а сущности содержат элементы, которые являются записями данных.
 
 |||
 |-|-|
-|![Виртуальная машина Azure](../../2014/master-data-services/media/azure-virtual-machine.png "Виртуальная машина Azure")|Хотите попробовать SQL Server 2016? Зарегистрируйтесь в Microsoft Azure, а затем перейдите на **[эту страницу](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** , чтобы запустить виртуальную машину с уже установленным SQL Server 2016. После завершения вы можете удалить виртуальную машину.|
+|![Виртуальная машина Azure](../../2014/master-data-services/media/azure-virtual-machine.png "Виртуальная машина Azure")|Хотите попробовать SQL Server 2016? Зарегистрируйтесь в Microsoft Azure, а затем перейдите на **[эту страницу](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** , чтобы запустить виртуальную машину с уже установленным SQL Server 2016. После завершения вы можете удалить виртуальную машину.|
 
  Модель продукта в сети может содержать сущности, такие как продукт, цвет и стиль. Сущность цвета может содержать элементы для красного, серебряного и черного цвета.
 
@@ -48,7 +48,7 @@ ms.locfileid: "78176033"
 > [!NOTE]
 >  Следующие задачи можно выполнить в тестовой среде и использовать предложенные образцы данных при установке служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Дополнительные сведения см. в разделе [Развертывание моделей (службы Master Data Services)](../../2014/master-data-services/deploying-models-master-data-services.md).
 
-|Действие|Сведения|Связанные разделы|
+|Действие|Сведения|См. также|
 |------------|-------------|--------------------|
 |Создание модели|При создании модели она считается версией VERSION_1.|[Модели (службы Master Data Services)](../../2014/master-data-services/models-master-data-services.md)<br /><br /> [Создание модели (службы Master Data Services)](../../2014/master-data-services/create-a-model-master-data-services.md)|
 |Создание сущностей|Создавайте столько сущностей, сколько необходимо для хранения элементов.|[Сущности (службы Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)<br /><br /> [Создание сущности (службы Master Data Services)](../../2014/master-data-services/create-an-entity-master-data-services.md)|

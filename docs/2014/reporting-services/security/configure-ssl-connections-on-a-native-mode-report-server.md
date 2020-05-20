@@ -12,18 +12,18 @@ ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7fb33e6ccb5afbdee1bf6c3673a24548d6fe9961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 952690e4f37be304d80a542e38d461ef92ce2c21
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66102123"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886441"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Настройка соединений SSL для сервера отчетов, работающего в собственном режиме
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] В собственном режиме используется HTTP-служба протокола SSL для установления зашифрованного соединения с сервером отчетов. Если в локальном хранилище сертификатов на компьютере сервера отчетов установлен CER-файл сертификата, можно связать его с резервированием URL-адресов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для поддержки соединений сервера отчетов через зашифрованный канал.  
   
 > [!TIP]  
->  Если используется режим интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с SharePoint, см. дополнительные сведения в документации по SharePoint. Например, руководство по [включению SSL в веб-приложении SharePoint 2010 (https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx).  
+>  Если используется режим интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с SharePoint, см. дополнительные сведения в документации по SharePoint. Например, руководство по [включению SSL в веб-приложении SharePoint 2010 (https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application)](https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application).  
   
  Поскольку службы IIS также используют HTTP-службу SSL, возникает ряд важных проблем взаимодействия, которые необходимо учитывать при запуске служб IIS и служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на одном компьютере. Ознакомьтесь с разделом «Проблемы взаимодействия со службами IIS», где приводятся рекомендации по решению данных проблем.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66102123"
   
 1.  Нажмите кнопку **URL-адрес диспетчера отчетов**.  
   
-2.  Щелкните **Дополнительно**.  
+2.  Нажмите кнопку **Дополнительно**.  
   
 3.  В разделе **Несколько удостоверений SSL для диспетчера отчетов**нажмите **Добавить**.  
   
