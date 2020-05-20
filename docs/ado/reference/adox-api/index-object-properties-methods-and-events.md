@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Index object [ADOX], members
 ms.assetid: 6f4e92e1-e7cb-45d8-aa86-cd749474f825
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ffd5987d79ce539baf536a3221ebc1bb5b470a15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b581a3c953d666d771ccdc80d06cdcc951cd60bd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966065"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762735"
 ---
 # <a name="index-object-properties-methods-and-events"></a>Свойства, методы и события объекта Index
 ## <a name="propertiescollections"></a>Свойства и коллекции  
@@ -36,7 +36,7 @@ ms.locfileid: "67966065"
  [Уникальное свойство](../../../ado/reference/adox-api/unique-property-adox.md)  
   
 ## <a name="methods"></a>Методы  
- Отсутствует.  
+ Нет.  
   
 ## <a name="events"></a>События  
  Нет.  

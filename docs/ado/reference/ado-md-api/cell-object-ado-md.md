@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Cell object [ADO MD]
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bbf97a4095f2295b8851f87ba20ab083938e70ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d309ba98c1e50d8eb6fbe47fb9452f8ea7df35ba
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67947749"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761802"
 ---
 # <a name="cell-object-ado-md"></a>Объект Cell (многомерные объекты ADO)
 Представляет данные на пересечении координат осей, содержащихся в наборе ячеек.  
@@ -42,7 +42,7 @@ ms.locfileid: "67947749"
   
  Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|Имя|Описание|  
+|name|Описание|  
 |----------|-----------------|  
 |BackColor|Цвет фона, используемый при отображении ячейки.|  
 |FontFlags|Битовая маска, определяющая влияние на шрифт.|  
@@ -55,7 +55,7 @@ ms.locfileid: "67947749"
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/cell-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример оси (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Объект набора ячеек (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [Коллекция Positions (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   

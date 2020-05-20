@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADO]
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ee1058299becb4a7a4234debc097516cb02dd41
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 46718126ede409caa749b3a49dfaaffe118afc77
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937867"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761832"
 ---
 # <a name="type-property-ado"></a>Свойство Type (ADO)
 Указывает операционный тип или тип данных для [параметра](../../../ado/reference/ado-api/parameter-object.md), [поля](../../../ado/reference/ado-api/field-object.md)или объекта [Свойства](../../../ado/reference/ado-api/property-object-ado.md) .  
@@ -40,7 +40,7 @@ ms.locfileid: "67937867"
 |-|-|-|  
 |[Объект Field](../../../ado/reference/ado-api/field-object.md)|[Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства Type (Field) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
  [Пример свойства Type (Property) (VC + +)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
  [Свойство RecordType (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   

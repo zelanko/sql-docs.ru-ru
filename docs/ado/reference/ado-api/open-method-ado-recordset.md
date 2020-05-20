@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16142f200e6fd6e7c141b4f1fe6d45fe8917bc28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8a091a606cf3049c055794bc16cc51db78a40978
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931902"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762182"
 ---
 # <a name="open-method-ado-recordset"></a>Метод Open (объект Recordset ADO)
 Открывает курсор для объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -35,19 +35,19 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### <a name="parameters"></a>Параметры  
  *Источник*  
- Необязательный параметр. Значение **типа Variant** , результатом которого является допустимый объект [команды](../../../ado/reference/ado-api/command-object-ado.md) , инструкция SQL, имя таблицы, вызов хранимой процедуры, URL-адрес или имя файла или объекта [потока](../../../ado/reference/ado-api/stream-object-ado.md) , содержащего сохраняемый [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Необязательный элемент. Значение **типа Variant** , результатом которого является допустимый объект [команды](../../../ado/reference/ado-api/command-object-ado.md) , инструкция SQL, имя таблицы, вызов хранимой процедуры, URL-адрес или имя файла или объекта [потока](../../../ado/reference/ado-api/stream-object-ado.md) , содержащего сохраняемый [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  *ActiveConnection*  
- Необязательный параметр. Значение **типа Variant** , результатом которого является допустимое имя переменной объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) или **строка** , содержащая параметры [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
+ Необязательный элемент. Значение **типа Variant** , результатом которого является допустимое имя переменной объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) или **строка** , содержащая параметры [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
   
  *Примеры CursorType*  
- Необязательный параметр. Значение [курсортипинум](../../../ado/reference/ado-api/cursortypeenum.md) , определяющее тип курсора, который должен использовать поставщик при открытии **набора записей**. Значение по умолчанию — **адопенфорвардонли**.  
+ Необязательный элемент. Значение [курсортипинум](../../../ado/reference/ado-api/cursortypeenum.md) , определяющее тип курсора, который должен использовать поставщик при открытии **набора записей**. Значение по умолчанию — **адопенфорвардонли**.  
   
  *LockType*  
- Необязательный параметр. Значение [локктипинум](../../../ado/reference/ado-api/locktypeenum.md) , определяющее, какой тип блокировки (параллелизм) должен использоваться поставщиком при открытии **набора записей**. Значение по умолчанию — **адлоккреадонли**.  
+ Необязательный элемент. Значение [локктипинум](../../../ado/reference/ado-api/locktypeenum.md) , определяющее, какой тип блокировки (параллелизм) должен использоваться поставщиком при открытии **набора записей**. Значение по умолчанию — **адлоккреадонли**.  
   
  *Параметры*  
- Необязательный параметр. Значение **типа Long** , указывающее, как поставщик должен оценивать *Исходный* аргумент, если он представляет нечто, отличное от объекта **Command** , или что **набор записей** следует восстановить из файла, в котором он был сохранен ранее. Может быть одним или несколькими значениями [коммандтипинум](../../../ado/reference/ado-api/commandtypeenum.md) или [ексекутеоптионенум](../../../ado/reference/ado-api/executeoptionenum.md) , которые можно сочетать с помощью побитового оператора или.  
+ Необязательный элемент. Значение **типа Long** , указывающее, как поставщик должен оценивать *Исходный* аргумент, если он представляет нечто, отличное от объекта **Command** , или что **набор записей** следует восстановить из файла, в котором он был сохранен ранее. Может быть одним или несколькими значениями [коммандтипинум](../../../ado/reference/ado-api/commandtypeenum.md) или [ексекутеоптионенум](../../../ado/reference/ado-api/executeoptionenum.md) , которые можно сочетать с помощью побитового оператора или.  
   
 > [!NOTE]
 >  Если вы открываете **набор записей** из **потока** , содержащего материализованный **набор записей**, использование значения [ексекутеоптионенум](../../../ado/reference/ado-api/executeoptionenum.md) для **адасинкфетчнонблоккинг** не приведет к результату. выборка будет синхронной и блокирующей.  
@@ -60,7 +60,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  При использовании метода **Open** для объекта **Recordset** открывается курсор, представляющий записи из базовой таблицы, результаты запроса или ранее сохраненный **набор записей**.  
   
- Используйте необязательный *Исходный* аргумент для указания источника данных с помощью одной из следующих команд: переменная объекта **команды** , инструкция SQL, хранимая процедура, имя таблицы, URL-адрес или полное имя пути к файлу. Если *Source* является именем пути к файлу, это может быть полный путь ("к:\дир\филе.РСТ"), относительный путь (".. \филе.РСТ ") или URL-адрес ("<https://files/file.rst>").  
+ Используйте необязательный *Исходный* аргумент для указания источника данных с помощью одной из следующих команд: переменная объекта **команды** , инструкция SQL, хранимая процедура, имя таблицы, URL-адрес или полное имя пути к файлу. Если *Source* является именем пути к файлу, это может быть полный путь ("к:\дир\филе.РСТ"), относительный путь (".. \филе.РСТ ") или URL-адрес (" <https://files/file.rst> ").  
   
  Не рекомендуется использовать аргумент *Source* метода **Open** для выполнения запроса на изменение, не возвращающего записи, поскольку нет простого способа определить успешность вызова. **Набор записей** , возвращаемый таким запросом, будет закрыт. Чтобы выполнить запрос, который не возвращает записи, например инструкцию SQL INSERT, вызовите метод [EXECUTE](../../../ado/reference/ado-api/execute-method-ado-command.md) объекта **Command** или метод [EXECUTE](../../../ado/reference/ado-api/execute-method-ado-connection.md) объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) .  
   
@@ -104,7 +104,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 ## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры методов Open и Close (Visual Basic)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Пример методов Open и Close (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Пример методов Open и Close (Visual c++)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   

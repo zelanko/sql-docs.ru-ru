@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], preparing and executing commands
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2295d421f8b802f2f3b531d7de3fc086e43ad572
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a59e357db60e3a29ec2473d4331ef4b6954889c7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924564"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763105"
 ---
 # <a name="preparing-and-executing-commands"></a>Подготовка и выполнение команд
 Команды — это инструкции, выдаваемые поставщику для выполнения некоторых операций с базовым источником данных. Например, инструкция SQL является командой для поставщика данных Microsoft SQL. В ADO команды обычно представлены объектами **Command** , хотя простые команды также могут выдаваться через объекты **Connection** или **Recordset** .  

@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 15115313613ea8f86dd2267c6be3c231cab92503
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 31ce05ce069e0eb3e7d6431b296f40824a8acd3a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931931"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762205"
 ---
 # <a name="open-method-ado-connection"></a>Метод Open (объект Connection ADO)
 Открывает соединение с источником данных.  
@@ -36,16 +36,16 @@ connection.Open ConnectionString, UserID, Password, Options
   
 #### <a name="parameters"></a>Параметры  
  *ConnectionString*  
- Необязательный параметр. **Строковое** значение, содержащее сведения о соединении. Сведения о допустимых параметрах см. в свойстве [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
+ Необязательный элемент. **Строковое** значение, содержащее сведения о соединении. Сведения о допустимых параметрах см. в свойстве [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
   
  *UserID*  
- Необязательный параметр. **Строковое** значение, содержащее имя пользователя, используемое при установлении соединения.  
+ Необязательный элемент. **Строковое** значение, содержащее имя пользователя, используемое при установлении соединения.  
   
  *Пароль*  
- Необязательный параметр. **Строковое** значение, содержащее пароль, используемый при установлении соединения.  
+ Необязательный элемент. **Строковое** значение, содержащее пароль, используемый при установлении соединения.  
   
  *Параметры*  
- Необязательный параметр. Значение [коннектоптионенум](../../../ado/reference/ado-api/connectoptionenum.md) , которое определяет, должен ли этот метод возвращаться после (синхронно) или до (асинхронно) установления соединения.  
+ Необязательный элемент. Значение [коннектоптионенум](../../../ado/reference/ado-api/connectoptionenum.md) , которое определяет, должен ли этот метод возвращаться после (синхронно) или до (асинхронно) установления соединения.  
   
 ## <a name="remarks"></a>Remarks  
  Использование метода **Open** для объекта [Connection](../../../ado/reference/ado-api/connection-object-ado.md) устанавливает физическое соединение с источником данных. После успешного завершения этого метода подключение будет активно, и вы сможете выполнить команды для него и обработать результаты.  
@@ -65,7 +65,7 @@ connection.Open ConnectionString, UserID, Password, Options
 ## <a name="applies-to"></a>Применяется к  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры методов Open и Close (Visual Basic)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Пример методов Open и Close (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Пример методов Open и Close (Visual c++)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   

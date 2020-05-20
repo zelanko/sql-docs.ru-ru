@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - hierarchical Recordsets [ADO], in XML
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 17ed6f29442bc55f81d0ef83bfd19473a99e9a95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 24a5303f4ecd43293508f117b795d389a7608285
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925105"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762745"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Иерархические наборы записей в XML
 ADO обеспечивает сохранение иерархических объектов Recordset в XML. При использовании иерархических объектов Recordset значение поля в родительском наборе записей является еще одним набором записей. Такие поля представлены как дочерние элементы в XML-потоке, а не в атрибуте.  
@@ -124,5 +124,5 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
   
 -   Если дочерняя запись ссылается на более чем одну родительскую запись, то при повторном открытии набора записей дочерний набор записей может содержать дублирующиеся записи. Однако эти дубликаты будут видны, только если пользователь работает непосредственно с базовым дочерним набором строк. Если глава используется для навигации по дочернему набору записей (это единственный способ навигации по ADO), дубликаты не отображаются.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сохранение записей в формате XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

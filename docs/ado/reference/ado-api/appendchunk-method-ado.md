@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - AppendChunk method [ADO]
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9d575460daf0f801f6d6dd2e80b0c67f4886dc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5ebf6f52e4c2ac9cc4875db26e633457915c0a5e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920566"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762943"
 ---
 # <a name="appendchunk-method-ado"></a>Метод AppendChunk (ADO)
 Добавляет данные к большому текстовому или двоичному [полю](../../../ado/reference/ado-api/field-object.md)данных или к объекту [параметра](../../../ado/reference/ado-api/parameter-object.md) .  
@@ -37,7 +37,7 @@ object.AppendChunk Data
  *object*  
  Объект **поля** или **параметра** .  
   
- *Data*  
+ *Данные*  
  **Значение типа Variant** , содержащее данные, добавляемые к объекту.  
   
 ## <a name="remarks"></a>Remarks  
@@ -64,7 +64,7 @@ object.AppendChunk Data
 |-|-|  
 |[Объект Field](../../../ado/reference/ado-api/field-object.md)|[Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры методов AppendChunk и-блока (Visual Basic)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [Примеры методов AppendChunk и-блока (Visual c++)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
  [Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   

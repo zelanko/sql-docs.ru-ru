@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectionString property [ADO]
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e391ad7c61bd6c303b0558892435af344a2768fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 39eb67a98d710e27c051d77aa7843663c853b9e0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933490"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762635"
 ---
 # <a name="connectionstring-property-ado"></a>Свойство ConnectionString (ADO)
 Указывает сведения, используемые для установления соединения с источником данных.  
@@ -64,7 +64,7 @@ ms.locfileid: "67933490"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойств ConnectionString, ConnectionTimeout и State (Visual Basic)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [Пример свойств ConnectionString, ConnectionTimeout и State (Visual c++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
  [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

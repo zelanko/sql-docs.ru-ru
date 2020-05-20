@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - MaxRecords property [ADO], VC++ example
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bde93002771c219b6358cd1ecd1325fd77208d8d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 16c837d37dc51c5f5203c1404b9c9a6bf9d8e95d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932249"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762525"
 ---
 # <a name="maxrecords-property-example-vc"></a>Пример свойства MaxRecords (Visual C++)
 В этом примере свойство [maxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) используется для открытия [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , содержащего 10 самых дорогих заголовков в таблице ***titles*** .  
@@ -176,6 +176,6 @@ void PrintComError(_com_error &e) {
 **Длительные Деприватион данных: четыре практических примера---19,99**  
 **Суши, кто угодно? ---14,99**  
 **50 лет в Буккингхам Palace Китченс---11,95**   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство MaxRecords (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

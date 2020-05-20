@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ObjectProxy collection [ADO]
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 485d011fa6762acd04cad54ff7fffc8d8136e063
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ff9cd79b4ac787987ef44ea3f73cbd9fb102ae43
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917954"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762323"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO — синтаксис WFC)
 Объект **обжектпрокси** представляет сервер и возвращается методом **CreateObject** объекта [пространства](../../../ado/reference/rds-api/dataspace-object-rds.md) данных. Класс Обжектпрокси имеет один метод, **Call**, который может вызывать метод на сервере и возвращать объект, полученный в результате этого вызова.  
@@ -37,7 +37,7 @@ public Object ObjectProxy.( String method )
 public Object ObjectProxy.( String method, Object[] args)  
 ```  
   
-#### <a name="returns"></a>Результаты  
+#### <a name="returns"></a>Возвращаемое значение  
  Объект  
  Объект, являющийся результатом вызова метода.  
   
@@ -45,8 +45,8 @@ public Object ObjectProxy.( String method, Object[] args)
  *обжектпрокси*  
  Объект **обжектпрокси** , представляющий сервер.  
   
- *method*  
+ *Method*  
  Строка, содержащая имя метода, который необходимо вызвать на сервере.  
   
  *args*  
- Необязательный параметр. Массив объектов, являющихся аргументами метода на сервере. Типы данных Java автоматически преобразуются в типы данных, подходящие для использования на сервере.
+ Необязательный элемент. Массив объектов, являющихся аргументами метода на сервере. Типы данных Java автоматически преобразуются в типы данных, подходящие для использования на сервере.

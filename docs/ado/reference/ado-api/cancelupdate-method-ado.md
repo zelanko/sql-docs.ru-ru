@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CancelUpdate method [ADO]
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa9e680e1626311f2cc10aa7c79fb583841fbc38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d62837bd06798fd8ce7b51b0345cf5e5a6463e4b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920118"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763165"
 ---
 # <a name="cancelupdate-method-ado"></a>Метод CancelUpdate (ADO)
 Отменяет все изменения, внесенные в текущую или новую строку объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , или коллекцию [полей](../../../ado/reference/ado-api/fields-collection-ado.md) объекта [Record](../../../ado/reference/ado-api/record-object-ado.md) перед вызовом метода [Update](../../../ado/reference/ado-api/update-method.md) .  
@@ -50,7 +50,7 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
 |-|-|  
 |[Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры методов Update и CancelUpdate (Visual Basic)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Примеры методов Update и CancelUpdate (Visual c++)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
  [Метод AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   

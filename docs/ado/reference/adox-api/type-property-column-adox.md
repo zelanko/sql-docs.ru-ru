@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADOX]
 ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 190d60fc5724286118a2209a60f8bee1d0835a37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c819d5b58f0153db84a624c79cef829605e54df8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965021"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763265"
 ---
 # <a name="type-property-column-adox"></a>Свойство Type (Column) (ADOX)
 Указывает тип данных столбца.  
@@ -38,7 +38,7 @@ ms.locfileid: "67965021"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Свойство Type (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [Свойство Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

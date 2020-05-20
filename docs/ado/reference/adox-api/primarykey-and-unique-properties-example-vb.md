@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Unique property [ADOX], Visual Basic example
 - PrimaryKey property [ADOX], Visual Basic example
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43ee83f0c08e5ea686758c5fe913d0afc9be572d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d38097ed2765eacfafafc980133594750a99d57e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965559"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763735"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>Примеры свойств PrimaryKey и Unique (Visual Basic)
 В этом примере демонстрируются свойства [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) и [UNIQUE](../../../ado/reference/adox-api/unique-property-adox.md) [индекса](../../../ado/reference/adox-api/index-object-adox.md). Код создает новую таблицу с двумя столбцами. Свойства **PrimaryKey** и **UNIQUE** используются, чтобы сделать один столбец первичным ключом, для которого повторяющиеся значения не допускаются.  
@@ -112,7 +112,7 @@ End Sub
 ' EndPrimaryKeyVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Свойство PrimaryKey (ADOX)](../../../ado/reference/adox-api/primarykey-property-adox.md)   
  [Свойство Unique (ADOX)](../../../ado/reference/adox-api/unique-property-adox.md)

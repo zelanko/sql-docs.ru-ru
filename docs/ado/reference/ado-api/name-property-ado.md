@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADO]
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a919bb377eee2da1c3c1a65e85ddfb9807ed8d50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38846bcb832df7cc535d35d8f07fb636f2db37f7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918033"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762425"
 ---
 # <a name="name-property-ado"></a>Свойство Name (ADO)
 Указывает имя объекта.  
@@ -38,7 +38,7 @@ ms.locfileid: "67918033"
   
  Для объектов **параметров** , которые еще не добавлены в коллекцию [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) , свойство **Name** доступно для чтения и записи. Для добавленных объектов **параметров** и всех остальных объектов свойство **Name** доступно только для чтения. Имена не обязательно должны быть уникальными в пределах коллекции.  
   
- Свойство **Name** объекта можно получить по порядковому номеру, после чего можно будет ссылаться на объект непосредственно по имени. Например, если `rstMain.Properties(20).Name` возвращает `Updatability`, то в дальнейшем можно ссылаться на это свойство как `rstMain.Properties("Updatability")`на.  
+ Свойство **Name** объекта можно получить по порядковому номеру, после чего можно будет ссылаться на объект непосредственно по имени. Например, если `rstMain.Properties(20).Name` возвращает `Updatability` , то в дальнейшем можно ссылаться на это свойство как на `rstMain.Properties("Updatability")` .  
   
 ## <a name="applies-to"></a>Применяется к  
   

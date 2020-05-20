@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - RightsEnum enumeration [ADOX]
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f6db3d1fecd8a2670a81fb239cb1a100389be21a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 343d5ec73a9720085f450cde3f35a187cf4b7302
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965271"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762815"
 ---
 # <a name="rightsenum"></a>RightsEnum
 Задает права или разрешения для группы или пользователя на объекте.  

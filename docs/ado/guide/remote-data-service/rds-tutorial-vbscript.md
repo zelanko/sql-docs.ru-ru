@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - RDS tutorial [ADO], VBScript
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d45347bcdf212158fb6a0ee9f4599e1e1b00ff54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1fc60383f0862c845ee70be11a051b9da48b36a2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922427"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763575"
 ---
 # <a name="rds-tutorial-vbscript"></a>Учебник по RDS (VBScript)
 Это руководство по RDS, написанное на Microsoft Visual Basic Scripting Edition. Описание назначения этого учебника см. в [руководстве по RDS](../../../ado/guide/remote-data-service/rds-tutorial.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "67922427"
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В этом руководстве [RDS. Элемент управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) и [RDS. Пространство](../../../ado/reference/rds-api/dataspace-object-rds.md) данных создается во время разработки, то есть они определяются с помощью тегов объектов следующим образом: `<OBJECT>...</OBJECT>`. Кроме того, они могут быть созданы во время выполнения с помощью метода [CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md) . Например, **RDS. Объект элемента управления** данным можно создать следующим образом:  
+ В этом руководстве [RDS. Элемент управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) и [RDS. Пространство](../../../ado/reference/rds-api/dataspace-object-rds.md) данных создается во время разработки, то есть они определяются с помощью тегов объектов следующим образом: `<OBJECT>...</OBJECT>` . Кроме того, они могут быть созданы во время выполнения с помощью метода [CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md) . Например, **RDS. Объект элемента управления** данным можно создать следующим образом:  
   
 ```vb
 Set DC = Server.CreateObject("RDS.DataControl")  
@@ -138,5 +138,5 @@ End Sub
   
  **Это последняя часть руководства.**  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Учебник по RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   

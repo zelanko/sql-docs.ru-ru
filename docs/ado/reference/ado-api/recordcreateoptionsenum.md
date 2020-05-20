@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - RecordCreateOptionsEnum enumeration [ADO]
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 65fe33b73cf77a27fcd69743ffb09cb05e197797
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f76d7773df443a76597184ecdabd5f27aea0bb7e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917345"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761912"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 Указывает, следует ли открыть существующую **запись** или создать новую **запись** для метода [открытия](../../../ado/reference/ado-api/open-method-ado-record.md) объекта [записи](../../../ado/reference/ado-api/record-object-ado.md) . Значения можно сочетать с оператором AND.  
   
-|Константа|Применение|Описание|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adCreateCollection**|0x2000|Создает новую **запись** в узле, указанном параметром *Source* , вместо того, чтобы открывать существующую **запись**. Если источник указывает на существующий узел, возникает ошибка времени выполнения, если **адкреатеколлектион** не объединен с **адопенифексистс** или **адкреатеоверврите**.|  
 |**adCreateNonCollection**|0|Создает новую **запись** типа [адсимплерекорд](../../../ado/reference/ado-api/recordtypeenum.md).|  

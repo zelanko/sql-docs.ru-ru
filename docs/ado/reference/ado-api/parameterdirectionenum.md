@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - ParameterDirectionEnum enumeration [ADO]
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 68aaa0bfb8aa72c9e94a8b5db65768fe85895f0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 88754f7dbd0064c765314d88b0fcc0d06f05bbb2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917740"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763405"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 Указывает, представляет ли [параметр](../../../ado/reference/ado-api/parameter-object.md) входной параметр, выходной параметр, как входной, так и выходной параметр, или возвращаемое значение из хранимой процедуры.  
   
-|Константа|Применение|Описание|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**адпараминпут**|1|По умолчанию. Указывает, что параметр представляет входной параметр.|  
 |**адпараминпутаутпут**|3|Указывает, что параметр представляет как входной, так и выходной параметр.|  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Cellset object [ADO MD], Visual Basic example
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1b099a1eb5d513285b33b26f5623f1e14b322731
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 943e36057478cbb6acfcabc0fa2ad713b4e43ac5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911583"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761782"
 ---
 # <a name="cellset-example-vb"></a>Пример объекта Cellset (Visual Basic)
 В этом Visual Basicном проекте демонстрируются основы использования объекты данных ActiveX (MD) для доступа к данным куба. Он отображает заголовки элементов для заголовков столбцов и строк, а затем отображает отформатированные значения конкретных ячеек в наборе ячеек.  

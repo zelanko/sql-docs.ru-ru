@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Direction property [ADO], JScript example
 - CommandTimeout property [ADO], JScript example
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c9c474cfe2b1d38154129070cb11c91434ee4fad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0fb389dd9761ff4e310d5047f85085b7f9ff6a43
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921556"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763565"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction (JScript)
 В этом примере для выполнения хранимой процедуры используются свойства [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [size](../../../ado/reference/ado-api/size-property-ado-parameter.md)и [Direction](../../../ado/reference/ado-api/direction-property.md) . Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **активеконнектионжс. ASP**.  
@@ -172,7 +172,7 @@ BODY {
 <!-- EndActiveConnectionJS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Свойство CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   

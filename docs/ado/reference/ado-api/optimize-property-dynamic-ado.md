@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Optimize property [ADO]
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3e8bb3c3787effe8418db735a72425a793b73e35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8d27195b00d1e1867f6bf037cd6c20500ec35e84
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931854"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762087"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Свойство Optimize (динамическое) (ADO)
 Указывает, должен ли быть создан индекс для [поля](../../../ado/reference/ado-api/field-object.md).  
@@ -49,7 +49,7 @@ fld.Properties("Optimize") = False   'Delete an index
 ## <a name="applies-to"></a>Применяется к  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства optimize (Visual Basic)](../../../ado/reference/ado-api/optimize-property-example-vb.md)   
  [Пример свойства optimize (Visual c++)](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
  [Свойство Filter](../../../ado/reference/ado-api/filter-property.md)   

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - ConnectionTimeout property [ADO], Visual Basic example
 - State property [ADO], Visual Basic example
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1d0cd34b13889ed44e32e29a058ca01d48aea1b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 861db15ef9e47bc814aff445b8b8887df5df7a7c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933478"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762655"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>Пример свойств ConnectionString, ConnectionTimeout и State (Visual Basic)
 В этом примере демонстрируются различные способы использования свойства [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) для открытия объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) . Он также использует свойство [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) для установки времени ожидания соединения, а свойство [State](../../../ado/reference/ado-api/state-property-ado.md) — для проверки состояния соединений. Для выполнения этой процедуры требуется функция-состояние.  
@@ -126,7 +126,7 @@ End Function
 'EndConnectionStringVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Свойство ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [Свойство ConnectionTimeout (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   

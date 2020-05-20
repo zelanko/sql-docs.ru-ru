@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Cancel method [ADO]
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: db369b32737c0e2dae4603a4a5a6c26cdd3a7142
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dd6fc7b58d49c788242e029fa004ec38534c8e38
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920231"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763545"
 ---
 # <a name="cancel-method-ado"></a>Метод Cancel (ADO)
 Отменяет выполнение ожидающего асинхронного вызова метода.  
@@ -43,8 +43,8 @@ object.Cancel
   
 |Если *объект* является|Последний асинхронный вызов этого метода завершен|  
 |----------------------|-------------------------------------------------------------|  
-|[Command](../../../ado/reference/ado-api/command-object-ado.md)|[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
-|[Соединен](../../../ado/reference/ado-api/connection-object-ado.md)|[Выполнить](../../../ado/reference/ado-api/execute-method-ado-connection.md) или [Открыть](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
+|[Команда](../../../ado/reference/ado-api/command-object-ado.md)|[Работать](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
+|[Подключение](../../../ado/reference/ado-api/connection-object-ado.md)|[Выполнить](../../../ado/reference/ado-api/execute-method-ado-connection.md) или [Открыть](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
 |[Записать](../../../ado/reference/ado-api/record-object-ado.md)|[Копирекорд](../../../ado/reference/ado-api/copyrecord-method-ado.md), [делетерекорд](../../../ado/reference/ado-api/deleterecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)или [Open](../../../ado/reference/ado-api/open-method-ado-record.md)|  
 |[набор записей](../../../ado/reference/ado-api/recordset-object-ado.md)|[Открыть](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
 |[Поток](../../../ado/reference/ado-api/stream-object-ado.md)|[Открыть](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
@@ -56,7 +56,7 @@ object.Cancel
 |[Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
 |[Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)||  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода Cancel (Visual Basic)](../../../ado/reference/ado-api/cancel-method-example-vb.md)   
  [Пример метода Cancel (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
  [Пример метода Cancel (Visual c++)](../../../ado/reference/ado-api/cancel-method-example-vc.md)   

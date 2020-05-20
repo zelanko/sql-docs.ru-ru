@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Close method [ADO], VC++ example
 - Open method [ADO], VC++ example
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 436c58b712ee256f6e120b1b30578e8f0cbb4b64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3c7aa6605cb613a8cc3f3a6b41c50747d96991f8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917929"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762215"
 ---
 # <a name="open-and-close-methods-example-vc"></a>Примеры методов Open и Close (Visual C++)
 В этом примере используются методы **Open** и [Close](../../../ado/reference/ado-api/close-method-ado.md) как для [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , так и для объектов [соединения](../../../ado/reference/ado-api/connection-object-ado.md) , которые были открыты.  

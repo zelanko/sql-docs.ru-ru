@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SortOrder property [ADOX]
 ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e30d3ba08c10b16768d75a9234cfa15fe501c9b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2026bcae8e0923159f6fb1044ab379d439993400
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965219"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762795"
 ---
 # <a name="sortorder-property-adox"></a>Свойство SortOrder (ADOX)
 Указывает последовательность сортировки для столбца (только столбцы индекса).  
@@ -38,7 +38,7 @@ ms.locfileid: "67965219"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства SortOrder (Visual Basic)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Объект Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

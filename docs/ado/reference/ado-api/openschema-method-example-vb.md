@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - OpenSchema method [ADO], Visual Basic example
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a16979e7993fd1ac86679d054508b837a0a08c68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 26a1a1af2430b3136114a7ba7929fa1fe566c449
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931892"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762147"
 ---
 # <a name="openschema-method-example-vb"></a>Пример метода OpenSchema (Visual Basic)
 В этом примере используется метод [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) для вывода имени и типа каждой таблицы в базе данных ***pubs*** .  
@@ -84,6 +84,6 @@ End Sub
 Attribute VB_Name = "OpenSchema"  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод OpenSchema](../../../ado/reference/ado-api/openschema-method.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

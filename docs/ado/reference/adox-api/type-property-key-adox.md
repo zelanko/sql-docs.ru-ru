@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADOX]
 ms.assetid: 8ca2f1fd-eb1e-490c-a28b-67eda92e0fc7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e72c93cf7f2126e26d5ed09d3cff246319e0495a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 000169993f3aae1047369449b7df71551b52ea22
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965047"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763255"
 ---
 # <a name="type-property-key-adox"></a>Свойство Property (Key) (ADOX)
 Указывает тип ключа.  
@@ -38,7 +38,7 @@ ms.locfileid: "67965047"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Свойство Type (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
  [Свойство Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - MoveRecordOptionsEnum enumeration [ADO]
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dcdb825073b267c3e3351001ecc7b11c969582e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 849f3720d831c17b6b9d6d2829ae0b28f19992de
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932049"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762445"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 Задает поведение метода [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) объекта [записи](../../../ado/reference/ado-api/record-object-ado.md) .  

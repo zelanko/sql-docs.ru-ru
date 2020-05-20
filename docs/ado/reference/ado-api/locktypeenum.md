@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - LockTypeEnum enumeration [ADO]
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ae822794b1b06a975e1cc3cd397b5a5f00036dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d3fd3c1ffea99abf859a4a328e21da288bc9378a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918249"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762535"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 Указывает тип блокировки, помещаемой в записи во время редактирования.  
   
-|Константа|Применение|Описание|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**адлоккбатчоптимистик**|4|Обозначает обновления оптимистических пакетов. Требуется для режима пакетного обновления.|  
 |**adLockOptimistic**|3|Обозначает оптимистичную блокировку, запись по записям. Поставщик использует оптимистичную блокировку, блокируя записи только при вызове метода [Update](../../../ado/reference/ado-api/update-method.md) .|  

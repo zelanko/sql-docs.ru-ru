@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4fe5c9bc18e0bc84dc8629ebc42227dad01ea3ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bd58cb2ec579586b25365abab9d6ff8b2b9c6617
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965192"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762775"
 ---
 # <a name="sortorder-property-example-vb"></a>Пример свойства SortOrder (Visual Basic)
 В этом примере демонстрируется свойство [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) [столбца](../../../ado/reference/adox-api/column-object-adox.md) , добавленного к коллекции [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) [индекса](../../../ado/reference/adox-api/index-object-adox.md). Код добавляет индекс по возрастанию к столбцу Country в таблице **Employees** , а затем отображает записи. Затем код добавляет нисходящий индекс к столбцу Country в таблице **Employees** и снова отображает записи. Отображается разность между индексами по возрастанию и убыванию.  
@@ -136,7 +136,7 @@ End Sub
 ' EndSortOrderVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Объект index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   

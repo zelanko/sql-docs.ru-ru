@@ -13,14 +13,14 @@ helpviewer_keywords:
 - GetChunk method [ADO], VC++ example
 - AppendChunk method [ADO], VC++ example
 ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 991c295f5437d16ed10aafeacf184722046941a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3f74c65a2a732c6875cf71a69420616f0b619f1e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76922563"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762955"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vc"></a>Примеры методов AppendChunk и GetChunk (Visual C++)
 В этом примере [используются методы](../../../ado/reference/ado-api/getchunk-method-ado.md) [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) и an для заполнения поля изображения данными из другой записи.  
@@ -265,7 +265,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод AppendChunk (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
  [Объект Field](../../../ado/reference/ado-api/field-object.md)   
  [Метод GetChunk (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)

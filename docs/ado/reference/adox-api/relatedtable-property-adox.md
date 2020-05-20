@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - RelatedTable property [ADOX]
 ms.assetid: cb54c6bc-2be2-40b1-bc11-90c10651b878
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 885d643bd6d75bfd20310dd450e09d772a105f51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 43fa9707f4bda0974211fbba5f74ec10c14cf961
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965349"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762827"
 ---
 # <a name="relatedtable-property-adox"></a>Свойство RelatedTable (ADOX)
 Указывает имя связанной таблицы.  
@@ -40,5 +40,5 @@ ms.locfileid: "67965349"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры метода Append коллекции Keys, свойства Type объекта Key, а также примеры свойств RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)

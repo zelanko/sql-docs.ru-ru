@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26caf2b54b4f0affbbe7cdc58fa2bf742f0d4101
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 32e3cd177089fb99009490b82941928e091ab7c6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925365"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763195"
 ---
 # <a name="event-parameters"></a>Параметры события
 Каждый обработчик событий имеет параметр status, который управляет обработчиком событий. Для полных событий этот параметр также используется для указания на успешное или неуспешное завершение операции, создавшей событие. У большинства полных событий также есть параметр ошибки для предоставления сведений об обнаруженной ошибке и один или несколько параметров объекта, которые ссылаются на объекты ADO, используемые для выполнения операции. Например, событие [ексекутекомплете](../../../ado/reference/ado-api/executecomplete-event-ado.md) включает параметры объекта для **команды**, **набора записей**и объектов **соединения** , связанных с событием. В следующем примере Microsoft® Visual Basic® можно увидеть объекты Пкомманд, Пконнектион и, которые представляют собой **команды**, **набор записей**и объекты **соединения** , используемые методом **EXECUTE** .  
@@ -86,7 +86,7 @@ End Sub
   
  Напротив, необходимо установить *адстатус* в **адстатусунвантедевент** только один раз, чтобы запросить, чтобы обработчик событий без параметра **адреасон** не получал уведомлений о событиях.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сводка по обработчику событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Создание экземпляра события ADO по языку](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Совместная работа обработчиков событий](../../../ado/guide/data/how-event-handlers-work-together.md)   

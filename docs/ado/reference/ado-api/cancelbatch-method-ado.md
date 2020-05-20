@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - CancelBatch method [ADO]
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f1c6a9f57d30b47641b9280e25a97336c28b0496
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c2e9f3b57137b4c113b9e177e9fecefec4070ac0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920161"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763175"
 ---
 # <a name="cancelbatch-method-ado"></a>Метод CancelBatch (ADO)
 Отменяет ожидающее пакетное обновление.  
@@ -35,7 +35,7 @@ recordset.CancelBatchAffectRecords
   
 #### <a name="parameters"></a>Параметры  
  *аффектрекордс*  
- Необязательный параметр. Значение [аффектенум](../../../ado/reference/ado-api/affectenum.md) , указывающее, сколько записей будет влиять на метод **CancelBatch** .  
+ Необязательный элемент. Значение [аффектенум](../../../ado/reference/ado-api/affectenum.md) , указывающее, сколько записей будет влиять на метод **CancelBatch** .  
   
 ## <a name="remarks"></a>Remarks  
  Используйте метод **CancelBatch** , чтобы отменить все ожидающие обновления в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md) в режиме пакетного обновления. Если **набор записей** находится в режиме немедленного обновления, вызов **CancelBatch** без **адаффекткуррент** выдает ошибку.  
@@ -49,7 +49,7 @@ recordset.CancelBatchAffectRecords
 ## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры методов UpdateBatch и CancelBatch (Visual Basic)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
  [Примеры методов UpdateBatch и CancelBatch (Visual c++)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
  [Метод Cancel (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   

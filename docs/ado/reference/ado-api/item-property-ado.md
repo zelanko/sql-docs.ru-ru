@@ -43,14 +43,14 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO]
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6fe7e807fc38d6f1cf6f72e5b19539bb839e9c08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a5925bc0e2ab4991c1067c6d1c26cfff2c237b37
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918367"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763435"
 ---
 # <a name="item-property-ado"></a>Свойство Item (ADO)
 Указывает конкретный элемент коллекции по имени или порядковому номеру.  
@@ -65,7 +65,7 @@ Set object = collection.Item ( Index )
  Возвращает ссылку на объект.  
   
 ## <a name="parameters"></a>Параметры  
- *Индекс*  
+ *Номер*  
  Выражение **типа Variant** , результатом которого является либо имя, либо порядковый номер объекта в коллекции.  
   
 ## <a name="remarks"></a>Remarks  

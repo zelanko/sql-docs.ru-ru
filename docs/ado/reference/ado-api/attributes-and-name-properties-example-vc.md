@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Attributes property [ADO], VC++ example
 - Name property [ADO], VC++ example
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 218103d24bc7fb35e8432743f543ad7bb9558479
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b639cafe2f37b365c733f4aabc269f5f09c27918
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920538"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762922"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Пример атрибутов и свойств имени (Visual c++)
 В этом примере отображается значение свойства [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) для объектов [соединения](../../../ado/reference/ado-api/connection-object-ado.md), [поля](../../../ado/reference/ado-api/field-object.md)и [Свойства](../../../ado/reference/ado-api/property-object-ado.md) . В нем используется свойство [Name](../../../ado/reference/ado-api/name-property-ado.md) для вывода имени каждого **поля** и объекта **Свойства** .  
@@ -180,7 +180,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Объект Field](../../../ado/reference/ado-api/field-object.md)   

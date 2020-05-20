@@ -20,14 +20,14 @@ helpviewer_keywords:
 - CommitTrans method [ADO]
 - RollbackTrans method [ADO]
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c3a8bc22e57d91ab64bdbbc5fc694575a8aa8ff9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a2a9f52b24ba4123db1b8e3a919b9fa25a030122
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920527"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762900"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>Методы BeginTrans, CommitTrans и RollbackTrans (ADO)
 Эти методы транзакций управляют обработкой транзакций в объекте [соединения](../../../ado/reference/ado-api/connection-object-ado.md) следующим образом:  
@@ -55,7 +55,7 @@ object.RollbackTrans
  *object*  
  Объект **соединения** .  
   
-## <a name="connection"></a>Соединение  
+## <a name="connection"></a>Подключение  
  Используйте эти методы с объектом **Connection** , если нужно сохранить или отменить ряд изменений, внесенных в исходные данные в виде одного элемента. Например, чтобы переносить деньги между учетными записями, можно вычесть сумму из единицы и добавить ту же сумму в другую. В случае сбоя одного из обновлений учетные записи больше не будут сбалансированы. Внесение этих изменений в открытой транзакции гарантирует, что все изменения не проходят.  
   
 > [!NOTE]
@@ -75,7 +75,7 @@ object.RollbackTrans
 ## <a name="applies-to"></a>Применяется к  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры методов примеры BeginTrans, CommitTrans и RollbackTrans (Visual Basic)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
  [Примеры методов примеры BeginTrans, CommitTrans и RollbackTrans (Visual c++)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
  [Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

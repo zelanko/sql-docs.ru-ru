@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e76bc993b6f3fed781b8458bc7cf4a70081cd167
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fd92fc3d88372047262b91378341bc9aadcb35ef
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931362"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761872"
 ---
 # <a name="recordset-object-ado"></a>Объект Recordset (ADO)
 Представляет весь набор записей из базовой таблицы или результаты выполненной команды. В любой момент времени объект **Recordset** ссылается только на одну запись в наборе в качестве текущей записи.  
@@ -76,7 +76,7 @@ Debug.Print objRs(0)              '  the Value of Item(0).
   
 -   [Свойства, методы и события объекта Recordset](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

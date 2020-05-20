@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectPromptEnum enumeration [ADO]
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: afd5d9ca0de6b8d2ffba75f862e6ca0afb594848
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 61a66866f8206f2df4cbdeb3f2144e0ac12ac695
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919443"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762595"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 Указывает, должно ли отображаться диалоговое окно для запроса отсутствующих параметров при открытии соединения с источником данных.  
   
-|Константа|Применение|Описание|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**адпромпталвайс**|1|Всегда запрашивает.|  
 |**adPromptComplete**|2|Запрашивает, требуется ли дополнительная информация.|  

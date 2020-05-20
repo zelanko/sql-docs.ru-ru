@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Append method [ADOX], Visual Basic example
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8bacc5dc2d55fb335358ab9ca34248f8e322811a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b522521da7737f935ac64ab07126cab6b5cd0294
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965428"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763675"
 ---
 # <a name="procedures-append-method-example-vb"></a>Пример метода Append коллекции Procedures (Visual Basic)
 В следующем коде показано, как использовать объект [Command](../../../ado/reference/ado-api/command-object-ado.md) и метод [append](../../../ado/reference/adox-api/append-method-adox-procedures.md) коллекции [процедур](../../../ado/reference/adox-api/procedures-collection-adox.md) для создания новой процедуры в базовом источнике данных.  
@@ -73,7 +73,7 @@ End Sub
 ' EndCreateProcedureVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Метод Append (процедуры ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

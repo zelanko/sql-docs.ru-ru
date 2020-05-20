@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Optimize property [ADO], VC++ example
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5000a537e068136de98e8635f348ff6aa3d9e364
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bc8268f65e8bd7206ff0be1423785e1862147bed
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931830"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762077"
 ---
 # <a name="optimize-property-example-vc"></a>Пример свойства Optimize (Visual C++)
 В этом примере демонстрируется динамическое свойство **optimize** объекта [field](../../../ado/reference/ado-api/field-object.md) . Поле **ZIP** таблицы **authors** в базе данных **pubs** не индексируется. Присвоение свойству [optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) значения **true** в поле **ZIP** разрешает ADO создавать индексы, повышающие производительность метода [Find](../../../ado/reference/ado-api/find-method-ado.md) .  
@@ -133,6 +133,6 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Акико Йокомото 3 серебро CT. Валнут Крик CA**   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)   
  [Свойство Optimize (динамическое) (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

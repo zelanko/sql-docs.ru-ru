@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS objects [ADO], object model summary
 - RDS object model [ADO]
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6c455d816b3ba5a9606d09e3b05e54583e11ca41
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 95ddd84bfd755e044d97a6043f295014933ae18c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922535"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763595"
 ---
 # <a name="rds-object-model-summary"></a>Сводка объектной модели RDS
 > [!IMPORTANT]
@@ -30,7 +30,7 @@ ms.locfileid: "67922535"
 |[RDSServer. факт.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Этот объект представляет программу сервера по умолчанию. Он выполняет получение данных RDS по умолчанию и поведение обновления.<br /><br /> Объект **фактов** не является надежным для сценариев.|  
 |[Клиент. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Этот объект может автоматически вызывать **RDS. Объекты Space** и **RDSServer. объект фактов** .<br /><br /> Используйте этот объект, чтобы вызвать получение данных RDS по умолчанию или поведение обновления.<br /><br /> Этот объект также предоставляет средства визуальных элементов управления для доступа к возвращенному объекту **набора записей** .<br /><br /> Объект " **элемент управления** " является надежным для сценариев.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [Сценарий RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Руководство по RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   

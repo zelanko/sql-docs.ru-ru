@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Precision property [ADO]
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26da0367e494bd74253b904393a2dad62308a608
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f3a72234a6d5e5cbb8e0dc9f5d625b93f15f437f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931630"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763335"
 ---
 # <a name="precision-property-ado"></a>Свойство Precision (ADO)
 Указывает степень точности для числовых значений в объекте [параметра](../../../ado/reference/ado-api/parameter-object.md) или для числовых объектов [полей](../../../ado/reference/ado-api/field-object.md) .  
@@ -42,7 +42,7 @@ ms.locfileid: "67931630"
 |-|-|  
 |[Объект Field](../../../ado/reference/ado-api/field-object.md)|[Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойств NumericScale и Precision (Visual Basic)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
  [Пример свойств NumericScale и Precision (Visual c++)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
  [Свойство NumericScale (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)

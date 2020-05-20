@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - PageSize property [ADO]
 ms.assetid: e57930a6-46c4-4a17-a3b6-f79e94d5c9c7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1db01010fea79d2badaf81588296391d7e2149f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 97902985dcd2110b165498be5324393ad5588bac
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931767"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761973"
 ---
 # <a name="pagesize-property-ado"></a>Свойство PageSize (ADO)
 Указывает, сколько записей составляют одну страницу в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "67931767"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры свойств примеры absolutepage, PageCount и PageSize (Visual Basic)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
  [Пример свойств примеры absolutepage, PageCount и PageSize (Visual c++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
  [Свойство примеры absolutepage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   

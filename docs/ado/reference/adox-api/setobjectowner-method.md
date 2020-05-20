@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - SetObjectOwner method [ADOX]
 ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 50a02898c1694fa43b8bf522a1a1bca65300efda
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 615e62ad8a22c50851ea50a2a8511e0859b54652
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965231"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763315"
 ---
 # <a name="setobjectowner-method"></a>Метод SetObjectOwner
 Указывает владельца объекта в [каталоге](../../../ado/reference/adox-api/catalog-object-adox.md).  
@@ -44,7 +44,7 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
  **Строковое** значение, указывающее [имя](../../../ado/reference/adox-api/name-property-adox.md) [пользователя](../../../ado/reference/adox-api/user-object-adox.md) или [группы](../../../ado/reference/adox-api/group-object-adox.md) для владельца объекта.  
   
  *обжекттипеид*  
- Необязательный параметр. Значение **типа Variant** , указывающее идентификатор GUID для типа объекта поставщика, который не определен спецификацией OLE DB. Этот параметр является обязательным, если для *ObjectType* задано значение **адпермобжпровидерспеЦифик**. в противном случае он не используется.  
+ Необязательный элемент. Значение **типа Variant** , указывающее идентификатор GUID для типа объекта поставщика, который не определен спецификацией OLE DB. Этот параметр является обязательным, если для *ObjectType* задано значение **адпермобжпровидерспеЦифик**. в противном случае он не используется.  
   
 ## <a name="remarks"></a>Remarks  
  Если поставщик не поддерживает указание владельцев объектов, возникнет ошибка.  
@@ -52,6 +52,6 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
 ## <a name="applies-to"></a>Применяется к  
  [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры методов примеры методов getobjectowner и SetObjectOwner (Visual Basic)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   
  [Метод GetObjectOwner (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)

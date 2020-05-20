@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 204aca25a330dd912e1a9354adc92bbb7c58f847
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926647"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763215"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Обзор поставщика Microsoft OLE DB для Microsoft Jet
 Поставщик OLE DB для Microsoft Jet позволяет ADO получать доступ к базам данных Microsoft Jet.
@@ -45,8 +45,8 @@ Microsoft.Jet.OLEDB.4.0
 |Ключевое слово|Описание|
 |-------------|-----------------|
 |**Поставщик**|Указывает поставщика OLE DB для Microsoft Jet.|
-|**Источник данных**|Указывает путь к базе данных и имя файла (например, `c:\Northwind.mdb`).|
-|**Идентификатор пользователя**|Указывает имя пользователя. Если это ключевое слово не указано, по умолчанию`admin`используется строка "".|
+|**Источник данных**|Указывает путь к базе данных и имя файла (например, `c:\Northwind.mdb` ).|
+|**Идентификатор пользователя**|Указывает имя пользователя. Если это ключевое слово не указано, `admin` по умолчанию используется строка "".|
 |**Пароль**|Указывает пароль пользователя. Если это ключевое слово не указано, по умолчанию используется пустая строка ("").|
 
 > [!NOTE]
@@ -131,7 +131,7 @@ Microsoft.Jet.OLEDB.4.0
 |Термин каталога|DBPROP_CATALOGTERM|
 |Определение столбца|DBPROP_COLUMNDEFINITION|
 |Текущий каталог|DBPROP_CURRENTCATALOG|
-|Источник данных|DBPROP_INIT_DATASOURCE|
+|источника данных|DBPROP_INIT_DATASOURCE|
 |Имя базы данных-источника|DBPROP_DATASOURCENAME|
 |Потоковая модель объекта источника данных|DBPROP_DSOTHREADMODEL|
 |Имя СУБД|DBPROP_DBMSNAME|

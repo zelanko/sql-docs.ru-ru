@@ -20,14 +20,14 @@ helpviewer_keywords:
 - RollbackTransComplete event [ADO]
 - BeginTransComplete event [ADO]
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 750e89e97eb916c7db23e71475b753a57a4d90e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6b5e005485fd2ebef3d9454286584bba03267201
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920446"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762865"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>События Бегинтранскомплете, Коммиттранскомплете и Роллбакктранскомплете (ADO)
 Эти события будут вызываться после завершения выполнения связанной операции над объектом [Connection](../../../ado/reference/ado-api/connection-object-ado.md) .  
@@ -67,7 +67,7 @@ RollbackTransComplete pError, adStatus, pConnection
   
  Если свойство [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) имеет значение **адксакткоммитретаининг** или **адксактабортретаининг**, Новая транзакция начинается после фиксации или отката транзакции. Используйте событие **бегинтранскомплете** , чтобы пропустить все события начала транзакции, кроме первого.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример модели событий ADO (Visual c++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Примеры методов примеры BeginTrans, CommitTrans и RollbackTrans (Visual Basic)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
  [Сводка по обработчику событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)   

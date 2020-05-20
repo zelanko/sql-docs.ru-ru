@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Position property [ADO]
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dba8636f07b88f1c05d465b844376c6ef3e61240
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f5669e22404ab75fc545708e1fc643cfefd3890a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931658"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763355"
 ---
 # <a name="position-property-ado"></a>Свойство Position (ADO)
 Указывает текущую точку в объекте [потока](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -43,5 +43,5 @@ ms.locfileid: "67931658"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство Charset (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)

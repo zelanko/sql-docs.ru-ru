@@ -11,14 +11,14 @@ helpviewer_keywords:
 - bookmarks [ADO]
 - Recordset object [ADO]
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9fa2a738a3e94cd306619a318b75a2fd506972c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ebf38cb9afaabef6d1af4e941cf02df1947c7b73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923605"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763055"
 ---
 # <a name="using-bookmarks"></a>Использование закладок
 Часто бывает полезно возвращаться к определенной записи после перемещения по **набору записей** без необходимости прокручивать каждую запись и сравнивать значения. Например, при попытке поиска записи с помощью метода **Find** , но при поиске не возвращаются записи, вы автоматически Помещаетесь в любой конец **набора записей**. Если поставщик поддерживает их, можно использовать закладки, чтобы отметить место до использования метода **Find** , чтобы вы могли вернуться к Вашему расположению. Закладка — это значение типа **Variant** , однозначно идентифицирующее запись в объекте **набора записей** .  

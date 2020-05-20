@@ -13,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - Cellset object [ADO MD]
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9524e9801f284d3dff3125b850cdd1fd32a361a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e50fb60fbde205171c066380a2c2023d485a5a09
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928647"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761772"
 ---
 # <a name="cellset-object-ado-md"></a>Объект Cellset (многомерные объекты ADO)
 Представляет результаты многомерного запроса. Это коллекция ячеек, выбранных из кубов или других наборы ячеек.  
   
 ## <a name="remarks"></a>Remarks  
- Данные в наборе **ячеек** извлекаются с помощью прямого доступа к массиву, подобного. Можно выполнить детализацию до определенного элемента, чтобы получить данные об этом элементе. Например, следующий код возвращает заголовок первого элемента в первой на первой оси в наборе ячеек с именем `cst`:  
+ Данные в наборе **ячеек** извлекаются с помощью прямого доступа к массиву, подобного. Можно выполнить детализацию до определенного элемента, чтобы получить данные об этом элементе. Например, следующий код возвращает заголовок первого элемента в первой на первой оси в наборе ячеек с именем `cst` :  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  
@@ -59,7 +59,7 @@ cst.Axes(0).Positions(0).Members(0).Caption
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/cellset-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример набора ячеек (Visual Basic)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Коллекция осей (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [Объект Cell (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - OpenSchema method [ADO]
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2080145e00c658288f9d34e3fa42ed335e0c1d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 716eec332690d1a6e9df1f16d67d82afc1a30985
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931866"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762105"
 ---
 # <a name="openschema-method"></a>Метод OpenSchema
 Получает сведения о схеме базы данных от поставщика.  
@@ -41,7 +41,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  Любое значение [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) , представляющее тип выполняемого запроса схемы.  
   
  *Критерии*  
- Необязательный параметр. Массив ограничений запроса для каждого параметра *QueryType* , как указано в [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
+ Необязательный элемент. Массив ограничений запроса для каждого параметра *QueryType* , как указано в [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
   
  *счемаид*  
  Идентификатор GUID для запроса схемы поставщика, не определяемый спецификацией OLE DB. Этот параметр является обязательным, если для *QueryType* задано значение **адсчемапровидерспеЦифик**. в противном случае он не используется.  
@@ -69,7 +69,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 ## <a name="applies-to"></a>Применяется к  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода OpenSchema (Visual Basic)](../../../ado/reference/ado-api/openschema-method-example-vb.md)   
  [Пример метода OpenSchema (Visual c++)](../../../ado/reference/ado-api/openschema-method-example-vc.md)   
  [Метод Open (подключение ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   

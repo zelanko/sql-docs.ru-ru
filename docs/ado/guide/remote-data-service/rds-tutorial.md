@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO]
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 541c92cd34b9cbaecdd1001be29dbab8d9b194a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f646bd95e3ae9cb809f04c2ef66c47386fbde6c6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922410"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762985"
 ---
 # <a name="rds-tutorial"></a>Учебник по RDS
 В этом учебнике показано, как использовать модель программирования RDS для запроса и обновления источника данных. Во первых, он описывает шаги, необходимые для выполнения этой задачи. Затем этот учебник повторяется в Microsoft® Visual Basic Scripting Edition (в котором используется ADO для классов Windows Foundation (ADO/WFC)).  
@@ -68,6 +68,6 @@ ms.locfileid: "67922410"
   
 -   [Учебник по RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Шаг 1. Указание серверной программы (учебник по RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
  [Учебник по RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

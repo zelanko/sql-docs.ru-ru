@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Unique property [ADOX]
 ms.assetid: 85fd4bd0-393b-4dc1-9d73-80dced4f2fbe
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7a4b3ab6c9b623544f1cc93f26394fa1905b6d3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 18b2bc4fca3ebd999529b61ac3b7ec1e8254966e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964985"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763235"
 ---
 # <a name="unique-property-adox"></a>Свойство Unique (ADOX)
 Указывает, должны ли ключи индекса быть уникальными.  
@@ -38,6 +38,6 @@ ms.locfileid: "67964985"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример PrimaryKey и уникальных свойств (Visual Basic)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
  [Объект Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

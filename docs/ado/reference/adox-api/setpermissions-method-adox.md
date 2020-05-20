@@ -16,14 +16,14 @@ f1_keywords:
 helpviewer_keywords:
 - SetPermissions method [ADOX]
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 50a609d0cebe70ea5127ed448e57a70881e35097
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 94cc5b07c97bd5c8d7c7ae6c30c179e2555b95d5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965227"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762785"
 ---
 # <a name="setpermissions-method-adox"></a>Метод SetPermissions (ADOX)
 Задает разрешения для [группы](../../../ado/reference/adox-api/group-object-adox.md) или [пользователя](../../../ado/reference/adox-api/user-object-adox.md) на объекте.  
@@ -36,7 +36,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *имя*;  
+ *Name*  
  **Строковое** значение, указывающее имя объекта, для которого задаются разрешения.  
   
  *ObjectType*  
@@ -49,10 +49,10 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  **Длинное** значение, которое может быть битовой маской одной или нескольких констант [ригхтсенум](../../../ado/reference/adox-api/rightsenum.md) , указывающих права на установку.  
   
  *Следующих*  
- Необязательный параметр. Значение **типа Long** , которое может быть одной из констант [инхериттипинум](../../../ado/reference/adox-api/inherittypeenum.md) , которое указывает, как объекты будут наследовать эти разрешения. Значение по умолчанию — **адинхеритноне**.  
+ Необязательный элемент. Значение **типа Long** , которое может быть одной из констант [инхериттипинум](../../../ado/reference/adox-api/inherittypeenum.md) , которое указывает, как объекты будут наследовать эти разрешения. Значение по умолчанию — **адинхеритноне**.  
   
  *обжекттипеид*  
- Необязательный параметр. Значение **типа Variant** , указывающее идентификатор GUID для типа объекта поставщика, который не определен спецификацией OLE DB. Этот параметр является обязательным, если для *ObjectType* задано значение **адпермобжпровидерспеЦифик**. в противном случае он не используется.  
+ Необязательный элемент. Значение **типа Variant** , указывающее идентификатор GUID для типа объекта поставщика, который не определен спецификацией OLE DB. Этот параметр является обязательным, если для *ObjectType* задано значение **адпермобжпровидерспеЦифик**. в противном случае он не используется.  
   
 ## <a name="remarks"></a>Remarks  
  Если поставщик не поддерживает установку прав доступа для групп или пользователей, возникнет ошибка.  
@@ -66,7 +66,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 |-|-|  
 |[Объект Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[Объект User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры методов SetPermissions и Methods (Visual Basic)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Метод PermissionSet (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
  [Свойство Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - UnderlyingValue property [ADO], VC++ example
 - OriginalValue property [ADO]
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b4950634f473ca70c26b7b2b2c8159fb9a75fb0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 142688ccbbd4e086592d419970a1c543e2211abc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931828"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762047"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Пример свойств OriginalValue и UnderlyingValue (Visual c++)
 Этот пример демонстрирует свойства [originalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) и [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) , отображая сообщение, если базовые данные записи изменились во время пакетного обновления [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -219,7 +219,7 @@ void PrintComError(_com_error &e) {
 **Текущее значение: self_help**   
 **Исходное значение: психологии**   
 **Базовое значение: социологии**    
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство OriginalValue (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)

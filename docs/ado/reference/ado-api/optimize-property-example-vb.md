@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Optimize property [ADO], Visual Basic example
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f36c0c574917e4f73533a400ea60f363aeb9d74b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 70bb3e20b36faff0358fe91ea51f85ba125207d1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917817"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762057"
 ---
 # <a name="optimize-property-example-vb"></a>Пример свойства Optimize (Visual Basic)
 В этом примере демонстрируется динамическое свойство **optimize** объекта [field](../../../ado/reference/ado-api/field-object.md) . Поле ***ZIP*** таблицы ***authors*** в базе данных ***pubs*** не индексируется. Присвоение свойству [optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) значения **true** в поле ***ZIP*** разрешает ADO создавать индексы, повышающие производительность метода [Find](../../../ado/reference/ado-api/find-method-ado.md) .  

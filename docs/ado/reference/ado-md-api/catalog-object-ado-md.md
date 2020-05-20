@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Catalog object [ADO MD]
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b791803b828852a1861e55dd8ec6ef189ea6e84b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5ef77f61703178bfe30fc4ce823d7c56be48836f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930378"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761822"
 ---
 # <a name="catalog-object-ado-md"></a>Объект Catalog (многомерные объекты ADO)
 Содержит сведения о многомерной схеме (то есть Кубы и базовые измерения, иерархии, уровни и элементы), относящиеся к поставщику многомерных данных (MDP).  
@@ -38,7 +38,7 @@ ms.locfileid: "67930378"
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/catalog-object-properties-methods-and-events-ado-md.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример каталога (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Коллекция CubeDefs (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)
