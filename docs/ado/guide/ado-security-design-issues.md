@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, security
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f638f6e48dccccd91849f02c65331d9212f9bbb7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8dde159e0b04b319b978e9a3743d866d05c64253
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927037"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761682"
 ---
 # <a name="ado-security-design-features"></a>Функции разработки системы безопасности ADO
 В следующих разделах описываются функции разработки системы безопасности в объекты данных ActiveX (ADO) 2,8 и более поздних версий. Эти изменения были внесены в ADO 2,8 для повышения безопасности. ADO 6,0, включенный в Windows DAC 6,0 в Windows Vista, функционально эквивалентен ADO 2,8, который был включен в MDAC 2,8 в Windows XP и Windows Server 2003. В этом разделе содержатся сведения о том, как лучше защитить приложения в ADO 2,8 или более поздней версии.

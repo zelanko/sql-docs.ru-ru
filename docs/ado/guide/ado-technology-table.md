@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, technologies
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e260ba5e9bfa4cc0d55187dff09072dd5842828
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0e0fb8e559dcf98f39b5f3783e3e43d5d10671cb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927017"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761662"
 ---
 # <a name="products-and-technologies-table"></a>Таблица Products and Technologies
 В следующей таблице перечислены продукты, средства и технологии Майкрософт, которые обсуждаются в этом руководством программиста. По возможности он предоставляет ссылки на соответствующие разделы руководства.
@@ -30,7 +30,7 @@ ms.locfileid: "67927017"
 |FrontPage|[Поставщик OLE DB Майкрософт для публикации в Интернете](../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
 |служба индексирования|[Поставщик OLE DB для службы индексирования Microsoft (Microsoft)](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
 |Internet Explorer|[Коды ошибок Internet Explorer](../../ado/guide/appendixes/internet-explorer-error-codes.md)|
-|Службы Internet Information Services (IIS)|[Записи и потоки](../../ado/guide/data/records-and-streams.md)<br /><br /> [Потоки и сохраняемость](../../ado/guide/data/streams-and-persistence.md)<br /><br /> [Потоки команд](../../ado/guide/data/command-streams.md)<br /><br /> [Использование ADO для публикации в Интернете](../../ado/guide/data/using-ado-for-internet-publishing.md)<br /><br /> [Решения для удаленного доступа к данным](../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)<br /><br /> [Сценарий RDS](../../ado/guide/remote-data-service/rds-scenario.md)<br /><br /> [Настройка виртуальных серверов в IIS](../../ado/guide/remote-data-service/configuring-virtual-servers-on-iis.md)<br /><br /> [Защита приложений RDS](../../ado/guide/remote-data-service/securing-rds-applications.md)<br /><br /> ["Ошибка в Интернете: доступ запрещен"](../../ado/guide/remote-data-service/internet-server-error-access-denied.md)<br /><br /> [Поставщик OLE DB Майкрософт для публикации в Интернете](../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)<br /><br /> [Коды ошибок служб Internet Information Services](../../ado/guide/appendixes/internet-information-services-error-codes.md)|
+|службы IIS|[Записи и потоки](../../ado/guide/data/records-and-streams.md)<br /><br /> [Потоки и сохраняемость](../../ado/guide/data/streams-and-persistence.md)<br /><br /> [Потоки команд](../../ado/guide/data/command-streams.md)<br /><br /> [Использование ADO для публикации в Интернете](../../ado/guide/data/using-ado-for-internet-publishing.md)<br /><br /> [Решения для удаленного доступа к данным](../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)<br /><br /> [Сценарий RDS](../../ado/guide/remote-data-service/rds-scenario.md)<br /><br /> [Настройка виртуальных серверов в IIS](../../ado/guide/remote-data-service/configuring-virtual-servers-on-iis.md)<br /><br /> [Защита приложений RDS](../../ado/guide/remote-data-service/securing-rds-applications.md)<br /><br /> ["Ошибка в Интернете: доступ запрещен"](../../ado/guide/remote-data-service/internet-server-error-access-denied.md)<br /><br /> [Поставщик OLE DB Майкрософт для публикации в Интернете](../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)<br /><br /> [Коды ошибок служб Internet Information Services](../../ado/guide/appendixes/internet-information-services-error-codes.md)|
 |Язык JScript|[Обработка ошибок на других языках](../../ado/guide/data/handling-errors-in-other-languages.md)<br /><br /> [Программирование объектов ADO с использованием JScript](../../ado/guide/appendixes/jscript-ado-programming.md)<br /><br /> [Примеры кода ADO в Microsoft JScript](../../ado/reference/ado-api/ado-code-examples-in-microsoft-jscript.md)|
 |ODBC|[Использование RDS с регулированием количества запросов подключений ODBC](../../ado/guide/remote-data-service/using-rds-with-odbc-connection-pooling.md)<br /><br /> [Поставщик Microsoft OLE DB для ODBC](../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
 |OLE DB|[Поставщики OLE DB](../../ado/guide/data/ole-db-providers-ado.md)<br /><br /> [Приложение А. Поставщики](../../ado/guide/appendixes/appendix-a-providers.md)<br /><br /> [Ошибки поставщика](../../ado/guide/data/provider-errors.md)|

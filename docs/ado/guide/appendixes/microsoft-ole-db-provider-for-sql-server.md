@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f1b66cf9d8e2e284dba2eea888ddc1eda061dabb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926617"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761622"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Обзор поставщика OLE DB Майкрософт для SQL Server
 Поставщик OLE DB Майкрософт для SQL Server, SQLOLEDB предоставляет ADO доступ к Microsoft SQL Server.
@@ -151,7 +151,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Определение столбца|DBPROP_COLUMNDEFINITION|
 |Время ожидания соединения|DBPROP_INIT_TIMEOUT|
 |Текущий каталог|DBPROP_CURRENTCATALOG|
-|Источник данных|DBPROP_INIT_DATASOURCE|
+|источника данных|DBPROP_INIT_DATASOURCE|
 |Имя базы данных-источника|DBPROP_DATASOURCENAME|
 |Потоковая модель объекта источника данных|DBPROP_DSOTHREADMODEL|
 |Имя СУБД|DBPROP_DBMSNAME|
@@ -357,5 +357,5 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
  Сведения о конкретной реализации и сведения о функциональных возMicrosoft SQL Serverии OLE DB поставщика см. в разделе [поставщик SQL Server](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  Property ( [ADO) свойство](../../../ado/reference/ado-api/connectionstring-property-ado.md) [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) (ADO) [объект Recordset Object (](../../../ado/reference/ado-api/recordset-object-ado.md) ADO)

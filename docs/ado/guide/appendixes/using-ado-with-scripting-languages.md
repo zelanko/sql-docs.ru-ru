@@ -11,14 +11,14 @@ helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b322dacbf85ec24b58e315ecbbf9d547d1481f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 71057caed6d28a2923e1c3735e10d20fccc9217d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926481"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761572"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Использование объектов ADO с языками сценариев
 В среде выполнения сценариев ADO позволяет предоставлять данные с помощью сценариев на стороне сервера. В этом сценарии ADO, базовый поставщик OLE DB, который он использует, и любые другие компоненты, необходимые для ссылки на данное хранилище данных, устанавливаются на сервере, на котором выполняется службы IIS (IIS). С помощью Active Server страниц (ASP) ADO — это компонент, на который ссылается скрипт, который может создавать HTML, например. Это содержимое HTML может передаваться через HTTP в веб-браузер клиента. С помощью сценариев веб-страница может отправить действия обратно на серверный сценарий, что позволяет обновлять, просматривать и просмотреть определенные данные.  
@@ -44,7 +44,7 @@ ms.locfileid: "67926481"
   
 |Поставщик|Уверены в безопасности сценариев?|  
 |--------------|-------------------------|  
-|Фигурная|Да|  
+|Фигура|Да|  
 |Сохранить|Да|  
 |Удаленный доступ|Да|  
 |Поставщик OLE DB для SQL Server (SQLOLEDB)|Нет|  
@@ -65,7 +65,7 @@ ms.locfileid: "67926481"
   
 -   [Программирование объектов ADO с использованием JScript](../../../ado/guide/appendixes/jscript-ado-programming.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Microsoft объекты данных ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Использование ADO с Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Использование объектов ADO с Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   

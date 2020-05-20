@@ -11,14 +11,14 @@ helpviewer_keywords:
 - events [ADO], about event handlers
 - event handlers [ADO]
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d4fef63ff610ad85e353c2ef1dc0f8e5987c74ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 78c3b19c63025bc77862e7f88f6c4d83350c0313
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926195"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761370"
 ---
 # <a name="ado-connection-and-recordset-events"></a>События подключения ADO и записи в набор записей
 События могут создаваться двумя объектами ADO: объектом [соединения](../../../ado/reference/ado-api/connection-object-ado.md) и объектом [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . Семейство **коннектионевент** относится к операциям объекта **Connection** , а семейство **рекордсетевент** относится к операциям с объектом **Recordset** .
@@ -44,5 +44,5 @@ ms.locfileid: "67926195"
 |[WillChangeRecord, RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**Управление изменениями строк** — уведомление о том, что что-то в текущей строке **набора записей** изменится или изменилось.|
 |[Виллчанжерекордсет, Рекордсетчанжекомплете](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**Управление изменениями в наборе записей** — уведомление о том, что что-либо в текущем **наборе записей** изменится или изменилось.|
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Параметры событий](../../../ado/guide/data/event-parameters.md) ADO " [Создание экземпляра события](../../../ado/guide/data/ado-event-instantiation-by-language.md) [ADO](../../../ado/reference/ado-api/ado-events.md) ". [как обработчики событий работают вместе](../../../ado/guide/data/how-event-handlers-work-together.md) с [типами событий](../../../ado/guide/data/types-of-events.md)

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8787d293c349ea921f9f0edd293e77a075e5f7a3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926366"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761482"
 ---
 # <a name="absolute-and-relative-urls"></a>Абсолютные и относительные URL-адреса
 URL-адрес указывает расположение целевого объекта, хранящегося на локальном или сетевом компьютере. Целевым объектом может быть файл, каталог, HTML-страница, изображение, программа и т. д.  
@@ -70,11 +70,11 @@ URL-адрес указывает расположение целевого об
 recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
- Абсолютный URL-адрес в строке подключения указывает сервер (`YourServer`) и путь (`Winnt`). Этот URL-адрес также определяет контекст.  
+ Абсолютный URL-адрес в строке подключения указывает сервер ( `YourServer` ) и путь ( `Winnt` ). Этот URL-адрес также определяет контекст.  
   
- Относительный URL-адрес в тексте команды использует абсолютный URL-адрес в качестве отправной точки и`system32`указывает оставшуюся часть пути ()`Readme25.txt`и открываемый файл ().  
+ Относительный URL-адрес в тексте команды использует абсолютный URL-адрес в качестве отправной точки и указывает оставшуюся часть пути ( `system32` ) и открываемый файл ( `Readme25.txt` ).  
   
- Поле параметров (`adCmdTableDirect`) указывает, что тип команды является относительным URL-адресом.  
+ Поле параметров ( `adCmdTableDirect` ) указывает, что тип команды является относительным URL-адресом.  
   
  В качестве другого примера следующий код откроет **набор записей** по содержимому `Winnt` каталога:  
   
@@ -87,7 +87,7 @@ recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect
   
  ADO поддерживает поставщики OLE DB, которые распознают собственные схемы URL-адресов. Например, [поставщик Microsoft OLE DB для публикации в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*,* который обращается к опубликованным файлам Windows 2000, распознает существующую схему HTTP.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

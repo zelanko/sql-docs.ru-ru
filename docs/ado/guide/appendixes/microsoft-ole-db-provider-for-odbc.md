@@ -11,14 +11,14 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b84ce6679071cc3ea90ce23b4dcd9f8e1894bb2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926638"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761632"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Обзор поставщика OLE DB Майкрософт для ODBC
 Для программистов ADO или RDS идеальным миром будет один, в котором каждый источник данных предоставляет интерфейс OLE DB, чтобы ADO мог напрямую обращаться к источнику данных. Хотя все больше поставщиков баз данных реализуют OLE DB интерфейсы, некоторые источники данных пока не предоставляются таким образом. Однако большинство систем СУБД, используемых сегодня, доступны через ODBC.
@@ -206,9 +206,9 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Да|Да|Да|Да|
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Клонировать)|Нет|Нет|Да|Да|
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Да|Да|Да|Да|
-|[Удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Да|Да|Да|Да|
+|[Удалить](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Да|Да|Да|Да|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Да|Да|Да|Да|
-|[Переместить](../../../ado/reference/ado-api/move-method-ado.md)|Да|Да|Да|Да|
+|[Перемещение](../../../ado/reference/ado-api/move-method-ado.md)|Да|Да|Да|Да|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|Да|Да|Да|
 |[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Нет|Да|Да|Да|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|Да|Да|Да|
@@ -242,7 +242,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Определение столбца|DBPROP_COLUMNDEFINITION|
 |Время ожидания соединения|DBPROP_INIT_TIMEOUT|
 |Текущий каталог|DBPROP_CURRENTCATALOG|
-|Источник данных|DBPROP_INIT_DATASOURCE|
+|источника данных|DBPROP_INIT_DATASOURCE|
 |Имя базы данных-источника|DBPROP_DATASOURCENAME|
 |Потоковая модель объекта источника данных|DBPROP_DSOTHREADMODEL|
 |Имя СУБД|DBPROP_DBMSNAME|
@@ -430,5 +430,5 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Дополнительные сведения о конкретной реализации и функциональных возможностях о поставщике OLE DB Майкрософт для ODBC см. в [справочнике по программированию OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) или на веб-сайте центра разработчиков для доступа к данным и хранилища на сайте MSDN.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [свойство CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) (ADO) свойство [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) (ADO) метод Execute (ADO) [(объект,](../../../ado/reference/ado-api/connection-object-ado.md) [команда ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md) [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) [Коллекция параметров](../../../ado/reference/ado-api/parameters-collection-ado.md) (ADO [)](../../../ado/reference/ado-api/properties-collection-ado.md) [свойство поставщика](../../../ado/reference/ado-api/provider-property-ado.md) (ADO) [объект Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) (ADO) [поддерживает метод](../../../ado/reference/ado-api/supports-method.md)

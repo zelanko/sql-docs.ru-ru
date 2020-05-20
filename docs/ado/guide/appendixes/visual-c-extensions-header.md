@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 675a31ab333a6c2d92e6afcd6a461b3baebd5b3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2c5b4e7a3bc960882830fa447f58f74e6728a559
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926386"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761502"
 ---
 # <a name="visual-c-extensions-header"></a>Заголовок расширений Visual C++
 В следующем заголовке **икрсинт. h**подробно описывается интерфейс, позволяющий клиентам получать поля из **набора записей** в переменные, определенные в классе, производном от **кадорекордбиндинг**. Необходимо указать макрос привязки ADO для каждого поля, к которому требуется получить доступ.  
@@ -207,6 +207,6 @@ public:
 #endif // !_ICRSINT_H_  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример расширений Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [Использование расширений Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md)

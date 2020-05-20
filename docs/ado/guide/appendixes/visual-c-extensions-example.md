@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions example
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d3517f40b15081ca2ee4621d07455cc13bb577d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d48315598c17b9462e9a42de58bd54313a4fd794
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926394"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761512"
 ---
 # <a name="visual-c-extensions-example"></a>Образец расширения Visual C++
 Эта программа показывает, как значения извлекаются из полей и преобразуются в переменные C/C++.  
@@ -38,7 +38,7 @@ TESTHR(pRs->QueryInterface(
 if (picRs) picRs->Release();  
 ```  
   
- При использовании смарт-указателей вы наследуете `IADORecordBindingPtr` от `IADORecordBinding` интерфейса следующую инструкцию:  
+ При использовании смарт-указателей вы наследуете от `IADORecordBindingPtr` `IADORecordBinding` интерфейса следующую инструкцию:  
   
 ```cpp
 _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));  
@@ -50,7 +50,7 @@ _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- Поскольку расширения Visual C++ реализуются объектом **Recordset** , конструктор для смарт-указателя, `picRs`, принимает указатель _`RecordsetPtr` ,. `pRs` Конструктор вызывает метод `QueryInterface` , `pRs` используя для поиска `IADORecordBinding` интерфейса.  
+ Поскольку расширения Visual C++ реализуются объектом **Recordset** , конструктор для смарт-указателя, `picRs` , принимает `RecordsetPtr` указатель _, `pRs` . Конструктор вызывает метод `QueryInterface` `pRs` , используя для поиска `IADORecordBinding` интерфейса.  
   
 ```cpp
 // Visual_Cpp_Extensions_Example.cpp  
@@ -109,6 +109,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование расширений Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
  [Заголовок расширений Visual C++](../../../ado/guide/appendixes/visual-c-extensions-header.md)

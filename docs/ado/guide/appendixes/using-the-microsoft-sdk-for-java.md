@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Java (Microsoft SDK for)
 - Microsoft SDK for Java [ADO]
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0e6c5f2eb5ad792141e77122ff9e132d97f62ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ae18edeeb66691f0875a196e11e10f9f761b30c5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926466"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761562"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Использование пакета Microsoft SDK для Java
 
@@ -29,7 +29,7 @@ ms.locfileid: "67926466"
   
  Служебная программа Жактивекс. exe создает классы из библиотеки типов, но может вызываться только в командной строке. Эта функция не интегрирована с средой разработки Visual J++. В отличие от классов, созданных с помощью мастера библиотеки типов Java, можно выполнить шаг с заходом в оболочки классов, созданные пакетом SDK. Это полезно для отладки того, как в коде используются классы-оболочки ADO.  
   
- Этот механизм считывает библиотеку типов ADO и создает классы, которые можно создать в приложении. Он создает эти классы в следующем расположении: \\<каталог\>Windows \Java\trustlib\msado15.  
+ Этот механизм считывает библиотеку типов ADO и создает классы, которые можно создать в приложении. Он создает эти классы в следующем расположении: \\<каталог Windows \> \Java\trustlib\msado15.  
   
  Создание приложения ADO в Java с помощью пакета Microsoft SDK для Java является принципиально идентичным с точки зрения исходного кода с помощью мастера библиотеки типов Java. Пример кода см. в разделе [оболочки классов ADO Java](../../../ado/guide/appendixes/ado-java-class-wrappers.md). Единственная реальная разница заключается в том, как создать классы-оболочки в первую очередь, как показано в следующих шагах.  
   
@@ -49,5 +49,5 @@ ms.locfileid: "67926466"
   
 3.  Чтобы использовать эти файлы, откройте проект в Visual J++. В меню **проект** выберите команду **Добавить в проект**. Выберите **файлы**и добавьте все. Файлы JAVA, созданные в каталоге trustlib\msado15 для вашего проекта.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Классы-оболочки Java для объектов ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   

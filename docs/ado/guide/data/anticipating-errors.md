@@ -12,14 +12,14 @@ helpviewer_keywords:
 - errors [ADO], preventing
 - preventing errors [ADO]
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2d92d96e3b8cdfea5cacea35d852e8859de65dbd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f28a6dc9d79ba59229609cbde94642e31274b9eb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925984"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761260"
 ---
 # <a name="anticipating-errors"></a>Прогнозирование ошибок
 Предотвращение ошибок по крайней мере не менее важно, чем обработка ошибок. В этом заключительном разделе содержится краткий список предосторожностей, которые могут потребоваться вашему приложению для уменьшения вероятности возникновения ошибок.  

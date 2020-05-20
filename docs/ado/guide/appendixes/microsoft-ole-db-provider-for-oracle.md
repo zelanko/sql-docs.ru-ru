@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e956ca5486485c3dde8079f6b9067a8fef7e2f3a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926623"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761642"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Обзор поставщик OLE DB для Oracle (Майкрософт)
 > [!IMPORTANT]
@@ -67,8 +67,8 @@ MSDAORA
 |**Дескриптор окна**|Указывает описатель окна, используемый для запроса дополнительных сведений.|
 |**Идентификатор локали**|Указывает уникальное 32-разрядное число (например, 1033), которое указывает параметры, относящиеся к языку пользователя. Эти настройки указывают, как форматируются даты и время, элементы сортируются в алфавитном порядке, сравниваются по строкам и т. д.|
 |**Службы OLE DB**|Указывает битовую маску, указывающую OLE DB службы для включения или отключения.|
-|**Prompt**|Указывает, следует ли запрашивать пользователя во время установки соединения.|
+|**Командная строка**.|Указывает, следует ли запрашивать пользователя во время установки соединения.|
 |**Расширенные свойства**|Строка, содержащая сведения о расширенном соединении, зависящие от поставщика. Это свойство используется только для специфичных для поставщика сведений о соединении, которые не могут быть описаны с помощью механизма свойств.|
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  Property ( [ADO) свойство](../../../ado/reference/ado-api/connectionstring-property-ado.md) [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) (ADO) [объект Recordset Object (](../../../ado/reference/ado-api/recordset-object-ado.md) ADO)

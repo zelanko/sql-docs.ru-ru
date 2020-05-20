@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions for ADO
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: db11e86ab479ad0df4224d59c3408729fa9903ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f623bd3eb0c0c4cdde47c6fea7e7cd8af2ad0de6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926375"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761522"
 ---
 # <a name="visual-c-extensions-for-ado"></a>Расширения Visual C++ для ADO
 Предпочтительный метод программирования ADO с Visual C++ использует директиву **#import** , как описано в [Microsoft Visual C++ программировании ADO](../../../ado/guide/appendixes/visual-c-ado-programming.md). Однако более ранние версии ADO поставляются с альтернативным методом программирования с использованием Visual C++: расширений Visual C++. В этом разделе описывается эта функция для тех, кто должен поддерживать код расширений Visual C++, но новый код ADO должен быть написан с помощью директивы #**Import**.
@@ -39,5 +39,5 @@ ms.locfileid: "67926375"
 
 -   [Пример модулей ADO с расширениями Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Visual C++ный индекс синтаксиса ADO для расширений COM-](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [Visual C++ пример](../../../ado/guide/appendixes/visual-c-extensions-example.md) [с использованием](../../../ado/guide/appendixes/using-visual-c-extensions.md) [заголовка Visual C++ расширений](../../../ado/guide/appendixes/visual-c-extensions-header.md) Visual C++ Extensions

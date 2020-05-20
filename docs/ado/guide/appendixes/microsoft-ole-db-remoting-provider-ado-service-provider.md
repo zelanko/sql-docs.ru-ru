@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB remoting provider
 - remoting provider [ADO]
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5c60567da677564c168f0601625686bdfb8b3d67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e3ad2ebe195bdcdf97548f040f3ef7dcc1fb1a38
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926591"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761612"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Обзор поставщика удаленного взаимодействия Microsoft OLE DB
 Поставщик удаленного взаимодействия Microsoft OLE DB позволяет локальному пользователю на клиентском компьютере запускать поставщики данных на удаленном компьютере. Укажите параметры поставщика данных для удаленного компьютера, как если бы вы были локальным пользователем на удаленном компьютере. Затем укажите параметры, используемые поставщиком удаленного взаимодействия для доступа к удаленному компьютеру. Затем можно получить доступ к удаленному компьютеру так, как если бы вы были локальным пользователем.
@@ -90,5 +90,5 @@ rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ...
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Общие сведения о поставщике удаленного взаимодействия OLE DB](https://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)
