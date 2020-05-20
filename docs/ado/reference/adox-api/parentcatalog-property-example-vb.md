@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ParentCatalog property [ADOX], Visual Basic example
 ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f87a092d20fb15a23e21a7ef9f0094e40eedeb57
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38dad31ffcdd134acef35ce397ac3ee10b5cc3a7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965595"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763755"
 ---
 # <a name="parentcatalog-property-example-vb"></a>Пример свойства ParentCatalog (Visual Basic)
 В следующем коде показано, как использовать свойство [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) для доступа к свойству, зависящему от поставщика, до добавления таблицы в каталог. Свойство имеет значение **AutoIncrement**, которое создает поле автоприращения в базе данных Microsoft Jet.  
@@ -83,7 +83,7 @@ End Sub
 ' EndCreateAutoIncrColumnVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Append (столбцы ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Метод Append (таблицы ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

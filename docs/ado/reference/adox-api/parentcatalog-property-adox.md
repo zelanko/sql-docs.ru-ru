@@ -38,14 +38,14 @@ f1_keywords:
 helpviewer_keywords:
 - ParentCatalog property [ADOX]
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8bc9527109aaa4a3a8063b26a594c9bdb978dcf3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c3557af934ab7029822b5f9d3657828ee5d2a75
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965583"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763765"
 ---
 # <a name="parentcatalog-property-adox"></a>Свойство ParentCatalog (ADOX)
 Указывает родительский каталог объекта таблицы, пользователя или столбца, который предоставляет доступ к свойствам, зависящим от поставщика.  
@@ -65,5 +65,5 @@ ms.locfileid: "67965583"
 |[Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|  
 |[Объект User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)||  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
