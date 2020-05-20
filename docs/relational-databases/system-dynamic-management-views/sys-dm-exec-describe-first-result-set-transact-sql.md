@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set catalog view
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 523a94718f123fab9d501de9497ca5ecc2b09c95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1591c84de006308e96a3b8079ea05ef9ad6802b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097815"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830618"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  *\@params*  
  \@params предоставляет строку объявления для параметров [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета, аналогично sp_executesql. Параметры могут быть **nvarchar (n)** или **nvarchar (max)**.  
   
- — Одна строка, содержащая определения всех параметров, внедренных в [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — это заполнитель, указывающий дополнительные определения параметров. Каждый параметр, указанный в stmt, должен быть \@определен в параметре params. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция или пакет в инструкции не содержит параметров, \@параметр params не требуется. Значением по умолчанию для этого аргумента является NULL.  
+ — Одна строка, содержащая определения всех параметров, внедренных в [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — это заполнитель, указывающий дополнительные определения параметров. Каждый параметр, указанный в stmt, должен быть определен в \@ параметре params. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция или пакет в инструкции не содержит параметров, \@ параметр params не требуется. Значением по умолчанию для этого аргумента является NULL.  
   
  *\@include_browse_information*  
  Если имеет значение 1, то каждый запрос анализируется так, как будто он имеет параметр FOR BROWSE для запроса. Возвращаются дополнительные ключевые столбцы и сведения об исходной таблице.  
@@ -119,16 +119,16 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |9|RECURSION|Не удается определить результат, так как в пакете содержится рекурсивная инструкция.|  
 |10|TEMPORARY_TABLE|Результат не удалось определить из-за того, что пакет содержит временную таблицу и не поддерживается хранимой процедурой **sp_describe_first_result_set**.|  
 |11|UNSUPPORTED_STATEMENT|Результат не удалось определить из-за того, что пакет содержит инструкцию, не поддерживаемую хранимой процедурой **sp_describe_first_result_set** (FETCH, REVERT и т. д.).|  
-|12|OBJECT_TYPE_NOT_SUPPORTED|Переданный функции \@OBJECT_ID не поддерживается (т. е. не является хранимой процедурой)|  
+|12|OBJECT_TYPE_NOT_SUPPORTED|\@Переданный функции OBJECT_ID не поддерживается (т. е. не является хранимой процедурой)|  
 |13|OBJECT_DOES_NOT_EXIST|\@Object_id, переданный функции, не найден в системном каталоге.|  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется разрешение для выполнения аргумента \@TSQL.  
+ Требуется разрешение для выполнения \@ аргумента tsql.  
   
 ## <a name="examples"></a>Примеры  
  Дополнительные примеры в разделе [sp_describe_first_result_set &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) можно адаптировать для использования **sys. dm_exec_describe_first_result_set**.  
   
-### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>А) Возврат сведений об отдельной инструкции Transact-SQL  
+### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. Возврат сведений об отдельной инструкции Transact-SQL  
  Следующий код возвращает сведения о результатах инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ```  
@@ -138,7 +138,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set
 (N'SELECT object_id, name, type_desc FROM sys.indexes', null, 0) ;  
 ```  
   
-### <a name="b-returning-information-about-a-procedure"></a>Б) Возврат сведений о процедуре  
+### <a name="b-returning-information-about-a-procedure"></a>Б. Возврат сведений о процедуре  
  В следующем примере создается хранимая процедура с именем pr_TestProc, которая возвращает два результирующих набора. Затем в примере показывается, как **sys.dm_exec_describe_first_result_set** возвращает сведения о первом результирующем наборе в процедуре.  
   
 ```  
@@ -169,7 +169,7 @@ N'@CustomerID int', 0) AS a;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sql_text dynamic management function
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ff8d99bd31e2638aa63393fb5ba052f442bf75f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de6ed0a0b8f91157b61c7d38564c8ab0941f1c6c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936896"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830643"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ Handle Plan — это хэш-значение, полученное из ско
 ### <a name="a-conceptual-example"></a>A. Концептуальный пример
 Ниже приведен простой пример, иллюстрирующий передачу **sql_handle** либо напрямую, либо с **ПЕРЕкрестным применением**.
   1.  Создать действие.  
-Выполните следующий T-SQL в новом окне запроса в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
+Выполните следующий T-SQL в новом окне запроса в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .   
       ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
@@ -111,7 +111,7 @@ Handle Plan — это хэш-значение, полученное из ско
       ```
       
     2.  Использование **CROSS APPLY**.  
-    Sql_handle из **sys. dm_exec_requests** будут переданы в представление **sys. Dm_exec_sql_text** с помощью **CROSS APPLY**. Откройте новое окно запроса и передайте SPID, определенный на шаге 1. В этом примере SPID имеет значение `59`.
+    Sql_handle из **sys. dm_exec_requests** будут переданы в представление **sys. Dm_exec_sql_text** с помощью **CROSS APPLY**. Откройте новое окно запроса и передайте SPID, определенный на шаге 1. В этом примере SPID имеет значение `59` .
 
         ```sql
         SELECT t.*
@@ -121,7 +121,7 @@ Handle Plan — это хэш-значение, полученное из ско
          ```      
  
     2.  Передача **sql_handle** напрямую.  
-Получение **sql_handle** из **sys. dm_exec_requests**. Затем передайте **sql_handle** непосредственно в **sys. dm_exec_sql_text**. Откройте новое окно запроса и передайте SPID, определенный в шаге 1, в **sys. dm_exec_requests**. В этом примере SPID имеет значение `59`. Затем передайте возвращенный **sql_handle** в качестве аргумента в **sys. dm_exec_sql_text**.
+Получение **sql_handle** из **sys. dm_exec_requests**. Затем передайте **sql_handle** непосредственно в **sys. dm_exec_sql_text**. Откройте новое окно запроса и передайте SPID, определенный в шаге 1, в **sys. dm_exec_requests**. В этом примере SPID имеет значение `59` . Затем передайте возвращенный **sql_handle** в качестве аргумента в **sys. dm_exec_sql_text**.
 
         ```sql
         -- acquire sql_handle
@@ -132,7 +132,7 @@ Handle Plan — это хэш-значение, полученное из ско
          ```      
     
   
-### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>Б) Получение сведений о пяти первых запросах по среднему времени ЦП  
+### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>Б. Получение сведений о пяти первых запросах по среднему времени ЦП  
  Следующий пример возвращает текст инструкции SQL и среднее время ЦП для пяти первых запросов.  
   
 ```sql  
@@ -178,7 +178,7 @@ WHERE s2.objectid is null
 ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   

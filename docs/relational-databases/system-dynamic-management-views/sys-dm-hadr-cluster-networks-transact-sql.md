@@ -18,30 +18,30 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_cluster_networks dynamic management view
 ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0b2475a3881cb73d9dd82ee7fc311e7288aa4738
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dd37e1f39291e12bd313b03b556506eb51eb131d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900650"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829387"
 ---
 # <a name="sysdm_hadr_cluster_networks-transact-sql"></a>sys.dm_hadr_cluster_networks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Возвращает по строке для каждого из элементов кластера WSFC, участвующего в конфигурации подсети группы доступности. Это динамическое административное представление можно использовать для проверки виртуального сетевого IP-адреса, настроенного для каждой из реплик доступности.  
   
- Первичный ключ: **MEMBER_NAME** + **network_subnet_IP** + **network_subnet_prefix_length**  
+ Первичный ключ: **MEMBER_NAME**  +  **network_subnet_IP**  +  **network_subnet_prefix_length**  
   
  > [!TIP]
- > Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]версии, это динамическое административное представление поддерживает Always on экземпляры отказоустойчивого кластера в дополнение к группам доступности Always on.  
+ > Начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , это динамическое административное представление поддерживает Always on экземпляры отказоустойчивого кластера в дополнение к группам доступности Always on.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**member_name**|**nvarchar(128)**|Имя компьютера, принадлежащее узлу в кластере WSFC.|  
 |**network_subnet_ip**|**nvarchar (48)**|IP-адрес подсети, к которой принадлежит компьютер. Это может быть адрес IPv4 или IPv6.|  
-|**network_subnet_ipv4_mask**|**nvarchar (45)**|Маска подсети, задающая подсеть, к которой принадлежит IP-адрес. **network_subnet_ipv4_mask** , чтобы указать параметры DHCP-<network_subnet_option> в предложении WITH DHCP инструкции [CREATE Availability Group](../../t-sql/statements/create-availability-group-transact-sql.md) или [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .<br /><br /> NULL = подсеть IPv6.|  
+|**network_subnet_ipv4_mask**|**nvarchar (45)**|Маска подсети, задающая подсеть, к которой принадлежит IP-адрес. **network_subnet_ipv4_mask** , чтобы указать параметры dhcp-<network_subnet_option> в предложении WITH DHCP инструкции [CREATE Availability Group](../../t-sql/statements/create-availability-group-transact-sql.md) или [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .<br /><br /> NULL = подсеть IPv6.|  
 ||||  
 |**network_subnet_prefix_length**|**int**|Длина префикса сетевого IP-адреса, задающего подсеть, к которой принадлежит компьютер.|  
 |**is_public**|**bit**|Является ли сеть в кластере WSFC общедоступной или закрытой, одно из следующих значений:<br /><br /> 0 = закрытая<br /><br /> 1 = общедоступная|  

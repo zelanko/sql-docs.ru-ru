@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sp_xtp_unbind_db_resource_pool
 - sys.sp_xtp_unbind_db_resource_pool
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: be0f8e7b410abb2e9027ce0b773d1a1ad5a14465
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d7cfca8eea2051ab8c1f070e0da9603604c5296a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68040998"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829946"
 ---
 # <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'
   
 -   Необходимо разрешение CONTROL SERVER.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_bind_db_resource_pool (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
   

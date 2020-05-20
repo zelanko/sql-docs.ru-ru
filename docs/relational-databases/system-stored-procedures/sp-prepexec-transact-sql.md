@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_prepexec
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 670b64cb107610fe8b5506654b9e655b0da5fb16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ee9e291a0ff8b2fc14e7bc249ceea8320facedf9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68794724"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830994"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_prepexec handle OUTPUT, params , stmt
   
 ## <a name="arguments"></a>Аргументы  
  *справиться*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]— Это созданный идентификатор *маркера* . *Handle* является обязательным параметром с возвращаемым значением **int** .  
+ — Это [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] созданный идентификатор *маркера* . *Handle* является обязательным параметром с возвращаемым значением **int** .  
   
  *params*  
  Указывает параметризованные инструкции. Определение переменных *params* подставляется для маркеров параметров в инструкции. *params* — это обязательный параметр, который вызывает для входного значения **ntext**, **nchar**или **nvarchar** . Если инструкция не параметризована, необходимо ввести значение NULL.  
@@ -66,7 +66,7 @@ EXEC sp_prepexec @Out output,
 EXEC sp_unprepare @Out;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_execute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

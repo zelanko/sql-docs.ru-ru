@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_create_collection_set
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3998211b12b942df15ebb4e7978c1e989486e013
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032638"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830965"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_syscollector_create_collection_set
   
 `[ @days_until_expiration = ] days_until_expiration`Число дней, в течение которых собранные данные сохраняются в хранилище данных управления. *days_until_expiration* имеет значение **smallint** со значением по умолчанию 730 (два года). *days_until_expiration* должно быть равно 0 или быть положительным целым числом.  
   
-`[ @proxy_id = ] proxy_id`Уникальный идентификатор учетной записи- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] посредника агента. *proxy_id* имеет **тип int** и значение по умолчанию NULL. Если указано, *proxy_name* должны иметь значение null. Чтобы получить *proxy_id*, запросите системную таблицу sysproxies. Предопределенная роль базы данных dc_admin должна иметь разрешение на доступ к посреднику. Дополнительные сведения см. [в статье создание агент SQL Server прокси-сервера](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
+`[ @proxy_id = ] proxy_id`Уникальный идентификатор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи-посредника агента. *proxy_id* имеет **тип int** и значение по умолчанию NULL. Если указано, *proxy_name* должны иметь значение null. Чтобы получить *proxy_id*, запросите системную таблицу sysproxies. Предопределенная роль базы данных dc_admin должна иметь разрешение на доступ к посреднику. Дополнительные сведения см. [в статье создание агент SQL Server прокси-сервера](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 `[ @proxy_name = ] 'proxy_name'`Имя учетной записи-посредника. *proxy_name* имеет тип **sysname** и значение по умолчанию NULL. Если указано, *proxy_id* должны иметь значение null. Чтобы получить *proxy_name*, запросите системную таблицу sysproxies.  
   
@@ -135,7 +135,7 @@ EXECUTE dbo.sp_syscollector_create_collection_set
 GO  
 ```  
   
-### <a name="b-creating-a-collection-set-by-using-specified-values"></a>Б) Создание набора элементов сбора при помощи указанных значений  
+### <a name="b-creating-a-collection-set-by-using-specified-values"></a>Б. Создание набора элементов сбора при помощи указанных значений  
  В следующем примере набор сбора создается путем указания значений для многих параметров.  
   
 ```  
@@ -155,7 +155,7 @@ EXEC dbo.sp_syscollector_create_collection_set
     @collection_set_uid = @collection_set_uid OUTPUT;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)   
  [Создание пользовательского набора сбора, использующего тип сборщика «Универсальный запрос T-SQL» &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [Хранимые процедуры сборщика данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   

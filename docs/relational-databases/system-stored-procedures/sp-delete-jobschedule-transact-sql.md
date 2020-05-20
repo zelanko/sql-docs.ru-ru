@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobschedule
 ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a1641685bfe017ab7bc3adfda5c667684a70b786
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bcbf2c6ff783e1871965ea94f126229ae37cc3f1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130654"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831232"
 ---
 # <a name="sp_delete_jobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "68130654"
   
  Члены роли **sysadmin** могут удалять любые расписания заданий. Пользователи, не являющиеся членами роли **sysadmin** , могут удалять только те расписания заданий, которыми они владеют.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
  [Просмотр или изменение заданий](../../ssms/agent/view-or-modify-jobs.md)   

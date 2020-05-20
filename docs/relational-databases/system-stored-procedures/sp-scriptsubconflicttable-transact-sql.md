@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_scriptsubconflicttable
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 806209b4f881576c680c14b0bc17ec4fd04a086c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f100fe3fda3bc3d156c093696a21ebcd7afce2a5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68126372"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830001"
 ---
 # <a name="sp_scriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_scriptsubconflicttable**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обнаружение и разрешение конфликтов обновления посредством очередей](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

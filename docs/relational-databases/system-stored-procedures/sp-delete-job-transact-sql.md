@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_job
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fc733ca2b56ef9fa96be5ab2adf6486419e0e250
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 53bb2daacf55bf86693f2e083262083d7cbff22b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72306272"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831252"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 `[ @delete_history = ] delete_history`Указывает, следует ли удалить журнал задания. *delete_history* имеет **бит**и значение по умолчанию **1**. Если *delete_history* равен **1**, журнал заданий для задания удаляется. Если значение *delete_history* равно **0**, журнал заданий не удаляется.  
   
- Обратите внимание, что при удалении задания, если журнал не удаляется, исторические данные для задания не будут отображаться в журнале [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] заданий графического пользовательского интерфейса агента, но информация по-прежнему будет находиться в таблице **sysjobhistory** базы данных **msdb** .  
+ Обратите внимание, что при удалении задания, если журнал не удаляется, исторические данные для задания не будут отображаться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журнале заданий графического пользовательского интерфейса агента, но информация по-прежнему будет находиться в таблице **sysjobhistory** базы данных **msdb** .  
   
 `[ @delete_unused_schedule = ] delete_unused_schedule`Указывает, следует ли удалять расписания, присоединенные к этому заданию, если они не присоединены к другим заданиям. *delete_unused_schedule* имеет **бит**и значение по умолчанию **1**. Если *delete_unused_schedule* равен **1**, то расписания, прикрепленные к этому заданию, удаляются, если другие задания не ссылаются на расписание. Если *delete_unused_schedule* равен **0**, расписания не удаляются.  
   
@@ -64,9 +64,9 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  None  
   
 ## <a name="remarks"></a>Remarks  
- Аргумент ** \@originating_server** зарезервирован для внутреннего использования.  
+ Аргумент ** \@ originating_server** зарезервирован для внутреннего использования.  
   
- Аргумент ** \@delete_unused_schedule** обеспечивает обратную совместимость с предыдущими версиями SQL Server путем автоматического удаления расписаний, не присоединенных к какому бы то ни было заданию. Обратите внимание, что поведение этого параметра по умолчанию обеспечивает обратную совместимость. Чтобы хранить расписания, которые не присоединены к заданию, необходимо указать значение **0** в качестве аргумента ** \@delete_unused_schedule** .  
+ Аргумент ** \@ delete_unused_schedule** обеспечивает обратную совместимость с предыдущими версиями SQL Server путем автоматического удаления расписаний, не присоединенных к какому бы то ни было заданию. Обратите внимание, что поведение этого параметра по умолчанию обеспечивает обратную совместимость. Чтобы хранить расписания, которые не присоединены к заданию, необходимо указать значение **0** в качестве аргумента ** \@ delete_unused_schedule** .  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
   
@@ -97,7 +97,7 @@ EXEC sp_delete_job
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   

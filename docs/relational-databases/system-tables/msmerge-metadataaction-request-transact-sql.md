@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_metadataaction_request system table
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 09f3fa61a1f79e98b8cd3330a03361b1b6a5c507
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 73fe0094b77c730f496dc0650c1169824018d00f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68106368"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829878"
 ---
 # <a name="msmerge_metadataaction_request-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68106368"
 |**поколения**|**bigint**|Значение поколения, для которого нужно действие по исправлению ошибок.|  
 |**изменившиеся**|**int**|Только для внутреннего использования.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_audit_class_type_map dynamic management view
 ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ae1c39d5c3ddc36f4ca3007cf9e17c2543055b85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7ed2102562b16be51f70abf22d7a18aeba010806
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68099204"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830938"
 ---
 # <a name="sysdm_audit_class_type_map-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68099204"
 ## <a name="permissions"></a>Разрешения  
  Участник должен иметь разрешение **SELECT** . По умолчанию это разрешение предоставлено роли Public.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание аудита сервера &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [Удаление аудита сервера &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

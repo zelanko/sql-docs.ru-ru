@@ -13,14 +13,14 @@ helpviewer_keywords:
 - log shipping [SQL Server], stored procedures
 - system stored procedures [SQL Server], log shipping
 ms.assetid: 39554188-20fe-42ec-a53f-35e1dc98c274
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0a081fd1d3cebb7d5d83362d2cf5af700f75da09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f93be0c72dcd5e8f555cd6610ccf3caeb64790c2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942171"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830421"
 ---
 # <a name="log-shipping-stored-procedures-transact-sql"></a>Хранимые процедуры доставки журналов (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67942171"
 |[sp_delete_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)|[sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)|  
 |[sp_delete_log_shipping_primary_secondary, хранимая процедура](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md)||  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

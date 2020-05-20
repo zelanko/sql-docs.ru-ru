@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_primarykeys
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ccae0385ef8c9305f4972ff6dcbd7a7960200370
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b7b4abd30b4fb62a6f9983fc0dd12348cca52467
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056315"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830975"
 ---
 # <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 `[ @table_catalog = ] 'table_catalog'`Имя каталога, в котором находится заданный *table_name* . В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует имени базы данных. Аргумент *table_catalog* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -82,7 +82,7 @@ EXEC sp_primarykeys @table_server = N'LONDON1',
    @table_schema = N'HumanResources';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры распределенных запросов &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   

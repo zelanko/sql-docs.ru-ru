@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_agent_parameter
 ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 398e1eebbb269fa1f1507725fefff820c5174f58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4c371f5b61e88b3fa42eb7a3e7a3060dfc38d0ab
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771514"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831068"
 ---
 # <a name="sp_help_agent_parameter-transact-sql"></a>sp_help_agent_parameter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **replmonitor** могут выполнять **sp_help_agent_parameter**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Работа с профилями агента репликации](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
  [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   

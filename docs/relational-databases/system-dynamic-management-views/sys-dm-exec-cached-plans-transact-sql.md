@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cached_plans dynamic management view
 ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe53a1d912ce03ab2eedb66b72b4de947466b313
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bd09fde00399dc2e96dc67334a0446ca9f618c3e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68263940"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830736"
 ---
 # <a name="sysdm_exec_cached_plans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68263940"
  Динамические административные представления в среде [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не могут предоставлять информацию, которая может повлиять на автономность базы данных, или информацию о других базах данных, к которым имеет доступ пользователь. Во избежание раскрытия этой информации все строки, содержащие данные, не принадлежащие подключенному клиенту, отфильтровываются. Кроме того, значения в столбцах **memory_object_address** и **pool_id** фильтруются. значение столбца установлено в NULL.  
   
 > [!NOTE]  
->  Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_exec_cached_plans**.  
+>  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_exec_cached_plans**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -48,13 +48,13 @@ ms.locfileid: "68263940"
 |objtype|**nvarchar (16)**|Тип объекта. Ниже приведены возможные значения и соответствующие им описания.<br /><br /> Proc: хранимая процедура<br />Подготовлено: подготовленная инструкция<br />Прямое соединение: нерегламентированный запрос. Относится к [!INCLUDE[tsql](../../includes/tsql-md.md)] отправке как события языка с помощью программы **osql** или **sqlcmd** , а не как удаленных вызовов процедур.<br />Реплпрок: процедура-фильтр репликации<br />Триггер: триггер<br />Представление: Просмотр<br />По умолчанию: по умолчанию<br />Усртаб: пользовательская таблица<br />Систаб: системная таблица<br />Проверка: ПРОВЕРОЧное ограничение<br />Правило: правило|  
 |plan_handle|**varbinary (64)**|Идентификатор плана в оперативной памяти. Этот идентификатор является временным и константным, только пока план сохраняется в кэше. Это значение можно использовать со следующими функциями динамического управления:<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|Идентификатор пула ресурсов, для которого подсчитывается использование памяти для плана.|  
-|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
  <sup>1</sup>  
   
 ## <a name="permissions"></a>Разрешения
 
-В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
+В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
 ## <a name="examples"></a>Примеры  
@@ -71,7 +71,7 @@ ORDER BY usecounts DESC;
 GO  
 ```  
   
-### <a name="b-returning-query-plans-for-all-cached-triggers"></a>Б) Возвращение планов запросов для всех кэшированных триггеров  
+### <a name="b-returning-query-plans-for-all-cached-triggers"></a>Б. Возвращение планов запросов для всех кэшированных триггеров  
  Следующий пример возвращает планы запросов для кэшированных триггеров.  
   
 ```sql  
@@ -83,7 +83,7 @@ GO
 ```  
   
 ### <a name="c-returning-the-set-options-with-which-the-plan-was-compiled"></a>В. Возвращение параметров SET, с которыми был скомпилирован план  
- Следующий пример возвращает параметры SET, с использованием которых был скомпилирован план. `sql_handle` Для плана также возвращается. Оператор PIVOT используется для вывода атрибутов `set_options` и `sql_handle` в виде столбцов, а не строк. Дополнительные сведения о значении, возвращаемом `set_options`в, см. в разделе [sys. dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).  
+ Следующий пример возвращает параметры SET, с использованием которых был скомпилирован план. `sql_handle`Для плана также возвращается. Оператор PIVOT используется для вывода `set_options` атрибутов и в `sql_handle` виде столбцов, а не строк. Дополнительные сведения о значении, возвращаемом в `set_options` , см. в разделе [sys. Dm_exec_plan_attributes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).  
   
 ```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
@@ -111,7 +111,7 @@ WHERE cacheobjtype = 'Compiled Plan';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   

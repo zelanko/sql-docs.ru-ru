@@ -12,14 +12,14 @@ helpviewer_keywords:
 - index dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server], index
 ms.assetid: ad9ad40f-b018-4bae-b003-691f08dcefdf
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1201cea371e25e89b0fd55131a56e414c56f67e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 96deb7df049189716f1c8c3a6f2f569877eee62e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130703"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829467"
 ---
 # <a name="index-related-dynamic-management-views-and-functions-transact-sql"></a>Динамические административные представления и функции, связанные с индексом (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68130703"
 |[sys.dm_db_index_usage_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)|[sys. dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)|  
 |[sys. dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)|[sys. dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Системные представления &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  

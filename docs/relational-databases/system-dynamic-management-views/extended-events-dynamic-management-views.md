@@ -12,14 +12,14 @@ helpviewer_keywords:
 - extended events [SQL Server], dynamic management objects
 - dynamic management objects (SQL Server)
 ms.assetid: 6d337c2f-71e9-4e0c-8877-9780baa7699d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6fb0b49bc25b8c5ac73224a41198d50b6e8099ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: afae172e03fe537fd3873ca182434b6cc5caf767
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130862"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829546"
 ---
 # <a name="extended-events-dynamic-management-views"></a>Динамические административные представления расширенных событий
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68130862"
 |[sys.dm_xe_packages (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql.md)|[sys.dm_xe_sessions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql.md)|  
 |[sys.dm_xe_session_event_actions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-event-actions-transact-sql.md)||  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

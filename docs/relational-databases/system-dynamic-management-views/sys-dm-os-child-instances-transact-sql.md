@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_os_child_instances dynamic management view
 - monitoring server health
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 59a58348f5428f568f40d28b4e83bc6bc040647c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 75eaf98c0b9c1f9c1bdf8a92dd2fe99520e20d2a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900238"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829359"
 ---
 # <a name="sysdm_os_child_instances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67900238"
   
 > **Примечание.** Пользовательские экземпляры являются [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] только функцией.  
 > 
-> **Примечание** . Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_os_child_instances**.  
+> **Примечание** . Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_os_child_instances**.  
   
 |Столбец|Тип данных|Описание|  
 |------------|---------------|-----------------|  
@@ -50,13 +50,13 @@ ms.locfileid: "67900238"
 |**os_process_id**|**Int**|Номер процесса Windows для этого пользовательского экземпляра.|  
 |**os_process_creation_date**|**DateTime**|Дата и время последнего запуска процесса этого пользовательского экземпляра.|  
 |**heart_beat**|**nvarchar (5)**|Текущее состояние этого пользовательского экземпляра; либо ALIVE, либо DEAD.|  
-|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="remarks"></a>Remarks  
- Дополнительные сведения о динамическом административном представлении см. в разделе [динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+## <a name="remarks"></a>Примечания  
+ Дополнительные сведения о динамическом административном представлении см. в разделе [динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  
   
 ## <a name="see-also"></a>См. также  
  [Пользовательские экземпляры для тех, кто не обладает правами администратора](https://msdn.microsoft.com/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  

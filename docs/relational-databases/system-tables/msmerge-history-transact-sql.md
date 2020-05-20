@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_history system table
 ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7de3f8de87804facf6670cf0dd261464143c2aeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: de9c51e35bab142bd54a81224057f1eda05c5fb1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017691"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829913"
 ---
 # <a name="msmerge_history-transact-sql"></a>MSmerge_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68017691"
 |**timestamp**|**timestamp**|Столбец отметок времени этой таблицы.|  
 |**updatable_row**|**bit**|Задайте значение **1** , если строка журнала может быть перезаписана.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

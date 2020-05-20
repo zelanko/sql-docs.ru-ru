@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropmergepullsubscription
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ab2cda06971e56a8c15e2fb7382977a36fe7a34a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1a22fdc297c4ce7310b8d71b65dbe1cd4e0abf04
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933889"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830070"
 ---
 # <a name="sp_dropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или пользователь, создавший подписку слиянием по запросу, могут выполнять **sp_dropmergepullsubscription**. Предопределенная роль базы данных **db_owner** может быть **sp_dropmergepullsubscription** выполнена только в том случае, если пользователь, создавший подписку слиянием по запросу, принадлежит этой роли.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Удаление подписки по запросу](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2033ae81a030fa57e2f4aaf962e5dd35f9a9a318
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053048"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831185"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -46,7 +46,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 `[ \@params = ] N'parameters'`\@params предоставляет строку объявления для параметров [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета, что аналогично sp_executesql. Параметры могут быть **nvarchar (n)** или **nvarchar (max)**.  
   
- — Одна строка, содержащая определения всех параметров, внедренных в [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — это заполнитель, указывающий дополнительные определения параметров. Каждый параметр, указанный в инструкции, должен быть определен \@в параметре params. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция или пакет в инструкции не содержит параметров, \@параметр params не требуется. Значением по умолчанию для этого аргумента является NULL.  
+ — Одна строка, содержащая определения всех параметров, внедренных в [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — это заполнитель, указывающий дополнительные определения параметров. Каждый параметр, указанный в инструкции, должен быть определен в \@ параметре params. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция или пакет в инструкции не содержит параметров, \@ параметр params не требуется. Значением по умолчанию для этого аргумента является NULL.  
   
 `[ \@browse_information_mode = ] tinyint`Указывает, возвращаются ли дополнительные ключевые столбцы и сведения об исходной таблице. Если он имеет значение 1, то каждый запрос анализируется аналогично анализу запроса с параметром FOR BROWSE. Возвращаются дополнительные ключевые столбцы и сведения об исходной таблице.  
   
@@ -113,11 +113,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set** возвращает ошибку в любом из следующих случаев.  
   
--   Если входной \@tsql не является допустимым [!INCLUDE[tsql](../../includes/tsql-md.md)] пакетом. Допустимость определяется путем анализа и анализа [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета. Ошибки, вызванные пакетом во время оптимизации запроса или во время выполнения, не учитываются при определении [!INCLUDE[tsql](../../includes/tsql-md.md)] допустимости пакета.  
+-   Если входной \@ tsql не является допустимым [!INCLUDE[tsql](../../includes/tsql-md.md)] пакетом. Допустимость определяется путем анализа и анализа [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета. Ошибки, вызванные пакетом во время оптимизации запроса или во время выполнения, не учитываются при определении [!INCLUDE[tsql](../../includes/tsql-md.md)] допустимости пакета.  
   
--   Если \@params не равно NULL и содержит строку, которая не является синтаксически допустимой строкой объявления для параметров, или если она содержит строку, которая объявляет любой параметр более одного раза.  
+-   Если \@ params не равно NULL и содержит строку, которая не является синтаксически допустимой строкой объявления для параметров, или если она содержит строку, которая объявляет любой параметр более одного раза.  
   
--   Если входной [!INCLUDE[tsql](../../includes/tsql-md.md)] пакет объявляет локальную переменную с тем же именем, что и параметр, объявленный в \@params.  
+-   Если входной [!INCLUDE[tsql](../../includes/tsql-md.md)] пакет объявляет локальную переменную с тем же именем, что и параметр, объявленный в \@ params.  
   
 -   Если инструкция использует временную таблицу.  
   
@@ -152,13 +152,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
  **sp_describe_first_result_set** не поддерживает косвенную рекурсию.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется разрешение для выполнения аргумента \@TSQL.  
+ Требуется разрешение для выполнения \@ аргумента tsql.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="typical-examples"></a>Наиболее распространенные примеры  
   
-#### <a name="a-simple-example"></a>А) Простой пример  
+#### <a name="a-simple-example"></a>A. Простой пример  
  В следующем примере описывается результирующий набор, возвращаемый одним запросом.  
   
 ```  
@@ -175,7 +175,7 @@ WHERE object_id = @id1'
 , @params = N'@id1 int'  
 ```  
   
-#### <a name="b-browse-mode-examples"></a>Б) Примеры режима просмотра  
+#### <a name="b-browse-mode-examples"></a>Б. Примеры режима просмотра  
  В следующих трех примерах показаны ключевые различия между разными режимами просмотра сведений. В результаты запроса включены только столбцы, относящиеся к теме.  
   
  В примере используется значение 0, которое указывает, что возврата сведений не происходит.  
@@ -269,7 +269,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- Результат: \<неизвестное имя столбца> **varchar (20) NULL**  
+ Результат: \< неизвестное имя столбца> **varchar (20) NULL**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>Для имен столбцов принудительно обеспечивается соответствие с помощью присвоения псевдонимов  
  Аналогично предыдущему, но имена столбцов идентичны благодаря присвоению псевдонимов.  
@@ -398,7 +398,7 @@ N'
   
  Result: **int NULL** , так как dbo. T1. a и S1. T1. a имеют тип **int** и разную допустимость значений NULL.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_checkpoint_stats dynamic management view
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84cbfafdba3bca9b06f250ed9996f0a87e71a18c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c93cc5f34d86e15645b4d53c02244e2705bbeda5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026866"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830838"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]существенно отличается от более поздних версий и обсуждается ниже в разделе [SQL Server 2014](#bkmk_2014).**
   
 ## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий  
- В следующей таблице описаны столбцы в `sys.dm_db_xtp_checkpoint_stats`, начиная с. **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**  
+ В следующей таблице описаны столбцы в `sys.dm_db_xtp_checkpoint_stats` , начиная с **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Type|Описание|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|Последний номер LSN, отображаемый контроллером.|  
 |end_of_log_lsn|**numeric (38)**|Номер LSN конца журнала.|  
-|bytes_to_end_of_log|**bigint**|Байты журнала, необработанные контроллером, соответствующие байты между `last_lsn_processed` и `end_of_log_lsn`.|  
+|bytes_to_end_of_log|**bigint**|Байты журнала, необработанные контроллером, соответствующие байты между `last_lsn_processed` и `end_of_log_lsn` .|  
 |log_consumption_rate|**bigint**|Интенсивность использования журнала транзакций контроллером (в КБ/с).|  
 |active_scan_time_in_ms|**bigint**|Время, затраченное контроллером на активное сканирование журнала транзакций.|  
 |total_wait_time_in_ms|**bigint**|Совокупное время ожидания контроллера, не проверяя журнал.|  
@@ -84,9 +84,9 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |bytes_of_large_data_serialized|**bigint**|Объем сериализованных данных. |  
   
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- В следующей таблице описаны столбцы в `sys.dm_db_xtp_checkpoint_stats`, для. **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**  
+ В следующей таблице описаны столбцы в `sys.dm_db_xtp_checkpoint_stats` , для **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Type|Описание|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|Число байтов журнала до регистрационного номера транзакции в журнале и в конце текущего потока транзакций.|  
 |total_log_blocks_processed|**bigint**|Общее количество блоков журнала, обработанных с момента запуска сервера.|  
@@ -107,7 +107,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение `VIEW DATABASE STATE` на сервере.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

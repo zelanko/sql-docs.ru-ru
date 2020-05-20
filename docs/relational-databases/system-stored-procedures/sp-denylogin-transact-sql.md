@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_denylogin
 ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 00ba2f254d2ff676eab7c93bb6d0cca7c4ae0901
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 07bc4084e96a6164fe6f057d49593499c4f69f44
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053182"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830271"
 ---
 # <a name="sp_denylogin-transact-sql"></a>sp_denylogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,13 +56,13 @@ sp_denylogin [ @loginame = ] 'login'
  Необходимо членство в предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере показано, как использовать **sp_denylogin** , чтобы запретить пользователю `CORPORATE\GeorgeV` Windows подключаться к серверу.  
+ В следующем примере показано, как использовать **sp_denylogin** , чтобы запретить пользователю Windows `CORPORATE\GeorgeV` подключаться к серверу.  
   
 ```  
 EXEC sp_denylogin 'CORPORATE\GeorgeV';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   

@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_posttracertoken
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7629c25264f0b45d68e29e947b1d5c40d02707e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 42401f5d99d7cf89563a0088260ab21e9df9fd67
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72041181"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831031"
 ---
 # <a name="sp_posttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_posttracertoken [ @publication = ] 'publication'
   
 `[ @tracer_token_id = ] _tracer_token_id OUTPUT`ИДЕНТИФИКАТОР вставленного трассировочного токена. *tracer_token_id* имеет **тип int** и значение по умолчанию NULL и является выходным параметром. Это значение можно использовать для выполнения [sp_helptracertokenhistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) или [sp_deletetracertokenhistory &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) без предварительного выполнения SP_HELPTRACERTOKENS &#40;[Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
   
-`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL, и его не следует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] указывать для издателя.  
+`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL, и его не следует указывать для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -59,7 +59,7 @@ sp_posttracertoken [ @publication = ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_posttracertoken**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Измерение задержки и проверка правильности соединений для репликации транзакций](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

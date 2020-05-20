@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - IHarticles system table
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 45278a6d9501b75b624e11bbeb11d24d10e482c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e5ccf91f17022ccf910c840c1af2abb7a4048dfb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056210"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829908"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "68056210"
 |**objid**|**int**|Этот столбец не используется и включается только для того, чтобы представление [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) таблицы **ихартиклес** , совместимое с представлением [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) , которое используется для SQL Serverных статей ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**sync_objid**|**int**|Этот столбец не используется и включается только для того, чтобы представление [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) таблицы **ихартиклес** , совместимое с представлением [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) , которое используется для SQL Serverных статей ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**nописание**|**nvarchar(255)**|Описание статьи.|  
-|**publisher_status**|**int**|Используется для указания, определено ли представление, определяющее опубликованную статью, путем вызова [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md).<br /><br /> **был вызван 0** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) .<br /><br /> **1** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) не был вызван.|  
+|**publisher_status**|**int**|Используется для указания, определено ли представление, определяющее опубликованную статью, путем вызова [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md).<br /><br /> значение **0**  =  вызвана [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) .<br /><br /> **1**  =  [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) не был вызван.|  
 |**article_view_owner**|**nvarchar(255)**|Владелец объекта синхронизации на издателе, используемого агентом чтения журнала.|  
 |**article_view**|**nvarchar(255)**|Объект синхронизации на издателе, используемый агентом чтения журнала.|  
 |**ins_scripting_proc**|**int**|Этот столбец не используется и включается только для того, чтобы представление [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) таблицы **ихартиклес** , совместимое с представлением [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) , которое используется для SQL Serverных статей ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
@@ -65,7 +65,7 @@ ms.locfileid: "68056210"
 |**instance_id**|**int**|Определяет текущий экземпляр журнала статьи для опубликованной таблицы.|  
 |**use_default_datatypes**|**bit**|Указывает, использует ли статья сопоставления типов данных по умолчанию; значение **1** указывает, что используются сопоставления типов данных по умолчанию.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разнородная репликация базы данных](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   

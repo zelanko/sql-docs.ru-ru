@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_requests catalog view
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4fb51b33655756d9c3c65dfcb5de3bae380ee9a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b7b44d76ad893775216e6566add3636603ea7dce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67951039"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830630"
 ---
 # <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Выводит список запросов ввода-вывода, обрабатываемых в данный момент владельцем пространства имен (NSO).  
   
-|Столбец|Тип|Описание|  
+|Столбец|Type|Описание|  
 |------------|----------|-----------------|  
 |**request_context_address**|**varbinary(8)**|Показывает внутренний адрес блока памяти NSO, содержащего запрос ввода-вывода от драйвера. Не допускает значение NULL.|  
 |**current_spid**|**smallint**|Показывает идентификатор системного процесса (SPID) для соединения текущего SQL Server. Не допускает значение NULL.|  
@@ -39,7 +39,7 @@ ms.locfileid: "67951039"
 |**request_id**|**int**|Показывает уникальный идентификатор, назначенный драйвером этому запросу. Не допускает значение NULL.|  
 |**irp_id**|**int**|Показывает уникальный идентификатор IRP. Это удобно для определения всех запросов ввода-вывода, связанных с заданным IRP. Не допускает значение NULL.|  
 |**handle_id**|**int**|Показывает идентификатор дескриптора пространства имен. Этот идентификатор зависит от NSO и уникален в пределах экземпляра. Не допускает значение NULL.|  
-|**client_thread_id**|**varbinary(8)**|Показывает идентификатор потока клиентского приложения, который является источником запроса.<br /><br /> **Предупреждение об ошибке \* \* \* ** Это имеет смысл только в том случае, если клиентское приложение работает на том же компьютере, что и SQL Server. Когда клиентское приложение выполняется удаленно, **client_thread_id** показывает идентификатор потока процесса, который работает от имени удаленного клиента.<br /><br /> Допускает значение NULL.|  
+|**client_thread_id**|**varbinary(8)**|Показывает идентификатор потока клиентского приложения, который является источником запроса.<br /><br /> Предупреждение это имеет смысл только в том случае, если клиентское приложение работает на том же компьютере, что и SQL Server. ** \* \* \* \* ** Когда клиентское приложение выполняется удаленно, **client_thread_id** показывает идентификатор потока процесса, который работает от имени удаленного клиента.<br /><br /> Допускает значение NULL.|  
 |**client_process_id**|**varbinary(8)**|Показывает идентификатор процесса клиентского приложения, если оно работает на одном компьютере с SQL Server. Для удаленного клиента здесь показывается идентификатор системного процесса, который работает от имени клиентского приложения. Допускает значение NULL.|  
 |**handle_context_address**|**varbinary(8)**|Показывает адрес внутренней структуры NSO, связанной с маркером клиента. Допускает значение NULL.|  
 |**filestream_transaction_id**|**varbinary(128)**|Показывает идентификатор транзакции, связанной с заданным дескриптором, и все запросы, связанные с этим дескриптором. Это значение, возвращаемое функцией **GET_FILESTREAM_TRANSACTION_CONTEXT** . Допускает значение NULL.|  
@@ -47,7 +47,7 @@ ms.locfileid: "67951039"
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления FILESTREAM и FileTable &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
   
   

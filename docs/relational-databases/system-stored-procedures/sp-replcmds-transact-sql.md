@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 85dd8567599de98af1abb72394fef747bd2da6b5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771009"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829989"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**command_type**|**int**|Тип команды.|  
 |**originator_srvname**|**sysname**|Сервер, на котором была начата транзакция.|  
 |**originator_db**|**sysname**|База данных, в которой была начата транзакция.|  
-|**pkHash**|**int**|Только для внутреннего применения.|  
+|**pkHash**|**int**|Только для внутреннего использования.|  
 |**originator_publication_id**|**int**|Идентификатор публикации, в которой началась транзакция.|  
 |**originator_db_version**|**int**|Версия базы данных, в которой началась транзакция.|  
 |**originator_lsn**|**varbinary (16)**|Указывает регистрационный номер транзакции в журнале (номер LSN) для команды в порождающей публикации.|  
@@ -73,12 +73,12 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
  Клиенты, пытающиеся выполнить **sp_replcmds** в одной и той же базе данных, получают ошибку 18752 до тех пор, пока первый клиент не отключится. После отключения первого клиента другой клиент может выполнить **sp_replcmds**и станет новым средством чтения журнала.  
   
- Предупреждение с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] номером 18759 добавляется как в журнал ошибок, так и в [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнал приложений Windows, если **sp_replcmds** не удается выполнить репликацию текстовой команды, поскольку текстовый указатель не был получен в той же транзакции.  
+ Предупреждение с номером 18759 добавляется как в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журнал ошибок, так и в [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнал приложений Windows, если **sp_replcmds** не удается выполнить репликацию текстовой команды, поскольку текстовый указатель не был получен в той же транзакции.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_replcmds**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сообщения об ошибках](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
  [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   

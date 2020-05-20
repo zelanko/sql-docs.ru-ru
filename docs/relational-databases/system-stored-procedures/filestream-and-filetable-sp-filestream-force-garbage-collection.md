@@ -16,14 +16,14 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cbf1658fd1567d9cdd3c35e02195435b6e86adcc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942287"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830405"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ sp_filestream_force_garbage_collection
 
 Из-за 2-фазных операций хранимая процедура должна запускаться дважды для фактического удаления базовых файлов FILESTREAM.  
 
-Сборка мусора (GC) основывается на усечении журнала. Таким образом, если файлы были недавно удалены из базы данных с использованием модели полного восстановления, они являются GC-ED только после создания резервной копии журнала этих частей журнала транзакций, а часть журнала помечается как неактивная. В базе данных, использующей простую модель восстановления, усечение журнала происходит после `CHECKPOINT` выполнения в базе данных.  
+Сборка мусора (GC) основывается на усечении журнала. Таким образом, если файлы были недавно удалены из базы данных с использованием модели полного восстановления, они являются GC-ED только после создания резервной копии журнала этих частей журнала транзакций, а часть журнала помечается как неактивная. В базе данных, использующей простую модель восстановления, усечение журнала происходит после выполнения в `CHECKPOINT` базе данных.  
 
 
 ## <a name="permissions"></a>Разрешения  
@@ -88,7 +88,7 @@ sp_filestream_force_garbage_collection
 ## <a name="examples"></a>Примеры  
  В следующих примерах сборщик мусора запускается для контейнеров FILESTREAM в базе данных `FSDB`.  
   
-### <a name="a-specifying-no-container"></a>А) Без указания контейнера  
+### <a name="a-specifying-no-container"></a>A. Без указания контейнера  
   
 ```sql  
 USE FSDB;  
@@ -96,7 +96,7 @@ GO
 EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB';  
 ```  
   
-### <a name="b-specifying-a-container"></a>Б) С указанием контейнера  
+### <a name="b-specifying-a-container"></a>Б. С указанием контейнера  
   
 ```sql  
 USE FSDB;  
@@ -105,7 +105,7 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
     @filename = N'FSContainer';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Потока](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Таблицы FileTable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Динамические административные представления Filestream and FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)

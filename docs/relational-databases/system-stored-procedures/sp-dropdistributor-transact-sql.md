@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropdistributor
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a82a3bedf78eb69dfc4a1736e212164341077601
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 55ebb2b9c42c0690bcffe409cbc6a5bf5bf68fc0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304977"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830162"
 ---
 # <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="remarks"></a>Remarks  
  **sp_dropdistributor** используется во всех типах репликации.  
   
- Если на сервере существуют другие объекты издателя или распространения, **sp_dropdistributor** завершается ошибкой, если ** \@no_checks** не имеет значение **1**.  
+ Если на сервере существуют другие объекты издателя или распространения, **sp_dropdistributor** завершается ошибкой, если ** \@ no_checks** не имеет значение **1**.  
   
  Эта хранимая процедура должна быть выполнена после удаления базы данных распространителя путем выполнения **sp_dropdistributiondb**.  
   
@@ -66,7 +66,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_dropdistributor**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Отключение публикации и распространения](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   

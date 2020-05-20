@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_optimizer_info dynamic management view
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6195ee80fb851a9875e4a95a6e5aab87deb905e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d15b171b20e81ea928528dc2124a0f33b697d2a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68255355"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829408"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,21 +33,21 @@ ms.locfileid: "68255355"
   Возвращает подробные статистики по операциям оптимизатора запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это представление можно использовать для настройки рабочей нагрузки при обнаружении проблем, связанных с оптимизацией запросов, или для улучшения производительности обработки запросов. Например, можно использовать общее число оптимизаций, значение затрачиваемого времени и значение конечной стоимости для сравнения с оптимизацией запросов текущей рабочей нагрузки и любыми изменениями во время процесса настройки. Некоторые счетчики предоставляют данные, которые могут быть использованы только для внутренней диагностики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эти счетчики помечены атрибутом «Только для внутреннего использования.».  
   
 > [!NOTE]  
->  Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_exec_query_optimizer_info**.  
+>  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_exec_query_optimizer_info**.  
   
-|Имя|Тип данных|Описание|  
+|name|Тип данных|Описание|  
 |----------|---------------|-----------------|  
 |**подписан**|**nvarchar(4000)**|Имя события статистики оптимизатора.|  
 |**occurrence**|**bigint**|Количество вхождений события оптимизации для этого счетчика.|  
 |**value**|**float**|Среднее значение свойства для вхождения события.|  
-|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
 ## <a name="permissions"></a>Разрешения  
 
-В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
+В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
     
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sys. dm_exec_query_optimizer_info** содержит следующие свойства (счетчики). Все значения частотности рассматриваются совокупно и при перезапуске системы устанавливаются в 0. Все значения полей значений при перезапуске системы устанавливаются в NULL. Все значения значимых столбцов, по которым определяется среднее, используют значение частотности из той же строки, что и знаменатель в вычислении среднего. Все оптимизации запросов измеряются, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет изменения в **dm_exec_query_optimizer_info**, включая запросы, создаваемые пользователями и системой. Выполнение уже кэшированного плана не изменяет значения в **dm_exec_query_optimizer_info**, учитываются только оптимизации.  
   
 |Счетчик|Наличие|Значение|  
@@ -101,7 +101,7 @@ ms.locfileid: "68255355"
 SELECT * FROM sys.dm_exec_query_optimizer_info;  
 ```  
   
-### <a name="b-viewing-the-total-number-of-optimizations"></a>Б) Просмотр общего количества операций оптимизации  
+### <a name="b-viewing-the-total-number-of-optimizations"></a>Б. Просмотр общего количества операций оптимизации  
  Количество выполняемых операций оптимизации.  
   
 ```  
@@ -127,7 +127,7 @@ SELECT (SELECT CAST (occurrence AS float) FROM sys.dm_exec_query_optimizer_info 
         AS ContainsSubqueryFraction;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   

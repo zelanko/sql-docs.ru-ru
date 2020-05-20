@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_depends
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9076d4bdda58a851e358371375b71f8934a945fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053100"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830241"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,15 +63,15 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>Результирующие наборы  
  **sp_depends** отображает два результирующих набора.  
   
- Следующий результирующий набор показывает объекты, от которых * \<зависит объект>* .  
+ Следующий результирующий набор показывает объекты, от которых зависит * \< объект>* .  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|Имя элемента, для которого существует зависимость.|  
 |**type**|**nvarchar (16)**|Тип элемента.|  
-|**модернизирован**|**nvarchar (7)**|Был ли элемент обновлен.|  
+|**обновлено**|**nvarchar (7)**|Был ли элемент обновлен.|  
 |**выбрать**|**nvarchar (8)**|Используется ли объект в инструкции SELECT.|  
-|**рубрик**|**sysname**|Столбец или параметр, от которого существует зависимость.|  
+|**column**|**sysname**|Столбец или параметр, от которого существует зависимость.|  
   
  Следующий результирующий набор показывает объекты, зависящие от * \<>объектов *.  
   
@@ -94,14 +94,14 @@ GO
 EXEC sp_depends @objname = N'Sales.Customer' ;  
 ```  
   
-### <a name="b-listing-dependencies-on-a-trigger"></a>Б) Список зависимостей триггера  
+### <a name="b-listing-dependencies-on-a-trigger"></a>Б. Список зависимостей триггера  
  Следующий пример отображает объекты базы данных, от которых зависит триггер `iWorkOrder`.  
   
 ```  
 EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   

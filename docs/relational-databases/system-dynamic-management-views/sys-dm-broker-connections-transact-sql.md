@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_connections dynamic management view
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2df4786147a5301e4e9167cbe121b9151e72190f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 43f5c110aaf9b492d70eb7220b6eccc249222609
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68099165"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830920"
 ---
 # <a name="sysdm_broker_connections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68099165"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|Идентификатор соединения. Допускает значение NULL.|  
-|**transport_stream_id**|**uniqueidentifier**|Идентификатор подключения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сетевого интерфейса (SNI), используемого этим подключением для обмена данными по протоколу TCP/IP. Допускает значение NULL.|  
+|**transport_stream_id**|**uniqueidentifier**|Идентификатор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключения сетевого интерфейса (SNI), используемого этим подключением для обмена данными по протоколу TCP/IP. Допускает значение NULL.|  
 |**state**|**smallint**|Текущее состояние соединения. Допускает значение NULL. Возможные значения:<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = ЗАКРЫТО|  
 |**state_desc**|**nvarchar(60)**|Текущее состояние соединения. Допускает значение NULL. Возможные значения:<br /><br /> NEW<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|Дата и время открытия соединения. Допускает значение NULL.|  
@@ -72,7 +72,7 @@ ms.locfileid: "68099165"
 |----------|--------|------------------|  
 |**dm_broker_connections.connection_id**|**dm_exec_connections.connection_id**|Один к одному|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с компонентом Service Broker (Transact-SQL)](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   

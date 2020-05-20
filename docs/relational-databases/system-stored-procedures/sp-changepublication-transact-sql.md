@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1e5b128a38fc32b16cca9d0a8e59f09aef88676c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6d5c08e0a844348210ae011e395c04de5b4cdcdd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762418"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829590"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|Файлы синхронизации создаются только для новых подписок. Подписчики могут получать файлы синхронизации после подписки при условии, что агент моментальных снимков был запущен и завершил работу.|  
 |**independent_agent**|**true**|Публикация имеет собственный выделенный агент распространителя.|  
 ||**false**|Публикация использует общий агент распространителя, а каждая пара баз данных публикации и подписки имеет общий агент.|  
-|**p2p_continue_onconflict**|**true**|Агент распространителя продолжает обрабатывать изменения при обнаружении конфликта.<br /> **Внимание!** Рекомендуется использовать значение по умолчанию `FALSE`. Если этот параметр имеет значение `TRUE`, агент распространения пытается выполнить согласование данных в топологии, применяя конфликтующую строку из узла с НАИБОЛЬШим идентификатором инициатора. Этот метод не гарантирует конвергенции. После обнаружения конфликта следует убедиться, что топология остается согласованной. Дополнительные сведения см. в подразделе «Обработка конфликтов» раздела [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|**p2p_continue_onconflict**|**true**|Агент распространителя продолжает обрабатывать изменения при обнаружении конфликта.<br /> **Внимание!** Рекомендуется использовать значение по умолчанию `FALSE` . Если этот параметр имеет значение `TRUE` , агент распространения пытается выполнить согласование данных в топологии, применяя конфликтующую строку из узла с наибольшим идентификатором инициатора. Этот метод не гарантирует конвергенции. После обнаружения конфликта следует убедиться, что топология остается согласованной. Дополнительные сведения см. в подразделе «Обработка конфликтов» раздела [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 ||**false**|Агент распространителя прекращает обрабатывать изменения при обнаружении конфликта.|  
 |**post_snapshot_script**||Указывает расположение файла скрипта на языке [!INCLUDE[tsql](../../includes/tsql-md.md)], который агент распространителя запускает после применения всех остальных скриптов и данных объектов репликации во время исходной синхронизации.|  
 |**pre_snapshot_script**||Указывает расположение файла скрипта на языке [!INCLUDE[tsql](../../includes/tsql-md.md)], который агент распространителя запускает перед применением всех остальных скриптов и данных объектов репликации во время исходной синхронизации.|  
@@ -111,7 +111,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**одновременных**|Используется собственный программный вывод для массового копирования всех таблиц, не блокирующий таблицы во время формирования моментальных снимков. Недопустимо для репликации моментальных снимков.|  
 ||**concurrent_c**|Используется символьный программный вывод для массового копирования всех таблиц, не блокирующий таблицы во время формирования моментальных снимков. Недопустимо для репликации моментальных снимков.|  
 |**taskid**||Это свойство устарело и больше не поддерживается.|  
-|**allow_drop**|**true**|Включает `DROP TABLE` поддержку DLL для статей, которые являются частью репликации транзакций. Минимальная поддерживаемая версия [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] : с пакетом обновления 2 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] или выше, с пакетом обновления 1 или более поздней версии. Дополнительная ссылка: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+|**allow_drop**|**true**|Включает `DROP TABLE` поддержку DLL для статей, которые являются частью репликации транзакций. Минимальная поддерживаемая версия: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 или выше, с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 1 или более поздней версии. Дополнительная ссылка: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|Отключает `DROP TABLE` поддержку библиотек DLL для статей, которые являются частью репликации транзакций. Это значение **по умолчанию** для этого свойства.|
 |**Null** (по умолчанию)||Возвращает список поддерживаемых значений для *Свойства*.|  
   
@@ -120,20 +120,20 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **1** указывает, что изменения в статье могут привести к недействительности моментального снимка. Если имеются подписки, требующие нового моментального снимка, это значение дает разрешение пометить существующий моментальный снимок как устаревший и сформировать новый моментальный снимок.   
 Сведения о свойствах, при изменении которых требуется формирование нового моментального снимка, см. в разделе «Примечания».  
   
-[**@force_reinit_subscription =** ] *force_reinit_subscription*  
+[** @force_reinit_subscription =** ] *force_reinit_subscription*  
  Подтверждает, что действие, выполняемое данной хранимой процедурой, может сделать необходимой повторную инициализацию текущих подписок. *force_reinit_subscription* является **битом** со значением по умолчанию **0**.  
   - **0** указывает, что изменения в статье не приводят к повторной инициализации подписки. Если хранимая процедура определяет, что изменения потребуют повторной инициализации подписок, возникает ошибка, и изменения не выполняются.  
   - **1** указывает, что изменения в статье приводят к повторной инициализации существующей подписки и предоставляют разрешение на повторную инициализацию подписки.  
   
-`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
   > [!NOTE]  
-  >  *publisher* при изменении свойств статьи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя не следует использовать издатель.  
+  >  При изменении свойств статьи издателя не следует использовать *Издатель* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_changepublication** используется в репликации моментальных снимков и репликации транзакций.  
   
  После изменения любого из следующих свойств необходимо создать новый моментальный снимок, а для параметра *force_invalidate_snapshot* необходимо указать значение **1** .  
@@ -163,7 +163,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_changepublication**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   

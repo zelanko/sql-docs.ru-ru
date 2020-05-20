@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropmessage
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a8e6a8187936e7a2f824315123937cf9c7eca9c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fa242b7adf46269402b28d459eace429fd247bc1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933869"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830026"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_dropmessage [ @msgnum = ] message_number
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Отсутствует.  
+ Нет.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в предопределенных ролях сервера **sysadmin** и **serveradmin** .  
@@ -59,7 +59,7 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-dropping-a-user-defined-message"></a>A. Удаление пользовательских сообщений  
- В следующем примере удаляется определяемое пользователем сообщение Number `50001`из представления **sys. messages**.  
+ В следующем примере удаляется определяемое пользователем сообщение Number `50001` из представления **sys. messages**.  
   
 ```  
 USE master;  
@@ -67,7 +67,7 @@ GO
 EXEC sp_dropmessage 50001;  
 ```  
   
-### <a name="b-dropping-a-user-defined-message-that-includes-a-localized-version"></a>Б) Удаление пользовательского сообщения, у которого есть локализованная версия  
+### <a name="b-dropping-a-user-defined-message-that-includes-a-localized-version"></a>Б. Удаление пользовательского сообщения, у которого есть локализованная версия  
  В следующем примере удаляется пользовательское сообщение с номером `60000`, у которого есть локализованная версия.  
   
 ```  
@@ -130,7 +130,7 @@ EXEC sp_dropmessage
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [sp_addmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   

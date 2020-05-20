@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_deletemergeconflictrow
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a315bc147cf86df40cf6fa216b8c45eeb1fcccca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d778a90adf2579ca136603847762b2577a5155f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68111957"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830283"
 ---
 # <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @conflict_table = ] 'conflict_table'`Имя таблицы конфликтов. Аргумент *conflict_table* имеет тип **sysname**и значение по **%** умолчанию. Если *conflict_table* указан **%** как null или, конфликт предполагается как конфликт удаления, а строка, соответствующая *rowguid* и *origin_datasource* , и *source_object* удаляется из [&#40;таблицы MSmerge_conflicts_info&#41;Transact-SQL](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) .  
+`[ @conflict_table = ] 'conflict_table'`Имя таблицы конфликтов. Аргумент *conflict_table* имеет тип **sysname**и значение по умолчанию **%** . Если *conflict_table* указан как null или **%** , конфликт предполагается как конфликт удаления, а строка, соответствующая *rowguid* и *origin_datasource* , и *Source_object* удаляется из [&#40;таблицы MSmerge_conflicts_info&#41;Transact-SQL](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) .  
   
 `[ @source_object = ] 'source_object'`Имя исходной таблицы. *source_object* имеет тип **nvarchar (386)** и значение по умолчанию NULL.  
   
@@ -62,7 +62,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_deletemergeconflictrow**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

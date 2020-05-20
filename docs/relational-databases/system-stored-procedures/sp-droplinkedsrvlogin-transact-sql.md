@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_droplinkedsrvlogin
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff6abaef6fc19a1bc646aab7ff30e4fcf6e13380
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3040f585e10816d4f8664566be8af1523048db88
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097658"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830136"
 ---
 # <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @rmtsrvname = ] 'rmtsrvname'`Имя связанного сервера, к которому применяется сопоставление [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имен входа. *рмтсрвнаме* имеет тип **sysname**и не имеет значения по умолчанию. *рмтсрвнаме* уже должен существовать.  
+`[ @rmtsrvname = ] 'rmtsrvname'`Имя связанного сервера, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к которому применяется сопоставление имен входа. *рмтсрвнаме* имеет тип **sysname**и не имеет значения по умолчанию. *рмтсрвнаме* уже должен существовать.  
   
-`[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Имя входа на локальном сервере с сопоставлением со связанным сервером *рмтсрвнаме*. *локаллогин* имеет тип **sysname**и не имеет значения по умолчанию. Сопоставление для *локаллогин* с *рмтсрвнаме* должно уже существовать. Если значение равно NULL, то сопоставление по умолчанию, созданное **sp_addlinkedserver**, которое сопоставляет все имена входа на локальном сервере с именами входа на связанном сервере, удаляется.  
+`[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Имя входа на локальном сервере с сопоставлением со связанным сервером *рмтсрвнаме*. *локаллогин* имеет тип **sysname**и не имеет значения по умолчанию. Сопоставление для *локаллогин* с *рмтсрвнаме* должно уже существовать. Если значение равно NULL, то сопоставление по умолчанию, созданное **sp_addlinkedserver**, которое сопоставляет все имена входа на локальном сервере с именами входа на связанном сервере, удаляется.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -66,14 +66,14 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 EXEC sp_droplinkedsrvlogin 'Accounts', 'Mary';  
 ```  
   
-### <a name="b-removing-the-default-login-mapping"></a>Б) Удаление отображения по умолчанию для имени входа  
+### <a name="b-removing-the-default-login-mapping"></a>Б. Удаление отображения по умолчанию для имени входа  
  Следующий пример удаляет отображение по умолчанию для имени входа, созданного с помощью выполнения процедуры `sp_addlinkedserver` на связанном сервере `Accounts`.  
   
 ```  
 EXEC sp_droplinkedsrvlogin 'Accounts', NULL;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -18,19 +18,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC
 - sys.sys.dm_hadr_instance_node_map dynamic management view
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: edd2ea7a215f01c25539753dff4bd170cf9d422f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2ae75aa570b20a21c31d75b66ddf5c01635eee51
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900422"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830583"
 ---
 # <a name="sysdm_hadr_instance_node_map-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Для каждого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещена реплика доступности, присоединенная к группе доступности Always on, возвращает имя узла отказоустойчивого кластера Windows Server (WSFC), на котором размещен экземпляр сервера. Это динамическое административное представление может использоваться следующим образом.  
+  Для каждого экземпляра, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] размещена реплика доступности, присоединенная к группе доступности Always on, возвращает имя узла отказоустойчивого кластера Windows Server (WSFC), на котором размещен экземпляр сервера. Это динамическое административное представление может использоваться следующим образом.  
   
 -   Динамическое административное представление может оказаться полезным для обнаружения группы доступности с несколькими репликами доступности, размещенными на одном узле WSFC, поскольку такая конфигурация, которая может возникнуть после отработки отказа FCI в том случае, если группа доступности сконфигурирована неверно, не поддерживается. Дополнительные сведения см. в разделе [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67900422"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar(256)**|Уникальный идентификатор группы доступности в виде ресурса в WSFC.|  
-|**instance_name**|**nvarchar(256)**|Имя экземпляра*сервера*/*instance*— экземпляр сервера, на котором размещена реплика группы доступности.|  
+|**instance_name**|**nvarchar(256)**|Имя экземпляра*сервера* / *instance*— экземпляр сервера, на котором размещена реплика группы доступности.|  
 |**node_name**|**nvarchar(256)**|Имя узла WSFC.|  
   
 ## <a name="permissions"></a>Разрешения  

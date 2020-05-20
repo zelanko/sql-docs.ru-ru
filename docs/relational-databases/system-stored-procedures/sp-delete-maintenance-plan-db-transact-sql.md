@@ -18,14 +18,14 @@ helpviewer_keywords:
 - removing maintenance plan
 - disassociating maintenance plan
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4843eb9de8badced7e446f20a997a530478c2756
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3f7f148104b6bfce09e7f16a2aa0b3638821787d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056520"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831235"
 ---
 # <a name="sp_delete_maintenance_plan_db-transact-sql"></a>Хранимая процедура sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 EXECUTE   sp_delete_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Хранимые процедуры плана обслуживания базы данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   

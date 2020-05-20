@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_marksubscriptionvalidation
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bb8c38d24fbf6c96c61a7b2e83874d15218797c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6ea2b5a6120395ad287a372b9d0edb3de7cb2b71
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68092675"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831038"
 ---
 # <a name="sp_marksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
   
 `[ @destination_db = ] 'destination_db'`Имя целевой базы данных. Аргумент *destination_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *Издатель* не следует использовать для публикации, которая принадлежит [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателю.  
@@ -99,7 +99,7 @@ exec sp_article_validation @publication = 'pub1', @article = 'art2',
 commit tran  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Проверка реплицированных данных](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sp_add_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 1d981037-2147-464e-a456-7d8e479bce89
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3e0f91b88a9f58ed290183ae48676572204ac98b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2e8d56f2959b78779f4ef8761053eab61cb7dd58
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078216"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829688"
 ---
 # <a name="coresp_add_collector_type-transact-sql"></a>core.sp_add_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ core.sp_add_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @collector_type_uid = ] "*collector_type_uid*"  
+ [ @collector_type_uid =] "*collector_type_uid*"  
  Идентификатор GUID типа сборщика. *collector_type_uid* имеет тип **uniqueidentifier**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -65,7 +65,7 @@ SELECT @collector_type_uid = (SELECT collector_type_uid FROM msdb.dbo.syscollect
 EXECUTE @RC = core.sp_add_collector_type @collector_type_uid;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Хранимые процедуры сборщика данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [хранилище данных управления](../../relational-databases/data-collection/management-data-warehouse.md)  

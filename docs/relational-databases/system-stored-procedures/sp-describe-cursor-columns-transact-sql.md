@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor_columns
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1dffb53a2b6436725a2b7dc19dfb209a58b1134e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 963fa56dfba33c13eb2ce4d317f69a22b5cdd259
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053113"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830267"
 ---
 # <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,25 +47,25 @@ sp_describe_cursor_columns
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @cursor_return= ] *output_cursor_variable* ПРОВЕРКИ  
+ [ @cursor_return =] *output_cursor_variable* выходные данные  
  Имя объявленной переменной для получения выходных данных курсора. *output_cursor_variable* является **курсором**, не имеет значения по умолчанию и не должен быть связан ни с одним курсором во время вызова sp_describe_cursor_columns. Возвращаемый курсор является прокручиваемым, динамическим и доступным только для чтения.  
   
- [ @cursor_source= ] {Н'локал ' | Н'глобал ' | Н'вариабле "}  
+ [ @cursor_source =] {Н'локал ' | Н'глобал ' | Н'вариабле "}  
  Указывает, задан ли возвращаемый курсор с помощью имени локального курсора, глобального курсора или курсорной переменной. Параметр имеет тип **nvarchar (30)**.  
   
- [ @cursor_identity= ] N "*local_cursor_name*"  
+ [ @cursor_identity =] N '*local_cursor_name*'  
  Имя курсора, созданного инструкцией DECLARE CURSOR с ключевым словом LOCAL или параметром LOCAL по умолчанию. *local_cursor_name* имеет тип **nvarchar (128)**.  
   
- [ @cursor_identity= ] N "*global_cursor_name*"  
+ [ @cursor_identity =] N '*global_cursor_name*'  
  Имя курсора, созданного инструкцией DECLARE CURSOR с ключевым словом GLOBAL или параметром GLOBAL по умолчанию. *global_cursor_name* имеет тип **nvarchar (128)**.  
   
  *global_cursor_name* также может быть именем серверного курсора API, который открыт приложением ODBC, а затем называется вызовом SQLSetCursorName.  
   
- [ @cursor_identity= ] N "*input_cursor_variable*"  
+ [ @cursor_identity =] N '*input_cursor_variable*'  
  Имя переменной курсора, связанной с открытым курсором. *input_cursor_variable* имеет тип **nvarchar (128)**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="cursors-returned"></a>Возвращенные курсоры  
  sp_describe_cursor_columns инкапсулирует свой отчет в качестве [!INCLUDE[tsql](../../includes/tsql-md.md)] выходного параметра **курсора** . Это позволяет пакетам [!INCLUDE[tsql](../../includes/tsql-md.md)], хранимым процедурам и триггерам построчно обрабатывать выходные данные. Это также означает, что процедуру нельзя вызывать непосредственно из функций API баз данных. Параметр вывода **курсора** должен быть привязан к программной переменной, но API-интерфейсы базы данных не поддерживают привязку параметров или переменных **курсора** .  
@@ -135,7 +135,7 @@ DEALLOCATE abc;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Курсоры](../../relational-databases/cursors.md)   
  [CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
  [ОБЪЯВИТь курсор &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   

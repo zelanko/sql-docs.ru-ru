@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropsubscriber
 ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9bef68803beedbfdb0d6034b2a92665f033d9641
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 49cfb9c44956f5d51f8671f2f891475b8794c053
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768286"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831150"
 ---
 # <a name="sp_dropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_dropsubscriber**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Удаление принудительной подписки](../../relational-databases/replication/delete-a-push-subscription.md)   
  [Удаление подписки по запросу](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   

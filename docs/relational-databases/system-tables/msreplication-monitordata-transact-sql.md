@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_monitordata system table
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 886240176188fdcea0c104ca366ec5451528312a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 118602eadf5dc1f23aa811d9a295fae351f54f36
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079145"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829880"
 ---
 # <a name="msreplication_monitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68079145"
 |**lastrefresh**|**datetime**|Дата и время обновления монитора.|  
 |**computetime**|**int**|Время (в секундах), которое заняло вычисление отслеживаемых данных.|  
 |**publication_id**|**int**|Идентификатор публикации.|  
-|**издателя**|**sysname**|Имя издателя.|  
+|**publisher**|**sysname**|Имя издателя.|  
 |**publisher_srvid**|**int**|Идентификатор сервера издателя.|  
 |**publisher_db**|**sysname**|Имя базы данных публикации.|  
 |**публикации**|**sysname**|Имя публикации.|  
@@ -64,7 +64,7 @@ ms.locfileid: "68079145"
 |**mergelatestsessionconnectiontype**|**int**|Тип соединения, использованный последним сеансом агента слияния, может принимать одно из следующих значений:<br /><br /> **1** = локальная сеть (LAN)<br /><br /> **2** = коммутируемое сетевое подключение|  
 |**retention_period_unit**|**tinyint**|Определяет единицу измерения для указания срока хранения, может принимать одно из следующих значений:<br /><br /> **1** = Неделя<br /><br /> **2** = Месяц<br /><br /> **3** = Год|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Программный мониторинг репликации](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)   
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   

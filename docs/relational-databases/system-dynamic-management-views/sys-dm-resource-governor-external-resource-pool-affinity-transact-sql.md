@@ -17,18 +17,18 @@ helpviewer_keywords:
 - sys.dm_resource_governor_external_resource_pool_affinity
 - dm_resource_governor_external_resource_pool_affinity
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 77d0d322139be1f1c6086622855600a7c24fc4c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3f3b22b1889380be3aeeacc70877987f080ac766
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80664325"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830468"
 ---
 # <a name="sysdm_resource_governor_external_resource_pool_affinity-transact-sql"></a>sys. dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**Применимо к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] и [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**Применимо к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]и [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 Возвращает сведения о сходстве ЦП с текущей конфигурацией внешнего пула ресурсов.
   
@@ -40,13 +40,13 @@ ms.locfileid: "80664325"
   
 ## <a name="remarks"></a>Remarks
 
-Пулы, созданные с помощью сходства `AUTO` , не отображаются в этом представлении, так как они не имеют сходства. Дополнительные сведения см. в статьях [Создание пула внешних ресурсов &#40;Transact-sql&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) и [Изменение внешнего пула ресурсов &#40;инструкций transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) .
+Пулы, созданные с помощью сходства, `AUTO` не отображаются в этом представлении, так как они не имеют сходства. Дополнительные сведения см. в статьях [Создание пула внешних ресурсов &#40;Transact-sql&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) и [Изменение внешнего пула ресурсов &#40;инструкций transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) .
 
 ## <a name="permissions"></a>Разрешения
 
 Требуется разрешение `VIEW SERVER STATE`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Управление ресурсами для машинного обучения в SQL Server](../../machine-learning/administration/resource-governor.md)
 

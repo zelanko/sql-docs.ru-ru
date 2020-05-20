@@ -18,14 +18,14 @@ helpviewer_keywords:
 - smart_admin.sp_backup_on_demand
 - sp_backup_on_demand
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bb2bda2d58504033469e8ed0f6455784efb113b8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155400"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830458"
 ---
 # <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ EXEC managed_backup.sp_backup_on_demand
   
 ##  <a name="arguments"></a><a name="Arguments"></a>Даваемых  
  @database_name  
- Имя базы данных, для которой будет выполняться резервное копирование. Аргумент @database_name имеет тип **sysname**.  
+ Имя базы данных, для которой будет выполняться резервное копирование. @database_nameАргумент имеет тип **sysname**.  
   
  @type  
- Тип выполняемой резервной копии: база данных или журнал. @type Параметр имеет тип **nvarchar (32)**.  
+ Тип выполняемой резервной копии: база данных или журнал. @typeПараметр имеет тип **nvarchar (32)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

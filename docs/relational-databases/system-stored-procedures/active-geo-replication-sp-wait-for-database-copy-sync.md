@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_wait_for_database_copy_sync
 ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: adee14219a29fef48abdcdcec9d7aac7894c2270
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 931babcaa6e229d6114930bba5f06803aa25f59e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79198211"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829691"
 ---
 # <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>Активная Георепликация — sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @target_server = ] "server_name"  
+ [ @target_server =] "server_name"  
  Имя сервера базы данных SQL, на котором размещена активная база данных-получатель. Аргумент server_name имеет тип sysname и не имеет значения по умолчанию.  
   
  [ @target_database = ] 'database_name'  
@@ -74,7 +74,7 @@ EXEC sys.sp_wait_for_database_copy_sync @target_server = N'ubfyu5ssyt1', @target
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. dm_continuous_copy_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
  [Динамические административные представления (DMV) георепликации и функции &#40;базе данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
  [sys.dm_geo_replication_link_status](../system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)

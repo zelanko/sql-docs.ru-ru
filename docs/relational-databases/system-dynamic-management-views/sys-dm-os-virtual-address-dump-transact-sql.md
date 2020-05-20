@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_virtual_address_dump dynamic management view
 ms.assetid: 7b24ea55-3873-42fd-a86c-441c92eb6175
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b1950c83bcda010daae98f5699984128f7d7c27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14de2490aa44620e922b16f29581be45faeb142a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899697"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829308"
 ---
 # <a name="sysdm_os_virtual_address_dump-transact-sql"></a>sys.dm_os_virtual_address_dump (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "67899697"
 >  Эти сведения также возвращаются API-интерфейсом **VirtualQuery** Windows.  
   
 > [!NOTE]  
->  Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_os_virtual_address_dump**.  
+>  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_os_virtual_address_dump**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "67899697"
 |**region_state**|**varbinary(8)**|Текущее состояние области. Возможны следующие варианты.<br /><br /> — MEM_COMMIT<br />— MEM_RESERVE<br />— MEM_FREE<br /><br /> Не допускает значение NULL.|  
 |**region_current_protection**|**varbinary(8)**|Атрибуты защиты. Значение может быть одним из следующих:<br /><br /> — PAGE_READONLY<br />— PAGE_READWRITE<br />— PAGE_NOACCESS<br />— PAGE_WRITECOPY<br />— PAGE_EXECUTE<br />— PAGE_EXECUTE_READ<br />— PAGE_EXECUTE_READWRITE<br />— PAGE_EXECUTE_WRITECOPY<br />— PAGE_GUARD<br />— PAGE_NOCACHE<br /><br /> Не допускает значение NULL.|  
 |**region_type**|**varbinary(8)**|Определяет типы страниц в области. Он может иметь одно из следующих значений:<br /><br /> — MEM_PRIVATE<br />— MEM_MAPPED<br />— MEM_IMAGE<br /><br /> Не допускает значение NULL.|  
-|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  

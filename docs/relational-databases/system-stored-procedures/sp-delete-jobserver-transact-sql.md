@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobserver
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a2f4b2e8dbcf8e8427f51388c7bead75263d95a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4499183a8cf5019fe7a4ce10bdb9ffc83726551a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130640"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831212"
 ---
 # <a name="sp_delete_jobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  Для выполнения этой хранимой процедуры пользователи должны быть членами предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере сервер `SEATTLE2` удаляется из обработки `Weekly Sales Backups`задания.  
+ В следующем примере сервер удаляется `SEATTLE2` из обработки `Weekly Sales Backups` задания.  
   
 > [!NOTE]  
 >  В этом примере предполагается, что ранее было создано задание `Weekly Sales Backups`.  
@@ -74,7 +74,7 @@ EXEC sp_delete_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
  [sp_help_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

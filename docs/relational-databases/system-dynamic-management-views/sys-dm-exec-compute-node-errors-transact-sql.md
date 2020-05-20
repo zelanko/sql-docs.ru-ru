@@ -19,15 +19,15 @@ helpviewer_keywords:
 - dm_exec_compute_node_errors
 - sys.dm_exec_compute_node_errors management view
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b074da717a2c5deac9d576da938d1229dafeac77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5de36530fcf50a403558cb97fa72ad6a2d126e32
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73532792"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830699"
 ---
 # <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys. dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "73532792"
 |Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|Уникальный числовой идентификатор, связанный с ошибкой.|Уникальные для всех ошибок запросов в системе|  
-|source|`nvarchar(255)`|Описание исходного потока или процесса||  
-|type|`nvarchar(255)`|Тип ошибки.||  
+|источник|`nvarchar(255)`|Описание исходного потока или процесса||  
+|тип|`nvarchar(255)`|Тип ошибки.||  
 |create_time|`datetime`|Время возникновения ошибки||  
 |compute_node_id|`int`|Идентификатор конкретного расчетного узла|См. раздел compute_node_id из [sys. dm_exec_compute_nodes &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md) .|  
 |rexecution_id|`nvarchar(36)`|Идентификатор запроса Polybase, если он имеется.||  
@@ -48,7 +48,7 @@ ms.locfileid: "73532792"
 |compute_pool_id|`int`|Уникальный идентификатор пула.|
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Устранение неполадок в Polybase с помощью динамических административных представлений](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  

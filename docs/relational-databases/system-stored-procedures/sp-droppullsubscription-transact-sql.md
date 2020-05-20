@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_droppullsubscription
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f4ad522c13987f7617def29d5ff112a5a26db8b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d003270b0856da0c833b6e96e8adf54a014d4b9b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771451"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830011"
 ---
 # <a name="sp_droppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или пользователь, создавший подписку по запросу, могут выполнять **sp_droppullsubscription**. Предопределенная роль базы данных **db_owner** может быть **sp_droppullsubscription** выполнена только в том случае, если пользователь, создавший подписку по запросу, принадлежит этой роли.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Удаление подписки по запросу](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_queue system table
 ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 914cf3ad65c881383a6d625c07d4fb5ed028b36a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7763f7406f865194743c43a6d182466767799b41
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68080007"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829848"
 ---
 # <a name="msreplication_queue-transact-sql"></a>MSreplication_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68080007"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**издателя**|**sysname**|Имя издателя.|  
+|**publisher**|**sysname**|Имя издателя.|  
 |**publisher_db**|**sysname**|Имя базы данных публикации.|  
 |**публикации**|**sysname**|Имя публикации.|  
 |**транид**|**sysname**|Идентификатор транзакции, в которой была выполнена команда из очереди.|  
@@ -42,7 +42,7 @@ ms.locfileid: "68080007"
 |**orderkey**|**bigint**|Столбец идентификаторов, постепенно увеличивающийся.|  
 |**cmdstate**|**bit**|Состояние команды:<br /><br /> 0 = завершена.<br /><br /> 1 = частично.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

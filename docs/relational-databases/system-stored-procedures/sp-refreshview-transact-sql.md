@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_refreshview
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3b8c1b95d8d04e2b11982af14971e43e83db146f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 09f0b37d417374509a69a5362a759ff2558a8228
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075775"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829973"
 ---
 # <a name="sp_refreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ GO
 EXECUTE sp_refreshview N'Sales.vIndividualCustomer';  
 ```  
   
-### <a name="b-creating-a-script-that-updates-all-views-that-have-dependencies-on-a-changed-object"></a>Б) Создание скрипта, обновляющего все представления с зависимостями от измененного объекта  
+### <a name="b-creating-a-script-that-updates-all-views-that-have-dependencies-on-a-changed-object"></a>Б. Создание скрипта, обновляющего все представления с зависимостями от измененного объекта  
  Предполагается, что таблица `Person.Person` была изменена таким образом, что это повлияло на определение созданных на ней представлений. В следующем примере создается скрипт, обновляющий метаданные для всех представлений с зависимостями от таблицы `Person.Person`.  
   
 ```  
@@ -74,7 +74,7 @@ INNER JOIN sys.sql_expression_dependencies AS sed
 WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   

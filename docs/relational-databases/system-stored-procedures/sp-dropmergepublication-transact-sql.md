@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropmergepublication
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b675b07466464f706b6503f3d017acd34822b2c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 27fb3a99167dce450a3d4f50e9d19036db8d896f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933904"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830082"
 ---
 # <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
   
  **sp_dropmergepublication** рекурсивно удаляет все статьи, связанные с публикацией, а затем удаляет саму публикацию. Публикацию нельзя удалить, если у нее есть хотя бы одна подписка. Сведения об удалении подписок см. в разделе [Удаление принудительной подписки](../../relational-databases/replication/delete-a-push-subscription.md) и [Удаление подписки по запросу](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
- При запуске **sp_dropmergepublication** для удаления публикации не удаляются опубликованные объекты из базы данных публикации или соответствующие объекты из базы данных подписки. При необходимости \<удалите эти объекты вручную при помощи перетаскивания объекта>.  
+ При запуске **sp_dropmergepublication** для удаления публикации не удаляются опубликованные объекты из базы данных публикации или соответствующие объекты из базы данных подписки. \<При необходимости удалите эти объекты вручную при помощи перетаскивания объекта>.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_dropmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepublication-_1.sql)]  
@@ -64,7 +64,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_dropmergepublication**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Удаление публикации](../../relational-databases/replication/publish/delete-a-publication.md)   
  [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   

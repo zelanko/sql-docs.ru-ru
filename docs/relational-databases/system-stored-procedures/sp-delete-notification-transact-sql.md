@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_notification
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 19c0a4d2a95b81c26b746a8ece9defce61fe712f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: eb3c5166aef24bcc9890295809b8b69a68ed4112
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68009134"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830328"
 ---
 # <a name="sp_delete_notification-transact-sql"></a>sp_delete_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ EXEC dbo.sp_delete_notification
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   

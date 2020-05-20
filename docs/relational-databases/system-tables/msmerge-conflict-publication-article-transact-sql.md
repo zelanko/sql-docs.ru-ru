@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_conflict_publication_article system table
 ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8d2c324f032f9cdd3206f6f2bed77fba74c2c0f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 070b8cfe44190f89db8e7adf142debbc29e64d15
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75322127"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829249"
 ---
 # <a name="msmerge_conflict_publication_article-transact-sql"></a>MSmerge_conflict_publication_article (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "75322127"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**_имя\_столбца\_статьи_**|**перемен**|Представляет столбец в реплицируемой таблице. В данной системной таблице содержится по одному столбцу на каждый столбец статьи таблицы.|  
+|**_\_имя столбца \_ статьи_**|**Переменная**|Представляет столбец в реплицируемой таблице. В данной системной таблице содержится по одному столбцу на каждый столбец статьи таблицы.|  
 |**rowguid**|**uniqueidentifier**|Идентификатор строки конфликта.|  
 |**ModifiedDate**|**datetime**|Время возникновения конфликта.|  
-|**Идентификатор\_источника\_DataSource**|**uniqueidentifier**|Подписка, для которой изменение строк было отменено или конфликт был потерян.|  
+|**\_идентификатор источника DataSource \_**|**uniqueidentifier**|Подписка, для которой изменение строк было отменено или конфликт был потерян.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

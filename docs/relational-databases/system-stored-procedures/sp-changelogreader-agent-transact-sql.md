@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changelogreader_agent
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bf2a18543f6f5db30e36965c9e399968402292e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c3fda7373aba20102a7842ba955d1275bae8e842
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768880"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829654"
 ---
 # <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,14 +43,14 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_login = ] 'job_login'`Имя входа для учетной записи, под которой выполняется агент. *job_login* имеет тип **nvarchar (257)** и значение по умолчанию NULL. На Управляемый экземпляр Базы данных SQL Azure используйте учетную запись SQL Server. *Его нельзя изменить для издателя, отличного от* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*  
+`[ @job_login = ] 'job_login'`Имя входа для учетной записи, под которой выполняется агент. *job_login* имеет тип **nvarchar (257)** и значение по умолчанию NULL. На Управляемый экземпляр Базы данных SQL Azure используйте учетную запись SQL Server. *Его нельзя изменить для не относящегося к* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *издатель.*  
   
 `[ @job_password = ] 'job_password'`Пароль для учетной записи, под которой выполняется агент. Аргумент *job_password* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`Режим безопасности, используемый агентом при соединении с издателем. *publisher_security_mode* является **smallint**и ЗНАЧЕНИЕМ по умолчанию NULL. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности, а **1** — проверка подлинности Windows.  
+`[ @publisher_security_mode = ] publisher_security_mode`Режим безопасности, используемый агентом при соединении с издателем. *publisher_security_mode* является **smallint**и ЗНАЧЕНИЕМ по умолчанию NULL. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности, а **1** — проверка подлинности Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -67,7 +67,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_changelogreader_agent** используется в репликации транзакций.  
   
  **sp_changelogreader_agent** используется для изменения учетной записи Windows, с которой запускается агент чтения журнала. Можно изменить пароль существующего имени входа в систему Windows или ввести новое имя пользователя Windows и пароль.  
@@ -77,7 +77,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_changelogreader_agent**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и изменение параметров безопасности репликации](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
  [sp_addlogreader_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  

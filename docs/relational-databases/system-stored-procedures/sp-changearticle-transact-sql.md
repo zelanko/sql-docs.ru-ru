@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8fe752b17af683f59078bd7c37eb702a9408a530
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 664f503aa6d3c6d3d0f8c32d83fc2ea9f238ff3b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771402"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829731"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**pre_creation_cmd**||Команда предсоздания, которая перед применением синхронизации может полностью или частично удалить данные из целевой таблицы или выполнить ее усечение.|  
 ||**отсутствуют**|Не использует команду.|  
 ||**тени**|Удаляет целевую таблицу полностью.|  
-||**delete**;|Удаляет целевую таблицу.|  
+||**delete**|Удаляет целевую таблицу.|  
 ||**TRUNCATE**|Усекает целевую таблицу.|  
 |**pub_identity_range**||Управляет размером диапазонов идентификаторов, назначенных на подписчике. В случае одноранговой репликации не поддерживается.|  
 |**schema_option**||Указывает битовую карту параметра формирования схемы для данной статьи. *schema_option* является **двоичным (8)**. Дополнительные сведения см. в подразделе «Примечания» далее в этом разделе.|  
@@ -103,17 +103,17 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x4000000**|Реплицирует индексы по **XML-** столбцам.|  
 ||**0x8000000**|Создает все схемы, отсутствующие в настоящий момент на подписчике.|  
 ||**0x10000000**|Преобразует **XML-** столбцы в **ntext** на подписчике.|  
-||**0x20000000**|Преобразует типы данных больших объектов (**nvarchar (max)**, **varchar (max)** и **varbinary (max)**), введенные в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , в типы данных, поддерживаемые в. [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|  
+||**0x20000000**|Преобразует типы данных больших объектов (**nvarchar (max)**, **varchar (max)** и **varbinary (max)**), введенные в, в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] типы данных, поддерживаемые в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] .|  
 ||**0x40000000**|Реплицировать разрешения.|  
 ||**0x80000000**|Попытаться удалить зависимости для всех объектов, не являющихся частью публикации.|  
-||**0x100000000**|Используйте этот параметр, чтобы реплицировать атрибут FILESTREAM, если он указан в столбцах типа **varbinary (max)** . Не указывайте этот параметр, если выполняется репликация таблиц на подписчики [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Репликация таблиц, которые имеют столбцы FILESTREAM [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] для подписчиков, не поддерживается независимо от того, как задан этот параметр схемы.<br /><br /> См. соответствующий параметр **0x800000000**.|  
-||**0x200000000**|Преобразует типы данных даты и времени (**Date**, **time**, **DateTimeOffset**и **datetime2**), введенные в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , в типы данных, которые поддерживаются в более ранних версиях. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+||**0x100000000**|Используйте этот параметр, чтобы реплицировать атрибут FILESTREAM, если он указан в столбцах типа **varbinary (max)** . Не указывайте этот параметр, если выполняется репликация таблиц на подписчики [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Репликация таблиц, которые имеют столбцы FILESTREAM для [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] подписчиков, не поддерживается независимо от того, как задан этот параметр схемы.<br /><br /> См. соответствующий параметр **0x800000000**.|  
+||**0x200000000**|Преобразует типы данных даты и времени (**Date**, **time**, **DateTimeOffset**и **datetime2**), введенные в, в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] типы данных, которые поддерживаются в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 ||**0x400000000**|Проводит репликацию параметра сжатия для данных и индексов. Дополнительные сведения см. в разделе [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 ||**0x800000000**|Задайте этот параметр для сохранения данных атрибута FILESTREAM в его файловой группе на подписчике. Если этот параметр не задан, данные атрибута FILESTREAM сохраняются в файловой группе по умолчанию. Репликация не создает файловые группы, поэтому, если этот параметр задан, необходимо создать файловую группу до применения моментального снимка на подписчике. Дополнительные сведения о создании объектов перед применением моментального снимка см. [в разделе Выполнение скриптов до и после применения моментального](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)снимка.<br /><br /> См. соответствующий параметр **0x100000000**.|  
-||**0x1000000000**|Преобразует определяемые пользователем типы данных среды CLR (UDT) размером более 8000 байт в тип **varbinary (max)** , чтобы столбцы типа UDT могли реплицироваться на подписчики, работающие [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]в.|  
-||**0x2000000000**|Преобразует тип данных **hierarchyid** в **varbinary (max)** , чтобы столбцы типа **hierarchyid** могли реплицироваться на подписчики, на которых выполняется [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Дополнительные сведения об использовании столбцов **hierarchyid** в реплицированных таблицах см. в разделе [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+||**0x1000000000**|Преобразует определяемые пользователем типы данных среды CLR (UDT) размером более 8000 байт в тип **varbinary (max)** , чтобы столбцы типа UDT могли реплицироваться на подписчики, работающие в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .|  
+||**0x2000000000**|Преобразует тип данных **hierarchyid** в **varbinary (max)** , чтобы столбцы типа **hierarchyid** могли реплицироваться на подписчики, на которых выполняется [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Дополнительные сведения об использовании столбцов **hierarchyid** в реплицированных таблицах см. в разделе [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 ||**0x4000000000**|Проводит репликацию всех фильтруемых индексов для таблицы. Дополнительные сведения об фильтруемых индексах см. в разделе [CREATE Filtered indexes](../../relational-databases/indexes/create-filtered-indexes.md).|  
-||**0x8000000000**|Преобразует типы данных **Geography** и **Geometry** в тип **varbinary (max)** , чтобы столбцы этих типов можно было реплицировать на подписчики, на которых выполняется [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
+||**0x8000000000**|Преобразует типы данных **Geography** и **Geometry** в тип **varbinary (max)** , чтобы столбцы этих типов можно было реплицировать на подписчики, на которых выполняется [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .|  
 ||**0x10000000000**|Реплицирует индексы по столбцам типа **Geography** и **Geometry**.|  
 ||**0x20000000000**|Производит репликацию атрибута SPARSE для столбцов. Дополнительные сведения об этом атрибуте см. в разделе [Использование разреженных столбцов](../../relational-databases/tables/use-sparse-columns.md).|  
 ||**0x40000000000**|Разрешить агенту моментальных снимков использовать скрипты для создания оптимизированной для памяти таблицы на подписчике.|  
@@ -157,15 +157,15 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Свойства, которые при изменении потребуют повторной инициализации всех текущих подписок, см. в разделе «Примечания».  
   
-`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  *publisher* при изменении свойств статьи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя не следует использовать издатель.  
+>  При изменении свойств статьи издателя не следует использовать *Издатель* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_changearticle** используется в репликации моментальных снимков и репликации транзакций.  
   
  Если статья принадлежит публикации, поддерживающей одноранговую репликацию транзакций, можно изменить только **Описание**, **ins_cmd**, **upd_cmd**и **del_cmd** свойства.  
@@ -212,7 +212,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 |Тип статьи|Тип репликации||  
 |------------------|----------------------|------|  
-||Транзакционную|Моментальный снимок|  
+||Транзакционную|Снимок|  
 |**logbased**|Все параметры|Все параметры, кроме **0x02**|  
 |**logbased manualfilter**|Все параметры|Все параметры, кроме **0x02**|  
 |**logbased manualview**|Все параметры|Все параметры, кроме **0x02**|  
@@ -236,7 +236,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_changearticle**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств статьи](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

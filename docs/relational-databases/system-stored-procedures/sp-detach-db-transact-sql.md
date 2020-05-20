@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 25d292ed7f45d921d2fc9eafbc1d2d5fe5912dbe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278179"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830236"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 `[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Указывает, что файл полнотекстового индекса, связанный с отсоединяемой базой данных, не будет удален во время операции отсоединения базы данных. *KeepFulltextIndexFile* — это значение типа **nvarchar (10)** со значением по умолчанию **true**. Если *KeepFulltextIndexFile* имеет **значение false**, все файлы полнотекстовых индексов, связанные с базой данных, и метаданные полнотекстового индекса удаляются, если только база данных не доступна только для чтения. Если задано значение NULL или **true**, метаданные, связанные с полнотекстовым текстом, сохраняются.  
   
 > [!IMPORTANT]
->  Параметр ** \@KeepFulltextIndexFile** будет удален в следующей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не используйте его при работе над новыми приложениями и как можно быстрее измените приложения, в которых он в настоящее время используется.  
+>  Параметр ** \@ KeepFulltextIndexFile** будет удален в следующей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Не используйте его при работе над новыми приложениями и как можно быстрее измените приложения, в которых он в настоящее время используется.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -121,7 +121,7 @@ GO
  Требуется членство в предопределенной роли сервера **sysadmin** или членство в роли **db_owner** базы данных.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] база данных отсоединяется с параметром *параметром skipchecks установленным* , для которого задано значение true.  
+ В следующем примере база данных отсоединяется [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] с параметром *параметром skipchecks установленным* , для которого задано значение true.  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
@@ -136,7 +136,7 @@ exec sp_detach_db @dbname='AdventureWorks2012'
   
 ## <a name="see-also"></a>См. также:  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [Отсоединение и присоединение базы данных &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Отсоединение базы данных](../../relational-databases/databases/detach-a-database.md)  
   

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - compression [SQL Server], estimating
 - sp_estimate_data_compression_savings
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2ecc9f44e28296b79cc5e1dc9a9c70caa93bd94f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 37c6a32b7970d8bfb0a44eaf407914c5de27f593
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71682132"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831112"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "71682132"
   Возвращает текущий размер запрошенного объекта и оценивает размер объекта для запрошенного состояния сжатия. Сжатие можно оценить для всех таблиц или только для части. Сюда входят кучи, кластеризованные индексы, некластеризованные индексы, индексы columnstore, индексированные представления, а также секции таблиц и индексов. Объекты могут быть сжаты с помощью сжатия строк, страниц, columnstore или columnstore архива. Если таблица, индекс или секция уже сжаты, использование этой процедуры позволяет определить размер таблицы, индекса или секции в распакованном виде.  
   
 > [!NOTE]
-> Сжатие и **sp_estimate_data_compression_savings** доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживаемых различными выпусками, см. [в разделе функции, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> Сжатие и **sp_estimate_data_compression_savings** доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Чтобы оценить размер объекта после сжатия с запрошенными параметрами, эта хранимая процедура создает образец исходного объекта и загружает эти данные в эквивалентную таблицу и индекс, созданные в базе данных tempdb. Созданная в базе данных tempdb таблица или индекс затем сжимается до необходимых настроек, и вычисляется оценка экономии от сжатия.  
   
@@ -55,21 +55,21 @@ sp_estimate_data_compression_savings
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @schema_name= ] "*schema_name*"  
+ [ @schema_name =] "*schema_name*"  
  Имя схемы базы данных, содержащей таблицу или индексированное представление. *schema_name* имеет тип **sysname**. Если *schema_name* имеет значение null, используется схема по умолчанию текущего пользователя.  
   
- [ @object_name= ] "*object_name*"  
+ [ @object_name =] "*object_name*"  
  Имя таблицы или индексированного представления, к которым относится индекс. Аргумент *object_name* имеет тип **sysname**.  
   
- [ @index_id= ] *index_id*  
+ [ @index_id =] *index_id*  
  Идентификатор индекса. *index_id* имеет **тип int**и может принимать одно из следующих значений: идентификационный номер индекса, null или 0, если *object_id* является кучей. Чтобы вернуть данные для всех индексов базовой таблицы или представления, укажите значение NULL. Если указано значение NULL, необходимо также указать значение NULL для *partition_number*.  
   
- [ @partition_number= ] *partition_number*  
+ [ @partition_number =] *partition_number*  
  Номер секции в объекте. *partition_number* имеет **тип int**и может принимать одно из следующих значений: номер секции индекса или кучи, null или 1 для несекционированного индекса или кучи.  
   
  Чтобы указать секцию, можно также указать функцию [$Partition](../../t-sql/functions/partition-transact-sql.md) . Чтобы получить сведения обо всех секциях объекта, укажите значение NULL.  
   
- [ @data_compression= ] "*DATA_COMPRESSION*"  
+ [ @data_compression =] "*DATA_COMPRESSION*"  
  Тип сжатия для оценки. *DATA_COMPRESSION* может принимать одно из следующих значений: None, Row, Page, COLUMNSTORE или COLUMNSTORE_ARCHIVE.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -109,10 +109,10 @@ sp_estimate_data_compression_savings
  До SQL Server 2019 эта процедура не была применена к индексам columnstore и поэтому не принимает параметры сжатия данных COLUMNSTORE и COLUMNSTORE_ARCHIVE.  Начиная с SQL Server 2019, индексы columnstore можно использовать как в качестве исходного объекта для оценки, так и в качестве требуемого типа сжатия.
 
  > [!IMPORTANT]
- > Если [метаданные tempdb, оптимизированные для памяти](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) , [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]включены в, создание индексов columnstore во временных таблицах не поддерживается. Из-за этого ограничения sp_estimate_data_compression_savings не поддерживаются с параметрами сжатия данных COLUMNSTORE и COLUMNSTORE_ARCHIVE, если включены метаданные TempDB, оптимизированные для памяти.
+ > Если [метаданные tempdb, оптимизированные для памяти](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) , включены в [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , создание индексов columnstore во временных таблицах не поддерживается. Из-за этого ограничения sp_estimate_data_compression_savings не поддерживаются с параметрами сжатия данных COLUMNSTORE и COLUMNSTORE_ARCHIVE, если включены метаданные TempDB, оптимизированные для памяти.
 
 ## <a name="considerations-for-columnstore-indexes"></a>Рекомендации для индексов columnstore
- Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], `sp_estimate_compression_savings` поддерживает оценку сжатия архива columnstore и columnstore. В отличие от сжатия страниц и строк, применение сжатия columnstore к объекту требует создания нового индекса columnstore. По этой причине при использовании параметров COLUMNSTORE и COLUMNSTORE_ARCHIVE этой процедуры тип исходного объекта, предоставляемого для процедуры, определяет тип индекса COLUMNSTORE, используемого для оценки сжатого размера. В следующей таблице показаны ссылочные объекты, используемые для оценки сжатия каждого типа исходного объекта, @data_compression если для параметра задано значение COLUMNSTORE или COLUMNSTORE_ARCHIVE.
+ Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , `sp_estimate_compression_savings` поддерживает оценку сжатия архива columnstore и columnstore. В отличие от сжатия страниц и строк, применение сжатия columnstore к объекту требует создания нового индекса columnstore. По этой причине при использовании параметров COLUMNSTORE и COLUMNSTORE_ARCHIVE этой процедуры тип исходного объекта, предоставляемого для процедуры, определяет тип индекса COLUMNSTORE, используемого для оценки сжатого размера. В следующей таблице показаны ссылочные объекты, используемые для оценки сжатия каждого типа исходного объекта, если @data_compression для параметра задано значение COLUMNSTORE или COLUMNSTORE_ARCHIVE.
 
  |Исходный объект|Ссылочный объект|
  |-----------------|---------------|
@@ -125,7 +125,7 @@ sp_estimate_data_compression_savings
 > [!NOTE]  
 > При оценке сжатия columnstore из исходного объекта rowstore (кластеризованный индекс, некластеризованный индекс или куча), если в исходном объекте есть какие-либо столбцы, имеющие тип данных, не поддерживаемый в индексе columnstore, sp_estimate_compression_savings завершится ошибкой.
 
- Аналогично, если `@data_compression` параметру `NONE`присвоено `ROW`значение, `PAGE` или, а исходный объект является индексом columnstore, то в следующей таблице описаны используемые ссылочные объекты.
+ Аналогично, если `@data_compression` параметру присвоено значение `NONE` , `ROW` или, `PAGE` а исходный объект является индексом columnstore, то в следующей таблице описаны используемые ссылочные объекты.
 
  |Исходный объект|Ссылочный объект|
  |-----------------|---------------|

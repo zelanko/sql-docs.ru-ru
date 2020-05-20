@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sp_set_parameter
 - smart_admin.sp_set_parameter
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 838a8b0d998476a37b0dd4d30cab5041ad4276a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7a1a2ad1b617ba30f5c271ced52399bf176cb527
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942037"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830358"
 ---
 # <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup. sp_set_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ EXEC managed_backup.sp_set_parameter
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="best-practices"></a>Советы и рекомендации  
+## <a name="best-practices"></a>Рекомендации  
  Необязательный раздел, описывающий рекомендации по выполнению инструкции или процедуры.  
   
 ## <a name="security"></a>Безопасность  
