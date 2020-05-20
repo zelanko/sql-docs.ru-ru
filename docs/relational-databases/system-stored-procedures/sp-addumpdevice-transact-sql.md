@@ -16,19 +16,19 @@ helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cd8e54f8de50ffe1912dd58abc6484198fac46c9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68117908"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833618"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 Добавляет в экземпляр компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устройство резервного копирования.  
   
@@ -51,7 +51,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**disk**|Файл на жестком диске в качестве устройства резервного копирования.|  
+|**свободного**|Файл на жестком диске в качестве устройства резервного копирования.|  
 |**аудиокассет**|Любое ленточное устройство, поддерживаемое [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Примечание. Поддержка ленточных устройств резервного копирования будет удалена в одной из будущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
   
 `[ @logicalname = ] 'logical_name'`Логическое имя устройства резервного копирования, используемое в инструкциях BACKUP и RESTORE. Аргумент *logical_name* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
@@ -60,7 +60,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  При создании устройства резервного копирования в удаленном сетевом каталоге убедитесь, что имя входа, под которым запущен компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)], имеет на удаленном компьютере необходимые права на запись.  
   
- При добавлении ленточного устройства этот параметр должен быть физическим именем, назначенным локальному ленточному устройству системой Windows. Например, ** \\ \\.\TAPE0** для первого ленточного устройства на компьютере. Ленточное устройство должно быть подключено к серверному компьютеру и его нельзя использовать удаленно. Имена команд, содержащие символы, отличные от алфавитно-цифровых, следует заключать в кавычки.  
+ При добавлении ленточного устройства этот параметр должен быть физическим именем, назначенным локальному ленточному устройству системой Windows. Например, ** \\ \\ .\TAPE0** для первого ленточного устройства на компьютере. Ленточное устройство должно быть подключено к серверному компьютеру и его нельзя использовать удаленно. Имена команд, содержащие символы, отличные от алфавитно-цифровых, следует заключать в кавычки.  
   
 > [!NOTE]  
 >  Эта процедура вносит указанное физическое имя в каталог. Она не пытается создать это устройство или произвести доступ к нему.  
@@ -104,7 +104,7 @@ GO
 EXEC sp_addumpdevice 'disk', 'mydiskdump', 'c:\dump\dump1.bak';  
 ```  
   
-### <a name="b-adding-a-network-disk-backup-device"></a>Б) Добавление сетевого дискового устройства резервного копирования  
+### <a name="b-adding-a-network-disk-backup-device"></a>Б. Добавление сетевого дискового устройства резервного копирования  
  Следующий пример иллюстрирует добавление удаленного дискового устройства резервного копирования с именем `networkdevice`. Имя, от которого запущен компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)], должно иметь разрешения на удаленный файл (`\\<servername>\<sharename>\<path>\<filename>.bak`).  
   
 ```  
@@ -139,13 +139,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Устройства резервного копирования &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
+ [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
- [Определение логического устройства резервного копирования для дискового файла &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [Определение логического устройства резервного копирования для ленточного накопителя &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [Определение логического устройства резервного копирования для дискового файла (SQL Server)](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [Определение логического устройства резервного копирования для ленточного накопителя (SQL Server)](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
- [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
- [sys. backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
+ [sp_dropdevice (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
+ [sys.backup_devices (Transact-SQL)](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

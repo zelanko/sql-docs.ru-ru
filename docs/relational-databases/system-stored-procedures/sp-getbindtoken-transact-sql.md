@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_getbindtoken
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ac8bc2087b4c100b784aadac8458e106538f76d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dca4015832f8bebf5501c4b3a7e84339bf62957b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123995"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833216"
 ---
 # <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [@out_token=] "*RETURN_VALUE*"  
+ [ @out_token =] "*RETURN_VALUE*"  
  Токен, используемый для связывания сеансов. *RETURN_VALUE* имеет тип **varchar (255)** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
@@ -125,7 +125,7 @@ SELECT @bind_token AS Token;
   
  `\0]---5^PJK51bP<1F<-7U-]ANZ`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_bindsession &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [API srv_getbindtoken &#40;расширенных хранимых процедур&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  

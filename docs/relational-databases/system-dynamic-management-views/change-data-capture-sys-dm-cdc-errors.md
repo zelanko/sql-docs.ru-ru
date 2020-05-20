@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sys.dm_cdc_errors dynamic management view
 - change data capture [SQL Server], error reporting
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 506dae205356504c76d47ffe324b82f9f34665f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 81908d815818c0274615e9bd2bd3bf40037e2b99
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018002"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833850"
 ---
 # <a name="change-data-capture---sysdm_cdc_errors"></a>Система отслеживания измененных данных — sys. dm_cdc_errors
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "68018002"
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение VIEW DATABASE STATE для запроса динамического административного представления **sys. dm_cdc_errors** . Дополнительные сведения о разрешениях для динамических административных представлений см. в разделе [динамические административные представления и функции &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. dm_cdc_log_scan_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)   
  [sys. dm_repl_traninfo &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-repl-traninfo-transact-sql.md)  
   

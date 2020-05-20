@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_attachsubscription
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2e059b78a886735ce53b86de77effa43b03136df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c3ac5075f3bedeb889536fe90ebe7f6c4049199a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768971"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833455"
 ---
 # <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Если *subscriber_security_mode* не равен **1** , а *subscriber_password* указан, возвращается ошибка.  
   
-`[ @distributor_security_mode = ] distributor_security_mode`Режим безопасности, используемый при соединении с распространителем при синхронизации. *distributor_security_mode* имеет **тип int**и значение по умолчанию **0**. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности. **1** указывает проверку подлинности Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @distributor_security_mode = ] distributor_security_mode`Режим безопасности, используемый при соединении с распространителем при синхронизации. *distributor_security_mode* имеет **тип int**и значение по умолчанию **0**. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности. **1** указывает проверку подлинности Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 `[ @distributor_login = ] 'distributor_login'`Имя входа распространителя, используемое при соединении с распространителем при синхронизации. *distributor_login* является обязательным, если *distributor_security_mode* имеет значение **0**. Аргумент *distributor_login* имеет тип **sysname**и значение по умолчанию NULL.  
   
@@ -113,7 +113,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_attachsubscription**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

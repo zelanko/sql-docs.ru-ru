@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysarticleupdates system table
 ms.assetid: 11a53bcd-a215-4d0b-9db8-233981d3ef5d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d2e710bdbe8f026624ea71357afb6d204b333c91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 34a6e261665555575daf78ba31e2f6cb5257e9d0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130501"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833056"
 ---
 # <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68130501"
 |**ins_conflict_proc**|**int**|Идентификатор процедуры, используемой для записи конфликта в **conflict_table**.|  
 |**identity_support**|**bit**|Определяет, включена ли автоматическая обработка диапазона идентификаторов при использовании очереди обновления.  **0** означает, что диапазон идентификаторов не поддерживается.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_jobstep
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa6a12a45a5c0609b4b717ccdf90af63ea53776b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084880"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833127"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ sp_update_jobstep
 |**2**|Добавить к выходному файлу.|  
 |**4**|Записать вывод шага задания Transact-SQL в журнал шагов.|  
 |**8**|Записать журнал в таблицу (переписать существующий журнал).|  
-|**16**|Записать журнал в таблицу (добавить к существующему журналу).|  
+|**глубин**|Записать журнал в таблицу (добавить к существующему журналу).|  
   
 `[ @proxy_id = ] proxy_id`ИДЕНТИФИКАЦИОНный номер учетной записи-посредника, от имени которой выполняется шаг задания. *proxy_id* имеет тип **int**и значение по умолчанию NULL. Если *proxy_id* не указано, *proxy_name* не указана и *user_name* не указана, шаг задания выполняется как учетная запись службы для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента.  
   
@@ -152,7 +152,7 @@ sp_update_jobstep
   
  Только члены **sysadmin** могут обновлять шаг задания, принадлежащий другому пользователю.  
   
- Если шаг задания требует доступа к учетной записи-посреднику, создатель шага задания должен обеспечить ему доступ к такой записи. Все подсистемы, за исключением Transact-SQL, требуют учетную запись-посредник. Члены **роли sysadmin** имеют доступ ко всем учетным записям-посредникам и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут использовать учетную запись службы агента для прокси.  
+ Если шаг задания требует доступа к учетной записи-посреднику, создатель шага задания должен обеспечить ему доступ к такой записи. Все подсистемы, за исключением Transact-SQL, требуют учетную запись-посредник. Члены **роли sysadmin** имеют доступ ко всем учетным записям-посредникам и могут использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетную запись службы агента для прокси.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример изменяет количество повторных попыток для первого шага задания `Weekly Sales Data Backup`. После выполнения данного примера количество повторных попыток будет равно `10`.  
@@ -168,7 +168,7 @@ EXEC dbo.sp_update_jobstep
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр или изменение заданий](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   

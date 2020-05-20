@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_registry dynamic management view
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8daa2d195ab1f4cf4602b9633394ed1705a3d7d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2b0a50ee81aa2247d569dab8125924fd6a2c7cf7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80530826"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831875"
 ---
 # <a name="sysdm_server_registry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%ControlSet%';  
 ```  
   
-### <a name="b-display-the-sql-server-agent-registry-key-values"></a>Б) Отображение значений раздела реестра для агента SQL Server  
+### <a name="b-display-the-sql-server-agent-registry-key-values"></a>Б. Отображение значений раздела реестра для агента SQL Server  
  Следующий пример возвращает значения разделов реестра агента SQL Server для текущего экземпляра SQL Server.  
   
 ```  
@@ -88,7 +88,7 @@ FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%SuperSocketNetLib%';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. dm_server_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   

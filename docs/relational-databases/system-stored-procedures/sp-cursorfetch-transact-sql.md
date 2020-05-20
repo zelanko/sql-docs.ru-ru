@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4635bffa5b5b681d0ff202c4231c4d8b8d10ae26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a1cb929158a6d17a7a7c16e5e303c403a2c03112
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108514"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831815"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_cursorfetch cursor
   
 ## <a name="arguments"></a>Аргументы  
  *курсор*  
- Значение *обработчика* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создаваемое и возвращаемое sp_cursoropen. *cursor* является обязательным параметром, который вызывает входное значение **int** . Дополнительные сведения см. в подразделе «Примечания» далее в этом разделе.  
+ Значение *обработчика* , создаваемое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и возвращаемое sp_cursoropen. *cursor* является обязательным параметром, который вызывает входное значение **int** . Дополнительные сведения см. в подразделе «Примечания» далее в этом разделе.  
   
  *fetchtype*  
  Указывает, какой буфер курсора выбирается. *fetchtype* — это необязательный параметр, для которого требуется одно из следующих целочисленных входных значений.  
@@ -172,7 +172,7 @@ row 6 contents
 > [!NOTE]  
 >  Это именно тот случай, когда параметр состояния RPC установлен в значение 2.  
   
-### <a name="b-using-prev_noadjust-to-return-fewer-rows-than-prev"></a>Б) Использование PREV_NOADJUST для возврата меньшего числа строк, чем PREV  
+### <a name="b-using-prev_noadjust-to-return-fewer-rows-than-prev"></a>Б. Использование PREV_NOADJUST для возврата меньшего числа строк, чем PREV  
  PREV_NOADJUST никогда не включает строки, находящиеся в позиции курсора или за ней в блоке строк, который он возвращает. В случаях, когда предыдущие строки возвращаются после текущей позицией, PREV_NOADJUST Возвращает меньшее количество строк, чем было запрошено в *nrows*. Если ранее в примере A задана текущая позиция, то при использовании PREV процедура sp_cursorfetch(h2, 4, 1, 5) выберет следующие строки:  
   
 ```  
@@ -191,7 +191,7 @@ row2 contents
 row3 contents   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

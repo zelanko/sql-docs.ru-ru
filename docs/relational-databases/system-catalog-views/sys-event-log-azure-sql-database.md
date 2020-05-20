@@ -17,15 +17,15 @@ helpviewer_keywords:
 - event_log
 - sys.event_log
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a239624fcbc3913d636f7f57b496c006d06a64b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6eb1173bf191ae319dc257c42199f02a05c9455
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061378"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832008"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (база данных SQL Azure)
 
@@ -47,7 +47,7 @@ ms.locfileid: "68061378"
 |**event_type**|**nvarchar (64)**|Тип события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**event_subtype**|**int**|Подтип произошедшего события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**event_subtype_desc**|**nvarchar (64)**|Описание подтипа события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
-|**severity**|**int**|Степень серьезности ошибки. Возможны следующие значения:<br /><br /> 0 = информационные<br />1 = предупреждение<br />2 = ошибка|  
+|**severity**|**int**|Степень серьезности ошибки. Доступны следующие значения:<br /><br /> 0 = информационные<br />1 = предупреждение<br />2 = ошибка|  
 |**event_count**|**int**|Количество раз, которое произошло это событие для указанной базы данных в течение указанного интервала времени (**start_time** и **end_time**).|  
 |**nописание**|**nvarchar(max)**|Подробное описание события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**additional_data**|**XML**|*Примечание. это значение всегда равно NULL для базы данных SQL Azure версии 12. Дополнительные сведения о получении событий взаимоблокировок для версии 12 см. в разделе " [примеры](#Deadlock) ".*<br /><br /> Для событий **взаимоблокировок** этот столбец содержит граф взаимоблокировок. Этот столбец содержит значение NULL для других типов событий. |  
@@ -76,7 +76,7 @@ ms.locfileid: "68061378"
 |**установлен**|**connection_failed**|9|**перенастройки**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> При подключении возникла ошибка, так как в это время выполнялась настройка базы данных.|  
 |**установлен**|**connection_terminated**|0|**idle_connection_timeout**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> Соединение бездействует дольше заданного системой порогового периода.|  
 |**установлен**|**connection_terminated**|1|**перенастройки**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> Сеанс прерван из-за изменения конфигурации базы данных.|  
-|**установлен**|**регулирования**|*\<код причины>*|**reason_code**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> Запрос регулируется.  Код причины регулирования: * \<код причины>*. Дополнительные сведения см. в разделе [регулирование подсистемы](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
+|**установлен**|**регулирования**|*\<код причины>*|**reason_code**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> Запрос регулируется.  Код причины регулирования: * \< код причины>*. Дополнительные сведения см. в разделе [регулирование подсистемы](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
 |**установлен**|**throttling_long_transaction**|40549|**long_transaction**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> Сеанс завершен по причине долго выполняющейся транзакции. Рекомендуется сократить транзакцию. Дополнительные сведения см. в разделе [ограничения ресурсов](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**установлен**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> Сеанс был завершен в связи с тем, что он получил слишком много блокировок. Рекомендуется сократить число строк, считываемых или изменяемых в одной транзакции. Дополнительные сведения см. в разделе [ограничения ресурсов](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**установлен**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> Сеанс был завершен в связи с чрезмерным использованием базы данных TEMPDB. Попробуйте изменить запрос, чтобы сократить объем использования временных таблиц. Дополнительные сведения см. в разделе [ограничения ресурсов](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
@@ -125,7 +125,7 @@ start_time                    end_time
  Это представление может содержать не все сведения о подключениях и ошибках:  
   
 - Это представление не включает все [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ошибки базы данных, которые могут возникнуть, только те, которые указаны в [типах событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) в этом разделе.  
-- Если в [!INCLUDE[ssSDS](../../includes/sssds-md.md)] центре обработки данных возникает сбой компьютера, в таблице событий может отсутствовать небольшой объем данных.  
+- Если в центре обработки данных возникает сбой компьютера [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , в таблице событий может отсутствовать небольшой объем данных.  
 - Если IP-адрес заблокирован через DoSGuard, события подключения с этого IP-адреса не могут собираться и не будут отображаться в этом представлении.  
   
 ## <a name="examples"></a>Примеры  
@@ -228,7 +228,7 @@ WITH CTE AS (
 SELECT * FROM CTE2;  
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
  [Расширенные события в базе данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
  

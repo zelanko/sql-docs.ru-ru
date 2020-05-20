@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpublicationthresholds system table
 ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2bf5659dc8a5a440b764b3264556359205646d75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2025dac432856e944dfd7e12e591907ef05a3565
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088514"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831978"
 ---
 # <a name="mspublicationthresholds-transact-sql"></a>MSpublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68088514"
 |**shouldalert**|**bit**|Значение **1** указывает, что предупреждение должно быть создано, если метрика превышает заданное пороговое значение.|  
 |**IsEnabled**|**bit**|Значение **1** указывает, что мониторинг включен для этой метрики производительности репликации.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

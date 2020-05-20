@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber_schedule
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7baa7419620fd25be06a731894432862bfba2b96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 96ab4f3fa8d3b756a40b4ca0aa347f2827aab66e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769046"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833698"
 ---
 # <a name="sp_addsubscriber_schedule-transact-sql"></a>Хранимая процедура sp_addsubscriber_schedule (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -65,8 +65,8 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**1**|Один раз.|  
 |**2**|По запросу|  
 |**4**|Ежедневно|  
-|**8**|Weekly (Еженедельно);|  
-|**16**|Ежемесячно|  
+|**8**|Еженедельно|  
+|**глубин**|Ежемесячно|  
 |**32**|Ежемесячно с относительной датой|  
 |**64** (по умолчанию)|Автозапуск|  
 |**128**|Повторяющееся задание|  
@@ -81,7 +81,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
-|**16**|Последний|  
+|**глубин**|Последний|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию **0**.  
   
@@ -104,10 +104,10 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 `[ @active_end_date = ] active_end_date`Дата прекращения расписания агент распространения в формате ГГГГММДД. *active_end_date* имеет **тип int**и значение по умолчанию 99991231, что означает 31 декабря 9999.  
   
-`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  *publisher* для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя не следует указывать издателя.  
+>  для издателя не следует указывать *издателя* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -118,7 +118,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_addsubscriber_schedule**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_changesubscriber_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

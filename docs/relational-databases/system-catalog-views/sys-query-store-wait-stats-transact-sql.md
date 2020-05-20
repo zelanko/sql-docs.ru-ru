@@ -19,12 +19,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bff80fbe2b5022e12eca58de42192a3a1bb18d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3c94f7f23697539b000c9c76dc1d0970a56a96d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74190373"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834117"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-SQL)
 
@@ -55,7 +55,7 @@ ms.locfileid: "74190373"
 |Целочисленное значение|Категория ожидания|Типы ожидания включают в категорию|  
 |-----------------|---------------|-----------------|  
 |**0**;|**Неизвестно**|Неизвестно |  
-|**1**|**ЗАГРУЗКИ**|SOS_SCHEDULER_YIELD|
+|**1**|**ЦП**|SOS_SCHEDULER_YIELD|
 |**2**|**Рабочий поток**|THREADPOOL|
 |**3**|**Скрыть**|LCK_M_%|
 |**4**|**Периода**|LATCH_%|
@@ -65,12 +65,12 @@ ms.locfileid: "74190373"
 |**8**|**SQL CLR**|CLR%, SQLCLR%|
 |**9**|**Зеркального**|ДБМИРРОР%|
 |**10**|**Транзакция**|ТРАНЗАКЦИИ%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
-|**11**|**Idle**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
+|**11**|**Бездействие**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
 |**12**|**PreEmptive**|PREEMPTIVE_%|
 |**13**|**Service Broker**|BROKER_% **(но не BROKER_RECEIVE_WAITFOR)**|
 |**14**|**Ввод-вывод журнала транзакций**|LOGMGR, ЛОГБУФФЕР, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOG|
 |**15**|**Сетевые операции ввода-вывода**|ASYNC_NETWORK_IO, NET_WAITFOR_PACKET, PROXY_NETWORK_IO, EXTERNAL_SCRIPT_NETWORK_IOF|
-|**16**|**Параллелизма**|CXPACKET, EXCHANGE, HT%, BMP%, BP%|
+|**глубин**|**Параллелизма**|CXPACKET, EXCHANGE, HT%, BMP%, BP%|
 |**широкоэкранны**|**Память**|RESOURCE_SEMAPHORE, КМЕМСРЕАД, КМЕМПАРТИТИОНЕД, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
 |**стр**|**Ожидание пользователя**|WAITFOR, WAIT_FOR_RESULTS, BROKER_RECEIVE_WAITFOR|
 |**стр**|**Трассировка**|ТРАЦЕВРИТЕ, SQLTRACE_LOCK, SQLTRACE_FILE_BUFFER, SQLTRACE_FILE_WRITE_IO_COMPLETION, SQLTRACE_FILE_READ_IO_COMPLETION, SQLTRACE_PENDING_BUFFER_WRITERS, SQLTRACE_SHUTDOWN, QUERY_TRACEOUT, TRACE_EVTNOTIFF|
@@ -85,7 +85,7 @@ ms.locfileid: "74190373"
 
  Требуется разрешение `VIEW DATABASE STATE`.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
 - [sys.query_context_settings (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)

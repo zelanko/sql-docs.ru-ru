@@ -16,15 +16,15 @@ helpviewer_keywords:
 - dm_operation_status dynamic management view
 - sys.dm_operation_status dynamic management view
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c49e4e01dd8ddaf0667546a8cc221a7918f42c81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9464a28505707abe602decabd00cde58a02d1feb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70911209"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833764"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (база данных SQL Azure)
 
@@ -54,7 +54,7 @@ ms.locfileid: "70911209"
  Это представление доступно в базе данных **master** только для входа субъекта уровня сервера.  
   
 ## <a name="remarks"></a>Remarks  
- Чтобы использовать это представление, необходимо подключиться к базе данных **master** . Используйте `sys.dm_operation_status` представление в базе данных **master** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] сервера для наблюдения за состоянием следующих операций, [!INCLUDE[ssSDS](../../includes/sssds-md.md)]выполняемых над:  
+ Чтобы использовать это представление, необходимо подключиться к базе данных **master** . Используйте `sys.dm_operation_status` представление в базе данных **master** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] сервера для наблюдения за состоянием следующих операций, выполняемых над [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :  
   
 -   Создание базы данных  
   
@@ -83,7 +83,7 @@ SELECT * FROM sys.dm_operation_status
    ORDER BY start_time DESC;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции георепликации &#40;базе данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
  [sys. dm_geo_replication_link_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
  [sys. geo_replication_links &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   

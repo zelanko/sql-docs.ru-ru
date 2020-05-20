@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_conditions view
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ee0f269fcfda93733d36a0b7396fd72d16bc01d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2f047007397eb302859f80bb5efe4b106a33ae61
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68121168"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833832"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68121168"
 |condition_id|**int**|Идентификатор условия. Каждое условие представляет собой коллекцию, состоящую из одного или нескольких выражений условий.|  
 |name|**sysname**|Имя условия.|  
 |date_created|**datetime**|Дата и время создания условия.|  
-|description|**nvarchar(max)**|Описание условия. Столбец описания является необязательным и может принимать значение NULL.|  
+|description;|**nvarchar(max)**|Описание условия. Столбец описания является необязательным и может принимать значение NULL.|  
 |created_by|**sysname**|Имя пользователя, создавшего условие.|  
 |modified_by|**sysname**|Имя пользователя, изменившего это условие последним. Содержит значение NULL, если изменений не было.|  
 |date_modified|**datetime**|Дата и время создания условия. Содержит значение NULL, если изменений не было.|  
@@ -49,7 +49,7 @@ ms.locfileid: "68121168"
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли PolicyAdministratorRole базы данных msdb.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Административные представления на основе политик (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

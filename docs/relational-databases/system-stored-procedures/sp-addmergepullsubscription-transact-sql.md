@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1b0a20e2bc7a167698353db31e7c0411fb1a6961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 21d9afddaf2fc4c937949244959cb346233cb51a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68769143"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831828"
 ---
 # <a name="sp_addmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>Remarks  
  **sp_addmergepullsubscription** используется для репликации слиянием.  
   
- Если для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] синхронизации подписки используется агент, то хранимая процедура [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) должна выполняться на подписчике, чтобы создать агент и задание для синхронизации с публикацией.  
+ Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для синхронизации подписки используется агент, то хранимая процедура [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) должна выполняться на подписчике, чтобы создать агент и задание для синхронизации с публикацией.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_0_1.sql)]  

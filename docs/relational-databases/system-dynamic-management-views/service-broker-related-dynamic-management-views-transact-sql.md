@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Service Broker, dynamic management views
 - dynamic management views [SQL Server], Service Broker
 ms.assetid: 3253bf60-5ea6-4525-8744-c21070c4df0e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7c47c229c925da14acfd58857d79b46a49deb6de
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0464f42ee99555b27919c58297054ff72faaeabe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68023718"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832614"
 ---
 # <a name="service-broker-related-dynamic-management-views-transact-sql"></a>Динамические административные представления, связанные с компонентом Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68023718"
 |[sys.dm_broker_activated_tasks](../../relational-databases/system-dynamic-management-views/sys-dm-broker-activated-tasks-transact-sql.md)|[sys.dm_broker_connections](../../relational-databases/system-dynamic-management-views/sys-dm-broker-connections-transact-sql.md)|  
 |[sys.dm_broker_forwarded_messages](../../relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql.md)|[sys.dm_broker_queue_monitors](../../relational-databases/system-dynamic-management-views/sys-dm-broker-queue-monitors-transact-sql.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Системные представления &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

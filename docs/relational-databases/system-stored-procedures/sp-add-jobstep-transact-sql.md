@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobstep
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d9f68c1e3b4f0bec4ba338af12fb1f24c5ff204
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74412854"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833704"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -33,7 +33,7 @@ ms.locfileid: "74412854"
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > В [управляемый экземпляр базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)поддерживаются большинство типов заданий, но не все агент SQL Server. Дополнительные сведения см. [в разделе управляемый экземпляр базы данных SQL Azure отличий T-SQL от SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
+  > В [управляемый экземпляр базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)поддерживаются большинство типов заданий, но не все агент SQL Server. Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -73,11 +73,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @step_name = ] 'step_name'`Имя шага. Аргумент *step_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @subsystem = ] 'subsystem'`Подсистема, используемая службой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента для выполнения *команды*. *подсистема* имеет тип **nvarchar (40)** и может принимать одно из следующих значений.  
+`[ @subsystem = ] 'subsystem'`Подсистема, используемая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службой агента для выполнения *команды*. *подсистема* имеет тип **nvarchar (40)** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|"**ACTIVESCRIPTING**"|Активный скрипт.<br /><br /> ** \* \* Важно \* !**[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|"**ACTIVESCRIPTING**"|Активный скрипт.<br /><br /> ** \* \* Важно \* ! \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**CMDEXEC**|Команда операционной системы или исполняемая программа.|  
 |"**Distribution**"|Задание агента распространения репликации.|  
 |"**Snapshot**"|Задание агента моментальных снимков репликации.|  
@@ -142,7 +142,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @os_run_priority = ] run_priority`Процессу.  
   
-`[ @output_file_name = ] 'file_name'`Имя файла, в котором сохраняется выходные данные этого шага. *file_name* имеет тип **nvarchar (200)** и значение по умолчанию NULL. *file_name* может содержать один или несколько токенов, перечисленных в разделе *команда*. Этот параметр допустим только [!INCLUDE[tsql](../../includes/tsql-md.md)]для команд, выполняющихся в, **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]или [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] подсистемах.  
+`[ @output_file_name = ] 'file_name'`Имя файла, в котором сохраняется выходные данные этого шага. *file_name* имеет тип **nvarchar (200)** и значение по умолчанию NULL. *file_name* может содержать один или несколько токенов, перечисленных в разделе *команда*. Этот параметр допустим только для команд, выполняющихся в [!INCLUDE[tsql](../../includes/tsql-md.md)] , **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] или [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] подсистемах.  
   
 `[ @flags = ] flags`Параметр, который управляет поведением. *Флаги* имеют **тип int**и могут принимать одно из следующих значений.  
   
@@ -152,7 +152,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**2**|Добавить к выходному файлу.|  
 |**4**|Записать вывод шага задания [!INCLUDE[tsql](../../includes/tsql-md.md)] в журнал шагов.|  
 |**8**|Записать журнал в таблицу (переписать существующий журнал).|  
-|**16**|Записать журнал в таблицу (добавить к существующему журналу).|  
+|**глубин**|Записать журнал в таблицу (добавить к существующему журналу).|  
 |**32**|Записать все выходные данные в журнал заданий.|  
 |**64**|Создать событие Windows для использования в качестве сигнала для прерывания шага задания Cmd.|  
   
@@ -207,7 +207,7 @@ EXEC sp_add_jobstep
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр или изменение заданий](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   

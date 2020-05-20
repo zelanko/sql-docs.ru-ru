@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addsrvrolemember
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2c927bdff462922d1846188366fbb92ce0d3663c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab49a6572bfe8b2879b832642eeb1cf692177bb6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022424"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833653"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
   
 ## <a name="arguments"></a>Аргументы  
  [ @loginame **=** ] **"**_Login_**"**  
- Имя входа, добавляемое к предопределенной роли сервера. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию. *имя входа* может быть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа или именем входа Windows. Если имени входа Windows еще не был предоставлен доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], он предоставляется автоматически.  
+ Имя входа, добавляемое к предопределенной роли сервера. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию. *имя входа* может быть именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или именем входа Windows. Если имени входа Windows еще не был предоставлен доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], он предоставляется автоматически.  
   
  [ @rolename **=** ] **"**_роль_**"**  
  Имя предопределенной роли сервера, к которой добавляется имя входа. Аргумент *Role* имеет тип **sysname**, значение по умолчанию NULL и должен иметь одно из следующих значений:  
@@ -81,14 +81,14 @@ sp_addsrvrolemember [ @loginame= ] 'login'
  Требует членства в роли, к которой добавляется новый элемент.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере имя входа `Corporate\HelenS` Windows добавляется к `sysadmin` предопределенной роли сервера.  
+ В следующем примере имя входа Windows добавляется `Corporate\HelenS` к `sysadmin` предопределенной роли сервера.  
   
 ```  
 EXEC sp_addsrvrolemember 'Corporate\HelenS', 'sysadmin';  
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   

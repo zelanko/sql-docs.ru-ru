@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sp_refresh_parameter_encryption
 - Always Encrypted, sp_refresh_parameter_encryption
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 47f622c287eb0e32e1c5db2d33b64af2de3e379b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002460"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833148"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,9 +46,9 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>Аргументы
 
-`[ @name = ] 'module_name'`Имя хранимой процедуры, определяемой пользователем функции, представления, триггера DML, триггера DDL уровня базы данных или триггера DDL уровня сервера. *module_name* не может быть хранимой процедурой среды CLR или функцией CLR. *module_name* не могут быть привязаны к схеме. *module_name* имеет `nvarchar`значение и не имеет значения по умолчанию. *module_name* может быть составным идентификатором, но может ссылаться только на объекты в текущей базе данных.
+`[ @name = ] 'module_name'`Имя хранимой процедуры, определяемой пользователем функции, представления, триггера DML, триггера DDL уровня базы данных или триггера DDL уровня сервера. *module_name* не может быть хранимой процедурой среды CLR или функцией CLR. *module_name* не могут быть привязаны к схеме. *module_name* имеет значение `nvarchar` и не имеет значения по умолчанию. *module_name* может быть составным идентификатором, но может ссылаться только на объекты в текущей базе данных.
 
-`[ @namespace = ] ' < class > '`Класс указанного модуля. Если *module_name* является триггером DDL, `<class>` требуется. Параметр `<class>` равен `nvarchar(20)`. Допустимые входные значения: `DATABASE_DDL_TRIGGER` и `SERVER_DDL_TRIGGER`.    
+`[ @namespace = ] ' < class > '`Класс указанного модуля. Если *module_name* является триггером DDL, `<class>` требуется. Параметр `<class>` равен `nvarchar(20)`. Допустимые входные значения: `DATABASE_DDL_TRIGGER` и `SERVER_DDL_TRIGGER` .    
 
 ## <a name="return-code-values"></a>Значения кода возврата  
 
@@ -63,12 +63,12 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 При изменении свойств шифрования таблицы `sp_refresh_parameter_encryption` должны выполняться для любых модулей прямо или косвенно ссылаться на эту таблицу. Эту хранимую процедуру можно вызывать для этих модулей в любом порядке, не требуя от пользователя сначала обновить внутренний модуль перед переходом к вызывающим его объектам.
 
-`sp_refresh_parameter_encryption`не влияет на разрешения, расширенные свойства или `SET` параметры, связанные с объектом. 
+`sp_refresh_parameter_encryption`не влияет на разрешения, расширенные свойства или параметры, `SET` связанные с объектом. 
 
 Чтобы обновить триггер DDL уровня сервера, необходимо выполнить эту хранимую процедуру в контексте любой базы данных.
 
 > [!NOTE]
->  Все подписи, связанные с объектом, удаляются при запуске `sp_refresh_parameter_encryption`.
+>  Все подписи, связанные с объектом, удаляются при запуске `sp_refresh_parameter_encryption` .
 
 ## <a name="permissions"></a>Разрешения
 
@@ -78,7 +78,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 Если указанный модуль является триггером DDL уровня сервера, требуется `CONTROL SERVER` разрешение.
 
-Для модулей, определенных с помощью `EXECUTE AS` предложения, `IMPERSONATE` для указанного участника требуется разрешение. Как правило, обновление объекта не приводит к изменению его `EXECUTE AS` участника, если только модуль не `EXECUTE AS USER` был определен с помощью, а имя пользователя участника в настоящее время не соответствует пользователю, который был выполнен на момент создания модуля.
+Для модулей, определенных с помощью `EXECUTE AS` предложения, для `IMPERSONATE` указанного участника требуется разрешение. Как правило, обновление объекта не приводит к изменению его `EXECUTE AS` участника, если только модуль не был определен с помощью `EXECUTE AS USER` , а имя пользователя участника в настоящее время не соответствует пользователю, который был выполнен на момент создания модуля.
  
 ## <a name="examples"></a>Примеры
 
@@ -153,7 +153,7 @@ EXEC sp_refresh_parameter_encryption [find_patient];
 GO
 ```
 
-## <a name="see-also"></a>См. также: 
+## <a name="see-also"></a>См. также 
 
 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [Мастер постоянного шифрования](../../relational-databases/security/encryption/always-encrypted-wizard.md)   

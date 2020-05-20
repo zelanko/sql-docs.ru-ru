@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9a3b575b39055976262858fcf527d1b892790a02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762779"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833411"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,11 +58,11 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="arguments"></a>Аргументы  
 `[ @subscriber = ] 'subscriber'`Имя подписчика, для которого необходимо изменить параметры. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @type = ] type`Тип подписчика. *Type имеет тип* **tinyint**и значение по умолчанию NULL. **0** означает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчик. **1** указывает другой подписчик сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источника данных ODBC, отличный от или другого.  
+`[ @type = ] type`Тип подписчика. *Type имеет тип* **tinyint**и значение по умолчанию NULL. **0** означает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчик. **1** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] другой подписчик сервера источника данных ODBC, отличный от или другого.  
   
-`[ @login = ] 'login'`Идентификатор входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для проверки подлинности. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL.  
+`[ @login = ] 'login'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Идентификатор входа для проверки подлинности. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @password = ] 'password'`Пароль для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Аргумент *Password* имеет тип **sysname**и значение по **%** умолчанию. **%** Указывает, что свойство Password не изменяется.  
+`[ @password = ] 'password'`Пароль для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Аргумент *Password* имеет тип **sysname**и значение по умолчанию **%** . **%** Указывает, что свойство Password не изменяется.  
   
 `[ @commit_batch_size = ] commit_batch_size`Поддерживается только для обратной совместимости.  
   
@@ -77,8 +77,8 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**1**|Один раз.|  
 |**2**|По запросу|  
 |**4**|Ежедневно|  
-|**8**|Weekly (Еженедельно);|  
-|**16**|Ежемесячно|  
+|**8**|Еженедельно|  
+|**глубин**|Ежемесячно|  
 |**32**|Ежемесячно с относительной датой|  
 |**64**|Автозапуск|  
 |**128**|Повторяющееся задание|  
@@ -93,7 +93,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
-|**16**|Последний|  
+|**глубин**|Последний|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Частота повторения задачи распределения во время определенных *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию NULL.  
   
@@ -125,10 +125,10 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности|  
 |**1**|Проверка подлинности Windows|  
   
-`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  *publisher* при изменении свойств статьи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя не следует использовать издатель.  
+>  При изменении свойств статьи издателя не следует использовать *Издатель* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -139,7 +139,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_changesubscriber**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
  [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   

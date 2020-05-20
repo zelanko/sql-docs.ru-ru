@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsrvrole
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a632e6923ab3127a363650c63533fa548d1acc12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9abcbec940d9afa7b5aeb36183610b471bb3a3df
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006127"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833199"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
   
  Сведения о добавлении или удалении членов из ролей сервера см. в разделе [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- Все имена входа являются членами общедоступной версии. sp_helpsrvrole не распознает общую роль, так как, внутри [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не реализует Public как роль.  
+ Все имена входа являются членами общедоступной версии. sp_helpsrvrole не распознает общую роль, так как, внутри, не [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реализует Public как роль.  
   
  sp_helpsrvrole не принимает определяемую пользователем роль сервера в качестве аргумента. Чтобы получить список определяемых пользователем ролей сервера, см. примеры в статье [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
@@ -83,7 +83,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 EXEC sp_helpsrvrole ;  
 ```  
   
-### <a name="b-listing-fixed-and-user-defined-server-roles"></a>Б) Перечисление предопределенных и определяемых пользователем ролей сервера  
+### <a name="b-listing-fixed-and-user-defined-server-roles"></a>Б. Перечисление предопределенных и определяемых пользователем ролей сервера  
  Следующий запрос возвращает список и предопределенных, и определяемых пользователем ролей сервера.  
   
 ```  
@@ -97,7 +97,7 @@ SELECT * FROM sys.server_principals WHERE type = 'R' ;
 sp_helpsrvrole 'diskadmin' ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   

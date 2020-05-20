@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpublisher_databases system table
 ms.assetid: 59b0166e-a64c-46b8-befc-c222fa1ccce2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: da208c7fb83053c1817693bb16d16c3488fe90c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 65d174c38d4d6fe22c73b16af40bcee9d4ff63a3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032609"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833141"
 ---
 # <a name="mspublisher_databases-transact-sql"></a>MSpublisher_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68032609"
 |**идентификатор**|**int**|Идентификатор строки.|  
 |**publisher_engine_edition**|**int**|Выпуск издателя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который может иметь следующие значения.<br /><br /> **10** = персональный выпуск<br /><br /> **11** = Desktop Engine (MSDE)<br /><br /> **20** = Стандартный<br /><br /> **21** = Рабочая группа<br /><br /> **30** = Enterprise (ознакомительная версия)<br /><br /> **31** = разработчик<br /><br /> **40** = Express (экспресс-выпуск не может быть издателем. Это значение вставлено для обеспечения полноты.)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_autostats
 ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3fdb095ed869ba2e8f060bdba7a3dc9db81a405
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b56b53b90bc8c66b72d68de4b83def5712cdc54
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70026250"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833413"
 ---
 # <a name="sp_autostats-transact-sql"></a>Хранимая процедура sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ EXEC sp_autostats 'Production.Product';
 GO  
 ```  
   
-### <a name="b-enable-auto_update_statistics-for-all-statistics-on-a-table"></a>Б) Включение параметра AUTO_UPDATE_STATISTICS для всей статистики по таблице  
+### <a name="b-enable-auto_update_statistics-for-all-statistics-on-a-table"></a>Б. Включение параметра AUTO_UPDATE_STATISTICS для всей статистики по таблице  
  Следующий код включает параметр AUTO_UPDATE_STATISTICS для всей статистики по таблице `Product`.  
   
 ```  
@@ -114,9 +114,9 @@ EXEC sp_autostats 'Production.Product', 'OFF', AK_Product_Name;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Статистически](../../relational-databases/statistics/statistics.md)   
- [Параметры ALTER DATABASE SET &#40;&#41;Transact-SQL](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Создание статистики &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   

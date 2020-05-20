@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.server_event_sessions catalog view
 - xe
 ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 142e4bfd81a60ec6f80294bce16bfb7a59d3211a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0867820ddc410295bfb6ce137c32b0f7fce1b43c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313706"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832745"
 ---
 # <a name="sysserver_event_sessions-transact-sql"></a>sys.server_event_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +44,12 @@ ms.locfileid: "72313706"
 |memory_partition_mode|**nchar (1)**|Местоположение в памяти, в котором созданы буферы событий. Режим раздела памяти по умолчанию — G. Не допускает значения NULL. memory_partition_mode является одним из следующих:<br /><br /> G — NONE;<br /><br /> C — PER_CPU;<br /><br /> N — PER_NODE.|  
 |memory_partition_mode_desc|**sysname**|По умолчанию значение установлено в NONE. Не допускает значение NULL. Принимает одно из следующих значений.<br /><br /> NONE. Внутри экземпляра SQL Server создается один набор буферов.<br /><br /> PER_CPU. Набор буферов создается для каждого ЦП.<br /><br /> PER_NODE. Набор буферов создается для каждого узла неоднородного доступа к памяти (NUMA).|  
 |track_causality|**bit**|Включает или отключает отслеживание причинности. Если установлено значение 1 (ВКЛ.), то отслеживание включено и можно установить соответствие между связанными событиями в различных серверных соединениях. Значение по умолчанию — 0 (ВЫКЛ.). Не допускает значение NULL.|  
-|startup_state|**bit**|Значение определяет, запускается ли сеанс автоматически при запуске сервера. Значение по умолчанию — 0. Не допускает значение NULL. Может принимать одно из следующих значений:<br /><br /> 0 (ВЫКЛ.). Сеанс не запускается автоматически при запуске сервера.<br /><br /> 1 (ВКЛ.). Сеанс событий запускается при запуске сервера.|  
+|startup_state|**bit**|Значение определяет, запускается ли сеанс автоматически при запуске сервера. Значение по умолчанию равно 0. Не допускает значение NULL. Может принимать одно из следующих значений:<br /><br /> 0 (ВЫКЛ.). Сеанс не запускается автоматически при запуске сервера.<br /><br /> 1 (ВКЛ.). Сеанс событий запускается при запуске сервера.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога расширенных событий &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  

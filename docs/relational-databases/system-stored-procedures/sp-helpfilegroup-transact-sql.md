@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpfilegroup
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6fe9798b6a9f560621eba9806e25081f72e316c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c212c587efbf32067d575f488416256f35312f2d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122537"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832644"
 ---
 # <a name="sp_helpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ EXEC sp_helpfilegroup;
 GO  
 ```  
   
-### <a name="b-returning-all-files-in-a-filegroup"></a>Б) Возвращать все файлы в файловой группе  
+### <a name="b-returning-all-files-in-a-filegroup"></a>Б. Возвращать все файлы в файловой группе  
  В приведенном ниже примере возвращаются сведения обо всех файлах файловой группы `PRIMARY` в образце базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
@@ -88,7 +88,7 @@ EXEC sp_helpfilegroup 'PRIMARY';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

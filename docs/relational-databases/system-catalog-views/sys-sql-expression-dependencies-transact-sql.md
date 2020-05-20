@@ -17,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_expression_dependencies catalog view
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ade6ffc213d570fcb7da965cf73f43e2db335d17
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c66a822991bb347b429b1524f0b04aa768cb38f4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69561134"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833967"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>Представление каталога sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Содержит по одной строке для каждой именованной зависимости определяемой пользователем сущности в текущей базе данных. Это включает в себя зависимости между скомпилированными в собственном код скалярными определяемыми пользователем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функциями и другими модулями. Зависимость между двумя сущностями создается, когда одна сущность, называемая *упоминаемой сущностью*, отображается по имени в сохраненном выражении SQL другой сущности, называемой *ссылающейся сущностью*. Например, если на таблицу ссылается определение представления, это представление, как ссылающаяся сущность, зависит от таблицы или упоминаемой сущности. При удалении таблицы представление становится непригодным для использования.  
+  Содержит по одной строке для каждой именованной зависимости определяемой пользователем сущности в текущей базе данных. Это включает в себя зависимости между скомпилированными в собственном код скалярными определяемыми пользователем функциями и другими [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] модулями. Зависимость между двумя сущностями создается, когда одна сущность, называемая *упоминаемой сущностью*, отображается по имени в сохраненном выражении SQL другой сущности, называемой *ссылающейся сущностью*. Например, если на таблицу ссылается определение представления, это представление, как ссылающаяся сущность, зависит от таблицы или упоминаемой сущности. При удалении таблицы представление становится непригодным для использования.  
   
  Дополнительные сведения см. в разделе [Скалярные определяемые пользователем функции для выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "69561134"
 |Тип сущности|Ссылающаяся сущность|Упоминаемая сущность|  
 |-----------------|------------------------|-----------------------|  
 |Таблица|Да*|Да|  
-|Представление|Да|Да|  
+|Просмотр|Да|Да|  
 |Фильтруемый индекс|Да**|Нет|  
 |Статистика фильтрации|Да**|Нет|  
 |Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Да|Да|  
@@ -91,7 +91,7 @@ ms.locfileid: "69561134"
 |Коллекция схем XML|Нет|Да|  
 |Функция секционирования|Нет|Да|  
   
- \*Таблица обрабатывается как ссылающаяся сущность, только если она ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] модуль, определяемый пользователем тип или коллекцию схем XML в определении вычисляемого СТОЛБЦА, проверочного ограничения или ограничения по умолчанию.  
+ \*Таблица обрабатывается как ссылающаяся сущность, только если она ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] модуль, определяемый пользователем тип или коллекцию схем XML в определении вычисляемого столбца, проверочного ограничения или ограничения по умолчанию.  
   
  **Каждый столбец, используемый в предикате фильтра, отслеживается как ссылающаяся сущность.  
   
@@ -123,7 +123,7 @@ GO
   
 ```  
   
-### <a name="b-returning-entities-that-reference-another-entity"></a>Б) Возвращение сущностей, ссылающихся на другую сущность  
+### <a name="b-returning-entities-that-reference-another-entity"></a>Б. Возвращение сущностей, ссылающихся на другую сущность  
  В следующем примере возвращаются сущности, ссылающиеся на таблицу `Production.Product`. Сущности, возвращенные в столбце `referencing_entity_name`, зависят от таблицы `Product`.  
   
 ```  
@@ -171,7 +171,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys.dm_sql_referenced_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   

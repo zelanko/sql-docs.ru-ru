@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Resource Governor, dynamic management views
 - dynamic management views [SQL Server], Resource Governor
 ms.assetid: fae5d600-586d-45fa-9d6d-03224cc13304
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ffe5e1f8d4ec36fd69f972dcfa631162b7547ba9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b77e9b2ce21eabda76eac48c980a7da8737f3112
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061910"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832695"
 ---
 # <a name="resource-governor-related-dynamic-management-views-transact-sql"></a>Динамические административные представления регулятора ресурсов (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68061910"
 |[sys. dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)|[sys.dm_resource_governor_workload_groups (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)|  
 |[sys. dm_resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)| |   
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Resource Governor представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
  [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)  
   

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.type_assembly_usages catalog view
 ms.assetid: 79b8bf25-6e4e-4a07-ae93-7a4e44f65171
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 48dbb35fcecde99dad30e71fdcd2c85a2ab92e3b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d66d9e82c3d0b0d5d555e32fe4239decbe52e429
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061278"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833878"
 ---
 # <a name="systype_assembly_usages-transact-sql"></a>sys.type_assembly_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68061278"
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**.  Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога скалярных типов &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

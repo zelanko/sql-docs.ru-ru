@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticlecolumndatatype
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f101d9081c7eb898d43c461a3bd64eca0c043b64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa069ffe0d4ce677542ac714b19475aa3930f290
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67995513"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833473"
 ---
 # <a name="sp_changearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,17 +55,17 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
   
 `[ @type = ] 'type'`Имя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типа данных в целевом столбце. Аргумент *Type имеет тип* **sysname**и значение по умолчанию NULL.  
   
-`[ @length = ] length`Длина типа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных в целевом столбце. *length* имеет тип **bigint**и значение по умолчанию NULL.  
+`[ @length = ] length`Длина [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типа данных в целевом столбце. *length* имеет тип **bigint**и значение по умолчанию NULL.  
   
-`[ @precision = ] precision`Точность типа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных в целевом столбце. *точность* имеет тип **bigint**и значение по умолчанию NULL.  
+`[ @precision = ] precision`Точность [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типа данных в целевом столбце. *точность* имеет тип **bigint**и значение по умолчанию NULL.  
   
-`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Remarks  
- **Sp_changearticlecolumndatatype** используется для переопределения сопоставлений типов данных по умолчанию между поддерживаемыми типами издателей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](Oracle и). Чтобы просмотреть сопоставления типов данных по умолчанию, выполните [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
+ **Sp_changearticlecolumndatatype** используется для переопределения сопоставлений типов данных по умолчанию между поддерживаемыми типами издателей (Oracle и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Чтобы просмотреть сопоставления типов данных по умолчанию, выполните [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
   
  **sp_changearticlecolumndatatype** поддерживается только для издателей Oracle. Выполнение этой хранимой процедуры для публикации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] завершится ошибкой.  
   
@@ -74,7 +74,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_changearticlecolumndatatype**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Сопоставление типов данных для издателей Oracle](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdistribution_agents system table
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c138f2e97bf80f00f77c519bb4b9467c715f95b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b82585e75be46cc38372564a68661815430c2be4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907416"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833087"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,12 +53,12 @@ ms.locfileid: "67907416"
 |**queue_status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offload_enabled**|**bit**|Указывает, может ли агент быть активизирован удаленно.<br /><br /> значение **0** указывает, что агент не может быть активирован удаленно.<br /><br /> значение **1** указывает, что агент будет активирован удаленно и на удаленном компьютере, указанном в свойстве *offload_server* .|  
 |**offload_server**|**sysname**|Сетевое имя сервера для удаленной активации.|  
-|**dts_package_name**|**sysname**|Имя пакета служб DTS. Например, для пакета с именем **DTSPub_Package**укажите `@dts_package_name = N'DTSPub_Package'`.|  
+|**dts_package_name**|**sysname**|Имя пакета служб DTS. Например, для пакета с именем **DTSPub_Package**укажите `@dts_package_name = N'DTSPub_Package'` .|  
 |**dts_package_password**|**nvarchar (524)**|Пароль пакета.|  
 |**dts_package_location**|**int**|Местонахождение пакета. Расположение пакета может быть **распространителем** или **подписчиком**.|  
 |**трансляцию**|**varbinary(85)**|Идентификатор безопасности (SID) агента распространителя или агента слияния при первом выполнении.|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**subscriber_security_mode**|**smallint**|Режим безопасности, используемый агентом при подключении к подписчику. Предусмотрены следующие режимы:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server проверка подлинности<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] проверка подлинности Windows.|  
+|**subscriber_security_mode**|**smallint**|Режим безопасности, используемый агентом при подключении к подписчику. Предусмотрены следующие режимы:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server проверка подлинности<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Проверка подлинности Windows.|  
 |**subscriber_login**|**sysname**|Имя входа для подключения к подписчику.|  
 |**subscriber_password**|**nvarchar (524)**|Зашифрованное значение пароля, используемое для подключения к подписчику.|  
 |**reset_partial_snapshot_progress**|**bit**|Установлен, если частично загруженный моментальный снимок будет отменен, затем загружен с самого начала.|  

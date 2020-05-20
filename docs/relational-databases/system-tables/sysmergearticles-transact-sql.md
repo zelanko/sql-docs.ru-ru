@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergearticles system table
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d712f462ebe504df20ded93d6a9730ce31e4d0db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8328c332fe35b8e157c8631d90b8de67c6e96e17
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251945"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831950"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,8 +69,8 @@ ms.locfileid: "72251945"
 |**gen_cur**|**int**|Создает число локальных изменений для базовой таблицы статьи.|  
 |**vertical_partition**|**int**|Определяет, включен ли механизм фильтрации столбцов в статье таблицы. **0** означает отсутствие вертикальной фильтрации и публикация всех столбцов.|  
 |**identity_support**|**int**|Определяет, включена ли автоматическая обработка диапазона идентификаторов. **1** означает, что обработка диапазона идентификаторов включена, а значение **0** означает, что диапазон идентификаторов не поддерживается.|  
-|**before_image_objid**|**int**|Идентификатор объекта таблицы отслеживания. Таблица отслеживания содержит определенные значения ключевых столбцов при создании публикации с * \@keep_partition_changes* = **true**.|  
-|**before_view_objid**|**int**|Идентификатор объекта таблицы представления. Представление основано на таблице, отслеживающей принадлежность строки определенному подписчику до удаления или обновления. Применяется только при создании публикации с * \@keep_partition_changes* = **true.**|  
+|**before_image_objid**|**int**|Идентификатор объекта таблицы отслеживания. Таблица отслеживания содержит определенные значения ключевых столбцов при создании публикации с * \@ keep_partition_changes*  =  **true**.|  
+|**before_view_objid**|**int**|Идентификатор объекта таблицы представления. Представление основано на таблице, отслеживающей принадлежность строки определенному подписчику до удаления или обновления. Применяется только при создании публикации с * \@ keep_partition_changes*  =  **true.**|  
 |**verify_resolver_signature**|**int**|Перед использованием сопоставителя в репликации слиянием определяет, проверена ли цифровая подпись.<br /><br /> **0** = подпись не проверена.<br /><br /> **1** = подпись проверяется, чтобы узнать, не является ли он надежным источником.|  
 |**allow_interactive_resolver**|**bit**|Указывает, обрабатывается ли статья интерактивным сопоставителем. **1** указывает, что в статье используется интерактивный сопоставитель.|  
 |**fast_multicol_updateproc**|**bit**|Определяет, разрешено ли агенту слияния применять в одной инструкции UPDATE изменения к нескольким столбцам одной и той же строки.<br /><br /> **0** = выдает отдельное обновление для каждого столбца.<br /><br /> **1** = выдает инструкцию UPDATE, которая приводит к тому, что обновления происходят в несколько столбцов в одной инструкции.|  
@@ -91,7 +91,7 @@ ms.locfileid: "72251945"
 |**stream_blob_columns**|**bit**|Указывает, применяется ли оптимизация потока данных при репликации столбцов с большими двоичными объектами. **1** означает, что выполняется оптимизация.|  
 |**preserve_rowguidcol**|**bit**|Показывает, использует ли репликация существующий столбец rowguid. Значение **1** означает, что используется существующий столбец ROWGUIDCOL. значение **0** означает, что репликация добавила столбец ROWGUIDCOL.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_db
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 88b0dffa84674b2d7e55895830f28cf1b95cd3dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b800997c3f978b0bf06472f7e72dd24743956fa8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305271"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833496"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>Аргументы  
 `[ @dbname = ] 'dbnam_ '`Имя базы данных, которая будет присоединена к серверу. Имя должно быть уникальным. Аргумент *dbname* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @filename1 = ] 'filename_n'`Физическое имя файла базы данных, включая путь. *filename_n* имеет тип **nvarchar (260)** и значение по умолчанию NULL. Можно указать до 16 имен файлов. Имена параметров начинаются с ** \@имя_файла1** и увеличиваются в ** \@filename16**. Список имен файлов должен включать хотя бы первичный файл. Первичный файл содержит системные таблицы, указывающие на другие файлы базы данных. Список также должен включать все файлы, перемещенные после отключения базы данных.  
+`[ @filename1 = ] 'filename_n'`Физическое имя файла базы данных, включая путь. *filename_n* имеет тип **nvarchar (260)** и значение по умолчанию NULL. Можно указать до 16 имен файлов. Имена параметров начинаются с ** \@ имя_файла1** и увеличиваются в ** \@ filename16**. Список имен файлов должен включать хотя бы первичный файл. Первичный файл содержит системные таблицы, указывающие на другие файлы базы данных. Список также должен включать все файлы, перемещенные после отключения базы данных.  
   
 > [!NOTE]  
 >  Этот аргумент сопоставляется с параметром FILENAME инструкции CREATE DATABASE. Дополнительные сведения см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -96,8 +96,8 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
 N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2012_log.ldf';  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Отсоединение и присоединение базы данных &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+## <a name="see-also"></a>См. также  
+ [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
  [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   

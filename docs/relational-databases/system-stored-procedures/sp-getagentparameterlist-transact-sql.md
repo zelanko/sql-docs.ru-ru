@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getagentparameterlist
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2d80aedbe2503c4ab11fd894d44e8e37f2167daf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c23cd3918742984afdb70b84d7a9adcf5553c746
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124009"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833210"
 ---
 # <a name="sp_getagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
   
 |Значение|Агент|  
 |-----------|-----------|  
-|**1**|Моментальный снимок|  
+|**1**|Снимок|  
 |**2**|Чтение журнала|  
 |**3**|Distribution|  
 |**4**|Объединить|  
@@ -55,7 +55,7 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_getagentparameter**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
  [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   

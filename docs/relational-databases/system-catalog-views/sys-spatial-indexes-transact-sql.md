@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.spatial_indexes catalog view
 ms.assetid: 40e967d5-2e8d-45af-bf5e-5251493cf7cb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f3b2172e48ec787c37fd9b3daab6cafb5c49f88f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a5264661a94b4802d6f06ab1af8ae74436b63b09
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078628"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833984"
 ---
 # <a name="sysspatial_indexes-transact-sql"></a>sys.spatial_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68078628"
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. Objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys. spatial_index_tessellations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)   
  [sys. indexes &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   

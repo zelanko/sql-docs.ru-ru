@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sp_fulltext_keymappings
 - full-text indexes [SQL Server], troubleshooting
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef8bd6cfbcc10fa0625b4925da618ab275331a32
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fc68be51382b72dee1b143a3535d631ae93dbb7c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124243"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833282"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -55,14 +55,14 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 >  Дополнительные сведения об использовании одного, двух или трех параметров см. в подразделе «Примечания» далее в этом разделе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Отсутствует.  
+ Нет.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|Столбец внутреннего идентификатора документа (DocId), который соответствует значению ключа.|  
-|Клавиши|*|Значение полнотекстового ключа из указанной таблицы.<br /><br /> Если в таблице сопоставлений отсутствуют полнотекстовые ключи, то возвращается пустой набор строк.|  
+|Ключ|*|Значение полнотекстового ключа из указанной таблицы.<br /><br /> Если в таблице сопоставлений отсутствуют полнотекстовые ключи, то возвращается пустой набор строк.|  
   
  <sup>*</sup>Тип данных для ключа совпадает с типом данных полнотекстового ключевого столбца в базовой таблице.  
   
@@ -89,9 +89,9 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="examples"></a>Примеры  
   
 > [!NOTE]  
->  В примерах этого раздела используется таблица `Production.ProductReview` образца базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Этот индекс можно создать, выполнив пример, приведенный для `ProductReview` таблицы в [инструкции create FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
+>  В примерах этого раздела используется таблица `Production.ProductReview` образца базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Этот индекс можно создать, выполнив пример, приведенный для `ProductReview` таблицы в [инструкции CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
-### <a name="a-obtaining-all-the-key-and-docid-values"></a>А) Получение значений Key и DocId  
+### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. Получение значений Key и DocId  
  В следующем примере с помощью инструкции [Declare](../../t-sql/language-elements/declare-local-variable-transact-sql.md) создается локальная переменная, `@table_id` а в качестве ее значения присваивается идентификатор `ProductReview` таблицы. В примере выполняется **sp_fulltext_keymappings** указания `@table_id` параметра *table_id* .  
   
 > [!NOTE]  
@@ -116,7 +116,7 @@ GO
 |`3`|`3`|`3`|  
 |`4`|`4`|`4`|  
   
-### <a name="b-obtaining-the-docid-value-for-a-specific-key-value"></a>Б) Получение значения DocId для конкретного значения Key  
+### <a name="b-obtaining-the-docid-value-for-a-specific-key-value"></a>Б. Получение значения DocId для конкретного значения Key  
  В следующем примере используется инструкция DECLARE, которая создает локальную переменную `@table_id`и присваивает ей в качестве значения идентификатор таблицы `ProductReview` . В примере выполняется **sp_fulltext_keymappings** указания `@table_id` параметра *table_id* , NULL для параметра *DocId* и 4 для параметра *ключа* .  
   
 > [!NOTE]  
@@ -138,7 +138,7 @@ GO
 ||`docid`|`key`|  
 |`4`|`4`|`4`|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры полнотекстового поиска и семантического поиска &#40;языке Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

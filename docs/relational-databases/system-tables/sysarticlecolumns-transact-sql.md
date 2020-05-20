@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysarticlecolumns system table
 ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 61e1329fe35ae032b5d35f94dd2e1ce5e8d08d38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8c7a77aa4850765e37963a5a59995fd9e9004004
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130518"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834138"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68130518"
 |**is_xml**|**bit**|Указывает, является ли столбец **XML-** столбцом. Значение **1** указывает на XML-столбец.|  
 |**is_max**|**bit**|Указывает, является ли столбец столбцом типа данных больших значений, **varchar (max)**, **nvarchar (max)** и **varbinary (max)**. Значение **1** указывает на столбец с большим значением.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

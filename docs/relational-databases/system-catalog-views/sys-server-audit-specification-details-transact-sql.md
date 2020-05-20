@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_audit_specification_details catalog view
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 43f5a4ca7dbad88fe98734576fd23368cc280fa2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 68283872613baf6cb64546ef79a9f03996815439
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125022"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834075"
 ---
 # <a name="sysserver_audit_specification_details-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "68125022"
 |server_specification_id|**int**|Идентификатор спецификации аудита сервера|  
 |audit_action_id|**int**|Идентификатор действия аудита|  
 |audit_action_name|**sysname**|Имя группы или имя действия аудита|  
-|class|**tinyint**|Reserved|  
-|class_desc|**nvarchar(60)**|Reserved|  
-|major_id|**int**|Reserved|  
-|minor_id|**int**|Reserved|  
-|audited_principal_id|**int**|Reserved|  
+|класс|**tinyint**|Зарезервированное|  
+|class_desc|**nvarchar(60)**|Зарезервированное|  
+|major_id|**int**|Зарезервированное|  
+|minor_id|**int**|Зарезервированное|  
+|audited_principal_id|**int**|Зарезервированное|  
 |audited_result|**nvarchar(60)**|Результат аудита:<br /><br /> - SUCCESS AND FAILURE<br /><br /> - SUCCESS<br /><br /> - FAILURE|  
 |is_group|**bit**|Является ли группой объект, прошедший аудит:<br /><br /> 0 — не группа;<br /><br /> 1 — группа.|  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68125022"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога безопасности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Создание аудита сервера &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   

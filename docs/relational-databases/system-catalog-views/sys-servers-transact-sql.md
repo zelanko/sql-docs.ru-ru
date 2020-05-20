@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.servers catalog view
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b17296d558c078d3f580e63bf662bb975615ad94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7b9cb03b97660bedc9c8e86cc72ae2bf9ebdd56d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68132951"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832756"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68132951"
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Локальный идентификатор связанного сервера.|  
 |**name**|**sysname**|Если **server_id** = 0, возвращаемое значение является именем сервера.<br /><br /> Если **server_id** > 0, возвращаемое значение является локальным именем связанного сервера.|  
-|**product**|**sysname**|Имя продукта связанного сервера. Значение "SQL Server" указывает на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**продукта**|**sysname**|Имя продукта связанного сервера. Значение "SQL Server" указывает на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**поставщики**|**sysname**|Имя поставщика OLE DB для соединения со связанным сервером.|  
 |**data_source**|**nvarchar(4000)**|Свойство соединения источника данных OLE DB.|  
 |**расположение**|**nvarchar(4000)**|Свойство соединения местоположения OLE DB. NULL — если нет.|  
@@ -72,7 +72,7 @@ ms.locfileid: "68132951"
 - `ALTER ANY LINKED SERVER` или `ALTER ANY LOGIN ON SERVER`  
 - Членство в предопределенных ролях сервера **setupadmin** или **sysadmin**  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога связанных серверов &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   

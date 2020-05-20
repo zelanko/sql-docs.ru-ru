@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 098d027ff74bad7b4215a96044f4044fda9ee98e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084842"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832533"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,41 +53,41 @@ sp_update_operator
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @name=] "*имя*"  
+ [ @name =] "*имя*"  
  Имя оператора для изменения. Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
- [ @new_name=] "*new_name*"  
+ [ @new_name =] "*new_name*"  
  Новое имя оператора. Имя должно быть уникальным. Аргумент *new_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
- [ @enabled=] *включено*  
+ [ @enabled =] *включено*  
  Число, указывающее текущее состояние оператора (**1** , если в настоящее время включено, **0** , если нет). *Enabled* имеет тип **tinyint**и значение по умолчанию NULL. Если оператор не включен, он не будет получать предупреждающих оповещений.  
   
- [ @email_address=] "*email_address*"  
+ [ @email_address =] "*email_address*"  
  Адрес электронной почты оператора. Эта строка передается напрямую в систему электронной почты. *email_address* имеет тип **nvarchar (100)** и значение по умолчанию NULL.  
   
- [ @pager_address=] "*pager_number*"  
+ [ @pager_address =] "*pager_number*"  
  Адрес пейджера оператора. Эта строка передается напрямую в систему электронной почты. *pager_number* имеет тип **nvarchar (100)** и значение по умолчанию NULL.  
   
- [ @weekday_pager_start_time=] *weekday_pager_start_time*  
+ [ @weekday_pager_start_time =] *weekday_pager_start_time*  
  Указывает время, по истечении которого на пейджер указанному оператору может быть отправлено оповещение (с понедельника по пятницу). *weekday_pager_start_time*имеет **тип int**, значение по умолчанию NULL и должно быть указано в формате ЧЧММСС для использования с 24-часовым часами.  
   
- [ @weekday_pager_end_time=] *weekday_pager_end_time*  
+ [ @weekday_pager_end_time =] *weekday_pager_end_time*  
  Указывает время, по истечении которого на пейджер указанному оператору не может быть отправлено оповещение (с понедельника по пятницу). *weekday_pager_end_time*имеет **тип int**, значение по умолчанию NULL и должно быть указано в формате ЧЧММСС для использования с 24-часовым часами.  
   
- [ @saturday_pager_start_time=] *saturday_pager_start_time*  
+ [ @saturday_pager_start_time =] *saturday_pager_start_time*  
  Указывает время, по истечении которого на пейджер указанному оператору может быть отправлено оповещение (по субботам). *saturday_pager_start_time*имеет **тип int**, значение по умолчанию NULL и должно быть указано в формате ЧЧММСС для использования с 24-часовым часами.  
   
- [ @saturday_pager_end_time=] *saturday_pager_end_time*  
+ [ @saturday_pager_end_time =] *saturday_pager_end_time*  
  Указывает время, по истечении которого на пейджер указанному оператору не может быть отправлено оповещение (по субботам). *saturday_pager_end_time*имеет **тип int**, значение по умолчанию NULL и должно быть указано в формате ЧЧММСС для использования с 24-часовым часами.  
   
- [ @sunday_pager_start_time=] *sunday_pager_start_time*  
+ [ @sunday_pager_start_time =] *sunday_pager_start_time*  
  Указывает время, по истечении которого на пейджер указанному оператору может быть отправлено оповещение (по воскресеньям). *sunday_pager_start_time*имеет **тип int**, значение по умолчанию NULL и должно быть указано в формате ЧЧММСС для использования с 24-часовым часами.  
   
- [ @sunday_pager_end_time=] *sunday_pager_end_time*  
+ [ @sunday_pager_end_time =] *sunday_pager_end_time*  
  Указывает время, по истечении которого на пейджер указанному оператору не может быть отправлено оповещение (по воскресеньям). *sunday_pager_end_time*имеет **тип int**, значение по умолчанию NULL и должно быть указано в формате ЧЧММСС для использования с 24-часовым часами.  
   
- [ @pager_days=] *pager_days*  
- Указывает дни, в которые оператор доступен для приема сообщений на пейджер (с учетом времени начала и конца работы). *pager_days*имеет тип **tinyint**, значение по умолчанию NULL и должно быть значением от **0** до **127**. *pager_days* вычисляется путем добавления отдельных значений для требуемых дней. Например, с понедельника по пятницу будет **2**+**4**+**8**+**16**+**32** = **64**.  
+ [ @pager_days =] *pager_days*  
+ Указывает дни, в которые оператор доступен для приема сообщений на пейджер (с учетом времени начала и конца работы). *pager_days*имеет тип **tinyint**, значение по умолчанию NULL и должно быть значением от **0** до **127**. *pager_days* вычисляется путем добавления отдельных значений для требуемых дней. Например, с понедельника по пятницу будет **2** + **4** + **8** + **16** + **32**  =  **64**.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -95,14 +95,14 @@ sp_update_operator
 |**2**|Понедельник|  
 |**4**|Вторник|  
 |**8**|Среда|  
-|**16**|Четверг|  
+|**глубин**|Четверг|  
 |**32**|Пятница|  
 |**64**|Суббота|  
   
- [ @netsend_address=] "*netsend_address*"  
+ [ @netsend_address =] "*netsend_address*"  
  Сетевой адрес оператора, которому посылается сетевое сообщение. *netsend_address*имеет тип **nvarchar (100)** и значение по умолчанию NULL.  
   
- [ @category_name=] "*Category*"  
+ [ @category_name =] "*Категория*"  
  Имя категории предупреждения. *Category* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -132,7 +132,7 @@ EXEC dbo.sp_update_operator
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   

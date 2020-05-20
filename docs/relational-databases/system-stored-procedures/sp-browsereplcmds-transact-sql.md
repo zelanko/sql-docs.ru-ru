@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsereplcmds
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d049a5e96d9c7212467595aa70cd44db727bdf6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5e4f5b003eccda5fdada81e49d2a1f5347591869
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769000"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831812"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 `[ @agent_id = ] agent_id`Указывает, что возвращаются только команды для конкретного агента репликации. *agent_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @compatibility_level = ] compatibility_level`Версия [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в которой *COMPATIBILITY_LEVEL* имеет **тип int**и значение по умолчанию 9000000.  
+`[ @compatibility_level = ] compatibility_level`Версия, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в которой *COMPATIBILITY_LEVEL* имеет **тип int**и значение по умолчанию 9000000.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -73,7 +73,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**article_id**|**int**|Идентификатор статьи.|  
 |**type**|**int**|Тип команды.|  
 |**partial_command**|**bit**|Обозначает, является ли эта команда частичной.|  
-|**hashkey**|**int**|Только для внутреннего применения.|  
+|**hashkey**|**int**|Только для внутреннего использования.|  
 |**originator_publication_id**|**int**|Идентификатор публикации, в которой началась транзакция.|  
 |**originator_db_version**|**int**|Версия базы данных, в которой началась транзакция.|  
 |**originator_lsn**|**varbinary (16)**|Указывает регистрационный номер транзакции в журнале (номер LSN) для команды в порождающей публикации. Используется для одноранговой репликации транзакций.|  
@@ -88,7 +88,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или члены предопределенных ролей базы данных **db_owner** или **replmonitor** в базе данных распространителя могут выполнять **sp_browsereplcmds**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

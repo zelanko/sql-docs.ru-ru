@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_nodes dynamic management view
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2b6f88e857ab7fc6300698174914126fb0881f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3069bbf376fbd1a94be6697e6bbb4ea2552c5c27
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265726"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833749"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "68265726"
 Внутренний компонент с именем SQLOS создает структуры узлов, имитирующие аппаратное размещение ЦП. Эти структуры можно изменить с помощью [программной архитектуры NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) для создания пользовательских макетов узлов.  
 
 > [!NOTE]
-> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] будет автоматически использовать Soft-NUMA для определенных конфигураций оборудования. Дополнительные сведения см. в разделе [Автоматический программный NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
+> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] будет автоматически использовать Soft-NUMA для определенных конфигураций оборудования. Дополнительные сведения см. в разделе [Автоматический программный NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
   
 Сведения об указанных узлах приведены в следующей таблице.  
   
 > [!NOTE]
-> Чтобы вызвать это динамическое [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] административное представление из или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys. dm_pdw_nodes_os_nodes**.  
+> Чтобы вызвать это динамическое административное представление из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_os_nodes**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -59,14 +59,14 @@ ms.locfileid: "68265726"
 |online_scheduler_mask|**bigint**|Идентифицирует маску схожести процессов для этого узла.|  
 |processor_group|**smallint**|Идентифицирует группу процессоров для этого узла.|  
 |cpu_count |**int** |Число ЦП, доступных для этого узла. |
-|pdw_node_id|**int**|Идентификатор узла, на котором находится данное распределение.<br /><br /> **Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|pdw_node_id|**int**|Идентификатор узла, на котором находится данное распределение.<br /><br /> **Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
 ## <a name="permissions"></a>Разрешения
 
-В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
+В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
-## <a name="see-also"></a>См. также:    
+## <a name="see-also"></a>См. также    
  [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Архитектура Soft-NUMA (SQL Server)](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   

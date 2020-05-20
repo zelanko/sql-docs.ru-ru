@@ -18,14 +18,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - sys.dm_db_mirroring_auto_page_repair dynamic management view
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e08aa031af0bd8c9d5c5ad012d11c534281f92f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 83dc24f312b1fa527804a1d7716ea3e754e97038
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017915"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833796"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_auto_page_repair"></a>Зеркальное отображение базы данных — sys. dm_db_mirroring_auto_page_repair
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68017915"
 ### <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Автоматическое восстановление страниц &#40;группы доступности:&#41;зеркального отображения базы данных](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   

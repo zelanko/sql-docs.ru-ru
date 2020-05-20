@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_semantic_unregister_language_statistics_db
 ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d6952d245dfc9083c7cfa6e6d36ad991ffd24654
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1f6b769291c43081be2dbe9ceeb256ad4edf5c02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909142"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833272"
 ---
 # <a name="sp_fulltext_semantic_unregister_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ GO
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-set"></a>Результирующий набор  
- Отсутствует.  
+ Нет.  
   
 ## <a name="general-remarks"></a>Общие замечания  
  При отмене регистрации базы данных статистики семантики языка удаляются и все связанные с ней метаданные.  
@@ -61,7 +61,7 @@ GO
  Дополнительные сведения см. в разделе [Установка и настройка семантического поиска](../../relational-databases/search/install-and-configure-semantic-search.md).  
   
 ## <a name="metadata"></a>Метаданные  
- Для получения сведений о Семантическая статистика языка базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установленной на экземпляре, запросите представление каталога [sys. fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
+ Для получения сведений о Семантическая статистика языка базе данных, установленной на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запросите представление каталога [sys. Fulltext_semantic_language_statistics_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
   
 ## <a name="security"></a>Безопасность  
   
@@ -76,7 +76,7 @@ EXEC sp_fulltext_semantic_unregister_language_statistics_db;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установка и настройка семантического поиска](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

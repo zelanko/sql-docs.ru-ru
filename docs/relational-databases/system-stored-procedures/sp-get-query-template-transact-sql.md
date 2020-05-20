@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 80f5bc86498bc33e0cb04e8ca54154b96307c480
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124084"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833242"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_get_query_template
  Является выходным параметром типа **nvarchar (max)**, предоставленным как указано, для получения параметризованной формы *query_text* в виде строкового литерала.  
   
  @parameters  
- Является выходным параметром типа **nvarchar (max)**, который указан как указанный, для получения строкового литерала имен параметров и типов данных, которые были параметризованы в @templatetext.  
+ Является выходным параметром типа **nvarchar (max)**, который указан как указанный, для получения строкового литерала имен параметров и типов данных, которые были параметризованы в @templatetext .  
   
 ## <a name="remarks"></a>Remarks  
  Процедура sp_get_query_template возвращает ошибку, если:  
@@ -58,7 +58,7 @@ sp_get_query_template
   
 -   *query_text* имеет значение null, не является строкой Юникода, синтаксически недопустимым или не может быть скомпилировано.  
   
- Если sp_get_query_template возвращает ошибку, значения выходных параметров @templatetext и @parameters не изменяются.  
+ Если sp_get_query_template возвращает ошибку, значения @templatetext выходных параметров и не изменяются @parameters .  
   
 ## <a name="permissions"></a>Разрешения  
  Требует членства в роли базы данных public.  
@@ -112,7 +112,7 @@ SELECT @my_parameters;
 > [!NOTE]  
 >  Порядок и имена параметров, возвращаемых из процедуры sp_get_query_template, могут измениться при наложении исправлений, пакетов обновлений и обновлениях версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обновление версии может также стать причиной получения отличающегося набора параметризуемых констант для того же запроса и изменения формата выдачи результатов для обоих выходных параметров.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Указание механизма параметризации запросов с помощью структур плана](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  

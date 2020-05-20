@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_audit_write
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9bef63c267bdf5b7d0c2603ed7a93af329d1992c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ba751e5872f4f6fa4973674170d54a0dbc75f75a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251968"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833435"
 ---
 # <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>Аргументы  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- Параметр, определяемый пользователем и записываемый в столбец **user_defined_event_id** журнала аудита. user_defined_event_id имеет тип **smallint**. * \@*  
+ Параметр, определяемый пользователем и записываемый в столбец **user_defined_event_id** журнала аудита. * \@ user_defined_event_id* имеет тип **smallint**.  
   
  `[ @succeeded = ] succeeded`  
  Параметр, переданный пользователем с целью указания, было ли событие успешным или нет. Содержится в столбце успеха журнала аудита. `@succeeded`**бит**.  
@@ -72,7 +72,7 @@ EXEC sp_audit_write @user_defined_event_id =  27 ,
             , @user_defined_information = N'Access to a monitored object.' ;  
 ```  
   
-### <a name="b--creating-a-user-defined-audit-event-without-informational-text"></a>Б)  Создание пользовательского события аудита без информативного текста  
+### <a name="b--creating-a-user-defined-audit-event-without-informational-text"></a>Б.  Создание пользовательского события аудита без информативного текста  
  В следующем примере создается событие аудита с идентификатором 27, успешным значением 0, не содержащее дополнительный информативный текст.  
   
 ```  
@@ -80,7 +80,7 @@ EXEC sp_audit_write 27, 0;
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sp_addrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   

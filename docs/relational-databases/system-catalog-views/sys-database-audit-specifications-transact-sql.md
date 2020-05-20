@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_audit_specifications catalog view
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2a01e41c67c937a0a6d85e9f5c46427ab149b65b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2fc5e725a86f974c14922d620c2a55af1340409f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67940208"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832029"
 ---
 # <a name="sysdatabase_audit_specifications-transact-sql"></a>sys.database_audit_specification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67940208"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|Имя|**sysname**|Имя спецификации аудита.|  
+|name|**sysname**|Имя спецификации аудита.|  
 |database_specification_id|**int**|Идентификатор спецификации базы данных.|  
 |create_date|**datetime**|Дата создания спецификации аудита.|  
 |modified_date|**datetime**|Дата последнего изменения спецификации аудита.|  
@@ -48,7 +48,7 @@ ms.locfileid: "67940208"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)].  Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание аудита сервера &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [Удаление аудита сервера &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

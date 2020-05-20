@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedistpublisher
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 80eb30fc6b6b2cea9fc058780831af3915fd9007
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb90ec6a3d5413d22f4721491d3b151a7e28ac05
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771365"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833440"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,10 +58,10 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 |**active**|**true**|Активирует издатель.|  
 ||**false**|Отключает издатель.|  
 |**distribution_db**||Имя базы данных распространителя.|  
-|**login**||Имя входа.|  
+|**пользователей**||Имя входа.|  
 |**password**||Надежный пароль для указанного имени входа.|  
-|**security_mode**|**1**|При подключении к подписчику используется проверка подлинности Windows. *Его нельзя изменить для издателя, отличного от* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
-||**0**;|При подключении к издателю используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Его нельзя изменить для издателя, отличного от* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
+|**security_mode**|**1**|При подключении к подписчику используется проверка подлинности Windows. *Его нельзя изменить для не относящегося к* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *издатель.*|  
+||**0**;|При подключении к издателю используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Его нельзя изменить для не относящегося к* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *издатель.*|  
 |**working_directory**||Рабочий каталог, в котором хранятся данные и файлы схемы для публикации.|  
 |NULL (по умолчанию)||Выводятся все доступные параметры *свойств* .| 
 |**storage_connection_string**| Ключ доступа | Ключ доступа для рабочего каталога при Управляемый экземпляр Базы данных SQL Azure базы данных. 
@@ -75,7 +75,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_changedistpublisher**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств распространителя и издателя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   

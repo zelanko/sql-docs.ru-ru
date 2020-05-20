@@ -18,21 +18,21 @@ helpviewer_keywords:
 - sys.dm_hadr_cluster catalog view
 - Availability Groups [SQL Server], WSFC clusters
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e2d58132b71e16f31e7369ae8f5b09fa3dac240f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b4e2b27e9c284676c576586c125309fa8116531d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900660"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833798"
 ---
 # <a name="sysdm_hadr_cluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Если узел отказоустойчивой кластеризации Windows Server (WSFC), на котором размещен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с включенным параметром, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] имеет кворум WSFC, **sys. dm_hadr_cluster** возвращает строку, которая предоставляет имя кластера и сведения о кворуме. Если узел WSFC не набирает кворума, строка не возвращается.  
  > [!TIP]
- > Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]версии, это динамическое административное представление поддерживает Always on экземпляры отказоустойчивого кластера в дополнение к группам доступности Always on.
+ > Начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , это динамическое административное представление поддерживает Always on экземпляры отказоустойчивого кластера в дополнение к группам доступности Always on.
 
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  

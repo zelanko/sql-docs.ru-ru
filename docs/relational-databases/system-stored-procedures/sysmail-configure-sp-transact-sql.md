@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_configure_sp
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7984fba52f813644c9dcb25bca2beb123be85622
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6e0f410a73d010d2931cfda2e87a4a4b4cbc1c64
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017721"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832518"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Изменяет настройки конфигурации компонента Database Mail. Параметры конфигурации, заданные параметром **sysmail_configure_sp** , применяются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ко всему экземпляру.  
+  Изменяет настройки конфигурации компонента Database Mail. Параметры конфигурации, заданные параметром **sysmail_configure_sp** , применяются ко всему [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляру.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,13 +41,13 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [**@parameter_name** = ] **"**_parameter_name_**"**  
+ [ **@parameter_name** =] **"**_parameter_name_**"**  
  Имя параметра, которое необходимо изменить.  
   
- [**@parameter_value** = ] **"**_parameter_value_**"**  
+ [ **@parameter_value** =] **"**_parameter_value_**"**  
  Новое значение параметра.  
   
- [**@description** = ] **"**_Описание_**"**  
+ [ **@description** =] **"**_Описание_**"**  
  Описание параметра.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -94,7 +94,7 @@ EXECUTE msdb.dbo.sysmail_configure_sp
     'MaxFileSize', '2097152' ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [sysmail_help_configure_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)   
  [Database Mail хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

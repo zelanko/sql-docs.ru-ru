@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a63a5e34ac0331bfe879814e4d503c4d57cc3208
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69890847"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832552"
 ---
 # <a name="sp_update_alert-transact-sql"></a>Хранимая процедура sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ sp_update_alert
   
 `[ @message_id = ] message_id`Новое сообщение или номер ошибки для определения предупреждения. Как правило, *message_id* соответствует номеру ошибки в таблице **sysmessages** . *message_id* имеет **тип int**и значение по умолчанию NULL. Идентификатор сообщения можно использовать только в том случае, если для предупреждения задан уровень серьезности **0**.  
   
-`[ @severity = ] severity`Новый уровень серьезности (от **1** до **25**) для определения предупреждения. Предупреждение [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет активировано любым сообщением, отправленным в журнал приложений Windows с заданной степенью серьезности. *уровень серьезности* — **int**, значение по умолчанию NULL. Степень серьезности может использоваться, только если параметр идентификатора сообщения для предупреждения равен **0**.  
+`[ @severity = ] severity`Новый уровень серьезности (от **1** до **25**) для определения предупреждения. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Предупреждение будет активировано любым сообщением, отправленным в журнал приложений Windows с заданной степенью серьезности. *уровень серьезности* — **int**, значение по умолчанию NULL. Степень серьезности может использоваться, только если параметр идентификатора сообщения для предупреждения равен **0**.  
   
 `[ @delay_between_responses = ] delay_between_responses`Новый период ожидания (в секундах) между ответами на предупреждение. *delay_between_responses* имеет **тип int**и значение по умолчанию NULL.  
   
@@ -80,11 +80,11 @@ sp_update_alert
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**0**|None|  
+|**0**|Нет|  
 |**1**|электронная почта;|  
 |**2**|Пейджер|  
 |**4**|**команда net send.**|  
-|**7**|All|  
+|**7**|Все|  
   
 `[ @database_name = ] 'database'`Имя базы данных, в которой должна произойти ошибка для срабатывания предупреждения. *база данных* имеет тип **sysname.** Символы, заключенные в квадратные скобки ([ ]), являются недопустимыми. Значение по умолчанию — NULL.  
   
@@ -115,7 +115,7 @@ sp_update_alert
 |Элемент формата|Описание|  
 |--------------------|-----------------|  
 |*Элемент*|Объект производительности, счетчик производительности или именованный экземпляр счетчика.|  
-|*Сравнения*|Один из следующих операторов: **>**, **<**,**=**|  
+|*Сравнения*|Один из следующих операторов: **>** , **<** ,**=**|  
 |*Значение*|Числовое значение счетчика|  
   
 `[ @category_name = ] 'category'`Имя категории оповещений. *Category* имеет тип **sysname** и значение по умолчанию NULL.  
@@ -128,7 +128,7 @@ sp_update_alert
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Remarks  
- Предупреждение **sysmessages** может создаваться только [!INCLUDE[msCoName](../../includes/msconame-md.md)] в таблице sysmessages, записанной в журнал приложений Windows.  
+ Предупреждение может создаваться только в таблице **sysmessages** , записанной в [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнал приложений Windows.  
   
  **sp_update_alert** изменяет только те параметры оповещений, для которых указаны значения параметров. Если параметр пропущен, сохраняется текущая настройка.  
   
@@ -148,7 +148,7 @@ EXEC dbo.sp_update_alert
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

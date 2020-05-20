@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_copysnapshot
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d8b34915371b164a4167058729d2720d9e60cdcd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c9d9eca16209dd9cfc5695ae56daf929d067ab6e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154598"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831805"
 ---
 # <a name="sp_copysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Копирует папку моментальных снимков указанной публикации в папку, ** \@** указанную в destination_folder. Эта хранимая процедура выполняется на издателе в базе данных публикации. Данная хранимая процедура полезна для копирования моментального снимка на извлекаемые носители, такие как CD-ROM.  
+  Копирует папку моментальных снимков указанной публикации в папку, указанную в ** \@ destination_folder**. Эта хранимая процедура выполняется на издателе в базе данных публикации. Данная хранимая процедура полезна для копирования моментального снимка на извлекаемые носители, такие как CD-ROM.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,12 +51,12 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Remarks  
- **sp_copysnapshot** используется во всех типах репликации. Подписчики [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с версией 7,0 и более ранними версиями не могут использовать альтернативное расположение моментального снимка.  
+ **sp_copysnapshot** используется во всех типах репликации. Подписчики с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версией 7,0 и более ранними версиями не могут использовать альтернативное расположение моментального снимка.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_copysnapshot**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Альтернативные расположения папки моментальных снимков](../../relational-databases/replication/snapshot-options.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

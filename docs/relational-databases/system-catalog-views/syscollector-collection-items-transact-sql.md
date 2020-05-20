@@ -16,14 +16,14 @@ helpviewer_keywords:
 - syscollector_collection_items view
 - add data collector view
 ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 78e8211c10d019c3b2a8c2435c5ddde8f8182a14
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d8f55a496a5d5fc4a0a0c499056eff5e00bd1ea8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060413"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833841"
 ---
 # <a name="syscollector_collection_items-transact-sql"></a>syscollector_collection_items (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68060413"
 ## <a name="permissions"></a>Разрешения  
  Требуется SELECT для **dc_operator**, **dc_proxy**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры сборщика данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Представления сборщика данных &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)  

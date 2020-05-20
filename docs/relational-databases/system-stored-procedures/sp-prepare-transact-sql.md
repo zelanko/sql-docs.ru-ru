@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_prepare
 ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: acadb311dac786d9f1c5dbcc86fac9b2609fb959
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e5875d4160ca3bb3e06670d02426e7b3cfe097c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085798"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832602"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -67,7 +67,7 @@ EXEC sp_execute @P1, N'tempdb', N'ONLINE';
 EXEC sp_unprepare @P1;  
 ```
 
-Б) В следующем примере подготавливается инструкция в базе данных AdventureWorks2016, а позднее она выполняется с помощью маркера.
+Б. В следующем примере подготавливается инструкция в базе данных AdventureWorks2016, а позднее она выполняется с помощью маркера.
 
 ```sql
 -- Prepare query
@@ -106,7 +106,7 @@ EXEC sp_unprepare 1;
 GO
 ```
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
 

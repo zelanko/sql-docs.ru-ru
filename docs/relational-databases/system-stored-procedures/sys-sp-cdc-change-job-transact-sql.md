@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_change_job
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 0c2c39363ca1b0824b27645df8c8501931b674a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c0cc477647150a11fc644378196f97cfc21007ff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056759"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832523"
 ---
 # <a name="syssp_cdc_change_job-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,9 +63,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  Если *Continuous* = 0, **sp_cdc_scan** задание выполняется до *max_scans* просмотров журнала, обработки до *max_trans* транзакций во время каждого сканирования, а затем завершает работу.  
   
- Если ** \@** значение параметра Continuous изменяется с 1 на 0, ** \@PollingInterval** автоматически устанавливается в значение 0. Значение, указанное для ** \@PollingInterval** , отличное от 0, игнорируется.  
+ Если значение параметра ** \@ Continuous** изменяется с 1 на 0, ** \@ PollingInterval** автоматически устанавливается в значение 0. Значение, указанное для ** \@ PollingInterval** , отличное от 0, игнорируется.  
   
- Если ** \@параметр Continuous** опущен или явно задано значение null, а ** \@PollingInterval** явно задано в значении больше 0, ** \@непрерывный** параметр автоматически устанавливается в 1.  
+ Если параметр ** \@ Continuous** опущен или явно ЗАДАНо значение null, а ** \@ PollingInterval** явно задано в значении больше 0, ** \@ непрерывный** параметр автоматически устанавливается в 1.  
   
  *Непрерывная* допустима только для заданий отслеживания.  
   
@@ -98,7 +98,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-changing-a-capture-job"></a>A. Изменение задания отслеживания  
- В следующем примере обновляются `@job_type`параметры `@maxscans`, и `@maxtrans` задания отслеживания в `AdventureWorks2012` базе данных. Другие допустимые параметры задания отслеживания (`@continuous` и `@pollinginterval`) пропущены; их значения не изменяются.  
+ В следующем примере обновляются `@job_type` `@maxscans` Параметры, и `@maxtrans` задания отслеживания в `AdventureWorks2012` базе данных. Другие допустимые параметры задания отслеживания (`@continuous` и `@pollinginterval`) пропущены; их значения не изменяются.  
   
 ```  
 USE AdventureWorks2012;  
@@ -110,8 +110,8 @@ EXECUTE sys.sp_cdc_change_job
 GO  
 ```  
   
-### <a name="b-changing-a-cleanup-job"></a>Б) Изменение задания очистки  
- В следующем примере обновляется задание очистки базы данных `AdventureWorks2012`. Указаны все допустимые параметры для этого типа задания, кроме ** \@порогового значения**. Значение ** \@порога** не изменяется.  
+### <a name="b-changing-a-cleanup-job"></a>Б. Изменение задания очистки  
+ В следующем примере обновляется задание очистки базы данных `AdventureWorks2012`. Указаны все допустимые параметры для этого типа задания, кроме ** \@ порогового значения**. Значение ** \@ порога** не изменяется.  
   
 ```  
 USE AdventureWorks2012;  
@@ -122,7 +122,7 @@ EXECUTE sys.sp_cdc_change_job
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [dbo. cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  

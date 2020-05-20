@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_batch_params
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9a5b4ac7c5e1e8d3c136f99475fa7a17ebd8b002
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e9a7cb410a1e520ee05b7f93263dcc46750dfb87
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001816"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833478"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 `[ @tsqlbatch = ] 'tsqlbatch'`Строка в Юникоде, содержащая [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию или пакет, для которых требуются сведения о параметрах. *тсклбатч* имеет тип **nvarchar (max)** или неявно преобразуется в **nvarchar (max)**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -55,7 +55,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**ОБЕСПЕЧИВАЮТ**|**int**|Количество значащих цифр. Возвращаемое значение для столбца **точности** находится в базовом 10.|  
 |**LENGTH**|**int**|Размер передаваемых данных. Значение NULL.|  
 |**Измените**|**smallint**|Число цифр справа от десятичной запятой. Значение NULL.|  
-|**RADIX**|**smallint**|Основание системы счисления для числовых типов. Значение NULL.|  
+|**ОСНОВАНИЕ системы СЧИСЛЕНИЯ**|**smallint**|Основание системы счисления для числовых типов. Значение NULL.|  
 |**ОБНУЛЯЕМОГО**|**smallint**|Определяет допустимость значений NULL:<br /><br /> 1 = тип данных параметра может быть создан со значением NULL.<br /><br /> 0 = значения NULL недопустимы.<br /><br /> Значение NULL.|  
 |**SQL_DATA_TYPE**|**smallint**|Значение системного типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], как оно показано в поле TYPE дескриптора. Этот столбец аналогичен столбцу **data_type** , за исключением типов данных **даты** **и времени ISO** . Этот столбец всегда возвращает значение. Значение NULL.|  
 |**SQL_DATETIME_SUB**|**smallint**|Код **интервала** **DateTime** или ISO, если значение **SQL_DATA_TYPE** равно SQL_DATETIME или SQL_INTERVAL. Для типов данных, отличных от **datetime** и **interval** в стандарте ISO, это поле имеет значение NULL. Значение NULL.|  
@@ -77,7 +77,7 @@ SET @SQLString =
 EXECUTE sp_batch_params @SQLString;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполнение хранимых процедур](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Разделы руководства по выполнению хранимых процедур &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
  [Выполнение хранимых процедур (OLE DB)](../../relational-databases/native-client/ole-db/stored-procedures-running.md)  

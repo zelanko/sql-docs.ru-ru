@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_droprole
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2573019948a326c9171fc83d62428e7e2f888eb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: df28493f6229a28b0f10d53bebad8bf031e63822
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933810"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833332"
 ---
 # <a name="sp_droprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67933810"
   Удаляет роль базы данных из текущей базы данных.  
   
 > [!IMPORTANT]  
->  В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] **sp_droprole** был заменен инструкцией DROP ROLE. **sp_droprole** включается только для обеспечения совместимости с предыдущими [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версиями и может не поддерживаться в будущем выпуске.  
+>  В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] **sp_droprole** был ЗАМЕНЕН инструкцией DROP ROLE. **sp_droprole** включается только для обеспечения совместимости с предыдущими версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и может не поддерживаться в будущем выпуске.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,7 +69,7 @@ EXEC sp_droprole 'Sales';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [УДАЛИТЬ роль &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
