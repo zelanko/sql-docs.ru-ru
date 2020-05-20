@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticlecolumns
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e87e542395c00797ce50b220ad8a6c981f43605a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c15a9051c6d706ddec55d031e93858a3d33c9d3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771093"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815954"
 ---
 # <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 `[ @article = ] 'article'`Имя статьи, для которой возвращены столбцы. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  не следует указывать *Издатель* , если запрошенная статья опубликована [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателем.  
@@ -56,12 +56,12 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**Идентификатор столбца**|**int**|Идентификатор столбца.|  
-|**рубрик**|**sysname**|Имя столбца.|  
+|**column**|**sysname**|Имя столбца.|  
 |**published**|**bit**|Опубликован ли столбец:<br /><br /> **0** = нет<br /><br /> **1** = да|  
 |**тип издателя**|**sysname**|Тип данных столбца на издателе.|  
 |**Тип подписчика**|**sysname**|Тип данных столбца на подписчике.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_helparticlecolumns** используется в моментальных снимках и репликации транзакций.  
   
  **sp_helparticlecolumns** удобно использовать для проверки вертикальной секции.  
@@ -69,7 +69,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** или списка доступа к публикации для текущей публикации могут выполнять **sp_helparticlecolumns**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Определение и изменение фильтра столбцов](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   

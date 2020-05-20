@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_account_sp
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ccb5cfd245148c97288a34b1857955f48f3efc73
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb61b115689472c5be3ec14de2e7387de3317d4d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81528418"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814148"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,11 +61,11 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**serverType**|**sysname**|Тип почтового сервера для учетной записи.|  
 |**имя**|**sysname**|Имя почтового сервера для учетной записи.|  
 |**порту**|**int**|Номер порта, который использует почтовый сервер.|  
-|**имен**|**nvarchar(128)**|Имя пользователя, используемое для входа на почтовый сервер в случае, если почтовый сервер использует проверку подлинности. Если параметр **username** имеет значение NULL, Database Mail не использует для этой учетной записи проверку подлинности.|  
-|**use_default_credentials**|**bit**|Указывает, посылать ли почту серверу SMTP с помощью учетных данных компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** имеет бит и не имеет значения по умолчанию. Если этот параметр равен 1, компонент Database Mail использует учетные данные службы компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Если этот параметр равен 0, Database Mail использует ** \@имя пользователя** и ** \@пароль** для проверки подлинности на SMTP-сервере. Если ** \@имя пользователя** и ** \@пароль** имеют значение null, Database Mail использует анонимную проверку подлинности. Перед указанием этого параметра проконсультируйтесь с администратором SMTP-сервера.|  
+|**username**|**nvarchar(128)**|Имя пользователя, используемое для входа на почтовый сервер в случае, если почтовый сервер использует проверку подлинности. Если параметр **username** имеет значение NULL, Database Mail не использует для этой учетной записи проверку подлинности.|  
+|**use_default_credentials**|**bit**|Указывает, посылать ли почту серверу SMTP с помощью учетных данных компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** имеет бит и не имеет значения по умолчанию. Если этот параметр равен 1, компонент Database Mail использует учетные данные службы компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Если этот параметр равен 0, Database Mail использует ** \@ имя пользователя** и ** \@ пароль** для проверки подлинности на SMTP-сервере. Если ** \@ имя пользователя** и ** \@ пароль** имеют значение null, Database Mail использует анонимную проверку подлинности. Перед указанием этого параметра проконсультируйтесь с администратором SMTP-сервера.|  
 |**enable_ssl**|**bit**|Указывает, будет ли Database Mail шифровать связь с помощью протокола TLS, который ранее назывался SSL (SSL). Используйте этот параметр, если на SMTP-сервере требуется TLS. **enable_ssl** имеет бит и не имеет значения по умолчанию. 1 указывает, Database Mail шифрует связь с помощью TLS. значение 0 указывает, Database Mail отправляет почту без шифрования TLS.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Если *account_id* или *account_name* не указаны, **sysmail_help_account** выводит сведения обо всех учетных записях Database Mail в экземпляре Microsoft SQL Server.  
   
  Хранимая процедура **sysmail_help_account_sp** находится в базе данных **msdb** и принадлежит схеме **dbo** . Процедура должна быть выполнена с именем, сопоставленным с тремя частями, если текущей базой данных не является **msdb**.  
@@ -108,7 +108,7 @@ account_id  name                         description                            
 148         AdventureWorks Administrator Mail account for administrative e-mail. dba@Adventure-Works.com   AdventureWorks Automated Mailer  NULL            SMTP       smtp.Adventure-Works.com  25          NULL     0                       0       
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Создание учетной записи Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Database Mail хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

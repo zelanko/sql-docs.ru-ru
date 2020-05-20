@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_mailitems_sp
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ad69cc6933b4f3d51d3b9ec11fad4edd6d555abe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ee0298a714394bdf90009657c3d5b7a4daafebcd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70846640"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814369"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +47,8 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
- Database Mail сообщения и их вложения хранятся в базе данных **msdb** . Сообщения следует периодически удалять, чтобы не допустить роста базы данных **msdb** , чем ожидалось, и в соответствии с программой хранения документов Организации. Используйте **sysmail_delete_mailitems_sp** хранимую процедуру, чтобы окончательно удалить сообщения электронной почты из Database Mail таблиц. Необязательный аргумент позволяет удалить только старые сообщения, указав дату и время. Сообщения, которые старше этого аргумента, будут удалены. Другой необязательный аргумент позволяет удалить только сообщения электронной почты определенного типа, указанные в качестве аргумента **sent_status** . Аргумент необходимо указать либо для ** \@sent_before** , либо ** \@для sent_status**. Чтобы удалить все сообщения, используйте ** \@sent_before = GETDATE ()**.  
+## <a name="remarks"></a>Примечания  
+ Database Mail сообщения и их вложения хранятся в базе данных **msdb** . Сообщения следует периодически удалять, чтобы не допустить роста базы данных **msdb** , чем ожидалось, и в соответствии с программой хранения документов Организации. Используйте **sysmail_delete_mailitems_sp** хранимую процедуру, чтобы окончательно удалить сообщения электронной почты из Database Mail таблиц. Необязательный аргумент позволяет удалить только старые сообщения, указав дату и время. Сообщения, которые старше этого аргумента, будут удалены. Другой необязательный аргумент позволяет удалить только сообщения электронной почты определенного типа, указанные в качестве аргумента **sent_status** . Аргумент необходимо указать либо для ** \@ sent_before** , либо для ** \@ sent_status**. Чтобы удалить все сообщения, используйте ** \@ sent_before = GETDATE ()**.  
   
  Удаление сообщений электронной почты также удаляет вложения, связанные с этими сообщениями. Удаление электронной почты не приводит к удалению соответствующих записей в **sysmail_event_log**. Для удаления элементов из журнала используйте [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) .  
   
@@ -67,7 +67,7 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @GETDATE;
 GO  
 ```  
   
-### <a name="b-deleting-the-oldest-e-mails"></a>Б) Удаление самых старых сообщений электронной почты  
+### <a name="b-deleting-the-oldest-e-mails"></a>Б. Удаление самых старых сообщений электронной почты  
  Следующий пример удаляет сообщения электронной почты в журнале компонента Database Mail, принятые раньше `October 9, 2005`.  
   
 ```  
@@ -85,7 +85,7 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
  [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
  [sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   

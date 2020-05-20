@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_principalprofile_sp
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fedc7e0dd7fe71feb0b0da1f00f2a7f996c6129c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d752015dab48058af18cb981a009691f407da171
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305059"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814454"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +54,12 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
- Чтобы сделать профиль общедоступным, укажите ** \@principal_id** **0** или ** \@principal_name** **Public**. Открытый профиль доступен для всех пользователей в базе данных **msdb** , хотя пользователи также должны быть членами **роли DatabaseMailUserRole** для выполнения **sp_send_dbmail**.  
+## <a name="remarks"></a>Примечания  
+ Чтобы сделать профиль общедоступным, укажите ** \@ principal_id** **0** или ** \@ principal_name** **Public**. Открытый профиль доступен для всех пользователей в базе данных **msdb** , хотя пользователи также должны быть членами **роли DatabaseMailUserRole** для выполнения **sp_send_dbmail**.  
   
- Пользователь базы данных может иметь только один профиль по умолчанию. Если ** \@is_default** имеет значение**1**, а пользователь уже связан с одним или несколькими профилями, указанный профиль становится профилем по умолчанию для пользователя. Профиль, который ранее был профилем по умолчанию, остается ассоциированным с пользователем, но уже не является профилем по умолчанию.  
+ Пользователь базы данных может иметь только один профиль по умолчанию. Если ** \@ is_default** имеет значение**1**, а пользователь уже связан с одним или несколькими профилями, указанный профиль становится профилем по умолчанию для пользователя. Профиль, который ранее был профилем по умолчанию, остается ассоциированным с пользователем, но уже не является профилем по умолчанию.  
   
- Если ** \@is_default** имеет значение "**0**", а другая ассоциация не существует, хранимая процедура возвращает ошибку.  
+ Если ** \@ is_default** имеет значение "**0**", а другая ассоциация не существует, хранимая процедура возвращает ошибку.  
   
  Хранимая процедура **sysmail_add_principalprofile_sp** находится в базе данных **msdb** и принадлежит схеме **dbo** . Процедура должна быть выполнена с именем, сопоставленным с тремя частями, если текущей базой данных не является **msdb**.  
   
@@ -69,7 +69,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="examples"></a>Примеры  
  **А. Создание ассоциации с профилем, определение профиля по умолчанию**  
   
- В следующем примере создается ассоциация между профилем `AdventureWorks Administrator Profile` и пользователем `ApplicationUser`базы данных **msdb** . Указанный профиль становится для пользователя профилем по умолчанию.  
+ В следующем примере создается ассоциация между профилем `AdventureWorks Administrator Profile` и пользователем базы данных **msdb** `ApplicationUser` . Указанный профиль становится для пользователя профилем по умолчанию.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  
@@ -80,7 +80,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
  **Б. Определение открытого профиля по умолчанию**  
   
- В следующем примере профиль `AdventureWorks Public Profile` создается в качестве открытого профиля по умолчанию для пользователей в базе данных **msdb** .  
+ В следующем примере профиль создается `AdventureWorks Public Profile` в качестве открытого профиля по умолчанию для пользователей в базе данных **msdb** .  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  
@@ -89,7 +89,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
     @is_default = 1 ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Database Mail объекты конфигурации](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Database Mail хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

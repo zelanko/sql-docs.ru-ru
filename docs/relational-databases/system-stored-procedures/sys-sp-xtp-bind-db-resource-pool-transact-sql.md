@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sp_xtp_bind_db_resource_pool
 - sys.sp_xtp_bind_db_resource_pool
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: af0e10f23d376c96fd7be0a75cf713dd76a2c149
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dfdfbe678e5b91d72e19a0300f9f1feec77c9d75
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041008"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814564"
 ---
 # <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  Привязка вступит в силу при следующем переводе базы данных в режим «в сети».  
  
- Б) Расширенный пример приведенного выше примера, который включает некоторые основные проверки.  Выполните следующую [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию в[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ Б. Расширенный пример приведенного выше примера, который включает некоторые основные проверки.  Выполните следующую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] в[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
@@ -151,7 +151,7 @@ END
   
 -   Необходимо разрешение CONTROL SERVER.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   

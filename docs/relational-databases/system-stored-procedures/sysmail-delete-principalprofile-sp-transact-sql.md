@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_principalprofile_sp
 ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 86f9566ce86423939aff22fc37331c5c9db89904
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 340682d6344057d758d3cf8a0822f439625460de
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67909211"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814281"
 ---
 # <a name="sysmail_delete_principalprofile_sp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Чтобы создать общий профиль в частном профиле, укажите для имени участника значение **"Public"** или **0** для идентификатора участника.  
   
  Будьте осторожны, удаляя разрешения для частного профиля пользователя по умолчанию или открытого профиля по умолчанию. Если профиль по умолчанию недоступен, **sp_send_dbmail** требует имя профиля в качестве аргумента. Поэтому удаление профиля по умолчанию может привести к сбою вызовов **sp_send_dbmail** . Дополнительные сведения см. в разделе [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).  

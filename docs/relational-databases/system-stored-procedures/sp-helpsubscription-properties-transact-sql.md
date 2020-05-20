@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription_properties
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 28305f4676c9323b364703feb0b668615a159e6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cf8c3510ffbd2d40c882061cc81bb8f6a80d294f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771562"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815443"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'`Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по **%** умолчанию, которое возвращает сведения обо всех издателях.  
+`[ @publisher = ] 'publisher'`Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех издателях.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и значение по **%** умолчанию, которое возвращает сведения обо всех базах данных издателя.  
+`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех базах данных издателя.  
   
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по **%** умолчанию, которое возвращает сведения обо всех публикациях.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех публикациях.  
   
 `[ @publication_type = ] publication_type`Тип публикации. *publication_type* имеет **тип int**и значение по умолчанию NULL. Если указано, *publication_type* должны иметь одно из следующих значений:  
   
@@ -58,17 +58,17 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**издателя**|**sysname**|Имя издателя.|  
+|**publisher**|**sysname**|Имя издателя.|  
 |**publisher_db**|**sysname**|Имя базы данных издателя.|  
 |**публикации**|**sysname**|Имя публикации.|  
 |**publication_type**|**int**|Тип публикации:<br /><br /> **0** = транзакционное<br /><br /> **1** = моментальный снимок<br /><br /> **2** = слияние|  
 |**publisher_login**|**sysname**|Идентификатор входа, используемый на издателе для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_password**|**nvarchar (524)**|Пароль (шифрованный), используемый на издателе для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**publisher_security_mode**|**int**|Режим безопасности, реализованный на издателе:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности<br /><br /> **1** = проверка подлинности Windows|  
+|**publisher_security_mode**|**int**|Режим безопасности, реализованный на издателе:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности<br /><br /> **1** = проверка подлинности Windows|  
 |**распространение**|**sysname**|Имя распространителя.|  
 |**distributor_login**|**sysname**|Имя входа распространителя.|  
 |**distributor_password**|**nvarchar (524)**|Пароль распространителя (шифрованный).|  
-|**distributor_security_mode**|**int**|Режим безопасности, используемый на распространителе:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности<br /><br /> **1** = проверка подлинности Windows|  
+|**distributor_security_mode**|**int**|Режим безопасности, используемый на распространителе:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности<br /><br /> **1** = проверка подлинности Windows|  
 |**ftp_address**|**sysname**|Только для обратной совместимости. Сетевой адрес службы протокола FTP для распространителя.|  
 |**ftp_port**|**int**|Только для обратной совместимости. Номер порта службы FTP для распространителя.|  
 |**ftp_login**|**sysname**|Только для обратной совместимости. Имя пользователя, используемое для подключения к службе FTP.|  
@@ -93,13 +93,13 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_helpsubscription_properties** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_helpsubscription_properties**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

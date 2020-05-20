@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_control_query_exec_stats
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd8ee38dc4ac1a8fd3a729d94744d3fd98f78875
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60d5967417698bc1970f02658fc28e8659201089
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017848"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814509"
 ---
 # <a name="syssp_xtp_control_query_exec_stats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
  @new_collection_value= *значение*  
  Определяет, включен (1) или выключен (0) сбор статистики на уровне процедуры.  
   
- @new_collection_valueПри [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запуске присваивается значение 0.  
+ @new_collection_valueПри запуске присваивается значение 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  @database_id= = *database_id*, @xtp_object_id = *procedure_id*  
  Идентификатор базы данных и идентификатор объекта для скомпилированной в собственном коде хранимой процедуры. Если сбор статистики включен для экземпляра ([sys. sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)), выполняется сбор статистики по хранимой процедуре, скомпилированной в собственном режиме. При отключении сбора статистики для экземпляра сбор статистики для отдельных, скомпилированных в собственном коде хранимых процедур не отключается.  
@@ -82,7 +82,7 @@ EXEC sp_xtp_control_query_exec_stats @database_id = 5,
 SELECT @c AS 'collection status';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

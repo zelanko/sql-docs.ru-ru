@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_deauthorize_db stored procedure
 ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6aeb27d4fb452a4ed5b7f45086f601eacb4f0339
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: eec07109c8f3697eb4738f30d3c201c6addc15a8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905112"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814898"
 ---
 # <a name="syssp_rda_deauthorize_db-transact-sql"></a>sys. sp_rda_deauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_rda_deauthorize_db
 ## <a name="permissions"></a>Разрешения  
  Требуются db_owner разрешения.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  После запуска **sp_rda_deauthorize_db** все запросы к базам данных и таблицам с поддержкой растяжения завершаются ошибкой. То есть режим запроса имеет значение ОТКЛЮЧЕНо. Чтобы выйти из этого режима, выполните одно из следующих действий.  
   
 -   Выполните [sys. sp_rda_reauthorize_db &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) , чтобы повторно подключиться к удаленной базе данных Azure. Эта операция автоматически сбрасывает режим запроса на LOCAL_AND_REMOTE, что является поведением по умолчанию для Stretch Database. То есть запросы возвращают результаты как из локальных, так и удаленных данных.  

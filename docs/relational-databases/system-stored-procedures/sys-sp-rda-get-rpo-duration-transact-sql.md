@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_get_rpo_duration stored procedure
 ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 715ceb531f2334f4cf9580c630d922f45faae74e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d1e89e4901cf8e0bb5674038bfd8fe74bc637511
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252058"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814798"
 ---
 # <a name="syssp_rda_get_rpo_duration-transact-sql"></a>sys. sp_rda_get_rpo_duration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_rda_get_rpo_duration @durationinhours output
 ## <a name="permissions"></a>Разрешения    
  Требуются db_owner разрешения.    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Примечания    
  Измените значение, выполнив [sys. sp_rda_set_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md).    
     
-## <a name="see-also"></a>См. также:    
+## <a name="see-also"></a>См. также    
  [sys. sp_rda_set_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
  [Восстановление баз данных с поддержкой Stretch (Stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)    
  [База данных Stretch](../../sql-server/stretch-database/stretch-database.md)    
