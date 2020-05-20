@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Delete method [ADO]
 ms.assetid: 25bedc25-c51c-4cab-96ce-930b959965d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9db49905b6548e5cb21cca976683c8b387017d32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 691ad580825e4d22cef8bea4f30c737415cfc6b3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919136"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757390"
 ---
 # <a name="delete-method-ado-fields-collection"></a>Метод Delete (коллекция Fields ADO)
 Удаляет объект из коллекции [полей](../../../ado/reference/ado-api/fields-collection-ado.md) .  
@@ -37,7 +37,7 @@ Fields.Delete Field
  *Поле*  
  **Вариант** , обозначающий объект [поля](../../../ado/reference/ado-api/field-object.md) для удаления. Этот параметр может быть именем объекта **поля** или порядком расположения самого объекта **поля** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Вызов метода **Fields. Delete** для открытого [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) приводит к ошибке времени выполнения.  
   
 ## <a name="applies-to"></a>Применяется к  

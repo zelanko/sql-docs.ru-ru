@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Connect property [ADO]
 ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba8b5aa1f59fbb161da878f5930f83d2f6ff0bdd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0f89e1097565c5b9841db69ac44e13c8d7138e64
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964567"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755586"
 ---
 # <a name="connect-property-rds"></a>Свойство Connect (служба удаленных рабочих столов)
 Указывает имя базы данных, из которой выполняются операции запроса и обновления.  
@@ -49,7 +49,7 @@ Run time: DataControl.Connect = "ConnectionString"
 ## <a name="applies-to"></a>Применяется к  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства Connect (VBScript)](../../../ado/reference/rds-api/connect-property-example-vbscript.md)   
  [Метод query (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
  [Метод Refresh (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   

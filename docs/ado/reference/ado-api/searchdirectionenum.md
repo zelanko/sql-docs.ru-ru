@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - SearchDirectionEnum enumeration [ADO]
 ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f8926e932317096cb3891cc8c480164268751cea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7e2928f1817b994c3101182677b5b2fcad9a4b1d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917003"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755777"
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
 Указывает направление поиска записей в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Константа|Применение|Описание|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adSearchBackward**|-1|Поиск в обратном направлении, остановка в начале **набора записей**. Если совпадение не найдено, указатель записи размещается по адресу [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md).|  
 |**adSearchForward**|1|Поиск вперед, остановка в конце **набора записей**. Если совпадение не найдено, указатель записи размещается на [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md).|  

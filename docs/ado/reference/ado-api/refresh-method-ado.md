@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Refresh method [ADO]
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a676bf5eb3d8d98f1b2eb9367aa8ad56f0da209d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 48fc3a1adf8dbeae010e4035ac4f2e390c015e54
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931252"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756536"
 ---
 # <a name="refresh-method-ado"></a>Метод Refresh (ADO)
 Обновляет объекты в коллекции, чтобы отразить объекты, доступные в поставщике, и связанные с ним.  
@@ -34,7 +34,7 @@ ms.locfileid: "67931252"
 collection.Refresh  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Метод **Refresh** выполняет различные задачи в зависимости от коллекции, из которой он вызывается.  
   
 ### <a name="parameters"></a>Параметры  
@@ -65,7 +65,7 @@ collection.Refresh
 |[Коллекция Properties](../../../ado/reference/ado-api/properties-collection-ado.md)|[Коллекция таблиц](../../../ado/reference/adox-api/tables-collection-adox.md)|[Коллекция пользователей](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Коллекция представлений](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода Refresh (Visual Basic)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Пример метода Refresh (Visual c++)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
  [Свойство Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   

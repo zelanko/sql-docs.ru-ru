@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bee7d185d5f598a2f0a086bb7e3bea49ddfff88c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c45f457cdf633cc16052ed2945f71da176efe472
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924915"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757590"
 ---
 # <a name="more-about-recordset-persistence"></a>Дополнительные сведения о сохраняемости набора записей
 Объект ADO Recordset поддерживает хранение содержимого объекта **набора записей** в файле с помощью метода [Save](../../../ado/reference/ado-api/save-method.md) . Сохраняемый файл может находиться на локальном диске, сервере или в качестве URL-адреса на веб – сайте. Позднее файл можно восстановить с помощью метода [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) объекта **Recordset** или метода [EXECUTE](../../../ado/reference/ado-api/execute-method-ado-connection.md) объекта [Connection](../../../ado/reference/ado-api/connection-object-ado.md) .  
@@ -77,7 +77,7 @@ dc.SQL = "c:\yourFile.adtg"
 dc.Refresh  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод GetString (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [Поставщик сохраняемости Microsoft OLE DB (поставщик служб ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Recordset [ADO]
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1c195b3f9897d0bc71ab9e03e69153a66cdd80ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0bffe36980f06bc187bdaf819b373cdb547ecc92
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924920"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757800"
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>Пример кода JScript, возвращающего набор записей
 ## <a name="jscript-code-rsjs"></a>Код JScript (RS. js)  

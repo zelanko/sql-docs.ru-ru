@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Description property
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 48b3a6987e6c7b6c3754f5041d90d248520345ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 25130c94ce9491fa8e61b1bba38246498880568a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933081"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757250"
 ---
 # <a name="description-property"></a>Свойство Description
 Описывает объект [Error](../../../ado/reference/ado-api/error-object.md) .  
@@ -38,7 +38,7 @@ ms.locfileid: "67933081"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Error](../../../ado/reference/ado-api/error-object.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры свойств Description, HelpContext, HelpFile, NativeError, Number, Source и SQLState (Visual Basic)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Примеры свойств Description, HelpContext, HelpFile, NativeError, Number, Source и SQLState (Visual c++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Свойства HelpContext, HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   

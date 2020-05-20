@@ -16,14 +16,14 @@ f1_keywords:
 helpviewer_keywords:
 - Resync method [ADO]
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7e2f83a3637af8f0e89c4125d3207c8c54b86763
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 54c92fad618ffaad9b22a8ed73b287c0a5716959
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917162"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756303"
 ---
 # <a name="resync-method"></a>Метод Resync
 Обновляет данные в текущем объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) или коллекции [полей](../../../ado/reference/ado-api/fields-collection-ado.md) объекта [записи](../../../ado/reference/ado-api/record-object-ado.md) из базовой базы данных.  
@@ -37,10 +37,10 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>Параметры  
  *аффектрекордс*  
- Необязательный параметр. Значение [аффектенум](../../../ado/reference/ado-api/affectenum.md) , определяющее количество записей, на которые будет влиять метод повторной **синхронизации** . Значение по умолчанию — **адаффекталл**. Это значение недоступно в методе **Resync** коллекции **Fields** объекта **Record** .  
+ Необязательный элемент. Значение [аффектенум](../../../ado/reference/ado-api/affectenum.md) , определяющее количество записей, на которые будет влиять метод повторной **синхронизации** . Значение по умолчанию — **адаффекталл**. Это значение недоступно в методе **Resync** коллекции **Fields** объекта **Record** .  
   
  *ресинквалуес*  
- Необязательный параметр. Значение [ресинценум](../../../ado/reference/ado-api/resyncenum.md) , указывающее, перезаписываются ли базовые значения. Значение по умолчанию — **адресинкаллвалуес**.  
+ Необязательный элемент. Значение [ресинценум](../../../ado/reference/ado-api/resyncenum.md) , указывающее, перезаписываются ли базовые значения. Значение по умолчанию — **адресинкаллвалуес**.  
   
 ## <a name="remarks"></a>Remarks  
   

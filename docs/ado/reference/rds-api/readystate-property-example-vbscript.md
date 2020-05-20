@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ReadyState property [ADO], VBScript example
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b27a26eede798b8a8f8df9d76451125f042510a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7a3d39355a95b46170ab3f7a5b24cd43582ecac3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963609"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755515"
 ---
 # <a name="readystate-property-example-vbscript"></a>Пример свойства ReadyState (VBScript)
 > [!IMPORTANT]
@@ -27,7 +27,7 @@ ms.locfileid: "67963609"
   
  В следующем примере показано, как считать свойство [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) объекта [RDS. Объект элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) DataObject во время выполнения в коде VBScript. Свойство **ReadyState** доступно только для чтения.  
   
- Чтобы протестировать этот пример, вырежьте и вставьте этот \<код между телом \<> и/боди> ТЕГАМИ в обычном HTML-документе и назовите его **рдсреадист. ASP**. Используйте **Find** для поиска файла адовбс. Inc и поместите его в каталог, который планируется использовать. Сценарий ASP определит ваш сервер.  
+ Чтобы протестировать этот пример, вырежьте и вставьте этот код между \< телом> и \< /боди> тегами в обычном HTML-документе и назовите его **рдсреадист. ASP**. Используйте **Find** для поиска файла адовбс. Inc и поместите его в каталог, который планируется использовать. Сценарий ASP определит ваш сервер.  
   
 ```  
 <!-- BeginReadyStateVBS -->  
@@ -109,7 +109,7 @@ body {
 <!-- EndReadyStateVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Свойство ReadyState (служба удаленных рабочих столов)](../../../ado/reference/rds-api/readystate-property-rds.md)
 

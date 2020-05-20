@@ -12,14 +12,14 @@ helpviewer_keywords:
 - immediate mode [ADO]
 - updating data [ADO], immediate mode
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3952ef502bf79d6704cbaea80b9a825a3c70981b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d036b2fa33c2f9fd5696eeb2984d07d4217eff6e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925016"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757910"
 ---
 # <a name="immediate-mode"></a>Режим интерпретации
 Режим интерпретации действует, когда свойство **LockType** имеет значение **adLockOptimistic** или **адлоккпессимистик**. В режиме интерпретации изменения в записи передаются в источник данных сразу после того, как вы объявили работу над строкой, вызвав метод **Update** .  

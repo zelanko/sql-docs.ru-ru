@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Resync Command property [ADO]
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e81fa9ffb28ba31f50d77cacf372bc24d09787ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 916afef294a76e62702dbbd7cc413a0540484f62
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917139"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756481"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Свойство Resync Command (динамическое) (ADO)
 Указывает указанную пользователем строку команды, которая выдается методом повторной [синхронизации](../../../ado/reference/ado-api/resync-method.md) для обновления данных в таблице, указанной в динамическом свойстве [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .  
@@ -33,7 +33,7 @@ ms.locfileid: "67917139"
   
  Ниже приведены два примера, основанные на SQL:  
   
- 1\) **набор записей** определяется командой:  
+ 1 \) **набор записей** определяется командой:  
   
 ```  
 SELECT * FROM Customers JOIN Orders ON   
@@ -54,7 +54,7 @@ WHERE Orders.OrderID = ?"
   
  **Уникальная таблица** — это *Orders* , а ее первичный ключ — *OrderID*. Подзапрос выборки предоставляет простой способ программно гарантировать, что то же количество и порядок столбцов возвращаются в виде исходной команды.  
   
- 2\) **набор записей** определяется хранимой процедурой.  
+ 2 \) **набор записей** определяется хранимой процедурой.  
   
 ```  
 CREATE PROC Custorders @CustomerID char(5) AS   

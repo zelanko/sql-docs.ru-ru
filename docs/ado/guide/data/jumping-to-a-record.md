@@ -11,14 +11,14 @@ helpviewer_keywords:
 - record jumping [ADO]
 - jumping to record [ADO]
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cead84eed4e7689d6b5df907b6a61ef07ab74e8a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eca1d1646721ea34d4ce075a882bde95b3c407a3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924928"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757770"
 ---
 # <a name="jumping-to-a-record"></a>Переход к записи
 Метод [Move](../../../ado/reference/ado-api/move-method-ado.md) позволяет перемещаться вперед или назад в **наборе** записей по заданному числу записей с помощью следующего синтаксиса:  

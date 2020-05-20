@@ -12,21 +12,21 @@ helpviewer_keywords:
 - underlying providers [ADO]
 - data shaping [ADO], commands
 ms.assetid: d6001863-7733-4c32-817f-081e48587fa1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 02a861daa78b798c1b19b5fc2607cfcaf0ce5968
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6bc30f35ebfe2ddc59e9ef1404253e9bc99d62e0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924948"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757810"
 ---
 # <a name="issuing-commands-to-the-underlying-data-provider"></a>Выдача команды для базового поставщика данных
 Любая команда, которая не начинается с SHAPE, передается поставщику данных. Это эквивалентно выдаче команды Shape в виде "SHAPE {поставщик команда}". Этим командам *не* требуется создавать **набор записей**. Например, форма {DROP TABLE MyTable} является абсолютно допустимой командой Shape, предполагая, что поставщик данных поддерживает инструкцию DROP TABLE.  
   
  Эта возможность позволяет использовать как обычные команды поставщика, так и команды Shape для совместного использования одного соединения и транзакции.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример формирования данных](../../../ado/guide/data/data-shaping-example.md)   
  [Грамматика формальной фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
  [Общие сведения о командах формирования данных](../../../ado/guide/data/shape-commands-in-general.md)

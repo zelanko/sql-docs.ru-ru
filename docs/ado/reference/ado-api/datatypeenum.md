@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - DataTypeEnum enumeration [ADO]
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 27386894ce6d1d393505d49b4863a0ba9bf3320b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5d22757951cad59c10bc1d7eea85ea8ee11ed0ad
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933226"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757630"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Указывает тип данных [поля](../../../ado/reference/ado-api/field-object.md), [параметра](../../../ado/reference/ado-api/parameter-object.md)или [Свойства](../../../ado/reference/ado-api/property-object-ado.md). Соответствующий индикатор типа OLE DB отображается в круглых скобках в столбце Описание следующей таблицы.  

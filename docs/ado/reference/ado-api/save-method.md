@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Save method [ADO]
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4134e34cc494185ec384bd9900ba578e9fa3034d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931177"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755862"
 ---
 # <a name="save-method"></a>Метод Save
 Сохраняет [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) в объекте File или [Stream](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -34,13 +34,13 @@ recordset.Save Destination, PersistFormat
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Назначение*  
- Необязательный параметр. **Вариант** , представляющий полное имя пути к файлу, в котором сохраняется **набор записей** , или ссылку на объект **потока** .  
+ *Местоназначение*  
+ Необязательный элемент. **Вариант** , представляющий полное имя пути к файлу, в котором сохраняется **набор записей** , или ссылку на объект **потока** .  
   
  *персистформат*  
- Необязательный параметр. Значение [персистформатенум](../../../ado/reference/ado-api/persistformatenum.md) , указывающее формат, в котором сохраняется **набор записей** (XML или адтг). Значение по умолчанию — **адперсистадтг**.  
+ Необязательный элемент. Значение [персистформатенум](../../../ado/reference/ado-api/persistformatenum.md) , указывающее формат, в котором сохраняется **набор записей** (XML или адтг). Значение по умолчанию — **адперсистадтг**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Метод [Save](../../../ado/reference/ado-api/save-method.md) можно вызвать только для открытого **набора записей**. Используйте метод [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) для последующего восстановления **набора записей** из *места назначения*.  
   
  Если свойство [фильтра](../../../ado/reference/ado-api/filter-property.md) для **набора записей**действует, сохраняются только те строки, которые доступны в фильтре. Если **набор записей** является иерархическим, текущий дочерний **набор записей** и его дочерние элементы сохраняются, включая родительский **набор записей**. Если вызывается метод Save дочернего **набора записей** , дочерний элемент и все его дочерние элементы сохраняются, но родительский элемент не является.  
@@ -93,7 +93,7 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 |-|-|  
 |[Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример методов Save и Open (Visual Basic)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [Пример методов Save и Open (Visual c++)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
  [Метод Open (набор записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - DefinedSize property [ADO]
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4bfb0db701801f1853009594b9d6d24aeb41c629
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 08a7842a2fbfb2bd34f02ad2e45871132111a68f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933215"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757400"
 ---
 # <a name="definedsize-property"></a>Свойство DefinedSize
 Указывает емкость данных для объекта [поля](../../../ado/reference/ado-api/field-object.md) .  
@@ -36,7 +36,7 @@ ms.locfileid: "67933215"
   
 4.  Для типов данных, длина которых не превышает длину, для этого параметра задано значение ~ 0 (битовая, а не 0, все биты установлены в 1).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Используйте свойство **DefinedSize** , чтобы определить емкость данных для объекта **поля** .  
   
  Свойства **DefinedSize** и [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) различаются. Например, рассмотрим объект **field** с объявленным типом **адварчар** и значением свойства **DefinedSize** 50, содержащим один символ. Возвращаемое значение свойства **ActualSize** — это длина в байтах одного символа.  
@@ -44,7 +44,7 @@ ms.locfileid: "67933215"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры свойств ActualSize и DefinedSize (Visual Basic)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
  [Пример свойств ActualSize и DefinedSize (Visual c++)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
  [Свойство ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)

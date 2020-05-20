@@ -12,14 +12,14 @@ helpviewer_keywords:
 - COMPUTE clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c3a5694613d3830b057204c89d2173eea4375519
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4db8d9be4bb797bffd4fc3b033dfc7e5693c1f88
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924956"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757820"
 ---
 # <a name="intervening-shape-compute-clauses"></a>Предложения COMPUTE для промежуточного формирования данных
 Допускается внедрение одного или нескольких предложений вычислений между родительским и дочерним элементами в параметризованной команде Shape, как показано в следующем примере:  
@@ -35,7 +35,7 @@ SHAPE {select au_lname, state from authors} APPEND
 RELATE state TO PARAMETER 0)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример формирования данных](../../../ado/guide/data/data-shaping-example.md)   
  [Грамматика формальной фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
  [Общие сведения о командах формирования данных](../../../ado/guide/data/shape-commands-in-general.md)
