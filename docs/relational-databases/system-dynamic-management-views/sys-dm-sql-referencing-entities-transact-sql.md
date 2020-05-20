@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd09706d1b3de9ebe4a5b333f79be9644c433e7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3557f9f77a310a9e72e8a9fb1e11a6976256d2d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982343"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811430"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "73982343"
   
 -   триггеры DDL уровня сервера.  
   
-**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (и более поздней версии), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -96,13 +96,13 @@ sys.dm_sql_referencing_entities (
   
  Возвращает ошибку, если заданная упоминаемая сущность является пронумерованной хранимой процедурой.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  В следующей таблице перечислены типы сущностей, для которых созданы и обновляются данные о зависимостях. Данные о зависимостях не создаются и не обновляются для правил, значений по умолчанию, временных таблиц, временных хранимых процедур и системных объектов.  
   
 |Тип сущности|Ссылающаяся сущность|Упоминаемая сущность|  
 |-----------------|------------------------|-----------------------|  
 |Таблица|Да*|Да|  
-|Представление|Да|Да|  
+|Просмотр|Да|Да|  
 |Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Да|Да|  
 |Хранимая процедура CLR|Нет|Да|  
 |Определяемая пользователем функция [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Да|  
@@ -118,7 +118,7 @@ sys.dm_sql_referencing_entities (
 |Коллекция схем XML|Нет|Да|  
 |Функция секционирования|Нет|Да|  
   
- \*Таблица обрабатывается как ссылающаяся сущность, только если она ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] модуль, определяемый пользователем тип или коллекцию схем XML в определении вычисляемого СТОЛБЦА, проверочного ограничения или ограничения по умолчанию.  
+ \*Таблица обрабатывается как ссылающаяся сущность, только если она ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] модуль, определяемый пользователем тип или коллекцию схем XML в определении вычисляемого столбца, проверочного ограничения или ограничения по умолчанию.  
   
  ** Пронумерованные хранимые процедуры с целочисленным значением больше 1 не отслеживаются в качестве ссылающихся или упоминаемых сущностей.  
   
@@ -153,8 +153,8 @@ FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');
 GO  
 ```  
   
-### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>Б) Получение списка сущностей, ссылающихся на заданный тип  
- В следующем примере возвращается список сущностей, ссылающихся на псевдоним типа `dbo.Flag`. Результирующий набор показывает, что этот тип используется двумя хранимыми процедурами. `dbo.Flag` Тип также используется в определении нескольких столбцов в `HumanResources.Employee` таблице. Однако, поскольку тип не находится в определении вычисляемого столбца, ограничения CHECK или ограничения по УМОЛЧАНИю в таблице, для `HumanResources.Employee` таблицы не возвращаются никакие строки.  
+### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>Б. Получение списка сущностей, ссылающихся на заданный тип  
+ В следующем примере возвращается список сущностей, ссылающихся на псевдоним типа `dbo.Flag`. Результирующий набор показывает, что этот тип используется двумя хранимыми процедурами. `dbo.Flag`Тип также используется в определении нескольких столбцов в `HumanResources.Employee` таблице. Однако, поскольку тип не находится в определении вычисляемого СТОЛБЦА, проверочного ограничения или ограничения по умолчанию в таблице, для таблицы не возвращаются никакие строки `HumanResources.Employee` .  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -174,7 +174,7 @@ GO
  (2 row(s) affected)`  
  ``` 
  
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys.dm_sql_referenced_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
