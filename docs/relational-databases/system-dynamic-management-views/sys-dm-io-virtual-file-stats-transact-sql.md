@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_virtual_file_stats dynamic management function
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ad2d38c031f97e46ef36f33f5e7a0fc82bcb5e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f74fcfb00286d79699eed1e40c3dc36f907026ec
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74412840"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811848"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "74412840"
   Возвращает статистику ввода-вывода для данных и файлов журнала. Это динамическое административное представление заменяет функцию [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) .  
   
 > [!NOTE]  
->  Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]из, используйте имя **sys. dm_pdw_nodes_io_virtual_file_stats**. 
+>  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , используйте имя **sys. dm_pdw_nodes_io_virtual_file_stats**. 
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -88,11 +88,11 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall**|**bigint**|Общее время задержек выполнения операций чтения-записи над файлом, в миллисекундах.|  
 |**size_on_disk_bytes**|**bigint**|Число байтов, используемых файлом на диске. Для разреженных файлов это показывает реальное число байт, занимаемых на диске, которое используется для моментальных снимков базы данных.|  
 |**file_handle**|**varbinary**|Дескриптор данного файла в Windows.|  
-|**io_stall_queued_read_ms**|**bigint**|**Не применяется к:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] с до [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Общая задержка ввода-вывода, созданная регулированием ресурсов ввода-вывода для чтения. Не допускает значение NULL. Дополнительные сведения см. в разделе [sys. dm_resource_governor_resource_pools &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
-|**io_stall_queued_write_ms**|**bigint**|**Не применяется к:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] с до [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Общая задержка ввода-вывода, созданная регулированием ресурсов ввода-вывода для записи. Не допускает значение NULL.|
-|**pdw_node_id**|**int**|**Относится к** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Идентификатор узла для распределения.
+|**io_stall_queued_read_ms**|**bigint**|**Не применяется к:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] с до [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] .<br /><br /> Общая задержка ввода-вывода, созданная регулированием ресурсов ввода-вывода для чтения. Не допускает значение NULL. Дополнительные сведения см. в разделе [sys. dm_resource_governor_resource_pools &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
+|**io_stall_queued_write_ms**|**bigint**|**Не применяется к:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] с до [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] .<br /><br />  Общая задержка ввода-вывода, созданная регулированием ресурсов ввода-вывода для записи. Не допускает значение NULL.|
+|**pdw_node_id**|**int**|**Применимо к:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Идентификатор узла для распределения.
  
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 При запуске службы SQL Server (MSSQLSERVER) счетчики инициализируются пустыми.
   
 ## <a name="permissions"></a>Разрешения  
@@ -111,7 +111,7 @@ SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
-### <a name="b-return-statistics-for-file-in-tempdb"></a>Б) Возврат статистики для файла в базе данных tempdb
+### <a name="b-return-statistics-for-file-in-tempdb"></a>Б. Возврат статистики для файла в базе данных tempdb
 
 **Применимо к:** Хранилище данных SQL Azure
 
@@ -121,7 +121,7 @@ WHERE database_name = 'tempdb' AND file_id = 2;
 
 ```
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с I O &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

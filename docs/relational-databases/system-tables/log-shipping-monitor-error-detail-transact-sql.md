@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_error_detail system table
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5e441e5165262a4455e34cb9a0adb55b9679578f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5c69ac9d3169b3cb407c98c76b1890c5a35188b4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67990052"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82813214"
 ---
 # <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,14 @@ ms.locfileid: "67990052"
 |**источника**|**nvarchar**|Источник сообщения об ошибке или событии.|  
 |**help_url**|**nvarchar**|URL-адрес, по которому в случае доступности могут быть найдены дополнительные сведения о данной ошибке.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Эта таблица содержит подробные сведения об ошибках для агентов доставки журнала. Каждая ошибка регистрируется как последовательность исключений. Может быть несколько ошибок (последовательности) для каждого сеанса агента.  
   
  Помимо хранения на удаленном сервере мониторинга, сведения, относящиеся к основному серверу, хранятся на сервере-источнике в его **log_shipping_monitor_error_detail** таблице, а сведения, связанные с сервером-получателем, также хранятся на сервере-получателе в своей **log_shipping_monitor_error_detail** таблице.  
   
  Для обнаружения сеанса агента используйте столбцы **agent_id**, **agent_type**и **session_id**. Отсортируйте по **log_time** , чтобы просмотреть ошибки в том порядке, в котором они были зарегистрированы.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_monitor_history_detail &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
  [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   

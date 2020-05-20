@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_subscriptions system table
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a7164afe24d15abf195ebff96e4e96a82877deae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 37114a42cd7e9c64872ff42848bb916b21c1d941
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079996"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812428"
 ---
 # <a name="msreplication_subscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "68079996"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**издателя**|**sysname**|Имя издателя.|  
+|**publisher**|**sysname**|Имя издателя.|  
 |**publisher_db**|**sysname**|Имя базы данных издателя.|  
 |**публикации**|**sysname**|Имя публикации.|  
 |**independent_agent**|**bit**|Указывает, имеется ли для данной публикации изолированный агент распространителя.|  
 |**subscription_type**|**int**|Тип подписки.<br /><br /> 0 = принудительная<br /><br /> 1 = по запросу<br /><br /> 2 = анонимная|  
 |**distribution_agent**|**sysname**|Имя агента распространителя.|  
-|**Таймаут**|**smalldatetime**|Время последнего обновления агентом распространителя.|  
+|**Time**|**smalldatetime**|Время последнего обновления агентом распространителя.|  
 |**nописание**|**nvarchar(255)**|Описание подписки.|  
 |**transaction_timestamp**|**varbinary (16)**|Только для внутреннего использования.|  
 |**update_mode**|**tinyint**|Тип обновления.|  
@@ -46,7 +46,7 @@ ms.locfileid: "68079996"
 |**subid**|**двоичный (16)**|Глобальный идентификатор для анонимной подписки.|  
 |**immediate_sync**|**bit**|Указывает, создаются ли повторно файлы синхронизации при каждом запуске агента моментальных снимков.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  

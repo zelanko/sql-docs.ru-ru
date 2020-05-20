@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_plan dynamic management function
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d4ccd016c32e197c75026c1039e5ff4c21eef32
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4cc8fd7a20da6d0bf56d68b690bf35341cb6a63e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135177"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812155"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sys.dm_exec_query_plan(plan_handle)
 |**Шифрование**|**bit**|Указывает, зашифрована ли соответствующая хранимая процедура.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована<br /><br /> Столбец не может содержать значение NULL.|  
 |**query_plan**|**xml**|Содержит представление Showplan времени компиляции для плана выполнения запроса, указанного в *plan_handle*. Представление Showplan имеет формат XML. Для каждого пакета, содержащего, например нерегламентированные инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)], вызовы хранимых процедур и вызовы определяемых пользователем функций, формируется один план.<br /><br /> Столбец может содержать значение NULL.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  При следующих условиях вывод инструкции Showplan не возвращается в столбец **query_plan** возвращаемой таблицы для функции **sys.dm_exec_query_plan**.  
   
 -   Если план запроса, указанный с помощью *plan_handle* , был исключен из кэша планов, то **query_plan** столбец возвращаемой таблицы имеет значение null. Например, такое условие может возникнуть при наличии задержки между принятием и использованием дескриптора плана функцией **sys.dm_exec_query_plan**.  
@@ -87,9 +87,9 @@ sys.dm_exec_query_plan(plan_handle)
 ## <a name="examples"></a>Примеры  
  В следующих примерах показано использование динамического административного представления **sys.dm_exec_query_plan**.  
   
- Чтобы просмотреть представление Showplan в формате XML, необходимо выполнить следующие запросы в редакторе запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], а затем щелкнуть элемент **ShowPlanXML** в столбце **query_plan** таблицы, возвращаемой функцией **sys.dm_exec_query_plan**. Представление Showplan в формате XML отображается на сводной панели среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Чтобы сохранить XML Showplan в файл, щелкните правой кнопкой мыши **ShowPlanXML** в столбце **query_plan** , выберите команду **сохранить результаты как**, присвойте файлу имя в формате \< *file_name*>. sqlplan; Например, Миксмлшовплан. sqlplan.  
+ Чтобы просмотреть представление Showplan в формате XML, необходимо выполнить следующие запросы в редакторе запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], а затем щелкнуть элемент **ShowPlanXML** в столбце **query_plan** таблицы, возвращаемой функцией **sys.dm_exec_query_plan**. Представление Showplan в формате XML отображается на сводной панели среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Чтобы сохранить XML Showplan в файл, щелкните правой кнопкой мыши **ShowPlanXML** в столбце **query_plan** , выберите команду **сохранить результаты как**, присвойте файлу имя в формате \< *file_name*>. sqlplan; например, миксмлшовплан. sqlplan.  
   
-### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>А) Получение кэшированного плана запроса для медленно выполняемого запроса или пакета Transact-SQL  
+### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. Получение кэшированного плана запроса для медленно выполняемого запроса или пакета Transact-SQL  
  Планы запросов для различных типов пакетов [!INCLUDE[tsql](../../includes/tsql-md.md)], в том числе нерегламентированных пакетов, хранимых процедур и определяемых пользователем функций, кэшируются в области памяти, называемой кэшем планов. Каждый кэшированный план запроса идентифицируется при помощи уникального идентификатора, дескриптора плана. Чтобы получить план выполнения для определенного запроса или пакета [!INCLUDE[tsql](../../includes/tsql-md.md)], можно указать дескриптор плана при помощи динамического административного представления **sys.dm_exec_query_plan**.  
   
  Если запрос или пакет [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняется длительное время при определенном соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то для определения причины задержки необходимо получить план выполнения для этого запроса или пакета. В следующем примере показано, как получить представление Showplan в формате XML для медленно выполняемого запроса или пакета.  
@@ -116,7 +116,7 @@ WHERE session_id = 54;
 GO  
 ```  
   
- Таблица, возвращаемая **sys. dm_exec_requests** указывает, что обработчик плана для замедляют выполнение запроса или пакета имеет значение `0x06000100A27E7C1FA821B10600`, которое можно указать в качестве аргумента *plan_handle* с `sys.dm_exec_query_plan` целью получения плана выполнения в формате XML, как показано ниже. План выполнения в формате XML для медленно выполняемых запросов или пакетов содержится в столбце **query_plan** таблицы, возвращаемой функцией `sys.dm_exec_query_plan`.  
+ Таблица, возвращаемая **sys. dm_exec_requests** указывает, что обработчик плана для замедляют выполнение запроса или пакета имеет значение `0x06000100A27E7C1FA821B10600` , которое можно указать в качестве аргумента *plan_handle* с `sys.dm_exec_query_plan` целью получения плана выполнения в формате XML, как показано ниже. План выполнения в формате XML для медленно выполняемых запросов или пакетов содержится в столбце **query_plan** таблицы, возвращаемой функцией `sys.dm_exec_query_plan`.  
   
 ```sql  
 USE master;  
@@ -126,7 +126,7 @@ FROM sys.dm_exec_query_plan (0x06000100A27E7C1FA821B10600);
 GO  
 ```  
   
-### <a name="b-retrieve-every-query-plan-from-the-plan-cache"></a>Б) Получение плана каждого запроса из кэша планов  
+### <a name="b-retrieve-every-query-plan-from-the-plan-cache"></a>Б. Получение плана каждого запроса из кэша планов  
  Чтобы получить моментальный снимок всех планов запроса, хранимых в кэше планов, необходимо получить дескрипторы планов для всех запросов, хранящихся в кэше, запросив динамическое административное представление `sys.dm_exec_cached_plans`. Дескрипторы планов хранятся в столбце `plan_handle` представления `sys.dm_exec_cached_plans`. Затем воспользуйтесь оператором CROSS APPLY для передачи дескрипторов плана в функцию `sys.dm_exec_query_plan`, как показано ниже. Вывод инструкции Showplan в формате XML для каждого плана, находящегося в кэше планов, находится в столбце `query_plan` возвращаемой таблицы.  
   
 ```sql  
@@ -162,7 +162,7 @@ ORDER BY total_worker_time/execution_count DESC;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   

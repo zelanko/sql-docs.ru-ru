@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublications system table
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5a94299b1411cdb53a47c773330773ce7209fbf2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 112d237781ecbe257ef0b9d8c3f4bdee37ca5bc4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67990334"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82813648"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +57,9 @@ ms.locfileid: "67990334"
 |**centralized_conflicts**|**bit**|Определяет, хранятся ли на издателе конфликтные записи.<br /><br /> **0** = конфликтные записи хранятся как на издателе, так и на подписчике, вызвавшем конфликт.<br /><br /> **1** = конфликтующие записи хранятся на издателе.<br /><br /> *Не поддерживается издателями, отличными от издателей SQL.*|  
 |**conflict_retention**|**int**|Задает срок хранения конфликтных записей в днях. *Не поддерживается издателями, отличными от издателей SQL.*|  
 |**conflict_policy**|**int**|Задает политику устранения конфликтов при обновлении подписчика посредством очередей. Может принимать одно из следующих значений:<br /><br /> **1** = побеждает конфликт с издателем.<br /><br /> **2** = конфликт побеждает подписчиком.<br /><br /> **3** = подписка повторно инициализирована.<br /><br /> *Не поддерживается издателями, отличными от издателей SQL.*|  
-|**queue_type**|**int**|Задает используемый тип очереди. Может принимать одно из следующих значений:<br /><br /> **1** = MSMQ, которая использует [!INCLUDE[msCoName](../../includes/msconame-md.md)] очередь сообщений для хранения транзакций.<br /><br /> **2** = SQL, который использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения транзакций.<br /><br /> Этот столбец не используется[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателями, отличными от.<br /><br /> Примечание. Использование [!INCLUDE[msCoName](../../includes/msconame-md.md)] очереди сообщений устарело и больше не поддерживается.<br /><br /> *Этот столбец не поддерживается для издателей, отличных от SQL.*|  
+|**queue_type**|**int**|Задает используемый тип очереди. Может принимать одно из следующих значений:<br /><br /> **1** = MSMQ, которая использует [!INCLUDE[msCoName](../../includes/msconame-md.md)] очередь сообщений для хранения транзакций.<br /><br /> **2** = SQL, который использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения транзакций.<br /><br /> Этот столбец не используется издателями, отличными от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Примечание. Использование [!INCLUDE[msCoName](../../includes/msconame-md.md)] очереди сообщений устарело и больше не поддерживается.<br /><br /> *Этот столбец не поддерживается для издателей, отличных от SQL.*|  
 |**ad_guidname**|**sysname**|Указывает, опубликована ли публикация в каталоге [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Допустимый глобальный уникальный идентификатор (GUID) указывает, что публикация опубликована в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory, а идентификатор GUID — соответствующая Active Directory **objectGUID**объекта публикации. Если это значение равно NULL, публикация в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory не публикуется. *Не поддерживается издателями, отличными от издателей SQL.*|  
-|**backward_comp_level**|**int**|Уровень совместимости базы данных может иметь одно из следующих значений:<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *Не поддерживается издателями, отличными от издателей SQL.*|  
+|**backward_comp_level**|**int**|Уровень совместимости базы данных может иметь одно из следующих значений:<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .<br /><br /> *Не поддерживается издателями, отличными от издателей SQL.*|  
 |**nописание**|**nvarchar(255)**|Описание публикации.|  
 |**independent_agent**|**bit**|Показывает наличие изолированного агента распространителя для этой публикации.<br /><br /> **0** = публикация использует общий агент распространения, а каждая пара базы данных издателя или подписчика имеет один общий агент.<br /><br /> **1** = для этой публикации существует изолированный агент распространения.|  
 |**immediate_sync**|**bit**|Указывает, создаются ли файлы синхронизации при каждом запуске агент моментальных снимков, где **1** означает, что они создаются каждый раз при запуске агента.|  
@@ -72,7 +72,7 @@ ms.locfileid: "67990334"
 |**replicate_ddl**|**int**|Указывает, поддерживается ли для публикации репликация схемы. значение **1** указывает, что инструкции DDL, выполняемые на издателе, реплицируются, а **0** означает, что инструкции DDL не реплицируются. Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md). *Не поддерживается издателями, отличными от издателей SQL.*|  
 |**options**|**int**|Битовая карта, указывающая дополнительные параметры публикации, со следующими необязательными значениями битов:<br /><br /> **0x1** — включается для одноранговой репликации.<br /><br /> **0x2** — публиковать только локальные изменения.<br /><br /> **0x4** — включено для подписчиков, отличных от SQL Server.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   

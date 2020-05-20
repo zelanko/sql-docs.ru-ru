@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_sentitems database mail view
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c935a83c3c3fdd9fa577a3232e46caed7865c1c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e869cd092dd242caff859298b97502693abe2116
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70745369"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812135"
 ---
 # <a name="sysmail_sentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "70745369"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Идентификатор почтового отправления в очереди почты.|  
 |**profile_id**|**int**|Идентификатор профиля, используемого для отсылки этого сообщения.|  
-|**recipients**|**varchar(max)**|Электронные адреса получателей сообщения.|  
+|**пользу**|**varchar(max)**|Электронные адреса получателей сообщения.|  
 |**copy_recipients**|**varchar(max)**|Электронные адреса получателей копий сообщения.|  
 |**blind_copy_recipients**|**varchar(max)**|Электронные адреса получателей копий сообщения, чьи имена не будут отображаться в заголовке сообщения.|  
 |**Тема**|**nvarchar (510)**|Строка темы сообщения.|  
@@ -61,13 +61,13 @@ ms.locfileid: "70745369"
 |**last_mod_date**|**datetime**|Дата и время последнего изменения строки.|  
 |**last_mod_user**|**sysname**|Пользователь, внесший последнее изменение в строку.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  При устранении неполадок в работе компонента Database Mail в этом представлении будут отображаться атрибуты успешно отправленных сообщений, что может помочь в определении причин неполадки. Компонент Database Mail помечает сообщения как отправленные, если они успешно переданы на почтовый SMTP-сервер. Как правило, электронная почта доходит за несколько минут, однако она может задерживаться из-за неполадок на SMTP-сервере. Компонент Database Mail помечает сообщения как отправленные, когда их принимает SMTP-сервер. Неполадки, возникающие на SMTP-сервере, например электронные адреса получателей, доставка на которые невозможна, не возвращаются в компонент Database Mail. Эти электронные письма помечаются как отправленные, несмотря на то, что они не были доставлены. Этот тип неполадок следует устранять на SMTP-сервере. Кроме того, SMTP-сервер может отправить уведомление о невозможности доставить сообщение по соответствующему электронному адресу, указанному в учетной записи компонента Database Mail.  
   
 ## <a name="permissions"></a>Разрешения  
  Предоставлено предопределенной роли сервера **sysadmin** и роли базы данных **DatabaseMailUserRole** . При выполнении членом предопределенной роли сервера **sysadmin** в этом представлении отображаются все отправленные сообщения. Все остальные пользователи видят только собственные отправленные сообщения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объекты обмена сообщениями компонента Database Mail](../../relational-databases/database-mail/database-mail-messaging-objects.md)  
   
   

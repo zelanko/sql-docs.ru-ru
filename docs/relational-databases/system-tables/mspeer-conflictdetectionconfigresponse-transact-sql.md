@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_conflictdetectionconfigureresponse
 ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6ed3a127d2527b35c301ab7f3d05305c4f8d2ced
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 511728cf8203407d964988486ea012d06dfbcc56
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75322135"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812683"
 ---
 # <a name="mspeer_conflictdetectionconfigresponse-transact-sql"></a>MSpeer_conflictdetectionconfigresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ ms.locfileid: "75322135"
 |originator_id|**varbinary (16)**|Указывает каждый узел в топологии с целью обнаружения конфликтов. Дополнительные сведения см. в разделе [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |peer_conflict_retention|**int**|Срок (в днях), в течение которого метаданные хранятся в таблицах конфликтов.|  
 |peer_subscriptions|**XML**|Сведения об узле, сформировавшем ответ на запрос.|  
-|progress_phase|**nvarchar(32)**|Определяет текущую стадию обработки как одно из следующих значений:<br /><br /> Запущено<br /><br /> Собраны данные о версии однорангового узла<br /><br /> Собранные данные о состоянии|  
+|progress_phase|**nvarchar(32)**|Определяет текущую стадию обработки как одно из следующих значений:<br /><br /> Начато<br /><br /> Собраны данные о версии однорангового узла<br /><br /> Собранные данные о состоянии|  
 |modified_date|**datetime**|Дата и время завершения стадии.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
