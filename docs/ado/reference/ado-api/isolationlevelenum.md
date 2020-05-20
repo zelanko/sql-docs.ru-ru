@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - IsolationLevelEnum enumeration [ADO]
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 15ae2aac2851c496b6cac9e47d37fe5fa26b8e34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 864938729153a1cd3f8f31f2e4ba04b075d2f713
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918376"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758650"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 Задает уровень изоляции транзакции для объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) .  
   
-|Константа|Применение|Описание|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**адксактунспеЦифиед**|-1|Указывает, что поставщик использует уровень изоляции, отличный от указанного, но уровень не может быть определен.|  
 |**адксактчаос**|16|Указывает, что ожидающие изменения более строго изолированных транзакций не могут быть перезаписаны.|  

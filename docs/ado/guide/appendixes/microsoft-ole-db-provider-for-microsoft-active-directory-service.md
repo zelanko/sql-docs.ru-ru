@@ -13,14 +13,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 837f5fbcbb6c7730cdfcbe08e532a73c5faad06f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926678"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758330"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Поставщик OLE DB Майкрософт для службы Microsoft Active Directory
 Поставщик интерфейсов служб Active Directory (ADSI) позволяет ADO подключаться к разнородным службам каталогов через ADSI. Это дает приложениям ADO доступ только для чтения к службам каталогов Microsoft Windows NT 4,0 и Microsoft Windows 2000 в дополнение к любым LDAP-совместимым службам каталогов и службами каталогов Novell. Интерфейсы ADSI основаны на модели поставщика, поэтому при наличии нового поставщика, предоставляющего доступ к другому каталогу, приложение ADO будет иметь доступ к нему без проблем. Поставщик ADSI бесплатен и поддерживает Юникод.  
@@ -64,7 +64,7 @@ ADSDSOObject
 |*Корневой*|Указывает **путь** к объекту, с которого начинается поиск (то есть корневой элемент поиска).|  
 |*Filter*|Указывает фильтр поиска в формате RFC 1960.|  
 |*Атрибуты*|Указывает разделенный запятыми список атрибутов, которые должны быть возвращены.|  
-|*Область*|Необязательный параметр. **Строка** , указывающая область поиска. Может принимать следующие значения:<br /><br /> -Base — Поиск только базового объекта (корень поиска).<br />-Одноуровневой — Поиск только на одном уровне.<br />-Subtree — Поиск по всему поддереву.|  
+|*Область*|Необязательный элемент. **Строка** , указывающая область поиска. Может принимать следующие значения:<br /><br /> -Base — Поиск только базового объекта (корень поиска).<br />-Одноуровневой — Поиск только на одном уровне.<br />-Subtree — Поиск по всему поддереву.|  
   
  Пример:  
   
@@ -100,7 +100,7 @@ objectClass='user' AND objectCategory='Person'"
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|всегда **адусесервер**|  
 |[Примеры CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|всегда **адопенстатик**|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|всегда **адедитноне**|  
-|[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Только для чтения|  
+|[КОНЦА](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Только для чтения|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|чтение/запись|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|чтение/запись|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|недоступно|  
@@ -122,9 +122,9 @@ objectClass='user' AND objectCategory='Person'"
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Нет|  
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Клонировать)|Да|  
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Да|  
-|[Удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Нет|  
+|[Удалить](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Нет|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Да|  
-|[Переместить](../../../ado/reference/ado-api/move-method-ado.md)|Да|  
+|[Перемещение](../../../ado/reference/ado-api/move-method-ado.md)|Да|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|  
 |[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|  
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|  
@@ -139,7 +139,7 @@ objectClass='user' AND objectCategory='Person'"
   
  Дополнительные сведения о ADSI и особенностях поставщика см. в документации по интерфейсам Active Directory служб или на веб-странице ADSI.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
  [Свойство ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

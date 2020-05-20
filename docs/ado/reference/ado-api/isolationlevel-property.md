@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - IsolationLevel property
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dc360bc91e977228a6f9139089a7bfa87d912e1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ea8d538dbd5c4c06cb770a983a2733bb2f27e6b2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918440"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758660"
 ---
 # <a name="isolationlevel-property"></a>Свойство IsolationLevel
 Указывает уровень изоляции для объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) .  
@@ -28,7 +28,7 @@ ms.locfileid: "67918440"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает значение [исолатионлевеленум](../../../ado/reference/ado-api/isolationlevelenum.md) . Значение по умолчанию — **adXactReadCommitted**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Используйте свойство **IsolationLevel** , чтобы установить уровень изоляции объекта **Connection** . Параметр не вступит в силу до следующего вызова метода [примеры BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) . Если запрошенный уровень изоляции недоступен, поставщик может вернуть следующий более высокий уровень изоляции, не обновляя свойство **IsolationLevel** .  
   
  Свойство **IsolationLevel** доступно для чтения и записи.  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Value property [ADO], VC++ example
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f30b6663ff532fe12eede6042df5c9f0cc29ccb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b124dc502df261972621b554cb2992d0e6014737
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944467"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758640"
 ---
 # <a name="value-property-example-vc"></a>Пример свойства Value (Visual C++)
 В этом примере демонстрируется свойство [value](../../../ado/reference/ado-api/value-property-ado.md) с объектами [полей](../../../ado/reference/ado-api/field-object.md) и [свойств](../../../ado/reference/ado-api/property-object-ado.md) путем отображения значений полей и свойств для таблицы ***Employees*** .  
@@ -169,7 +169,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)   
  [Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Свойство Value (ADO)](../../../ado/reference/ado-api/value-property-ado.md)

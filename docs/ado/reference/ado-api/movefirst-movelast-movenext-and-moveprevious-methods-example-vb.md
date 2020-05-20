@@ -15,14 +15,14 @@ helpviewer_keywords:
 - MoveFirst method [ADO], Visual Basic example
 - MoveNext method [ADO], Visual Basic example
 ms.assetid: 31d3b083-c677-423e-8d26-a212eaeea281
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4ade95659b1e7111ff2f3c27a04008e859ded605
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a4f0d0394e660bc691b4e13a2971d9d3181bbcee
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932083"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758630"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vb"></a>Примеры методов MoveFirst, MoveLast, MoveNext и MovePrevious (Visual Basic)
 В этом примере используются методы [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)и [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) для перемещения указателя записи [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе указанной команды. Для выполнения этой процедуры требуется процедура Мовеани.  
@@ -123,6 +123,6 @@ End Sub
 'EndMoveFirstVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы MoveFirst, MoveLast, MoveNext и MovePrevious (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

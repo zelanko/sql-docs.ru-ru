@@ -16,14 +16,14 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 77a45203c50555168d2cd163c8b97406b8377694
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9142282c2ee2cda5a2b545a3ef164581403ccba3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919899"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758820"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Коллекции (Visual C++ индекс синтаксиса с #import)
 Полезно помнить, что коллекции наследуют определенные общие методы и свойства.  
@@ -96,7 +96,7 @@ long GetCount( ); __declspec(property(get=GetCount)) long Count;
 PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem)) PropertyPtr Item[];  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Коллекция Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

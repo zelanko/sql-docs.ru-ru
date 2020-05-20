@@ -11,14 +11,14 @@ helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6b0b4a3773f0de637458384e8819a7b913da3e40
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926797"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758510"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Обзор службы курсоров Майкрософт для OLE DB
 Служба курсора Майкрософт для OLE DB дополняет функции поддержки курсоров поставщиками данных. В результате пользователь воспринимает относительно единую функциональность всех поставщиков данных.
@@ -63,7 +63,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 |Дочерние строки кэша (DBPROP_ADC_CACHECHILDROWS)|Для наборов записей, созданных с помощью службы формирования данных, это значение указывает, хранятся ли дочерние наборы записей в кэше для последующего использования.|
 |Версия обработчика курсоров (DBPROP_ADC_CEVER)|Указывает версию используемой службы курсора.|
 |Ведение состояния изменений (DBPROP_ADC_MAINTAINCHANGESTATUS)|Указывает текст команды, используемой для повторной синхронизации одной или нескольких строк в соединении нескольких таблиц.|
-|[Увеличить](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Указывает, должен ли быть создан индекс. Если задано значение **true**, разрешает временное создание индексов для улучшения выполнения определенных операций.|
+|[Оптимизация](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Указывает, должен ли быть создан индекс. Если задано значение **true**, разрешает временное создание индексов для улучшения выполнения определенных операций.|
 |[Изменить имя формы](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Указывает имя **набора записей**. Можно ссылаться в текущих или последующих командах формирования данных.|
 |[Команда повторной синхронизации](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Указывает пользовательскую командную строку, которая используется методом повторной [синхронизации](../../../ado/reference/ado-api/resync-method.md) , когда действует свойство [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .|
 |[Уникальный каталог](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Указывает имя базы данных, содержащей таблицу, на которую ссылается свойство **уникальной таблицы** .|

@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - 'Field collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 90cb636a-9416-48a4-b4eb-bb11bbd40950
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 587be8f0686cd7b2498080984d40e79c80bde898
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 13e2c57f4e00b4a4dae03a11ee357dd8f1d6398e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932698"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758780"
 ---
 # <a name="field-visual-c-syntax-index-with-import"></a>Поле (Visual C++ индекс синтаксиса с #import)
 ## <a name="methods"></a>Методы  
@@ -79,5 +79,5 @@ void PutValue( const _variant_t & pvar );
 __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)

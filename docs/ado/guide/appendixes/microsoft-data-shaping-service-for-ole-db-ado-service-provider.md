@@ -11,14 +11,14 @@ helpviewer_keywords:
 - providers [ADO], data shaping service for OLE DB
 - data shaping service for OLE DB [ADO]
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ddef2feab633627c9549b73787faa1d104d69c5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 68ed3899311d970da47e627fe844fe05ccd37c78
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926812"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758480"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Обзор службы формирования данных Майкрософт для OLE DB
 > [!IMPORTANT]
@@ -60,5 +60,5 @@ cn.Properties("Data Provider") = "MSDASQL"
 
  Дополнительные сведения о формировании данных см. в разделе [формирование данных](../../../ado/guide/data/data-shaping-overview.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

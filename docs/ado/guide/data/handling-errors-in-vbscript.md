@@ -13,17 +13,17 @@ helpviewer_keywords:
 - VBScript error handling [ADO]
 - errors [ADO], VBScript
 ms.assetid: 31bc3743-32d3-4bc7-ac61-ee6ed0fdec70
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 99c3d2a615abe64a6ea5fc79cab8fb3dc083178d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d191748315cb4636b295dbae56333e9ee0d16227
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925143"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758860"
 ---
 # <a name="handling-errors-in-vbscript"></a>Обработка ошибок в VBScript
-Существует небольшая разница между методами, используемыми в Visual Basic, и теми, которые используются в VBScript. Основное отличие заключается в том, что VBScript не поддерживает концепцию обработки ошибок, продолжая выполнение в метке. Иными словами, нельзя использовать `On Error GoTo` в VBScript. Вместо этого следует `On Error Resume Next` использовать, а затем проверить свойство **Err. Number** и **Count** коллекции **Errors** , как показано в следующем примере:  
+Существует небольшая разница между методами, используемыми в Visual Basic, и теми, которые используются в VBScript. Основное отличие заключается в том, что VBScript не поддерживает концепцию обработки ошибок, продолжая выполнение в метке. Иными словами, нельзя использовать `On Error GoTo` в VBScript. Вместо этого следует использовать, `On Error Resume Next` а затем проверить свойство **Err. Number** и **Count** коллекции **Errors** , как показано в следующем примере:  
   
 ```  
 <!-- BeginErrorExampleVBS -->  

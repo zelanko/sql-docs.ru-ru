@@ -15,14 +15,14 @@ helpviewer_keywords:
 - event handlers [ADO]
 - multiple object event handlers [ADO]
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b744dbd464aedbd9b87d22aa74277787fcc3c7a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 98144b1dacb406de4f57f9d051547640edd09397
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925043"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758110"
 ---
 # <a name="how-event-handlers-work-together"></a>Совместная работа обработчиков событий
 Если вы не программируете в Visual Basic, необходимо реализовать все обработчики событий для **соединений** и событий **набора записей** независимо от того, действительно ли вы обрабатываете все события. Объем работ по реализации зависит от языка программирования. Дополнительные сведения см. в разделе [Создание экземпляра события ADO по языку](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "67925043"
 > [!NOTE]
 >  Этот метод не может использоваться в Visual Basic, поскольку этот язык может сопоставлять только один объект с обработчиком событий.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сводка по обработчику событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Создание экземпляра события ADO по языку](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Параметры события](../../../ado/guide/data/event-parameters.md)   

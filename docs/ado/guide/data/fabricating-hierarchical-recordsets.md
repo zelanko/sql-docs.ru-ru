@@ -13,14 +13,14 @@ helpviewer_keywords:
 - fabricating hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6fcdb630f2391f685080ac594cfdb537edf626a2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 105dee3121252e94b53d1d8211b94af5e6004c31
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925327"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758310"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Составление иерархических наборов записей
 В следующем примере показано, как создать иерархический набор записей без базового источника данных, используя грамматику формирования данных для определения столбцов для родительских, дочерних и внучатый **наборов записей**.  
@@ -54,7 +54,7 @@ rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1
   
  Как только **набор записей** будет создан, он может быть заполнен, обработан или сохранен в файле.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Доступ к строкам в иерархическом наборе записей](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Грамматика формальной фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
  [Необходимые поставщики для формирования данных](../../../ado/guide/data/required-providers-for-data-shaping.md)   

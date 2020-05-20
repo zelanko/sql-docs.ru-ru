@@ -13,14 +13,14 @@ helpviewer_keywords:
 - errors [ADO], Visual C++
 - Visual C++ error handling [ADO]
 ms.assetid: b7576f07-020a-45f7-9e79-b5756f33f7ab
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb9eb29a78c3ec5f47e3ff09641ba04ca01d204a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1628522a6ef1c9498ea26e987070ee9f3a873d19
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925126"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758850"
 ---
 # <a name="handling-errors-in-visual-c"></a>Обработка ошибок в Visual C++
 В COM большинство операций возвращают код возврата HRESULT, указывающий, успешно ли завершилась функция. Директива #import создает код-оболочку вокруг каждого "необработанного" метода или свойства и проверяет возвращенное значение HRESULT. Если HRESULT указывает на сбой, код программы-оболочки вызывает ошибку COM путем вызова _com_issue_errorex () с кодом возврата HRESULT в качестве аргумента. Объекты ошибок COM могут быть перехвачены в блок **try-catch** . (Для повышения эффективности перехватите ссылку на объект _com_error.)  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - ADO, events
 - event handlers [ADO]
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 452259b6e4e406d7a406211a9e9b42ebbf60da53
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0628c0af52473c3b7eb7200cb4a06bfc45123a10
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925227"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758880"
 ---
 # <a name="handling-ado-events"></a>Обработка событий ADO
 Модель событий ADO поддерживает определенные синхронные и асинхронные операции ADO, которые выдают *события*или уведомления до начала или после завершения операции. Событие фактически является вызовом подпрограммы обработчика событий, определяемой в приложении.  
@@ -45,7 +45,7 @@ ms.locfileid: "67925227"
   
 -   [Создание экземпляра события ADO на различных языках](../../../ado/guide/data/ado-event-instantiation-by-language.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сводка по обработчику событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Создание экземпляра события ADO по языку](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [События ADO](../../../ado/reference/ado-api/ado-events.md)   

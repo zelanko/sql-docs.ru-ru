@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetString method [ADO]
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 72526eca57d08152d7eaa773be50d68d4b3688e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 166bfad93d994a4b85bdb944a5d5505987182044
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932463"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758750"
 ---
 # <a name="getstring-method-ado"></a>Метод GetString (ADO)
 Возвращает [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) в виде строки.  
@@ -41,18 +41,18 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  Значение [стрингформатенум](../../../ado/reference/ado-api/stringformatenum.md) , указывающее, как **набор записей** должен быть преобразован в строку. Параметры *RowDelimiter*, *ColumnDelimiter*и *Нуллекспр* используются только с *StringFormat* **адклипстринг**.  
   
  *нумровс*  
- Необязательный параметр. Число строк для преобразования в **наборе записей**. Если *нумровс* не указан или превышает общее число строк в **наборе записей**, то преобразуются все строки в **наборе записей** .  
+ Необязательный элемент. Число строк для преобразования в **наборе записей**. Если *нумровс* не указан или превышает общее число строк в **наборе записей**, то преобразуются все строки в **наборе записей** .  
   
  *ColumnDelimiter*  
- Необязательный параметр. Разделитель, используемый между столбцами, если он указан; в противном случае — символ ТАБУЛЯЦИи.  
+ Необязательный элемент. Разделитель, используемый между столбцами, если он указан; в противном случае — символ ТАБУЛЯЦИи.  
   
  *RowDelimiter*  
- Необязательный параметр. Разделитель, используемый между строками, если они заданы; в противном случае — символ возврата КАРЕТки.  
+ Необязательный элемент. Разделитель, используемый между строками, если они заданы; в противном случае — символ возврата КАРЕТки.  
   
  *нуллекспр*  
- Необязательный параметр. Выражение, используемое вместо значения NULL, если оно указано, в противном случае — пустая строка.  
+ Необязательный элемент. Выражение, используемое вместо значения NULL, если оно указано, в противном случае — пустая строка.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Данные строк, но отсутствуют данные схемы, сохраняются в строке. Таким образом, **набор записей** нельзя открыть повторно с помощью этой строки.  
   
  Этот метод эквивалентен методу RDO **жетклипстринг** .  
@@ -60,5 +60,5 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
 ## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода GetString (Visual Basic)](../../../ado/reference/ado-api/getstring-method-example-vb.md)
