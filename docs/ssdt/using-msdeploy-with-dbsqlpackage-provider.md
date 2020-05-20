@@ -35,7 +35,7 @@ ms.locfileid: "75243564"
 > Компонент поставщика dbSqlPackage будет удален из следующей основной версии Visual Studio. Сведения о публикации базы данных с помощью с веб-развертывания см. в статье [Поставщик dbDacFx для добавочной публикации базы данных](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  
   
 ## <a name="command-line-syntax"></a>Синтаксис командной строки  
-Программа **MSDeploy** с поставщиком **dbSqlPackage** использует командную строку в следующем формате:  
+Программа **MSDeploy**с поставщиком**dbSqlPackage** использует командную строку в следующем формате:  
   
 ```  
   

@@ -59,8 +59,8 @@ ms.locfileid: "68077914"
   
 ## <a name="data-type-conversion"></a>Преобразование типов данных
 Тип данных **hierarchyid** можно преобразовывать в другие типы описанным ниже образом.
--   Для преобразования значения типа [hierarchyid](../../t-sql/data-types/tostring-database-engine.md) в логическое представление типа данных **nvarchar(4000)** используется метод **ToString()** .  
--   Для преобразования типа данных [hierarchyid](../../t-sql/data-types/read-database-engine.md) в тип [varbinary](../../t-sql/data-types/write-database-engine.md) используются методы **Read ()** и **Write ()** .  
+-   Для преобразования значения типа **hierarchyid** в логическое представление типа данных **nvarchar(4000)** используется метод [ToString()](../../t-sql/data-types/tostring-database-engine.md).  
+-   Для преобразования типа данных **hierarchyid** в тип **varbinary** используются методы [Read ()](../../t-sql/data-types/read-database-engine.md) и [Write ()](../../t-sql/data-types/write-database-engine.md).  
 -   Чтобы передать параметры типа **hierarchyid** по протоколу SOAP, сначала нужно преобразовать их в строки.  
   
 ## <a name="upgrading-databases"></a>Обновление баз данных

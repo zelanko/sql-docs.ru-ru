@@ -67,7 +67,7 @@ ms.locfileid: "74056182"
          Сведения о выборе параметра полнотекстового обновления см. в статье[Обновление полнотекстового поиска](../../relational-databases/search/upgrade-full-text-search.md).  
   
         > [!NOTE]  
-        >  Режим полнотекстового обновления также можно задать с помощью действия [upgrade_option](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) процедуры **sp_fulltext_service**.  
+        >  Режим полнотекстового обновления также можно задать с помощью действия **upgrade_option** процедуры [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
 ##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> Просмотр дополнительных свойств сервера полнотекстового поиска  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] Функции могут использоваться для получения значений различных свойств полнотекстового поиска уровня сервера. Данные сведения касаются прежде всего администрирования и устранения неполадок в полнотекстовом поиске.  

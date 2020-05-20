@@ -95,7 +95,7 @@ ms.locfileid: "70148834"
 Сведения о преобразовании даты в соответствующее значение **datetimeoffset** в целевом часовом поясе см. в статье [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md).
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Соответствие стандартам ANSI и ISO 8601  
-Тип данных [datetimeoffset](../../t-sql/data-types/date-transact-sql.md) соответствует стандартам [date](../../t-sql/data-types/time-transact-sql.md) и **time** ANSI и ISO 8601.
+Тип данных **datetimeoffset** соответствует стандартам [date](../../t-sql/data-types/date-transact-sql.md) и [time](../../t-sql/data-types/time-transact-sql.md) ANSI и ISO 8601.
   
 ## <a name="backward-compatibility-for-down-level-clients"></a>Обратная совместимость для клиентов нижнего уровня
 Некоторые клиенты нижнего уровня не поддерживают типы данных **time**, **date**, **datetime2** и **datetimeoffset**. В следующей таблице показано сопоставление типов экземпляра более высокого уровня [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и клиентов низкого уровня.
