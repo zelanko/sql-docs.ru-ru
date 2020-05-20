@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindrule
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76d1572e1f99162c8daebeafadb0c8d75a53a4d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c89b2cb803df80872d82f18b5f26b207e9e4bc38
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046036"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828497"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  К столбцу можно привязать новое правило (хотя рекомендуется использовать ПРОВЕРОЧное ограничение) или псевдоним типа данных с **sp_bindrule** без отмены привязки существующего правила. Старое правило замещается. Если правило привязано к столбцу с существующим ограничением CHECK, вычисляются все ограничения. Нельзя привязать правило к типу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Правило создается принудительно при выполнении инструкции INSERT, а не путем привязки. Символьное правило можно привязать к столбцу **числовых** типов данных, хотя такая операция вставки недопустима.  
@@ -85,8 +85,8 @@ GO
 EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';  
 ```  
   
-### <a name="b-binding-a-rule-to-an-alias-data-type"></a>Б) Привязка правила к псевдониму типа данных  
- Предполагая существование правила с именем `rule_ssn` и типа данных псевдонима с именем `ssn`, следующий пример привязывает `rule_ssn` к `ssn`. В инструкции CREATE TABLE столбцы типа `ssn` наследуют правило `rule_ssn`. Существующие `ssn` столбцы типа также наследуют `rule_ssn` правило, если только для *futureonly_flag*не указано значение **futureonly** или `ssn` к нему напрямую привязано правило. Правила, привязанные к столбцам, всегда имеют преимущество перед теми, которые привязаны к типам данных.  
+### <a name="b-binding-a-rule-to-an-alias-data-type"></a>Б. Привязка правила к псевдониму типа данных  
+ Предполагая существование правила с именем `rule_ssn` и типа данных псевдонима с именем `ssn`, следующий пример привязывает `rule_ssn` к `ssn`. В инструкции CREATE TABLE столбцы типа `ssn` наследуют правило `rule_ssn`. Существующие столбцы типа `ssn` также наследуют `rule_ssn` правило, если только для *futureonly_flag*не указано значение **futureonly** или к `ssn` нему напрямую привязано правило. Правила, привязанные к столбцам, всегда имеют преимущество перед теми, которые привязаны к типам данных.  
   
 ```  
 USE master;  
@@ -117,7 +117,7 @@ EXEC sp_bindrule rule1, '[t.2].c1' ;
 -- and the second distinguishes the table name from the column name.  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   

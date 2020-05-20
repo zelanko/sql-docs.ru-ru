@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9dd52e6d2e4bf8a1a099ea2391a2c6ce2d6decdc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055190"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827728"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,14 +58,14 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |Значение|Описание|  
 |-----------|-----------------|  
 |**ОШИБК**|Серверная операция, которая запрашивает у целевого сервера исключение из службы Master **SQLServerAgent** .|  
-|**УДАЛЕН**|Операция задания, удаляющая все задание.|  
-|**ВСТАВЛЯЕТ**|Операция задания, вставляющая все задание или обновляющая существующее задание. Эта операция включает все шаги и расписания задания, если возможно.|  
+|**DELETE**|Операция задания, удаляющая все задание.|  
+|**INSERT**|Операция задания, вставляющая все задание или обновляющая существующее задание. Эта операция включает все шаги и расписания задания, если возможно.|  
 |**RE-ENLIST**|Серверная операция, вызывающая повторную отсылку многосерверному домену целевым сервером его сведений о прикреплении, включая интервал опроса и часовой пояс. Целевой сервер также снова скачивает сведения о **MSXOperator** .|  
 |**SET-POLL**|Серверная операция, устанавливающая интервал в секундах для опроса многосерверного домена целевыми серверами. Если указано, *значение* интерпретируется как требуемое значение интервала и может быть значением от **10** до **28 800**.|  
 |**ЗАПУСТИТЬ**|Операция задания, запрашивающая начало выполнения задания.|  
 |**ПОЗИЦИИ**|Операция задания, запрашивающая прекращение выполнения задания.|  
 |**SYNC-TIME**|Серверная операция, вызывающая синхронизацию системных часов целевого сервера с многосерверным доменом. Это дорогостоящая операция, поэтому ее не стоит выполнять регулярно.|  
-|**ОБНОВЛЯЮТ**|Операция задания, которая обновляет только данные **sysjobs** для задания, а не шаги задания или расписания. Автоматически вызывается **sp_update_job**.|  
+|**UPDATE**|Операция задания, которая обновляет только данные **sysjobs** для задания, а не шаги задания или расписания. Автоматически вызывается **sp_update_job**.|  
   
 `[ @object_type = ] 'object_type'`Тип объекта для указанного задания. *object_type* имеет тип **varchar (64)** и значение по умолчанию NULL. *object_type* может быть либо заданием, либо сервером. Дополнительные сведения о допустимых значениях *object_type*см. в разделе [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
@@ -119,7 +119,7 @@ EXEC dbo.sp_help_downloadlist
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

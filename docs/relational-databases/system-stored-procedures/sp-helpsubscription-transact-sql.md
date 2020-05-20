@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f6ad28ace9f8b3a1b4852c54e3e4f427bd22c06d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771573"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824459"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя связанной публикации. Аргумент *publication* имеет тип **sysname**и значение по **%** умолчанию, которое возвращает все сведения о подписке для этого сервера.  
+`[ @publication = ] 'publication'`Имя связанной публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает все сведения о подписке для этого сервера.  
   
-`[ @article = ] 'article'`Имя статьи. Аргумент *article* имеет тип **sysname**и значение по **%** умолчанию, которое возвращает все сведения о подписке для выбранных публикаций и подписчиков. В **этом случае для**полной подписки на публикацию возвращается только одна запись.  
+`[ @article = ] 'article'`Имя статьи. Аргумент *article* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает все сведения о подписке для выбранных публикаций и подписчиков. В **этом случае для**полной подписки на публикацию возвращается только одна запись.  
   
-`[ @subscriber = ] 'subscriber'`Имя подписчика, для которого необходимо получить сведения о подписке. Аргумент *Subscriber* имеет тип **sysname**и значение по **%** умолчанию, которое возвращает все сведения о подписке для выбранных публикаций и статей.  
+`[ @subscriber = ] 'subscriber'`Имя подписчика, для которого необходимо получить сведения о подписке. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает все сведения о подписке для выбранных публикаций и статей.  
   
-`[ @destination_db = ] 'destination_db'`Имя целевой базы данных. Аргумент *destination_db* имеет тип **sysname**и значение по **%** умолчанию.  
+`[ @destination_db = ] 'destination_db'`Имя целевой базы данных. Аргумент *destination_db* имеет тип **sysname**и значение по умолчанию **%** .  
   
 `[ @found = ] 'found'OUTPUT`Флаг, указывающий возвращаемые строки. Аргумент *Found*имеет **тип int** и выходной параметр и значение по умолчанию 23456.  
   
@@ -67,7 +67,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**абонент**|**sysname**|Имя подписчика.|  
 |**публикации**|**sysname**|Имя публикации.|  
-|**рассмотрен**|**sysname**|Имя статьи.|  
+|**статья**|**sysname**|Имя статьи.|  
 |**Целевая база данных**|**sysname**|Имя целевой базы данных, в которую помещаются реплицируемые данные.|  
 |**состояние подписки**|**tinyint**|Состояние подписки:<br /><br /> **0** = неактивно<br /><br /> **1** = подписано<br /><br /> **2** = активно|  
 |**synchronization type**|**tinyint**|Тип синхронизации подписки:<br /><br /> **1** = автоматический<br /><br /> **2** = нет|  
@@ -81,7 +81,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**offload_server**|**sysname**|Имя сервера, используемого для удаленной активации агента. Если значение равно NULL, то используется текущая offload_server, указанная в [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) таблице.|  
 |**dts_package_name**|**sysname**|Указывает имя пакета служб DTS.|  
 |**dts_package_location**|**int**|Расположение пакета служб DTS, если он назначен для подписки. Если пакет существует, значение **0** указывает расположение пакета на **распространителе**. Значение **1** указывает **подписчика**.|  
-|**subscriber_security_mode**|**smallint**|Режим безопасности на подписчике, где **1** означает проверку подлинности Windows, **0** а 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — проверку подлинности.|  
+|**subscriber_security_mode**|**smallint**|Режим безопасности на подписчике, где **1** означает проверку подлинности Windows, а **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверку подлинности.|  
 |**subscriber_login**|**sysname**|Имя входа на подписчике.|  
 |**subscriber_password**||Фактический пароль подписчика никогда не возвращается. Результат скрывается строкой "**&#42;&#42;&#42;&#42;&#42;&#42;**".|  
 |**job_login**|**sysname**|Имя учетной записи Windows, под которой работает агент распространителя.|  
@@ -97,13 +97,13 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_helpsubscription** используется в моментальных снимках и репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  
  Разрешения на выполнение по умолчанию имеют роль **Public** . Пользователям всего лишь возвращаются сведения о подписках, которые они создали. Сведения обо всех подписках возвращаются членам предопределенной роли сервера **sysadmin** на издателе или членам предопределенной роли базы данных **db_owner** в базе данных публикации.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c10e05098a611e51583b2b1132f811d36b0f20a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 12ee833860c4131b6dc9634d7f1da926968c1e14
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771330"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824059"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,11 +64,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по **%** умолчанию. Если *Публикация* не указана, затрагиваются все публикации.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** . Если *Публикация* не указана, затрагиваются все публикации.  
   
-`[ @article = ] 'article'`Имя статьи. Оно должно быть уникальным для публикации. Аргумент *article* имеет тип **sysname**и значение по **%** умолчанию. Если *статья* не указана, затрагиваются все статьи.  
+`[ @article = ] 'article'`Имя статьи. Оно должно быть уникальным для публикации. Аргумент *article* имеет тип **sysname**и значение по умолчанию **%** . Если *статья* не указана, затрагиваются все статьи.  
   
-`[ @subscriber = ] 'subscriber'`Имя подписчика, для которого изменяется состояние. Аргумент *Subscriber* имеет тип **sysname**и значение по **%** умолчанию. Если параметр *подписчик* не указан, состояние изменяется для всех подписчиков на указанную статью.  
+`[ @subscriber = ] 'subscriber'`Имя подписчика, для которого изменяется состояние. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию **%** . Если параметр *подписчик* не указан, состояние изменяется для всех подписчиков на указанную статью.  
   
 `[ @status = ] 'status'`— Это состояние подписки в таблице **syssubscriptions** . Аргумент *Status* имеет тип **sysname**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
@@ -80,7 +80,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @previous_status = ] 'previous_status'`Предыдущее состояние подписки. Аргумент *previous_status* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр позволяет изменить все подписки, имеющие это состояние, таким образом разрешая групповые функции для определенного набора подписок (например, установка всех активных подписок обратно на **подписку**).  
   
-`[ @destination_db = ] 'destination_db'`Имя целевой базы данных. Аргумент *destination_db* имеет тип **sysname**и значение по **%** умолчанию.  
+`[ @destination_db = ] 'destination_db'`Имя целевой базы данных. Аргумент *destination_db* имеет тип **sysname**и значение по умолчанию **%** .  
   
 `[ @frequency_type = ] frequency_type`Частота, с которой следует запланировать задачу распределения. *frequency_type* имеет **тип int**и значение по умолчанию NULL.  
   
@@ -94,7 +94,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
-|**16**|Последний|  
+|**глубин**|Последний|  
 |NULL (по умолчанию)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию NULL.  
@@ -135,7 +135,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  > [!NOTE]  
 >  Удаленная активация агента является устаревшей и больше не поддерживается. Этот аргумент поддерживается только для обратной совместимости скриптов. При установке *remote_agent_server_name* любого значения, отличного от NULL, возникает ошибка.  
   
-`[ @dts_package_name = ] 'dts_package_name'`Указывает имя пакета служб DTS. *dts_package_name* имеет тип **sysname**и значение по умолчанию NULL. Например, для пакета с именем **DTSPub_Package** можно указать `@dts_package_name = N'DTSPub_Package'`.  
+`[ @dts_package_name = ] 'dts_package_name'`Указывает имя пакета служб DTS. *dts_package_name* имеет тип **sysname**и значение по умолчанию NULL. Например, для пакета с именем **DTSPub_Package** можно указать `@dts_package_name = N'DTSPub_Package'` .  
   
 `[ @dts_package_password = ] 'dts_package_password'`Указывает пароль для пакета. Аргумент *dts_package_password* имеет тип **sysname** и значение по умолчанию NULL, которое указывает, что свойство Password должно остаться без изменений.  
   
@@ -148,15 +148,15 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @distribution_job_name = ] 'distribution_job_name'`Имя задания распространения. Аргумент *distribution_job_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  *publisher* при изменении свойств статьи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя не следует использовать издатель.  
+>  При изменении свойств статьи издателя не следует использовать *Издатель* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_changesubstatus** используется в репликации моментальных снимков и репликации транзакций.  
   
  **sp_changesubstatus** изменяет состояние подписчика в таблице **syssubscriptions** с измененным состоянием. При необходимости обновляет состояние статьи в таблице **sysarticles** , чтобы указать на активное или неактивное значение. При необходимости он устанавливает или отключает флаг репликации в таблице **sysobjects** для реплицированной таблицы.  
@@ -164,7 +164,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** , **db_owner** предопределенной роли базы данных или создатель подписки могут выполнять **sp_changesubstatus**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   

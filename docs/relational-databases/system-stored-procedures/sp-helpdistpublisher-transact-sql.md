@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistpublisher
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a47a81b2b19ceccf76a031e298ab60cf4a6f8c9a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a0e6ab6c9c633181d72c6916f92606a9c71b177a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770953"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824577"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>Хранимая процедура sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'`Издатель, для которого возвращаются свойства. Аргумент *Publisher* имеет тип **sysname**и значение по **%** умолчанию.  
+`[ @publisher = ] 'publisher'`Издатель, для которого возвращаются свойства. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию **%** .  
   
 `[ @check_user = ] check_user` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -48,13 +48,13 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Имя издателя.|  
 |**distribution_db**|**sysname**|База данных распространителя для указанного издателя.|  
-|**security_mode**|**int**|Режим безопасности, используемый агентами репликации для подключения к издателю обновляемых посредством очередей подписок, или к издателю, не являющемуся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности<br /><br /> **1** = проверка подлинности Windows|  
-|**login**|**sysname**|Имя входа, используемое агентами репликации для подключения к издателю обновляемых посредством очередей подписок, или к издателю, не являющемуся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**security_mode**|**int**|Режим безопасности, используемый агентами репликации для подключения к издателю обновляемых посредством очередей подписок, или к издателю, не являющемуся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности<br /><br /> **1** = проверка подлинности Windows|  
+|**пользователей**|**sysname**|Имя входа, используемое агентами репликации для подключения к издателю обновляемых посредством очередей подписок, или к издателю, не являющемуся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password**|**nvarchar (524)**|Возвращаемый пароль (в простой зашифрованной форме). Пароль имеет значение NULL для пользователей, отличных от **sysadmin**.|  
 |**active**|**bit**|Использует ли удаленный издатель локальный сервер в качестве распространителя:<br /><br /> **0** = нет<br /><br /> **1** = да|  
 |**working_directory**|**nvarchar(255)**|Имя рабочего каталога.|  
 |**trusted**|**bit**|Требуется ли пароль при подключении издателя к распространителю. Для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий этот параметр всегда должен возвращать значение **0**, означающее, что пароль является обязательным.|  
-|**thirdparty_flag**|**bit**|Будет ли публикация включена [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или приложением стороннего разработчика:<br /><br /> **0** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle или издатель шлюза Oracle.<br /><br /> **1** = издатель интегрирован с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приложением стороннего производителя.|  
+|**thirdparty_flag**|**bit**|Будет ли публикация включена [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или приложением стороннего разработчика:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Oracle или издатель шлюза Oracle.<br /><br /> **1** = издатель интегрирован с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приложением стороннего производителя.|  
 |**publisher_type**|**sysname**|Тип издателя; возможны следующие варианты:<br /><br /> **MSSQLSERVER**<br /><br /> **СУБД**<br /><br /> **ORACLE GATEWAY.**|  
 |**publisher_data_source**|**nvarchar(4000)**|Имя источника данных OLE DB на издателе.|  
 |**storage_connection_string**|**nvarchar(4000)**|Ключ доступа к хранилищу для рабочего каталога, когда распространитель или издатель в базе данных SQL Azure.|  
@@ -62,7 +62,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_helpdistpublisher** используется во всех типах репликации.  
   
  **sp_helpdistpublisher** не будет отображать имя или пароль издателя в результирующем наборе для имен входа, не являющихся**администраторами** .  
@@ -70,7 +70,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ## <a name="permissions"></a>Разрешения  
  Члены предопределенной роли сервера **sysadmin** могут выполнять **Sp_helpdistpublisher** для любого издателя, использующего локальный сервер в качестве распространителя. Члены предопределенной роли базы данных **db_owner** или роли **replmonitor** в базе данных распространителя могут выполнять **sp_helpdistpublisher** для любого издателя, использующего эту базу данных распространителя. Пользователи из списка доступа к публикации для публикации на указанном *издателе* могут выполнять **sp_helpdistpublisher**. Если параметр *Publisher* не указан, возвращаются сведения для всех издателей, к которым у пользователя есть права доступа.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств распространителя и издателя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   

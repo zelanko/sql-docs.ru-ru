@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_uncontained_entities dynamic management view
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 625c6134c91a9b452b8df2b7e235b78126c1354e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4e42daae837968ddcf0f61b860886e372bb47245
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026919"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828002"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68026919"
 |-|-|-|  
 |**Имя столбца**|**Type**|**Описание**|  
 |*class*|**int**|1 = объект или столбец (включая модули, XP, представления, синонимы и таблицы).<br /><br /> 4 = Участник базы данных<br /><br /> 5 = Сборка<br /><br /> 6 = Тип<br /><br /> 7 = Индекс (полнотекстовый индекс)<br /><br /> 12 = Триггер DDL базы данных<br /><br /> 19 = Маршрут<br /><br /> 30 = Спецификация аудита|  
-|*class_desc*|**nvarchar(120)**|Описание класса сущности. Один из следующих элементов для сопоставления с классом:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **СБОРОК**<br /><br /> **ТИП**<br /><br /> **НОМЕР**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
+|*class_desc*|**nvarchar(120)**|Описание класса сущности. Один из следующих элементов для сопоставления с классом:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **СБОРОК**<br /><br /> **ТИП**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|Идентификатор сущности.<br /><br /> Если *класс* = 1, то object_id<br /><br /> Если *класс* = 4, то sys. database_principals. principal_id.<br /><br /> Если *класс* = 5, то sys. assemblies. assembly_id.<br /><br /> Если *класс* = 6, то sys. types. user_type_id.<br /><br /> Если *Class* = 7, то sys. indexes. index_id.<br /><br /> Если *Class* = 12, то sys. triggers. object_id.<br /><br /> Если *класс* = 19, то sys. routes. route_id.<br /><br /> Если *Class* = 30, то sys. database_audit_specifications. database_specification_id.|  
 |*statement_line_number*|**int**|Если класс является модулем, возвращает номер строки, в которой используется неавтономная инструкция.  В противном случае — значение NULL.|  
 |*statement_ offset_begin*|**int**|Если класс является модулем, он указывает (в байтах, начиная с 0) положение, откуда начинается неавтономная инструкция. В противном случае возвращается значение null.|  
@@ -45,7 +45,7 @@ ms.locfileid: "68026919"
 |*имя feature_*|**nvarchar(256)**|Возвращает внешнее имя объекта.|  
 |*feature_type_name*|**nvarchar(256)**|Возвращает тип функции.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  sys. dm_db_uncontained_entities показывает эти сущности, которые потенциально могут пересекать границу базы данных. Будут возвращены все сущности пользователей, которые могут использовать объекты за пределами базы данных.  
   
  В отчете указываются следующие типы функций.  
@@ -85,7 +85,7 @@ LEFT JOIN sys.objects AS SO
     ON UE.major_id = SO.object_id;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Автономные базы данных](../../relational-databases/databases/contained-databases.md)  
   
   

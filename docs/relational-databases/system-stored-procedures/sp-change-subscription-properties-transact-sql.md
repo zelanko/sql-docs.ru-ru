@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_subscription_properties
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e033e446fc771ad87542474edb1e90caf08faebd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 511276581464f366214bfd9bdd8543e3fb339ab8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81528792"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828458"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |Значение|Тип публикации|  
 |-----------|----------------------|  
 |**0**;|Транзакционную|  
-|**1**|Моментальный снимок|  
+|**1**|Снимок|  
 |**2**|Объединить|  
 |NULL (по умолчанию)|Репликация определяет тип публикации. Так как хранимая процедура должна выполнять просмотр в нескольких таблицах, работа при указании этого значения производится медленнее, чем в случае, когда предоставлен точный тип публикации.|  
   
@@ -102,7 +102,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_change_subscription_properties** используется во всех типах репликации.  
   
  **sp_change_subscription_properties** используется для подписок по запросу.  
@@ -112,7 +112,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_change_subscription_properties**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств подписки по запросу](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   

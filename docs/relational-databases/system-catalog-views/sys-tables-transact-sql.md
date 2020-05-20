@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.tables catalog view
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1a6d6be7a51cf03442bb5576556b10c5c099ab0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25661cc9d9166da61bd7cef8e3368c2a393a931e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983310"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821294"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73983310"
 |-----------------|---------------|-----------------|  
 |\<наследуемые столбцы>||Список столбцов, наследуемых этим представлением, см. в разделе [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |lob_data_space_id|**int**|Ненулевое значение — это идентификатор пространства данных (файловой группы или схемы секционирования), хранящего данные больших двоичных объектов (LOB) для этой таблицы. Примерами типов данных LOB являются **varbinary (max)**, **varchar (max)**, **Geography**или **XML**.<br /><br /> 0 = таблица не содержит данных LOB.|  
-|filestream_data_space_id|**int**|Идентификатор пространства данных для файловой группы FILESTREAM или схемы секционирования, состоящей из файловых групп FILESTREAM.<br /><br /> Чтобы сообщить имя файловой группы FILESTREAM, выполните запрос `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables`.<br /><br /> sys.tables можно объединить со следующими представлениями по условию filestream_data_space_id = data_space_id.<br /><br /> -sys. FILEGROUP<br /><br /> -sys. partition_schemes<br /><br /> -sys. indexes<br /><br /> -sys. allocation_units<br /><br /> -sys. fulltext_catalogs<br /><br /> -sys. data_spaces<br /><br /> -sys. destination_data_spaces<br /><br /> -sys. master_files<br /><br /> -sys. database_files<br /><br /> -backupfilegroup (присоединение filegroup_id)|  
+|filestream_data_space_id|**int**|Идентификатор пространства данных для файловой группы FILESTREAM или схемы секционирования, состоящей из файловых групп FILESTREAM.<br /><br /> Чтобы сообщить имя файловой группы FILESTREAM, выполните запрос `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables` .<br /><br /> sys.tables можно объединить со следующими представлениями по условию filestream_data_space_id = data_space_id.<br /><br /> -sys. FILEGROUP<br /><br /> -sys. partition_schemes<br /><br /> -sys. indexes<br /><br /> -sys. allocation_units<br /><br /> -sys. fulltext_catalogs<br /><br /> -sys. data_spaces<br /><br /> -sys. destination_data_spaces<br /><br /> -sys. master_files<br /><br /> -sys. database_files<br /><br /> -backupfilegroup (присоединение filegroup_id)|  
 |max_column_id_used|**int**|Максимальный идентификатор столбца, когда-либо использованный в таблице.|  
 |lock_on_bulk_load|**bit**|Таблица заблокирована при массовой загрузке. Дополнительные сведения см. в разделе [sp_tableoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
 |uses_ansi_nulls|**bit**|Таблица была создана при установленном параметре SET ANSI_NULLS = ON.|  
@@ -58,7 +58,7 @@ ms.locfileid: "73983310"
 |temporal_type_desc|**nvarchar(60)**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Текстовое описание типа таблицы:<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |history_table_id|**int**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Если temporal_type в (2, 4) возвращает object_id таблицы, которая поддерживает исторические данные, в противном случае возвращает значение NULL.|  
 |is_remote_data_archive_enabled|**bit**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздним версиям и[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Указывает, включена ли таблица с растяжением.<br /><br /> 0 = таблица не поддерживает растяжение.<br /><br /> 1 = таблица поддерживает растяжение.<br /><br /> Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
-|is_external|**bit**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]поздним [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)], и.<br /><br /> Указывает, что таблица является внешней таблицей.<br /><br /> 0 = таблица не является внешней таблицей.<br /><br /> 1 = таблица является внешней таблицей.| 
+|is_external|**bit**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздним, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] .<br /><br /> Указывает, что таблица является внешней таблицей.<br /><br /> 0 = таблица не является внешней таблицей.<br /><br /> 1 = таблица является внешней таблицей.| 
 |history_retention_period|**int**|**Применимо к**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Числовое значение, представляющее продолжительность временного периода хранения журнала в единицах, указанных с помощью history_retention_period_unit. |  
 |history_retention_period_unit|**int**|**Применимо к**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Числовое значение, представляющее тип временной единицы хранения истории. <br /><br />-1: БЕСКОНЕЧНОСТЬ <br /><br />3: ДЕНЬ <br /><br />4: НЕДЕЛЯ <br /><br />5: МЕСЯЦ <br /><br />6: ГОД |  
 |history_retention_period_unit_desc|**nvarchar (10)**|**Применимо к**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Текстовое описание типа временной единицы срока хранения истории. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
@@ -109,7 +109,7 @@ LEFT JOIN sys.tables T2
 ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2 
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [DBCC CHECKDB &#40;&#41;Transact-SQL](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   

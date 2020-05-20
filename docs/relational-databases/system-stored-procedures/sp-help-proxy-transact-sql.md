@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c091872c7e79a45fd6fb135d20c0910f9cd0158d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085277"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828420"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_help_proxy
 |-----------|-----------------|  
 |ActiveScripting|ActiveX-скрипт|  
 |CmdExec|Операционная система (CmdExec)|  
-|Моментальный снимок|Агент моментальных снимков репликации|  
+|Снимок|Агент моментальных снимков репликации|  
 |LogReader|Агент чтения журнала репликации|  
 |Distribution|агент распространения репликации|  
 |Объединить|Replication Merge Agent|  
@@ -65,7 +65,7 @@ sp_help_proxy
 |Dts|Выполнение пакетов служб SSIS|  
 |PowerShell|Скрипт PowerShell|  
   
-`[ @name = ] 'name'`Имя входа, для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] которого перечисляются учетные записи-посредники. Имя имеет тип **nvarchar (256)** и значение по умолчанию NULL. Если указано *имя* , необходимо также указать *subsystem_name* .  
+`[ @name = ] 'name'`Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа, для которого перечисляются учетные записи-посредники. Имя имеет тип **nvarchar (256)** и значение по умолчанию NULL. Если указано *имя* , необходимо также указать *subsystem_name* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -83,7 +83,7 @@ sp_help_proxy
 |**credential_id**|**int**|Идентификатор учетных данных, связанных с учетной записью-посредником.|  
 |**credential_identity_exists**|**int**|Указывает, существует ли столбец credential_identity. { 0 = не существует, 1 = существует }|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Если параметры не указаны, **sp_help_proxy** выводит сведения для всех прокси-серверов в экземпляре.  
   
  Чтобы определить, какие прокси-серверы могут использоваться для входа в данную подсистему, укажите *имя* и *subsystem_name*. При указании этих аргументов **sp_help_proxy** перечисляет прокси-серверы, к которым может получить доступ указанное имя входа, которые могут использоваться для указанной подсистемы.  
@@ -109,7 +109,7 @@ EXEC dbo.sp_help_proxy ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-proxy"></a>Б) Перечисление сведений для определенной учетной записи-посредника  
+### <a name="b-listing-information-for-a-specific-proxy"></a>Б. Перечисление сведений для определенной учетной записи-посредника  
  В следующем примере выводятся сведения, относящиеся к учетной записи-посреднику с именем `Catalog application proxy`.  
   
 ```  
@@ -121,7 +121,7 @@ EXEC dbo.sp_help_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1c3e0e4f48037f471ad260f709879ea7ce8ff5e8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68255602"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829470"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|атрибут|**varchar (128)**|Имя атрибута, ассоциированного с этим планом. В таблице ниже приведен список возможных атрибутов, их типов данных и их описания.|  
+|Атрибут|**varchar (128)**|Имя атрибута, ассоциированного с этим планом. В таблице ниже приведен список возможных атрибутов, их типов данных и их описания.|  
 |значение|**sql_variant**|Значение атрибута, ассоциированного с этим планом.|  
 |is_cache_key|**bit**|Указывает, используется ли атрибут в качестве части ключа уточняющего запроса к кэшу для плана.|  
 
@@ -80,10 +80,10 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="permissions"></a>Разрешения  
 
-В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
+В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="set-options"></a>Параметры SET  
  Копии одного и того же скомпилированного плана могут отличаться только значением столбца **set_options** . Это указывает на то, что разные соединения используют разные наборы параметров SET для одного запроса. Использование разных наборов параметров, как правило, нежелательно, поскольку приводит к дополнительным компиляциям, меньшему повторному использованию планов и расширению кэша планов по причине размещения нескольких копий планов в кэш-памяти.  
@@ -111,7 +111,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> Указывает, что параметру базы данных PARAMETERIZATION присвоено значение FORCED при компиляции плана.|131072|  
-|ROWCOUNT|**Применимо к:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**Применимо к:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Кому[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>Курсоры  
  Неактивные курсоры кэшируются в скомпилированном плане так, чтобы одновременно работающие пользователи курсоров могли повторно использовать память, использованную для хранения курсора. Предположим, что пакет объявляет и использует курсор без его освобождения. Если два пользователя выполняют один и тот же пакет, то будет два активных курсора. После освобождения курсоров (потенциально в разных пакетах), память, используемая для хранения курсора, кэшируется и не освобождается. Этот список неактивных курсоров хранится в скомпилированном плане. При следующем выполнении пакета пользователем память кэшированного курсора будет использоваться повторно и инициализироваться соответствующим образом, как для активного курсора.  
@@ -121,7 +121,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |Параметр|Значение|  
 |------------|-----------|  
-|None|0|  
+|Нет|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  
@@ -152,7 +152,7 @@ FROM sys.dm_exec_plan_attributes(<plan_handle>);
 GO  
 ```  
   
-### <a name="b-returning-the-set-options-for-compiled-plans-and-the-sql-handle-for-cached-plans"></a>Б) Возврат параметров SET для скомпилированных планов и дескриптора SQL для планов в кэш-памяти  
+### <a name="b-returning-the-set-options-for-compiled-plans-and-the-sql-handle-for-cached-plans"></a>Б. Возврат параметров SET для скомпилированных планов и дескриптора SQL для планов в кэш-памяти  
  Следующий пример возвращает значение, представляющее параметры, с использованием которых был скомпилирован план. Кроме того, возвращается дескриптор SQL для всех кэшированных планов.  
   
 ```sql  
@@ -166,7 +166,7 @@ PIVOT (MAX(ecpa.value) FOR ecpa.attribute IN ("set_options", "sql_handle")) AS p
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   

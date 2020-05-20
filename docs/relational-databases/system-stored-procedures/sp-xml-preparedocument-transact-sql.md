@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 56468767e60d49d0fc92864cd613a4f36e84132a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 65ec62997eb25564e19696a8df2895b980d728be
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67950529"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827508"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  Указывает объявления пространств имен, которые используются в выражениях XPath строк и столбцов в OPENXML. *xpath_namespaces* — текстовый параметр: **char**, **nchar**, **varchar**, **nvarchar**, **Text**, **ntext** или **XML**.  
   
- Значение по умолчанию — ** \<root xmlns: MP = "urn: schemas-microsoft-com: XML-metaprop" >**. *xpath_namespaces* предоставляет URI пространства имен для префиксов, используемых в выражениях XPath в OPENXML с помощью XML-документа правильного формата. *xpath_namespaces* объявляет префикс, который должен использоваться для ссылки на пространство имен **urn: schemas-microsoft-com: XML-metaprop**; Это предоставляет метаданные для проанализированных XML-элементов. Хотя с помощью данного приема можно переопределить префикс пространства имен для пространства имен метасвойства, это пространство имен не будет потеряно. Префикс **MP** по-прежнему действителен для **urn: schemas-microsoft-com: XML-metaprop** , даже если *xpath_namespaces* не содержит такого объявления.  
+ Значение по умолчанию — ** \< root xmlns: MP = "urn: schemas-microsoft-com: XML-metaprop" >**. *xpath_namespaces* предоставляет URI пространства имен для префиксов, используемых в выражениях XPath в OPENXML с помощью XML-документа правильного формата. *xpath_namespaces* объявляет префикс, который должен использоваться для ссылки на пространство имен **urn: schemas-microsoft-com: XML-metaprop**; Это предоставляет метаданные для проанализированных XML-элементов. Хотя с помощью данного приема можно переопределить префикс пространства имен для пространства имен метасвойства, это пространство имен не будет потеряно. Префикс **MP** по-прежнему действителен для **urn: schemas-microsoft-com: XML-metaprop** , даже если *xpath_namespaces* не содержит такого объявления.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или >0 (сбой)  
@@ -107,7 +107,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;
 exec sp_xml_removedocument @hdoc;  
 ```  
   
-### <a name="b-preparing-an-internal-representation-for-a-well-formed-xml-document-with-a-dtd"></a>Б) Подготовка внутреннего представления для XML-документа правильного формата с DTD  
+### <a name="b-preparing-an-internal-representation-for-a-well-formed-xml-document-with-a-dtd"></a>Б. Подготовка внутреннего представления для XML-документа правильного формата с DTD  
  В следующем примере возвращается дескриптор вновь созданного внутреннего представления XML-документа, который передается как входной аргумент. Хранимая процедура проверяет корректность загруженного документа с помощью DTD, включенного в документ. При вызове процедуры `sp_xml_preparedocument` используется сопоставление префикса пространства имен по умолчанию.  
   
 ```  
@@ -127,7 +127,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;
 ```  
   
 ### <a name="c-specifying-a-namespace-uri"></a>В. Указание URI пространства имен  
- В следующем примере возвращается дескриптор вновь созданного внутреннего представления XML-документа, который передается как входной аргумент. Вызов метода `sp_xml_preparedocument` сохраняет `mp` префикс в сопоставлении пространства имен метасвойств и добавляет префикс `xyz` сопоставления в пространство имен. `urn:MyNamespace`  
+ В следующем примере возвращается дескриптор вновь созданного внутреннего представления XML-документа, который передается как входной аргумент. Вызов метода `sp_xml_preparedocument` сохраняет `mp` префикс в сопоставлении пространства имен метасвойств и добавляет `xyz` префикс сопоставления в пространство имен `urn:MyNamespace` .  
   
 ```  
 DECLARE @hdoc int;  
@@ -152,7 +152,7 @@ SET @doc ='
 EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespace"/>';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <br>[Хранимые процедуры XML (Transact-SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
  <br>[Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)

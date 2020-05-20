@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cycle_errorlog
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c15a36678bf0bd1ff5fc933eb79bff96b6780b60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 59f21f3ce4c69bf9cb0df0d2fbd078c7614bd1a7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108338"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826232"
 ---
 # <a name="sp_cycle_errorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_cycle_errorlog
  None  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] При каждом запуске текущий журнал ошибок переименовывается в **ErrorLog. 1**; **Журнал** ErrorLog. 1 превращается в **ErrorLog. 2**, **ErrorLog. 2** — **ErrorLog. 3**и т. д. **sp_cycle_errorlog** позволяет циклически запускать файлы журнала ошибок без остановки и запуска сервера.  
+ При каждом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запуске текущий журнал ошибок переименовывается в **ErrorLog. 1**; **Журнал** ErrorLog. 1 превращается в **ErrorLog. 2**, **ErrorLog. 2** — **ErrorLog. 3**и т. д. **sp_cycle_errorlog** позволяет циклически запускать файлы журнала ошибок без остановки и запуска сервера.  
   
 ## <a name="permissions"></a>Разрешения  
  Разрешения на выполнение **sp_cycle_errorlog** ограничены членами предопределенной роли сервера **sysadmin** .  
@@ -58,7 +58,7 @@ EXEC sp_cycle_errorlog ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_cycle_agent_errorlog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md)  
   

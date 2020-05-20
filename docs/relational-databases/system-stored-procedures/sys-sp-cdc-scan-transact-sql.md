@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_scan
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: a064b49df3f45d9cbc4b148b8d78c3661f9a2bcc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 84e404ffb9459abc3f0ab2a7a1604d3f4c5609a8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066729"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827423"
 ---
 # <a name="syssp_cdc_scan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,12 +59,12 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
  None  
   
 ## <a name="remarks"></a>Remarks  
- sys. sp_cdc_scan вызывается внутренне посредством sys. sp_MScdc_capture_job, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задание отслеживания агента используется системой отслеживания измененных данных. Процедура не может быть выполнена явным образом, если активна операция просмотра журнала системы отслеживания измененных данных или в базе данных включена репликация транзакций. Эта хранимая процедура должна использоваться администраторами, которым необходимо настроить действие задания отслеживания, настроенное автоматически.  
+ sys. sp_cdc_scan вызывается внутренне посредством sys. sp_MScdc_capture_job, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Задание отслеживания агента используется системой отслеживания измененных данных. Процедура не может быть выполнена явным образом, если активна операция просмотра журнала системы отслеживания измененных данных или в базе данных включена репликация транзакций. Эта хранимая процедура должна использоваться администраторами, которым необходимо настроить действие задания отслеживания, настроенное автоматически.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли базы данных db_owner.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [dbo. cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
   
   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3cc0e6bb77c49b7eefc17e5d1f16a185834f2061
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097685"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829614"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Конфликтующие записи хранятся на сервере, который был выбран в качестве проигравшего при устранении конфликта. После изменения этого свойства необходимо выполнить повторную инициализацию существующих подписчиков.|  
 |**compress_snapshot**|**true**|Моментальный снимок в альтернативной папке снимков сжимается в формате CAB. Сжатие моментального снимка в папке моментальных снимков по умолчанию невозможно. Изменение этого свойства потребует создания нового моментального снимка.|  
 ||**false**|По умолчанию моментальный снимок не сжимается. Изменение этого свойства потребует создания нового моментального снимка.|  
-|**conflict_logging**|**издателя**|Конфликтующие записи хранятся на издателе.|  
+|**conflict_logging**|**publisher**|Конфликтующие записи хранятся на издателе.|  
 ||**абонент**|Конфликтующие записи хранятся на подписчике, вызвавшем конфликт. Не поддерживается для [!INCLUDE[ssEW](../../includes/ssew-md.md)] подписчиков *.*|  
 ||**как**|Конфликтующие записи хранятся одновременно на издателе и на подписчике.|  
 |**conflict_retention**||Значение **типа int** , указывающее срок хранения (в днях), в течение которого сохраняются конфликты. Если задать для параметра *conflict_retention* значение **0** , очистка конфликтов не требуется.|  
@@ -139,7 +139,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_changemergepublication** используется в репликации слиянием.  
   
  Изменение следующих свойств требует создания нового моментального снимка. Для параметра *force_invalidate_snapshot* необходимо указать значение **1** .  
@@ -186,7 +186,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_changemergepublication**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   

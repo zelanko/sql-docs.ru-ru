@@ -13,14 +13,14 @@ helpviewer_keywords:
 - object catalog views [SQL Server]
 - catalog views [SQL Server], objects
 ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a64052771d767f64880118f3940461b7f0fb1a4d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6809509fa81f00faf0d02fbbd05ebd3519ad97d5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68220354"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826470"
 ---
 # <a name="object-catalog-views-transact-sql"></a>Представления каталога объектов (Transact-SQL)
 
@@ -51,7 +51,7 @@ ms.locfileid: "68220354"
 |[sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)|[sys.numbered_procedure_parameters](../../relational-databases/system-catalog-views/sys-numbered-procedure-parameters-transact-sql.md)|
 |[sys.numbered_procedures](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)||  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  Системные представления системных представлений системного [каталога](catalog-views-transact-sql.md) [&#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

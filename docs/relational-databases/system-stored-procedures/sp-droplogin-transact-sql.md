@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_droplogin
 ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: de01ffe595a636356bf5b82ed2c5540cc3f5a092
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 07a91b923ffedb2c76cc1140ae3b5a4ee33a8553
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056502"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830120"
 ---
 # <a name="sp_droplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_droplogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @loginame = ] 'login'`Имя входа для удаления. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию. *имя входа* должно уже существовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в.  
+`[ @loginame = ] 'login'`Имя входа для удаления. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию. *имя входа* должно уже существовать в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -63,7 +63,7 @@ DROP LOGIN Victoria;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DROP LOGIN &#40;&#41;Transact-SQL](../../t-sql/statements/drop-login-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

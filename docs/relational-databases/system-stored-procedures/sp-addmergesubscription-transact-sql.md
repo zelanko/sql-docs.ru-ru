@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: af9bd2035106502da6ccb83a9a8818ca6bd0c47a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769126"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820716"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|Однократно|  
 |**4**|Ежедневно|  
-|**8**|Weekly (Еженедельно);|  
+|**8**|Еженедельно|  
 |**10**|Ежемесячно|  
 |**20**|Ежемесячно, в соответствии с заданным интервалом|  
 |**40**|При запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
@@ -124,7 +124,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
-|**16**|Последний|  
+|**глубин**|Последний|  
 |NULL (по умолчанию)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor*имеет **тип int**и значение по умолчанию NULL.  
@@ -153,7 +153,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @description = ] 'description'`Краткое описание этой подписки на публикацию слиянием. *Description*имеет тип **nvarchar (255)** и значение по умолчанию NULL. Это значение отображается монитором репликации в столбце **понятное имя** , который можно использовать для сортировки подписок для отслеживаемой публикации.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Указывает, можно ли синхронизировать подписку с [!INCLUDE[msCoName](../../includes/msconame-md.md)] помощью диспетчера синхронизации Windows. *enabled_for_syncmgr* имеет тип **nvarchar (5)** и значение по умолчанию false. Если **значение равно false**, подписка не зарегистрирована в диспетчере синхронизации. Если **значение — true**, подписка регистрируется в диспетчере синхронизации и может быть синхронизирована [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]без запуска.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Указывает, можно ли синхронизировать подписку с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчера синхронизации Windows. *enabled_for_syncmgr* имеет тип **nvarchar (5)** и значение по умолчанию false. Если **значение равно false**, подписка не зарегистрирована в диспетчере синхронизации. Если **значение — true**, подписка регистрируется в диспетчере синхронизации и может быть синхронизирована без запуска [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @offloadagent = ] remote_agent_activation`Указывает, что агент может быть активирован удаленно. *remote_agent_activation* имеет **бит** с значением по умолчанию **0**.  
   
@@ -164,7 +164,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @use_interactive_resolver = ] 'use_interactive_resolver'`Разрешает интерактивное разрешение конфликтов для всех статей, в которых разрешено интерактивная поддержка. *use_interactive_resolver* имеет тип **nvarchar (5)** и значение по умолчанию false.  
   
-`[ @merge_job_name = ] 'merge_job_name'`Параметр * \@merge_job_name* является устаревшим и не может быть задан. Аргумент *merge_job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @merge_job_name = ] 'merge_job_name'`Параметр * \@ merge_job_name* является устаревшим и не может быть задан. Аргумент *merge_job_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 `[ @hostname = ] 'hostname'`Переопределяет значение, возвращаемое [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) , когда эта функция используется в предложении WHERE параметризованного фильтра. Аргумент *HostName* имеет тип **sysname**и значение по умолчанию NULL.  
   
@@ -177,7 +177,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>Remarks  
  **sp_addmergesubscription** используется в репликации слиянием.  
   
- Если **sp_addmergesubscription** выполняется членом предопределенной роли сервера **sysadmin** для создания принудительной подписки, то агент слияния задание создается неявно и выполняется в учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента. Рекомендуется выполнить [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) и указать учетные данные другой учетной записи Windows, зависящей от агента, для ** \@job_login** и ** \@job_password**. Дополнительные сведения см. в разделе [модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Если **sp_addmergesubscription** выполняется членом предопределенной роли сервера **sysadmin** для создания принудительной подписки, то агент слияния задание создается неявно и выполняется в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи службы агента. Рекомендуется выполнить [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) и указать учетные данные другой учетной записи Windows, зависящей от агента, для ** \@ job_login** и ** \@ job_password**. Дополнительные сведения см. в разделе [модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  
@@ -185,7 +185,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_addmergesubscription**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание принудительной подписки](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Интерактивное разрешение конфликтов](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   

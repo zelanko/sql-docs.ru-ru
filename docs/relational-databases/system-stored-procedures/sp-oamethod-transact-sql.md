@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98a8b4ce231c907231646379a3730ab0c1c535db
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252194"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828268"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,13 +68,13 @@ sp_OAMethod objecttoken , methodname
   
  Чтобы получить возвращаемое значение выходного параметра, параметр должен быть локальной переменной соответствующего типа данных, а *аргумент* **Output** должен быть указан. Если указан постоянный параметр или если **Output** не указан, то любые возвращаемые значения из выходного параметра игнорируются.  
   
- Если аргумент имеет значение, параметр *ParameterName* должен быть именем [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] именованного параметра. Обратите **@** внимание, что [!INCLUDE[tsql](../../includes/tsql-md.md)] _parametername_is не локальная переменная. Удаляется знак AT**@**(), а параметр *ParameterName*передается в объект OLE в качестве имени параметра. Все именованные параметры должны указываться после указания всех позиционных параметров.  
+ Если аргумент имеет значение, параметр *ParameterName* должен быть именем [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] именованного параметра. Обратите внимание, что **@** _parametername_is не [!INCLUDE[tsql](../../includes/tsql-md.md)] Локальная переменная. Удаляется знак at ( **@** ), а параметр *ParameterName*передается в объект OLE в качестве имени параметра. Все именованные параметры должны указываться после указания всех позиционных параметров.  
   
  *n*  
  Заполнитель, указывающий на возможность указания нескольких параметров.  
   
 > [!NOTE]
->  parametername может быть именованным параметром, так как он является частью указанного метода и передается в объект. * \@* Другие параметры для такой хранимой процедуры задаются позицией, а не именем.  
+>  * \@ ParameterName* может быть именованным параметром, так как он является частью указанного метода и передается в объект. Другие параметры для такой хранимой процедуры задаются позицией, а не именем.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое число (неуспешное завершение), которое является целочисленным значением типа HRESULT, возвращаемого объектом OLE-автоматизации.  
@@ -92,7 +92,7 @@ sp_OAMethod objecttoken , methodname
   
  Если все значения данных в столбце имеют один и тот же тип данных, этот тип используется для всего столбца. Если значения данных в столбце имеют различные типы данных, тип данных всего столбца определяется по следующей схеме.  
   
-||INT|FLOAT|money|DATETIME|varchar|nvarchar|  
+||INT|плавающее|money|DATETIME|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -101,7 +101,7 @@ sp_OAMethod objecttoken , methodname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Для получения значения свойства также можно использовать **sp_OAMethod** .  
   
 ## <a name="permissions"></a>Разрешения  
@@ -122,8 +122,8 @@ BEGIN
 END;  
 ```  
   
-### <a name="b-getting-a-property"></a>Б) Получение свойства  
- В следующем примере показано получение `HostName` свойства (ранее созданного объекта **SQLServer** ) и его сохранение в локальной переменной.  
+### <a name="b-getting-a-property"></a>Б. Получение свойства  
+ В следующем примере показано получение `HostName` Свойства (ранее созданного объекта **SQLServer** ) и его сохранение в локальной переменной.  
   
 ```  
 DECLARE @property varchar(255);  
@@ -136,7 +136,7 @@ END;
 PRINT @property;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры OLE-автоматизации &#40;&#41;Transact — SQL](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Пример скрипта OLE-автоматизации](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   

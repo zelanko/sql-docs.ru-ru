@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 ms.assetid: 32494df1-7ab7-4b88-a858-6b1021d67433
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16aa77224f45a07540f7c5e688f9e3b6bc9bb6ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c05c2535a0bd2694fc85905648c909f0b77065cc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67915148"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823563"
 ---
 # <a name="sysdatabase_event_session_actions-azure-sql-database"></a>sys.database_event_session_actions (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "67915148"
 |event_session_id|**int**|Идентификатор сеанса событий. Не допускает значение NULL.|  
 |event_id|**int**|Идентификатор события. Этот идентификатор уникален внутри объекта сеанса событий. Не допускает значение NULL.|  
 |name|**sysname**|Имя действия. Допускает значение NULL.|  
-|пакет|**sysname**|Имя пакета событий, который содержит событие. Допускает значение NULL.|  
+|Пакет|**sysname**|Имя пакета событий, который содержит событие. Допускает значение NULL.|  
 |module|**sysname**|Имя модуля, который содержит событие. Допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  

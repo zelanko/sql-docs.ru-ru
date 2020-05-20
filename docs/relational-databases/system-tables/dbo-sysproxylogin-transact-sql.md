@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sysproxylogin system table
 ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2fb62d70c1b0a41edf684a8216205fb43e070eea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cfa29500a798cdcfe535a377abd8c649972415b0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67984879"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825964"
 ---
 # <a name="dbosysproxylogin-transact-sql"></a>dbo.sysproxylogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +36,12 @@ ms.locfileid: "67984879"
 |**proxy_id**|**int**|Идентификатор учетной записи-посредника агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это значение соответствует столбцу **proxy_id** в таблице **sysproxies** .|  
 |**трансляцию**|**varbinary(85)**|*Security_identifier* Microsoft Windows для SQL Server имени входа.|  
 |**principal_id**|**int**|Идентификатор пользователя или группы, которая имеет разрешение на использование учетной записи-посредника для указанного шага подсистемы.|  
-|**flags**|**int**|Тип имени входа:<br /><br /> **0** = пользователь или группа Windows, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также имя входа.<br /><br /> **1** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Фиксированная системная роль<br /><br /> **2** = роль базы данных**msdb**|  
+|**flags**|**int**|Тип имени входа:<br /><br /> **0** = пользователь или группа Windows, а также [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа.<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Фиксированная системная роль<br /><br /> **2**  =  роль базы данных **msdb**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Только члены предопределенной роли сервера **sysadmin** могут обращаться к этой таблице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [dbo. sysproxies &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
   
   

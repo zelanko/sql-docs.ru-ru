@@ -89,7 +89,7 @@ ms.locfileid: "75252862"
   > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
 ## <a name="to-provision-install-a-certificate-on-a-single-server"></a>Подготовка (установка) сертификата на одном сервере  
-В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] управление сертификатами интегрировано в диспетчер конфигурации SQL Server. Диспетчер конфигурации SQL Server для [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] можно использовать с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о добавлении сертификата в одном экземпляре [ см. в статье ](../../database-engine/configure-windows/manage-certificates.md)Управление сертификатами (диспетчер конфигурации SQL Server)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] управление сертификатами интегрировано в диспетчер конфигурации SQL Server. Диспетчер конфигурации SQL Server для [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] можно использовать с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о добавлении сертификата в одном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [Управление сертификатами (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/manage-certificates.md).
 
 Если вы используете версию от [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и диспетчер конфигурации SQL Server для [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] недоступен, выполните указанные ниже действия.
 

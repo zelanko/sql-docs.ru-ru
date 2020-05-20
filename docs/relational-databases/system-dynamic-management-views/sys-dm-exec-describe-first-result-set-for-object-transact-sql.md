@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set_for_object catalog view
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c500967b83581cc3bc108232f12c9a0f4d008da6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9bf2dff5e5d7a3cb1581de9c0b15ff8a58dc6be7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71199334"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827994"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Эта функция динамического управления принимает в @object_id качестве параметра и описывает первый результирующий набор метаданных для модуля с таким идентификатором. @object_id Заданный параметр может быть идентификатором [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимой процедуры или [!INCLUDE[tsql](../../includes/tsql-md.md)] триггера. Если же передан идентификатор любого другого объекта (представления, функции, таблицы или процедуры CLR), то в столбцах ошибки результата будет содержаться ошибка.  
+  Эта функция динамического управления принимает в @object_id качестве параметра и описывает первый результирующий набор метаданных для модуля с таким идентификатором. Заданный параметр @object_id может быть идентификатором [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимой процедуры или [!INCLUDE[tsql](../../includes/tsql-md.md)] триггера. Если же передан идентификатор любого другого объекта (представления, функции, таблицы или процедуры CLR), то в столбцах ошибки результата будет содержаться ошибка.  
   
  представление **sys. dm_exec_describe_first_result_set_for_object** имеет то же определение результирующего набора, что и [sys. Dm_exec_describe_first_result_set &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) , и аналогично [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
@@ -44,7 +44,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>Аргументы  
  *\@object_id*  
- Хранимой процедуры или [!INCLUDE[tsql](../../includes/tsql-md.md)] триггера. @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] @object_id имеет тип **int**.  
+ @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] Хранимой процедуры или [!INCLUDE[tsql](../../includes/tsql-md.md)] триггера. @object_id имеет тип **int**.  
   
  *\@include_browse_information*  
  @include_browse_informationявляется **битом**типа. Если имеет значение 1, то каждый запрос анализируется так, как будто он имеет параметр FOR BROWSE для запроса. Возвращает дополнительные ключевые столбцы и сведения об исходной таблице.  
@@ -96,7 +96,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_type**|**int**|Содержит целое число, представляющее возвращаемую ошибку. Соответствует error_type_desc. См. список под замечаниями.|  
 |**error_type_desc**|**nvarchar(60)**|Содержит короткую строку в верхнем регистре, представляющую возвращаемую ошибку. Сопоставляется с error_type. См. список под замечаниями.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  В этой функции используется тот же алгоритм, что и в процедуре **sp_describe_first_result_set**. Дополнительные сведения см. в разделе [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  В следующей таблице содержится список типов ошибок и их описания  
@@ -114,8 +114,8 @@ sys.dm_exec_describe_first_result_set_for_object
 |9|RECURSION|Не удается определить результат, так как в пакете содержится рекурсивная инструкция.|  
 |10|TEMPORARY_TABLE|Результат не удалось определить из-за того, что пакет содержит временную таблицу и не поддерживается хранимой процедурой **sp_describe_first_result_set**.|  
 |11|UNSUPPORTED_STATEMENT|Результат не удалось определить из-за того, что пакет содержит инструкцию, не поддерживаемую хранимой процедурой **sp_describe_first_result_set** (FETCH, REVERT и т. д.).|  
-|12|OBJECT_ID_NOT_SUPPORTED|Переданный функции объект @object_id не поддерживается (т. е. не является хранимой процедурой)|  
-|13|OBJECT_ID_DOES_NOT_EXIST|Переданный функции объект @object_id не найден в системном каталоге.|  
+|12|OBJECT_ID_NOT_SUPPORTED|@object_idПереданный функции объект не поддерживается (т. е. не является хранимой процедурой)|  
+|13|OBJECT_ID_DOES_NOT_EXIST|@object_idПереданный функции объект не найден в системном каталоге.|  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение для выполнения @tsql аргумента.  
@@ -137,7 +137,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set_for_object(OBJECT_ID('TestPr
 GO  
 ```  
   
-### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>Б) Объединение функции sys.dm_exec_describe_first_result_set_for_object с таблицей или представлением  
+### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>Б. Объединение функции sys.dm_exec_describe_first_result_set_for_object с таблицей или представлением  
  В следующем примере используются как представление каталога sys. процедур, так и функция **sys. dm_exec_describe_first_result_set_for_object** для отображения метаданных для результирующих наборов всех хранимых процедур в [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базе данных.  
   
 ```  
@@ -151,7 +151,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  

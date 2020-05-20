@@ -15,19 +15,19 @@ helpviewer_keywords:
 - e-mail [SQL Server], stored procedures
 - system stored procedures [SQL Server], mail
 ms.assetid: 3bdb0e6d-9d09-465e-9a3f-7a8ccd53aca8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 13c8c9c7c14cdd4cd6a3c15d3c6216614b38a518
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b8f81d6839346de07eb84ed5250bb5986dbd2fff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70211318"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826354"
 ---
 # <a name="database-mail-stored-procedures-transact-sql"></a>Хранимые процедуры Database Mail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает следующие системные хранимые процедуры, используемые для выполнения операций электронной почты в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]поддерживает следующие системные хранимые процедуры, используемые для выполнения операций электронной почты в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="database-mail-procedures"></a>Процедуры службы Database Mail  
   
@@ -47,7 +47,7 @@ ms.locfileid: "70211318"
 |[sysmail_delete_profileaccount_sp](../../relational-databases/system-stored-procedures/sysmail-delete-profileaccount-sp-transact-sql.md)|[sysmail_update_profileaccount_sp](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)|  
 |[sysmail_help_account_sp](../../relational-databases/system-stored-procedures/sysmail-help-account-sp-transact-sql.md)||  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
   

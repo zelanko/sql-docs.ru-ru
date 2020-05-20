@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbc724b9178ec867768fde3dc3d9ff58add554e9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070354"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826274"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ sp_columns [ @table_name = ] object
 `[ \@ODBCVer = ] ODBCVer`Используемая версия ODBC. *Одбквер* имеет **тип int**и значение по умолчанию 2. Это значение соответствует ODBC версии 2. Допустимы значения 2 или 3. Различия в поведении версий 2 и 3 см. в спецификации ODBC **SQLColumns** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Хранимая процедура каталога **sp_columns** эквивалентна **SQLColumns** в ODBC. Возвращаемые результаты упорядочиваются по **TABLE_QUALIFIER**, **table_owner**и **table_name**.  
@@ -74,7 +74,7 @@ sp_columns [ @table_name = ] object
 |**ОБЕСПЕЧИВАЮТ**|**int**|Количество значащих цифр. Возвращаемое значение для столбца **точности** находится в базовом 10.|  
 |**LENGTH**|**int**|Размер передаваемых данных. <sup>1</sup>|  
 |**Измените**|**smallint**|Число цифр справа от десятичной запятой.|  
-|**RADIX**|**smallint**|Основание системы счисления числовых типов данных.|  
+|**ОСНОВАНИЕ системы СЧИСЛЕНИЯ**|**smallint**|Основание системы счисления числовых типов данных.|  
 |**ОБНУЛЯЕМОГО**|**smallint**|Указывает возможность содержать значение NULL.<br /><br /> 1 = значение NULL допустимо.<br /><br /> 0 = значение NULL недопустимо.|  
 |**ЗАМЕЧАНИЯ**|**varchar (254)**|Это поле всегда возвращает значение NULL.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|Значение столбца по умолчанию.|  
@@ -90,7 +90,7 @@ sp_columns [ @table_name = ] object
 ## <a name="permissions"></a>Разрешения  
  Требуются разрешения SELECT и VIEW DEFINITION на схему.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_columns** соответствует требованиям для идентификаторов с разделителями. Дополнительные сведения см. в разделе [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="examples"></a>Примеры  
@@ -113,7 +113,7 @@ EXEC sp_columns @table_name = N'DimEmployee',
    @table_owner = N'dbo';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
  [Хранимые процедуры каталога &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

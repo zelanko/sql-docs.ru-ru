@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_distribution_agent_properties
 ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1a2e2e3c0074c3fcc53298c2556c786c9b7057db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 53b138f923a8ac26c19f6673e3c63233d23fc78f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75322282"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828310"
 ---
 # <a name="sp_mschange_distribution_agent_properties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,19 +64,19 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Имя входа учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которой выполняется агент.|  
 |**distrib_job_password**||Пароль учетной записи Windows, под которой запускается задание агента.|  
-|**subscriber_catalog**||Каталог, используемый при соединении с поставщиком OLE DB. *Это свойство допустимо только для* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *подписчиков,* отличных от.|  
-|**subscriber_datasource**||Имя источника данных, понятное поставщику OLE DB. *Это свойство допустимо только для* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *подписчиков,* отличных от.|  
-|**subscriber_location**||Местоположение базы данных, понятное поставщику OLE DB. *Это свойство допустимо только для* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *подписчиков,* отличных от.|  
+|**subscriber_catalog**||Каталог, используемый при соединении с поставщиком OLE DB. *Это свойство допустимо только для не-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Подписчики.*|  
+|**subscriber_datasource**||Имя источника данных, понятное поставщику OLE DB. *Это свойство допустимо только для не-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Подписчики.*|  
+|**subscriber_location**||Местоположение базы данных, понятное поставщику OLE DB. *Это свойство допустимо только для не-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Подписчики.*|  
 |**subscriber_login**||Имя входа, используемое при подключении к подписчику для синхронизации подписки.|  
 |**subscriber_password**||Пароль подписчика.<br /><br /> [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]|  
-|**subscriber_provider**||Уникальный программный идентификатор (PROGID), с которым зарегистрирован поставщик OLE DB для источника данных, не относящихся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Это свойство допустимо только для* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *подписчиков,* отличных от.|  
+|**subscriber_provider**||Уникальный программный идентификатор (PROGID), с которым зарегистрирован поставщик OLE DB для источника данных, не относящихся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Это свойство допустимо только для не-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Подписчики.*|  
 |**subscriber_providerstring**||Идентифицирующая источник данных строка соединения, зависящая от поставщика OLE DB. *Данное свойство допустимо только для подписчиков, отличных от подписчика SQL Server.*|  
 |**subscriber_security_mode**|**1**|Проверка подлинности Windows.<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
 ||**0**;|Проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**subscriber_type**|**0**;|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Абонент|  
 ||**1**|Сервер источника данных ODBC|  
 ||**3**|Поставщик OLE DB|  
-|**SubscriptionStreams**||Обозначает количество соединений, разрешенных для агента распространителя с тем, чтобы он применял пакеты изменений параллельно с подписчиком. *Не поддерживается для подписчиков, отличных от* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *, издателей Oracle* и одноранговых подписок.|  
+|**SubscriptionStreams**||Обозначает количество соединений, разрешенных для агента распространителя с тем, чтобы он применял пакеты изменений параллельно с подписчиком. *Не поддерживается для не-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Подписчики, издатели Oracle или* одноранговые подписки.|  
   
 > [!NOTE]  
 >  После изменения имени входа и пароля агента необходимо остановить и повторно запустить агент, чтобы изменения вступили в силу.  
@@ -84,7 +84,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_MSchange_distribution_agent_properties** используется в репликации моментальных снимков и репликации транзакций.  
   
  При запуске издателя на экземпляре [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии следует использовать [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) для изменения свойств задания агент слияния, которое синхронизирует принудительную подписку, которая выполняется на распространителе.  
@@ -92,7 +92,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** на распространителе могут выполнять **sp_MSchange_distribution_agent_properties**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)  
   

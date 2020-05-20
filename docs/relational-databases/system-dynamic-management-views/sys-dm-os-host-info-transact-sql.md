@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_host_info dynamic management view
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 052402d3a394e8da3e08828992127d3cd89b95ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8275ed39d49c8fdb64c1d2f26cc1d218c525500c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900167"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830521"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ ms.locfileid: "67900167"
 ## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
-По `SELECT` умолчанию `sys.dm_os_host_info` разрешение предоставляется `public` роли. Если параметр отозван, требуется `VIEW SERVER STATE` разрешение на сервере.   
+По `SELECT` `sys.dm_os_host_info` `public` умолчанию разрешение предоставляется роли. Если параметр отозван, требуется `VIEW SERVER STATE` разрешение на сервере.   
  
 > [!CAUTION]
->  Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1,3 для [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] подключения к [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `SELECT` разрешение `sys.dm_os_host_info` для версии 17. Если `SELECT` разрешение отменяется `public`, только имена входа с `VIEW SERVER STATE` разрешением могут подключаться к последней версии SSMS. (Другие средства, например, `sqlcmd.exe` могут подключаться `SELECT` без `sys.dm_os_host_info`разрешения на.)
+>  Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1,3 для [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] подключения к необходимо разрешение для версии 17 `SELECT` `sys.dm_os_host_info` [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] . Если `SELECT` разрешение отменяется `public` , только имена входа с `VIEW SERVER STATE` разрешением могут подключаться к последней версии SSMS. (Другие средства, например, `sqlcmd.exe` могут подключаться без `SELECT` разрешения на `sys.dm_os_host_info` .)
 
   
 ## <a name="examples"></a>Примеры  

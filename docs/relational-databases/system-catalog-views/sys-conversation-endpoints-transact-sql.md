@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.conversation_endpoints catalog view
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 16d29272e4229ac93b3dd5b1eaf5502a07fb0a2a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 11beb90fe3bf0be71d31f5e330c3588d6e1e0aaa
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68109544"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82822117"
 ---
 # <a name="sysconversation_endpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68109544"
 |service_id|**int**|Идентификатор службы для этой стороны диалога. Не допускает значения NULL.|  
 |lifetime|**datetime**|Дата и время окончания диалога. Не допускает значения NULL.|  
 |state|**char (2)**|Текущее состояние диалога. Не допускает значения NULL. Одно из двух значений:<br /><br /> Итак, начата отправка исходящих сообщений. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обработал инструкцию BEGIN CONVERSATION для этого диалога, но пока не отправлено ни одного сообщения.<br /><br /> SI   Начат прием данных. Другой экземпляр запущен в новом диалоге с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] еще не до конца получил первое сообщение. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может создать диалог в этом состоянии в том случае, если первая передача фрагментирована или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] получает передачу вне порядка. Однако [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может создать диалог сразу в состоянии CO (ведение диалога), если первая передача, полученная для диалога, содержит первое сообщение целиком.<br /><br /> СОВМЕСТНОе обращение. Диалог открыт, и обе стороны диалога могут отправлять сообщения. Для большинства служб большая часть обмена данными происходит, когда диалог находится в этом состоянии.<br /><br /> DI отключен входящий трафик. Удаленной стороной диалога была выполнена инструкция END CONVERSATION. Состояние диалога остается неизменным до тех пор, пока локальная сторона диалога не выдаст сообщение END CONVERSATION. Приложение может продолжать получать сообщения для диалога. Поскольку удаленная сторона диалога закончила диалог, приложение не может отправлять сообщения в этом диалоге. Когда приложение выполняет инструкцию END CONVERSATION, диалог переходит в состояние CD (закрыто).<br /><br /> DO   Отключена отправка. Локальной стороной диалога была выполнена инструкция END CONVERSATION. Состояние диалога остается неизменным до тех пор, пока удаленная часть диалога не подтвердит сообщение END CONVERSATION. Приложение не может отправлять и получать сообщения для диалога. Когда удаленная сторона диалога подтверждает сообщение END CONVERSATION, диалог переходит в состояние CD (закрыто).<br /><br /> Ошибка ER. В данной конечной точке произошла ошибка. Сообщение об ошибке помещено в очередь приложений. Если очередь приложений пуста, значит это сообщение об ошибке уже обработано приложением.<br /><br /> CD   Закрыто. Конечная точка диалога больше не используется.|  
-|state_desc|**nvarchar(60)**|Описание состояния диалогового окна конечной точки. Этот столбец допускает значение NULL. Одно из двух значений:<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **ДИАЛОГ**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **CLOSED**<br /><br /> **ПЛАН**|  
+|state_desc|**nvarchar(60)**|Описание состояния диалогового окна конечной точки. Этот столбец допускает значение NULL. Одно из двух значений:<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **ДИАЛОГ**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **ЗАВЕРШИЛ**<br /><br /> **ПЛАН**|  
 |far_service|**nvarchar(256)**|Название службы на удаленной стороне диалога. Не допускает значения NULL.|  
 |far_broker_instance|**nvarchar(128)**|Экземпляр брокера на удаленной стороне диалога. Допускает значение NULL.|  
 |principal_id|**int**|Идентификатор участника, чей сертификат используется на локальной стороне диалога. Не допускает значения NULL.|  

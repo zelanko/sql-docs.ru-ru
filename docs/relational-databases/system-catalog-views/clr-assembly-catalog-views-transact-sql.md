@@ -14,14 +14,14 @@ helpviewer_keywords:
 - assemblies [CLR integration], catalog views
 - CLR assembly catalog views
 ms.assetid: b2e71480-92b2-4610-a4ff-dafb121087d9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b57221daa18d23d3dd88794e851d67712704f76c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2ae1a2b8a7a7469c8dd1b779f17880032924c2ac
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68050849"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823660"
 ---
 # <a name="clr-assembly-catalog-views-transact-sql"></a>Представления каталога с информацией о сборках среды CLR (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68050849"
 |[sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|[sys.assembly_references](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|  
 |[sys.assembly_files](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)||  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Системные представления &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

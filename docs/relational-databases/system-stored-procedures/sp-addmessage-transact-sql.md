@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d040fa0ccfe9b962f8847db0a841b95a534326fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c046d562164e47ed72580801196756714547755e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80531037"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820727"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
 `[ @lang = ] 'language'`Язык этого сообщения. *Language* имеет тип **sysname** и значение по умолчанию NULL. Поскольку на одном сервере можно установить несколько языков, *язык* определяет язык, на котором написано каждое сообщение. Если *язык* не указан, язык является языком по умолчанию для сеанса.  
   
-`[ @with_log = ] { 'TRUE' | 'FALSE' }`Указывает, следует ли записывать сообщение в журнал приложений Windows при его возникновении. WITH_LOG имеет тип **varchar (5)** и значение по умолчанию false. ** \@** Если указано значение TRUE, сообщение об ошибке всегда записывается в журнал приложений Windows. Если указано значение FALSE, то сообщение об ошибке может попасть в журнал приложений Windows в зависимости от того, как эта ошибка возникла. Только члены роли сервера **sysadmin** могут использовать этот параметр.  
+`[ @with_log = ] { 'TRUE' | 'FALSE' }`Указывает, следует ли записывать сообщение в журнал приложений Windows при его возникновении. ** \@ WITH_LOG** имеет тип **varchar (5)** и значение по умолчанию false. Если указано значение TRUE, сообщение об ошибке всегда записывается в журнал приложений Windows. Если указано значение FALSE, то сообщение об ошибке может попасть в журнал приложений Windows в зависимости от того, как эта ошибка возникла. Только члены роли сервера **sysadmin** могут использовать этот параметр.  
   
 > [!NOTE]  
 >  Если сообщение заносится в журнал приложений Windows, оно также заносится и в журнал ошибок компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -91,7 +91,7 @@ EXEC sp_addmessage 50001, 16,
 GO  
 ```  
   
-### <a name="b-adding-a-message-in-two-languages"></a>Б) Добавление сообщения на двух языках  
+### <a name="b-adding-a-message-in-two-languages"></a>Б. Добавление сообщения на двух языках  
  В следующем примере сначала создается сообщение на английском языке, а затем добавляется сообщение на французском`.`  
   
 ```  
@@ -156,7 +156,7 @@ RAISERROR(60000,1,1,15,'param1','param2'); -- error, severity, state,
 GO                                       -- parameters.  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [sp_dropmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   

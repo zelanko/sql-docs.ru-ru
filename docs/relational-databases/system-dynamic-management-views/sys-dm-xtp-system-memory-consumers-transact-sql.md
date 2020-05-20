@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 83e9368b562a7ac200171dc814830b21d677770a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ac86bea128939be70a3931183f23d4fdffa0d8c3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090088"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829022"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ select * from sys.dm_xtp_system_memory_consumers
   
  Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Type|Описание|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|Внутренний идентификатор потребителя памяти.|  
 |memory_consumer_type|**int**|Целое число, представляющее тип потребителя памяти с одним из следующих значений:<br /><br /> 0 — не должно отображаться. Суммирует использование памяти для двух или более потребителей.<br /><br /> 1 — РЕЗЕРВный: отслеживает потребление памяти для резерва системы.<br /><br /> 2 — VARHEAP: отслеживает потребление памяти для кучи переменной длины.<br /><br /> 4. Пул страниц ввода-вывода: отслеживает потребление памяти для пула системных страниц, используемого для операций ввода-вывода.|  
@@ -48,10 +48,10 @@ select * from sys.dm_xtp_system_memory_consumers
 |allocated_bytes|**bigint**|Число байтов, зарезервированных для этого потребителя памяти.|  
 |used_bytes|**bigint**|Число байтов, используемых этим потребителем. Применимо только для потребителей памяти varheap.|  
 |allocation_count|**int**|Количество выделений.|  
-|partition_count|**int**|Только для внутреннего применения.|  
-|sizeclass_count|**int**|Только для внутреннего применения.|  
-|min_sizeclass|**int**|Только для внутреннего применения.|  
-|max_sizeclass|**int**|Только для внутреннего применения.|  
+|partition_count|**int**|Только для внутреннего использования.|  
+|sizeclass_count|**int**|Только для внутреннего использования.|  
+|min_sizeclass|**int**|Только для внутреннего использования.|  
+|max_sizeclass|**int**|Только для внутреннего использования.|  
 |memory_consumer_address|**varbinary**|Внутренний адрес потребителя памяти.|  
   
 ## <a name="permissions"></a>Разрешения  
@@ -104,7 +104,7 @@ total_allocated_MB   total_used_MB
 2                    2  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

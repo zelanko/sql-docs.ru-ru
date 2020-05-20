@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_migrate_user_to_contained
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d5bcafb24313851f58fd18fc19ebabd0ee98f6dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a641f363b4a39b28b7a7ea767914d952c83d697e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022336"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828315"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +42,19 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [**@username =** ] **N "***пользователь***"**  
+ [** @username =** ] **N '***пользователь***'**  
  Имя пользователя в текущей автономной базе данных, сопоставленное с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], прошедшим проверку подлинности. Аргумент имеет тип **sysname**и значение по умолчанию **null**.  
   
- [**@rename =** ] **N '***copy_login_name***'** | **n '***keep_name***'**  
+ [** @rename =** ] **N '***copy_login_name***'**  |  **N "***keep_name***"**  
  Если пользователь базы данных, основанный на имени входа, имеет имя, отличное от имени входа, используйте *keep_name* , чтобы во время миграции имя пользователя базы данных сохранялось. Используйте *copy_login_name* , чтобы создать нового пользователя автономной базы данных с именем входа, а не пользователя. Если пользователь базы данных, созданный на основе имени входа, имеет имя, совпадающее с именем входа, то в обоих вариантах будет создан пользователь автономной базы данных без изменения имени.  
   
- [**@disablelogin =** ] **N '***disable_login***'** | **n '***do_not_disable_login***'**  
+ [** @disablelogin =** ] **N '***disable_login***'**  |  **N "***do_not_disable_login***"**  
  *disable_login* отключает имя входа в базе данных master. Чтобы подключиться, если имя входа отключено, соединение должно предоставить имя автономной базы данных в качестве **первоначального каталога** в строке подключения.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_migrate_user_to_contained** создает пользователя автономной базы данных с паролем независимо от свойств или разрешений имени входа. Например, процедура может быть выполнена, если имя входа отключено или если пользователю отказано **в** доступе к базе данных.  
   
  **sp_migrate_user_to_contained** имеет следующие ограничения.  
@@ -90,7 +90,7 @@ sp_migrate_user_to_contained
   
 ```  
   
-### <a name="b-migrating-all-database-users-with-logins-to-contained-database-users-without-logins"></a>Б) Преобразование всех пользователей базы данных с именами входа в пользователей автономной базы данных без имен входа  
+### <a name="b-migrating-all-database-users-with-logins-to-contained-database-users-without-logins"></a>Б. Преобразование всех пользователей базы данных с именами входа в пользователей автономной базы данных без имен входа  
  В следующем примере выполняется миграция всех пользователей, основанных на имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в пользователей автономной базы данных с паролями. Этот пример исключает имена входа, которые не были включены. Этот пример должен выполняться в автономной базе данных.  
   
 ```sql  
@@ -116,7 +116,7 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Миграция в частично автономную базу данных](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [Автономные базы данных](../../relational-databases/databases/contained-databases.md)  
   
