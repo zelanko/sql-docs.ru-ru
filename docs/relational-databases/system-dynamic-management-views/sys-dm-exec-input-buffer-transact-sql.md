@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_input_buffer dynamic management function
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e18f635b7bbdd8fa96a565fef6aef5be5bde87f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 05ec724effbabfeec11d113e46fd11c4daec0688
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74097870"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821077"
 ---
 # <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
-Возвращает сведения о инструкциях, отправленных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]экземпляр.
+Возвращает сведения о инструкциях, отправленных в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -59,12 +59,12 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="permissions"></a>Разрешения
 
-В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]случае, если пользователь имеет разрешение View Server State, он увидит все сеансы выполнения на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. в противном случае пользователь увидит только текущий сеанс.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Если пользователь имеет разрешение View Server State, пользователь увидит все выполняющиеся сеансы на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; в противном случае пользователь увидит только текущий сеанс.
 
 > [!IMPORTANT]
 > Выполнение этого динамического административного представления вне SQL Server Management Studio от SQL Server без разрешения VIEW SERVER STATE (например, в триггере, хранимой процедуре или функции) вызывает ошибку разрешения в базе данных master.
 
-В [!INCLUDE[ssSDS](../../includes/sssds-md.md)]случае, если пользователь является владельцем базы данных, он увидит все выполненные сеансы в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. в противном случае пользователь увидит только текущий сеанс.
+В случае [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , если пользователь является владельцем базы данных, он увидит все выполняющиеся сеансы в [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ; в противном случае пользователь увидит только текущий сеанс.
 
 > [!IMPORTANT]
 > Выполнение этого динамического административного представления вне SQL Server Management Studio в базе данных SQL Azure без разрешений владельца (например, в триггере, хранимой процедуре или функции) вызывает ошибку разрешения в базе данных master.
@@ -84,7 +84,7 @@ SELECT * FROM sys.dm_exec_input_buffer (52, 0);
 GO
 ```
 
-### <a name="b-using-cross-apply-to-additional-information"></a>Б) Использование перекрестного применения к дополнительным сведениям
+### <a name="b-using-cross-apply-to-additional-information"></a>Б. Использование перекрестного применения к дополнительным сведениям
 
 В следующем примере перечисляются Входные буферы для сеансов с ИДЕНТИФИКАТОРом сеанса больше 50.
 
@@ -96,7 +96,7 @@ WHERE es.session_id > 50;
 GO
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
 - [sys.dm_exec_sessions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)

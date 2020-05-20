@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dbba9ea2f9df7e9a9fd154193c8f52fe904899c7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906098"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820462"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_help_notification
   
 `[ @enum_type = ] 'enum_type'`Возвращаемые сведения о *object_type*. в большинстве случаев *ENUM_TYPE* фактически. *enum_type*имеет **тип char (10)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |ACTUAL|Выводит только *object_types* , связанные с *именем*.|  
 |ALL|Список всех*object_types* , включая те, которые не связаны с *именем*.|  
@@ -58,7 +58,7 @@ sp_help_notification
   
 `[ @notification_method = ] notification_method`Числовое значение, определяющее возвращаемые столбцы метода уведомления. *notification_method* имеет тип **tinyint**и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Электронная почта. возвращает только столбец **use_email** .|  
 |**2**|Пейджер: возвращает только столбец **use_pager** .|  
@@ -120,7 +120,7 @@ EXEC dbo.sp_help_notification
 GO  
 ```  
   
-### <a name="b-listing-operators-for-a-specific-alert"></a>Б) Список операторов для указанного предупреждения  
+### <a name="b-listing-operators-for-a-specific-alert"></a>Б. Список операторов для указанного предупреждения  
  В следующем примере возвращаются все операторы, которые получают уведомления любого вида для предупреждения `Test Alert`.  
   
 ```  

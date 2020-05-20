@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - syspublications system table
 ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6d7fb57743726a59c0b501544802ecc7c701da20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60b6557bdc8db86ef1d8092220fb91e7e506193f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029749"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820060"
 ---
 # <a name="syspublications-transact-sql"></a>Таблица syspublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "68029749"
 |**alt_snapshot_folder**|**nvarchar(255)**|Указывает местоположение альтернативной папки для моментального снимка.|  
 |**pre_snapshot_script**|**nvarchar(255)**|Задает указатель на расположение **SQL** -файла. Если моментальный снимок создается для подписчика, то агент распространителя выполняет предварительный скрипт моментального снимка до запуска скриптов реплицируемых объектов.|  
 |**post_snapshot_script**|**nvarchar(255)**|Задает указатель на расположение **SQL** -файла. Агент распространителя выполняет заключительный скрипт после применения скриптов и данных всех реплицируемых объектов во время начальной синхронизации.|  
-|**compress_snapshot**|**bit**|Указывает, что моментальный снимок, записываемый в *alt_snapshot_folder* расположение, должен быть сжат в [!INCLUDE[msCoName](../../includes/msconame-md.md)] формате CAB. **1** означает, что моментальный снимок будет сжат.|  
+|**compress_snapshot**|**bit**|Указывает, что моментальный снимок, записываемый в *alt_snapshot_folder* расположение, должен быть сжат в [!INCLUDE[msCoName](../../includes/msconame-md.md)] формате CAB.** 1** означает, что моментальный снимок будет сжат.|  
 |**ftp_address**|**sysname**|Сетевой адрес службы FTP для распространителя. Указывает расположение файлов моментальных снимков публикаций, необходимых агенту распространителя.|  
 |**ftp_port**|**int**|Номер порта службы FTP для распространителя. Указывает местоположение файлов с моментальными снимками публикаций, которые требуются агенту распространителя.|  
 |**ftp_subdirectory**|**nvarchar(255)**|Указывает расположение файлов моментальных снимков для агента распространителя, если публикация поддерживает распространение моментальных снимков с помощью FTP.|  
@@ -66,14 +66,14 @@ ms.locfileid: "68029749"
 |**conflict_policy**|**int**|Задает политику устранения конфликтов при обновлении подписчика посредством очередей. Может принимать одно из следующих значений:<br /><br /> **1** = побеждает конфликт с издателем.<br /><br /> **2** = конфликт побеждает подписчиком.<br /><br /> **3** = подписка повторно инициализирована.|  
 |**queue_type**|**int**|Задает используемый тип очереди. Может принимать одно из следующих значений:<br /><br /> **1** = MSMQ, которая использует [!INCLUDE[msCoName](../../includes/msconame-md.md)] очередь сообщений для хранения транзакций.<br /><br /> **2** = SQL, который использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения транзакций.<br /><br /> Примечание. Использование [!INCLUDE[msCoName](../../includes/msconame-md.md)] очереди сообщений устарело и больше не доступно.|  
 |**ad_guidname**|**sysname**|Указывает, опубликована ли публикация в каталоге [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Допустимый глобальный уникальный идентификатор (GUID) указывает, что публикация опубликована в Active Directory, а идентификатор GUID — соответствующая Active Directory **objectGUID**объекта публикации. Если значение равно NULL, то публикация не опубликована в Active Directory.|  
-|**backward_comp_level**|**int**|Уровень совместимости базы данных может иметь одно из следующих значений:<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> **110** = 110[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].<br /><br /> **120** = 120[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].|  
+|**backward_comp_level**|**int**|Уровень совместимости базы данных может иметь одно из следующих значений:<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .<br /><br /> **110**  =  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .<br /><br /> **120**  =  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] .|  
 |**allow_initialize_from_backup**|**bit**|Показывает, может ли подписчик инициализировать подписку на данную публикацию из резервной копии, а не из исходного моментального снимка. **1** означает, что подписки можно инициализировать из резервной копии, а **0** — нет. Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).|  
 |**min_autonosync_lsn**|**binary**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|Показывает, поддерживается ли в публикации репликация схемы. **1** указывает, что инструкции языка описания данных DDL, выполняемые на издателе, реплицируются, а **0** означает, что инструкции DDL не реплицируются. Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
-|**options**|**int**|Битовая карта, указывающая дополнительные параметры публикации, со следующими значениями битов:<br /><br /> **0x1** — включается для одноранговой репликации.<br /><br /> **0x2** — публиковать только локальные изменения для одноранговой репликации.<br /><br /> **0x4** — включено для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, отличных от.<br /><br /> **0x8** — включено для обнаружения конфликтов в одноранговой сети.|  
+|**options**|**int**|Битовая карта, указывающая дополнительные параметры публикации, со следующими значениями битов:<br /><br /> **0x1** — включается для одноранговой репликации.<br /><br /> **0x2** — публиковать только локальные изменения для одноранговой репликации.<br /><br /> **0x4** — включено для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, отличных от.<br /><br /> **0x8** — включено для обнаружения конфликтов в одноранговой сети.|  
 |**originator_id**|**smallint**|Определяет каждый узел в одноранговой топологии репликации для обнаружения конфликтов. Дополнительные сведения см. в разделе [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   

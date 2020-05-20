@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication_snapshot
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c32ea67eef368a17b129989e3f05c29ab0533d72
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3447b9111ec6d6a6fd6a4084f884647cbd38eec2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769113"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820689"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**1**|Однократно.|  
 |**4** (по умолчанию)|Ежедневно.|  
 |**8**|Еженедельно.|  
-|**16**|Ежемесячно.|  
+|**глубин**|Ежемесячно.|  
 |**32**|Ежемесячно относительно интервала частоты.|  
 |**64**|При запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**128**|Запускать, когда компьютер простаивает|  
@@ -78,7 +78,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**1**|*frequency_interval* не используется.|  
 |**4** (по умолчанию)|Каждые *frequency_interval* дней и по умолчанию ежедневно.|  
 |**8**|*frequency_interval* является одним или несколькими следующими (в сочетании с логическим оператором [&#124; (побитовое или)](../../t-sql/language-elements/bitwise-or-transact-sql.md) ):<br /><br /> **1** = воскресенье &#124;<br /><br /> **2** = понедельник &#124;<br /><br /> **4** = вторник &#124;<br /><br /> **8** = среда &#124;<br /><br /> **16** = четверг &#124;<br /><br /> **32** = Пятница &#124;<br /><br /> **64** = Суббота|  
-|**16**|В *frequency_interval* день месяца.|  
+|**глубин**|В *frequency_interval* день месяца.|  
 |**32**|*frequency_interval* является одним из следующих:<br /><br /> **1** = воскресенье &#124;<br /><br /> **2** = понедельник &#124;<br /><br /> **3** = вторник &#124;<br /><br /> **4** = среда &#124;<br /><br /> **5** = четверг &#124;<br /><br /> **6** = Пятница &#124;<br /><br /> **7** = Суббота &#124;<br /><br /> **8** = день &#124;<br /><br /> **9** = &#124; дня недели<br /><br /> **10** = выходной день|  
 |**64**|*frequency_interval* не используется.|  
 |**128**|*frequency_interval* не используется.|  
@@ -108,7 +108,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 `[ @snapshot_job_name = ] 'snapshot_agent_name'`Имя существующего агент моментальных снимков имени задания, если используется существующее задание. *snapshot_agent_name* имеет тип **nvarchar (100)** и значение по умолчанию NULL. Этот параметр предназначен для внутреннего использования и не указывается при создании новой публикации. Если указан *snapshot_agent_name* , *job_login* и *job_password* должны иметь значение null.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`Режим безопасности, используемый агентом при соединении с издателем. *publisher_security_mode* имеет значение **smallint**и значение по умолчанию 1. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности, а **1** — проверка подлинности Windows. Значение **0** должно быть указано для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode`Режим безопасности, используемый агентом при соединении с издателем. *publisher_security_mode* имеет значение **smallint**и значение по умолчанию 1. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности, а **1** — проверка подлинности Windows. Значение **0** должно быть указано для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 `[ @publisher_login = ] 'publisher_login'`Имя входа, используемое при соединении с издателем. Аргумент *publisher_login* имеет тип **sysname**и значение по умолчанию NULL. необходимо указать *publisher_login* , если *publisher_security_mode* равен **0**. Если *publisher_login* имеет значение null, а *publisher_security_mode* равен **1**, то при соединении с издателем будет использоваться учетная запись, указанная в *job_login* .  
   
@@ -120,17 +120,17 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 `[ @job_login = ] 'job_login'`Имя входа для учетной записи, под которой выполняется агент. На Управляемый экземпляр Базы данных SQL Azure используйте учетную запись SQL Server. *job_login* имеет тип **nvarchar (257)** и значение по умолчанию NULL. Эта учетная запись всегда используется для соединений агента с распространителем. Необходимо указывать этот аргумент при создании нового задания агента моментальных снимков.  
   
 > [!NOTE]
->  Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от, это должно быть одно и то же имя входа, указанное в [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
+>  Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от, это должно быть одно и то же имя входа, указанное в [Sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
   
 `[ @job_password = ] 'job_password'`Пароль для учетной записи Windows, под которой запускается агент. Аргумент *job_password* имеет тип **sysname**и не имеет значения по умолчанию. Необходимо указывать этот аргумент при создании нового задания агента моментальных снимков.  
   
 > [!IMPORTANT]  
 >  Не храните данные проверки подлинности в файлах скриптов. В целях повышения безопасности рекомендуется вводить имена входа и пароли во время выполнения.  
   
-`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  *publisher* при создании агент моментальных снимков на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателе не следует использовать издатель.  
+>  При создании агент моментальных снимков на издателе не следует использовать *Издатель* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

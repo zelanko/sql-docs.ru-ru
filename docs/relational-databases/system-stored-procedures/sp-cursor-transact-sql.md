@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e99f8f657c3d35cc91ff92a9ae5d920271769b8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108572"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820617"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68108572"
   
 ||  
 |-|  
-|**Применимо к**: SQL Server [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Применимо к**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -98,7 +98,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="return-code-values"></a>Значения кода возврата  
  При использовании RPC операция позиционированного удаления или обновления с буфером номер 0 будет возвращать ЗАВЕРШЕНное сообщение с количеством строк *0* (сбой) или 1 (успешно) для каждой строки в буфере выборки.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="optype-parameter"></a>Параметр optype  
  За исключением сочетаний SETPOSITION с UPDATE, DELETE, REFRESH или LOCK; или АБСОЛЮТная с помощью UPDATE или DELETE, значения *optype* являются взаимоисключающими.  
@@ -125,7 +125,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="value-parameter"></a>Параметр value  
  Существует два варианта применения правил для использования *значения* , как упоминалось ранее в разделе arguments:  
   
-1.  Можно использовать имя, которое\@заранее предваряется именем столбца в списке SELECT-List для любых параметров именованного *значения* . Одним из преимуществ такого варианта является то, что не обязательно преобразовывать данные.  
+1.  Можно использовать имя, которое \@ заранее предваряется именем столбца в списке SELECT-List для любых параметров именованного *значения* . Одним из преимуществ такого варианта является то, что не обязательно преобразовывать данные.  
   
 2.  Используйте параметр, чтобы отправить полную инструкцию UPDATE или INSERT или использовать несколько параметров для отправки частей инструкции UPDATE или INSERT, которые SQL Server затем будут построены в полной инструкции. Примеры можно найти далее в подразделе «Примеры» этого раздела.  
   
@@ -139,7 +139,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  Если указано \<имя таблицы обновления>, любое значение, заданное для параметра *Table* , будет пропущено.  
+>  Если \< указано имя таблицы обновления>, любое значение, заданное для параметра *Table* , будет пропущено.  
   
  При использовании нескольких параметров первый параметр должен быть строкой в следующем формате:  
   
@@ -149,7 +149,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `<column name> = expression  [,...n]`  
   
- В этом случае имя \<таблицы,> в созданной инструкции UPDATE, является либо указанным, либо по умолчанию параметром *Table* .  
+ В этом случае \< имя таблицы,> в созданной инструкции UPDATE, является либо указанным, либо по умолчанию параметром *Table* .  
   
  Для INSERT:  
   
@@ -158,7 +158,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  Если указана инструкция INSERT * \<Table name>* , любое значение, заданное для параметра *Table* , будет пропущено.  
+>  Если указана инструкция INSERT * \< table name>* , любое значение, заданное для параметра *Table* , будет пропущено.  
   
  При использовании нескольких параметров первый параметр должен быть строкой в следующем формате:  
   
@@ -168,12 +168,12 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- За исключением случаев, когда указан параметр VALUES, в этом случае после последнего выражения должен стоять символ ). В этом случае * \<имя таблицы,>* в созданной инструкции UPDATE, является либо указанным, либо по умолчанию параметром *Table* .  
+ За исключением случаев, когда указан параметр VALUES, в этом случае после последнего выражения должен стоять символ ). В этом случае * \< имя таблицы,>* в СОЗДАНной инструкции UPDATE, является либо указанным, либо по умолчанию параметром *Table* .  
   
 > [!NOTE]  
 >  Возможно передать один параметр как именованный, то есть «`@VALUES`». В этом случае другие параметры использовать нельзя.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

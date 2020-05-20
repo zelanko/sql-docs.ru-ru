@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_special_columns
 ms.assetid: 0b0993f8-73e0-402b-8c6c-1b0963956f5d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c82970caa25089320a1dc5daf68076f27478081f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ceb000826fee3ce4a26472343a6bb68e3636a9b3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032839"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820353"
 ---
 # <a name="sp_special_columns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,31 +46,31 @@ sp_special_columns [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @table_name=] "*table_name*"  
+ [ @table_name =] "*table_name*"  
  Название таблицы, используемой для возврата сведений о каталоге. Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию. Сопоставление по шаблону не поддерживается.  
   
- [ @table_owner=] "*table_owner*"  
+ [ @table_owner =] "*table_owner*"  
  Владелец таблицы, используемой для возврата сведений о каталоге. Аргумент *owner* имеет тип **sysname**и значение по умолчанию NULL. Сопоставление по шаблону не поддерживается. Если параметр *owner* не указан, применяются правила видимости таблиц по умолчанию базовой СУБД.  
   
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если текущий пользователь является владельцем таблицы с указанным именем, возвращаются ее столбцы. Если *владелец* не указан и текущий пользователь не владеет таблицей с указанным *именем*, эта процедура ищет таблицу с указанным *именем* , принадлежащую владельцу базы данных. Если таблица существует, возвращаются ее столбцы.  
   
- [ @qualifier=] "*квалификатор*"  
+ [ @qualifier =] "*квалификатор*"  
  Имя квалификатора таблицы. *квалификатор* имеет тип **sysname**и значение по умолчанию NULL. Различные продукты СУБД поддерживают имена таблиц, состоящие из трех частей (*Qualifier.Owner.Name*). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, в которой находится таблица.  
   
- [ @col_type=] "*col_type*"  
+ [ @col_type =] "*col_type*"  
  Тип — Column. *col_type* имеет **тип char (** 1 **)** и значение по умолчанию r. Type r Возвращает оптимальный столбец или набор столбцов, которые, получая значения из столбца или столбцов, позволяют однозначно идентифицировать любую строку в указанной таблице. Столбец может быть либо псевдостолбцом, специально созданным для этой цели, либо столбцом или столбцами любого уникального индекса таблицы. Тип V возвращает столбец или столбцы в указанной таблице, которые источник данных обновляет автоматически, когда любое значение в строке обновляется транзакцией.  
   
- [ @scope=] "*Scope*"  
+ [ @scope =] "*область*"  
  Минимально требуемая область ROWID. *Scope* имеет **тип char (** 1 **)** и значение по умолчанию T. Scope C указывает, что ROWID действителен только при размещении в этой строке. Область T указывает, что ROWID действителен для транзакции.  
   
- [ @nullable=] "*Nullable*"  
+ [ @nullable =] "*Nullable*"  
  Определяет, допускают ли специальные столбцы значение NULL. *Nullable* имеет **тип char (** 1 **)** и значение по умолчанию U. O указывает специальные столбцы, которые не допускают значения NULL. U указывает столбцы, частично допускающие значения NULL.  
   
- [ @ODBCVer=] "*Одбквер*"  
+ [ @ODBCVer =] '*Одбквер*'  
  Используемая версия ODBC. *Одбквер* имеет **тип int (** 4 **)** и значение по умолчанию 2. Это значение соответствует версии ODBC 2.0. Дополнительные сведения о различиях между ODBC 2.0 и ODBC 3.0 см. в спецификации ODBC SQLSpecialColumns для ODBC 3.0.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -101,7 +101,7 @@ EXEC sp_special_columns @table_name = 'Department'
     ,@table_owner = 'HumanResources';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры каталога &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

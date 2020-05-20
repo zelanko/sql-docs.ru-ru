@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_dbmmonitordropmonitoring
 - database mirroring [SQL Server], monitoring
 ms.assetid: 6f2d552d-bfd7-47a5-8dcb-05560aa1a32d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd9c138cd574e22d1ce658c4749f2a61c34d8e73
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a20f943801989490fa8769644d4b45c09f404f7f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108067"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820509"
 ---
 # <a name="sp_dbmmonitordropmonitoring-transact-sql"></a>sp_dbmmonitordropmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ sp_dbmmonitordropmonitoring
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- None  
+ Нет  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
@@ -58,7 +58,7 @@ sp_dbmmonitordropmonitoring
 EXEC sp_dbmmonitordropmonitoring ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Мониторинг &#40;SQL Server зеркального отображения базы данных&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   

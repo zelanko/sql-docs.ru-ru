@@ -12,19 +12,19 @@ helpviewer_keywords:
 - database dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server], database
 ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c51f22a66344c0ae72daf7ca662285e1fdde5b5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2bdc377c87ce84ec6e44bd06bc905426aeaba231
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090877"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819564"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>Динамические административные представления базы данных (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  В этом разделе описаны следующие динамические управляющие объекты [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] в и иногда в базе данных SQL.  
+  В этом разделе описаны следующие динамические управляющие объекты в [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] и иногда в базе данных SQL.  
   
 |||  
 |-|-|  
@@ -44,7 +44,7 @@ ms.locfileid: "68090877"
 |[sys. dm_db_resource_stats &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)|[sys. dm_db_objects_impacted_on_version_change &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md)|  
 |[sys. dm_operation_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) | |
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
    
   

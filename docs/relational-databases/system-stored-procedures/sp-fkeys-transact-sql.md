@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fkeys
 ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb5f684321a11d56a419ae73be0bfb2950fb9939
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cee63720a743de8e2aed496bf3f7f3e791780575
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124403"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820536"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,10 +44,10 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @pktable_name=] "*pktable_name*"  
+ [ @pktable_name =] "*pktable_name*"  
  Имя таблицы с первичным ключом, применяемое для возврата сведений о каталоге. Аргумент *pktable_name* имеет тип **sysname**и значение по умолчанию NULL. Сопоставление по шаблону не поддерживается. Необходимо указать этот параметр, параметр *fktable_name* или оба.  
   
- [ @pktable_owner=] "*pktable_owner*"  
+ [ @pktable_owner =] "*pktable_owner*"  
  Имя владельца таблицы (с первичным ключом), используемой для возврата сведений о каталоге. Аргумент *pktable_owner* имеет тип **sysname**и значение по умолчанию NULL. Сопоставление по шаблону не поддерживается. Если *pktable_owner* не указан, применяются правила видимости таблиц по умолчанию базовой СУБД.  
   
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если текущему пользователю принадлежит таблица с указанным именем, возвращаются столбцы этой таблицы. Если параметр *pktable_owner* не указан и текущий пользователь не владеет таблицей с указанным *pktable_name*, процедура ищет таблицу с указанным *pktable_name* владельцем базы данных. Если такая таблица существует, возвращаются ее столбцы.  
@@ -55,7 +55,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
  [ @pktable_qualifier =] "*pktable_qualifier*"  
  Имя квалификатора таблицы (с первичным ключом). Аргумент *pktable_qualifier* имеет тип sysname и значение по умолчанию NULL. Различные продукты СУБД поддерживают имена таблиц, состоящие из трех частей (*Qualifier.Owner.Name*). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] квалификатор представляет собой имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
   
- [ @fktable_name=] "*fktable_name*"  
+ [ @fktable_name =] "*fktable_name*"  
  Имя таблицы (с внешним ключом), применяемое для возврата сведений о каталоге. Аргумент *fktable_name* имеет тип sysname и значение по умолчанию NULL. Сопоставление по шаблону не поддерживается. Необходимо указать этот параметр, параметр *pktable_name* или оба.  
   
  [ @fktable_owner =] "*fktable_owner*"  
@@ -63,11 +63,11 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если текущему пользователю принадлежит таблица с указанным именем, возвращаются столбцы этой таблицы. Если параметр *fktable_owner* не указан и текущий пользователь не владеет таблицей с указанным *fktable_name*, процедура ищет таблицу с указанным *fktable_name* владельцем базы данных. Если такая таблица существует, возвращаются ее столбцы.  
   
- [ @fktable_qualifier= ] "*fktable_qualifier*"  
+ [ @fktable_qualifier =] "*fktable_qualifier*"  
  Имя квалификатора таблицы (с внешним ключом). Аргумент *fktable_qualifier* имеет тип **sysname**и значение по умолчанию NULL. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] квалификатор представляет собой имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -114,13 +114,13 @@ EXEC sp_fkeys @pktable_name = N'Department'
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- В приведенном ниже примере выводится список внешних ключей для таблицы `DimDate` базы данных `AdventureWorksPDW2012`. Строки не возвращаются, так [!INCLUDE[ssDW](../../includes/ssdw-md.md)] как не поддерживает внешние ключи.  
+ В приведенном ниже примере выводится список внешних ключей для таблицы `DimDate` базы данных `AdventureWorksPDW2012`. Строки не возвращаются, так как не [!INCLUDE[ssDW](../../includes/ssdw-md.md)] поддерживает внешние ключи.  
   
 ```sql  
 EXEC sp_fkeys @pktable_name = N'DimDate;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры каталога &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_pkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  

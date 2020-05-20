@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.server_event_session_targets catalog view
 - xe
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d9d3000b38f8cc59ef1349a1e0cd9219a3eb385f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 707060599513e765e702755251015899eb6732d7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133194"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821805"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68133194"
 |event_session_id|**int**|Идентификатор сеанса событий. Не допускает значение NULL.|  
 |target_id|**int**|Идентификатор цели. Идентификатор уникален внутри объекта сеанса событий. Не допускает значение NULL.|  
 |name|**sysname**|Имя цели события. Не допускает значение NULL.|  
-|пакет|**sysname**|Имя пакета событий, который содержит цель события. Не допускает значение NULL.|  
+|Пакет|**sysname**|Имя пакета событий, который содержит цель события. Не допускает значение NULL.|  
 |module|**sysname**|Имя модуля, который содержит цель события. Не допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
@@ -51,7 +51,7 @@ ms.locfileid: "68133194"
 |Исходный тип|Кому|Связь|  
 |sys.server_event_session_targets.event_session_id|sys. server_event_sessions. event_session_id|Многие к одному|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога расширенных событий &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  

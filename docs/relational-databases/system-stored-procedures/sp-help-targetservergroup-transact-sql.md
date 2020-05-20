@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_targetservergroup
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 63a3d9daa48bb98408c3f0d9b8282e8083849cf0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3329efc6ecb0ed19788138987a0f88210abeaaa3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085076"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820435"
 ---
 # <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ EXEC dbo.sp_help_targetservergroup ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-target-server-group"></a>Б) Вывод сведений об определенной группе целевых серверов  
+### <a name="b-listing-information-for-a-specific-target-server-group"></a>Б. Вывод сведений об определенной группе целевых серверов  
  В этом примере выводятся сведения о целевой серверной группе `Servers Maintaining Customer Information`.  
   
 ```  
@@ -80,7 +80,7 @@ EXEC dbo.sp_help_targetservergroup
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
  [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
  [sp_update_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   

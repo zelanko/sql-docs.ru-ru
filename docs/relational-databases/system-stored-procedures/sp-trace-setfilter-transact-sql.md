@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0f48f7e8dd6e7d8fa57868994f9bcabb66777e90
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d6646bb794b50158035759916ba823c6fca2102
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095941"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820275"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="arguments"></a>Аргументы  
 `[ @traceid = ] trace_id`Идентификатор трассировки, для которой задан фильтр. *trace_id* имеет **тип int**и не имеет значения по умолчанию. Пользователь использует это *trace_id* значение для выявления, изменения и управления трассировкой.  
   
-`[ @columnid = ] column_id`Идентификатор столбца, к которому применяется фильтр. *column_id* имеет **тип int**и не имеет значения по умолчанию. Если *column_id* имеет значение NULL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , очищает все фильтры для указанной трассировки.  
+`[ @columnid = ] column_id`Идентификатор столбца, к которому применяется фильтр. *column_id* имеет **тип int**и не имеет значения по умолчанию. Если *column_id* имеет значение null, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] очищает все фильтры для указанной трассировки.  
   
 `[ @logical_operator = ] logical_operator`Указывает, применяется ли оператор AND (**0**) или OR (**1**). *logical_operator* имеет **тип int**и не имеет значения по умолчанию.  
   
@@ -92,7 +92,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |16|Недопустимая функция для данной трассировки.|  
   
 ## <a name="remarks"></a>Remarks  
- **sp_trace_setfilter** — это [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимая процедура, которая выполняет многие действия, ранее выполненные расширенными хранимыми процедурами, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]доступными в более ранних версиях служб. Используйте **sp_trace_setfilter** вместо **xp_trace_set\*фильтрации** расширенных хранимых процедур для создания, применения и удаления фильтров в трассировке. Дополнительные сведения см. [в разделе Фильтрация трассировки](../../relational-databases/sql-trace/filter-a-trace.md).  
+ **sp_trace_setfilter** — это [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимая процедура, которая выполняет многие действия, ранее выполненные расширенными хранимыми процедурами, доступными в более ранних версиях служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Используйте **sp_trace_setfilter** вместо **xp_trace_set \* фильтрации** расширенных хранимых процедур для создания, применения и удаления фильтров в трассировке. Дополнительные сведения см. [в разделе Фильтрация трассировки](../../relational-databases/sql-trace/filter-a-trace.md).  
   
  Все фильтры для определенного столбца должны быть включены одновременно в одном выполнении **sp_trace_setfilter**. Например, если пользователь собирается применить два фильтра к столбцу имен приложений и один фильтр к столбцу имен пользователей, то ему потребуется указать фильтры для имен приложений последовательно. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает ошибку, когда пользователь пытается указать фильтр по имени приложения в пределах одного хранимого вызова процедуры, за которым указывается фильтр по имени пользователя, после чего — второй фильтр по имени приложения.  
   
@@ -110,7 +110,7 @@ sp_trace_setfilter  1, 10, 0, 6, N'MS%';
 sp_trace_setfilter  1, 11, 0, 0, N'joe';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
  [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [Трассировка SQL](../../relational-databases/sql-trace/sql-trace.md)  

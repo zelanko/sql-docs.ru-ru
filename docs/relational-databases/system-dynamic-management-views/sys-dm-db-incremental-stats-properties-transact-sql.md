@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_incremental_stats_properties
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 17ef15033281f040e00444dfbfc2e739bfa7a338
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1f958e122277e28665b10ff27be4c0224574690d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004922"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820929"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Возвращает свойства добавочной статистики для указанного объекта базы данных (таблицы) из текущей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Использование `sys.dm_db_incremental_stats_properties` (который содержит номер секции) аналогичен `sys.dm_db_stats_properties` , который используется для недобавочной статистики. 
   
-  Эта функция была введена [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] в пакет обновления 2 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] (SP2) и пакет обновления 1 (SP1).
+  Эта функция была введена в [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] пакет обновления 2 (SP2) и [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] пакет обновления 1 (SP1).
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -85,7 +85,7 @@ SELECT * FROM sys.dm_db_incremental_stats_properties (object_id('PartitionTable'
 
 Дополнительные предложения по использованию см. в разделе  [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md).
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [sys. stats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [Динамические административные представления и функции, связанные с объектом, &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   

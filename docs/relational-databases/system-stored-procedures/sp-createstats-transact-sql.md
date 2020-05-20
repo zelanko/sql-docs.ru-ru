@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_createstats
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0bb7d109323f4eb4a33181ab45b4b17d15faf54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0cc6ff854079b740279127000a9edb04552245e1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108616"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820563"
 ---
 # <a name="sp_createstats-transact-sql"></a>Хранимая процедура sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_createstats
 ## <a name="result-sets"></a>Результирующие наборы  
  Каждая новая статистика имеет имя, совпадающее со столбцом, по которому она создается.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  sp_createstats не создает или не обновляет статистику по столбцам, которые являются первым столбцом в существующем объекте статистики;  Сюда входит первый столбец статистики, созданный для индексов, столбцы с статистикой по отдельным столбцам, созданные с помощью AUTO_CREATE_STATISTICS параметр, и первый столбец статистики, созданный с помощью инструкции CREATE STATISTICS. sp_createstats не создает статистику по первым столбцам отключенных индексов, если этот столбец не используется в другом включенном индексе. sp_createstats не создает статистику по таблицам с отключенным кластеризованным индексом.  
   
  Если таблица содержит набор столбцов, то хранимая процедура sp_createstats не создает статистику по разреженным столбцам. Дополнительные сведения о наборах столбцов и разреженных столбцах см. в разделе [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md) и [Использование разреженных столбцов](../../relational-databases/tables/use-sparse-columns.md).  
@@ -80,7 +80,7 @@ EXEC sp_createstats;
 GO  
 ```  
   
-### <a name="b-create-single-column-statistics-on-all-eligible-index-columns"></a>Б) Создание статистики по отдельным столбцам для всех подходящих столбцов индекса  
+### <a name="b-create-single-column-statistics-on-all-eligible-index-columns"></a>Б. Создание статистики по отдельным столбцам для всех подходящих столбцов индекса  
  В следующем примере создается статистика по отдельным столбцам для всех подходящих столбцов, которые включены в индекс, но не являются первыми в индексе.  
   
 ```  
@@ -88,10 +88,10 @@ EXEC sp_createstats 'indexonly';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Статистически](../../relational-databases/statistics/statistics.md)   
  [Создание статистики &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
- [Параметры ALTER DATABASE SET &#40;&#41;Transact-SQL](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [Удаление статистики &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [Обновление статистики &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   

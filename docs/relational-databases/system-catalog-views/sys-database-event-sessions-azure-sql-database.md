@@ -6,27 +6,27 @@ ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
 ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4ef8388e18ee73a0f1217e4e04adc13379892520
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7384cf9bfcf08f307a4e81cb0cdebe78e8011ea3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67915081"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823549"
 ---
 # <a name="sysdatabase_event_sessions-azure-sql-database"></a>sys.database_event_sessions (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Перечисляет все определения сеансов событий, существующие в текущей базе данных, в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+  Перечисляет все определения сеансов событий, существующие в текущей базе данных, в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .  
   
 > [!NOTE]
->  Аналогичное представление каталога с `sys.server_event_sessions` именем применяется только [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]к.  
+>  Аналогичное представление каталога с именем `sys.server_event_sessions` применяется только к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ||  
 |-|  
-|**Применимо к**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]и к любой более поздним версиям.|  
+|**Применимо к**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] и к любой более поздним версиям.|  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "67915081"
 |memory_partition_mode|**nchar (1)**|Местоположение в памяти, в котором созданы буферы событий. Режим раздела памяти по умолчанию — G. Не допускает значения NULL. memory_partition_mode является одним из следующих:<br /><br /> G — NONE;<br /><br /> C — PER_CPU;<br /><br /> N — PER_NODE.|  
 |memory_partition_mode_desc|**sysname**|По умолчанию значение установлено в NONE. Не допускает значение NULL. Принимает одно из следующих значений.<br /><br /> NONE. Внутри экземпляра SQL Server создается один набор буферов.<br /><br /> PER_CPU. Набор буферов создается для каждого ЦП.<br /><br /> PER_NODE. Набор буферов создается для каждого узла неоднородного доступа к памяти (NUMA).|  
 |track_causality|**bit**|Включает или отключает отслеживание причинности. Если установлено значение 1 (ВКЛ.), то отслеживание включено и можно установить соответствие между связанными событиями в различных серверных соединениях. Значение по умолчанию — 0 (ВЫКЛ.). Не допускает значение NULL.|  
-|startup_state|**bit**|Значение определяет, запускается ли сеанс автоматически при запуске сервера. Значение по умолчанию — 0. Не допускает значение NULL. Может принимать одно из следующих значений:<br /><br /> 0 (ВЫКЛ.). Сеанс не запускается автоматически при запуске сервера.<br /><br /> 1 (ВКЛ.). Сеанс событий запускается при запуске сервера.|  
+|startup_state|**bit**|Значение определяет, запускается ли сеанс автоматически при запуске сервера. Значение по умолчанию равно 0. Не допускает значение NULL. Может принимать одно из следующих значений:<br /><br /> 0 (ВЫКЛ.). Сеанс не запускается автоматически при запуске сервера.<br /><br /> 1 (ВКЛ.). Сеанс событий запускается при запуске сервера.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  

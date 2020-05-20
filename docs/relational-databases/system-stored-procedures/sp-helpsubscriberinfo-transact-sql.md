@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscriberinfo
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 38b653dcb51f428692401fb87609187a82449393
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fdb8e596405c9e205ec7a8cd907569644f8c9c5c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771491"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820409"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @subscriber = ] 'subscriber'`Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и значение по **%** умолчанию, которое возвращает всю информацию.  
+`[ @subscriber = ] 'subscriber'`Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает всю информацию.  
   
 `[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**, а значение по умолчанию — имя текущего сервера.  
   
@@ -49,10 +49,10 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**издателя**|**sysname**|Имя издателя.|  
+|**publisher**|**sysname**|Имя издателя.|  
 |**абонент**|**sysname**|Имя подписчика.|  
-|**type**|**tinyint**|Тип подписчика:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] база данных 1 = источник данных ODBC **1** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**login**|**sysname**|Идентификатор входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**type**|**tinyint**|Тип подписчика:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] база данных **1** = источник данных ODBC|  
+|**пользователей**|**sysname**|Идентификатор входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password**|**sysname**|Пароль для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**commit_batch_size**|**int**|Не поддерживается.|  
 |**status_batch_size**|**int**|Не поддерживается.|  
@@ -70,7 +70,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**retryattempt**|**int**|Не поддерживается.|  
 |**retrydelay**|**int**|Не поддерживается.|  
 |**nописание**|**nvarchar(255)**|Текстовое описание подписчика.|  
-|**security_mode**|**int**|Реализованный режим безопасности:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] проверка подлинности Windows|  
+|**security_mode**|**int**|Реализованный режим безопасности:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Проверка подлинности Windows|  
 |**frequency_type2**|**int**|Частота запуска агента слияния:<br /><br /> **1** = один раз<br /><br /> **2** = по запросу<br /><br /> **4** = ежедневно<br /><br /> **8** = еженедельно<br /><br /> **16** = ежемесячно<br /><br /> **32** = ежемесячное относительное<br /><br /> **64** = Автозапуск<br /><br /> **128** = повторяющаяся|  
 |**frequency_interval2**|**int**|Значение, применяемое к частоте, установленной *frequency_type*.|  
 |**frequency_relative_interval2**|**int**|Дата агент слияния, используемая, когда *frequency_type* имеет значение 32 (ежемесячное относительное):<br /><br /> **1** = сначала<br /><br /> **2** = секунда<br /><br /> **4** = третий<br /><br /> **8** = четвертый<br /><br /> **16** = Последняя|  
@@ -91,7 +91,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** или списка доступа к публикации для публикации могут выполнять **sp_helpsubscriberinfo**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_mirroring_connections dynamic management view
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 57987f90552897b57e2efe685a9f7ea95152daa9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bbb92c73f29c55cf30dde68e59489e64859a2267
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090953"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819717"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_connections"></a>Зеркальное отображение базы данных — sys. dm_db_mirroring_connections
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68090953"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|Идентификатор соединения.|  
-|**transport_stream_id**|**uniqueidentifier**|Идентификатор подключения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сетевого интерфейса (SNI), используемого этим подключением для обмена данными по протоколу TCP/IP.|  
+|**transport_stream_id**|**uniqueidentifier**|Идентификатор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключения сетевого интерфейса (SNI), используемого этим подключением для обмена данными по протоколу TCP/IP.|  
 |**state**|**smallint**|Текущее состояние соединения. Возможные значения:<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = ЗАКРЫТО|  
 |**state_desc**|**nvarchar(60)**|Текущее состояние соединения. Возможные значения:<br /><br /> NEW<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|Дата и время открытия соединения.|  
@@ -72,7 +72,7 @@ ms.locfileid: "68090953"
 |----------|--------|------------------|  
 |**dm_db_mirroring_connections.connection_id**|**dm_exec_connections.connection_id**|Один к одному|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Мониторинг зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   

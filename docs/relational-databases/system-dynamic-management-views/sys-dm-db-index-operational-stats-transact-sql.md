@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_index_operational_stats dynamic management function
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8222454d5e016733abef3c086e38add777cd304
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2b473019a20a962a41c44aade08e4a1daa2a765
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004894"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820875"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="arguments"></a>Аргументы    
  *database_id* | NULL | 0 | ПАРАМЕТРЫ    
- Идентификатор базы данных. *database_id* имеет **smallint**. Допустимыми входными значениями являются идентификатор базы данных, NULL, 0 или DEFAULT. Значение по умолчанию — 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.    
+ Идентификатор базы данных. *database_id* имеет **smallint**. Допустимыми входными значениями являются идентификатор базы данных, NULL, 0 или DEFAULT. Значение по умолчанию равно 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.    
     
  Укажите значение NULL, чтобы вернуть сведения для всех баз данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если для *database_id*указано значение null, необходимо также указать значение null для *object_id*, *index_id*и *partition_number*.    
     
@@ -62,7 +62,7 @@ sys.dm_db_index_operational_stats (
  *object_id* | NULL | 0 | ПАРАМЕТРЫ    
  Идентификатор объекта таблицы или представления, которые содержат индекс. *object_id* имеет тип **int**.    
     
- Допустимыми входными значениями являются идентификатор таблицы, NULL, 0 или DEFAULT. Значение по умолчанию — 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.    
+ Допустимыми входными значениями являются идентификатор таблицы, NULL, 0 или DEFAULT. Значение по умолчанию равно 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.    
     
  Укажите значение NULL, чтобы вернуть кэшированные данные для всех таблиц и представлений в указанной базе данных. Если для *object_id*указано значение null, необходимо также указать значение null для *index_id* и *partition_number*.    
     
@@ -72,7 +72,7 @@ sys.dm_db_index_operational_stats (
  Укажите значение NULL, чтобы вернуть кэшированные данные для всех индексов базовой таблицы или представления. Если для *index_id*указано значение null, необходимо также указать значение null для *partition_number*.    
     
  *partition_number* | NULL | 0 | ПАРАМЕТРЫ    
- Номер секции в объекте. *partition_number* имеет **тип int**. Допустимыми входными значениями являются *partion_number* индекса, КУЧИ, null, 0 или Default. Значение по умолчанию — 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.    
+ Номер секции в объекте. *partition_number* имеет **тип int**. Допустимыми входными значениями являются *partion_number* индекса, КУЧИ, null, 0 или Default. Значение по умолчанию равно 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.    
     
  Укажите NULL, чтобы возвратить кэшированные данные для всех секций индекса или кучи.    
     
@@ -86,7 +86,7 @@ sys.dm_db_index_operational_stats (
 |**object_id**|**int**|Идентификатор таблицы или представления.|    
 |**index_id**|**int**|Идентификатор индекса или кучи.<br /><br /> 0 = куча;| 
 |**partition_number**|**int**|Номер секции внутри индекса или кучи (нумерация начинается с 1).| 
-|**hobt_id**|**bigint**|**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)],.<br /><br /> Идентификатор набора строк куча или сбалансированное дерево данных, который отслеживает внутренние данные для индекса columnstore.<br /><br /> NULL — это не внутренний набор строк columnstore.<br /><br /> Дополнительные сведения см. в разделе [sys. internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
+|**hobt_id**|**bigint**|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> Идентификатор набора строк куча или сбалансированное дерево данных, который отслеживает внутренние данные для индекса columnstore.<br /><br /> NULL — это не внутренний набор строк columnstore.<br /><br /> Дополнительные сведения см. в разделе [sys. internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|Совокупное количество вставок конечного уровня.|    
 |**leaf_delete_count**|**bigint**|Совокупное количество удалений конечного уровня. leaf_delete_count увеличивается только для удаленных записей, которые сначала не помечены как фантомные. Для удаленных записей, которые сначала являются фантомными, **leaf_ghost_count** увеличивается.|    
 |**leaf_update_count**|**bigint**|Совокупное количество обновлений конечного уровня.|    
@@ -180,7 +180,7 @@ sys.dm_db_index_operational_stats (
  Значения для каждого столбца устанавливаются в нуль всякий раз, когда метаданные для кучи или индекса заносятся в кэш метаданных, и статистические данные накапливаются, пока объект кэша не удаляется из кэша метаданных. Поэтому активная куча или индекс будут, вероятно, всегда иметь эти метаданные в кэше, и совокупные значения количества могут отражать активность с момента последнего запуска экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Метаданные для менее активной кучи или индекса будут перемещаться в кэш и из него по мере их использования. В результате метаданные могут иметь или не иметь действительных значений. Удаление индекса приведет к удалению соответствующих статистических данных из памяти, и они больше не будут передаваться функцией. При других DDL-операциях с индексом может произойти обнуление статистических данных.    
     
 ## <a name="using-system-functions-to-specify-parameter-values"></a>Использование системных функций для указания значений параметров    
- Можно [!INCLUDE[tsql](../../includes/tsql-md.md)] использовать функции [DB_ID](../../t-sql/functions/db-id-transact-sql.md) и [object_id](../../t-sql/functions/object-id-transact-sql.md) , чтобы указать значения для параметров *database_id* и *object_id* . Однако передавая значения, которые не допустимы для этих функций, можно получить неожиданные результаты. Всегда следует проверять, что функции DB_ID и OBJECT_ID возвращают допустимый идентификатор. Дополнительные сведения см. в подразделе "Примечания" статьи [sys. dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
+ Можно использовать [!INCLUDE[tsql](../../includes/tsql-md.md)] функции [DB_ID](../../t-sql/functions/db-id-transact-sql.md) и [object_id](../../t-sql/functions/object-id-transact-sql.md) , чтобы указать значения для параметров *database_id* и *object_id* . Однако передавая значения, которые не допустимы для этих функций, можно получить неожиданные результаты. Всегда следует проверять, что функции DB_ID и OBJECT_ID возвращают допустимый идентификатор. Дополнительные сведения см. в подразделе "Примечания" статьи [sys. dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
     
 ## <a name="permissions"></a>Разрешения    
  Необходимы следующие разрешения:    
@@ -226,7 +226,7 @@ GO
     
 ```    
     
-### <a name="b-returning-information-for-all-tables-and-indexes"></a>Б) Возвращение сведений для всех таблиц и индексов    
+### <a name="b-returning-information-for-all-tables-and-indexes"></a>Б. Возвращение сведений для всех таблиц и индексов    
  В следующем примере возвращаются сведения по всем таблицам и индексам в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Выполнение этого запроса требует разрешения VIEW SERVER STATE.    
     
 ```    
@@ -235,10 +235,10 @@ GO
     
 ```    
     
-## <a name="see-also"></a>См. также:    
+## <a name="see-also"></a>См. также    
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
  [Динамические административные представления и функции, связанные с индексами &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
- [Мониторинг и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
+ [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
  [sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
  [sys. dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     

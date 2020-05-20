@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_column
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 724c3b71012014d6858554614fbed9239bbfeddc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124341"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820460"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -58,10 +58,10 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**add**|Добавляет *column_name* *qualified_table_name* в неактивный полнотекстовый индекс таблицы. Это действие активирует полнотекстовое индексирование столбца.|  
+|**добавление**|Добавляет *column_name* *qualified_table_name* в неактивный полнотекстовый индекс таблицы. Это действие активирует полнотекстовое индексирование столбца.|  
 |**тени**|Удаляет *column_name* *qualified_table_name* из неактивного полнотекстового индекса таблицы.|  
   
-`[ @language = ] 'language_term'`Язык данных, хранящихся в столбце. Список языков, входящих в состав, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в разделе [sys. Fulltext_languages &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+`[ @language = ] 'language_term'`Язык данных, хранящихся в столбце. Список языков, входящих в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , см. в разделе [sys. fulltext_languages &#40;&#41;TRANSACT-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 > [!NOTE]  
 >  Указывайте значение «Neutral», если столбец содержит данные на нескольких языках или на языке, который не поддерживается. Значение по умолчанию задается параметром конфигурации «default full-text language».  
@@ -112,7 +112,7 @@ WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')
 > [!NOTE]  
 >  Все столбцы, перечисленные в одной функции предложения полнотекстового запроса, должны быть на одном языке.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_help_fulltext_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
  [sp_help_fulltext_columns_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   

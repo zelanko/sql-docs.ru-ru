@@ -16,14 +16,14 @@ helpviewer_keywords:
 - ghost records
 - sp_clean_db_file_free_space
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c788d78dac45f2371829bb450ac98c94164d97ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1761c3546d043dd74a3fe2b491618140635fe61c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070391"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823462"
 ---
 # <a name="sp_clean_db_file_free_space-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_clean_db_file_free_space
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @dbname= ] "*database_name*"  
+ [ @dbname =] "*database_name*"  
  Имя очищаемой базы данных. Аргумент *dbname* имеет тип **sysname** и не может иметь значение null.  
   
- [ @fileid= ] "*file_number*"  
+ [ @fileid =] "*file_number*"  
  Идентификатор очищаемого файла данных. *file_number* имеет **тип int** и не может иметь значение null.  
   
- [ @cleaning_delay= ] "*delay_in_seconds*"  
+ [ @cleaning_delay =] "*delay_in_seconds*"  
  Интервал задержки между операциями очистки страниц. Применение задержки помогает уменьшить нагрузку на систему ввода-вывода. *delay_in_seconds* имеет **тип int** и значение по умолчанию 0.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -77,7 +77,7 @@ EXEC sp_clean_db_file_free_space
 @dbname = N'AdventureWorks2012', @fileid = 1 ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
  <br>[Обзор процесса очистки фантомных записей](../ghost-record-cleanup-process-guide.md) 
   

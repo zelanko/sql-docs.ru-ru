@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_purge_jobhistory
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad5e7a1d03dde408da52ca2b5ebe6b40f10c06c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64832f713153e6eaed126e30a2a0fd56c38a4bc6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313759"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820369"
 ---
 # <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ sp_purge_jobhistory
 > [!NOTE]  
 >  Члены предопределенной роли сервера **sysadmin** или члены предопределенной роли базы данных **SQLAgentOperatorRole** могут выполнять **sp_purge_jobhistory** без указания *job_name* или *job_id*. Если пользователи **sysadmin** не указали эти аргументы, журнал заданий для всех локальных и многосерверных заданий удаляется в течение времени, указанного в *oldest_date*. Если пользователи **SQLAgentOperatorRole** не указывают эти аргументы, журнал заданий для всех локальных заданий удаляется в течение времени, заданного *oldest_date*.  
   
-`[ @job_id = ] job_id`Идентификационный номер задания для удаляемых записей. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL. Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения. Сведения о том, как пользователи **sysadmin** и **SQLAgentOperatorRole** могут использовать этот аргумент, см. в примечании в описании ** \@job_name** .  
+`[ @job_id = ] job_id`Идентификационный номер задания для удаляемых записей. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL. Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения. Сведения о том, как пользователи **sysadmin** и **SQLAgentOperatorRole** могут использовать этот аргумент, см. в примечании в описании ** \@ job_name** .  
   
 `[ @oldest_date = ] oldest_date`Самая старая запись, сохраняемая в журнале. *oldest_date* имеет тип **DateTime**и значение по умолчанию NULL. Если указано *oldest_date* , **sp_purge_jobhistory** удаляет только записи, которые старше указанного значения.  
   
@@ -82,7 +82,7 @@ EXEC dbo.sp_purge_jobhistory
 GO  
 ```  
   
-### <a name="b-remove-history-for-all-jobs"></a>Б) Удаление записи журналов для всех заданий  
+### <a name="b-remove-history-for-all-jobs"></a>Б. Удаление записи журналов для всех заданий  
   
 > [!NOTE]  
 >  Только члены предопределенной роли сервера **sysadmin** и члены **SQLAgentOperatorRole** могут удалять журналы для всех заданий. Когда пользователь **sysadmin** выполняет эту хранимую процедуру без параметров, журнал заданий для всех локальных и многосерверных заданий очищается. Когда **SQLAgentOperatorRole** пользователи выполняют эту хранимую процедуру без параметров, очищаются только журнал заданий для всех локальных заданий.  
@@ -97,7 +97,7 @@ EXEC dbo.sp_purge_jobhistory ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_help_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

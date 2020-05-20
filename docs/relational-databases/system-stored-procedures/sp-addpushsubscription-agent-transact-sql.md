@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpushsubscription_agent
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 740437178b6d9ab444cabdbda3e37febc65b3897
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68894044"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820714"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @subscriber_db = ] 'subscriber_db'`Имя базы данных подписки. Аргумент *subscriber_db* имеет тип **sysname**и значение по умолчанию NULL. Для подписчика, не являющегося SQL Server, укажите значение **(назначение по умолчанию)** для *subscriber_db*.  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`Режим безопасности, используемый при соединении с подписчиком при синхронизации. *subscriber_security_mode* имеет **тип int**и значение по умолчанию 1. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности. **1** указывает проверку подлинности Windows.  
+`[ @subscriber_security_mode = ] subscriber_security_mode`Режим безопасности, используемый при соединении с подписчиком при синхронизации. *subscriber_security_mode* имеет **тип int**и значение по умолчанию 1. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности. **1** указывает проверку подлинности Windows.  
   
 > [!IMPORTANT]  
 >  Для обновляемых посредством очередей подписок при соединении с подписчиками используйте проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], указывая для каждого из подписчиков различные учетные записи. Для всех других подписок используйте проверку подлинности Windows.  
@@ -103,8 +103,8 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**1**|Один раз.|  
 |**2**|По запросу|  
 |**4**|Ежедневно|  
-|**8**|Weekly (Еженедельно);|  
-|**16**|Ежемесячно|  
+|**8**|Еженедельно|  
+|**глубин**|Ежемесячно|  
 |**32**|Ежемесячно с относительной датой|  
 |**64** (по умолчанию)|Автозапуск|  
 |**128**|Повторяющееся задание|  
@@ -122,7 +122,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
-|**16**|Последний|  
+|**глубин**|Последний|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию 0.  
   
@@ -154,13 +154,13 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @dts_package_location = ] 'dts_package_location'`Указывает расположение пакета. *dts_package_location* имеет тип **nvarchar (12)** и значение по умолчанию распространителя. Расположение пакета может быть **распространителем** или **подписчиком**.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Указывает, можно ли синхронизировать подписку с [!INCLUDE[msCoName](../../includes/msconame-md.md)] помощью диспетчера синхронизации. *enabled_for_syncmgr* имеет тип **nvarchar (5)** и значение по умолчанию false. Если **значение равно false**, подписка не зарегистрирована в диспетчере синхронизации. Если **значение — true**, подписка регистрируется в диспетчере синхронизации и может быть синхронизирована [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]без запуска.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Указывает, можно ли синхронизировать подписку с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчера синхронизации. *enabled_for_syncmgr* имеет тип **nvarchar (5)** и значение по умолчанию false. Если **значение равно false**, подписка не зарегистрирована в диспетчере синхронизации. Если **значение — true**, подписка регистрируется в диспетчере синхронизации и может быть синхронизирована без запуска [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @distribution_job_name = ] 'distribution_job_name'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 `[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @subscriber_provider = ] 'subscriber_provider'`Уникальный программный идентификатор (PROGID), с которым регистрируется поставщик OLE DB для источника, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не являющегося источником данных. Аргумент *subscriber_provider* имеет тип **sysname**и значение по умолчанию NULL. *subscriber_provider* должны быть уникальными для поставщика OLE DB, установленного на распространителе. *subscriber_provider* поддерживается только для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, отличных от.  
+`[ @subscriber_provider = ] 'subscriber_provider'`Уникальный программный идентификатор (PROGID), с которым регистрируется поставщик OLE DB для источника, не являющегося [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источником данных. Аргумент *subscriber_provider* имеет тип **sysname**и значение по умолчанию NULL. *subscriber_provider* должны быть уникальными для поставщика OLE DB, установленного на распространителе. *subscriber_provider* поддерживается только для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, отличных от.  
   
 `[ @subscriber_datasrc = ] 'subscriber_datasrc'`Имя источника данных, понятное поставщику OLE DB. *subscriber_datasrc* имеет тип **nvarchar (4000)** и значение по умолчанию NULL. *subscriber_datasrc* передается как свойство DBPROP_INIT_DATASOURCE для инициализации поставщика OLE DB. *subscriber_datasrc* поддерживается только для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, отличных от.  
   
@@ -173,7 +173,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_addpushsubscription_agent** используется в репликации моментальных снимков и репликации транзакций.  
   
 ## <a name="example"></a>Пример  
@@ -182,7 +182,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_addpushsubscription_agent**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание принудительной подписки](../../relational-databases/replication/create-a-push-subscription.md)   
  [Создание подписки для подписчика, не являющегося SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5e6e7232d718d5cf6cb1791783f105f31dc2f4ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3ae6596579942a3292c3467f4d3489346eb4aa42
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769102"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820680"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -97,16 +97,16 @@ sp_addpublication [ @publication = ] 'publication'
 |**символов**|Производит выходные данные программы массового копирования всех таблиц в символьном режиме. _Для издателя Oracle_ **символ** _допустим только для репликации моментальных снимков_.|  
 |**одновременных**|Создает собственный программный вывод массового копирования всех таблиц, но не блокирует таблицы во время формирования моментальных снимков. Поддерживается только для публикаций транзакций. *Не поддерживается для издателей Oracle*.|  
 |**concurrent_c**|Создает символьный программный вывод массового копирования всех таблиц, но не блокирует таблицы во время формирования моментальных снимков. Поддерживается только для публикаций транзакций.|  
-|**моментальный снимок базы данных**|Производит выходные данные программы массового копирования всех таблиц в моментальном снимке базы данных. Моментальные снимки базы данных доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживаемых различными выпусками, см. [в разделе функции, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
-|**database snapshot character**|Производит выходные данные программы массового копирования в символьном режиме всех таблиц в моментальном снимке базы данных. Моментальные снимки базы данных доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживаемых различными выпусками, см. [в разделе функции, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
-|NULL (по умолчанию)|По умолчанию **native** используется Native [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для издателей. Для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от, по умолчанию используется **символьный** , если значение *repl_freq* — **snapshot** , а для **Concurrent_c** во всех остальных случаях.|  
+|**моментальный снимок базы данных**|Производит выходные данные программы массового копирования всех таблиц в моментальном снимке базы данных. Моментальные снимки базы данных доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
+|**database snapshot character**|Производит выходные данные программы массового копирования в символьном режиме всех таблиц в моментальном снимке базы данных. Моментальные снимки базы данных доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
+|NULL (по умолчанию)|По умолчанию используется **native** для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей. Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от, по умолчанию используется **символьный** , если значение *repl_freq* — **snapshot** , а для **Concurrent_c** во всех остальных случаях.|  
   
 `[ \@repl_freq = ] 'repl_freq'`Тип частоты репликации, *repl_freq* — **nvarchar (10)** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**Непрерывная** (по умолчанию)|Издатель предоставляет выходные данные всех транзакций, записываемых в журнал. Для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, не относящихся к, это требует, чтобы для *sync_method* было установлено значение **Concurrent_c**.|  
-|**обновляем**|Издатель предоставляет только запланированные события синхронизации. Для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от, это требует, чтобы *sync_method* были установлены в **символьный**.|  
+|**Непрерывная** (по умолчанию)|Издатель предоставляет выходные данные всех транзакций, записываемых в журнал. Для издателей, не относящихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к, это требует, чтобы для *sync_method* было установлено значение **Concurrent_c**.|  
+|**обновляем**|Издатель предоставляет только запланированные события синхронизации. Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от, это требует, чтобы *sync_method* были установлены в **символьный**.|  
   
 `[ \@description = ] 'description'`Необязательное описание публикации. *Description* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
   
@@ -148,7 +148,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@allow_queued_tran = ] 'allow_queued_updating'`Включает или отключает очередь изменений на подписчике, пока они не могут быть применены на издателе. *allow_queued_updating* имеет тип **nvarchar (5)** и значение по умолчанию false. Если **значение равно false**, изменения на подписчике не помещаются в очередь. **значение true** *не поддерживается для издателей Oracle*.  
   
-`[ \@snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'`Указывает, хранятся ли файлы моментальных снимков в папке по умолчанию. *snapshot_in_default_folder* имеет тип **nvarchar (5)** и значение по умолчанию true. Если **значение — true**, файлы моментальных снимков можно найти в папке по умолчанию. Если **значение равно false**, файлы моментальных снимков хранились в альтернативном расположении, указанном *alternate_snapshot_folder*. Другим местом может быть другой сервер, сетевой диск или съемный носитель (такой как компакт-диск или съемные диски). Файлы моментальных снимков можно также хранить на FTP-сайте, откуда подписчик позже может их получить. Обратите внимание, что этот параметр может иметь значение true и по-прежнему иметь расположение в параметре ** \@alt_snapshot_folder** . Это сочетание размещает файлы моментальных снимков одновременно и в месте по умолчанию, и в альтернативном месте.  
+`[ \@snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'`Указывает, хранятся ли файлы моментальных снимков в папке по умолчанию. *snapshot_in_default_folder* имеет тип **nvarchar (5)** и значение по умолчанию true. Если **значение — true**, файлы моментальных снимков можно найти в папке по умолчанию. Если **значение равно false**, файлы моментальных снимков хранились в альтернативном расположении, указанном *alternate_snapshot_folder*. Другим местом может быть другой сервер, сетевой диск или съемный носитель (такой как компакт-диск или съемные диски). Файлы моментальных снимков можно также хранить на FTP-сайте, откуда подписчик позже может их получить. Обратите внимание, что этот параметр может иметь значение true и по-прежнему иметь расположение в параметре ** \@ alt_snapshot_folder** . Это сочетание размещает файлы моментальных снимков одновременно и в месте по умолчанию, и в альтернативном месте.  
   
 `[ \@alt_snapshot_folder = ] 'alternate_snapshot_folder'`Указывает расположение альтернативной папки для моментального снимка. *alternate_snapshot_folder* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
   
@@ -156,7 +156,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@post_snapshot_script = ] 'post_snapshot_script'`Задает указатель на расположение файла **SQL** . *post_snapshot_script* имеет тип **nvarchar (255)** и значение по умолчанию NULL. Агент распространителя запускает заключительный скрипт после применения скриптов и данных всех реплицируемых объектов во время первоначальной синхронизации. Скрипт выполняется в контексте безопасности, использованном для агента распространителя при подключении к базе данных подписки.  
   
-`[ \@compress_snapshot = ] 'compress_snapshot'`Указывает, что моментальный снимок, записываемый в ** \@alt_snapshot_folder** расположение, должен быть сжат в [!INCLUDE[msCoName](../../includes/msconame-md.md)] формате CAB. *compress_snapshot* имеет тип **nvarchar (5)** и значение по умолчанию false. **значение false** указывает, что моментальный снимок не будет сжиматься. **значение true** указывает, что моментальный снимок будет сжат. Нельзя сжать моментальные снимки размером более 2 гигабайт (ГБ). Сжатые файлы моментальных снимков распаковываются в расположении запуска агента распространителя. Со сжатыми моментальными снимками обычно используются подписки по запросу, чтобы сжатые файлы распаковывались на подписчике. Моментальный снимок в папке по умолчанию сжать нельзя.  
+`[ \@compress_snapshot = ] 'compress_snapshot'`Указывает, что моментальный снимок, записываемый в ** \@ alt_snapshot_folder** расположение, должен быть сжат в [!INCLUDE[msCoName](../../includes/msconame-md.md)] формате CAB. *compress_snapshot* имеет тип **nvarchar (5)** и значение по умолчанию false. **значение false** указывает, что моментальный снимок не будет сжиматься. **значение true** указывает, что моментальный снимок будет сжат. Нельзя сжать моментальные снимки размером более 2 гигабайт (ГБ). Сжатые файлы моментальных снимков распаковываются в расположении запуска агента распространителя. Со сжатыми моментальными снимками обычно используются подписки по запросу, чтобы сжатые файлы распаковывались на подписчике. Моментальный снимок в папке по умолчанию сжать нельзя.  
   
 `[ \@ftp_address = ] 'ftp_address'`Сетевой адрес службы FTP для распространителя. Аргумент *ftp_address* имеет тип **sysname**и значение по умолчанию NULL. Указывает расположение файлов моментальных снимков публикаций для агента распространителя или агента слияния подписчика. Так как это свойство хранится для каждой публикации, каждая публикация может иметь разные *ftp_address*. Публикация должна поддерживать распространение моментальных снимков с помощью протокола FTP.  
   
@@ -194,7 +194,7 @@ sp_addpublication [ @publication = ] 'publication'
 |Значение|Описание|  
 |-----------|-----------------|  
 |**SQL**|Для хранения транзакций используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|NULL (по умолчанию)|По умолчанию используется значение **SQL**, которое указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , что следует использовать для хранения транзакций.|  
+|NULL (по умолчанию)|По умолчанию используется значение **SQL**, которое указывает, что следует использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения транзакций.|  
   
 > [!NOTE]  
 >  Поддержка использования [!INCLUDE[msCoName](../../includes/msconame-md.md)] очереди сообщений прекращена. Указание значения **MSMQ** приведет к появлению предупреждения, и репликация автоматически установит значение **SQL**.  
@@ -207,7 +207,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@qreader_job_name = ] 'queue_reader_agent_name'`Имя существующего задания агента. Аргумент *queue_reader_agent_name* имеет тип **sysname**и значение по умолчанию NULL. Он указывается, только если агент чтения очереди будет использовать существующее задание, а не создающееся заново.  
   
-`[ \@publisher = ] 'publisher'`Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ \@publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *Издатель* не следует использовать при добавлении публикации в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издатель.  
@@ -225,13 +225,13 @@ sp_addpublication [ @publication = ] 'publication'
 > [!WARNING]  
 >  Чтобы предотвратить отсутствие данных подписчика, при использовании процедуры **sp_addpublication** с `@allow_initialize_from_backup = N'true'`всегда используйте `@immediate_sync = N'true'`.  
   
-`[ \@replicate_ddl = ] replicate_ddl`Указывает, поддерживается ли репликация схемы для публикации. *replicate_ddl* имеет **тип int**и значение по умолчанию **1** для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей и **0** для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от. **1** указывает, что инструкции языка описания данных DDL, выполняемые на издателе, реплицируются, а **0** означает, что инструкции DDL не реплицируются. *Репликация схемы не поддерживается для издателей Oracle.* Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+`[ \@replicate_ddl = ] replicate_ddl`Указывает, поддерживается ли репликация схемы для публикации. *replicate_ddl* имеет **тип int**и значение по умолчанию **1** для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей и **0** для издателей, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **1** указывает, что инструкции языка описания данных DDL, выполняемые на издателе, реплицируются, а **0** означает, что инструкции DDL не реплицируются. *Репликация схемы не поддерживается для издателей Oracle.* Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
- Параметр * \@replicate_ddl* учитывается, когда инструкция DDL добавляет столбец. Параметр * \@replicate_ddl* игнорируется, если инструкция DDL изменяет или удаляет столбец по следующим причинам.  
+ Параметр * \@ replicate_ddl* учитывается, когда инструкция DDL добавляет столбец. Параметр * \@ replicate_ddl* игнорируется, если инструкция DDL изменяет или удаляет столбец по следующим причинам.  
   
--   При удалении столбца столбцы sysarticlecolumns должны обновляться, чтобы новые инструкции DML не включали удаленный столбец, из-за чего работа агента распространителя завершилась бы ошибкой. Параметр * \@replicate_ddl* игнорируется, так как репликация должна всегда реплицировать изменения схемы.  
+-   При удалении столбца столбцы sysarticlecolumns должны обновляться, чтобы новые инструкции DML не включали удаленный столбец, из-за чего работа агента распространителя завершилась бы ошибкой. Параметр * \@ replicate_ddl* игнорируется, так как репликация должна всегда реплицировать изменения схемы.  
   
--   Когда в столбец вносится изменение, исходный тип данных или возможность допустимости значения NULL может измениться, в результате чего инструкции DML будут содержать значение, которое может быть несовместимым с таблицей на подписчике. Такие инструкции DML могут привести к тому, что работа агента распространителя завершится ошибкой. Параметр * \@replicate_ddl* игнорируется, так как репликация должна всегда реплицировать изменения схемы.  
+-   Когда в столбец вносится изменение, исходный тип данных или возможность допустимости значения NULL может измениться, в результате чего инструкции DML будут содержать значение, которое может быть несовместимым с таблицей на подписчике. Такие инструкции DML могут привести к тому, что работа агента распространителя завершится ошибкой. Параметр * \@ replicate_ddl* игнорируется, так как репликация должна всегда реплицировать изменения схемы.  
   
 -   Когда инструкция DDL добавляет новый столбец, в столбцах sysarticlecolumns этого нового столбца нет. Инструкции DML не будут пытаться реплицировать данные для этого нового столбца. Этот параметр учитывается потому, что допустимо как выполнение, так и не выполнение репликации DDL.  
   
@@ -259,7 +259,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@publish_local_changes_only = ] 'publish_local_changes_only'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ \@enabled_for_het_sub = ] 'enabled_for_het_sub'`Позволяет публикации поддерживать[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, отличных от. *enabled_for_het_sub* имеет тип **nvarchar (5)** и значение по умолчанию false. Значение **true** означает, что публикация поддерживает[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, отличных от. Если *enabled_for_het_sub* имеет **значение true**, применяются следующие ограничения.  
+`[ \@enabled_for_het_sub = ] 'enabled_for_het_sub'`Позволяет публикации поддерживать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, отличных от. *enabled_for_het_sub* имеет тип **nvarchar (5)** и значение по умолчанию false. Значение **true** означает, что публикация поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, отличных от. Если *enabled_for_het_sub* имеет **значение true**, применяются следующие ограничения.  
   
 -   значение *allow_initialize_from_backup* должно быть **равно false**.  
   
@@ -321,7 +321,7 @@ sp_addpublication [ @publication = ] 'publication'
   
  Если существует несколько публикаций, которые публикуют один и тот же объект базы данных, только публикации с *replicate_ddl* значением **1** будут реплицировать инструкции ALTER TABLE, ALTER VIEW, ALTER PROCEDURE, ALTER FUNCTION и ALTER TRIGGER DDL. Однако инструкция ALTER TABLE DROP COLUMN DDL будет реплицирована всеми публикациями, публикующими столбец, который был удален.  
   
- При включенной репликации DDL (*replicate_ddl* = **1**) для публикации, чтобы не выполнять репликацию изменений DDL в публикацию, необходимо сначала выполнить [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) , чтобы установить значение *replicate_ddl* равным **0**. После выполнения нереплицируемых инструкций DDL можно снова выполнить [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) , чтобы снова включить репликацию DDL.  
+ При включенной репликации DDL (*replicate_ddl*  =  **1**) для публикации, чтобы не выполнять репликацию изменений DDL в публикацию, необходимо сначала выполнить [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) , чтобы установить значение *replicate_ddl* равным **0**. После выполнения нереплицируемых инструкций DDL можно снова выполнить [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) , чтобы снова включить репликацию DDL.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_AddTranPub](../../relational-databases/replication/codesnippet/tsql/sp-addpublication-transa_1.sql)]  
@@ -329,7 +329,7 @@ sp_addpublication [ @publication = ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_addpublication**. Имена входа, используемые для проверки подлинности Windows, должны иметь учетные записи пользователей в базе данных, представляющие их учетные записи пользователей Windows. Учетной записи пользователя, представляющей группу Windows, недостаточно.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
  [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   

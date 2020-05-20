@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_stored_procedures
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 865e86976a6da117d41ba2f22020f7137dee5038
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68702787"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820279"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 
@@ -64,7 +64,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
  **1** = сопоставление по шаблону включено.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -100,7 +100,7 @@ GO
 EXEC sp_stored_procedures;  
 ```  
   
-### <a name="b-returning-a-single-stored-procedure"></a>Б) Возвращение одной хранимой процедуры  
+### <a name="b-returning-a-single-stored-procedure"></a>Б. Возвращение одной хранимой процедуры  
  В следующем примере возвращается результирующий набор для хранимой процедуры `uspLogError`.  
   
 ```  
@@ -109,7 +109,7 @@ GO
 sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры каталога &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
