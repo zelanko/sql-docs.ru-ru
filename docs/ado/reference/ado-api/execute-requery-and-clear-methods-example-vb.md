@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Clear method [ADO], Visual Basic example
 - Execute method [ADO], Visual Basic example
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eff8b97d1248acaae23f5bcd21e050da61cf4346
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0ac9a84c9b4780ad149d3c614b9e3c52494ace8b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932886"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760170"
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>Примеры методов Execute, Requery и Clear (Visual Basic)
 В этом примере демонстрируется метод **EXECUTE** при запуске из объекта [команды](../../../ado/reference/ado-api/command-object-ado.md) и объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) . Он также использует метод [Requery](../../../ado/reference/ado-api/requery-method.md) для получения текущих данных в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md)и метод [clear](../../../ado/reference/ado-api/clear-method-ado.md) для очистки содержимого коллекции [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) . (Доступ к коллекции **Errors** осуществляется через объект **Connection** свойства [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md).) Для выполнения этой процедуры требуются процедуры ExecuteCommand и Принтаутпут.  
@@ -167,7 +167,7 @@ End Sub
 'EndExecuteVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

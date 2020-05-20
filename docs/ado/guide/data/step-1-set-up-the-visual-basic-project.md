@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd44990c38a30f26e682fbb7f1f6aef642043215
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 12c31fcd18918b05626dc1dda817bb524bca9449
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924076"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760810"
 ---
 # <a name="step-1-set-up-the-visual-basic-project"></a>Шаг 1. Настройка проекта Visual Basic
 В этом сценарии предполагается, что у вас есть Microsoft Visual Basic 6,0, ADO 2,5 или более поздней версии и поставщик Microsoft OLE DB для публикации в Интернете в системе. Сначала необходимо создать новый проект, а затем добавить некоторые элементы управления в форму по умолчанию в проекте.  
@@ -36,6 +36,6 @@ ms.locfileid: "67924076"
   
 3.  Добавьте элемент управления TextBox в форму Form1. Присвойте свойству Name значение **ткстдетаилс**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сценарий публикации в Интернете](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Шаг 2. Инициализация главного списка](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)

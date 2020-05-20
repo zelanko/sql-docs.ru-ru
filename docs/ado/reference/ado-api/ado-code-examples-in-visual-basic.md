@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ADO code examples, Visual Basic
 ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2c21f18d403817acb536367df97c8b555a4c8b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f09b1827ae26f5ba8b8168e9c53809120bce6133
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921196"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760580"
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Примеры кода ADO в Visual Basic
 Используйте приведенные ниже примеры кода, чтобы научиться использовать методы, свойства и события ADO при записи в Visual Basic.  
@@ -155,7 +155,7 @@ ms.locfileid: "67921196"
   
 -   [Пример свойства Version](../../../ado/reference/ado-api/version-property-example-vb.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры кода ADO VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Примеры кода ADO в Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
  [Приложение Г. Образцы объектов ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

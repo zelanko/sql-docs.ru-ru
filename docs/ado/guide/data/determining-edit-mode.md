@@ -11,14 +11,14 @@ helpviewer_keywords:
 - editing data [ADO], edit mode
 - ADO, editing data
 ms.assetid: 4c7e010d-08cd-4e22-9b32-23c36f02f88c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22e63bad49586bbbc1a5616114055779cd3ea041
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6df3765b8dd9461349937fc14f6edebcaab3fbfb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925547"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761080"
 ---
 # <a name="determining-edit-mode"></a>Определение режима изменения
 ADO поддерживает буфер редактирования, связанный с текущей записью. Свойство **EditMode** указывает, были ли внесены изменения в этот буфер или создана ли новая запись. Используйте **EditMode** , чтобы определить состояние редактирования текущей записи. Вы можете проверить наличие ожидающих изменений в случае, если процесс редактирования был прерван, и определить, нужно ли использовать метод **Update** или **CancelUpdate** .  

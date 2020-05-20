@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Source property [ADO], VC++ example
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da0bfacc4ab64929bcd37051efa9d36944871253
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0d7d5fb516e1ec8ed5eb68f3fccdc834e0a06259
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930887"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759790"
 ---
 # <a name="source-property-example-vc"></a>Пример свойства Source (Visual C++)
 В этом примере показано свойство [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) , открывающее три объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе различных источников данных.  
@@ -156,6 +156,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство Source (объект Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

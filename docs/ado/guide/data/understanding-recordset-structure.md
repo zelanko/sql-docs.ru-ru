@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: 3ef36d24-f121-4a5f-84ad-5fc84992e81d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b118feb24ab22346c8bb28c37eded49b1679df9d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 963077a9dd5e7542fe8bc20d498019d07a1c15d7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923738"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759010"
 ---
 # <a name="understanding-recordset-structure"></a>Основные сведения о структуре набора записей
 Каждый **набор записей** содержит коллекцию **Fields** , состоящую из одного или нескольких объектов **field** . Объект **поля** обычно представляет столбец таблицы. В следующих разделах объясняется, как перемещаться по коллекции **Fields** и получать сведения о каждом поле. Затем они обсуждают, какие сведения доступны через объект **field** и как его использовать.  

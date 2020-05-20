@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ADO code examples, Visual C++
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7741b6757cef08dcc4d5a05574f22c4f4538d97f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ac6e639001c84142604ca54664784922da05d682
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921180"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760570"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Примеры кода ADO в Visual C++
 Используйте приведенные ниже примеры кода, чтобы научиться использовать методы, свойства и события ADO при записи в Microsoft Visual C++.  
@@ -141,11 +141,11 @@ ms.locfileid: "67921180"
   
 -   [Пример свойства Version](../../../ado/reference/ado-api/version-property-example-vc.md)  
   
-## <a name="other"></a>Другой  
+## <a name="other"></a>Другие  
   
 -   [Пример модели событий ADO](../../../ado/reference/ado-api/ado-events-model-example-vc.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры кода ADO в Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [Примеры кода ADO VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Приложение Г. Образцы объектов ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

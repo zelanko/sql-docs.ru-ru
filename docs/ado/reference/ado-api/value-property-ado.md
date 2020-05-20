@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Value property [ADO]
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e35dd93e6d90a81934d8f272ea79c5eb7c8a97c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6648fcabe8890ef653558636738735a4f5e4012f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67913921"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759450"
 ---
 # <a name="value-property-ado"></a>Свойство Value (ADO)
 
@@ -50,5 +50,5 @@ ADO позволяет задавать и возвращать длинные �
   
 ## <a name="see-also"></a>См. также
 
-[Пример свойства Value (пример)](../../../ado/reference/ado-api/value-property-example-vb.md)
-свойства[value (](../../../ado/reference/ado-api/value-property-example-vc.md) Visual c++) 
+[Пример свойства Value (Visual Basic)](../../../ado/reference/ado-api/value-property-example-vb.md) 
+ [Пример свойства Value (](../../../ado/reference/ado-api/value-property-example-vc.md) Visual c++) 

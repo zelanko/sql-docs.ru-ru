@@ -11,14 +11,14 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 45324642d2f323297ecbe091617fbb14cc5fc785
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e3a2c971f952a7c3f13b058bb3937201d323746d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922246"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758990"
 ---
 # <a name="running-the-address-book-sample-application"></a>Выполнение примера приложения адресной книги
 > [!IMPORTANT]
@@ -41,7 +41,7 @@ ms.locfileid: "67922246"
   
 3.  Затем можно попробовать различные сценарии в примере приложения адресной книги, например поиск человека по его имени, список всех людей с названием «руководитель программы» или изменение существующих записей. Нажмите кнопку **найти** , чтобы заполнить сетку данных всеми доступными именами.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект привязки данных адресной книги](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)
 
 

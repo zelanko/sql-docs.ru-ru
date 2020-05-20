@@ -12,14 +12,14 @@ helpviewer_keywords:
 - streams [ADO], about streams
 - records [ADO]
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4636df1451ba946b9a7bfb62e3d6775c35b1d6f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ec87974499edabb2c5a5ae503d90f9f739694c41
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924497"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760990"
 ---
 # <a name="records-and-streams"></a>Записи и потоки
 В настоящее время ADO предоставляет объект [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) в качестве основного средства доступа к данным в источниках данных, таким как реляционные базы данных. Однако некоторые поставщики поддерживают объекты [записи](../../../ado/reference/ado-api/record-object-ado.md) и [потока](../../../ado/reference/ado-api/stream-object-ado.md) в качестве альтернативных или дополнительных объектов, с которыми можно манипулировать данными из поставщиков. Дополнительные сведения о поведении **записей** см. в документации поставщика.  

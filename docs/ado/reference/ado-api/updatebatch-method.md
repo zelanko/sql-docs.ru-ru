@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - UpdateBatch method [ADO]
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e9d74fe938ce486a4cd15573af8166dbed12ba6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9572bf6b50f359a5193dbe1b23034f1503afb1fc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937845"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759460"
 ---
 # <a name="updatebatch-method"></a>Метод UpdateBatch
 Записывает все ожидающие пакетные обновления на диск.  
@@ -35,12 +35,12 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
   
 #### <a name="parameters"></a>Параметры  
  *аффектрекордс*  
- Необязательный параметр. Значение [аффектенум](../../../ado/reference/ado-api/affectenum.md) , указывающее, сколько записей будет влиять на метод **UpdateBatch** .  
+ Необязательный элемент. Значение [аффектенум](../../../ado/reference/ado-api/affectenum.md) , указывающее, сколько записей будет влиять на метод **UpdateBatch** .  
   
  *пресервестатус*  
- Необязательный параметр. **Логическое** значение, указывающее, должны ли быть зафиксированы локальные изменения, указанные в свойстве [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) . Если это значение равно **true**, свойство **Status** каждой записи остается неизменным после завершения обновления.  
+ Необязательный элемент. **Логическое** значение, указывающее, должны ли быть зафиксированы локальные изменения, указанные в свойстве [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) . Если это значение равно **true**, свойство **Status** каждой записи остается неизменным после завершения обновления.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Используйте метод **UpdateBatch** при изменении объекта **набора записей** в режиме пакетного обновления для передачи всех изменений, внесенных в объект **набора записей** , в основную базу данных.  
   
  Если объект **Recordset** поддерживает пакетное обновление, можно кэшировать несколько изменений в одной или нескольких записях локально, пока не будет вызван метод **UpdateBatch** . Если вы изменяете текущую запись или добавляете новую запись при вызове метода **UpdateBatch** , ADO автоматически вызывает метод [Update](../../../ado/reference/ado-api/update-method.md) , чтобы сохранить все ожидающие изменения в текущей записи перед передачей пакетных изменений поставщику. Пакетное обновление следует использовать только с курсором KEYSET или static.  
@@ -59,7 +59,7 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
 ## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры методов UpdateBatch и CancelBatch (Visual Basic)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
  [Примеры методов UpdateBatch и CancelBatch (Visual c++)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
  [Метод CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   

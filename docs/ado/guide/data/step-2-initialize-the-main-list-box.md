@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ad89d806f8a6774cb0fe2de056e30fd274a517c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c6aaf4d87e4e01e6f32e1d681d93e5a2291c3999
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924088"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760820"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Шаг 2. Инициализация главного списка
 Для объявления глобальных записей и объектов Recordset вставьте следующий код в (Общие) (объявления) для Form1:  
@@ -45,11 +45,11 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- Этот код создает экземпляры глобальной записи и объектов набора записей. Объект `grec`Record открыт с URL-адресом, указанным в качестве ActiveConnection. Если URL-адрес существует, он открывается; Если он еще не существует, он будет создан. Обратите внимание, что необходимо<https://servername/foldername/>заменить "" допустимым URL-адресом из вашей среды.  
+ Этот код создает экземпляры глобальной записи и объектов набора записей. Объект Record `grec` открыт с URL-адресом, указанным в качестве ActiveConnection. Если URL-адрес существует, он открывается; Если он еще не существует, он будет создан. Обратите внимание, что необходимо заменить " <https://servername/foldername/> " допустимым URL-адресом из вашей среды.  
   
- Объект набора записей, `grs`, открывается на дочерних элементах записи, `grec`. Затем `lstMain` заполняются имена файлов ресурсов, опубликованных по URL-адресу.  
+ Объект набора записей, `grs` , открывается на дочерних элементах записи, `grec` . Затем `lstMain` заполняются имена файлов ресурсов, опубликованных по URL-адресу.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сценарий публикации в Интернете](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Шаг 1. Настройка проекта Visual Basic](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
  [Шаг 3. Заполнение списка полей](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

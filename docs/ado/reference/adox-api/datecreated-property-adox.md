@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - DateCreated property [ADOX]
 ms.assetid: 2bf4b00d-045c-444e-8af7-8af6297ed418
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0151b6388a19fc95227cbfa55a571e0a797d0acc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 566e815350bd59effc4802495bda4846e9a77691
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966571"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759220"
 ---
 # <a name="datecreated-property-adox"></a>Свойство DateCreated (ADOX)
 Указывает дату создания объекта.  
@@ -39,6 +39,6 @@ ms.locfileid: "67966571"
 |-|-|-|  
 |[Объект Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[Объект View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры свойств DateCreated и DateModified (Visual Basic)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
  [Свойство DateModified (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)

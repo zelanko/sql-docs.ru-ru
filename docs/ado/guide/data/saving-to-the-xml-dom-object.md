@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XML DOM object [ADO], saving to
 ms.assetid: 4d20fd28-aaf8-4232-83ce-f9d1e5f93dae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fe4790fa7fc1a2859013500f44dcd4a266719f39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2360d9886fa718034bdf3fcc4ed1cacd459b2788
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924313"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760910"
 ---
 # <a name="saving-to-the-xml-dom-object"></a>Сохранение в объект DOM XML
 Набор записей в формате XML можно сохранить в экземпляре объекта DOM MSXML, как показано в следующем Visual Basic коде:  
@@ -35,5 +35,5 @@ rsXML.Save xDOM, adPersistADO   'Save Recordset directly into a DOM tree.
 ...  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сохранение записей в формате XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

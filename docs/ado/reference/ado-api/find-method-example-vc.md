@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Find method [ADO], VC++ example
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e6be0edf100501762f6d4eada735ff90caa84df4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 73ba054b583fb9930cc62d18ff9e8e28a20720e9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932529"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760100"
 ---
 # <a name="find-method-example-vc"></a>Пример метода Find (Visual C++)
 В этом примере используется метод [Find](../../../ado/reference/ado-api/find-method-ado.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) для поиска и подсчета количества названий бизнес-объектов в базе данных **pubs** . В этом примере предполагается, что базовый поставщик не поддерживает аналогичные функции.  
@@ -154,6 +154,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Find (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

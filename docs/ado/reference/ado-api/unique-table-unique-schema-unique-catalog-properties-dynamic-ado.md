@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Unique Schema property [ADO]
 - Unique Catalog property [ADO]
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1b70920cd223223d5efb14925a6808168ca9cc16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ac7fa0cf50a92b2738d3e83d5e7b9d5fac46fd9b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911683"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759520"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Уникальная таблица, уникальная схема, свойства уникального каталога — Dynamic (ADO)
 Позволяет точно управлять изменениями в определенной базовой таблице в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md) , сформированном операцией Join над несколькими базовыми таблицами.  

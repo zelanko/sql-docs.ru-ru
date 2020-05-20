@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Status property [ADO Field]
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d90eff53ef998a009aecd4d82fc3b502a487c01d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b2880c63e42c1d64526db053a61f2824e6ac8305
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930837"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759720"
 ---
 # <a name="status-property-ado-field"></a>Свойство Status (объект Field ADO)
 Указывает состояние объекта [поля](../../../ado/reference/ado-api/field-object.md) .  
@@ -30,7 +30,7 @@ ms.locfileid: "67930837"
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение [фиелдстатусенум](../../../ado/reference/ado-api/fieldstatusenum.md) . Значение по умолчанию — **адфиелдок**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="record-field-status"></a>Состояние поля записи  
  Изменения значения объекта **поля** в коллекции полей объекта [записи](../../../ado/reference/ado-api/record-object-ado.md) кэшируются до тех пор, пока не будет вызван метод [обновления](../../../ado/reference/ado-api/update-method.md) объекта. Если в этот момент изменение значения поля привело к ошибке, OLE DB вызывает ошибку **DB_E_ERRORSOCCURRED** (2147749409). Свойство Status любого из объектов **field** в коллекции **Fields** , вызвавшей ошибку, будет содержать значение из [фиелдстатусенум](../../../ado/reference/ado-api/fieldstatusenum.md) , описывающее причину проблемы.  
@@ -47,6 +47,6 @@ ms.locfileid: "67930837"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства Status (поле) (VB)](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
  [Пример свойства Status (Visual C++)](../../../ado/reference/ado-api/status-property-example-vc.md)   

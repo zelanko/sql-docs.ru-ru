@@ -13,14 +13,14 @@ helpviewer_keywords:
 - CommandText property [ADOX], Visual Basic example
 - Command property [ADOX], Visual Basic example
 ms.assetid: 413263a8-05c0-4404-929d-69f82b987ba3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 848fffdaabaf0a7f783969d7e44d7612bb2f92dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 116aaa974255352e0d51171f804e86ac02191737
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966789"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759320"
 ---
 # <a name="command-and-commandtext-properties-example-vb"></a>Примеры свойств Command и CommandText (Visual Basic)
 В следующем коде показано, как использовать свойство [Command](../../../ado/reference/adox-api/command-property-adox.md) для обновления текста процедуры.  
@@ -75,7 +75,7 @@ End Sub
 ' EndProcedureTextVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Свойство Command (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   

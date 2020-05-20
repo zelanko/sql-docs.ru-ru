@@ -11,14 +11,14 @@ helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d3b3a9f4c5482d0171c59a734aa6139bc2239c55
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925566"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761090"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Обнаружение и разрешение конфликтов
 Если вы работаете с набором записей в режиме интерпретации, проблемы с параллелизмом значительно снижаются. С другой стороны, если приложение использует обновление в пакетном режиме, то может быть хорошей шанс, что один пользователь изменит запись, прежде чем изменения, внесенные другим пользователем, редактируют ту же запись, сохраняются. В этом случае вам потребуется, чтобы приложение корректно обрабатывал конфликт. Возможно, вы хотите, чтобы последний пользователь отправлял обновление на сервер "WINS". Или, возможно, вы хотите, чтобы последний пользователь решил, какое обновление должно иметь приоритет, предоставив ему выбор между двумя конфликтующими значениями.  
@@ -115,5 +115,5 @@ ms.locfileid: "67925566"
   
  Подробные сведения об обработке ошибок см. в разделе [Обработка ошибок](../../../ado/guide/data/error-handling.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пакетный режим](../../../ado/guide/data/batch-mode.md)

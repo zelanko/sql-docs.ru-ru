@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - AddNew method [ADO]
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2f9efa8f5042fab603c794edada5aacab001936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6359d1b9f69963120e9446c47aa5473beedd127
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921329"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760730"
 ---
 # <a name="addnew-method-ado"></a>Метод AddNew (ADO)
 Создает новую запись для обновляемого объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -38,12 +38,12 @@ recordset.AddNew FieldList, Values
  Объект **Recordset** .  
   
  *FieldList*  
- Необязательный параметр. Одно имя или массив имен или порядковое расположение полей в новой записи.  
+ Необязательный элемент. Одно имя или массив имен или порядковое расположение полей в новой записи.  
   
  *Значения*  
- Необязательный параметр. Одно значение или массив значений для полей в новой записи. Если *списокполей* является массивом, то *значения* также должны быть массивом с одинаковым числом членов. в противном случае возникает ошибка. Порядок имен полей должен совпадать с порядком значений полей в каждом массиве.  
+ Необязательный элемент. Одно значение или массив значений для полей в новой записи. Если *списокполей* является массивом, то *значения* также должны быть массивом с одинаковым числом членов. в противном случае возникает ошибка. Порядок имен полей должен совпадать с порядком значений полей в каждом массиве.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Используйте метод **AddNew** для создания и инициализации новой записи. Чтобы проверить, можно ли добавлять записи в текущий объект **Recordset** , используйте метод [поддерживает](../../../ado/reference/ado-api/supports-method.md) с **ададднев** (значение [курсороптионенум](../../../ado/reference/ado-api/cursoroptionenum.md) ).  
   
  После вызова метода **AddNew** новая запись становится текущей и остается текущей после вызова метода [Update](../../../ado/reference/ado-api/update-method.md) . Так как новая запись добавляется к **набору записей**, вызов **MoveNext** после обновления будет перемещаться за пределы **набора записей**, делая **EOF** истинным. Если объект **Recordset** не поддерживает закладки, вы не сможете получить доступ к новой записи после перехода на другую запись. В зависимости от типа курсора может потребоваться вызвать метод [Requery](../../../ado/reference/ado-api/requery-method.md) , чтобы сделать новую запись доступной.  
@@ -85,7 +85,7 @@ rs.Update
 ## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода AddNew (Visual Basic)](../../../ado/reference/ado-api/addnew-method-example-vb.md)   
  [Пример метода AddNew (VBScript)](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)   
  [Пример метода AddNew (Visual c++)](../../../ado/reference/ado-api/addnew-method-example-vc.md)   

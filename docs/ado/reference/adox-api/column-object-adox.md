@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Column object [ADOX]
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: db2c2dbe6af2a50fc2507a9ade92d83e0502f2ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 80e462e3bc7a8f5d4833c78bcaf6b4a45705c083
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966911"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759400"
 ---
 # <a name="column-object-adox"></a>Объект Column (ADOX)
 Представляет столбец из таблицы, индекса или ключа.  
@@ -61,7 +61,7 @@ ms.locfileid: "67966911"
   
 -   [Свойства, методы и события объекта Column](../../../ado/reference/adox-api/column-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Пример метода Close соединения, свойство типа таблицы (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
  [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   

@@ -19,14 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Recordset]
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8f6ac84445272ae3657d4e25691dbbf150f32c5d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fc7d3336b9c346a070266b4ef1d104d0e32eb042
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930923"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759810"
 ---
 # <a name="source-property-ado-recordset"></a>Свойство Source (объект Recordset ADO)
 Указывает источник данных для объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -46,7 +46,7 @@ ms.locfileid: "67930923"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства Source (Visual Basic)](../../../ado/reference/ado-api/source-property-example-vb.md)   
  [Свойство Source (ошибка ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Свойство Source (объект Record ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)

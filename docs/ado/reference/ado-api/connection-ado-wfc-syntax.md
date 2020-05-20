@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Connection collection [ADO], ADO/WFC syntax
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 64647d577170a79b1f600b7162a0338ea19c572e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b8602b170d4c067744fd002a98c949b8d0836d2e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919537"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760310"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Connection (ADO — синтаксис WFC)
 ## <a name="package-commswfcdata"></a>упаковать com. MS. WFC. Data  
@@ -109,5 +109,5 @@ public void addOnWillExecute(ConnectionEventHandler handler)
 public void removeOnWillExecute(ConnectionEventHandler handler)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

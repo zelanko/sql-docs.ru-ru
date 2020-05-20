@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Command property [ADOX]
 ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 55f54ed42b121c347bc2640068fd5b4ef702aeb3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b9b46a0385505f8673cb456adab4ee7905f499af
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966681"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759290"
 ---
 # <a name="command-property-adox"></a>Свойство Command (ADOX)
 Указывает объект [команды](../../../ado/reference/ado-api/command-object-ado.md) ADO, который может быть использован для создания или выполнения процедуры.  
@@ -38,7 +38,7 @@ ms.locfileid: "67966681"
 |-|-|  
 |[Объект Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Объект View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойств Command и CommandText (Visual Basic)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Коллекция Parameters, пример свойства Command (Visual Basic)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
  [Пример представлений и коллекций полей (Visual Basic)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   

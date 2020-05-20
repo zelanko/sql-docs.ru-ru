@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - Stream collection [ADO]
 ms.assetid: dddcceef-9296-4fb3-8eca-94b17d0148de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ec7e5ac51718bd703586b0c60f77dad0c77cb938
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b570b21caed38042cfe975332791251426236c98
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930698"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759650"
 ---
 # <a name="stream-ado-for-visual-c-syntax"></a>Stream (синтаксис ADO для Visual C++)
 ## <a name="methods"></a>Методы  
@@ -59,5 +59,5 @@ get_Type(StreamTypeEnum *pType)
 put_Type(StreamTypeEnum Type)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

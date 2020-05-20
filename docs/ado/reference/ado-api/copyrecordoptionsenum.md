@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CopyRecordOptionsEnum enumeration [ADO]
 ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6692125b7323bedc7a416e51555c373ef850ce0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8dc32a3cfad89e479b2541819b7ff6ad1bb1a4ed
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919373"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760260"
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
 Задает поведение метода [копирекорд](../../../ado/reference/ado-api/copyrecord-method-ado.md) .  
   
-|Константа|Применение|Описание|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adCopyAllowEmulation**|4|Указывает, что поставщик *источника* пытается имитировать копирование с помощью операций скачивания и отправки, если этот метод завершается сбоем из-за того, что *целевой объект*находится на другом сервере или обслуживается другим поставщиком, чем *источник*. Обратите внимание, что различные возможности поставщика могут препятствовать повышению производительности или потере данных.|  
 |**adCopyNonRecursive**|2|Копирует текущий каталог, но не все его подкаталоги в место назначения. Операция копирования не является рекурсивной.|  

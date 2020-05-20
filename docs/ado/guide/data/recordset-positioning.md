@@ -13,14 +13,14 @@ helpviewer_keywords:
 - repositioning record [ADO]
 - AbsolutePosition property [ADO]
 ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cdce4c7b08a8b15cdb0a9ee1111a216aeef005bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e48c80c59a51b007832b8c68c8e27c66333f57dc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924434"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760980"
 ---
 # <a name="recordset-positioning"></a>Позиционирование в наборе записей
 Используйте свойство **примеры AbsolutePosition** для перемещения к записи, основанной на ее порядковом положении в объекте **набора записей** , или для определения порядкового номера текущей записи. Чтобы это свойство было доступно, поставщик должен поддерживать соответствующие функциональные возможности.  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - GetDataProviderDSO Method [ADO]
 ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2b5fbe59ab58b31cd0b796cbe46963683aa890b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 55272fdbcd0aacfc8e98cb4e38ae19270b3b461a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932491"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760050"
 ---
 # <a name="getdataproviderdso-method"></a>Метод GetDataProviderDSO
 Извлекает базовый объект источника данных OLE DB из поставщика фигур.  
@@ -35,8 +35,8 @@ HRESULT GetDataProviderDSO(
  *ппдатапровидердсоиункновн*  
  заполняет  Указатель на указатель, возвращающий IUnknown базового OLE DB объекта источника данных.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Этот метод не выполняет AddRef указателя на интерфейс. Если вызывающий объект планирует удерживать указатель, вызывающий объект должен выполнить требуемый метод AddRef и Release.  
   
-## <a name="applies-to"></a>Область применения  
+## <a name="applies-to"></a>Применяется к  
  [Интерфейс IDSOShapeExtensions](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)

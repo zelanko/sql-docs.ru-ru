@@ -11,14 +11,14 @@ helpviewer_keywords:
 - locks [ADO]
 - cursors [ADO]
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 41fd90d4f30c080951bd5d68407e38adac482418
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 13a175d9e98fec5795c2756e79f96304b2ab2cc6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923795"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759020"
 ---
 # <a name="understanding-cursors-and-locks"></a>Основные сведения о курсорах и блокировок
 Важно понимать, как работают курсоры, чтобы можно было выбрать лучший и наиболее эффективный тип курсора для требований к доступу к данным приложения. Менее Оптимальная конфигурация курсора может сделать операции доступа к данным более медленными.  

@@ -1,10 +1,8 @@
 ---
 title: Общие сведения о Database Experimentation Assistant
 description: Общие сведения о Database Experimentation Assistant
-ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
-ms.prod_service: dea
 ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
@@ -12,12 +10,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.custom: seo-lt-2019
+ms.openlocfilehash: dce2bfcafeb95a72e6584e4b619f1e4e5e12bdf1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247116"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759160"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Общие сведения о Database Experimentation Assistant
 
@@ -94,7 +93,7 @@ Database Experimentation Assistant (ДЕА) — это решение экспе
 
 ## <a name="set-up-telemetry"></a>Настройка телеметрии
 
-ДЕА имеет функцию с поддержкой Интернета, которая может отсылать данные телеметрии в корпорацию Майкрософт для использования при улучшении работы продукта. Собранные сведения также сохраняются на компьютере для локального аудита, поэтому вы всегда можете увидеть собранные данные. Все файлы журнала ДЕА сохраняются в папке% temp%\\ДЕА.
+ДЕА имеет функцию с поддержкой Интернета, которая может отсылать данные телеметрии в корпорацию Майкрософт для использования при улучшении работы продукта. Собранные сведения также сохраняются на компьютере для локального аудита, поэтому вы всегда можете увидеть собранные данные. Все файлы журнала ДЕА сохраняются в папке% temp% \\ ДЕА.
 
 Данные телеметрии можно собирать в четырех типах событий:
 
@@ -105,7 +104,7 @@ Database Experimentation Assistant (ДЕА) — это решение экспе
 
 Сбор и отправка данных телеметрии необязательно. Чтобы указать, какие события собираются и какие события были собраны в корпорацию Майкрософт, выполните следующие действия.
 
-1. Перейдите в расположение, в котором установлена Деа (например, C:\\Program Files (x86)\\Microsoft Corporation\\Database experimentation Assistant).
+1. Перейдите в расположение, в котором установлена Деа (например, C: \\ Program Files (x86) \\ Microsoft Corporation \\ Database experimentation Assistant).
 2. Откройте и измените config-файлы **ДЕА. exe. config** (для приложения) и **деакмд. exe. config** (для интерфейса командной строки), чтобы решить проблему соответствующим образом.
     - Чтобы отключить сбор данных о типе события, задайте для *события* (например, **TraceEvent**) значение **false**. Чтобы снова начать сбор события, установите значение **true**.
     - Чтобы отключить сохранение локальных копий событий, присвойте параметру **трацелогжеренаблед** значение **false**. Чтобы снова приступить к сохранению локальных копий, присвойте параметру значение **true**.
@@ -113,6 +112,6 @@ Database Experimentation Assistant (ДЕА) — это решение экспе
 
 ДЕА регулируется заявлением [о конфиденциальности Майкрософт](https://aka.ms/dea-privacy).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - В статье рассматривается [процесс сравнения рабочих нагрузок](database-experimentation-assistant-get-started.md), объясняющий процесс сравнения рабочих нагрузок в двух средах.

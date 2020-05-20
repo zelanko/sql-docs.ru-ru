@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Sort property [ADO], VC++ example
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2092b830501ca22b28e867090623a4343f27eca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a4c01370efddbd4163459d694772f3e581ddeadd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930960"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759850"
 ---
 # <a name="sort-property-example-vc"></a>Пример свойства Sort (Visual C++)
 В этом примере используется свойство [Sort](../../../ado/reference/ado-api/sort-property.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) для изменения порядка строк **набора записей** , производного от таблицы ***authors*** базы данных **pubs** . Вторичная служебная программа выводит каждую строку.  
@@ -132,6 +132,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство Sort](../../../ado/reference/ado-api/sort-property.md)

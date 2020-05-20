@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ActualSize property [ADO], JScript example
 - DefinedSize property [ADO], JScript example
 ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b465f5e567262aead6ffe73f696968d736b472eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b2282aa7df82f7bb7b42c1ab9e37b3c2a2cf94bc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921509"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760740"
 ---
 # <a name="actualsize-and-definedsize-properties-example-jscript"></a>Примеры свойств ActualSize и DefinedSize (JScript)
 В этом примере используются свойства [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) и [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) для вывода определенного размера и фактического размера поля. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **актуалсизежс. ASP**.  
@@ -130,7 +130,7 @@ body {
 <!-- EndActualSizeJS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [DefinedSize, свойство](../../../ado/reference/ado-api/definedsize-property.md)   
  [Объект Field](../../../ado/reference/ado-api/field-object.md)

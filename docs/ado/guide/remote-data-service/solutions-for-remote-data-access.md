@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS [ADO]
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 40485562c8385e05ced033062563d5c5165218de
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bc2addcc74551e754218f200ae977e6641c214b9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922178"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758950"
 ---
 # <a name="solutions-for-remote-data-access"></a>Решения для удаленного доступа к данным
 ## <a name="the-issue"></a>Эта ошибка  
@@ -42,7 +42,7 @@ ms.locfileid: "67922178"
 ## <a name="the-solution"></a>Решение  
  RDS определяет модель программирования — последовательность действий, необходимых для получения доступа и обновления источника данных, чтобы получить доступ к данным через посредника, например службы IIS (IIS). Модель программирования суммирует все функции RDS.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Базовая модель программирования RDS](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   
  [Сценарий RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Руководство по RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   

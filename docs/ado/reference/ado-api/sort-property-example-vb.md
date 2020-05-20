@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Sort property [ADO], Visual Basic example
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7dec17461f44c9e461a010e8a0bf5cf3fe3bbbd9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0a2ae26c61534996fcfb5094432ff2e0e81c90c9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931022"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759860"
 ---
 # <a name="sort-property-example-vb"></a>Пример свойства Sort (Visual Basic)
 В этом примере используется свойство [Sort](../../../ado/reference/ado-api/sort-property.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) для изменения порядка строк **набора записей** , производного от таблицы ***authors*** базы данных ***pubs*** . Вторичная служебная программа выводит каждую строку.  
@@ -109,6 +109,6 @@ End Sub
 Attribute VB_Name = "Sort"  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство Sort](../../../ado/reference/ado-api/sort-property.md)

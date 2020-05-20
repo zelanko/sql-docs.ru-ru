@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - CompareBookmarks method [ADO], Visual Basic example
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f14ad9d6605747b78109e517636e5864847881f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3d2eb2d5db5fe7c1803e32413fd214993444e494
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919609"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760360"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>Пример метода CompareBookmarks (Visual Basic)
 В этом примере демонстрируется метод [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) . Относительное значение закладок редко требуется, если конкретная закладка не является каким-либо специальным.  
@@ -132,7 +132,7 @@ End Sub
 'EndCompareBookmarksVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод CompareBookmarks (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
  [компаринум](../../../ado/reference/ado-api/compareenum.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

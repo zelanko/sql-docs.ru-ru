@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Internet Explorer errors [ADO]
 - errors [ADO], Internet Explorer
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d7c3364dba94f6b106509e2646821391bd01df1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8b50d56cca411af0a9a6a3999cdc1d891da2569f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81219273"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760510"
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>Коды ошибок Internet Explorer для удаленной службы данных
 В следующей таблице перечислены коды ошибок Microsoft® Internet Explorer, связанные с использованием удаленной службы данных. Положительное десятичное преобразование двух младших байтов, отрицательное десятичное преобразование полного кода ошибки и шестнадцатеричные значения.

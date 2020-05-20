@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connections [ADO]
 - connection strings [ADO]
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b58dc19097d01630fa1ab1c2707e8be379ae83cb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925767"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761150"
 ---
 # <a name="creating-a-connection-string"></a>Создание строки подключения
 Строка подключения состоит из списка пар "аргумент-значение" (то есть параметров), разделенных точкой с запятой. Пример:  
@@ -48,7 +48,7 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
   
- В этой строке подключения ADO распознает только `"Provider=SQLOLEDB"` параметр, который указывает поставщика OLE DB майкрософт для SQL Server в качестве источника данных ADO. Остальные пары "аргумент-значение" `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"`передаются в этот поставщик буквально. Тип и допустимость таких параметров зависит от поставщика. Сведения о допустимых параметрах, которые могут быть переданы в строке подключения, см. в документации к отдельному поставщику.  
+ В этой строке подключения ADO распознает только `"Provider=SQLOLEDB"` параметр, который указывает поставщика OLE DB Майкрософт для SQL Server в качестве источника данных ADO. Остальные пары "аргумент-значение" `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"` передаются в этот поставщик буквально. Тип и допустимость таких параметров зависит от поставщика. Сведения о допустимых параметрах, которые могут быть переданы в строке подключения, см. в документации к отдельному поставщику.  
   
  В соответствии с документацией поставщика OLE DB для SQL Server можно заменить "сервер" для параметра *источника данных* и "Database" для параметра *начального каталога* . Таким образом, следующая строка соединения приведет к результату, идентичному приведенному выше:  
   

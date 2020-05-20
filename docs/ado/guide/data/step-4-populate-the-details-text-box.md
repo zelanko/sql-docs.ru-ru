@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 90748ca7f725ddbf947d9686b846695da0c6626c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2110384afa66e74e17d4e3c9a8600b5825cc412e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924068"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760790"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>Шаг 4. Заполнение текстового поля сведений
 Чтобы заполнить текстовое поле сведения, создайте новую подпрограмму с именем **рекфиелдс** и вставьте следующий код:  
@@ -44,8 +44,8 @@ Sub recFields(r As Record, l As ListBox, t As TextBox)
 End Sub  
 ```  
   
- Этот код заполняет `lstDetails` поля и значения простой записи, передаваемой в `recFields`. Если ресурс является текстовым файлом, в записи ресурса открывается текстовый поток. Код определяет, является ли кодировка кодировкой ASCII, и копирует содержимое потока `txtDetails`в.  
+ Этот код заполняет `lstDetails` поля и значения простой записи, передаваемой в `recFields` . Если ресурс является текстовым файлом, в записи ресурса открывается текстовый поток. Код определяет, является ли кодировка кодировкой ASCII, и копирует содержимое потока в `txtDetails` .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сценарий публикации в Интернете](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Шаг 3. Заполнение списка полей](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

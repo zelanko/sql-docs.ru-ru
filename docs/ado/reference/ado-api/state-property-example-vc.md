@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - State property [ADO], VC++ example
 ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dad78c3754fb55aa83c50d467920a611db277f13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 63518ccce25b9c3597b0baf45ad1a7cfd03d5031
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930846"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759730"
 ---
 # <a name="state-property-example-vc"></a>Пример свойства State (Visual C++)
 В этом примере свойство [State](../../../ado/reference/ado-api/state-property-ado.md) используется для отображения сообщения, в то время как асинхронные соединения открываются и выполняются асинхронные команды.  
@@ -135,5 +135,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство State (ADO)](../../../ado/reference/ado-api/state-property-ado.md)

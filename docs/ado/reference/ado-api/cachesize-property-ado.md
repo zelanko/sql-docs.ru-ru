@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CacheSize property [ADO]
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c6b33ef7eb4bae796fa2b2da59a7b1dc805d739e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 502459b890c533ace8a96847bcf79eb09929e53f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920336"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758920"
 ---
 # <a name="cachesize-property-ado"></a>Свойство CacheSize (ADO)
 Указывает число записей из объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , которые кэшируются локально в памяти.  
@@ -47,7 +47,7 @@ ms.locfileid: "67920336"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства CacheSize (Visual Basic)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
  [Пример свойства CacheSize (Visual c++)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
  [Пример свойства CacheSize (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Create method [ADOX]
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aafcab3ad379dc25a2681a5d4f0d3f5e8d6eab5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 15ea5cf8b565a943f4905a890cb08ba0afed202f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966673"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759270"
 ---
 # <a name="create-method-adox"></a>Метод Create (ADOX)
 Создает новый каталог.  
@@ -45,6 +45,6 @@ Catalog.Create ConnectString
 ## <a name="applies-to"></a>Применяется к  
  [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода Create (Visual Basic)](../../../ado/reference/adox-api/create-method-example-vb.md)   
  [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)

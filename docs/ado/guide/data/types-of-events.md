@@ -14,14 +14,14 @@ helpviewer_keywords:
 - complete events [ADO]
 - WillEvent event [ADO]
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c02d8d115a4336470c0e0d32aebabea63c05ab0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f8d0dd197b5f74b25aad2f7e9e888165c2dc02ba
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923818"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759030"
 ---
 # <a name="types-of-events"></a>Типы событий
 Существует два основных типа событий. «Будут события», которые вызываются перед началом операции, обычно включают в себя имя «будет», например **виллчанжерекордсет** или **виллконнект**. События, которые вызываются после завершения события, обычно содержат "Complete" в своих именах, например **рекордчанжекомплете** или **коннекткомплете**. Существуют исключения, такие как **InfoMessage** , но они происходят после завершения связанной операции.  
@@ -37,7 +37,7 @@ ms.locfileid: "67923818"
 ## <a name="other-events"></a>Другие события  
  Другие обработчики событий, т. е. события, имена которых не являются формами, вызывают <strong>*событие* </strong> или <strong> *событие*завершено</strong> . вызывается только после завершения операции. Эти события: **Disconnect**, **ендофрекордсет**и **InfoMessage**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сводка по обработчику событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Создание экземпляра события ADO по языку](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Параметры события](../../../ado/guide/data/event-parameters.md)   

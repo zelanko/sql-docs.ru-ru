@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - Command collection [ADO], ADO for Visual C++ syntax
 ms.assetid: cf12cbd1-25f7-4bb5-aa94-0fe823b3b6d6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 49a82682e619bb2a33e5c04e049b40ac4733f427
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2e804520e73df93993bc24c2db89191e9391bfdb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919874"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760490"
 ---
 # <a name="command-ado-for-visual-c-syntax"></a>Command (синтаксис ADO для Visual C++)
 ## <a name="methods"></a>Методы  
@@ -51,5 +51,5 @@ get_State(LONG *plObjState)
 get_Parameters(ADOParameters **ppvObject)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

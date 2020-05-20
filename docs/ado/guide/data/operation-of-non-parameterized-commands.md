@@ -11,14 +11,14 @@ helpviewer_keywords:
 - non-parameterized commands [ADO]
 - data shaping [ADO], non-parameterized commands
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3512b484425749ed027f6533dab7398765c1af2e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d69ff29f0baabc770da8a62b56962bdc44619b1e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924741"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759130"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Использование непараметризованных команд
 Для непараметризованных команд выполняются все команды поставщика, а также **наборы записей** , создаваемые во время выполнения команды. Если команда выполняется синхронно, все **наборы записей** будут заполнены полностью. Если выбран режим асинхронного заполнения, заполненное состояние **наборов записей** будет зависеть от режима заполнения и размера **наборов записей**.  
@@ -41,7 +41,7 @@ SHAPE {SELECT * FROM Customers}
   
  Сведения о навигации по иерархическим **наборам записей**см. [в разделе доступ к строкам в иерархическом наборе записей](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример формирования данных](../../../ado/guide/data/data-shaping-example.md)   
  [Грамматика формальной фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
  [Общие сведения о командах формирования данных](../../../ado/guide/data/shape-commands-in-general.md)

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Size property [ADO Parameter]
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3796f772dedb961ec34eb0639034350989f99142
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 58f989ab60099673f95debbe4eb5f8217beb0ccd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931053"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759890"
 ---
 # <a name="size-property-ado-parameter"></a>Свойство Size (объект Parameter ADO)
 Указывает максимальный размер объекта [параметра](../../../ado/reference/ado-api/parameter-object.md) в байтах или символах.  
@@ -42,7 +42,7 @@ ms.locfileid: "67931053"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction (Visual Basic)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction (Visual c++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   

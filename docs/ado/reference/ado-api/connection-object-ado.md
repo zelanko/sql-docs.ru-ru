@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Connection object [ADO]
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 278e2d90ed20b99706f00acf72e2892941c42865
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 49a270f143e57c1e093ac94732b67b6424c88607
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933566"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760300"
 ---
 # <a name="connection-object-ado"></a>Объект Connection (ADO)
 Представляет открытое подключение к источнику данных.  
@@ -94,7 +94,7 @@ cnn. "parameter"
   
 -   [Свойства, методы и события объекта Connection](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Коллекция Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

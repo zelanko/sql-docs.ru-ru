@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Count property [ADO]
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 292a4a8c26b3b10aa47fcbe7046a5897f601ed9f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9b611546b63dec8484785ba855f299925933e89e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919358"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760240"
 ---
 # <a name="count-property-ado"></a>Свойство Count (ADO)
 Указывает количество объектов в коллекции.  
@@ -28,7 +28,7 @@ ms.locfileid: "67919358"
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение **типа Long** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Для определения количества объектов в заданной коллекции используется свойство **Count** .  
   
  Поскольку нумерация элементов коллекции начинается с нуля, всегда следует создавать циклы кода, начиная с нуля и заканчивая значением свойства **Count** минус 1. Если вы используете Microsoft Visual Basic и хотите перебрать элементы коллекции, не проверяя свойство **Count** , используйте оператор **For Each... Следующая** команда.  

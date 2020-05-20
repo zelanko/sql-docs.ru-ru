@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO], disconnecting and reconnecting
 ms.assetid: c5134af7-81d6-4de4-9fd1-cfe29973545e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9829ddfd7e625941c97bd3b2027c328a1fba93d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ef30165a05bc472bfe34cec4e7f669d545d7768
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925516"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761060"
 ---
 # <a name="disconnecting-and-reconnecting-the-recordset"></a>Отключение и повторное подключение набора записей
 Одной из самых эффективных функций ADO является возможность открыть набор записей на стороне клиента из источника данных, а затем отключить набор записей от источника данных. После отключения набора записей подключение к источнику данных может быть закрыто, тем самым освобождая ресурсы на сервере, используемом для его обслуживания. Вы можете продолжить просмотр и изменение данных в наборе, пока он отключен, а затем повторно подключается к источнику данных и отправляет обновления в пакетном режиме.  
@@ -26,5 +26,5 @@ ms.locfileid: "67925516"
   
  Мы будем использовать отключенный набор записей далее в этом разделе, когда мы обсудим сохраняемость набора записей для решения ситуации, в которой необходимо, чтобы данные в наборе записей были доступны приложению, а клиентский компьютер не подключен к сети.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пакетный режим](../../../ado/guide/data/batch-mode.md)

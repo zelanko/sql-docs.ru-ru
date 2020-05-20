@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Source property [ADO], Visual Basic example
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5161dc2aa0a0a213095a160cf0473c138cdf2cf5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3f652b23e65b4f5669c6d369595933df4c5c6b9a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930916"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759800"
 ---
 # <a name="source-property-example-vb"></a>Пример свойства Source (Visual Basic)
 В этом примере показано свойство [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) , открывающее три объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе различных источников данных.  
@@ -126,6 +126,6 @@ End Sub
 'EndSourceVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство Source (объект Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

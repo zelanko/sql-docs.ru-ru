@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], static
 - static cursors [ADO]
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 520c484bdaaa6eb59488900208993a607c5b0f7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4baacc48beffda2d83a23ce24d3a31c314da5841
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924121"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760830"
 ---
 # <a name="static-cursors"></a>Статические курсоры
 Статический курсор всегда отображает результирующий набор в том виде, в котором он был при первом открытии курсора. В зависимости от реализации статические курсоры доступны только для чтения или для чтения и записи и обеспечивают прямую и обратную прокрутку. Статический курсор обычно не обнаруживает изменения, внесенные в членство, порядок или значения результирующего набора после открытия курсора. Статические курсоры могут обнаруживать результаты собственных инструкций обновления, удаления и вставки, хотя это и не обязательно.  
@@ -27,7 +27,7 @@ ms.locfileid: "67924121"
   
  Если приложению не требуется обнаруживать изменения данных и требуется прокрутка, то лучшим выбором является статический курсор. Используйте **Адопенстатик курсортипинум** , чтобы указать, что вы хотите использовать статический курсор в ADO.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Однопроходные курсоры](../../../ado/guide/data/forward-only-cursors.md)   
  [Курсоры набора ключей](../../../ado/guide/data/keyset-cursors.md)   
  [Динамические курсоры](../../../ado/guide/data/dynamic-cursors.md)

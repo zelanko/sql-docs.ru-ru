@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Record]
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b1870d8cd8253e1b6de74ce093d51ca6e33c5c6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 32b329d8365370560f51503129ac2c8d85517527
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930937"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759820"
 ---
 # <a name="source-property-ado-record"></a>Свойство Source (объект Record ADO)
 Указывает источник данных или объект, представленный [записью](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "67930937"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает значение **типа Variant** , указывающее сущность, представленную **записью**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Свойство **Source** возвращает *Исходный* аргумент метода [Open](../../../ado/reference/ado-api/open-method-ado-record.md) объекта **Record** . Он может содержать абсолютную или относительную строку URL-адреса. Абсолютный URL-адрес можно использовать без задания свойства [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) для непосредственного открытия объекта **записи** . В этом случае создается неявный объект **соединения** .  
   
  Свойство **Source** может также содержать ссылку на уже открытый **набор записей**, который открывает объект **Record** , представляющий текущую строку в **наборе записей**.  
@@ -50,6 +50,6 @@ ms.locfileid: "67930937"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство Source (ошибка ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Свойство Source (объект Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

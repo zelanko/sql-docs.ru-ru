@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8222b697fec7d0dd5bd1f32425cf48761f25308e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924294"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760900"
 ---
 # <a name="schema-section"></a>Раздел схемы
 Требуется раздел схемы. Как показано в предыдущем примере, ADO записывает подробные метаданные о каждом столбце, чтобы сохранить семантику значений данных, насколько это возможно для обновления. Однако для загрузки в XML ADO требуются только имена столбцов и набор строк, к которому они относятся. Ниже приведен пример минимальной схемы.  
@@ -152,7 +152,7 @@ ms.locfileid: "67924294"
 </s:AttributeType>  
 ```  
   
- Определение допускает `CompanyName` значение null, но `ShipperID` не может содержать значение null. Если в разделе данных содержится следующая строка, то поставщик сохраняемости настроил состояние данных `CompanyName` столбца на OLE DB константы состояния DBSTATUS_S_ISNULL:  
+ Определение допускает значение `CompanyName` null, но `ShipperID` не может содержать значение null. Если в разделе данных содержится следующая строка, то поставщик сохраняемости настроил состояние данных `CompanyName` столбца на OLE DB константы состояния DBSTATUS_S_ISNULL:  
   
 ```  
 <z:row ShipperID="1"/>  
@@ -170,9 +170,9 @@ ms.locfileid: "67924294"
 <z:row ShipperID="1" CompanyName=""/>  
 ```  
   
- Для предыдущей строки поставщик сохраняемости возвратит OLE DB состояние DBSTATUS_S_OK для обоих столбцов. `CompanyName` В данном случае это просто "" (строка нулевой длины).  
+ Для предыдущей строки поставщик сохраняемости возвратит OLE DB состояние DBSTATUS_S_OK для обоих столбцов. `CompanyName`В данном случае это просто "" (строка нулевой длины).  
   
  Дополнительные сведения о конструкциях OLE DB, доступных для использования в схеме XML-документа для OLE DB, см. в описании определения "urn: schemas-microsoft-com: RowSet" и руководства программиста OLE DB.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сохранение записей в формате XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

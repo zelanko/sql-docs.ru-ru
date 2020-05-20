@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Provider property [ADO]
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fae46773befb13105ed9dcd81b1116be48cf0675
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: af95544a998963ffd81b4ebf9098089cc1a9915f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931451"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759910"
 ---
 # <a name="provider-property-ado"></a>Свойство Provider (ADO)
 Указывает имя поставщика для объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) .  
@@ -40,7 +40,7 @@ ms.locfileid: "67931451"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойств provider и DefaultDatabase (Visual Basic)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Пример свойств provider и DefaultDatabase (Visual Basic)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Поставщик OLE DB Майкрософт для ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   

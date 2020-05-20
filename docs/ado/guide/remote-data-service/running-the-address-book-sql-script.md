@@ -11,14 +11,14 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5adc631a3c3f7a66c02f9ebfe541fa5e923deb0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 133ff64f2c15fefac072ecfa28a7f772cea4f465
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922232"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758980"
 ---
 # <a name="running-the-address-book-sql-script"></a>Запуск сценария SQL адресной книги
 > [!IMPORTANT]
@@ -68,7 +68,7 @@ ms.locfileid: "67922232"
   
 7.  После выполнения запроса закройте окно **запрос**, **анализатор запросов**и окна **Enterprise Manager** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполнение примера приложения адресной книги](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
 
 

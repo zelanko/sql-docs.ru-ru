@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CommandStream property [ADO]
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 23ec65380bfea16d38f02cab0a070ab69f85d525
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 20d2cb62b51a73066da242b3446a4d991f3bc79b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919748"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760417"
 ---
 # <a name="commandstream-property-ado"></a>Свойство CommandStream (ADO)
 Указывает поток, используемый в качестве входных данных для объекта [команды](../../../ado/reference/ado-api/command-object-ado.md) .  
@@ -40,7 +40,7 @@ ms.locfileid: "67919748"
 ## <a name="applies-to"></a>Применяется к  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [Свойство диалекта](../../../ado/reference/ado-api/dialect-property.md)   
  [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)

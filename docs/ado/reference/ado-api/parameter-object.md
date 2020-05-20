@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Parameter object [ADO]
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 15df27e3dc48decf743a78dd4d147a22dc7cf276
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 22af5fadda96adbe67c1c03aaa5cde3527df1113
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931665"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760000"
 ---
 # <a name="parameter-object"></a>Объект Parameter
 Представляет параметр или аргумент, связанный с объектом [Command](../../../ado/reference/ado-api/command-object-ado.md) на основе параметризованного запроса или хранимой процедуры.  
@@ -50,7 +50,7 @@ ms.locfileid: "67931665"
   
 -   [Свойства, методы и события объекта Parameter](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

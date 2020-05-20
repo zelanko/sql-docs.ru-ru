@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Name property [ADOX], VC++ example
 - Append method [ADOX], VC++ example
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2d0807dc58b9e51b593a3ac9ea1375c47b585fce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 424813731993841bc503592e42459548dcaf5152
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76910511"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759350"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Примеры методов Append для коллекций Columns и Tables, а также пример свойства Name (Visual C++)
 В следующем коде показано, как создать новую таблицу.  
@@ -81,7 +81,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Append (столбцы ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Метод Append (таблицы ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Свойство Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)
