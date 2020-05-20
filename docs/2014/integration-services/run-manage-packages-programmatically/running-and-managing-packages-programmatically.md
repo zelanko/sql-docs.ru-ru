@@ -10,12 +10,12 @@ ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ecbaa54a723fae6a3c5fd11363bf42f1f2a57da0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 077460ed71e42cdbecb6ac67b3e6bb1a3b49860c
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766831"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922057"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Выполнение пакетов и управление пакетами программным образом
   Если требуется управлять пакетами служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и выполнять их за пределами среды разработки, можно делать это программно. Этот подход предоставляет следующие возможности.  
@@ -35,7 +35,7 @@ ms.locfileid: "62766831"
 ## <a name="running-packages-on-the-integration-services-server"></a>Выполнение пакетов на сервере службы Integration Services  
  При развертывании пакетов на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно запустить пакеты программным путем с помощью пространства имен <xref:Microsoft.SqlServer.Management.IntegrationServices>. Сборка Microsoft.SqlServer.Management.IntegrationServices компилируется с платформой .NET Framework 3.5. При построении приложения .NET Framework 4.0 может потребоваться добавить ссылку на сборку непосредственно в файл проекта.  
   
- Можно также использовать пространство имен для развертывания проектов [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и управления ими. Общие сведения о пространстве имен и фрагменты кода см. в записи блога [Обзор модели управляющих объектов каталога служб SSIS](https://go.microsoft.com/fwlink/?LinkId=253122) на сайте blogs.msdn.com.  
+ Можно также использовать пространство имен для развертывания проектов [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и управления ими. Общие сведения о пространстве имен и фрагменты кода см. в записи блога [Обзор модели управляющих объектов каталога служб SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892) на сайте blogs.msdn.com.  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Основные сведения об отличиях между локальным и удаленным выполнением](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  

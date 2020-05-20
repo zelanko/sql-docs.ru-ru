@@ -10,12 +10,12 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 25ae3cee8e08292297449914bfb6e40dfc1b4b3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e31789b1f2cf5b2206af400c7c7798f7761f1e6c
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175463"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922073"
 ---
 # <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Занятие 7: Перенос файлов данных в службу хранилища Azure
   На этом занятии вы узнаете, как перемещать файлы данных в службу хранилища Azure (но не на экземпляр SQL Server). Для прохождения этого занятия не требуется завершать занятия 4, 5 и 6.  
@@ -74,7 +74,7 @@ ms.locfileid: "70175463"
   
     ```  
   
-5.  Теперь необходимо скопировать файлы данных в службу хранилища Azure с помощью одного из следующих методов: [средство AzCopy](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [размещение страницы](https://msdn.microsoft.com/library/azure/ee691975.aspx), [Справочник по клиентской библиотеке хранилища](https://msdn.microsoft.com/library/azure/dn261237.aspx)или средство обозревателя хранилищ сторонних производителей.  
+5.  Теперь необходимо скопировать файлы данных в службу хранилища Azure с помощью одного из следующих методов: [средство AzCopy](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs), [размещение страницы](https://msdn.microsoft.com/library/azure/ee691975.aspx), [Справочник по клиентской библиотеке хранилища](https://msdn.microsoft.com/library/azure/dn261237.aspx)или средство обозревателя хранилищ сторонних производителей.  
   
      **Внимание!** При использовании этого расширения всегда проверяйте, что создается большой двоичный объект страницы, а не блока.  
   

@@ -13,12 +13,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 090ad6a9651a01532af528f5f78316eeadb9798d
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815759"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922015"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)
   Модель правил определения исправности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] вычисляет набор стандартных (PBM) политик управления на основе политик. Их можно использовать для просмотра исправности группы доступности и реплики доступности и базы данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -48,15 +48,15 @@ ms.locfileid: "62815759"
   
 |Имя политики|Проблема|Категори**<sup>*</sup>**|Аспект|  
 |-----------------|-----------|------------------------------|-----------|  
-|Состояние кластера WSFC|[Служба кластеров WSFC находится в автономном режиме](wsfc-cluster-service-is-offline.md).|Critical|Экземпляр SQL Server|  
-|Режим «в сети» группы доступности|[Группа доступности находится в автономном режиме](availability-group-is-offline.md).|Critical|группа доступности|  
-|Готовность группы доступности к автоматическому переходу на другой ресурс при сбое|[Группа доступности не готова к автоматическому переходу на другой ресурс](availability-group-is-not-ready-for-automatic-failover.md).|Critical|группа доступности|  
+|Состояние кластера WSFC|[Служба кластеров WSFC находится в автономном режиме](wsfc-cluster-service-is-offline.md).|Критические важное|Экземпляр SQL Server|  
+|Режим «в сети» группы доступности|[Группа доступности находится в автономном режиме](availability-group-is-offline.md).|Критические важное|группа доступности|  
+|Готовность группы доступности к автоматическому переходу на другой ресурс при сбое|[Группа доступности не готова к автоматическому переходу на другой ресурс](availability-group-is-not-ready-for-automatic-failover.md).|Критические важное|группа доступности|  
 |Состояние синхронизации данных реплик доступности|[Некоторые реплики доступности не синхронизируют данные](some-availability-replicas-are-not-synchronizing-data.md).|Предупреждение|группа доступности|  
 |Состояние синхронизации данных синхронных реплик|[Некоторые синхронные реплики не синхронизированы](some-synchronous-replicas-are-not-synchronized.md).|Предупреждение|группа доступности|  
 |Состояние роли реплик доступности|[Некоторые реплики доступности не имеют работоспособной роли](some-availability-replicas-do-not-have-a-healthy-role.md).|Предупреждение|группа доступности|  
 |Состояние соединения с репликами доступности|[Некоторые реплики доступности отключены](some-availability-replicas-are-disconnected.md).|Предупреждение|группа доступности|  
-|Состояние роли реплики доступности|[Реплика доступности не имеет работоспособной роли](availability-replica-does-not-have-a-healthy-role.md).|Critical|Реплика доступности|  
-|Состояние соединения с репликами доступности|[Реплика доступности отключена](availability-replica-is-disconnected.md).|Critical|Реплика доступности|  
+|Состояние роли реплики доступности|[Реплика доступности не имеет работоспособной роли](availability-replica-does-not-have-a-healthy-role.md).|Критические важное|Реплика доступности|  
+|Состояние соединения с репликами доступности|[Реплика доступности отключена](availability-replica-is-disconnected.md).|Критические важное|Реплика доступности|  
 |Состояние присоединения реплики доступности|[Реплика доступности не присоединена](availability-replica-is-not-joined.md).|Предупреждение|Реплика доступности|  
 |Состояние синхронизации данных реплики доступности|[Состояние синхронизации данных некоторых баз данных доступности не является работоспособным](data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Предупреждение|Реплика доступности|  
 |Состояние приостановки базы данных доступности|[База данных доступности приостановлена](availability-database-is-suspended.md).|Предупреждение|База данных доступности|  
@@ -86,7 +86,7 @@ ms.locfileid: "62815759"
   
  Определяемая пользователем политика может применять доступные аспекты управления на основе политик, включая те из них, которые используются в стандартных политиках AlwaysOn (см. подраздел [Стандартные политики и проблемы](#AlwaysOnPBM) выше). Аспект сервера содержит следующие свойства для мониторинга работоспособности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]: (`IsHadrEnabled` и `HadrManagerStatus`). Аспект сервера содержит также следующие свойства политики для мониторинга конфигурации кластера WSFC: `ClusterQuorumType` и `ClusterQuorumState`.  
   
- Дополнительные сведения см. в записи [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (Модель работоспособности AlwaysOn, часть 2. Расширение модели работоспособности) блога группы разработчиков SQL Server AlwaysOn.  
+ Дополнительные сведения см. в записи [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (Модель работоспособности AlwaysOn, часть 2. Расширение модели работоспособности) блога группы разработчиков SQL Server AlwaysOn.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
@@ -104,9 +104,9 @@ ms.locfileid: "62815759"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
--   [The AlwaysOn Health Model Part 1 -- Health Model Architecture](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [The AlwaysOn Health Model Part 1 -- Health Model Architecture](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)  
   
--   [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
   
 -   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

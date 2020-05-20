@@ -13,12 +13,12 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 865e8d720e9977f582ac5ae8a0e75d995fc82629
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a2dc38d5e916cf67c09162c86db9ab31728804f
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789559"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922032"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>Необходимые условия для выполнения перехода от использования доставки журналов к использованию групп доступности AlwaysOn (SQL Server)
   В этом разделе описаны предварительные условия для преобразования базы данных-источника доставки журналов вместе с одной или несколькими базами данных-получателями в базу данных-источник и базы данных-получатели AlwaysOn.  
@@ -39,7 +39,7 @@ ms.locfileid: "62789559"
 ##  <a name="availability-group-prerequisites"></a><a name="AGPrereqsRealAddress"></a>Предварительные требования для группы доступности  
  Чтобы разрешить выполнение заданий резервного копирования в первичной реплике группы доступности, используйте следующие параметры резервного копирования групп доступности AlwaysOn:  
   
-|Свойство|Параметр|  
+|Свойство.|Параметр|  
 |--------------|-------------|  
 |Автоматическое резервное копирование группы доступности|Только в первичной реплике|  
 |Приоритет резервного копирования первичной реплики.|> 0|  
@@ -93,11 +93,11 @@ ms.locfileid: "62789559"
   
 -   **Блоги**  
   
-     [Преобразование конфигурации доставки журналов в группу доступности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
+     [Преобразование конфигурации доставки журналов в группу доступности](https://docs.microsoft.com/archive/blogs/sqlalwayson/converting-a-logshipping-configuration-to-availability-group)  
   
-     [Добавление базы данных-источника доставки журналов и баз данных-получателей к существующей группе доступности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
+     [Добавление базы данных-источника доставки журналов и баз данных-получателей к существующей группе доступности](https://docs.microsoft.com/archive/blogs/sqlalwayson/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group)  
   
-     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
+     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://docs.microsoft.com/archive/blogs/sqlalwayson/)  
   
      [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
