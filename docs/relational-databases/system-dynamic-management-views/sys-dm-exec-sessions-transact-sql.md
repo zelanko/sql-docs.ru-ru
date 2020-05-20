@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sessions dynamic management view
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9c87a6900b8ee19e18efb76506d1bed5a645202
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ce44d14573000e9880fb1daf3a1ddb42746ee85
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76516275"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151964"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,19 +34,19 @@ ms.locfileid: "76516275"
   
  Динамические административные представления sys. dm_exec_connections, sys. dm_exec_sessions и sys. dm_exec_requests сопоставляются с системной таблицей [sys. sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) .  
   
-> **Примечание.** Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_exec_sessions**.  
+> **Примечание.** Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_exec_sessions**.  
   
 |Имя столбца|Тип данных|Описание и сведения о конкретной версии|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Идентификатор сеанса, связанный со всеми активными первичными соединениями. Не допускает значение NULL.|  
-|login_time|**datetime**|Время подключения сеанса. Не допускает значение NULL.|  
+|login_time|**datetime**|Время подключения сеанса. Не допускает значение NULL. Сеансы, для которых не завершен вход в систему во время запроса этого динамического административного представления, отображаются с временем входа `1900-01-01` .|  
 |host_name|**nvarchar(128)**|Имя клиентской рабочей станции, указанное в сеансе. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.<br /><br /> **Примечание по безопасности.** Клиентское приложение предоставляет имя рабочей станции и может предоставлять неточные данные. Не следует полагаться на функцию HOST_NAME для обеспечения безопасности.|  
 |program_name|**nvarchar(128)**|Имя клиентской программы, которая инициировала сеанс. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.|  
 |host_process_id|**int**|Идентификатор процесса клиентской программы, которая инициировала сеанс. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.|  
 |client_version|**int**|Версия TDS-протокола интерфейса, который используется клиентом для подключения к серверу. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.|  
 |client_interface_name|**nvarchar(32)**|Имя библиотеки или драйвера, используемое клиентом для обмена данными с сервером. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.|  
 |security_id|**varbinary(85)**|Идентификатор безопасности Microsoft Windows, связанный с именем входа. Не допускает значение NULL.|  
-|login_name|**nvarchar(128)**|Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], под которым выполняется текущий сеанс. Чтобы узнать первоначальное имя входа, с помощью которого был создан сеанс, см. параметр original_login_name. Может быть именем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа, прошедшим проверку подлинности, или именем пользователя домена, прошедшего проверку подлинности Windows. Не допускает значение NULL.|  
+|login_name|**nvarchar(128)**|Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], под которым выполняется текущий сеанс. Чтобы узнать первоначальное имя входа, с помощью которого был создан сеанс, см. параметр original_login_name. Может быть именем входа, прошедшим проверку подлинности, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или именем пользователя домена, прошедшего проверку подлинности Windows. Не допускает значение NULL.|  
 |nt_domain|**nvarchar(128)**|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> Домен Windows для клиента, если во время сеанса применяется проверка подлинности Windows или доверительное соединение. Для внутренних сеансов и пользователей, не принадлежащих к домену, это значение равно NULL. Допускает значение NULL.|  
 |nt_user_name|**nvarchar(128)**|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> Имя пользователя Windows для клиента, если во время сеанса используется проверка подлинности Windows или доверительное соединение. Для внутренних сеансов и пользователей, не принадлежащих к домену, это значение равно NULL. Допускает значение NULL.|  
 |status|**nvarchar(30)**|Состояние сеанса. Возможные значения:<br /><br /> **Running** — в данный момент выполняется один или несколько запросов.<br /><br /> **Sleeping** — в данный момент запросы не выполняются.<br /><br /> **Неактивный** сеанс был сброшен из-за пула соединений и теперь находится в состоянии предварительного входа.<br /><br /> **Preconnect** — Сеанс находится в классификаторе регулятора ресурсов.<br /><br /> Не допускает значение NULL.|  
@@ -88,13 +88,13 @@ ms.locfileid: "76516275"
 |database_id|**smallint**|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Идентификатор текущей базы данных для каждого сеанса.|  
 |authenticating_database_id|**int**|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Идентификатор базы данных, выполняющей проверку подлинности участника. Для имен входа это значение будет равно 0. Для пользователей автономной базы данных это значение будет содержать идентификатор автономной базы данных.|  
 |open_transaction_count|**int**|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Количество открытых транзакций на сеанс.|  
-|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
 |page_server_reads|**bigint**|Область **применения**: масштабирование базы данных SQL Azure<br /><br /> Число операций чтения сервера страниц, выполненных запросами в этом сеансе во время этого сеанса. Не допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
 Все могут просматривать свои сведения о сеансе.  
-**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** Для просмотра всех сеансов на сервере требуется `VIEW SERVER STATE` разрешение. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Требуется `VIEW DATABASE STATE` для просмотра всех соединений с текущей базой данных. `VIEW DATABASE STATE`не может быть предоставлено `master` в базе данных. 
+** [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** `VIEW SERVER STATE` [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Для просмотра всех сеансов на сервере требуется разрешение.  
+** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Требуется `VIEW DATABASE STATE` для просмотра всех подключений к текущей базе данных. `VIEW DATABASE STATE`не может быть предоставлено в `master` базе данных. 
   
   
 ## <a name="remarks"></a>Remarks  
@@ -133,7 +133,7 @@ FROM sys.dm_exec_sessions
 GROUP BY login_name;  
 ```  
   
-### <a name="b-finding-long-running-cursors"></a>Б) Поиск курсоров, выполняющихся продолжительное время  
+### <a name="b-finding-long-running-cursors"></a>Б. Поиск курсоров, выполняющихся продолжительное время  
  В следующем примере производится поиск курсоров, открытых дольше заданного периода времени, определяются их создатели и соответствующие им сеансы.  
   
 ```sql  
@@ -183,7 +183,7 @@ JOIN sys.dm_exec_sessions AS s
 WHERE c.session_id = @@SPID;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   

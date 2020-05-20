@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5323054b77ed26a3ada816f44c1bf6764ded931d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fcb8be3b7803402d6e20510d95f293107b66540
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089364"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000824"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>Параметры (страница "Выполнение запросов/SQL Server/Дополнительно")
   При использовании команды SET доступно несколько параметров. Данная страница используется для задания параметра **set** для запуска запросов [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в редакторе запросов SQL Server. Они не влияют на другие редакторы кода. Изменения этих параметров применяются только к новым запросам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Для изменения параметров для текущих запросов выберите пункт **Параметры запроса** в меню **Запрос** или контекстное меню в окне запроса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . В пункте **Выполнение**выберите **Дополнительно**. Дополнительные сведения о них см. в разделе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] электронной документации.  

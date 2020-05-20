@@ -9,18 +9,18 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAnsi
 ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e075de106a66ffee63c02ead06a3fc68548111a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23e46eaf73be4f14e90065627379bb778525051a
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089383"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000854"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>Параметры (выполнение запроса — страница «SQL Server-ANSI»)
-  Все вместе эти параметры SET стандарта ANSI (ISO) определяют среду обработки запроса на время выполнения пользовательского запроса, триггера или хранимой процедуры. Однако эти параметры SET включают не все возможности, необходимые для соответствия стандарту ISO. Используйте эту страницу, чтобы указать [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , что будет выполнять запросы, используя все или часть параметров, указанных в стандарте ISO. Изменения этих параметров применяются только к новым запросам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы изменить параметры для текущих запросов, в меню **запрос** выберите пункт [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Параметры запроса** или щелкните правой кнопкой мыши в окне запроса и выберите пункт **Параметры запроса**. В диалоговом окне **Параметры запроса** в разделе **Выполнение**щелкните **ANSI**.  
+  Все вместе эти параметры SET стандарта ANSI (ISO) определяют среду обработки запроса на время выполнения пользовательского запроса, триггера или хранимой процедуры. Однако эти параметры SET включают не все возможности, необходимые для соответствия стандарту ISO. Используйте эту страницу, чтобы указать, что [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] будет выполнять запросы, используя все или часть параметров, указанных в стандарте ISO. Изменения этих параметров применяются только к новым запросам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы изменить параметры для текущих запросов, в меню **запрос** выберите пункт **Параметры запроса** или щелкните правой кнопкой мыши в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] окне запроса и выберите пункт **Параметры запроса**. В диалоговом окне **Параметры запроса** в разделе **Выполнение**щелкните **ANSI**.  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
  **SET ANSI_DEFAULTS**  

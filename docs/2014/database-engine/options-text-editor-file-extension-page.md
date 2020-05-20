@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4bf6c8146e8f3b5f6222affb3709439c37fc5023
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7588f75c1b2f3f282026821d5bf9a77bd8e09886
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089938"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000716"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Параметры ("Текстовый редактор" — страница "Расширение файла")
   Используйте диалоговое окно **Параметры**, чтобы задать способ обработки файлов с определенными расширениями в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Для каждого введенного расширения можно выбрать соответствующий редактор. Таким образом, можно выбрать редактор среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], в котором будут открываться документы определенного типа. Чтобы открыть параметры расширений файлов, выберите **Параметры** в меню **Сервис**, разверните **Редактор текстов** и выберите **Расширение файла**.  
@@ -29,10 +29,10 @@ ms.locfileid: "66089938"
  **Редактор**  
  Выберите редактор среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], с помощью которого будут открываться документы с расширением, указанным в поле **Расширение**. При выборе параметра «с кодировкой» каждый раз при открытии такого документа будет появляться диалоговое окно, где можно выбрать схему кодировки.  
   
- **Добавление**  
+ **Добавить**  
  Добавление записи, включающей указанные значения параметров **Расширение** и **Использование редакторов**, в **Список расширений**.  
   
- **Удалить**  
+ **Remove**  
  Удаление выбранной записи из списка **Расширения**.  
   
  **Расширение**  

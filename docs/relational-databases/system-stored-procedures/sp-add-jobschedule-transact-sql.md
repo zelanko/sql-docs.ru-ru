@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobschedule
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 06dbee74cfb3e2d5e697ea9594d46c98557de8ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 11aa73828caba66637d5d5b87a478dca851bdaf9
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70810498"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151953"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "70810498"
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > В [управляемый экземпляр базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)в настоящее время поддерживаются не все функции агент SQL Server. Дополнительные сведения см. [в разделе управляемый экземпляр базы данных SQL Azure отличий T-SQL от SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
+  > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,7 +50,8 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
      [ , [ @active_end_date = ] active_end_date ]  
      [ , [ @active_start_time = ] active_start_time ]  
      [ , [ @active_end_time = ] active_end_time ]  
-     [ , [ @schedule_id = ] schedule_id OUTPUT ]  
+     [ , [ @schedule_id = ] schedule_id OUTPUT ]
+     [ , [ @schedule_uid = ] _schedule_uid OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -71,8 +72,8 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |-----------|-----------------|  
 |**1**|Однократно|  
 |**4**|Ежедневно|  
-|**8**|Weekly (Еженедельно);|  
-|**16**|Ежемесячно|  
+|**8**|Еженедельно|  
+|**глубин**|Ежемесячно|  
 |**32**|Ежемесячно относительно *frequency_interval.*|  
 |**64**|Выполняется при запуске службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**128**|Запускается при простое компьютера.|  
@@ -86,7 +87,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**8** (еженедельно)|*frequency_interval* является одним или несколькими следующими (в сочетании с логическим оператором OR):<br /><br /> 1 = воскресенье<br /><br /> 2 = понедельник<br /><br /> 4 = вторник<br /><br /> 8 = среда<br /><br /> 16 = Четверг<br /><br /> 32 = Пятница<br /><br /> 64 = суббота|  
 |**16** (ежемесячно)|В *frequency_interval* день месяца.|  
 |**32** (ежемесячная относительная)|*frequency_interval* является одним из следующих:<br /><br /> 1 = воскресенье<br /><br /> 2 = понедельник<br /><br /> 3 = вторник<br /><br /> 4 = среда<br /><br /> 5 = четверг<br /><br /> 6 = пятница<br /><br /> 7 = суббота<br /><br /> 8 = Ежедневно<br /><br /> 9 = рабочий день<br /><br /> 10 = выходной|  
-|**64** (при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы агента)|*frequency_interval* не используется.|  
+|**64** (при [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запуске службы агента)|*frequency_interval* не используется.|  
 |**128**|*frequency_interval* не используется.|  
   
 `[ @freq_subday_type = ] frequency_subday_type`Указывает единицы для *frequency_subday_interval*. *frequency_subday_type* имеет **тип int**, не имеет значения по умолчанию и может принимать одно из следующих значений:  
@@ -109,7 +110,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
-|**16**|Последний|  
+|**глубин**|Последний|  
   
  *frequency_relative_interval* указывает на вхождение интервала. Например, если *frequency_relative_interval* имеет значение **2**, *frequency_type* имеет значение **32**, а *frequency_interval* имеет значение **3**, запланированное задание будет выполняться во второй вторник каждого месяца.  
   
@@ -161,7 +162,7 @@ EXEC msdb.dbo.sp_add_jobschedule
         @active_start_time = 20000 -- 2:00 AM
 ```
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание и присоединение расписаний к заданиям](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
  [Планирование задания](../../ssms/agent/schedule-a-job.md)   
  [Создание расписания](../../ssms/agent/create-a-schedule.md)   

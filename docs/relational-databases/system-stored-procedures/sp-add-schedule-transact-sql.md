@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_schedule
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 21fe2a05c87caf5270967381e9ebeefc1069729f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dcaf10a680540a533e539783a1fc9ed289998a40
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "70810395"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151973"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,8 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
     [ , [ @active_end_time = ] active_end_time ]   
     [ , [ @owner_login_name = ] 'owner_login_name' ]  
     [ , [ @schedule_uid = ] schedule_uid OUTPUT ]  
-    [ , [ @schedule_id = ] schedule_id OUTPUT ]  
+    [ , [ @schedule_id = ] schedule_id OUTPUT ]
+    [ , [ @schedule_uid = ] _schedule_uid OUTPUT ]
     [ , [ @originating_server = ] server_name ] /* internal */  
 ```  
   
@@ -60,12 +61,12 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_type = ] freq_type`Значение, указывающее, когда должно выполняться задание. *freq_type* имеет **тип int**, значение по умолчанию **0**и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
 |**4**|Ежедневно|  
-|**8**|Weekly (Еженедельно);|  
-|**16**|Ежемесячно|  
+|**8**|Еженедельно|  
+|**глубин**|Ежемесячно|  
 |**32**|Ежемесячно относительно *freq_interval*|  
 |**64**|Запускать при запуске службы агента SQL|  
 |**128**|Запуск при простое компьютера (не поддерживается в [управляемый экземпляр базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
@@ -84,7 +85,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_subday_type = ] freq_subday_type`Указывает единицы для *freq_subday_interval*. *freq_subday_type* имеет **тип int**, значение по умолчанию **0**и может принимать одно из следующих значений.  
   
-|Применение|Описание (единица измерения)|  
+|Значение|Описание (единица измерения)|  
 |-----------|--------------------------|  
 |**0x1**|В указанное время|  
 |**0x2**|Секунды|  
@@ -95,13 +96,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_relative_interval = ] freq_relative_interval`Вхождение *freq_interval* задания в каждый месяц, если *freq_interval* — 32 (ежемесячное относительное значение). *freq_relative_interval* имеет **тип int**, значение по умолчанию **0**и может принимать одно из следующих значений. *freq_relative_interval* игнорируется в тех случаях, когда *freq_type* не равно 32.  
   
-|Применение|Описание (единица измерения)|  
+|Значение|Описание (единица измерения)|  
 |-----------|--------------------------|  
 |**1**|Первый|  
 |**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
-|**16**|Последний|  
+|**глубин**|Последний|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`Число недель или месяцев между запланированным выполнением задания. *freq_recurrence_factor* используется только в том случае, если *freq_type* имеет значение **8**, **16**или **32**. *freq_recurrence_factor* имеет **тип int**и значение по умолчанию **0**.  
   
@@ -129,7 +130,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Отсутствуют  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
@@ -162,7 +163,7 @@ EXEC dbo.sp_add_schedule
 GO  
 ```  
   
-### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>Б) Создание расписания, присоединение расписания к нескольким заданиям  
+### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>Б. Создание расписания, присоединение расписания к нескольким заданиям  
  В следующем примере создается расписание с именем `NightlyJobs`. Задания, использующие это расписание, выполняются на сервере каждый день в `01:00`. В этом примере расписание подключается к заданиям `BackupDatabase` и `RunReports`.  
   
 > [!NOTE]  

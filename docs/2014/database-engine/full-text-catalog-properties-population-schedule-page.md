@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.schedule.f1
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e8ac94f235e08f2217edb9504722ebac998cb28
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62778826"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000936"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>Свойства полнотекстового каталога (страница «Расписание заполнения»)
   Это диалоговое окно используется для добавления или изменения расписаний, определяющих время заполнения или повторного заполнения полнотекстового каталога.  
@@ -25,7 +25,7 @@ ms.locfileid: "62778826"
 ## <a name="schedules-grid"></a>Сетка расписаний  
  Каждая строка представляет собой назначенную операцию по заполнению или повторному заполнению каталога.  
   
- **Имя**  
+ **Name**  
  Отображает имя расписания.  
   
  **Тип заполнения**  
@@ -37,13 +37,13 @@ ms.locfileid: "62778826"
  **Описание**  
  Описание назначенной операции.  
   
- **Создать**  
+ **Новые**  
  Нажмите эту кнопку, чтобы создать новое расписание индексирования. При нажатии этой кнопки открывается диалоговое окно **Создание расписания полнотекстового индексирования каталога** .  
   
  **Edit** (Изменение)  
  Нажмите эту кнопку, чтобы изменить выбранное расписание заполнения.  
   
- **Удаление**  
+ **Удалить**  
  Нажмите эту кнопку, чтобы удалить выбранное расписание заполнения.  
   
 ## <a name="see-also"></a>См. также  

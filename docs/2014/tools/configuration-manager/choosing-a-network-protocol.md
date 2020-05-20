@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Banyan VINES
 - protocols [SQL Server], client configuration
 ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9046541411d472c7fe557cfad78ca903107513ab
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035293"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001094"
 ---
 # <a name="choosing-a-network-protocol"></a>Выбор сетевого протокола
-  Чтобы установить соединение с [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , необходимо включить сетевой протокол. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может одновременно обслуживать запросы по нескольким протоколам. Клиенты подключаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи одного протокола. Если программе клиента неизвестно, какой протокол прослушивается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , настройте клиент для последовательного использования нескольких протоколов. Для включения, выключения и настройки сетевых протоколов используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Чтобы установить соединение с [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , необходимо включить сетевой протокол. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]может одновременно обслуживать запросы по нескольким протоколам. Клиенты подключаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи одного протокола. Если программе клиента неизвестно, какой протокол прослушивается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , настройте клиент для последовательного использования нескольких протоколов. Для включения, выключения и настройки сетевых протоколов используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="shared-memory"></a>Общая память  
  Общая память является простейшим протоколом и не имеет настраиваемых параметров. Поскольку клиенты, использующие протокол общей памяти, могут подключаться только к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запущенному на том же компьютере, этот протокол неприменим к большинству действий базы данных. Используйте протокол общей памяти, чтобы устранить неполадки, если есть вероятность того, что другие протоколы настроены некорректно.  

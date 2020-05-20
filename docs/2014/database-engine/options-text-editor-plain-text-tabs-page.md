@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.Tabs
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e060f1bccb544edd4e82c759b737e05c4bb980b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bdbcfa8140ecbc8c40086af41e64ba96920fe78
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089862"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000702"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Параметры ("Текстовый редактор" — "Обычный текст" — страница "Вкладки")
   Используйте это диалоговое окно для изменения режима табуляции в текстовом редакторе, который используется для редактирования документа, не связанного с определенным языком разработки. Для вывода этих параметров щелкните пункт **Параметры** в меню **Сервис**, раскройте узел **Текстовый редактор**, узел **Неформатированный текст**, затем щелкните **Табуляция**.  
@@ -29,7 +29,7 @@ ms.locfileid: "66089862"
  **Нет**  
  Не делать отступ при создании новой строки нажатием клавиши ВВОД. Курсор помещается в первый столбец новой строки.  
   
- **Блок**  
+ **Заблокировать**  
  Делать отступ на новой строке при нажатии клавиши ВВОД на такое же расстояние, как и у предыдущей строки.  
   
  **Структура**  

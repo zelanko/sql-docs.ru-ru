@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
 - VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7a64d8fe198b5660715488b6e1b15d5e4831a99
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089239"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000724"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Параметры (страница "Текстовый редактор" — "Вкладка редактора и строка состояния")
   На странице **Вкладка редактора и строка состояния** можно настроить сведения, которые показываются в редакторах запросов [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Можно указать уровень сведений, отображаемых на вкладке и в строке состояния редактора запросов, а также место расположения строки состояния: вверху или внизу окна редактора.  
@@ -70,7 +70,7 @@ ms.locfileid: "66089239"
  **Вверх**  
  Строка состояния появляется в верхней части окна редактора запросов.  
   
- **Нижний**  
+ **Последние**  
  Строка состояния появляется в нижней части окна редактора запросов.  
   
 ## <a name="tab-text"></a>Текст вкладки  

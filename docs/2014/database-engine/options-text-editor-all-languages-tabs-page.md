@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: bd715d6b-f873-41d4-aa10-57b7098b61cc
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 377ca16075a86c366fcfa8d9d96bcfa989efec4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56dee0d04c713163f74c391fe5a482092c6c30e7
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089907"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000741"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>Параметры ("Текстовый редактор" — "Все языки" — страница "Вкладки")
   Это диалоговое окно используется для задания действий во всех пяти редакторах в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]при использовании клавиши TAB. Для отображения этих параметров в меню **Сервис** выберите **Параметры** . Выберите папку **Текстовый редактор** , откройте папку **Все языки** и выберите **Вкладки**.  
@@ -32,7 +32,7 @@ ms.locfileid: "66089907"
  **Нет**  
  Если данный параметр выбран, при нажатии клавиши ВВОД отступ у новой строки создаваться не будет. Курсор помещается в первый столбец новой строки.  
   
- **Блок**  
+ **Заблокировать**  
  При выборе этого параметра во вновь созданной строке при нажатии пользователем клавиши ВВОД производится отступ на то же расстояние, что и в предыдущей строке.  
   
  **Структура**  

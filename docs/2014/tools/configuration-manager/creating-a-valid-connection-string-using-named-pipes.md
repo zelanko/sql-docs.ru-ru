@@ -13,18 +13,18 @@ helpviewer_keywords:
 - aliases [SQL Server], named pipes
 - Named Pipes [SQL Server], connection strings
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 12d5cb30217a0580d4da101d614b4930cfd8184b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c22ee167318fb6e37194a3558637d9afc642111
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63065552"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001034"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Создание допустимой строки соединения, использующей протокол именованных каналов
-  Если пользователь по умолчанию [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает протокол именованных каналов, он использует `\\.\pipe\sql\query` в качестве имени канала. Точка означает, что компьютер является локальным компьютером, `pipe` указывает, что соединение является именованным каналом, а `sql\query` — именем канала. Чтобы подключиться к каналу по умолчанию, псевдоним должен содержать `\\<computer_name>\pipe\sql\query` в качестве имени канала. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был настроен на прослушивание другого канала, то имя канала должно соответствовать этому каналу. Например, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует в качестве канала `\\.\pipe\unit\app`, то псевдоним должен использовать `\\<computer_name>\pipe\unit\app` в качестве имени канала.  
+  Если пользователь по умолчанию [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает протокол именованных каналов, он использует в `\\.\pipe\sql\query` качестве имени канала. Точка означает, что компьютер является локальным компьютером, `pipe` указывает, что соединение является именованным каналом, а `sql\query` — именем канала. Чтобы подключиться к каналу по умолчанию, псевдоним должен содержать `\\<computer_name>\pipe\sql\query` в качестве имени канала. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был настроен на прослушивание другого канала, то имя канала должно соответствовать этому каналу. Например, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует в качестве канала `\\.\pipe\unit\app`, то псевдоним должен использовать `\\<computer_name>\pipe\unit\app` в качестве имени канала.  
   
  Создание допустимого имени канала  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63065552"
   
 -   Укажите **сервер**. Для именованного экземпляра можно ввести имя сервера и имя экземпляра.  
   
- Во время подключения компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента считывает значения имени сервера, протокола и канала из реестра для указанного имени псевдонима и создает имя канала в формате `np:\\<computer_name>\pipe\<pipename>` или. `np:\\<IPAddress>\pipe\<pipename>` Для именованного экземпляра имя канала по умолчанию — `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query`.  
+ Во время подключения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонент собственного клиента считывает значения имени сервера, протокола и канала из реестра для указанного имени псевдонима и создает имя канала в формате `np:\\<computer_name>\pipe\<pipename>` или `np:\\<IPAddress>\pipe\<pipename>` . Для именованного экземпляра имя канала по умолчанию — `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query` .  
   
 > [!NOTE]  
 >  Брандмауэр Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] по умолчанию закрывает порт 445. Так как [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляет связь через порт 445, необходимо повторно открыть порт, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для прослушивания клиентских подключений с помощью именованных каналов. Информацию о настройке брандмауэра см. в статье "Настройка брандмауэра Windows для разрешения доступа к SQL Server" в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или документации по вашей версии брандмауэра.  

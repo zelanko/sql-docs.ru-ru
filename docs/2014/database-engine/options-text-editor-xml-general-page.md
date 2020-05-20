@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b32dcfc95c5fc6929454add71ff4452e00fdda6e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089201"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001047"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Options (Text Editor - XML - General Page)
   Используйте это диалоговое окно для изменения общего режима правок в редакторе XML, который используется для изменения XML-документов. Чтобы открыть эту страницу, выберите пункт **Параметры** в меню **Сервис** , откройте вложенную папку **XML** , а затем откройте страницу **Общие**.  
@@ -33,7 +33,7 @@ ms.locfileid: "66089201"
  **Сведения о параметрах**  
  Если этот флажок установлен, то слева от точки ввода в редакторе отображается полный синтаксис текущего объявления или процедуры со всеми доступными параметрами. Очередной параметр, который может быть присвоен, выделяется полужирным шрифтом.  
   
-## <a name="settings"></a>Параметры  
+## <a name="settings"></a>"Настройки"  
  **Разрешить виртуальные пробелы**  
  Если установлен этот флажок, конец каждой строки кода дополняется пробелами. Установите этот флажок для размещения комментариев в постоянной позиции относительно кода.  
   

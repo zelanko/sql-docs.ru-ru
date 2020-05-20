@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.AnalysisServer.AnalysisServicesExecutionGeneral
 ms.assetid: 456867d0-724c-449c-abf9-013a694d7924
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9d299e8ffc5faceb86bcccd6bd508f09ef3c80b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8af37661cb3676eaeb13db0c35b1e70b2f23ec1a
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089416"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000788"
 ---
 # <a name="options-query-execution-analysis-server-general-page"></a>Параметры (выполнение запроса-сервер анализа данных-страница "Общие")
   Используйте эту страницу, чтобы задать параметры для запросов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Чтобы открыть страницу настроек в меню **Сервис** выберите пункт **Параметры**. На странице **Выполнение запросов** откройте папку **Сервер анализа данных** и выберите пункт **Общие**.  

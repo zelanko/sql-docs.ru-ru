@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.schedule.f1
 ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4188a76609df3829455da05365d60776b8f6b815
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779034"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000904"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Свойства полнотекстового индекса (страница «Расписания»)
   Эта страница предназначена для просмотра и создания расписаний выполнения для задания агента SQL Server, которое запускает добавочное заполнение в ходе обновлений базовой таблицы полнотекстового индекса. Если базовая таблица или представление не содержат столбец типа данных `timestamp`, то выполняется полное заполнение.  
@@ -30,7 +30,7 @@ ms.locfileid: "62779034"
  **Расписания**  
  Выводит список всех запланированных добавочных заполнений (если таковые имеются) для базовой таблицы полнотекстового индекса.  
   
- **Имя**  
+ **Name**  
  Выводит имя каждого из запланированных заполнений.  
   
  **Тип заполнения**  
@@ -42,7 +42,7 @@ ms.locfileid: "62779034"
  **Описание**  
  Выводит описание, указанное в момент создания расписания.  
   
- **Создать**  
+ **Новые**  
  Нажмите, чтобы создать новое расписание для заполнения полнотекстового индекса.  
   
 ## <a name="see-also"></a>См. также  

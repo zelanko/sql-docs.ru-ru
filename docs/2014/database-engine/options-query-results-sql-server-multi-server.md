@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.sqleditors.multiserverresultssettings
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLMultiServerResults
 ms.assetid: d6768bd8-9cb5-4606-a726-a33a1df9e1bb
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6019a328463d27b4495ae0db70e844eb4e05d747
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8b7c8a3653fd54112d4f5639832e25727ce67b5
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089968"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000774"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>Параметры (страница "Результаты запроса/SQL Server/Многосерверные")
   При одновременном выполнении запросов для нескольких серверов с помощью этой страницы можно указать параметры отображения результирующих наборов. Слияние результатов объединяет результирующие наборы всех серверов в единый результирующий набор. При объединении результатов первый ответивший сервер устанавливает схему результирующего набора. Для объединения результирующих наборов запрос должен вернуть одинаковое число столбцов с одинаковыми для каждого сервера именами. При слиянии результатов будет выведено сообщение для каждого сервера, результаты которого не совпадают со схемой (количество и имена столбцов), возвращенной первым сервером, возвратившим результаты.  

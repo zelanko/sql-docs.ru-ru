@@ -9,18 +9,18 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToGrid
 ms.assetid: f88a0f5c-e800-473b-ae23-c3943de5ed63
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b67926706674abb116b4f3075089853e6fbb665e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 914daa6a44df3410224616efbe8285598c95dbd3
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089309"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000764"
 ---
 # <a name="options-query-results-sql-server-results-to-grid-page"></a>Параметры (результаты запроса — страница «SQL Server-Results to Grid»)
-  Используйте эту страницу, чтобы указать параметры отображения результирующего набора запроса в формате сетки. Изменения этих параметров применяются только к новым запросам [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы изменить параметры для текущих запросов, в меню **запрос** выберите пункт [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Параметры запроса** или щелкните правой кнопкой мыши в окне запроса и выберите пункт **Параметры запроса**. На левой панели диалогового окна **Параметры запроса** в списке **Результаты**выберите пункт **Сетка**.  
+  Используйте эту страницу, чтобы указать параметры отображения результирующего набора запроса в формате сетки. Изменения этих параметров применяются только к новым запросам [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы изменить параметры для текущих запросов, в меню **запрос** выберите пункт **Параметры запроса** или щелкните правой кнопкой мыши в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] окне запроса и выберите пункт **Параметры запроса**. На левой панели диалогового окна **Параметры запроса** в списке **Результаты**выберите пункт **Сетка**.  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
  **Включение запроса в результирующий набор**  

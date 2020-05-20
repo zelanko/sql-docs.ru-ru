@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 385380e6e51c3b8519e7dbc6ec3d934e1ef14846
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55e89850c3b3f19c30a4943f5d787407da7e3c88
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089251"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000744"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>Параметры ("Текстовый редактор" — "Все языки" — страница "Общие")
   Это диалоговое окно используется для задания общих параметров редактирования во всех пяти редакторах в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Для отображения этих параметров в меню **Сервис** выберите **Параметры** . Выберите папку **Текстовый редактор** , разверните узел **Все языки** и выберите **Общие**.  
@@ -38,7 +38,7 @@ ms.locfileid: "66089251"
  **Сведения о параметрах**  
  Отображает полный синтаксис для текущего объявления или процедуры слева от точки вставки в редакторе со всеми доступными параметрами. Очередной параметр, который может быть присвоен, выделяется полужирным шрифтом.  
   
-## <a name="settings"></a>Параметры  
+## <a name="settings"></a>"Настройки"  
  **Разрешить виртуальные пробелы**  
  Разместить комментарии в коде. Если установлен этот флажок, можно разместить курсор после последнего символа строки. При вводе данных автоматически добавляются табуляции и пробелы, чтобы заполнить строку до места вставки.  
   
