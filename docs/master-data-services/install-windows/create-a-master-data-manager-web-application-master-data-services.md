@@ -1,5 +1,6 @@
 ---
 title: Создание веб-приложения диспетчера основных данных
+description: Диспетчер основных данных веб-приложение предоставляет пользователям интерфейс для работы с основными данными, а администраторам — для настройки и администрирования MDS.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5617adb01ffc566319905942376ecaa9b78065bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4df60a40ff57ee7d51b7a34a2452815239ab491
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81728504"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606664"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>Создание веб-приложения диспетчера основных данных (Master Data Services)
 
@@ -47,7 +48,7 @@ ms.locfileid: "81728504"
   
 #### <a name="to-create-a-master-data-manager-web-application-in-a-new-website"></a>Создание веб-приложения диспетчера основных данных на новом веб-сайте  
   
-1.  Откройте [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+1.  Откройте файл [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
 2.  На панели слева щелкните элемент **Веб-конфигурация**.  
   
@@ -62,7 +63,7 @@ ms.locfileid: "81728504"
   
 #### <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>Создание веб-приложения диспетчера основных данных на существующем веб-сайте  
   
-1.  Откройте [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+1.  Откройте файл [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
 2.  На панели слева щелкните элемент **Веб-конфигурация**.  
   
@@ -74,13 +75,13 @@ ms.locfileid: "81728504"
   
 6.  Нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
   
 -   Свяжите веб-приложение с базой данных служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . Дополнительные сведения см. в разделе [Связывание базы данных служб Master Data Services и веб-приложения](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md).  
   
--   При необходимости можно настроить веб-сайт, на [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] котором размещено веб-приложение, использовать привязку HTTPS, если требуется шифровать содержимое с помощью протокола TLS, ранее известного как SSL (SSL). Для настройки сертификата сервера для веб-сервера и настройки привязки HTTPS и параметров TLS для сайта необходимо использовать средство службы IIS (IIS), например диспетчер IIS. Дополнительные сведения см. в статье [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md).  
+-   При необходимости можно настроить веб-сайт, на котором размещено [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] веб-приложение, использовать привязку HTTPS, если требуется шифровать содержимое с помощью протокола TLS, ранее известного как SSL (SSL). Для настройки сертификата сервера для веб-сервера и настройки привязки HTTPS и параметров TLS для сайта необходимо использовать средство службы IIS (IIS), например диспетчер IIS. Дополнительные сведения см. в статье [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установка служб Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

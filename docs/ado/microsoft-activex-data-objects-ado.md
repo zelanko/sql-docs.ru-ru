@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0ca9c22cb54c54441f848ecbf367e92e30c1fd83
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18b9a6590ce777402456c8e9f8c8f28807ec5670
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921873"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606616"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Объекты данных Microsoft ActiveX (ADO)
 
-ADO используется в программах C++ для подключения к SQL Server. Конечно, он также работает для подключения к базе данных SQL Azure в облаке.
+Объекты данных ActiveX — это модель программирования, которая означает, что она не зависит от какой-либо из заданной серверной части. Однако в настоящее время единственной подсистемой, поддерживающей модель ADO, является OLE-DB. Существует множество собственных поставщиков OLE-DB, а также поставщик OLE DB для ODBC. ADO используется в C++ и Visual Basic программах для подключения к SQL Server и другим базам данных. Конечно, он также работает для подключения к базе данных SQL Azure в облаке.
 
 В каждом разделе этой статьи описывается компонент ADO.
 

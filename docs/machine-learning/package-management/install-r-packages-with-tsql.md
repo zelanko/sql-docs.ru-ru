@@ -9,19 +9,17 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: b19b2df1b39bcc88332d60f1389be12b32d7b921
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4e9aa1b7b2b21883e3034d32959a8267d67d56c0
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118017"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606910"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>Использование инструкции T-SQL (CREATE EXTERNAL LIBRARY) для установки пакетов R на SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этой статье объясняется, как установить новые пакеты R на экземпляре SQL Server, где включено машинное обучение. Существует несколько подходов. Использование T-SQL лучше подходит администраторам сервера, которые не знакомы с R.
-
-**Применимо к**: [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 Инструкция [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) позволяет добавить пакет или набор пакетов в экземпляр или конкретную базу данных без непосредственного запуска кода R или Python. Тем не менее этот метод требует разрешений на подготовку пакета и дополнительных разрешений для базы данных.
 
