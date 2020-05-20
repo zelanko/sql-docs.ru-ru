@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_prepare
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 641086797c9d6b8ddf6a86a83de1b5d7b69dcb39
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165909"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831722"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -104,15 +104,15 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISTIC_ACCEPTABLE|  
   
- Как и *scrollpt*в случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с скроллпт, может назначить другое значение из запрошенного.  
+ Как и в случае с *скроллпт*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может назначить другое значение из запрошенного.  
   
 ## <a name="remarks"></a>Remarks  
  Параметр состояния RPC может иметь следующие значения.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|0|Успех|  
-|0x0001|Failure|  
+|0|Успешно|  
+|0x0001|Сбой|  
 |1FF6|Невозможно вернуть метаданные.<br /><br /> Примечание. Причина в том, что инструкция не создает результирующий набор; Например, это инструкция INSERT или DDL.|  
   
 ## <a name="examples"></a>Примеры  
@@ -144,9 +144,9 @@ exec sp_cursorclose @p2
  
  Если параметр *stmt* является параметризованным, а PARAMETERIZED_STMT *SCROLLOPT* имеет значение ON, формат строки выглядит следующим образом:  
   
- { * \<имя локальной переменной> * *\<тип данных>* } [ ,... *n* ]  
+ { * \< имя локальной переменной> * * \< тип данных>* } [,... *n* ]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
  [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorunprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   

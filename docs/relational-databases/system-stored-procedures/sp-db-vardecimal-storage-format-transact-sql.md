@@ -20,14 +20,14 @@ helpviewer_keywords:
 - database compression [SQL Server]
 - table compression [SQL Server]
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 28628ee5dc8ff1bde7906dfea7fca60470720e11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 91667feca7974f66233b7549af9f75838d2ce32d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108224"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831713"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @dbname= ] "*database_name*"  
+ [ @dbname =] "*database_name*"  
  Имя базы данных, формат хранения которой нужно изменить. Аргумент *database_name* имеет тип **sysname**и не имеет значения по умолчанию. Если имя базы данных пропущено, то возвращаются состояния формата хранения vardecimal для всех баз данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [ @vardecimal_storage_format= ] {"НА" | " OFF "}  
+ [ @vardecimal_storage_format =] {' На ' | ' OFF "}  
  Указывает, включен ли формат хранения vardecimal. Аргумент @vardecimal_storage_format может иметь значение ON или OFF. Параметр имеет тип **varchar (3)** и не имеет значения по умолчанию. Если имя базы данных указано, но аргумент @vardecimal_storage_format пропущен, то возвращается текущий параметр указанной базы данных. Этот аргумент не действует в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздних версиях.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -108,7 +108,7 @@ EXEC sp_tableoption 'Sales.SalesOrderDetail', 'vardecimal storage format', 1 ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

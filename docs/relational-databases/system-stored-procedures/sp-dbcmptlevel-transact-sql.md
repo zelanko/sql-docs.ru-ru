@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dbcmptlevel
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0f6ffcb7a43fbfc2a840cbbbeb95de4bbb875cbe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 69b98f779a30e15a83e7ce6eed681f8c7c0df04b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108212"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831700"
 ---
 # <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ## <a name="permissions"></a>Разрешения  
  Эту процедуру могут выполнять только владелец базы данных, члены предопределенной роли сервера **sysadmin** и предопределенная роль базы данных **db_owner** (если вы изменяете текущую базу данных).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [Зарезервированные ключевые слова (Transact-SQL)](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   

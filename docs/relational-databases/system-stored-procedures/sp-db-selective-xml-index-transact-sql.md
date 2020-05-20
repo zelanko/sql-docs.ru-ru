@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_db_selective_xml_index procedure
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1648cca415f37f9c54f13857d25af90a65372c04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d34cc5e283a94a59d2c6a540ab42b7d520d895f7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108232"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831698"
 ---
 # <a name="sp_db_selective_xml_index-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ EXECUTE sys.sp_db_selective_xml_index
 GO  
 ```  
   
-### <a name="b-disable-selective-xml-index-functionality"></a>Б) Отключение возможностей селективного XML-индекса  
+### <a name="b-disable-selective-xml-index-functionality"></a>Б. Отключение возможностей селективного XML-индекса  
  В следующем примере выключается селективный XML-индекс в текущей базе данных.  
   
 ```  
@@ -103,7 +103,7 @@ EXECUTE sys.sp_db_selective_xml_index;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выборочный XML-индекс (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md)  
   
   

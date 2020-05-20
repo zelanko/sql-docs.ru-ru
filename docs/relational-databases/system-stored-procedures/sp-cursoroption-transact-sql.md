@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoroption
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 560c425c5bda4ee1f9dd7ecf454c65d3ba7eab1e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108449"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831728"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +47,8 @@ sp_cursoroption cursor, code, value
   
 |Значение|Имя|Описание|  
 |-----------|----------|-----------------|  
-|0x0001|TEXTPTR_ONLY|Возвращает не фактические данные, а текстовый указатель для определенных назначенных столбцов типа text или image.<br /><br /> TEXTPTR_ONLY позволяет использовать текстовые указатели в качестве *дескрипторов* объектов BLOB, которые впоследствии могут быть выборочно извлечены или [!INCLUDE[tsql](../../includes/tsql-md.md)] обновлены с помощью или DBLIB [!INCLUDE[tsql](../../includes/tsql-md.md)] средств (например, READTEXT или DBLIB DBWRITETEXT).<br /><br /> Если присвоено значение «0», то все столбцы типа text или image из выбранного списка будут возвращать вместо данных текстовые указатели.|  
-|0x0002|CURSOR_NAME|Присваивает имя, указанное в поле *значение* , курсору. Это, в свою очередь, позволяет ODBC использовать [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции позиционированного обновления или удаления для курсоров, открытых с помощью sp_cursoropen.<br /><br /> Строка может иметь любой символьный тип данных или UNICODE.<br /><br /> Так [!INCLUDE[tsql](../../includes/tsql-md.md)] как инструкции позиционированного обновления и удаления работают по умолчанию в первой строке курсора fat, sp_cursor SETPOSITION следует использовать для позиционирования курсора перед выполнением инструкции позиционированного обновления и удаления.|  
+|0x0001|TEXTPTR_ONLY|Возвращает не фактические данные, а текстовый указатель для определенных назначенных столбцов типа text или image.<br /><br /> TEXTPTR_ONLY позволяет использовать текстовые указатели в качестве *дескрипторов* объектов BLOB, которые впоследствии могут быть выборочно извлечены или обновлены с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] или DBLIB средств (например, [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT или DBLIB DBWRITETEXT).<br /><br /> Если присвоено значение «0», то все столбцы типа text или image из выбранного списка будут возвращать вместо данных текстовые указатели.|  
+|0x0002|CURSOR_NAME|Присваивает имя, указанное в поле *значение* , курсору. Это, в свою очередь, позволяет ODBC использовать [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции позиционированного обновления или удаления для курсоров, открытых с помощью sp_cursoropen.<br /><br /> Строка может иметь любой символьный тип данных или UNICODE.<br /><br /> Так как [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции позиционированного обновления и удаления работают по умолчанию в первой строке курсора FAT, SP_CURSOR SETPOSITION следует использовать для позиционирования курсора перед выполнением инструкции позиционированного обновления и удаления.|  
 |0x0003|TEXTDATA|Возвращает фактические данные, а не текстовый указатель для определенных столбцов типа text или image при последующей выборке (т. е. отменяет действие TEXTPTR_ONLY).<br /><br /> Если для определенного столбца включен режим TEXTDATA, то выполняется повторная выборка или обновление строки, и после этого можно опять присвоить значение TEXTPTR_ONLY. Как и в случае с TEXTPTR_ONLY, целочисленный параметр значения задает номер столбца. Нулевое значение возвращает все текстовые столбцы или столбцы изображений.|  
 |0x0004|SCROLLOPT|Параметр прокрутки. Дополнительные сведения см. ниже в разделе «Значения кодов возврата».|  
 |0x0005|CCOPT|Параметр управления параллелизмом. Дополнительные сведения см. ниже в разделе «Значения кодов возврата».|  
@@ -86,7 +86,7 @@ sp_cursoroption cursor, code, value
 |0x0002|SCROLL_LOCKS|  
 |0x0004 или 0x0008|OPTIMISTIC|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
  [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  

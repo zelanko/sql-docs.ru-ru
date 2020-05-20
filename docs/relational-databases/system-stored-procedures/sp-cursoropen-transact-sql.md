@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f5127d041817a41dcf2d6fb4ed65070c87d05dd4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8f439fa61b8bfecfba9d03589af0d09ff737f3bc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108485"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831776"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISTIC_ACCEPTABLE|  
   
- Как и *scrollopt*в случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с scrollopt, может переопределить запрошенные значения *ccopt* .  
+ Как и в случае с *scrollopt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может переопределить запрошенные значения *ccopt* .  
   
  *количества*  
  Количество строк буфера выборки для AUTO_FETCH. Значение по умолчанию составляет 20 строк. При назначении в качестве входного значения и возвращаемого значения *ROWCOUNT* ведет себя иначе.  
@@ -154,7 +154,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  Допустимое содержимое параметра *stmt* зависит от того, было ли *ccopt* ALLOW_DIRECT возвращаемое значение, или к остальным значениям *ccopt* , например:  
   
--   Если параметр ALLOW_DIRECT не указан, необходимо использовать [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию SELECT или Execute, которая вызывается для хранимой процедуры, содержащей одну инструкцию SELECT. Кроме того, инструкция SELECT должна квалифицироваться как курсор, т. е. она не может содержать ключевые слова SELECT INTO или FOR BROWSE.  
+-   Если параметр ALLOW_DIRECT не указан, [!INCLUDE[tsql](../../includes/tsql-md.md)] необходимо использовать инструкцию SELECT или Execute, которая вызывается для хранимой процедуры, содержащей одну инструкцию SELECT. Кроме того, инструкция SELECT должна квалифицироваться как курсор, т. е. она не может содержать ключевые слова SELECT INTO или FOR BROWSE.  
   
 -   Если параметр ALLOW_DIRECT задан, то результатом может быть одна или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)], включая те, которые в свою очередь выполняют другие хранимые процедуры с большим количеством инструкций. Инструкции, кроме SELECT, а также любая инструкция SELECT с ключевыми словами SELECT INTO или FOR BROWSE будут просто выполнены и не приведут к созданию курсора. Это относится и к любой инструкции SELECT, включенной в пакет из нескольких инструкций. Если инструкция SELECT содержит предложения, относящиеся только к курсорам, то эти предложения пропускаются. Например, если значение *ccopt* равно 0x2002, то это запрос для:  
   
@@ -169,7 +169,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  AUTO_FETCH и AUTO_CLOSE могут быть связаны оператором OR только с FAST_FORWARD.  
   
- Если CHECK_ACCEPTED_TYPES включен, по крайней мере одно из последних пяти значений *scrollopt* (KEYSET_ACCEPTABLE`,` DYNAMIC_ACCEPTABLE, FORWARD_ONLY_ACCEPTABLE, STATIC_ACCEPTABLE или FAST_FORWARD_ACCEPTABLE) также должно иметь значение ON.  
+ Если CHECK_ACCEPTED_TYPES включен, по крайней мере одно из последних пяти значений *scrollopt* (KEYSET_ACCEPTABLE `,` DYNAMIC_ACCEPTABLE, FORWARD_ONLY_ACCEPTABLE, STATIC_ACCEPTABLE или FAST_FORWARD_ACCEPTABLE) также должно иметь значение ON.  
   
  Курсоры STATIC всегда открываются только для чтения. Это означает, что обновить базовую таблицу через этот курсор невозможно.  
   
@@ -210,7 +210,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  Последующие параметры используются для передачи значений, подставляемых для *имени локальной переменной* в операторе.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
