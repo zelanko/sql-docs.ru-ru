@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Seek method [ADO]
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3e2ee81ac2ede53eb4fdbcfe8d3b5987db96f1ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a96c8054d83fa0ecff4cc3fed3a1227f300f7e2e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917014"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765405"
 ---
 # <a name="seek-method"></a>Метод Seek
 Выполняет поиск индекса [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , чтобы быстро найти строку, совпадающую с указанными значениями, и изменяет положение текущей строки на эту строку.  
@@ -40,7 +40,7 @@ recordset.Seek KeyValues, SeekOption
  *сикоптион*  
  Значение [сикенум](../../../ado/reference/ado-api/seekenum.md) , указывающее тип сравнения между столбцами индекса и соответствующим *кэйвалуес*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Используйте метод **Seek** в сочетании со свойством [index](../../../ado/reference/ado-api/index-property.md) , если базовый поставщик поддерживает индексы в объекте **Recordset** . Используйте метод [поддерживает](../../../ado/reference/ado-api/supports-method.md)**(адсик)** , чтобы определить, поддерживает ли базовый поставщик **Поиск**, и **поддерживает метод (адиндекс)** , чтобы определить, поддерживает ли поставщик индексы. (Например, [поставщик OLE DB для Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) поддерживает **Поиск** и **индексирование**.)  
   
  Если **Seek** не находит нужную строку, ошибка не возникает и строка располагается в конце **набора записей**. Перед выполнением этого метода задайте для свойства **index** нужный индекс.  

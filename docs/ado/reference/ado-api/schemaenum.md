@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - SchemaEnum enumeration [ADO]
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c064120e3c658cafd88a96953ff00e18fbaa9b88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cb004c33ae413c93506bc1c90b331494b7e56adc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931110"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765435"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Указывает тип **набора записей** схемы, извлекаемый методом [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Дополнительные сведения о функции и столбцах, возвращаемых для каждой константы ADO, можно найти в подразделах [приложения б: наборы строк схемы](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) справочника по OLE DB программисту. Имя каждого раздела указано в скобках в разделе Описание следующей таблицы.  
   
  Дополнительные сведения о функции и столбцах, возвращаемых для каждой объекты данных ActiveX (MD)ной константы, можно найти в разделах [OLE DB для объектов OLAP и наборов строк схемы](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) в OLE DB документации по аналитической обработке в Интернете (OLAP). Имя каждого раздела указано в скобках в столбце Описание следующей таблицы.  

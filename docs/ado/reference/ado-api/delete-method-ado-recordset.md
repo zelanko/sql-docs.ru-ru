@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Delete method [ADO]
 ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b978e3d885e3ff06dda18859384f88eb4c564254
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c5747704601e5e325624c79ce853526e36f6cbe1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919121"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765605"
 ---
 # <a name="delete-method-ado-recordset"></a>Метод Delete (объект Recordset ADO)
 Удаляет текущую запись или группу записей.  
@@ -40,7 +40,7 @@ recordset.Delete AffectRecords
 > [!NOTE]
 >  **адаффекталл** и **адаффекталлчаптерс** не являются допустимыми аргументами для **удаления**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Использование метода **Delete** помечает текущую запись или группу записей в объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) для удаления. Если объект **набора записей** не допускает удаления записей, возникает ошибка. Если вы используете режим немедленного обновления, немедленное удаление происходит в базе данных. Если запись не может быть успешно удалена (например, из-за нарушений целостности базы данных), после вызова метода [Update](../../../ado/reference/ado-api/update-method.md)запись остается в режиме редактирования. Это означает, что необходимо отменить обновление с помощью [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) , прежде чем перемещаться по текущей записи (например, с помощью [закрытия](../../../ado/reference/ado-api/close-method-ado.md), [перемещения](../../../ado/reference/ado-api/move-method-ado.md)или [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
   
  Если вы используете режим пакетного обновления, записи помечаются для удаления из кэша, а фактическое удаление происходит при вызове метода [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) . Используйте свойство [Filter](../../../ado/reference/ado-api/filter-property.md) для просмотра удаленных записей.  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO]
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 928ac3b1d3cd753ded0bcf4337f10a654c9a3dc0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b630d589cf20039a72091fb526302d3652f8ed31
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924828"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765615"
 ---
 # <a name="named-commands"></a>Именованные команды
 [Создание и выполнение простой команды](../../../ado/guide/data/creating-and-executing-a-simple-command.md) демонстрирует один из способов выполнения команды. Существует другой способ: можно сделать его именованной командой, а затем вызвать эту именованную команду непосредственно в объекте **Connection** (назначенном свойству **ActiveConnection** объекта **Command** ). Именование команды означает присвоение имени свойству **Name** объекта **Command** . Например, примененная к объекту директива  
@@ -89,5 +89,5 @@ ErrHandler:
 'EndNamedCmd  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

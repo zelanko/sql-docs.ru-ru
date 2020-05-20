@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - EditMode property
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c0ffc6fb258799b0ab0bb03e7acbd922f6a67d1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1cbe93a06eb6521b2210edc08cdca421cd5de982
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918980"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765575"
 ---
 # <a name="editmode-property"></a>Свойство EditMode
 Указывает состояние редактирования текущей записи.  
@@ -28,10 +28,10 @@ ms.locfileid: "67918980"
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение [едитмодинум](../../../ado/reference/ado-api/editmodeenum.md) .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  ADO поддерживает буфер редактирования, связанный с текущей записью. Это свойство указывает, были ли внесены изменения в этот буфер или создана ли новая запись. Чтобы определить состояние редактирования текущей записи, используйте свойство **EditMode** . Вы можете проверить наличие ожидающих изменений в случае, если процесс редактирования был прерван, и определить, нужно ли использовать метод [Update](../../../ado/reference/ado-api/update-method.md) или [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) .  
   
- В *режиме немедленного обновления* свойство **EditMode** сбрасывается в **адедитноне** после вызова успешного вызова метода **Update** . Если при вызове [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) не удается удалить записи или записи в источнике данных (например, из-за нарушений ссылочной целостности), [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) остается в режиме редактирования (**EditMode** = **адедитинпрогресс**). Поэтому **CancelUpdate** должен вызываться перед переходом от текущей записи (например, с [Move](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)или [Close](../../../ado/reference/ado-api/close-method-ado.md) ).  
+ В *режиме немедленного обновления* свойство **EditMode** сбрасывается в **адедитноне** после вызова успешного вызова метода **Update** . Если при вызове [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) не удается удалить записи или записи в источнике данных (например, из-за нарушений ссылочной целостности), [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) остается в режиме редактирования (**EditMode**  =  **адедитинпрогресс**). Поэтому **CancelUpdate** должен вызываться перед переходом от текущей записи (например, с [Move](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)или [Close](../../../ado/reference/ado-api/close-method-ado.md) ).  
   
  В *режиме пакетного обновления* (в котором поставщик кэширует несколько изменений и записывает их в базовый источник данных только при вызове метода [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) ) значение свойства **EditMode** изменяется при выполнении первой операции и не сбрасывается при вызове метода **Update** . Последующие операции не изменяют значение свойства **EditMode** , даже если выполняются различные операции. Например, если первая операция заключается в добавлении новой записи, а вторая вносит изменения в существующую запись, свойство **EditMode** по-прежнему будет **адедитадд**. Свойство **EditMode** не сбрасывается в **Адедитноне** до вызова **UpdateBatch**. Чтобы определить, какие операции были выполнены, присвойте свойству [Filter](../../../ado/reference/ado-api/filter-property.md) значение [адфилтерпендинг](../../../ado/reference/ado-api/filtergroupenum.md) , чтобы были видны только записи с ожидающими изменениями, и проверьте свойство [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) каждой записи, чтобы определить, какие изменения были внесены в данные.  
   

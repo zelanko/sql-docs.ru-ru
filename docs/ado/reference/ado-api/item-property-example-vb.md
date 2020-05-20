@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Item property [ADO], Visual Basic example
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c309319ceb81e9af4a8b84d0b96537d0be933e32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0b9929c6c8547836131df61ae2d2576fae5aee38
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918341"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765475"
 ---
 # <a name="item-property-example-vb"></a>Пример свойства Item (Visual Basic)
 В этом примере показано, как свойство [Item](../../../ado/reference/ado-api/item-property-ado.md) получает доступ к членам коллекции. В примере открывается таблица ***authors*** базы данных ***pubs*** с параметризованной командой.  
