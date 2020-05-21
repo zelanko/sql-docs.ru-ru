@@ -1,6 +1,6 @@
 ---
 title: Установка новых пакетов R
-description: Сведения об использовании пакета sqlmlutils для установки новых пакетов R в экземпляре служб машинного обучения SQL Server или служб SQL Server R Services.
+description: Узнайте, как использовать пакет sqlmlutils для установки новых пакетов R в экземпляре Служб машинного обучения SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/11/2020
@@ -10,18 +10,18 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b2c561791b88340fd0a77977843f582fa60c648
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: efea0d4306c71607de93652e08f347586a17450e
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269438"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606882"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Установка новых пакетов R с помощью sqlmlutils
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этой статье описывается использование функций в пакете [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) для установки новых пакетов R в экземпляре служб машинного обучения SQL Server или служб SQL Server R Services. Устанавливаемые пакеты можно использовать в сценариях R, выполняющихся в базе данных, с помощью инструкции T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
+Эта статья описывает использование функций пакета [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) для установки новых пакетов R в экземпляре Служб машинного обучения SQL Server. Устанавливаемые пакеты можно использовать в сценариях R, выполняющихся в базе данных, с помощью инструкции T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
 
 > [!NOTE]
 > Описанный в этой статье пакет **sqlmlutils** используется для добавления пакетов R в SQL Server 2019 и более поздних версий. Для SQL Server 2017 и более ранних версий обратитесь к разделу [Установка пакетов с инструментами R](https://docs.microsoft.com/sql/machine-learning/package-management/install-r-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15).
@@ -30,7 +30,7 @@ ms.locfileid: "83269438"
 
 - Установите [R](https://www.r-project.org) и [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) на клиентском компьютере, который используется для подключения к SQL Server. Для выполнения сценариев можно использовать любую интегрированную среду разработки R, но в этой статье применяется RStudio.
 
-- Установите [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) или [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) на клиентском компьютере, который используется для подключения к SQL Server. Можно использовать другие средства управления базами данных или инструменты работы с запросами, но в этой статье применяются Azure Data Studio или SSMS.
+- Установите [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) на клиентском компьютере, который используется для подключения к SQL Server. Вы можете использовать другие средства запросов и управления базами данных, но в этой статье рассматривается Azure Data Studio.
 
 ### <a name="other-considerations"></a>Другие замечания
 
@@ -194,7 +194,6 @@ ms.locfileid: "83269438"
    ```
    ::: moniker-end
 
-
    В качестве значения `Rversion` укажите версию R, установленную в SQL Server. Чтобы проверить установленную версию, используйте следующую команду T-SQL.
 
    ```sql
@@ -227,7 +226,7 @@ ms.locfileid: "83269438"
 
 После установки пакет **glue** можно использовать в сценарии R в SQL Server с командой T-SQL **sp_execute_external_script**.
 
-1. Откройте Azure Data Studio или SSMS и подключитесь к базе данных SQL Server.
+1. Откройте Azure Data Studio и подключитесь к своей базе данных SQL Server.
 
 1. Выполните следующую команду:
 
