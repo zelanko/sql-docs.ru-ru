@@ -3,18 +3,18 @@ title: Установка пакетов Python с помощью sqlmlutils
 description: Узнайте, как использовать Python pip для установки новых пакетов Python на экземпляре Служб машинного обучения SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/30/2020
+ms.date: 04/24/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9271d10c83575ba1203c145d217c4b179976eff6
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 69da04eaad729225ed0629ba78d2f214b30ba942
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886463"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606496"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Установка пакетов Python с помощью sqlmlutils
 
@@ -33,11 +33,11 @@ ms.locfileid: "82886463"
 
 + Установите [python](https://www.python.org/) на клиентском компьютере, который используется для подключения к SQL Server. Кроме того, может потребоваться среда разработки Python, например [Visual Studio Code](https://code.visualstudio.com/download) с [расширением Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python). 
 
-+ Установите [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) или [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) на клиентском компьютере, который используется для подключения к SQL Server. Можно использовать другие средства управления базами данных или инструменты работы с запросами, но в этой статье применяются Azure Data Studio или SSMS.
++ Установите [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) на клиентском компьютере, который используется для подключения к SQL Server. Вы можете использовать другие средства запросов и управления базами данных, но в этой статье рассматривается Azure Data Studio.
 
 ### <a name="other-considerations"></a>Другие замечания
 
-+ Пакеты должны соответствовать используемой версии Python. Дополнительные сведения о версии Python, включенной в каждую версию SQL Server, см. в разделе о [версиях Python и R в статье с общими сведениями о Службах машинного обучения SQL Server (Python и R)](../sql-server-machine-learning-services.md#versions).
++ Пакеты должны соответствовать используемой версии Python. Сведения о том, какая версия Python устанавливается вместе с той или иной версией SQL Server, приведены в разделе [Версии Python и R](../sql-server-machine-learning-services.md#versions).
 
 + Библиотека пакетов Python находится в папке Program Files своего экземпляра SQL Server и по умолчанию для установки в этой папке требуются права администратора. Дополнительные сведения см. в статье [Расположение библиотеки пакетов](../package-management/python-package-information.md#default-python-library-location).
 
@@ -134,7 +134,7 @@ connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdataba
 sqlmlutils.SQLPackageManager(connection).install("text_tools-1.0.0-py3-none-any.whl")
 ```
 
-## <a name="use-the-package-in-sql-server"></a>Использование пакета в SQL Server
+## <a name="use-the-package"></a>Использование пакета
 
 Теперь пакет можно использовать в скрипте Python в SQL Server. Пример:
 
@@ -158,7 +158,7 @@ print(first_match)
 sqlmlutils.SQLPackageManager(connection).uninstall("text-tools")
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="next-steps"></a>Дальнейшие действия
 
 + Сведения о том, как просмотреть пакеты Python, установленные в Службах машинного обучения SQL Server, см. в разделе [Получения сведений о пакете Python](../package-management/python-package-information.md).
 

@@ -1,28 +1,34 @@
 ---
 title: Учебник по Python. Подготовка данных кластера
-description: В второй части серии руководств из четырех частей описано, как подготовить данные SQL для кластеризации в Python с помощью Служб машинного обучения SQL Server.
+titleSuffix: SQL machine learning
+description: В второй части цикла учебников, состоящего из четырех частей, описано, как подготовить данные SQL для кластеризации в Python с помощью машинного обучения SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 12/17/2019
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ee19ddfa59f8f1a4a32c0adf08b8f36eef9aa1f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 25ccde4580e43ce68b74ef32f37f9c92cad12dfe
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116517"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606851"
 ---
-# <a name="tutorial-prepare-data-to-categorize-customers-in-python-with-sql-server-machine-learning-services"></a>Руководство по Подготовка данных для категоризации клиентов в Python со службами машинного обучения SQL Server
+# <a name="python-tutorial-prepare-data-to-categorize-customers-with-sql-machine-learning"></a>Учебник по Python. Подготовка данных для классификации клиентов с использованием машинного обучения SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Во второй части этого учебника, состоящего из четырех частей, вы восстановите и подготовите данные из базы данных SQL с использованием Python. Далее в этой серии руководств вы будете использовать эти данные для обучения и развертывания модели кластеризации с использованием Python в службах машинного обучения SQL Server.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Во второй части этого цикла учебников, состоящего из четырех частей, вы восстановите и подготовите данные из базы данных с использованием Python. Далее в этом цикле вы используете подготовленные данные для обучения и развертывания модели кластеризации в Python с помощью Служб машинного обучения SQL Server или в Кластерах больших данных.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+Во второй части этого цикла учебников, состоящего из четырех частей, вы восстановите и подготовите данные из базы данных с использованием Python. Далее в этой серии руководств вы будете использовать эти данные для обучения и развертывания модели кластеризации с использованием Python в службах машинного обучения SQL Server.
+::: moniker-end
 
 В этой статье вы узнаете, как выполнять следующие задачи.
 
@@ -34,7 +40,7 @@ ms.locfileid: "81116517"
 
 В [третьей части](python-clustering-model-build.md) вы узнаете, как создать и обучить модель кластеризации на основе k-средних в Python.
 
-В [четвертой части](python-clustering-model-deploy.md) вы узнаете, как создать хранимую процедуру в базе данных SQL, которая может выполнять кластеризацию в Python на основе новых данных.
+В [четвертой части](python-clustering-model-deploy.md) вы узнаете, как создать в базе данных хранимую процедуру, которая может выполнять кластеризацию в Python на основе новых данных.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -69,7 +75,7 @@ from sklearn import cluster as sk_cluster
 ################################################################################################
 
 # Connection string to connect to SQL Server named instance.
-conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=tpcxbb_1gb; Trusted_Connection=yes')
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<SQL Server>; DATABASE=tpcxbb_1gb; Trusted_Connection=yes')
 
 input_query = '''SELECT
 ss_customer_sk AS customer,
@@ -139,16 +145,16 @@ Data frame:     customer  orderRatio  itemsRatio  monetaryRatio  frequency
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
-Если вы не собираетесь продолжать работу с этим учебником, удалите базу данных tpcxbb_1gb из SQL Server.
+Если вы не собираетесь продолжать работу с этим учебником, удалите базу данных tpcxbb_1gb.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
 Во второй части этого учебника вы выполнили следующие действия.
 
-* Разделение клиентов по различным измерениям с помощью Python
-* Загрузка данных из базы данных SQL в кадр данных Python
+* Разделение клиентов по различным измерениям с помощью Python.
+* Загрузка данных из базы данных в кадр данных Python.
 
 Чтобы создать модель машинного обучения, которая использует эти данные о клиентах, перейдите к третьей части этого учебника:
 
 > [!div class="nextstepaction"]
-> [Руководство. Создание модели прогнозов в Python с помощью служб машинного обучения SQL Server](python-clustering-model-build.md)
+> [Учебник по Python. Создание прогнозной модели](python-clustering-model-build.md)

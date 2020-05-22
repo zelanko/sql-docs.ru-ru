@@ -1,7 +1,7 @@
 ---
 title: Развертывание приложений с помощью azdata
 titleSuffix: SQL Server Big Data Clusters
-description: Развертывание скрипта Python или R как приложения в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Развертывание сценария Python или R в качестве приложения в кластере больших данных SQL Server 2019.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 33b5bf6061e9168fd150adcb4a7ccf29302bce63
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab28a6bbe7bbf108305f065dcdf7b870c0f76602
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253149"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606634"
 ---
 # <a name="how-to-deploy-an-app-on-big-data-clusters-2019"></a>Развертывание приложения в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -37,7 +37,7 @@ ms.locfileid: "75253149"
 - MLeap Serving
 - Службы SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Кластер больших данных SQL Server 2019](deployment-guidance.md)
 - [Служебная программа командной строки azdata](deploy-install-azdata.md)
@@ -46,7 +46,7 @@ ms.locfileid: "75253149"
 
 В SQL Server 2019 можно создать, удалить, описать, инициализировать, перечислить, запустить и обновить приложение. В следующей таблице описаны команды развертывания приложения, которые можно использовать с **azdata**.
 
-|Get-Help |Description |
+|Get-Help |Описание |
 |:---|:---|
 |`azdata login` | Вход в кластер больших данных SQL Server. |
 |`azdata app create` | Создание приложения. |
@@ -106,7 +106,7 @@ azdata app create --spec <directory containing spec file>
 azdata app create --spec ./addpy
 ```
 
-Предполагается, что ваше приложение хранится в папке `addpy`. Эта папка также должна содержать файл спецификации для приложения — `spec.yaml`. Дополнительные сведения о файле [ см. на ](concept-application-deployment.md)странице "Развертывание приложений"`spec.yaml`.
+Предполагается, что ваше приложение хранится в папке `addpy`. Эта папка также должна содержать файл спецификации для приложения — `spec.yaml`. Дополнительные сведения о файле `spec.yaml` см. на [странице "Развертывание приложений"](concept-application-deployment.md).
 
 Чтобы развернуть этот пример приложения, создайте следующие файлы в каталоге с именем `addpy`.
 

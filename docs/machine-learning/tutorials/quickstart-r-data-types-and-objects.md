@@ -1,26 +1,35 @@
 ---
 title: Краткое руководство. Структуры данных, типы данных и объекты R
-description: В этом кратком руководстве вы получите сведения о том, как использовать структуры данных, типы данных и объекты при работе с R в службах машинного обучения SQL Server. Вы узнаете о том, как перемещать данные между R и SQL Server, и о типичных проблемах, возникающих при этом процессе.
+titleSuffix: SQL machine learning
+description: В этом кратком руководстве вы узнаете, как применять структуры данных, типы данных и объекты при использовании R и машинного обучения SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2019
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 07d167ddc39f281a3330ffd80460d9cc34ccfa65
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: e5b5f4e90b680f5ae06944eedc997a43b8a40024
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487334"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606576"
 ---
-# <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Краткое руководство. Структуры данных, типы данных и объекты для использования R в Службах машинного обучения SQL Server
+# <a name="quickstart-data-structures-data-types-and-objects-using-r-with-sql-machine-learning"></a>Краткое руководство. Использование структур данных, типов данных и объектов при работе с R и машинным обучением SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этом кратком руководстве вы получите сведения о том, как использовать структуры данных и типы данных при работе с R в службах машинного обучения SQL Server. Вы узнаете о том, как перемещать данные между R и SQL Server, и о типичных проблемах, возникающих при этом процессе.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+В этом кратком руководстве вы узнаете, как использовать структуры и типы данных при применении R в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) или [Кластерах больших данных](../../big-data-cluster/machine-learning-services.md). Вы узнаете о том, как перемещать данные между R и SQL Server, и о типичных проблемах, возникающих при этом процессе.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+В этом кратком руководстве вы узнаете, как использовать структуры и типы данных при работе с R в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md). Вы узнаете о том, как перемещать данные между R и SQL Server, и о типичных проблемах, возникающих при этом процессе.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+В этом кратком руководстве вы узнаете, как использовать структуры и типы данных при работе с R в службах [SQL Server R Services](../r/sql-server-r-services.md). Вы узнаете о том, как перемещать данные между R и SQL Server, и о типичных проблемах, возникающих при этом процессе.
+::: moniker-end
 
 Основные проблемы, о которых следует знать в самом начале, таковы:
 
@@ -31,11 +40,19 @@ ms.locfileid: "81487334"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- Для этого краткого руководства требуется доступ к экземпляру SQL Server со [службами машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md) и с установленным языком R.
+Для работы с этим кратким руководством необходимо следующее.
 
-  Экземпляр SQL Server может находиться в виртуальной машине Azure или на локальном компьютере. Обратите внимание, что функция внешних сценариев по умолчанию отключена, поэтому перед началом работы вам может потребоваться [включить ее](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) и убедиться, что **служба панели запуска SQL Server** выполняется.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- Службы машинного обучения SQL Server. Сведения об установке Служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md) или [руководстве по установке для Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Можно также [включить Службы машинного обучения в кластерах больших данных SQL Server](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- Службы машинного обучения SQL Server. Сведения об установке Служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services. Сведения об установке служб R Services см. в [руководстве по установке для Windows](../install/sql-r-services-windows-install.md). 
+::: moniker-end
 
-- Вам также понадобится средство для выполнения SQL-запросов, содержащих сценарии R. Эти сценарии можно выполнять с помощью любого средства управления базами данных или запросов, которые могут подключаться к экземпляру SQL Server и выполнять запросы T-SQL или хранимые процедуры. В этом кратком руководстве используется среда [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Инструмент для выполнения SQL-запросов, содержащих сценарии R. В этом кратком руководстве используется [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 ## <a name="always-return-a-data-frame"></a>Всегда возвращайте кадр данных
 
@@ -68,7 +85,7 @@ EXECUTE sp_execute_external_script
 
 Почему результаты настолько отличаются?
 
-Обычно ответ можно найти, использовав команду R `str()`. Добавьте функцию `str(object_name)` в скрипте R для получения сведений о схеме данных возвращаемого объекта R в виде информационного сообщения. Сообщения можно просмотреть на панели **Сообщения** Visual Studio Code или на вкладке **Сообщения** в среде SSMS.
+Обычно ответ можно найти, использовав команду R `str()`. Добавьте функцию `str(object_name)` в скрипте R для получения сведений о схеме данных возвращаемого объекта R в виде информационного сообщения.
 
 Чтобы понять, почему результаты примера 1 и 2 так сильно отличаются, вставьте строку `str(OutputDataSet)` в конце определения переменной `@script` в каждой инструкции следующим образом:
 
@@ -225,7 +242,7 @@ EXECUTE sp_execute_external_script
 
 Помните, что кадр данных только выглядит как таблица и на самом деле является списком векторов.
 
-## <a name="cast-or-convert-sql-server-data"></a>Приведение или преобразование данных SQL Server
+## <a name="cast-or-convert-data"></a>Приведение или преобразование данных
 
 R и SQL Server используют разные типы данных, поэтому при выполнении запроса в SQL Server для получения данных и их передаче в среду выполнения R обычно выполняется неявное преобразование. Кроме того, преобразования выполняются при возвращении данных из R в SQL Server.
 
@@ -296,16 +313,9 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 
 Дополнительные сведения о поддерживаемых и неподдерживаемых типах данных см. в статье [Библиотеки и типы данных R](../r/r-libraries-and-data-types.md).
 
-Сведения том, как преобразование строк в числовые коэффициенты во время выполнения влияет на производительность, см. в статье [Настройка производительности SQL Server R Services](../r/sql-server-r-services-performance-tuning.md).
-
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о написании расширенных функций R в SQL Server см. в этом кратком руководстве:
+Дополнительные сведения о написании расширенных функций R с использованием машинного обучения SQL см. в этом кратком руководстве:
 
 > [!div class="nextstepaction"]
-> [Написание расширенных функций R с использованием служб машинного обучения SQL Server](quickstart-r-functions.md)
-
-Дополнительные сведения об использовании R в службах машинного обучения SQL Server см. в следующих статьях:
-
-- [Создание и оценка модели прогнозов в R с помощью служб машинного обучения SQL Server](quickstart-r-train-score-model.md)
-- [Что такое службы машинного обучения SQL Server (Python и R)?](../sql-server-machine-learning-services.md)
+> [Написание расширенных функций R с использованием машинного обучения SQL](quickstart-r-functions.md)

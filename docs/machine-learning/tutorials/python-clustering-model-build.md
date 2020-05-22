@@ -1,28 +1,34 @@
 ---
 title: Учебник по Python. Создание кластерной модели
-description: В третьей части этого учебника из четырех частей вы создадите модель K-средних для кластеризации в Python с использованием служб машинного обучения SQL Server.
+titleSuffix: SQL machine learning
+description: В третьей части этого цикла учебников из четырех частей вы создадите модель k-средних для кластеризации в Python с использованием машинного обучения SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 05/14/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9669686d0163b9ce1c362e7cdf2814c7a95bfaa8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6e0aa1bcbf1bc79b6f77fc0b564d840194ffa8ec
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116597"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606449"
 ---
-# <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Руководство по Создание модели для категоризации клиентов в Python с использованием служб машинного обучения SQL Server
+# <a name="python-tutorial-build-a-model-to-categorize-customers-with-sql-machine-learning"></a>Учебник по Python. Создание модели для классификации клиентов с использованием машинного обучения SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В третьей части этого учебника из четырех частей вы создадите модель K-средних для кластеризации в Python. В следующей части этого учебника вы развернете эту модель в базе данных SQL с использованием служб машинного обучения SQL Server.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+В третьей части этого учебника из четырех частей вы создадите модель K-средних для кластеризации в Python. В следующей части данного цикла вы развернете эту модель в базе данных с использованием Служб машинного обучения SQL Server.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+В третьей части этого учебника из четырех частей вы создадите модель K-средних для кластеризации в Python. В следующей части данного цикла вы развернете эту модель в базе данных с использованием Служб машинного обучения SQL Server.
+::: moniker-end
 
 В этой статье вы узнаете, как выполнять следующие задачи.
 
@@ -33,9 +39,9 @@ ms.locfileid: "81116597"
 
 В [первой части](python-clustering-model.md) были установлены необходимые компоненты и восстановлена демонстрационная база данных.
 
-Во [второй части](python-clustering-model-prepare-data.md) вы узнали, как подготовить данные из базы данных SQL для выполнения кластеризации.
+Во [второй части](python-clustering-model-prepare-data.md) вы узнали, как подготовить данные из базы данных для выполнения кластеризации.
 
-В [четвертой части](python-clustering-model-deploy.md) вы узнаете, как создать хранимую процедуру в базе данных SQL, которая может выполнять кластеризацию в Python на основе новых данных.
+В [четвертой части](python-clustering-model-deploy.md) вы узнаете, как создать в базе данных хранимую процедуру, которая может выполнять кластеризацию в Python на основе новых данных.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -147,7 +153,7 @@ cluster
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
-Если вы не собираетесь продолжать работу с этим учебником, удалите базу данных tpcxbb_1gb из SQL Server.
+Если вы не собираетесь продолжать работу с этим учебником, удалите базу данных tpcxbb_1gb.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
@@ -160,4 +166,4 @@ cluster
 Чтобы развернуть созданную модель машинного обучения, перейдите к четвертой части этого учебника:
 
 > [!div class="nextstepaction"]
-> [Руководство. Развертывание модели кластеризации в Python с помощью служб машинного обучения SQL Server](python-clustering-model-deploy.md)
+> [Учебник по Python. Развертывание модели кластеризации](python-clustering-model-deploy.md)

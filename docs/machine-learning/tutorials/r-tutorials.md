@@ -1,51 +1,58 @@
 ---
 title: Учебники по R
-description: В этой статье описываются учебники и краткие руководства по R для Служб машинного обучения SQL Server.
+titleSuffix: SQL machine learning
+description: В этой статье описываются учебники по использованию R для машинного обучения SQL. Узнайте, как выполнять сценарии и создавать модели машинного обучения.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/13/2020
 ms.topic: tutorial
-author: dphansen
-ms.author: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye, davidph
+ms.date: 05/04/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 952a33eb5a160acae44b5d1ae674c75b8d74cca5
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 63c271c4e1d59c9446495607b42b0b5ad13ea246
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487306"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606926"
 ---
-# <a name="r-tutorials-for-sql-server-machine-learning-services"></a>Учебники по R для Служб машинного обучения SQL Server
+# <a name="r-tutorials-for-sql-machine-learning"></a>Учебники по использованию R для машинного обучения SQL
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+В этой статье описываются учебники и краткие руководства по использованию R для работы со [Службами машинного обучения SQL Server](../sql-server-machine-learning-services.md) и [Кластерами больших данных](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 В этой статье описываются учебники и краткие руководства по R для [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md).
-
-+ Узнайте, как выполнять скрипты R.
-+ Создавайте, обучайте и развертывайте модели R в SQL Server.
-+ Узнайте об удаленных и локальных контекстах вычисления.
-+ Изучите пакеты Microsoft R для обработки и анализа данных и машинного обучения.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+В этой статье описываются учебники и краткие руководства по R для служб [SQL Server 2016 R Services](../r/sql-server-r-services.md).
+::: moniker-end
 
 <a name="bkmk_sqltutorials"></a>
 
-## <a name="r-quickstarts-and-tutorials"></a>Краткие руководства и учебники по R
+## <a name="r-tutorials"></a>Учебники по R
 
-| Ссылка | Описание |
+| Учебник | Описание |
 |------|-------------|
-| [Краткое руководство. Создание и выполнение простых скриптов R](quickstart-r-create-script.md) | Первое из нескольких кратких руководств, где показан базовый синтаксис для вызова функции R с помощью редактора запросов T-SQL, например SQL Server Management Studio. |
-| [Руководство. Сведения об аналитических функциях в базе данных R для специалистов по анализу и обработке данных](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | В этом учебнике разработчики на R, впервые столкнувшиеся с SQL Server, узнают, как выполнять общие задачи обработки и анализа данных в SQL Server. Описывается загрузка и визуализация данных, обучение и сохранение модели для SQL Server, а также использование модели для прогнозной аналитики. |
-| [Руководство. Изучение аналитических функций в базе данных R для разработчиков SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) | Описывается создание и развертывание полноценного решения R с помощью инструментов [!INCLUDE[tsql](../../includes/tsql-md.md)]. Основное внимание уделено переносу решения в рабочую среду. Вы узнаете, как включить код на языке R в хранимую процедуру, сохранить модель R в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выполнять параметризованные вызовы модели R для составления прогнозов. |
-| [Руководство. Глубокое погружение в RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | Сведения об использовании функций из пакетов RevoScaleR. Перемещение данных между R и SQL Server и переключение контекстов вычисления в соответствии с конкретной задачей. Создание моделей и диаграмм и их перемещение между средой разработки и сервером базы данных. |
+| [Прогнозирование проката лыж с помощью дерева принятия решений](r-predictive-model-introduction.md) | Используйте R и модель дерева принятия решений для прогнозирования числа лыж, сдаваемых напрокат. Используйте записные книжки в Azure Data Studio для подготовки данных и обучения модели, а также T-SQL для развертывания модели. |
+| [Категоризация клиентов с помощью кластеризации методом k-средних](r-clustering-model-introduction.md) | Используйте R для разработки и развертывания модели кластеризации методом k-средних, чтобы классифицировать клиентов. Используйте записные книжки в Azure Data Studio для подготовки данных и обучения модели, а также T-SQL для развертывания модели. |
+| [Аналитические функции R в базе данных для специалистов по анализу и обработке данных](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | В этом учебнике разработчики на R, впервые столкнувшиеся с SQL Server, узнают, как выполнять общие задачи обработки и анализа данных в SQL Server. Описывается загрузка и визуализация данных, обучение и сохранение модели для SQL Server, а также использование модели для прогнозной аналитики. |
+| [Аналитические функции R в базе данных для разработчиков SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) | Описывается создание и развертывание полноценного решения R с помощью инструментов [!INCLUDE[tsql](../../includes/tsql-md.md)]. Основное внимание уделено переносу решения в рабочую среду. Вы узнаете, как включить код на языке R в хранимую процедуру, сохранить модель R в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выполнять параметризованные вызовы модели R для составления прогнозов. |
 
-<a name ="bkmk_samples"></a>
+## <a name="r-quickstarts"></a>Краткие руководства по R
 
-## <a name="code-samples"></a>Примеры кода
+Если вы еще не работали с машинным обучением SQL, можете также изучить краткие руководства по R.
 
-| Ссылка | Описание |
-|------|-------------|
-| [Создание модели прогнозирования с помощью R и SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | Сведения об использовании машинного обучения для прогнозирования будущих заказов в компании проката лыж, что позволяет создать бизнес-план и организовать работу с учетом будущего спроса. |
-| [Выполнение кластеризации клиентов с помощью R и SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | Использование неконтролируемого обучения для сегментирования клиентов на основе данных о продажах. |
+| Краткое руководство | Описание |
+|-|-|
+| [Запуск простых скриптов R](quickstart-r-create-script.md) | Изучите основы вызова R в T-SQL с помощью [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
+| [Использование структур данных и объектов с помощью R](quickstart-r-data-types-and-objects.md) | Описывается, как SQL использует R для обработки структур данных. |
+| [Создание и оценка прогнозной модели в R](quickstart-r-data-types-and-objects.md) | Объясняется, как создать, обучить и использовать модель R для создания прогнозов на основе новых данных. |
 
-## <a name="see-also"></a>См. также раздел
+## <a name="next-steps"></a>Дальнейшие действия
 
-+ [Расширение R в SQL Server](../concepts/extension-r.md)
+Дополнительные технические сведения об использовании R в SQL Server см. в разделе [Расширение языка R в SQL Server](../concepts/extension-r.md).

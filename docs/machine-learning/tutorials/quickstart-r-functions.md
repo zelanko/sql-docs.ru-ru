@@ -1,38 +1,55 @@
 ---
 title: Краткое руководство. Функции R
-description: В этом кратком руководстве вы узнаете, как внедрять математические и служебные функции R в Службах машинного обучения SQL Server.
+titleSuffix: SQL machine learning
+description: В этом кратком руководстве вы узнаете, как использовать математические и служебные функции R в машинном обучении SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fd3c3326fe0b186ade24cbcf95f587abba1cb6bc
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: c769862ab2ab1b06169ae5191217945cf8220c9b
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487291"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606673"
 ---
-# <a name="quickstart-r-functions-with-sql-server-machine-learning-services"></a>Краткое руководство. Функции R в Службах машинного обучения SQL Server
+# <a name="quickstart-r-functions-with-sql-machine-learning"></a>Краткое руководство. Функции R с использованием машинного обучения SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этом кратком руководстве вы узнаете, как внедрять математические и служебные функции R в Службах машинного обучения SQL Server. Зачастую статистические функции, которые сложно реализовать в T-SQL, выполняются в R всего парой строк кода.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+В этом кратком руководстве вы узнаете, как использовать математические и служебные функции R в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) или [Кластерах больших данных](../../big-data-cluster/machine-learning-services.md). Зачастую статистические функции, которые сложно реализовать в T-SQL, выполняются в R всего парой строк кода.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+В этом кратком руководстве вы узнаете, как использовать математические и служебные функции R в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md). Зачастую статистические функции, которые сложно реализовать в T-SQL, выполняются в R всего парой строк кода.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+В этом кратком руководстве вы узнаете, как использовать математические и служебные функции R в службах [SQL Server R Services](../r/sql-server-r-services.md). Зачастую статистические функции, которые сложно реализовать в T-SQL, выполняются в R всего парой строк кода.
+::: moniker-end
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- Для этого краткого руководства требуется доступ к экземпляру SQL Server со [службами машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md) и с установленным языком R.
+Для работы с этим кратким руководством необходимо следующее.
 
-  Экземпляр SQL Server может находиться в виртуальной машине Azure или на локальном компьютере. Обратите внимание, что функция внешних сценариев по умолчанию отключена, поэтому перед началом работы вам может потребоваться [включить ее](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) и убедиться, что **служба панели запуска SQL Server** выполняется.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- Службы машинного обучения SQL Server. Сведения об установке Служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md) или [руководстве по установке для Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Можно также [включить Службы машинного обучения в кластерах больших данных SQL Server](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- Службы машинного обучения SQL Server. Сведения об установке Служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services. Сведения об установке служб R Services см. в [руководстве по установке для Windows](../install/sql-r-services-windows-install.md).
+::: moniker-end
 
-- Вам также понадобится средство для выполнения SQL-запросов, содержащих сценарии R. Эти сценарии можно выполнять с помощью любого средства управления базами данных или запросов, которые могут подключаться к экземпляру SQL Server и выполнять запросы T-SQL или хранимые процедуры. В этом кратком руководстве используется среда [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Инструмент для выполнения SQL-запросов, содержащих сценарии R. В этом кратком руководстве используется [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Создание хранимой процедуры для формирования случайных чисел
 
-Для простоты мы будем использовать пакет R `stats`, который по умолчанию устанавливается и загружается в службы машинного обучения SQL Server при установке R. Он содержит сотню функций для общих статистических задач, в том числе функцию `rnorm`, которая формирует указанное количество случайных чисел с нормальным распределением при заданном среднем значении и стандартном отклонении.
+Для простоты давайте воспользуемся пакетом R `stats`, который устанавливается и загружается по умолчанию. Он содержит сотню функций для общих статистических задач, в том числе функцию `rnorm`, которая формирует указанное количество случайных чисел с нормальным распределением при заданном среднем значении и стандартном отклонении.
 
 Например, следующий код R возвращает 100 чисел со средним значением 50 и стандартным отклонением 3.
 
@@ -53,7 +70,7 @@ EXECUTE sp_execute_external_script
 
 Как упростить формирование другого набора случайных чисел?
 
-С помощью SQL Server это несложно. Вы определяете хранимую процедуру, которая получает предоставленные пользователем аргументы и передает их в качестве переменных в скрипт R.
+С помощью T-SQL это несложно. Вы определяете хранимую процедуру, которая получает предоставленные пользователем аргументы и передает их в качестве переменных в скрипт R.
 
 ```sql
 CREATE PROCEDURE MyRNorm (
@@ -107,11 +124,7 @@ WITH RESULT SETS (([Col1] int not null));
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Инструкции по созданию модели машинного обучения с использованием R в SQL Server см. в следующем кратком руководстве:
+Сведения о создании модели машинного обучения с использованием R и машинного обучения SQL приведены в следующем кратком руководстве:
 
 > [!div class="nextstepaction"]
-> [Создание и оценка модели прогнозов в R с помощью служб машинного обучения SQL Server](quickstart-r-train-score-model.md)
-
-Дополнительные сведения о службах машинного обучения SQL Server см. в следующей статье:
-
-- [Что такое службы машинного обучения SQL Server (Python и R)?](../sql-server-machine-learning-services.md)
+> [Создание и оценка прогнозной модели в R с помощью машинного обучения SQL](quickstart-r-train-score-model.md)

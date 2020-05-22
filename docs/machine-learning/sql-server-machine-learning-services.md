@@ -1,36 +1,40 @@
 ---
 title: Что такое службы машинного обучения SQL Server (Python и R)?
 titleSuffix: ''
-description: Службы машинного обучения — это компонент SQL Server, который дает возможность выполнять скрипты Python и R с реляционными данными. Вы можете использовать платформы и пакеты с открытым исходным кодом и пакеты Майкрософт Python и R для прогнозной аналитики и машинного обучения. Скрипты выполняются в базе данных без перемещения данных за пределы SQL Server или по сети. В этой статье объясняются основы Служб машинного обучения SQL Server.
+description: Службы машинного обучения — это компонент SQL Server, который дает возможность выполнять скрипты Python и R с реляционными данными. Вы можете использовать платформы и пакеты с открытым исходным кодом и пакеты Майкрософт Python и R для прогнозной аналитики и машинного обучения. Скрипты выполняются в базе данных без перемещения данных за пределы SQL Server или по сети. В этой статье объясняются основы Служб машинного обучения SQL Server и описывается, как приступить к работе с ними.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/06/2020
+ms.date: 04/16/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: afce689bffe69de78970006aea51ddd49481e614
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 8a3ce585c69cd0ee026d81c4bd1f75c235af4752
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220659"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606596"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>Что такое службы машинного обучения SQL Server (Python и R)?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Службы машинного обучения — это компонент SQL Server, который дает возможность выполнять скрипты Python и R с реляционными данными. Вы можете использовать платформы и пакеты с открытым исходным кодом и [пакеты Майкрософт Python и R](#packages) для прогнозной аналитики и машинного обучения. Скрипты выполняются в базе данных без перемещения данных за пределы SQL Server или по сети. В этой статье объясняются основы Служб машинного обучения SQL Server.
+Службы машинного обучения — это компонент SQL Server, который дает возможность выполнять скрипты Python и R с реляционными данными. Вы можете использовать платформы и пакеты с открытым кодом и [пакеты Microsoft Python и R](#packages) для прогнозной аналитики и машинного обучения. Скрипты выполняются в базе данных без перемещения данных за пределы SQL Server или по сети. В этой статье объясняются основы Служб машинного обучения SQL Server и описывается, как приступить к работе с ними.
+
+Сведения о применении машинного обучения на других платформах SQL доступны в [документации по машинному обучению SQL](index.yml).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
 > Сведения о запуске Java в SQL Server см. в [документации по расширениям языков](../language-extensions/language-extensions-overview.md).
 ::: moniker-end
 
-## <a name="what-is-machine-learning-services"></a>Что такое Службы машинного обучения?
+## <a name="execute-python-and-r-scripts-in-sql-server"></a>Выполнение сценариев Python и R в среде SQL Server
 
 Службы машинного обучения SQL Server можно использовать для запуска скриптов R или Python в базе данных. С их помощью можно подготавливать и очищать данные, выполнять проектирование признаков, а также обучать, оценивать и развертывать модели машинного обучения в базе данных. Этот компонент выполняет скрипты там, где хранятся данные, и устраняет необходимость перемещения данных по сети на другой сервер.
 
-Базовые распределения Python и R включены в Службы машинного обучения. Вы можете установить и использовать платформы и пакеты с открытым исходным кодом, такие как PyTorch, TensorFlow и scikit-learn, в дополнение к пакетам Microsoft [revoscalepy](python/ref-py-revoscalepy.md) и [microsoftml](python/ref-py-microsoftml.md) для Python и [RevoScaleR](r/ref-r-revoscaler.md), [MicrosoftML](r/ref-r-microsoftml.md), [OLAP](r/ref-r-olapr.md) и [sqlrutils](r/ref-r-sqlrutils.md) для R.
+Вы выполните хранимую процедуру [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для запуска сценариев Python и R в экземпляре SQL Server.
+
+Базовые распределения Python и R включены в Службы машинного обучения. Вы можете установить и использовать платформы и пакеты с открытым кодом, такие как PyTorch, TensorFlow и scikit-learn, в дополнение к пакетам Microsoft.
 
 Службы машинного обучения используют платформу расширяемости для выполнения скриптов Python и R на SQL Server. Дополнительные сведения о том, как это работает:
 
@@ -38,39 +42,41 @@ ms.locfileid: "82220659"
 + [Расширение Python](concepts/extension-python.md)
 + [Расширение R](concepts/extension-r.md)
 
-## <a name="what-can-i-do-with-machine-learning-services"></a>Что можно сделать с помощью Служб машинного обучения?
+## <a name="get-started-with-machine-learning-services"></a>Приступая к работе со Службами машинного обучения
 
-Службы машинного обучения можно использовать для создания и обучения моделей машинного обучения и глубокого обучения в SQL Server. Можно также развернуть существующие модели в Службах машинного обучения и использовать реляционные данные для прогнозов.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+1. [Установите Службы машинного обучения SQL Server в Windows](install/sql-machine-learning-services-windows-install.md) или [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json). Можно также использовать [Службы машинного обучения в Кластерах больших данных](../big-data-cluster/machine-learning-services.md).
 
-Примеры типов прогнозирования, для которых можно использовать Службы машинного обучения SQL Server:
+1. Настройте средства разработки. Вы можете [выполнять сценарии Python и R в записных книжках Azure Data Studio](install/sql-machine-learning-azure-data-studio.md). Можно также выполнять T-SQL в [Azure Data Studio](../azure-data-studio/what-is.md).
 
-|||
-|-|-|
-|Классификация и категоризация|Автоматическое разделение отзывов клиентов на положительные и отрицательные|
-|Регрессия/прогнозирование непрерывных значений|Прогнозирование стоимости домов на основе размера и расположения|
-|Обнаружение аномалий|Обнаружение мошеннических банковских транзакций |
-|Рекомендации|Предложение продуктов, которые могут понравиться покупателям Интернет-магазина, на основе их предыдущих покупок|
+1. Создайте свой первый сценарий Python или R.
 
-### <a name="how-to-execute-python-and-r-scripts"></a>Выполнение скриптов Python и R
+    + [Учебники по использованию Python для машинного обучения SQL](tutorials/python-tutorials.md)
+    + [Учебники по использованию R для машинного обучения SQL](tutorials/r-tutorials.md)
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+1. [Установка служб машинного обучения SQL Server в Windows](install/sql-machine-learning-services-windows-install.md).
 
-Существует два способа выполнения скриптов Python и R в Службах машинного обучения:
+1. Настройте средства разработки. Вы можете [выполнять сценарии Python и R в записных книжках Azure Data Studio](install/sql-machine-learning-azure-data-studio.md). Можно также использовать T-SQL в [Azure Data Studio](../azure-data-studio/what-is.md).
 
-+ Наиболее распространенным способом является использование хранимой процедуры T-SQL [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+1. Создайте свой первый сценарий Python или R.
 
-+ Вы также можете использовать предпочтительный клиент Python или R и написать скрипты, которые принудительно отправляют выполнение (так называемый *удаленный контекст вычислений*) на удаленный SQL Server. Дополнительные сведения о настройке обработки и анализа данных см. в статьях [Разработки на Python](python/setup-python-client-tools-sql.md) и [Разработки на R](r/set-up-a-data-science-client.md).
+    + [Учебники по использованию Python для машинного обучения SQL](tutorials/python-tutorials.md)
+    + [Учебники по использованию R для машинного обучения SQL](tutorials/r-tutorials.md)
+::: moniker-end
 
 <a name="versions"></a>
 
 ## <a name="python-and-r-versions"></a>Версии Python и R
 
-Ниже перечислены версии Python и R, включенные в службы машинного обучения, с каждой версией SQL Server.
+Ниже перечислены версии Python и R, включенные в Службы машинного обучения.
 
 | Версия SQL Server | Версия Python | Версия R |
 |-|-|-|
 | SQL Server 2017 | 3.5.2 | 3.3.3 |
 | SQL Server 2019 | 3.7.3 | 3.5.2 |
 
-Сведения о версии R в SQL Server 2016 см. в [разделе о версии R в статье с описанием служб R Services](r/sql-server-r-services.md#version).
+Сведения о версии R в SQL Server 2016 см. в [разделе о версии R в статье с описанием служб R Services](r/sql-server-r-services.md?view=sql-server-2016#version).
 
 <a name="packages"></a>
 
@@ -90,28 +96,21 @@ ms.locfileid: "82220659"
 
 Дополнительные сведения о том, какие пакеты устанавливаются со Службами машинного обучения и как устанавливать другие пакеты, см. в следующих статьях:
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [Получение сведений о пакете Python](package-management/python-package-information.md)
 + [Установка пакетов Python с помощью sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md)
 + [Получение сведений о пакете R](package-management/r-package-information.md)
 + [Установка новых пакетов R с помощью sqlmlutils](package-management/install-additional-r-packages-on-sql-server.md)
-
-## <a name="how-do-i-get-started-with-machine-learning-services"></a>Как начать работу со Службами машинного обучения?
-
-1. [Установка служб машинного обучения SQL Server](install/sql-machine-learning-services-windows-install.md)
-
-1. Настройте средства разработки. Вы можете использовать:
-
-    + [Azure Data Studio](../azure-data-studio/what-is.md) или [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) для использования T-SQL и хранимой процедуры [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), чтобы выполнить скрипт Python или R.
-    + Python или R на собственном ноутбуке или рабочей станции разработки для выполнения скриптов. Можно либо извлечь данные локально, либо отправить выполнение удаленно в SQL Server с помощью [revoscalepy](python/ref-py-revoscalepy.md) и [RevoScaleR](r/ref-r-revoscaler.md). Дополнительные сведения о настройке обработки и анализа данных см. в статьях [Разработки на Python](python/setup-python-client-tools-sql.md) и [Разработки на R](r/set-up-a-data-science-client.md).
-
-1. Написание первого скрипта Python или R
-
-    + Краткое руководство. [Запуск простых скриптов Python](tutorials/quickstart-python-create-script.md)
-    + Краткое руководство. [Запуск простых скриптов R](tutorials/quickstart-r-create-script.md)
-    + Руководство по [Запуск Python в T-SQL](tutorials/sqldev-in-database-python-for-sql-developers.md). Просмотр данных, разработка признаков, обучение и развертывание моделей, создание прогнозов (серия из пяти частей)
-    + Руководство по [Использование R в T-SQL](tutorials/sqldev-in-database-r-for-sql-developers.md). Просмотр данных, разработка признаков, обучение и развертывание моделей, создание прогнозов (серия из пяти частей)
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
++ [Получение сведений о пакете Python](package-management/python-package-information.md)
++ [Установка пакетов с инструментами Python в SQL Server](package-management/install-python-packages-standard-tools.md)
++ [Получение сведений о пакете R](package-management/r-package-information.md)
++ [Использование инструкции T-SQL (CREATE EXTERNAL LIBRARY) для установки пакетов R на SQL Server](package-management/install-r-packages-with-tsql.md)
+::: moniker-end
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-+ [Установка служб машинного обучения SQL Server](install/sql-machine-learning-services-windows-install.md)
-+ Настройка клиента обработки и анализа данных для [разработки на Python](python/setup-python-client-tools-sql.md) и [разработки на R](r/set-up-a-data-science-client.md)
++ [Установите Службы машинного обучения SQL Server в Windows](install/sql-machine-learning-services-windows-install.md) или [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json).
++ [Учебники по использованию Python для машинного обучения SQL](tutorials/python-tutorials.md)
++ [Учебники по использованию R для машинного обучения SQL](tutorials/r-tutorials.md)

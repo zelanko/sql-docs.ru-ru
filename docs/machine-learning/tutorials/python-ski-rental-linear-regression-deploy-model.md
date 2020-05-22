@@ -1,25 +1,31 @@
 ---
 title: Учебник по Python. Развертывание модели
-description: В четвертой, заключительной части этой серии руководств вы развернете модель Python для прогнозирования аренды лыжного оборудования в базе данных SQL Server со Службами машинного обучения.
+titleSuffix: SQL machine learning
+description: В четвертой части этого цикла учебников вы развернете модель Python для прогнозирования проката лыж на основе базы данных с использованием машинного обучения SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/02/2020
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e78f099f108f9affa58f53d1ad46b802eae004dd
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1771cc70a2e5b36109ba028c86939ce66fa00993
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116487"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606738"
 ---
-# <a name="python-tutorial-deploy-a-linear-regression-model-to-sql-server-machine-learning-services"></a>Учебник по Python. Развертывание модели линейной регрессии в Службах машинного обучения SQL Server
+# <a name="python-tutorial-deploy-a-linear-regression-model-with-sql-machine-learning"></a>Учебник по Python. Развертывание модели линейной регрессии с использованием машинного обучения SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+В четвертой части этого цикла учебников вы развернете модель линейной регрессии, разработанную в Python, в базе данных SQL Server с помощью Служб машинного обучения или в Кластерах больших данных.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 В четвертой части этой серии руководств будет выполняться развертывание модели линейной регрессии, разработанной на Python, в базе данных SQL Server с помощью Служб машинного обучения.
+::: moniker-end
 
 В этой статье вы узнаете, как выполнять следующие задачи.
 
@@ -31,7 +37,7 @@ ms.locfileid: "81116487"
 
 В [первой части](python-ski-rental-linear-regression.md) вы узнали, как восстановить учебную базу данных.
 
-Во [второй части](python-ski-rental-linear-regression-prepare-data.md) вы узнали, как загружать данные из SQL Server в кадр данных Python, а также подготавливать данные в Python.
+Во [второй части](python-ski-rental-linear-regression-prepare-data.md) вы узнали, как загрузить данные из базы данных в кадр данных Python, а также подготовить данные в Python.
 
 В [третьей части](python-ski-rental-linear-regression-train-model.md) вы узнали, как обучить модель машинного обучения линейной регрессии в Python.
 
@@ -119,11 +125,11 @@ GO
    CREATE PROCEDURE py_predict_rentalcount (@model varchar(100))
    AS
    BEGIN
-    DECLARE @py_model varbinary(max) = (select model from rental_py_models where model_name = @model);
+       DECLARE @py_model varbinary(max) = (select model from rental_py_models where model_name = @model);
    
-    EXECUTE sp_execute_external_script
-                @language = N'Python',
-                @script = N'
+       EXECUTE sp_execute_external_script
+                   @language = N'Python',
+                   @script = N'
    
    # Import the scikit-learn function to compute error.
    from sklearn.metrics import mean_squared_error
@@ -196,7 +202,7 @@ GO
 
    :::image type="content" source="media/python-tutorial-prediction-results.png" alt-text="Прогнозирование результатов из хранимой процедуры":::
 
-Вы успешно создали, обучили и развернули модель в Службах машинного обучения SQL Server. Затем вы использовали ее в хранимой процедуре для прогнозирования значений на основе новых данных.
+Вы успешно создали, обучили и развернули модель. Затем вы использовали ее в хранимой процедуре для прогнозирования значений на основе новых данных.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
@@ -207,6 +213,6 @@ GO
 * Создание хранимой процедуры, которая делает прогнозы с помощью модели
 * Выполнение модели с новыми данными
 
-Дополнительные сведения об использовании Python в Службах машинного обучения SQL Server см. в следующих ресурсах.
+Дополнительные сведения об использовании Python в машинном обучении SQL:
 
-+ [Учебники по Python для Служб машинного обучения SQL Server](sql-server-python-tutorials.md)
++ [Учебники по Python](python-tutorials.md)

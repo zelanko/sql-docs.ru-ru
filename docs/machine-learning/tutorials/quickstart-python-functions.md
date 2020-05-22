@@ -3,24 +3,31 @@ title: Краткое руководство. Функции Python
 description: В этом кратком руководстве вы узнаете, как внедрять математические и служебные функции Python в Службах машинного обучения SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/28/2020
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 577bb4e6d956c53182a20f0e363642946c33c92c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 6afe1685956c43e30ace59f3e5cc794a2abbd88f
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487337"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606710"
 ---
 # <a name="quickstart-python-functions-with-sql-server-machine-learning-services"></a>Краткое руководство. Функции Python в Службах машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этом кратком руководстве вы узнаете, как внедрять математические и служебные функции Python в Службах машинного обучения SQL Server. Зачастую статистические функции, которые сложно реализовать в T-SQL, выполняются в Python всего парой строк кода.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+В этом кратком руководстве вы узнаете, как использовать математические и служебные функции Python в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) или [Кластерах больших данных](../../big-data-cluster/machine-learning-services.md). Зачастую статистические функции, которые сложно реализовать в T-SQL, выполняются в Python всего парой строк кода.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+В этом кратком руководстве вы узнаете, как использовать математические и служебные функции Python в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md). Зачастую статистические функции, которые сложно реализовать в T-SQL, выполняются в Python всего парой строк кода.
+::: moniker-end
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -28,7 +35,7 @@ ms.locfileid: "81487337"
 
   Экземпляр SQL Server может находиться в виртуальной машине Azure или на локальном компьютере. Обратите внимание, что функция внешних сценариев по умолчанию отключена, поэтому перед началом работы вам может потребоваться [включить ее](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) и убедиться, что **служба панели запуска SQL Server** выполняется.
 
-- Вам также понадобится средство для выполнения SQL-запросов, содержащих сценарии Python. Эти сценарии можно выполнять с помощью любого средства управления базами данных или запросов, которые могут подключаться к экземпляру SQL Server и выполнять запросы T-SQL или хранимые процедуры. В этом кратком руководстве используется среда [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Вам также понадобится средство для выполнения SQL-запросов, содержащих сценарии Python. Эти сценарии можно выполнять с помощью любого средства управления базами данных или запросов, которые могут подключаться к экземпляру SQL Server и выполнять запросы T-SQL или хранимые процедуры. В этом кратком руководстве используется [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio).
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Создание хранимой процедуры для формирования случайных чисел
 

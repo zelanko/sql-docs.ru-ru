@@ -1,51 +1,52 @@
 ---
-title: Учебник по Python. Классификация клиентов
-titleSuffix: SQL machine learning
-description: В этом цикле учебников из четырех частей вы выполните кластеризацию клиентов методом k-средних в базе данных, используя Python и машинное обучение SQL.
+title: Руководство по развертыванию модели кластеризации в R
+titleSuffix: SQL Machine Learning
+description: В этом цикле учебников, состоящем из четырех частей, вы создадите модель для кластеризации в R с использованием машинного обучения SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.devlang: python
-ms.date: 04/15/2020
 ms.topic: tutorial
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye, davidph
+ms.date: 05/04/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8b3be490a6da01d34f8c762bf9c6cae1a35dbe40
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 558d6b9aaa47288de7c75e61ee38d379a3fc1e68
 ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606556"
+ms.locfileid: "83607107"
 ---
-# <a name="python-tutorial-categorizing-customers-using-k-means-clustering-with-sql-machine-learning"></a>Учебник по Python. Классификация клиентов на основе кластеризации методом k-средних с помощью машинного обучения SQL
+# <a name="tutorial-prepare-data-to-perform-clustering-in-r-with-sql-machine-learning"></a>Руководство по подготовке данных для кластеризации в R с помощью машинного обучения SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-В этом цикле учебников из четырех частей вы будете использовать Python для разработки и развертывания модели кластеризации методом k-средних в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) или [Кластерах больших данных](../../big-data-cluster/machine-learning-services.md) для классификации данных клиентов.
+В этом цикле учебников, состоящем из четырех частей, вы будете использовать R для разработки и развертывания модели кластеризации методом k-средних в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) или [Кластерах больших данных](../../big-data-cluster/machine-learning-services.md) для классификации данных клиентов.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-В этом учебнике из четырех частей вы будете использовать Python для разработки и развертывания модели кластеризации методом k-средних в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) для кластеризации данных клиентов.
+В этом цикле учебников, состоящем из четырех частей, вы будете использовать R для разработки и развертывания модели кластеризации методом k-средних в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) для кластеризации данных клиентов.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+В этом цикле учебников, состоящем из четырех частей, вы будете использовать R для разработки и развертывания модели кластеризации методом k-средних в службах [SQL Server R Services](../r/sql-server-r-services.md) для кластеризации данных клиентов.
 ::: moniker-end
 
-В первой части этого цикла учебников вы настроите необходимые компоненты, а затем восстановите пример набора данных в базе данных. Далее в этом цикле вы будете использовать полученные данные для обучения и развертывания модели кластеризации в Python с помощью машинного обучения SQL.
-
-Во второй и третьей частях вы напишите скрипты Python в записной книжке Azure Data Studio для анализа и подготовки данных и обучения модели машинного обучения. Затем, в четвертой части, вы запустите эти сценарии Python в базе данных с помощью хранимых процедур.
+В первой части этого цикла учебников вы настроите необходимые компоненты, а затем восстановите пример набора данных в базе данных. Во второй и третьей частях вы создадите сценарии R в записной книжке Azure Data Studio для анализа и подготовки этого примера данных, а также для обучения модели машинного обучения. Затем, в четвертой части, вы запустите эти сценарии R в базе данных с помощью хранимых процедур.
 
 *Кластеризацию* можно описать как организацию данных по группам, где члены группы каким-либо образом похожи друг на друга. В рамках этой серии руководств вы можете представить себя владельцем розничного предприятия. Вы будете использовать метод **k-средних** для кластеризации клиентов в наборе данных о покупках и возвратах продуктов. Благодаря кластеризации клиентов вы можете более эффективно осуществлять маркетинговую деятельность, ориентируясь на конкретные группы. Кластеризация методом k-средних — это алгоритм *неконтролируемого обучения*, который ищет закономерности в данных на основе сходства.
+
 
 В этой статье вы узнаете, как выполнять следующие задачи.
 
 > [!div class="checklist"]
 > * Восстановление примера базы данных
+> 
+Во [второй части](r-clustering-model-prepare-data.md) вы узнаете, как подготовить данные из базы данных для выполнения кластеризации.
 
-Во [второй части](python-clustering-model-prepare-data.md) вы узнаете, как подготовить данные из базы данных для выполнения кластеризации.
+В [третьей части](r-clustering-model-build.md) вы узнаете, как создать и обучить модель кластеризации на основе k-средних в R.
 
-В [третьей части](python-clustering-model-build.md) вы узнаете, как создать и обучить модель кластеризации на основе k-средних в Python.
-
-В [четвертой части](python-clustering-model-deploy.md) вы узнаете, как создать в базе данных хранимую процедуру, которая может выполнять кластеризацию в Python на основе новых данных.
+В [четвертой части](r-clustering-model-deploy.md) вы узнаете, как создать хранимую процедуру в базе данных, которая может выполнять кластеризацию в R на основе новых данных.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -53,22 +54,14 @@ ms.locfileid: "83606556"
 * [Службы машинного обучения SQL Server с языком Python](../sql-server-machine-learning-services.md) — следуйте инструкциям по установке в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md) или [руководстве по установке для Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fmachine-learning%2ftoc.json&view=sql-server-linux-ver15). Можно также [включить Службы машинного обучения в кластерах больших данных SQL Server](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-* [Службы машинного обучения SQL Server](../sql-server-machine-learning-services.md) с языком Python — следуйте инструкциям по установке в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md).
+* [Службы машинного обучения SQL Server](../sql-server-machine-learning-services.md) с языком R — следуйте инструкциям по установке в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md).
 ::: moniker-end
 
-* [Azure Data Studio](../../azure-data-studio/what-is.md). Записную книжку Azure Data Studio вы будете использовать как для Python, так и для SQL. Дополнительные сведения о записных книжках см. в статье [Использование записных книжек в Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+* [Azure Data Studio](../../azure-data-studio/what-is.md). Записную книжку в Azure Data Studio вы будете использовать для SQL. Дополнительные сведения о записных книжках см. в статье [Использование записных книжек в Azure Data Studio](../../azure-data-studio/notebooks-guidance.md).
 
-* Дополнительные пакеты Python — в примерах этой серии учебников используются пакеты Python, которые могут быть как установлены, так и не установлены вами.
+* IDE R. В этом учебнике используется [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
 
-  Откройте **командную строку** и измените путь установки для версии Python, используемой в Azure Data Studio. Например, `cd %LocalAppData%\Programs\Python\Python37-32`. Выполните следующие команды, чтобы импортировать пакеты, которые еще не установлены.
-
-  ```console
-  pip install matplotlib
-  pip install pandas
-  pip install pyodbc
-  pip install scipy
-  pip install sklearn
-  ```
+* RODBC — данный драйвер используется в сценариях R, разрабатываемых в рамках этого учебника. Установите его с помощью команды R `install.packages("RODBC")`, если этот драйвер еще не установлен. Дополнительные сведения о RODBC см. в разделе [CRAN - Package RODBC](https://CRAN.R-project.org/package=RODBC) (CRAN: пакет RODBC).
 
 ## <a name="restore-the-sample-database"></a>Восстановление примера базы данных
 
@@ -101,9 +94,10 @@ ms.locfileid: "83606556"
 
 В первой части этого учебника вы выполнили следующие действия:
 
-* Восстановление примера базы данных
+* Установка необходимых компонентов
+* Восстановили пример базы данных в SQL Server.
 
 Чтобы подготовить данные из для модели машинного обучения, перейдите ко второй части этого учебника:
 
 > [!div class="nextstepaction"]
-> [Учебник по Python. Подготовка данных к выполнению кластеризации](python-clustering-model-prepare-data.md)
+> [Подготовка данных к выполнению кластеризации](r-clustering-model-prepare-data.md)

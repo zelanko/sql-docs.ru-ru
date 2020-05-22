@@ -1,6 +1,6 @@
 ---
 title: Учебник по Python. Развертывание кластерной модели
-description: В четвертой части этой серии руководств будет выполняться развертывание модели кластеризации в Python с помощью Служб машинного обучения SQL Server.
+description: В четвертой части этого цикла учебников вы развернете модель кластеризации в Python с помощью машинного обучения SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -11,28 +11,33 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: df0fd7cb27977679a6ca879d7ae01045ed3fa8c8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0343c3c410c8cf7b76b391fecd6ff57bff5e80d3
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116567"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606452"
 ---
-# <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Руководство по Развертывание модели для категоризации клиентов в Python с использованием Служб машинного обучения SQL Server
+# <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Учебник по Python. Развертывание модели для классификации клиентов с использованием машинного обучения SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+В четвертой части этого цикла учебников вы развернете модель кластеризации, разработанную в Python, в базе данных SQL с помощью Служб машинного обучения SQL Server или в Кластерах больших данных.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 В четвертой части этой серии руководств будет выполняться развертывание модели кластеризации, разработанной в Python, в базе данных SQL с помощью Служб машинного обучения SQL Server.
+::: moniker-end
 
-Для выполнения кластеризации на регулярной основе по мере регистрации новых клиентов необходимо иметь возможность вызывать скрипт Python из любого приложения. Для этого можно развернуть скрипт Python в SQL Server, заключив его в хранимую процедуру SQL в базе данных. Поскольку модель выполняется в базе данных SQL, ее можно легко обучать на данных, хранящихся в базе данных.
+Для выполнения кластеризации на регулярной основе по мере регистрации новых клиентов необходимо иметь возможность вызывать скрипт Python из любого приложения. Для этого можно развернуть сценарий Python в базе данных, поместив его в хранимую процедуру SQL. Так как модель выполняется в базе данных, ее можно легко обучать на данных, хранящихся в базе данных.
 
-В этом разделе вы будете перемещать только что написанный код Python в SQL и развертывать кластеризацию с помощью Служб машинного обучения SQL Server.
+В этом разделе вы переместите только что созданный код Python на сервер и развернете кластеризацию.
 
 В этой статье вы узнаете, как выполнять следующие задачи.
 
 > [!div class="checklist"]
 > * Создание хранимой процедуры, которая формирует модель
-> * Выполнение кластеризации в SQL Server
+> * Выполнение кластеризации на сервере
 > * Использование сведений кластеризации
 
 В [первой части](python-clustering-model.md) были установлены необходимые компоненты и восстановлена демонстрационная база данных.
@@ -175,19 +180,18 @@ SELECT customer.[c_email_address], customer.c_customer_sk
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
-Если вы не собираетесь продолжать работу с этим учебником, можно удалить базу данных tpcxbb_1gb с SQL Server.
+Если вы не собираетесь продолжать работу с этим учебником, можно удалить базу данных tpcxbb_1gb.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
 В четвертой части этого учебника вы выполнили следующие действия.
 
 * Создание хранимой процедуры, которая формирует модель
-* Выполнение кластеризации в SQL Server
+* Выполнение кластеризации на сервере
 * Использование сведений кластеризации
 
-Дополнительные сведения об использовании Python в Службах машинного обучения SQL Server см. в следующих ресурсах.
+Дополнительные сведения об использовании Python в машинном обучении SQL:
 
-* [Краткое руководство. Создание и выполнение простых сценариев Python с помощью служб машинного обучения SQL Server](quickstart-python-create-script.md)
-* [Другие учебники по Python для Служб машинного обучения SQL Server](sql-server-python-tutorials.md)
+* [Краткое руководство. Создание и выполнение простых скриптов Python с помощью Служб машинного обучения SQL Server](quickstart-python-create-script.md)
+* [Другие учебники по использованию Python для машинного обучения SQL](python-tutorials.md)
 * [Установка пакетов Python с помощью sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md)
-

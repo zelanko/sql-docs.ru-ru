@@ -1,25 +1,31 @@
 ---
 title: Учебник по Python. Подготовка данных
-description: Во второй части этого руководства, состоящего из четырех частей, описано, как с помощью Python подготовить данные, чтобы спрогнозировать число прокатов лыж в Службах машинного обучения SQL Server.
+titleSuffix: SQL machine learning
+description: Во второй части этого цикла учебников, состоящего из четырех частей, с помощью Python вы подготовите данные, чтобы спрогнозировать число прокатов лыж с помощью машинного обучения SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/02/2020
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9aeefb0b6fd9ca1a744d132fccf1eedfedbaa6e7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 75f475f8a2b4b0d23d95498a69f5e5d745f7510d
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116427"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606726"
 ---
-# <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Учебник по Python. Подготовка данных для обучения модели линейной регрессии в Службах машинного обучения SQL Server
+# <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-with-sql-machine-learning"></a>Учебник по Python. Подготовка данных для обучения модели линейной регрессии с помощью машинного обучения SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Во второй части этого учебника, состоящего из четырех частей, вы будете подготавливать данные из базы данных SQL Server с помощью Python. Далее в этой серии руководств вы будете использовать эти данные для обучения и развертывания модели линейной регрессии с использованием Python в Службах машинного обучения SQL Server.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Во второй части этого цикла учебников, состоящего из четырех частей, вы подготовите данные из базы данных с помощью Python. Далее в этом цикле вы будете использовать подготовленные данные для обучения и развертывания модели линейной регрессии в Python с помощью Служб машинного обучения SQL Server или в Кластерах больших данных.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+Во второй части этого цикла учебников, состоящего из четырех частей, вы подготовите данные из базы данных с помощью Python. Далее в этой серии руководств вы будете использовать эти данные для обучения и развертывания модели линейной регрессии с использованием Python в Службах машинного обучения SQL Server.
+::: moniker-end
 
 В этой статье вы узнаете, как выполнять следующие задачи.
 
@@ -31,7 +37,7 @@ ms.locfileid: "81116427"
 
 В [третьей части](python-ski-rental-linear-regression-train-model.md) вы узнаете, как обучить модель машинного обучения линейной регрессии в Python.
 
-В [четвертой части](python-ski-rental-linear-regression-deploy-model.md) вы узнаете, как сохранить модель в SQL Server, а затем создать хранимые процедуры на основе сценариев Python, разработанных во второй и третьей частях. Хранимые процедуры будут запускаться в SQL Server, чтобы сформировать прогнозы на основе новых данных.
+В [четвертой части](python-ski-rental-linear-regression-deploy-model.md) вы узнаете, как сохранить модель в базе данных, а затем создать хранимые процедуры на основе сценариев Python, разработанных во второй и третьей частях. Хранимые процедуры будут запускаться на сервере, чтобы формировать прогнозы на основе новых данных.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -39,9 +45,9 @@ ms.locfileid: "81116427"
 
 ## <a name="explore-and-prepare-the-data"></a>Анализ и подготовка данных
 
-Чтобы использовать данные в Python, необходимо загрузить данные из базы данных SQL Server в кадр данных pandas.
+Чтобы использовать данные в Python, необходимо загрузить их из базы данных в кадр данных pandas.
 
-Создайте новую записную книжку Python в Azure Data Studio и выполните следующий сценарий. Замените `<SQL Server>` именем своего SQL Server.
+Создайте записную книжку Python в Azure Data Studio и выполните приведенный ниже сценарий. Замените `<SQL Server>` именем своего SQL Server.
 
 Приведенный ниже сценарий Python импортирует набор данных из таблицы **dbo.rental_data** вашей базы данных в кадр данных pandas **df**.
 
@@ -54,7 +60,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 # Connection string to your SQL Server instance
-conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=TutorialDB; Trusted_Connection=yes')
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<SQL Server>; DATABASE=TutorialDB; Trusted_Connection=yes')
 
 query_str = 'SELECT Year, Month, Day, Rentalcount, Weekday, Holiday, Snow FROM dbo.rental_data'
 
@@ -92,7 +98,7 @@ Data frame:      Year  Month  Day  RentalCount  WeekDay  Holiday  Snow
 
 Во второй части этого учебника вы выполнили следующие действия.
 
-* Загрузка данных из базы данных SQL Server в кадр данных **pandas**
+* Загрузка данных из базы данных в кадр данных **pandas**.
 * Подготовка данных в Python путем удаления некоторых столбцов
 
 Чтобы обучить модель машинного обучения, которая использует данные из базы данных TutorialDB, перейдите к третьей части этого учебника:

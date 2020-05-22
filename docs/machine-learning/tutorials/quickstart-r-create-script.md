@@ -1,41 +1,57 @@
 ---
 title: Краткое руководство. Запуск сценариев R
-description: Сведения о выполнении простых скриптов R с помощью Служб машинного обучения SQL Server. Вы узнаете, как применить хранимую процедуру sp_execute_external_script для выполнения скрипта в экземпляре SQL Server.
+titleSuffix: SQL machine learning
+description: Выполните ряд простых сценариев R с использованием машинного обучения SQL. Узнайте, как применять хранимую процедуру sp_execute_external_script для выполнения сценария.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 33baeba807711c1eb65b3a9c972066bb384e2542
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: ed4f4899869dbc9609f29d935c80a7df88fa3d4c
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487303"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606756"
 ---
-# <a name="quickstart-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>Краткое руководство. Выполнение простых сценариев R с помощью служб машинного обучения SQL Server
+# <a name="quickstart-run-simple-r-scripts-with-sql-machine-learning"></a>Краткое руководство. Выполнение простых сценариев R с использованием машинного обучения SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+В этом кратком руководстве вы запустите ряд простых сценариев R с помощью [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md) или в [Кластерах больших данных](../../big-data-cluster/machine-learning-services.md). Также вы узнаете, как применить хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для выполнения скрипта в экземпляре SQL Server.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 В этом кратком руководстве вы запустите несколько простых скриптов R, используя [Службы машинного обучения SQL Server](../sql-server-machine-learning-services.md). Также вы узнаете, как применить хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для выполнения скрипта в экземпляре SQL Server.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+В этом кратком руководстве вы запустите ряд простых сценариев R, используя службы [SQL Server R Services](../r/sql-server-r-services.md). Также вы узнаете, как применить хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для выполнения скрипта в экземпляре SQL Server.
+::: moniker-end
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- Для этого краткого руководства требуется доступ к экземпляру SQL Server со [службами машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md) и с установленным языком R.
+Для работы с этим кратким руководством необходимо следующее.
 
-  Экземпляр SQL Server может находиться в виртуальной машине Azure или на локальном компьютере. Обратите внимание, что функция внешних сценариев по умолчанию отключена, поэтому перед началом работы вам может потребоваться [включить ее](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) и убедиться, что **служба панели запуска SQL Server** выполняется.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- Службы машинного обучения SQL Server. Сведения об установке Служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md) или [руководстве по установке для Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Можно также [включить Службы машинного обучения в кластерах больших данных SQL Server](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- Службы машинного обучения SQL Server. Сведения об установке Служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services. Сведения об установке служб R Services см. в [руководстве по установке для Windows](../install/sql-r-services-windows-install.md). 
+::: moniker-end
 
-- Вам также понадобится средство для выполнения SQL-запросов, содержащих сценарии R. Эти сценарии можно выполнять с помощью любого средства управления базами данных или запросов, которые могут подключаться к экземпляру SQL Server и выполнять запросы T-SQL или хранимые процедуры. В этом кратком руководстве используется среда [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Инструмент для выполнения SQL-запросов, содержащих сценарии R. В этом кратком руководстве используется [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 ## <a name="run-a-simple-script"></a>Выполнение простого сценария
 
-Чтобы выполнить сценарий R, необходимо передать его в качестве аргумента в системную хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
-Эта хранимая процедура запускает среду выполнения R в контексте SQL Server, передает данные в R, безопасно управляет пользовательскими сеансами R и возвращает результаты клиенту.
+Чтобы выполнить сценарий R, необходимо передать его в качестве аргумента в системную хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Эта системная хранимая процедура запускает среду выполнения R, передает данные в R, безопасно управляет пользовательскими сеансами R и возвращает результаты клиенту.
 
-В следующих шагах вы выполните этот пример сценария R в своем экземпляре SQL Server:
+В следующих шагах вы запустите этот пример сценария R.
 
 ```r
 a <- 1
@@ -45,7 +61,7 @@ d <- a*b
 print(c(c, d))
 ```
 
-1. Откройте среду **SQL Server Management Studio** и подключитесь к экземпляру SQL Server.
+1. Откройте **Azure Data Studio** и подключитесь к своему серверу.
 
 1. Передайте весь сценарий R в хранимую процедуру `sp_execute_external_script`.
 
@@ -91,8 +107,8 @@ GO
 |-|-|
 | @language | Определяет вызываемое расширение языка (в данном случае R). |
 | @script | Определяет команды, которые передаются в среду выполнения R. Весь сценарий R должен содержаться в этом аргументе в виде текста в Юникоде. Также можно добавить текст в переменную типа **nvarchar**, а затем вызвать ее. |
-| @input_data_1 | Данные, возвращаемые запросом, передаются в среду выполнения R, которая возвращает данные в SQL Server в виде кадра данных. |
-|WITH RESULT SETS | Это предложение определяет схему возвращаемой таблицы данных для SQL Server. В данном случае добавляется "Hello World" в качестве имени столбца и **int** в качестве типа данных. |
+| @input_data_1 | Данные, возвращаемые запросом, передаются в среду выполнения R, которая возвращает их в виде кадра данных. |
+|WITH RESULT SETS | Это предложение определяет схему возвращаемой таблицы данных. В данном случае добавляется "Hello World" в качестве имени столбца и **int** в качестве типа данных. |
 
 Эта команда выводит следующий текст:
 
@@ -182,7 +198,12 @@ GO
 
 ## <a name="check-r-version"></a>Проверка версии R
 
-Если вы хотите узнать, какая версия R установлена в вашем экземпляре SQL Server, выполните следующий сценарий.
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+Если вы хотите узнать, какая версия R была установлена со Службами машинного обучения SQL Server, выполните приведенный ниже сценарий.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Если вы хотите узнать, какая версия R была установлена со службами SQL Server 2016 R Services, выполните приведенный ниже сценарий.
+::: moniker-end
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'R'
@@ -214,8 +235,12 @@ nickname       Someone to Lean On
 ```
 
 ## <a name="list-r-packages"></a>Получение списка пакетов R
-
-Майкрософт предоставляет ряд пакетов R, которые устанавливаются вместе со службами машинного обучения SQL Server.
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+Корпорация Майкрософт предоставляет ряд пакетов R, которые устанавливаются вместе со Службами машинного обучения.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Корпорация Майкрософт предоставляет ряд пакетов R, которые устанавливаются вместе со службами R Services.
+::: moniker-end
 
 Чтобы просмотреть список установленных пакетов R, включая сведения о версии, зависимостях, лицензии и пути к библиотеке, выполните следующий сценарий.
 
@@ -240,13 +265,7 @@ WITH result sets((
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Сведения о том, как работать со структурами данных при использовании языка R в службах машинного обучения SQL Server, см. в этом кратком руководстве:
+Сведения о том, как применять структуры данных при использовании R в машинном обучении SQL, см. в этом кратком руководстве:
 
 > [!div class="nextstepaction"]
-> [Работа с типами данных и объектами с помощью R в службах машинного обучения SQL Server](quickstart-r-data-types-and-objects.md)
-
-Дополнительные сведения об использовании R в службах машинного обучения SQL Server см. в следующих статьях:
-
-- [Написание расширенных функций R с использованием служб машинного обучения SQL Server](quickstart-r-functions.md)
-- [Создание и оценка модели прогнозов в R с помощью служб машинного обучения SQL Server](quickstart-r-train-score-model.md)
-- [Что такое службы машинного обучения SQL Server (Python и R)?](../sql-server-machine-learning-services.md)
+> [Обработка типов данных и объектов при работе с R и машинным обучением SQL](quickstart-r-data-types-and-objects.md)

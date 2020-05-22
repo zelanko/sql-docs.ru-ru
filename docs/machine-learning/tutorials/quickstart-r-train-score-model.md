@@ -1,31 +1,40 @@
 ---
 title: Краткое руководство. Обучение модели в R
-description: В этом кратком руководстве вы создадите и обучите прогнозную модель с помощью T. Затем вы сохраните модель в таблицу в экземпляре SQL Server и примените эту модель для прогнозирования значений на основе новых данных с помощью Служб машинного обучения SQL Server.
+titleSuffix: SQL machine learning
+description: В этом кратком руководстве вы создадите и обучите прогнозную модель с помощью T. Затем вы сохраните эту модель в таблицу и примените ее для прогнозирования значений на основе новых данных с помощью машинного обучения SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b34bfbf4f539412835c0de1e3c75b55e15b1e471
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 532a08f29b3b623d531d03ff7bc0ac56605faa17
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487282"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606242"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Краткое руководство. Создание и оценка модели прогнозов в R с помощью служб машинного обучения SQL Server
+# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-machine-learning"></a>Краткое руководство. Создание и оценка прогнозной модели в R с помощью машинного обучения SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+В этом кратком руководстве вы создадите и обучите прогнозную модель с помощью T. Затем вы сохраните ее в таблицу в экземпляре SQL Server и примените эту модель для прогнозирования значений на основе новых данных с помощью [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md) в [кластерах больших данных](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 В этом кратком руководстве вы создадите и обучите прогнозную модель с помощью T. Затем вы сохраните модель в таблицу в экземпляре SQL Server и примените эту модель для прогнозирования значений на основе новых данных с помощью [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+В этом кратком руководстве вы создадите и обучите прогнозную модель с помощью T. Затем вы сохраните ее в таблицу в экземпляре SQL Server и примените эту модель для прогнозирования значений на основе новых данных с помощью служб [SQL Server R Services](../r/sql-server-r-services.md).
+::: moniker-end
 
 Вы создадите и запустите две хранимые процедуры, выполняемые в SQL. В первой из них используется набор данных **mtcars**, входящий в состав R, на основе которого создается простая обобщенная линейная модель (ОЛМ), которая прогнозирует вероятность оснащения автомобиля механической КПП. Вторая процедура предназначена для оценки — она вызывает модель, созданную в первой процедуре, для вывода набора прогнозов на основе новых данных. Поместив код R в хранимую процедуру SQL, вы переносите операции в SQL, благодаря чему они могут многократно использоваться и вызываться другими хранимыми процедурами и клиентскими приложениями.
 
 > [!TIP]
-> Если вам требуется средство обновления линейных моделей, ознакомьтесь со следующим руководством, в котором описывается процесс компоновки моделей с помощью функции rxLinMod:  [Fitting Linear Models using RevoScaleR](/machine-learning-server/r/how-to-revoscaler-linear-model) (Подготовка линейных моделей с помощью RevoScaleR)
+> Если вам требуется средство обновления линейных моделей, ознакомьтесь со следующим руководством, в котором описывается процесс компоновки моделей с помощью функции rxLinMod: [Fitting Linear Models using RevoScaleR](/machine-learning-server/r/how-to-revoscaler-linear-model) (Подготовка линейных моделей с помощью RevoScaleR)
 
 Выполнив это краткое руководство, вы узнаете, как делать следующее.
 
@@ -36,19 +45,27 @@ ms.locfileid: "81487282"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- Для этого краткого руководства требуется доступ к экземпляру SQL Server со [службами машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md) и с установленным языком R.
+Для работы с этим кратким руководством необходимо следующее.
 
-  Экземпляр SQL Server может находиться в виртуальной машине Azure или на локальном компьютере. Обратите внимание, что функция внешних сценариев по умолчанию отключена, поэтому перед началом работы вам может потребоваться [включить ее](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) и убедиться, что **служба панели запуска SQL Server** выполняется.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- Службы машинного обучения SQL Server. Сведения об установке Служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md) или [руководстве по установке для Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Можно также [включить Службы машинного обучения в кластерах больших данных SQL Server](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- Службы машинного обучения SQL Server. Сведения об установке Служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services. Сведения об установке служб R Services см. в [руководстве по установке для Windows](../install/sql-r-services-windows-install.md).
+::: moniker-end
 
-- Вам также понадобится средство для выполнения SQL-запросов, содержащих сценарии R. Эти сценарии можно выполнять с помощью любого средства управления базами данных или запросов, которые могут подключаться к экземпляру SQL Server и выполнять запросы T-SQL или хранимые процедуры. В этом кратком руководстве используется среда [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Инструмент для выполнения SQL-запросов, содержащих сценарии R. В этом кратком руководстве используется [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 ## <a name="create-the-model"></a>Создание модели
 
-Чтобы создать модель, вам необходимо создать исходные данные для обучения, создать модель и обучить ее с использованием этих данных, а затем сохранить модель в базе данных SQL, где она будет использоваться для создания прогнозов на основе новых данных.
+Чтобы создать модель, вам необходимо сформировать исходные данные для обучения, создать модель и обучить ее с использованием этих данных, а затем сохранить эту модель в базе данных, где она будет использоваться для создания прогнозов на основе новых данных.
 
 ### <a name="create-the-source-data"></a>Создание исходных данных
 
-1. Откройте SSMS, подключитесь к экземпляру SQL Server и откройте окно создания запроса.
+1. Откройте Azure Data Studio, подключитесь к своему экземпляру и откройте новое окно запроса.
 
 1. Создайте таблицу, чтобы сохранить данные для обучения.
 
@@ -108,9 +125,9 @@ GO
 - Первый аргумент для функции `glm` — это параметр *formula*, где дистанция (`am`) является значением, зависимым от скорости (`hp + wt`).
 - Входные данные хранятся в переменной `MTCarsData`, которая заполняется с помощью SQL-запроса. Если для входных данных не назначено определенное имя, имя переменной по умолчанию будет _InputDataSet_.
 
-### <a name="store-the-model-in-the-sql-database"></a>Сохранение модели в базе данных SQL
+### <a name="store-the-model-in-the-database"></a>Сохранение модели в базе данных
 
-Далее необходимо сохранить модель в базе данных SQL, где ее можно использовать для прогнозирования или повторного обучения. 
+Далее необходимо сохранить модель в базе данных, где ее можно будет использовать для прогнозирования или повторного обучения. 
 
 1. Создайте таблицу для хранения модели.
 
@@ -220,6 +237,6 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о службах машинного обучения SQL Server см. в следующей статье:
+Дополнительные сведения об учебниках по использованию R и машинного обучения SQL:
 
-- [Что такое службы машинного обучения SQL Server (Python и R)?](../sql-server-machine-learning-services.md)
+- [Учебники по R](r-tutorials.md)

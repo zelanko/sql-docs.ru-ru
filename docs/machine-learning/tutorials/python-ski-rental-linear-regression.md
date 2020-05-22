@@ -1,50 +1,59 @@
 ---
 title: Учебник по Python. Прокат лыж
-description: В части три этого четырехсерийного учебника вы создадите линейную модель регрессии на Python для прогнозирования проката лыж в Службах машинного обучения SQL Server.
+titleSuffix: SQL machine learning
+description: В этом цикле учебников, состоящем из четырех частей, вы узнаете, как создать модель линейной регрессии в Python, чтобы прогнозировать число прокатов лыж с помощью машинного обучения SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/02/2020
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 877b9ece1fb88f8e46b4d986645fe051fba5fdd7
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: b34687440763f2c514016989542ae3f2d7c0e6ed
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487423"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606920"
 ---
-# <a name="python-tutorial-predict-ski-rental-with-linear-regression-in-sql-server-machine-learning-services"></a>Учебник по Python. Прогнозирование проката лыж с помощью линейной регрессии в Службах машинного обучения SQL Server
+# <a name="python-tutorial-predict-ski-rental-with-linear-regression-with-sql-machine-learning"></a>Учебник по Python. Прогнозирование проката лыж с помощью линейной регрессии и машинного обучения SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этом учебнике, состоящем из четырех частей, вы будете использовать Python и линейную регрессию в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) для прогнозирования количества прокатов лыж. В этом учебнике используется [записная книжка Python в Azure Data Studio](../../azure-data-studio/sql-notebooks.md), но также можно использовать собственную интегрированную среду разработки (IDE) Python.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+В этом цикле учебников, состоящем из четырех частей, вы будете использовать Python и линейную регрессию в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) или [Кластерах больших данных](../../big-data-cluster/machine-learning-services.md) для прогнозирования количества прокатов лыж. В этом учебнике используется [записная книжка Python в Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+В этом учебнике, состоящем из четырех частей, вы будете использовать Python и линейную регрессию в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) для прогнозирования количества прокатов лыж. В этом учебнике используется [записная книжка Python в Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+::: moniker-end
 
 Представьте, что вы являетесь владельцем компании по прокату лыж и хотите спрогнозировать количество прокатов за некоторый будущий период. Эта информация поможет вам подготовить инвентарь, персонал и пункты проката.
 
-В первой части учебника вы установите необходимые компоненты. Во второй и третьей частях вы напишите скрипты Python в записной книжке Jupyter для подготовки данных и обучения модели машинного обучения. Затем в третьей части вы запустите эти скрипты Python в SQL Server с помощью хранимых процедур T-SQL.
+В первой части учебника вы установите необходимые компоненты. Во второй и третьей частях вы создадите сценарии Python в записной книжке для подготовки данных и обучения модели машинного обучения. Затем в третьей части вы запустите эти скрипты Python в SQL Server с помощью хранимых процедур T-SQL.
 
 В этой статье вы узнаете, как выполнять следующие задачи.
 
 > [!div class="checklist"]
 > * Импорт примера базы данных в SQL Server 
 
-Во [второй части](python-ski-rental-linear-regression-prepare-data.md) вы узнаете, как загружать данные из SQL Server в кадр данных Python, а также подготавливать данные в Python.
+Во [второй части](python-ski-rental-linear-regression-prepare-data.md) вы узнаете, как загрузить данные из базы данных в кадр данных Python, а также подготовить данные в Python.
 
 В [третьей части](python-ski-rental-linear-regression-train-model.md) вы узнаете, как обучить модель машинного обучения линейной регрессии в Python.
 
-В [четвертой части](python-ski-rental-linear-regression-deploy-model.md) вы узнаете, как сохранить модель в SQL Server, а затем создать хранимые процедуры на основе сценариев Python, разработанных во второй и третьей частях. Хранимые процедуры будут запускаться в SQL Server, чтобы сформировать прогнозы на основе новых данных.
+В [четвертой части](python-ski-rental-linear-regression-deploy-model.md) вы узнаете, как сохранить модель в базе данных, а затем создать хранимые процедуры на основе сценариев Python, разработанных во второй и третьей частях. Хранимые процедуры будут запускаться на сервере, чтобы формировать прогнозы на основе новых данных.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-* Службы машинного обучения SQL Server: сведения об установке служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md) или [руководстве по установке для Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json).
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+* Службы машинного обучения SQL Server: сведения об установке служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md) или [руководстве по установке для Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Можно также [включить Службы машинного обучения в кластерах больших данных SQL Server](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+* Службы машинного обучения SQL Server — сведения об установке служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
 
-* Интегрированная среда разработки Python: в этом учебнике используется записная книжка Python в [Azure Data Studio](../../azure-data-studio/what-is.md). Дополнительные сведения см. в статье [Использование записных книжек в Azure Data Studio](../../azure-data-studio/sql-notebooks.md). 
+* Интегрированная среда разработки Python: в этом учебнике используется записная книжка Python в [Azure Data Studio](../../azure-data-studio/what-is.md). Дополнительные сведения см. в статье [Использование записных книжек в Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
 
-    Вы также можете использовать собственную интегрированную среду разработки Python, например записную книжку Jupyter или [Visual Studio Code](https://code.visualstudio.com/docs) с [расширением Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) и [расширением MSSQL](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql). 
-
-* Инструмент SQL-запросов — в этом учебнике предполагается, что вы используете [Azure Data Studio](../../azure-data-studio/what-is.md). Можно также использовать [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS).
+* Инструмент SQL-запросов — в этом учебнике предполагается, что вы используете [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 * Дополнительные пакеты Python. В примерах этой серии учебников используются пакеты Python, которые не могут быть установлены по умолчанию.
 
@@ -63,6 +72,11 @@ ms.locfileid: "81487423"
 
 Пример базы данных, используемый в этом учебнике, сохранен в файл резервной копии базы данных **BAK**, чтобы его можно было скачать и использовать.
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!NOTE]
+> Если вы используете Службы машинного обучения в Кластерах больших данных, ознакомьтесь со статьей [Восстановление базы данных на главном экземпляре кластера больших данных SQL Server](../../big-data-cluster/data-ingestion-restore-database.md).
+::: moniker-end
+
 1. Скачайте файл [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak).
 
 1. Следуйте инструкциям из раздела [Восстановление базы данных из файла резервной копии](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) в Azure Data Studio, используя следующие сведения:
@@ -77,12 +91,12 @@ ms.locfileid: "81487423"
    SELECT * FROM [dbo].[rental_data];
    ```
 
-Включите внешние скрипты, выполнив следующие команды SQL:
+1. Включите внешние скрипты, выполнив следующие команды SQL:
 
-  ```sql
-  sp_configure 'external scripts enabled', 1;
-  RECONFIGURE WITH override;
-  ```
+    ```sql
+    sp_configure 'external scripts enabled', 1;
+    RECONFIGURE WITH override;
+    ```
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

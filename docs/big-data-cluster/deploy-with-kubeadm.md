@@ -1,7 +1,7 @@
 ---
 title: Настройка Kubernetes с использованием kubeadm
 titleSuffix: SQL Server Big Data Clusters
-description: Сведения о том, как настроить Kubernetes на нескольких компьютерах с Ubuntu 16.04 или 18.04 (физических или виртуальных) для развертываний [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Узнайте, как настроить Kubernetes на нескольких компьютерах Ubuntu 16.04 или 18.04 (физических или виртуальных) для развертываний кластера больших данных SQL Server 2019.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0d5478df68f6f88d638aaafc88c92f2a5730b9f7
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 83f66841c4894d3c61ff8196eb52f3ac84fe42f9
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269463"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606550"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Настройка Kubernetes на нескольких компьютерах для развертываний кластера больших данных SQL Server
 
@@ -26,7 +26,7 @@ ms.locfileid: "83269463"
 > Примеры сценариев, которые настраивают Kubernetes, см. в статье [ Создание кластера Kubernetes с использованием Kubeadm в Ubuntu 16.04 LTS или 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).
 Кроме того, в [этом](deployment-script-single-node-kubeadm.md) разделе приведен пример скрипта, который автоматизирует развертывание kubeadm из одного узла на виртуальной машине, а затем поверх него развертывает конфигурацию по умолчанию кластера больших данных.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Не меньше 3 физических компьютеров или виртуальных машин с Linux
 - Рекомендуемая конфигурация отдельного компьютера:

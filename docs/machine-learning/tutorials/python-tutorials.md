@@ -1,29 +1,30 @@
 ---
 title: Учебники по Python
-description: В этой статье описываются руководства по Python для Служб машинного обучения SQL Server. Узнайте, как выполнять скрипты и создавать модели машинного обучения в SQL Server.
+titleSuffix: SQL machine learning
+description: В этой статье описываются учебники по использованию Python для машинного обучения SQL. Узнайте, как выполнять сценарии и создавать модели машинного обучения.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/04/2019
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e3733f12ed93d7c84a86259742b6996333c3900f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 7127be209c9637eb0c1cc701d16f0d157f90be54
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487357"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83605796"
 ---
-# <a name="python-tutorials-for-sql-server-machine-learning-services"></a>Учебники по Python для Служб машинного обучения SQL Server
+# <a name="python-tutorials-for-sql-machine-learning"></a>Учебники по использованию Python для машинного обучения SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этой статье описываются учебники и краткие руководства по Python для [Служб машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md).
-
-+ Узнайте, как выполнять скрипты Python.
-+ Создавайте, обучайте и развертывайте модели Python в SQL Server.
-+ Узнайте об удаленных и локальных контекстах вычисления.
-+ Изучите пакеты Microsoft Python для обработки и анализа данных и машинного обучения.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+В этой статье описываются учебники и краткие руководства по использованию Python для [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md) и [Кластеров больших данных](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+В этой статье описываются учебники и краткие руководства по Python для [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md).
+::: moniker-end
 
 <a name="bkmk_pythontutorials"></a>
 
@@ -38,15 +39,14 @@ ms.locfileid: "81487357"
 
 ## <a name="python-quickstarts"></a>Краткие руководства для Python
 
-Если вы не знакомы со службами машинного обучения SQL Server, можно также попробовать краткие руководства по Python.
+Если вы еще не работали с машинным обучением SQL, можете также изучить краткие руководства по Python.
 
 | Краткое руководство | Описание |
 |-|-|
-| [Hello World на Python и SQL Server](quickstart-python-create-script.md) | Изучите основы вызова Python в T-SQL с помощью [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
-| [Работа с типами данных и объектами с помощью Python в SQL Server](quickstart-python-data-structures.md) | Показывает, как SQL Server использует пакет Python pandas для работы со структурами данных. |
+| [Запуск простых скриптов Python](quickstart-python-create-script.md) | Изучите основы вызова Python в T-SQL с помощью [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
+| [Использование структур данных и объектов с помощью Python](quickstart-python-data-structures.md) | Показывает, как SQL использует пакет Python pandas для работы со структурами данных. |
 | [Создание и оценка модели прогнозирования на Python](quickstart-python-train-score-model.md) | Объясняется, как создать, обучить и использовать модель Python для создания прогнозов на основе новых данных. |
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-+ [Что такое службы машинного обучения SQL Server (Python и R)?](../sql-server-machine-learning-services.md)
 + [Расширение Python в SQL Server](../concepts/extension-python.md)

@@ -9,12 +9,12 @@ ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 997896520a72f7803e656a42d2e38ebc6bf59d3d
-ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
+ms.openlocfilehash: 9c45fa9db06980f05bdaf059aae857a36b326c24
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619667"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606686"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Руководство по Создание моделей на основе секций в R в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "82619667"
 
 + Экземпляр ядра СУБД SQL Server 2019 со службами машинного обучения и интеграцией R.
 
-+ В этом руководстве используется [замыкание соединения на себя для SQL Server из скрипта R через ODBC](../connect/loopback-connection.md]. Поэтому необходимо [создать имя входа для SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md).
++ В этом руководстве используется [петлевое соединение, устанавливаемое с SQL Server из сценария R через ODBC](../connect/loopback-connection.md). Поэтому необходимо [создать имя входа для SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md).
 
 Проверьте версию, выполнив **`SELECT @@Version`** как запрос T-SQL в средстве выполнения запросов.
 

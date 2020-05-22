@@ -1,25 +1,31 @@
 ---
 title: Учебник по Python. Обучение модели
-description: В третьей части этого руководства, состоящего из четырех частей, описано, как создать линейную модель регрессии на Python, чтобы спрогнозировать число прокатов лыж в Службах машинного обучения SQL Server.
+titleSuffix: SQL machine learning
+description: В третьей части этого цикла учебников, состоящего из четырех частей, описано, как создать модель линейной регрессии в Python, чтобы спрогнозировать число прокатов лыж с помощью машинного обучения SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/20/2020
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c564ac26c5706e67d9a633a05f81cb48d00fb771
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2d2335c982a75d924bfc60293632650b2d887527
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116437"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606538"
 ---
-# <a name="python-tutorial-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Учебник по Python. Обучение модели линейной регрессии в службах машинного обучения SQL Server
+# <a name="python-tutorial-train-a-linear-regression-model-with-sql-machine-learning"></a>Учебник по Python. Обучение модели линейной регрессии с помощью машинного обучения SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+В третьей части серии руководств из четырех частей вы проведете обучение модели линейной регрессии в Python. В следующей части данного цикла вы развернете эту модель в базе данных SQL Server с использованием Служб машинного обучения или в Кластерах больших данных.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 В третьей части серии руководств из четырех частей вы проведете обучение модели линейной регрессии в Python. В следующей части этого учебника вы развернете эту модель в базе данных SQL Server с использованием служб машинного обучения.
+::: moniker-end
 
 В этой статье вы узнаете, как выполнять следующие задачи.
 
@@ -29,9 +35,9 @@ ms.locfileid: "81116437"
 
 В [первой части](python-ski-rental-linear-regression.md) вы узнали, как восстановить учебную базу данных.
 
-Во [второй части](python-ski-rental-linear-regression-prepare-data.md) вы узнали, как загружать данные из SQL Server в кадр данных Python, а также подготавливать данные в Python.
+Во [второй части](python-ski-rental-linear-regression-prepare-data.md) вы узнали, как загрузить данные из базы данных в кадр данных Python, а также подготовить данные в Python.
 
-В [четвертой части](python-ski-rental-linear-regression-deploy-model.md) вы узнаете, как сохранить модель в SQL Server, а затем создать хранимые процедуры на основе сценариев Python, разработанных во второй и третьей частях. Хранимые процедуры будут запускаться в SQL Server, чтобы сформировать прогнозы на основе новых данных.
+В [четвертой части](python-ski-rental-linear-regression-deploy-model.md) вы узнаете, как сохранить модель в базе данных, а затем создать хранимые процедуры на основе сценариев Python, разработанных во второй и третьей частях. Хранимые процедуры будут запускаться на сервере, чтобы формировать прогнозы на основе новых данных.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
