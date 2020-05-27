@@ -397,7 +397,7 @@ GO
 
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>Б. Добавление файловой группы с двумя файлами к базе данных
 
-В следующем примере в базе данных `Test1FG1` создается файловая группа [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] и добавляется два файла по 5 МБ в эту файловую группу.
+В следующем примере в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] создается файловая группа `Test1FG1` и добавляется два файла по 5 МБ в эту файловую группу.
 
 ```sql
 USE master
@@ -878,7 +878,7 @@ GO
 
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>Б. Добавление файловой группы с двумя файлами к базе данных
 
-В следующем примере в базе данных `Test1FG1` создается файловая группа [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] и добавляется два файла по 5 МБ в эту файловую группу.
+В следующем примере в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] создается файловая группа `Test1FG1` и добавляется два файла по 5 МБ в эту файловую группу.
 
 ```sql
 USE master
@@ -968,7 +968,7 @@ GO
 
 ### <a name="f-adding-a-filegroup-using-alter-database"></a>Е. Добавление файловой группы с помощью инструкции ALTER DATABASE
 
-В следующем примере к базе данных `FILEGROUP` добавляется `MyDB`.
+В следующем примере к базе данных `MyDB` добавляется `FILEGROUP`.
 
 ```sql
 --Create and add a FILEGROUP

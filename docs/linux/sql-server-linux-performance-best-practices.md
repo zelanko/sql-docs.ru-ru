@@ -31,7 +31,7 @@ ms.locfileid: "79286848"
 
 - **Использование PROCESS AFFINITY для узла и ЦП**
 
-   Рекомендуется использовать инструкцию `ALTER SERVER CONFIGURATION`, чтобы задать `PROCESS AFFINITY` для всех узлов **NUMANODE** или ЦП, используемых для SQL Server в операционной системе Linux (то есть обычно для всех узлов и ЦП). Соответствие процессоров помогает эффективно планировать работу Linux и SQL. Использование параметра **NUMANODE** — простейший метод. Имейте в виду, что **PROCESS AFFINITY** следует использовать, даже если на вашем компьютере всего один узел NUMA.  Дополнительные сведения о задании [PROCESS AFFINITY](../t-sql/statements/alter-server-configuration-transact-sql.md) см. в документации по **ALTER SERVER CONFIGURATION**.
+   Рекомендуется использовать инструкцию `ALTER SERVER CONFIGURATION`, чтобы задать `PROCESS AFFINITY` для всех узлов **NUMANODE** или ЦП, используемых для SQL Server в операционной системе Linux (то есть обычно для всех узлов и ЦП). Соответствие процессоров помогает эффективно планировать работу Linux и SQL. Использование параметра **NUMANODE** — простейший метод. Имейте в виду, что **PROCESS AFFINITY** следует использовать, даже если на вашем компьютере всего один узел NUMA.  Дополнительные сведения о задании **PROCESS AFFINITY** см. в документации по [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md).
 
 - **Настройка нескольких файлов данных tempdb**
 
