@@ -62,7 +62,7 @@ ms.locfileid: "76909834"
 # <a name="odbc-scalar-functions-transact-sql"></a>Скалярные функции ODBC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  В инструкциях [ можно использовать ](https://go.microsoft.com/fwlink/?LinkID=88579)скалярные функции ODBC[!INCLUDE[tsql](../../includes/tsql-md.md)]. Эти инструкции интерпретируются средой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они могут использоваться в хранимых процедурах и других определяемых пользователем функциях. Они включают строковые, числовые и системные функции, а также функции даты, времени и интервалов.  
+  В инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] можно использовать [скалярные функции ODBC](https://go.microsoft.com/fwlink/?LinkID=88579). Эти инструкции интерпретируются средой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они могут использоваться в хранимых процедурах и других определяемых пользователем функциях. Они включают строковые, числовые и системные функции, а также функции даты, времени и интервалов.  
   
 ## <a name="usage"></a>Использование  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  

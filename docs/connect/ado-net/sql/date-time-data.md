@@ -70,7 +70,7 @@ ms.locfileid: "78896987"
 > [!NOTE]
 > Вы не можете установить для свойства `DbType` параметра `SqlParameter` значение `SqlDbType.Date`.
 
-Также можно указать тип объекта <xref:Microsoft.Data.SqlClient.SqlParameter> в общей форме, задав для свойства <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> объекта `SqlParameter` особое значение перечисления <xref:System.Data.DbType>. Для поддержки типов данных <xref:System.Data.DbType> и `datetime2` к свойству `datetimeoffset` были добавлены следующие значения перечисления.  
+Также можно указать тип объекта <xref:Microsoft.Data.SqlClient.SqlParameter> в общей форме, задав для свойства <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> объекта `SqlParameter` особое значение перечисления <xref:System.Data.DbType>. Для поддержки типов данных `datetime2` и `datetimeoffset` к свойству <xref:System.Data.DbType> были добавлены следующие значения перечисления.  
   
 - DbType.DateTime2.  
   

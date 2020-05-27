@@ -136,7 +136,7 @@ GO
 ```
   
 ### <a name="d-using-the-over-clause"></a>Г. Использование предложения OVER  
-В этом примере функции `MIN`, `MAX`, `AVG` и `COUNT` используются с предложением `OVER`, чтобы получить статистические значения для каждого из отделов в таблице [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базы данных `HumanResources.Department`.
+В этом примере функции `MIN`, `MAX`, `AVG` и `COUNT` используются с предложением `OVER`, чтобы получить статистические значения для каждого из отделов в таблице `HumanResources.Department` базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql
 SELECT DISTINCT Name  

@@ -93,7 +93,7 @@ ADD SENSITIVITY CLASSIFICATION TO [Patients].SSN WITH (LABEL = 'Highly Confident
 ADD SENSITIVITY CLASSIFICATION TO [Patients].BirthDate WITH (LABEL = 'Confidential Personal Data', INFORMATION_TYPE = 'Birthdays')
 ```
 
-Чтобы получить доступ к метаданным, установите для `PDOStatement::getColumnMeta` значение true и примените `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION`, как показано в следующем фрагменте кода:
+Чтобы получить доступ к метаданным, установите для `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` значение true и примените `PDOStatement::getColumnMeta`, как показано в следующем фрагменте кода:
 
 ```
 $options = array(PDO::SQLSRV_ATTR_DATA_CLASSIFICATION => true);

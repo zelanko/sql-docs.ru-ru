@@ -96,7 +96,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-granting-view-definition-permission-on-an-endpoint"></a>A. Предоставление разрешения VIEW DEFINITION на конечную точку  
- В следующем примере предоставлено разрешение `VIEW DEFINITION` на конечную точку `Mirror7` для учетной записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от `ZArifin`.  
+ В следующем примере предоставлено разрешение `VIEW DEFINITION` на конечную точку `Mirror7` для учетной записи `ZArifin` от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 USE master;  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>Б. Предоставление разрешения TAKE OWNERSHIP с параметром GRANT OPTION  
- В следующем примере предоставляется разрешение `TAKE OWNERSHIP` на конечную точку `Shipping83` для пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от `PKomosinski` с `GRANT OPTION`.  
+ В следующем примере предоставляется разрешение `TAKE OWNERSHIP` на конечную точку `Shipping83` для пользователя `PKomosinski` от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с `GRANT OPTION`.  
   
 ```  
 USE master;  

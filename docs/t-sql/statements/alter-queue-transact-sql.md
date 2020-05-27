@@ -191,7 +191,7 @@ ALTER QUEUE ExpenseQueue
 ```  
   
 ### <a name="c-changing-the-number-of-queue-readers"></a>В. Изменение числа агентов чтения очереди  
- Следующий пример устанавливает максимальное число экземпляров хранимых процедур, запускаемых компонентом `7` для этой очереди, равное [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
+ Следующий пример устанавливает максимальное число экземпляров хранимых процедур, запускаемых компонентом [!INCLUDE[ssSB](../../includes/sssb-md.md)] для этой очереди, равное `7`.  
   
 ```  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  

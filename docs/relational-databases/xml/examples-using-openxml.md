@@ -577,7 +577,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- А именно, переменная (**x) типа** xml\@ передается функции **sp_xml_preparedocument()** .  
+ А именно, переменная (\@x) типа **xml** передается функции **sp_xml_preparedocument()** .  
   
  Результат:  
   

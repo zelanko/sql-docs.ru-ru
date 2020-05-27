@@ -150,7 +150,7 @@ Chiapas
 
 ### <a name="b-additional-examples"></a>Б. Дополнительные примеры
 
-Дополнительные примеры, в которых используется **COLLATE**, приведены в разделе [Ж. Создание базы данных и назначение имени и параметров сортировки](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) статьи **CREATE DATABASE** и в разделе [Ф. Изменение параметров сортировки столбца](../../t-sql/statements/alter-table-transact-sql.md#alter_column) статьи **ALTER TABLE**.
+Дополнительные примеры, в которых используется **COLLATE**, приведены в разделе **Ж. Создание базы данных и назначение имени и параметров сортировки** статьи [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) и в разделе **Ф. Изменение параметров сортировки столбца** статьи [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column).
 
 ## <a name="see-also"></a>См. также:
 

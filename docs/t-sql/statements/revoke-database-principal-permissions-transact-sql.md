@@ -180,7 +180,7 @@ GO
 ```  
   
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>В. Отмена разрешения IMPERSONATE на пользователя у роли приложения  
- В следующем примере у роли приложения `IMPERSONATE` отменяется разрешение `HamithaL` на пользователя [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базы данных `AccountsPayable17`.  
+ В следующем примере у роли приложения `IMPERSONATE` отменяется разрешение `HamithaL` на пользователя `AccountsPayable17` базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   

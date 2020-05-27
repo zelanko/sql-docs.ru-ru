@@ -105,14 +105,14 @@ GO
 ```  
   
 ### <a name="b-adding-a-domain-account-to-a-server-role"></a>Б. Добавление учетной записи домена к роли сервера  
-В следующем примере к определяемой пользователем роли сервера с именем `adventure-works\roberto0` добавляется учетная запись домена с именем `Production`.  
+В следующем примере к определяемой пользователем роли сервера с именем `Production` добавляется учетная запись домена с именем `adventure-works\roberto0`.  
   
 ```  
 ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>В. Добавление имени входа SQL Server к роли сервера  
-В следующем примере к предопределенной роли сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] добавляется имя входа `Ted``diskadmin`.  
+В следующем примере к предопределенной роли сервера `diskadmin` добавляется имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Ted`.  
   
 ```  
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
@@ -127,7 +127,7 @@ ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>Д. Удаление имени входа SQL Server из роли сервера  
-В следующем примере имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Ted` удаляется из предопределенной роли сервера `diskadmin`.  
+В следующем примере имя входа `Ted`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удаляется из предопределенной роли сервера `diskadmin`.  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
@@ -159,7 +159,7 @@ ORDER BY  SP.name,  SP2.name
 ## <a name="examples-sspdw"></a>Примеры: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="h-basic-syntax"></a>З. Базовый синтаксис  
-В следующем примере к роли сервера `Anna` добавляется имя входа `LargeRC`.  
+В следующем примере к роли сервера `LargeRC` добавляется имя входа `Anna`.  
   
 ```  
 ALTER SERVER ROLE LargeRC ADD MEMBER Anna;  

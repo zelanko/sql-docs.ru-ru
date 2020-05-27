@@ -48,7 +48,7 @@ ms.locfileid: "68026411"
   
 Эта функция ANSI SQL эквивалентна функции [GETDATE](../../t-sql/functions/getdate-transact-sql.md).
   
-Обзор всех типов данных и функций даты и времени в языке [ см. в статье ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)Типы данных и функции даты и времени[!INCLUDE[tsql](../../includes/tsql-md.md)].
+Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -65,7 +65,7 @@ CURRENT_TIMESTAMP
 **datetime**
   
 ## <a name="remarks"></a>Remarks  
-Функция [!INCLUDE[tsql](../../includes/tsql-md.md)] может использоваться в инструкциях `CURRENT_TIMESTAMP` везде, где допустимо использование выражения **datetime**.
+Функция `CURRENT_TIMESTAMP` может использоваться в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] везде, где допустимо использование выражения **datetime**.
   
 `CURRENT_TIMESTAMP` является недетерминированной функцией. Невозможно проиндексировать представления и выражения, ссылающиеся на этот столбец.
   

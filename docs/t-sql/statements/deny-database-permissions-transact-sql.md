@@ -179,7 +179,7 @@ AS \<database_principal> указывает участника, от котор�
 
 ### <a name="a-denying-permission-to-create-certificates"></a>A. Запрет разрешения на создание сертификатов
 
-Следующий код отказывает в разрешении `CREATE CERTIFICATE` пользователю [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базы данных `MelanieK`.
+Следующий код отказывает в разрешении `CREATE CERTIFICATE` пользователю `MelanieK` базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
 
 ```sql
 USE AdventureWorks2012;

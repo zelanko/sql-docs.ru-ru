@@ -42,7 +42,7 @@ ms.locfileid: "69028228"
   
  Более ранние версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чем [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)], не поддерживают тип данных **time**, поэтому приложения, использующие java.sql.Time, обычно хранят значения java.sql.Time как типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DateTime** или **smalldatetime**.  
   
- Если для работы со значениями java.sql.Time вы хотите использовать типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** и **smalldatetime**, то для свойства подключения **sendTimeAsDatetime** следует задать значение **true**. Если для работы со значениями java.sql.Time вы хотите использовать тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **time**, то для свойства подключения **sendTimeAsDatetime** следует задать значение **false**.  
+ Если для работы со значениями java.sql.Time вы хотите использовать типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**datetime** и **smalldatetime**, то для свойства подключения **sendTimeAsDatetime** следует задать значение **true**. Если для работы со значениями java.sql.Time вы хотите использовать тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **time**, то для свойства подключения **sendTimeAsDatetime** следует задать значение **false**.  
   
  Учтите, что если значения java.sql.Time передаются в параметр, тип данных которого также поддерживает хранение дат, то даты по умолчанию различаются в зависимости от типа отправки значения java.sql.Time — **datetime** (1 января 1970 г.) или **time** (1 января 1900 г.). Дополнительные сведения о преобразовании данных при отправке на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Использование даты и времени](https://go.microsoft.com/fwlink/?LinkID=145211).  
   
@@ -52,7 +52,7 @@ ms.locfileid: "69028228"
   
 -   Использовать java.sql.Time при работе с типом данных **time**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Используйте java.sql.Timestamp при работе с типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**, **smalldatetime** и **datetime2**.  
+-   Используйте java.sql.Timestamp при работе с типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**datetime**, **smalldatetime** и **datetime2**.  
   
 SendTimeAsDatetime должен иметь значение FALSE для зашифрованных столбцов, так как они не поддерживают преобразование типа time в datetime. Начиная с Microsoft JDBC Driver 6.0 для SQL Server, класс SQLServerConnection содержит два следующих метода для задания и получения значений свойства sendTimeAsDatetime.
 

@@ -26,7 +26,7 @@ ms.locfileid: "67976331"
   
 |Имя|Description|  
 |----------|-----------------|  
-|[Метод position (java.sql.NClob, long)](../../../connect/jdbc/reference/position-method-java-sql-nclob-long.md)|Возвращает символьную позицию, с которой начинается значение свойства **searchstr** указанного объекта *NClob* в этом же объекте **NClob**.|  
+|[Метод position (java.sql.NClob, long)](../../../connect/jdbc/reference/position-method-java-sql-nclob-long.md)|Возвращает символьную позицию, с которой начинается значение свойства *searchstr* указанного объекта **NClob** в этом же объекте **NClob**.|  
 |[Метод position (java.lang.String, long) в SQLServerNClob](../../../connect/jdbc/reference/position-method-java-lang-string-long-sqlservernclob.md)|Возвращает символьную позицию, с которой начинается значение указанной подстроки *searchstr* в значении типа **NCLOB**, представленном текущим объектом **NClob**.|  
   
 ## <a name="see-also"></a>См. также:  

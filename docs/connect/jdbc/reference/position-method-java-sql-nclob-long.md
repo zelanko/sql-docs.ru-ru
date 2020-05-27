@@ -20,7 +20,7 @@ ms.locfileid: "67976359"
 # <a name="position-method-javasqlnclob-long"></a>Метод position (java.sql.NClob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Возвращает символьную позицию, с которой начинается значение свойства **searchstr** указанного объекта *NClob* в этом же объекте **NClob**.  
+  Возвращает символьную позицию, с которой начинается значение свойства *searchstr* указанного объекта **NClob** в этом же объекте **NClob**.  
   
 ## <a name="syntax"></a>Синтаксис  
   

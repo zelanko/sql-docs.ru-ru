@@ -40,7 +40,7 @@ ms.locfileid: "69028173"
 
 В следующем примере образец кода задает различные свойства соединения с помощью методов задания объекта [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), затем вызывает метод [getConnection](../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) объекта SQLServerDataSource, чтобы вернуть объект [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).
 
-Далее образец кода создает объект [SQLServerCallableStatement](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) с помощью метода [prepareCall](../../connect/jdbc/reference/sqlservercallablestatement-class.md) объекта SQLServerConnection, после чего вызывается метод [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) для выполнения хранимой процедуры.
+Далее образец кода создает объект [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) с помощью метода [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) объекта SQLServerConnection, после чего вызывается метод [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) для выполнения хранимой процедуры.
 
 Наконец, для прохода по результатам, возвращенным хранимой процедурой, используется объект [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), возвращенный из метода executeQuery.
 
